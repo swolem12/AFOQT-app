@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Install AFOQT Quest</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background: #000;
+            color: #0ff;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(0, 20, 20, 0.8);
+            border: 2px solid #0ff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        }
+        
+        h1 {
+            color: #0ff;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #0ff;
+        }
+        
+        h2 {
+            color: #0ff;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #0ff;
+            padding-bottom: 5px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #0ff;
+            color: #000;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 10px 10px 10px 0;
+            transition: all 0.3s;
+            border: 2px solid #0ff;
+        }
+        
+        .btn:hover {
+            background: #000;
+            color: #0ff;
+            box-shadow: 0 0 15px #0ff;
+        }
+        
+        .btn-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .steps {
+            background: rgba(0, 50, 50, 0.3);
+            padding: 20px;
+            border-left: 3px solid #0ff;
+            margin: 20px 0;
+        }
+        
+        .steps ol {
+            padding-left: 20px;
+        }
+        
+        .steps li {
+            margin: 10px 0;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        
+        .feature::before {
+            content: "✓";
+            color: #0ff;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .warning {
+            background: rgba(255, 50, 0, 0.2);
+            border-left: 3px solid #f50;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .platform {
+            background: rgba(0, 100, 100, 0.2);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        code {
+            background: rgba(0, 255, 255, 0.1);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        a {
+            color: #0ff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 Install AFOQT Quest</h1>
+        
+        <div class="btn-container">
+            <a href="index.html" class="btn">🚀 Launch App</a>
+            <a href="MOBILE-INSTALL.md" class="btn">📖 Mobile Guide</a>
+            <a href="APK-SETUP.md" class="btn">📦 APK Setup</a>
+        </div>
+        
+        <h2>Why Install?</h2>
+        <div class="feature">Works 100% offline after installation</div>
+        <div class="feature">Fullscreen mode - no browser UI</div>
+        <div class="feature">App icon on your home screen</div>
+        <div class="feature">Faster loading with cached files</div>
+        <div class="feature">Auto-updates to latest version</div>
+        <div class="feature">Uses minimal storage (~5-10 MB)</div>
+        
+        <h2>Quick Install (Android)</h2>
+        <div class="steps">
+            <ol>
+                <li>Open <strong>Chrome</strong> on your Android phone</li>
+                <li>Visit <code>https://swolem12.github.io/AFOQT-app/</code></li>
+                <li>Tap the menu (⋮) and select <strong>"Install app"</strong></li>
+                <li>Tap <strong>"Install"</strong></li>
+                <li>Launch from your home screen! 🎉</li>
+            </ol>
+        </div>
+        
+        <h2>Quick Install (iPhone)</h2>
+        <div class="steps">
+            <ol>
+                <li>Open <strong>Safari</strong> on your iPhone</li>
+                <li>Visit <code>https://swolem12.github.io/AFOQT-app/</code></li>
+                <li>Tap the <strong>Share button</strong> (square with up arrow)</li>
+                <li>Scroll down and tap <strong>"Add to Home Screen"</strong></li>
+                <li>Tap <strong>"Add"</strong></li>
+                <li>Launch from your home screen! 🎉</li>
+            </ol>
+        </div>
+        
+        <h2>Want an APK File?</h2>
+        <p>If you need a traditional Android APK file instead of the PWA installation above, you have several options:</p>
+        
+        <div class="platform">
+            <h3>Option 1: PWABuilder (Easiest)</h3>
+            <ol>
+                <li>Visit <a href="https://www.pwabuilder.com/" target="_blank">PWABuilder.com</a></li>
+                <li>Enter: <code>https://swolem12.github.io/AFOQT-app/</code></li>
+                <li>Click "Package for Android"</li>
+                <li>Download your APK</li>
+            </ol>
+        </div>
+        
+        <div class="platform">
+            <h3>Option 2: Bubblewrap CLI (Advanced)</h3>
+            <ol>
+                <li>Install Bubblewrap: <code>npm install -g @bubblewrap/cli</code></li>
+                <li>Run our script: <code>./generate-apk.sh</code></li>
+                <li>Follow the prompts</li>
+                <li>Get your signed APK</li>
+            </ol>
+        </div>
+        
+        <p>For detailed APK generation instructions, see <a href="APK-SETUP.md">APK-SETUP.md</a></p>
+        
+        <h2>Need Help?</h2>
+        <p>Check out these guides:</p>
+        <ul>
+            <li><a href="README.md">Main README</a> - Overview and features</li>
+            <li><a href="MOBILE-INSTALL.md">Mobile Installation Guide</a> - Detailed mobile instructions</li>
+            <li><a href="APK-SETUP.md">APK Setup Guide</a> - Complete APK generation guide</li>
+        </ul>
+        
+        <div class="btn-container">
+            <a href="index.html" class="btn">🚀 Start Learning Now</a>
+        </div>
+    </div>
+    
+    <script>
+        // Detect if running as installed PWA
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+            // Create new content for installed state
+            const container = document.createElement('div');
+            container.className = 'container';
+            container.innerHTML = '<h1>✓ Already Installed!</h1><p>You\'re running AFOQT Quest as an installed app.</p><div class="btn-container"><a href="index.html" class="btn">Launch App</a></div>';
+            document.body.innerHTML = '';
+            document.body.appendChild(container);
+        }
+        
+        // Show install button if available
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            
+            const installBtn = document.createElement('a');
+            installBtn.className = 'btn';
+            installBtn.textContent = '⬇️ Install Now';
+            installBtn.style.background = '#0f0';
+            installBtn.style.borderColor = '#0f0';
+            installBtn.style.animation = 'pulse 2s infinite';
+            installBtn.href = '#';
+            installBtn.onclick = async (e) => {
+                e.preventDefault();
+                if (deferredPrompt) {
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    console.log(`User response: ${outcome}`);
+                    deferredPrompt = null;
+                    installBtn.remove();
+                }
+            };
+            
+            const btnContainer = document.querySelector('.btn-container');
+            if (btnContainer) {
+                btnContainer.prepend(installBtn);
+            }
+        });
+    </script>
+</body>
+</html>
