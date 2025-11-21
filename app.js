@@ -1899,8 +1899,8 @@ function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     state.quiz.mode = mode;
     state.quiz.difficulty = difficulty;
     
-    // Generate unique questions based on mode (5 for sprint, 20 for others)
-    const questionCount = mode === 'sprint' ? 5 : 20;
+    // Generate unique questions based on mode (5 for sprint, 10 for others)
+    const questionCount = mode === 'sprint' ? 5 : 10;
     const usedQuestions = new Set();
     const maxAttempts = questionCount * 10; // Prevent infinite loops
     let attempts = 0;
@@ -2274,7 +2274,7 @@ function renderModeSelect() {
                             • Instant feedback<br>
                             • See explanations<br>
                             • No time pressure<br>
-                            • 20 questions
+                            • 10 questions
                         </div>
                     </div>
                     
@@ -2284,7 +2284,7 @@ function renderModeSelect() {
                             • No feedback until end<br>
                             • 60-second timer<br>
                             • Test conditions<br>
-                            • 20 questions
+                            • 10 questions
                         </div>
                     </div>
                     
