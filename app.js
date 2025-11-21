@@ -63,7 +63,7 @@ document.head.appendChild(particleStyle);
 // ============================================================================
 function showBootScreen() {
     const bootMessages = [
-        'INITIALIZING AFOQT STUDY CONSOLE...',
+        'INITIALIZING AFOQT QUEST...',
         'LOADING SYSTEM MODULES...',
         'LOADING MATH ENGINE... OK',
         'LOADING VERBAL PROCESSOR... OK',
@@ -1356,27 +1356,16 @@ function renderHome() {
     return `
         <div class="panel">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                <h1 class="panel-header" style="margin: 0;">AFOQT STUDY CONSOLE</h1>
-                ${state.currentPlayer ? `
-                    <button class="btn btn-small" id="status-btn" style="animation: none;">
-                        ⚔ Status (Lv. ${playerInfo.level})
+                <h1 class="panel-header" style="margin: 0;">AFOQT QUEST</h1>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn btn-small" id="player-manager-btn" style="animation: none;">
+                        ${state.currentPlayer ? `👤 ${state.currentPlayer.name}` : '👤 Select Player'}
                     </button>
-                ` : ''}
-            </div>
-            
-            <div class="player-section">
-                <h2>Player Selection</h2>
-                <div class="player-controls">
-                    <select id="player-select">
-                        ${state.players.length === 0 ? '<option>No players yet</option>' : ''}
-                        ${state.players.map(p => `
-                            <option value="${p.id}" ${state.currentPlayer?.id === p.id ? 'selected' : ''}>
-                                ${p.name}
-                            </option>
-                        `).join('')}
-                    </select>
-                    <input type="text" id="new-player-name" placeholder="New player name" />
-                    <button class="btn btn-small" id="add-player-btn">Add Player</button>
+                    ${state.currentPlayer ? `
+                        <button class="btn btn-small" id="status-btn" style="animation: none;">
+                            ⚔ Status (Lv. ${playerInfo.level})
+                        </button>
+                    ` : ''}
                 </div>
             </div>
             
@@ -1388,6 +1377,36 @@ function renderHome() {
                         <div class="tile-description">${subject.description}</div>
                     </div>
                 `).join('')}
+            </div>
+        </div>
+        
+        ${renderPlayerModal()}
+    `;
+}
+
+function renderPlayerModal() {
+    return `
+        <div id="player-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Player Management</h2>
+                    <button class="modal-close" id="close-player-modal">✕</button>
+                </div>
+                <div class="modal-body">
+                    <div class="player-list">
+                        ${state.players.length === 0 ? '<p style="text-align: center; opacity: 0.7;">No players yet. Create one below!</p>' : ''}
+                        ${state.players.map(p => `
+                            <div class="player-item ${state.currentPlayer?.id === p.id ? 'selected' : ''}" data-player-id="${p.id}">
+                                <div class="player-name">${p.name}</div>
+                                <div class="player-level">Lv. ${computePlayerTotals(p).level}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="new-player-form">
+                        <input type="text" id="new-player-name" placeholder="New player name" />
+                        <button class="btn btn-small" id="add-player-btn">Create Player</button>
+                    </div>
+                </div>
             </div>
         </div>
     `;
@@ -1689,6 +1708,54 @@ function renderStatus() {
 // Event Listeners
 // ============================================================================
 function attachEventListeners() {
+    // Player modal
+    const playerManagerBtn = document.getElementById('player-manager-btn');
+    if (playerManagerBtn) {
+        playerManagerBtn.addEventListener('click', () => {
+            const modal = document.getElementById('player-modal');
+            if (modal) {
+                modal.style.display = 'flex';
+                playSfx('nav');
+            }
+        });
+    }
+    
+    const closePlayerModal = document.getElementById('close-player-modal');
+    if (closePlayerModal) {
+        closePlayerModal.addEventListener('click', () => {
+            const modal = document.getElementById('player-modal');
+            if (modal) {
+                modal.style.display = 'none';
+                playSfx('nav');
+            }
+        });
+    }
+    
+    // Click outside modal to close
+    const modal = document.getElementById('player-modal');
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                playSfx('nav');
+            }
+        });
+    }
+    
+    // Player selection in modal
+    const playerItems = document.querySelectorAll('.player-item');
+    playerItems.forEach(item => {
+        item.addEventListener('click', () => {
+            selectPlayer(item.dataset.playerId);
+            const modal = document.getElementById('player-modal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+            playSfx('player');
+            render();
+        });
+    });
+    
     // Home screen
     const addPlayerBtn = document.getElementById('add-player-btn');
     if (addPlayerBtn) {
@@ -1698,16 +1765,12 @@ function attachEventListeners() {
             if (name) {
                 createPlayer(name);
                 input.value = '';
+                const modal = document.getElementById('player-modal');
+                if (modal) {
+                    modal.style.display = 'none';
+                }
                 render();
             }
-        });
-    }
-    
-    const playerSelect = document.getElementById('player-select');
-    if (playerSelect) {
-        playerSelect.addEventListener('change', (e) => {
-            selectPlayer(e.target.value);
-            render();
         });
     }
     
