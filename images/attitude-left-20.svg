@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" style="background: #000;">
+  <!-- Banking left 20 degrees and descending attitude indicator -->
+  <g transform="translate(100, 100)">
+    <!-- Outer case -->
+    <circle cx="0" cy="0" r="90" fill="#1a1a1a" stroke="#00ffff" stroke-width="3"/>
+    
+    <!-- Rotate the horizon for left bank -->
+    <g transform="rotate(20)">
+      <!-- Sky (blue) half - shifted down for descent -->
+      <path d="M -63,10 A 63,63 0 0,1 63,10 Z" fill="#0066cc"/>
+      
+      <!-- Ground (brown) half - shifted up for descent -->
+      <path d="M -63,10 A 63,63 0 0,0 63,10 Z" fill="#663300"/>
+      
+      <!-- Horizon line -->
+      <line x1="-63" y1="10" x2="63" y2="10" stroke="#ffffff" stroke-width="3"/>
+      
+      <!-- Pitch lines (descending - horizon higher) -->
+      <line x1="-50" y1="-10" x2="-30" y2="-10" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="30" y1="-10" x2="50" y2="-10" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="-50" y1="30" x2="-30" y2="30" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="30" y1="30" x2="50" y2="30" stroke="#ffffff" stroke-width="1.5"/>
+    </g>
+    
+    <!-- Aircraft symbol (fixed) -->
+    <g>
+      <line x1="-40" y1="0" x2="-15" y2="0" stroke="#ffff00" stroke-width="3"/>
+      <line x1="15" y1="0" x2="40" y2="0" stroke="#ffff00" stroke-width="3"/>
+      <circle cx="0" cy="0" r="3" fill="#ffff00"/>
+    </g>
+    
+    <!-- Bank angle markers -->
+    <g stroke="#ffffff" stroke-width="2" fill="none">
+      <line x1="0" y1="-75" x2="0" y2="-70"/>
+      <line x1="-22" y1="-72" x2="-20" y2="-68"/>
+      <line x1="22" y1="-72" x2="20" y2="-68"/>
+      <line x1="-42" y1="-61" x2="-39" y2="-58"/>
+      <line x1="42" y1="-61" x2="39" y2="-58"/>
+    </g>
+    
+    <!-- Bank indicator triangle (points down) -->
+    <polygon points="0,-73 -4,-80 4,-80" fill="#ffff00"/>
+  </g>
+  
+  <!-- Heading indicator -->
+  <g transform="translate(100, 180)">
+    <text x="-15" y="5" fill="#00ffff" font-family="monospace" font-size="14" font-weight="bold">W</text>
+  </g>
+</svg>

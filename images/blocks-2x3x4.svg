@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" style="background: #000;">
+  <!-- Title -->
+  <text x="70" y="25" fill="#00ffff" font-family="monospace" font-size="14" font-weight="bold">2×3×4 RECTANGULAR (24 blocks)</text>
+  
+  <!-- 3D isometric view of 2x3x4 rectangular block -->
+  <g transform="translate(200, 200)">
+    <!-- Back layer (4 blocks deep) -->
+    <g transform="translate(-50, -70)">
+      <!-- First column (2 wide) -->
+      <!-- Back row -->
+      <polygon points="0,0 20,10 20,30 0,20" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="20,10 40,0 40,20 20,30" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="0,20 20,30 40,20 20,10" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <polygon points="30,5 50,15 50,35 30,25" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="50,15 70,5 70,25 50,35" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="30,25 50,35 70,25 50,15" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <!-- Second row from back -->
+      <polygon points="0,20 20,30 20,50 0,40" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="20,30 40,20 40,40 20,50" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="0,40 20,50 40,40 20,30" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <polygon points="30,25 50,35 50,55 30,45" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="50,35 70,25 70,45 50,55" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="30,45 50,55 70,45 50,35" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <!-- Third row -->
+      <polygon points="0,40 20,50 20,70 0,60" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="20,50 40,40 40,60 20,70" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="0,60 20,70 40,60 20,50" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <polygon points="30,45 50,55 50,75 30,65" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="50,55 70,45 70,65 50,75" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="30,65 50,75 70,65 50,55" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <!-- Front row (closest) -->
+      <polygon points="0,60 20,70 20,90 0,80" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="20,70 40,60 40,80 20,90" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="0,80 20,90 40,80 20,70" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <polygon points="30,65 50,75 50,95 30,85" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="50,75 70,65 70,85 50,95" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="30,85 50,95 70,85 50,75" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <!-- Second layer (on top of first) -->
+      <!-- Back row - second layer -->
+      <polygon points="0,-20 20,-10 20,10 0,0" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="20,-10 40,-20 40,0 20,10" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="0,0 20,10 40,0 20,-10" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <polygon points="30,-15 50,-5 50,15 30,5" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="50,-5 70,-15 70,5 50,15" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="30,5 50,15 70,5 50,-5" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <!-- Second row - second layer -->
+      <polygon points="0,0 20,10 20,30 0,20" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="20,10 40,0 40,20 20,30" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="0,20 20,30 40,20 20,10" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <polygon points="30,5 50,15 50,35 30,25" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="50,15 70,5 70,25 50,35" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="30,25 50,35 70,25 50,15" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <!-- Third row - second layer -->
+      <polygon points="0,20 20,30 20,50 0,40" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="20,30 40,20 40,40 20,50" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="0,40 20,50 40,40 20,30" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <polygon points="30,25 50,35 50,55 30,45" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="50,35 70,25 70,45 50,55" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="30,45 50,55 70,45 50,35" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <!-- Front row - second layer -->
+      <polygon points="0,40 20,50 20,70 0,60" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="20,50 40,40 40,60 20,70" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="0,60 20,70 40,60 20,50" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <polygon points="30,45 50,55 50,75 30,65" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="50,55 70,45 70,65 50,75" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="30,65 50,75 70,65 50,55" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+    </g>
+  </g>
+  
+  <!-- Label -->
+  <text x="80" y="330" fill="#00ffff" font-family="monospace" font-size="12">2 blocks wide × 3 blocks tall × 4 blocks deep</text>
+</svg>
