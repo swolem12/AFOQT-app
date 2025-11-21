@@ -4,10 +4,125 @@
 // ============================================================================
 
 // ============================================================================
+// Particle Effects
+// ============================================================================
+function createParticles(x, y, color, count = 20) {
+    const container = document.createElement('div');
+    container.style.cssText = `
+        position: fixed;
+        top: ${y}px;
+        left: ${x}px;
+        pointer-events: none;
+        z-index: 9999;
+    `;
+    document.body.appendChild(container);
+    
+    for (let i = 0; i < count; i++) {
+        const particle = document.createElement('div');
+        const angle = (Math.PI * 2 * i) / count;
+        const velocity = 100 + Math.random() * 100;
+        const vx = Math.cos(angle) * velocity;
+        const vy = Math.sin(angle) * velocity;
+        
+        particle.style.cssText = `
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: ${color};
+            border-radius: 50%;
+            box-shadow: 0 0 10px ${color};
+            animation: particleFloat 1s ease-out forwards;
+            --vx: ${vx}px;
+            --vy: ${vy}px;
+        `;
+        
+        container.appendChild(particle);
+    }
+    
+    setTimeout(() => container.remove(), 1000);
+}
+
+// Add CSS for particle animation
+const particleStyle = document.createElement('style');
+particleStyle.textContent = `
+    @keyframes particleFloat {
+        0% {
+            transform: translate(0, 0) scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: translate(var(--vx), var(--vy)) scale(0);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(particleStyle);
+
+// ============================================================================
+// Boot Screen Effect
+// ============================================================================
+function showBootScreen() {
+    const bootMessages = [
+        'INITIALIZING AFOQT STUDY CONSOLE...',
+        'LOADING SYSTEM MODULES...',
+        'LOADING MATH ENGINE... OK',
+        'LOADING VERBAL PROCESSOR... OK',
+        'LOADING READING ANALYZER... OK',
+        'LOADING SCIENCE DATABASE... OK',
+        'INITIALIZING AUDIO SYSTEM... OK',
+        'SYSTEM READY.',
+        ''
+    ];
+    
+    const bootScreen = document.createElement('div');
+    bootScreen.id = 'boot-screen';
+    bootScreen.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        color: #00ffff;
+        font-family: 'Courier New', monospace;
+        padding: 40px;
+        z-index: 10000;
+        overflow: hidden;
+    `;
+    
+    const bootText = document.createElement('pre');
+    bootText.style.cssText = `
+        font-size: 14px;
+        line-height: 1.6;
+        text-shadow: 0 0 5px #00ffff;
+    `;
+    bootScreen.appendChild(bootText);
+    document.body.appendChild(bootScreen);
+    
+    let currentLine = 0;
+    const typeInterval = setInterval(() => {
+        if (currentLine < bootMessages.length) {
+            bootText.textContent += bootMessages[currentLine] + '\n';
+            currentLine++;
+            playSfx('nav');
+        } else {
+            clearInterval(typeInterval);
+            setTimeout(() => {
+                bootScreen.style.transition = 'opacity 0.5s';
+                bootScreen.style.opacity = '0';
+                setTimeout(() => {
+                    bootScreen.remove();
+                }, 500);
+            }, 500);
+        }
+    }, 200);
+}
+
+// ============================================================================
 // Global State
 // ============================================================================
 const state = {
-    screen: 'home', // 'home' | 'subject' | 'mode-select' | 'quiz' | 'results'
+    screen: 'home', // 'home' | 'subject' | 'mode-select' | 'quiz' | 'results' | 'status'
     players: [],
     currentPlayer: null,
     currentSubject: null,
@@ -961,6 +1076,42 @@ function formatDate(timestamp) {
 }
 
 // ============================================================================
+// RPG Character Status System
+// ============================================================================
+function computePlayerTotals(player) {
+    const stats = player.stats || {};
+    let totalStatPoints = 0;
+    for (const topicId in stats) {
+        totalStatPoints += stats[topicId].statPoints || 0;
+    }
+    const level = 1 + Math.floor(totalStatPoints / 5);
+    const pointsIntoLevel = totalStatPoints % 5;
+    const pointsToNextLevel = 5 - pointsIntoLevel;
+    return { totalStatPoints, level, pointsIntoLevel, pointsToNextLevel };
+}
+
+function updatePlayerStats(player, topicId, correctCount) {
+    // Initialize stats if needed
+    if (!player.stats) {
+        player.stats = {};
+    }
+    
+    // Initialize topic stats if needed
+    if (!player.stats[topicId]) {
+        player.stats[topicId] = {
+            correctAnswers: 0,
+            statPoints: 0
+        };
+    }
+    
+    // Update correct answers and recalculate stat points
+    player.stats[topicId].correctAnswers += correctCount;
+    player.stats[topicId].statPoints = Math.floor(player.stats[topicId].correctAnswers / 5);
+    
+    return player;
+}
+
+// ============================================================================
 // LocalStorage Functions
 // ============================================================================
 function loadPlayers() {
@@ -1067,6 +1218,21 @@ function handleAnswer(optionIndex) {
     const currentQuestion = state.quiz.questions[state.quiz.currentIndex];
     const isCorrect = optionIndex === currentQuestion.correctIndex;
     
+    // Get button position for particle effect
+    const buttons = document.querySelectorAll('.option-btn');
+    const selectedButton = buttons[optionIndex];
+    if (selectedButton) {
+        const rect = selectedButton.getBoundingClientRect();
+        const x = rect.left + rect.width / 2;
+        const y = rect.top + rect.height / 2;
+        
+        if (isCorrect) {
+            createParticles(x, y, '#00ffff', 30);
+        } else {
+            createParticles(x, y, '#ff0000', 20);
+        }
+    }
+    
     if (isCorrect) {
         state.quiz.score++;
         playSfx('correct');
@@ -1108,6 +1274,10 @@ function finishQuiz() {
         };
         
         state.currentPlayer.sessions.push(session);
+        
+        // Update RPG stats
+        updatePlayerStats(state.currentPlayer, state.currentTopic.id, state.quiz.score);
+        
         savePlayers(state.players);
     }
     
@@ -1140,6 +1310,15 @@ function goToSubject(subjectId) {
     render();
 }
 
+function goToStatus() {
+    if (!state.currentPlayer) {
+        return; // Can't view status without a player
+    }
+    playSfx('nav');
+    state.screen = 'status';
+    render();
+}
+
 // ============================================================================
 // Render Functions
 // ============================================================================
@@ -1163,15 +1342,27 @@ function render() {
         case 'results':
             root.innerHTML = renderResults();
             break;
+        case 'status':
+            root.innerHTML = renderStatus();
+            break;
     }
     
     attachEventListeners();
 }
 
 function renderHome() {
+    const playerInfo = state.currentPlayer ? computePlayerTotals(state.currentPlayer) : null;
+    
     return `
         <div class="panel">
-            <h1 class="panel-header">AFOQT STUDY CONSOLE</h1>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h1 class="panel-header" style="margin: 0;">AFOQT STUDY CONSOLE</h1>
+                ${state.currentPlayer ? `
+                    <button class="btn btn-small" id="status-btn" style="animation: none;">
+                        ⚔ Status (Lv. ${playerInfo.level})
+                    </button>
+                ` : ''}
+            </div>
             
             <div class="player-section">
                 <h2>Player Selection</h2>
@@ -1273,9 +1464,14 @@ function renderQuiz() {
     const answered = state.quiz.selectedAnswer !== null;
     const isCorrect = answered && state.quiz.selectedAnswer === currentQuestion.correctIndex;
     const isTestMode = state.quiz.mode === 'test';
+    const progressPercent = ((state.quiz.currentIndex + 1) / state.quiz.questions.length) * 100;
     
     return `
         <div class="panel">
+            <div class="quiz-progress-bar">
+                <div class="quiz-progress-fill" style="width: ${progressPercent}%"></div>
+            </div>
+            
             <div class="quiz-header">
                 <div class="quiz-info">
                     <strong>${state.currentTopic.name}</strong><br>
@@ -1407,6 +1603,76 @@ function renderResults() {
     `;
 }
 
+function renderStatus() {
+    if (!state.currentPlayer) {
+        return '<div class="panel"><h1>No player selected</h1></div>';
+    }
+    
+    const { totalStatPoints, level, pointsIntoLevel, pointsToNextLevel } = computePlayerTotals(state.currentPlayer);
+    const stats = state.currentPlayer.stats || {};
+    
+    // Get all topics for display
+    const allTopicStats = topics.map(topic => {
+        const topicStat = stats[topic.id] || { correctAnswers: 0, statPoints: 0 };
+        return {
+            topicId: topic.id,
+            topicName: topic.name,
+            correctAnswers: topicStat.correctAnswers,
+            statPoints: topicStat.statPoints
+        };
+    });
+    
+    return `
+        <div class="panel">
+            <h1 class="panel-header">Character Status</h1>
+            
+            <div class="status-header">
+                <div class="status-player-info">
+                    <div class="status-name">${state.currentPlayer.name}</div>
+                    <div class="status-level">Level ${level}</div>
+                    <div class="status-total-stats">Total Stat Points: ${totalStatPoints}</div>
+                </div>
+                
+                <div class="status-progress">
+                    <div class="status-progress-label">Progress to Level ${level + 1}</div>
+                    <div class="status-progress-bar">
+                        <div class="status-progress-fill" style="width: ${(pointsIntoLevel / 5) * 100}%"></div>
+                    </div>
+                    <div class="status-progress-text">${pointsIntoLevel} / 5 points</div>
+                </div>
+            </div>
+            
+            <h2 style="margin: 30px 0 20px 0; text-align: center;">Topic Stats</h2>
+            
+            <div class="stats-grid">
+                ${allTopicStats.map(stat => {
+                    const maxBarWidth = 20; // Max stat points to show in bar
+                    const barPercentage = Math.min((stat.statPoints / maxBarWidth) * 100, 100);
+                    
+                    return `
+                        <div class="stat-item">
+                            <div class="stat-header">
+                                <div class="stat-topic-name">${stat.topicName}</div>
+                                <div class="stat-points">SP: ${stat.statPoints}</div>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" style="width: ${barPercentage}%"></div>
+                            </div>
+                            <div class="stat-details">
+                                Correct Answers: ${stat.correctAnswers}
+                            </div>
+                        </div>
+                    `;
+                }).join('')}
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn" id="home-btn">← Home</button>
+            </div>
+        </div>
+    `;
+}
+
 // ============================================================================
 // Event Listeners
 // ============================================================================
@@ -1431,6 +1697,12 @@ function attachEventListeners() {
             selectPlayer(e.target.value);
             render();
         });
+    }
+    
+    // Status button
+    const statusBtn = document.getElementById('status-btn');
+    if (statusBtn) {
+        statusBtn.addEventListener('click', goToStatus);
     }
     
     // Subject tiles
@@ -1513,6 +1785,13 @@ function attachEventListeners() {
 // Initialization
 // ============================================================================
 function init() {
+    // Show boot screen on first load
+    const hasBooted = sessionStorage.getItem('afoqt-booted');
+    if (!hasBooted) {
+        showBootScreen();
+        sessionStorage.setItem('afoqt-booted', 'true');
+    }
+    
     state.players = loadPlayers();
     if (state.players.length > 0) {
         state.currentPlayer = state.players[0];
