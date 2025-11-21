@@ -877,3 +877,164 @@ body::after {
 ::-webkit-scrollbar-thumb:hover {
     background: #0099cc;
 }
+
+/* RPG Character Status Screen */
+.status-header {
+    background: rgba(0, 255, 255, 0.05);
+    border: 2px solid #00ffff;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 
+        0 0 20px rgba(0, 255, 255, 0.2),
+        inset 0 0 30px rgba(0, 255, 255, 0.02);
+}
+
+.status-player-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.status-name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+    animation: textGlow 2s ease-in-out infinite;
+}
+
+.status-level {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    color: #ffff00;
+    text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00;
+    font-weight: bold;
+}
+
+.status-total-stats {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.status-progress {
+    margin-top: 20px;
+}
+
+.status-progress-label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.status-progress-bar {
+    width: 100%;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #00ffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.status-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00ffff, #ffff00);
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    transition: width 0.5s ease-out;
+    animation: progressPulse 2s ease-in-out infinite;
+}
+
+.status-progress-text {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.stat-item {
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #00ffff;
+    border-radius: 6px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    animation: tileSlideIn 0.4s ease-out backwards;
+}
+
+.stat-item:nth-child(1) { animation-delay: 0.05s; }
+.stat-item:nth-child(2) { animation-delay: 0.1s; }
+.stat-item:nth-child(3) { animation-delay: 0.15s; }
+.stat-item:nth-child(4) { animation-delay: 0.2s; }
+.stat-item:nth-child(5) { animation-delay: 0.25s; }
+.stat-item:nth-child(6) { animation-delay: 0.3s; }
+.stat-item:nth-child(7) { animation-delay: 0.35s; }
+.stat-item:nth-child(8) { animation-delay: 0.4s; }
+
+.stat-item:hover {
+    background: rgba(0, 255, 255, 0.05);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.stat-topic-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+.stat-points {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffff00;
+    text-shadow: 0 0 10px #ffff00;
+}
+
+.stat-bar {
+    width: 100%;
+    height: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #00ffff;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.stat-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00ffff, #0099cc);
+    box-shadow: 0 0 8px #00ffff;
+    transition: width 0.5s ease-out;
+}
+
+.stat-details {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .status-name {
+        font-size: 1.5rem;
+    }
+    
+    .status-level {
+        font-size: 1.3rem;
+    }
+}
