@@ -1,13 +1,13 @@
 // Service Worker for AFOQT Study Console
 // Provides offline caching and PWA functionality
 
-const CACHE_NAME = 'afoqt-study-v3';
+const CACHE_NAME = 'afoqt-study-v4';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/app.js',
-  '/manifest.json'
+  './',
+  './index.html',
+  './styles.css',
+  './app.js',
+  './manifest.json'
 ];
 
 // Install event - cache assets
@@ -75,7 +75,7 @@ self.addEventListener('fetch', (event) => {
         }).catch((error) => {
           console.error('Fetch failed:', error);
           // Return offline page or cached version
-          return caches.match('/index.html');
+          return caches.match('./index.html');
         });
       })
   );
