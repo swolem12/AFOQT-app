@@ -126,11 +126,11 @@ body::after {
 }
 
 .panel-header {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw + 0.5rem, 2.5rem);
     text-align: center;
     margin-bottom: 30px;
     text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
-    letter-spacing: 4px;
+    letter-spacing: clamp(2px, 0.5vw, 4px);
     animation: textGlow 2s ease-in-out infinite, typeIn 1s steps(20);
     font-weight: bold;
     position: relative;
@@ -147,7 +147,7 @@ body::after {
     color: #00ffff;
     border: 2px solid #00ffff;
     padding: 12px 24px;
-    font-size: 1rem;
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
     cursor: pointer;
     border-radius: 4px;
     transition: all 0.3s ease;
@@ -202,12 +202,12 @@ body::after {
 
 .btn-small {
     padding: 8px 16px;
-    font-size: 0.9rem;
+    font-size: clamp(0.75rem, 1.2vw, 0.9rem);
 }
 
 .btn-large {
     padding: 16px 32px;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 /* Grid layouts */
@@ -353,14 +353,14 @@ body::after {
 }
 
 .tile-title {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     font-weight: bold;
     margin-bottom: 8px;
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
 .tile-description {
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
     opacity: 0.8;
     line-height: 1.4;
 }
@@ -418,13 +418,13 @@ body::after {
 }
 
 .quiz-info {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
 }
 
 .timer {
     font-family: 'Courier New', monospace;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: bold;
     padding: 10px 20px;
     background: rgba(0, 0, 0, 0.9);
@@ -461,7 +461,7 @@ body::after {
 }
 
 .question-prompt {
-    font-size: 1.3rem;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
     margin: 30px 0;
     padding: 20px;
     background: rgba(0, 255, 255, 0.05);
@@ -472,6 +472,8 @@ body::after {
         0 0 20px rgba(0, 255, 255, 0.1),
         inset 0 0 30px rgba(0, 255, 255, 0.02);
     animation: questionReveal 0.6s ease-out;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 @keyframes questionReveal {
@@ -509,11 +511,12 @@ body::after {
     cursor: pointer;
     border-radius: 4px;
     transition: all 0.3s ease;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
     font-family: 'Courier New', 'Courier', monospace;
     position: relative;
     overflow: hidden;
     animation: optionAppear 0.4s ease-out backwards;
+    word-wrap: break-word;
 }
 
 @keyframes optionAppear {
@@ -709,7 +712,7 @@ body::after {
 }
 
 .score-display {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: bold;
     margin: 20px 0;
     text-shadow: 
@@ -752,7 +755,7 @@ body::after {
 }
 
 .stat-line {
-    font-size: 1.3rem;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
     margin: 10px 0;
 }
 
@@ -820,6 +823,15 @@ body::after {
 
 .history-stats {
     font-size: 0.95rem;
+}
+
+/* Header controls for home screen */
+.header-controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 /* Action buttons */
@@ -896,7 +908,7 @@ body::after {
 }
 
 .status-name {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: bold;
     margin-bottom: 10px;
     text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
@@ -904,7 +916,7 @@ body::after {
 }
 
 .status-level {
-    font-size: 1.8rem;
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
     margin-bottom: 5px;
     color: #ffff00;
     text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00;
@@ -912,7 +924,7 @@ body::after {
 }
 
 .status-total-stats {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     opacity: 0.9;
 }
 
@@ -992,12 +1004,12 @@ body::after {
 
 .stat-topic-name {
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
     text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
 }
 
 .stat-points {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     font-weight: bold;
     color: #ffff00;
     text-shadow: 0 0 10px #ffff00;
@@ -1182,13 +1194,13 @@ body::after {
 }
 
 .player-name {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     font-weight: bold;
     text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
 }
 
 .player-level {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
     color: #ffff00;
     text-shadow: 0 0 10px #ffff00;
 }
@@ -1359,7 +1371,7 @@ body::after {
 }
 
 .player-name-login {
-    font-size: 1.4em;
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
     font-weight: bold;
     color: #00ffff;
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
@@ -1367,13 +1379,13 @@ body::after {
 }
 
 .player-level-login {
-    font-size: 1.1em;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
     color: #ffff00;
     margin-bottom: 3px;
 }
 
 .player-stats-login {
-    font-size: 0.9em;
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
     opacity: 0.8;
 }
 

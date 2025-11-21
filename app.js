@@ -1338,7 +1338,7 @@ const aviationTopics = [
             const shuffled = shuffleArray(allOptions);
             
             return {
-                prompt: item.q,
+                prompt: `⚠️ NOTE: This section typically requires aircraft diagrams and images.\n\n${item.q}`,
                 options: shuffled,
                 correctIndex: shuffled.indexOf(item.a),
                 explanation: item.exp
@@ -1379,7 +1379,7 @@ const instrumentTopics = [
             const shuffled = shuffleArray(allOptions);
             
             return {
-                prompt: `Based on the instrument panel, the aircraft is:\nHeading: ${correct.heading}\nBank: ${correct.bank}\nPitch: ${correct.pitch}\n\nWhat is the aircraft attitude?`,
+                prompt: `⚠️ NOTE: This section typically requires instrument panel diagrams.\n\nBased on the instrument panel, the aircraft is:\nHeading: ${correct.heading}\nBank: ${correct.bank}\nPitch: ${correct.pitch}\n\nWhat is the aircraft attitude?`,
                 options: shuffled.map(a => a.desc),
                 correctIndex: shuffled.indexOf(correct),
                 explanation: `The correct interpretation is: ${correct.desc}`
@@ -1441,7 +1441,7 @@ const tableTopics = [
             });
             
             return {
-                prompt: `Find the value at Row ${targetRow}, Column ${targetCol}:\n\n${tableDisplay}`,
+                prompt: `⚠️ NOTE: This section typically requires visual tables and grids.\n\nFind the value at Row ${targetRow}, Column ${targetCol}:\n\n${tableDisplay}`,
                 options: shuffled,
                 correctIndex: shuffled.indexOf(String(correctValue)),
                 explanation: `The value at Row ${targetRow}, Column ${targetCol} is ${correctValue}`
@@ -1518,7 +1518,7 @@ const blockTopics = [
             const shuffled = shuffleArray(options);
             
             return {
-                prompt: `${scenario.desc}\n\n${question.q}`,
+                prompt: `⚠️ NOTE: This section typically requires 3D block diagrams.\n\n${scenario.desc}\n\n${question.q}`,
                 options: shuffled.map(String),
                 correctIndex: shuffled.indexOf(question.a),
                 explanation: `The correct answer is ${question.a} blocks.`
@@ -2140,21 +2140,20 @@ function renderHome() {
     
     return `
         <div class="panel">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                <h1 class="panel-header" style="margin: 0;">AFOQT QUEST</h1>
-                <div style="display: flex; gap: 10px;">
-                    <button class="btn btn-small" id="change-character-btn" style="animation: none;">
-                        ${state.currentPlayer ? `👤 ${state.currentPlayer.name}` : '👤 Change Character'}
+            <h1 class="panel-header">AFOQT QUEST</h1>
+            
+            <div class="header-controls">
+                <button class="btn btn-small" id="change-character-btn">
+                    ${state.currentPlayer ? `👤 ${state.currentPlayer.name}` : '👤 Change Character'}
+                </button>
+                ${state.currentPlayer ? `
+                    <button class="btn btn-small" id="status-btn">
+                        ⚔ Status (Lv. ${playerInfo.level})
                     </button>
-                    ${state.currentPlayer ? `
-                        <button class="btn btn-small" id="status-btn" style="animation: none;">
-                            ⚔ Status (Lv. ${playerInfo.level})
-                        </button>
-                    ` : ''}
-                    <button class="btn btn-small" id="settings-btn" style="animation: none;">
-                        ⚙ Settings
-                    </button>
-                </div>
+                ` : ''}
+                <button class="btn btn-small" id="settings-btn">
+                    ⚙ Settings
+                </button>
             </div>
             
             <h2>Subjects</h2>
