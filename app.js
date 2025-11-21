@@ -122,7 +122,7 @@ function showBootScreen() {
 // Global State
 // ============================================================================
 const state = {
-    screen: 'home', // 'home' | 'subject' | 'mode-select' | 'quiz' | 'results'
+    screen: 'home', // 'home' | 'subject' | 'mode-select' | 'quiz' | 'results' | 'status'
     players: [],
     currentPlayer: null,
     currentSubject: null,
@@ -1076,6 +1076,42 @@ function formatDate(timestamp) {
 }
 
 // ============================================================================
+// RPG Character Status System
+// ============================================================================
+function computePlayerTotals(player) {
+    const stats = player.stats || {};
+    let totalStatPoints = 0;
+    for (const topicId in stats) {
+        totalStatPoints += stats[topicId].statPoints || 0;
+    }
+    const level = 1 + Math.floor(totalStatPoints / 5);
+    const pointsIntoLevel = totalStatPoints % 5;
+    const pointsToNextLevel = 5 - pointsIntoLevel;
+    return { totalStatPoints, level, pointsIntoLevel, pointsToNextLevel };
+}
+
+function updatePlayerStats(player, topicId, correctCount) {
+    // Initialize stats if needed
+    if (!player.stats) {
+        player.stats = {};
+    }
+    
+    // Initialize topic stats if needed
+    if (!player.stats[topicId]) {
+        player.stats[topicId] = {
+            correctAnswers: 0,
+            statPoints: 0
+        };
+    }
+    
+    // Update correct answers and recalculate stat points
+    player.stats[topicId].correctAnswers += correctCount;
+    player.stats[topicId].statPoints = Math.floor(player.stats[topicId].correctAnswers / 5);
+    
+    return player;
+}
+
+// ============================================================================
 // LocalStorage Functions
 // ============================================================================
 function loadPlayers() {
@@ -1238,6 +1274,10 @@ function finishQuiz() {
         };
         
         state.currentPlayer.sessions.push(session);
+        
+        // Update RPG stats
+        updatePlayerStats(state.currentPlayer, state.currentTopic.id, state.quiz.score);
+        
         savePlayers(state.players);
     }
     
@@ -1270,6 +1310,15 @@ function goToSubject(subjectId) {
     render();
 }
 
+function goToStatus() {
+    if (!state.currentPlayer) {
+        return; // Can't view status without a player
+    }
+    playSfx('nav');
+    state.screen = 'status';
+    render();
+}
+
 // ============================================================================
 // Render Functions
 // ============================================================================
@@ -1293,15 +1342,27 @@ function render() {
         case 'results':
             root.innerHTML = renderResults();
             break;
+        case 'status':
+            root.innerHTML = renderStatus();
+            break;
     }
     
     attachEventListeners();
 }
 
 function renderHome() {
+    const playerInfo = state.currentPlayer ? computePlayerTotals(state.currentPlayer) : null;
+    
     return `
         <div class="panel">
-            <h1 class="panel-header">AFOQT STUDY CONSOLE</h1>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h1 class="panel-header" style="margin: 0;">AFOQT STUDY CONSOLE</h1>
+                ${state.currentPlayer ? `
+                    <button class="btn btn-small" id="status-btn" style="animation: none;">
+                        ⚔ Status (Lv. ${playerInfo.level})
+                    </button>
+                ` : ''}
+            </div>
             
             <div class="player-section">
                 <h2>Player Selection</h2>
@@ -1542,6 +1603,76 @@ function renderResults() {
     `;
 }
 
+function renderStatus() {
+    if (!state.currentPlayer) {
+        return '<div class="panel"><h1>No player selected</h1></div>';
+    }
+    
+    const { totalStatPoints, level, pointsIntoLevel, pointsToNextLevel } = computePlayerTotals(state.currentPlayer);
+    const stats = state.currentPlayer.stats || {};
+    
+    // Get all topics for display
+    const allTopicStats = topics.map(topic => {
+        const topicStat = stats[topic.id] || { correctAnswers: 0, statPoints: 0 };
+        return {
+            topicId: topic.id,
+            topicName: topic.name,
+            correctAnswers: topicStat.correctAnswers,
+            statPoints: topicStat.statPoints
+        };
+    });
+    
+    return `
+        <div class="panel">
+            <h1 class="panel-header">Character Status</h1>
+            
+            <div class="status-header">
+                <div class="status-player-info">
+                    <div class="status-name">${state.currentPlayer.name}</div>
+                    <div class="status-level">Level ${level}</div>
+                    <div class="status-total-stats">Total Stat Points: ${totalStatPoints}</div>
+                </div>
+                
+                <div class="status-progress">
+                    <div class="status-progress-label">Progress to Level ${level + 1}</div>
+                    <div class="status-progress-bar">
+                        <div class="status-progress-fill" style="width: ${(pointsIntoLevel / 5) * 100}%"></div>
+                    </div>
+                    <div class="status-progress-text">${pointsIntoLevel} / 5 points</div>
+                </div>
+            </div>
+            
+            <h2 style="margin: 30px 0 20px 0; text-align: center;">Topic Stats</h2>
+            
+            <div class="stats-grid">
+                ${allTopicStats.map(stat => {
+                    const maxBarWidth = 20; // Max stat points to show in bar
+                    const barPercentage = Math.min((stat.statPoints / maxBarWidth) * 100, 100);
+                    
+                    return `
+                        <div class="stat-item">
+                            <div class="stat-header">
+                                <div class="stat-topic-name">${stat.topicName}</div>
+                                <div class="stat-points">SP: ${stat.statPoints}</div>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" style="width: ${barPercentage}%"></div>
+                            </div>
+                            <div class="stat-details">
+                                Correct Answers: ${stat.correctAnswers}
+                            </div>
+                        </div>
+                    `;
+                }).join('')}
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn" id="home-btn">← Home</button>
+            </div>
+        </div>
+    `;
+}
+
 // ============================================================================
 // Event Listeners
 // ============================================================================
@@ -1566,6 +1697,12 @@ function attachEventListeners() {
             selectPlayer(e.target.value);
             render();
         });
+    }
+    
+    // Status button
+    const statusBtn = document.getElementById('status-btn');
+    if (statusBtn) {
+        statusBtn.addEventListener('click', goToStatus);
     }
     
     // Subject tiles
