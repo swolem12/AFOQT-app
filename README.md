@@ -17,15 +17,21 @@ Retro terminal study app for AFOQT preparation
 ## Usage
 
 ### Desktop/Browser
-1. Open `index.html` in any modern browser
+1. Visit [https://swolem12.github.io/AFOQT-app/](https://swolem12.github.io/AFOQT-app/) in any modern browser
 2. No installation or build step required
-3. Works completely offline
+3. Works completely offline after first visit
 
-### Mobile (PWA Installation)
-1. Open the app in Chrome/Edge/Safari on your phone
-2. Tap the menu (⋮) and select "Add to Home Screen" or "Install App"
-3. The app will install like a native app
-4. Launch from your home screen - works fully offline
+### Mobile Installation (Recommended)
+
+**Install as PWA (Progressive Web App):**
+1. Open [https://swolem12.github.io/AFOQT-app/](https://swolem12.github.io/AFOQT-app/) in Chrome on your Android phone
+2. Tap the menu (⋮) and select **"Add to Home Screen"** or **"Install App"**
+3. The app icon will appear on your home screen
+4. Launch from your home screen - runs in fullscreen mode like a native app
+5. Works fully offline after installation
+
+**Want an APK file instead?**  
+See [APK-SETUP.md](APK-SETUP.md) for detailed instructions on converting this PWA to an Android APK file using PWABuilder, Bubblewrap, or Android Studio.
 
 ## PWA Features (NEW!)
 ✅ Installable on mobile devices

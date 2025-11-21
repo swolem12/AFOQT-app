@@ -1,0 +1,45 @@
+{
+  "name": "pwabuilder-config",
+  "description": "Configuration for generating Android APK via PWABuilder",
+  "instructions": "Upload this file to PWABuilder.com or use with PWABuilder CLI",
+  "platform": "android",
+  "package": {
+    "packageId": "com.github.swolem12.afoqtapp",
+    "name": "AFOQT Quest",
+    "version": "1.0.0",
+    "versionCode": 1,
+    "minSdkVersion": 21,
+    "targetSdkVersion": 33
+  },
+  "webManifestUrl": "https://swolem12.github.io/AFOQT-app/manifest.json",
+  "url": "https://swolem12.github.io/AFOQT-app/",
+  "host": "swolem12.github.io",
+  "startUrl": "/AFOQT-app/",
+  "display": "standalone",
+  "themeColor": "#00ffff",
+  "backgroundColor": "#000000",
+  "enableNotifications": false,
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "features": {
+    "locationDelegation": {
+      "enabled": false
+    },
+    "playBilling": {
+      "enabled": false
+    }
+  },
+  "signing": {
+    "file": null,
+    "alias": null,
+    "fullName": "AFOQT Quest Developer",
+    "organization": "AFOQT Quest",
+    "organizationalUnit": "Development",
+    "countryCode": "US"
+  },
+  "shortcuts": [],
+  "splash": {
+    "backgroundColor": "#000000",
+    "fadeOutDuration": 300
+  }
+}
