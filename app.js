@@ -2466,7 +2466,7 @@ function renderQuiz() {
                 </div>
             ` : ''}
             
-            <div class="action-buttons">
+            <div class="action-buttons quiz-action-buttons">
                 <button class="btn" id="home-btn">← Home</button>
                 ${answered ? `
                     <button class="btn" id="next-btn">
