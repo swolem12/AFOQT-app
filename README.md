@@ -64,3 +64,16 @@ See [APK-SETUP.md](APK-SETUP.md) for detailed instructions on converting this PW
 - [ ] Study streak tracking
 - [ ] Additional AFOQT sections (Instrument Comprehension, Aviation Information, etc.)
 
+## 📱 Installation Guides
+
+Need help installing on your device? Check out these guides:
+
+- **[MOBILE-INSTALL.md](MOBILE-INSTALL.md)** - Step-by-step mobile installation guide for Android and iOS
+- **[APK-SETUP.md](APK-SETUP.md)** - Complete guide for generating Android APK files
+- **[install.html](install.html)** - Interactive installation landing page
+
+## 🛠️ Tools & Resources
+
+- `generate-apk.sh` - Automated script for APK generation using Bubblewrap
+- `pwabuilder-config.json` - Configuration file for PWABuilder.com
+
