@@ -1611,14 +1611,26 @@ function renderStatus() {
     const { totalStatPoints, level, pointsIntoLevel, pointsToNextLevel } = computePlayerTotals(state.currentPlayer);
     const stats = state.currentPlayer.stats || {};
     
-    // Get all topics for display
-    const allTopicStats = topics.map(topic => {
-        const topicStat = stats[topic.id] || { correctAnswers: 0, statPoints: 0 };
+    // Aggregate stats by subject (main topics)
+    const subjectStats = subjects.map(subject => {
+        // Get all topics for this subject
+        const subjectTopics = topics.filter(t => t.subjectId === subject.id);
+        
+        // Sum up stats for all topics in this subject
+        let totalCorrectAnswers = 0;
+        let totalStatPoints = 0;
+        
+        subjectTopics.forEach(topic => {
+            const topicStat = stats[topic.id] || { correctAnswers: 0, statPoints: 0 };
+            totalCorrectAnswers += topicStat.correctAnswers;
+            totalStatPoints += topicStat.statPoints;
+        });
+        
         return {
-            topicId: topic.id,
-            topicName: topic.name,
-            correctAnswers: topicStat.correctAnswers,
-            statPoints: topicStat.statPoints
+            subjectId: subject.id,
+            subjectName: subject.name,
+            correctAnswers: totalCorrectAnswers,
+            statPoints: totalStatPoints
         };
     });
     
@@ -1642,17 +1654,17 @@ function renderStatus() {
                 </div>
             </div>
             
-            <h2 style="margin: 30px 0 20px 0; text-align: center;">Topic Stats</h2>
+            <h2 style="margin: 30px 0 20px 0; text-align: center;">Subject Stats</h2>
             
             <div class="stats-grid">
-                ${allTopicStats.map(stat => {
-                    const maxBarWidth = 20; // Max stat points to show in bar
+                ${subjectStats.map(stat => {
+                    const maxBarWidth = 50; // Max stat points to show in bar (increased for subjects)
                     const barPercentage = Math.min((stat.statPoints / maxBarWidth) * 100, 100);
                     
                     return `
                         <div class="stat-item">
                             <div class="stat-header">
-                                <div class="stat-topic-name">${stat.topicName}</div>
+                                <div class="stat-topic-name">${stat.subjectName}</div>
                                 <div class="stat-points">SP: ${stat.statPoints}</div>
                             </div>
                             <div class="stat-bar">
