@@ -62,6 +62,13 @@ document.head.appendChild(particleStyle);
 // Boot Screen Effect - Enhanced ASCII RPG Style
 // ============================================================================
 function showBootScreen() {
+    // Configuration constants
+    const MATRIX_COLUMN_WIDTH = 20;
+    const MATRIX_RESET_PROBABILITY = 0.975;
+    const FADE_DURATION_MS = 800;
+    const AUTO_FINISH_DELAY_MS = 2000;
+    const TYPING_INTERVAL_MS = 100;
+    
     const asciiLogo = `
     ╔═══════════════════════════════════════════════════════════════════════╗
     ║                                                                       ║
@@ -227,9 +234,10 @@ function showBootScreen() {
     matrixCanvas.width = window.innerWidth;
     matrixCanvas.height = window.innerHeight;
     
-    const columns = Math.floor(matrixCanvas.width / 20);
+    const columns = Math.floor(matrixCanvas.width / MATRIX_COLUMN_WIDTH);
     const drops = Array(columns).fill(1);
     
+    // Matrix characters: binary digits + Japanese katakana for cyberpunk aesthetic
     const matrixChars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
     
     function drawMatrix() {
@@ -241,9 +249,9 @@ function showBootScreen() {
         
         for (let i = 0; i < drops.length; i++) {
             const text = matrixChars[Math.floor(Math.random() * matrixChars.length)];
-            ctx.fillText(text, i * 20, drops[i] * 20);
+            ctx.fillText(text, i * MATRIX_COLUMN_WIDTH, drops[i] * MATRIX_COLUMN_WIDTH);
             
-            if (drops[i] * 20 > matrixCanvas.height && Math.random() > 0.975) {
+            if (drops[i] * MATRIX_COLUMN_WIDTH > matrixCanvas.height && Math.random() > MATRIX_RESET_PROBABILITY) {
                 drops[i] = 0;
             }
             drops[i]++;
@@ -281,16 +289,16 @@ function showBootScreen() {
             // Allow click or key to skip
             const finishBoot = () => {
                 clearInterval(matrixInterval);
-                bootScreen.style.transition = 'opacity 0.8s';
+                bootScreen.style.transition = `opacity ${FADE_DURATION_MS / 1000}s`;
                 bootScreen.style.opacity = '0';
                 setTimeout(() => {
                     bootScreen.remove();
                     style.remove();
-                }, 800);
+                }, FADE_DURATION_MS);
             };
             
-            // Auto-finish after 2 seconds or on user interaction
-            const autoFinishTimeout = setTimeout(finishBoot, 2000);
+            // Auto-finish after delay or on user interaction
+            const autoFinishTimeout = setTimeout(finishBoot, AUTO_FINISH_DELAY_MS);
             
             const userInteract = () => {
                 clearTimeout(autoFinishTimeout);
@@ -302,7 +310,7 @@ function showBootScreen() {
             bootScreen.addEventListener('click', userInteract);
             document.addEventListener('keydown', userInteract);
         }
-    }, 100);
+    }, TYPING_INTERVAL_MS);
 }
 
 // ============================================================================
