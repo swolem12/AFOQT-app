@@ -473,7 +473,7 @@ body::after {
         inset 0 0 30px rgba(0, 255, 255, 0.02);
     animation: questionReveal 0.6s ease-out;
     white-space: pre-wrap;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 @keyframes questionReveal {
@@ -516,7 +516,7 @@ body::after {
     position: relative;
     overflow: hidden;
     animation: optionAppear 0.4s ease-out backwards;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 @keyframes optionAppear {
