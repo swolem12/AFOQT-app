@@ -128,13 +128,24 @@ function showBootScreen() {
 // Global State
 // ============================================================================
 const state = {
-    screen: 'home', // 'home' | 'subject' | 'mode-select' | 'difficulty-select' | 'quiz' | 'results' | 'status'
+    screen: 'home', // 'home' | 'subject' | 'mode-select' | 'difficulty-select' | 'quiz' | 'results' | 'status' | 'settings'
     players: [],
     currentPlayer: null,
     currentSubject: null,
     currentTopic: null,
     quizMode: 'practice', // 'practice' | 'test' | 'sprint'
     difficulty: 'beginner', // 'beginner' | 'advanced' | 'expert'
+    settings: {
+        volumes: {
+            master: 0.5,
+            nav: 0.5,
+            correct: 0.5,
+            wrong: 0.5,
+            levelup: 0.5,
+            boot: 0.5,
+            modal: 0.5
+        }
+    },
     quiz: {
         questions: [],
         currentIndex: 0,
@@ -171,6 +182,31 @@ const subjects = [
         id: 'science',
         name: 'Physical Science',
         description: 'Physics and chemistry basics'
+    },
+    {
+        id: 'situational',
+        name: 'Situational Judgement',
+        description: 'Decision-making and leadership'
+    },
+    {
+        id: 'aviation',
+        name: 'Aviation Knowledge',
+        description: 'Aircraft and flight principles'
+    },
+    {
+        id: 'instrument',
+        name: 'Instrument Comprehension',
+        description: 'Aircraft attitude and heading'
+    },
+    {
+        id: 'table',
+        name: 'Table Reading',
+        description: 'Data extraction and speed'
+    },
+    {
+        id: 'blocks',
+        name: 'Block Counting',
+        description: 'Spatial reasoning'
     }
 ];
 
@@ -996,12 +1032,323 @@ const scienceTopics = [
     }
 ];
 
+// ============================================================================
+// Topics with Question Generators - SITUATIONAL JUDGEMENT
+// ============================================================================
+const situationalTopics = [
+    {
+        id: 'situational-judgement',
+        name: 'Situational Judgement',
+        description: 'Leadership and decision-making scenarios',
+        subjectId: 'situational',
+        generateQuestion: () => {
+            const scenarios = [
+                {
+                    scenario: "You are leading a team that is falling behind schedule on an important project. One team member suggests cutting corners to meet the deadline.",
+                    question: "What is the MOST effective action?",
+                    best: "Discuss with the team alternative ways to prioritize tasks without compromising quality",
+                    options: [
+                        "Accept the suggestion to meet the deadline",
+                        "Report the team member to superiors",
+                        "Extend the deadline without consulting anyone"
+                    ]
+                },
+                {
+                    scenario: "During a briefing, you notice a colleague presenting incorrect information that could affect the mission.",
+                    question: "What should you do?",
+                    best: "Politely raise the issue privately with your colleague after the briefing",
+                    options: [
+                        "Interrupt the briefing immediately",
+                        "Ignore it and let them finish",
+                        "Report them to their supervisor"
+                    ]
+                },
+                {
+                    scenario: "A subordinate comes to you with a personal problem that is affecting their work performance.",
+                    question: "What is the BEST response?",
+                    best: "Listen empathetically and help them identify appropriate resources or support",
+                    options: [
+                        "Tell them to keep personal issues separate from work",
+                        "Try to solve their problem yourself",
+                        "Report them to human resources"
+                    ]
+                },
+                {
+                    scenario: "You discover that a popular policy you implemented is not working as intended and may need to be reversed.",
+                    question: "What should you do?",
+                    best: "Acknowledge the issue, gather data, and adjust the policy based on feedback",
+                    options: [
+                        "Defend the policy regardless of results",
+                        "Blame others for poor implementation",
+                        "Quietly stop enforcing it without announcement"
+                    ]
+                },
+                {
+                    scenario: "Two team members are in conflict, affecting team morale and productivity.",
+                    question: "What is the MOST effective approach?",
+                    best: "Meet with both parties together to facilitate communication and find common ground",
+                    options: [
+                        "Ignore it and hope they work it out",
+                        "Take sides with the person you know better",
+                        "Separate them permanently"
+                    ]
+                },
+                {
+                    scenario: "You are assigned a task that you believe is inefficient, but your supervisor insists on a specific approach.",
+                    question: "What should you do?",
+                    best: "Respectfully present your alternative approach with supporting rationale",
+                    options: [
+                        "Do it your way without telling them",
+                        "Complain to other team members",
+                        "Follow orders without question"
+                    ]
+                }
+            ];
+            
+            const scenario = scenarios[Math.floor(Math.random() * scenarios.length)];
+            const allOptions = [scenario.best, ...scenario.options];
+            const shuffled = shuffleArray(allOptions);
+            
+            return {
+                prompt: `${scenario.scenario}\n\n${scenario.question}`,
+                options: shuffled,
+                correctIndex: shuffled.indexOf(scenario.best),
+                explanation: `The best approach demonstrates leadership, communication, and sound judgment.`
+            };
+        }
+    }
+];
+
+// ============================================================================
+// Topics with Question Generators - AVIATION KNOWLEDGE
+// ============================================================================
+const aviationTopics = [
+    {
+        id: 'aviation-knowledge',
+        name: 'Aviation Knowledge',
+        description: 'Aircraft systems and flight principles',
+        subjectId: 'aviation',
+        generateQuestion: () => {
+            const questions = [
+                { q: "What are the four forces of flight?", a: "Lift, Weight, Thrust, Drag", opts: ["Lift, Gravity, Speed, Wind", "Up, Down, Forward, Backward", "Pitch, Roll, Yaw, Speed"], exp: "The four forces are Lift (up), Weight (down), Thrust (forward), and Drag (backward)" },
+                { q: "What does the rudder control?", a: "Yaw", opts: ["Pitch", "Roll", "Altitude"], exp: "The rudder controls yaw, which is rotation around the vertical axis" },
+                { q: "What does the elevator control?", a: "Pitch", opts: ["Yaw", "Roll", "Speed"], exp: "The elevator controls pitch, which is rotation around the lateral axis" },
+                { q: "What does the aileron control?", a: "Roll", opts: ["Pitch", "Yaw", "Altitude"], exp: "Ailerons control roll, which is rotation around the longitudinal axis" },
+                { q: "What is the standard sea level atmospheric pressure?", a: "29.92 inches Hg", opts: ["30.00 inches Hg", "14.7 psi only", "1013 mb only"], exp: "Standard sea level pressure is 29.92 inches of mercury (or 1013.25 mb)" },
+                { q: "What is V1 speed?", a: "Decision speed for takeoff", opts: ["Landing speed", "Cruise speed", "Stall speed"], exp: "V1 is the critical engine failure recognition speed during takeoff" },
+                { q: "What instrument shows rate of climb or descent?", a: "Vertical Speed Indicator", opts: ["Altimeter", "Airspeed Indicator", "Attitude Indicator"], exp: "The VSI (Vertical Speed Indicator) shows rate of climb or descent" },
+                { q: "What does 'angle of attack' mean?", a: "Angle between chord line and relative wind", opts: ["Angle of the aircraft to ground", "Angle of climb", "Bank angle"], exp: "Angle of attack is the angle between the wing's chord line and the oncoming airflow" },
+                { q: "What causes an aircraft to stall?", a: "Exceeding critical angle of attack", opts: ["Flying too fast", "Running out of fuel", "Engine failure"], exp: "A stall occurs when the wing exceeds its critical angle of attack, disrupting airflow" },
+                { q: "What is the purpose of flaps?", a: "Increase lift and drag at lower speeds", opts: ["Increase speed", "Control direction", "Reduce weight"], exp: "Flaps increase wing camber to generate more lift and drag for takeoff and landing" },
+                { q: "Which direction does a propeller rotate (viewed from cockpit) in most single-engine aircraft?", a: "Clockwise", opts: ["Counterclockwise", "Either direction", "Depends on altitude"], exp: "Most single-engine aircraft have propellers that rotate clockwise when viewed from the cockpit" },
+                { q: "What is the minimum safe altitude over congested areas?", a: "1,000 feet above highest obstacle within 2,000 feet", opts: ["500 feet AGL", "1,500 feet MSL", "Any altitude"], exp: "FAA regulations require 1,000 feet above the highest obstacle within a 2,000-foot radius" }
+            ];
+            
+            const item = questions[Math.floor(Math.random() * questions.length)];
+            const allOptions = [item.a, ...item.opts];
+            const shuffled = shuffleArray(allOptions);
+            
+            return {
+                prompt: item.q,
+                options: shuffled,
+                correctIndex: shuffled.indexOf(item.a),
+                explanation: item.exp
+            };
+        }
+    }
+];
+
+// ============================================================================
+// Topics with Question Generators - INSTRUMENT COMPREHENSION
+// ============================================================================
+const instrumentTopics = [
+    {
+        id: 'instrument-comprehension',
+        name: 'Instrument Comprehension',
+        description: 'Aircraft attitude and heading interpretation',
+        subjectId: 'instrument',
+        generateQuestion: () => {
+            const attitudes = [
+                { heading: "North", bank: "Level", pitch: "Level", desc: "Straight and level flight heading North" },
+                { heading: "East", bank: "Right 30°", pitch: "Level", desc: "Banking right 30 degrees while heading East" },
+                { heading: "South", bank: "Level", pitch: "Climbing", desc: "Climbing while heading South" },
+                { heading: "West", bank: "Left 20°", pitch: "Descending", desc: "Banking left and descending while heading West" },
+                { heading: "Northeast", bank: "Level", pitch: "Level", desc: "Straight and level heading Northeast (045°)" },
+                { heading: "Southeast", bank: "Right 15°", pitch: "Climbing", desc: "Banking right and climbing heading Southeast" },
+                { heading: "Southwest", bank: "Left 25°", pitch: "Level", desc: "Banking left heading Southwest" },
+                { heading: "Northwest", bank: "Level", pitch: "Descending", desc: "Descending heading Northwest" }
+            ];
+            
+            const correct = attitudes[Math.floor(Math.random() * attitudes.length)];
+            
+            // Generate distractors
+            const otherAttitudes = attitudes.filter(a => a !== correct);
+            const shuffledOthers = shuffleArray(otherAttitudes);
+            const distractors = shuffledOthers.slice(0, 3);
+            
+            const allOptions = [correct, ...distractors];
+            const shuffled = shuffleArray(allOptions);
+            
+            return {
+                prompt: `Based on the instrument panel, the aircraft is:\nHeading: ${correct.heading}\nBank: ${correct.bank}\nPitch: ${correct.pitch}\n\nWhat is the aircraft attitude?`,
+                options: shuffled.map(a => a.desc),
+                correctIndex: shuffled.indexOf(correct),
+                explanation: `The correct interpretation is: ${correct.desc}`
+            };
+        }
+    }
+];
+
+// ============================================================================
+// Topics with Question Generators - TABLE READING
+// ============================================================================
+const tableTopics = [
+    {
+        id: 'table-reading',
+        name: 'Table Reading',
+        description: 'Quick data extraction from tables',
+        subjectId: 'table',
+        generateQuestion: () => {
+            // Generate a random data table
+            const rows = 5;
+            const cols = 5;
+            const rowLabels = Array.from({length: rows}, (_, i) => (i + 1) * 10);
+            const colLabels = Array.from({length: cols}, (_, i) => (i + 1) * 5);
+            
+            // Create table data
+            const table = {};
+            rowLabels.forEach(row => {
+                table[row] = {};
+                colLabels.forEach(col => {
+                    table[row][col] = Math.floor(Math.random() * 90) + 10;
+                });
+            });
+            
+            // Pick a random cell
+            const targetRow = rowLabels[Math.floor(Math.random() * rows)];
+            const targetCol = colLabels[Math.floor(Math.random() * cols)];
+            const correctValue = table[targetRow][targetCol];
+            
+            // Generate distractors from nearby cells
+            const distractors = [];
+            rowLabels.forEach(row => {
+                colLabels.forEach(col => {
+                    if (row !== targetRow || col !== targetCol) {
+                        distractors.push(table[row][col]);
+                    }
+                });
+            });
+            
+            const shuffledDistractors = shuffleArray(distractors);
+            const options = [correctValue, ...shuffledDistractors.slice(0, 3)];
+            const shuffled = shuffleArray([...new Set(options)].map(String)); // Remove duplicates
+            
+            // Build table display
+            let tableDisplay = `Row\\Col  ${colLabels.join('   ')}\n`;
+            rowLabels.forEach(row => {
+                tableDisplay += `${row.toString().padStart(3)}     `;
+                tableDisplay += colLabels.map(col => table[row][col].toString().padStart(2)).join('  ');
+                tableDisplay += '\n';
+            });
+            
+            return {
+                prompt: `Find the value at Row ${targetRow}, Column ${targetCol}:\n\n${tableDisplay}`,
+                options: shuffled,
+                correctIndex: shuffled.indexOf(String(correctValue)),
+                explanation: `The value at Row ${targetRow}, Column ${targetCol} is ${correctValue}`
+            };
+        }
+    }
+];
+
+// ============================================================================
+// Topics with Question Generators - BLOCK COUNTING
+// ============================================================================
+const blockTopics = [
+    {
+        id: 'block-counting',
+        name: 'Block Counting',
+        description: 'Spatial reasoning with block configurations',
+        subjectId: 'blocks',
+        generateQuestion: () => {
+            const scenarios = [
+                {
+                    desc: "A 3×3×3 cube with all blocks visible",
+                    blocks: 27,
+                    hidden: 1,
+                    touching: 6
+                },
+                {
+                    desc: "A 4×4×4 cube",
+                    blocks: 64,
+                    hidden: 8,
+                    touching: 24
+                },
+                {
+                    desc: "A 2×3×4 rectangular configuration",
+                    blocks: 24,
+                    hidden: 0,
+                    touching: 11
+                },
+                {
+                    desc: "A pyramid with a 4×4 base, 3 layers",
+                    blocks: 30,
+                    hidden: 1,
+                    touching: 13
+                },
+                {
+                    desc: "An L-shaped configuration: 5 blocks on bottom row, 3 on second layer",
+                    blocks: 8,
+                    hidden: 0,
+                    touching: 4
+                }
+            ];
+            
+            const scenario = scenarios[Math.floor(Math.random() * scenarios.length)];
+            
+            const questionTypes = [
+                {
+                    q: "How many total blocks are in this configuration?",
+                    a: scenario.blocks,
+                    distractors: [scenario.blocks - 1, scenario.blocks + 1, scenario.blocks + 3]
+                },
+                {
+                    q: "How many blocks are completely hidden from view?",
+                    a: scenario.hidden,
+                    distractors: [scenario.hidden + 1, scenario.hidden + 2, Math.max(0, scenario.hidden - 1)]
+                },
+                {
+                    q: "How many blocks touch the center block?",
+                    a: scenario.touching,
+                    distractors: [scenario.touching - 2, scenario.touching + 1, scenario.touching + 3]
+                }
+            ];
+            
+            const question = questionTypes[Math.floor(Math.random() * questionTypes.length)];
+            const options = [question.a, ...question.distractors];
+            const shuffled = shuffleArray(options);
+            
+            return {
+                prompt: `${scenario.desc}\n\n${question.q}`,
+                options: shuffled.map(String),
+                correctIndex: shuffled.indexOf(question.a),
+                explanation: `The correct answer is ${question.a} blocks.`
+            };
+        }
+    }
+];
+
 // Combine all topics and add subject IDs
 const topics = [
     ...mathTopics.map(t => ({ ...t, subjectId: 'math' })),
     ...verbalTopics,
     ...readingTopics,
-    ...scienceTopics
+    ...scienceTopics,
+    ...situationalTopics,
+    ...aviationTopics,
+    ...instrumentTopics,
+    ...tableTopics,
+    ...blockTopics
 ];
 
 // ============================================================================
@@ -1027,7 +1374,10 @@ function playBeep(frequency, duration, type = 'sine', gainValue = 0.1, delay = 0
         
         oscillator.frequency.value = frequency;
         oscillator.type = type;
-        gainNode.gain.value = gainValue;
+        
+        // Apply master volume and category volume
+        const masterVol = state.settings.volumes.master || 0.5;
+        gainNode.gain.value = gainValue * masterVol;
         
         const startTime = ctx.currentTime + delay;
         oscillator.start(startTime);
@@ -1048,7 +1398,10 @@ function playSweep(startFreq, endFreq, duration, type = 'square', gainValue = 0.
         gainNode.connect(ctx.destination);
         
         oscillator.type = type;
-        gainNode.gain.value = gainValue;
+        
+        // Apply master volume
+        const masterVol = state.settings.volumes.master || 0.5;
+        gainNode.gain.value = gainValue * masterVol;
         
         const startTime = ctx.currentTime + delay;
         oscillator.frequency.setValueAtTime(startFreq, startTime);
@@ -1062,85 +1415,113 @@ function playSweep(startFreq, endFreq, duration, type = 'square', gainValue = 0.
 }
 
 function playSfx(kind) {
+    // Get category volume (default to 0.5 if not set)
+    const categoryVol = state.settings.volumes[kind] || 0.5;
+    const masterVol = state.settings.volumes.master || 0.5;
+    const totalVol = categoryVol * masterVol;
+    
+    // If volume is 0, don't play
+    if (totalVol === 0) return;
+    
+    // Helper to apply volume to gain values
+    const applyVol = (baseGain) => baseGain * totalVol;
+    
     switch (kind) {
         case 'boot':
-            // Boot screen loading sound - retro computer startup
-            playBeep(100, 0.05, 'square', 0.15, 0);
-            playBeep(150, 0.05, 'square', 0.15, 0.06);
-            playBeep(200, 0.05, 'square', 0.15, 0.12);
-            playSweep(300, 600, 0.2, 'square', 0.12, 0.18);
+            // Boot screen - mysterious awakening with crystal chimes
+            playBeep(523, 0.08, 'sine', applyVol(0.15), 0);        // C
+            playBeep(659, 0.08, 'sine', applyVol(0.15), 0.09);     // E
+            playBeep(784, 0.08, 'sine', applyVol(0.15), 0.18);     // G
+            playBeep(1047, 0.15, 'sine', applyVol(0.18), 0.27);    // C (high)
+            playSweep(1047, 1568, 0.3, 'sine', applyVol(0.12), 0.42); // Magical shimmer
             break;
         case 'start':
-            // Quiz start - energetic upward arpeggio
-            playBeep(440, 0.08, 'square', 0.12, 0);
-            playBeep(554, 0.08, 'square', 0.12, 0.09);
-            playBeep(659, 0.08, 'square', 0.12, 0.18);
-            playBeep(880, 0.15, 'square', 0.15, 0.27);
+            // Quiz start - epic battle start fanfare
+            playBeep(392, 0.1, 'triangle', applyVol(0.15), 0);      // G
+            playBeep(523, 0.1, 'triangle', applyVol(0.15), 0.11);   // C
+            playBeep(659, 0.1, 'triangle', applyVol(0.15), 0.22);   // E
+            playBeep(784, 0.15, 'triangle', applyVol(0.18), 0.33);  // G
+            playBeep(1047, 0.2, 'sine', applyVol(0.18), 0.48);      // C (high)
             break;
         case 'correct':
-            // Correct answer - triumphant chime
-            playBeep(523, 0.08, 'square', 0.15, 0);
-            playBeep(659, 0.08, 'square', 0.15, 0.09);
-            playBeep(784, 0.12, 'square', 0.15, 0.18);
-            playBeep(1047, 0.15, 'sine', 0.12, 0.3);
+            // Correct answer - victorious chime progression
+            playBeep(659, 0.1, 'sine', applyVol(0.16), 0);          // E
+            playBeep(784, 0.1, 'sine', applyVol(0.16), 0.11);       // G
+            playBeep(1047, 0.12, 'sine', applyVol(0.16), 0.22);     // C
+            playBeep(1319, 0.18, 'sine', applyVol(0.18), 0.34);     // E (high)
+            // Add a sparkle effect
+            playBeep(1568, 0.08, 'sine', applyVol(0.12), 0.52);
+            playBeep(2093, 0.08, 'sine', applyVol(0.10), 0.56);
             break;
         case 'wrong':
-            // Wrong answer - descending error sound
-            playBeep(300, 0.1, 'sawtooth', 0.12, 0);
-            playBeep(250, 0.1, 'sawtooth', 0.12, 0.11);
-            playBeep(200, 0.15, 'sawtooth', 0.15, 0.22);
-            playBeep(150, 0.2, 'sawtooth', 0.15, 0.37);
+            // Wrong answer - gentle but clear negative melody
+            playBeep(440, 0.12, 'triangle', applyVol(0.14), 0);     // A
+            playBeep(415, 0.12, 'triangle', applyVol(0.14), 0.13);  // G#
+            playBeep(392, 0.12, 'triangle', applyVol(0.14), 0.26);  // G
+            playBeep(349, 0.2, 'sine', applyVol(0.16), 0.39);       // F
             break;
         case 'nav':
-            // Navigation click - crisp button press
-            playBeep(880, 0.04, 'square', 0.1, 0);
-            playBeep(660, 0.03, 'square', 0.08, 0.05);
+            // Navigation - quick crystalline blip
+            playBeep(1047, 0.04, 'sine', applyVol(0.12), 0);
+            playBeep(1319, 0.03, 'sine', applyVol(0.10), 0.04);
             break;
         case 'player':
-            // Player select - character selection jingle
-            playBeep(523, 0.08, 'square', 0.1, 0);
-            playBeep(659, 0.08, 'square', 0.1, 0.09);
-            playBeep(784, 0.12, 'square', 0.12, 0.18);
+            // Player select - character theme
+            playBeep(523, 0.1, 'triangle', applyVol(0.12), 0);
+            playBeep(659, 0.1, 'triangle', applyVol(0.12), 0.11);
+            playBeep(784, 0.15, 'sine', applyVol(0.14), 0.22);
+            playBeep(1047, 0.12, 'sine', applyVol(0.12), 0.37);
             break;
         case 'levelup':
-            // Level up - celebratory fanfare
-            playBeep(523, 0.1, 'square', 0.15, 0);
-            playBeep(659, 0.1, 'square', 0.15, 0.11);
-            playBeep(784, 0.1, 'square', 0.15, 0.22);
-            playBeep(1047, 0.15, 'sine', 0.15, 0.33);
-            playBeep(1319, 0.2, 'sine', 0.15, 0.48);
-            playSweep(1319, 1568, 0.3, 'sine', 0.12, 0.68);
+            // Level up - grand Final Fantasy style fanfare
+            playBeep(523, 0.12, 'triangle', applyVol(0.16), 0);      // C
+            playBeep(659, 0.12, 'triangle', applyVol(0.16), 0.13);   // E
+            playBeep(784, 0.12, 'triangle', applyVol(0.16), 0.26);   // G
+            playBeep(1047, 0.18, 'sine', applyVol(0.18), 0.39);      // C
+            playBeep(1319, 0.18, 'sine', applyVol(0.18), 0.57);      // E
+            playBeep(1568, 0.25, 'sine', applyVol(0.18), 0.75);      // G
+            // Victory shimmer
+            playSweep(1568, 2093, 0.4, 'sine', applyVol(0.14), 1.0);
+            // Final chord
+            playBeep(1047, 0.3, 'sine', applyVol(0.12), 1.4);
+            playBeep(1319, 0.3, 'sine', applyVol(0.12), 1.4);
+            playBeep(1568, 0.3, 'sine', applyVol(0.12), 1.4);
             break;
         case 'modal-open':
-            // Modal open - upward sweep
-            playSweep(440, 880, 0.15, 'square', 0.1, 0);
+        case 'modal':
+            // Modal open - upward magical sweep
+            playSweep(523, 1047, 0.2, 'sine', applyVol(0.12), 0);
+            playBeep(1319, 0.1, 'sine', applyVol(0.10), 0.2);
             break;
         case 'modal-close':
-            // Modal close - downward sweep
-            playSweep(880, 440, 0.12, 'square', 0.1, 0);
+            // Modal close - downward magical sweep
+            playSweep(1047, 523, 0.18, 'sine', applyVol(0.12), 0);
             break;
         case 'hover':
-            // Hover sound - subtle tick
-            playBeep(1200, 0.02, 'square', 0.06, 0);
+            // Hover - subtle menu cursor sound
+            playBeep(1568, 0.02, 'sine', applyVol(0.08), 0);
             break;
         case 'select':
-            // Selection confirm - positive beep
-            playBeep(880, 0.06, 'square', 0.1, 0);
-            playBeep(1047, 0.08, 'square', 0.1, 0.07);
+            // Selection - positive confirmation
+            playBeep(1047, 0.08, 'sine', applyVol(0.12), 0);
+            playBeep(1319, 0.1, 'sine', applyVol(0.12), 0.08);
             break;
         case 'timer-warning':
-            // Timer running low - urgent beeps
-            playBeep(880, 0.08, 'square', 0.12, 0);
-            playBeep(880, 0.08, 'square', 0.12, 0.2);
+            // Timer running low - urgent but musical
+            playBeep(880, 0.1, 'triangle', applyVol(0.14), 0);
+            playBeep(880, 0.1, 'triangle', applyVol(0.14), 0.25);
             break;
         case 'complete':
-            // Quiz complete - victory melody
-            playBeep(523, 0.1, 'square', 0.12, 0);
-            playBeep(659, 0.1, 'square', 0.12, 0.11);
-            playBeep(784, 0.1, 'square', 0.12, 0.22);
-            playBeep(659, 0.1, 'square', 0.12, 0.33);
-            playBeep(784, 0.15, 'square', 0.15, 0.44);
-            playBeep(1047, 0.3, 'sine', 0.15, 0.59);
+            // Quiz complete - celebration melody
+            playBeep(523, 0.12, 'triangle', applyVol(0.14), 0);
+            playBeep(659, 0.12, 'triangle', applyVol(0.14), 0.13);
+            playBeep(784, 0.12, 'triangle', applyVol(0.14), 0.26);
+            playBeep(659, 0.12, 'triangle', applyVol(0.14), 0.39);
+            playBeep(784, 0.18, 'sine', applyVol(0.16), 0.52);
+            playBeep(1047, 0.35, 'sine', applyVol(0.18), 0.7);
+            // Victory sparkles
+            playBeep(1568, 0.1, 'sine', applyVol(0.12), 1.05);
+            playBeep(2093, 0.1, 'sine', applyVol(0.10), 1.1);
             break;
     }
 }
@@ -1248,6 +1629,32 @@ function savePlayers(players) {
     }
 }
 
+function loadSettings() {
+    try {
+        const data = localStorage.getItem('afoqt-settings');
+        if (data) {
+            const loaded = JSON.parse(data);
+            // Merge with defaults to ensure all settings exist
+            state.settings = {
+                volumes: {
+                    ...state.settings.volumes,
+                    ...(loaded.volumes || {})
+                }
+            };
+        }
+    } catch (e) {
+        console.warn('Could not load settings:', e);
+    }
+}
+
+function saveSettings() {
+    try {
+        localStorage.setItem('afoqt-settings', JSON.stringify(state.settings));
+    } catch (e) {
+        console.warn('Could not save settings:', e);
+    }
+}
+
 // ============================================================================
 // Player Management
 // ============================================================================
@@ -1280,10 +1687,22 @@ function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     state.quiz.mode = mode;
     state.quiz.difficulty = difficulty;
     
-    // Generate questions based on mode (5 for sprint, 20 for others)
+    // Generate unique questions based on mode (5 for sprint, 20 for others)
     const questionCount = mode === 'sprint' ? 5 : 20;
-    for (let i = 0; i < questionCount; i++) {
-        state.quiz.questions.push(topic.generateQuestion());
+    const usedQuestions = new Set();
+    const maxAttempts = questionCount * 10; // Prevent infinite loops
+    let attempts = 0;
+    
+    while (state.quiz.questions.length < questionCount && attempts < maxAttempts) {
+        const question = topic.generateQuestion();
+        // Create a unique key for this question based on prompt and correct answer
+        const questionKey = `${question.prompt}|${question.options[question.correctIndex]}`;
+        
+        if (!usedQuestions.has(questionKey)) {
+            usedQuestions.add(questionKey);
+            state.quiz.questions.push(question);
+        }
+        attempts++;
     }
     
     state.quiz.currentIndex = 0;
@@ -1440,6 +1859,12 @@ function goToStatus() {
     render();
 }
 
+function goToSettings() {
+    playSfx('nav');
+    state.screen = 'settings';
+    render();
+}
+
 // ============================================================================
 // Render Functions
 // ============================================================================
@@ -1469,6 +1894,9 @@ function render() {
         case 'status':
             root.innerHTML = renderStatus();
             break;
+        case 'settings':
+            root.innerHTML = renderSettings();
+            break;
     }
     
     attachEventListeners();
@@ -1490,6 +1918,9 @@ function renderHome() {
                             ⚔ Status (Lv. ${playerInfo.level})
                         </button>
                     ` : ''}
+                    <button class="btn btn-small" id="settings-btn" style="animation: none;">
+                        ⚙ Settings
+                    </button>
                 </div>
             </div>
             
@@ -1913,6 +2344,103 @@ function renderStatus() {
     `;
 }
 
+function renderSettings() {
+    const volumes = state.settings.volumes;
+    
+    return `
+        <div class="panel">
+            <h1 class="panel-header">Settings</h1>
+            
+            <div style="max-width: 600px; margin: 0 auto;">
+                <h2 style="margin: 30px 0 20px 0;">Volume Controls</h2>
+                
+                <div class="settings-section">
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <span class="setting-name">Master Volume</span>
+                            <span class="setting-value">${Math.round(volumes.master * 100)}%</span>
+                        </label>
+                        <input type="range" class="volume-slider" id="volume-master" 
+                            min="0" max="100" value="${volumes.master * 100}" 
+                            data-volume-type="master">
+                        <button class="btn btn-small test-sound-btn" data-sound-type="nav">Test</button>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <span class="setting-name">Navigation Sounds</span>
+                            <span class="setting-value">${Math.round(volumes.nav * 100)}%</span>
+                        </label>
+                        <input type="range" class="volume-slider" id="volume-nav" 
+                            min="0" max="100" value="${volumes.nav * 100}" 
+                            data-volume-type="nav">
+                        <button class="btn btn-small test-sound-btn" data-sound-type="nav">Test</button>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <span class="setting-name">Correct Answer</span>
+                            <span class="setting-value">${Math.round(volumes.correct * 100)}%</span>
+                        </label>
+                        <input type="range" class="volume-slider" id="volume-correct" 
+                            min="0" max="100" value="${volumes.correct * 100}" 
+                            data-volume-type="correct">
+                        <button class="btn btn-small test-sound-btn" data-sound-type="correct">Test</button>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <span class="setting-name">Wrong Answer</span>
+                            <span class="setting-value">${Math.round(volumes.wrong * 100)}%</span>
+                        </label>
+                        <input type="range" class="volume-slider" id="volume-wrong" 
+                            min="0" max="100" value="${volumes.wrong * 100}" 
+                            data-volume-type="wrong">
+                        <button class="btn btn-small test-sound-btn" data-sound-type="wrong">Test</button>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <span class="setting-name">Level Up</span>
+                            <span class="setting-value">${Math.round(volumes.levelup * 100)}%</span>
+                        </label>
+                        <input type="range" class="volume-slider" id="volume-levelup" 
+                            min="0" max="100" value="${volumes.levelup * 100}" 
+                            data-volume-type="levelup">
+                        <button class="btn btn-small test-sound-btn" data-sound-type="levelup">Test</button>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <span class="setting-name">Boot & Start</span>
+                            <span class="setting-value">${Math.round(volumes.boot * 100)}%</span>
+                        </label>
+                        <input type="range" class="volume-slider" id="volume-boot" 
+                            min="0" max="100" value="${volumes.boot * 100}" 
+                            data-volume-type="boot">
+                        <button class="btn btn-small test-sound-btn" data-sound-type="start">Test</button>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <span class="setting-name">Modals & Menus</span>
+                            <span class="setting-value">${Math.round(volumes.modal * 100)}%</span>
+                        </label>
+                        <input type="range" class="volume-slider" id="volume-modal" 
+                            min="0" max="100" value="${volumes.modal * 100}" 
+                            data-volume-type="modal">
+                        <button class="btn btn-small test-sound-btn" data-sound-type="modal">Test</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn" id="home-btn">← Home</button>
+            </div>
+        </div>
+    `;
+}
+
 // ============================================================================
 // Event Listeners
 // ============================================================================
@@ -1988,6 +2516,41 @@ function attachEventListeners() {
     if (statusBtn) {
         statusBtn.addEventListener('click', goToStatus);
     }
+    
+    // Settings button
+    const settingsBtn = document.getElementById('settings-btn');
+    if (settingsBtn) {
+        settingsBtn.addEventListener('click', goToSettings);
+    }
+    
+    // Volume sliders
+    const volumeSliders = document.querySelectorAll('.volume-slider');
+    volumeSliders.forEach(slider => {
+        slider.addEventListener('input', (e) => {
+            const volumeType = e.target.dataset.volumeType;
+            const value = parseFloat(e.target.value) / 100;
+            state.settings.volumes[volumeType] = value;
+            
+            // Update display
+            const settingItem = e.target.closest('.setting-item');
+            const valueDisplay = settingItem.querySelector('.setting-value');
+            if (valueDisplay) {
+                valueDisplay.textContent = `${Math.round(value * 100)}%`;
+            }
+            
+            // Save to localStorage
+            saveSettings();
+        });
+    });
+    
+    // Test sound buttons
+    const testSoundBtns = document.querySelectorAll('.test-sound-btn');
+    testSoundBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const soundType = btn.dataset.soundType;
+            playSfx(soundType);
+        });
+    });
     
     // Subject tiles
     const subjectTiles = document.querySelectorAll('[data-subject-id]');
@@ -2125,6 +2688,7 @@ function init() {
     }
     
     state.players = loadPlayers();
+    loadSettings(); // Load settings from localStorage
     if (state.players.length > 0) {
         state.currentPlayer = state.players[0];
     }
