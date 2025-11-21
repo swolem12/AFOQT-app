@@ -31,13 +31,28 @@ const subjects = [
         id: 'math',
         name: 'Math',
         description: 'AFOQT quantitative reasoning'
+    },
+    {
+        id: 'verbal',
+        name: 'Verbal',
+        description: 'Word knowledge and analogies'
+    },
+    {
+        id: 'reading',
+        name: 'Reading',
+        description: 'Comprehension and analysis'
+    },
+    {
+        id: 'science',
+        name: 'Physical Science',
+        description: 'Physics and chemistry basics'
     }
 ];
 
 // ============================================================================
-// Topics with Question Generators
+// Topics with Question Generators - MATH
 // ============================================================================
-const topics = [
+const mathTopics = [
     {
         id: 'evaluate-expressions',
         name: 'Evaluate Expressions (Substitution)',
@@ -682,6 +697,189 @@ const topics = [
 ];
 
 // ============================================================================
+// Topics with Question Generators - VERBAL
+// ============================================================================
+const verbalTopics = [
+    {
+        id: 'word-analogies',
+        name: 'Word Analogies',
+        description: 'Complete analogies',
+        subjectId: 'verbal',
+        generateQuestion: () => {
+            const analogies = [
+                { pair1: ['CAT', 'KITTEN'], pair2: ['DOG', 'PUPPY'], options: ['PUPPY', 'BONE', 'BARK', 'LEASH'], correct: 0, relation: 'adult to young' },
+                { pair1: ['WHEEL', 'CAR'], pair2: ['WING', 'AIRPLANE'], options: ['AIRPLANE', 'SKY', 'PILOT', 'FLY'], correct: 0, relation: 'part to whole' },
+                { pair1: ['HOT', 'COLD'], pair2: ['UP', 'DOWN'], options: ['DOWN', 'CLIMB', 'TALL', 'FALL'], correct: 0, relation: 'opposites' },
+                { pair1: ['HAPPY', 'JOYFUL'], pair2: ['SAD', 'SORROWFUL'], options: ['SORROWFUL', 'CRY', 'TEAR', 'BLUE'], correct: 0, relation: 'synonyms' },
+                { pair1: ['BOOK', 'READ'], pair2: ['MUSIC', 'LISTEN'], options: ['LISTEN', 'PLAY', 'SONG', 'HEAR'], correct: 0, relation: 'object to action' },
+                { pair1: ['DOCTOR', 'HOSPITAL'], pair2: ['TEACHER', 'SCHOOL'], options: ['SCHOOL', 'STUDENT', 'BOOK', 'LEARN'], correct: 0, relation: 'person to place' },
+                { pair1: ['PEN', 'WRITE'], pair2: ['KNIFE', 'CUT'], options: ['CUT', 'SHARP', 'BLADE', 'FORK'], correct: 0, relation: 'tool to function' },
+                { pair1: ['FLOWER', 'BOUQUET'], pair2: ['TREE', 'FOREST'], options: ['FOREST', 'WOOD', 'LEAF', 'GREEN'], correct: 0, relation: 'one to many' }
+            ];
+            
+            const analogy = analogies[Math.floor(Math.random() * analogies.length)];
+            const shuffled = shuffleArray(analogy.options);
+            
+            return {
+                prompt: `${analogy.pair1[0]} is to ${analogy.pair1[1]} as ${analogy.pair2[0]} is to _____`,
+                options: shuffled,
+                correctIndex: shuffled.indexOf(analogy.options[analogy.correct]),
+                explanation: `This is a ${analogy.relation} relationship. ${analogy.pair1[0]}:${analogy.pair1[1]} :: ${analogy.pair2[0]}:${analogy.options[analogy.correct]}`
+            };
+        }
+    },
+    {
+        id: 'vocabulary',
+        name: 'Vocabulary',
+        description: 'Word meanings and synonyms',
+        subjectId: 'verbal',
+        generateQuestion: () => {
+            const words = [
+                { word: 'BENEVOLENT', correct: 'Kind', options: ['Angry', 'Confused', 'Wealthy'], definition: 'well-meaning and kindly' },
+                { word: 'METICULOUS', correct: 'Careful', options: ['Messy', 'Quick', 'Lazy'], definition: 'showing great attention to detail' },
+                { word: 'CANDID', correct: 'Honest', options: ['Sweet', 'Bright', 'Quiet'], definition: 'truthful and straightforward' },
+                { word: 'ELOQUENT', correct: 'Articulate', options: ['Silent', 'Confused', 'Angry'], definition: 'fluent and persuasive in speech' },
+                { word: 'FRUGAL', correct: 'Economical', options: ['Wasteful', 'Generous', 'Rich'], definition: 'sparing or economical with money' },
+                { word: 'RESILIENT', correct: 'Flexible', options: ['Rigid', 'Weak', 'Broken'], definition: 'able to withstand or recover quickly' },
+                { word: 'DILIGENT', correct: 'Hardworking', options: ['Lazy', 'Careless', 'Slow'], definition: 'having or showing care in one\'s work' },
+                { word: 'AMBIGUOUS', correct: 'Unclear', options: ['Obvious', 'Simple', 'Direct'], definition: 'open to more than one interpretation' }
+            ];
+            
+            const item = words[Math.floor(Math.random() * words.length)];
+            const allOptions = [item.correct, ...item.options];
+            const shuffled = shuffleArray(allOptions);
+            
+            return {
+                prompt: `${item.word} most nearly means:`,
+                options: shuffled,
+                correctIndex: shuffled.indexOf(item.correct),
+                explanation: `${item.word} means ${item.definition}. The closest synonym is "${item.correct}".`
+            };
+        }
+    }
+];
+
+// ============================================================================
+// Topics with Question Generators - READING
+// ============================================================================
+const readingTopics = [
+    {
+        id: 'reading-comprehension',
+        name: 'Reading Comprehension',
+        description: 'Analyze passages',
+        subjectId: 'reading',
+        generateQuestion: () => {
+            const passages = [
+                {
+                    text: "The Wright brothers, Orville and Wilbur, achieved the first powered, sustained, and controlled airplane flight on December 17, 1903. Their aircraft, the Wright Flyer, flew for 12 seconds and covered 120 feet during its first flight. This historic achievement marked the beginning of the aviation age.",
+                    questions: [
+                        { q: "How long did the first flight last?", a: "12 seconds", opts: ["10 seconds", "15 seconds", "20 seconds"] },
+                        { q: "What was the name of the aircraft?", a: "Wright Flyer", opts: ["Flying Machine", "Sky Rider", "Air Pioneer"] },
+                        { q: "In what year did the first flight occur?", a: "1903", opts: ["1900", "1905", "1910"] }
+                    ]
+                },
+                {
+                    text: "Photosynthesis is the process by which plants convert light energy into chemical energy. Using chlorophyll, plants absorb sunlight and combine carbon dioxide from the air with water from the soil to produce glucose and oxygen. This process is essential for life on Earth.",
+                    questions: [
+                        { q: "What do plants produce through photosynthesis?", a: "Glucose and oxygen", opts: ["Carbon dioxide", "Water only", "Nitrogen"] },
+                        { q: "What pigment helps plants absorb sunlight?", a: "Chlorophyll", opts: ["Hemoglobin", "Melanin", "Carotene"] },
+                        { q: "What is the main purpose of photosynthesis?", a: "Convert light to chemical energy", opts: ["Create water", "Produce soil", "Generate heat"] }
+                    ]
+                },
+                {
+                    text: "The Roman Empire, at its height, controlled much of Europe, North Africa, and the Middle East. Its influence on law, language, architecture, and engineering can still be seen today. Latin, the language of Rome, evolved into the Romance languages including French, Spanish, and Italian.",
+                    questions: [
+                        { q: "Which modern languages evolved from Latin?", a: "Romance languages", opts: ["Germanic languages", "Slavic languages", "Asian languages"] },
+                        { q: "What regions did Rome control?", a: "Europe, Africa, Middle East", opts: ["Only Europe", "Only Africa", "Only Asia"] },
+                        { q: "What was Rome's language?", a: "Latin", opts: ["Greek", "Hebrew", "Arabic"] }
+                    ]
+                }
+            ];
+            
+            const passage = passages[Math.floor(Math.random() * passages.length)];
+            const question = passage.questions[Math.floor(Math.random() * passage.questions.length)];
+            const allOptions = [question.a, ...question.opts];
+            const shuffled = shuffleArray(allOptions);
+            
+            return {
+                prompt: `Passage: "${passage.text}"\n\nQuestion: ${question.q}`,
+                options: shuffled,
+                correctIndex: shuffled.indexOf(question.a),
+                explanation: `The correct answer is "${question.a}" based on the information in the passage.`
+            };
+        }
+    }
+];
+
+// ============================================================================
+// Topics with Question Generators - PHYSICAL SCIENCE
+// ============================================================================
+const scienceTopics = [
+    {
+        id: 'physics-basics',
+        name: 'Physics Basics',
+        description: 'Forces, motion, and energy',
+        subjectId: 'science',
+        generateQuestion: () => {
+            const questions = [
+                { q: "What is the formula for speed?", a: "Distance ÷ Time", opts: ["Time ÷ Distance", "Distance × Time", "Force × Mass"], exp: "Speed = Distance / Time" },
+                { q: "What is Newton's First Law?", a: "Object at rest stays at rest", opts: ["Force equals mass times acceleration", "Every action has a reaction", "Energy cannot be created"], exp: "Law of Inertia" },
+                { q: "What type of energy does a moving object have?", a: "Kinetic", opts: ["Potential", "Thermal", "Chemical"], exp: "Kinetic energy is energy of motion" },
+                { q: "What force pulls objects toward Earth?", a: "Gravity", opts: ["Friction", "Magnetism", "Tension"], exp: "Gravity is the attractive force between masses" },
+                { q: "What is the SI unit of force?", a: "Newton", opts: ["Joule", "Watt", "Pascal"], exp: "Force is measured in Newtons (N)" },
+                { q: "Light travels fastest through:", a: "Vacuum", opts: ["Water", "Glass", "Air"], exp: "Light speed is maximum in a vacuum" }
+            ];
+            
+            const item = questions[Math.floor(Math.random() * questions.length)];
+            const allOptions = [item.a, ...item.opts];
+            const shuffled = shuffleArray(allOptions);
+            
+            return {
+                prompt: item.q,
+                options: shuffled,
+                correctIndex: shuffled.indexOf(item.a),
+                explanation: item.exp
+            };
+        }
+    },
+    {
+        id: 'chemistry-basics',
+        name: 'Chemistry Basics',
+        description: 'Matter and reactions',
+        subjectId: 'science',
+        generateQuestion: () => {
+            const questions = [
+                { q: "What is the chemical symbol for water?", a: "H₂O", opts: ["HO", "H₂O₂", "OH"], exp: "Water is two hydrogen atoms and one oxygen" },
+                { q: "What is the smallest unit of an element?", a: "Atom", opts: ["Molecule", "Cell", "Electron"], exp: "Atoms are the basic building blocks" },
+                { q: "What type of bond involves sharing electrons?", a: "Covalent", opts: ["Ionic", "Metallic", "Hydrogen"], exp: "Covalent bonds share electron pairs" },
+                { q: "What is the pH of a neutral solution?", a: "7", opts: ["0", "14", "10"], exp: "pH 7 is neutral; <7 is acid, >7 is base" },
+                { q: "What are the three states of matter?", a: "Solid, Liquid, Gas", opts: ["Hot, Cold, Warm", "Big, Medium, Small", "Fast, Slow, Still"], exp: "The three common states of matter" },
+                { q: "What is the process of a solid turning to gas?", a: "Sublimation", opts: ["Evaporation", "Condensation", "Melting"], exp: "Sublimation skips the liquid phase" }
+            ];
+            
+            const item = questions[Math.floor(Math.random() * questions.length)];
+            const allOptions = [item.a, ...item.opts];
+            const shuffled = shuffleArray(allOptions);
+            
+            return {
+                prompt: item.q,
+                options: shuffled,
+                correctIndex: shuffled.indexOf(item.a),
+                explanation: item.exp
+            };
+        }
+    }
+];
+
+// Combine all topics and add subject IDs
+const topics = [
+    ...mathTopics.map(t => ({ ...t, subjectId: 'math' })),
+    ...verbalTopics,
+    ...readingTopics,
+    ...scienceTopics
+];
+
+// ============================================================================
 // Web Audio Sound Effects
 // ============================================================================
 let audioContext = null;
@@ -1000,12 +1198,15 @@ function renderHome() {
 function renderSubject() {
     if (!state.currentSubject) return '';
     
+    // Filter topics for current subject
+    const subjectTopics = topics.filter(t => t.subjectId === state.currentSubject.id);
+    
     return `
         <div class="panel">
             <h1 class="panel-header">${state.currentSubject.name}</h1>
             
             <div class="grid grid-3">
-                ${topics.map(topic => `
+                ${subjectTopics.map(topic => `
                     <div class="tile" data-topic-id="${topic.id}">
                         <div class="tile-title">${topic.name}</div>
                         <div class="tile-description">${topic.description}</div>
