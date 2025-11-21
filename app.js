@@ -317,7 +317,7 @@ function showBootScreen() {
 // Global State
 // ============================================================================
 const state = {
-    screen: 'home', // 'home' | 'subject' | 'mode-select' | 'difficulty-select' | 'quiz' | 'results' | 'status' | 'settings'
+    screen: 'login', // 'login' | 'home' | 'subject' | 'mode-select' | 'difficulty-select' | 'quiz' | 'results' | 'status' | 'settings'
     players: [],
     currentPlayer: null,
     currentSubject: null,
@@ -2062,6 +2062,9 @@ function render() {
     if (!root) return;
     
     switch (state.screen) {
+        case 'login':
+            root.innerHTML = renderLogin();
+            break;
         case 'home':
             root.innerHTML = renderHome();
             break;
@@ -2091,6 +2094,47 @@ function render() {
     attachEventListeners();
 }
 
+function renderLogin() {
+    return `
+        <div class="panel">
+            <h1 class="panel-header">CHARACTER SELECT</h1>
+            
+            <div class="login-section">
+                <h2 style="text-align: center; margin-bottom: 20px;">Select Your Character</h2>
+                
+                <div class="player-list-login">
+                    ${state.players.length === 0 ? '<p style="text-align: center; opacity: 0.7; margin: 30px 0;">No characters yet. Create one below!</p>' : ''}
+                    ${state.players.map(p => {
+                        const playerInfo = computePlayerTotals(p);
+                        return `
+                            <div class="player-item-login" data-player-id="${p.id}">
+                                <div class="player-info-login">
+                                    <div class="player-name-login">${p.name}</div>
+                                    <div class="player-level-login">Level ${playerInfo.level}</div>
+                                    <div class="player-stats-login">Total SP: ${playerInfo.totalStatPoints}</div>
+                                </div>
+                                <div class="player-action">
+                                    <button class="btn btn-small select-player-btn" data-player-id="${p.id}">
+                                        SELECT →
+                                    </button>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+                
+                <div class="new-character-section">
+                    <h3 style="text-align: center; margin: 30px 0 20px 0;">Create New Character</h3>
+                    <div class="new-player-form-login">
+                        <input type="text" id="new-player-name-login" placeholder="Enter character name" maxlength="20" />
+                        <button class="btn" id="create-player-btn-login">Create Character</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
 function renderHome() {
     const playerInfo = state.currentPlayer ? computePlayerTotals(state.currentPlayer) : null;
     
@@ -2099,8 +2143,8 @@ function renderHome() {
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                 <h1 class="panel-header" style="margin: 0;">AFOQT QUEST</h1>
                 <div style="display: flex; gap: 10px;">
-                    <button class="btn btn-small" id="player-manager-btn" style="animation: none;">
-                        ${state.currentPlayer ? `👤 ${state.currentPlayer.name}` : '👤 Select Player'}
+                    <button class="btn btn-small" id="change-character-btn" style="animation: none;">
+                        ${state.currentPlayer ? `👤 ${state.currentPlayer.name}` : '👤 Change Character'}
                     </button>
                     ${state.currentPlayer ? `
                         <button class="btn btn-small" id="status-btn" style="animation: none;">
@@ -2634,7 +2678,60 @@ function renderSettings() {
 // Event Listeners
 // ============================================================================
 function attachEventListeners() {
-    // Player modal
+    // Login screen - Character selection
+    const selectPlayerBtns = document.querySelectorAll('.select-player-btn');
+    selectPlayerBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            selectPlayer(btn.dataset.playerId);
+            state.screen = 'home';
+            playSfx('select');
+            render();
+        });
+    });
+    
+    // Login screen - Create character
+    const createPlayerBtnLogin = document.getElementById('create-player-btn-login');
+    if (createPlayerBtnLogin) {
+        createPlayerBtnLogin.addEventListener('click', () => {
+            const input = document.getElementById('new-player-name-login');
+            const name = input.value.trim();
+            if (name) {
+                createPlayer(name);
+                // Auto-select the newly created player
+                const newPlayer = state.players[state.players.length - 1];
+                if (newPlayer) {
+                    selectPlayer(newPlayer.id);
+                    state.screen = 'home';
+                }
+                input.value = '';
+                playSfx('player');
+                render();
+            }
+        });
+    }
+    
+    // Login screen - Enter key support
+    const newPlayerNameLogin = document.getElementById('new-player-name-login');
+    if (newPlayerNameLogin) {
+        newPlayerNameLogin.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                const createBtn = document.getElementById('create-player-btn-login');
+                if (createBtn) createBtn.click();
+            }
+        });
+    }
+    
+    // Change character button (replaces player-manager-btn)
+    const changeCharacterBtn = document.getElementById('change-character-btn');
+    if (changeCharacterBtn) {
+        changeCharacterBtn.addEventListener('click', () => {
+            state.screen = 'login';
+            playSfx('nav');
+            render();
+        });
+    }
+    
+    // Player modal (keeping for backward compatibility, but not used in login flow)
     const playerManagerBtn = document.getElementById('player-manager-btn');
     if (playerManagerBtn) {
         playerManagerBtn.addEventListener('click', () => {
