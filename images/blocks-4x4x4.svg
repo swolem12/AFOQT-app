@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" style="background: #000;">
+  <!-- Title -->
+  <text x="80" y="25" fill="#00ffff" font-family="monospace" font-size="14" font-weight="bold">4×4×4 CUBE (64 blocks)</text>
+  
+  <!-- 3D isometric view of 4x4x4 cube -->
+  <g transform="translate(200, 220)">
+    <!-- Back layer (partially visible) -->
+    <g transform="translate(-60, -90)">
+      <!-- Top row of back layer -->
+      <polygon points="0,0 15,8 15,23 0,15" fill="#004488" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="15,8 30,0 30,15 15,23" fill="#0066cc" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="0,15 15,23 30,15 15,8" fill="#0088ff" stroke="#00ffff" stroke-width="1.2"/>
+      
+      <polygon points="22,4 37,12 37,27 22,19" fill="#004488" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="37,12 52,4 52,19 37,27" fill="#0066cc" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="22,19 37,27 52,19 37,12" fill="#0088ff" stroke="#00ffff" stroke-width="1.2"/>
+      
+      <polygon points="44,8 59,16 59,31 44,23" fill="#004488" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="59,16 74,8 74,23 59,31" fill="#0066cc" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="44,23 59,31 74,23 59,16" fill="#0088ff" stroke="#00ffff" stroke-width="1.2"/>
+      
+      <polygon points="66,12 81,20 81,35 66,27" fill="#004488" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="81,20 96,12 96,27 81,35" fill="#0066cc" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="66,27 81,35 96,27 81,20" fill="#0088ff" stroke="#00ffff" stroke-width="1.2"/>
+      
+      <!-- Second row of back layer -->
+      <polygon points="0,15 15,23 15,38 0,30" fill="#004488" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="15,23 30,15 30,30 15,38" fill="#0066cc" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="0,30 15,38 30,30 15,23" fill="#0088ff" stroke="#00ffff" stroke-width="1.2"/>
+      
+      <polygon points="22,19 37,27 37,42 22,34" fill="#004488" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="37,27 52,19 52,34 37,42" fill="#0066cc" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="22,34 37,42 52,34 37,27" fill="#0088ff" stroke="#00ffff" stroke-width="1.2"/>
+      
+      <polygon points="44,23 59,31 59,46 44,38" fill="#004488" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="59,31 74,23 74,38 59,46" fill="#0066cc" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="44,38 59,46 74,38 59,31" fill="#0088ff" stroke="#00ffff" stroke-width="1.2"/>
+      
+      <polygon points="66,27 81,35 81,50 66,42" fill="#004488" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="81,35 96,27 96,42 81,50" fill="#0066cc" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="66,42 81,50 96,42 81,35" fill="#0088ff" stroke="#00ffff" stroke-width="1.2"/>
+      
+      <!-- Third row of back layer -->
+      <polygon points="0,30 15,38 15,53 0,45" fill="#004488" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="15,38 30,30 30,45 15,53" fill="#0066cc" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="0,45 15,53 30,45 15,38" fill="#0088ff" stroke="#00ffff" stroke-width="1.2"/>
+      
+      <polygon points="22,34 37,42 37,57 22,49" fill="#004488" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="37,42 52,34 52,49 37,57" fill="#0066cc" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="22,49 37,57 52,49 37,42" fill="#0088ff" stroke="#00ffff" stroke-width="1.2"/>
+      
+      <polygon points="44,38 59,46 59,61 44,53" fill="#004488" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="59,46 74,38 74,53 59,61" fill="#0066cc" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="44,53 59,61 74,53 59,46" fill="#0088ff" stroke="#00ffff" stroke-width="1.2"/>
+      
+      <polygon points="66,42 81,50 81,65 66,57" fill="#004488" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="81,50 96,42 96,57 81,65" fill="#0066cc" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="66,57 81,65 96,57 81,50" fill="#0088ff" stroke="#00ffff" stroke-width="1.2"/>
+      
+      <!-- Fourth row of back layer -->
+      <polygon points="0,45 15,53 15,68 0,60" fill="#004488" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="15,53 30,45 30,60 15,68" fill="#0066cc" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="0,60 15,68 30,60 15,53" fill="#0088ff" stroke="#00ffff" stroke-width="1.2"/>
+      
+      <polygon points="22,49 37,57 37,72 22,64" fill="#004488" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="37,57 52,49 52,64 37,72" fill="#0066cc" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="22,64 37,72 52,64 37,57" fill="#0088ff" stroke="#00ffff" stroke-width="1.2"/>
+      
+      <polygon points="44,53 59,61 59,76 44,68" fill="#004488" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="59,61 74,53 74,68 59,76" fill="#0066cc" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="44,68 59,76 74,68 59,61" fill="#0088ff" stroke="#00ffff" stroke-width="1.2"/>
+      
+      <polygon points="66,57 81,65 81,80 66,72" fill="#004488" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="81,65 96,57 96,72 81,80" fill="#0066cc" stroke="#00ffff" stroke-width="1.2"/>
+      <polygon points="66,72 81,80 96,72 81,65" fill="#0088ff" stroke="#00ffff" stroke-width="1.2"/>
+    </g>
+  </g>
+  
+  <!-- Label -->
+  <text x="100" y="380" fill="#00ffff" font-family="monospace" font-size="12">4 blocks wide × 4 blocks deep × 4 blocks tall</text>
+</svg>

@@ -1376,11 +1376,11 @@ const instrumentTopics = [
                 { heading: "North", bank: "Level", pitch: "Level", desc: "Straight and level flight heading North", img: "images/attitude-level.svg" },
                 { heading: "East", bank: "Right 30°", pitch: "Level", desc: "Banking right 30 degrees while heading East", img: "images/attitude-right-30.svg" },
                 { heading: "South", bank: "Level", pitch: "Climbing", desc: "Climbing while heading South", img: "images/attitude-climbing.svg" },
-                { heading: "West", bank: "Left 20°", pitch: "Descending", desc: "Banking left and descending while heading West", img: "images/flight-instruments.svg" },
+                { heading: "West", bank: "Left 20°", pitch: "Descending", desc: "Banking left and descending while heading West", img: "images/attitude-left-20.svg" },
                 { heading: "Northeast", bank: "Level", pitch: "Level", desc: "Straight and level heading Northeast (045°)", img: "images/attitude-level.svg" },
-                { heading: "Southeast", bank: "Right 15°", pitch: "Climbing", desc: "Banking right and climbing heading Southeast", img: "images/attitude-climbing.svg" },
-                { heading: "Southwest", bank: "Left 25°", pitch: "Level", desc: "Banking left heading Southwest", img: "images/attitude-level.svg" },
-                { heading: "Northwest", bank: "Level", pitch: "Descending", desc: "Descending heading Northwest", img: "images/flight-instruments.svg" }
+                { heading: "Southeast", bank: "Right 15°", pitch: "Climbing", desc: "Banking right and climbing heading Southeast", img: "images/attitude-right-15.svg" },
+                { heading: "Southwest", bank: "Left 25°", pitch: "Level", desc: "Banking left heading Southwest", img: "images/attitude-left-25.svg" },
+                { heading: "Northwest", bank: "Level", pitch: "Descending", desc: "Descending heading Northwest", img: "images/attitude-descending.svg" }
             ];
             
             const correct = attitudes[Math.floor(Math.random() * attitudes.length)];
@@ -1490,21 +1490,21 @@ const blockTopics = [
                     blocks: 64,
                     hidden: 8,
                     touching: 24,
-                    img: "images/blocks-3x3x3.svg"
+                    img: "images/blocks-4x4x4.svg"
                 },
                 {
                     desc: "A 2×3×4 rectangular configuration",
                     blocks: 24,
                     hidden: 0,
                     touching: 11,
-                    img: "images/blocks-3x3x3.svg"
+                    img: "images/blocks-2x3x4.svg"
                 },
                 {
                     desc: "A pyramid with a 4×4 base, 3 layers",
                     blocks: 30,
                     hidden: 1,
                     touching: 13,
-                    img: "images/blocks-3x3x3.svg"
+                    img: "images/blocks-pyramid.svg"
                 },
                 {
                     desc: "An L-shaped configuration: 5 blocks on bottom row, 3 on second layer",
