@@ -99,17 +99,23 @@ function showBootScreen() {
     bootScreen.appendChild(bootText);
     document.body.appendChild(bootScreen);
     
+    // Play boot sound at start
+    playSfx('boot');
+    
     let currentLine = 0;
     const typeInterval = setInterval(() => {
         if (currentLine < bootMessages.length) {
             bootText.textContent += bootMessages[currentLine] + '\n';
             currentLine++;
-            playSfx('nav');
+            if (currentLine < bootMessages.length) {
+                playSfx('nav');
+            }
         } else {
             clearInterval(typeInterval);
             setTimeout(() => {
                 bootScreen.style.transition = 'opacity 0.5s';
                 bootScreen.style.opacity = '0';
+                playSfx('complete');
                 setTimeout(() => {
                     bootScreen.remove();
                 }, 500);
@@ -998,7 +1004,7 @@ const topics = [
 ];
 
 // ============================================================================
-// Web Audio Sound Effects
+// Web Audio Sound Effects - 12-bit Sci-Fi RPG Style
 // ============================================================================
 let audioContext = null;
 
@@ -1030,27 +1036,110 @@ function playBeep(frequency, duration, type = 'sine', gainValue = 0.1, delay = 0
     }
 }
 
+// Enhanced sci-fi RPG sound effect with pitch sweep
+function playSweep(startFreq, endFreq, duration, type = 'square', gainValue = 0.12, delay = 0) {
+    try {
+        const ctx = getAudioContext();
+        const oscillator = ctx.createOscillator();
+        const gainNode = ctx.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(ctx.destination);
+        
+        oscillator.type = type;
+        gainNode.gain.value = gainValue;
+        
+        const startTime = ctx.currentTime + delay;
+        oscillator.frequency.setValueAtTime(startFreq, startTime);
+        oscillator.frequency.exponentialRampToValueAtTime(endFreq, startTime + duration);
+        
+        oscillator.start(startTime);
+        oscillator.stop(startTime + duration);
+    } catch (e) {
+        console.warn('Audio not available:', e);
+    }
+}
+
 function playSfx(kind) {
     switch (kind) {
+        case 'boot':
+            // Boot screen loading sound - retro computer startup
+            playBeep(100, 0.05, 'square', 0.15, 0);
+            playBeep(150, 0.05, 'square', 0.15, 0.06);
+            playBeep(200, 0.05, 'square', 0.15, 0.12);
+            playSweep(300, 600, 0.2, 'square', 0.12, 0.18);
+            break;
         case 'start':
-            playBeep(440, 0.1, 'sine', 0.1, 0);
-            playBeep(554, 0.1, 'sine', 0.1, 0.12);
-            playBeep(659, 0.15, 'sine', 0.1, 0.24);
+            // Quiz start - energetic upward arpeggio
+            playBeep(440, 0.08, 'square', 0.12, 0);
+            playBeep(554, 0.08, 'square', 0.12, 0.09);
+            playBeep(659, 0.08, 'square', 0.12, 0.18);
+            playBeep(880, 0.15, 'square', 0.15, 0.27);
             break;
         case 'correct':
-            playBeep(523, 0.1, 'sine', 0.15, 0);
-            playBeep(659, 0.15, 'sine', 0.15, 0.1);
+            // Correct answer - triumphant chime
+            playBeep(523, 0.08, 'square', 0.15, 0);
+            playBeep(659, 0.08, 'square', 0.15, 0.09);
+            playBeep(784, 0.12, 'square', 0.15, 0.18);
+            playBeep(1047, 0.15, 'sine', 0.12, 0.3);
             break;
         case 'wrong':
-            playBeep(200, 0.15, 'sawtooth', 0.1, 0);
-            playBeep(150, 0.2, 'sawtooth', 0.1, 0.15);
+            // Wrong answer - descending error sound
+            playBeep(300, 0.1, 'sawtooth', 0.12, 0);
+            playBeep(250, 0.1, 'sawtooth', 0.12, 0.11);
+            playBeep(200, 0.15, 'sawtooth', 0.15, 0.22);
+            playBeep(150, 0.2, 'sawtooth', 0.15, 0.37);
             break;
         case 'nav':
-            playBeep(440, 0.08, 'sine', 0.08, 0);
+            // Navigation click - crisp button press
+            playBeep(880, 0.04, 'square', 0.1, 0);
+            playBeep(660, 0.03, 'square', 0.08, 0.05);
             break;
         case 'player':
-            playBeep(523, 0.08, 'sine', 0.08, 0);
-            playBeep(440, 0.08, 'sine', 0.08, 0.1);
+            // Player select - character selection jingle
+            playBeep(523, 0.08, 'square', 0.1, 0);
+            playBeep(659, 0.08, 'square', 0.1, 0.09);
+            playBeep(784, 0.12, 'square', 0.12, 0.18);
+            break;
+        case 'levelup':
+            // Level up - celebratory fanfare
+            playBeep(523, 0.1, 'square', 0.15, 0);
+            playBeep(659, 0.1, 'square', 0.15, 0.11);
+            playBeep(784, 0.1, 'square', 0.15, 0.22);
+            playBeep(1047, 0.15, 'sine', 0.15, 0.33);
+            playBeep(1319, 0.2, 'sine', 0.15, 0.48);
+            playSweep(1319, 1568, 0.3, 'sine', 0.12, 0.68);
+            break;
+        case 'modal-open':
+            // Modal open - upward sweep
+            playSweep(440, 880, 0.15, 'square', 0.1, 0);
+            break;
+        case 'modal-close':
+            // Modal close - downward sweep
+            playSweep(880, 440, 0.12, 'square', 0.1, 0);
+            break;
+        case 'hover':
+            // Hover sound - subtle tick
+            playBeep(1200, 0.02, 'square', 0.06, 0);
+            break;
+        case 'select':
+            // Selection confirm - positive beep
+            playBeep(880, 0.06, 'square', 0.1, 0);
+            playBeep(1047, 0.08, 'square', 0.1, 0.07);
+            break;
+        case 'timer-warning':
+            // Timer running low - urgent beeps
+            playBeep(880, 0.08, 'square', 0.12, 0);
+            playBeep(880, 0.08, 'square', 0.12, 0.2);
+            break;
+        case 'complete':
+            // Quiz complete - victory melody
+            playBeep(523, 0.1, 'square', 0.12, 0);
+            playBeep(659, 0.1, 'square', 0.12, 0.11);
+            playBeep(784, 0.1, 'square', 0.12, 0.22);
+            playBeep(659, 0.1, 'square', 0.12, 0.33);
+            playBeep(784, 0.15, 'square', 0.15, 0.44);
+            playBeep(1047, 0.3, 'sine', 0.15, 0.59);
             break;
     }
 }
@@ -1104,9 +1193,22 @@ function updatePlayerStats(player, topicId, correctCount) {
         };
     }
     
+    // Calculate level before update
+    const oldTotals = computePlayerTotals(player);
+    const oldLevel = oldTotals.level;
+    
     // Update correct answers and recalculate stat points
     player.stats[topicId].correctAnswers += correctCount;
     player.stats[topicId].statPoints = Math.floor(player.stats[topicId].correctAnswers / 5);
+    
+    // Calculate level after update
+    const newTotals = computePlayerTotals(player);
+    const newLevel = newTotals.level;
+    
+    // Check if leveled up
+    if (newLevel > oldLevel) {
+        playSfx('levelup');
+    }
     
     return player;
 }
@@ -1281,6 +1383,9 @@ function finishQuiz() {
         
         savePlayers(state.players);
     }
+    
+    // Play completion sound if no level up (level up sound already played)
+    playSfx('complete');
     
     state.screen = 'results';
     render();
@@ -1735,7 +1840,7 @@ function attachEventListeners() {
             const modal = document.getElementById('player-modal');
             if (modal) {
                 modal.style.display = 'flex';
-                playSfx('nav');
+                playSfx('modal-open');
             }
         });
     }
@@ -1746,7 +1851,7 @@ function attachEventListeners() {
             const modal = document.getElementById('player-modal');
             if (modal) {
                 modal.style.display = 'none';
-                playSfx('nav');
+                playSfx('modal-close');
             }
         });
     }
@@ -1757,7 +1862,7 @@ function attachEventListeners() {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 modal.style.display = 'none';
-                playSfx('nav');
+                playSfx('modal-close');
             }
         });
     }
@@ -1771,7 +1876,7 @@ function attachEventListeners() {
             if (modal) {
                 modal.style.display = 'none';
             }
-            playSfx('player');
+            playSfx('select');
             render();
         });
     });
