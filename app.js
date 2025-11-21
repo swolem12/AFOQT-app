@@ -63,7 +63,7 @@ document.head.appendChild(particleStyle);
 // ============================================================================
 function showBootScreen() {
     const bootMessages = [
-        'INITIALIZING AFOQT STUDY CONSOLE...',
+        'INITIALIZING AFOQT QUEST...',
         'LOADING SYSTEM MODULES...',
         'LOADING MATH ENGINE... OK',
         'LOADING VERBAL PROCESSOR... OK',
@@ -99,17 +99,23 @@ function showBootScreen() {
     bootScreen.appendChild(bootText);
     document.body.appendChild(bootScreen);
     
+    // Play boot sound at start
+    playSfx('boot');
+    
     let currentLine = 0;
     const typeInterval = setInterval(() => {
         if (currentLine < bootMessages.length) {
             bootText.textContent += bootMessages[currentLine] + '\n';
             currentLine++;
-            playSfx('nav');
+            if (currentLine < bootMessages.length) {
+                playSfx('nav');
+            }
         } else {
             clearInterval(typeInterval);
             setTimeout(() => {
                 bootScreen.style.transition = 'opacity 0.5s';
                 bootScreen.style.opacity = '0';
+                playSfx('complete');
                 setTimeout(() => {
                     bootScreen.remove();
                 }, 500);
@@ -122,13 +128,13 @@ function showBootScreen() {
 // Global State
 // ============================================================================
 const state = {
-    screen: 'home', // 'home' | 'subject' | 'mode-select' | 'quiz' | 'results' | 'status'
+    screen: 'home', // 'home' | 'subject' | 'mode-select' | 'difficulty-select' | 'quiz' | 'results' | 'status'
     players: [],
     currentPlayer: null,
     currentSubject: null,
     currentTopic: null,
-    quizMode: 'practice', // 'practice' | 'test'
-    difficulty: 'medium', // 'easy' | 'medium' | 'hard'
+    quizMode: 'practice', // 'practice' | 'test' | 'sprint'
+    difficulty: 'beginner', // 'beginner' | 'advanced' | 'expert'
     quiz: {
         questions: [],
         currentIndex: 0,
@@ -137,7 +143,8 @@ const state = {
         questionStartTime: null,
         questionTimes: [],
         timerInterval: null,
-        mode: 'practice' // Store mode with quiz session
+        mode: 'practice', // Store mode with quiz session
+        difficulty: 'beginner' // Store difficulty with quiz session
     }
 };
 
@@ -998,7 +1005,7 @@ const topics = [
 ];
 
 // ============================================================================
-// Web Audio Sound Effects
+// Web Audio Sound Effects - 12-bit Sci-Fi RPG Style
 // ============================================================================
 let audioContext = null;
 
@@ -1030,27 +1037,110 @@ function playBeep(frequency, duration, type = 'sine', gainValue = 0.1, delay = 0
     }
 }
 
+// Enhanced sci-fi RPG sound effect with pitch sweep
+function playSweep(startFreq, endFreq, duration, type = 'square', gainValue = 0.12, delay = 0) {
+    try {
+        const ctx = getAudioContext();
+        const oscillator = ctx.createOscillator();
+        const gainNode = ctx.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(ctx.destination);
+        
+        oscillator.type = type;
+        gainNode.gain.value = gainValue;
+        
+        const startTime = ctx.currentTime + delay;
+        oscillator.frequency.setValueAtTime(startFreq, startTime);
+        oscillator.frequency.exponentialRampToValueAtTime(endFreq, startTime + duration);
+        
+        oscillator.start(startTime);
+        oscillator.stop(startTime + duration);
+    } catch (e) {
+        console.warn('Audio not available:', e);
+    }
+}
+
 function playSfx(kind) {
     switch (kind) {
+        case 'boot':
+            // Boot screen loading sound - retro computer startup
+            playBeep(100, 0.05, 'square', 0.15, 0);
+            playBeep(150, 0.05, 'square', 0.15, 0.06);
+            playBeep(200, 0.05, 'square', 0.15, 0.12);
+            playSweep(300, 600, 0.2, 'square', 0.12, 0.18);
+            break;
         case 'start':
-            playBeep(440, 0.1, 'sine', 0.1, 0);
-            playBeep(554, 0.1, 'sine', 0.1, 0.12);
-            playBeep(659, 0.15, 'sine', 0.1, 0.24);
+            // Quiz start - energetic upward arpeggio
+            playBeep(440, 0.08, 'square', 0.12, 0);
+            playBeep(554, 0.08, 'square', 0.12, 0.09);
+            playBeep(659, 0.08, 'square', 0.12, 0.18);
+            playBeep(880, 0.15, 'square', 0.15, 0.27);
             break;
         case 'correct':
-            playBeep(523, 0.1, 'sine', 0.15, 0);
-            playBeep(659, 0.15, 'sine', 0.15, 0.1);
+            // Correct answer - triumphant chime
+            playBeep(523, 0.08, 'square', 0.15, 0);
+            playBeep(659, 0.08, 'square', 0.15, 0.09);
+            playBeep(784, 0.12, 'square', 0.15, 0.18);
+            playBeep(1047, 0.15, 'sine', 0.12, 0.3);
             break;
         case 'wrong':
-            playBeep(200, 0.15, 'sawtooth', 0.1, 0);
-            playBeep(150, 0.2, 'sawtooth', 0.1, 0.15);
+            // Wrong answer - descending error sound
+            playBeep(300, 0.1, 'sawtooth', 0.12, 0);
+            playBeep(250, 0.1, 'sawtooth', 0.12, 0.11);
+            playBeep(200, 0.15, 'sawtooth', 0.15, 0.22);
+            playBeep(150, 0.2, 'sawtooth', 0.15, 0.37);
             break;
         case 'nav':
-            playBeep(440, 0.08, 'sine', 0.08, 0);
+            // Navigation click - crisp button press
+            playBeep(880, 0.04, 'square', 0.1, 0);
+            playBeep(660, 0.03, 'square', 0.08, 0.05);
             break;
         case 'player':
-            playBeep(523, 0.08, 'sine', 0.08, 0);
-            playBeep(440, 0.08, 'sine', 0.08, 0.1);
+            // Player select - character selection jingle
+            playBeep(523, 0.08, 'square', 0.1, 0);
+            playBeep(659, 0.08, 'square', 0.1, 0.09);
+            playBeep(784, 0.12, 'square', 0.12, 0.18);
+            break;
+        case 'levelup':
+            // Level up - celebratory fanfare
+            playBeep(523, 0.1, 'square', 0.15, 0);
+            playBeep(659, 0.1, 'square', 0.15, 0.11);
+            playBeep(784, 0.1, 'square', 0.15, 0.22);
+            playBeep(1047, 0.15, 'sine', 0.15, 0.33);
+            playBeep(1319, 0.2, 'sine', 0.15, 0.48);
+            playSweep(1319, 1568, 0.3, 'sine', 0.12, 0.68);
+            break;
+        case 'modal-open':
+            // Modal open - upward sweep
+            playSweep(440, 880, 0.15, 'square', 0.1, 0);
+            break;
+        case 'modal-close':
+            // Modal close - downward sweep
+            playSweep(880, 440, 0.12, 'square', 0.1, 0);
+            break;
+        case 'hover':
+            // Hover sound - subtle tick
+            playBeep(1200, 0.02, 'square', 0.06, 0);
+            break;
+        case 'select':
+            // Selection confirm - positive beep
+            playBeep(880, 0.06, 'square', 0.1, 0);
+            playBeep(1047, 0.08, 'square', 0.1, 0.07);
+            break;
+        case 'timer-warning':
+            // Timer running low - urgent beeps
+            playBeep(880, 0.08, 'square', 0.12, 0);
+            playBeep(880, 0.08, 'square', 0.12, 0.2);
+            break;
+        case 'complete':
+            // Quiz complete - victory melody
+            playBeep(523, 0.1, 'square', 0.12, 0);
+            playBeep(659, 0.1, 'square', 0.12, 0.11);
+            playBeep(784, 0.1, 'square', 0.12, 0.22);
+            playBeep(659, 0.1, 'square', 0.12, 0.33);
+            playBeep(784, 0.15, 'square', 0.15, 0.44);
+            playBeep(1047, 0.3, 'sine', 0.15, 0.59);
             break;
     }
 }
@@ -1090,7 +1180,7 @@ function computePlayerTotals(player) {
     return { totalStatPoints, level, pointsIntoLevel, pointsToNextLevel };
 }
 
-function updatePlayerStats(player, topicId, correctCount) {
+function updatePlayerStats(player, topicId, correctCount, difficulty = 'beginner') {
     // Initialize stats if needed
     if (!player.stats) {
         player.stats = {};
@@ -1104,9 +1194,35 @@ function updatePlayerStats(player, topicId, correctCount) {
         };
     }
     
-    // Update correct answers and recalculate stat points
+    // Calculate level before update
+    const oldTotals = computePlayerTotals(player);
+    const oldLevel = oldTotals.level;
+    
+    // XP multipliers based on difficulty
+    const multipliers = {
+        'beginner': 1.0,
+        'advanced': 1.5,
+        'expert': 2.0
+    };
+    
+    const multiplier = multipliers[difficulty] || 1.0;
+    
+    // Update correct answers with multiplier applied
     player.stats[topicId].correctAnswers += correctCount;
-    player.stats[topicId].statPoints = Math.floor(player.stats[topicId].correctAnswers / 5);
+    
+    // Calculate stat points with difficulty multiplier
+    // Base: 1 SP per 5 correct answers, then multiply by difficulty
+    const baseStatPoints = Math.floor(player.stats[topicId].correctAnswers / 5);
+    player.stats[topicId].statPoints = Math.floor(baseStatPoints * multiplier);
+    
+    // Calculate level after update
+    const newTotals = computePlayerTotals(player);
+    const newLevel = newTotals.level;
+    
+    // Check if leveled up
+    if (newLevel > oldLevel) {
+        playSfx('levelup');
+    }
     
     return player;
 }
@@ -1155,16 +1271,18 @@ function selectPlayer(playerId) {
 // ============================================================================
 // Quiz Management
 // ============================================================================
-function startQuiz(topicId, mode = 'practice') {
+function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     const topic = topics.find(t => t.id === topicId);
     if (!topic) return;
     
     state.currentTopic = topic;
     state.quiz.questions = [];
     state.quiz.mode = mode;
+    state.quiz.difficulty = difficulty;
     
-    // Generate 20 questions
-    for (let i = 0; i < 20; i++) {
+    // Generate questions based on mode (5 for sprint, 20 for others)
+    const questionCount = mode === 'sprint' ? 5 : 20;
+    for (let i = 0; i < questionCount; i++) {
         state.quiz.questions.push(topic.generateQuestion());
     }
     
@@ -1275,11 +1393,14 @@ function finishQuiz() {
         
         state.currentPlayer.sessions.push(session);
         
-        // Update RPG stats
-        updatePlayerStats(state.currentPlayer, state.currentTopic.id, state.quiz.score);
+        // Update RPG stats with difficulty multiplier
+        updatePlayerStats(state.currentPlayer, state.currentTopic.id, state.quiz.score, state.quiz.difficulty);
         
         savePlayers(state.players);
     }
+    
+    // Play completion sound if no level up (level up sound already played)
+    playSfx('complete');
     
     state.screen = 'results';
     render();
@@ -1336,6 +1457,9 @@ function render() {
         case 'mode-select':
             root.innerHTML = renderModeSelect();
             break;
+        case 'difficulty-select':
+            root.innerHTML = renderDifficultySelect();
+            break;
         case 'quiz':
             root.innerHTML = renderQuiz();
             break;
@@ -1356,27 +1480,16 @@ function renderHome() {
     return `
         <div class="panel">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                <h1 class="panel-header" style="margin: 0;">AFOQT STUDY CONSOLE</h1>
-                ${state.currentPlayer ? `
-                    <button class="btn btn-small" id="status-btn" style="animation: none;">
-                        ⚔ Status (Lv. ${playerInfo.level})
+                <h1 class="panel-header" style="margin: 0;">AFOQT QUEST</h1>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn btn-small" id="player-manager-btn" style="animation: none;">
+                        ${state.currentPlayer ? `👤 ${state.currentPlayer.name}` : '👤 Select Player'}
                     </button>
-                ` : ''}
-            </div>
-            
-            <div class="player-section">
-                <h2>Player Selection</h2>
-                <div class="player-controls">
-                    <select id="player-select">
-                        ${state.players.length === 0 ? '<option>No players yet</option>' : ''}
-                        ${state.players.map(p => `
-                            <option value="${p.id}" ${state.currentPlayer?.id === p.id ? 'selected' : ''}>
-                                ${p.name}
-                            </option>
-                        `).join('')}
-                    </select>
-                    <input type="text" id="new-player-name" placeholder="New player name" />
-                    <button class="btn btn-small" id="add-player-btn">Add Player</button>
+                    ${state.currentPlayer ? `
+                        <button class="btn btn-small" id="status-btn" style="animation: none;">
+                            ⚔ Status (Lv. ${playerInfo.level})
+                        </button>
+                    ` : ''}
                 </div>
             </div>
             
@@ -1388,6 +1501,36 @@ function renderHome() {
                         <div class="tile-description">${subject.description}</div>
                     </div>
                 `).join('')}
+            </div>
+        </div>
+        
+        ${renderPlayerModal()}
+    `;
+}
+
+function renderPlayerModal() {
+    return `
+        <div id="player-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Player Management</h2>
+                    <button class="modal-close" id="close-player-modal">✕</button>
+                </div>
+                <div class="modal-body">
+                    <div class="player-list">
+                        ${state.players.length === 0 ? '<p style="text-align: center; opacity: 0.7;">No players yet. Create one below!</p>' : ''}
+                        ${state.players.map(p => `
+                            <div class="player-item ${state.currentPlayer?.id === p.id ? 'selected' : ''}" data-player-id="${p.id}">
+                                <div class="player-name">${p.name}</div>
+                                <div class="player-level">Lv. ${computePlayerTotals(p).level}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="new-player-form">
+                        <input type="text" id="new-player-name" placeholder="New player name" />
+                        <button class="btn btn-small" id="add-player-btn">Create Player</button>
+                    </div>
+                </div>
             </div>
         </div>
     `;
@@ -1429,24 +1572,34 @@ function renderModeSelect() {
             <div style="margin: 40px 0;">
                 <h2 style="text-align: center; margin-bottom: 30px;">Select Quiz Mode</h2>
                 
-                <div class="grid grid-2" style="max-width: 600px; margin: 0 auto;">
-                    <div class="tile" id="practice-mode-btn" style="cursor: pointer; padding: 30px;">
-                        <div class="tile-title" style="font-size: 1.5rem; margin-bottom: 15px;">📚 Practice Mode</div>
+                <div class="grid grid-3" style="max-width: 900px; margin: 0 auto;">
+                    <div class="tile mode-tile" id="practice-mode-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">⚔ Practice</div>
                         <div class="tile-description">
-                            • Instant feedback after each question<br>
-                            • See explanations immediately<br>
+                            • Instant feedback<br>
+                            • See explanations<br>
                             • No time pressure<br>
-                            • Perfect for learning
+                            • 20 questions
                         </div>
                     </div>
                     
-                    <div class="tile" id="test-mode-btn" style="cursor: pointer; padding: 30px;">
-                        <div class="tile-title" style="font-size: 1.5rem; margin-bottom: 15px;">🎯 Test Mode</div>
+                    <div class="tile mode-tile" id="test-mode-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">🛡 Test</div>
                         <div class="tile-description">
-                            • No feedback until the end<br>
-                            • Strict 60-second timer<br>
-                            • Simulates real test conditions<br>
-                            • Challenge yourself
+                            • No feedback until end<br>
+                            • 60-second timer<br>
+                            • Test conditions<br>
+                            • 20 questions
+                        </div>
+                    </div>
+                    
+                    <div class="tile mode-tile" id="sprint-mode-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">⚡ Sprint</div>
+                        <div class="tile-description">
+                            • Quick practice<br>
+                            • Instant feedback<br>
+                            • Fast-paced<br>
+                            • 5 questions only
                         </div>
                     </div>
                 </div>
@@ -1459,12 +1612,87 @@ function renderModeSelect() {
     `;
 }
 
+function renderDifficultySelect() {
+    if (!state.currentTopic) return '';
+    
+    return `
+        <div class="panel">
+            <h1 class="panel-header">Select Difficulty</h1>
+            
+            <div style="margin: 40px 0;">
+                <h2 style="text-align: center; margin-bottom: 30px;">${state.currentTopic.name} - Practice Mode</h2>
+                
+                <div class="grid grid-3" style="max-width: 900px; margin: 0 auto;">
+                    <div class="tile difficulty-tile" id="beginner-diff-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title" style="font-size: 1.5rem; margin-bottom: 15px;">⭐ Beginner</div>
+                        <div class="tile-description">
+                            • Simpler questions<br>
+                            • More time to think<br>
+                            • 1x XP multiplier<br>
+                            • Perfect for learning
+                        </div>
+                    </div>
+                    
+                    <div class="tile difficulty-tile" id="advanced-diff-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title" style="font-size: 1.5rem; margin-bottom: 15px;">⭐⭐ Advanced</div>
+                        <div class="tile-description">
+                            • Standard difficulty<br>
+                            • Balanced challenge<br>
+                            • 1.5x XP multiplier<br>
+                            • Recommended
+                        </div>
+                    </div>
+                    
+                    <div class="tile difficulty-tile" id="expert-diff-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title" style="font-size: 1.5rem; margin-bottom: 15px;">⭐⭐⭐ Expert</div>
+                        <div class="tile-description">
+                            • Complex problems<br>
+                            • True mastery<br>
+                            • 2x XP multiplier<br>
+                            • Maximum rewards!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn" id="back-to-mode-btn">← Back to Modes</button>
+            </div>
+        </div>
+    `;
+}
+
 function renderQuiz() {
     const currentQuestion = state.quiz.questions[state.quiz.currentIndex];
     const answered = state.quiz.selectedAnswer !== null;
     const isCorrect = answered && state.quiz.selectedAnswer === currentQuestion.correctIndex;
     const isTestMode = state.quiz.mode === 'test';
+    const isSprintMode = state.quiz.mode === 'sprint';
     const progressPercent = ((state.quiz.currentIndex + 1) / state.quiz.questions.length) * 100;
+    
+    // Determine mode label with difficulty
+    let modeLabel = '';
+    const difficultyLabels = {
+        'beginner': '⭐',
+        'advanced': '⭐⭐',
+        'expert': '⭐⭐⭐'
+    };
+    const xpMultipliers = {
+        'beginner': '1x',
+        'advanced': '1.5x',
+        'expert': '2x'
+    };
+    
+    if (isTestMode) {
+        modeLabel = ' <span style="color: #ff6666;">• TEST MODE (1.5x XP)</span>';
+    } else if (isSprintMode) {
+        modeLabel = ' <span style="color: #ffff00;">• SPRINT MODE</span>';
+    } else {
+        // Practice mode - show difficulty
+        const diffLabel = difficultyLabels[state.quiz.difficulty] || '⭐';
+        const xpLabel = xpMultipliers[state.quiz.difficulty] || '1x';
+        modeLabel = ` <span style="color: #00ff00;">• ${diffLabel} ${xpLabel} XP</span>`;
+    }
     
     return `
         <div class="panel">
@@ -1476,7 +1704,7 @@ function renderQuiz() {
                 <div class="quiz-info">
                     <strong>${state.currentTopic.name}</strong><br>
                     Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}
-                    ${isTestMode ? ' <span style="color: #ff6666;">• TEST MODE</span>' : ''}
+                    ${modeLabel}
                 </div>
                 <div class="timer">60.0s</div>
             </div>
@@ -1611,14 +1839,26 @@ function renderStatus() {
     const { totalStatPoints, level, pointsIntoLevel, pointsToNextLevel } = computePlayerTotals(state.currentPlayer);
     const stats = state.currentPlayer.stats || {};
     
-    // Get all topics for display
-    const allTopicStats = topics.map(topic => {
-        const topicStat = stats[topic.id] || { correctAnswers: 0, statPoints: 0 };
+    // Aggregate stats by subject (main topics)
+    const subjectStats = subjects.map(subject => {
+        // Get all topics for this subject
+        const subjectTopics = topics.filter(t => t.subjectId === subject.id);
+        
+        // Sum up stats for all topics in this subject
+        let totalCorrectAnswers = 0;
+        let totalStatPoints = 0;
+        
+        subjectTopics.forEach(topic => {
+            const topicStat = stats[topic.id] || { correctAnswers: 0, statPoints: 0 };
+            totalCorrectAnswers += topicStat.correctAnswers;
+            totalStatPoints += topicStat.statPoints;
+        });
+        
         return {
-            topicId: topic.id,
-            topicName: topic.name,
-            correctAnswers: topicStat.correctAnswers,
-            statPoints: topicStat.statPoints
+            subjectId: subject.id,
+            subjectName: subject.name,
+            correctAnswers: totalCorrectAnswers,
+            statPoints: totalStatPoints
         };
     });
     
@@ -1642,17 +1882,17 @@ function renderStatus() {
                 </div>
             </div>
             
-            <h2 style="margin: 30px 0 20px 0; text-align: center;">Topic Stats</h2>
+            <h2 style="margin: 30px 0 20px 0; text-align: center;">Subject Stats</h2>
             
             <div class="stats-grid">
-                ${allTopicStats.map(stat => {
-                    const maxBarWidth = 20; // Max stat points to show in bar
+                ${subjectStats.map(stat => {
+                    const maxBarWidth = 50; // Max stat points to show in bar (increased for subjects)
                     const barPercentage = Math.min((stat.statPoints / maxBarWidth) * 100, 100);
                     
                     return `
                         <div class="stat-item">
                             <div class="stat-header">
-                                <div class="stat-topic-name">${stat.topicName}</div>
+                                <div class="stat-topic-name">${stat.subjectName}</div>
                                 <div class="stat-points">SP: ${stat.statPoints}</div>
                             </div>
                             <div class="stat-bar">
@@ -1677,6 +1917,54 @@ function renderStatus() {
 // Event Listeners
 // ============================================================================
 function attachEventListeners() {
+    // Player modal
+    const playerManagerBtn = document.getElementById('player-manager-btn');
+    if (playerManagerBtn) {
+        playerManagerBtn.addEventListener('click', () => {
+            const modal = document.getElementById('player-modal');
+            if (modal) {
+                modal.style.display = 'flex';
+                playSfx('modal-open');
+            }
+        });
+    }
+    
+    const closePlayerModal = document.getElementById('close-player-modal');
+    if (closePlayerModal) {
+        closePlayerModal.addEventListener('click', () => {
+            const modal = document.getElementById('player-modal');
+            if (modal) {
+                modal.style.display = 'none';
+                playSfx('modal-close');
+            }
+        });
+    }
+    
+    // Click outside modal to close
+    const modal = document.getElementById('player-modal');
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                playSfx('modal-close');
+            }
+        });
+    }
+    
+    // Player selection in modal
+    const playerItems = document.querySelectorAll('.player-item');
+    playerItems.forEach(item => {
+        item.addEventListener('click', () => {
+            selectPlayer(item.dataset.playerId);
+            const modal = document.getElementById('player-modal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+            playSfx('select');
+            render();
+        });
+    });
+    
     // Home screen
     const addPlayerBtn = document.getElementById('add-player-btn');
     if (addPlayerBtn) {
@@ -1686,16 +1974,12 @@ function attachEventListeners() {
             if (name) {
                 createPlayer(name);
                 input.value = '';
+                const modal = document.getElementById('player-modal');
+                if (modal) {
+                    modal.style.display = 'none';
+                }
                 render();
             }
-        });
-    }
-    
-    const playerSelect = document.getElementById('player-select');
-    if (playerSelect) {
-        playerSelect.addEventListener('change', (e) => {
-            selectPlayer(e.target.value);
-            render();
         });
     }
     
@@ -1733,7 +2017,9 @@ function attachEventListeners() {
     if (practiceModeBtn) {
         practiceModeBtn.addEventListener('click', () => {
             if (state.currentTopic) {
-                startQuiz(state.currentTopic.id, 'practice');
+                state.screen = 'difficulty-select';
+                playSfx('select');
+                render();
             }
         });
     }
@@ -1742,8 +2028,54 @@ function attachEventListeners() {
     if (testModeBtn) {
         testModeBtn.addEventListener('click', () => {
             if (state.currentTopic) {
-                startQuiz(state.currentTopic.id, 'test');
+                startQuiz(state.currentTopic.id, 'test', 'advanced'); // Test mode always uses advanced difficulty
             }
+        });
+    }
+    
+    const sprintModeBtn = document.getElementById('sprint-mode-btn');
+    if (sprintModeBtn) {
+        sprintModeBtn.addEventListener('click', () => {
+            if (state.currentTopic) {
+                startQuiz(state.currentTopic.id, 'sprint', 'beginner'); // Sprint mode uses beginner for quick practice
+            }
+        });
+    }
+    
+    // Difficulty selection buttons
+    const beginnerDiffBtn = document.getElementById('beginner-diff-btn');
+    if (beginnerDiffBtn) {
+        beginnerDiffBtn.addEventListener('click', () => {
+            if (state.currentTopic) {
+                startQuiz(state.currentTopic.id, 'practice', 'beginner');
+            }
+        });
+    }
+    
+    const advancedDiffBtn = document.getElementById('advanced-diff-btn');
+    if (advancedDiffBtn) {
+        advancedDiffBtn.addEventListener('click', () => {
+            if (state.currentTopic) {
+                startQuiz(state.currentTopic.id, 'practice', 'advanced');
+            }
+        });
+    }
+    
+    const expertDiffBtn = document.getElementById('expert-diff-btn');
+    if (expertDiffBtn) {
+        expertDiffBtn.addEventListener('click', () => {
+            if (state.currentTopic) {
+                startQuiz(state.currentTopic.id, 'practice', 'expert');
+            }
+        });
+    }
+    
+    const backToModeBtn = document.getElementById('back-to-mode-btn');
+    if (backToModeBtn) {
+        backToModeBtn.addEventListener('click', () => {
+            state.screen = 'mode-select';
+            playSfx('nav');
+            render();
         });
     }
     
@@ -1804,7 +2136,7 @@ function init() {
 function registerServiceWorker() {
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
+            navigator.serviceWorker.register('./sw.js')
                 .then((registration) => {
                     console.log('Service Worker registered:', registration.scope);
                     
