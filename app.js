@@ -118,6 +118,9 @@ function showBootScreen() {
                 playSfx('complete');
                 setTimeout(() => {
                     bootScreen.remove();
+                    // Show login screen after boot completes
+                    state.screen = 'login';
+                    render();
                 }, 500);
             }, 500);
         }
@@ -128,7 +131,7 @@ function showBootScreen() {
 // Global State
 // ============================================================================
 const state = {
-    screen: 'home', // 'home' | 'subject' | 'mode-select' | 'difficulty-select' | 'quiz' | 'results' | 'status'
+    screen: 'login', // 'login' | 'home' | 'subject' | 'mode-select' | 'difficulty-select' | 'quiz' | 'results' | 'status'
     players: [],
     currentPlayer: null,
     currentSubject: null,
@@ -1448,6 +1451,9 @@ function render() {
     if (!root) return;
     
     switch (state.screen) {
+        case 'login':
+            root.innerHTML = renderLogin();
+            break;
         case 'home':
             root.innerHTML = renderHome();
             break;
@@ -1474,6 +1480,47 @@ function render() {
     attachEventListeners();
 }
 
+function renderLogin() {
+    return `
+        <div class="panel">
+            <h1 class="panel-header">CHARACTER SELECT</h1>
+            
+            <div class="login-section">
+                <h2 style="text-align: center; margin-bottom: 20px;">Select Your Character</h2>
+                
+                <div class="player-list-login">
+                    ${state.players.length === 0 ? '<p style="text-align: center; opacity: 0.7; margin: 30px 0;">No characters yet. Create one below!</p>' : ''}
+                    ${state.players.map(p => {
+                        const playerInfo = computePlayerTotals(p);
+                        return `
+                            <div class="player-item-login" data-player-id="${p.id}">
+                                <div class="player-info-login">
+                                    <div class="player-name-login">${p.name}</div>
+                                    <div class="player-level-login">Level ${playerInfo.level}</div>
+                                    <div class="player-stats-login">Total SP: ${playerInfo.totalStatPoints}</div>
+                                </div>
+                                <div class="player-action">
+                                    <button class="btn btn-small select-player-btn" data-player-id="${p.id}">
+                                        SELECT →
+                                    </button>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+                
+                <div class="new-character-section">
+                    <h3 style="text-align: center; margin: 30px 0 20px 0;">Create New Character</h3>
+                    <div class="new-player-form-login">
+                        <input type="text" id="new-player-name-login" placeholder="Enter character name" maxlength="20" />
+                        <button class="btn" id="create-player-btn-login">Create Character</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
 function renderHome() {
     const playerInfo = state.currentPlayer ? computePlayerTotals(state.currentPlayer) : null;
     
@@ -1482,8 +1529,8 @@ function renderHome() {
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                 <h1 class="panel-header" style="margin: 0;">AFOQT QUEST</h1>
                 <div style="display: flex; gap: 10px;">
-                    <button class="btn btn-small" id="player-manager-btn" style="animation: none;">
-                        ${state.currentPlayer ? `👤 ${state.currentPlayer.name}` : '👤 Select Player'}
+                    <button class="btn btn-small" id="change-character-btn" style="animation: none;">
+                        ${state.currentPlayer ? `👤 ${state.currentPlayer.name}` : '👤 Select Character'}
                     </button>
                     ${state.currentPlayer ? `
                         <button class="btn btn-small" id="status-btn" style="animation: none;">
@@ -1501,36 +1548,6 @@ function renderHome() {
                         <div class="tile-description">${subject.description}</div>
                     </div>
                 `).join('')}
-            </div>
-        </div>
-        
-        ${renderPlayerModal()}
-    `;
-}
-
-function renderPlayerModal() {
-    return `
-        <div id="player-modal" class="modal" style="display: none;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2>Player Management</h2>
-                    <button class="modal-close" id="close-player-modal">✕</button>
-                </div>
-                <div class="modal-body">
-                    <div class="player-list">
-                        ${state.players.length === 0 ? '<p style="text-align: center; opacity: 0.7;">No players yet. Create one below!</p>' : ''}
-                        ${state.players.map(p => `
-                            <div class="player-item ${state.currentPlayer?.id === p.id ? 'selected' : ''}" data-player-id="${p.id}">
-                                <div class="player-name">${p.name}</div>
-                                <div class="player-level">Lv. ${computePlayerTotals(p).level}</div>
-                            </div>
-                        `).join('')}
-                    </div>
-                    <div class="new-player-form">
-                        <input type="text" id="new-player-name" placeholder="New player name" />
-                        <button class="btn btn-small" id="add-player-btn">Create Player</button>
-                    </div>
-                </div>
             </div>
         </div>
     `;
@@ -1917,69 +1934,56 @@ function renderStatus() {
 // Event Listeners
 // ============================================================================
 function attachEventListeners() {
-    // Player modal
-    const playerManagerBtn = document.getElementById('player-manager-btn');
-    if (playerManagerBtn) {
-        playerManagerBtn.addEventListener('click', () => {
-            const modal = document.getElementById('player-modal');
-            if (modal) {
-                modal.style.display = 'flex';
-                playSfx('modal-open');
-            }
-        });
-    }
-    
-    const closePlayerModal = document.getElementById('close-player-modal');
-    if (closePlayerModal) {
-        closePlayerModal.addEventListener('click', () => {
-            const modal = document.getElementById('player-modal');
-            if (modal) {
-                modal.style.display = 'none';
-                playSfx('modal-close');
-            }
-        });
-    }
-    
-    // Click outside modal to close
-    const modal = document.getElementById('player-modal');
-    if (modal) {
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-                playSfx('modal-close');
-            }
-        });
-    }
-    
-    // Player selection in modal
-    const playerItems = document.querySelectorAll('.player-item');
-    playerItems.forEach(item => {
-        item.addEventListener('click', () => {
-            selectPlayer(item.dataset.playerId);
-            const modal = document.getElementById('player-modal');
-            if (modal) {
-                modal.style.display = 'none';
-            }
+    // Login screen - Select player
+    const selectPlayerBtns = document.querySelectorAll('.select-player-btn');
+    selectPlayerBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            selectPlayer(btn.dataset.playerId);
             playSfx('select');
+            state.screen = 'home';
             render();
         });
     });
     
-    // Home screen
-    const addPlayerBtn = document.getElementById('add-player-btn');
-    if (addPlayerBtn) {
-        addPlayerBtn.addEventListener('click', () => {
-            const input = document.getElementById('new-player-name');
+    // Login screen - Create new character
+    const createPlayerBtnLogin = document.getElementById('create-player-btn-login');
+    if (createPlayerBtnLogin) {
+        createPlayerBtnLogin.addEventListener('click', () => {
+            const input = document.getElementById('new-player-name-login');
             const name = input.value.trim();
             if (name) {
                 createPlayer(name);
                 input.value = '';
-                const modal = document.getElementById('player-modal');
-                if (modal) {
-                    modal.style.display = 'none';
-                }
+                // After creating, automatically select and go to home
+                state.screen = 'home';
                 render();
             }
+        });
+    }
+    
+    // Allow Enter key to create character
+    const newPlayerNameInput = document.getElementById('new-player-name-login');
+    if (newPlayerNameInput) {
+        newPlayerNameInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const name = e.target.value.trim();
+                if (name) {
+                    createPlayer(name);
+                    e.target.value = '';
+                    state.screen = 'home';
+                    render();
+                }
+            }
+        });
+    }
+    
+    // Home screen - Change character button
+    const changeCharacterBtn = document.getElementById('change-character-btn');
+    if (changeCharacterBtn) {
+        changeCharacterBtn.addEventListener('click', () => {
+            playSfx('nav');
+            state.screen = 'login';
+            render();
         });
     }
     
@@ -2117,18 +2121,20 @@ function attachEventListeners() {
 // Initialization
 // ============================================================================
 function init() {
+    state.players = loadPlayers();
+    
     // Show boot screen on first load
     const hasBooted = sessionStorage.getItem('afoqt-booted');
     if (!hasBooted) {
         showBootScreen();
         sessionStorage.setItem('afoqt-booted', 'true');
+        // Don't render yet - boot screen will trigger login screen
+    } else {
+        // If already booted this session, go straight to login
+        state.screen = 'login';
+        render();
     }
     
-    state.players = loadPlayers();
-    if (state.players.length > 0) {
-        state.currentPlayer = state.players[0];
-    }
-    render();
     registerServiceWorker();
 }
 
