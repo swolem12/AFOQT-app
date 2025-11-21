@@ -126,6 +126,11 @@
         a:hover {
             text-decoration: underline;
         }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
     </style>
 </head>
 <body>
@@ -210,7 +215,12 @@
     <script>
         // Detect if running as installed PWA
         if (window.matchMedia('(display-mode: standalone)').matches) {
-            document.body.innerHTML = '<div class="container"><h1>✓ Already Installed!</h1><p>You\'re running AFOQT Quest as an installed app.</p><div class="btn-container"><a href="index.html" class="btn">Launch App</a></div></div>';
+            // Create new content for installed state
+            const container = document.createElement('div');
+            container.className = 'container';
+            container.innerHTML = '<h1>✓ Already Installed!</h1><p>You\'re running AFOQT Quest as an installed app.</p><div class="btn-container"><a href="index.html" class="btn">Launch App</a></div>';
+            document.body.innerHTML = '';
+            document.body.appendChild(container);
         }
         
         // Show install button if available
@@ -228,14 +238,19 @@
             installBtn.href = '#';
             installBtn.onclick = async (e) => {
                 e.preventDefault();
-                deferredPrompt.prompt();
-                const { outcome } = await deferredPrompt.userChoice;
-                console.log(`User response: ${outcome}`);
-                deferredPrompt = null;
-                installBtn.remove();
+                if (deferredPrompt) {
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    console.log(`User response: ${outcome}`);
+                    deferredPrompt = null;
+                    installBtn.remove();
+                }
             };
             
-            document.querySelector('.btn-container').prepend(installBtn);
+            const btnContainer = document.querySelector('.btn-container');
+            if (btnContainer) {
+                btnContainer.prepend(installBtn);
+            }
         });
     </script>
 </body>

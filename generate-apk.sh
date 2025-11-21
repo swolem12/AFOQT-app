@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Script to generate Android APK from AFOQT PWA using Bubblewrap
 # Prerequisites: Node.js 14+, JDK 8+, Android SDK
 
@@ -73,7 +73,9 @@ echo "=================================================="
 echo ""
 
 # Initialize Bubblewrap project
-echo "Initializing Bubblewrap project..."
+# Note: Bubblewrap will prompt for additional configuration interactively
+# Recommended: Package ID: $PACKAGE_ID, Version: $APP_VERSION
+echo "Initializing Bubblewrap project (interactive prompts will follow)..."
 bubblewrap init --manifest https://swolem12.github.io/AFOQT-app/manifest.json
 
 echo ""
