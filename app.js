@@ -2149,20 +2149,22 @@ function renderHome() {
     
     return `
         <div class="panel">
-            <h1 class="panel-header">AFOQT QUEST</h1>
+            <h1 class="panel-header" style="text-align: center; margin-bottom: 20px;">AFOQT QUEST</h1>
             
-            <div class="header-controls">
-                <button class="btn btn-small" id="change-character-btn">
-                    ${state.currentPlayer ? `👤 ${state.currentPlayer.name}` : '👤 Change Character'}
-                </button>
-                ${state.currentPlayer ? `
-                    <button class="btn btn-small" id="status-btn">
-                        ⚔ Status (Lv. ${playerInfo.level})
+            <div class="home-controls-box" style="background: rgba(0, 40, 80, 0.5); border: 2px solid #00ffff; border-radius: 8px; padding: 20px; margin-bottom: 30px; box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);">
+                <div class="header-controls">
+                    <button class="btn btn-small" id="change-character-btn">
+                        👤 ${state.currentPlayer ? state.currentPlayer.name : 'Player'}
                     </button>
-                ` : ''}
-                <button class="btn btn-small" id="settings-btn">
-                    ⚙ Settings
-                </button>
+                    ${state.currentPlayer ? `
+                        <button class="btn btn-small" id="status-btn">
+                            📊 Stats
+                        </button>
+                    ` : ''}
+                    <button class="btn btn-small" id="settings-btn">
+                        ⚙ Settings
+                    </button>
+                </div>
             </div>
             
             <h2>Subjects</h2>
