@@ -128,13 +128,13 @@ function showBootScreen() {
 // Global State
 // ============================================================================
 const state = {
-    screen: 'home', // 'home' | 'subject' | 'mode-select' | 'quiz' | 'results' | 'status'
+    screen: 'home', // 'home' | 'subject' | 'mode-select' | 'difficulty-select' | 'quiz' | 'results' | 'status'
     players: [],
     currentPlayer: null,
     currentSubject: null,
     currentTopic: null,
-    quizMode: 'practice', // 'practice' | 'test'
-    difficulty: 'medium', // 'easy' | 'medium' | 'hard'
+    quizMode: 'practice', // 'practice' | 'test' | 'sprint'
+    difficulty: 'beginner', // 'beginner' | 'advanced' | 'expert'
     quiz: {
         questions: [],
         currentIndex: 0,
@@ -143,7 +143,8 @@ const state = {
         questionStartTime: null,
         questionTimes: [],
         timerInterval: null,
-        mode: 'practice' // Store mode with quiz session
+        mode: 'practice', // Store mode with quiz session
+        difficulty: 'beginner' // Store difficulty with quiz session
     }
 };
 
@@ -1179,7 +1180,7 @@ function computePlayerTotals(player) {
     return { totalStatPoints, level, pointsIntoLevel, pointsToNextLevel };
 }
 
-function updatePlayerStats(player, topicId, correctCount) {
+function updatePlayerStats(player, topicId, correctCount, difficulty = 'beginner') {
     // Initialize stats if needed
     if (!player.stats) {
         player.stats = {};
@@ -1197,9 +1198,22 @@ function updatePlayerStats(player, topicId, correctCount) {
     const oldTotals = computePlayerTotals(player);
     const oldLevel = oldTotals.level;
     
-    // Update correct answers and recalculate stat points
+    // XP multipliers based on difficulty
+    const multipliers = {
+        'beginner': 1.0,
+        'advanced': 1.5,
+        'expert': 2.0
+    };
+    
+    const multiplier = multipliers[difficulty] || 1.0;
+    
+    // Update correct answers with multiplier applied
     player.stats[topicId].correctAnswers += correctCount;
-    player.stats[topicId].statPoints = Math.floor(player.stats[topicId].correctAnswers / 5);
+    
+    // Calculate stat points with difficulty multiplier
+    // Base: 1 SP per 5 correct answers, then multiply by difficulty
+    const baseStatPoints = Math.floor(player.stats[topicId].correctAnswers / 5);
+    player.stats[topicId].statPoints = Math.floor(baseStatPoints * multiplier);
     
     // Calculate level after update
     const newTotals = computePlayerTotals(player);
@@ -1257,13 +1271,14 @@ function selectPlayer(playerId) {
 // ============================================================================
 // Quiz Management
 // ============================================================================
-function startQuiz(topicId, mode = 'practice') {
+function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     const topic = topics.find(t => t.id === topicId);
     if (!topic) return;
     
     state.currentTopic = topic;
     state.quiz.questions = [];
     state.quiz.mode = mode;
+    state.quiz.difficulty = difficulty;
     
     // Generate questions based on mode (5 for sprint, 20 for others)
     const questionCount = mode === 'sprint' ? 5 : 20;
@@ -1378,8 +1393,8 @@ function finishQuiz() {
         
         state.currentPlayer.sessions.push(session);
         
-        // Update RPG stats
-        updatePlayerStats(state.currentPlayer, state.currentTopic.id, state.quiz.score);
+        // Update RPG stats with difficulty multiplier
+        updatePlayerStats(state.currentPlayer, state.currentTopic.id, state.quiz.score, state.quiz.difficulty);
         
         savePlayers(state.players);
     }
@@ -1441,6 +1456,9 @@ function render() {
             break;
         case 'mode-select':
             root.innerHTML = renderModeSelect();
+            break;
+        case 'difficulty-select':
+            root.innerHTML = renderDifficultySelect();
             break;
         case 'quiz':
             root.innerHTML = renderQuiz();
@@ -1594,6 +1612,56 @@ function renderModeSelect() {
     `;
 }
 
+function renderDifficultySelect() {
+    if (!state.currentTopic) return '';
+    
+    return `
+        <div class="panel">
+            <h1 class="panel-header">Select Difficulty</h1>
+            
+            <div style="margin: 40px 0;">
+                <h2 style="text-align: center; margin-bottom: 30px;">${state.currentTopic.name} - Practice Mode</h2>
+                
+                <div class="grid grid-3" style="max-width: 900px; margin: 0 auto;">
+                    <div class="tile difficulty-tile" id="beginner-diff-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title" style="font-size: 1.5rem; margin-bottom: 15px;">⭐ Beginner</div>
+                        <div class="tile-description">
+                            • Simpler questions<br>
+                            • More time to think<br>
+                            • 1x XP multiplier<br>
+                            • Perfect for learning
+                        </div>
+                    </div>
+                    
+                    <div class="tile difficulty-tile" id="advanced-diff-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title" style="font-size: 1.5rem; margin-bottom: 15px;">⭐⭐ Advanced</div>
+                        <div class="tile-description">
+                            • Standard difficulty<br>
+                            • Balanced challenge<br>
+                            • 1.5x XP multiplier<br>
+                            • Recommended
+                        </div>
+                    </div>
+                    
+                    <div class="tile difficulty-tile" id="expert-diff-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title" style="font-size: 1.5rem; margin-bottom: 15px;">⭐⭐⭐ Expert</div>
+                        <div class="tile-description">
+                            • Complex problems<br>
+                            • True mastery<br>
+                            • 2x XP multiplier<br>
+                            • Maximum rewards!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn" id="back-to-mode-btn">← Back to Modes</button>
+            </div>
+        </div>
+    `;
+}
+
 function renderQuiz() {
     const currentQuestion = state.quiz.questions[state.quiz.currentIndex];
     const answered = state.quiz.selectedAnswer !== null;
@@ -1602,12 +1670,28 @@ function renderQuiz() {
     const isSprintMode = state.quiz.mode === 'sprint';
     const progressPercent = ((state.quiz.currentIndex + 1) / state.quiz.questions.length) * 100;
     
-    // Determine mode label
+    // Determine mode label with difficulty
     let modeLabel = '';
+    const difficultyLabels = {
+        'beginner': '⭐',
+        'advanced': '⭐⭐',
+        'expert': '⭐⭐⭐'
+    };
+    const xpMultipliers = {
+        'beginner': '1x',
+        'advanced': '1.5x',
+        'expert': '2x'
+    };
+    
     if (isTestMode) {
-        modeLabel = ' <span style="color: #ff6666;">• TEST MODE</span>';
+        modeLabel = ' <span style="color: #ff6666;">• TEST MODE (1.5x XP)</span>';
     } else if (isSprintMode) {
         modeLabel = ' <span style="color: #ffff00;">• SPRINT MODE</span>';
+    } else {
+        // Practice mode - show difficulty
+        const diffLabel = difficultyLabels[state.quiz.difficulty] || '⭐';
+        const xpLabel = xpMultipliers[state.quiz.difficulty] || '1x';
+        modeLabel = ` <span style="color: #00ff00;">• ${diffLabel} ${xpLabel} XP</span>`;
     }
     
     return `
@@ -1933,7 +2017,9 @@ function attachEventListeners() {
     if (practiceModeBtn) {
         practiceModeBtn.addEventListener('click', () => {
             if (state.currentTopic) {
-                startQuiz(state.currentTopic.id, 'practice');
+                state.screen = 'difficulty-select';
+                playSfx('select');
+                render();
             }
         });
     }
@@ -1942,7 +2028,7 @@ function attachEventListeners() {
     if (testModeBtn) {
         testModeBtn.addEventListener('click', () => {
             if (state.currentTopic) {
-                startQuiz(state.currentTopic.id, 'test');
+                startQuiz(state.currentTopic.id, 'test', 'advanced'); // Test mode always uses advanced difficulty
             }
         });
     }
@@ -1951,8 +2037,45 @@ function attachEventListeners() {
     if (sprintModeBtn) {
         sprintModeBtn.addEventListener('click', () => {
             if (state.currentTopic) {
-                startQuiz(state.currentTopic.id, 'sprint');
+                startQuiz(state.currentTopic.id, 'sprint', 'beginner'); // Sprint mode uses beginner for quick practice
             }
+        });
+    }
+    
+    // Difficulty selection buttons
+    const beginnerDiffBtn = document.getElementById('beginner-diff-btn');
+    if (beginnerDiffBtn) {
+        beginnerDiffBtn.addEventListener('click', () => {
+            if (state.currentTopic) {
+                startQuiz(state.currentTopic.id, 'practice', 'beginner');
+            }
+        });
+    }
+    
+    const advancedDiffBtn = document.getElementById('advanced-diff-btn');
+    if (advancedDiffBtn) {
+        advancedDiffBtn.addEventListener('click', () => {
+            if (state.currentTopic) {
+                startQuiz(state.currentTopic.id, 'practice', 'advanced');
+            }
+        });
+    }
+    
+    const expertDiffBtn = document.getElementById('expert-diff-btn');
+    if (expertDiffBtn) {
+        expertDiffBtn.addEventListener('click', () => {
+            if (state.currentTopic) {
+                startQuiz(state.currentTopic.id, 'practice', 'expert');
+            }
+        });
+    }
+    
+    const backToModeBtn = document.getElementById('back-to-mode-btn');
+    if (backToModeBtn) {
+        backToModeBtn.addEventListener('click', () => {
+            state.screen = 'mode-select';
+            playSfx('nav');
+            render();
         });
     }
     
