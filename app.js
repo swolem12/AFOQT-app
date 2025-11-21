@@ -59,19 +59,69 @@ particleStyle.textContent = `
 document.head.appendChild(particleStyle);
 
 // ============================================================================
-// Boot Screen Effect
+// Boot Screen Effect - Enhanced ASCII RPG Style
 // ============================================================================
 function showBootScreen() {
+    const asciiLogo = `
+    ╔═══════════════════════════════════════════════════════════════════════╗
+    ║                                                                       ║
+    ║     ▄▄▄        █████▒ ▒█████    █████   ▄▄▄█████▓                   ║
+    ║    ▒████▄    ▓██   ▒ ▒██▒  ██▒▒██▓  ██▒ ▓  ██▒ ▓▒                   ║
+    ║    ▒██  ▀█▄  ▒████ ░ ▒██░  ██▒▒██▒  ██░ ▒ ▓██░ ▒░                   ║
+    ║    ░██▄▄▄▄██ ░▓█▒  ░ ▒██   ██░░██  █▀ ░ ░ ▓██▓ ░                    ║
+    ║     ▓█   ▓██▒░▒█░    ░ ████▓▒░░▒███▒█▄    ▒██▒ ░                    ║
+    ║     ▒▒   ▓▒█░ ▒ ░    ░ ▒░▒░▒░ ░░ ▒▒░ ▒    ▒ ░░                      ║
+    ║      ▒   ▒▒ ░ ░        ░ ▒ ▒░  ░ ▒░  ░      ░                       ║
+    ║      ░   ▒    ░ ░    ░ ░ ░ ▒     ░   ░    ░                         ║
+    ║          ░  ░            ░ ░      ░                                  ║
+    ║                                                                       ║
+    ║              ███████  ██    ██ ███████ ███████ ████████              ║
+    ║             ██     ██ ██    ██ ██      ██         ██                 ║
+    ║             ██     ██ ██    ██ █████   ███████    ██                 ║
+    ║             ██  ▄▄ ██ ██    ██ ██           ██    ██                 ║
+    ║              ██████ █  ██████  ███████ ███████    ██                 ║
+    ║                 ▀▀                                                    ║
+    ║                                                                       ║
+    ║               >> R P G   S T U D Y   S Y S T E M <<                  ║
+    ║                     [  NEURAL  LINK  ACTIVE  ]                       ║
+    ╚═══════════════════════════════════════════════════════════════════════╝
+    `;
+    
     const bootMessages = [
-        'INITIALIZING AFOQT QUEST...',
-        'LOADING SYSTEM MODULES...',
-        'LOADING MATH ENGINE... OK',
-        'LOADING VERBAL PROCESSOR... OK',
-        'LOADING READING ANALYZER... OK',
-        'LOADING SCIENCE DATABASE... OK',
-        'INITIALIZING AUDIO SYSTEM... OK',
-        'SYSTEM READY.',
-        ''
+        '',
+        '>> SYSTEM INITIALIZATION SEQUENCE...',
+        '>> Establishing neural link...',
+        '',
+        '[████████████████████████████████████████] 100%',
+        '',
+        '>> LOADING CORE MODULES:',
+        '   ├─ Math Combat Engine................ [✓] READY',
+        '   ├─ Verbal Processing Unit............ [✓] READY', 
+        '   ├─ Reading Comprehension Matrix...... [✓] READY',
+        '   ├─ Science Knowledge Database........ [✓] READY',
+        '   └─ Audio Synthesis System............ [✓] READY',
+        '',
+        '>> INITIALIZING PLAYER SYSTEMS:',
+        '   ├─ Character Profile Manager......... [✓] ONLINE',
+        '   ├─ Experience Point Calculator....... [✓] ONLINE',
+        '   ├─ Progress Tracker.................. [✓] ONLINE',
+        '   └─ LocalStorage Persistence.......... [✓] ONLINE',
+        '',
+        '>> LOADING QUEST DATABASE:',
+        '   ├─ Math Topics (27 Quests)........... [✓] LOADED',
+        '   ├─ Verbal Challenges................. [✓] LOADED',
+        '   ├─ Reading Missions.................. [✓] LOADED',
+        '   └─ Science Encounters................ [✓] LOADED',
+        '',
+        '>> ALL SYSTEMS OPERATIONAL',
+        '>> NEURAL LINK ESTABLISHED',
+        '',
+        '┌─────────────────────────────────────────────────────────────────┐',
+        '│  WELCOME TO THE VIRTUAL STUDY REALM                            │',
+        '│  Your journey to mastery begins now...                         │',
+        '└─────────────────────────────────────────────────────────────────┘',
+        '',
+        '>> Press any key or wait to continue...'
     ];
     
     const bootScreen = document.createElement('div');
@@ -85,43 +135,174 @@ function showBootScreen() {
         background: #000;
         color: #00ffff;
         font-family: 'Courier New', monospace;
-        padding: 40px;
+        padding: 20px;
         z-index: 10000;
-        overflow: hidden;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     `;
+    
+    // Create matrix rain background effect
+    const matrixCanvas = document.createElement('canvas');
+    matrixCanvas.style.cssText = `
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.15;
+        z-index: 1;
+    `;
+    bootScreen.appendChild(matrixCanvas);
+    
+    const bootContent = document.createElement('div');
+    bootContent.style.cssText = `
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 900px;
+    `;
+    bootScreen.appendChild(bootContent);
+    
+    const logoText = document.createElement('pre');
+    logoText.style.cssText = `
+        font-size: 10px;
+        line-height: 1.2;
+        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+        text-align: center;
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: logoFadeIn 1s ease-out forwards;
+    `;
+    logoText.textContent = asciiLogo;
+    bootContent.appendChild(logoText);
     
     const bootText = document.createElement('pre');
     bootText.style.cssText = `
-        font-size: 14px;
+        font-size: 13px;
         line-height: 1.6;
         text-shadow: 0 0 5px #00ffff;
+        margin-top: 20px;
     `;
-    bootScreen.appendChild(bootText);
+    bootContent.appendChild(bootText);
+    
+    // Add CSS for logo animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes logoFadeIn {
+            from { 
+                opacity: 0; 
+                transform: scale(0.9);
+                filter: blur(5px);
+            }
+            to { 
+                opacity: 1; 
+                transform: scale(1);
+                filter: blur(0);
+            }
+        }
+        @keyframes textGlitch {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-2px); }
+            50% { transform: translateX(2px); }
+            75% { transform: translateX(-1px); }
+        }
+        @media (max-width: 768px) {
+            #boot-screen pre {
+                font-size: 8px !important;
+            }
+            #boot-screen pre:last-child {
+                font-size: 10px !important;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+    
     document.body.appendChild(bootScreen);
+    
+    // Matrix rain effect
+    const ctx = matrixCanvas.getContext('2d');
+    matrixCanvas.width = window.innerWidth;
+    matrixCanvas.height = window.innerHeight;
+    
+    const columns = Math.floor(matrixCanvas.width / 20);
+    const drops = Array(columns).fill(1);
+    
+    const matrixChars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+    
+    function drawMatrix() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
+        
+        ctx.fillStyle = '#00ffff';
+        ctx.font = '15px monospace';
+        
+        for (let i = 0; i < drops.length; i++) {
+            const text = matrixChars[Math.floor(Math.random() * matrixChars.length)];
+            ctx.fillText(text, i * 20, drops[i] * 20);
+            
+            if (drops[i] * 20 > matrixCanvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+            drops[i]++;
+        }
+    }
+    
+    const matrixInterval = setInterval(drawMatrix, 50);
     
     // Play boot sound at start
     playSfx('boot');
     
+    // Type out boot messages
     let currentLine = 0;
     const typeInterval = setInterval(() => {
         if (currentLine < bootMessages.length) {
-            bootText.textContent += bootMessages[currentLine] + '\n';
+            const line = bootMessages[currentLine];
+            bootText.textContent += line + '\n';
+            
+            // Auto-scroll to bottom
+            bootScreen.scrollTop = bootScreen.scrollHeight;
+            
             currentLine++;
-            if (currentLine < bootMessages.length) {
+            
+            // Play sound effects for certain lines
+            if (line.includes('[✓]') || line.includes('READY') || line.includes('ONLINE') || line.includes('LOADED')) {
                 playSfx('nav');
+            } else if (line.includes('100%')) {
+                playSfx('correct');
+            } else if (line.includes('OPERATIONAL') || line.includes('ESTABLISHED')) {
+                playSfx('complete');
             }
         } else {
             clearInterval(typeInterval);
-            setTimeout(() => {
-                bootScreen.style.transition = 'opacity 0.5s';
+            
+            // Allow click or key to skip
+            const finishBoot = () => {
+                clearInterval(matrixInterval);
+                bootScreen.style.transition = 'opacity 0.8s';
                 bootScreen.style.opacity = '0';
-                playSfx('complete');
                 setTimeout(() => {
                     bootScreen.remove();
-                }, 500);
-            }, 500);
+                    style.remove();
+                }, 800);
+            };
+            
+            // Auto-finish after 2 seconds or on user interaction
+            const autoFinishTimeout = setTimeout(finishBoot, 2000);
+            
+            const userInteract = () => {
+                clearTimeout(autoFinishTimeout);
+                finishBoot();
+                bootScreen.removeEventListener('click', userInteract);
+                document.removeEventListener('keydown', userInteract);
+            };
+            
+            bootScreen.addEventListener('click', userInteract);
+            document.addEventListener('keydown', userInteract);
         }
-    }, 200);
+    }, 100);
 }
 
 // ============================================================================
