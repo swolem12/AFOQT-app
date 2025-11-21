@@ -226,6 +226,12 @@ body {
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
 }
 
+.option-btn.selected {
+    border-color: #00ffff;
+    background: rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
 .option-btn.incorrect {
     border-color: #ff0000;
     background: rgba(255, 0, 0, 0.2);

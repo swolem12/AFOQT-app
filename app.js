@@ -7,11 +7,13 @@
 // Global State
 // ============================================================================
 const state = {
-    screen: 'home', // 'home' | 'subject' | 'quiz' | 'results'
+    screen: 'home', // 'home' | 'subject' | 'mode-select' | 'quiz' | 'results'
     players: [],
     currentPlayer: null,
     currentSubject: null,
     currentTopic: null,
+    quizMode: 'practice', // 'practice' | 'test'
+    difficulty: 'medium', // 'easy' | 'medium' | 'hard'
     quiz: {
         questions: [],
         currentIndex: 0,
@@ -19,7 +21,8 @@ const state = {
         selectedAnswer: null,
         questionStartTime: null,
         questionTimes: [],
-        timerInterval: null
+        timerInterval: null,
+        mode: 'practice' // Store mode with quiz session
     }
 };
 
@@ -1001,12 +1004,13 @@ function selectPlayer(playerId) {
 // ============================================================================
 // Quiz Management
 // ============================================================================
-function startQuiz(topicId) {
+function startQuiz(topicId, mode = 'practice') {
     const topic = topics.find(t => t.id === topicId);
     if (!topic) return;
     
     state.currentTopic = topic;
     state.quiz.questions = [];
+    state.quiz.mode = mode;
     
     // Generate 20 questions
     for (let i = 0; i < 20; i++) {
@@ -1150,6 +1154,9 @@ function render() {
         case 'subject':
             root.innerHTML = renderSubject();
             break;
+        case 'mode-select':
+            root.innerHTML = renderModeSelect();
+            break;
         case 'quiz':
             root.innerHTML = renderQuiz();
             break;
@@ -1221,10 +1228,51 @@ function renderSubject() {
     `;
 }
 
+function renderModeSelect() {
+    if (!state.currentTopic) return '';
+    
+    return `
+        <div class="panel">
+            <h1 class="panel-header">${state.currentTopic.name}</h1>
+            
+            <div style="margin: 40px 0;">
+                <h2 style="text-align: center; margin-bottom: 30px;">Select Quiz Mode</h2>
+                
+                <div class="grid grid-2" style="max-width: 600px; margin: 0 auto;">
+                    <div class="tile" id="practice-mode-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title" style="font-size: 1.5rem; margin-bottom: 15px;">📚 Practice Mode</div>
+                        <div class="tile-description">
+                            • Instant feedback after each question<br>
+                            • See explanations immediately<br>
+                            • No time pressure<br>
+                            • Perfect for learning
+                        </div>
+                    </div>
+                    
+                    <div class="tile" id="test-mode-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title" style="font-size: 1.5rem; margin-bottom: 15px;">🎯 Test Mode</div>
+                        <div class="tile-description">
+                            • No feedback until the end<br>
+                            • Strict 60-second timer<br>
+                            • Simulates real test conditions<br>
+                            • Challenge yourself
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn" id="back-to-subject-btn">← Back to Topics</button>
+            </div>
+        </div>
+    `;
+}
+
 function renderQuiz() {
     const currentQuestion = state.quiz.questions[state.quiz.currentIndex];
     const answered = state.quiz.selectedAnswer !== null;
     const isCorrect = answered && state.quiz.selectedAnswer === currentQuestion.correctIndex;
+    const isTestMode = state.quiz.mode === 'test';
     
     return `
         <div class="panel">
@@ -1232,6 +1280,7 @@ function renderQuiz() {
                 <div class="quiz-info">
                     <strong>${state.currentTopic.name}</strong><br>
                     Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}
+                    ${isTestMode ? ' <span style="color: #ff6666;">• TEST MODE</span>' : ''}
                 </div>
                 <div class="timer">60.0s</div>
             </div>
@@ -1246,9 +1295,12 @@ function renderQuiz() {
                     const isCorrectOption = idx === currentQuestion.correctIndex;
                     let classes = 'option-btn';
                     
-                    if (answered) {
+                    // In test mode, don't show correct/incorrect highlighting
+                    if (answered && !isTestMode) {
                         if (isCorrectOption) classes += ' correct';
                         if (isSelected && !isCorrect) classes += ' incorrect';
+                    } else if (answered && isTestMode && isSelected) {
+                        classes += ' selected';
                     }
                     
                     return `
@@ -1264,7 +1316,7 @@ function renderQuiz() {
                 }).join('')}
             </div>
             
-            ${answered ? `
+            ${answered && !isTestMode ? `
                 <div class="feedback ${isCorrect ? 'correct' : 'incorrect'}">
                     <div class="feedback-status">
                         ${isCorrect ? '✓ CORRECT' : '✗ INCORRECT'}
@@ -1274,6 +1326,17 @@ function renderQuiz() {
                     </div>
                     <div class="feedback-explanation">
                         ${currentQuestion.explanation}
+                    </div>
+                </div>
+            ` : ''}
+            
+            ${answered && isTestMode ? `
+                <div class="feedback" style="background: rgba(0, 255, 0, 0.05); border-color: #00ff00; color: #00ff00;">
+                    <div class="feedback-status">
+                        Answer Recorded
+                    </div>
+                    <div style="opacity: 0.8;">
+                        Feedback will be shown at the end of the test
                     </div>
                 </div>
             ` : ''}
@@ -1382,9 +1445,44 @@ function attachEventListeners() {
     const topicTiles = document.querySelectorAll('[data-topic-id]');
     topicTiles.forEach(tile => {
         tile.addEventListener('click', () => {
-            startQuiz(tile.dataset.topicId);
+            const topicId = tile.dataset.topicId;
+            const topic = topics.find(t => t.id === topicId);
+            if (topic) {
+                state.currentTopic = topic;
+                state.screen = 'mode-select';
+                playSfx('nav');
+                render();
+            }
         });
     });
+    
+    // Mode selection buttons
+    const practiceModeBtn = document.getElementById('practice-mode-btn');
+    if (practiceModeBtn) {
+        practiceModeBtn.addEventListener('click', () => {
+            if (state.currentTopic) {
+                startQuiz(state.currentTopic.id, 'practice');
+            }
+        });
+    }
+    
+    const testModeBtn = document.getElementById('test-mode-btn');
+    if (testModeBtn) {
+        testModeBtn.addEventListener('click', () => {
+            if (state.currentTopic) {
+                startQuiz(state.currentTopic.id, 'test');
+            }
+        });
+    }
+    
+    const backToSubjectBtn = document.getElementById('back-to-subject-btn');
+    if (backToSubjectBtn) {
+        backToSubjectBtn.addEventListener('click', () => {
+            state.screen = 'subject';
+            playSfx('nav');
+            render();
+        });
+    }
     
     // Quiz options
     const optionBtns = document.querySelectorAll('[data-option-index]');
