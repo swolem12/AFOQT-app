@@ -314,6 +314,11 @@ function showBootScreen() {
 }
 
 // ============================================================================
+// Constants
+// ============================================================================
+const DIFFICULTY_LEVELS = ['beginner', 'advanced', 'expert'];
+
+// ============================================================================
 // Global State
 // ============================================================================
 const state = {
@@ -1904,8 +1909,7 @@ function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
         // For sprint mode, randomly select difficulty for each question
         let questionDifficulty = difficulty;
         if (mode === 'sprint') {
-            const difficulties = ['beginner', 'advanced', 'expert'];
-            questionDifficulty = difficulties[Math.floor(Math.random() * difficulties.length)];
+            questionDifficulty = DIFFICULTY_LEVELS[Math.floor(Math.random() * DIFFICULTY_LEVELS.length)];
         }
         
         // Pass difficulty to question generator (will be ignored by generators that don't support it)
