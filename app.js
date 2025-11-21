@@ -83,7 +83,7 @@ function showBootScreen() {
         width: 100%;
         height: 100%;
         background: #000;
-        color: #00ff00;
+        color: #00ffff;
         font-family: 'Courier New', monospace;
         padding: 40px;
         z-index: 10000;
@@ -94,7 +94,7 @@ function showBootScreen() {
     bootText.style.cssText = `
         font-size: 14px;
         line-height: 1.6;
-        text-shadow: 0 0 5px #00ff00;
+        text-shadow: 0 0 5px #00ffff;
     `;
     bootScreen.appendChild(bootText);
     document.body.appendChild(bootScreen);
@@ -1191,7 +1191,7 @@ function handleAnswer(optionIndex) {
         const y = rect.top + rect.height / 2;
         
         if (isCorrect) {
-            createParticles(x, y, '#00ff00', 30);
+            createParticles(x, y, '#00ffff', 30);
         } else {
             createParticles(x, y, '#ff0000', 20);
         }

@@ -18,14 +18,14 @@
 }
 
 @keyframes textGlow {
-    0%, 100% { text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; }
-    50% { text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00; }
+    0%, 100% { text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; }
+    50% { text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff; }
 }
 
 body {
     font-family: 'Courier New', 'Courier', monospace;
     background: #000000;
-    color: #00ff00;
+    color: #00ffff;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -62,7 +62,7 @@ body::after {
     left: 0;
     width: 100%;
     height: 3px;
-    background: rgba(0, 255, 0, 0.1);
+    background: rgba(0, 255, 255, 0.1);
     pointer-events: none;
     z-index: 999;
     animation: scanline 6s linear infinite;
@@ -84,13 +84,13 @@ body::after {
 
 /* Card/Panel styles */
 .panel {
-    background: rgba(0, 20, 0, 0.9);
-    border: 2px solid #00ff00;
+    background: rgba(0, 20, 40, 0.9);
+    border: 2px solid #00ffff;
     border-radius: 8px;
     padding: 30px;
     box-shadow: 
-        0 0 20px rgba(0, 255, 0, 0.3),
-        inset 0 0 100px rgba(0, 255, 0, 0.02);
+        0 0 20px rgba(0, 255, 255, 0.3),
+        inset 0 0 100px rgba(0, 255, 255, 0.02);
     margin-bottom: 20px;
     position: relative;
     animation: panelEnter 0.5s ease-out;
@@ -118,8 +118,8 @@ body::after {
         90deg,
         transparent,
         transparent 2px,
-        rgba(0, 255, 0, 0.03) 2px,
-        rgba(0, 255, 0, 0.03) 4px
+        rgba(0, 255, 255, 0.03) 2px,
+        rgba(0, 255, 255, 0.03) 4px
     );
     pointer-events: none;
     border-radius: 8px;
@@ -129,7 +129,7 @@ body::after {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 30px;
-    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
     letter-spacing: 4px;
     animation: textGlow 2s ease-in-out infinite, typeIn 1s steps(20);
     font-weight: bold;
@@ -144,8 +144,8 @@ body::after {
 /* Button styles */
 .btn {
     background: rgba(0, 0, 0, 0.9);
-    color: #00ff00;
-    border: 2px solid #00ff00;
+    color: #00ffff;
+    border: 2px solid #00ffff;
     padding: 12px 24px;
     font-size: 1rem;
     cursor: pointer;
@@ -166,7 +166,7 @@ body::after {
     left: 50%;
     width: 0;
     height: 0;
-    background: rgba(0, 255, 0, 0.2);
+    background: rgba(0, 255, 255, 0.2);
     border-radius: 50%;
     transform: translate(-50%, -50%);
     transition: width 0.6s, height 0.6s;
@@ -178,20 +178,20 @@ body::after {
 }
 
 .btn:hover {
-    background: rgba(0, 255, 0, 0.1);
+    background: rgba(0, 255, 255, 0.1);
     box-shadow: 
-        0 0 15px rgba(0, 255, 0, 0.5),
-        0 0 30px rgba(0, 255, 0, 0.3),
-        inset 0 0 10px rgba(0, 255, 0, 0.2);
+        0 0 15px rgba(0, 255, 255, 0.5),
+        0 0 30px rgba(0, 255, 255, 0.3),
+        inset 0 0 10px rgba(0, 255, 255, 0.2);
     transform: translateY(-2px);
-    text-shadow: 0 0 10px #00ff00;
+    text-shadow: 0 0 10px #00ffff;
 }
 
 .btn:active {
     transform: translateY(0) scale(0.98);
     box-shadow: 
-        0 0 10px rgba(0, 255, 0, 0.3),
-        inset 0 0 20px rgba(0, 255, 0, 0.1);
+        0 0 10px rgba(0, 255, 255, 0.3),
+        inset 0 0 20px rgba(0, 255, 255, 0.1);
 }
 
 .btn:disabled {
@@ -245,8 +245,8 @@ body::after {
 .player-controls select,
 .player-controls input {
     background: rgba(0, 0, 0, 0.9);
-    color: #00ff00;
-    border: 2px solid #00ff00;
+    color: #00ffff;
+    border: 2px solid #00ffff;
     padding: 10px;
     font-size: 1rem;
     border-radius: 4px;
@@ -256,16 +256,16 @@ body::after {
 
 .player-controls input:focus {
     outline: none;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
     animation: inputFocus 0.3s ease-out;
 }
 
 @keyframes inputFocus {
     from {
-        box-shadow: 0 0 0 rgba(0, 255, 0, 0);
+        box-shadow: 0 0 0 rgba(0, 255, 255, 0);
     }
     to {
-        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
     }
 }
 
@@ -284,7 +284,7 @@ body::after {
 /* Subject and Topic tiles */
 .tile {
     background: rgba(0, 0, 0, 0.9);
-    border: 2px solid #00ff00;
+    border: 2px solid #00ffff;
     padding: 20px;
     text-align: center;
     cursor: pointer;
@@ -322,7 +322,7 @@ body::after {
     bottom: -2px;
     background: linear-gradient(45deg, 
         transparent 30%, 
-        rgba(0, 255, 0, 0.1) 50%, 
+        rgba(0, 255, 255, 0.1) 50%, 
         transparent 70%);
     opacity: 0;
     transition: opacity 0.3s;
@@ -339,13 +339,13 @@ body::after {
 }
 
 .tile:hover {
-    background: rgba(0, 255, 0, 0.05);
+    background: rgba(0, 255, 255, 0.05);
     box-shadow: 
-        0 0 20px rgba(0, 255, 0, 0.5),
-        0 0 40px rgba(0, 255, 0, 0.3),
-        inset 0 0 20px rgba(0, 255, 0, 0.1);
+        0 0 20px rgba(0, 255, 255, 0.5),
+        0 0 40px rgba(0, 255, 255, 0.3),
+        inset 0 0 20px rgba(0, 255, 255, 0.1);
     transform: translateY(-3px) scale(1.02);
-    border-color: #00ff00;
+    border-color: #00ffff;
 }
 
 .tile:active {
@@ -356,7 +356,7 @@ body::after {
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 8px;
-    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
 .tile-description {
@@ -370,7 +370,7 @@ body::after {
     width: 100%;
     height: 6px;
     background: rgba(0, 0, 0, 0.8);
-    border: 1px solid #00ff00;
+    border: 1px solid #00ffff;
     border-radius: 3px;
     overflow: hidden;
     margin-bottom: 20px;
@@ -379,8 +379,8 @@ body::after {
 
 .quiz-progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #00ff00, #00cc00);
-    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    background: linear-gradient(90deg, #00ffff, #0099cc);
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
     transition: width 0.5s ease-out;
     animation: progressPulse 2s ease-in-out infinite;
 }
@@ -388,11 +388,11 @@ body::after {
 @keyframes progressPulse {
     0%, 100% { 
         opacity: 1;
-        box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+        box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
     }
     50% { 
         opacity: 0.9;
-        box-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00;
+        box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
     }
 }
 
@@ -419,7 +419,7 @@ body::after {
 
 .quiz-info {
     font-size: 1.2rem;
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
 }
 
 .timer {
@@ -428,12 +428,12 @@ body::after {
     font-weight: bold;
     padding: 10px 20px;
     background: rgba(0, 0, 0, 0.9);
-    border: 2px solid #00ff00;
+    border: 2px solid #00ffff;
     border-radius: 4px;
-    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
     box-shadow: 
-        0 0 20px rgba(0, 255, 0, 0.3),
-        inset 0 0 10px rgba(0, 255, 0, 0.1);
+        0 0 20px rgba(0, 255, 255, 0.3),
+        inset 0 0 10px rgba(0, 255, 255, 0.1);
     animation: timerPulse 1s ease-in-out infinite;
 }
 
@@ -464,13 +464,13 @@ body::after {
     font-size: 1.3rem;
     margin: 30px 0;
     padding: 20px;
-    background: rgba(0, 255, 0, 0.05);
-    border-left: 4px solid #00ff00;
+    background: rgba(0, 255, 255, 0.05);
+    border-left: 4px solid #00ffff;
     line-height: 1.6;
     position: relative;
     box-shadow: 
-        0 0 20px rgba(0, 255, 0, 0.1),
-        inset 0 0 30px rgba(0, 255, 0, 0.02);
+        0 0 20px rgba(0, 255, 255, 0.1),
+        inset 0 0 30px rgba(0, 255, 255, 0.02);
     animation: questionReveal 0.6s ease-out;
 }
 
@@ -489,9 +489,9 @@ body::after {
 
 .question-prompt::before {
     content: '> ';
-    color: #00ff00;
+    color: #00ffff;
     font-weight: bold;
-    text-shadow: 0 0 10px #00ff00;
+    text-shadow: 0 0 10px #00ffff;
 }
 
 .options-grid {
@@ -502,8 +502,8 @@ body::after {
 
 .option-btn {
     background: rgba(0, 0, 0, 0.9);
-    color: #00ff00;
-    border: 2px solid #00ff00;
+    color: #00ffff;
+    border: 2px solid #00ffff;
     padding: 15px;
     text-align: left;
     cursor: pointer;
@@ -549,21 +549,21 @@ body::after {
 }
 
 .option-btn:hover:not(:disabled) {
-    background: rgba(0, 255, 0, 0.1);
+    background: rgba(0, 255, 255, 0.1);
     box-shadow: 
-        0 0 20px rgba(0, 255, 0, 0.4),
-        inset 0 0 10px rgba(0, 255, 0, 0.1);
+        0 0 20px rgba(0, 255, 255, 0.4),
+        inset 0 0 10px rgba(0, 255, 255, 0.1);
     padding-left: 30px;
     transform: translateX(5px);
 }
 
 .option-btn.correct {
-    border-color: #00ff00;
-    background: rgba(0, 255, 0, 0.2);
+    border-color: #00ffff;
+    background: rgba(0, 255, 255, 0.2);
     box-shadow: 
-        0 0 20px rgba(0, 255, 0, 0.5),
-        0 0 40px rgba(0, 255, 0, 0.3),
-        inset 0 0 20px rgba(0, 255, 0, 0.2);
+        0 0 20px rgba(0, 255, 255, 0.5),
+        0 0 40px rgba(0, 255, 255, 0.3),
+        inset 0 0 20px rgba(0, 255, 255, 0.2);
     animation: correctPulse 0.6s ease-out;
 }
 
@@ -603,7 +603,7 @@ body::after {
 .option-label {
     font-weight: bold;
     margin-right: 10px;
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
 }
 
 /* Feedback panel */
@@ -654,11 +654,11 @@ body::after {
 }
 
 .feedback.correct {
-    background: rgba(0, 255, 0, 0.1);
-    border-color: #00ff00;
+    background: rgba(0, 255, 255, 0.1);
+    border-color: #00ffff;
     box-shadow: 
-        0 0 20px rgba(0, 255, 0, 0.3),
-        inset 0 0 30px rgba(0, 255, 0, 0.05);
+        0 0 20px rgba(0, 255, 255, 0.3),
+        inset 0 0 30px rgba(0, 255, 255, 0.05);
 }
 
 .feedback.incorrect {
@@ -692,7 +692,7 @@ body::after {
 .feedback-explanation {
     margin-top: 15px;
     padding-top: 15px;
-    border-top: 1px solid rgba(0, 255, 0, 0.3);
+    border-top: 1px solid rgba(0, 255, 255, 0.3);
     line-height: 1.6;
 }
 
@@ -713,9 +713,9 @@ body::after {
     font-weight: bold;
     margin: 20px 0;
     text-shadow: 
-        0 0 15px #00ff00,
-        0 0 30px #00ff00,
-        0 0 45px #00ff00;
+        0 0 15px #00ffff,
+        0 0 30px #00ffff,
+        0 0 45px #00ffff;
     animation: scoreReveal 1s ease-out, scorePulse 2s ease-in-out infinite 1s;
 }
 
@@ -737,17 +737,17 @@ body::after {
     0%, 100% { 
         transform: scale(1);
         text-shadow: 
-            0 0 15px #00ff00,
-            0 0 30px #00ff00,
-            0 0 45px #00ff00;
+            0 0 15px #00ffff,
+            0 0 30px #00ffff,
+            0 0 45px #00ffff;
     }
     50% { 
         transform: scale(1.05);
         text-shadow: 
-            0 0 20px #00ff00,
-            0 0 40px #00ff00,
-            0 0 60px #00ff00,
-            0 0 80px #00ff00;
+            0 0 20px #00ffff,
+            0 0 40px #00ffff,
+            0 0 60px #00ffff,
+            0 0 80px #00ffff;
     }
 }
 
@@ -763,7 +763,7 @@ body::after {
 .history-title {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    border-bottom: 2px solid #00ff00;
+    border-bottom: 2px solid #00ffff;
     padding-bottom: 10px;
 }
 
@@ -773,8 +773,8 @@ body::after {
 }
 
 .history-item {
-    background: rgba(0, 255, 0, 0.05);
-    border-left: 3px solid #00ff00;
+    background: rgba(0, 255, 255, 0.05);
+    border-left: 3px solid #00ffff;
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 4px;
@@ -800,10 +800,10 @@ body::after {
 .history-item:nth-child(5) { animation-delay: 0.5s; }
 
 .history-item:hover {
-    background: rgba(0, 255, 0, 0.1);
-    border-left-color: #00ff00;
+    background: rgba(0, 255, 255, 0.1);
+    border-left-color: #00ffff;
     transform: translateX(5px);
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
 }
 
 .history-date {
@@ -870,10 +870,10 @@ body::after {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #00ff00;
+    background: #00ffff;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #00cc00;
+    background: #0099cc;
 }
