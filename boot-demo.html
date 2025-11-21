@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFOQT Quest - Boot Screen Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #000;
+            color: #00ffff;
+            font-family: 'Courier New', monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        h1 {
+            text-align: center;
+            text-shadow: 0 0 10px #00ffff;
+            margin-bottom: 30px;
+        }
+        
+        button {
+            background: rgba(0, 0, 0, 0.9);
+            color: #00ffff;
+            border: 2px solid #00ffff;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            background: rgba(0, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            transform: scale(1.05);
+        }
+        
+        .info {
+            margin-top: 30px;
+            text-align: center;
+            opacity: 0.7;
+            max-width: 600px;
+        }
+    </style>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>🎮 AFOQT QUEST - BOOT SEQUENCE DEMO 🎮</h1>
+    
+    <button onclick="replayBoot()">▶ REPLAY BOOT SEQUENCE</button>
+    
+    <div class="info">
+        <p>This demonstrates the enhanced ASCII/Terminal-style loading screen with:</p>
+        <ul style="text-align: left;">
+            <li>Sword Art Online inspired ASCII logo</li>
+            <li>Tron-style matrix rain background effect</li>
+            <li>RPG-themed system initialization messages</li>
+            <li>Progressive loading indicators</li>
+            <li>Neural link / cyberpunk atmosphere</li>
+        </ul>
+    </div>
+    
+    <script>
+        function replayBoot() {
+            // Clear any existing boot screen
+            const existing = document.getElementById('boot-screen');
+            if (existing) {
+                existing.remove();
+            }
+            
+            // Show the boot screen
+            showBootScreen();
+        }
+        
+        // Show boot screen on initial load
+        window.addEventListener('load', () => {
+            setTimeout(replayBoot, 500);
+        });
+    </script>
+</body>
+</html>
