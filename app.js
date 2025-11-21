@@ -1163,8 +1163,9 @@ function startQuiz(topicId, mode = 'practice') {
     state.quiz.questions = [];
     state.quiz.mode = mode;
     
-    // Generate 20 questions
-    for (let i = 0; i < 20; i++) {
+    // Generate questions based on mode (5 for sprint, 20 for others)
+    const questionCount = mode === 'sprint' ? 5 : 20;
+    for (let i = 0; i < questionCount; i++) {
         state.quiz.questions.push(topic.generateQuestion());
     }
     
@@ -1448,24 +1449,34 @@ function renderModeSelect() {
             <div style="margin: 40px 0;">
                 <h2 style="text-align: center; margin-bottom: 30px;">Select Quiz Mode</h2>
                 
-                <div class="grid grid-2" style="max-width: 600px; margin: 0 auto;">
-                    <div class="tile" id="practice-mode-btn" style="cursor: pointer; padding: 30px;">
-                        <div class="tile-title" style="font-size: 1.5rem; margin-bottom: 15px;">📚 Practice Mode</div>
+                <div class="grid grid-3" style="max-width: 900px; margin: 0 auto;">
+                    <div class="tile mode-tile" id="practice-mode-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">⚔ Practice</div>
                         <div class="tile-description">
-                            • Instant feedback after each question<br>
-                            • See explanations immediately<br>
+                            • Instant feedback<br>
+                            • See explanations<br>
                             • No time pressure<br>
-                            • Perfect for learning
+                            • 20 questions
                         </div>
                     </div>
                     
-                    <div class="tile" id="test-mode-btn" style="cursor: pointer; padding: 30px;">
-                        <div class="tile-title" style="font-size: 1.5rem; margin-bottom: 15px;">🎯 Test Mode</div>
+                    <div class="tile mode-tile" id="test-mode-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">🛡 Test</div>
                         <div class="tile-description">
-                            • No feedback until the end<br>
-                            • Strict 60-second timer<br>
-                            • Simulates real test conditions<br>
-                            • Challenge yourself
+                            • No feedback until end<br>
+                            • 60-second timer<br>
+                            • Test conditions<br>
+                            • 20 questions
+                        </div>
+                    </div>
+                    
+                    <div class="tile mode-tile" id="sprint-mode-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">⚡ Sprint</div>
+                        <div class="tile-description">
+                            • Quick practice<br>
+                            • Instant feedback<br>
+                            • Fast-paced<br>
+                            • 5 questions only
                         </div>
                     </div>
                 </div>
@@ -1483,7 +1494,16 @@ function renderQuiz() {
     const answered = state.quiz.selectedAnswer !== null;
     const isCorrect = answered && state.quiz.selectedAnswer === currentQuestion.correctIndex;
     const isTestMode = state.quiz.mode === 'test';
+    const isSprintMode = state.quiz.mode === 'sprint';
     const progressPercent = ((state.quiz.currentIndex + 1) / state.quiz.questions.length) * 100;
+    
+    // Determine mode label
+    let modeLabel = '';
+    if (isTestMode) {
+        modeLabel = ' <span style="color: #ff6666;">• TEST MODE</span>';
+    } else if (isSprintMode) {
+        modeLabel = ' <span style="color: #ffff00;">• SPRINT MODE</span>';
+    }
     
     return `
         <div class="panel">
@@ -1495,7 +1515,7 @@ function renderQuiz() {
                 <div class="quiz-info">
                     <strong>${state.currentTopic.name}</strong><br>
                     Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}
-                    ${isTestMode ? ' <span style="color: #ff6666;">• TEST MODE</span>' : ''}
+                    ${modeLabel}
                 </div>
                 <div class="timer">60.0s</div>
             </div>
@@ -1818,6 +1838,15 @@ function attachEventListeners() {
         testModeBtn.addEventListener('click', () => {
             if (state.currentTopic) {
                 startQuiz(state.currentTopic.id, 'test');
+            }
+        });
+    }
+    
+    const sprintModeBtn = document.getElementById('sprint-mode-btn');
+    if (sprintModeBtn) {
+        sprintModeBtn.addEventListener('click', () => {
+            if (state.currentTopic) {
+                startQuiz(state.currentTopic.id, 'sprint');
             }
         });
     }
