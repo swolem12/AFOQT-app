@@ -1321,3 +1321,125 @@ body::after {
         width: 100%;
     }
 }
+
+/* ============================================================================
+   Login Screen Styles
+   ============================================================================ */
+.login-section {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.player-list-login {
+    margin-bottom: 40px;
+}
+
+.player-item-login {
+    background: rgba(0, 255, 255, 0.05);
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.player-item-login:hover {
+    background: rgba(0, 255, 255, 0.1);
+    border-color: rgba(0, 255, 255, 0.6);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    transform: translateX(5px);
+}
+
+.player-info-login {
+    flex: 1;
+}
+
+.player-name-login {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    margin-bottom: 5px;
+}
+
+.player-level-login {
+    font-size: 1.1em;
+    color: #ffff00;
+    margin-bottom: 3px;
+}
+
+.player-stats-login {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.player-action {
+    margin-left: 20px;
+}
+
+.new-character-section {
+    border-top: 2px solid rgba(0, 255, 255, 0.3);
+    padding-top: 30px;
+}
+
+.new-player-form-login {
+    display: flex;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.new-player-form-login input {
+    flex: 1;
+    background: rgba(0, 255, 255, 0.1);
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    border-radius: 4px;
+    padding: 12px 15px;
+    color: #00ffff;
+    font-family: 'Courier New', monospace;
+    font-size: 1em;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.new-player-form-login input::placeholder {
+    color: rgba(0, 255, 255, 0.5);
+}
+
+.new-player-form-login input:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.new-player-form-login .btn {
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .player-item-login {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .player-action {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .player-action .btn {
+        width: 100%;
+    }
+    
+    .new-player-form-login {
+        flex-direction: column;
+    }
+    
+    .new-player-form-login .btn {
+        width: 100%;
+    }
+}
