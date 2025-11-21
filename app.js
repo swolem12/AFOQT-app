@@ -1319,13 +1319,13 @@ const aviationTopics = [
         subjectId: 'aviation',
         generateQuestion: () => {
             const questions = [
-                { q: "What are the four forces of flight?", a: "Lift, Weight, Thrust, Drag", opts: ["Lift, Gravity, Speed, Wind", "Up, Down, Forward, Backward", "Pitch, Roll, Yaw, Speed"], exp: "The four forces are Lift (up), Weight (down), Thrust (forward), and Drag (backward)" },
-                { q: "What does the rudder control?", a: "Yaw", opts: ["Pitch", "Roll", "Altitude"], exp: "The rudder controls yaw, which is rotation around the vertical axis" },
-                { q: "What does the elevator control?", a: "Pitch", opts: ["Yaw", "Roll", "Speed"], exp: "The elevator controls pitch, which is rotation around the lateral axis" },
-                { q: "What does the aileron control?", a: "Roll", opts: ["Pitch", "Yaw", "Altitude"], exp: "Ailerons control roll, which is rotation around the longitudinal axis" },
+                { q: "What are the four forces of flight?", a: "Lift, Weight, Thrust, Drag", opts: ["Lift, Gravity, Speed, Wind", "Up, Down, Forward, Backward", "Pitch, Roll, Yaw, Speed"], exp: "The four forces are Lift (up), Weight (down), Thrust (forward), and Drag (backward)", img: "images/aircraft-forces.svg" },
+                { q: "What does the rudder control?", a: "Yaw", opts: ["Pitch", "Roll", "Altitude"], exp: "The rudder controls yaw, which is rotation around the vertical axis", img: "images/aircraft-controls.svg" },
+                { q: "What does the elevator control?", a: "Pitch", opts: ["Yaw", "Roll", "Speed"], exp: "The elevator controls pitch, which is rotation around the lateral axis", img: "images/aircraft-controls.svg" },
+                { q: "What does the aileron control?", a: "Roll", opts: ["Pitch", "Yaw", "Altitude"], exp: "Ailerons control roll, which is rotation around the longitudinal axis", img: "images/aircraft-controls.svg" },
                 { q: "What is the standard sea level atmospheric pressure?", a: "29.92 inches Hg", opts: ["30.00 inches Hg", "14.7 psi only", "1013 mb only"], exp: "Standard sea level pressure is 29.92 inches of mercury (or 1013.25 mb)" },
                 { q: "What is V1 speed?", a: "Decision speed for takeoff", opts: ["Landing speed", "Cruise speed", "Stall speed"], exp: "V1 is the critical engine failure recognition speed during takeoff" },
-                { q: "What instrument shows rate of climb or descent?", a: "Vertical Speed Indicator", opts: ["Altimeter", "Airspeed Indicator", "Attitude Indicator"], exp: "The VSI (Vertical Speed Indicator) shows rate of climb or descent" },
+                { q: "What instrument shows rate of climb or descent?", a: "Vertical Speed Indicator", opts: ["Altimeter", "Airspeed Indicator", "Attitude Indicator"], exp: "The VSI (Vertical Speed Indicator) shows rate of climb or descent", img: "images/flight-instruments.svg" },
                 { q: "What does 'angle of attack' mean?", a: "Angle between chord line and relative wind", opts: ["Angle of the aircraft to ground", "Angle of climb", "Bank angle"], exp: "Angle of attack is the angle between the wing's chord line and the oncoming airflow" },
                 { q: "What causes an aircraft to stall?", a: "Exceeding critical angle of attack", opts: ["Flying too fast", "Running out of fuel", "Engine failure"], exp: "A stall occurs when the wing exceeds its critical angle of attack, disrupting airflow" },
                 { q: "What is the purpose of flaps?", a: "Increase lift and drag at lower speeds", opts: ["Increase speed", "Control direction", "Reduce weight"], exp: "Flaps increase wing camber to generate more lift and drag for takeoff and landing" },
@@ -1338,10 +1338,11 @@ const aviationTopics = [
             const shuffled = shuffleArray(allOptions);
             
             return {
-                prompt: `⚠️ NOTE: This section typically requires aircraft diagrams and images.\n\n${item.q}`,
+                prompt: item.q,
                 options: shuffled,
                 correctIndex: shuffled.indexOf(item.a),
-                explanation: item.exp
+                explanation: item.exp,
+                image: item.img || null
             };
         }
     }
@@ -1358,14 +1359,14 @@ const instrumentTopics = [
         subjectId: 'instrument',
         generateQuestion: () => {
             const attitudes = [
-                { heading: "North", bank: "Level", pitch: "Level", desc: "Straight and level flight heading North" },
-                { heading: "East", bank: "Right 30°", pitch: "Level", desc: "Banking right 30 degrees while heading East" },
-                { heading: "South", bank: "Level", pitch: "Climbing", desc: "Climbing while heading South" },
-                { heading: "West", bank: "Left 20°", pitch: "Descending", desc: "Banking left and descending while heading West" },
-                { heading: "Northeast", bank: "Level", pitch: "Level", desc: "Straight and level heading Northeast (045°)" },
-                { heading: "Southeast", bank: "Right 15°", pitch: "Climbing", desc: "Banking right and climbing heading Southeast" },
-                { heading: "Southwest", bank: "Left 25°", pitch: "Level", desc: "Banking left heading Southwest" },
-                { heading: "Northwest", bank: "Level", pitch: "Descending", desc: "Descending heading Northwest" }
+                { heading: "North", bank: "Level", pitch: "Level", desc: "Straight and level flight heading North", img: "images/attitude-level.svg" },
+                { heading: "East", bank: "Right 30°", pitch: "Level", desc: "Banking right 30 degrees while heading East", img: "images/attitude-right-30.svg" },
+                { heading: "South", bank: "Level", pitch: "Climbing", desc: "Climbing while heading South", img: "images/attitude-climbing.svg" },
+                { heading: "West", bank: "Left 20°", pitch: "Descending", desc: "Banking left and descending while heading West", img: "images/flight-instruments.svg" },
+                { heading: "Northeast", bank: "Level", pitch: "Level", desc: "Straight and level heading Northeast (045°)", img: "images/attitude-level.svg" },
+                { heading: "Southeast", bank: "Right 15°", pitch: "Climbing", desc: "Banking right and climbing heading Southeast", img: "images/attitude-climbing.svg" },
+                { heading: "Southwest", bank: "Left 25°", pitch: "Level", desc: "Banking left heading Southwest", img: "images/attitude-level.svg" },
+                { heading: "Northwest", bank: "Level", pitch: "Descending", desc: "Descending heading Northwest", img: "images/flight-instruments.svg" }
             ];
             
             const correct = attitudes[Math.floor(Math.random() * attitudes.length)];
@@ -1379,10 +1380,11 @@ const instrumentTopics = [
             const shuffled = shuffleArray(allOptions);
             
             return {
-                prompt: `⚠️ NOTE: This section typically requires instrument panel diagrams.\n\nBased on the instrument panel, the aircraft is:\nHeading: ${correct.heading}\nBank: ${correct.bank}\nPitch: ${correct.pitch}\n\nWhat is the aircraft attitude?`,
+                prompt: `Based on the instrument panel shown, the aircraft is:\nHeading: ${correct.heading}\nBank: ${correct.bank}\nPitch: ${correct.pitch}\n\nWhat is the aircraft attitude?`,
                 options: shuffled.map(a => a.desc),
                 correctIndex: shuffled.indexOf(correct),
-                explanation: `The correct interpretation is: ${correct.desc}`
+                explanation: `The correct interpretation is: ${correct.desc}`,
+                image: correct.img
             };
         }
     }
@@ -1441,10 +1443,11 @@ const tableTopics = [
             });
             
             return {
-                prompt: `⚠️ NOTE: This section typically requires visual tables and grids.\n\nFind the value at Row ${targetRow}, Column ${targetCol}:\n\n${tableDisplay}`,
+                prompt: `Find the value at Row ${targetRow}, Column ${targetCol}:\n\n${tableDisplay}`,
                 options: shuffled,
                 correctIndex: shuffled.indexOf(String(correctValue)),
-                explanation: `The value at Row ${targetRow}, Column ${targetCol} is ${correctValue}`
+                explanation: `The value at Row ${targetRow}, Column ${targetCol} is ${correctValue}`,
+                image: "images/table-sample.svg"
             };
         }
     }
@@ -1465,31 +1468,36 @@ const blockTopics = [
                     desc: "A 3×3×3 cube with all blocks visible",
                     blocks: 27,
                     hidden: 1,
-                    touching: 6
+                    touching: 6,
+                    img: "images/blocks-3x3x3.svg"
                 },
                 {
                     desc: "A 4×4×4 cube",
                     blocks: 64,
                     hidden: 8,
-                    touching: 24
+                    touching: 24,
+                    img: "images/blocks-3x3x3.svg"
                 },
                 {
                     desc: "A 2×3×4 rectangular configuration",
                     blocks: 24,
                     hidden: 0,
-                    touching: 11
+                    touching: 11,
+                    img: "images/blocks-3x3x3.svg"
                 },
                 {
                     desc: "A pyramid with a 4×4 base, 3 layers",
                     blocks: 30,
                     hidden: 1,
-                    touching: 13
+                    touching: 13,
+                    img: "images/blocks-3x3x3.svg"
                 },
                 {
                     desc: "An L-shaped configuration: 5 blocks on bottom row, 3 on second layer",
                     blocks: 8,
                     hidden: 0,
-                    touching: 4
+                    touching: 4,
+                    img: "images/blocks-l-shape.svg"
                 }
             ];
             
@@ -1518,10 +1526,11 @@ const blockTopics = [
             const shuffled = shuffleArray(options);
             
             return {
-                prompt: `⚠️ NOTE: This section typically requires 3D block diagrams.\n\n${scenario.desc}\n\n${question.q}`,
+                prompt: `${scenario.desc}\n\n${question.q}`,
                 options: shuffled.map(String),
                 correctIndex: shuffled.indexOf(question.a),
-                explanation: `The correct answer is ${question.a} blocks.`
+                explanation: `The correct answer is ${question.a} blocks.`,
+                image: scenario.img
             };
         }
     }
@@ -2371,6 +2380,12 @@ function renderQuiz() {
                 </div>
                 <div class="timer">60.0s</div>
             </div>
+            
+            ${currentQuestion.image ? `
+                <div class="question-image">
+                    <img src="${currentQuestion.image}" alt="Question diagram" style="max-width: 100%; height: auto; margin: 20px auto; display: block; border: 2px solid #00ffff; border-radius: 8px; background: #000;">
+                </div>
+            ` : ''}
             
             <div class="question-prompt">
                 ${currentQuestion.prompt}

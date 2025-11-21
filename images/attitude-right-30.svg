@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" style="background: #000;">
+  <!-- Right bank 30° attitude indicator -->
+  <g transform="translate(100, 100)">
+    <!-- Outer case -->
+    <circle cx="0" cy="0" r="90" fill="#1a1a1a" stroke="#00ffff" stroke-width="3"/>
+    
+    <!-- Rotated horizon (30° right bank) -->
+    <g transform="rotate(30)">
+      <!-- Sky (blue) half -->
+      <path d="M -63,-0 A 63,63 0 0,1 63,0 Z" fill="#0066cc"/>
+      
+      <!-- Ground (brown) half -->
+      <path d="M -63,0 A 63,63 0 0,0 63,0 Z" fill="#663300"/>
+      
+      <!-- Horizon line -->
+      <line x1="-63" y1="0" x2="63" y2="0" stroke="#ffffff" stroke-width="3"/>
+      
+      <!-- Pitch lines -->
+      <line x1="-50" y1="-20" x2="-30" y2="-20" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="30" y1="-20" x2="50" y2="-20" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="-50" y1="20" x2="-30" y2="20" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="30" y1="20" x2="50" y2="20" stroke="#ffffff" stroke-width="1.5"/>
+    </g>
+    
+    <!-- Aircraft symbol (fixed) -->
+    <g>
+      <line x1="-40" y1="0" x2="-15" y2="0" stroke="#ffff00" stroke-width="3"/>
+      <line x1="15" y1="0" x2="40" y2="0" stroke="#ffff00" stroke-width="3"/>
+      <circle cx="0" cy="0" r="3" fill="#ffff00"/>
+    </g>
+    
+    <!-- Bank angle markers -->
+    <g stroke="#ffffff" stroke-width="2" fill="none">
+      <line x1="0" y1="-75" x2="0" y2="-85"/>
+      <line x1="0" y1="-75" x2="0" y2="-80" transform="rotate(30)"/>
+      <line x1="0" y1="-75" x2="0" y2="-80" transform="rotate(60)"/>
+      <line x1="0" y1="-75" x2="0" y2="-80" transform="rotate(-30)"/>
+      <line x1="0" y1="-75" x2="0" y2="-80" transform="rotate(-60)"/>
+    </g>
+    
+    <!-- Bank pointer (top) - aligned with 30° right bank -->
+    <polygon points="0,-70 -5,-80 5,-80" fill="#ffff00" transform="rotate(30)"/>
+  </g>
+</svg>

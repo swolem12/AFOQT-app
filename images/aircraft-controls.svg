@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" style="background: #000;">
+  <!-- Top view of aircraft -->
+  <g fill="none" stroke="#00ffff" stroke-width="2">
+    <!-- Fuselage -->
+    <rect x="230" y="100" width="40" height="150" fill="#001a1a"/>
+    
+    <!-- Wings -->
+    <rect x="150" y="160" width="200" height="30" fill="#001a1a"/>
+    
+    <!-- Tail -->
+    <polygon points="250,250 240,280 260,280" fill="#001a1a"/>
+    
+    <!-- Ailerons (highlighted) -->
+    <rect x="150" y="165" width="30" height="20" fill="#ffff00" stroke="#ffff00" stroke-width="2"/>
+    <rect x="320" y="165" width="30" height="20" fill="#ffff00" stroke="#ffff00" stroke-width="2"/>
+    <text x="100" y="180" fill="#ffff00" font-family="monospace" font-size="12">AILERONS</text>
+    <text x="70" y="195" fill="#ffff00" font-family="monospace" font-size="10">(Control Roll)</text>
+    
+    <!-- Rudder -->
+    <rect x="245" y="280" width="10" height="20" fill="#ff00ff" stroke="#ff00ff" stroke-width="2"/>
+    <text x="260" y="295" fill="#ff00ff" font-family="monospace" font-size="12">RUDDER</text>
+    <text x="255" y="310" fill="#ff00ff" font-family="monospace" font-size="10">(Control Yaw)</text>
+  </g>
+  
+  <!-- Side view of aircraft -->
+  <g fill="none" stroke="#00ffff" stroke-width="2" transform="translate(0, 30)">
+    <!-- Fuselage side view -->
+    <ellipse cx="250" cy="250" rx="80" ry="15" fill="#001a1a"/>
+    
+    <!-- Tail fin -->
+    <polygon points="330,250 350,230 350,270" fill="#001a1a"/>
+    
+    <!-- Horizontal stabilizer -->
+    <line x1="330" y1="250" x2="360" y2="250" stroke-width="3"/>
+    
+    <!-- Elevator (highlighted) -->
+    <rect x="340" y="245" width="20" height="10" fill="#00ff00" stroke="#00ff00" stroke-width="2"/>
+    <text x="370" y="250" fill="#00ff00" font-family="monospace" font-size="12">ELEVATOR</text>
+    <text x="365" y="265" fill="#00ff00" font-family="monospace" font-size="10">(Control Pitch)</text>
+  </g>
+  
+  <!-- Labels -->
+  <text x="200" y="30" fill="#00ffff" font-family="monospace" font-size="16" font-weight="bold">AIRCRAFT CONTROL SURFACES</text>
+  <text x="180" y="50" fill="#00ffff" font-family="monospace" font-size="10">Top View</text>
+  <text x="180" y="220" fill="#00ffff" font-family="monospace" font-size="10">Side View</text>
+</svg>

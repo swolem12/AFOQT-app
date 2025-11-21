@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 300" style="background: #000;">
+  <!-- Title -->
+  <text x="80" y="25" fill="#00ffff" font-family="monospace" font-size="14" font-weight="bold">L-SHAPED CONFIGURATION</text>
+  
+  <!-- 3D isometric view of L-shape: 5 blocks on bottom, 3 on second layer -->
+  <g transform="translate(100, 120)">
+    <!-- Bottom row - 5 blocks in a row -->
+    <!-- Block 1 -->
+    <polygon points="0,50 20,60 20,80 0,70" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+    <polygon points="20,60 40,50 40,70 20,80" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+    <polygon points="0,70 20,80 40,70 20,60" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+    
+    <!-- Block 2 -->
+    <polygon points="40,50 60,60 60,80 40,70" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+    <polygon points="60,60 80,50 80,70 60,80" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+    <polygon points="40,70 60,80 80,70 60,60" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+    
+    <!-- Block 3 -->
+    <polygon points="80,50 100,60 100,80 80,70" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+    <polygon points="100,60 120,50 120,70 100,80" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+    <polygon points="80,70 100,80 120,70 100,60" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+    
+    <!-- Block 4 -->
+    <polygon points="120,50 140,60 140,80 120,70" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+    <polygon points="140,60 160,50 160,70 140,80" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+    <polygon points="120,70 140,80 160,70 140,60" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+    
+    <!-- Block 5 -->
+    <polygon points="160,50 180,60 180,80 160,70" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+    <polygon points="180,60 200,50 200,70 180,80" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+    <polygon points="160,70 180,80 200,70 180,60" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+    
+    <!-- Second layer - 3 blocks on left end (forming the L) -->
+    <!-- Block 6 -->
+    <polygon points="0,30 20,40 20,60 0,50" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+    <polygon points="20,40 40,30 40,50 20,60" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+    <polygon points="0,50 20,60 40,50 20,40" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+    
+    <!-- Block 7 -->
+    <polygon points="40,30 60,40 60,60 40,50" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+    <polygon points="60,40 80,30 80,50 60,60" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+    <polygon points="40,50 60,60 80,50 60,40" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+    
+    <!-- Block 8 -->
+    <polygon points="80,30 100,40 100,60 80,50" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+    <polygon points="100,40 120,30 120,50 100,60" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+    <polygon points="80,50 100,60 120,50 100,40" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Labels -->
+  <text x="20" y="250" fill="#ffff00" font-family="monospace" font-size="11">Bottom layer: 5 blocks</text>
+  <text x="20" y="270" fill="#ffff00" font-family="monospace" font-size="11">Second layer: 3 blocks</text>
+  <text x="20" y="290" fill="#00ff00" font-family="monospace" font-size="11">Total: 8 blocks</text>
+</svg>

@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" style="background: #000;">
+  <!-- Attitude Indicator -->
+  <g transform="translate(150, 200)">
+    <!-- Outer case -->
+    <circle cx="0" cy="0" r="90" fill="#1a1a1a" stroke="#00ffff" stroke-width="3"/>
+    
+    <!-- Sky (blue) half -->
+    <path d="M -63,-0 A 63,63 0 0,1 63,0 Z" fill="#0066cc"/>
+    
+    <!-- Ground (brown) half -->
+    <path d="M -63,0 A 63,63 0 0,0 63,0 Z" fill="#663300"/>
+    
+    <!-- Horizon line -->
+    <line x1="-63" y1="0" x2="63" y2="0" stroke="#ffffff" stroke-width="3"/>
+    
+    <!-- Pitch lines -->
+    <line x1="-50" y1="-20" x2="-30" y2="-20" stroke="#ffffff" stroke-width="1.5"/>
+    <line x1="30" y1="-20" x2="50" y2="-20" stroke="#ffffff" stroke-width="1.5"/>
+    <line x1="-50" y1="20" x2="-30" y2="20" stroke="#ffffff" stroke-width="1.5"/>
+    <line x1="30" y1="20" x2="50" y2="20" stroke="#ffffff" stroke-width="1.5"/>
+    
+    <!-- Aircraft symbol (fixed) -->
+    <g>
+      <line x1="-40" y1="0" x2="-15" y2="0" stroke="#ffff00" stroke-width="3"/>
+      <line x1="15" y1="0" x2="40" y2="0" stroke="#ffff00" stroke-width="3"/>
+      <circle cx="0" cy="0" r="3" fill="#ffff00"/>
+    </g>
+    
+    <!-- Bank angle markers -->
+    <g stroke="#ffffff" stroke-width="2" fill="none">
+      <line x1="0" y1="-75" x2="0" y2="-85" transform="rotate(0)"/>
+      <line x1="0" y1="-75" x2="0" y2="-80" transform="rotate(30)"/>
+      <line x1="0" y1="-75" x2="0" y2="-80" transform="rotate(60)"/>
+      <line x1="0" y1="-75" x2="0" y2="-80" transform="rotate(-30)"/>
+      <line x1="0" y1="-75" x2="0" y2="-80" transform="rotate(-60)"/>
+    </g>
+    
+    <!-- Bank pointer (top) -->
+    <polygon points="0,-70 -5,-80 5,-80" fill="#ffff00"/>
+    
+    <!-- Label -->
+    <text x="-70" y="110" fill="#00ffff" font-family="monospace" font-size="14" font-weight="bold">ATTITUDE INDICATOR</text>
+  </g>
+  
+  <!-- Heading Indicator -->
+  <g transform="translate(450, 200)">
+    <!-- Outer case -->
+    <circle cx="0" cy="0" r="90" fill="#1a1a1a" stroke="#00ffff" stroke-width="3"/>
+    
+    <!-- Compass rose background -->
+    <circle cx="0" cy="0" r="70" fill="#0a0a0a"/>
+    
+    <!-- Cardinal directions -->
+    <text x="-5" y="-55" fill="#ffffff" font-family="monospace" font-size="16" font-weight="bold">N</text>
+    <text x="55" y="5" fill="#ffffff" font-family="monospace" font-size="14">E</text>
+    <text x="-5" y="65" fill="#ffffff" font-family="monospace" font-size="14">S</text>
+    <text x="-60" y="5" fill="#ffffff" font-family="monospace" font-size="14">W</text>
+    
+    <!-- Degree markings -->
+    <text x="-8" y="-35" fill="#888" font-family="monospace" font-size="10">33</text>
+    <text x="35" y="-35" fill="#888" font-family="monospace" font-size="10">3</text>
+    <text x="35" y="35" fill="#888" font-family="monospace" font-size="10">12</text>
+    <text x="-8" y="45" fill="#888" font-family="monospace" font-size="10">18</text>
+    <text x="-45" y="35" fill="#888" font-family="monospace" font-size="10">24</text>
+    <text x="-45" y="-35" fill="#888" font-family="monospace" font-size="10">30</text>
+    
+    <!-- Tick marks around compass -->
+    <g stroke="#888" stroke-width="1" fill="none">
+      <line x1="0" y1="-70" x2="0" y2="-65" transform="rotate(0)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(10)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(20)"/>
+      <line x1="0" y1="-70" x2="0" y2="-65" transform="rotate(30)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(40)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(50)"/>
+      <line x1="0" y1="-70" x2="0" y2="-65" transform="rotate(60)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(70)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(80)"/>
+      <line x1="0" y1="-70" x2="0" y2="-65" transform="rotate(90)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(100)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(110)"/>
+      <line x1="0" y1="-70" x2="0" y2="-65" transform="rotate(120)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(130)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(140)"/>
+      <line x1="0" y1="-70" x2="0" y2="-65" transform="rotate(150)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(160)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(170)"/>
+      <line x1="0" y1="-70" x2="0" y2="-65" transform="rotate(180)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(190)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(200)"/>
+      <line x1="0" y1="-70" x2="0" y2="-65" transform="rotate(210)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(220)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(230)"/>
+      <line x1="0" y1="-70" x2="0" y2="-65" transform="rotate(240)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(250)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(260)"/>
+      <line x1="0" y1="-70" x2="0" y2="-65" transform="rotate(270)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(280)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(290)"/>
+      <line x1="0" y1="-70" x2="0" y2="-65" transform="rotate(300)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(310)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(320)"/>
+      <line x1="0" y1="-70" x2="0" y2="-65" transform="rotate(330)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(340)"/>
+      <line x1="0" y1="-70" x2="0" y2="-67" transform="rotate(350)"/>
+    </g>
+    
+    <!-- Aircraft heading pointer (fixed at top) -->
+    <polygon points="0,-60 -5,-50 5,-50" fill="#ffff00"/>
+    
+    <!-- Label -->
+    <text x="-70" y="110" fill="#00ffff" font-family="monospace" font-size="14" font-weight="bold">HEADING INDICATOR</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="150" y="30" fill="#00ffff" font-family="monospace" font-size="18" font-weight="bold">FLIGHT INSTRUMENTS</text>
+</svg>
