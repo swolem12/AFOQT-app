@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" style="background: #000;">
+  <!-- Title -->
+  <text x="100" y="25" fill="#00ffff" font-family="monospace" font-size="14" font-weight="bold">3×3×3 CUBE (27 blocks)</text>
+  
+  <!-- 3D isometric view of 3x3x3 cube -->
+  <g transform="translate(200, 180)">
+    <!-- Back layer (9 blocks visible) -->
+    <g transform="translate(-40, -60)">
+      <!-- Top row -->
+      <polygon points="0,0 20,10 20,30 0,20" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="20,10 40,0 40,20 20,30" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="0,20 20,30 40,20 20,10" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <polygon points="30,5 50,15 50,35 30,25" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="50,15 70,5 70,25 50,35" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="30,25 50,35 70,25 50,15" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <polygon points="60,10 80,20 80,40 60,30" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="80,20 100,10 100,30 80,40" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="60,30 80,40 100,30 80,20" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <!-- Middle row -->
+      <polygon points="0,20 20,30 20,50 0,40" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="20,30 40,20 40,40 20,50" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="0,40 20,50 40,40 20,30" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <polygon points="30,25 50,35 50,55 30,45" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="50,35 70,25 70,45 50,55" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="30,45 50,55 70,45 50,35" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <polygon points="60,30 80,40 80,60 60,50" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="80,40 100,30 100,50 80,60" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="60,50 80,60 100,50 80,40" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <!-- Bottom row -->
+      <polygon points="0,40 20,50 20,70 0,60" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="20,50 40,40 40,60 20,70" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="0,60 20,70 40,60 20,50" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <polygon points="30,45 50,55 50,75 30,65" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="50,55 70,45 70,65 50,75" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="30,65 50,75 70,65 50,55" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+      
+      <polygon points="60,50 80,60 80,80 60,70" fill="#004488" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="80,60 100,50 100,70 80,80" fill="#0066cc" stroke="#00ffff" stroke-width="1.5"/>
+      <polygon points="60,70 80,80 100,70 80,60" fill="#0088ff" stroke="#00ffff" stroke-width="1.5"/>
+    </g>
+  </g>
+  
+  <!-- Instructions -->
+  <text x="50" y="310" fill="#ffff00" font-family="monospace" font-size="11">Question: How many blocks touch the center block?</text>
+  <text x="50" y="330" fill="#00ff00" font-family="monospace" font-size="11">Answer: 6 blocks (one on each face of the center cube)</text>
+</svg>

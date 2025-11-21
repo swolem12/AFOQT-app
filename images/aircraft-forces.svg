@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: #000;">
+  <!-- Aircraft silhouette -->
+  <g fill="#00ffff" stroke="#00ffff" stroke-width="2">
+    <!-- Fuselage -->
+    <ellipse cx="200" cy="150" rx="60" ry="15" fill="none"/>
+    <!-- Wings -->
+    <line x1="140" y1="150" x2="260" y2="150" stroke-width="3"/>
+    <!-- Tail -->
+    <polygon points="260,150 280,140 280,160" fill="none"/>
+    <line x1="280" y1="140" x2="280" y2="125" stroke-width="2"/>
+  </g>
+  
+  <!-- Force arrows -->
+  <!-- Lift (up) -->
+  <g>
+    <line x1="200" y1="150" x2="200" y2="50" stroke="#00ff00" stroke-width="3" marker-end="url(#arrowGreen)"/>
+    <text x="210" y="100" fill="#00ff00" font-family="monospace" font-size="14">LIFT</text>
+  </g>
+  
+  <!-- Weight (down) -->
+  <g>
+    <line x1="200" y1="150" x2="200" y2="250" stroke="#ff00ff" stroke-width="3" marker-end="url(#arrowMagenta)"/>
+    <text x="210" y="200" fill="#ff00ff" font-family="monospace" font-size="14">WEIGHT</text>
+  </g>
+  
+  <!-- Thrust (right) -->
+  <g>
+    <line x1="200" y1="150" x2="320" y2="150" stroke="#ffff00" stroke-width="3" marker-end="url(#arrowYellow)"/>
+    <text x="250" y="140" fill="#ffff00" font-family="monospace" font-size="14">THRUST</text>
+  </g>
+  
+  <!-- Drag (left) -->
+  <g>
+    <line x1="200" y1="150" x2="80" y2="150" stroke="#ff6666" stroke-width="3" marker-end="url(#arrowRed)"/>
+    <text x="90" y="140" fill="#ff6666" font-family="monospace" font-size="14">DRAG</text>
+  </g>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#00ff00"/>
+    </marker>
+    <marker id="arrowMagenta" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ff00ff"/>
+    </marker>
+    <marker id="arrowYellow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ffff00"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ff6666"/>
+    </marker>
+  </defs>
+</svg>
