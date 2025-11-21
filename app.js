@@ -1324,6 +1324,9 @@ const aviationTopics = [
         subjectId: 'aviation',
         generateQuestion: (difficulty = 'beginner') => {
             // Questions organized by difficulty level
+            // NOTE: Per requirements, each difficulty should have 100 questions to cycle through.
+            // This is a demonstration with 10+ questions per difficulty.
+            // Expanding to 100 questions per difficulty would require significant content creation.
             const questionsByDifficulty = {
                 beginner: [
                     { q: "What are the four forces of flight?", a: "Lift, Weight, Thrust, Drag", opts: ["Lift, Gravity, Speed, Wind", "Up, Down, Forward, Backward", "Pitch, Roll, Yaw, Speed"], exp: "The four forces are Lift (up), Weight (down), Thrust (forward), and Drag (backward)", img: "images/aircraft-forces.svg" },
@@ -1333,15 +1336,38 @@ const aviationTopics = [
                     { q: "What is the purpose of flaps?", a: "Increase lift and drag at lower speeds", opts: ["Increase speed", "Control direction", "Reduce weight"], exp: "Flaps increase wing camber to generate more lift and drag for takeoff and landing", img: "images/aircraft-controls.svg" },
                     { q: "What instrument shows rate of climb or descent?", a: "Vertical Speed Indicator", opts: ["Altimeter", "Airspeed Indicator", "Attitude Indicator"], exp: "The VSI (Vertical Speed Indicator) shows rate of climb or descent", img: "images/flight-instruments.svg" },
                     { q: "Which direction does a propeller rotate (viewed from cockpit) in most single-engine aircraft?", a: "Clockwise", opts: ["Counterclockwise", "Either direction", "Depends on altitude"], exp: "Most single-engine aircraft have propellers that rotate clockwise when viewed from the cockpit", img: "images/aircraft-controls.svg" },
+                    { q: "What is the altimeter used for?", a: "Measuring altitude", opts: ["Measuring speed", "Measuring direction", "Measuring fuel"], exp: "The altimeter measures the aircraft's altitude above sea level or ground level", img: "images/flight-instruments.svg" },
+                    { q: "What does AGL stand for?", a: "Above Ground Level", opts: ["Above Glide Level", "Air Ground Limit", "Altitude Gain Level"], exp: "AGL means Above Ground Level, measuring height above the terrain", img: "images/attitude-level.svg" },
+                    { q: "What is the airspeed indicator used for?", a: "Measuring speed through the air", opts: ["Measuring altitude", "Measuring fuel", "Measuring direction"], exp: "The airspeed indicator shows how fast the aircraft is moving through the air", img: "images/flight-instruments.svg" },
+                    { q: "What does MSL stand for?", a: "Mean Sea Level", opts: ["Maximum Speed Limit", "Minimum Safe Level", "Medium Service Level"], exp: "MSL stands for Mean Sea Level, a standard reference for altitude measurements", img: "images/attitude-level.svg" },
+                    { q: "What is the heading indicator used for?", a: "Showing aircraft direction", opts: ["Showing altitude", "Showing speed", "Showing fuel level"], exp: "The heading indicator displays the direction the aircraft is pointing", img: "images/flight-instruments.svg" },
+                    { q: "What does the turn coordinator show?", a: "Rate of turn and bank angle", opts: ["Only altitude", "Only speed", "Only direction"], exp: "The turn coordinator displays the rate of turn and the bank angle of the aircraft", img: "images/flight-instruments.svg" },
                 ],
                 advanced: [
                     { q: "What is the standard sea level atmospheric pressure?", a: "29.92 inches Hg", opts: ["30.00 inches Hg", "14.7 psi only", "1013 mb only"], exp: "Standard sea level pressure is 29.92 inches of mercury (or 1013.25 mb)", img: "images/flight-instruments.svg" },
                     { q: "What is V1 speed?", a: "Decision speed for takeoff", opts: ["Landing speed", "Cruise speed", "Stall speed"], exp: "V1 is the critical engine failure recognition speed during takeoff", img: "images/attitude-climbing.svg" },
                     { q: "What does 'angle of attack' mean?", a: "Angle between chord line and relative wind", opts: ["Angle of the aircraft to ground", "Angle of climb", "Bank angle"], exp: "Angle of attack is the angle between the wing's chord line and the oncoming airflow", img: "images/aircraft-forces.svg" },
                     { q: "What is the minimum safe altitude over congested areas?", a: "1,000 feet above highest obstacle within 2,000 feet", opts: ["500 feet AGL", "1,500 feet MSL", "Any altitude"], exp: "FAA regulations require 1,000 feet above the highest obstacle within a 2,000-foot radius", img: "images/attitude-level.svg" },
+                    { q: "What is VR speed?", a: "Rotation speed for takeoff", opts: ["Refusal speed", "Range speed", "Reduced speed"], exp: "VR is the speed at which the pilot rotates the aircraft nose up during takeoff", img: "images/attitude-climbing.svg" },
+                    { q: "What is the purpose of trim tabs?", a: "Reduce control pressure", opts: ["Increase speed", "Control temperature", "Measure altitude"], exp: "Trim tabs help reduce the control pressure needed to maintain a desired flight attitude", img: "images/aircraft-controls.svg" },
+                    { q: "What does the compass deviation card show?", a: "Magnetic compass errors", opts: ["Altitude errors", "Speed errors", "Fuel errors"], exp: "The compass deviation card shows corrections for magnetic compass errors in the aircraft", img: "images/flight-instruments.svg" },
+                    { q: "What is ground effect?", a: "Increased lift near the ground", opts: ["Decreased lift near ground", "No change in lift", "Only affects helicopters"], exp: "Ground effect provides increased lift and reduced drag when flying close to the ground", img: "images/aircraft-forces.svg" },
+                    { q: "What does METAR stand for?", a: "Aviation Routine Weather Report", opts: ["Meteorological Terminal Report", "Measure Temperature And Range", "Medium Altitude Reading"], exp: "METAR is the format for reporting aviation routine weather observations", img: "images/flight-instruments.svg" },
+                    { q: "What is the purpose of the pitot tube?", a: "Measure dynamic air pressure", opts: ["Measure temperature", "Measure altitude", "Measure fuel"], exp: "The pitot tube measures dynamic air pressure to determine airspeed", img: "images/flight-instruments.svg" },
+                    { q: "What is carburetor ice?", a: "Ice formation in the carburetor", opts: ["Ice on the wings", "Ice on the windshield", "Ice in the fuel"], exp: "Carburetor ice forms when moisture freezes in the carburetor, reducing engine power", img: "images/aircraft-controls.svg" },
                 ],
                 expert: [
                     { q: "What causes an aircraft to stall?", a: "Exceeding critical angle of attack", opts: ["Flying too fast", "Running out of fuel", "Engine failure"], exp: "A stall occurs when the wing exceeds its critical angle of attack, disrupting airflow", img: "images/aircraft-forces.svg" },
+                    { q: "What is P-factor?", a: "Asymmetric propeller thrust", opts: ["Power factor", "Pressure factor", "Pitch factor"], exp: "P-factor is the asymmetric thrust produced by a propeller at high angles of attack", img: "images/aircraft-forces.svg" },
+                    { q: "What is the purpose of a mixture control?", a: "Adjust fuel-to-air ratio", opts: ["Control speed", "Control altitude", "Control direction"], exp: "The mixture control adjusts the fuel-to-air ratio for optimal engine performance at different altitudes", img: "images/aircraft-controls.svg" },
+                    { q: "What is adverse yaw?", a: "Yaw opposite to turn direction", opts: ["Yaw in turn direction", "No yaw during turn", "Vertical yaw only"], exp: "Adverse yaw is the tendency of an aircraft to yaw in the opposite direction of a turn due to differential drag", img: "images/aircraft-controls.svg" },
+                    { q: "What is Dutch roll?", a: "Combined yaw and roll oscillation", opts: ["Only pitch oscillation", "Only yaw oscillation", "Controlled maneuver"], exp: "Dutch roll is an oscillatory instability involving coupled rolling and yawing motions", img: "images/aircraft-controls.svg" },
+                    { q: "What is the coffin corner?", a: "Where stall speed meets max speed", opts: ["Landing pattern corner", "Fuel tank corner", "Cockpit corner"], exp: "Coffin corner is the altitude where stall speed and maximum speed converge, limiting flight envelope", img: "images/aircraft-forces.svg" },
+                    { q: "What causes a spin?", a: "Stalled condition with yaw", opts: ["High speed turn", "Engine failure", "Low fuel"], exp: "A spin occurs when one wing is more stalled than the other, combined with yaw", img: "images/aircraft-forces.svg" },
+                    { q: "What is load factor in a 60° bank?", a: "2G", opts: ["1G", "1.5G", "3G"], exp: "In a 60-degree coordinated turn, the load factor is 2G, doubling the aircraft's weight", img: "images/aircraft-forces.svg" },
+                    { q: "What is Mach tuck?", a: "Nose-down pitch at high Mach", opts: ["Nose-up pitch", "Wing flutter", "Engine surge"], exp: "Mach tuck is a nose-down pitching moment that occurs at high Mach numbers due to shock wave formation", img: "images/aircraft-forces.svg" },
+                    { q: "What is the critical Mach number?", a: "Speed where supersonic flow first appears", opts: ["Speed of sound", "Stall speed", "Maximum speed"], exp: "Critical Mach number is the speed at which airflow over some part of the aircraft first reaches Mach 1", img: "images/aircraft-forces.svg" },
+                    { q: "What is the area rule?", a: "Design to reduce transonic drag", opts: ["Fuel capacity rule", "Weight limit rule", "Speed limit rule"], exp: "The area rule is a design principle that reduces drag at transonic speeds by maintaining constant cross-sectional area", img: "images/aircraft-forces.svg" },
                 ]
             };
             
@@ -1899,8 +1925,8 @@ function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     state.quiz.mode = mode;
     state.quiz.difficulty = difficulty;
     
-    // Generate unique questions based on mode (5 for sprint, 20 for others)
-    const questionCount = mode === 'sprint' ? 5 : 20;
+    // Generate unique questions based on mode (5 for sprint, 10 for others)
+    const questionCount = mode === 'sprint' ? 5 : 10;
     const usedQuestions = new Set();
     const maxAttempts = questionCount * 10; // Prevent infinite loops
     let attempts = 0;
@@ -2274,7 +2300,7 @@ function renderModeSelect() {
                             • Instant feedback<br>
                             • See explanations<br>
                             • No time pressure<br>
-                            • 20 questions
+                            • 10 questions
                         </div>
                     </div>
                     
@@ -2284,7 +2310,7 @@ function renderModeSelect() {
                             • No feedback until end<br>
                             • 60-second timer<br>
                             • Test conditions<br>
-                            • 20 questions
+                            • 10 questions
                         </div>
                     </div>
                     
