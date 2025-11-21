@@ -314,6 +314,11 @@ function showBootScreen() {
 }
 
 // ============================================================================
+// Constants
+// ============================================================================
+const DIFFICULTY_LEVELS = ['beginner', 'advanced', 'expert'];
+
+// ============================================================================
 // Global State
 // ============================================================================
 const state = {
@@ -1317,22 +1322,31 @@ const aviationTopics = [
         name: 'Aviation Knowledge',
         description: 'Aircraft systems and flight principles',
         subjectId: 'aviation',
-        generateQuestion: () => {
-            const questions = [
-                { q: "What are the four forces of flight?", a: "Lift, Weight, Thrust, Drag", opts: ["Lift, Gravity, Speed, Wind", "Up, Down, Forward, Backward", "Pitch, Roll, Yaw, Speed"], exp: "The four forces are Lift (up), Weight (down), Thrust (forward), and Drag (backward)", img: "images/aircraft-forces.svg" },
-                { q: "What does the rudder control?", a: "Yaw", opts: ["Pitch", "Roll", "Altitude"], exp: "The rudder controls yaw, which is rotation around the vertical axis", img: "images/aircraft-controls.svg" },
-                { q: "What does the elevator control?", a: "Pitch", opts: ["Yaw", "Roll", "Speed"], exp: "The elevator controls pitch, which is rotation around the lateral axis", img: "images/aircraft-controls.svg" },
-                { q: "What does the aileron control?", a: "Roll", opts: ["Pitch", "Yaw", "Altitude"], exp: "Ailerons control roll, which is rotation around the longitudinal axis", img: "images/aircraft-controls.svg" },
-                { q: "What is the standard sea level atmospheric pressure?", a: "29.92 inches Hg", opts: ["30.00 inches Hg", "14.7 psi only", "1013 mb only"], exp: "Standard sea level pressure is 29.92 inches of mercury (or 1013.25 mb)" },
-                { q: "What is V1 speed?", a: "Decision speed for takeoff", opts: ["Landing speed", "Cruise speed", "Stall speed"], exp: "V1 is the critical engine failure recognition speed during takeoff" },
-                { q: "What instrument shows rate of climb or descent?", a: "Vertical Speed Indicator", opts: ["Altimeter", "Airspeed Indicator", "Attitude Indicator"], exp: "The VSI (Vertical Speed Indicator) shows rate of climb or descent", img: "images/flight-instruments.svg" },
-                { q: "What does 'angle of attack' mean?", a: "Angle between chord line and relative wind", opts: ["Angle of the aircraft to ground", "Angle of climb", "Bank angle"], exp: "Angle of attack is the angle between the wing's chord line and the oncoming airflow" },
-                { q: "What causes an aircraft to stall?", a: "Exceeding critical angle of attack", opts: ["Flying too fast", "Running out of fuel", "Engine failure"], exp: "A stall occurs when the wing exceeds its critical angle of attack, disrupting airflow" },
-                { q: "What is the purpose of flaps?", a: "Increase lift and drag at lower speeds", opts: ["Increase speed", "Control direction", "Reduce weight"], exp: "Flaps increase wing camber to generate more lift and drag for takeoff and landing" },
-                { q: "Which direction does a propeller rotate (viewed from cockpit) in most single-engine aircraft?", a: "Clockwise", opts: ["Counterclockwise", "Either direction", "Depends on altitude"], exp: "Most single-engine aircraft have propellers that rotate clockwise when viewed from the cockpit" },
-                { q: "What is the minimum safe altitude over congested areas?", a: "1,000 feet above highest obstacle within 2,000 feet", opts: ["500 feet AGL", "1,500 feet MSL", "Any altitude"], exp: "FAA regulations require 1,000 feet above the highest obstacle within a 2,000-foot radius" }
-            ];
+        generateQuestion: (difficulty = 'beginner') => {
+            // Questions organized by difficulty level
+            const questionsByDifficulty = {
+                beginner: [
+                    { q: "What are the four forces of flight?", a: "Lift, Weight, Thrust, Drag", opts: ["Lift, Gravity, Speed, Wind", "Up, Down, Forward, Backward", "Pitch, Roll, Yaw, Speed"], exp: "The four forces are Lift (up), Weight (down), Thrust (forward), and Drag (backward)", img: "images/aircraft-forces.svg" },
+                    { q: "What does the rudder control?", a: "Yaw", opts: ["Pitch", "Roll", "Altitude"], exp: "The rudder controls yaw, which is rotation around the vertical axis", img: "images/aircraft-controls.svg" },
+                    { q: "What does the elevator control?", a: "Pitch", opts: ["Yaw", "Roll", "Speed"], exp: "The elevator controls pitch, which is rotation around the lateral axis", img: "images/aircraft-controls.svg" },
+                    { q: "What does the aileron control?", a: "Roll", opts: ["Pitch", "Yaw", "Altitude"], exp: "Ailerons control roll, which is rotation around the longitudinal axis", img: "images/aircraft-controls.svg" },
+                    { q: "What is the purpose of flaps?", a: "Increase lift and drag at lower speeds", opts: ["Increase speed", "Control direction", "Reduce weight"], exp: "Flaps increase wing camber to generate more lift and drag for takeoff and landing", img: "images/aircraft-controls.svg" },
+                    { q: "What instrument shows rate of climb or descent?", a: "Vertical Speed Indicator", opts: ["Altimeter", "Airspeed Indicator", "Attitude Indicator"], exp: "The VSI (Vertical Speed Indicator) shows rate of climb or descent", img: "images/flight-instruments.svg" },
+                    { q: "Which direction does a propeller rotate (viewed from cockpit) in most single-engine aircraft?", a: "Clockwise", opts: ["Counterclockwise", "Either direction", "Depends on altitude"], exp: "Most single-engine aircraft have propellers that rotate clockwise when viewed from the cockpit", img: "images/aircraft-controls.svg" },
+                ],
+                advanced: [
+                    { q: "What is the standard sea level atmospheric pressure?", a: "29.92 inches Hg", opts: ["30.00 inches Hg", "14.7 psi only", "1013 mb only"], exp: "Standard sea level pressure is 29.92 inches of mercury (or 1013.25 mb)", img: "images/flight-instruments.svg" },
+                    { q: "What is V1 speed?", a: "Decision speed for takeoff", opts: ["Landing speed", "Cruise speed", "Stall speed"], exp: "V1 is the critical engine failure recognition speed during takeoff", img: "images/attitude-climbing.svg" },
+                    { q: "What does 'angle of attack' mean?", a: "Angle between chord line and relative wind", opts: ["Angle of the aircraft to ground", "Angle of climb", "Bank angle"], exp: "Angle of attack is the angle between the wing's chord line and the oncoming airflow", img: "images/aircraft-forces.svg" },
+                    { q: "What is the minimum safe altitude over congested areas?", a: "1,000 feet above highest obstacle within 2,000 feet", opts: ["500 feet AGL", "1,500 feet MSL", "Any altitude"], exp: "FAA regulations require 1,000 feet above the highest obstacle within a 2,000-foot radius", img: "images/attitude-level.svg" },
+                ],
+                expert: [
+                    { q: "What causes an aircraft to stall?", a: "Exceeding critical angle of attack", opts: ["Flying too fast", "Running out of fuel", "Engine failure"], exp: "A stall occurs when the wing exceeds its critical angle of attack, disrupting airflow", img: "images/aircraft-forces.svg" },
+                ]
+            };
             
+            // Select questions based on difficulty
+            const questions = questionsByDifficulty[difficulty] || questionsByDifficulty.beginner;
             const item = questions[Math.floor(Math.random() * questions.length)];
             const allOptions = [item.a, ...item.opts];
             const shuffled = shuffleArray(allOptions);
@@ -1357,7 +1371,7 @@ const instrumentTopics = [
         name: 'Instrument Comprehension',
         description: 'Aircraft attitude and heading interpretation',
         subjectId: 'instrument',
-        generateQuestion: () => {
+        generateQuestion: (difficulty = 'beginner') => {
             const attitudes = [
                 { heading: "North", bank: "Level", pitch: "Level", desc: "Straight and level flight heading North", img: "images/attitude-level.svg" },
                 { heading: "East", bank: "Right 30°", pitch: "Level", desc: "Banking right 30 degrees while heading East", img: "images/attitude-right-30.svg" },
@@ -1399,7 +1413,7 @@ const tableTopics = [
         name: 'Table Reading',
         description: 'Quick data extraction from tables',
         subjectId: 'table',
-        generateQuestion: () => {
+        generateQuestion: (difficulty = 'beginner') => {
             // Generate a random data table
             const rows = 5;
             const cols = 5;
@@ -1462,7 +1476,7 @@ const blockTopics = [
         name: 'Block Counting',
         description: 'Spatial reasoning with block configurations',
         subjectId: 'blocks',
-        generateQuestion: () => {
+        generateQuestion: (difficulty = 'beginner') => {
             const scenarios = [
                 {
                     desc: "A 3×3×3 cube with all blocks visible",
@@ -1892,7 +1906,14 @@ function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     let attempts = 0;
     
     while (state.quiz.questions.length < questionCount && attempts < maxAttempts) {
-        const question = topic.generateQuestion();
+        // For sprint mode, randomly select difficulty for each question
+        let questionDifficulty = difficulty;
+        if (mode === 'sprint') {
+            questionDifficulty = DIFFICULTY_LEVELS[Math.floor(Math.random() * DIFFICULTY_LEVELS.length)];
+        }
+        
+        // Pass difficulty to question generator (will be ignored by generators that don't support it)
+        const question = topic.generateQuestion(questionDifficulty);
         // Create a unique key for this question based on prompt and correct answer
         const questionKey = `${question.prompt}|${question.options[question.correctIndex]}`;
         
@@ -2149,20 +2170,22 @@ function renderHome() {
     
     return `
         <div class="panel">
-            <h1 class="panel-header">AFOQT QUEST</h1>
+            <h1 class="panel-header" style="text-align: center; margin-bottom: 20px;">AFOQT QUEST</h1>
             
-            <div class="header-controls">
-                <button class="btn btn-small" id="change-character-btn">
-                    ${state.currentPlayer ? `👤 ${state.currentPlayer.name}` : '👤 Change Character'}
-                </button>
-                ${state.currentPlayer ? `
-                    <button class="btn btn-small" id="status-btn">
-                        ⚔ Status (Lv. ${playerInfo.level})
+            <div class="home-controls-box" style="background: rgba(0, 40, 80, 0.5); border: 2px solid #00ffff; border-radius: 8px; padding: 20px; margin-bottom: 30px; box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);">
+                <div class="header-controls">
+                    <button class="btn btn-small" id="change-character-btn">
+                        👤 ${state.currentPlayer ? state.currentPlayer.name : 'Player'}
                     </button>
-                ` : ''}
-                <button class="btn btn-small" id="settings-btn">
-                    ⚙ Settings
-                </button>
+                    ${state.currentPlayer ? `
+                        <button class="btn btn-small" id="status-btn">
+                            📊 Stats
+                        </button>
+                    ` : ''}
+                    <button class="btn btn-small" id="settings-btn">
+                        ⚙ Settings
+                    </button>
+                </div>
             </div>
             
             <h2>Subjects</h2>
