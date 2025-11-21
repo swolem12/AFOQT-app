@@ -4,6 +4,121 @@
 // ============================================================================
 
 // ============================================================================
+// Particle Effects
+// ============================================================================
+function createParticles(x, y, color, count = 20) {
+    const container = document.createElement('div');
+    container.style.cssText = `
+        position: fixed;
+        top: ${y}px;
+        left: ${x}px;
+        pointer-events: none;
+        z-index: 9999;
+    `;
+    document.body.appendChild(container);
+    
+    for (let i = 0; i < count; i++) {
+        const particle = document.createElement('div');
+        const angle = (Math.PI * 2 * i) / count;
+        const velocity = 100 + Math.random() * 100;
+        const vx = Math.cos(angle) * velocity;
+        const vy = Math.sin(angle) * velocity;
+        
+        particle.style.cssText = `
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: ${color};
+            border-radius: 50%;
+            box-shadow: 0 0 10px ${color};
+            animation: particleFloat 1s ease-out forwards;
+            --vx: ${vx}px;
+            --vy: ${vy}px;
+        `;
+        
+        container.appendChild(particle);
+    }
+    
+    setTimeout(() => container.remove(), 1000);
+}
+
+// Add CSS for particle animation
+const particleStyle = document.createElement('style');
+particleStyle.textContent = `
+    @keyframes particleFloat {
+        0% {
+            transform: translate(0, 0) scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: translate(var(--vx), var(--vy)) scale(0);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(particleStyle);
+
+// ============================================================================
+// Boot Screen Effect
+// ============================================================================
+function showBootScreen() {
+    const bootMessages = [
+        'INITIALIZING AFOQT STUDY CONSOLE...',
+        'LOADING SYSTEM MODULES...',
+        'LOADING MATH ENGINE... OK',
+        'LOADING VERBAL PROCESSOR... OK',
+        'LOADING READING ANALYZER... OK',
+        'LOADING SCIENCE DATABASE... OK',
+        'INITIALIZING AUDIO SYSTEM... OK',
+        'SYSTEM READY.',
+        ''
+    ];
+    
+    const bootScreen = document.createElement('div');
+    bootScreen.id = 'boot-screen';
+    bootScreen.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        color: #00ff00;
+        font-family: 'Courier New', monospace;
+        padding: 40px;
+        z-index: 10000;
+        overflow: hidden;
+    `;
+    
+    const bootText = document.createElement('pre');
+    bootText.style.cssText = `
+        font-size: 14px;
+        line-height: 1.6;
+        text-shadow: 0 0 5px #00ff00;
+    `;
+    bootScreen.appendChild(bootText);
+    document.body.appendChild(bootScreen);
+    
+    let currentLine = 0;
+    const typeInterval = setInterval(() => {
+        if (currentLine < bootMessages.length) {
+            bootText.textContent += bootMessages[currentLine] + '\n';
+            currentLine++;
+            playSfx('nav');
+        } else {
+            clearInterval(typeInterval);
+            setTimeout(() => {
+                bootScreen.style.transition = 'opacity 0.5s';
+                bootScreen.style.opacity = '0';
+                setTimeout(() => {
+                    bootScreen.remove();
+                }, 500);
+            }, 500);
+        }
+    }, 200);
+}
+
+// ============================================================================
 // Global State
 // ============================================================================
 const state = {
@@ -1067,6 +1182,21 @@ function handleAnswer(optionIndex) {
     const currentQuestion = state.quiz.questions[state.quiz.currentIndex];
     const isCorrect = optionIndex === currentQuestion.correctIndex;
     
+    // Get button position for particle effect
+    const buttons = document.querySelectorAll('.option-btn');
+    const selectedButton = buttons[optionIndex];
+    if (selectedButton) {
+        const rect = selectedButton.getBoundingClientRect();
+        const x = rect.left + rect.width / 2;
+        const y = rect.top + rect.height / 2;
+        
+        if (isCorrect) {
+            createParticles(x, y, '#00ff00', 30);
+        } else {
+            createParticles(x, y, '#ff0000', 20);
+        }
+    }
+    
     if (isCorrect) {
         state.quiz.score++;
         playSfx('correct');
@@ -1273,9 +1403,14 @@ function renderQuiz() {
     const answered = state.quiz.selectedAnswer !== null;
     const isCorrect = answered && state.quiz.selectedAnswer === currentQuestion.correctIndex;
     const isTestMode = state.quiz.mode === 'test';
+    const progressPercent = ((state.quiz.currentIndex + 1) / state.quiz.questions.length) * 100;
     
     return `
         <div class="panel">
+            <div class="quiz-progress-bar">
+                <div class="quiz-progress-fill" style="width: ${progressPercent}%"></div>
+            </div>
+            
             <div class="quiz-header">
                 <div class="quiz-info">
                     <strong>${state.currentTopic.name}</strong><br>
@@ -1513,6 +1648,13 @@ function attachEventListeners() {
 // Initialization
 // ============================================================================
 function init() {
+    // Show boot screen on first load
+    const hasBooted = sessionStorage.getItem('afoqt-booted');
+    if (!hasBooted) {
+        showBootScreen();
+        sessionStorage.setItem('afoqt-booted', 'true');
+    }
+    
     state.players = loadPlayers();
     if (state.players.length > 0) {
         state.currentPlayer = state.players[0];
