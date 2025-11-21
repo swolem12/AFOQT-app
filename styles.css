@@ -1039,6 +1039,124 @@ body::after {
     }
 }
 
+/* Login Screen Styles */
+.login-section {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.player-list-login {
+    margin-bottom: 30px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.player-item-login {
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #00ffff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+    animation: playerItemSlide 0.4s ease-out backwards;
+}
+
+.player-item-login:nth-child(1) { animation-delay: 0.1s; }
+.player-item-login:nth-child(2) { animation-delay: 0.2s; }
+.player-item-login:nth-child(3) { animation-delay: 0.3s; }
+.player-item-login:nth-child(4) { animation-delay: 0.4s; }
+.player-item-login:nth-child(5) { animation-delay: 0.5s; }
+
+.player-item-login:hover {
+    background: rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.player-info-login {
+    flex: 1;
+}
+
+.player-name-login {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.player-level-login {
+    font-size: 1.1rem;
+    color: #ffff00;
+    text-shadow: 0 0 10px #ffff00;
+    margin-bottom: 5px;
+}
+
+.player-stats-login {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.player-action {
+    flex-shrink: 0;
+}
+
+.new-character-section {
+    border-top: 2px solid rgba(0, 255, 255, 0.3);
+    padding-top: 30px;
+    margin-top: 30px;
+}
+
+.new-player-form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.new-player-form-login input {
+    background: rgba(0, 0, 0, 0.9);
+    color: #00ffff;
+    border: 2px solid #00ffff;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    font-family: 'Courier New', 'Courier', monospace;
+    text-align: center;
+}
+
+.new-player-form-login input:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.new-player-form-login input::placeholder {
+    color: rgba(0, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+    .player-item-login {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .player-info-login {
+        width: 100%;
+    }
+    
+    .player-action {
+        width: 100%;
+    }
+    
+    .player-action button {
+        width: 100%;
+    }
+}
+
 /* Modal styles */
 .modal {
     display: none;
