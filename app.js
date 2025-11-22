@@ -2298,40 +2298,103 @@ function showBootSequence() {
             <div id="boot-sequence">
                 <div class="boot-warning-stripe"></div>
                 <div class="boot-container">
-                    <div class="boot-header">AFOQT QUEST</div>
+                    <div class="boot-ascii-art">
+╔═══════════════════════════════════════════════════════════╗
+║  ▄▄▄       ███████  ▒█████   █████   ▄▄▄█████▓           ║
+║ ▒████▄    ▓██   ▒  ▒██▒  ██▒▒██▓  ██▒ ▓  ██▒ ▓▒           ║
+║ ▒██  ▀█▄  ▒████ ░  ▒██░  ██▒▒██▒  ██░ ▒ ▓██░ ▒░           ║
+║ ░██▄▄▄▄██ ░▓█▒  ░  ▒██   ██░░██  █▀ ░ ░ ▓██▓ ░            ║
+║  ▓█   ▓██▒░▒█░     ░ ████▓▒░░▒███▒█▄    ▒██▒ ░            ║
+║        QUEST :: TERMINAL OS v2.1.47 [NERV-SAO-ANAHEIM]    ║
+╚═══════════════════════════════════════════════════════════╝</div>
+                    <div class="boot-header">LINK START</div>
+                    <div class="boot-subheader">── INITIALIZING VIRTUAL LEARNING INTERFACE ──</div>
                     
                     <div class="boot-system-check">
                         <div class="boot-line">
-                            <span>> SYSTEM INITIALIZATION</span>
-                            <span class="boot-status">OK</span>
+                            <span>NERV-MAGI SYSTEM // SYNCHRONIZATION TEST</span>
+                        </div>
+                        <div class="boot-line boot-indent">
+                            <span>├─ CASPER (Logic)....................</span>
+                            <span class="boot-status">SYNC 99.8%</span>
+                        </div>
+                        <div class="boot-line boot-indent">
+                            <span>├─ BALTHASAR (Strategy)..............</span>
+                            <span class="boot-status">SYNC 99.9%</span>
+                        </div>
+                        <div class="boot-line boot-indent">
+                            <span>└─ MELCHIOR (Creativity)..............</span>
+                            <span class="boot-status">SYNC 100%</span>
+                        </div>
+                        <div class="boot-line boot-spacer"></div>
+                        <div class="boot-line">
+                            <span>GUNDAM OS // MOBILE SUIT SYSTEMS</span>
+                        </div>
+                        <div class="boot-line boot-indent">
+                            <span>├─ Psycommu Neural Link..............</span>
+                            <span class="boot-status">ACTIVE</span>
+                        </div>
+                        <div class="boot-line boot-indent">
+                            <span>├─ Combat Calculation Engine.........</span>
+                            <span class="boot-status">STANDBY</span>
+                        </div>
+                        <div class="boot-line boot-indent">
+                            <span>└─ Pilot Interface Module............</span>
+                            <span class="boot-status">READY</span>
+                        </div>
+                        <div class="boot-line boot-spacer"></div>
+                        <div class="boot-line">
+                            <span>SAO CARDINAL SYSTEM // CORE MODULES</span>
+                        </div>
+                        <div class="boot-line boot-indent">
+                            <span>├─ Math Combat Engine (27 Skills)....</span>
+                            <span class="boot-status">LOADED</span>
+                        </div>
+                        <div class="boot-line boot-indent">
+                            <span>├─ Verbal Sword Arts.................</span>
+                            <span class="boot-status">LOADED</span>
+                        </div>
+                        <div class="boot-line boot-indent">
+                            <span>├─ Reading Comprehension Quest........</span>
+                            <span class="boot-status">LOADED</span>
+                        </div>
+                        <div class="boot-line boot-indent">
+                            <span>├─ Science Knowledge Database........</span>
+                            <span class="boot-status">LOADED</span>
+                        </div>
+                        <div class="boot-line boot-indent">
+                            <span>└─ Audio Synthesis System............</span>
+                            <span class="boot-status">LOADED</span>
+                        </div>
+                        <div class="boot-line boot-spacer"></div>
+                        <div class="boot-line">
+                            <span>PLAYER INTERFACE // STATUS CHECK</span>
+                        </div>
+                        <div class="boot-line boot-indent">
+                            <span>├─ Character Profile Registry........</span>
+                            <span class="boot-status">ONLINE</span>
+                        </div>
+                        <div class="boot-line boot-indent">
+                            <span>├─ Experience Point System...........,</span>
+                            <span class="boot-status">ONLINE</span>
+                        </div>
+                        <div class="boot-line boot-indent">
+                            <span>├─ Quest Progress Tracker............</span>
+                            <span class="boot-status">ONLINE</span>
+                        </div>
+                        <div class="boot-line boot-indent">
+                            <span>└─ Local Data Persistence............</span>
+                            <span class="boot-status">ONLINE</span>
+                        </div>
+                        <div class="boot-line boot-spacer"></div>
+                        <div class="boot-line">
+                            <span class="boot-status-highlight">█ A.T. FIELD STABLE // PATTERN BLUE</span>
                         </div>
                         <div class="boot-line">
-                            <span>> NEURAL INTERFACE</span>
-                            <span class="boot-status">OK</span>
+                            <span class="boot-status-highlight">█ ALL SYSTEMS NOMINAL // READY FOR SORTIE</span>
                         </div>
                         <div class="boot-line">
-                            <span>> QUESTION GENERATOR</span>
-                            <span class="boot-status">OK</span>
-                        </div>
-                        <div class="boot-line">
-                            <span>> RPG SYSTEMS</span>
-                            <span class="boot-status">OK</span>
-                        </div>
-                        <div class="boot-line">
-                            <span>> OFFLINE CACHE</span>
-                            <span class="boot-status">OK</span>
-                        </div>
-                        <div class="boot-line">
-                            <span>> AUDIO SYSTEMS</span>
-                            <span class="boot-status">OK</span>
-                        </div>
-                        <div class="boot-line">
-                            <span>> THEME ENGINE</span>
-                            <span class="boot-status">OK</span>
-                        </div>
-                        <div class="boot-line">
-                            <span>> SYNCHRONIZATION</span>
-                            <span class="boot-status warning">STANDBY</span>
+                            <span class="boot-status-highlight">█ LINK ESTABLISHED // DIVE AUTHORIZED</span>
                         </div>
                     </div>
                     
@@ -2347,16 +2410,38 @@ function showBootSequence() {
                     </div>
                     
                     <div class="boot-progress">
-                        <div class="boot-progress-label">LOADING</div>
+                        <div class="boot-progress-label">[ SYNCHRONIZATION RATE ]</div>
                         <div class="boot-progress-bar">
                             <div class="boot-progress-fill"></div>
                         </div>
+                        <div class="boot-progress-percent">0%</div>
+                    </div>
+                    
+                    <div class="boot-footer">
+                        <div class="boot-footer-line">┌─────────────────────────────────────────────────┐</div>
+                        <div class="boot-footer-line">│ WELCOME, PLAYER. THE QUEST BEGINS NOW.        │</div>
+                        <div class="boot-footer-line">│ >> Press START to enter the virtual realm <<   │</div>
+                        <div class="boot-footer-line">└─────────────────────────────────────────────────┘</div>
                     </div>
                 </div>
             </div>
         `;
         
         document.body.insertAdjacentHTML('afterbegin', bootHTML);
+        
+        // Animate progress percentage
+        const progressPercent = document.querySelector('.boot-progress-percent');
+        if (progressPercent) {
+            let percent = 0;
+            const percentInterval = setInterval(() => {
+                percent += 2;
+                if (percent <= 100) {
+                    progressPercent.textContent = percent + '%';
+                } else {
+                    clearInterval(percentInterval);
+                }
+            }, 60);
+        }
         
         // Remove boot sequence after animation
         setTimeout(() => {
@@ -2365,7 +2450,7 @@ function showBootSequence() {
                 bootSeq.remove();
             }
             resolve();
-        }, 5500);
+        }, 7000);
     });
 }
 
