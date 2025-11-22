@@ -1669,7 +1669,7 @@ body::after {
 .player-auth-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 15px;
     padding: clamp(10px, 2vw, 15px);
     background: rgba(0, 255, 255, 0.05);
     border: 2px solid rgba(0, 255, 255, 0.3);
@@ -1692,10 +1692,27 @@ body::after {
     box-shadow: 0 0 25px rgba(255, 255, 0, 0.4);
 }
 
+.player-auth-sprite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.player-auth-sprite .pixel-character {
+    transform: scale(0.5);
+}
+
 .player-auth-info {
     display: flex;
     align-items: center;
     gap: clamp(15px, 3vw, 20px);
+    flex: 1;
 }
 
 .player-auth-name {
@@ -2025,7 +2042,7 @@ body::after {
     padding: 15px 20px;
     margin-bottom: 12px;
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
     align-items: center;
     transition: all 0.3s;
     cursor: pointer;
@@ -2036,6 +2053,22 @@ body::after {
     border-color: var(--color-primary);
     box-shadow: 0 0 20px var(--color-primary-glow);
     transform: translateX(5px);
+}
+
+.player-sprite-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--color-primary-dim);
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.player-sprite-preview .pixel-character {
+    transform: scale(0.6);
 }
 
 .player-info-login {

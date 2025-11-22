@@ -3013,8 +3013,13 @@ function renderLogin() {
                     ${state.players.length === 0 ? '<p style="text-align: center; opacity: 0.7; margin: 30px 0;">No characters yet. Create one below!</p>' : ''}
                     ${state.players.map(p => {
                         const playerInfo = computePlayerTotals(p);
+                        // Initialize equipment if needed
+                        initializePlayerEquipment(p);
                         return `
                             <div class="player-item-login" data-player-id="${p.id}">
+                                <div class="player-sprite-preview">
+                                    ${renderCharacterSprite(p)}
+                                </div>
                                 <div class="player-info-login">
                                     <div class="player-name-login">${p.name}</div>
                                     <div class="player-level-login">Level ${playerInfo.level}</div>
@@ -3100,8 +3105,13 @@ function renderPlayerModal() {
                         <div class="auth-section">
                             <div class="auth-section-label">EXISTING PILOTS</div>
                             <div class="player-auth-list">
-                                ${state.players.map(p => `
+                                ${state.players.map(p => {
+                                    initializePlayerEquipment(p);
+                                    return `
                                     <div class="player-auth-item ${state.currentPlayer?.id === p.id ? 'selected' : ''}" data-player-id="${p.id}">
+                                        <div class="player-auth-sprite">
+                                            ${renderCharacterSprite(p)}
+                                        </div>
                                         <div class="player-auth-info">
                                             <span class="player-auth-name">${p.name}</span>
                                             <span class="player-auth-level">Lv. ${computePlayerTotals(p).level}</span>
@@ -3110,7 +3120,7 @@ function renderPlayerModal() {
                                             <span class="auth-play-icon">▶</span> DEPLOY
                                         </button>
                                     </div>
-                                `).join('')}
+                                `}).join('')}
                             </div>
                         </div>
                     ` : ''}
