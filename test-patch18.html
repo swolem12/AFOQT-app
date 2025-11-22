@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patch 18 Test</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: #000;
+            color: #00ffff;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff;
+        }
+        .success { color: #00ff00; }
+        .error { color: #ff0000; }
+        .info { color: #ffff00; }
+        pre {
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid #00ffff;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #00ffff;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Patch 18 System Test</h1>
+    <div id="test-results"></div>
+
+    <script src="patch-loader.js"></script>
+    <script>
+        const resultsDiv = document.getElementById('test-results');
+        
+        function log(message, type = 'info') {
+            const p = document.createElement('p');
+            p.className = type;
+            p.textContent = message;
+            resultsDiv.appendChild(p);
+        }
+
+        function logSection(title) {
+            const div = document.createElement('div');
+            div.className = 'test-section';
+            const h2 = document.createElement('h2');
+            h2.textContent = title;
+            div.appendChild(h2);
+            resultsDiv.appendChild(div);
+            return div;
+        }
+
+        async function runTests() {
+            log('Starting Patch 18 tests...', 'info');
+            
+            // Test 1: Load config
+            const section1 = logSection('Test 1: Load Patch 18 Config');
+            try {
+                await loadPatch18Config();
+                if (patch18Config) {
+                    log('✓ Config loaded successfully', 'success');
+                    log(`  Subjects: ${patch18Config.subjects.length}`, 'info');
+                    log(`  Practice tests: ${patch18Config.afoqtPracticeTests.subjectConfigs.length}`, 'info');
+                } else {
+                    log('✗ Failed to load config', 'error');
+                }
+            } catch (error) {
+                log(`✗ Error: ${error.message}`, 'error');
+            }
+            
+            // Test 2: Parse filename
+            const section2 = logSection('Test 2: Filename Parsing');
+            const testFilenames = [
+                'synonyms_beginner_part1.json',
+                'antonyms_advanced_part2.json',
+                'word_roots_affixes_expert_part1.json'
+            ];
+            testFilenames.forEach(filename => {
+                const parsed = parseFilename(filename);
+                if (parsed) {
+                    log(`✓ ${filename} → subtopic: ${parsed.subtopicId}, difficulty: ${parsed.difficulty}, part: ${parsed.part}`, 'success');
+                } else {
+                    log(`✗ Failed to parse: ${filename}`, 'error');
+                }
+            });
+            
+            // Test 3: Load vocabulary
+            const section3 = logSection('Test 3: Load Vocabulary Content');
+            try {
+                await loadAllVocabularyContent();
+                
+                // Check registry
+                const subjects = Object.keys(questionRegistry);
+                log(`✓ Loaded ${subjects.length} subjects`, 'success');
+                
+                subjects.forEach(subjectId => {
+                    const subtopics = Object.keys(questionRegistry[subjectId]);
+                    log(`  ${subjectId}: ${subtopics.length} subtopics`, 'info');
+                    
+                    subtopics.forEach(subtopicId => {
+                        const difficulties = questionRegistry[subjectId][subtopicId];
+                        const total = difficulties.beginner.length + difficulties.advanced.length + difficulties.expert.length;
+                        log(`    ${subtopicId}: ${total} questions (B:${difficulties.beginner.length}, A:${difficulties.advanced.length}, E:${difficulties.expert.length})`, 'info');
+                    });
+                });
+                
+                // Show sample question
+                if (questionRegistry.word_knowledge && questionRegistry.word_knowledge.synonyms) {
+                    const sampleQ = questionRegistry.word_knowledge.synonyms.beginner[0];
+                    if (sampleQ) {
+                        log('Sample question:', 'info');
+                        const pre = document.createElement('pre');
+                        pre.textContent = JSON.stringify(sampleQ, null, 2);
+                        section3.appendChild(pre);
+                    }
+                }
+            } catch (error) {
+                log(`✗ Error loading vocabulary: ${error.message}`, 'error');
+                console.error(error);
+            }
+            
+            // Test 4: Create practice tests
+            const section4 = logSection('Test 4: Create AFOQT Practice Tests');
+            try {
+                const practiceTests = createAfoqtPracticeTestTopics();
+                log(`✓ Created ${practiceTests.length} practice tests`, 'success');
+                
+                practiceTests.forEach(test => {
+                    log(`  ${test.name} (${test.id})`, 'info');
+                    log(`    Subject: ${test.subjectId}`, 'info');
+                    log(`    Test length: ${test.testConfig.questionSelectionPolicy.defaultTestLength}`, 'info');
+                });
+            } catch (error) {
+                log(`✗ Error creating practice tests: ${error.message}`, 'error');
+            }
+            
+            // Test 5: Generate practice test questions
+            if (patch18Config && patch18Config.afoqtPracticeTests.subjectConfigs.length > 0) {
+                const section5 = logSection('Test 5: Generate Practice Test Questions');
+                try {
+                    const testConfig = patch18Config.afoqtPracticeTests.subjectConfigs[0];
+                    const questions = generateAfoqtPracticeTest(testConfig);
+                    log(`✓ Generated ${questions.length} questions for ${testConfig.displayName}`, 'success');
+                    
+                    // Count by difficulty
+                    const counts = { beginner: 0, advanced: 0, expert: 0 };
+                    // Note: Can't easily determine difficulty from converted questions
+                    log(`  Target distribution:`, 'info');
+                    log(`    Beginner: ${testConfig.questionSelectionPolicy.difficultyDistribution.beginner * 100}%`, 'info');
+                    log(`    Advanced: ${testConfig.questionSelectionPolicy.difficultyDistribution.advanced * 100}%`, 'info');
+                    log(`    Expert: ${testConfig.questionSelectionPolicy.difficultyDistribution.expert * 100}%`, 'info');
+                    
+                    // Show sample converted question
+                    if (questions.length > 0) {
+                        log('Sample converted question:', 'info');
+                        const pre = document.createElement('pre');
+                        pre.textContent = JSON.stringify(questions[0], null, 2);
+                        section5.appendChild(pre);
+                    }
+                } catch (error) {
+                    log(`✗ Error generating questions: ${error.message}`, 'error');
+                    console.error(error);
+                }
+            }
+            
+            log('Tests complete!', 'success');
+        }
+
+        // Run tests on page load
+        runTests().catch(error => {
+            log(`✗ Fatal error: ${error.message}`, 'error');
+            console.error(error);
+        });
+    </script>
+</body>
+</html>

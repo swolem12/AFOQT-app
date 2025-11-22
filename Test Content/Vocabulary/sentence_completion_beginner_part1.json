@@ -1,0 +1,307 @@
+{
+  "subtopicId": "sentence_completion",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "id": "sc_beg_001",
+      "question": "The instructor appreciated the cadet’s ___ attitude during training.",
+      "choices": {
+        "A": "cooperative",
+        "B": "distracted",
+        "C": "uncertain",
+        "D": "hostile"
+      },
+      "answer": "A",
+      "explanation": "A cooperative attitude aligns with appreciation."
+    },
+    {
+      "id": "sc_beg_002",
+      "question": "Despite the long shift, the technician remained ___ and focused.",
+      "choices": {
+        "A": "alert",
+        "B": "apathetic",
+        "C": "reckless",
+        "D": "fragile"
+      },
+      "answer": "A",
+      "explanation": "Remaining focused implies alertness."
+    },
+    {
+      "id": "sc_beg_003",
+      "question": "The mission briefing was so ___ that even new recruits understood it.",
+      "choices": {
+        "A": "clear",
+        "B": "complex",
+        "C": "abrupt",
+        "D": "hostile"
+      },
+      "answer": "A",
+      "explanation": "Clarity helps understanding."
+    },
+    {
+      "id": "sc_beg_004",
+      "question": "The pilot handled the unexpected turbulence with complete ___",
+      "choices": {
+        "A": "confidence",
+        "B": "confusion",
+        "C": "hesitation",
+        "D": "panic"
+      },
+      "answer": "A",
+      "explanation": "Pilots are expected to handle turbulence confidently."
+    },
+    {
+      "id": "sc_beg_005",
+      "question": "The cadet’s uniform was always ___, reflecting attention to detail.",
+      "choices": {
+        "A": "neat",
+        "B": "frayed",
+        "C": "irregular",
+        "D": "patched"
+      },
+      "answer": "A",
+      "explanation": "Attention to detail implies neatness."
+    },
+    {
+      "id": "sc_beg_006",
+      "question": "Although the schedule was tight, the team managed to ___ all tasks on time.",
+      "choices": {
+        "A": "complete",
+        "B": "ignore",
+        "C": "question",
+        "D": "delay"
+      },
+      "answer": "A",
+      "explanation": "Completing tasks matches the sentence logic."
+    },
+    {
+      "id": "sc_beg_007",
+      "question": "The briefing officer spoke in a ___ tone to ensure everyone understood the plan.",
+      "choices": {
+        "A": "precise",
+        "B": "rushed",
+        "C": "uncertain",
+        "D": "casual"
+      },
+      "answer": "A",
+      "explanation": "Precise aligns with clarity and understanding."
+    },
+    {
+      "id": "sc_beg_008",
+      "question": "Although the equipment was old, it remained surprisingly ___.",
+      "choices": {
+        "A": "reliable",
+        "B": "fragile",
+        "C": "erratic",
+        "D": "dangerous"
+      },
+      "answer": "A",
+      "explanation": "Old but reliable is a common pairing."
+    },
+    {
+      "id": "sc_beg_009",
+      "question": "The new recruits were ___, eager to prove themselves.",
+      "choices": {
+        "A": "enthusiastic",
+        "B": "apathetic",
+        "C": "hostile",
+        "D": "silent"
+      },
+      "answer": "A",
+      "explanation": "Eager recruits are enthusiastic."
+    },
+    {
+      "id": "sc_beg_010",
+      "question": "The sergeant encouraged cadets to remain ___ during stressful scenarios.",
+      "choices": {
+        "A": "calm",
+        "B": "reckless",
+        "C": "boastful",
+        "D": "impatient"
+      },
+      "answer": "A",
+      "explanation": "Calmness is essential during stress."
+    },
+    {
+      "id": "sc_beg_011",
+      "question": "The aircraft maintenance logs were kept ___ to avoid confusion.",
+      "choices": {
+        "A": "organized",
+        "B": "abrupt",
+        "C": "erratic",
+        "D": "excessive"
+      },
+      "answer": "A",
+      "explanation": "Logs must be organized."
+    },
+    {
+      "id": "sc_beg_012",
+      "question": "The medic remained ___ while treating the injured airman.",
+      "choices": {
+        "A": "composed",
+        "B": "agitated",
+        "C": "irate",
+        "D": "uncertain"
+      },
+      "answer": "A",
+      "explanation": "Medical care requires composure."
+    },
+    {
+      "id": "sc_beg_013",
+      "question": "Although the training was difficult, the cadets showed ___ effort.",
+      "choices": {
+        "A": "consistent",
+        "B": "halfhearted",
+        "C": "confused",
+        "D": "sporadic"
+      },
+      "answer": "A",
+      "explanation": "Difficult training requires consistency."
+    },
+    {
+      "id": "sc_beg_014",
+      "question": "The commander’s ___ instructions helped reduce errors.",
+      "choices": {
+        "A": "clear",
+        "B": "vague",
+        "C": "contradictory",
+        "D": "hurried"
+      },
+      "answer": "A",
+      "explanation": "Clear instructions reduce errors."
+    },
+    {
+      "id": "sc_beg_015",
+      "question": "The cadet’s performance ___ the expectations set by leadership.",
+      "choices": {
+        "A": "exceeded",
+        "B": "barely met",
+        "C": "opposed",
+        "D": "ignored"
+      },
+      "answer": "A",
+      "explanation": "Exceeded expectations fits the tone."
+    },
+    {
+      "id": "sc_beg_016",
+      "question": "The weather briefing warned of ___ conditions that could impact visibility.",
+      "choices": {
+        "A": "hazardous",
+        "B": "pleasant",
+        "C": "transparent",
+        "D": "neutral"
+      },
+      "answer": "A",
+      "explanation": "Hazardous conditions affect visibility."
+    },
+    {
+      "id": "sc_beg_017",
+      "question": "The team remained ___ despite multiple setbacks.",
+      "choices": {
+        "A": "determined",
+        "B": "apathetic",
+        "C": "disorganized",
+        "D": "silent"
+      },
+      "answer": "A",
+      "explanation": "Setbacks require determination."
+    },
+    {
+      "id": "sc_beg_018",
+      "question": "The operation required a ___ approach due to its complexity.",
+      "choices": {
+        "A": "careful",
+        "B": "reckless",
+        "C": "haphazard",
+        "D": "impatient"
+      },
+      "answer": "A",
+      "explanation": "Complex operations demand careful planning."
+    },
+    {
+      "id": "sc_beg_019",
+      "question": "To avoid confusion, the lieutenant provided a ___ explanation.",
+      "choices": {
+        "A": "simple",
+        "B": "scattered",
+        "C": "indirect",
+        "D": "hasty"
+      },
+      "answer": "A",
+      "explanation": "Simple explanations reduce confusion."
+    },
+    {
+      "id": "sc_beg_020",
+      "question": "The squadron worked ___ to finish the project before the deadline.",
+      "choices": {
+        "A": "together",
+        "B": "reluctantly",
+        "C": "noisily",
+        "D": "erratically"
+      },
+      "answer": "A",
+      "explanation": "Finishing before a deadline requires teamwork."
+    },
+    {
+      "id": "sc_beg_021",
+      "question": "___ his inexperience, the cadet adapted quickly to the task.",
+      "choices": {
+        "A": "Despite",
+        "B": "Because of",
+        "C": "Given",
+        "D": "Through"
+      },
+      "answer": "A",
+      "explanation": "Adaptation despite inexperience fits logically."
+    },
+    {
+      "id": "sc_beg_022",
+      "question": "The sergeant was respected for being both ___ and fair.",
+      "choices": {
+        "A": "firm",
+        "B": "boastful",
+        "C": "impulsive",
+        "D": "distracted"
+      },
+      "answer": "A",
+      "explanation": "Firm and fair is a common respected trait pairing."
+    },
+    {
+      "id": "sc_beg_023",
+      "question": "The aircraft required immediate maintenance due to a ___ issue.",
+      "choices": {
+        "A": "critical",
+        "B": "minor",
+        "C": "trivial",
+        "D": "optional"
+      },
+      "answer": "A",
+      "explanation": "Immediate maintenance implies a critical issue."
+    },
+    {
+      "id": "sc_beg_024",
+      "question": "The cadet responded with ___ when asked to repeat the procedure.",
+      "choices": {
+        "A": "patience",
+        "B": "irritation",
+        "C": "confusion",
+        "D": "indifference"
+      },
+      "answer": "A",
+      "explanation": "Repeating procedures requires patience."
+    },
+    {
+      "id": "sc_beg_025",
+      "question": "The mission required both ___ planning and precise execution.",
+      "choices": {
+        "A": "careful",
+        "B": "casual",
+        "C": "careless",
+        "D": "rushed"
+      },
+      "answer": "A",
+      "explanation": "Mission planning must be careful."
+    }
+  ]
+}

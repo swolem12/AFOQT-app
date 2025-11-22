@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Content Loading Test</title>
+    <style>
+        body { font-family: monospace; background: #000; color: #0f0; padding: 20px; }
+        .success { color: #0f0; }
+        .error { color: #f00; }
+        .info { color: #0ff; }
+    </style>
+</head>
+<body>
+    <h1>Vocabulary Content Loading Test</h1>
+    <div id="output"></div>
+    <script src="patch-loader.js"></script>
+    <script>
+        const output = document.getElementById('output');
+        
+        async function test() {
+            output.innerHTML += '<p class="info">Starting test...</p>';
+            
+            // Initialize Patch 18
+            await initializePatch18();
+            
+            // Check registry
+            const subjects = Object.keys(questionRegistry);
+            output.innerHTML += `<p class="success">✓ Found ${subjects.length} subject(s): ${subjects.join(', ')}</p>`;
+            
+            if (questionRegistry.vocabulary) {
+                const subtopics = Object.keys(questionRegistry.vocabulary);
+                output.innerHTML += `<p class="success">✓ Vocabulary has ${subtopics.length} subtopics</p>`;
+                
+                subtopics.forEach(subtopic => {
+                    const diff = questionRegistry.vocabulary[subtopic];
+                    const total = diff.beginner.length + diff.advanced.length + diff.expert.length;
+                    output.innerHTML += `<p class="info">  - ${subtopic}: ${total} questions (B:${diff.beginner.length}, A:${diff.advanced.length}, E:${diff.expert.length})</p>`;
+                    
+                    // Show a sample question
+                    if (diff.beginner.length > 0) {
+                        const sample = diff.beginner[0];
+                        output.innerHTML += `<p style="margin-left: 40px; color: #ff0;">Sample: ${sample.question}</p>`;
+                    }
+                });
+            }
+            
+            output.innerHTML += '<p class="success">✓ Test complete!</p>';
+        }
+        
+        test().catch(err => {
+            output.innerHTML += `<p class="error">✗ Error: ${err.message}</p>`;
+            console.error(err);
+        });
+    </script>
+</body>
+</html>

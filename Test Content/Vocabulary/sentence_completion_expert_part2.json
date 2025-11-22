@@ -1,0 +1,307 @@
+{
+  "subtopicId": "sentence_completion",
+  "difficulty": "expert",
+  "part": 2,
+  "questions": [
+    {
+      "id": "sc_exp_026",
+      "question": "Although the drones were advertised as fully autonomous, their behavior in complex environments was surprisingly ___ and often required manual override.",
+      "choices": {
+        "A": "erratic",
+        "B": "parsimonious",
+        "C": "didactic",
+        "D": "trenchant"
+      },
+      "answer": "A",
+      "explanation": "Needing manual override suggests 'erratic' performance."
+    },
+    {
+      "id": "sc_exp_027",
+      "question": "The exercise was designed to be both ___ and realistic, forcing crews to make difficult choices under time pressure.",
+      "choices": {
+        "A": "rigorous",
+        "B": "perfunctory",
+        "C": "decorous",
+        "D": "anodyne"
+      },
+      "answer": "A",
+      "explanation": "Demanding and realistic training is 'rigorous.'"
+    },
+    {
+      "id": "sc_exp_028",
+      "question": "Even his compliments carried a subtle ___, leaving subordinates unsure whether they were being praised or mocked.",
+      "choices": {
+        "A": "acerbity",
+        "B": "candor",
+        "C": "equanimity",
+        "D": "parity"
+      },
+      "answer": "A",
+      "explanation": "A harsh, biting undertone in speech is 'acerbity.'"
+    },
+    {
+      "id": "sc_exp_029",
+      "question": "The new directive sought to ___, rather than replace, existing procedures, aligning them under a single coherent framework.",
+      "choices": {
+        "A": "synthesize",
+        "B": "abrogate",
+        "C": "obfuscate",
+        "D": "deride"
+      },
+      "answer": "A",
+      "explanation": "To combine and align procedures is to 'synthesize' them."
+    },
+    {
+      "id": "sc_exp_030",
+      "question": "The colonel was admired not only for his tactical brilliance but also for his unusual ___ in admitting mistakes.",
+      "choices": {
+        "A": "candor",
+        "B": "duplicity",
+        "C": "austerity",
+        "D": "tenacity"
+      },
+      "answer": "A",
+      "explanation": "Openly admitting mistakes reflects 'candor' (frankness)."
+    },
+    {
+      "id": "sc_exp_031",
+      "question": "Because the plan addressed only the most visible symptoms of the problem, critics dismissed it as ___ rather than transformative.",
+      "choices": {
+        "A": "palliative",
+        "B": "prescient",
+        "C": "salient",
+        "D": "trenchant"
+      },
+      "answer": "A",
+      "explanation": "A 'palliative' eases symptoms without solving root causes."
+    },
+    {
+      "id": "sc_exp_032",
+      "question": "His questions, though framed politely, were sufficiently ___ to expose several contradictions in the proposal.",
+      "choices": {
+        "A": "probing",
+        "B": "diffuse",
+        "C": "decorous",
+        "D": "nonchalant"
+      },
+      "answer": "A",
+      "explanation": "Questions that reveal contradictions are deeply 'probing.'"
+    },
+    {
+      "id": "sc_exp_033",
+      "question": "The advisory memo was intentionally ___, signaling concern without formally challenging the existing policy.",
+      "choices": {
+        "A": "cautious",
+        "B": "strident",
+        "C": "exuberant",
+        "D": "combative"
+      },
+      "answer": "A",
+      "explanation": "Subtle concern is expressed in a 'cautious' tone."
+    },
+    {
+      "id": "sc_exp_034",
+      "question": "What at first seemed like a minor discrepancy in the logs turned out to be a ___ indicator of system-wide failure.",
+      "choices": {
+        "A": "portentous",
+        "B": "peripheral",
+        "C": "banal",
+        "D": "spontaneous"
+      },
+      "answer": "A",
+      "explanation": "A small sign that foreshadows major trouble is 'portentous.'"
+    },
+    {
+      "id": "sc_exp_035",
+      "question": "The cadet’s demeanor was so outwardly ___ that few realized how intensely he studied the details of every briefing.",
+      "choices": {
+        "A": "nonchalant",
+        "B": "acrimonious",
+        "C": "obsequious",
+        "D": "didactic"
+      },
+      "answer": "A",
+      "explanation": "Appearing casually unconcerned is 'nonchalant.'"
+    },
+    {
+      "id": "sc_exp_036",
+      "question": "The unit’s response was neither impulsive nor rigid; instead, it was ___, adjusting rapidly while maintaining overall intent.",
+      "choices": {
+        "A": "adaptive",
+        "B": "capricious",
+        "C": "static",
+        "D": "equivocal"
+      },
+      "answer": "A",
+      "explanation": "Balancing agility with consistency is 'adaptive.'"
+    },
+    {
+      "id": "sc_exp_037",
+      "question": "Despite the simulator’s apparent realism, experienced pilots noted a subtle yet ___ disconnect between training and actual flight.",
+      "choices": {
+        "A": "consequential",
+        "B": "ephemeral",
+        "C": "benign",
+        "D": "decorous"
+      },
+      "answer": "A",
+      "explanation": "A small but important disconnect is 'consequential.'"
+    },
+    {
+      "id": "sc_exp_038",
+      "question": "The committee’s report avoided the usual partisan rhetoric, opting instead for a ___ tone that emphasized shared goals.",
+      "choices": {
+        "A": "conciliatory",
+        "B": "trenchant",
+        "C": "vituperative",
+        "D": "flippant"
+      },
+      "answer": "A",
+      "explanation": "Seeking common ground and easing tension is 'conciliatory.'"
+    },
+    {
+      "id": "sc_exp_039",
+      "question": "Her presentation was praised for its ___ structure: each assertion was supported by data, and every counterargument was addressed.",
+      "choices": {
+        "A": "coherent",
+        "B": "improvised",
+        "C": "elliptical",
+        "D": "capricious"
+      },
+      "answer": "A",
+      "explanation": "Logical, well-organized structure is 'coherent.'"
+    },
+    {
+      "id": "sc_exp_040",
+      "question": "The general’s reputation for being ___ meant that when he warned of a threat, few dismissed it as exaggeration.",
+      "choices": {
+        "A": "judicious",
+        "B": "bombastic",
+        "C": "mercurial",
+        "D": "polemical"
+      },
+      "answer": "A",
+      "explanation": "Careful, balanced judgment is 'judicious,' making his warnings credible."
+    },
+    {
+      "id": "sc_exp_041",
+      "question": "The new guidance attempted to ___ long-standing contradictions between written policy and everyday practice.",
+      "choices": {
+        "A": "reconcile",
+        "B": "exacerbate",
+        "C": "dilute",
+        "D": "obscure"
+      },
+      "answer": "A",
+      "explanation": "Fixing contradictions is to 'reconcile' them."
+    },
+    {
+      "id": "sc_exp_042",
+      "question": "The lieutenant’s remarks were more ___ than analytical; they stirred emotion but provided little concrete guidance.",
+      "choices": {
+        "A": "rhetorical",
+        "B": "empirical",
+        "C": "pedantic",
+        "D": "laconic"
+      },
+      "answer": "A",
+      "explanation": "Emotion-stirring speech without guidance is 'rhetorical.'"
+    },
+    {
+      "id": "sc_exp_043",
+      "question": "The policy seemed straightforward, but its implementation uncovered a series of ___ complications that no one had anticipated.",
+      "choices": {
+        "A": "insidious",
+        "B": "banal",
+        "C": "cursory",
+        "D": "jejune"
+      },
+      "answer": "A",
+      "explanation": "Hidden, subtly harmful complications are 'insidious.'"
+    },
+    {
+      "id": "sc_exp_044",
+      "question": "The analyst’s ___ style, while occasionally abrasive, often forced teams to confront assumptions they preferred to ignore.",
+      "choices": {
+        "A": "abrasive",
+        "B": "oblique",
+        "C": "diffident",
+        "D": "euphemistic"
+      },
+      "answer": "A",
+      "explanation": "A rough, confrontational style is 'abrasive,' consistent with forcing hard conversations."
+    },
+    {
+      "id": "sc_exp_045",
+      "question": "The commander insisted that any critique, however ___, be supported by clear evidence rather than rumor.",
+      "choices": {
+        "A": "trenchant",
+        "B": "tepid",
+        "C": "equivocal",
+        "D": "nonchalant"
+      },
+      "answer": "A",
+      "explanation": "Sharp, penetrating criticism is 'trenchant.'"
+    },
+    {
+      "id": "sc_exp_046",
+      "question": "Because the timeline was so ___, the team could not afford even minor delays.",
+      "choices": {
+        "A": "stringent",
+        "B": "elastic",
+        "C": "peripheral",
+        "D": "equable"
+      },
+      "answer": "A",
+      "explanation": "A very tight, inflexible timeline is 'stringent.'"
+    },
+    {
+      "id": "sc_exp_047",
+      "question": "Her remarks were ___ rather than opportunistic; she raised concerns even when they were inconvenient.",
+      "choices": {
+        "A": "principled",
+        "B": "expedient",
+        "C": "vacuous",
+        "D": "elliptical"
+      },
+      "answer": "A",
+      "explanation": "Acting from ethics, not convenience, is 'principled.'"
+    },
+    {
+      "id": "sc_exp_048",
+      "question": "The proposal’s initial appeal lay in its apparent simplicity, but a more careful reading revealed a ___ web of assumptions.",
+      "choices": {
+        "A": "byzantine",
+        "B": "pedestrian",
+        "C": "deferential",
+        "D": "anodyne"
+      },
+      "answer": "A",
+      "explanation": "A complex, intricate set of assumptions is 'byzantine.'"
+    },
+    {
+      "id": "sc_exp_049",
+      "question": "The squadron’s culture was notably ___: junior members were encouraged to challenge ideas, not merely salute them.",
+      "choices": {
+        "A": "egalitarian",
+        "B": "hierarchical",
+        "C": "insular",
+        "D": "austere"
+      },
+      "answer": "A",
+      "explanation": "Encouraging all ranks to contribute reflects an 'egalitarian' culture."
+    },
+    {
+      "id": "sc_exp_050",
+      "question": "The general’s warning, though delivered calmly, carried an unmistakably ___ implication about the risks of inaction.",
+      "choices": {
+        "A": "grave",
+        "B": "facetious",
+        "C": "buoyant",
+        "D": "facile"
+      },
+      "answer": "A",
+      "explanation": "Serious, weighty consequences are 'grave.'"
+    }
+  ]
+}

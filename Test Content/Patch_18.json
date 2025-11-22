@@ -1,0 +1,262 @@
+{
+  "patchId": "patch_18",
+  "title": "Patch 18",
+  "description": "Align vocabulary content zip with topic/difficulty structure and update AFOQT practice test behavior.",
+  "vocabularyContent": {
+    "zipPath": "/mnt/data/Vocabulary Tests Content.zip",
+    "fileNamingConvention": {
+      "pattern": "<subtopicId>_<difficulty>_part<index>.json",
+      "subtopicIdExamples": [
+        "synonyms",
+        "antonyms",
+        "confusing_word_pairs",
+        "vocabulary_in_context",
+        "word_roots_affixes",
+        "highfreq_vocab",
+        "sentence_completion",
+        "verbal_analogies"
+      ],
+      "difficultyLevels": [
+        "beginner",
+        "advanced",
+        "expert"
+      ],
+      "notesForCopilot": [
+        "Inside the zip, each JSON file represents a batch of questions for a single subtopic and difficulty level.",
+        "Use the filename to infer subtopicId and difficulty (e.g., `synonyms_beginner_part1.json` → subtopicId = `synonyms`, difficulty = `beginner`).",
+        "Aggregate all parts for the same (subtopicId, difficulty) pair into a single in-memory question pool when the app loads."
+      ]
+    }
+  },
+  "subjects": [
+    {
+      "id": "vocabulary",
+      "displayName": "Vocabulary",
+      "isAfoqtOfficialSubject": true,
+      "officialTopicsPerPdf": [
+        "word_structure_prefixes",
+        "word_structure_roots",
+        "word_structure_suffixes",
+        "vocabulary_meaning_in_isolation",
+        "vocabulary_meaning_in_context"
+      ],
+      "mappedGameSubtopics": [
+        {
+          "subtopicId": "synonyms",
+          "description": "Single-word meaning, closest synonym to target word.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "confusing_word_pairs",
+          "description": "Easily confused words; precision of meaning.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "vocabulary_in_context",
+          "description": "Word meaning based on sentence or short context.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "word_roots_affixes",
+          "description": "Prefixes, roots, and suffixes to infer meaning.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "highfreq_vocab",
+          "description": "High-yield AFOQT/GRE-style vocabulary words.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "antonyms",
+          "description": "Opposite meaning; supports analogies and vocab depth.",
+          "isOfficialAfoqtTopic": false,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        }
+      ]
+    },
+    {
+      "id": "verbal_analogies",
+      "displayName": "AFOQT Verbal Analogies",
+      "isAfoqtOfficialSubject": true,
+      "officialTopicsPerPdf": [
+        "synonym_relationships",
+        "antonym_relationships",
+        "part_to_whole",
+        "whole_to_part",
+        "type_or_category",
+        "cause_and_effect",
+        "degree_or_intensity",
+        "tool_worker_or_function",
+        "item_purpose_or_use"
+      ],
+      "mappedGameSubtopics": [
+        {
+          "subtopicId": "verbal_analogies",
+          "description": "All analogy relationship types combined.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        }
+      ]
+    },
+    {
+      "id": "reading_comprehension",
+      "displayName": "AFOQT Reading Comprehension",
+      "isAfoqtOfficialSubject": true,
+      "officialTopicsPerPdf": [
+        "main_idea",
+        "supporting_details",
+        "inference",
+        "vocabulary_in_context",
+        "tone_and_attitude"
+      ],
+      "mappedGameSubtopics": [
+        {
+          "subtopicId": "vocabulary_in_context",
+          "description": "Word meaning based on multi-sentence or passage context.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        }
+      ]
+    }
+  ],
+  "questionRoutingRules": {
+    "bySubtopicAndDifficulty": {
+      "strategy": "filename_inference",
+      "logicForCopilot": [
+        "When loading questions, iterate over all JSON files extracted from the vocabulary zip.",
+        "Parse each filename according to the pattern `<subtopicId>_<difficulty>_part<index>.json`.",
+        "Normalize `difficulty` to one of: `beginner`, `advanced`, `expert`.",
+        "Insert questions into an in-memory registry keyed as: `questions[subjectId][subtopicId][difficulty]`.",
+        "For example, synonyms_beginner_part1.json and synonyms_beginner_part2.json both append to `questions['vocabulary']['synonyms']['beginner']`.",
+        "Use `subjects[].mappedGameSubtopics` to associate a given `subtopicId` to its parent `subjectId`."
+      ]
+    }
+  },
+  "testModeRules": {
+    "modes": {
+      "studyMode": {
+        "id": "studyMode",
+        "description": "Immediate feedback after each question for learning.",
+        "perQuestionFeedback": true,
+        "showScoreAtEnd": true,
+        "showCorrectAnswerAfterEachQuestion": true
+      },
+      "practiceTestMode": {
+        "id": "practiceTestMode",
+        "description": "Simulated AFOQT environment; no feedback until test completion.",
+        "perQuestionFeedback": false,
+        "showCorrectAnswerAfterEachQuestion": false,
+        "showScoreAtEnd": true,
+        "summaryReportConfig": {
+          "showOverallScore": true,
+          "showPercentCorrect": true,
+          "showBySubjectBreakdown": true,
+          "showBySubtopicAndDifficultyBreakdown": true,
+          "showListOfMissedQuestions": true,
+          "suppressRationaleUntilEnd": true
+        }
+      }
+    },
+    "globalInstructionForCopilot": [
+      "Update all AFOQT subjects to support two distinct modes: `studyMode` and `practiceTestMode`.",
+      "In `studyMode`, keep existing behavior: show correctness and explanation immediately after each question.",
+      "In `practiceTestMode`, do NOT reveal correctness or explanations until the entire test has been completed.",
+      "When the user finishes all questions in a practice test session, compute and display a summary report based on `summaryReportConfig`.",
+      "Ensure the UI clearly labels which mode is active before the user starts answering questions."
+    ]
+  },
+  "afoqtPracticeTests": {
+    "globalRules": [
+      "For each main AFOQT subject flagged with `isAfoqtOfficialSubject = true`, create a dedicated practice test entry titled `AFOQT <DisplayName> Practice Test`.",
+      "Each AFOQT practice test must only pull questions from subtopics where `isOfficialAfoqtTopic = true`.",
+      "Each AFOQT practice test automatically runs in `practiceTestMode` by default to simulate real test conditions.",
+      "Within a subject, question selection should sample across all difficulty levels, with a bias toward `advanced` and `beginner`, and a smaller share from `expert` to stretch the learner without overwhelming them."
+    ],
+    "subjectConfigs": [
+      {
+        "subjectId": "vocabulary",
+        "practiceTestId": "afoqt_vocabulary_practice_test",
+        "displayName": "AFOQT Word Knowledge Practice Test",
+        "questionSelectionPolicy": {
+          "subtopicsIncluded": [
+            "synonyms",
+            "confusing_word_pairs",
+            "vocabulary_in_context",
+            "word_roots_affixes",
+            "highfreq_vocab"
+          ],
+          "difficultyDistribution": {
+            "beginner": 0.35,
+            "advanced": 0.45,
+            "expert": 0.20
+          },
+          "selectionLogicForCopilot": [
+            "Merge all questions for the included subtopics and difficulty tiers into a temporary pool.",
+            "Randomly sample questions according to the configured difficultyDistribution.",
+            "Avoid duplicate questions within a single test run.",
+            "If a requested quota for a given difficulty cannot be met (pool too small), backfill from the nearest difficulty level (e.g., advanced → beginner or expert) while maintaining total test length."
+          ],
+          "defaultTestLength": 40
+        },
+        "mode": "practiceTestMode"
+      },
+      {
+        "subjectId": "verbal_analogies",
+        "practiceTestId": "afoqt_verbal_analogies_practice_test",
+        "displayName": "AFOQT Verbal Analogies Practice Test",
+        "questionSelectionPolicy": {
+          "subtopicsIncluded": [
+            "verbal_analogies"
+          ],
+          "difficultyDistribution": {
+            "beginner": 0.30,
+            "advanced": 0.45,
+            "expert": 0.25
+          },
+          "selectionLogicForCopilot": [
+            "Load all `verbal_analogies_<difficulty>_partX.json` files from the vocabulary zip.",
+            "Aggregate into a single pool keyed by difficulty.",
+            "Sample across relationship types (synonym, antonym, part-to-whole, cause-effect, function, degree) as evenly as the data allows.",
+            "Maintain the target difficultyDistribution while ensuring no question repeats within one test session."
+          ],
+          "defaultTestLength": 40
+        },
+        "mode": "practiceTestMode"
+      },
+      {
+        "subjectId": "reading_comprehension",
+        "practiceTestId": "afoqt_reading_comprehension_practice_test",
+        "displayName": "AFOQT Reading Comprehension Practice Test",
+        "questionSelectionPolicy": {
+          "subtopicsIncluded": [
+            "vocabulary_in_context"
+          ],
+          "difficultyDistribution": {
+            "beginner": 0.30,
+            "advanced": 0.50,
+            "expert": 0.20
+          },
+          "selectionLogicForCopilot": [
+            "When reading comprehension question banks are available, include all official RC subtopics; until then, use vocabulary-in-context items tagged for passage-based reading if present.",
+            "Apply similar random sampling and non-repetition rules as other practice tests."
+          ],
+          "defaultTestLength": 30
+        },
+        "mode": "practiceTestMode"
+      }
+    ]
+  },
+  "implementationNotesForCopilot": [
+    "1. Unzip `Vocabulary Tests Content.zip` at build or runtime and index all question JSON files using the naming convention.",
+    "2. Build an in-memory registry: `registry[subjectId][subtopicId][difficulty] = Question[]`.",
+    "3. Update any existing quiz engines to respect `testModeRules.modes.studyMode` and `testModeRules.modes.practiceTestMode`.",
+    "4. Wire new AFOQT practice test entries from `afoqtPracticeTests.subjectConfigs` into the game's mode selection UI.",
+    "5. Ensure all scoring, summaries, and analytics use the same underlying registry, so adding new JSON content in future patches automatically feeds into tests without code changes.",
+    "6. Do not expose the internal file paths to the user; they are only for loading content. All user-facing labels should use `displayName` fields."
+  ]
+}

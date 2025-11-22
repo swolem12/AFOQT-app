@@ -1,0 +1,307 @@
+{
+  "subtopicId": "sentence_completion",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "sc_adv_001",
+      "question": "Although the lieutenant was known for his ___ demeanor, he remained decisive under pressure.",
+      "choices": {
+        "A": "reserved",
+        "B": "flustered",
+        "C": "boastful",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "Reserved vs decisive creates a contrast typical in leadership descriptions."
+    },
+    {
+      "id": "sc_adv_002",
+      "question": "The aircrew found the instructions ___; they were thorough yet simple enough to execute quickly.",
+      "choices": {
+        "A": "lucid",
+        "B": "convoluted",
+        "C": "tentative",
+        "D": "implied"
+      },
+      "answer": "A",
+      "explanation": "Lucid = clear; fits thorough + simple."
+    },
+    {
+      "id": "sc_adv_003",
+      "question": "The technician’s solution was surprisingly ___, solving a problem that had persisted for weeks.",
+      "choices": {
+        "A": "ingenious",
+        "B": "derivative",
+        "C": "erratic",
+        "D": "tedious"
+      },
+      "answer": "A",
+      "explanation": "Ingenious matches a breakthrough solution."
+    },
+    {
+      "id": "sc_adv_004",
+      "question": "Despite the team's fatigue, their performance remained ___ throughout the final exercise.",
+      "choices": {
+        "A": "consistent",
+        "B": "sporadic",
+        "C": "apathetic",
+        "D": "tentative"
+      },
+      "answer": "A",
+      "explanation": "Consistency contrasts with fatigue yet is possible through discipline."
+    },
+    {
+      "id": "sc_adv_005",
+      "question": "The colonel viewed the proposal as overly ___, lacking practical considerations.",
+      "choices": {
+        "A": "idealistic",
+        "B": "lucid",
+        "C": "coherent",
+        "D": "tactical"
+      },
+      "answer": "A",
+      "explanation": "Idealistic implies lacking practical realism."
+    },
+    {
+      "id": "sc_adv_006",
+      "question": "The investigation revealed a pattern so ___ that even experienced analysts were surprised.",
+      "choices": {
+        "A": "subtle",
+        "B": "arbitrary",
+        "C": "impulsive",
+        "D": "redundant"
+      },
+      "answer": "A",
+      "explanation": "A subtle pattern surprises analysts because it’s difficult to detect."
+    },
+    {
+      "id": "sc_adv_007",
+      "question": "The sergeant's instructions were both ___ and assertive, leaving no room for misinterpretation.",
+      "choices": {
+        "A": "unequivocal",
+        "B": "tentative",
+        "C": "circuitous",
+        "D": "ambivalent"
+      },
+      "answer": "A",
+      "explanation": "Unequivocal = completely clear."
+    },
+    {
+      "id": "sc_adv_008",
+      "question": "The commander emphasized that morale was not a trivial concern but a ___ factor in operational success.",
+      "choices": {
+        "A": "pivotal",
+        "B": "peripheral",
+        "C": "transient",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "Pivotal = essential or central."
+    },
+    {
+      "id": "sc_adv_009",
+      "question": "The meteorologists issued a ___ warning after detecting severe turbulence forming rapidly.",
+      "choices": {
+        "A": "premature",
+        "B": "preliminary",
+        "C": "haphazard",
+        "D": "retrospective"
+      },
+      "answer": "B",
+      "explanation": "Preliminary = early and cautionary."
+    },
+    {
+      "id": "sc_adv_010",
+      "question": "The cadet’s argument was weakened by its ___, relying heavily on emotion rather than logic.",
+      "choices": {
+        "A": "sentimentality",
+        "B": "precision",
+        "C": "coherence",
+        "D": "validity"
+      },
+      "answer": "A",
+      "explanation": "Sentimentality over logic weakens an argument."
+    },
+    {
+      "id": "sc_adv_011",
+      "question": "The software update proved ___, eliminating several long-standing performance issues.",
+      "choices": {
+        "A": "salutary",
+        "B": "erroneous",
+        "C": "redundant",
+        "D": "opaque"
+      },
+      "answer": "A",
+      "explanation": "Salutary = beneficial."
+    },
+    {
+      "id": "sc_adv_012",
+      "question": "The squadron adopted a ___ strategy, balancing speed with caution.",
+      "choices": {
+        "A": "measured",
+        "B": "impulsive",
+        "C": "arbitrary",
+        "D": "reckless"
+      },
+      "answer": "A",
+      "explanation": "Measured = deliberate, balanced."
+    },
+    {
+      "id": "sc_adv_013",
+      "question": "The briefing was intentionally ___, allowing flexibility in how units executed the mission.",
+      "choices": {
+        "A": "general",
+        "B": "explicit",
+        "C": "hyper-specific",
+        "D": "redundant"
+      },
+      "answer": "A",
+      "explanation": "General instructions allow flexibility."
+    },
+    {
+      "id": "sc_adv_014",
+      "question": "Even minor errors could ___ the integrity of the experiment.",
+      "choices": {
+        "A": "compromise",
+        "B": "enhance",
+        "C": "clarify",
+        "D": "reinforce"
+      },
+      "answer": "A",
+      "explanation": "Compromise = weaken."
+    },
+    {
+      "id": "sc_adv_015",
+      "question": "The new pilot was ___, asking thoughtful questions and observing procedures carefully.",
+      "choices": {
+        "A": "conscientious",
+        "B": "apathetic",
+        "C": "carefree",
+        "D": "tentative"
+      },
+      "answer": "A",
+      "explanation": "Conscientious = thorough and careful."
+    },
+    {
+      "id": "sc_adv_016",
+      "question": "The tactical team performed a ___ withdrawal to avoid detection.",
+      "choices": {
+        "A": "covert",
+        "B": "candid",
+        "C": "redundant",
+        "D": "belated"
+      },
+      "answer": "A",
+      "explanation": "Covert = hidden/secretive."
+    },
+    {
+      "id": "sc_adv_017",
+      "question": "The airman's confidence was ___ by repeated successes during training.",
+      "choices": {
+        "A": "bolstered",
+        "B": "deterred",
+        "C": "diluted",
+        "D": "obscured"
+      },
+      "answer": "A",
+      "explanation": "Bolstered = strengthened."
+    },
+    {
+      "id": "sc_adv_018",
+      "question": "The commander’s philosophy was both pragmatic and ___, balancing reality with aspiration.",
+      "choices": {
+        "A": "visionary",
+        "B": "incoherent",
+        "C": "perfunctory",
+        "D": "tentative"
+      },
+      "answer": "A",
+      "explanation": "Pragmatic + visionary is a common leadership duality."
+    },
+    {
+      "id": "sc_adv_019",
+      "question": "While the equipment was durable, its interface was unexpectedly ___ for new operators.",
+      "choices": {
+        "A": "opaque",
+        "B": "lucid",
+        "C": "concise",
+        "D": "redundant"
+      },
+      "answer": "A",
+      "explanation": "Opaque = difficult to understand."
+    },
+    {
+      "id": "sc_adv_020",
+      "question": "Although the cadets were inexperienced, their ___ allowed them to adapt quickly.",
+      "choices": {
+        "A": "initiative",
+        "B": "indifference",
+        "C": "reticence",
+        "D": "ambivalence"
+      },
+      "answer": "A",
+      "explanation": "Initiative drives adaptation."
+    },
+    {
+      "id": "sc_adv_021",
+      "question": "The officer’s remarks were intended to ___ concerns rather than amplify them.",
+      "choices": {
+        "A": "assuage",
+        "B": "exacerbate",
+        "C": "enumerate",
+        "D": "propel"
+      },
+      "answer": "A",
+      "explanation": "Assuage = calm or reduce."
+    },
+    {
+      "id": "sc_adv_022",
+      "question": "The researcher’s findings were so ___ that they reshaped the entire field.",
+      "choices": {
+        "A": "groundbreaking",
+        "B": "redundant",
+        "C": "tentative",
+        "D": "peripheral"
+      },
+      "answer": "A",
+      "explanation": "Groundbreaking = revolutionary."
+    },
+    {
+      "id": "sc_adv_023",
+      "question": "The logistics plan was intentionally ___, allowing units to adapt to changing conditions.",
+      "choices": {
+        "A": "flexible",
+        "B": "rigid",
+        "C": "opaque",
+        "D": "exhaustive"
+      },
+      "answer": "A",
+      "explanation": "Flexibility aids dynamic operations."
+    },
+    {
+      "id": "sc_adv_024",
+      "question": "Even during emergencies, the command center maintained a ___ flow of information.",
+      "choices": {
+        "A": "coherent",
+        "B": "haphazard",
+        "C": "sporadic",
+        "D": "constrained"
+      },
+      "answer": "A",
+      "explanation": "Coherent = logical and organized."
+    },
+    {
+      "id": "sc_adv_025",
+      "question": "The unit’s success was a result of both disciplined training and ___ coordination.",
+      "choices": {
+        "A": "meticulous",
+        "B": "tenuous",
+        "C": "inadvertent",
+        "D": "hasty"
+      },
+      "answer": "A",
+      "explanation": "Meticulous coordination complements discipline."
+    }
+  ]
+}

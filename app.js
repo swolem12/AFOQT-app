@@ -322,7 +322,7 @@ const DIFFICULTY_LEVELS = ['beginner', 'advanced', 'expert'];
 // Global State
 // ============================================================================
 const state = {
-    screen: 'login', // 'login' | 'home' | 'subject' | 'mode-select' | 'difficulty-select' | 'quiz' | 'results' | 'status' | 'settings'
+    screen: 'login', // 'login' | 'home' | 'subject' | 'mode-select' | 'difficulty-select' | 'quiz' | 'results' | 'status' | 'equipment' | 'settings'
     players: [],
     currentPlayer: null,
     currentSubject: null,
@@ -330,6 +330,14 @@ const state = {
     quizMode: 'practice', // 'practice' | 'test' | 'sprint'
     difficulty: 'beginner', // 'beginner' | 'advanced' | 'expert'
     settings: {
+        theme: 'default', // 'default' | 'eva01' | 'eva02'
+        visualEffects: {
+            glassmorphism: true,
+            neonBorders: true,
+            floatingAnimations: true,
+            gradientEffects: false,
+            premiumButtons: false
+        },
         volumes: {
             master: 0.5,
             nav: 0.5,
@@ -347,10 +355,14 @@ const state = {
         selectedAnswer: null,
         questionStartTime: null,
         questionTimes: [],
+        userAnswers: [], // Track user's answer for each question
         timerInterval: null,
         mode: 'practice', // Store mode with quiz session
-        difficulty: 'beginner' // Store difficulty with quiz session
-    }
+        difficulty: 'beginner', // Store difficulty with quiz session
+        showFeedback: true, // Patch 18: control feedback visibility
+        isPracticeTest: false // Patch 18: flag for AFOQT practice tests
+    },
+    patch18Loaded: false // Track if Patch 18 content is loaded
 };
 
 // ============================================================================
@@ -363,9 +375,11 @@ const subjects = [
         description: 'AFOQT quantitative reasoning'
     },
     {
-        id: 'verbal',
-        name: 'Verbal',
-        description: 'Word knowledge and analogies'
+        id: 'vocabulary',
+        name: 'Vocabulary',
+        description: 'Word knowledge and analogies',
+        isAfoqtOfficialSubject: true,
+        mappedGameSubtopics: ['synonyms', 'antonyms', 'verbal_analogies', 'vocabulary_in_context', 'confusing_word_pairs', 'highfreq_vocab', 'sentence_completion', 'word_roots_affixes']
     },
     {
         id: 'reading',
@@ -1052,63 +1066,176 @@ const mathTopics = [
 ];
 
 // ============================================================================
-// Topics with Question Generators - VERBAL
+// Topics with Question Generators - VOCABULARY
 // ============================================================================
-const verbalTopics = [
+const vocabularyTopics = [
     {
-        id: 'word-analogies',
-        name: 'Word Analogies',
-        description: 'Complete analogies',
-        subjectId: 'verbal',
-        generateQuestion: () => {
-            const analogies = [
-                { pair1: ['CAT', 'KITTEN'], pair2: ['DOG', 'PUPPY'], options: ['PUPPY', 'BONE', 'BARK', 'LEASH'], correct: 0, relation: 'adult to young' },
-                { pair1: ['WHEEL', 'CAR'], pair2: ['WING', 'AIRPLANE'], options: ['AIRPLANE', 'SKY', 'PILOT', 'FLY'], correct: 0, relation: 'part to whole' },
-                { pair1: ['HOT', 'COLD'], pair2: ['UP', 'DOWN'], options: ['DOWN', 'CLIMB', 'TALL', 'FALL'], correct: 0, relation: 'opposites' },
-                { pair1: ['HAPPY', 'JOYFUL'], pair2: ['SAD', 'SORROWFUL'], options: ['SORROWFUL', 'CRY', 'TEAR', 'BLUE'], correct: 0, relation: 'synonyms' },
-                { pair1: ['BOOK', 'READ'], pair2: ['MUSIC', 'LISTEN'], options: ['LISTEN', 'PLAY', 'SONG', 'HEAR'], correct: 0, relation: 'object to action' },
-                { pair1: ['DOCTOR', 'HOSPITAL'], pair2: ['TEACHER', 'SCHOOL'], options: ['SCHOOL', 'STUDENT', 'BOOK', 'LEARN'], correct: 0, relation: 'person to place' },
-                { pair1: ['PEN', 'WRITE'], pair2: ['KNIFE', 'CUT'], options: ['CUT', 'SHARP', 'BLADE', 'FORK'], correct: 0, relation: 'tool to function' },
-                { pair1: ['FLOWER', 'BOUQUET'], pair2: ['TREE', 'FOREST'], options: ['FOREST', 'WOOD', 'LEAF', 'GREEN'], correct: 0, relation: 'one to many' }
-            ];
-            
-            const analogy = analogies[Math.floor(Math.random() * analogies.length)];
-            const shuffled = shuffleArray(analogy.options);
-            
-            return {
-                prompt: `${analogy.pair1[0]} is to ${analogy.pair1[1]} as ${analogy.pair2[0]} is to _____`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(analogy.options[analogy.correct]),
-                explanation: `This is a ${analogy.relation} relationship. ${analogy.pair1[0]}:${analogy.pair1[1]} :: ${analogy.pair2[0]}:${analogy.options[analogy.correct]}`
-            };
-        }
-    },
-    {
-        id: 'vocabulary',
-        name: 'Vocabulary',
-        description: 'Word meanings and synonyms',
-        subjectId: 'verbal',
-        generateQuestion: () => {
+        id: 'synonyms',
+        name: 'Synonyms',
+        description: 'Words with similar meanings',
+        subjectId: 'vocabulary',
+        isOfficialAfoqtTopic: true,
+        generateQuestion: (difficulty = 'beginner') => {
+            // Fallback generator - will be replaced by content-based questions from Patch 18
             const words = [
                 { word: 'BENEVOLENT', correct: 'Kind', options: ['Angry', 'Confused', 'Wealthy'], definition: 'well-meaning and kindly' },
-                { word: 'METICULOUS', correct: 'Careful', options: ['Messy', 'Quick', 'Lazy'], definition: 'showing great attention to detail' },
-                { word: 'CANDID', correct: 'Honest', options: ['Sweet', 'Bright', 'Quiet'], definition: 'truthful and straightforward' },
-                { word: 'ELOQUENT', correct: 'Articulate', options: ['Silent', 'Confused', 'Angry'], definition: 'fluent and persuasive in speech' },
-                { word: 'FRUGAL', correct: 'Economical', options: ['Wasteful', 'Generous', 'Rich'], definition: 'sparing or economical with money' },
-                { word: 'RESILIENT', correct: 'Flexible', options: ['Rigid', 'Weak', 'Broken'], definition: 'able to withstand or recover quickly' },
-                { word: 'DILIGENT', correct: 'Hardworking', options: ['Lazy', 'Careless', 'Slow'], definition: 'having or showing care in one\'s work' },
-                { word: 'AMBIGUOUS', correct: 'Unclear', options: ['Obvious', 'Simple', 'Direct'], definition: 'open to more than one interpretation' }
+                { word: 'METICULOUS', correct: 'Careful', options: ['Messy', 'Quick', 'Lazy'], definition: 'showing great attention to detail' }
             ];
-            
             const item = words[Math.floor(Math.random() * words.length)];
             const allOptions = [item.correct, ...item.options];
             const shuffled = shuffleArray(allOptions);
-            
             return {
                 prompt: `${item.word} most nearly means:`,
                 options: shuffled,
                 correctIndex: shuffled.indexOf(item.correct),
-                explanation: `${item.word} means ${item.definition}. The closest synonym is "${item.correct}".`
+                explanation: `${item.word} means ${item.definition}.`
+            };
+        }
+    },
+    {
+        id: 'antonyms',
+        name: 'Antonyms',
+        description: 'Words with opposite meanings',
+        subjectId: 'vocabulary',
+        isOfficialAfoqtTopic: true,
+        generateQuestion: (difficulty = 'beginner') => {
+            const words = [
+                { word: 'HOT', correct: 'Cold', options: ['Warm', 'Spicy', 'Bright'] },
+                { word: 'HAPPY', correct: 'Sad', options: ['Joyful', 'Excited', 'Content'] }
+            ];
+            const item = words[Math.floor(Math.random() * words.length)];
+            const allOptions = [item.correct, ...item.options];
+            const shuffled = shuffleArray(allOptions);
+            return {
+                prompt: `Select the word that means the OPPOSITE of ${item.word}:`,
+                options: shuffled,
+                correctIndex: shuffled.indexOf(item.correct),
+                explanation: `The opposite of ${item.word} is ${item.correct}.`
+            };
+        }
+    },
+    {
+        id: 'verbal_analogies',
+        name: 'Verbal Analogies',
+        description: 'Word relationship patterns',
+        subjectId: 'vocabulary',
+        isOfficialAfoqtTopic: true,
+        generateQuestion: (difficulty = 'beginner') => {
+            const analogies = [
+                { pair1: ['CAT', 'KITTEN'], pair2: ['DOG', 'PUPPY'], options: ['PUPPY', 'BONE', 'BARK', 'LEASH'], correct: 0, relation: 'adult to young' },
+                { pair1: ['HOT', 'COLD'], pair2: ['UP', 'DOWN'], options: ['DOWN', 'CLIMB', 'TALL', 'FALL'], correct: 0, relation: 'opposites' }
+            ];
+            const analogy = analogies[Math.floor(Math.random() * analogies.length)];
+            const shuffled = shuffleArray(analogy.options);
+            return {
+                prompt: `${analogy.pair1[0]} is to ${analogy.pair1[1]} as ${analogy.pair2[0]} is to _____`,
+                options: shuffled,
+                correctIndex: shuffled.indexOf(analogy.options[analogy.correct]),
+                explanation: `This is a ${analogy.relation} relationship.`
+            };
+        }
+    },
+    {
+        id: 'vocabulary_in_context',
+        name: 'Vocabulary in Context',
+        description: 'Word meanings from context',
+        subjectId: 'vocabulary',
+        isOfficialAfoqtTopic: true,
+        generateQuestion: (difficulty = 'beginner') => {
+            const examples = [
+                { sentence: 'The lawyer\'s argument was very COGENT and convinced the jury.', word: 'COGENT', correct: 'Convincing', options: ['Confusing', 'Weak', 'Lengthy'] }
+            ];
+            const item = examples[0];
+            const allOptions = [item.correct, ...item.options];
+            const shuffled = shuffleArray(allOptions);
+            return {
+                prompt: `${item.sentence}\n\nWhat does ${item.word} mean in this context?`,
+                options: shuffled,
+                correctIndex: shuffled.indexOf(item.correct),
+                explanation: `In context, ${item.word} means ${item.correct}.`
+            };
+        }
+    },
+    {
+        id: 'confusing_word_pairs',
+        name: 'Confusing Word Pairs',
+        description: 'Commonly confused words',
+        subjectId: 'vocabulary',
+        isOfficialAfoqtTopic: true,
+        generateQuestion: (difficulty = 'beginner') => {
+            const pairs = [
+                { sentence: 'The weather ___ nice today.', correct: 'is', wrong: 'its', explanation: '"is" is a verb, "its" is possessive' }
+            ];
+            const item = pairs[0];
+            const shuffled = shuffleArray([item.correct, item.wrong, 'was', 'are']);
+            return {
+                prompt: `Choose the correct word: ${item.sentence}`,
+                options: shuffled,
+                correctIndex: shuffled.indexOf(item.correct),
+                explanation: item.explanation
+            };
+        }
+    },
+    {
+        id: 'highfreq_vocab',
+        name: 'High Frequency Vocabulary',
+        description: 'Common AFOQT vocabulary words',
+        subjectId: 'vocabulary',
+        isOfficialAfoqtTopic: true,
+        generateQuestion: (difficulty = 'beginner') => {
+            const words = [
+                { word: 'ELOQUENT', correct: 'Articulate', options: ['Silent', 'Confused', 'Angry'], definition: 'fluent in speech' }
+            ];
+            const item = words[0];
+            const allOptions = [item.correct, ...item.options];
+            const shuffled = shuffleArray(allOptions);
+            return {
+                prompt: `${item.word} most nearly means:`,
+                options: shuffled,
+                correctIndex: shuffled.indexOf(item.correct),
+                explanation: `${item.word} means ${item.definition}.`
+            };
+        }
+    },
+    {
+        id: 'sentence_completion',
+        name: 'Sentence Completion',
+        description: 'Fill in the blank with best word',
+        subjectId: 'vocabulary',
+        isOfficialAfoqtTopic: true,
+        generateQuestion: (difficulty = 'beginner') => {
+            const sentences = [
+                { sentence: 'Despite the ___ weather, we enjoyed our picnic.', correct: 'inclement', options: ['pleasant', 'sunny', 'warm'], explanation: 'inclement means harsh or severe weather' }
+            ];
+            const item = sentences[0];
+            const allOptions = [item.correct, ...item.options];
+            const shuffled = shuffleArray(allOptions);
+            return {
+                prompt: `Complete the sentence: ${item.sentence}`,
+                options: shuffled,
+                correctIndex: shuffled.indexOf(item.correct),
+                explanation: item.explanation
+            };
+        }
+    },
+    {
+        id: 'word_roots_affixes',
+        name: 'Word Roots & Affixes',
+        description: 'Latin and Greek word origins',
+        subjectId: 'vocabulary',
+        isOfficialAfoqtTopic: true,
+        generateQuestion: (difficulty = 'beginner') => {
+            const roots = [
+                { root: 'bene', meaning: 'good', example: 'benefit', correct: 'good', options: ['bad', 'water', 'light'] }
+            ];
+            const item = roots[0];
+            const allOptions = [item.correct, ...item.options];
+            const shuffled = shuffleArray(allOptions);
+            return {
+                prompt: `The root "${item.root}" means:`,
+                options: shuffled,
+                correctIndex: shuffled.indexOf(item.correct),
+                explanation: `"${item.root}" means ${item.meaning}, as in ${item.example}.`
             };
         }
     }
@@ -1579,7 +1706,7 @@ const blockTopics = [
 // Combine all topics and add subject IDs
 const topics = [
     ...mathTopics.map(t => ({ ...t, subjectId: 'math' })),
-    ...verbalTopics,
+    ...vocabularyTopics,
     ...readingTopics,
     ...scienceTopics,
     ...situationalTopics,
@@ -1847,6 +1974,235 @@ function updatePlayerStats(player, topicId, correctCount, difficulty = 'beginner
 }
 
 // ============================================================================
+// RPG Equipment System
+// ============================================================================
+const EQUIPMENT_ITEMS = {
+    // HELMETS - Unlock with Math mastery
+    helmet_basic: {
+        id: 'helmet_basic',
+        name: 'Scholar\'s Cap',
+        type: 'helmet',
+        description: 'Basic headgear for aspiring scholars',
+        unlockLevel: 1,
+        unlockSubject: null,
+        statBonus: { intelligence: 1 },
+        sprite: 'cap'
+    },
+    helmet_math: {
+        id: 'helmet_math',
+        name: 'Calculator Crown',
+        type: 'helmet',
+        description: 'Grants +3 INT from mathematical mastery',
+        unlockLevel: 5,
+        unlockSubject: 'math',
+        statBonus: { intelligence: 3 },
+        sprite: 'crown'
+    },
+    helmet_vocab: {
+        id: 'helmet_vocab',
+        name: 'Wordsmith\'s Circlet',
+        type: 'helmet',
+        description: 'Enhances verbal prowess +3 CHA',
+        unlockLevel: 5,
+        unlockSubject: 'vocabulary',
+        statBonus: { charisma: 3 },
+        sprite: 'circlet'
+    },
+    
+    // ARMOR - Unlock with overall level
+    armor_basic: {
+        id: 'armor_basic',
+        name: 'Student Robes',
+        type: 'armor',
+        description: 'Simple robes for dedicated students',
+        unlockLevel: 1,
+        unlockSubject: null,
+        statBonus: { defense: 1 },
+        sprite: 'robes'
+    },
+    armor_scholar: {
+        id: 'armor_scholar',
+        name: 'Scholar\'s Vestments',
+        type: 'armor',
+        description: '+2 INT, +2 DEF from academic dedication',
+        unlockLevel: 10,
+        unlockSubject: null,
+        statBonus: { intelligence: 2, defense: 2 },
+        sprite: 'vestments'
+    },
+    armor_master: {
+        id: 'armor_master',
+        name: 'Master\'s Regalia',
+        type: 'armor',
+        description: '+5 to all stats - true mastery',
+        unlockLevel: 20,
+        unlockSubject: null,
+        statBonus: { intelligence: 5, charisma: 5, defense: 5, wisdom: 5 },
+        sprite: 'regalia'
+    },
+    
+    // WEAPONS - Unlock with Science/Reading
+    weapon_basic: {
+        id: 'weapon_basic',
+        name: 'Wooden Stylus',
+        type: 'weapon',
+        description: 'A simple writing tool',
+        unlockLevel: 1,
+        unlockSubject: null,
+        statBonus: { attack: 1 },
+        sprite: 'stylus'
+    },
+    weapon_science: {
+        id: 'weapon_science',
+        name: 'Atomic Blade',
+        type: 'weapon',
+        description: 'Science-powered weapon +4 ATK',
+        unlockLevel: 5,
+        unlockSubject: 'science',
+        statBonus: { attack: 4 },
+        sprite: 'blade'
+    },
+    weapon_reading: {
+        id: 'weapon_reading',
+        name: 'Tome of Knowledge',
+        type: 'weapon',
+        description: '+3 WIS from literary mastery',
+        unlockLevel: 5,
+        unlockSubject: 'reading',
+        statBonus: { wisdom: 3 },
+        sprite: 'tome'
+    },
+    
+    // ACCESSORIES - Special unlocks
+    accessory_speed: {
+        id: 'accessory_speed',
+        name: 'Quick-Mind Amulet',
+        type: 'accessory',
+        description: 'Reduces avg answer time by 10%',
+        unlockLevel: 8,
+        unlockSubject: null,
+        statBonus: { speed: 2 },
+        sprite: 'amulet'
+    },
+    accessory_accuracy: {
+        id: 'accessory_accuracy',
+        name: 'Precision Ring',
+        type: 'accessory',
+        description: '+5% accuracy bonus',
+        unlockLevel: 12,
+        unlockSubject: null,
+        statBonus: { accuracy: 5 },
+        sprite: 'ring'
+    },
+    accessory_legendary: {
+        id: 'accessory_legendary',
+        name: 'AFOQT Champion Badge',
+        type: 'accessory',
+        description: 'Proof of true mastery +10 all',
+        unlockLevel: 30,
+        unlockSubject: null,
+        statBonus: { intelligence: 10, charisma: 10, attack: 10, defense: 10, wisdom: 10 },
+        sprite: 'badge'
+    }
+};
+
+function initializePlayerEquipment(player) {
+    if (!player.equipment) {
+        player.equipment = {
+            helmet: null,
+            armor: 'armor_basic',
+            weapon: 'weapon_basic',
+            accessory: null
+        };
+    }
+    if (!player.unlockedItems) {
+        player.unlockedItems = ['helmet_basic', 'armor_basic', 'weapon_basic'];
+    }
+}
+
+function getUnlockedItems(player) {
+    initializePlayerEquipment(player);
+    const playerLevel = computePlayerTotals(player).level;
+    const subjectLevels = {};
+    
+    // Calculate level per subject
+    if (player.stats) {
+        for (const subjectId in player.stats) {
+            const statPoints = player.stats[subjectId].statPoints || 0;
+            subjectLevels[subjectId] = 1 + Math.floor(statPoints / 5);
+        }
+    }
+    
+    const unlocked = [];
+    for (const itemId in EQUIPMENT_ITEMS) {
+        const item = EQUIPMENT_ITEMS[itemId];
+        
+        // Check if unlocked
+        if (item.unlockSubject) {
+            // Requires specific subject level
+            const subjectLevel = subjectLevels[item.unlockSubject] || 1;
+            if (subjectLevel >= item.unlockLevel) {
+                unlocked.push(itemId);
+            }
+        } else {
+            // Requires overall level
+            if (playerLevel >= item.unlockLevel) {
+                unlocked.push(itemId);
+            }
+        }
+    }
+    
+    return unlocked;
+}
+
+function equipItem(player, itemId) {
+    const item = EQUIPMENT_ITEMS[itemId];
+    if (!item) return false;
+    
+    initializePlayerEquipment(player);
+    const unlocked = getUnlockedItems(player);
+    
+    if (!unlocked.includes(itemId)) return false;
+    
+    player.equipment[item.type] = itemId;
+    savePlayers(state.players);
+    playSfx('select');
+    return true;
+}
+
+function unequipItem(player, slot) {
+    initializePlayerEquipment(player);
+    player.equipment[slot] = null;
+    savePlayers(state.players);
+    playSfx('nav');
+}
+
+function calculateEquipmentBonus(player) {
+    initializePlayerEquipment(player);
+    const totalBonus = {
+        intelligence: 0,
+        charisma: 0,
+        attack: 0,
+        defense: 0,
+        wisdom: 0,
+        speed: 0,
+        accuracy: 0
+    };
+    
+    for (const slot in player.equipment) {
+        const itemId = player.equipment[slot];
+        if (itemId && EQUIPMENT_ITEMS[itemId]) {
+            const item = EQUIPMENT_ITEMS[itemId];
+            for (const stat in item.statBonus) {
+                totalBonus[stat] = (totalBonus[stat] || 0) + item.statBonus[stat];
+            }
+        }
+    }
+    
+    return totalBonus;
+}
+
+// ============================================================================
 // LocalStorage Functions
 // ============================================================================
 function loadPlayers() {
@@ -1874,11 +2230,23 @@ function loadSettings() {
             const loaded = JSON.parse(data);
             // Merge with defaults to ensure all settings exist
             state.settings = {
+                theme: loaded.theme || 'default',
+                visualEffects: {
+                    glassmorphism: loaded.visualEffects?.glassmorphism ?? true,
+                    neonBorders: loaded.visualEffects?.neonBorders ?? true,
+                    floatingAnimations: loaded.visualEffects?.floatingAnimations ?? true,
+                    gradientEffects: loaded.visualEffects?.gradientEffects ?? true,
+                    premiumButtons: loaded.visualEffects?.premiumButtons ?? true
+                },
                 volumes: {
                     ...state.settings.volumes,
                     ...(loaded.volumes || {})
                 }
             };
+            // Apply the theme immediately
+            applyTheme(state.settings.theme);
+            // Apply visual effects
+            applyVisualEffects();
         }
     } catch (e) {
         console.warn('Could not load settings:', e);
@@ -1891,6 +2259,114 @@ function saveSettings() {
     } catch (e) {
         console.warn('Could not save settings:', e);
     }
+}
+
+// Apply theme to document
+function applyTheme(themeName) {
+    const root = document.documentElement;
+    
+    // Remove existing theme classes
+    root.classList.remove('theme-default', 'theme-eva01', 'theme-eva02');
+    
+    // Add new theme class
+    root.classList.add(`theme-${themeName}`);
+    
+    // Store current theme
+    state.settings.theme = themeName;
+}
+
+// Apply visual effects to document
+function applyVisualEffects() {
+    const root = document.documentElement;
+    const effects = state.settings.visualEffects;
+    
+    // Toggle effect classes on document root
+    root.classList.toggle('effect-glassmorphism', effects.glassmorphism);
+    root.classList.toggle('effect-neon-borders', effects.neonBorders);
+    root.classList.toggle('effect-floating', effects.floatingAnimations);
+    root.classList.toggle('effect-gradients', effects.gradientEffects);
+    root.classList.toggle('effect-premium-buttons', effects.premiumButtons);
+}
+
+// ============================================================================
+// Boot Initialization Sequence
+// ============================================================================
+
+function showBootSequence() {
+    return new Promise((resolve) => {
+        const bootHTML = `
+            <div id="boot-sequence">
+                <div class="boot-warning-stripe"></div>
+                <div class="boot-container">
+                    <div class="boot-header">AFOQT QUEST</div>
+                    
+                    <div class="boot-system-check">
+                        <div class="boot-line">
+                            <span>> SYSTEM INITIALIZATION</span>
+                            <span class="boot-status">OK</span>
+                        </div>
+                        <div class="boot-line">
+                            <span>> NEURAL INTERFACE</span>
+                            <span class="boot-status">OK</span>
+                        </div>
+                        <div class="boot-line">
+                            <span>> QUESTION GENERATOR</span>
+                            <span class="boot-status">OK</span>
+                        </div>
+                        <div class="boot-line">
+                            <span>> RPG SYSTEMS</span>
+                            <span class="boot-status">OK</span>
+                        </div>
+                        <div class="boot-line">
+                            <span>> OFFLINE CACHE</span>
+                            <span class="boot-status">OK</span>
+                        </div>
+                        <div class="boot-line">
+                            <span>> AUDIO SYSTEMS</span>
+                            <span class="boot-status">OK</span>
+                        </div>
+                        <div class="boot-line">
+                            <span>> THEME ENGINE</span>
+                            <span class="boot-status">OK</span>
+                        </div>
+                        <div class="boot-line">
+                            <span>> SYNCHRONIZATION</span>
+                            <span class="boot-status warning">STANDBY</span>
+                        </div>
+                    </div>
+                    
+                    <div class="boot-hexagon-grid">
+                        <div class="boot-hexagon"></div>
+                        <div class="boot-hexagon"></div>
+                        <div class="boot-hexagon"></div>
+                        <div class="boot-hexagon"></div>
+                        <div class="boot-hexagon"></div>
+                        <div class="boot-hexagon"></div>
+                        <div class="boot-hexagon"></div>
+                        <div class="boot-hexagon"></div>
+                    </div>
+                    
+                    <div class="boot-progress">
+                        <div class="boot-progress-label">LOADING</div>
+                        <div class="boot-progress-bar">
+                            <div class="boot-progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        document.body.insertAdjacentHTML('afterbegin', bootHTML);
+        
+        // Remove boot sequence after animation
+        setTimeout(() => {
+            const bootSeq = document.getElementById('boot-sequence');
+            if (bootSeq) {
+                bootSeq.remove();
+            }
+            resolve();
+        }, 5500);
+    });
 }
 
 // ============================================================================
@@ -1925,35 +2401,91 @@ function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     state.quiz.mode = mode;
     state.quiz.difficulty = difficulty;
     
-    // Generate unique questions based on mode (5 for sprint, 10 for others)
-    const questionCount = mode === 'sprint' ? 5 : 10;
-    const usedQuestions = new Set();
-    const maxAttempts = questionCount * 10; // Prevent infinite loops
-    let attempts = 0;
+    // Patch 18: Set feedback visibility based on mode
+    // test/practiceTestMode = no feedback until end, practice/sprint = immediate feedback
+    state.quiz.showFeedback = (mode !== 'practiceTestMode' && mode !== 'test');
+    state.quiz.isPracticeTest = topic.isPracticeTest || false;
     
-    while (state.quiz.questions.length < questionCount && attempts < maxAttempts) {
-        // For sprint mode, randomly select difficulty for each question
-        let questionDifficulty = difficulty;
+    // Patch 18: Check if this is an AFOQT practice test
+    if (topic.isPracticeTest && topic.testConfig && typeof generateAfoqtPracticeTest === 'function') {
+        // Use Patch 18 content-based questions
+        state.quiz.questions = generateAfoqtPracticeTest(topic.testConfig);
+        state.quiz.mode = 'practiceTestMode'; // Force practice test mode
+        state.quiz.showFeedback = false;
+    } else if (topic.subjectId === 'vocabulary' && typeof getQuestionsFromRegistry === 'function') {
+        // Patch 18: Use content-based questions for vocabulary topics
+        const questionCount = mode === 'sprint' ? 5 : 10;
+        
         if (mode === 'sprint') {
-            questionDifficulty = DIFFICULTY_LEVELS[Math.floor(Math.random() * DIFFICULTY_LEVELS.length)];
+            // For sprint mode, get questions from all difficulties
+            const difficulties = ['beginner', 'advanced', 'expert'];
+            const questionsPerDifficulty = Math.ceil(questionCount / 3);
+            
+            difficulties.forEach(diff => {
+                const qs = getQuestionsFromRegistry(topic.subjectId, topic.id, diff, questionsPerDifficulty);
+                state.quiz.questions.push(...qs);
+            });
+            
+            // Shuffle and limit to exact count
+            state.quiz.questions = state.quiz.questions.sort(() => Math.random() - 0.5).slice(0, questionCount);
+        } else {
+            // Regular practice/test mode - use specified difficulty
+            state.quiz.questions = getQuestionsFromRegistry(topic.subjectId, topic.id, difficulty, questionCount);
         }
         
-        // Pass difficulty to question generator (will be ignored by generators that don't support it)
-        const question = topic.generateQuestion(questionDifficulty);
-        // Create a unique key for this question based on prompt and correct answer
-        const questionKey = `${question.prompt}|${question.options[question.correctIndex]}`;
-        
-        if (!usedQuestions.has(questionKey)) {
-            usedQuestions.add(questionKey);
-            state.quiz.questions.push(question);
+        // Fallback to procedural if no content available
+        if (state.quiz.questions.length === 0) {
+            console.warn(`No content-based questions found for ${topic.id}, using procedural generator`);
+            const usedQuestions = new Set();
+            const maxAttempts = questionCount * 10;
+            let attempts = 0;
+            
+            while (state.quiz.questions.length < questionCount && attempts < maxAttempts) {
+                const question = topic.generateQuestion(difficulty);
+                if (!question) break;
+                
+                const questionKey = `${question.prompt}|${question.options[question.correctIndex]}`;
+                if (!usedQuestions.has(questionKey)) {
+                    usedQuestions.add(questionKey);
+                    state.quiz.questions.push(question);
+                }
+                attempts++;
+            }
         }
-        attempts++;
+    } else {
+        // Use procedural generators for non-vocabulary topics
+        const questionCount = mode === 'sprint' ? 5 : 10;
+        const usedQuestions = new Set();
+        const maxAttempts = questionCount * 10; // Prevent infinite loops
+        let attempts = 0;
+        
+        while (state.quiz.questions.length < questionCount && attempts < maxAttempts) {
+            // For sprint mode, randomly select difficulty for each question
+            let questionDifficulty = difficulty;
+            if (mode === 'sprint') {
+                questionDifficulty = DIFFICULTY_LEVELS[Math.floor(Math.random() * DIFFICULTY_LEVELS.length)];
+            }
+            
+            // Pass difficulty to question generator (will be ignored by generators that don't support it)
+            const question = topic.generateQuestion(questionDifficulty);
+            if (!question) continue; // Skip if generator returns null (practice tests)
+            
+            // Create a unique key for this question based on prompt and correct answer
+            const questionKey = `${question.prompt}|${question.options[question.correctIndex]}`;
+            
+            if (!usedQuestions.has(questionKey)) {
+                usedQuestions.add(questionKey);
+                state.quiz.questions.push(question);
+            }
+            attempts++;
+        }
     }
     
     state.quiz.currentIndex = 0;
     state.quiz.score = 0;
     state.quiz.selectedAnswer = null;
     state.quiz.questionTimes = [];
+    state.quiz.userAnswers = [];
     state.quiz.questionStartTime = Date.now();
     
     state.screen = 'quiz';
@@ -1999,6 +2531,15 @@ function handleAnswer(optionIndex) {
     
     const currentQuestion = state.quiz.questions[state.quiz.currentIndex];
     const isCorrect = optionIndex === currentQuestion.correctIndex;
+    
+    // Track the user's answer
+    state.quiz.userAnswers.push({
+        questionIndex: state.quiz.currentIndex,
+        userAnswer: optionIndex,
+        correctAnswer: currentQuestion.correctIndex,
+        isCorrect: isCorrect,
+        timeSpent: elapsed
+    });
     
     // Get button position for particle effect
     const buttons = document.querySelectorAll('.option-btn');
@@ -2110,6 +2651,24 @@ function goToSettings() {
     render();
 }
 
+function goToEquipment() {
+    if (!state.currentPlayer) {
+        return; // Can't view equipment without a player
+    }
+    playSfx('nav');
+    state.screen = 'equipment';
+    render();
+}
+
+function goToAnalytics() {
+    if (!state.currentPlayer) {
+        return; // Can't view analytics without a player
+    }
+    playSfx('nav');
+    state.screen = 'analytics';
+    render();
+}
+
 // ============================================================================
 // Render Functions
 // ============================================================================
@@ -2139,8 +2698,14 @@ function render() {
         case 'results':
             root.innerHTML = renderResults();
             break;
+        case 'analytics':
+            root.innerHTML = renderAnalytics();
+            break;
         case 'status':
             root.innerHTML = renderStatus();
+            break;
+        case 'equipment':
+            root.innerHTML = renderEquipment();
             break;
         case 'settings':
             root.innerHTML = renderSettings();
@@ -2198,7 +2763,7 @@ function renderHome() {
         <div class="panel">
             <h1 class="panel-header" style="text-align: center; margin-bottom: 20px;">AFOQT QUEST</h1>
             
-            <div class="home-controls-box" style="background: rgba(0, 40, 80, 0.5); border: 2px solid #00ffff; border-radius: 8px; padding: 20px; margin-bottom: 30px; box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);">
+            <div class="home-controls-box">
                 <div class="header-controls">
                     <button class="btn btn-small" id="change-character-btn">
                         👤 ${state.currentPlayer ? state.currentPlayer.name : 'Player'}
@@ -2206,6 +2771,12 @@ function renderHome() {
                     ${state.currentPlayer ? `
                         <button class="btn btn-small" id="status-btn">
                             📊 Stats
+                        </button>
+                        <button class="btn btn-small" id="equipment-btn">
+                            ⚔ Equipment
+                        </button>
+                        <button class="btn btn-small" id="results-btn">
+                            📈 Results
                         </button>
                     ` : ''}
                     <button class="btn btn-small" id="settings-btn">
@@ -2388,7 +2959,9 @@ function renderQuiz() {
     const answered = state.quiz.selectedAnswer !== null;
     const isCorrect = answered && state.quiz.selectedAnswer === currentQuestion.correctIndex;
     const isTestMode = state.quiz.mode === 'test';
+    const isPracticeTestMode = state.quiz.mode === 'practiceTestMode';
     const isSprintMode = state.quiz.mode === 'sprint';
+    const showFeedback = state.quiz.showFeedback; // Patch 18: use flag
     const progressPercent = ((state.quiz.currentIndex + 1) / state.quiz.questions.length) * 100;
     
     // Determine mode label with difficulty
@@ -2404,7 +2977,9 @@ function renderQuiz() {
         'expert': '2x'
     };
     
-    if (isTestMode) {
+    if (isPracticeTestMode) {
+        modeLabel = ' <span style="color: #ff9900;">• AFOQT PRACTICE TEST</span>';
+    } else if (isTestMode) {
         modeLabel = ' <span style="color: #ff6666;">• TEST MODE (1.5x XP)</span>';
     } else if (isSprintMode) {
         modeLabel = ' <span style="color: #ffff00;">• SPRINT MODE</span>';
@@ -2446,11 +3021,11 @@ function renderQuiz() {
                     const isCorrectOption = idx === currentQuestion.correctIndex;
                     let classes = 'option-btn';
                     
-                    // In test mode, don't show correct/incorrect highlighting
-                    if (answered && !isTestMode) {
+                    // Patch 18: Only show highlighting if showFeedback is true
+                    if (answered && showFeedback) {
                         if (isCorrectOption) classes += ' correct';
                         if (isSelected && !isCorrect) classes += ' incorrect';
-                    } else if (answered && isTestMode && isSelected) {
+                    } else if (answered && !showFeedback && isSelected) {
                         classes += ' selected';
                     }
                     
@@ -2467,7 +3042,7 @@ function renderQuiz() {
                 }).join('')}
             </div>
             
-            ${answered && !isTestMode ? `
+            ${answered && showFeedback ? `
                 <div class="feedback ${isCorrect ? 'correct' : 'incorrect'}">
                     <div class="feedback-status">
                         ${isCorrect ? '✓ CORRECT' : '✗ INCORRECT'}
@@ -2481,13 +3056,13 @@ function renderQuiz() {
                 </div>
             ` : ''}
             
-            ${answered && isTestMode ? `
-                <div class="feedback" style="background: rgba(0, 255, 0, 0.05); border-color: #00ff00; color: #00ff00;">
+            ${answered && !showFeedback ? `
+                <div class="feedback feedback-success">
                     <div class="feedback-status">
                         Answer Recorded
                     </div>
                     <div style="opacity: 0.8;">
-                        Feedback will be shown at the end of the test
+                        ${isPracticeTestMode ? 'Feedback will be shown in the summary report' : 'Feedback will be shown at the end of the test'}
                     </div>
                 </div>
             ` : ''}
@@ -2527,12 +3102,67 @@ function renderResults() {
                 </div>
             </div>
             
+            <!-- Question Review Section -->
+            <div class="question-review-section">
+                <h2 class="review-title">📝 Question Review</h2>
+                
+                ${state.quiz.questions.map((question, idx) => {
+                    const userAnswer = state.quiz.userAnswers.find(a => a.questionIndex === idx);
+                    const isCorrect = userAnswer ? userAnswer.isCorrect : false;
+                    const userAnswerIndex = userAnswer ? userAnswer.userAnswer : null;
+                    const timeSpent = userAnswer ? userAnswer.timeSpent : 0;
+                    
+                    return `
+                        <div class="review-question ${isCorrect ? 'review-correct' : 'review-incorrect'}">
+                            <div class="review-header">
+                                <div class="review-number">Question ${idx + 1}</div>
+                                <div class="review-status ${isCorrect ? 'status-correct' : 'status-incorrect'}">
+                                    ${isCorrect ? '✓ Correct' : '✗ Incorrect'}
+                                </div>
+                                <div class="review-time">⏱ ${formatTime(timeSpent)}s</div>
+                            </div>
+                            
+                            <div class="review-prompt">${question.prompt}</div>
+                            
+                            <div class="review-options">
+                                ${question.options.map((option, optIdx) => {
+                                    const isUserAnswer = optIdx === userAnswerIndex;
+                                    const isCorrectAnswer = optIdx === question.correctIndex;
+                                    let optionClass = 'review-option';
+                                    
+                                    if (isCorrectAnswer) {
+                                        optionClass += ' review-option-correct';
+                                    }
+                                    if (isUserAnswer && !isCorrect) {
+                                        optionClass += ' review-option-wrong';
+                                    }
+                                    
+                                    return `
+                                        <div class="${optionClass}">
+                                            <span class="review-option-label">${String.fromCharCode(65 + optIdx)}.</span>
+                                            <span class="review-option-text">${option}</span>
+                                            ${isUserAnswer ? '<span class="review-badge-user">Your Answer</span>' : ''}
+                                            ${isCorrectAnswer ? '<span class="review-badge-correct">Correct Answer</span>' : ''}
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+                            
+                            <div class="review-explanation">
+                                <strong>Explanation:</strong> ${question.explanation}
+                            </div>
+                        </div>
+                    `;
+                }).join('')}
+            </div>
+            
             ${state.currentPlayer ? `
                 <div class="history-section">
                     <div class="history-title">Recent Sessions - ${state.currentPlayer.name}</div>
                     <div class="history-list">
                         ${state.currentPlayer.sessions
                             .sort((a, b) => b.timestamp - a.timestamp)
+                            .slice(0, 5)
                             .map(session => {
                                 const percent = (session.score / session.total * 100).toFixed(1);
                                 return `
@@ -2566,12 +3196,9 @@ function renderStatus() {
     const { totalStatPoints, level, pointsIntoLevel, pointsToNextLevel } = computePlayerTotals(state.currentPlayer);
     const stats = state.currentPlayer.stats || {};
     
-    // Aggregate stats by subject (main topics)
+    // Aggregate stats by subject
     const subjectStats = subjects.map(subject => {
-        // Get all topics for this subject
         const subjectTopics = topics.filter(t => t.subjectId === subject.id);
-        
-        // Sum up stats for all topics in this subject
         let totalCorrectAnswers = 0;
         let totalStatPoints = 0;
         
@@ -2588,6 +3215,12 @@ function renderStatus() {
             statPoints: totalStatPoints
         };
     });
+    
+    // Get equipped items
+    const equippedHelmet = EQUIPMENT_ITEMS[state.currentPlayer.equipment.helmet];
+    const equippedArmor = EQUIPMENT_ITEMS[state.currentPlayer.equipment.armor];
+    const equippedWeapon = EQUIPMENT_ITEMS[state.currentPlayer.equipment.weapon];
+    const equippedAccessory = EQUIPMENT_ITEMS[state.currentPlayer.equipment.accessory];
     
     return `
         <div class="panel">
@@ -2613,7 +3246,7 @@ function renderStatus() {
             
             <div class="stats-grid">
                 ${subjectStats.map(stat => {
-                    const maxBarWidth = 50; // Max stat points to show in bar (increased for subjects)
+                    const maxBarWidth = 50;
                     const barPercentage = Math.min((stat.statPoints / maxBarWidth) * 100, 100);
                     
                     return `
@@ -2640,14 +3273,300 @@ function renderStatus() {
     `;
 }
 
+function renderEquipment() {
+    if (!state.currentPlayer) {
+        return '<div class="panel"><h1>No player selected</h1></div>';
+    }
+    
+    initializePlayerEquipment(state.currentPlayer);
+    
+    const { totalStatPoints, level } = computePlayerTotals(state.currentPlayer);
+    const stats = state.currentPlayer.stats || {};
+    const equipmentBonus = calculateEquipmentBonus(state.currentPlayer);
+    const unlockedItems = getUnlockedItems(state.currentPlayer);
+    
+    // Calculate subject levels
+    const subjectLevels = {};
+    subjects.forEach(subject => {
+        const subjectTopics = topics.filter(t => t.subjectId === subject.id);
+        let totalStatPoints = 0;
+        
+        subjectTopics.forEach(topic => {
+            const topicStat = stats[topic.id] || { correctAnswers: 0, statPoints: 0 };
+            totalStatPoints += topicStat.statPoints;
+        });
+        
+        subjectLevels[subject.id] = {
+            name: subject.name,
+            level: 1 + Math.floor(totalStatPoints / 5),
+            statPoints: totalStatPoints
+        };
+    });
+    
+    // Get equipped items
+    const equippedHelmet = EQUIPMENT_ITEMS[state.currentPlayer.equipment.helmet];
+    const equippedArmor = EQUIPMENT_ITEMS[state.currentPlayer.equipment.armor];
+    const equippedWeapon = EQUIPMENT_ITEMS[state.currentPlayer.equipment.weapon];
+    const equippedAccessory = EQUIPMENT_ITEMS[state.currentPlayer.equipment.accessory];
+    
+    return `
+        <div class="panel">
+            <h1 class="panel-header">⚔ Character Equipment ⚔</h1>
+            
+            <div class="loadout-container">
+                <!-- Left Side: Character Display & Equipment Slots -->
+                <div class="character-display-section">
+                    <div class="character-info-box">
+                        <div class="character-name">${state.currentPlayer.name}</div>
+                        <div class="character-level">Level ${level} Scholar</div>
+                        <div class="character-sp">Total SP: ${totalStatPoints}</div>
+                    </div>
+                    
+                    <!-- Pixel Art Character Sprite -->
+                    <div class="character-sprite-container">
+                        ${renderCharacterSprite(state.currentPlayer)}
+                    </div>
+                    
+                    <!-- Equipment Slots -->
+                    <div class="equipment-slots">
+                        <div class="equipment-slot ${equippedHelmet ? 'equipped' : 'empty'}" data-slot="helmet">
+                            <div class="slot-icon">🎓</div>
+                            <div class="slot-label">Helmet</div>
+                            ${equippedHelmet ? `
+                                <div class="equipped-item">
+                                    <div class="item-name">${equippedHelmet.name}</div>
+                                    <button class="btn-tiny unequip-btn" data-slot="helmet">✕</button>
+                                </div>
+                            ` : '<div class="slot-empty-text">Empty</div>'}
+                        </div>
+                        
+                        <div class="equipment-slot ${equippedArmor ? 'equipped' : 'empty'}" data-slot="armor">
+                            <div class="slot-icon">🛡</div>
+                            <div class="slot-label">Armor</div>
+                            ${equippedArmor ? `
+                                <div class="equipped-item">
+                                    <div class="item-name">${equippedArmor.name}</div>
+                                    <button class="btn-tiny unequip-btn" data-slot="armor">✕</button>
+                                </div>
+                            ` : '<div class="slot-empty-text">Empty</div>'}
+                        </div>
+                        
+                        <div class="equipment-slot ${equippedWeapon ? 'equipped' : 'empty'}" data-slot="weapon">
+                            <div class="slot-icon">⚔</div>
+                            <div class="slot-label">Weapon</div>
+                            ${equippedWeapon ? `
+                                <div class="equipped-item">
+                                    <div class="item-name">${equippedWeapon.name}</div>
+                                    <button class="btn-tiny unequip-btn" data-slot="weapon">✕</button>
+                                </div>
+                            ` : '<div class="slot-empty-text">Empty</div>'}
+                        </div>
+                        
+                        <div class="equipment-slot ${equippedAccessory ? 'equipped' : 'empty'}" data-slot="accessory">
+                            <div class="slot-icon">💎</div>
+                            <div class="slot-label">Accessory</div>
+                            ${equippedAccessory ? `
+                                <div class="equipped-item">
+                                    <div class="item-name">${equippedAccessory.name}</div>
+                                    <button class="btn-tiny unequip-btn" data-slot="accessory">✕</button>
+                                </div>
+                            ` : '<div class="slot-empty-text">Empty</div>'}
+                        </div>
+                    </div>
+                    
+                    <!-- Equipment Stats Bonus -->
+                    <div class="equipment-bonus-box">
+                        <div class="bonus-title">Equipment Bonus:</div>
+                        <div class="bonus-stats">
+                            ${equipmentBonus.intelligence > 0 ? `<span class="bonus-stat">+${equipmentBonus.intelligence} INT</span>` : ''}
+                            ${equipmentBonus.charisma > 0 ? `<span class="bonus-stat">+${equipmentBonus.charisma} CHA</span>` : ''}
+                            ${equipmentBonus.attack > 0 ? `<span class="bonus-stat">+${equipmentBonus.attack} ATK</span>` : ''}
+                            ${equipmentBonus.defense > 0 ? `<span class="bonus-stat">+${equipmentBonus.defense} DEF</span>` : ''}
+                            ${equipmentBonus.wisdom > 0 ? `<span class="bonus-stat">+${equipmentBonus.wisdom} WIS</span>` : ''}
+                            ${Object.values(equipmentBonus).every(v => v === 0) ? '<span class="bonus-stat-none">No bonuses</span>' : ''}
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Side: Item Inventory -->
+                <div class="inventory-section">
+                    <h2 class="inventory-title">⚡ Available Items ⚡</h2>
+                    
+                    <div class="inventory-grid">
+                        ${Object.values(EQUIPMENT_ITEMS).map(item => {
+                            const isUnlocked = unlockedItems.includes(item.id);
+                            const isEquipped = state.currentPlayer.equipment[item.type] === item.id;
+                            const unlockReq = item.unlockSubject ? 
+                                `${subjects.find(s => s.id === item.unlockSubject)?.name || item.unlockSubject} Lv.${item.unlockLevel}` : 
+                                `Level ${item.unlockLevel}`;
+                            
+                            return `
+                                <div class="inventory-item ${isUnlocked ? 'unlocked' : 'locked'} ${isEquipped ? 'equipped-item-highlight' : ''}" 
+                                     data-item-id="${item.id}">
+                                    <div class="item-header">
+                                        <div class="item-icon">${getItemIcon(item.type)}</div>
+                                        <div class="item-name-inv">${item.name}</div>
+                                    </div>
+                                    <div class="item-description">${item.description}</div>
+                                    <div class="item-stats">
+                                        ${Object.entries(item.statBonus).map(([stat, value]) => 
+                                            `<span class="item-stat-bonus">+${value} ${stat.substring(0, 3).toUpperCase()}</span>`
+                                        ).join(' ')}
+                                    </div>
+                                    ${isUnlocked ? `
+                                        ${isEquipped ? 
+                                            `<div class="item-equipped-badge">✓ EQUIPPED</div>` :
+                                            `<button class="btn btn-small equip-item-btn" data-item-id="${item.id}">Equip</button>`
+                                        }
+                                    ` : `
+                                        <div class="item-locked-overlay">
+                                            <div class="lock-icon">🔒</div>
+                                            <div class="unlock-req">${unlockReq}</div>
+                                        </div>
+                                    `}
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                    
+                    <h3 style="margin-top: 30px; color: #00ffff;">📚 Subject Levels</h3>
+                    <div class="subject-levels-list">
+                        ${Object.values(subjectLevels).filter(s => s.statPoints > 0).map(subject => `
+                            <div class="subject-level-item">
+                                <span class="subject-level-name">${subject.name}</span>
+                                <span class="subject-level-value">Level ${subject.level}</span>
+                            </div>
+                        `).join('')}
+                        ${Object.values(subjectLevels).every(s => s.statPoints === 0) ? '<p style="opacity: 0.7; text-align: center;">Complete quizzes to level up subjects!</p>' : ''}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn" id="home-btn">← Home</button>
+            </div>
+        </div>
+    `;
+}
+
+function getItemIcon(type) {
+    const icons = {
+        helmet: '🎓',
+        armor: '🛡',
+        weapon: '⚔',
+        accessory: '💎'
+    };
+    return icons[type] || '📦';
+}
+
+function renderCharacterSprite(player) {
+    const equipment = player.equipment || {};
+    const helmetId = equipment.helmet;
+    const armorId = equipment.armor;
+    const weaponId = equipment.weapon;
+    const accessoryId = equipment.accessory;
+    
+    // Determine visual styles based on equipment
+    const helmetClass = helmetId ? `helmet-${EQUIPMENT_ITEMS[helmetId]?.sprite || 'cap'}` : '';
+    const armorClass = armorId ? `armor-${EQUIPMENT_ITEMS[armorId]?.sprite || 'robes'}` : '';
+    const weaponClass = weaponId ? `weapon-${EQUIPMENT_ITEMS[weaponId]?.sprite || 'stylus'}` : '';
+    const accessoryClass = accessoryId ? `accessory-${EQUIPMENT_ITEMS[accessoryId]?.sprite || 'amulet'}` : '';
+    
+    return `
+        <div class="pixel-character ${armorClass}">
+            <!-- Head -->
+            <div class="pixel-head ${helmetId ? 'has-helmet' : ''}"></div>
+            ${helmetId ? `<div class="pixel-helmet ${helmetClass}"></div>` : ''}
+            
+            <!-- Body -->
+            <div class="pixel-body ${armorId ? 'has-armor' : ''} ${armorClass}"></div>
+            
+            <!-- Arms -->
+            <div class="pixel-arm-left"></div>
+            <div class="pixel-arm-right ${weaponId ? 'has-weapon' : ''}"></div>
+            ${weaponId ? `<div class="pixel-weapon ${weaponClass}"></div>` : ''}
+            
+            <!-- Legs -->
+            <div class="pixel-leg-left"></div>
+            <div class="pixel-leg-right"></div>
+            
+            ${accessoryId ? `<div class="pixel-accessory ${accessoryClass}"></div>` : ''}
+        </div>
+    `;
+}
+
 function renderSettings() {
     const volumes = state.settings.volumes;
+    const currentTheme = state.settings.theme || 'default';
     
     return `
         <div class="panel">
             <h1 class="panel-header">Settings</h1>
             
             <div style="max-width: 600px; margin: 0 auto;">
+                <h2 style="margin: 30px 0 20px 0;">Appearance</h2>
+                
+                <div class="settings-section">
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <span class="setting-name">Color Theme</span>
+                        </label>
+                        <div class="theme-selector">
+                            <button class="theme-btn ${currentTheme === 'default' ? 'active' : ''}" data-theme="default">
+                                <span class="theme-preview theme-preview-default"></span>
+                                <span>Default</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'eva01' ? 'active' : ''}" data-theme="eva01">
+                                <span class="theme-preview theme-preview-eva01"></span>
+                                <span>EVA-01</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'eva02' ? 'active' : ''}" data-theme="eva02">
+                                <span class="theme-preview theme-preview-eva02"></span>
+                                <span>EVA-02</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 style="margin: 30px 0 20px 0;">Visual Effects</h2>
+                
+                <div class="settings-section">
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <span class="setting-name">Glassmorphism Panels</span>
+                            <span class="setting-description">Frosted glass effect with blur</span>
+                        </label>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="effect-glassmorphism" ${state.settings.visualEffects.glassmorphism ? 'checked' : ''}>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <span class="setting-name">Neon Borders</span>
+                            <span class="setting-description">Glowing animated borders</span>
+                        </label>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="effect-neon" ${state.settings.visualEffects.neonBorders ? 'checked' : ''}>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <span class="setting-name">Floating Animations</span>
+                            <span class="setting-description">Gentle hover effects on cards</span>
+                        </label>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="effect-floating" ${state.settings.visualEffects.floatingAnimations ? 'checked' : ''}>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <!-- Gradient Effects and Premium Buttons removed for cleaner UI -->
+                </div>
+                
                 <h2 style="margin: 30px 0 20px 0;">Volume Controls</h2>
                 
                 <div class="settings-section">
@@ -2727,6 +3646,190 @@ function renderSettings() {
                             data-volume-type="modal">
                         <button class="btn btn-small test-sound-btn" data-sound-type="modal">Test</button>
                     </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn" id="home-btn">← Home</button>
+            </div>
+        </div>
+    `;
+}
+
+function renderAnalytics() {
+    if (!state.currentPlayer || !state.currentPlayer.sessions) {
+        return `
+            <div class="panel">
+                <h1 class="panel-header">Results & Analytics</h1>
+                <p style="text-align: center; margin: 40px 0; opacity: 0.7;">No session data available. Complete some quizzes to see your analytics!</p>
+                <div class="action-buttons">
+                    <button class="btn" id="home-btn">← Home</button>
+                </div>
+            </div>
+        `;
+    }
+    
+    const sessions = state.currentPlayer.sessions;
+    
+    // Calculate overall statistics
+    const totalSessions = sessions.length;
+    const totalQuestions = sessions.reduce((sum, s) => sum + s.total, 0);
+    const totalCorrect = sessions.reduce((sum, s) => sum + s.score, 0);
+    const overallAccuracy = totalQuestions > 0 ? ((totalCorrect / totalQuestions) * 100).toFixed(1) : 0;
+    const avgTimePerQuestion = totalQuestions > 0 ? 
+        (sessions.reduce((sum, s) => sum + (s.avgTime || 0) * s.total, 0) / totalQuestions).toFixed(1) : 0;
+    
+    // Group sessions by topic
+    const sessionsByTopic = {};
+    sessions.forEach(session => {
+        if (!sessionsByTopic[session.topicId]) {
+            sessionsByTopic[session.topicId] = {
+                topicName: session.topicName,
+                sessions: [],
+                totalCorrect: 0,
+                totalQuestions: 0
+            };
+        }
+        sessionsByTopic[session.topicId].sessions.push(session);
+        sessionsByTopic[session.topicId].totalCorrect += session.score;
+        sessionsByTopic[session.topicId].totalQuestions += session.total;
+    });
+    
+    // Calculate topic statistics and identify weak/strong areas
+    const topicStats = Object.keys(sessionsByTopic).map(topicId => {
+        const data = sessionsByTopic[topicId];
+        const accuracy = (data.totalCorrect / data.totalQuestions * 100).toFixed(1);
+        const recentSessions = data.sessions.slice(-3); // Last 3 sessions
+        const recentAccuracy = recentSessions.length > 0 ?
+            (recentSessions.reduce((sum, s) => sum + s.score, 0) / 
+             recentSessions.reduce((sum, s) => sum + s.total, 0) * 100).toFixed(1) : 0;
+        
+        return {
+            topicId,
+            topicName: data.topicName,
+            accuracy: parseFloat(accuracy),
+            recentAccuracy: parseFloat(recentAccuracy),
+            sessionCount: data.sessions.length,
+            totalCorrect: data.totalCorrect,
+            totalQuestions: data.totalQuestions,
+            trend: parseFloat(recentAccuracy) - parseFloat(accuracy) // Positive = improving
+        };
+    });
+    
+    // Sort topics by accuracy (weakest first for focus suggestions)
+    topicStats.sort((a, b) => a.accuracy - b.accuracy);
+    
+    const weakestTopics = topicStats.slice(0, 3);
+    const strongestTopics = topicStats.slice(-3).reverse();
+    
+    // Calculate improvement trend (last 5 sessions vs previous 5)
+    const recentSessions = sessions.slice(-5);
+    const previousSessions = sessions.slice(-10, -5);
+    const recentAvgAccuracy = recentSessions.length > 0 ?
+        (recentSessions.reduce((sum, s) => sum + (s.score / s.total), 0) / recentSessions.length * 100).toFixed(1) : 0;
+    const previousAvgAccuracy = previousSessions.length > 0 ?
+        (previousSessions.reduce((sum, s) => sum + (s.score / s.total), 0) / previousSessions.length * 100).toFixed(1) : 0;
+    const improvementTrend = (parseFloat(recentAvgAccuracy) - parseFloat(previousAvgAccuracy)).toFixed(1);
+    
+    return `
+        <div class="panel">
+            <h1 class="panel-header">Results & Analytics</h1>
+            
+            <div class="analytics-section">
+                <h2 style="margin-top: 0; color: #00ffff; text-shadow: 0 0 10px #00ffff;">Overall Performance</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
+                    <div class="stat-box">
+                        <div class="stat-label">Total Sessions</div>
+                        <div class="stat-value">${totalSessions}</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Overall Accuracy</div>
+                        <div class="stat-value" style="color: ${overallAccuracy >= 70 ? '#00ff00' : overallAccuracy >= 50 ? '#ffff00' : '#ff6666'}">${overallAccuracy}%</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Questions Answered</div>
+                        <div class="stat-value">${totalCorrect} / ${totalQuestions}</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Avg Time/Question</div>
+                        <div class="stat-value">${avgTimePerQuestion}s</div>
+                    </div>
+                </div>
+                
+                ${sessions.length >= 10 ? `
+                    <div class="improvement-box">
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Improvement Trend (Last 5 vs Previous 5 sessions)</div>
+                        <div style="font-size: 1.5rem; font-weight: bold; margin-top: 5px; color: ${improvementTrend >= 0 ? '#00ff00' : '#ff6666'}">
+                            ${improvementTrend >= 0 ? '↗' : '↘'} ${Math.abs(improvementTrend)}% ${improvementTrend >= 0 ? 'improvement' : 'decline'}
+                        </div>
+                    </div>
+                ` : ''}
+            </div>
+            
+            <div class="analytics-weak-section">
+                <h2 style="margin-top: 0; color: #ff6666; text-shadow: 0 0 10px #ff6666;">📚 Focus Areas (Weakest Topics)</h2>
+                ${weakestTopics.length > 0 ? `
+                    <div style="margin-top: 15px;">
+                        ${weakestTopics.map((topic, idx) => `
+                            <div style="padding: 12px; margin-bottom: 10px; background: rgba(0, 0, 0, 0.3); border-left: 4px solid ${topic.accuracy < 50 ? '#ff0000' : topic.accuracy < 70 ? '#ffaa00' : '#ffff00'}; border-radius: 4px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <div style="font-weight: bold; font-size: 1.1rem;">${idx + 1}. ${topic.topicName}</div>
+                                        <div style="font-size: 0.9rem; opacity: 0.8; margin-top: 5px;">
+                                            ${topic.sessionCount} sessions • ${topic.totalCorrect}/${topic.totalQuestions} correct
+                                            ${topic.trend !== 0 ? ` • <span style="color: ${topic.trend > 0 ? '#00ff00' : '#ff6666'}">${topic.trend > 0 ? '↗' : '↘'} ${Math.abs(topic.trend).toFixed(1)}%</span>` : ''}
+                                        </div>
+                                    </div>
+                                    <div style="font-size: 1.8rem; font-weight: bold; color: ${topic.accuracy < 50 ? '#ff0000' : topic.accuracy < 70 ? '#ffaa00' : '#ffff00'}">
+                                        ${topic.accuracy}%
+                                    </div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div style="margin-top: 15px; padding: 12px; background: rgba(0, 255, 255, 0.1); border-radius: 4px; border-left: 4px solid #00ffff;">
+                        <strong>💡 Recommendation:</strong> Focus on practice sessions in ${weakestTopics[0].topicName} to improve your weak areas. Consistent practice will boost your overall performance!
+                    </div>
+                ` : '<p style="opacity: 0.7;">Not enough data to determine weak areas yet.</p>'}
+            </div>
+            
+            <div class="analytics-strong-section">
+                <h2 style="margin-top: 0; color: #00ff00; text-shadow: 0 0 10px #00ff00;">⭐ Strongest Topics</h2>
+                ${strongestTopics.length > 0 ? `
+                    <div style="margin-top: 15px;">
+                        ${strongestTopics.map((topic, idx) => `
+                            <div style="padding: 12px; margin-bottom: 10px; background: rgba(0, 0, 0, 0.3); border-left: 4px solid #00ff00; border-radius: 4px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <div style="font-weight: bold; font-size: 1.1rem;">${idx + 1}. ${topic.topicName}</div>
+                                        <div style="font-size: 0.9rem; opacity: 0.8; margin-top: 5px;">
+                                            ${topic.sessionCount} sessions • ${topic.totalCorrect}/${topic.totalQuestions} correct
+                                        </div>
+                                    </div>
+                                    <div style="font-size: 1.8rem; font-weight: bold; color: #00ff00">
+                                        ${topic.accuracy}%
+                                    </div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                ` : '<p style="opacity: 0.7;">Keep practicing to establish your strong areas!</p>'}
+            </div>
+            
+            <div class="analytics-all-section">
+                <h2 style="margin-top: 0; color: #00aaff; text-shadow: 0 0 10px #00aaff;">📊 All Topics Performance</h2>
+                <div style="margin-top: 15px;">
+                    ${topicStats.sort((a, b) => b.accuracy - a.accuracy).map(topic => `
+                        <div style="padding: 10px; margin-bottom: 8px; background: rgba(0, 0, 0, 0.2); border-radius: 4px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                <span>${topic.topicName}</span>
+                                <span style="color: ${topic.accuracy >= 70 ? '#00ff00' : topic.accuracy >= 50 ? '#ffff00' : '#ff6666'}">${topic.accuracy}%</span>
+                            </div>
+                            <div style="height: 8px; background: rgba(0, 0, 0, 0.5); border-radius: 4px; overflow: hidden;">
+                                <div style="height: 100%; width: ${topic.accuracy}%; background: ${topic.accuracy >= 70 ? '#00ff00' : topic.accuracy >= 50 ? '#ffff00' : '#ff6666'}; transition: width 0.3s;"></div>
+                            </div>
+                        </div>
+                    `).join('')}
                 </div>
             </div>
             
@@ -2866,11 +3969,44 @@ function attachEventListeners() {
         statusBtn.addEventListener('click', goToStatus);
     }
     
+    // Equipment button
+    const equipmentBtn = document.getElementById('equipment-btn');
+    if (equipmentBtn) {
+        equipmentBtn.addEventListener('click', goToEquipment);
+    }
+    
+    // Results button
+    const resultsBtn = document.getElementById('results-btn');
+    if (resultsBtn) {
+        resultsBtn.addEventListener('click', goToAnalytics);
+    }
+    
     // Settings button
     const settingsBtn = document.getElementById('settings-btn');
     if (settingsBtn) {
         settingsBtn.addEventListener('click', goToSettings);
     }
+    
+    // Equipment: Equip item buttons
+    const equipBtns = document.querySelectorAll('.equip-item-btn');
+    equipBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const itemId = btn.dataset.itemId;
+            if (equipItem(state.currentPlayer, itemId)) {
+                render();
+            }
+        });
+    });
+    
+    // Equipment: Unequip item buttons
+    const unequipBtns = document.querySelectorAll('.unequip-btn');
+    unequipBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const slot = btn.dataset.slot;
+            unequipItem(state.currentPlayer, slot);
+            render();
+        });
+    });
     
     // Volume sliders
     const volumeSliders = document.querySelectorAll('.volume-slider');
@@ -2899,6 +4035,39 @@ function attachEventListeners() {
             const soundType = btn.dataset.soundType;
             playSfx(soundType);
         });
+    });
+    
+    // Theme selector buttons
+    const themeBtns = document.querySelectorAll('.theme-btn');
+    themeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const themeName = btn.dataset.theme;
+            applyTheme(themeName);
+            saveSettings();
+            playSfx('nav');
+            render(); // Re-render to update active state
+        });
+    });
+    
+    // Visual effect toggles
+    const effectToggles = {
+        'effect-glassmorphism': 'glassmorphism',
+        'effect-neon': 'neonBorders',
+        'effect-floating': 'floatingAnimations',
+        'effect-gradients': 'gradientEffects',
+        'effect-premium': 'premiumButtons'
+    };
+    
+    Object.entries(effectToggles).forEach(([id, key]) => {
+        const toggle = document.getElementById(id);
+        if (toggle) {
+            toggle.addEventListener('change', (e) => {
+                state.settings.visualEffects[key] = e.target.checked;
+                applyVisualEffects();
+                saveSettings();
+                playSfx('nav');
+            });
+        }
     });
     
     // Subject tiles
@@ -3028,11 +4197,11 @@ function attachEventListeners() {
 // ============================================================================
 // Initialization
 // ============================================================================
-function init() {
-    // Show boot screen on first load
+async function init() {
+    // Show Evangelion-style boot sequence on first load
     const hasBooted = sessionStorage.getItem('afoqt-booted');
     if (!hasBooted) {
-        showBootScreen();
+        await showBootSequence();
         sessionStorage.setItem('afoqt-booted', 'true');
     }
     
@@ -3041,6 +4210,29 @@ function init() {
     if (state.players.length > 0) {
         state.currentPlayer = state.players[0];
     }
+    
+    // Patch 18: Initialize content-based question system
+    if (typeof initializePatch18 === 'function') {
+        try {
+            const success = await initializePatch18();
+            if (success) {
+                state.patch18Loaded = true;
+                console.log('✓ Patch 18 active');
+                
+                // Add AFOQT practice test topics if available
+                if (typeof createAfoqtPracticeTestTopics === 'function') {
+                    const practiceTests = createAfoqtPracticeTestTopics();
+                    if (practiceTests.length > 0) {
+                        topics.push(...practiceTests);
+                        console.log(`✓ Added ${practiceTests.length} AFOQT practice tests`);
+                    }
+                }
+            }
+        } catch (error) {
+            console.warn('Patch 18 initialization failed:', error);
+        }
+    }
+    
     render();
     registerServiceWorker();
 }

@@ -1,0 +1,307 @@
+{
+  "subtopicId": "sentence_completion",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "sc_exp_001",
+      "question": "Although the maneuver appeared ___ on paper, its execution in turbulent conditions proved extremely hazardous.",
+      "choices": {
+        "A": "feasible",
+        "B": "extravagant",
+        "C": "perfunctory",
+        "D": "redundant"
+      },
+      "answer": "A",
+      "explanation": "The contrast is between theory and real conditions; 'feasible on paper' matches a plan that seems workable but is risky in practice."
+    },
+    {
+      "id": "sc_exp_002",
+      "question": "The briefing was so ___ that even seasoned officers struggled to discern the commander’s actual intent.",
+      "choices": {
+        "A": "opaque",
+        "B": "succinct",
+        "C": "didactic",
+        "D": "lucid"
+      },
+      "answer": "A",
+      "explanation": "If officers struggle to discern intent, the briefing must be unclear; 'opaque' best fits."
+    },
+    {
+      "id": "sc_exp_003",
+      "question": "Her analysis was both ___ and restrained, avoiding exaggeration while still highlighting serious flaws in the plan.",
+      "choices": {
+        "A": "incisive",
+        "B": "bombastic",
+        "C": "desultory",
+        "D": "equivocal"
+      },
+      "answer": "A",
+      "explanation": "Sharp but controlled criticism is 'incisive'; the other options imply scattered, showy, or unclear speech."
+    },
+    {
+      "id": "sc_exp_004",
+      "question": "The colonel’s leadership style, though sometimes perceived as ___, ultimately fostered a culture of discipline and clarity.",
+      "choices": {
+        "A": "austere",
+        "B": "capricious",
+        "C": "congenial",
+        "D": "diffident"
+      },
+      "answer": "A",
+      "explanation": "A strict, severe style that still yields discipline aligns with 'austere.'"
+    },
+    {
+      "id": "sc_exp_005",
+      "question": "The intelligence report was ___: it noted the limitations of its own sources while still drawing firm, defensible conclusions.",
+      "choices": {
+        "A": "nuanced",
+        "B": "tendentious",
+        "C": "dogmatic",
+        "D": "perfunctory"
+      },
+      "answer": "A",
+      "explanation": "Recognizing limitations yet drawing careful conclusions indicates subtlety; 'nuanced' fits best."
+    },
+    {
+      "id": "sc_exp_006",
+      "question": "The cadet’s initial response was so ___ that the panel questioned whether he had grasped the scenario at all.",
+      "choices": {
+        "A": "tangential",
+        "B": "trenchant",
+        "C": "cogent",
+        "D": "deferential"
+      },
+      "answer": "A",
+      "explanation": "If they question his grasp, his answer was off-topic; 'tangential' means only loosely related."
+    },
+    {
+      "id": "sc_exp_007",
+      "question": "Because the system had never been tested under real combat conditions, confidence in its performance remained ___ at best.",
+      "choices": {
+        "A": "tentative",
+        "B": "resolute",
+        "C": "effusive",
+        "D": "unqualified"
+      },
+      "answer": "A",
+      "explanation": "Lack of testing leads to cautious, 'tentative' confidence."
+    },
+    {
+      "id": "sc_exp_008",
+      "question": "His criticism of the plan was not merely ___; it identified specific vulnerabilities that later proved accurate.",
+      "choices": {
+        "A": "pejorative",
+        "B": "laudatory",
+        "C": "formulaic",
+        "D": "derivative"
+      },
+      "answer": "A",
+      "explanation": "The sentence contrasts mere insult with substantive critique; 'pejorative' means purely negative or insulting."
+    },
+    {
+      "id": "sc_exp_009",
+      "question": "The unit’s success was not the product of a single brilliant tactic but of many small, ___ adjustments made in real time.",
+      "choices": {
+        "A": "incremental",
+        "B": "arbitrary",
+        "C": "ostentatious",
+        "D": "spurious"
+      },
+      "answer": "A",
+      "explanation": "Many small, stepwise changes are 'incremental.'"
+    },
+    {
+      "id": "sc_exp_010",
+      "question": "Although his tone was outwardly ___, the underlying message left no room for disagreement.",
+      "choices": {
+        "A": "conciliatory",
+        "B": "strident",
+        "C": "diffuse",
+        "D": "obsequious"
+      },
+      "answer": "A",
+      "explanation": "A calm, peace-seeking surface that hides firmness fits 'conciliatory.'"
+    },
+    {
+      "id": "sc_exp_011",
+      "question": "The report was criticized for being ___; it presented data but carefully avoided drawing any substantive conclusions.",
+      "choices": {
+        "A": "noncommittal",
+        "B": "trenchant",
+        "C": "prescient",
+        "D": "forthright"
+      },
+      "answer": "A",
+      "explanation": "Describing facts without taking a position is 'noncommittal.'"
+    },
+    {
+      "id": "sc_exp_012",
+      "question": "The liaison officer had a talent for turning potentially ___ disagreements into constructive discussions.",
+      "choices": {
+        "A": "intractable",
+        "B": "salient",
+        "C": "decorous",
+        "D": "extemporaneous"
+      },
+      "answer": "A",
+      "explanation": "Disagreements that seem impossible to resolve are 'intractable.'"
+    },
+    {
+      "id": "sc_exp_013",
+      "question": "The cadet’s explanation was so ___ that, despite its length, it shed little light on what had actually occurred.",
+      "choices": {
+        "A": "verbose",
+        "B": "succinct",
+        "C": "trenchant",
+        "D": "candid"
+      },
+      "answer": "A",
+      "explanation": "Long but unilluminating suggests 'verbose' rather than succinct or sharp."
+    },
+    {
+      "id": "sc_exp_014",
+      "question": "The proposed solution, though initially dismissed as ___, ultimately proved both achievable and effective.",
+      "choices": {
+        "A": "quixotic",
+        "B": "methodical",
+        "C": "salutary",
+        "D": "pedantic"
+      },
+      "answer": "A",
+      "explanation": "Something dismissed as unrealistic or idealistic is 'quixotic.'"
+    },
+    {
+      "id": "sc_exp_015",
+      "question": "Her demeanor was outwardly ___, but her questions revealed a keen, critical intelligence.",
+      "choices": {
+        "A": "unassuming",
+        "B": "didactic",
+        "C": "acerbic",
+        "D": "polemical"
+      },
+      "answer": "A",
+      "explanation": "A modest exterior masking sharp insight fits 'unassuming.'"
+    },
+    {
+      "id": "sc_exp_016",
+      "question": "The general’s remarks were deliberately ___, signaling disapproval without openly contradicting the policy.",
+      "choices": {
+        "A": "circumspect",
+        "B": "vociferous",
+        "C": "didactic",
+        "D": "blatant"
+      },
+      "answer": "A",
+      "explanation": "Careful, indirect disapproval is 'circumspect.'"
+    },
+    {
+      "id": "sc_exp_017",
+      "question": "The plan’s appeal lay in its apparent ___: it promised major gains without requiring additional resources.",
+      "choices": {
+        "A": "parsimony",
+        "B": "redundancy",
+        "C": "improvidence",
+        "D": "opacity"
+      },
+      "answer": "A",
+      "explanation": "Doing more with less reflects 'parsimony' (economy in resource use)."
+    },
+    {
+      "id": "sc_exp_018",
+      "question": "His critique was unusually ___, acknowledging the proposal’s strengths before turning to its weaknesses.",
+      "choices": {
+        "A": "evenhanded",
+        "B": "invidious",
+        "C": "cursory",
+        "D": "vitriolic"
+      },
+      "answer": "A",
+      "explanation": "A balanced appraisal is 'evenhanded.'"
+    },
+    {
+      "id": "sc_exp_019",
+      "question": "Because the training scenario was deliberately ___, cadets had to identify the relevant details on their own.",
+      "choices": {
+        "A": "ambiguous",
+        "B": "didactic",
+        "C": "formulaic",
+        "D": "unequivocal"
+      },
+      "answer": "A",
+      "explanation": "A scenario that forces interpretation is 'ambiguous.'"
+    },
+    {
+      "id": "sc_exp_020",
+      "question": "The unit’s performance was all the more impressive given the ___ conditions under which it had to operate.",
+      "choices": {
+        "A": "adverse",
+        "B": "peripheral",
+        "C": "tenuous",
+        "D": "benign"
+      },
+      "answer": "A",
+      "explanation": "Impressive performance despite difficulty implies 'adverse' conditions."
+    },
+    {
+      "id": "sc_exp_021",
+      "question": "The analyst’s tone was ___ rather than alarmist, stressing the seriousness of the threat without exaggerating it.",
+      "choices": {
+        "A": "measured",
+        "B": "histrionic",
+        "C": "facetious",
+        "D": "apathetic"
+      },
+      "answer": "A",
+      "explanation": "Calm but serious messaging is 'measured,' not hysterical."
+    },
+    {
+      "id": "sc_exp_022",
+      "question": "While the report appeared neutral, its selective use of data revealed a decidedly ___ bias.",
+      "choices": {
+        "A": "partisan",
+        "B": "stoic",
+        "C": "equable",
+        "D": "tepid"
+      },
+      "answer": "A",
+      "explanation": "Selective data to favor one side reflects a 'partisan' bias."
+    },
+    {
+      "id": "sc_exp_023",
+      "question": "The policy was both ___ and durable, designed to guide decisions long after its authors had left their posts.",
+      "choices": {
+        "A": "prescient",
+        "B": "ephemeral",
+        "C": "parochial",
+        "D": "superficial"
+      },
+      "answer": "A",
+      "explanation": "A long-lasting, forward-looking policy is 'prescient.'"
+    },
+    {
+      "id": "sc_exp_024",
+      "question": "The officer’s refusal to speculate, while frustrating to reporters, reflected a disciplined commitment to ___ information.",
+      "choices": {
+        "A": "corroborated",
+        "B": "salacious",
+        "C": "incendiary",
+        "D": "improvised"
+      },
+      "answer": "A",
+      "explanation": "Avoiding speculation implies a preference for verified ('corroborated') facts."
+    },
+    {
+      "id": "sc_exp_025",
+      "question": "What made her leadership distinctive was its combination of ___ authority and genuine humility.",
+      "choices": {
+        "A": "unassailable",
+        "B": "diffident",
+        "C": "tentative",
+        "D": "mercurial"
+      },
+      "answer": "A",
+      "explanation": "Strong, unquestioned authority fits 'unassailable', which contrasts with humility."
+    }
+  ]
+}
