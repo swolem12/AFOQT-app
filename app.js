@@ -2498,22 +2498,22 @@ function showBootSequence() {
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="boot-progress">
-                            <div class="boot-progress-label">[ SYNCHRONIZATION RATE ]</div>
-                            <div class="boot-progress-bar">
-                                <div class="boot-progress-fill"></div>
-                                <div class="progress-scanline"></div>
-                            </div>
-                            <div class="boot-progress-percent">0%</div>
+                    </div>
+                    
+                    <!-- Progress bar - static position, always visible -->
+                    <div class="boot-progress-static">
+                        <div class="boot-progress-label">[ SYNCHRONIZATION RATE ]</div>
+                        <div class="boot-progress-bar">
+                            <div class="boot-progress-fill"></div>
+                            <div class="progress-scanline"></div>
                         </div>
-                        
-                        <div class="boot-footer">
-                            <div class="boot-footer-line">┌─────────────────────────────────────────────────┐</div>
-                            <div class="boot-footer-line footer-welcome">│ WELCOME, PLAYER. THE QUEST BEGINS NOW.        │</div>
-                            <div class="boot-footer-line footer-prompt">│ >> Press START to enter the virtual realm <<   │</div>
-                            <div class="boot-footer-line">└─────────────────────────────────────────────────┘</div>
-                        </div>
+                        <div class="boot-progress-percent">0%</div>
+                    </div>
+                    
+                    <!-- Welcome message - shown at end -->
+                    <div class="boot-welcome-message" id="boot-welcome-msg" style="opacity: 0;">
+                        <div class="welcome-text-main" id="welcome-player-name">HELLO, PILOT</div>
+                        <div class="welcome-text-sub">WELCOME BACK</div>
                     </div>
                 </div>
             </div>
@@ -2521,40 +2521,40 @@ function showBootSequence() {
         
         document.body.insertAdjacentHTML('afterbegin', bootHTML);
         
-        // Auto-scroll functionality
+        // Update welcome message with player name
+        const welcomeName = document.getElementById('welcome-player-name');
+        if (welcomeName && state.currentPlayer) {
+            welcomeName.textContent = `HELLO, ${state.currentPlayer.name.toUpperCase()}`;
+        }
+        
+        // Auto-scroll functionality - precise timing to match 9 second duration
         const scrollContainer = document.getElementById('boot-container-scroll');
-        let scrollEnabled = false;
+        let scrollStartTime = null;
+        const scrollDuration = 9000; // 9 seconds
+        const scrollDelay = 5500; // Start at 5.5s
         
         setTimeout(() => {
-            scrollEnabled = true;
+            scrollStartTime = Date.now();
             
-            // Smooth auto-scroll as content appears
-            const autoScroll = () => {
-                if (scrollContainer && scrollEnabled) {
-                    const targetScroll = scrollContainer.scrollHeight - scrollContainer.clientHeight;
-                    const currentScroll = scrollContainer.scrollTop;
-                    const distance = targetScroll - currentScroll;
-                    
-                    if (distance > 5) {
-                        scrollContainer.scrollTop += distance * 0.1; // Smooth scroll
-                        requestAnimationFrame(autoScroll);
-                    }
+            const smoothScroll = () => {
+                if (!scrollContainer) return;
+                
+                const elapsed = Date.now() - scrollStartTime;
+                const progress = Math.min(elapsed / scrollDuration, 1);
+                
+                // Ease-out function for smooth deceleration
+                const easeProgress = 1 - Math.pow(1 - progress, 3);
+                
+                const maxScroll = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+                scrollContainer.scrollTop = maxScroll * easeProgress;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(smoothScroll);
                 }
             };
             
-            // Start auto-scrolling
-            const scrollInterval = setInterval(() => {
-                if (scrollContainer && scrollEnabled) {
-                    autoScroll();
-                }
-            }, 100);
-            
-            // Stop scrolling before end
-            setTimeout(() => {
-                scrollEnabled = false;
-                clearInterval(scrollInterval);
-            }, 9000);
-        }, 5500);
+            smoothScroll();
+        }, scrollDelay);
         
         // Animate timestamp
         const updateTimestamp = () => {
@@ -2582,10 +2582,18 @@ function showBootSequence() {
             }, 100);
         }
         
+        // Show welcome message near the end
+        setTimeout(() => {
+            const welcomeMsg = document.getElementById('boot-welcome-msg');
+            if (welcomeMsg) {
+                welcomeMsg.style.opacity = '1';
+                welcomeMsg.style.transition = 'opacity 1s ease-in';
+            }
+        }, 13000);
+        
         // Remove boot sequence after 15 seconds
         setTimeout(() => {
             clearInterval(tsInterval);
-            scrollEnabled = false;
             const bootSeq = document.getElementById('boot-sequence');
             if (bootSeq) {
                 bootSeq.classList.add('boot-fade-out');
