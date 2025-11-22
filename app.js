@@ -2342,76 +2342,67 @@ function showBootSequence() {
                         <div class="hud-corner hud-br"></div>
                     </div>
                     
-                    <div class="boot-container">
+                    <div class="boot-container" id="boot-container-scroll">
                         <div class="boot-timestamp">
                             <span class="timestamp-label">SYS.TIME:</span>
                             <span class="timestamp-value" id="boot-timestamp">00:00:00</span>
                         </div>
 
-                        <div class="boot-ascii-art">
-╔═══════════════════════════════════════════════════════════╗
-║  ▄▄▄       ███████  ▒█████   █████   ▄▄▄█████▓           ║
-║ ▒████▄    ▓██   ▒  ▒██▒  ██▒▒██▓  ██▒ ▓  ██▒ ▓▒           ║
-║ ▒██  ▀█▄  ▒████ ░  ▒██░  ██▒▒██▒  ██░ ▒ ▓██░ ▒░           ║
-║ ░██▄▄▄▄██ ░▓█▒  ░  ▒██   ██░░██  █▀ ░ ░ ▓██▓ ░            ║
-║  ▓█   ▓██▒░▒█░     ░ ████▓▒░░▒███▒█▄    ▒██▒ ░            ║
-║    QUEST :: TERMINAL OS v2.1.47 [NERV-SAO-ANAHEIM]        ║
-╚═══════════════════════════════════════════════════════════╝</div>
-                        
-                        <div class="boot-header">
-                            <span class="boot-header-glitch" data-text="LINK START">LINK START</span>
-                        </div>
-                        <div class="boot-subheader">
-                            <span class="typing-text">── INITIALIZING VIRTUAL LEARNING INTERFACE ──</span>
-                        </div>
-                        
-                        <div class="boot-grid-display">
-                            <div class="grid-panel grid-left">
-                                <div class="panel-title">CORE SYS</div>
-                                <div class="panel-bars">
-                                    <div class="stat-bar" style="--stat-value: 98%">
-                                        <div class="stat-label">CPU</div>
-                                        <div class="stat-fill"></div>
-                                    </div>
-                                    <div class="stat-bar" style="--stat-value: 87%">
-                                        <div class="stat-label">MEM</div>
-                                        <div class="stat-fill"></div>
-                                    </div>
-                                    <div class="stat-bar" style="--stat-value: 100%">
-                                        <div class="stat-label">PWR</div>
-                                        <div class="stat-fill"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-panel grid-center">
-                                <div class="radar-display">
-                                    <div class="radar-ring radar-ring-1"></div>
-                                    <div class="radar-ring radar-ring-2"></div>
-                                    <div class="radar-ring radar-ring-3"></div>
-                                    <div class="radar-sweep"></div>
-                                    <div class="radar-blip"></div>
-                                </div>
-                            </div>
-                            <div class="grid-panel grid-right">
-                                <div class="panel-title">STATUS</div>
-                                <div class="status-indicators">
-                                    <div class="status-item">
-                                        <span class="status-dot status-ok"></span>
-                                        <span>ONLINE</span>
-                                    </div>
-                                    <div class="status-item">
-                                        <span class="status-dot status-ok"></span>
-                                        <span>SYNC</span>
-                                    </div>
-                                    <div class="status-item">
-                                        <span class="status-dot status-warning"></span>
-                                        <span>STANDBY</span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="boot-user-info">
+                            <div class="user-line">USER: <span class="user-name">PILOT</span></div>
+                            <div class="user-line">SESSION: <span class="session-id">S2</span></div>
                         </div>
 
-                        <div class="boot-system-check">
+                        <div class="boot-main-title">
+                            <div class="title-line">╔═══════════════════════════════════════════════╗</div>
+                            <div class="title-line">║  AFOQT QUEST :: NEURAL LEARNING SYSTEM      ║</div>
+                            <div class="title-line">║  TERMINAL OS v2.1.47 [NERV-SAO-ANAHEIM]     ║</div>
+                            <div class="title-line">╚═══════════════════════════════════════════════╝</div>
+                        </div>
+
+                        <!-- MAGI System Visualization -->
+                        <div class="boot-magi-display">
+                            <div class="magi-header">第一種接触警戒態勢 // BATTLE STATIONS CONDITIONS ONE</div>
+                            <div class="magi-grid">
+                                <div class="magi-hex magi-melchior">
+                                    <div class="magi-hex-content">
+                                        <div class="magi-label">MODE: Tactics</div>
+                                        <div class="magi-name">MAGI<br>Melchior</div>
+                                        <div class="magi-number">1</div>
+                                    </div>
+                                </div>
+                                <div class="magi-hex magi-casper">
+                                    <div class="magi-hex-content">
+                                        <div class="magi-label">MODE: Tactics</div>
+                                        <div class="magi-name">MAGI<br>Casper</div>
+                                        <div class="magi-number">3</div>
+                                    </div>
+                                </div>
+                                <div class="magi-hex magi-balthasar">
+                                    <div class="magi-hex-content">
+                                        <div class="magi-label">MODE: Tactics</div>
+                                        <div class="magi-name">MAGI<br>Balthasar</div>
+                                        <div class="magi-number">2</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="magi-warning-sides">
+                                <div class="magi-warning-left">
+                                    <div class="warning-stripe"></div>
+                                    <div class="warning-text">警報<br>敵襲<br>ALERT<br>DANGER</div>
+                                </div>
+                                <div class="magi-warning-right">
+                                    <div class="warning-stripe"></div>
+                                    <div class="warning-text">警報<br>敵襲<br>ALERT<br>DANGER</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="boot-protocol-header">
+                            <span class="protocol-arrow">></span> TEST PROTOCOL INITIATED_
+                        </div>
+
+                        <div class="boot-system-check" id="boot-system-scroll">
                             <div class="boot-section-header">
                                 <span class="section-icon">▼</span> NERV-MAGI SYSTEM // SYNCHRONIZATION TEST
                             </div>
@@ -2508,17 +2499,6 @@ function showBootSequence() {
                             </div>
                         </div>
                         
-                        <div class="boot-hexagon-grid">
-                            <div class="boot-hexagon"><span class="hex-id">01</span></div>
-                            <div class="boot-hexagon"><span class="hex-id">02</span></div>
-                            <div class="boot-hexagon"><span class="hex-id">03</span></div>
-                            <div class="boot-hexagon"><span class="hex-id">04</span></div>
-                            <div class="boot-hexagon"><span class="hex-id">05</span></div>
-                            <div class="boot-hexagon"><span class="hex-id">06</span></div>
-                            <div class="boot-hexagon"><span class="hex-id">07</span></div>
-                            <div class="boot-hexagon"><span class="hex-id">08</span></div>
-                        </div>
-                        
                         <div class="boot-progress">
                             <div class="boot-progress-label">[ SYNCHRONIZATION RATE ]</div>
                             <div class="boot-progress-bar">
@@ -2540,6 +2520,41 @@ function showBootSequence() {
         `;
         
         document.body.insertAdjacentHTML('afterbegin', bootHTML);
+        
+        // Auto-scroll functionality
+        const scrollContainer = document.getElementById('boot-container-scroll');
+        let scrollEnabled = false;
+        
+        setTimeout(() => {
+            scrollEnabled = true;
+            
+            // Smooth auto-scroll as content appears
+            const autoScroll = () => {
+                if (scrollContainer && scrollEnabled) {
+                    const targetScroll = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+                    const currentScroll = scrollContainer.scrollTop;
+                    const distance = targetScroll - currentScroll;
+                    
+                    if (distance > 5) {
+                        scrollContainer.scrollTop += distance * 0.1; // Smooth scroll
+                        requestAnimationFrame(autoScroll);
+                    }
+                }
+            };
+            
+            // Start auto-scrolling
+            const scrollInterval = setInterval(() => {
+                if (scrollContainer && scrollEnabled) {
+                    autoScroll();
+                }
+            }, 100);
+            
+            // Stop scrolling before end
+            setTimeout(() => {
+                scrollEnabled = false;
+                clearInterval(scrollInterval);
+            }, 9000);
+        }, 5500);
         
         // Animate timestamp
         const updateTimestamp = () => {
@@ -2570,6 +2585,7 @@ function showBootSequence() {
         // Remove boot sequence after 15 seconds
         setTimeout(() => {
             clearInterval(tsInterval);
+            scrollEnabled = false;
             const bootSeq = document.getElementById('boot-sequence');
             if (bootSeq) {
                 bootSeq.classList.add('boot-fade-out');
