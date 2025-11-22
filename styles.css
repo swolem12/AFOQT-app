@@ -3496,15 +3496,15 @@ select {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: clamp(300px, 60vw, 500px);
-    height: clamp(300px, 60vw, 500px);
+    width: clamp(250px, 50vw, 450px);
+    height: clamp(250px, 50vw, 450px);
 }
 
 .corner {
     position: absolute;
-    width: 80px;
-    height: 80px;
-    border: 4px solid var(--color-warning);
+    width: clamp(40px, 8vw, 80px);
+    height: clamp(40px, 8vw, 80px);
+    border: clamp(2px, 0.5vw, 4px) solid var(--color-warning);
     animation: cornerExpand 2s ease-out forwards, cornerPulse 1.5s ease-in-out infinite;
 }
 
@@ -3538,12 +3538,12 @@ select {
 
 @keyframes cornerExpand {
     from {
-        width: 20px;
-        height: 20px;
+        width: clamp(15px, 3vw, 20px);
+        height: clamp(15px, 3vw, 20px);
     }
     to {
-        width: 80px;
-        height: 80px;
+        width: clamp(40px, 8vw, 80px);
+        height: clamp(40px, 8vw, 80px);
     }
 }
 
@@ -3610,9 +3610,9 @@ select {
 }
 
 .boot-emergency {
-    width: clamp(300px, 80vw, 700px);
-    padding: clamp(20px, 5vw, 40px);
-    border: 4px solid var(--color-error);
+    width: clamp(280px, 85vw, 650px);
+    padding: clamp(15px, 4vw, 35px);
+    border: clamp(2px, 0.5vw, 4px) solid var(--color-error);
     background: rgba(40, 0, 0, 0.9);
     box-shadow: 0 0 60px var(--color-error), inset 0 0 40px rgba(255, 0, 0, 0.3);
     clip-path: polygon(
@@ -3634,7 +3634,7 @@ select {
     top: 0;
     left: 0;
     right: 0;
-    height: 20px;
+    height: clamp(15px, 3vw, 25px);
     background: repeating-linear-gradient(
         45deg,
         var(--color-warning) 0px,
@@ -3725,11 +3725,12 @@ select {
 }
 
 .boot-container {
-    width: clamp(300px, 90vw, 900px);
-    max-height: 90vh;
+    width: clamp(280px, 92vw, 850px);
+    max-height: 85vh;
     overflow-y: auto;
-    padding: clamp(20px, 4vw, 40px);
-    border: 3px solid var(--color-primary);
+    overflow-x: hidden;
+    padding: clamp(15px, 3.5vw, 35px);
+    border: clamp(2px, 0.4vw, 3px) solid var(--color-primary);
     clip-path: polygon(
         0 15px,
         15px 0,
@@ -3766,38 +3767,38 @@ select {
 
 .hud-corner {
     position: absolute;
-    width: clamp(60px, 10vw, 100px);
-    height: clamp(60px, 10vw, 100px);
-    border: 3px solid var(--color-primary);
+    width: clamp(50px, 8vw, 90px);
+    height: clamp(50px, 8vw, 90px);
+    border: clamp(2px, 0.4vw, 3px) solid var(--color-primary);
 }
 
 .hud-tl {
-    top: 20px;
-    left: 20px;
+    top: clamp(10px, 2vw, 20px);
+    left: clamp(10px, 2vw, 20px);
     border-right: none;
     border-bottom: none;
     animation: cornerPulse 2s ease-in-out infinite;
 }
 
 .hud-tr {
-    top: 20px;
-    right: 20px;
+    top: clamp(10px, 2vw, 20px);
+    right: clamp(10px, 2vw, 20px);
     border-left: none;
     border-bottom: none;
     animation: cornerPulse 2s ease-in-out 0.5s infinite;
 }
 
 .hud-bl {
-    bottom: 20px;
-    left: 20px;
+    bottom: clamp(10px, 2vw, 20px);
+    left: clamp(10px, 2vw, 20px);
     border-right: none;
     border-top: none;
     animation: cornerPulse 2s ease-in-out 1s infinite;
 }
 
 .hud-br {
-    bottom: 20px;
-    right: 20px;
+    bottom: clamp(10px, 2vw, 20px);
+    right: clamp(10px, 2vw, 20px);
     border-left: none;
     border-top: none;
     animation: cornerPulse 2s ease-in-out 1.5s infinite;
@@ -3821,12 +3822,12 @@ select {
 
 .boot-ascii-art {
     font-family: 'Courier New', monospace;
-    font-size: clamp(0.4rem, 1vw, 0.6rem);
-    line-height: 1.2;
+    font-size: clamp(0.45rem, 1.1vw, 0.65rem);
+    line-height: 1.3;
     text-align: center;
     color: var(--color-primary);
-    text-shadow: 0 0 10px var(--color-primary-glow);
-    margin-bottom: 15px;
+    text-shadow: 0 0 clamp(8px, 1.5vw, 12px) var(--color-primary-glow);
+    margin-bottom: clamp(12px, 2.5vw, 18px);
     white-space: pre;
     overflow-x: auto;
     opacity: 0;
@@ -3906,8 +3907,8 @@ select {
 .boot-grid-display {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: clamp(10px, 2vw, 15px);
-    margin: 20px 0;
+    gap: clamp(8px, 1.5vw, 12px);
+    margin: clamp(15px, 3vw, 25px) 0;
     opacity: 0;
     animation: bootLineAppear 0.5s ease-out 6.2s forwards;
 }
@@ -3915,6 +3916,7 @@ select {
 @media (max-width: 768px) {
     .boot-grid-display {
         grid-template-columns: 1fr;
+        gap: clamp(10px, 2vw, 15px);
     }
 }
 
@@ -3953,18 +3955,18 @@ select {
 .stat-bar {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: clamp(6px, 1.2vw, 10px);
 }
 
 .stat-label {
-    font-size: clamp(0.6rem, 1.2vw, 0.8rem);
-    min-width: 40px;
+    font-size: clamp(0.65rem, 1.4vw, 0.85rem);
+    min-width: clamp(35px, 8vw, 45px);
     color: var(--color-text-dim);
 }
 
 .stat-fill {
     flex: 1;
-    height: 8px;
+    height: clamp(6px, 1.2vw, 10px);
     background: var(--color-primary-dim);
     position: relative;
     overflow: hidden;
@@ -3992,6 +3994,7 @@ select {
     position: relative;
     width: 100%;
     aspect-ratio: 1;
+    max-height: 150px;
     background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
     border-radius: 50%;
     display: flex;
@@ -4001,7 +4004,7 @@ select {
 
 .radar-ring {
     position: absolute;
-    border: 1px solid var(--color-primary-dim);
+    border: clamp(1px, 0.2vw, 2px) solid var(--color-primary-dim);
     border-radius: 50%;
     opacity: 0.5;
 }
@@ -4024,7 +4027,7 @@ select {
 .radar-sweep {
     position: absolute;
     width: 50%;
-    height: 2px;
+    height: clamp(1px, 0.3vw, 2px);
     background: linear-gradient(90deg, transparent, var(--color-primary));
     transform-origin: right center;
     animation: radarSweep 3s linear infinite;
@@ -4036,11 +4039,11 @@ select {
 }
 
 .radar-blip {
-    width: 8px;
-    height: 8px;
+    width: clamp(6px, 1.2vw, 10px);
+    height: clamp(6px, 1.2vw, 10px);
     background: var(--color-secondary);
     border-radius: 50%;
-    box-shadow: 0 0 10px var(--color-secondary);
+    box-shadow: 0 0 clamp(8px, 1.5vw, 12px) var(--color-secondary);
     animation: blipPulse 2s ease-in-out infinite;
     position: absolute;
     top: 30%;
@@ -4096,9 +4099,9 @@ select {
 .boot-section-header {
     color: var(--color-secondary);
     font-weight: bold;
-    letter-spacing: 1px;
-    margin: 15px 0 8px 0;
-    padding: 8px;
+    letter-spacing: clamp(0.5px, 0.2vw, 1.5px);
+    margin: clamp(12px, 2.5vw, 18px) 0 clamp(6px, 1.2vw, 10px) 0;
+    padding: clamp(6px, 1.5vw, 10px);
     background: rgba(0, 255, 255, 0.05);
     border-left: 3px solid var(--color-secondary);
     text-shadow: 0 0 10px var(--color-secondary);
@@ -4242,10 +4245,10 @@ select {
 
 .boot-hexagon-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-    gap: clamp(8px, 2vw, 12px);
-    max-width: 400px;
-    margin: 30px auto;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(35px, 7vw, 50px), 1fr));
+    gap: clamp(6px, 1.5vw, 10px);
+    max-width: clamp(300px, 60vw, 450px);
+    margin: clamp(20px, 4vw, 35px) auto;
     opacity: 0;
     animation: bootLineAppear 0.5s ease-out 11.5s forwards;
 }
@@ -4396,7 +4399,7 @@ select {
     top: 0;
     left: 0;
     right: 0;
-    height: clamp(10px, 2vw, 15px);
+    height: clamp(12px, 2.5vw, 18px);
     background: repeating-linear-gradient(
         45deg,
         var(--color-warning) 0px,
@@ -4416,16 +4419,16 @@ select {
 
 .boot-footer {
     text-align: center;
-    margin-top: 25px;
-    padding: 15px;
+    margin-top: clamp(18px, 3.5vw, 30px);
+    padding: clamp(12px, 2.5vw, 18px);
     opacity: 0;
     animation: bootLineAppear 0.5s ease-out 13.5s forwards;
 }
 
 .boot-footer-line {
     font-family: 'Courier New', monospace;
-    font-size: clamp(0.7rem, 1.8vw, 0.9rem);
-    letter-spacing: 1px;
+    font-size: clamp(0.65rem, 1.6vw, 0.85rem);
+    letter-spacing: clamp(0.5px, 0.15vw, 1px);
     color: var(--color-primary);
     text-shadow: 0 0 10px var(--color-primary-glow);
     line-height: 1.6;
