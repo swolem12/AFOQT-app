@@ -2600,6 +2600,42 @@ function showBootSequence() {
     });
 }
 
+// Access Granted animation after player selection
+function showAccessGranted() {
+    return new Promise((resolve) => {
+        const container = document.createElement('div');
+        container.id = 'access-granted';
+        container.innerHTML = `
+            <div class="access-granted-content">
+                <div class="access-corner access-corner-tl"></div>
+                <div class="access-corner access-corner-tr"></div>
+                <div class="access-corner access-corner-bl"></div>
+                <div class="access-corner access-corner-br"></div>
+                <div class="access-text">ACCESS GRANTED</div>
+                <div class="access-subtext">PILOT AUTHENTICATION COMPLETE</div>
+            </div>
+        `;
+        document.body.appendChild(container);
+        
+        // Play sound
+        playSfx('select');
+        
+        // Animation timeline
+        setTimeout(() => {
+            container.classList.add('access-fade-in');
+        }, 50);
+        
+        setTimeout(() => {
+            container.classList.add('access-fade-out');
+        }, 1800);
+        
+        setTimeout(() => {
+            container.remove();
+            resolve();
+        }, 2300);
+    });
+}
+
 // ============================================================================
 // Player Management
 // ============================================================================
@@ -3034,24 +3070,43 @@ function renderHome() {
 function renderPlayerModal() {
     return `
         <div id="player-modal" class="modal" style="display: none;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2>Player Management</h2>
-                    <button class="modal-close" id="close-player-modal">✕</button>
+            <div class="modal-content player-auth-modal">
+                <div class="auth-header">
+                    <div class="auth-header-bracket left"></div>
+                    <h2 class="auth-title">PLEASE IDENTIFY YOURSELF</h2>
+                    <div class="auth-header-bracket right"></div>
                 </div>
                 <div class="modal-body">
-                    <div class="player-list">
-                        ${state.players.length === 0 ? '<p style="text-align: center; opacity: 0.7;">No players yet. Create one below!</p>' : ''}
-                        ${state.players.map(p => `
-                            <div class="player-item ${state.currentPlayer?.id === p.id ? 'selected' : ''}" data-player-id="${p.id}">
-                                <div class="player-name">${p.name}</div>
-                                <div class="player-level">Lv. ${computePlayerTotals(p).level}</div>
+                    ${state.players.length > 0 ? `
+                        <div class="auth-section">
+                            <div class="auth-section-label">EXISTING PILOTS</div>
+                            <div class="player-auth-list">
+                                ${state.players.map(p => `
+                                    <div class="player-auth-item ${state.currentPlayer?.id === p.id ? 'selected' : ''}" data-player-id="${p.id}">
+                                        <div class="player-auth-info">
+                                            <span class="player-auth-name">${p.name}</span>
+                                            <span class="player-auth-level">Lv. ${computePlayerTotals(p).level}</span>
+                                        </div>
+                                        <button class="btn-auth-play" data-player-id="${p.id}">
+                                            <span class="auth-play-icon">▶</span> DEPLOY
+                                        </button>
+                                    </div>
+                                `).join('')}
                             </div>
-                        `).join('')}
-                    </div>
-                    <div class="new-player-form">
-                        <input type="text" id="new-player-name" placeholder="New player name" />
-                        <button class="btn btn-small" id="add-player-btn">Create Player</button>
+                        </div>
+                    ` : ''}
+                    <div class="auth-section">
+                        <div class="auth-section-label">NEW PILOT REGISTRATION</div>
+                        <div class="auth-input-container">
+                            <input type="text" id="new-player-name" class="auth-input" placeholder="ENTER CALLSIGN" maxlength="20" />
+                            <div class="auth-input-corner tl"></div>
+                            <div class="auth-input-corner tr"></div>
+                            <div class="auth-input-corner bl"></div>
+                            <div class="auth-input-corner br"></div>
+                        </div>
+                        <button class="btn-auth-create" id="add-player-btn">
+                            <span class="auth-create-icon">+</span> CREATE PILOT
+                        </button>
                     </div>
                 </div>
             </div>
@@ -4162,24 +4217,45 @@ function attachEventListeners() {
         });
     }
     
-    // Player selection in modal
+    // Player selection in modal - NEW: DEPLOY buttons trigger access granted animation
+    const deployButtons = document.querySelectorAll('.btn-auth-play');
+    deployButtons.forEach(btn => {
+        btn.addEventListener('click', async () => {
+            const playerId = btn.dataset.playerId;
+            selectPlayer(playerId);
+            const modal = document.getElementById('player-modal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+            playSfx('select');
+            
+            // Show ACCESS GRANTED animation before going to main menu
+            await showAccessGranted();
+            render();
+        });
+    });
+    
+    // Legacy player-item selection (for backward compatibility)
     const playerItems = document.querySelectorAll('.player-item');
     playerItems.forEach(item => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', async () => {
             selectPlayer(item.dataset.playerId);
             const modal = document.getElementById('player-modal');
             if (modal) {
                 modal.style.display = 'none';
             }
             playSfx('select');
+            
+            // Show ACCESS GRANTED animation before going to main menu
+            await showAccessGranted();
             render();
         });
     });
     
-    // Home screen
+    // Home screen - Create new player
     const addPlayerBtn = document.getElementById('add-player-btn');
     if (addPlayerBtn) {
-        addPlayerBtn.addEventListener('click', () => {
+        addPlayerBtn.addEventListener('click', async () => {
             const input = document.getElementById('new-player-name');
             const name = input.value.trim();
             if (name) {
@@ -4189,7 +4265,21 @@ function attachEventListeners() {
                 if (modal) {
                     modal.style.display = 'none';
                 }
+                
+                // Show ACCESS GRANTED animation before going to main menu
+                await showAccessGranted();
                 render();
+            }
+        });
+    }
+    
+    // Enter key support for auth input
+    const authInput = document.getElementById('new-player-name');
+    if (authInput) {
+        authInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                const createBtn = document.getElementById('add-player-btn');
+                if (createBtn) createBtn.click();
             }
         });
     }

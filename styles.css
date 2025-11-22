@@ -1348,6 +1348,260 @@ body::after {
     border-top: 2px solid rgba(0, 255, 255, 0.3);
 }
 
+/* ============================================================================
+   CYBERPUNK AUTHENTICATION UI
+   ============================================================================ */
+.player-auth-modal {
+    max-width: 600px;
+    background: linear-gradient(135deg, #000a0f 0%, #001a1f 100%);
+    border: 2px solid var(--color-primary);
+    box-shadow: 
+        0 0 40px rgba(0, 255, 255, 0.4),
+        inset 0 0 60px rgba(0, 255, 255, 0.1);
+}
+
+.auth-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(20px, 4vw, 30px) clamp(20px, 5vw, 40px);
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.1) 0%, rgba(255, 102, 0, 0.1) 100%);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.auth-title {
+    margin: 0;
+    font-family: 'Orbitron', 'Courier New', monospace;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 900;
+    color: var(--color-primary);
+    letter-spacing: clamp(2px, 0.3vw, 4px);
+    text-shadow: 
+        0 0 10px var(--color-primary),
+        0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.auth-header-bracket {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(30px, 5vw, 50px);
+    height: clamp(40px, 6vw, 60px);
+    border: 2px solid #ff6600;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+}
+
+.auth-header-bracket.left {
+    left: clamp(10px, 2vw, 20px);
+    border-right: none;
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 30% 30%, 30% 70%, 100% 70%, 100% 100%, 0 100%);
+}
+
+.auth-header-bracket.right {
+    right: clamp(10px, 2vw, 20px);
+    border-left: none;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 70%, 70% 70%, 70% 30%, 0 30%);
+}
+
+.auth-section {
+    margin: clamp(20px, 4vw, 30px) 0;
+}
+
+.auth-section-label {
+    font-family: 'Orbitron', 'Courier New', monospace;
+    font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+    font-weight: 700;
+    color: rgba(0, 255, 255, 0.7);
+    letter-spacing: clamp(1px, 0.2vw, 2px);
+    margin-bottom: clamp(12px, 2.5vw, 18px);
+    padding-left: 10px;
+    border-left: 3px solid rgba(0, 255, 255, 0.5);
+}
+
+/* Auth Input Field */
+.auth-input-container {
+    position: relative;
+    margin-bottom: clamp(15px, 3vw, 20px);
+}
+
+.auth-input {
+    width: 100%;
+    padding: clamp(12px, 2.5vw, 16px) clamp(15px, 3vw, 20px);
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #ff6600;
+    color: var(--color-primary);
+    font-family: 'Orbitron', 'Courier New', monospace;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    letter-spacing: clamp(1px, 0.2vw, 2px);
+    text-transform: uppercase;
+    box-shadow: 
+        0 0 15px rgba(255, 102, 0, 0.3),
+        inset 0 0 20px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+    clip-path: polygon(
+        0 0, calc(100% - 15px) 0, 100% 15px,
+        100% 100%, 15px 100%, 0 calc(100% - 15px)
+    );
+}
+
+.auth-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 
+        0 0 25px rgba(0, 255, 255, 0.6),
+        inset 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.auth-input::placeholder {
+    color: rgba(255, 102, 0, 0.5);
+    letter-spacing: clamp(1px, 0.2vw, 2px);
+}
+
+.auth-input-corner {
+    position: absolute;
+    width: clamp(15px, 2.5vw, 20px);
+    height: clamp(15px, 2.5vw, 20px);
+    border: 2px solid rgba(255, 102, 0, 0.6);
+    pointer-events: none;
+}
+
+.auth-input-corner.tl {
+    top: -5px;
+    left: -5px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.auth-input-corner.tr {
+    top: -5px;
+    right: -5px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.auth-input-corner.bl {
+    bottom: -5px;
+    left: -5px;
+    border-right: none;
+    border-top: none;
+}
+
+.auth-input-corner.br {
+    bottom: -5px;
+    right: -5px;
+    border-left: none;
+    border-top: none;
+}
+
+/* Player Auth List */
+.player-auth-list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(10px, 2vw, 15px);
+}
+
+.player-auth-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(10px, 2vw, 15px);
+    background: rgba(0, 255, 255, 0.05);
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    clip-path: polygon(
+        0 0, calc(100% - 10px) 0, 100% 10px,
+        100% 100%, 10px 100%, 0 calc(100% - 10px)
+    );
+}
+
+.player-auth-item:hover {
+    background: rgba(0, 255, 255, 0.1);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.player-auth-item.selected {
+    background: rgba(255, 255, 0, 0.1);
+    border-color: #ffff00;
+    box-shadow: 0 0 25px rgba(255, 255, 0, 0.4);
+}
+
+.player-auth-info {
+    display: flex;
+    align-items: center;
+    gap: clamp(15px, 3vw, 20px);
+}
+
+.player-auth-name {
+    font-family: 'Orbitron', 'Courier New', monospace;
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    font-weight: 700;
+    color: var(--color-primary);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    letter-spacing: clamp(1px, 0.15vw, 2px);
+}
+
+.player-auth-level {
+    font-size: clamp(0.85rem, 1.8vw, 1rem);
+    color: #ffff00;
+    text-shadow: 0 0 10px #ffff00;
+    font-weight: 600;
+}
+
+/* Auth Buttons */
+.btn-auth-play,
+.btn-auth-create {
+    font-family: 'Orbitron', 'Courier New', monospace;
+    font-size: clamp(0.8rem, 1.8vw, 0.95rem);
+    font-weight: 700;
+    letter-spacing: clamp(1px, 0.2vw, 2px);
+    padding: clamp(8px, 1.8vw, 12px) clamp(15px, 3vw, 20px);
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, rgba(0, 255, 255, 0.2) 100%);
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    clip-path: polygon(
+        0 0, calc(100% - 8px) 0, 100% 8px,
+        100% 100%, 8px 100%, 0 calc(100% - 8px)
+    );
+}
+
+.btn-auth-play:hover,
+.btn-auth-create:hover {
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.2) 0%, rgba(0, 255, 255, 0.3) 100%);
+    box-shadow: 
+        0 0 20px rgba(0, 255, 255, 0.6),
+        inset 0 0 15px rgba(0, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-auth-create {
+    width: 100%;
+    background: linear-gradient(135deg, rgba(255, 102, 0, 0.1) 0%, rgba(255, 102, 0, 0.2) 100%);
+    border-color: #ff6600;
+    color: #ff6600;
+    text-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
+}
+
+.btn-auth-create:hover {
+    background: linear-gradient(135deg, rgba(255, 102, 0, 0.2) 0%, rgba(255, 102, 0, 0.3) 100%);
+    box-shadow: 
+        0 0 20px rgba(255, 102, 0, 0.6),
+        inset 0 0 15px rgba(255, 102, 0, 0.2);
+}
+
+.auth-play-icon,
+.auth-create-icon {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
 .new-player-form input {
     flex: 1;
     background: rgba(0, 0, 0, 0.9);
@@ -3463,6 +3717,119 @@ select {
     to {
         opacity: 0;
         pointer-events: none;
+    }
+}
+
+/* ============================================================================
+   ACCESS GRANTED ANIMATION
+   ============================================================================ */
+#access-granted {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+#access-granted.access-fade-in {
+    opacity: 1;
+}
+
+#access-granted.access-fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.access-granted-content {
+    position: relative;
+    text-align: center;
+    padding: clamp(40px, 8vw, 80px);
+}
+
+.access-text {
+    font-family: 'Orbitron', 'Courier New', monospace;
+    font-size: clamp(2rem, 8vw, 5rem);
+    font-weight: 900;
+    color: #ff6600;
+    letter-spacing: clamp(3px, 0.5vw, 10px);
+    text-shadow: 
+        0 0 20px #ff6600,
+        0 0 40px #ff6600,
+        0 0 60px #ff3300,
+        0 0 80px #ff3300;
+    margin-bottom: clamp(15px, 3vw, 30px);
+    animation: accessPulse 1.5s ease-in-out infinite;
+}
+
+.access-subtext {
+    font-family: 'Orbitron', 'Courier New', monospace;
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+    color: rgba(255, 102, 0, 0.7);
+    letter-spacing: clamp(2px, 0.3vw, 5px);
+    text-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+}
+
+.access-corner {
+    position: absolute;
+    width: clamp(30px, 5vw, 60px);
+    height: clamp(30px, 5vw, 60px);
+    border: 2px solid #ff6600;
+    box-shadow: 0 0 10px #ff6600, inset 0 0 10px rgba(255, 102, 0, 0.3);
+}
+
+.access-corner-tl {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+    clip-path: polygon(0 0, 100% 0, 100% 20%, 20% 20%, 20% 100%, 0 100%);
+}
+
+.access-corner-tr {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 100%, 80% 20%, 0 20%);
+}
+
+.access-corner-bl {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+    clip-path: polygon(0 0, 20% 0, 20% 80%, 100% 80%, 100% 100%, 0 100%);
+}
+
+.access-corner-br {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+    clip-path: polygon(0 80%, 80% 80%, 80% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@keyframes accessPulse {
+    0%, 100% {
+        text-shadow: 
+            0 0 20px #ff6600,
+            0 0 40px #ff6600,
+            0 0 60px #ff3300,
+            0 0 80px #ff3300;
+    }
+    50% {
+        text-shadow: 
+            0 0 30px #ff6600,
+            0 0 60px #ff6600,
+            0 0 90px #ff3300,
+            0 0 120px #ff3300;
     }
 }
 
