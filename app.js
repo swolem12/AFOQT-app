@@ -2296,132 +2296,244 @@ function showBootSequence() {
     return new Promise((resolve) => {
         const bootHTML = `
             <div id="boot-sequence">
-                <div class="boot-warning-stripe"></div>
-                <div class="boot-container">
-                    <div class="boot-ascii-art">
+                <!-- Phase 1: Frameshift Entry (0-3s) -->
+                <div class="boot-phase boot-phase-1">
+                    <div class="boot-frameshift">
+                        <div class="frameshift-corners">
+                            <div class="corner corner-tl"></div>
+                            <div class="corner corner-tr"></div>
+                            <div class="corner corner-bl"></div>
+                            <div class="corner corner-br"></div>
+                        </div>
+                        <div class="frameshift-text">FRAMESHIFT</div>
+                        <div class="frameshift-subtext">INITIATING NEURAL DIVE PROTOCOL</div>
+                        <div class="frameshift-dots">
+                            <span>●</span><span>●</span><span>●</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 2: Emergency Warning (3-5s) -->
+                <div class="boot-phase boot-phase-2">
+                    <div class="boot-emergency">
+                        <div class="emergency-stripe-top"></div>
+                        <div class="emergency-hexagons">
+                            <div class="emergency-hex"></div>
+                            <div class="emergency-hex"></div>
+                            <div class="emergency-hex"></div>
+                            <div class="emergency-hex"></div>
+                            <div class="emergency-hex"></div>
+                            <div class="emergency-hex"></div>
+                        </div>
+                        <div class="emergency-header">警報 ALERT 警報</div>
+                        <div class="emergency-condition">CONDITION: STANDBY</div>
+                        <div class="emergency-message">SECURITY LEVEL: EEE</div>
+                        <div class="emergency-status">SYSTEM INITIALIZATION IN PROGRESS</div>
+                    </div>
+                </div>
+
+                <!-- Phase 3: Main Terminal Interface (5-15s) -->
+                <div class="boot-phase boot-phase-3">
+                    <div class="boot-warning-stripe"></div>
+                    <div class="boot-hud-corners">
+                        <div class="hud-corner hud-tl"></div>
+                        <div class="hud-corner hud-tr"></div>
+                        <div class="hud-corner hud-bl"></div>
+                        <div class="hud-corner hud-br"></div>
+                    </div>
+                    
+                    <div class="boot-container">
+                        <div class="boot-timestamp">
+                            <span class="timestamp-label">SYS.TIME:</span>
+                            <span class="timestamp-value" id="boot-timestamp">00:00:00</span>
+                        </div>
+
+                        <div class="boot-ascii-art">
 ╔═══════════════════════════════════════════════════════════╗
 ║  ▄▄▄       ███████  ▒█████   █████   ▄▄▄█████▓           ║
 ║ ▒████▄    ▓██   ▒  ▒██▒  ██▒▒██▓  ██▒ ▓  ██▒ ▓▒           ║
 ║ ▒██  ▀█▄  ▒████ ░  ▒██░  ██▒▒██▒  ██░ ▒ ▓██░ ▒░           ║
 ║ ░██▄▄▄▄██ ░▓█▒  ░  ▒██   ██░░██  █▀ ░ ░ ▓██▓ ░            ║
 ║  ▓█   ▓██▒░▒█░     ░ ████▓▒░░▒███▒█▄    ▒██▒ ░            ║
-║        QUEST :: TERMINAL OS v2.1.47 [NERV-SAO-ANAHEIM]    ║
+║    QUEST :: TERMINAL OS v2.1.47 [NERV-SAO-ANAHEIM]        ║
 ╚═══════════════════════════════════════════════════════════╝</div>
-                    <div class="boot-header">LINK START</div>
-                    <div class="boot-subheader">── INITIALIZING VIRTUAL LEARNING INTERFACE ──</div>
-                    
-                    <div class="boot-system-check">
-                        <div class="boot-line">
-                            <span>NERV-MAGI SYSTEM // SYNCHRONIZATION TEST</span>
+                        
+                        <div class="boot-header">
+                            <span class="boot-header-glitch" data-text="LINK START">LINK START</span>
                         </div>
-                        <div class="boot-line boot-indent">
-                            <span>├─ CASPER (Logic)....................</span>
-                            <span class="boot-status">SYNC 99.8%</span>
+                        <div class="boot-subheader">
+                            <span class="typing-text">── INITIALIZING VIRTUAL LEARNING INTERFACE ──</span>
                         </div>
-                        <div class="boot-line boot-indent">
-                            <span>├─ BALTHASAR (Strategy)..............</span>
-                            <span class="boot-status">SYNC 99.9%</span>
+                        
+                        <div class="boot-grid-display">
+                            <div class="grid-panel grid-left">
+                                <div class="panel-title">CORE SYS</div>
+                                <div class="panel-bars">
+                                    <div class="stat-bar" style="--stat-value: 98%">
+                                        <div class="stat-label">CPU</div>
+                                        <div class="stat-fill"></div>
+                                    </div>
+                                    <div class="stat-bar" style="--stat-value: 87%">
+                                        <div class="stat-label">MEM</div>
+                                        <div class="stat-fill"></div>
+                                    </div>
+                                    <div class="stat-bar" style="--stat-value: 100%">
+                                        <div class="stat-label">PWR</div>
+                                        <div class="stat-fill"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-panel grid-center">
+                                <div class="radar-display">
+                                    <div class="radar-ring radar-ring-1"></div>
+                                    <div class="radar-ring radar-ring-2"></div>
+                                    <div class="radar-ring radar-ring-3"></div>
+                                    <div class="radar-sweep"></div>
+                                    <div class="radar-blip"></div>
+                                </div>
+                            </div>
+                            <div class="grid-panel grid-right">
+                                <div class="panel-title">STATUS</div>
+                                <div class="status-indicators">
+                                    <div class="status-item">
+                                        <span class="status-dot status-ok"></span>
+                                        <span>ONLINE</span>
+                                    </div>
+                                    <div class="status-item">
+                                        <span class="status-dot status-ok"></span>
+                                        <span>SYNC</span>
+                                    </div>
+                                    <div class="status-item">
+                                        <span class="status-dot status-warning"></span>
+                                        <span>STANDBY</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="boot-line boot-indent">
-                            <span>└─ MELCHIOR (Creativity)..............</span>
-                            <span class="boot-status">SYNC 100%</span>
+
+                        <div class="boot-system-check">
+                            <div class="boot-section-header">
+                                <span class="section-icon">▼</span> NERV-MAGI SYSTEM // SYNCHRONIZATION TEST
+                            </div>
+                            <div class="boot-line boot-indent">
+                                <span>├─ CASPER (Logic)....................</span>
+                                <span class="boot-status">SYNC 99.8%</span>
+                            </div>
+                            <div class="boot-line boot-indent">
+                                <span>├─ BALTHASAR (Strategy)..............</span>
+                                <span class="boot-status">SYNC 99.9%</span>
+                            </div>
+                            <div class="boot-line boot-indent">
+                                <span>└─ MELCHIOR (Creativity)..............</span>
+                                <span class="boot-status">SYNC 100%</span>
+                            </div>
+                            <div class="boot-line boot-spacer"></div>
+                            
+                            <div class="boot-section-header">
+                                <span class="section-icon">▼</span> GUNDAM OS // MOBILE SUIT SYSTEMS
+                            </div>
+                            <div class="boot-line boot-indent">
+                                <span>├─ Psycommu Neural Link..............</span>
+                                <span class="boot-status">ACTIVE</span>
+                            </div>
+                            <div class="boot-line boot-indent">
+                                <span>├─ Combat Calculation Engine.........</span>
+                                <span class="boot-status">STANDBY</span>
+                            </div>
+                            <div class="boot-line boot-indent">
+                                <span>└─ Pilot Interface Module............</span>
+                                <span class="boot-status">READY</span>
+                            </div>
+                            <div class="boot-line boot-spacer"></div>
+                            
+                            <div class="boot-section-header">
+                                <span class="section-icon">▼</span> SAO CARDINAL SYSTEM // CORE MODULES
+                            </div>
+                            <div class="boot-line boot-indent">
+                                <span>├─ Math Combat Engine (27 Skills)....</span>
+                                <span class="boot-status">LOADED</span>
+                            </div>
+                            <div class="boot-line boot-indent">
+                                <span>├─ Verbal Sword Arts.................</span>
+                                <span class="boot-status">LOADED</span>
+                            </div>
+                            <div class="boot-line boot-indent">
+                                <span>├─ Reading Comprehension Quest........</span>
+                                <span class="boot-status">LOADED</span>
+                            </div>
+                            <div class="boot-line boot-indent">
+                                <span>├─ Science Knowledge Database........</span>
+                                <span class="boot-status">LOADED</span>
+                            </div>
+                            <div class="boot-line boot-indent">
+                                <span>└─ Audio Synthesis System............</span>
+                                <span class="boot-status">LOADED</span>
+                            </div>
+                            <div class="boot-line boot-spacer"></div>
+                            
+                            <div class="boot-section-header">
+                                <span class="section-icon">▼</span> PLAYER INTERFACE // STATUS CHECK
+                            </div>
+                            <div class="boot-line boot-indent">
+                                <span>├─ Character Profile Registry........</span>
+                                <span class="boot-status">ONLINE</span>
+                            </div>
+                            <div class="boot-line boot-indent">
+                                <span>├─ Experience Point System...........</span>
+                                <span class="boot-status">ONLINE</span>
+                            </div>
+                            <div class="boot-line boot-indent">
+                                <span>├─ Quest Progress Tracker............</span>
+                                <span class="boot-status">ONLINE</span>
+                            </div>
+                            <div class="boot-line boot-indent">
+                                <span>└─ Local Data Persistence............</span>
+                                <span class="boot-status">ONLINE</span>
+                            </div>
+                            <div class="boot-line boot-spacer"></div>
+                            
+                            <div class="boot-critical-status">
+                                <div class="critical-line">
+                                    <span class="critical-icon">◆</span>
+                                    <span class="boot-status-highlight">A.T. FIELD STABLE // PATTERN BLUE</span>
+                                </div>
+                                <div class="critical-line">
+                                    <span class="critical-icon">◆</span>
+                                    <span class="boot-status-highlight">ALL SYSTEMS NOMINAL // READY FOR SORTIE</span>
+                                </div>
+                                <div class="critical-line">
+                                    <span class="critical-icon">◆</span>
+                                    <span class="boot-status-highlight">LINK ESTABLISHED // DIVE AUTHORIZED</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="boot-line boot-spacer"></div>
-                        <div class="boot-line">
-                            <span>GUNDAM OS // MOBILE SUIT SYSTEMS</span>
+                        
+                        <div class="boot-hexagon-grid">
+                            <div class="boot-hexagon"><span class="hex-id">01</span></div>
+                            <div class="boot-hexagon"><span class="hex-id">02</span></div>
+                            <div class="boot-hexagon"><span class="hex-id">03</span></div>
+                            <div class="boot-hexagon"><span class="hex-id">04</span></div>
+                            <div class="boot-hexagon"><span class="hex-id">05</span></div>
+                            <div class="boot-hexagon"><span class="hex-id">06</span></div>
+                            <div class="boot-hexagon"><span class="hex-id">07</span></div>
+                            <div class="boot-hexagon"><span class="hex-id">08</span></div>
                         </div>
-                        <div class="boot-line boot-indent">
-                            <span>├─ Psycommu Neural Link..............</span>
-                            <span class="boot-status">ACTIVE</span>
+                        
+                        <div class="boot-progress">
+                            <div class="boot-progress-label">[ SYNCHRONIZATION RATE ]</div>
+                            <div class="boot-progress-bar">
+                                <div class="boot-progress-fill"></div>
+                                <div class="progress-scanline"></div>
+                            </div>
+                            <div class="boot-progress-percent">0%</div>
                         </div>
-                        <div class="boot-line boot-indent">
-                            <span>├─ Combat Calculation Engine.........</span>
-                            <span class="boot-status">STANDBY</span>
+                        
+                        <div class="boot-footer">
+                            <div class="boot-footer-line">┌─────────────────────────────────────────────────┐</div>
+                            <div class="boot-footer-line footer-welcome">│ WELCOME, PLAYER. THE QUEST BEGINS NOW.        │</div>
+                            <div class="boot-footer-line footer-prompt">│ >> Press START to enter the virtual realm <<   │</div>
+                            <div class="boot-footer-line">└─────────────────────────────────────────────────┘</div>
                         </div>
-                        <div class="boot-line boot-indent">
-                            <span>└─ Pilot Interface Module............</span>
-                            <span class="boot-status">READY</span>
-                        </div>
-                        <div class="boot-line boot-spacer"></div>
-                        <div class="boot-line">
-                            <span>SAO CARDINAL SYSTEM // CORE MODULES</span>
-                        </div>
-                        <div class="boot-line boot-indent">
-                            <span>├─ Math Combat Engine (27 Skills)....</span>
-                            <span class="boot-status">LOADED</span>
-                        </div>
-                        <div class="boot-line boot-indent">
-                            <span>├─ Verbal Sword Arts.................</span>
-                            <span class="boot-status">LOADED</span>
-                        </div>
-                        <div class="boot-line boot-indent">
-                            <span>├─ Reading Comprehension Quest........</span>
-                            <span class="boot-status">LOADED</span>
-                        </div>
-                        <div class="boot-line boot-indent">
-                            <span>├─ Science Knowledge Database........</span>
-                            <span class="boot-status">LOADED</span>
-                        </div>
-                        <div class="boot-line boot-indent">
-                            <span>└─ Audio Synthesis System............</span>
-                            <span class="boot-status">LOADED</span>
-                        </div>
-                        <div class="boot-line boot-spacer"></div>
-                        <div class="boot-line">
-                            <span>PLAYER INTERFACE // STATUS CHECK</span>
-                        </div>
-                        <div class="boot-line boot-indent">
-                            <span>├─ Character Profile Registry........</span>
-                            <span class="boot-status">ONLINE</span>
-                        </div>
-                        <div class="boot-line boot-indent">
-                            <span>├─ Experience Point System...........,</span>
-                            <span class="boot-status">ONLINE</span>
-                        </div>
-                        <div class="boot-line boot-indent">
-                            <span>├─ Quest Progress Tracker............</span>
-                            <span class="boot-status">ONLINE</span>
-                        </div>
-                        <div class="boot-line boot-indent">
-                            <span>└─ Local Data Persistence............</span>
-                            <span class="boot-status">ONLINE</span>
-                        </div>
-                        <div class="boot-line boot-spacer"></div>
-                        <div class="boot-line">
-                            <span class="boot-status-highlight">█ A.T. FIELD STABLE // PATTERN BLUE</span>
-                        </div>
-                        <div class="boot-line">
-                            <span class="boot-status-highlight">█ ALL SYSTEMS NOMINAL // READY FOR SORTIE</span>
-                        </div>
-                        <div class="boot-line">
-                            <span class="boot-status-highlight">█ LINK ESTABLISHED // DIVE AUTHORIZED</span>
-                        </div>
-                    </div>
-                    
-                    <div class="boot-hexagon-grid">
-                        <div class="boot-hexagon"></div>
-                        <div class="boot-hexagon"></div>
-                        <div class="boot-hexagon"></div>
-                        <div class="boot-hexagon"></div>
-                        <div class="boot-hexagon"></div>
-                        <div class="boot-hexagon"></div>
-                        <div class="boot-hexagon"></div>
-                        <div class="boot-hexagon"></div>
-                    </div>
-                    
-                    <div class="boot-progress">
-                        <div class="boot-progress-label">[ SYNCHRONIZATION RATE ]</div>
-                        <div class="boot-progress-bar">
-                            <div class="boot-progress-fill"></div>
-                        </div>
-                        <div class="boot-progress-percent">0%</div>
-                    </div>
-                    
-                    <div class="boot-footer">
-                        <div class="boot-footer-line">┌─────────────────────────────────────────────────┐</div>
-                        <div class="boot-footer-line">│ WELCOME, PLAYER. THE QUEST BEGINS NOW.        │</div>
-                        <div class="boot-footer-line">│ >> Press START to enter the virtual realm <<   │</div>
-                        <div class="boot-footer-line">└─────────────────────────────────────────────────┘</div>
                     </div>
                 </div>
             </div>
@@ -2429,28 +2541,46 @@ function showBootSequence() {
         
         document.body.insertAdjacentHTML('afterbegin', bootHTML);
         
+        // Animate timestamp
+        const updateTimestamp = () => {
+            const now = new Date();
+            const timeStr = now.toTimeString().split(' ')[0];
+            const tsElement = document.getElementById('boot-timestamp');
+            if (tsElement) {
+                tsElement.textContent = timeStr;
+            }
+        };
+        updateTimestamp();
+        const tsInterval = setInterval(updateTimestamp, 1000);
+        
         // Animate progress percentage
         const progressPercent = document.querySelector('.boot-progress-percent');
         if (progressPercent) {
             let percent = 0;
             const percentInterval = setInterval(() => {
-                percent += 2;
+                percent += 1;
                 if (percent <= 100) {
                     progressPercent.textContent = percent + '%';
                 } else {
                     clearInterval(percentInterval);
                 }
-            }, 60);
+            }, 100);
         }
         
-        // Remove boot sequence after animation
+        // Remove boot sequence after 15 seconds
         setTimeout(() => {
+            clearInterval(tsInterval);
             const bootSeq = document.getElementById('boot-sequence');
             if (bootSeq) {
-                bootSeq.remove();
+                bootSeq.classList.add('boot-fade-out');
+                setTimeout(() => {
+                    bootSeq.remove();
+                    resolve();
+                }, 500);
+            } else {
+                resolve();
             }
-            resolve();
-        }, 7000);
+        }, 15000);
     });
 }
 
