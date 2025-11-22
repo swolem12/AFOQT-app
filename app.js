@@ -2527,6 +2527,11 @@ function showBootSequence() {
             welcomeName.textContent = `HELLO, ${state.currentPlayer.name.toUpperCase()}`;
         }
         
+        // Sound effects for boot sequence
+        playSfx('boot'); // Phase 1: Frameshift
+        setTimeout(() => playSfx('wrong'), 3000); // Phase 2: Alert sound
+        setTimeout(() => playSfx('nav'), 5000); // Phase 3: Terminal start
+        
         // Auto-scroll functionality - precise timing to match 9 second duration
         const scrollContainer = document.getElementById('boot-container-scroll');
         let scrollStartTime = null;
@@ -2625,12 +2630,11 @@ function showAccessGranted() {
         `;
         document.body.appendChild(container);
         
-        // Play sound
-        playSfx('select');
-        
         // Animation timeline
         setTimeout(() => {
             container.classList.add('access-fade-in');
+            // Play sound on fade-in
+            playSfx('correct');
         }, 50);
         
         setTimeout(() => {
@@ -3489,6 +3493,7 @@ function renderStatus() {
     
     const { totalStatPoints, level, pointsIntoLevel, pointsToNextLevel } = computePlayerTotals(state.currentPlayer);
     const stats = state.currentPlayer.stats || {};
+    const sessions = state.currentPlayer.sessions || [];
     
     // Aggregate stats by subject
     const subjectStats = subjects.map(subject => {
