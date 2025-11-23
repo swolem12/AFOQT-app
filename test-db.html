@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Test - AFOQT Quest</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0e27;
+            color: #00ffff;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 { color: #00ffff; text-shadow: 0 0 10px #00ffff; }
+        h2 { color: #ff00ff; margin-top: 30px; }
+        .test-section {
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid #00ffff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        button {
+            background: #00ffff;
+            color: #0a0e27;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+        }
+        button:hover { background: #00cccc; }
+        .result {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 3px solid #00ff00;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .error {
+            border-left-color: #ff0000;
+            color: #ff6666;
+        }
+        .success {
+            border-left-color: #00ff00;
+            color: #66ff66;
+        }
+    </style>
+    <script src="db.js"></script>
+</head>
+<body>
+    <h1>🗄️ AFOQT Quest - Database System Test</h1>
+    
+    <div class="test-section">
+        <h2>Database Initialization</h2>
+        <button onclick="testInit()">Test Initialize Database</button>
+        <div id="init-result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Player Operations</h2>
+        <button onclick="testCreatePlayer()">Create Test Player</button>
+        <button onclick="testGetAllPlayers()">Get All Players</button>
+        <button onclick="testGetPlayer()">Get Player by ID</button>
+        <button onclick="testUpdatePlayer()">Update Player Stats</button>
+        <div id="player-result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Session Operations</h2>
+        <button onclick="testCreateSession()">Create Test Session</button>
+        <button onclick="testGetPlayerSessions()">Get Player Sessions</button>
+        <button onclick="testGetRecentSessions()">Get Recent Sessions</button>
+        <div id="session-result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Settings Operations</h2>
+        <button onclick="testSaveSettings()">Save Settings</button>
+        <button onclick="testGetSettings()">Get Settings</button>
+        <div id="settings-result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Migration & Cleanup</h2>
+        <button onclick="testMigration()">Test Migration</button>
+        <button onclick="testClearAll()">Clear All Data</button>
+        <div id="migration-result"></div>
+    </div>
+
+    <script>
+        let testPlayerId = null;
+
+        function displayResult(elementId, message, isError = false) {
+            const element = document.getElementById(elementId);
+            const resultDiv = document.createElement('div');
+            resultDiv.className = `result ${isError ? 'error' : 'success'}`;
+            resultDiv.textContent = message;
+            element.innerHTML = '';
+            element.appendChild(resultDiv);
+        }
+
+        async function testInit() {
+            try {
+                await afoqtDB.init();
+                displayResult('init-result', '✓ Database initialized successfully');
+            } catch (error) {
+                displayResult('init-result', '✗ Error: ' + error.message, true);
+            }
+        }
+
+        async function testCreatePlayer() {
+            try {
+                const player = {
+                    id: Date.now().toString(),
+                    name: 'TestPlayer_' + Date.now(),
+                    stats: { math: { correctAnswers: 0, statPoints: 0 } },
+                    achievements: [],
+                    challengeProgress: {}
+                };
+                testPlayerId = player.id;
+                await afoqtDB.savePlayer(player);
+                displayResult('player-result', `✓ Player created:\n${JSON.stringify(player, null, 2)}`);
+            } catch (error) {
+                displayResult('player-result', '✗ Error: ' + error.message, true);
+            }
+        }
+
+        async function testGetAllPlayers() {
+            try {
+                const players = await afoqtDB.getAllPlayers();
+                displayResult('player-result', `✓ Found ${players.length} players:\n${JSON.stringify(players, null, 2)}`);
+            } catch (error) {
+                displayResult('player-result', '✗ Error: ' + error.message, true);
+            }
+        }
+
+        async function testGetPlayer() {
+            try {
+                if (!testPlayerId) {
+                    throw new Error('Create a player first');
+                }
+                const player = await afoqtDB.getPlayer(testPlayerId);
+                displayResult('player-result', `✓ Player retrieved:\n${JSON.stringify(player, null, 2)}`);
+            } catch (error) {
+                displayResult('player-result', '✗ Error: ' + error.message, true);
+            }
+        }
+
+        async function testUpdatePlayer() {
+            try {
+                if (!testPlayerId) {
+                    throw new Error('Create a player first');
+                }
+                const player = await afoqtDB.getPlayer(testPlayerId);
+                player.stats.math.correctAnswers = 50;
+                player.stats.math.statPoints = 10;
+                await afoqtDB.savePlayer(player);
+                displayResult('player-result', `✓ Player updated:\n${JSON.stringify(player, null, 2)}`);
+            } catch (error) {
+                displayResult('player-result', '✗ Error: ' + error.message, true);
+            }
+        }
+
+        async function testCreateSession() {
+            try {
+                if (!testPlayerId) {
+                    throw new Error('Create a player first');
+                }
+                const session = {
+                    playerId: testPlayerId,
+                    topicId: 'linear_equations',
+                    topicName: 'Linear Equations',
+                    score: 8,
+                    total: 10,
+                    avgTime: 5.5,
+                    timestamp: Date.now(),
+                    difficulty: 'beginner'
+                };
+                const sessionId = await afoqtDB.saveSession(session);
+                displayResult('session-result', `✓ Session created (ID: ${sessionId}):\n${JSON.stringify(session, null, 2)}`);
+            } catch (error) {
+                displayResult('session-result', '✗ Error: ' + error.message, true);
+            }
+        }
+
+        async function testGetPlayerSessions() {
+            try {
+                if (!testPlayerId) {
+                    throw new Error('Create a player first');
+                }
+                const sessions = await afoqtDB.getPlayerSessions(testPlayerId);
+                displayResult('session-result', `✓ Found ${sessions.length} sessions:\n${JSON.stringify(sessions, null, 2)}`);
+            } catch (error) {
+                displayResult('session-result', '✗ Error: ' + error.message, true);
+            }
+        }
+
+        async function testGetRecentSessions() {
+            try {
+                if (!testPlayerId) {
+                    throw new Error('Create a player first');
+                }
+                const sessions = await afoqtDB.getRecentPlayerSessions(testPlayerId, 5);
+                displayResult('session-result', `✓ Found ${sessions.length} recent sessions:\n${JSON.stringify(sessions, null, 2)}`);
+            } catch (error) {
+                displayResult('session-result', '✗ Error: ' + error.message, true);
+            }
+        }
+
+        async function testSaveSettings() {
+            try {
+                const settings = {
+                    id: 'global',
+                    theme: 'eva01',
+                    visualEffects: {
+                        glassmorphism: true,
+                        neonBorders: true
+                    },
+                    volumes: {
+                        master: 0.7,
+                        nav: 0.5
+                    },
+                    bgMusicEnabled: false
+                };
+                await afoqtDB.saveSettings(settings);
+                displayResult('settings-result', `✓ Settings saved:\n${JSON.stringify(settings, null, 2)}`);
+            } catch (error) {
+                displayResult('settings-result', '✗ Error: ' + error.message, true);
+            }
+        }
+
+        async function testGetSettings() {
+            try {
+                const settings = await afoqtDB.getSettings('global');
+                displayResult('settings-result', `✓ Settings retrieved:\n${JSON.stringify(settings, null, 2)}`);
+            } catch (error) {
+                displayResult('settings-result', '✗ Error: ' + error.message, true);
+            }
+        }
+
+        async function testMigration() {
+            try {
+                // Create some test localStorage data
+                localStorage.setItem('afoqt-math-players', JSON.stringify([
+                    {
+                        id: 'legacy-player-1',
+                        name: 'LegacyPlayer',
+                        sessions: [
+                            {
+                                topicId: 'math_test',
+                                topicName: 'Math Test',
+                                score: 9,
+                                total: 10,
+                                avgTime: 6.0,
+                                timestamp: Date.now(),
+                                difficulty: 'advanced'
+                            }
+                        ],
+                        stats: {},
+                        achievements: []
+                    }
+                ]));
+                
+                // Remove migration flag to trigger migration
+                localStorage.removeItem('afoqt-migration-complete');
+                
+                const results = await afoqtDB.migrateFromLocalStorage();
+                displayResult('migration-result', `✓ Migration completed:\n${JSON.stringify(results, null, 2)}`);
+            } catch (error) {
+                displayResult('migration-result', '✗ Error: ' + error.message, true);
+            }
+        }
+
+        async function testClearAll() {
+            try {
+                if (confirm('Are you sure you want to clear all database data? This cannot be undone!')) {
+                    await afoqtDB.clearAllData();
+                    testPlayerId = null;
+                    displayResult('migration-result', '✓ All database data cleared');
+                }
+            } catch (error) {
+                displayResult('migration-result', '✗ Error: ' + error.message, true);
+            }
+        }
+
+        // Auto-initialize on page load
+        window.addEventListener('load', async () => {
+            await testInit();
+        });
+    </script>
+</body>
+</html>
