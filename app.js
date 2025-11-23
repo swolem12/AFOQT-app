@@ -3100,104 +3100,82 @@ function showBootSequence() {
     return new Promise((resolve) => {
         const bootHTML = `
             <div id="boot-sequence">
-                <!-- Phase 1: Frameshift Entry (0-3s) -->
+                <!-- Phase 1: System Boot (0-4s) -->
                 <div class="boot-phase boot-phase-1">
-                    <div class="boot-frameshift">
-                        <div class="frameshift-corners">
-                            <div class="corner corner-tl"></div>
-                            <div class="corner corner-tr"></div>
-                            <div class="corner corner-bl"></div>
-                            <div class="corner corner-br"></div>
+                    <div class="boot-system-init">
+                        <div class="sys-corners">
+                            <div class="sys-corner sys-tl"></div>
+                            <div class="sys-corner sys-tr"></div>
+                            <div class="sys-corner sys-bl"></div>
+                            <div class="sys-corner sys-br"></div>
                         </div>
-                        <div class="frameshift-text">FRAMESHIFT</div>
-                        <div class="frameshift-subtext">INITIATING NEURAL DIVE PROTOCOL</div>
-                        <div class="frameshift-dots">
-                            <span>●</span><span>●</span><span>●</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Phase 2: Emergency Warning (3-5s) -->
-                <div class="boot-phase boot-phase-2">
-                    <div class="boot-emergency">
-                        <div class="emergency-stripe-top"></div>
-                        <div class="emergency-hexagons">
-                            <div class="emergency-hex"></div>
-                            <div class="emergency-hex"></div>
-                            <div class="emergency-hex"></div>
-                            <div class="emergency-hex"></div>
-                            <div class="emergency-hex"></div>
-                            <div class="emergency-hex"></div>
-                        </div>
-                        <div class="emergency-header">警報 ALERT 警報</div>
-                        <div class="emergency-condition">CONDITION: STANDBY</div>
-                        <div class="emergency-message">SECURITY LEVEL: EEE</div>
-                        <div class="emergency-status">SYSTEM INITIALIZATION IN PROGRESS</div>
-                    </div>
-                </div>
-
-                <!-- Phase 3: Main Terminal Interface (5-15s) -->
-                <div class="boot-phase boot-phase-3">
-                    <div class="boot-warning-stripe"></div>
-                    <div class="boot-hud-corners">
-                        <div class="hud-corner hud-tl"></div>
-                        <div class="hud-corner hud-tr"></div>
-                        <div class="hud-corner hud-bl"></div>
-                        <div class="hud-corner hud-br"></div>
-                    </div>
-                    
-                    <div class="boot-container" id="boot-container-scroll">
-                        <div class="boot-timestamp">
-                            <span class="timestamp-label">SYS.TIME:</span>
-                            <span class="timestamp-value" id="boot-timestamp">00:00:00</span>
-                        </div>
-
-                        <div class="boot-user-info">
-                            <div class="user-line">USER: <span class="user-name">PLAYER</span></div>
-                            <div class="user-line">SESSION: <span class="session-id">S2</span></div>
-                        </div>
-
-                        <div class="boot-main-title">
-                            <div class="title-line">╔═══════════════════════════════════════════════╗</div>
-                            <div class="title-line">║  AFOQT QUEST :: NEURAL LEARNING SYSTEM      ║</div>
-                            <div class="title-line">║  TERMINAL OS v2.1.47 [NERV-SAO-ANAHEIM]     ║</div>
-                            <div class="title-line">╚═══════════════════════════════════════════════╝</div>
-                        </div>
-
-                        <!-- MAGI System Visualization -->
-                        <div class="boot-magi-display">
-                            <div class="magi-header">第一種接触警戒態勢 // BATTLE STATIONS CONDITIONS ONE</div>
-                            <div class="magi-grid">
-                                <div class="magi-hex magi-melchior">
-                                    <div class="magi-hex-content">
-                                        <div class="magi-label">MODE: Tactics</div>
-                                        <div class="magi-name">MAGI<br>Melchior</div>
-                                        <div class="magi-number">1</div>
-                                    </div>
-                                </div>
-                                <div class="magi-hex magi-casper">
-                                    <div class="magi-hex-content">
-                                        <div class="magi-label">MODE: Tactics</div>
-                                        <div class="magi-name">MAGI<br>Casper</div>
-                                        <div class="magi-number">3</div>
-                                    </div>
-                                </div>
-                                <div class="magi-hex magi-balthasar">
-                                    <div class="magi-hex-content">
-                                        <div class="magi-label">MODE: Tactics</div>
-                                        <div class="magi-name">MAGI<br>Balthasar</div>
-                                        <div class="magi-number">2</div>
-                                    </div>
-                                </div>
+                        <div class="sys-title">SYSTEM INITIALIZATION</div>
+                        <div class="sys-processes">
+                            <div class="sys-process" style="animation-delay: 0.3s;">
+                                <span class="process-icon">▶</span>
+                                <span class="process-name">CORE.01/SYNC</span>
+                                <span class="process-status">ONLINE</span>
                             </div>
-                            <div class="magi-warning-sides">
-                                <div class="magi-warning-left">
-                                    <div class="warning-stripe"></div>
-                                    <div class="warning-text">警報<br>敵襲<br>ALERT<br>DANGER</div>
-                                </div>
-                                <div class="magi-warning-right">
-                                    <div class="warning-stripe"></div>
-                                    <div class="warning-text">警報<br>敵襲<br>ALERT<br>DANGER</div>
+                            <div class="sys-process" style="animation-delay: 0.6s;">
+                                <span class="process-icon">▶</span>
+                                <span class="process-name">CORE.02/SYNC</span>
+                                <span class="process-status">ONLINE</span>
+                            </div>
+                            <div class="sys-process" style="animation-delay: 0.9s;">
+                                <span class="process-icon">▶</span>
+                                <span class="process-name">CORE.03/SYNC</span>
+                                <span class="process-status">ONLINE</span>
+                            </div>
+                            <div class="sys-process" style="animation-delay: 1.2s;">
+                                <span class="process-icon">▶</span>
+                                <span class="process-name">NEURAL.SYS</span>
+                                <span class="process-status">ACTIVE</span>
+                            </div>
+                            <div class="sys-process" style="animation-delay: 1.5s;">
+                                <span class="process-icon">▶</span>
+                                <span class="process-name">PILOT.INTERFACE</span>
+                                <span class="process-status">READY</span>
+                            </div>
+                            <div class="sys-process" style="animation-delay: 1.8s;">
+                                <span class="process-icon">▶</span>
+                                <span class="process-name">COMBAT.ENGINE</span>
+                                <span class="process-status">STANDBY</span>
+                            </div>
+                        </div>
+                        <div class="sys-loading-bar">
+                            <div class="sys-bar-fill"></div>
+                        </div>
+                        <div class="sys-percentage">0%</div>
+                    </div>
+                </div>
+
+                <!-- Phase 2: Welcome Message (4-7s) -->
+                <div class="boot-phase boot-phase-2">
+                    <div class="boot-welcome-screen">
+                        <div class="welcome-shape-container">
+                            <div class="welcome-shape welcome-hex-1">
+                                <div class="shape-line"></div>
+                            </div>
+                            <div class="welcome-shape welcome-hex-2">
+                                <div class="shape-line"></div>
+                            </div>
+                            <div class="welcome-shape welcome-hex-3">
+                                <div class="shape-line"></div>
+                            </div>
+                        </div>
+                        <div class="welcome-main-text">WELCOME TO</div>
+                        <div class="welcome-title">AFOQT QUEST</div>
+                        <div class="welcome-subtitle">NEURAL COMBAT TRAINING SYSTEM</div>
+                        <div class="welcome-corners">
+                            <div class="welcome-corner wc-tl"></div>
+                            <div class="welcome-corner wc-tr"></div>
+                            <div class="welcome-corner wc-bl"></div>
+                            <div class="welcome-corner wc-br"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
                                 </div>
                             </div>
                         </div>
@@ -3338,71 +3316,31 @@ function showBootSequence() {
             document.addEventListener('keydown', enableAudio, { once: true });
         }
         
-        // Sound effects for boot sequence - Enhanced with distinct sounds for each animation phase
-        playSfx('boot'); // Phase 1: Frameshift Entry animation (0s)
-        setTimeout(() => playSfx('nav'), 1500); // Phase 1: Additional beep
-        setTimeout(() => playSfx('wrong'), 3000); // Phase 2: Emergency Warning animation (3s)
-        setTimeout(() => playSfx('nav'), 3500); // Phase 2: Warning beep
-        setTimeout(() => playSfx('start'), 5000); // Phase 3: Main Terminal Interface animation (5s)
-        setTimeout(() => playSfx('nav'), 6000); // Phase 3: System check
-        setTimeout(() => playSfx('nav'), 8000); // Phase 3: Loading modules
-        setTimeout(() => playSfx('nav'), 10000); // Phase 3: More loading
-        setTimeout(() => playSfx('correct'), 13000); // Phase 3: Systems ready
-        setTimeout(() => playSfx('complete'), 14000); // Welcome message
         
-        // Auto-scroll functionality - precise timing to match 9 second duration
-        const scrollContainer = document.getElementById('boot-container-scroll');
-        let scrollStartTime = null;
-        const scrollDuration = 9000; // 9 seconds
-        const scrollDelay = 5500; // Start at 5.5s
+        document.body.insertAdjacentHTML('afterbegin', bootHTML);
         
-        setTimeout(() => {
-            scrollStartTime = Date.now();
-            
-            const smoothScroll = () => {
-                if (!scrollContainer) return;
-                
-                const elapsed = Date.now() - scrollStartTime;
-                const progress = Math.min(elapsed / scrollDuration, 1);
-                
-                // Ease-out function for smooth deceleration
-                const easeProgress = 1 - Math.pow(1 - progress, 3);
-                
-                const maxScroll = scrollContainer.scrollHeight - scrollContainer.clientHeight;
-                scrollContainer.scrollTop = maxScroll * easeProgress;
-                
-                if (progress < 1) {
-                    requestAnimationFrame(smoothScroll);
+        // Sound effects for boot sequence
+        playSfx('boot'); // Phase 1: System boot
+        setTimeout(() => playSfx('nav'), 1500); // Phase 1: Process loading
+        setTimeout(() => playSfx('correct'), 3500); // Phase 1: Systems online
+        setTimeout(() => playSfx('select'), 4000); // Phase 2: Welcome screen
+        
+        // Animate system boot percentage
+        const sysPercent = document.querySelector('.sys-percentage');
+        if (sysPercent) {
+            let percent = 0;
+            const percentInterval = setInterval(() => {
+                percent += 2;
+                if (percent <= 100) {
+                    sysPercent.textContent = percent + '%';
+                } else {
+                    clearInterval(percentInterval);
                 }
-            };
-            
-            smoothScroll();
-        }, scrollDelay);
+            }, 35); // Complete in ~1.75s
+        }
         
-        // Animate timestamp
-        const updateTimestamp = () => {
-            const now = new Date();
-            const timeStr = now.toTimeString().split(' ')[0];
-            const tsElement = document.getElementById('boot-timestamp');
-            if (tsElement) {
-                tsElement.textContent = timeStr;
-            }
-        };
-        updateTimestamp();
-        const tsInterval = setInterval(updateTimestamp, 1000);
-        
-        // Show welcome message near the end
+        // Remove boot sequence after 7 seconds
         setTimeout(() => {
-            const welcomeMsg = document.getElementById('boot-welcome-msg');
-            if (welcomeMsg) {
-                welcomeMsg.style.opacity = '1';
-                welcomeMsg.style.transition = 'opacity 1s ease-in';
-            }
-        }, 13000);
-        
-        // Remove boot sequence after 15 seconds
-        setTimeout(() => {
-            clearInterval(tsInterval);
             const bootSeq = document.getElementById('boot-sequence');
             if (bootSeq) {
                 bootSeq.classList.add('boot-fade-out');
@@ -3413,7 +3351,7 @@ function showBootSequence() {
             } else {
                 resolve();
             }
-        }, 15000);
+        }, 7000);
     });
 }
 
