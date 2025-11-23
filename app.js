@@ -1492,7 +1492,7 @@ const aviationTopics = [
                     { q: "What is V1 speed?", a: "Decision speed for takeoff", opts: ["Landing speed", "Cruise speed", "Stall speed"], exp: "V1 is the critical engine failure recognition speed during takeoff", img: "images/attitude-climbing.svg" },
                     { q: "What does 'angle of attack' mean?", a: "Angle between chord line and relative wind", opts: ["Angle of the aircraft to ground", "Angle of climb", "Bank angle"], exp: "Angle of attack is the angle between the wing's chord line and the oncoming airflow", img: "images/aircraft-forces.svg" },
                     { q: "What is the minimum safe altitude over congested areas?", a: "1,000 feet above highest obstacle within 2,000 feet", opts: ["500 feet AGL", "1,500 feet MSL", "Any altitude"], exp: "FAA regulations require 1,000 feet above the highest obstacle within a 2,000-foot radius", img: "images/attitude-level.svg" },
-                    { q: "What is VR speed?", a: "Rotation speed for takeoff", opts: ["Refusal speed", "Range speed", "Reduced speed"], exp: "VR is the speed at which the pilot rotates the aircraft nose up during takeoff", img: "images/attitude-climbing.svg" },
+                    { q: "What is VR speed?", a: "Rotation speed for takeoff", opts: ["Refusal speed", "Range speed", "Reduced speed"], exp: "VR is the speed at which the player rotates the aircraft nose up during takeoff", img: "images/attitude-climbing.svg" },
                     { q: "What is the purpose of trim tabs?", a: "Reduce control pressure", opts: ["Increase speed", "Control temperature", "Measure altitude"], exp: "Trim tabs help reduce the control pressure needed to maintain a desired flight attitude", img: "images/aircraft-controls.svg" },
                     { q: "What does the compass deviation card show?", a: "Magnetic compass errors", opts: ["Altitude errors", "Speed errors", "Fuel errors"], exp: "The compass deviation card shows corrections for magnetic compass errors in the aircraft", img: "images/flight-instruments.svg" },
                     { q: "What is ground effect?", a: "Increased lift near the ground", opts: ["Decreased lift near ground", "No change in lift", "Only affects helicopters"], exp: "Ground effect provides increased lift and reduced drag when flying close to the ground", img: "images/aircraft-forces.svg" },
@@ -2073,7 +2073,7 @@ const achievements = [
     },
     {
         id: 'level_25',
-        name: 'Expert Pilot',
+        name: 'Expert Player',
         description: 'Reach level 25',
         icon: '🚀',
         condition: (player) => {
@@ -2083,7 +2083,7 @@ const achievements = [
     },
     {
         id: 'ace_pilot',
-        name: 'Ace Pilot',
+        name: 'Ace Player',
         description: 'Score 90%+ on 10 expert-level quizzes',
         icon: '🏆',
         condition: (player) => {
@@ -2668,7 +2668,7 @@ function showBootSequence() {
                         </div>
 
                         <div class="boot-user-info">
-                            <div class="user-line">USER: <span class="user-name">PILOT</span></div>
+                            <div class="user-line">USER: <span class="user-name">PLAYER</span></div>
                             <div class="user-line">SESSION: <span class="session-id">S2</span></div>
                         </div>
 
@@ -2751,7 +2751,7 @@ function showBootSequence() {
                                 <span class="boot-status">STANDBY</span>
                             </div>
                             <div class="boot-line boot-indent">
-                                <span>└─ Pilot Interface Module............</span>
+                                <span>└─ Player Interface Module............</span>
                                 <span class="boot-status">READY</span>
                             </div>
                             <div class="boot-line boot-spacer"></div>
@@ -2831,7 +2831,7 @@ function showBootSequence() {
                     
                     <!-- Welcome message - shown at end -->
                     <div class="boot-welcome-message" id="boot-welcome-msg" style="opacity: 0;">
-                        <div class="welcome-text-main" id="welcome-player-name">HELLO, PILOT</div>
+                        <div class="welcome-text-main" id="welcome-player-name">HELLO, PLAYER</div>
                         <div class="welcome-text-sub">WELCOME BACK</div>
                     </div>
                 </div>
@@ -2846,12 +2846,12 @@ function showBootSequence() {
             welcomeName.textContent = `HELLO, ${state.currentPlayer.name.toUpperCase()}`;
         }
         
-        // Sound effects for boot sequence - Enhanced
-        playSfx('boot'); // Phase 1: Frameshift (0s)
+        // Sound effects for boot sequence - Enhanced with distinct sounds for each animation phase
+        playSfx('boot'); // Phase 1: Frameshift Entry animation (0s)
         setTimeout(() => playSfx('nav'), 1500); // Phase 1: Additional beep
-        setTimeout(() => playSfx('wrong'), 3000); // Phase 2: Alert sound (3s)
+        setTimeout(() => playSfx('wrong'), 3000); // Phase 2: Emergency Warning animation (3s)
         setTimeout(() => playSfx('nav'), 3500); // Phase 2: Warning beep
-        setTimeout(() => playSfx('nav'), 5000); // Phase 3: Terminal start (5s)
+        setTimeout(() => playSfx('start'), 5000); // Phase 3: Main Terminal Interface animation (5s)
         setTimeout(() => playSfx('nav'), 6000); // Phase 3: System check
         setTimeout(() => playSfx('nav'), 8000); // Phase 3: Loading modules
         setTimeout(() => playSfx('nav'), 10000); // Phase 3: More loading
@@ -2951,7 +2951,7 @@ function showAccessGranted() {
                 <div class="access-corner access-corner-bl"></div>
                 <div class="access-corner access-corner-br"></div>
                 <div class="access-text">ACCESS GRANTED</div>
-                <div class="access-subtext">PILOT AUTHENTICATION COMPLETE</div>
+                <div class="access-subtext">PLAYER AUTHENTICATION COMPLETE</div>
             </div>
         `;
         document.body.appendChild(container);
@@ -3400,10 +3400,10 @@ function renderLogin() {
                 </div>
                 
                 <div class="new-character-section">
-                    <h3 style="text-align: center; margin: 30px 0 20px 0;">Create New Pilot</h3>
+                    <h3 style="text-align: center; margin: 30px 0 20px 0;">Create New Player</h3>
                     <div class="new-player-form-login">
-                        <input type="text" id="new-player-name-login" placeholder="Enter pilot name" maxlength="20" />
-                        <button class="btn" id="create-player-btn-login">Create Pilot</button>
+                        <input type="text" id="new-player-name-login" placeholder="Enter player name" maxlength="20" />
+                        <button class="btn" id="create-player-btn-login">Create Player</button>
                     </div>
                 </div>
             </div>
@@ -3421,7 +3421,7 @@ function renderHome() {
             <div class="home-controls-box">
                 <div class="header-controls">
                     <button class="btn btn-small" id="change-character-btn">
-                        👤 ${state.currentPlayer ? state.currentPlayer.name : 'Pilot'}
+                        👤 ${state.currentPlayer ? state.currentPlayer.name : 'Player'}
                     </button>
                     ${state.currentPlayer ? `
                         <button class="btn btn-small" id="status-btn">
@@ -3470,7 +3470,7 @@ function renderPlayerModal() {
                 <div class="modal-body">
                     ${state.players.length > 0 ? `
                         <div class="auth-section">
-                            <div class="auth-section-label">EXISTING PILOTS</div>
+                            <div class="auth-section-label">EXISTING PLAYERS</div>
                             <div class="player-auth-list">
                                 ${state.players.map(p => {
                                     initializePlayerEquipment(p);
@@ -3492,7 +3492,7 @@ function renderPlayerModal() {
                         </div>
                     ` : ''}
                     <div class="auth-section">
-                        <div class="auth-section-label">NEW PILOT REGISTRATION</div>
+                        <div class="auth-section-label">NEW PLAYER REGISTRATION</div>
                         <div class="auth-input-container">
                             <input type="text" id="new-player-name" class="auth-input" placeholder="ENTER CALLSIGN" maxlength="20" />
                             <div class="auth-input-corner tl"></div>
@@ -3501,7 +3501,7 @@ function renderPlayerModal() {
                             <div class="auth-input-corner br"></div>
                         </div>
                         <button class="btn-auth-create" id="add-player-btn">
-                            <span class="auth-create-icon">+</span> CREATE PILOT
+                            <span class="auth-create-icon">+</span> CREATE PLAYER
                         </button>
                     </div>
                 </div>
@@ -3910,7 +3910,7 @@ function renderStatus() {
     
     return `
         <div class="panel">
-            <h1 class="panel-header">Pilot Status</h1>
+            <h1 class="panel-header">Player Status</h1>
             
             <div class="status-layout">
                 <!-- Left side: Character Display -->
@@ -4034,7 +4034,7 @@ function renderEquipment() {
     
     return `
         <div class="panel">
-            <h1 class="panel-header">🎖 Pilot Loadout 🎖</h1>
+            <h1 class="panel-header">🎖 Player Loadout 🎖</h1>
             
             <div class="loadout-container">
                 <!-- Left Side: Character Display & Equipment Slots -->
@@ -4304,7 +4304,7 @@ function renderCharacterSprite(player) {
 
 function renderAchievements() {
     if (!state.currentPlayer) {
-        return '<div class="panel"><h1>No pilot selected</h1></div>';
+        return '<div class="panel"><h1>No player selected</h1></div>';
     }
     
     if (!state.currentPlayer.achievements) {
