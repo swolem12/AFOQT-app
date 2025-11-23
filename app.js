@@ -275,8 +275,40 @@ function showBootScreen() {
     
     const matrixInterval = setInterval(drawMatrix, isMobile ? 80 : 50);
     
-    // Play boot sound at start
-    playSfx('boot');
+    // Enable audio on first user interaction (required by browser autoplay policy)
+    let audioEnabled = false;
+    const enableAudio = () => {
+        if (!audioEnabled) {
+            audioEnabled = true;
+            const ctx = getAudioContext();
+            if (ctx.state === 'suspended') {
+                ctx.resume().then(() => {
+                    console.log('Audio context resumed');
+                    // Play boot sound once audio is enabled
+                    playSfx('boot');
+                }).catch(e => console.warn('Could not resume audio:', e));
+            } else {
+                // Audio already running, play boot sound
+                playSfx('boot');
+            }
+        }
+    };
+    
+    // Try to play boot sound immediately (will work if autoplay is allowed)
+    // If it fails silently due to autoplay policy, it will play after user interaction
+    const tryPlayBootSound = () => {
+        const ctx = getAudioContext();
+        if (ctx.state === 'running') {
+            playSfx('boot');
+            audioEnabled = true;
+        }
+        // If suspended, wait for user interaction
+    };
+    tryPlayBootSound();
+    
+    // Listen for any user interaction to enable audio
+    bootScreen.addEventListener('click', enableAudio, { once: true });
+    document.addEventListener('keydown', enableAudio, { once: true });
     
     // Type out boot messages
     let currentLine = 0;
@@ -1742,6 +1774,10 @@ function getAudioContext() {
     if (!audioContext) {
         audioContext = new (window.AudioContext || window.webkitAudioContext)();
     }
+    // Resume the context if it's suspended (due to browser autoplay policy)
+    if (audioContext.state === 'suspended') {
+        audioContext.resume().catch(e => console.warn('Could not resume audio context:', e));
+    }
     return audioContext;
 }
 
@@ -2844,6 +2880,36 @@ function showBootSequence() {
         const welcomeName = document.getElementById('welcome-player-name');
         if (welcomeName && state.currentPlayer) {
             welcomeName.textContent = `HELLO, ${state.currentPlayer.name.toUpperCase()}`;
+        }
+        
+        // Enable audio on first user interaction (required by browser autoplay policy)
+        let audioEnabled = false;
+        const enableAudio = () => {
+            if (!audioEnabled) {
+                audioEnabled = true;
+                const ctx = getAudioContext();
+                if (ctx.state === 'suspended') {
+                    ctx.resume().then(() => {
+                        console.log('Audio context resumed - boot sounds enabled');
+                    }).catch(e => console.warn('Could not resume audio:', e));
+                }
+            }
+        };
+        
+        // Try to play immediately (will work if autoplay is allowed)
+        const tryPlayBootSound = () => {
+            const ctx = getAudioContext();
+            if (ctx.state === 'running') {
+                audioEnabled = true;
+            }
+        };
+        tryPlayBootSound();
+        
+        // Listen for any user interaction to enable audio
+        const bootSequence = document.getElementById('boot-sequence');
+        if (bootSequence) {
+            bootSequence.addEventListener('click', enableAudio, { once: true });
+            document.addEventListener('keydown', enableAudio, { once: true });
         }
         
         // Sound effects for boot sequence - Enhanced with distinct sounds for each animation phase
