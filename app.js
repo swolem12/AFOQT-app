@@ -2881,6 +2881,8 @@ function showBootSequence() {
         }
         
         // Enable audio on first user interaction (required by browser autoplay policy)
+        // Note: Sound effects are scheduled throughout the 14s animation. Those played before
+        // user interaction will fail silently, those after will play normally.
         const enableAudio = createAudioEnabler();
         
         // Listen for any user interaction to enable audio
