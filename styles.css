@@ -4872,14 +4872,8 @@ select {
     }
 }
 
-.boot-progress {
-    margin-top: 30px;
-    opacity: 0;
-    animation: bootLineAppear 0.5s ease-out 12.5s forwards;
-}
-
-/* Static progress bar - always visible outside scroll container */
-.boot-progress-static {
+/* Static welcome message - always visible outside scroll container */
+.boot-welcome-static {
     position: absolute;
     bottom: clamp(140px, 18vw, 200px);
     left: clamp(20px, 4vw, 40px);
@@ -4887,92 +4881,19 @@ select {
     z-index: 100;
     opacity: 0;
     animation: bootLineAppear 0.5s ease-out 5.5s forwards;
-}
-
-.boot-progress-label {
-    font-size: clamp(0.8rem, 2vw, 1rem);
-    letter-spacing: 3px;
-    margin-bottom: 10px;
     text-align: center;
-    color: var(--color-secondary);
-    text-shadow: 0 0 15px var(--color-secondary);
-    font-family: 'Courier New', monospace;
 }
 
-.boot-progress-percent {
-    text-align: center;
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
-    font-weight: bold;
-    letter-spacing: 4px;
-    margin-top: 10px;
-    color: var(--color-warning);
-    text-shadow: 0 0 20px var(--color-warning);
-    font-family: 'Courier New', monospace;
-}
-
-.boot-progress-bar {
-    width: 100%;
-    height: clamp(20px, 4vw, 30px);
-    border: 2px solid var(--color-primary);
-    background: rgba(0, 0, 0, 0.5);
-    position: relative;
-    clip-path: polygon(
-        0 4px,
-        4px 0,
-        calc(100% - 4px) 0,
-        100% 4px,
-        100% calc(100% - 4px),
-        calc(100% - 4px) 100%,
-        4px 100%,
-        0 calc(100% - 4px)
-    );
-    overflow: hidden;
-}
-
-.boot-progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-    width: 0%;
-    animation: bootProgressFill 10s linear 12.5s forwards;
-    box-shadow: 0 0 20px var(--color-primary-glow);
-    position: relative;
-}
-
-.progress-scanline {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    animation: scanlineMove 2s linear infinite;
-}
-
-@keyframes scanlineMove {
-    from { left: -100%; }
-    to { left: 200%; }
-}
-
-.boot-progress-fill::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 20px,
-        rgba(0, 0, 0, 0.3) 20px,
-        rgba(0, 0, 0, 0.3) 22px
-    );
-}
-
-@keyframes bootProgressFill {
-    to {
-        width: 100%;
-    }
+.boot-welcome-label {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    letter-spacing: clamp(3px, 0.5vw, 6px);
+    color: var(--color-primary);
+    text-shadow: 
+        0 0 15px var(--color-primary),
+        0 0 30px var(--color-primary-glow);
+    font-family: 'Orbitron', 'Courier New', monospace;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 /* Welcome message at end of boot sequence */
