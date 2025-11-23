@@ -2031,7 +2031,7 @@ const achievements = [
         icon: '📚',
         condition: (player) => {
             const verbalSessions = player.sessions.filter(s => s.topicId && (
-                verbalTopics.find(t => t.id === s.topicId)
+                vocabularyTopics.find(t => t.id === s.topicId)
             ));
             return verbalSessions.length >= 10;
         }
@@ -2149,7 +2149,7 @@ const challenges = [
 
 function getSubjectForTopic(topicId) {
     if (mathTopics.find(t => t.id === topicId)) return 'math';
-    if (verbalTopics.find(t => t.id === topicId)) return 'verbal';
+    if (vocabularyTopics.find(t => t.id === topicId)) return 'verbal';
     if (readingTopics.find(t => t.id === topicId)) return 'reading';
     if (scienceTopics.find(t => t.id === topicId)) return 'science';
     return null;
@@ -2522,31 +2522,66 @@ function calculateEquipmentBonus(player) {
 }
 
 // ============================================================================
-// LocalStorage Functions
+// Database Functions (IndexedDB)
 // ============================================================================
-function loadPlayers() {
+
+/**
+ * Load all players from database
+ * @returns {Promise<Array>}
+ */
+async function loadPlayers() {
     try {
-        const data = localStorage.getItem('afoqt-math-players');
-        return data ? JSON.parse(data) : [];
+        const players = await afoqtDB.getAllPlayers();
+        
+        // For each player, load their sessions
+        for (const player of players) {
+            const sessions = await afoqtDB.getPlayerSessions(player.id);
+            player.sessions = sessions.map(s => {
+                // Remove playerId and id from session object to maintain backward compatibility
+                const { playerId, id, ...sessionData } = s;
+                return sessionData;
+            });
+        }
+        
+        return players;
     } catch (e) {
-        console.warn('Could not load players:', e);
+        console.warn('Could not load players from database:', e);
         return [];
     }
 }
 
-function savePlayers(players) {
+/**
+ * Save all players to database
+ * @param {Array} players
+ * @returns {Promise<void>}
+ */
+async function savePlayers(players) {
     try {
-        localStorage.setItem('afoqt-math-players', JSON.stringify(players));
+        for (const player of players) {
+            // Separate sessions from player object
+            const sessions = player.sessions || [];
+            const playerWithoutSessions = { ...player };
+            delete playerWithoutSessions.sessions;
+            
+            // Save player
+            await afoqtDB.savePlayer(playerWithoutSessions);
+            
+            // Note: Sessions are saved individually when they're created
+            // This function is kept for backward compatibility
+        }
     } catch (e) {
-        console.warn('Could not save players:', e);
+        console.warn('Could not save players to database:', e);
     }
 }
 
-function loadSettings() {
+/**
+ * Load settings from database
+ * @returns {Promise<void>}
+ */
+async function loadSettings() {
     try {
-        const data = localStorage.getItem('afoqt-settings');
-        if (data) {
-            const loaded = JSON.parse(data);
+        const loaded = await afoqtDB.getSettings('global');
+        if (loaded) {
             // Merge with defaults to ensure all settings exist
             state.settings = {
                 theme: loaded.theme || 'default',
@@ -2560,7 +2595,8 @@ function loadSettings() {
                 volumes: {
                     ...state.settings.volumes,
                     ...(loaded.volumes || {})
-                }
+                },
+                bgMusicEnabled: loaded.bgMusicEnabled ?? false
             };
             // Apply the theme immediately
             applyTheme(state.settings.theme);
@@ -2568,15 +2604,19 @@ function loadSettings() {
             applyVisualEffects();
         }
     } catch (e) {
-        console.warn('Could not load settings:', e);
+        console.warn('Could not load settings from database:', e);
     }
 }
 
-function saveSettings() {
+/**
+ * Save settings to database
+ * @returns {Promise<void>}
+ */
+async function saveSettings() {
     try {
-        localStorage.setItem('afoqt-settings', JSON.stringify(state.settings));
+        await afoqtDB.saveSettings({ id: 'global', ...state.settings });
     } catch (e) {
-        console.warn('Could not save settings:', e);
+        console.warn('Could not save settings to database:', e);
     }
 }
 
@@ -3208,10 +3248,17 @@ function finishQuiz() {
             total: state.quiz.questions.length,
             avgTime: avgTime,
             timestamp: Date.now(),
-            difficulty: state.quiz.difficulty
+            difficulty: state.quiz.difficulty,
+            playerId: state.currentPlayer.id // Add playerId for database
         };
         
+        // Add to player's sessions array (in-memory)
         state.currentPlayer.sessions.push(session);
+        
+        // Save session to database
+        afoqtDB.saveSession(session).catch(err => {
+            console.error('Failed to save session to database:', err);
+        });
         
         // Update RPG stats with difficulty multiplier
         updatePlayerStats(state.currentPlayer, state.currentTopic.id, state.quiz.score, state.quiz.difficulty);
@@ -5170,6 +5217,16 @@ function attachEventListeners() {
 // Initialization
 // ============================================================================
 async function init() {
+    // Initialize database
+    await afoqtDB.init();
+    
+    // Check if we need to migrate from localStorage
+    if (!afoqtDB.hasMigrationCompleted()) {
+        console.log('Migrating data from localStorage to IndexedDB...');
+        const migrationResults = await afoqtDB.migrateFromLocalStorage();
+        console.log('Migration complete:', migrationResults);
+    }
+    
     // Show Evangelion-style boot sequence on first load
     const hasBooted = sessionStorage.getItem('afoqt-booted');
     if (!hasBooted) {
@@ -5177,8 +5234,8 @@ async function init() {
         sessionStorage.setItem('afoqt-booted', 'true');
     }
     
-    state.players = loadPlayers();
-    loadSettings(); // Load settings from localStorage
+    state.players = await loadPlayers();
+    await loadSettings(); // Load settings from database
     if (state.players.length > 0) {
         state.currentPlayer = state.players[0];
     }

@@ -1,12 +1,13 @@
 // Service Worker for AFOQT Study Console
 // Provides offline caching and PWA functionality
 
-const CACHE_NAME = 'afoqt-quest-v38';
+const CACHE_NAME = 'afoqt-quest-v39';
 const urlsToCache = [
   './',
   './index.html',
   './styles.css',
   './app.js',
+  './db.js',
   './patch-loader.js',
   './manifest.json',
   './Test Content/Patch_18.json'
