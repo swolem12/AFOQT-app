@@ -205,33 +205,6 @@ function showBootScreen() {
     logoText.textContent = asciiLogo;
     bootContent.appendChild(logoText);
     
-    // Create a separate loading bar container
-    const loadingBarContainer = document.createElement('div');
-    loadingBarContainer.style.cssText = `
-        background: rgba(0, 255, 255, 0.05);
-        border: 1px solid #00ffff;
-        border-radius: 4px;
-        padding: ${isMobile ? '8px' : '12px'};
-        margin: ${isMobile ? '15px 0' : '20px 0'};
-        text-align: center;
-        box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
-    `;
-    
-    const loadingBar = document.createElement('pre');
-    loadingBar.style.cssText = `
-        font-size: ${isMobile ? '10px' : '14px'};
-        line-height: 1.4;
-        text-shadow: 0 0 5px #00ffff;
-        margin: 0;
-        color: #00ffff;
-    `;
-    loadingBar.textContent = '[████████████████████████████████████████] 100%';
-    loadingBarContainer.appendChild(loadingBar);
-    bootContent.appendChild(loadingBarContainer);
-    
-    // Play sound effect for loading bar completion
-    setTimeout(() => playSfx('correct'), 500);
-    
     const bootText = document.createElement('pre');
     bootText.style.cssText = `
         font-size: ${isMobile ? '9px' : '13px'};
@@ -2062,16 +2035,99 @@ function toggleBackgroundMusic(enabled) {
 // Achievements and Challenges System
 // ============================================================================
 const achievements = [
+    // Beginner Achievements (1-10)
     {
         id: 'first_steps',
         name: 'First Steps',
         description: 'Complete your first quiz',
-        icon: '🎯',
+        icon: '⚔️',
         condition: (player) => player.sessions && player.sessions.length >= 1
     },
     {
-        id: 'math_explorer',
-        name: 'Math Explorer',
+        id: 'novice_warrior',
+        name: 'Novice Warrior',
+        description: 'Complete 5 quizzes',
+        icon: '🛡️',
+        condition: (player) => player.sessions && player.sessions.length >= 5
+    },
+    {
+        id: 'apprentice_mage',
+        name: 'Apprentice Mage',
+        description: 'Complete 10 quizzes',
+        icon: '🔮',
+        condition: (player) => player.sessions && player.sessions.length >= 10
+    },
+    {
+        id: 'bronze_shield',
+        name: 'Bronze Shield',
+        description: 'Reach level 5',
+        icon: '🥉',
+        condition: (player) => {
+            const totals = computePlayerTotals(player);
+            return totals.level >= 5;
+        }
+    },
+    {
+        id: 'silver_blade',
+        name: 'Silver Blade',
+        description: 'Reach level 10',
+        icon: '🥈',
+        condition: (player) => {
+            const totals = computePlayerTotals(player);
+            return totals.level >= 10;
+        }
+    },
+    {
+        id: 'gold_crown',
+        name: 'Gold Crown',
+        description: 'Reach level 15',
+        icon: '🥇',
+        condition: (player) => {
+            const totals = computePlayerTotals(player);
+            return totals.level >= 15;
+        }
+    },
+    {
+        id: 'perfect_score',
+        name: 'Flawless Victory',
+        description: 'Get 100% on any quiz',
+        icon: '💯',
+        condition: (player) => {
+            return player.sessions.some(s => s.score === s.total);
+        }
+    },
+    {
+        id: 'speed_demon',
+        name: 'Lightning Strike',
+        description: 'Average less than 30 seconds per question',
+        icon: '⚡',
+        condition: (player) => {
+            return player.sessions.some(s => s.avgTime && s.avgTime < 30);
+        }
+    },
+    {
+        id: 'first_blood',
+        name: 'First Blood',
+        description: 'Score 80%+ on your first quiz',
+        icon: '🩸',
+        condition: (player) => {
+            return player.sessions.length >= 1 && player.sessions[0].score / player.sessions[0].total >= 0.8;
+        }
+    },
+    {
+        id: 'quick_learner',
+        name: 'Quick Learner',
+        description: 'Complete 3 quizzes in beginner mode',
+        icon: '📖',
+        condition: (player) => {
+            return player.sessions.filter(s => s.difficulty === 'beginner').length >= 3;
+        }
+    },
+    
+    // Subject Mastery Achievements (11-20)
+    {
+        id: 'math_warrior',
+        name: 'Math Warrior',
         description: 'Complete 10 math quizzes',
         icon: '🔢',
         condition: (player) => {
@@ -2082,8 +2138,8 @@ const achievements = [
         }
     },
     {
-        id: 'word_master',
-        name: 'Word Master',
+        id: 'word_wizard',
+        name: 'Word Wizard',
         description: 'Complete 10 vocabulary quizzes',
         icon: '📚',
         condition: (player) => {
@@ -2094,65 +2150,32 @@ const achievements = [
         }
     },
     {
-        id: 'perfect_score',
-        name: 'Perfect Score',
-        description: 'Get 100% on any quiz',
-        icon: '💯',
+        id: 'reading_champion',
+        name: 'Reading Champion',
+        description: 'Complete 10 reading quizzes',
+        icon: '📜',
         condition: (player) => {
-            return player.sessions.some(s => s.score === s.total);
+            const readingSessions = player.sessions.filter(s => s.topicId && (
+                readingTopics.find(t => t.id === s.topicId)
+            ));
+            return readingSessions.length >= 10;
         }
     },
     {
-        id: 'speed_demon',
-        name: 'Speed Demon',
-        description: 'Average less than 30 seconds per question',
-        icon: '⚡',
+        id: 'science_sage',
+        name: 'Science Sage',
+        description: 'Complete 10 science quizzes',
+        icon: '🧪',
         condition: (player) => {
-            return player.sessions.some(s => s.avgTime && s.avgTime < 30);
-        }
-    },
-    {
-        id: 'dedicated_student',
-        name: 'Dedicated Student',
-        description: 'Complete 50 quizzes',
-        icon: '🎓',
-        condition: (player) => player.sessions && player.sessions.length >= 50
-    },
-    {
-        id: 'level_10',
-        name: 'Rising Star',
-        description: 'Reach level 10',
-        icon: '⭐',
-        condition: (player) => {
-            const totals = computePlayerTotals(player);
-            return totals.level >= 10;
-        }
-    },
-    {
-        id: 'level_25',
-        name: 'Expert Player',
-        description: 'Reach level 25',
-        icon: '🚀',
-        condition: (player) => {
-            const totals = computePlayerTotals(player);
-            return totals.level >= 25;
-        }
-    },
-    {
-        id: 'ace_pilot',
-        name: 'Ace Player',
-        description: 'Score 90%+ on 10 expert-level quizzes',
-        icon: '🏆',
-        condition: (player) => {
-            const expertSessions = player.sessions.filter(s => 
-                s.difficulty === 'expert' && (s.score / s.total) >= 0.9
-            );
-            return expertSessions.length >= 10;
+            const scienceSessions = player.sessions.filter(s => s.topicId && (
+                scienceTopics.find(t => t.id === s.topicId)
+            ));
+            return scienceSessions.length >= 10;
         }
     },
     {
         id: 'all_rounder',
-        name: 'All-Rounder',
+        name: 'Renaissance Soul',
         description: 'Complete at least 5 quizzes in each subject',
         icon: '🌟',
         condition: (player) => {
@@ -2164,8 +2187,373 @@ const achievements = [
                 }
             });
             const uniqueSubjects = Object.values(subjectCounts).filter(c => c >= 5);
-            return uniqueSubjects.length >= subjects.length - 1; // All subjects except situational
+            return uniqueSubjects.length >= subjects.length - 1;
         }
+    },
+    {
+        id: 'math_master',
+        name: 'Arithmetic Archmage',
+        description: 'Complete 25 math quizzes',
+        icon: '🧮',
+        condition: (player) => {
+            const mathSessions = player.sessions.filter(s => s.topicId && (
+                mathTopics.find(t => t.id === s.topicId)
+            ));
+            return mathSessions.length >= 25;
+        }
+    },
+    {
+        id: 'vocabulary_virtuoso',
+        name: 'Vocabulary Virtuoso',
+        description: 'Complete 25 vocabulary quizzes',
+        icon: '✍️',
+        condition: (player) => {
+            const verbalSessions = player.sessions.filter(s => s.topicId && (
+                vocabularyTopics.find(t => t.id === s.topicId)
+            ));
+            return verbalSessions.length >= 25;
+        }
+    },
+    {
+        id: 'knowledge_keeper',
+        name: 'Knowledge Keeper',
+        description: 'Complete at least 1 quiz in all subjects',
+        icon: '🗝️',
+        condition: (player) => {
+            const subjectCounts = {};
+            player.sessions.forEach(s => {
+                const subject = getSubjectForTopic(s.topicId);
+                if (subject) {
+                    subjectCounts[subject] = (subjectCounts[subject] || 0) + 1;
+                }
+            });
+            return Object.keys(subjectCounts).length >= subjects.length - 1;
+        }
+    },
+    {
+        id: 'versatile_veteran',
+        name: 'Versatile Veteran',
+        description: 'Complete 10 quizzes in 3 different subjects',
+        icon: '🎭',
+        condition: (player) => {
+            const subjectCounts = {};
+            player.sessions.forEach(s => {
+                const subject = getSubjectForTopic(s.topicId);
+                if (subject) {
+                    subjectCounts[subject] = (subjectCounts[subject] || 0) + 1;
+                }
+            });
+            return Object.values(subjectCounts).filter(c => c >= 10).length >= 3;
+        }
+    },
+    {
+        id: 'subject_specialist',
+        name: 'Subject Specialist',
+        description: 'Complete 50 quizzes in one subject',
+        icon: '🎯',
+        condition: (player) => {
+            const subjectCounts = {};
+            player.sessions.forEach(s => {
+                const subject = getSubjectForTopic(s.topicId);
+                if (subject) {
+                    subjectCounts[subject] = (subjectCounts[subject] || 0) + 1;
+                }
+            });
+            return Object.values(subjectCounts).some(c => c >= 50);
+        }
+    },
+    
+    // Progression Achievements (21-30)
+    {
+        id: 'iron_rank',
+        name: 'Iron Rank',
+        description: 'Reach level 20',
+        icon: '⚙️',
+        condition: (player) => {
+            const totals = computePlayerTotals(player);
+            return totals.level >= 20;
+        }
+    },
+    {
+        id: 'platinum_tier',
+        name: 'Platinum Tier',
+        description: 'Reach level 25',
+        icon: '💎',
+        condition: (player) => {
+            const totals = computePlayerTotals(player);
+            return totals.level >= 25;
+        }
+    },
+    {
+        id: 'diamond_league',
+        name: 'Diamond League',
+        description: 'Reach level 30',
+        icon: '💠',
+        condition: (player) => {
+            const totals = computePlayerTotals(player);
+            return totals.level >= 30;
+        }
+    },
+    {
+        id: 'mythical_hero',
+        name: 'Mythical Hero',
+        description: 'Reach level 40',
+        icon: '🌠',
+        condition: (player) => {
+            const totals = computePlayerTotals(player);
+            return totals.level >= 40;
+        }
+    },
+    {
+        id: 'legendary_champion',
+        name: 'Legendary Champion',
+        description: 'Reach level 50',
+        icon: '👑',
+        condition: (player) => {
+            const totals = computePlayerTotals(player);
+            return totals.level >= 50;
+        }
+    },
+    {
+        id: 'quiz_apprentice',
+        name: 'Quiz Apprentice',
+        description: 'Complete 25 quizzes',
+        icon: '🎓',
+        condition: (player) => player.sessions && player.sessions.length >= 25
+    },
+    {
+        id: 'quiz_journeyman',
+        name: 'Quiz Journeyman',
+        description: 'Complete 50 quizzes',
+        icon: '🏅',
+        condition: (player) => player.sessions && player.sessions.length >= 50
+    },
+    {
+        id: 'quiz_expert',
+        name: 'Quiz Expert',
+        description: 'Complete 100 quizzes',
+        icon: '🏆',
+        condition: (player) => player.sessions && player.sessions.length >= 100
+    },
+    {
+        id: 'quiz_master',
+        name: 'Quiz Master',
+        description: 'Complete 200 quizzes',
+        icon: '🎖️',
+        condition: (player) => player.sessions && player.sessions.length >= 200
+    },
+    {
+        id: 'quiz_grandmaster',
+        name: 'Quiz Grandmaster',
+        description: 'Complete 500 quizzes',
+        icon: '👹',
+        condition: (player) => player.sessions && player.sessions.length >= 500
+    },
+    
+    // Difficulty Achievements (31-40)
+    {
+        id: 'advanced_initiate',
+        name: 'Advanced Initiate',
+        description: 'Complete 5 advanced quizzes',
+        icon: '🎪',
+        condition: (player) => {
+            return player.sessions.filter(s => s.difficulty === 'advanced').length >= 5;
+        }
+    },
+    {
+        id: 'advanced_warrior',
+        name: 'Advanced Warrior',
+        description: 'Complete 15 advanced quizzes',
+        icon: '🗡️',
+        condition: (player) => {
+            return player.sessions.filter(s => s.difficulty === 'advanced').length >= 15;
+        }
+    },
+    {
+        id: 'expert_initiate',
+        name: 'Expert Initiate',
+        description: 'Complete 5 expert quizzes',
+        icon: '🔱',
+        condition: (player) => {
+            return player.sessions.filter(s => s.difficulty === 'expert').length >= 5;
+        }
+    },
+    {
+        id: 'expert_slayer',
+        name: 'Expert Slayer',
+        description: 'Complete 15 expert quizzes',
+        icon: '⚔️',
+        condition: (player) => {
+            return player.sessions.filter(s => s.difficulty === 'expert').length >= 15;
+        }
+    },
+    {
+        id: 'challenge_seeker',
+        name: 'Challenge Seeker',
+        description: 'Complete 30 expert quizzes',
+        icon: '🐉',
+        condition: (player) => {
+            return player.sessions.filter(s => s.difficulty === 'expert').length >= 30;
+        }
+    },
+    {
+        id: 'ace_student',
+        name: 'Ace Student',
+        description: 'Score 90%+ on 5 expert quizzes',
+        icon: '🌟',
+        condition: (player) => {
+            const expertSessions = player.sessions.filter(s => 
+                s.difficulty === 'expert' && (s.score / s.total) >= 0.9
+            );
+            return expertSessions.length >= 5;
+        }
+    },
+    {
+        id: 'ace_pilot',
+        name: 'Ace Pilot',
+        description: 'Score 90%+ on 10 expert quizzes',
+        icon: '✈️',
+        condition: (player) => {
+            const expertSessions = player.sessions.filter(s => 
+                s.difficulty === 'expert' && (s.score / s.total) >= 0.9
+            );
+            return expertSessions.length >= 10;
+        }
+    },
+    {
+        id: 'perfect_expert',
+        name: 'Perfect Expert',
+        description: 'Get 100% on an expert quiz',
+        icon: '🎆',
+        condition: (player) => {
+            return player.sessions.some(s => s.difficulty === 'expert' && s.score === s.total);
+        }
+    },
+    {
+        id: 'unstoppable',
+        name: 'Unstoppable Force',
+        description: 'Score 100% on 5 expert quizzes',
+        icon: '🔥',
+        condition: (player) => {
+            return player.sessions.filter(s => s.difficulty === 'expert' && s.score === s.total).length >= 5;
+        }
+    },
+    {
+        id: 'difficulty_master',
+        name: 'Difficulty Master',
+        description: 'Complete 10 quizzes at each difficulty',
+        icon: '🎲',
+        condition: (player) => {
+            const beginner = player.sessions.filter(s => s.difficulty === 'beginner').length >= 10;
+            const advanced = player.sessions.filter(s => s.difficulty === 'advanced').length >= 10;
+            const expert = player.sessions.filter(s => s.difficulty === 'expert').length >= 10;
+            return beginner && advanced && expert;
+        }
+    },
+    
+    // Performance Achievements (41-50)
+    {
+        id: 'consistency_king',
+        name: 'Consistency King',
+        description: 'Score 80%+ on 5 consecutive quizzes',
+        icon: '👑',
+        condition: (player) => {
+            for (let i = 0; i <= player.sessions.length - 5; i++) {
+                const consecutive = player.sessions.slice(i, i + 5);
+                if (consecutive.every(s => (s.score / s.total) >= 0.8)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    },
+    {
+        id: 'winning_streak',
+        name: 'Winning Streak',
+        description: 'Score 70%+ on 10 consecutive quizzes',
+        icon: '🔗',
+        condition: (player) => {
+            for (let i = 0; i <= player.sessions.length - 10; i++) {
+                const consecutive = player.sessions.slice(i, i + 10);
+                if (consecutive.every(s => (s.score / s.total) >= 0.7)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    },
+    {
+        id: 'speed_runner',
+        name: 'Speed Runner',
+        description: 'Average less than 20 seconds per question',
+        icon: '💨',
+        condition: (player) => {
+            return player.sessions.some(s => s.avgTime && s.avgTime < 20);
+        }
+    },
+    {
+        id: 'lightning_reflexes',
+        name: 'Lightning Reflexes',
+        description: 'Average less than 15 seconds per question',
+        icon: '⚡',
+        condition: (player) => {
+            return player.sessions.some(s => s.avgTime && s.avgTime < 15);
+        }
+    },
+    {
+        id: 'perfectionist',
+        name: 'Perfectionist',
+        description: 'Get 100% on 3 quizzes',
+        icon: '💫',
+        condition: (player) => {
+            return player.sessions.filter(s => s.score === s.total).length >= 3;
+        }
+    },
+    {
+        id: 'flawless_champion',
+        name: 'Flawless Champion',
+        description: 'Get 100% on 10 quizzes',
+        icon: '🌈',
+        condition: (player) => {
+            return player.sessions.filter(s => s.score === s.total).length >= 10;
+        }
+    },
+    {
+        id: 'high_scorer',
+        name: 'High Scorer',
+        description: 'Score 95%+ on any quiz',
+        icon: '🎯',
+        condition: (player) => {
+            return player.sessions.some(s => (s.score / s.total) >= 0.95);
+        }
+    },
+    {
+        id: 'elite_performer',
+        name: 'Elite Performer',
+        description: 'Score 95%+ on 5 quizzes',
+        icon: '⭐',
+        condition: (player) => {
+            return player.sessions.filter(s => (s.score / s.total) >= 0.95).length >= 5;
+        }
+    },
+    {
+        id: 'night_owl',
+        name: 'Night Owl',
+        description: 'Complete a quiz after midnight',
+        icon: '🦉',
+        condition: (player) => {
+            return player.sessions.some(s => {
+                const hour = new Date(s.timestamp).getHours();
+                return hour >= 0 && hour < 6;
+            });
+        }
+    },
+    {
+        id: 'ultimate_scholar',
+        name: 'Ultimate Scholar',
+        description: 'Complete 1000 quizzes',
+        icon: '🏰',
+        condition: (player) => player.sessions && player.sessions.length >= 1000
     }
 ];
 
@@ -3432,6 +3820,28 @@ function goToAnalytics() {
     render();
 }
 
+// Helper function to generate floating navigation buttons
+function renderFloatingNav(options = {}) {
+    const showBack = options.showBack !== false; // default true
+    const showHome = options.showHome !== false; // default true
+    const backAction = options.backAction || null;
+    const backLabel = options.backLabel || '← Back';
+    
+    if (!showBack && !showHome) return '';
+    
+    let buttons = [];
+    
+    if (showBack && backAction) {
+        buttons.push(`<button class="floating-nav-btn" id="floating-back-btn">${backLabel}</button>`);
+    }
+    
+    if (showHome) {
+        buttons.push(`<button class="floating-nav-btn" id="floating-home-btn">🏠 Home</button>`);
+    }
+    
+    return `<div class="floating-nav">${buttons.join('')}</div>`;
+}
+
 // ============================================================================
 // Render Functions
 // ============================================================================
@@ -3649,6 +4059,7 @@ function renderSubject() {
                 <button class="btn" id="home-btn">← Home</button>
             </div>
         </div>
+        ${renderFloatingNav()}
     `;
 }
 
@@ -3699,6 +4110,7 @@ function renderModeSelect() {
                 <button class="btn" id="back-to-subject-btn">← Back to Topics</button>
             </div>
         </div>
+        ${renderFloatingNav({ backAction: 'subject', backLabel: '← Topics' })}
     `;
 }
 
@@ -3749,6 +4161,7 @@ function renderDifficultySelect() {
                 <button class="btn" id="back-to-mode-btn">← Back to Modes</button>
             </div>
         </div>
+        ${renderFloatingNav({ backAction: 'mode', backLabel: '← Modes' })}
     `;
 }
 
@@ -3983,6 +4396,7 @@ function renderResults() {
                 <button class="btn" id="retry-btn">↻ Retry Topic</button>
             </div>
         </div>
+        ${renderFloatingNav()}
     `;
 }
 
@@ -4109,6 +4523,7 @@ function renderStatus() {
                 <button class="btn" id="home-btn">← Home</button>
             </div>
         </div>
+        ${renderFloatingNav()}
     `;
 }
 
@@ -4285,6 +4700,7 @@ function renderEquipment() {
                 <button class="btn" id="home-btn">← Home</button>
             </div>
         </div>
+        ${renderFloatingNav()}
     `;
 }
 
@@ -4501,6 +4917,7 @@ function renderAchievements() {
                 <button class="btn" id="home-btn">← Home</button>
             </div>
         </div>
+        ${renderFloatingNav()}
     `;
 }
 
@@ -4691,6 +5108,7 @@ function renderSettings() {
                 <button class="btn" id="home-btn">← Home</button>
             </div>
         </div>
+        ${renderFloatingNav()}
     `;
 }
 
@@ -4875,6 +5293,7 @@ function renderAnalytics() {
                 <button class="btn" id="home-btn">← Home</button>
             </div>
         </div>
+        ${renderFloatingNav()}
     `;
 }
 
@@ -5269,6 +5688,28 @@ function attachEventListeners() {
     const homeBtn = document.getElementById('home-btn');
     if (homeBtn) {
         homeBtn.addEventListener('click', goHome);
+    }
+    
+    // Floating navigation buttons
+    const floatingHomeBtn = document.getElementById('floating-home-btn');
+    if (floatingHomeBtn) {
+        floatingHomeBtn.addEventListener('click', goHome);
+    }
+    
+    const floatingBackBtn = document.getElementById('floating-back-btn');
+    if (floatingBackBtn) {
+        floatingBackBtn.addEventListener('click', () => {
+            playSfx('nav');
+            // Determine which screen to go back to based on current screen
+            if (state.screen === 'mode-select') {
+                state.screen = 'subject';
+            } else if (state.screen === 'difficulty-select') {
+                state.screen = 'mode-select';
+            } else {
+                goHome();
+            }
+            render();
+        });
     }
     
     const nextBtn = document.getElementById('next-btn');
