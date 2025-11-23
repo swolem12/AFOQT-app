@@ -1171,7 +1171,169 @@ body::after {
     opacity: 0.8;
 }
 
+/* Status screen layout */
+.status-layout {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.status-character-section {
+    background: var(--color-primary-dim);
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 
+        0 0 20px var(--color-primary-dim),
+        inset 0 0 30px var(--color-primary-dim);
+}
+
+.status-sprite-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    min-height: 200px;
+}
+
+.status-equipped-items {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--color-primary-dim);
+    border-radius: 6px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.equipped-item-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    margin: 4px 0;
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.equipped-item-row:hover {
+    background: rgba(0, 255, 255, 0.1);
+}
+
+.equipped-icon {
+    font-size: 1.3rem;
+    width: 30px;
+    text-align: center;
+}
+
+.equipped-name {
+    font-size: 0.95rem;
+    flex: 1;
+    color: var(--color-secondary);
+}
+
+.status-stats-section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Achievements */
+.achievements-container {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.achievement-list {
+    display: grid;
+    gap: 12px;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.4s ease-out backwards;
+}
+
+.achievement-item:nth-child(1) { animation-delay: 0.05s; }
+.achievement-item:nth-child(2) { animation-delay: 0.1s; }
+.achievement-item:nth-child(3) { animation-delay: 0.15s; }
+.achievement-item:nth-child(4) { animation-delay: 0.2s; }
+.achievement-item:nth-child(5) { animation-delay: 0.25s; }
+.achievement-item:nth-child(6) { animation-delay: 0.3s; }
+
+.achievement-item:hover {
+    background: rgba(0, 255, 255, 0.1);
+    border-left-color: var(--color-secondary);
+    transform: translateX(5px);
+}
+
+.achievement-item.title {
+    border-left-color: var(--color-warning);
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), rgba(0, 0, 0, 0.6));
+}
+
+.achievement-item.milestone {
+    border-left-color: var(--color-secondary);
+}
+
+.achievement-item.award {
+    border-left-color: var(--color-primary);
+}
+
+.achievement-item.mastery {
+    border-left-color: #9b59b6;
+}
+
+.achievement-icon {
+    font-size: 1.8rem;
+    width: 40px;
+    text-align: center;
+    filter: drop-shadow(0 0 5px currentColor);
+}
+
+.achievement-info {
+    flex: 1;
+}
+
+.achievement-name {
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: var(--color-secondary);
+    margin-bottom: 4px;
+    text-shadow: 0 0 10px var(--color-secondary-glow);
+}
+
+.achievement-description {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    color: var(--color-text-dim);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media (max-width: 768px) {
+    .status-layout {
+        grid-template-columns: 1fr;
+    }
+    
     .stats-grid {
         grid-template-columns: 1fr;
     }
@@ -1184,6 +1346,7 @@ body::after {
         font-size: 1.3rem;
     }
 }
+
 
 /* Modal styles */
 .modal {
@@ -1506,7 +1669,7 @@ body::after {
 .player-auth-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 15px;
     padding: clamp(10px, 2vw, 15px);
     background: rgba(0, 255, 255, 0.05);
     border: 2px solid rgba(0, 255, 255, 0.3);
@@ -1529,10 +1692,27 @@ body::after {
     box-shadow: 0 0 25px rgba(255, 255, 0, 0.4);
 }
 
+.player-auth-sprite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.player-auth-sprite .pixel-character {
+    transform: scale(0.5);
+}
+
 .player-auth-info {
     display: flex;
     align-items: center;
     gap: clamp(15px, 3vw, 20px);
+    flex: 1;
 }
 
 .player-auth-name {
@@ -1862,7 +2042,7 @@ body::after {
     padding: 15px 20px;
     margin-bottom: 12px;
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
     align-items: center;
     transition: all 0.3s;
     cursor: pointer;
@@ -1873,6 +2053,22 @@ body::after {
     border-color: var(--color-primary);
     box-shadow: 0 0 20px var(--color-primary-glow);
     transform: translateX(5px);
+}
+
+.player-sprite-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--color-primary-dim);
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.player-sprite-preview .pixel-character {
+    transform: scale(0.6);
 }
 
 .player-info-login {
@@ -4657,7 +4853,7 @@ select {
 /* Static progress bar - always visible outside scroll container */
 .boot-progress-static {
     position: absolute;
-    bottom: clamp(80px, 12vw, 120px);
+    bottom: clamp(140px, 18vw, 200px);
     left: clamp(20px, 4vw, 40px);
     right: clamp(20px, 4vw, 40px);
     z-index: 100;

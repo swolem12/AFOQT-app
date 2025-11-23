@@ -2527,10 +2527,17 @@ function showBootSequence() {
             welcomeName.textContent = `HELLO, ${state.currentPlayer.name.toUpperCase()}`;
         }
         
-        // Sound effects for boot sequence
-        playSfx('boot'); // Phase 1: Frameshift
-        setTimeout(() => playSfx('wrong'), 3000); // Phase 2: Alert sound
-        setTimeout(() => playSfx('nav'), 5000); // Phase 3: Terminal start
+        // Sound effects for boot sequence - Enhanced
+        playSfx('boot'); // Phase 1: Frameshift (0s)
+        setTimeout(() => playSfx('nav'), 1500); // Phase 1: Additional beep
+        setTimeout(() => playSfx('wrong'), 3000); // Phase 2: Alert sound (3s)
+        setTimeout(() => playSfx('nav'), 3500); // Phase 2: Warning beep
+        setTimeout(() => playSfx('nav'), 5000); // Phase 3: Terminal start (5s)
+        setTimeout(() => playSfx('nav'), 6000); // Phase 3: System check
+        setTimeout(() => playSfx('nav'), 8000); // Phase 3: Loading modules
+        setTimeout(() => playSfx('nav'), 10000); // Phase 3: More loading
+        setTimeout(() => playSfx('correct'), 13000); // Phase 3: Systems ready
+        setTimeout(() => playSfx('complete'), 14000); // Welcome message
         
         // Auto-scroll functionality - precise timing to match 9 second duration
         const scrollContainer = document.getElementById('boot-container-scroll');
@@ -3006,8 +3013,13 @@ function renderLogin() {
                     ${state.players.length === 0 ? '<p style="text-align: center; opacity: 0.7; margin: 30px 0;">No characters yet. Create one below!</p>' : ''}
                     ${state.players.map(p => {
                         const playerInfo = computePlayerTotals(p);
+                        // Initialize equipment if needed
+                        initializePlayerEquipment(p);
                         return `
                             <div class="player-item-login" data-player-id="${p.id}">
+                                <div class="player-sprite-preview">
+                                    ${renderCharacterSprite(p)}
+                                </div>
                                 <div class="player-info-login">
                                     <div class="player-name-login">${p.name}</div>
                                     <div class="player-level-login">Level ${playerInfo.level}</div>
@@ -3093,8 +3105,13 @@ function renderPlayerModal() {
                         <div class="auth-section">
                             <div class="auth-section-label">EXISTING PILOTS</div>
                             <div class="player-auth-list">
-                                ${state.players.map(p => `
+                                ${state.players.map(p => {
+                                    initializePlayerEquipment(p);
+                                    return `
                                     <div class="player-auth-item ${state.currentPlayer?.id === p.id ? 'selected' : ''}" data-player-id="${p.id}">
+                                        <div class="player-auth-sprite">
+                                            ${renderCharacterSprite(p)}
+                                        </div>
                                         <div class="player-auth-info">
                                             <span class="player-auth-name">${p.name}</span>
                                             <span class="player-auth-level">Lv. ${computePlayerTotals(p).level}</span>
@@ -3103,7 +3120,7 @@ function renderPlayerModal() {
                                             <span class="auth-play-icon">▶</span> DEPLOY
                                         </button>
                                     </div>
-                                `).join('')}
+                                `}).join('')}
                             </div>
                         </div>
                     ` : ''}
@@ -3515,6 +3532,9 @@ function renderStatus() {
         };
     });
     
+    // Initialize equipment if not present
+    initializePlayerEquipment(state.currentPlayer);
+    
     // Get equipped items
     const equippedHelmet = EQUIPMENT_ITEMS[state.currentPlayer.equipment.helmet];
     const equippedArmor = EQUIPMENT_ITEMS[state.currentPlayer.equipment.armor];
@@ -3525,44 +3545,81 @@ function renderStatus() {
         <div class="panel">
             <h1 class="panel-header">Character Status</h1>
             
-            <div class="status-header">
-                <div class="status-player-info">
-                    <div class="status-name">${state.currentPlayer.name}</div>
-                    <div class="status-level">Level ${level}</div>
-                    <div class="status-total-stats">Total Stat Points: ${totalStatPoints}</div>
+            <div class="status-layout">
+                <!-- Left side: Character Display -->
+                <div class="status-character-section">
+                    <div class="status-player-info">
+                        <div class="status-name">${state.currentPlayer.name}</div>
+                        <div class="status-level">Level ${level}</div>
+                        <div class="status-total-stats">Total SP: ${totalStatPoints}</div>
+                    </div>
+                    
+                    <!-- Character Sprite -->
+                    <div class="status-sprite-container">
+                        ${renderCharacterSprite(state.currentPlayer)}
+                    </div>
+                    
+                    <!-- Equipped Items Preview -->
+                    <div class="status-equipped-items">
+                        <div class="equipped-item-row">
+                            <span class="equipped-icon">🎓</span>
+                            <span class="equipped-name">${equippedHelmet ? equippedHelmet.name : 'None'}</span>
+                        </div>
+                        <div class="equipped-item-row">
+                            <span class="equipped-icon">🛡</span>
+                            <span class="equipped-name">${equippedArmor ? equippedArmor.name : 'None'}</span>
+                        </div>
+                        <div class="equipped-item-row">
+                            <span class="equipped-icon">⚔</span>
+                            <span class="equipped-name">${equippedWeapon ? equippedWeapon.name : 'None'}</span>
+                        </div>
+                        <div class="equipped-item-row">
+                            <span class="equipped-icon">💎</span>
+                            <span class="equipped-name">${equippedAccessory ? equippedAccessory.name : 'None'}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="status-progress">
+                        <div class="status-progress-label">Progress to Level ${level + 1}</div>
+                        <div class="status-progress-bar">
+                            <div class="status-progress-fill" style="width: ${(pointsIntoLevel / 5) * 100}%"></div>
+                        </div>
+                        <div class="status-progress-text">${pointsIntoLevel} / 5 points</div>
+                    </div>
                 </div>
                 
-                <div class="status-progress">
-                    <div class="status-progress-label">Progress to Level ${level + 1}</div>
-                    <div class="status-progress-bar">
-                        <div class="status-progress-fill" style="width: ${(pointsIntoLevel / 5) * 100}%"></div>
-                    </div>
-                    <div class="status-progress-text">${pointsIntoLevel} / 5 points</div>
-                </div>
-            </div>
-            
-            <h2 style="margin: 30px 0 20px 0; text-align: center;">Subject Stats</h2>
-            
-            <div class="stats-grid">
-                ${subjectStats.map(stat => {
-                    const maxBarWidth = 50;
-                    const barPercentage = Math.min((stat.statPoints / maxBarWidth) * 100, 100);
+                <!-- Right side: Stats and Achievements -->
+                <div class="status-stats-section">
+                    <h2 style="margin: 0 0 20px 0; text-align: center;">Subject Stats</h2>
                     
-                    return `
-                        <div class="stat-item">
-                            <div class="stat-header">
-                                <div class="stat-topic-name">${stat.subjectName}</div>
-                                <div class="stat-points">SP: ${stat.statPoints}</div>
-                            </div>
-                            <div class="stat-bar">
-                                <div class="stat-bar-fill" style="width: ${barPercentage}%"></div>
-                            </div>
-                            <div class="stat-details">
-                                Correct Answers: ${stat.correctAnswers}
-                            </div>
-                        </div>
-                    `;
-                }).join('')}
+                    <div class="stats-grid">
+                        ${subjectStats.map(stat => {
+                            const maxBarWidth = 50;
+                            const barPercentage = Math.min((stat.statPoints / maxBarWidth) * 100, 100);
+                            
+                            return `
+                                <div class="stat-item">
+                                    <div class="stat-header">
+                                        <div class="stat-topic-name">${stat.subjectName}</div>
+                                        <div class="stat-points">SP: ${stat.statPoints}</div>
+                                    </div>
+                                    <div class="stat-bar">
+                                        <div class="stat-bar-fill" style="width: ${barPercentage}%"></div>
+                                    </div>
+                                    <div class="stat-details">
+                                        Correct Answers: ${stat.correctAnswers}
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                    
+                    <!-- Titles, Awards, and Milestones -->
+                    <h2 style="margin: 30px 0 20px 0; text-align: center;">🏆 Titles & Achievements</h2>
+                    <div class="achievements-container">
+                        ${renderPlayerAchievements(state.currentPlayer, level, totalStatPoints)}
+                    </div>
+                </div>
             </div>
             
             <div class="action-buttons">
@@ -3757,6 +3814,90 @@ function getItemIcon(type) {
     };
     return icons[type] || '📦';
 }
+
+function renderPlayerAchievements(player, level, totalStatPoints) {
+    const stats = player.stats || {};
+    const sessions = player.sessions || [];
+    
+    // Calculate achievements
+    const achievements = [];
+    
+    // Level-based titles
+    if (level >= 30) {
+        achievements.push({ type: 'title', icon: '👑', name: 'Grand Master', description: 'Reached Level 30' });
+    } else if (level >= 20) {
+        achievements.push({ type: 'title', icon: '🎖️', name: 'Expert Scholar', description: 'Reached Level 20' });
+    } else if (level >= 10) {
+        achievements.push({ type: 'title', icon: '🏅', name: 'Advanced Student', description: 'Reached Level 10' });
+    } else if (level >= 5) {
+        achievements.push({ type: 'title', icon: '⭐', name: 'Dedicated Learner', description: 'Reached Level 5' });
+    } else {
+        achievements.push({ type: 'title', icon: '🌟', name: 'Novice', description: 'Beginning the journey' });
+    }
+    
+    // Stat point milestones
+    if (totalStatPoints >= 100) {
+        achievements.push({ type: 'milestone', icon: '💯', name: 'Century Club', description: '100+ Total Stat Points' });
+    }
+    if (totalStatPoints >= 50) {
+        achievements.push({ type: 'milestone', icon: '✨', name: 'Half Century', description: '50+ Total Stat Points' });
+    }
+    
+    // Session-based achievements
+    const totalSessions = sessions.length;
+    if (totalSessions >= 100) {
+        achievements.push({ type: 'award', icon: '🎯', name: 'Persistent', description: '100+ Quiz Sessions' });
+    } else if (totalSessions >= 50) {
+        achievements.push({ type: 'award', icon: '🔥', name: 'Dedicated', description: '50+ Quiz Sessions' });
+    } else if (totalSessions >= 25) {
+        achievements.push({ type: 'award', icon: '💪', name: 'Committed', description: '25+ Quiz Sessions' });
+    }
+    
+    // Perfect score achievements
+    const perfectScores = sessions.filter(s => s.score === s.total).length;
+    if (perfectScores >= 10) {
+        achievements.push({ type: 'award', icon: '🌟', name: 'Perfectionist', description: '10+ Perfect Scores' });
+    } else if (perfectScores >= 5) {
+        achievements.push({ type: 'award', icon: '⚡', name: 'Sharpshooter', description: '5+ Perfect Scores' });
+    }
+    
+    // Subject mastery (check if any subject has high stat points)
+    const subjectMastery = [];
+    subjects.forEach(subject => {
+        const subjectTopics = topics.filter(t => t.subjectId === subject.id);
+        let subjectStatPoints = 0;
+        subjectTopics.forEach(topic => {
+            const topicStat = stats[topic.id] || { statPoints: 0 };
+            subjectStatPoints += topicStat.statPoints;
+        });
+        
+        if (subjectStatPoints >= 30) {
+            subjectMastery.push({ type: 'mastery', icon: '📚', name: `${subject.name} Master`, description: `30+ SP in ${subject.name}` });
+        }
+    });
+    
+    achievements.push(...subjectMastery.slice(0, 3)); // Limit to top 3
+    
+    // If no achievements yet
+    if (achievements.length === 1) {
+        achievements.push({ type: 'milestone', icon: '🎯', name: 'First Steps', description: 'Complete quizzes to earn more!' });
+    }
+    
+    return `
+        <div class="achievement-list">
+            ${achievements.map(achievement => `
+                <div class="achievement-item ${achievement.type}">
+                    <div class="achievement-icon">${achievement.icon}</div>
+                    <div class="achievement-info">
+                        <div class="achievement-name">${achievement.name}</div>
+                        <div class="achievement-description">${achievement.description}</div>
+                    </div>
+                </div>
+            `).join('')}
+        </div>
+    `;
+}
+
 
 function renderCharacterSprite(player) {
     const equipment = player.equipment || {};
