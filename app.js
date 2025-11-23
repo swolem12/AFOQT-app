@@ -3304,17 +3304,12 @@ function showBootSequence() {
                         </div>
                     </div>
                     
-                    <!-- Progress bar - static position, always visible -->
-                    <div class="boot-progress-static">
-                        <div class="boot-progress-label">[ SYNCHRONIZATION RATE ]</div>
-                        <div class="boot-progress-bar">
-                            <div class="boot-progress-fill"></div>
-                            <div class="progress-scanline"></div>
-                        </div>
-                        <div class="boot-progress-percent">0%</div>
+                    <!-- Welcome message - static position, always visible -->
+                    <div class="boot-welcome-static">
+                        <div class="boot-welcome-label">WELCOME TO AFOQT QUEST</div>
                     </div>
                     
-                    <!-- Welcome message - shown at end -->
+                    <!-- Player greeting - shown at end -->
                     <div class="boot-welcome-message" id="boot-welcome-msg" style="opacity: 0;">
                         <div class="welcome-text-main" id="welcome-player-name">HELLO, PLAYER</div>
                         <div class="welcome-text-sub">WELCOME BACK</div>
@@ -3395,20 +3390,6 @@ function showBootSequence() {
         };
         updateTimestamp();
         const tsInterval = setInterval(updateTimestamp, 1000);
-        
-        // Animate progress percentage
-        const progressPercent = document.querySelector('.boot-progress-percent');
-        if (progressPercent) {
-            let percent = 0;
-            const percentInterval = setInterval(() => {
-                percent += 1;
-                if (percent <= 100) {
-                    progressPercent.textContent = percent + '%';
-                } else {
-                    clearInterval(percentInterval);
-                }
-            }, 100);
-        }
         
         // Show welcome message near the end
         setTimeout(() => {

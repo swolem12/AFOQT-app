@@ -51,6 +51,8 @@
             max-width: 600px;
         }
     </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="db.js"></script>
     <script src="app.js"></script>
 </head>
 <body>
@@ -72,16 +74,16 @@
     <script>
         function replayBoot() {
             // Clear any existing boot screen
-            const existing = document.getElementById('boot-screen');
+            const existing = document.getElementById('boot-sequence');
             if (existing) {
                 existing.remove();
             }
             
-            // Show the boot screen
-            showBootScreen();
+            // Show the boot sequence
+            showBootSequence();
         }
         
-        // Show boot screen on initial load
+        // Show boot sequence on initial load
         window.addEventListener('load', () => {
             setTimeout(replayBoot, 500);
         });
