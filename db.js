@@ -14,6 +14,14 @@ const STORES = {
     QUESTION_HISTORY: 'questionHistory'
 };
 
+// Spaced repetition intervals (in days)
+const SPACED_REPETITION = {
+    INCORRECT: 0.5,      // 12 hours for incorrect answers
+    CORRECT_FIRST: 1,    // 1 day after first correct answer
+    CORRECT_SECOND: 3,   // 3 days after second correct answer
+    CORRECT_MASTERY: 7   // 7 days for mastered questions (3+ correct)
+};
+
 class AfoqtDatabase {
     constructor() {
         this.db = null;
@@ -310,6 +318,64 @@ class AfoqtDatabase {
     // ============================================================================
 
     /**
+     * Record a question attempt with atomic attempt count calculation
+     * @param {Object} questionRecord - must include playerId and questionId
+     * @returns {Promise<number>} record id
+     */
+    async recordQuestionAttemptAtomic(questionRecord) {
+        await this.init();
+        
+        return new Promise((resolve, reject) => {
+            // Use a single transaction to read history and write new attempt atomically
+            const transaction = this.db.transaction([STORES.QUESTION_HISTORY], 'readwrite');
+            const store = transaction.objectStore(STORES.QUESTION_HISTORY);
+            const index = store.index('playerIdQuestionId');
+            
+            // First, get the count of previous attempts
+            const countRequest = index.count([questionRecord.playerId, questionRecord.questionId]);
+            
+            countRequest.onsuccess = () => {
+                const attemptCount = countRequest.result + 1;
+                
+                // Calculate next review date based on performance (spaced repetition)
+                const now = Date.now();
+                let intervalDays = SPACED_REPETITION.CORRECT_FIRST;
+                
+                if (questionRecord.correct) {
+                    // Correct answer: increase interval based on attempt count
+                    if (attemptCount >= 3) {
+                        intervalDays = SPACED_REPETITION.CORRECT_MASTERY;
+                    } else if (attemptCount >= 2) {
+                        intervalDays = SPACED_REPETITION.CORRECT_SECOND;
+                    } else {
+                        intervalDays = SPACED_REPETITION.CORRECT_FIRST;
+                    }
+                } else {
+                    // Incorrect answer: review soon
+                    intervalDays = SPACED_REPETITION.INCORRECT;
+                }
+                
+                const nextReview = now + (intervalDays * 24 * 60 * 60 * 1000);
+                
+                const record = {
+                    ...questionRecord,
+                    attemptCount,
+                    nextReview,
+                    timestamp: now
+                };
+                
+                // Now add the new attempt record
+                const addRequest = store.add(record);
+                addRequest.onsuccess = () => resolve(addRequest.result);
+                addRequest.onerror = () => reject(addRequest.error);
+            };
+            
+            countRequest.onerror = () => reject(countRequest.error);
+            transaction.onerror = () => reject(transaction.error);
+        });
+    }
+
+    /**
      * Record a question attempt
      * @param {Object} questionRecord
      * @returns {Promise<number>} record id
@@ -319,20 +385,20 @@ class AfoqtDatabase {
         
         // Calculate next review date based on performance (spaced repetition)
         const now = Date.now();
-        let intervalDays = 1; // Default: review tomorrow
+        let intervalDays = SPACED_REPETITION.CORRECT_FIRST; // Default: review tomorrow
         
         if (questionRecord.correct) {
-            // Correct answer: increase interval
+            // Correct answer: increase interval based on attempt count
             if (questionRecord.attemptCount >= 3) {
-                intervalDays = 7; // Week
+                intervalDays = SPACED_REPETITION.CORRECT_MASTERY;
             } else if (questionRecord.attemptCount >= 2) {
-                intervalDays = 3; // 3 days
+                intervalDays = SPACED_REPETITION.CORRECT_SECOND;
             } else {
-                intervalDays = 1; // Tomorrow
+                intervalDays = SPACED_REPETITION.CORRECT_FIRST;
             }
         } else {
             // Incorrect answer: review soon
-            intervalDays = 0.5; // 12 hours
+            intervalDays = SPACED_REPETITION.INCORRECT;
         }
         
         const nextReview = now + (intervalDays * 24 * 60 * 60 * 1000);

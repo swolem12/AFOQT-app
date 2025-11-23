@@ -258,17 +258,22 @@ async function getQuestionsWithSpacedRepetition(subjectId, subtopicId, difficult
         // Get pool of all questions for this subtopic/difficulty
         const allQuestions = getQuestionsFromRegistry(subjectId, subtopicId, difficulty, 100);
         
+        // Create Map for O(1) lookups by question ID
+        const questionsById = new Map(allQuestions.map(q => [q.id, q]));
+        
         // Get seen question IDs
         const seenIds = new Set(dueQuestions.map(q => q.questionId));
         
         // Prioritize: 1) Due questions, 2) Unseen questions, 3) Random seen questions
         const result = [];
+        const resultIds = new Set();
         
-        // Add due questions first
+        // Add due questions first (O(1) lookup per question)
         for (const dueQ of relevantDue) {
-            const match = allQuestions.find(q => q.id === dueQ.questionId);
+            const match = questionsById.get(dueQ.questionId);
             if (match && result.length < count) {
                 result.push(match);
+                resultIds.add(match.id);
             }
         }
         
@@ -278,14 +283,16 @@ async function getQuestionsWithSpacedRepetition(subjectId, subtopicId, difficult
         for (const q of shuffledUnseen) {
             if (result.length >= count) break;
             result.push(q);
+            resultIds.add(q.id);
         }
         
         // If still need more, add random questions from pool
         const shuffledAll = [...allQuestions].sort(() => Math.random() - 0.5);
         for (const q of shuffledAll) {
             if (result.length >= count) break;
-            if (!result.find(r => r.id === q.id)) {
+            if (!resultIds.has(q.id)) {
                 result.push(q);
+                resultIds.add(q.id);
             }
         }
         

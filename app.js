@@ -3473,17 +3473,11 @@ function handleAnswer(optionIndex) {
             subtopicId: currentQuestion.subtopicId || state.currentTopic.id,
             difficulty: currentQuestion.difficulty || state.quiz.difficulty,
             correct: isCorrect,
-            responseTime: elapsed,
-            attemptCount: 1, // Will be updated based on history
-            timestamp: Date.now()
+            responseTime: elapsed
         };
         
-        // Get previous attempts to calculate attempt count
-        afoqtDB.getQuestionHistory(state.currentPlayer.id, currentQuestion.id)
-            .then(history => {
-                questionRecord.attemptCount = history.length + 1;
-                return afoqtDB.recordQuestionAttempt(questionRecord);
-            })
+        // Use atomic method to avoid race conditions
+        afoqtDB.recordQuestionAttemptAtomic(questionRecord)
             .catch(err => {
                 console.error('Failed to record question attempt:', err);
             });
