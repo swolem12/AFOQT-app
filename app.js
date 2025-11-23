@@ -3186,7 +3186,7 @@ function showBootSequence() {
         }
         
         // Enable audio on first user interaction (required by browser autoplay policy)
-        // Note: Sound effects are scheduled throughout the 14s animation. Those played before
+        // Note: Sound effects are scheduled throughout the boot animation. Those played before
         // user interaction will fail silently, those after will play normally.
         const enableAudio = createAudioEnabler();
         
@@ -3196,9 +3196,6 @@ function showBootSequence() {
             bootSequence.addEventListener('click', enableAudio, { once: true });
             document.addEventListener('keydown', enableAudio, { once: true });
         }
-        
-        
-        document.body.insertAdjacentHTML('afterbegin', bootHTML);
         
         // Sound effects for boot sequence
         playSfx('boot'); // Phase 1: System boot
