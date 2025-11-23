@@ -3476,7 +3476,7 @@ function handleAnswer(optionIndex) {
         // Use atomic method to avoid race conditions
         afoqtDB.recordQuestionAttemptAtomic(questionRecord)
             .catch(err => {
-                console.error('Failed to record question attempt:', err);
+                console.error(`Failed to record question attempt for question ${currentQuestion.id}:`, err);
             });
     }
     
