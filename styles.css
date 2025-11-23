@@ -4876,15 +4876,15 @@ select {
 .boot-welcome-static {
     position: absolute;
     bottom: clamp(140px, 18vw, 200px);
-    left: 50%;
-    transform: translateX(-50%);
+    left: clamp(20px, 4vw, 40px);
+    right: clamp(20px, 4vw, 40px);
     z-index: 100;
     opacity: 0;
     animation: bootLineAppear 0.5s ease-out 5.5s forwards;
     text-align: center;
     /* Hexagonal container sizing */
-    width: clamp(300px, 50vw, 600px);
-    max-width: 90%;
+    display: flex;
+    justify-content: center;
 }
 
 .boot-welcome-label {
@@ -4935,8 +4935,8 @@ select {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: calc(100% - 6px); /* Slightly smaller to create border effect */
-    height: calc(100% - 6px);
+    width: calc(100% - clamp(4px, 0.5vw, 8px)); /* Responsive border width */
+    height: calc(100% - clamp(4px, 0.5vw, 8px));
     background: rgba(0, 255, 255, 0.3); /* 30% opacity cyan fill */
     clip-path: polygon(
         50% 0%,
