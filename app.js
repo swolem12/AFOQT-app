@@ -118,8 +118,6 @@ function showBootScreen() {
         '>> SYSTEM INITIALIZATION SEQUENCE...',
         '>> Establishing neural link...',
         '',
-        '[████████████████████████████████████████] 100%',
-        '',
         '>> LOADING CORE MODULES:',
         '   ├─ Math Combat Engine................ [✓] READY',
         '   ├─ Verbal Processing Unit............ [✓] READY', 
@@ -207,6 +205,33 @@ function showBootScreen() {
     logoText.textContent = asciiLogo;
     bootContent.appendChild(logoText);
     
+    // Create a separate loading bar container
+    const loadingBarContainer = document.createElement('div');
+    loadingBarContainer.style.cssText = `
+        background: rgba(0, 255, 255, 0.05);
+        border: 1px solid #00ffff;
+        border-radius: 4px;
+        padding: ${isMobile ? '8px' : '12px'};
+        margin: ${isMobile ? '15px 0' : '20px 0'};
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    `;
+    
+    const loadingBar = document.createElement('pre');
+    loadingBar.style.cssText = `
+        font-size: ${isMobile ? '10px' : '14px'};
+        line-height: 1.4;
+        text-shadow: 0 0 5px #00ffff;
+        margin: 0;
+        color: #00ffff;
+    `;
+    loadingBar.textContent = '[████████████████████████████████████████] 100%';
+    loadingBarContainer.appendChild(loadingBar);
+    bootContent.appendChild(loadingBarContainer);
+    
+    // Play sound effect for loading bar completion
+    setTimeout(() => playSfx('correct'), 500);
+    
     const bootText = document.createElement('pre');
     bootText.style.cssText = `
         font-size: ${isMobile ? '9px' : '13px'};
@@ -293,8 +318,6 @@ function showBootScreen() {
             // Play sound effects for certain lines
             if (line.includes('[✓]') || line.includes('READY') || line.includes('ONLINE') || line.includes('LOADED')) {
                 playSfx('nav');
-            } else if (line.includes('100%')) {
-                playSfx('correct');
             } else if (line.includes('OPERATIONAL') || line.includes('ESTABLISHED')) {
                 playSfx('complete');
             }
