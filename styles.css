@@ -1782,14 +1782,14 @@ body::after {
     background: linear-gradient(135deg, var(--color-warning-dim) 0%, var(--color-warning) 100%);
     border-color: var(--color-warning);
     color: var(--color-warning);
-    text-shadow: 0 0 5px var(--color-warning-glow);
+    text-shadow: 0 0 5px var(--color-warning);
     box-shadow: 0 0 10px var(--color-warning-dim);
 }
 
 .btn-auth-create:hover {
     background: linear-gradient(135deg, var(--color-warning) 0%, var(--color-warning-glow) 100%);
     box-shadow: 
-        0 0 20px var(--color-warning-glow),
+        0 0 20px var(--color-warning),
         inset 0 0 15px var(--color-warning-dim);
 }
 
