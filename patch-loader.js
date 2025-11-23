@@ -202,8 +202,7 @@ function convertJsonQuestionToAppFormat(jsonQuestion) {
         prompt: jsonQuestion.question,
         options: options,
         correctIndex: correctIndex,
-        explanation: jsonQuestion.explanation,
-        originalQuestion: jsonQuestion // Keep reference for metadata
+        explanation: jsonQuestion.explanation
     };
 }
 

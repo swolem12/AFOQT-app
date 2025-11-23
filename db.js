@@ -442,7 +442,7 @@ class AfoqtDatabase {
      * Get questions due for review
      * @param {string} playerId
      * @param {number} limit
-     * @returns {Promise<Array>}
+     * @returns {Promise<Array>} Array of most recent attempts for each question due for review
      */
     async getQuestionsDueForReview(playerId, limit = 20) {
         await this.init();
@@ -451,26 +451,28 @@ class AfoqtDatabase {
         return new Promise((resolve, reject) => {
             const transaction = this.db.transaction([STORES.QUESTION_HISTORY], 'readonly');
             const store = transaction.objectStore(STORES.QUESTION_HISTORY);
-            const index = store.index('playerIdNextReview');
-            const range = IDBKeyRange.bound([playerId, 0], [playerId, now]);
-            
-            const questions = [];
-            const seenQuestions = new Set();
-            const request = index.openCursor(range);
+            const index = store.index('playerId');
+            const request = index.getAll(playerId);
 
-            request.onsuccess = (event) => {
-                const cursor = event.target.result;
-                if (cursor && questions.length < limit) {
-                    const record = cursor.value;
-                    // Only include each question once (most recent attempt)
-                    if (!seenQuestions.has(record.questionId)) {
-                        seenQuestions.add(record.questionId);
-                        questions.push(record);
+            request.onsuccess = () => {
+                const allRecords = request.result || [];
+                
+                // Group by questionId and keep only the most recent attempt for each
+                const latestByQuestion = new Map();
+                allRecords.forEach(record => {
+                    const existing = latestByQuestion.get(record.questionId);
+                    if (!existing || record.timestamp > existing.timestamp) {
+                        latestByQuestion.set(record.questionId, record);
                     }
-                    cursor.continue();
-                } else {
-                    resolve(questions);
-                }
+                });
+                
+                // Filter for questions due for review (nextReview <= now)
+                const dueQuestions = Array.from(latestByQuestion.values())
+                    .filter(record => record.nextReview <= now)
+                    .sort((a, b) => a.nextReview - b.nextReview) // Earlier due dates first
+                    .slice(0, limit);
+                
+                resolve(dueQuestions);
             };
 
             request.onerror = () => reject(request.error);
@@ -646,11 +648,7 @@ class AfoqtDatabase {
     async clearAllData() {
         await this.init();
         
-        const stores = [STORES.PLAYERS, STORES.SESSIONS, STORES.SETTINGS];
-        if (this.db.objectStoreNames.contains(STORES.QUESTION_HISTORY)) {
-            stores.push(STORES.QUESTION_HISTORY);
-        }
-        
+        const stores = [STORES.PLAYERS, STORES.SESSIONS, STORES.SETTINGS, STORES.QUESTION_HISTORY];
         const transaction = this.db.transaction(stores, 'readwrite');
 
         const clearPromises = stores.map(storeName =>
