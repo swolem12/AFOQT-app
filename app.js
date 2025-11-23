@@ -276,35 +276,7 @@ function showBootScreen() {
     const matrixInterval = setInterval(drawMatrix, isMobile ? 80 : 50);
     
     // Enable audio on first user interaction (required by browser autoplay policy)
-    let audioEnabled = false;
-    const enableAudio = () => {
-        if (!audioEnabled) {
-            audioEnabled = true;
-            const ctx = getAudioContext();
-            if (ctx.state === 'suspended') {
-                ctx.resume().then(() => {
-                    console.log('Audio context resumed');
-                    // Play boot sound once audio is enabled
-                    playSfx('boot');
-                }).catch(e => console.warn('Could not resume audio:', e));
-            } else {
-                // Audio already running, play boot sound
-                playSfx('boot');
-            }
-        }
-    };
-    
-    // Try to play boot sound immediately (will work if autoplay is allowed)
-    // If it fails silently due to autoplay policy, it will play after user interaction
-    const tryPlayBootSound = () => {
-        const ctx = getAudioContext();
-        if (ctx.state === 'running') {
-            playSfx('boot');
-            audioEnabled = true;
-        }
-        // If suspended, wait for user interaction
-    };
-    tryPlayBootSound();
+    const enableAudio = createAudioEnabler(() => playSfx('boot'));
     
     // Listen for any user interaction to enable audio
     bootScreen.addEventListener('click', enableAudio, { once: true });
@@ -1774,11 +1746,37 @@ function getAudioContext() {
     if (!audioContext) {
         audioContext = new (window.AudioContext || window.webkitAudioContext)();
     }
-    // Resume the context if it's suspended (due to browser autoplay policy)
-    if (audioContext.state === 'suspended') {
-        audioContext.resume().catch(e => console.warn('Could not resume audio context:', e));
-    }
     return audioContext;
+}
+
+// Utility function to enable audio after user interaction (required by browser autoplay policy)
+// Returns a function that should be called on user interaction (click/keydown)
+function createAudioEnabler(onEnabled) {
+    let audioEnabled = false;
+    
+    const enableAudio = () => {
+        if (!audioEnabled) {
+            audioEnabled = true;
+            const ctx = getAudioContext();
+            if (ctx.state === 'suspended') {
+                ctx.resume().then(() => {
+                    console.log('Audio context resumed');
+                    if (onEnabled) onEnabled();
+                }).catch(e => console.warn('Could not resume audio:', e));
+            } else if (onEnabled) {
+                onEnabled();
+            }
+        }
+    };
+    
+    // Try to enable immediately (will work if autoplay is allowed)
+    const ctx = getAudioContext();
+    if (ctx.state === 'running') {
+        audioEnabled = true;
+        if (onEnabled) onEnabled();
+    }
+    
+    return enableAudio;
 }
 
 function playBeep(frequency, duration, type = 'sine', gainValue = 0.1, delay = 0) {
@@ -2883,27 +2881,7 @@ function showBootSequence() {
         }
         
         // Enable audio on first user interaction (required by browser autoplay policy)
-        let audioEnabled = false;
-        const enableAudio = () => {
-            if (!audioEnabled) {
-                audioEnabled = true;
-                const ctx = getAudioContext();
-                if (ctx.state === 'suspended') {
-                    ctx.resume().then(() => {
-                        console.log('Audio context resumed - boot sounds enabled');
-                    }).catch(e => console.warn('Could not resume audio:', e));
-                }
-            }
-        };
-        
-        // Try to play immediately (will work if autoplay is allowed)
-        const tryPlayBootSound = () => {
-            const ctx = getAudioContext();
-            if (ctx.state === 'running') {
-                audioEnabled = true;
-            }
-        };
-        tryPlayBootSound();
+        const enableAudio = createAudioEnabler();
         
         // Listen for any user interaction to enable audio
         const bootSequence = document.getElementById('boot-sequence');
