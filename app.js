@@ -275,8 +275,12 @@ function showBootScreen() {
     
     const matrixInterval = setInterval(drawMatrix, isMobile ? 80 : 50);
     
-    // Play boot sound at start
-    playSfx('boot');
+    // Enable audio on first user interaction (required by browser autoplay policy)
+    const enableAudio = createAudioEnabler(() => playSfx('boot'));
+    
+    // Listen for any user interaction to enable audio
+    bootScreen.addEventListener('click', enableAudio, { once: true });
+    document.addEventListener('keydown', enableAudio, { once: true });
     
     // Type out boot messages
     let currentLine = 0;
@@ -1745,6 +1749,36 @@ function getAudioContext() {
     return audioContext;
 }
 
+// Utility function to enable audio after user interaction (required by browser autoplay policy)
+// Returns a function that should be called on user interaction (click/keydown)
+function createAudioEnabler(onEnabled) {
+    let audioEnabled = false;
+    
+    const enableAudio = () => {
+        if (!audioEnabled) {
+            audioEnabled = true;
+            const ctx = getAudioContext();
+            if (ctx.state === 'suspended') {
+                ctx.resume().then(() => {
+                    console.log('Audio context resumed');
+                    if (onEnabled) onEnabled();
+                }).catch(e => console.warn('Could not resume audio:', e));
+            } else if (onEnabled) {
+                onEnabled();
+            }
+        }
+    };
+    
+    // Try to enable immediately (will work if autoplay is allowed)
+    const ctx = getAudioContext();
+    if (ctx.state === 'running') {
+        audioEnabled = true;
+        if (onEnabled) onEnabled();
+    }
+    
+    return enableAudio;
+}
+
 function playBeep(frequency, duration, type = 'sine', gainValue = 0.1, delay = 0) {
     try {
         const ctx = getAudioContext();
@@ -2844,6 +2878,18 @@ function showBootSequence() {
         const welcomeName = document.getElementById('welcome-player-name');
         if (welcomeName && state.currentPlayer) {
             welcomeName.textContent = `HELLO, ${state.currentPlayer.name.toUpperCase()}`;
+        }
+        
+        // Enable audio on first user interaction (required by browser autoplay policy)
+        // Note: Sound effects are scheduled throughout the 14s animation. Those played before
+        // user interaction will fail silently, those after will play normally.
+        const enableAudio = createAudioEnabler();
+        
+        // Listen for any user interaction to enable audio
+        const bootSequence = document.getElementById('boot-sequence');
+        if (bootSequence) {
+            bootSequence.addEventListener('click', enableAudio, { once: true });
+            document.addEventListener('keydown', enableAudio, { once: true });
         }
         
         // Sound effects for boot sequence - Enhanced with distinct sounds for each animation phase
