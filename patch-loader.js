@@ -191,17 +191,19 @@ async function loadAllVocabularyContent() {
  */
 function convertJsonQuestionToAppFormat(jsonQuestion) {
     // JSON format: {id, question, choices: {A, B, C, D}, answer, explanation}
-    // App format: {prompt, options: [], correctIndex, explanation}
+    // App format: {prompt, options: [], correctIndex, explanation, id, originalQuestion}
     
     const choices = jsonQuestion.choices;
     const options = [choices.A, choices.B, choices.C, choices.D];
     const correctIndex = ['A', 'B', 'C', 'D'].indexOf(jsonQuestion.answer);
     
     return {
+        id: jsonQuestion.id, // Preserve question ID for tracking
         prompt: jsonQuestion.question,
         options: options,
         correctIndex: correctIndex,
-        explanation: jsonQuestion.explanation
+        explanation: jsonQuestion.explanation,
+        originalQuestion: jsonQuestion // Keep reference for metadata
     };
 }
 
@@ -225,9 +227,75 @@ function getQuestionsFromRegistry(subjectId, subtopicId, difficulty, count = 10)
     const shuffled = [...pool].sort(() => Math.random() - 0.5);
     const selected = shuffled.slice(0, Math.min(count, shuffled.length));
     
-    // Convert to app format
-    return selected.map(convertJsonQuestionToAppFormat);
+    // Convert to app format and add metadata
+    return selected.map(q => {
+        const converted = convertJsonQuestionToAppFormat(q);
+        converted.subtopicId = subtopicId;
+        converted.difficulty = difficulty;
+        return converted;
+    });
 }
+
+/**
+ * Get questions with spaced repetition prioritization
+ * Prioritizes questions due for review, then fills with new/random questions
+ */
+async function getQuestionsWithSpacedRepetition(subjectId, subtopicId, difficulty, count = 10, playerId = null) {
+    if (!playerId || typeof afoqtDB === 'undefined') {
+        // Fallback to regular selection if no player or DB not available
+        return getQuestionsFromRegistry(subjectId, subtopicId, difficulty, count);
+    }
+    
+    try {
+        // Get questions due for review
+        const dueQuestions = await afoqtDB.getQuestionsDueForReview(playerId, count);
+        
+        // Filter due questions for this subtopic and difficulty
+        const relevantDue = dueQuestions.filter(q => 
+            q.subtopicId === subtopicId && q.difficulty === difficulty
+        );
+        
+        // Get pool of all questions for this subtopic/difficulty
+        const allQuestions = getQuestionsFromRegistry(subjectId, subtopicId, difficulty, 100);
+        
+        // Get seen question IDs
+        const seenIds = new Set(dueQuestions.map(q => q.questionId));
+        
+        // Prioritize: 1) Due questions, 2) Unseen questions, 3) Random seen questions
+        const result = [];
+        
+        // Add due questions first
+        for (const dueQ of relevantDue) {
+            const match = allQuestions.find(q => q.id === dueQ.questionId);
+            if (match && result.length < count) {
+                result.push(match);
+            }
+        }
+        
+        // Fill with unseen questions
+        const unseenQuestions = allQuestions.filter(q => !seenIds.has(q.id));
+        const shuffledUnseen = [...unseenQuestions].sort(() => Math.random() - 0.5);
+        for (const q of shuffledUnseen) {
+            if (result.length >= count) break;
+            result.push(q);
+        }
+        
+        // If still need more, add random questions from pool
+        const shuffledAll = [...allQuestions].sort(() => Math.random() - 0.5);
+        for (const q of shuffledAll) {
+            if (result.length >= count) break;
+            if (!result.find(r => r.id === q.id)) {
+                result.push(q);
+            }
+        }
+        
+        return result;
+    } catch (error) {
+        console.error('Error with spaced repetition:', error);
+        return getQuestionsFromRegistry(subjectId, subtopicId, difficulty, count);
+    }
+}
+
 
 /**
  * Generate AFOQT practice test questions based on Patch 18 config

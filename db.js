@@ -4,13 +4,14 @@
 // ============================================================================
 
 const DB_NAME = 'afoqt-quest-db';
-const DB_VERSION = 1;
+const DB_VERSION = 2;
 
 // Object store names
 const STORES = {
     PLAYERS: 'players',
     SESSIONS: 'sessions',
-    SETTINGS: 'settings'
+    SETTINGS: 'settings',
+    QUESTION_HISTORY: 'questionHistory'
 };
 
 class AfoqtDatabase {
@@ -48,7 +49,8 @@ class AfoqtDatabase {
 
             request.onupgradeneeded = (event) => {
                 const db = event.target.result;
-                console.log('Upgrading database schema...');
+                const oldVersion = event.oldVersion;
+                console.log(`Upgrading database from version ${oldVersion} to ${DB_VERSION}...`);
 
                 // Create Players object store
                 if (!db.objectStoreNames.contains(STORES.PLAYERS)) {
@@ -74,6 +76,22 @@ class AfoqtDatabase {
                 if (!db.objectStoreNames.contains(STORES.SETTINGS)) {
                     db.createObjectStore(STORES.SETTINGS, { keyPath: 'id' });
                     console.log('Created settings object store');
+                }
+
+                // Create Question History object store (v2)
+                if (!db.objectStoreNames.contains(STORES.QUESTION_HISTORY)) {
+                    const questionHistoryStore = db.createObjectStore(STORES.QUESTION_HISTORY, { 
+                        keyPath: 'id', 
+                        autoIncrement: true 
+                    });
+                    questionHistoryStore.createIndex('playerId', 'playerId', { unique: false });
+                    questionHistoryStore.createIndex('questionId', 'questionId', { unique: false });
+                    questionHistoryStore.createIndex('subtopicId', 'subtopicId', { unique: false });
+                    questionHistoryStore.createIndex('playerIdQuestionId', ['playerId', 'questionId'], { unique: false });
+                    questionHistoryStore.createIndex('playerIdSubtopic', ['playerId', 'subtopicId'], { unique: false });
+                    questionHistoryStore.createIndex('nextReview', 'nextReview', { unique: false });
+                    questionHistoryStore.createIndex('playerIdNextReview', ['playerId', 'nextReview'], { unique: false });
+                    console.log('Created question history object store');
                 }
             };
         });
@@ -288,6 +306,186 @@ class AfoqtDatabase {
     }
 
     // ============================================================================
+    // Question History Operations (for spaced repetition)
+    // ============================================================================
+
+    /**
+     * Record a question attempt
+     * @param {Object} questionRecord
+     * @returns {Promise<number>} record id
+     */
+    async recordQuestionAttempt(questionRecord) {
+        await this.init();
+        
+        // Calculate next review date based on performance (spaced repetition)
+        const now = Date.now();
+        let intervalDays = 1; // Default: review tomorrow
+        
+        if (questionRecord.correct) {
+            // Correct answer: increase interval
+            if (questionRecord.attemptCount >= 3) {
+                intervalDays = 7; // Week
+            } else if (questionRecord.attemptCount >= 2) {
+                intervalDays = 3; // 3 days
+            } else {
+                intervalDays = 1; // Tomorrow
+            }
+        } else {
+            // Incorrect answer: review soon
+            intervalDays = 0.5; // 12 hours
+        }
+        
+        const nextReview = now + (intervalDays * 24 * 60 * 60 * 1000);
+        
+        const record = {
+            ...questionRecord,
+            nextReview,
+            timestamp: now
+        };
+        
+        return new Promise((resolve, reject) => {
+            const transaction = this.db.transaction([STORES.QUESTION_HISTORY], 'readwrite');
+            const store = transaction.objectStore(STORES.QUESTION_HISTORY);
+            const request = store.add(record);
+
+            request.onsuccess = () => resolve(request.result);
+            request.onerror = () => reject(request.error);
+        });
+    }
+
+    /**
+     * Get question history for a player and question
+     * @param {string} playerId
+     * @param {string} questionId
+     * @returns {Promise<Array>}
+     */
+    async getQuestionHistory(playerId, questionId) {
+        await this.init();
+        return new Promise((resolve, reject) => {
+            const transaction = this.db.transaction([STORES.QUESTION_HISTORY], 'readonly');
+            const store = transaction.objectStore(STORES.QUESTION_HISTORY);
+            const index = store.index('playerIdQuestionId');
+            const request = index.getAll([playerId, questionId]);
+
+            request.onsuccess = () => resolve(request.result || []);
+            request.onerror = () => reject(request.error);
+        });
+    }
+
+    /**
+     * Get questions due for review
+     * @param {string} playerId
+     * @param {number} limit
+     * @returns {Promise<Array>}
+     */
+    async getQuestionsDueForReview(playerId, limit = 20) {
+        await this.init();
+        const now = Date.now();
+        
+        return new Promise((resolve, reject) => {
+            const transaction = this.db.transaction([STORES.QUESTION_HISTORY], 'readonly');
+            const store = transaction.objectStore(STORES.QUESTION_HISTORY);
+            const index = store.index('playerIdNextReview');
+            const range = IDBKeyRange.bound([playerId, 0], [playerId, now]);
+            
+            const questions = [];
+            const seenQuestions = new Set();
+            const request = index.openCursor(range);
+
+            request.onsuccess = (event) => {
+                const cursor = event.target.result;
+                if (cursor && questions.length < limit) {
+                    const record = cursor.value;
+                    // Only include each question once (most recent attempt)
+                    if (!seenQuestions.has(record.questionId)) {
+                        seenQuestions.add(record.questionId);
+                        questions.push(record);
+                    }
+                    cursor.continue();
+                } else {
+                    resolve(questions);
+                }
+            };
+
+            request.onerror = () => reject(request.error);
+        });
+    }
+
+    /**
+     * Get all question attempts for a subtopic
+     * @param {string} playerId
+     * @param {string} subtopicId
+     * @returns {Promise<Array>}
+     */
+    async getSubtopicQuestionHistory(playerId, subtopicId) {
+        await this.init();
+        return new Promise((resolve, reject) => {
+            const transaction = this.db.transaction([STORES.QUESTION_HISTORY], 'readonly');
+            const store = transaction.objectStore(STORES.QUESTION_HISTORY);
+            const index = store.index('playerIdSubtopic');
+            const request = index.getAll([playerId, subtopicId]);
+
+            request.onsuccess = () => resolve(request.result || []);
+            request.onerror = () => reject(request.error);
+        });
+    }
+
+    /**
+     * Get analytics data per subtopic for a player
+     * @param {string} playerId
+     * @returns {Promise<Object>} Subtopic analytics
+     */
+    async getSubtopicAnalytics(playerId) {
+        await this.init();
+        
+        return new Promise((resolve, reject) => {
+            const transaction = this.db.transaction([STORES.QUESTION_HISTORY], 'readonly');
+            const store = transaction.objectStore(STORES.QUESTION_HISTORY);
+            const index = store.index('playerId');
+            const request = index.getAll(playerId);
+
+            request.onsuccess = () => {
+                const records = request.result || [];
+                const analytics = {};
+                
+                records.forEach(record => {
+                    const key = `${record.subtopicId}_${record.difficulty}`;
+                    if (!analytics[key]) {
+                        analytics[key] = {
+                            subtopicId: record.subtopicId,
+                            difficulty: record.difficulty,
+                            totalAttempts: 0,
+                            correctAttempts: 0,
+                            totalTime: 0,
+                            uniqueQuestions: new Set()
+                        };
+                    }
+                    
+                    analytics[key].totalAttempts++;
+                    if (record.correct) {
+                        analytics[key].correctAttempts++;
+                    }
+                    analytics[key].totalTime += (record.responseTime || 0);
+                    analytics[key].uniqueQuestions.add(record.questionId);
+                });
+                
+                // Convert sets to counts
+                Object.keys(analytics).forEach(key => {
+                    analytics[key].uniqueQuestionsCount = analytics[key].uniqueQuestions.size;
+                    delete analytics[key].uniqueQuestions;
+                    analytics[key].accuracy = analytics[key].totalAttempts > 0 ?
+                        (analytics[key].correctAttempts / analytics[key].totalAttempts * 100).toFixed(1) : 0;
+                    analytics[key].avgTime = analytics[key].totalAttempts > 0 ?
+                        (analytics[key].totalTime / analytics[key].totalAttempts).toFixed(1) : 0;
+                });
+                
+                resolve(analytics);
+            };
+            request.onerror = () => reject(request.error);
+        });
+    }
+
+    // ============================================================================
     // Migration and Utility Operations
     // ============================================================================
 
@@ -382,28 +580,22 @@ class AfoqtDatabase {
     async clearAllData() {
         await this.init();
         
-        const transaction = this.db.transaction(
-            [STORES.PLAYERS, STORES.SESSIONS, STORES.SETTINGS], 
-            'readwrite'
-        );
+        const stores = [STORES.PLAYERS, STORES.SESSIONS, STORES.SETTINGS];
+        if (this.db.objectStoreNames.contains(STORES.QUESTION_HISTORY)) {
+            stores.push(STORES.QUESTION_HISTORY);
+        }
+        
+        const transaction = this.db.transaction(stores, 'readwrite');
 
-        await Promise.all([
+        const clearPromises = stores.map(storeName =>
             new Promise((resolve, reject) => {
-                const request = transaction.objectStore(STORES.PLAYERS).clear();
-                request.onsuccess = () => resolve();
-                request.onerror = () => reject(request.error);
-            }),
-            new Promise((resolve, reject) => {
-                const request = transaction.objectStore(STORES.SESSIONS).clear();
-                request.onsuccess = () => resolve();
-                request.onerror = () => reject(request.error);
-            }),
-            new Promise((resolve, reject) => {
-                const request = transaction.objectStore(STORES.SETTINGS).clear();
+                const request = transaction.objectStore(storeName).clear();
                 request.onsuccess = () => resolve();
                 request.onerror = () => reject(request.error);
             })
-        ]);
+        );
+
+        await Promise.all(clearPromises);
 
         console.log('All database data cleared');
     }

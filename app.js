@@ -3176,125 +3176,6 @@ function showBootSequence() {
                 </div>
             </div>
         `;
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="boot-protocol-header">
-                            <span class="protocol-arrow">></span> TEST PROTOCOL INITIATED_
-                        </div>
-
-                        <div class="boot-system-check" id="boot-system-scroll">
-                            <div class="boot-section-header">
-                                <span class="section-icon">▼</span> NERV-MAGI SYSTEM // SYNCHRONIZATION TEST
-                            </div>
-                            <div class="boot-line boot-indent">
-                                <span>├─ CASPER (Logic)....................</span>
-                                <span class="boot-status">SYNC 99.8%</span>
-                            </div>
-                            <div class="boot-line boot-indent">
-                                <span>├─ BALTHASAR (Strategy)..............</span>
-                                <span class="boot-status">SYNC 99.9%</span>
-                            </div>
-                            <div class="boot-line boot-indent">
-                                <span>└─ MELCHIOR (Creativity)..............</span>
-                                <span class="boot-status">SYNC 100%</span>
-                            </div>
-                            <div class="boot-line boot-spacer"></div>
-                            
-                            <div class="boot-section-header">
-                                <span class="section-icon">▼</span> GUNDAM OS // MOBILE SUIT SYSTEMS
-                            </div>
-                            <div class="boot-line boot-indent">
-                                <span>├─ Psycommu Neural Link..............</span>
-                                <span class="boot-status">ACTIVE</span>
-                            </div>
-                            <div class="boot-line boot-indent">
-                                <span>├─ Combat Calculation Engine.........</span>
-                                <span class="boot-status">STANDBY</span>
-                            </div>
-                            <div class="boot-line boot-indent">
-                                <span>└─ Player Interface Module............</span>
-                                <span class="boot-status">READY</span>
-                            </div>
-                            <div class="boot-line boot-spacer"></div>
-                            
-                            <div class="boot-section-header">
-                                <span class="section-icon">▼</span> SAO CARDINAL SYSTEM // CORE MODULES
-                            </div>
-                            <div class="boot-line boot-indent">
-                                <span>├─ Math Combat Engine (27 Skills)....</span>
-                                <span class="boot-status">LOADED</span>
-                            </div>
-                            <div class="boot-line boot-indent">
-                                <span>├─ Verbal Sword Arts.................</span>
-                                <span class="boot-status">LOADED</span>
-                            </div>
-                            <div class="boot-line boot-indent">
-                                <span>├─ Reading Comprehension Quest........</span>
-                                <span class="boot-status">LOADED</span>
-                            </div>
-                            <div class="boot-line boot-indent">
-                                <span>├─ Science Knowledge Database........</span>
-                                <span class="boot-status">LOADED</span>
-                            </div>
-                            <div class="boot-line boot-indent">
-                                <span>└─ Audio Synthesis System............</span>
-                                <span class="boot-status">LOADED</span>
-                            </div>
-                            <div class="boot-line boot-spacer"></div>
-                            
-                            <div class="boot-section-header">
-                                <span class="section-icon">▼</span> PLAYER INTERFACE // STATUS CHECK
-                            </div>
-                            <div class="boot-line boot-indent">
-                                <span>├─ Character Profile Registry........</span>
-                                <span class="boot-status">ONLINE</span>
-                            </div>
-                            <div class="boot-line boot-indent">
-                                <span>├─ Experience Point System...........</span>
-                                <span class="boot-status">ONLINE</span>
-                            </div>
-                            <div class="boot-line boot-indent">
-                                <span>├─ Quest Progress Tracker............</span>
-                                <span class="boot-status">ONLINE</span>
-                            </div>
-                            <div class="boot-line boot-indent">
-                                <span>└─ Local Data Persistence............</span>
-                                <span class="boot-status">ONLINE</span>
-                            </div>
-                            <div class="boot-line boot-spacer"></div>
-                            
-                            <div class="boot-critical-status">
-                                <div class="critical-line">
-                                    <span class="critical-icon">◆</span>
-                                    <span class="boot-status-highlight">A.T. FIELD STABLE // PATTERN BLUE</span>
-                                </div>
-                                <div class="critical-line">
-                                    <span class="critical-icon">◆</span>
-                                    <span class="boot-status-highlight">ALL SYSTEMS NOMINAL // READY FOR SORTIE</span>
-                                </div>
-                                <div class="critical-line">
-                                    <span class="critical-icon">◆</span>
-                                    <span class="boot-status-highlight">LINK ESTABLISHED // DIVE AUTHORIZED</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Welcome message - static position, always visible -->
-                    <div class="boot-welcome-static">
-                        <div class="boot-welcome-label">WELCOME TO AFOQT QUEST</div>
-                    </div>
-                    
-                    <!-- Player greeting - shown at end -->
-                    <div class="boot-welcome-message" id="boot-welcome-msg" style="opacity: 0;">
-                        <div class="welcome-text-main" id="welcome-player-name">HELLO, PLAYER</div>
-                        <div class="welcome-text-sub">WELCOME BACK</div>
-                    </div>
-                </div>
-            </div>
-        `;
         
         document.body.insertAdjacentHTML('afterbegin', bootHTML);
         
@@ -3422,7 +3303,7 @@ function selectPlayer(playerId) {
 // ============================================================================
 // Quiz Management
 // ============================================================================
-function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
+async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     const topic = topics.find(t => t.id === topicId);
     if (!topic) return;
     
@@ -3442,25 +3323,38 @@ function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
         state.quiz.questions = generateAfoqtPracticeTest(topic.testConfig);
         state.quiz.mode = 'practiceTestMode'; // Force practice test mode
         state.quiz.showFeedback = false;
-    } else if (topic.subjectId === 'vocabulary' && typeof getQuestionsFromRegistry === 'function') {
-        // Patch 18: Use content-based questions for vocabulary topics
+    } else if (topic.subjectId === 'vocabulary' && typeof getQuestionsWithSpacedRepetition === 'function') {
+        // Patch 18: Use content-based questions with spaced repetition for vocabulary topics
         const questionCount = mode === 'sprint' ? 5 : 10;
+        const playerId = state.currentPlayer ? state.currentPlayer.id : null;
         
         if (mode === 'sprint') {
             // For sprint mode, get questions from all difficulties
             const difficulties = ['beginner', 'advanced', 'expert'];
             const questionsPerDifficulty = Math.ceil(questionCount / 3);
             
-            difficulties.forEach(diff => {
-                const qs = getQuestionsFromRegistry(topic.subjectId, topic.id, diff, questionsPerDifficulty);
+            for (const diff of difficulties) {
+                const qs = await getQuestionsWithSpacedRepetition(
+                    topic.subjectId, 
+                    topic.id, 
+                    diff, 
+                    questionsPerDifficulty,
+                    playerId
+                );
                 state.quiz.questions.push(...qs);
-            });
+            }
             
             // Shuffle and limit to exact count
             state.quiz.questions = state.quiz.questions.sort(() => Math.random() - 0.5).slice(0, questionCount);
         } else {
-            // Regular practice/test mode - use specified difficulty
-            state.quiz.questions = getQuestionsFromRegistry(topic.subjectId, topic.id, difficulty, questionCount);
+            // Regular practice/test mode - use spaced repetition with specified difficulty
+            state.quiz.questions = await getQuestionsWithSpacedRepetition(
+                topic.subjectId, 
+                topic.id, 
+                difficulty, 
+                questionCount,
+                playerId
+            );
         }
         
         // Fallback to procedural if no content available
@@ -3570,6 +3464,30 @@ function handleAnswer(optionIndex) {
         isCorrect: isCorrect,
         timeSpent: elapsed
     });
+    
+    // Record question attempt for spaced repetition (if question has ID and player exists)
+    if (currentQuestion.id && state.currentPlayer && typeof afoqtDB !== 'undefined') {
+        const questionRecord = {
+            playerId: state.currentPlayer.id,
+            questionId: currentQuestion.id,
+            subtopicId: currentQuestion.subtopicId || state.currentTopic.id,
+            difficulty: currentQuestion.difficulty || state.quiz.difficulty,
+            correct: isCorrect,
+            responseTime: elapsed,
+            attemptCount: 1, // Will be updated based on history
+            timestamp: Date.now()
+        };
+        
+        // Get previous attempts to calculate attempt count
+        afoqtDB.getQuestionHistory(state.currentPlayer.id, currentQuestion.id)
+            .then(history => {
+                questionRecord.attemptCount = history.length + 1;
+                return afoqtDB.recordQuestionAttempt(questionRecord);
+            })
+            .catch(err => {
+                console.error('Failed to record question attempt:', err);
+            });
+    }
     
     // Get button position for particle effect
     const buttons = document.querySelectorAll('.option-btn');
@@ -5208,12 +5126,118 @@ function renderAnalytics() {
                 </div>
             </div>
             
+            <div id="detailed-analytics-section" class="analytics-section">
+                <h2 style="margin-top: 0; color: #ff00ff; text-shadow: 0 0 10px #ff00ff;">🔍 Detailed Subtopic Analytics</h2>
+                <div style="margin-top: 15px;">
+                    <button class="btn" id="load-detailed-analytics-btn" style="width: 100%;">
+                        Load Detailed Question Analytics
+                    </button>
+                    <div id="detailed-analytics-content" style="margin-top: 15px; display: none;">
+                        <p style="text-align: center; opacity: 0.7;">Loading...</p>
+                    </div>
+                </div>
+            </div>
+            
             <div class="action-buttons">
                 <button class="btn" id="home-btn">← Home</button>
             </div>
         </div>
         ${renderFloatingNav()}
     `;
+}
+
+// ============================================================================
+// Enhanced Analytics with Database
+// ============================================================================
+async function loadDetailedAnalytics() {
+    const contentDiv = document.getElementById('detailed-analytics-content');
+    if (!contentDiv) return;
+    
+    contentDiv.style.display = 'block';
+    contentDiv.innerHTML = '<p style="text-align: center; opacity: 0.7;">Loading detailed analytics...</p>';
+    
+    try {
+        if (!state.currentPlayer || typeof afoqtDB === 'undefined') {
+            contentDiv.innerHTML = '<p style="text-align: center; opacity: 0.7;">Detailed analytics not available.</p>';
+            return;
+        }
+        
+        const subtopicAnalytics = await afoqtDB.getSubtopicAnalytics(state.currentPlayer.id);
+        const analyticsArray = Object.values(subtopicAnalytics);
+        
+        if (analyticsArray.length === 0) {
+            contentDiv.innerHTML = '<p style="text-align: center; opacity: 0.7;">No detailed question data yet. Complete some vocabulary quizzes to see subtopic analytics!</p>';
+            return;
+        }
+        
+        // Group by subtopic
+        const bySubtopic = {};
+        analyticsArray.forEach(item => {
+            if (!bySubtopic[item.subtopicId]) {
+                bySubtopic[item.subtopicId] = [];
+            }
+            bySubtopic[item.subtopicId].push(item);
+        });
+        
+        let html = '<div style="margin-top: 20px;">';
+        
+        Object.keys(bySubtopic).forEach(subtopicId => {
+            const items = bySubtopic[subtopicId];
+            const subtopicName = subtopicId.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            
+            // Calculate overall subtopic stats
+            const totalAttempts = items.reduce((sum, i) => sum + parseInt(i.totalAttempts), 0);
+            const totalCorrect = items.reduce((sum, i) => sum + parseInt(i.correctAttempts), 0);
+            const overallAccuracy = totalAttempts > 0 ? (totalCorrect / totalAttempts * 100).toFixed(1) : 0;
+            const uniqueTotal = items.reduce((sum, i) => sum + parseInt(i.uniqueQuestionsCount), 0);
+            
+            html += `
+                <div style="padding: 15px; margin-bottom: 15px; background: rgba(0, 0, 0, 0.3); border-left: 4px solid #ff00ff; border-radius: 4px;">
+                    <div style="font-weight: bold; font-size: 1.2rem; margin-bottom: 10px; color: #ff00ff;">
+                        ${subtopicName}
+                    </div>
+                    <div style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 10px;">
+                        ${uniqueTotal} unique questions • ${totalAttempts} total attempts • ${overallAccuracy}% accuracy
+                    </div>
+                    
+                    <div style="margin-top: 10px;">
+                        ${items.sort((a, b) => {
+                            const diffOrder = { 'beginner': 0, 'advanced': 1, 'expert': 2 };
+                            return diffOrder[a.difficulty] - diffOrder[b.difficulty];
+                        }).map(item => {
+                            const diffColor = item.difficulty === 'beginner' ? '#00ff00' : 
+                                            item.difficulty === 'advanced' ? '#ffaa00' : '#ff0000';
+                            return `
+                                <div style="padding: 8px; margin-bottom: 8px; background: rgba(0, 0, 0, 0.2); border-radius: 4px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                                        <span style="color: ${diffColor}; font-weight: bold; text-transform: uppercase;">
+                                            ${item.difficulty}
+                                        </span>
+                                        <span style="font-size: 1.1rem; font-weight: bold; color: ${parseFloat(item.accuracy) >= 70 ? '#00ff00' : parseFloat(item.accuracy) >= 50 ? '#ffff00' : '#ff6666'}">
+                                            ${item.accuracy}%
+                                        </span>
+                                    </div>
+                                    <div style="font-size: 0.85rem; opacity: 0.7;">
+                                        ${item.uniqueQuestionsCount} questions • ${item.correctAttempts}/${item.totalAttempts} correct • ${item.avgTime}s avg
+                                    </div>
+                                    <div style="height: 6px; background: rgba(0, 0, 0, 0.5); border-radius: 3px; overflow: hidden; margin-top: 5px;">
+                                        <div style="height: 100%; width: ${item.accuracy}%; background: ${parseFloat(item.accuracy) >= 70 ? '#00ff00' : parseFloat(item.accuracy) >= 50 ? '#ffff00' : '#ff6666'}; transition: width 0.3s;"></div>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            `;
+        });
+        
+        html += '</div>';
+        contentDiv.innerHTML = html;
+        
+    } catch (error) {
+        console.error('Error loading detailed analytics:', error);
+        contentDiv.innerHTML = '<p style="text-align: center; color: #ff6666;">Error loading detailed analytics.</p>';
+    }
 }
 
 // ============================================================================
@@ -5639,6 +5663,16 @@ function attachEventListeners() {
     const retryBtn = document.getElementById('retry-btn');
     if (retryBtn) {
         retryBtn.addEventListener('click', retryTopic);
+    }
+    
+    // Detailed analytics button
+    const loadDetailedAnalyticsBtn = document.getElementById('load-detailed-analytics-btn');
+    if (loadDetailedAnalyticsBtn) {
+        loadDetailedAnalyticsBtn.addEventListener('click', () => {
+            loadDetailedAnalytics();
+            loadDetailedAnalyticsBtn.disabled = true;
+            loadDetailedAnalyticsBtn.textContent = 'Loading...';
+        });
     }
 }
 
