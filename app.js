@@ -69,7 +69,24 @@ function showBootScreen() {
     const AUTO_FINISH_DELAY_MS = 2000;
     const TYPING_INTERVAL_MS = 100;
     
-    const asciiLogo = `
+    // Detect mobile device
+    const isMobile = window.innerWidth <= 768;
+    
+    // Simplified logo for mobile devices
+    const mobileLogo = `
+    ╔════════════════════════════════════╗
+    ║     █████  ███████  ██████  ████████     ║
+    ║    ██   ██ ██      ██    ██    ██        ║
+    ║    ███████ █████   ██    ██    ██        ║
+    ║    ██   ██ ██      ██ ▄▄ ██    ██        ║
+    ║    ██   ██ ██       ██████     ██        ║
+    ║                        ▀▀                 ║
+    ║          >>> QUEST <<<                    ║
+    ║       [ NEURAL LINK ACTIVE ]              ║
+    ╚════════════════════════════════════╝
+    `;
+    
+    const desktopLogo = `
     ╔═══════════════════════════════════════════════════════════════════════╗
     ║                                                                       ║
     ║     ▄▄▄        █████▒ ▒█████    █████   ▄▄▄█████▓                   ║
@@ -93,6 +110,8 @@ function showBootScreen() {
     ║                     [  NEURAL  LINK  ACTIVE  ]                       ║
     ╚═══════════════════════════════════════════════════════════════════════╝
     `;
+    
+    const asciiLogo = isMobile ? mobileLogo : desktopLogo;
     
     const bootMessages = [
         '',
@@ -142,16 +161,16 @@ function showBootScreen() {
         background: #000;
         color: #00ffff;
         font-family: 'Courier New', monospace;
-        padding: 20px;
+        padding: ${isMobile ? '10px' : '20px'};
         z-index: 10000;
         overflow: auto;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: ${isMobile ? 'center' : 'flex-start'};
         align-items: center;
     `;
     
-    // Create matrix rain background effect
+    // Create matrix rain background effect (lighter on mobile for performance)
     const matrixCanvas = document.createElement('canvas');
     matrixCanvas.style.cssText = `
         position: absolute;
@@ -159,7 +178,7 @@ function showBootScreen() {
         left: 0;
         width: 100%;
         height: 100%;
-        opacity: 0.15;
+        opacity: ${isMobile ? '0.08' : '0.15'};
         z-index: 1;
     `;
     bootScreen.appendChild(matrixCanvas);
@@ -169,29 +188,32 @@ function showBootScreen() {
         position: relative;
         z-index: 2;
         width: 100%;
-        max-width: 900px;
+        max-width: ${isMobile ? '100%' : '900px'};
+        padding: ${isMobile ? '0 5px' : '0'};
     `;
     bootScreen.appendChild(bootContent);
     
     const logoText = document.createElement('pre');
     logoText.style.cssText = `
-        font-size: 10px;
+        font-size: ${isMobile ? '7px' : '10px'};
         line-height: 1.2;
         text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: ${isMobile ? '10px' : '20px'};
         opacity: 0;
         animation: logoFadeIn 1s ease-out forwards;
+        overflow-x: auto;
     `;
     logoText.textContent = asciiLogo;
     bootContent.appendChild(logoText);
     
     const bootText = document.createElement('pre');
     bootText.style.cssText = `
-        font-size: 13px;
+        font-size: ${isMobile ? '9px' : '13px'};
         line-height: 1.6;
         text-shadow: 0 0 5px #00ffff;
-        margin-top: 20px;
+        margin-top: ${isMobile ? '10px' : '20px'};
+        overflow-x: auto;
     `;
     bootContent.appendChild(bootText);
     
@@ -216,25 +238,17 @@ function showBootScreen() {
             50% { transform: translateX(2px); }
             75% { transform: translateX(-1px); }
         }
-        @media (max-width: 768px) {
-            #boot-screen pre {
-                font-size: 8px !important;
-            }
-            #boot-screen pre:last-child {
-                font-size: 10px !important;
-            }
-        }
     `;
     document.head.appendChild(style);
     
     document.body.appendChild(bootScreen);
     
-    // Matrix rain effect
+    // Matrix rain effect (simplified on mobile)
     const ctx = matrixCanvas.getContext('2d');
     matrixCanvas.width = window.innerWidth;
     matrixCanvas.height = window.innerHeight;
     
-    const columns = Math.floor(matrixCanvas.width / MATRIX_COLUMN_WIDTH);
+    const columns = Math.floor(matrixCanvas.width / (isMobile ? MATRIX_COLUMN_WIDTH * 1.5 : MATRIX_COLUMN_WIDTH));
     const drops = Array(columns).fill(1);
     
     // Matrix characters: binary digits + Japanese katakana for cyberpunk aesthetic
@@ -245,20 +259,21 @@ function showBootScreen() {
         ctx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
         
         ctx.fillStyle = '#00ffff';
-        ctx.font = '15px monospace';
+        ctx.font = `${isMobile ? '12px' : '15px'} monospace`;
         
         for (let i = 0; i < drops.length; i++) {
             const text = matrixChars[Math.floor(Math.random() * matrixChars.length)];
-            ctx.fillText(text, i * MATRIX_COLUMN_WIDTH, drops[i] * MATRIX_COLUMN_WIDTH);
+            const colWidth = isMobile ? MATRIX_COLUMN_WIDTH * 1.5 : MATRIX_COLUMN_WIDTH;
+            ctx.fillText(text, i * colWidth, drops[i] * colWidth);
             
-            if (drops[i] * MATRIX_COLUMN_WIDTH > matrixCanvas.height && Math.random() > MATRIX_RESET_PROBABILITY) {
+            if (drops[i] * colWidth > matrixCanvas.height && Math.random() > MATRIX_RESET_PROBABILITY) {
                 drops[i] = 0;
             }
             drops[i]++;
         }
     }
     
-    const matrixInterval = setInterval(drawMatrix, 50);
+    const matrixInterval = setInterval(drawMatrix, isMobile ? 80 : 50);
     
     // Play boot sound at start
     playSfx('boot');
@@ -330,7 +345,7 @@ const state = {
     quizMode: 'practice', // 'practice' | 'test' | 'sprint'
     difficulty: 'beginner', // 'beginner' | 'advanced' | 'expert'
     settings: {
-        theme: 'default', // 'default' | 'eva01' | 'eva02'
+        theme: 'default', // 'default' | 'eva01' | 'eva02' | 'rx0'
         visualEffects: {
             glassmorphism: true,
             neonBorders: true,
@@ -345,8 +360,10 @@ const state = {
             wrong: 0.5,
             levelup: 0.5,
             boot: 0.5,
-            modal: 0.5
-        }
+            modal: 0.5,
+            bgMusic: 0.3
+        },
+        bgMusicEnabled: false
     },
     quiz: {
         questions: [],
@@ -1892,6 +1909,308 @@ function playSfx(kind) {
 }
 
 // ============================================================================
+// Background Music System
+// ============================================================================
+let bgMusicOscillator = null;
+let bgMusicGain = null;
+let bgMusicInterval = null;
+
+function startBackgroundMusic() {
+    if (!state.settings.bgMusicEnabled) return;
+    if (bgMusicOscillator) return; // Already playing
+    
+    try {
+        const ctx = getAudioContext();
+        
+        // Create oscillator and gain nodes
+        bgMusicOscillator = ctx.createOscillator();
+        bgMusicGain = ctx.createGain();
+        
+        bgMusicOscillator.connect(bgMusicGain);
+        bgMusicGain.connect(ctx.destination);
+        
+        // Atmospheric ambient music sequence
+        const notes = [
+            { freq: 130.81, duration: 2 },  // C3
+            { freq: 155.56, duration: 2 },  // Eb3
+            { freq: 196.00, duration: 2 },  // G3
+            { freq: 233.08, duration: 2 },  // Bb3
+            { freq: 261.63, duration: 2 },  // C4
+            { freq: 196.00, duration: 2 },  // G3
+            { freq: 155.56, duration: 2 },  // Eb3
+            { freq: 130.81, duration: 2 }   // C3
+        ];
+        
+        let noteIndex = 0;
+        const masterVol = state.settings.volumes.master || 0.5;
+        const bgMusicVol = state.settings.volumes.bgMusic || 0.3;
+        
+        bgMusicOscillator.type = 'sine';
+        bgMusicOscillator.frequency.value = notes[0].freq;
+        bgMusicGain.gain.value = bgMusicVol * masterVol * 0.15; // Keep it very subtle
+        
+        bgMusicOscillator.start();
+        
+        // Cycle through notes for ambient effect
+        bgMusicInterval = setInterval(() => {
+            if (!state.settings.bgMusicEnabled) {
+                stopBackgroundMusic();
+                return;
+            }
+            
+            noteIndex = (noteIndex + 1) % notes.length;
+            const note = notes[noteIndex];
+            
+            // Smoothly transition to next note
+            bgMusicOscillator.frequency.exponentialRampToValueAtTime(
+                note.freq, 
+                ctx.currentTime + note.duration * 0.8
+            );
+        }, 2000);
+        
+    } catch (e) {
+        console.warn('Background music not available:', e);
+    }
+}
+
+function stopBackgroundMusic() {
+    if (bgMusicOscillator) {
+        try {
+            bgMusicOscillator.stop();
+        } catch (e) {
+            // Already stopped
+        }
+        bgMusicOscillator = null;
+    }
+    if (bgMusicGain) {
+        bgMusicGain = null;
+    }
+    if (bgMusicInterval) {
+        clearInterval(bgMusicInterval);
+        bgMusicInterval = null;
+    }
+}
+
+function toggleBackgroundMusic(enabled) {
+    state.settings.bgMusicEnabled = enabled;
+    saveSettings();
+    if (enabled) {
+        startBackgroundMusic();
+    } else {
+        stopBackgroundMusic();
+    }
+}
+
+// ============================================================================
+// Achievements and Challenges System
+// ============================================================================
+const achievements = [
+    {
+        id: 'first_steps',
+        name: 'First Steps',
+        description: 'Complete your first quiz',
+        icon: '🎯',
+        condition: (player) => player.sessions && player.sessions.length >= 1
+    },
+    {
+        id: 'math_explorer',
+        name: 'Math Explorer',
+        description: 'Complete 10 math quizzes',
+        icon: '🔢',
+        condition: (player) => {
+            const mathSessions = player.sessions.filter(s => s.topicId && (
+                mathTopics.find(t => t.id === s.topicId)
+            ));
+            return mathSessions.length >= 10;
+        }
+    },
+    {
+        id: 'word_master',
+        name: 'Word Master',
+        description: 'Complete 10 vocabulary quizzes',
+        icon: '📚',
+        condition: (player) => {
+            const verbalSessions = player.sessions.filter(s => s.topicId && (
+                verbalTopics.find(t => t.id === s.topicId)
+            ));
+            return verbalSessions.length >= 10;
+        }
+    },
+    {
+        id: 'perfect_score',
+        name: 'Perfect Score',
+        description: 'Get 100% on any quiz',
+        icon: '💯',
+        condition: (player) => {
+            return player.sessions.some(s => s.score === s.total);
+        }
+    },
+    {
+        id: 'speed_demon',
+        name: 'Speed Demon',
+        description: 'Average less than 30 seconds per question',
+        icon: '⚡',
+        condition: (player) => {
+            return player.sessions.some(s => s.avgTime && s.avgTime < 30);
+        }
+    },
+    {
+        id: 'dedicated_student',
+        name: 'Dedicated Student',
+        description: 'Complete 50 quizzes',
+        icon: '🎓',
+        condition: (player) => player.sessions && player.sessions.length >= 50
+    },
+    {
+        id: 'level_10',
+        name: 'Rising Star',
+        description: 'Reach level 10',
+        icon: '⭐',
+        condition: (player) => {
+            const totals = computePlayerTotals(player);
+            return totals.level >= 10;
+        }
+    },
+    {
+        id: 'level_25',
+        name: 'Expert Pilot',
+        description: 'Reach level 25',
+        icon: '🚀',
+        condition: (player) => {
+            const totals = computePlayerTotals(player);
+            return totals.level >= 25;
+        }
+    },
+    {
+        id: 'ace_pilot',
+        name: 'Ace Pilot',
+        description: 'Score 90%+ on 10 expert-level quizzes',
+        icon: '🏆',
+        condition: (player) => {
+            const expertSessions = player.sessions.filter(s => 
+                s.difficulty === 'expert' && (s.score / s.total) >= 0.9
+            );
+            return expertSessions.length >= 10;
+        }
+    },
+    {
+        id: 'all_rounder',
+        name: 'All-Rounder',
+        description: 'Complete at least 5 quizzes in each subject',
+        icon: '🌟',
+        condition: (player) => {
+            const subjectCounts = {};
+            player.sessions.forEach(s => {
+                const subject = getSubjectForTopic(s.topicId);
+                if (subject) {
+                    subjectCounts[subject] = (subjectCounts[subject] || 0) + 1;
+                }
+            });
+            const uniqueSubjects = Object.values(subjectCounts).filter(c => c >= 5);
+            return uniqueSubjects.length >= subjects.length - 1; // All subjects except situational
+        }
+    }
+];
+
+const challenges = [
+    {
+        id: 'daily_grind',
+        name: 'Daily Grind',
+        description: 'Complete 5 quizzes today',
+        icon: '📅',
+        target: 5,
+        progressType: 'daily_quizzes'
+    },
+    {
+        id: 'marathon',
+        name: 'Marathon',
+        description: 'Complete 20 quizzes in one week',
+        icon: '🏃',
+        target: 20,
+        progressType: 'weekly_quizzes'
+    },
+    {
+        id: 'accuracy_challenge',
+        name: 'Accuracy Challenge',
+        description: 'Score 80%+ on 5 consecutive quizzes',
+        icon: '🎯',
+        target: 5,
+        progressType: 'consecutive_80plus'
+    },
+    {
+        id: 'subject_mastery',
+        name: 'Subject Mastery',
+        description: 'Complete all topics in one subject',
+        icon: '📖',
+        target: 1,
+        progressType: 'complete_subject'
+    }
+];
+
+function getSubjectForTopic(topicId) {
+    if (mathTopics.find(t => t.id === topicId)) return 'math';
+    if (verbalTopics.find(t => t.id === topicId)) return 'verbal';
+    if (readingTopics.find(t => t.id === topicId)) return 'reading';
+    if (scienceTopics.find(t => t.id === topicId)) return 'science';
+    return null;
+}
+
+function checkAchievements(player) {
+    if (!player.achievements) {
+        player.achievements = [];
+    }
+    
+    const newAchievements = [];
+    achievements.forEach(achievement => {
+        if (!player.achievements.includes(achievement.id)) {
+            if (achievement.condition(player)) {
+                player.achievements.push(achievement.id);
+                newAchievements.push(achievement);
+            }
+        }
+    });
+    
+    return newAchievements;
+}
+
+function showAchievementNotification(achievement) {
+    const notification = document.createElement('div');
+    notification.className = 'achievement-notification';
+    notification.innerHTML = `
+        <div class="achievement-icon">${achievement.icon}</div>
+        <div class="achievement-content">
+            <div class="achievement-title">Achievement Unlocked!</div>
+            <div class="achievement-name">${achievement.name}</div>
+            <div class="achievement-desc">${achievement.description}</div>
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Play achievement sound
+    playSfx('levelup');
+    
+    // Remove after animation
+    setTimeout(() => {
+        notification.style.opacity = '0';
+        setTimeout(() => notification.remove(), 500);
+    }, 4000);
+}
+
+function updateChallengeProgress(player, progressType, value = 1) {
+    if (!player.challengeProgress) {
+        player.challengeProgress = {};
+    }
+    
+    if (!player.challengeProgress[progressType]) {
+        player.challengeProgress[progressType] = 0;
+    }
+    
+    player.challengeProgress[progressType] += value;
+    savePlayers(state.players);
+}
+
+// ============================================================================
 // Utility Functions
 // ============================================================================
 function shuffleArray(array) {
@@ -2266,7 +2585,7 @@ function applyTheme(themeName) {
     const root = document.documentElement;
     
     // Remove existing theme classes
-    root.classList.remove('theme-default', 'theme-eva01', 'theme-eva02');
+    root.classList.remove('theme-default', 'theme-eva01', 'theme-eva02', 'theme-rx0');
     
     // Add new theme class
     root.classList.add(`theme-${themeName}`);
@@ -2662,7 +2981,9 @@ function createPlayer(name) {
     const player = {
         id: Date.now().toString(),
         name: name.trim(),
-        sessions: []
+        sessions: [],
+        achievements: [], // Track unlocked achievement IDs
+        challengeProgress: {} // Track progress toward challenges
     };
     state.players.push(player);
     savePlayers(state.players);
@@ -2673,6 +2994,13 @@ function createPlayer(name) {
 
 function selectPlayer(playerId) {
     state.currentPlayer = state.players.find(p => p.id === playerId) || null;
+    
+    // Initialize achievements if not present
+    if (state.currentPlayer && !state.currentPlayer.achievements) {
+        state.currentPlayer.achievements = [];
+        state.currentPlayer.challengeProgress = {};
+        savePlayers(state.players);
+    }
 }
 
 // ============================================================================
@@ -2879,13 +3207,37 @@ function finishQuiz() {
             score: state.quiz.score,
             total: state.quiz.questions.length,
             avgTime: avgTime,
-            timestamp: Date.now()
+            timestamp: Date.now(),
+            difficulty: state.quiz.difficulty
         };
         
         state.currentPlayer.sessions.push(session);
         
         // Update RPG stats with difficulty multiplier
         updatePlayerStats(state.currentPlayer, state.currentTopic.id, state.quiz.score, state.quiz.difficulty);
+        
+        // Check for new achievements
+        const newAchievements = checkAchievements(state.currentPlayer);
+        if (newAchievements.length > 0) {
+            // Show first achievement notification after a delay
+            setTimeout(() => {
+                newAchievements.forEach((achievement, index) => {
+                    setTimeout(() => {
+                        showAchievementNotification(achievement);
+                    }, index * 500);
+                });
+            }, 1000);
+        }
+        
+        // Update challenge progress
+        updateChallengeProgress(state.currentPlayer, 'daily_quizzes', 1);
+        updateChallengeProgress(state.currentPlayer, 'weekly_quizzes', 1);
+        
+        // Check for consecutive 80%+ scores
+        const recentSessions = state.currentPlayer.sessions.slice(-5);
+        if (recentSessions.every(s => (s.score / s.total) >= 0.8)) {
+            updateChallengeProgress(state.currentPlayer, 'consecutive_80plus', recentSessions.length);
+        }
         
         savePlayers(state.players);
     }
@@ -2946,6 +3298,15 @@ function goToEquipment() {
     render();
 }
 
+function goToAchievements() {
+    if (!state.currentPlayer) {
+        return; // Can't view achievements without a player
+    }
+    playSfx('nav');
+    state.screen = 'achievements';
+    render();
+}
+
 function goToAnalytics() {
     if (!state.currentPlayer) {
         return; // Can't view analytics without a player
@@ -2993,6 +3354,9 @@ function render() {
         case 'equipment':
             root.innerHTML = renderEquipment();
             break;
+        case 'achievements':
+            root.innerHTML = renderAchievements();
+            break;
         case 'settings':
             root.innerHTML = renderSettings();
             break;
@@ -3036,10 +3400,10 @@ function renderLogin() {
                 </div>
                 
                 <div class="new-character-section">
-                    <h3 style="text-align: center; margin: 30px 0 20px 0;">Create New Character</h3>
+                    <h3 style="text-align: center; margin: 30px 0 20px 0;">Create New Pilot</h3>
                     <div class="new-player-form-login">
-                        <input type="text" id="new-player-name-login" placeholder="Enter character name" maxlength="20" />
-                        <button class="btn" id="create-player-btn-login">Create Character</button>
+                        <input type="text" id="new-player-name-login" placeholder="Enter pilot name" maxlength="20" />
+                        <button class="btn" id="create-player-btn-login">Create Pilot</button>
                     </div>
                 </div>
             </div>
@@ -3057,14 +3421,17 @@ function renderHome() {
             <div class="home-controls-box">
                 <div class="header-controls">
                     <button class="btn btn-small" id="change-character-btn">
-                        👤 ${state.currentPlayer ? state.currentPlayer.name : 'Player'}
+                        👤 ${state.currentPlayer ? state.currentPlayer.name : 'Pilot'}
                     </button>
                     ${state.currentPlayer ? `
                         <button class="btn btn-small" id="status-btn">
                             📊 Stats
                         </button>
                         <button class="btn btn-small" id="equipment-btn">
-                            ⚔ Equipment
+                            🎖 Loadout
+                        </button>
+                        <button class="btn btn-small" id="achievements-btn">
+                            🏆 Awards
                         </button>
                         <button class="btn btn-small" id="results-btn">
                             📈 Results
@@ -3543,7 +3910,7 @@ function renderStatus() {
     
     return `
         <div class="panel">
-            <h1 class="panel-header">Character Status</h1>
+            <h1 class="panel-header">Pilot Status</h1>
             
             <div class="status-layout">
                 <!-- Left side: Character Display -->
@@ -3667,7 +4034,7 @@ function renderEquipment() {
     
     return `
         <div class="panel">
-            <h1 class="panel-header">⚔ Character Equipment ⚔</h1>
+            <h1 class="panel-header">🎖 Pilot Loadout 🎖</h1>
             
             <div class="loadout-container">
                 <!-- Left Side: Character Display & Equipment Slots -->
@@ -3935,6 +4302,92 @@ function renderCharacterSprite(player) {
     `;
 }
 
+function renderAchievements() {
+    if (!state.currentPlayer) {
+        return '<div class="panel"><h1>No pilot selected</h1></div>';
+    }
+    
+    if (!state.currentPlayer.achievements) {
+        state.currentPlayer.achievements = [];
+    }
+    
+    const { level } = computePlayerTotals(state.currentPlayer);
+    const unlockedAchievements = achievements.filter(a => 
+        state.currentPlayer.achievements.includes(a.id)
+    );
+    const lockedAchievements = achievements.filter(a => 
+        !state.currentPlayer.achievements.includes(a.id)
+    );
+    
+    return `
+        <div class="panel">
+            <h1 class="panel-header">🏆 Awards & Achievements 🏆</h1>
+            
+            <div class="achievements-container">
+                <div class="achievements-header">
+                    <div class="achievement-stats">
+                        <span class="achievement-count">${unlockedAchievements.length} / ${achievements.length}</span>
+                        <span class="achievement-label">Achievements Unlocked</span>
+                    </div>
+                </div>
+                
+                ${unlockedAchievements.length > 0 ? `
+                    <h2 style="margin-top: 30px; color: var(--color-accent);">✓ Unlocked</h2>
+                    <div class="achievements-grid">
+                        ${unlockedAchievements.map(achievement => `
+                            <div class="achievement-card unlocked">
+                                <div class="achievement-card-icon">${achievement.icon}</div>
+                                <div class="achievement-card-name">${achievement.name}</div>
+                                <div class="achievement-card-desc">${achievement.description}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                ` : ''}
+                
+                ${lockedAchievements.length > 0 ? `
+                    <h2 style="margin-top: 30px; color: var(--color-text-dim);">🔒 Locked</h2>
+                    <div class="achievements-grid">
+                        ${lockedAchievements.map(achievement => `
+                            <div class="achievement-card locked">
+                                <div class="achievement-card-icon">🔒</div>
+                                <div class="achievement-card-name">???</div>
+                                <div class="achievement-card-desc">${achievement.description}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                ` : ''}
+                
+                <h2 style="margin-top: 40px; color: var(--color-secondary);">📋 Active Challenges</h2>
+                <div class="challenges-list">
+                    ${challenges.map(challenge => {
+                        const progress = state.currentPlayer.challengeProgress?.[challenge.progressType] || 0;
+                        const percentage = Math.min(100, (progress / challenge.target) * 100);
+                        const isComplete = progress >= challenge.target;
+                        
+                        return `
+                            <div class="challenge-card ${isComplete ? 'complete' : ''}">
+                                <div class="challenge-icon">${challenge.icon}</div>
+                                <div class="challenge-content">
+                                    <div class="challenge-name">${challenge.name}</div>
+                                    <div class="challenge-desc">${challenge.description}</div>
+                                    <div class="challenge-progress-bar">
+                                        <div class="challenge-progress-fill" style="width: ${percentage}%"></div>
+                                    </div>
+                                    <div class="challenge-progress-text">${progress} / ${challenge.target}</div>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn" id="home-btn">← Home</button>
+            </div>
+        </div>
+    `;
+}
+
 function renderSettings() {
     const volumes = state.settings.volumes;
     const currentTheme = state.settings.theme || 'default';
@@ -3963,6 +4416,10 @@ function renderSettings() {
                             <button class="theme-btn ${currentTheme === 'eva02' ? 'active' : ''}" data-theme="eva02">
                                 <span class="theme-preview theme-preview-eva02"></span>
                                 <span>EVA-02</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'rx0' ? 'active' : ''}" data-theme="rx0">
+                                <span class="theme-preview theme-preview-rx0"></span>
+                                <span>RX-0</span>
                             </button>
                         </div>
                     </div>
@@ -4085,6 +4542,31 @@ function renderSettings() {
                             min="0" max="100" value="${volumes.modal * 100}" 
                             data-volume-type="modal">
                         <button class="btn btn-small test-sound-btn" data-sound-type="modal">Test</button>
+                    </div>
+                </div>
+                
+                <h2 style="margin: 30px 0 20px 0;">Audio</h2>
+                
+                <div class="settings-section">
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <span class="setting-name">Background Music</span>
+                            <span class="setting-description">Ambient atmospheric music</span>
+                        </label>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="bgmusic-toggle" ${state.settings.bgMusicEnabled ? 'checked' : ''}>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <span class="setting-name">Music Volume</span>
+                            <span class="setting-value">${Math.round(volumes.bgMusic * 100)}%</span>
+                        </label>
+                        <input type="range" class="volume-slider" id="volume-bgmusic" 
+                            min="0" max="100" value="${volumes.bgMusic * 100}" 
+                            data-volume-type="bgMusic">
                     </div>
                 </div>
             </div>
@@ -4450,6 +4932,12 @@ function attachEventListeners() {
         equipmentBtn.addEventListener('click', goToEquipment);
     }
     
+    // Achievements button
+    const achievementsBtn = document.getElementById('achievements-btn');
+    if (achievementsBtn) {
+        achievementsBtn.addEventListener('click', goToAchievements);
+    }
+    
     // Results button
     const resultsBtn = document.getElementById('results-btn');
     if (resultsBtn) {
@@ -4544,6 +5032,15 @@ function attachEventListeners() {
             });
         }
     });
+    
+    // Background music toggle
+    const bgMusicToggle = document.getElementById('bgmusic-toggle');
+    if (bgMusicToggle) {
+        bgMusicToggle.addEventListener('change', (e) => {
+            toggleBackgroundMusic(e.target.checked);
+            playSfx('nav');
+        });
+    }
     
     // Subject tiles
     const subjectTiles = document.querySelectorAll('[data-subject-id]');
