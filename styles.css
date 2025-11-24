@@ -141,15 +141,15 @@ body::after {
 
 /* Screen curvature effect */
 #app-root {
-    filter: contrast(1.1) brightness(1.1);
-    perspective: 1000px;
+    /* Removed filter and perspective as they create a containing block for position:fixed elements */
+    /* filter: contrast(1.1) brightness(1.1); */
+    /* perspective: 1000px; */
 }
 
 #app-root {
     width: 100%;
     max-width: 900px;
     padding: 20px;
-    position: relative;
     z-index: 1;
 }
 
