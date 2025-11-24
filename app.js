@@ -4,7 +4,17 @@
 // ============================================================================
 
 // ============================================================================
-// Particle Effects
+// Anime.js v4 Enhanced Animation System
+// Using anime.animate(), anime.stagger(), anime.createTimeline()
+// ============================================================================
+
+// Helper to check if anime.js is available
+function hasAnime() {
+    return typeof anime !== 'undefined' && typeof anime.animate === 'function';
+}
+
+// ============================================================================
+// Anime.js Enhanced Particle Effects
 // ============================================================================
 function createParticles(x, y, color, count = 20) {
     const container = document.createElement('div');
@@ -17,13 +27,9 @@ function createParticles(x, y, color, count = 20) {
     `;
     document.body.appendChild(container);
     
+    const particles = [];
     for (let i = 0; i < count; i++) {
         const particle = document.createElement('div');
-        const angle = (Math.PI * 2 * i) / count;
-        const velocity = 100 + Math.random() * 100;
-        const vx = Math.cos(angle) * velocity;
-        const vy = Math.sin(angle) * velocity;
-        
         particle.style.cssText = `
             position: absolute;
             width: 4px;
@@ -31,20 +37,324 @@ function createParticles(x, y, color, count = 20) {
             background: ${color};
             border-radius: 50%;
             box-shadow: 0 0 10px ${color};
-            animation: particleFloat 1s ease-out forwards;
-            --vx: ${vx}px;
-            --vy: ${vy}px;
         `;
-        
         container.appendChild(particle);
+        particles.push(particle);
     }
     
-    setTimeout(() => container.remove(), 1000);
+    // Use anime.js v4 for smooth particle animation
+    if (hasAnime()) {
+        anime.animate(particles, {
+            translateX: () => (Math.random() - 0.5) * 300,
+            translateY: () => (Math.random() - 0.5) * 300,
+            scale: [1, 0],
+            opacity: [1, 0],
+            duration: 1000,
+            ease: 'outExpo',
+            delay: anime.stagger(20),
+            onComplete: () => container.remove()
+        });
+    } else {
+        // Fallback to CSS animation if anime.js not loaded
+        particles.forEach((particle, i) => {
+            const angle = (Math.PI * 2 * i) / count;
+            const velocity = 100 + Math.random() * 100;
+            particle.style.setProperty('--vx', `${Math.cos(angle) * velocity}px`);
+            particle.style.setProperty('--vy', `${Math.sin(angle) * velocity}px`);
+            particle.style.animation = 'particleFloat 1s ease-out forwards';
+        });
+        setTimeout(() => container.remove(), 1000);
+    }
 }
 
-// Add CSS for particle animation
-const particleStyle = document.createElement('style');
-particleStyle.textContent = `
+// ============================================================================
+// Enhanced Celebration Effect (Level Up, Perfect Score)
+// ============================================================================
+function createCelebration(type = 'levelup') {
+    if (!hasAnime()) return;
+    
+    const colors = type === 'levelup' 
+        ? ['#FFD700', '#FFA500', '#FF6347', '#00FF00', '#00FFFF']
+        : ['#00FFFF', '#00FF00', '#FFFFFF'];
+    
+    const container = document.createElement('div');
+    container.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9998;
+    `;
+    document.body.appendChild(container);
+    
+    // Create multiple particle bursts
+    for (let burst = 0; burst < 3; burst++) {
+        setTimeout(() => {
+            const burstX = Math.random() * window.innerWidth;
+            const burstY = Math.random() * window.innerHeight * 0.5;
+            
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                particle.style.cssText = `
+                    position: absolute;
+                    left: ${burstX}px;
+                    top: ${burstY}px;
+                    width: ${4 + Math.random() * 4}px;
+                    height: ${4 + Math.random() * 4}px;
+                    background: ${color};
+                    border-radius: 50%;
+                    box-shadow: 0 0 10px ${color};
+                `;
+                container.appendChild(particle);
+                
+                anime.animate(particle, {
+                    translateX: (Math.random() - 0.5) * 400,
+                    translateY: [0, (Math.random() - 0.3) * 400],
+                    scale: [1, 0],
+                    opacity: [1, 0],
+                    duration: 1500 + Math.random() * 500,
+                    ease: 'outQuart',
+                    delay: Math.random() * 200
+                });
+            }
+        }, burst * 300);
+    }
+    
+    setTimeout(() => container.remove(), 3000);
+}
+
+// ============================================================================
+// Ripple Effect for Buttons (anime.js v4)
+// ============================================================================
+function createRipple(event) {
+    const button = event.currentTarget;
+    const rect = button.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    
+    const ripple = document.createElement('span');
+    ripple.className = 'ripple-effect';
+    ripple.style.cssText = `
+        position: absolute;
+        left: ${x}px;
+        top: ${y}px;
+        width: 0;
+        height: 0;
+        background: var(--color-primary-glow, rgba(0, 255, 255, 0.4));
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    `;
+    
+    // Ensure button has position relative for ripple positioning
+    const originalPosition = button.style.position;
+    if (!button.style.position || button.style.position === 'static') {
+        button.style.position = 'relative';
+    }
+    button.style.overflow = 'hidden';
+    button.appendChild(ripple);
+    
+    if (hasAnime()) {
+        const size = Math.max(rect.width, rect.height) * 2.5;
+        anime.animate(ripple, {
+            width: [0, size],
+            height: [0, size],
+            opacity: [0.6, 0],
+            duration: 600,
+            ease: 'outExpo',
+            onComplete: () => {
+                ripple.remove();
+                if (originalPosition) button.style.position = originalPosition;
+            }
+        });
+    } else {
+        ripple.remove();
+    }
+}
+
+// ============================================================================
+// Panel Entrance Animation (anime.js v4)
+// ============================================================================
+function animatePanelEntrance() {
+    if (!hasAnime()) return;
+    
+    const panels = document.querySelectorAll('.panel, .subject-card, .topic-card, .player-item-login');
+    if (panels.length === 0) return;
+    
+    // Set initial state
+    panels.forEach(panel => {
+        panel.style.opacity = '0';
+        panel.style.transform = 'translateY(30px)';
+    });
+    
+    anime.animate(panels, {
+        translateY: [30, 0],
+        opacity: [0, 1],
+        duration: 600,
+        delay: anime.stagger(80, { start: 100 }),
+        ease: 'outQuart'
+    });
+}
+
+// ============================================================================
+// Quiz Option Button Animations (anime.js v4)
+// ============================================================================
+function animateQuizOptions() {
+    if (!hasAnime()) return;
+    
+    const options = document.querySelectorAll('.option-btn');
+    if (options.length === 0) return;
+    
+    // Set initial state
+    options.forEach(opt => {
+        opt.style.opacity = '0';
+        opt.style.transform = 'translateX(-30px)';
+    });
+    
+    anime.animate(options, {
+        translateX: [-30, 0],
+        opacity: [0, 1],
+        duration: 500,
+        delay: anime.stagger(100, { start: 200 }),
+        ease: 'outQuart'
+    });
+}
+
+// ============================================================================
+// Correct/Wrong Answer Feedback Animation (anime.js v4)
+// ============================================================================
+function animateAnswerFeedback(element, isCorrect) {
+    if (!hasAnime() || !element) return;
+    
+    if (isCorrect) {
+        // Pulse and glow for correct
+        anime.animate(element, {
+            scale: [1, 1.05, 1],
+            duration: 400,
+            ease: 'outElastic(1, .6)'
+        });
+    } else {
+        // Shake for wrong
+        anime.animate(element, {
+            translateX: [0, -10, 10, -10, 10, 0],
+            duration: 400,
+            ease: 'inOutQuad'
+        });
+    }
+}
+
+// ============================================================================
+// Score Counter Animation (anime.js v4)
+// ============================================================================
+function animateScoreChange(element, fromValue, toValue) {
+    if (!hasAnime() || !element) return;
+    
+    const obj = { value: fromValue };
+    anime.animate(obj, {
+        value: toValue,
+        duration: 800,
+        ease: 'outQuart',
+        round: 1,
+        update: () => {
+            element.textContent = Math.round(obj.value);
+        }
+    });
+}
+
+// ============================================================================
+// Screen Transition Animation (anime.js v4)
+// ============================================================================
+function animateScreenTransition(callback) {
+    if (!hasAnime()) {
+        if (callback) callback();
+        return;
+    }
+    
+    const root = document.getElementById('app-root');
+    if (!root) {
+        if (callback) callback();
+        return;
+    }
+    
+    anime.animate(root, {
+        opacity: [1, 0],
+        translateY: [0, -20],
+        duration: 150,
+        ease: 'inQuad',
+        onComplete: () => {
+            if (callback) callback();
+            anime.animate(root, {
+                opacity: [0, 1],
+                translateY: [20, 0],
+                duration: 300,
+                ease: 'outQuart'
+            });
+        }
+    });
+}
+
+// ============================================================================
+// Stat Bar Fill Animation (anime.js v4)
+// ============================================================================
+function animateStatBar(element, targetPercent) {
+    if (!hasAnime() || !element) return;
+    
+    anime.animate(element, {
+        width: [`0%`, `${targetPercent}%`],
+        duration: 1000,
+        ease: 'outQuart',
+        delay: 200
+    });
+}
+
+// ============================================================================
+// Button Hover Glow Animation (anime.js v4)
+// ============================================================================
+function initButtonAnimations() {
+    // Add ripple effect to all buttons
+    document.querySelectorAll('.btn, .option-btn, .subject-card, .topic-card').forEach(btn => {
+        if (!btn.dataset.rippleInit) {
+            btn.addEventListener('click', createRipple);
+            btn.dataset.rippleInit = 'true';
+        }
+    });
+}
+
+// ============================================================================
+// Boot Screen Logo Animation (anime.js v4 Timeline)
+// ============================================================================
+function animateBootLogo(logoElement, bootTextElement) {
+    if (!hasAnime() || !logoElement) return;
+    
+    // Create a timeline for the boot sequence
+    const timeline = anime.createTimeline({
+        ease: 'outExpo'
+    });
+    
+    timeline
+        .add(logoElement, {
+            opacity: [0, 1],
+            scale: [0.8, 1],
+            filter: ['blur(10px)', 'blur(0px)'],
+            duration: 1000
+        })
+        .add(logoElement, {
+            textShadow: [
+                '0 0 10px var(--color-primary)',
+                '0 0 30px var(--color-primary), 0 0 50px var(--color-primary)'
+            ],
+            duration: 500
+        }, '-=300');
+    
+    return timeline;
+}
+
+// Add CSS for animations
+const animationStyles = document.createElement('style');
+animationStyles.textContent = `
     @keyframes particleFloat {
         0% {
             transform: translate(0, 0) scale(1);
@@ -55,8 +365,60 @@ particleStyle.textContent = `
             opacity: 0;
         }
     }
+    
+    .btn, .option-btn, .subject-card, .topic-card {
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+    
+    .btn:hover, .option-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 
+            0 0 15px var(--color-primary-glow, rgba(0, 255, 255, 0.4)),
+            0 0 30px var(--color-primary-dim, rgba(0, 255, 255, 0.2));
+    }
+    
+    .btn:active, .option-btn:active {
+        transform: translateY(0);
+    }
+    
+    .ripple-effect {
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    
+    /* Glowing neon effect for interactive elements */
+    .neon-glow {
+        animation: neonPulse 2s ease-in-out infinite alternate;
+    }
+    
+    @keyframes neonPulse {
+        from {
+            box-shadow: 
+                0 0 5px var(--color-primary-glow),
+                0 0 10px var(--color-primary-dim);
+        }
+        to {
+            box-shadow: 
+                0 0 10px var(--color-primary-glow),
+                0 0 20px var(--color-primary-dim),
+                0 0 30px var(--color-primary-dim);
+        }
+    }
+    
+    /* Floating animation for decorative elements */
+    .float-animation {
+        animation: floatUpDown 3s ease-in-out infinite;
+    }
+    
+    @keyframes floatUpDown {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
 `;
-document.head.appendChild(particleStyle);
+document.head.appendChild(animationStyles);
 
 // ============================================================================
 // Boot Screen Effect - Enhanced ASCII RPG Style
@@ -192,6 +554,7 @@ function showBootScreen() {
     bootScreen.appendChild(bootContent);
     
     const logoText = document.createElement('pre');
+    logoText.className = 'boot-logo';
     logoText.style.cssText = `
         font-size: ${isMobile ? '7px' : '10px'};
         line-height: 1.2;
@@ -199,13 +562,15 @@ function showBootScreen() {
         text-align: center;
         margin-bottom: ${isMobile ? '10px' : '20px'};
         opacity: 0;
-        animation: logoFadeIn 1s ease-out forwards;
         overflow-x: auto;
+        transform: scale(0.9);
+        filter: blur(5px);
     `;
     logoText.textContent = asciiLogo;
     bootContent.appendChild(logoText);
     
     const bootText = document.createElement('pre');
+    bootText.className = 'boot-messages';
     bootText.style.cssText = `
         font-size: ${isMobile ? '9px' : '13px'};
         line-height: 1.6;
@@ -215,31 +580,42 @@ function showBootScreen() {
     `;
     bootContent.appendChild(bootText);
     
-    // Add CSS for logo animation
+    // Add CSS for fallback and glitch animation
     const style = document.createElement('style');
     style.textContent = `
-        @keyframes logoFadeIn {
-            from { 
-                opacity: 0; 
-                transform: scale(0.9);
-                filter: blur(5px);
-            }
-            to { 
-                opacity: 1; 
-                transform: scale(1);
-                filter: blur(0);
-            }
-        }
         @keyframes textGlitch {
             0%, 100% { transform: translateX(0); }
             25% { transform: translateX(-2px); }
             50% { transform: translateX(2px); }
             75% { transform: translateX(-1px); }
         }
+        .boot-line {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        .boot-line.visible {
+            opacity: 1;
+            transform: translateX(0);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
     `;
     document.head.appendChild(style);
     
     document.body.appendChild(bootScreen);
+    
+    // Use anime.js v4 for logo entrance animation
+    if (hasAnime()) {
+        anime.animate(logoText, {
+            opacity: [0, 1],
+            scale: [0.9, 1],
+            filter: ['blur(5px)', 'blur(0px)'],
+            duration: 1000,
+            ease: 'outExpo'
+        });
+    } else {
+        // Fallback CSS animation
+        logoText.style.animation = 'logoFadeIn 1s ease-out forwards';
+    }
     
     // Matrix rain effect (simplified on mobile)
     const ctx = matrixCanvas.getContext('2d');
@@ -301,15 +677,39 @@ function showBootScreen() {
         } else {
             clearInterval(typeInterval);
             
-            // Allow click or key to skip
+            // Allow click or key to skip - use anime.js v4 for smooth exit
             const finishBoot = () => {
                 clearInterval(matrixInterval);
-                bootScreen.style.transition = `opacity ${FADE_DURATION_MS / 1000}s`;
-                bootScreen.style.opacity = '0';
-                setTimeout(() => {
-                    bootScreen.remove();
-                    style.remove();
-                }, FADE_DURATION_MS);
+                
+                if (hasAnime()) {
+                    // Create a timeline for exit animation
+                    const exitTimeline = anime.createTimeline({
+                        ease: 'inQuart'
+                    });
+                    
+                    exitTimeline
+                        .add(bootContent, {
+                            opacity: [1, 0],
+                            translateY: [0, -30],
+                            duration: 400
+                        })
+                        .add(bootScreen, {
+                            opacity: [1, 0],
+                            duration: 400,
+                            onComplete: () => {
+                                bootScreen.remove();
+                                style.remove();
+                            }
+                        }, '-=200');
+                } else {
+                    // Fallback to CSS transition
+                    bootScreen.style.transition = `opacity ${FADE_DURATION_MS / 1000}s`;
+                    bootScreen.style.opacity = '0';
+                    setTimeout(() => {
+                        bootScreen.remove();
+                        style.remove();
+                    }, FADE_DURATION_MS);
+                }
             };
             
             // Auto-finish after delay or on user interaction
@@ -4339,7 +4739,7 @@ function handleAnswer(optionIndex) {
             });
     }
     
-    // Get button position for particle effect
+    // Get button position for particle effect and anime.js feedback
     const buttons = document.querySelectorAll('.option-btn');
     const selectedButton = buttons[optionIndex];
     if (selectedButton) {
@@ -4349,8 +4749,12 @@ function handleAnswer(optionIndex) {
         
         if (isCorrect) {
             createParticles(x, y, '#00ffff', 30);
+            // Add anime.js bounce/pulse for correct answer
+            animateAnswerFeedback(selectedButton, true);
         } else {
             createParticles(x, y, '#ff0000', 20);
+            // Add anime.js shake for wrong answer
+            animateAnswerFeedback(selectedButton, false);
         }
     }
     
@@ -4579,6 +4983,12 @@ function render() {
     
     // Apply panel style to all newly rendered panels
     applyPanelStyle(state.settings.panelStyle || 'default');
+    
+    // Initialize anime.js button animations (ripple effects, hover)
+    initButtonAnimations();
+    
+    // Animate panel entrances
+    animatePanelEntrance();
 }
 
 function renderLogin() {
