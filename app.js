@@ -6810,6 +6810,16 @@ function attachEventListeners() {
         });
     }
     
+    // Settings home button
+    const settingsHomeBtn = document.getElementById('home-btn');
+    if (settingsHomeBtn) {
+        settingsHomeBtn.addEventListener('click', () => {
+            state.screen = 'home';
+            playSfx('nav');
+            render();
+        });
+    }
+    
     // Subject tiles
     const subjectTiles = document.querySelectorAll('[data-subject-id]');
     subjectTiles.forEach(tile => {
