@@ -71,6 +71,278 @@
     --color-warning: #ffaa00;
 }
 
+.theme-eva03 {
+    /* EVA-03 - Black/Yellow/Orange (from EVA 03.jpg) */
+    --color-bg: #0a0a00;
+    --color-bg-panel: rgba(10, 10, 0, 0.9);
+    --color-primary: #FFD700;
+    --color-primary-glow: rgba(255, 215, 0, 0.3);
+    --color-primary-dim: rgba(255, 215, 0, 0.1);
+    --color-secondary: #FF8C00;
+    --color-accent: #FFA500;
+    --color-text: #FFF8DC;
+    --color-text-dim: rgba(255, 248, 220, 0.7);
+    --color-success: #FFD700;
+    --color-error: #FF4500;
+    --color-warning: #FFA500;
+}
+
+.theme-purple-gundam {
+    /* Purple Gundam - Purple/Pink/White (from Purple Gundam.jpg) */
+    --color-bg: #1a0a1f;
+    --color-bg-panel: rgba(26, 10, 31, 0.9);
+    --color-primary: #B026FF;
+    --color-primary-glow: rgba(176, 38, 255, 0.3);
+    --color-primary-dim: rgba(176, 38, 255, 0.1);
+    --color-secondary: #FF1493;
+    --color-accent: #ffffff;
+    --color-text: #E6D5FF;
+    --color-text-dim: rgba(230, 213, 255, 0.7);
+    --color-success: #B026FF;
+    --color-error: #FF1493;
+    --color-warning: #FF69B4;
+}
+
+.theme-gray-gundam {
+    /* Gray Gundam - Gray/Blue/White (from Gray Gundam.jpg) */
+    --color-bg: #0f0f14;
+    --color-bg-panel: rgba(15, 15, 20, 0.9);
+    --color-primary: #B0B0B0;
+    --color-primary-glow: rgba(176, 176, 176, 0.3);
+    --color-primary-dim: rgba(176, 176, 176, 0.1);
+    --color-secondary: #4A90E2;
+    --color-accent: #ffffff;
+    --color-text: #E0E0E0;
+    --color-text-dim: rgba(224, 224, 224, 0.7);
+    --color-success: #4A90E2;
+    --color-error: #FF6B6B;
+    --color-warning: #FFA500;
+}
+
+.theme-celestial-pink {
+    /* Celestial Pink - Pink/Purple/Cyan/White (from Celestial Pink.jpg) */
+    --color-bg: #1a0520;
+    --color-bg-panel: rgba(26, 5, 32, 0.9);
+    --color-primary: #FF1493;
+    --color-primary-glow: rgba(255, 20, 147, 0.3);
+    --color-primary-dim: rgba(255, 20, 147, 0.1);
+    --color-secondary: #9370DB;
+    --color-accent: #00FFFF;
+    --color-text: #FFD0E6;
+    --color-text-dim: rgba(255, 208, 230, 0.7);
+    --color-success: #00FFFF;
+    --color-error: #FF1493;
+    --color-warning: #FFB6C1;
+}
+
+.theme-blue-terminal {
+    /* Blue Terminal - Blue/Cyan/White (from Blue Terminal.jpg) */
+    --color-bg: #000a1f;
+    --color-bg-panel: rgba(0, 10, 31, 0.9);
+    --color-primary: #0080FF;
+    --color-primary-glow: rgba(0, 128, 255, 0.3);
+    --color-primary-dim: rgba(0, 128, 255, 0.1);
+    --color-secondary: #00FFFF;
+    --color-accent: #FFFFFF;
+    --color-text: #B0D9FF;
+    --color-text-dim: rgba(176, 217, 255, 0.7);
+    --color-success: #00FFFF;
+    --color-error: #FF4444;
+    --color-warning: #FFA500;
+}
+
+.theme-green-terminal {
+    /* Green Terminal - Green/Lime/White (from Green Terminal.jpg) */
+    --color-bg: #001a00;
+    --color-bg-panel: rgba(0, 26, 0, 0.9);
+    --color-primary: #00FF00;
+    --color-primary-glow: rgba(0, 255, 0, 0.3);
+    --color-primary-dim: rgba(0, 255, 0, 0.1);
+    --color-secondary: #7FFF00;
+    --color-accent: #FFFFFF;
+    --color-text: #B0FFB0;
+    --color-text-dim: rgba(176, 255, 176, 0.7);
+    --color-success: #00FF00;
+    --color-error: #FF4444;
+    --color-warning: #FFAA00;
+}
+
+.theme-orange-terminal {
+    /* Orange Terminal - Orange/Yellow/White (from Orange Terminal.jpg) */
+    --color-bg: #1a0f00;
+    --color-bg-panel: rgba(26, 15, 0, 0.9);
+    --color-primary: #FF8C00;
+    --color-primary-glow: rgba(255, 140, 0, 0.3);
+    --color-primary-dim: rgba(255, 140, 0, 0.1);
+    --color-secondary: #FFD700;
+    --color-accent: #FFFFFF;
+    --color-text: #FFE4B5;
+    --color-text-dim: rgba(255, 228, 181, 0.7);
+    --color-success: #FFD700;
+    --color-error: #FF4500;
+    --color-warning: #FFA500;
+}
+
+.theme-red-terminal {
+    /* Red Terminal - Red/Orange/White (from Red Terminal.jpg) */
+    --color-bg: #1a0000;
+    --color-bg-panel: rgba(26, 0, 0, 0.9);
+    --color-primary: #FF0000;
+    --color-primary-glow: rgba(255, 0, 0, 0.3);
+    --color-primary-dim: rgba(255, 0, 0, 0.1);
+    --color-secondary: #FF4500;
+    --color-accent: #FFFFFF;
+    --color-text: #FFB0B0;
+    --color-text-dim: rgba(255, 176, 176, 0.7);
+    --color-success: #FF6347;
+    --color-error: #FF0000;
+    --color-warning: #FF8C00;
+}
+
+.theme-solo-leveling {
+    /* Solo Leveling - Purple/Blue/Gold/White (from Solo Leveling Theme.jpg) */
+    --color-bg: #0a0014;
+    --color-bg-panel: rgba(10, 0, 20, 0.9);
+    --color-primary: #8B00FF;
+    --color-primary-glow: rgba(139, 0, 255, 0.3);
+    --color-primary-dim: rgba(139, 0, 255, 0.1);
+    --color-secondary: #4169E1;
+    --color-accent: #FFD700;
+    --color-text: #D8BFD8;
+    --color-text-dim: rgba(216, 191, 216, 0.7);
+    --color-success: #FFD700;
+    --color-error: #FF1493;
+    --color-warning: #FFA500;
+}
+
+.theme-nova-kit {
+    /* Nova Kit - Cyan/Blue/White (from Nova Kit.jpg) */
+    --color-bg: #001420;
+    --color-bg-panel: rgba(0, 20, 32, 0.9);
+    --color-primary: #00CED1;
+    --color-primary-glow: rgba(0, 206, 209, 0.3);
+    --color-primary-dim: rgba(0, 206, 209, 0.1);
+    --color-secondary: #1E90FF;
+    --color-accent: #FFFFFF;
+    --color-text: #AFEEEE;
+    --color-text-dim: rgba(175, 238, 238, 0.7);
+    --color-success: #00CED1;
+    --color-error: #FF6B6B;
+    --color-warning: #FFA500;
+}
+
+.theme-hydra-kit {
+    /* Hydra Kit - Green/Teal/Yellow (from Hydra Kit.jpg) */
+    --color-bg: #001a14;
+    --color-bg-panel: rgba(0, 26, 20, 0.9);
+    --color-primary: #00FF7F;
+    --color-primary-glow: rgba(0, 255, 127, 0.3);
+    --color-primary-dim: rgba(0, 255, 127, 0.1);
+    --color-secondary: #20B2AA;
+    --color-accent: #FFFF00;
+    --color-text: #B0FFC0;
+    --color-text-dim: rgba(176, 255, 192, 0.7);
+    --color-success: #00FF7F;
+    --color-error: #FF4444;
+    --color-warning: #FFFF00;
+}
+
+.theme-cyberpunk-purple {
+    /* Cyberpunk Purple - Purple/Pink/Cyan/White (from Cyber Punk Purple.jpg) */
+    --color-bg: #0f0020;
+    --color-bg-panel: rgba(15, 0, 32, 0.9);
+    --color-primary: #9D00FF;
+    --color-primary-glow: rgba(157, 0, 255, 0.3);
+    --color-primary-dim: rgba(157, 0, 255, 0.1);
+    --color-secondary: #FF00FF;
+    --color-accent: #00FFFF;
+    --color-text: #E6D5FF;
+    --color-text-dim: rgba(230, 213, 255, 0.7);
+    --color-success: #00FFFF;
+    --color-error: #FF1493;
+    --color-warning: #FF69B4;
+}
+
+.theme-red-yellow-mech {
+    /* Red/Yellow Mech - Red/Yellow/Orange (from Red Yellow Mech.jpg) */
+    --color-bg: #1a0a00;
+    --color-bg-panel: rgba(26, 10, 0, 0.9);
+    --color-primary: #FF0000;
+    --color-primary-glow: rgba(255, 0, 0, 0.3);
+    --color-primary-dim: rgba(255, 0, 0, 0.1);
+    --color-secondary: #FFFF00;
+    --color-accent: #FF8C00;
+    --color-text: #FFD9B3;
+    --color-text-dim: rgba(255, 217, 179, 0.7);
+    --color-success: #FFFF00;
+    --color-error: #FF0000;
+    --color-warning: #FF8C00;
+}
+
+.theme-gray-white-gundam {
+    /* Gray/White Gundam - Gray/White/Blue (from Gray White Gundam.jpg) */
+    --color-bg: #0a0a0f;
+    --color-bg-panel: rgba(10, 10, 15, 0.9);
+    --color-primary: #C0C0C0;
+    --color-primary-glow: rgba(192, 192, 192, 0.3);
+    --color-primary-dim: rgba(192, 192, 192, 0.1);
+    --color-secondary: #FFFFFF;
+    --color-accent: #4682B4;
+    --color-text: #E8E8E8;
+    --color-text-dim: rgba(232, 232, 232, 0.7);
+    --color-success: #4682B4;
+    --color-error: #FF6B6B;
+    --color-warning: #FFA500;
+}
+
+.theme-purple-white-gundam {
+    /* Purple/White Gundam - Purple/White/Gold (from Purple White Gundam.jpg) */
+    --color-bg: #14001a;
+    --color-bg-panel: rgba(20, 0, 26, 0.9);
+    --color-primary: #9370DB;
+    --color-primary-glow: rgba(147, 112, 219, 0.3);
+    --color-primary-dim: rgba(147, 112, 219, 0.1);
+    --color-secondary: #FFFFFF;
+    --color-accent: #FFD700;
+    --color-text: #E6D5FF;
+    --color-text-dim: rgba(230, 213, 255, 0.7);
+    --color-success: #FFD700;
+    --color-error: #FF1493;
+    --color-warning: #FFA500;
+}
+
+.theme-wb-mecha {
+    /* WB Mecha - White/Blue/Red (from WB Mecha 01.jpg) */
+    --color-bg: #0a0a14;
+    --color-bg-panel: rgba(10, 10, 20, 0.9);
+    --color-primary: #FFFFFF;
+    --color-primary-glow: rgba(255, 255, 255, 0.3);
+    --color-primary-dim: rgba(255, 255, 255, 0.1);
+    --color-secondary: #1E90FF;
+    --color-accent: #FF4444;
+    --color-text: #F0F0F5;
+    --color-text-dim: rgba(240, 240, 245, 0.7);
+    --color-success: #1E90FF;
+    --color-error: #FF4444;
+    --color-warning: #FFA500;
+}
+
+.theme-yellow-terminal {
+    /* Yellow Terminal - Yellow/Orange/Black (from Yellow Terminal.gif) */
+    --color-bg: #141000;
+    --color-bg-panel: rgba(20, 16, 0, 0.9);
+    --color-primary: #FFFF00;
+    --color-primary-glow: rgba(255, 255, 0, 0.3);
+    --color-primary-dim: rgba(255, 255, 0, 0.1);
+    --color-secondary: #FFD700;
+    --color-accent: #FF8C00;
+    --color-text: #FFFFCC;
+    --color-text-dim: rgba(255, 255, 204, 0.7);
+    --color-success: #FFFF00;
+    --color-error: #FF4444;
+    --color-warning: #FF8C00;
+}
+
 /* CRT Screen effect */
 @keyframes flicker {
     0% { opacity: 0.97; }
@@ -219,6 +491,1134 @@ body::after {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+/* ========================================
+   GUNDAM MECHA PANEL STYLES
+   13 panel style variations with geometric cuts,
+   panel lines, and technical mecha aesthetics
+   SHAPE-ONLY: All colors inherit from active theme
+   ======================================== */
+
+/* Blue Mech Panel - Angular cuts with diagonal corner */
+.panel-blue-mech {
+    clip-path: polygon(
+        0 0, 100% 0, 100% calc(100% - 20px), 
+        calc(100% - 20px) 100%, 0 100%
+    );
+    border: 3px solid var(--color-primary);
+    position: relative;
+}
+
+.panel-blue-mech::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid var(--color-primary);
+    opacity: 0.3;
+    pointer-events: none;
+    clip-path: polygon(
+        0 0, calc(100% - 10px) 0, 100% 10px,
+        100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%
+    );
+}
+
+.panel-blue-mech::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    border-left: 2px solid var(--color-primary);
+    border-top: 2px solid var(--color-primary);
+    transform: rotate(45deg);
+    transform-origin: bottom right;
+}
+
+/* Cyberpunk Panels 01 - Tech panel cuts with circuit grid */
+.panel-cyberpunk01 {
+    clip-path: polygon(
+        15px 0, 100% 0, 100% calc(100% - 15px),
+        calc(100% - 15px) 100%, 0 100%, 0 15px
+    );
+    border: 2px solid var(--color-primary);
+    position: relative;
+}
+
+.panel-cyberpunk01::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        transparent 2px,
+        var(--color-primary) 2px,
+        var(--color-primary) 3px
+    ),
+    repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        transparent 2px,
+        var(--color-primary) 2px,
+        var(--color-primary) 3px
+    );
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.panel-cyberpunk01::after {
+    content: '▶';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: var(--color-primary);
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* Cyberpunk Panels 02 - Circuit board style with gradient borders */
+.panel-cyberpunk02 {
+    border: 1px solid var(--color-primary);
+    border-radius: 0;
+    position: relative;
+}
+
+.panel-cyberpunk02::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+        45deg,
+        var(--color-primary) 0%,
+        transparent 30%,
+        transparent 70%,
+        var(--color-secondary) 100%
+    );
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.panel-cyberpunk02::after {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border: 1px dashed var(--color-primary);
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+/* Gungale Panels - Angular military cuts */
+.panel-gungale {
+    clip-path: polygon(
+        0 0, calc(100% - 30px) 0, 100% 30px,
+        100% 100%, 30px 100%, 0 calc(100% - 30px)
+    );
+    border: 3px solid var(--color-primary);
+    position: relative;
+}
+
+.panel-gungale::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    border-bottom: 2px solid var(--color-secondary);
+    border-left: 2px solid var(--color-secondary);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.panel-gungale::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    border-top: 2px solid var(--color-secondary);
+    border-right: 2px solid var(--color-secondary);
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+/* Pink Mech - Elegant technical panels with diamond */
+.panel-pink-mech {
+    border: 2px solid var(--color-primary);
+    border-radius: 0;
+    position: relative;
+}
+
+.panel-pink-mech::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 1px solid var(--color-primary);
+    clip-path: polygon(
+        10px 0, calc(100% - 10px) 0, 100% 10px,
+        100% calc(100% - 10px), calc(100% - 10px) 100%,
+        10px 100%, 0 calc(100% - 10px), 0 10px
+    );
+    opacity: 0.4;
+}
+
+.panel-pink-mech::after {
+    content: '◆';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-primary);
+    font-size: 16px;
+    text-shadow: 0 0 10px var(--color-primary-glow);
+}
+
+/* Purple Mech - Purple geometric cuts with corner triangles */
+.panel-purple-mech {
+    clip-path: polygon(
+        0 12px, 12px 0, 100% 0, 100% calc(100% - 12px),
+        calc(100% - 12px) 100%, 0 100%
+    );
+    border: 2px solid var(--color-primary);
+    position: relative;
+}
+
+.panel-purple-mech::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-secondary);
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+.panel-purple-mech::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-secondary);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+/* Unicorn Panels - RX-0 style frames with horn accent */
+.panel-unicorn {
+    border: 3px solid var(--color-primary);
+    border-radius: 2px;
+    position: relative;
+}
+
+.panel-unicorn::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 6px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--color-primary) 50%, 
+        transparent 100%
+    );
+    box-shadow: 0 0 15px var(--color-primary-glow);
+}
+
+.panel-unicorn::after {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border: 1px solid var(--color-primary);
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* WB Mecha Panels - White/Blue technical style with corner cut */
+.panel-wb-mecha {
+    border: 2px solid var(--color-primary);
+    border-radius: 0;
+    clip-path: polygon(
+        20px 0, 100% 0, 100% calc(100% - 20px),
+        calc(100% - 20px) 100%, 0 100%, 0 20px
+    );
+    position: relative;
+}
+
+.panel-wb-mecha::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-right: 2px solid var(--color-secondary);
+    border-bottom: 2px solid var(--color-secondary);
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.panel-wb-mecha::after {
+    content: '■';
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    color: var(--color-primary);
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+/* White SciFi 01 - Clean scifi borders with corner brackets */
+.panel-white-scifi01 {
+    border: 1px solid var(--color-primary);
+    border-radius: 0;
+    position: relative;
+}
+
+.panel-white-scifi01::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 40px;
+    height: 40px;
+    border-top: 3px solid var(--color-primary);
+    border-left: 3px solid var(--color-primary);
+}
+
+.panel-white-scifi01::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 40px;
+    height: 40px;
+    border-bottom: 3px solid var(--color-primary);
+    border-right: 3px solid var(--color-primary);
+}
+
+/* White SciFi 02 - Minimal tech frames with center line */
+.panel-white-scifi02 {
+    border: 2px solid var(--color-primary);
+    border-radius: 0;
+    position: relative;
+}
+
+.panel-white-scifi02::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 1px solid var(--color-primary);
+    opacity: 0.3;
+}
+
+.panel-white-scifi02::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--color-primary) 50%,
+        transparent 100%
+    );
+    opacity: 0.1;
+}
+
+/* White SciFi 03 - Modern panels with corner brackets */
+.panel-white-scifi03 {
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    position: relative;
+}
+
+.panel-white-scifi03::before,
+.panel-white-scifi03::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--color-secondary);
+}
+
+.panel-white-scifi03::before {
+    top: 8px;
+    left: 8px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.panel-white-scifi03::after {
+    bottom: 8px;
+    right: 8px;
+    border-left: none;
+    border-top: none;
+}
+
+/* Word Boxes - Text container style with system header */
+.panel-word-boxes {
+    border: 2px solid var(--color-primary);
+    border-radius: 0;
+    position: relative;
+    padding: 35px 25px 25px 25px;
+}
+
+.panel-word-boxes::before {
+    content: '[ SYSTEM ]';
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--color-primary);
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+
+.panel-word-boxes::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 28px;
+    border-bottom: 1px solid var(--color-primary);
+    opacity: 0.3;
+}
+
+/* Yellow Mech - Warning panels with caution stripes */
+.panel-yellow-mech {
+    border: 3px solid var(--color-primary);
+    border-radius: 0;
+    position: relative;
+}
+
+.panel-yellow-mech::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--color-primary) 0px,
+        var(--color-primary) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    opacity: 0.3;
+}
+
+.panel-yellow-mech::after {
+    content: '⚠';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: var(--color-primary);
+    font-size: 20px;
+    animation: pulseWarning 2s ease-in-out infinite;
+}
+
+@keyframes pulseWarning {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* END GUNDAM MECHA PANEL STYLES */
+
+/* ========================================
+   UI LAYOUT SYSTEMS
+   14 complete GUI restructuring layouts
+   Each changes navigation, HUD, data readouts
+   ======================================== */
+
+/* Aida Layout - Grid-based tactical UI with corner HUD */
+body.layout-aida #app-root {
+    position: relative;
+}
+
+body.layout-aida #app-root::before {
+    content: '◢ TACTICAL SYSTEM ACTIVE ◣';
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-primary);
+    font-size: 11px;
+    letter-spacing: 3px;
+    z-index: 1000;
+    opacity: 0.7;
+}
+
+body.layout-aida #app-root::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border-top: 2px solid var(--color-primary);
+    border-left: 2px solid var(--color-primary);
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 999;
+}
+
+body.layout-aida .panel {
+    border-radius: 0;
+    clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+}
+
+/* Blue Mech Layout - Cockpit HUD with status bars */
+body.layout-blue-mech #app-root {
+    border: 3px solid var(--color-primary);
+    border-radius: 0;
+    position: relative;
+    min-height: 100vh;
+}
+
+body.layout-blue-mech #app-root::before {
+    content: 'PILOT STATUS: OPTIMAL';
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    color: var(--color-success);
+    font-size: 10px;
+    letter-spacing: 2px;
+    z-index: 1000;
+}
+
+body.layout-blue-mech .panel-header {
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+/* Blue Terminal Layout - Classic terminal with scan lines */
+body.layout-blue-terminal {
+    background: #000;
+}
+
+body.layout-blue-terminal #app-root {
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 255, 255, 0.03) 0px,
+        transparent 1px,
+        transparent 2px,
+        rgba(0, 255, 255, 0.03) 3px
+    );
+}
+
+body.layout-blue-terminal .panel {
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid var(--color-primary);
+    box-shadow: 0 0 20px var(--color-primary-glow);
+}
+
+body.layout-blue-terminal .btn {
+    border-radius: 0;
+    text-shadow: 0 0 5px var(--color-primary);
+}
+
+/* Celestial Pink Layout - Elegant modern UI with soft edges */
+body.layout-celestial-pink .panel {
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--color-bg-panel) 0%, rgba(255, 105, 180, 0.05) 100%);
+}
+
+body.layout-celestial-pink .panel-header {
+    background: linear-gradient(90deg, transparent 0%, var(--color-primary) 50%, transparent 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: none;
+}
+
+body.layout-celestial-pink .btn {
+    border-radius: 25px;
+    background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-primary-dim) 100%);
+}
+
+/* Covert Ops Layout - Military stealth interface with brackets */
+body.layout-covert-ops #app-root {
+    position: relative;
+}
+
+body.layout-covert-ops #app-root::before,
+body.layout-covert-ops #app-root::after {
+    content: '';
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    border: 3px solid var(--color-primary);
+    opacity: 0.4;
+    z-index: 999;
+    pointer-events: none;
+}
+
+body.layout-covert-ops #app-root::before {
+    top: 15px;
+    left: 15px;
+    border-right: none;
+    border-bottom: none;
+}
+
+body.layout-covert-ops #app-root::after {
+    bottom: 15px;
+    right: 15px;
+    border-left: none;
+    border-top: none;
+}
+
+body.layout-covert-ops .panel {
+    clip-path: polygon(
+        30px 0, calc(100% - 30px) 0, 100% 30px,
+        100% calc(100% - 30px), calc(100% - 30px) 100%,
+        30px 100%, 0 calc(100% - 30px), 0 30px
+    );
+}
+
+/* Green Terminal Layout - Matrix-style with green glow */
+body.layout-green-terminal {
+    background: #000;
+}
+
+body.layout-green-terminal #app-root {
+    text-shadow: 0 0 5px var(--color-primary);
+}
+
+body.layout-green-terminal .panel {
+    background: rgba(0, 20, 0, 0.95);
+    box-shadow: 
+        0 0 30px var(--color-primary-glow),
+        inset 0 0 50px rgba(0, 255, 0, 0.1);
+}
+
+body.layout-green-terminal .panel-header {
+    animation: textGlow 1.5s ease-in-out infinite;
+}
+
+/* Nova Kit Layout - Tech readout with data streams */
+body.layout-nova-kit #app-root::before {
+    content: '█████ DATA STREAM ACTIVE █████';
+    position: fixed;
+    top: 5px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 9px;
+    letter-spacing: 2px;
+    opacity: 0.5;
+    z-index: 1000;
+    animation: dataStream 3s linear infinite;
+}
+
+@keyframes dataStream {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+}
+
+body.layout-nova-kit .panel {
+    position: relative;
+    overflow: hidden;
+}
+
+body.layout-nova-kit .panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+    animation: scanLine 4s linear infinite;
+}
+
+@keyframes scanLine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Orange SciFi Layout - Futuristic orange HUD with hexagons */
+body.layout-orange-scifi .panel {
+    clip-path: polygon(
+        10% 0, 90% 0, 100% 10%, 100% 90%,
+        90% 100%, 10% 100%, 0 90%, 0 10%
+    );
+    background: 
+        linear-gradient(var(--color-bg-panel) 0%, rgba(255, 140, 0, 0.05) 100%),
+        repeating-linear-gradient(
+            60deg,
+            transparent,
+            transparent 50px,
+            rgba(255, 140, 0, 0.02) 50px,
+            rgba(255, 140, 0, 0.02) 100px
+        );
+}
+
+body.layout-orange-scifi .btn {
+    clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+    border-radius: 0;
+}
+
+/* Orange Terminal Layout - Amber terminal aesthetic */
+body.layout-orange-terminal {
+    background: #0a0500;
+}
+
+body.layout-orange-terminal .panel {
+    background: rgba(20, 10, 0, 0.9);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 25px rgba(255, 140, 0, 0.3);
+}
+
+body.layout-orange-terminal .btn {
+    background: rgba(20, 10, 0, 0.95);
+    border-radius: 0;
+}
+
+/* Pink Mech Layout - Pink gundam cockpit with feminine touch */
+body.layout-pink-mech #app-root::before {
+    content: '♦ COMBAT SYSTEM ONLINE ♦';
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-primary);
+    font-size: 10px;
+    letter-spacing: 3px;
+    z-index: 1000;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+body.layout-pink-mech .panel {
+    border: 2px solid;
+    border-image: linear-gradient(45deg, var(--color-primary), var(--color-secondary)) 1;
+    background: radial-gradient(ellipse at top, rgba(255, 105, 180, 0.08) 0%, var(--color-bg-panel) 60%);
+}
+
+body.layout-pink-mech .panel-header::before {
+    content: '◆';
+    margin-right: 10px;
+}
+
+body.layout-pink-mech .panel-header::after {
+    content: '◆';
+    margin-left: 10px;
+}
+
+/* Purple Mech Layout - Purple technical UI with angular design */
+body.layout-purple-mech .panel {
+    clip-path: polygon(
+        12px 0, calc(100% - 12px) 0, 100% 12px,
+        100% calc(100% - 12px), calc(100% - 12px) 100%,
+        12px 100%, 0 calc(100% - 12px), 0 12px
+    );
+    background: linear-gradient(135deg, var(--color-bg-panel) 0%, rgba(128, 0, 255, 0.05) 100%);
+}
+
+body.layout-purple-mech .btn {
+    clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px);
+}
+
+/* Yellow Mech Layout - Warning system HUD with caution aesthetic */
+body.layout-yellow-mech #app-root::before {
+    content: '⚠ WARNING: HIGH PERFORMANCE MODE ⚠';
+    position: fixed;
+    top: 8px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 10px;
+    letter-spacing: 2px;
+    z-index: 1000;
+    animation: pulseWarning 1.5s ease-in-out infinite;
+}
+
+body.layout-yellow-mech .panel {
+    border: 3px solid var(--color-primary);
+    border-top: 8px solid var(--color-primary);
+    background: linear-gradient(to bottom, rgba(255, 200, 0, 0.05) 0%, var(--color-bg-panel) 30%);
+}
+
+body.layout-yellow-mech .panel::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--color-primary) 0px,
+        var(--color-primary) 8px,
+        transparent 8px,
+        transparent 16px
+    );
+    opacity: 0.5;
+}
+
+/* Yellow Terminal Layout - Animated terminal with scan effects */
+body.layout-yellow-terminal {
+    background: #0a0a00;
+}
+
+body.layout-yellow-terminal #app-root {
+    position: relative;
+}
+
+body.layout-yellow-terminal #app-root::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        rgba(255, 255, 0, 0.02) 1px,
+        transparent 2px
+    );
+    animation: scanLines 8s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes scanLines {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(20px); }
+}
+
+body.layout-yellow-terminal .panel {
+    background: rgba(20, 20, 0, 0.95);
+    border: 1px solid var(--color-primary);
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.2);
+}
+
+/* END UI LAYOUT SYSTEMS */
+
+/* ========================================
+   CHARACTER SCREEN LAYOUTS
+   3 character/status screen variations
+   ======================================== */
+
+/* Equipment Loadout - Tactical gear grid layout */
+body.char-equipment-loadout .status-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+}
+
+body.char-equipment-loadout .character-avatar {
+    grid-row: 1 / 3;
+    width: 200px;
+    height: 200px;
+    border: 3px solid var(--color-primary);
+    background: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    position: relative;
+}
+
+body.char-equipment-loadout .character-avatar::after {
+    content: 'PILOT';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--color-primary);
+}
+
+body.char-equipment-loadout .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+body.char-equipment-loadout .stat-item {
+    padding: 12px;
+    border: 2px solid var(--color-primary);
+    background: var(--color-bg);
+    text-align: center;
+}
+
+body.char-equipment-loadout .stat-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--color-text-dim);
+    margin-bottom: 5px;
+}
+
+body.char-equipment-loadout .stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+/* Gundam Loadout - Mecha customization with radial slots */
+body.char-gundam-loadout .status-container {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.char-gundam-loadout .character-avatar {
+    width: 250px;
+    height: 250px;
+    border: 4px solid var(--color-primary);
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, var(--color-primary-dim) 0%, var(--color-bg) 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    margin: 30px auto;
+    position: relative;
+    box-shadow: 0 0 40px var(--color-primary-glow);
+}
+
+body.char-gundam-loadout .character-avatar::before {
+    content: '';
+    position: absolute;
+    inset: -15px;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+body.char-gundam-loadout .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+body.char-gundam-loadout .stat-item {
+    background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-panel) 100%);
+    border: 2px solid var(--color-primary);
+    padding: 15px;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+body.char-gundam-loadout .stat-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+}
+
+body.char-gundam-loadout .stat-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-primary);
+    text-shadow: 0 0 10px var(--color-primary-glow);
+}
+
+/* Primary Stat Screen - Horizontal stat bars */
+body.char-primary-stats .stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+body.char-primary-stats .stat-item {
+    background: var(--color-bg);
+    border: 2px solid var(--color-primary);
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+body.char-primary-stats .stat-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: var(--stat-percent, 0%);
+    background: linear-gradient(90deg, var(--color-primary-dim) 0%, transparent 100%);
+    opacity: 0.3;
+    transition: width 0.5s ease;
+}
+
+body.char-primary-stats .stat-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--color-text);
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+body.char-primary-stats .stat-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-primary);
+    z-index: 1;
+}
+
+/* END CHARACTER SCREEN LAYOUTS */
+
+/* ========================================
+   BOOT ANIMATION VARIANTS
+   5 different boot sequence styles
+   ======================================== */
+
+/* Classic Boot (existing default) - already implemented */
+
+/* Inspiration 1 Boot - Fast tech startup */
+body.boot-inspiration1 .boot-screen {
+    background: linear-gradient(135deg, #000 0%, #001a1a 100%);
+}
+
+body.boot-inspiration1 .boot-line {
+    animation: bootFadeInFast 0.15s ease-out forwards;
+}
+
+@keyframes bootFadeInFast {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Inspiration 2 Boot - Minimalist quick boot */
+body.boot-inspiration2 .boot-screen {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.boot-inspiration2 .boot-logo {
+    font-size: 80px;
+    color: var(--color-primary);
+    animation: logoFlash 0.5s ease-out;
+}
+
+@keyframes logoFlash {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Inspiration 3 Boot - Detailed system check */
+body.boot-inspiration3 .boot-screen {
+    background: #000;
+    padding: 40px;
+}
+
+body.boot-inspiration3 .boot-line {
+    border-left: 3px solid var(--color-primary);
+    padding-left: 10px;
+    margin: 5px 0;
+    animation: bootSlideIn 0.3s ease-out forwards;
+}
+
+@keyframes bootSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+        border-left-color: transparent;
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        border-left-color: var(--color-primary);
+    }
+}
+
+/* Retro Tech Boot - CRT screen effect with glitch */
+body.boot-retro-tech .boot-screen {
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+body.boot-retro-tech .boot-screen::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        rgba(0, 255, 0, 0.05) 1px,
+        transparent 2px,
+        transparent 4px
+    );
+    animation: scanlineMove 8s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes scanlineMove {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(40px); }
+}
+
+body.boot-retro-tech .boot-line {
+    text-shadow: 0 0 5px var(--color-primary);
+    animation: bootGlitch 0.4s ease-out forwards;
+}
+
+@keyframes bootGlitch {
+    0% { 
+        opacity: 0;
+        transform: translateX(-5px);
+        filter: blur(2px);
+    }
+    20% {
+        opacity: 0.5;
+        transform: translateX(3px);
+    }
+    40% {
+        opacity: 0.8;
+        transform: translateX(-2px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(1px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+
+/* END BOOT ANIMATION VARIANTS */
 
 /* Button styles */
 .btn {
@@ -2121,6 +3521,210 @@ body:has(.floating-nav) .action-buttons:not(.quiz-action-buttons) {
     background: #ff3366;
 }
 
+.theme-preview-eva03 {
+    background: #0a0a00;
+}
+
+.theme-preview-eva03::before {
+    background: #FFD700;
+}
+
+.theme-preview-eva03::after {
+    background: #FF8C00;
+}
+
+.theme-preview-purple-gundam {
+    background: #1a0a1f;
+}
+
+.theme-preview-purple-gundam::before {
+    background: #B026FF;
+}
+
+.theme-preview-purple-gundam::after {
+    background: #FF1493;
+}
+
+.theme-preview-gray-gundam {
+    background: #0f0f14;
+}
+
+.theme-preview-gray-gundam::before {
+    background: #B0B0B0;
+}
+
+.theme-preview-gray-gundam::after {
+    background: #4A90E2;
+}
+
+.theme-preview-celestial-pink {
+    background: #1a0520;
+}
+
+.theme-preview-celestial-pink::before {
+    background: #FF1493;
+}
+
+.theme-preview-celestial-pink::after {
+    background: #9370DB;
+}
+
+.theme-preview-blue-terminal {
+    background: #000a1f;
+}
+
+.theme-preview-blue-terminal::before {
+    background: #0080FF;
+}
+
+.theme-preview-blue-terminal::after {
+    background: #00FFFF;
+}
+
+.theme-preview-green-terminal {
+    background: #001a00;
+}
+
+.theme-preview-green-terminal::before {
+    background: #00FF00;
+}
+
+.theme-preview-green-terminal::after {
+    background: #7FFF00;
+}
+
+.theme-preview-orange-terminal {
+    background: #1a0f00;
+}
+
+.theme-preview-orange-terminal::before {
+    background: #FF8C00;
+}
+
+.theme-preview-orange-terminal::after {
+    background: #FFD700;
+}
+
+.theme-preview-red-terminal {
+    background: #1a0000;
+}
+
+.theme-preview-red-terminal::before {
+    background: #FF0000;
+}
+
+.theme-preview-red-terminal::after {
+    background: #FF4500;
+}
+
+.theme-preview-solo-leveling {
+    background: #0a0014;
+}
+
+.theme-preview-solo-leveling::before {
+    background: #8B00FF;
+}
+
+.theme-preview-solo-leveling::after {
+    background: #4169E1;
+}
+
+.theme-preview-nova-kit {
+    background: #001420;
+}
+
+.theme-preview-nova-kit::before {
+    background: #00CED1;
+}
+
+.theme-preview-nova-kit::after {
+    background: #1E90FF;
+}
+
+.theme-preview-hydra-kit {
+    background: #001a14;
+}
+
+.theme-preview-hydra-kit::before {
+    background: #00FF7F;
+}
+
+.theme-preview-hydra-kit::after {
+    background: #20B2AA;
+}
+
+.theme-preview-cyberpunk-purple {
+    background: #0f0020;
+}
+
+.theme-preview-cyberpunk-purple::before {
+    background: #9D00FF;
+}
+
+.theme-preview-cyberpunk-purple::after {
+    background: #FF00FF;
+}
+
+.theme-preview-red-yellow-mech {
+    background: #1a0a00;
+}
+
+.theme-preview-red-yellow-mech::before {
+    background: #FF0000;
+}
+
+.theme-preview-red-yellow-mech::after {
+    background: #FFFF00;
+}
+
+.theme-preview-gray-white-gundam {
+    background: #0a0a0f;
+}
+
+.theme-preview-gray-white-gundam::before {
+    background: #C0C0C0;
+}
+
+.theme-preview-gray-white-gundam::after {
+    background: #FFFFFF;
+}
+
+.theme-preview-purple-white-gundam {
+    background: #14001a;
+}
+
+.theme-preview-purple-white-gundam::before {
+    background: #9370DB;
+}
+
+.theme-preview-purple-white-gundam::after {
+    background: #FFFFFF;
+}
+
+.theme-preview-wb-mecha {
+    background: #0a0a14;
+}
+
+.theme-preview-wb-mecha::before {
+    background: #FFFFFF;
+}
+
+.theme-preview-wb-mecha::after {
+    background: #1E90FF;
+}
+
+.theme-preview-yellow-terminal {
+    background: #141000;
+}
+
+.theme-preview-yellow-terminal::before {
+    background: #FFFF00;
+}
+
+.theme-preview-yellow-terminal::after {
+    background: #FFD700;
+}
+
 @media (max-width: 768px) {
     .theme-selector {
         justify-content: center;
@@ -4007,7 +5611,7 @@ select {
 }
 
 /* ============================================================================
-   BOOT INITIALIZATION SEQUENCE - Evangelion Style
+   BOOT INITIALIZATION SEQUENCE - Modern Video-Inspired Design
    ============================================================================ */
 
 #boot-sequence {
@@ -4016,14 +5620,11 @@ select {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #000;
+    background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
     z-index: 10000;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    color: var(--color-primary);
-    font-family: 'Courier New', monospace;
+    justify-content: center;
     overflow: hidden;
 }
 
@@ -4032,9 +5633,383 @@ select {
 }
 
 @keyframes bootFadeOut {
-    to {
-        opacity: 0;
-        pointer-events: none;
+    from { opacity: 1; }
+    to { opacity: 0; pointer-events: none; }
+}
+
+/* Skip Button */
+.boot-skip-btn {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    padding: 12px 24px;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    font-family: 'Orbitron', monospace;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.boot-skip-btn:hover {
+    background: rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 20px var(--color-primary);
+    transform: scale(1.05);
+}
+
+/* ===== PHASE SYSTEM ===== */
+.boot-phase {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Phase 1: Flash & Logo (0-1.5s) */
+.boot-phase-flash {
+    animation: phaseFlash 1.5s ease-out forwards;
+}
+
+@keyframes phaseFlash {
+    0% { opacity: 1; }
+    60% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.boot-flash-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary);
+    animation: flashPulse 1.5s ease-out forwards;
+}
+
+@keyframes flashPulse {
+    0% { opacity: 0; transform: scale(0.8); }
+    20% { opacity: 1; transform: scale(1); }
+    60% { opacity: 0.8; }
+    100% { opacity: 0; transform: scale(1.2); }
+}
+
+.boot-logo-container {
+    position: relative;
+    z-index: 2;
+}
+
+.boot-logo-symbol {
+    font-size: 120px;
+    color: #000;
+    text-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    animation: logoAppear 1.5s ease-out forwards;
+}
+
+.boot-logo-glitch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 120px;
+    color: var(--color-primary);
+    opacity: 0;
+    animation: logoGlitch 1.5s ease-out forwards;
+}
+
+@keyframes logoAppear {
+    0% { opacity: 0; transform: scale(0.5) rotate(-180deg); }
+    50% { opacity: 1; transform: scale(1.2) rotate(10deg); }
+    100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+@keyframes logoGlitch {
+    0%, 90% { opacity: 0; transform: translate(0, 0); }
+    92% { opacity: 0.8; transform: translate(-3px, 2px); }
+    94% { opacity: 0.8; transform: translate(2px, -3px); }
+    96% { opacity: 0.8; transform: translate(-2px, 3px); }
+    100% { opacity: 0; transform: translate(0, 0); }
+}
+
+/* Phase 2: System Grid (1.5-3.5s) */
+.boot-phase-grid {
+    animation: phaseGrid 2s 1.5s ease-out forwards;
+}
+
+@keyframes phaseGrid {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.boot-grid-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridScroll 2s linear infinite;
+}
+
+@keyframes gridScroll {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.boot-scan-line {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--color-primary) 50%, 
+        transparent 100%);
+    box-shadow: 0 0 20px var(--color-primary);
+    animation: scanLine 2s ease-in-out infinite;
+}
+
+@keyframes scanLine {
+    0% { top: 0%; opacity: 0; }
+    50% { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+}
+
+.boot-data-streams {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.data-stream {
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background: linear-gradient(to bottom, 
+        transparent 0%, 
+        var(--color-primary) 50%, 
+        transparent 100%);
+    animation: dataStreamFall 1.5s ease-in infinite;
+    opacity: 0.6;
+}
+
+@keyframes dataStreamFall {
+    0% { top: -100px; }
+    100% { top: 100%; }
+}
+
+.boot-sys-init {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border: 1px solid var(--color-primary);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+    max-width: 600px;
+}
+
+.sys-line {
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    color: var(--color-primary);
+    margin: 10px 0;
+    opacity: 0;
+    animation: sysLineAppear 0.3s ease-out forwards;
+}
+
+.sys-success {
+    color: #00ff00;
+    font-weight: bold;
+}
+
+@keyframes sysLineAppear {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Phase 3: Title Reveal (3.5-5.5s) */
+.boot-phase-title {
+    animation: phaseTitle 2s 3.5s ease-out forwards;
+}
+
+@keyframes phaseTitle {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+.boot-title-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.title-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--color-primary);
+    animation: particleFloat 3s ease-in-out infinite;
+}
+
+@keyframes particleFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+    50% { transform: translate(20px, -20px) scale(1.5); opacity: 1; }
+}
+
+.boot-title-brackets {
+    position: absolute;
+    width: 80%;
+    height: 60%;
+    max-width: 800px;
+}
+
+.bracket {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--color-primary);
+    animation: bracketExpand 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.bracket-tl {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+    animation-delay: 0.2s;
+}
+
+.bracket-tr {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+    animation-delay: 0.3s;
+}
+
+.bracket-bl {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+    animation-delay: 0.4s;
+}
+
+.bracket-br {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+    animation-delay: 0.5s;
+}
+
+@keyframes bracketExpand {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.boot-main-title {
+    position: relative;
+    z-index: 2;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--color-primary);
+    text-shadow: 0 0 20px var(--color-primary), 0 0 40px var(--color-primary);
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+}
+
+.title-char {
+    display: inline-block;
+    opacity: 0;
+    animation: charReveal 0.5s ease-out forwards;
+}
+
+.title-spacer {
+    display: inline-block;
+    width: 0.5em;
+}
+
+@keyframes charReveal {
+    0% { 
+        opacity: 0; 
+        transform: translateY(30px) rotateX(90deg);
+        filter: blur(10px);
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0) rotateX(0deg);
+        filter: blur(0);
+    }
+}
+
+.boot-subtitle {
+    position: relative;
+    z-index: 2;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+    letter-spacing: 0.3em;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: subtitleFade 1s 0.8s ease-out forwards;
+}
+
+.boot-version {
+    position: relative;
+    z-index: 2;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: rgba(0, 255, 255, 0.6);
+    opacity: 0;
+    animation: subtitleFade 1s 1s ease-out forwards;
+}
+
+@keyframes subtitleFade {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .boot-main-title {
+        font-size: 3rem;
+        letter-spacing: 0.15em;
+    }
+    
+    .boot-subtitle {
+        font-size: 0.9rem;
+        letter-spacing: 0.2em;
+    }
+    
+    .boot-sys-init {
+        padding: 20px;
+        max-width: 90%;
+    }
+    
+    .sys-line {
+        font-size: 0.85rem;
+    }
+    
+    .bracket {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .boot-skip-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 16px;
+        font-size: 0.8rem;
     }
 }
 

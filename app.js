@@ -345,7 +345,11 @@ const state = {
     quizMode: 'practice', // 'practice' | 'test' | 'sprint'
     difficulty: 'beginner', // 'beginner' | 'advanced' | 'expert'
     settings: {
-        theme: 'default', // 'default' | 'eva01' | 'eva02' | 'rx0'
+        theme: 'default', // 21 themes: default, eva01, eva02, rx0, eva03, purple-gundam, gray-gundam, celestial-pink, blue-terminal, green-terminal, orange-terminal, red-terminal, solo-leveling, nova-kit, hydra-kit, cyberpunk-purple, red-yellow-mech, gray-white-gundam, purple-white-gundam, wb-mecha, yellow-terminal
+        panelStyle: 'default', // 14 panel styles: default, blue-mech, cyberpunk01, cyberpunk02, gungale, pink-mech, purple-mech, unicorn, wb-mecha, white-scifi01, white-scifi02, white-scifi03, word-boxes, yellow-mech
+        uiLayout: 'default', // 14 UI layouts: default, aida, blue-mech, blue-terminal, celestial-pink, covert-ops, green-terminal, nova-kit, orange-scifi, orange-terminal, pink-mech, purple-mech, yellow-mech, yellow-terminal
+        bootAnimation: 'classic', // 5 boot animations: classic, inspiration1, inspiration2, inspiration3, retro-tech
+        characterLayout: 'default', // 3 character layouts: default, equipment-loadout, gundam-loadout
         visualEffects: {
             glassmorphism: true,
             neonBorders: true,
@@ -3758,6 +3762,14 @@ async function loadSettings() {
             };
             // Apply the theme immediately
             applyTheme(state.settings.theme);
+            // Apply panel style
+            applyPanelStyle(state.settings.panelStyle || 'default');
+            // Apply UI layout
+            applyUILayout(state.settings.uiLayout || 'default');
+            // Apply character layout
+            applyCharacterLayout(state.settings.characterLayout || 'default');
+            // Apply boot animation style
+            applyBootAnimation(state.settings.bootAnimation || 'classic');
             // Apply visual effects
             applyVisualEffects();
         }
@@ -3782,14 +3794,47 @@ async function saveSettings() {
 function applyTheme(themeName) {
     const root = document.documentElement;
     
-    // Remove existing theme classes
-    root.classList.remove('theme-default', 'theme-eva01', 'theme-eva02', 'theme-rx0');
+    // Remove all existing theme classes
+    const allThemes = [
+        'theme-default', 'theme-eva01', 'theme-eva02', 'theme-rx0', 'theme-eva03',
+        'theme-purple-gundam', 'theme-gray-gundam', 'theme-celestial-pink',
+        'theme-blue-terminal', 'theme-green-terminal', 'theme-orange-terminal',
+        'theme-red-terminal', 'theme-solo-leveling', 'theme-nova-kit', 'theme-hydra-kit',
+        'theme-cyberpunk-purple', 'theme-red-yellow-mech', 'theme-gray-white-gundam',
+        'theme-purple-white-gundam', 'theme-wb-mecha', 'theme-yellow-terminal'
+    ];
+    
+    allThemes.forEach(theme => root.classList.remove(theme));
     
     // Add new theme class
     root.classList.add(`theme-${themeName}`);
     
     // Store current theme
     state.settings.theme = themeName;
+}
+
+// Apply panel style to all panels
+function applyPanelStyle(panelStyle) {
+    // Remove all existing panel style classes from all panels
+    const allPanels = document.querySelectorAll('.panel');
+    const panelStyles = [
+        'panel-blue-mech', 'panel-cyberpunk01', 'panel-cyberpunk02', 'panel-gungale',
+        'panel-pink-mech', 'panel-purple-mech', 'panel-unicorn', 'panel-wb-mecha',
+        'panel-white-scifi01', 'panel-white-scifi02', 'panel-white-scifi03', 
+        'panel-word-boxes', 'panel-yellow-mech'
+    ];
+    
+    allPanels.forEach(panel => {
+        panelStyles.forEach(style => panel.classList.remove(style));
+        
+        // Add new panel style if not default
+        if (panelStyle !== 'default') {
+            panel.classList.add(`panel-${panelStyle}`);
+        }
+    });
+    
+    // Store current panel style
+    state.settings.panelStyle = panelStyle;
 }
 
 // Apply visual effects to document
@@ -3805,132 +3850,233 @@ function applyVisualEffects() {
     root.classList.toggle('effect-premium-buttons', effects.premiumButtons);
 }
 
+// Apply UI layout to body
+function applyUILayout(layoutName) {
+    const body = document.body;
+    
+    // Remove all existing layout classes
+    const layoutClasses = [
+        'layout-aida', 'layout-blue-mech', 'layout-blue-terminal', 'layout-celestial-pink',
+        'layout-covert-ops', 'layout-green-terminal', 'layout-nova-kit', 'layout-orange-scifi',
+        'layout-orange-terminal', 'layout-pink-mech', 'layout-purple-mech', 
+        'layout-yellow-mech', 'layout-yellow-terminal'
+    ];
+    
+    layoutClasses.forEach(cls => body.classList.remove(cls));
+    
+    // Add new layout class if not default
+    if (layoutName !== 'default') {
+        body.classList.add(`layout-${layoutName}`);
+    }
+    
+    // Store current layout
+    state.settings.uiLayout = layoutName;
+}
+
+// Apply character screen layout
+function applyCharacterLayout(layoutName) {
+    const body = document.body;
+    
+    // Remove all existing character layout classes
+    const charLayoutClasses = [
+        'char-equipment-loadout', 'char-gundam-loadout', 'char-primary-stats'
+    ];
+    
+    charLayoutClasses.forEach(cls => body.classList.remove(cls));
+    
+    // Add new character layout class if not default
+    if (layoutName !== 'default') {
+        body.classList.add(`char-${layoutName}`);
+    }
+    
+    // Store current character layout
+    state.settings.characterLayout = layoutName;
+}
+
+// Apply boot animation style
+function applyBootAnimation(animationName) {
+    const body = document.body;
+    
+    // Remove all existing boot animation classes
+    const bootClasses = [
+        'boot-inspiration1', 'boot-inspiration2', 'boot-inspiration3', 'boot-retro-tech'
+    ];
+    
+    bootClasses.forEach(cls => body.classList.remove(cls));
+    
+    // Add new boot animation class if not classic
+    if (animationName !== 'classic') {
+        body.classList.add(`boot-${animationName}`);
+    }
+    
+    // Store current boot animation
+    state.settings.bootAnimation = animationName;
+}
+
+// Preview boot animation
+function previewBootAnimation(animationName) {
+    // Temporarily apply the boot animation style
+    const body = document.body;
+    const bootClasses = [
+        'boot-inspiration1', 'boot-inspiration2', 'boot-inspiration3', 'boot-retro-tech'
+    ];
+    
+    bootClasses.forEach(cls => body.classList.remove(cls));
+    
+    if (animationName !== 'classic') {
+        body.classList.add(`boot-${animationName}`);
+    }
+    
+    // Show a simplified boot preview
+    return new Promise((resolve) => {
+        const previewHTML = `
+            <div id="boot-preview" style="position: fixed; inset: 0; z-index: 10000; background: #000; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 20px;">
+                <div class="boot-screen" style="color: var(--color-primary); font-family: 'Courier New', monospace; text-align: center; padding: 40px;">
+                    <div class="boot-logo" style="font-size: 60px; margin-bottom: 30px;">⚡</div>
+                    <div class="boot-line" style="margin: 10px 0; animation-delay: 0s;">SYSTEM BOOT PREVIEW</div>
+                    <div class="boot-line" style="margin: 10px 0; animation-delay: 0.1s;">▶ INITIALIZING CORE SYSTEMS...</div>
+                    <div class="boot-line" style="margin: 10px 0; animation-delay: 0.2s;">▶ LOADING AFOQT QUEST...</div>
+                    <div class="boot-line" style="margin: 10px 0; animation-delay: 0.3s;">▶ BOOT ANIMATION: ${animationName.toUpperCase()}</div>
+                    <div class="boot-line" style="margin: 10px 0; animation-delay: 0.4s;">✓ PREVIEW COMPLETE</div>
+                </div>
+                <button class="btn" id="close-boot-preview" style="padding: 12px 30px; font-size: 14px; z-index: 10001;">CLOSE PREVIEW</button>
+            </div>
+        `;
+        
+        const previewDiv = document.createElement('div');
+        previewDiv.innerHTML = previewHTML;
+        document.body.appendChild(previewDiv.firstElementChild);
+        
+        document.getElementById('close-boot-preview').addEventListener('click', () => {
+            document.getElementById('boot-preview').remove();
+            // Restore saved boot animation style
+            bootClasses.forEach(cls => body.classList.remove(cls));
+            if (state.settings.bootAnimation !== 'classic') {
+                body.classList.add(`boot-${state.settings.bootAnimation}`);
+            }
+            resolve();
+        });
+        
+        // Auto-close after 5 seconds
+        setTimeout(() => {
+            const preview = document.getElementById('boot-preview');
+            if (preview) {
+                preview.remove();
+                bootClasses.forEach(cls => body.classList.remove(cls));
+                if (state.settings.bootAnimation !== 'classic') {
+                    body.classList.add(`boot-${state.settings.bootAnimation}`);
+                }
+                resolve();
+            }
+        }, 5000);
+    });
+}
+
 // ============================================================================
 // Boot Initialization Sequence
 // ============================================================================
 
 function showBootSequence() {
     return new Promise((resolve) => {
+        const animStyle = state.settings.bootAnimation || 'classic';
+        
         const bootHTML = `
-            <div id="boot-sequence">
-                <!-- Phase 1: System Boot (0-4s) -->
-                <div class="boot-phase boot-phase-1">
-                    <div class="boot-system-init">
-                        <div class="sys-corners">
-                            <div class="sys-corner sys-tl"></div>
-                            <div class="sys-corner sys-tr"></div>
-                            <div class="sys-corner sys-bl"></div>
-                            <div class="sys-corner sys-br"></div>
-                        </div>
-                        <div class="sys-title">SYSTEM INITIALIZATION</div>
-                        <div class="sys-processes">
-                            <div class="sys-process" style="animation-delay: 0.3s;">
-                                <span class="process-icon">▶</span>
-                                <span class="process-name">CORE.01/SYNC</span>
-                                <span class="process-status">ONLINE</span>
-                            </div>
-                            <div class="sys-process" style="animation-delay: 0.6s;">
-                                <span class="process-icon">▶</span>
-                                <span class="process-name">CORE.02/SYNC</span>
-                                <span class="process-status">ONLINE</span>
-                            </div>
-                            <div class="sys-process" style="animation-delay: 0.9s;">
-                                <span class="process-icon">▶</span>
-                                <span class="process-name">CORE.03/SYNC</span>
-                                <span class="process-status">ONLINE</span>
-                            </div>
-                            <div class="sys-process" style="animation-delay: 1.2s;">
-                                <span class="process-icon">▶</span>
-                                <span class="process-name">NEURAL.SYS</span>
-                                <span class="process-status">ACTIVE</span>
-                            </div>
-                            <div class="sys-process" style="animation-delay: 1.5s;">
-                                <span class="process-icon">▶</span>
-                                <span class="process-name">PILOT.INTERFACE</span>
-                                <span class="process-status">READY</span>
-                            </div>
-                            <div class="sys-process" style="animation-delay: 1.8s;">
-                                <span class="process-icon">▶</span>
-                                <span class="process-name">COMBAT.ENGINE</span>
-                                <span class="process-status">STANDBY</span>
-                            </div>
-                        </div>
-                        <div class="sys-loading-bar">
-                            <div class="sys-bar-fill"></div>
-                        </div>
-                        <div class="sys-percentage">0%</div>
+            <div id="boot-sequence" class="boot-anim-${animStyle}">
+                <!-- Phase 1: Initial Flash & Logo (0-1.5s) -->
+                <div class="boot-phase boot-phase-flash">
+                    <div class="boot-flash-overlay"></div>
+                    <div class="boot-logo-container">
+                        <div class="boot-logo-symbol">⚡</div>
+                        <div class="boot-logo-glitch">⚡</div>
                     </div>
                 </div>
 
-                <!-- Phase 2: Welcome Message (4-7s) -->
-                <div class="boot-phase boot-phase-2">
-                    <div class="boot-welcome-screen">
-                        <div class="welcome-shape-container">
-                            <div class="welcome-shape welcome-hex-1">
-                                <div class="shape-line"></div>
-                            </div>
-                            <div class="welcome-shape welcome-hex-2">
-                                <div class="shape-line"></div>
-                            </div>
-                            <div class="welcome-shape welcome-hex-3">
-                                <div class="shape-line"></div>
-                            </div>
-                        </div>
-                        <div class="welcome-main-text">WELCOME TO</div>
-                        <div class="welcome-title">AFOQT QUEST</div>
-                        <div class="welcome-subtitle">NEURAL COMBAT TRAINING SYSTEM</div>
-                        <div class="welcome-corners">
-                            <div class="welcome-corner wc-tl"></div>
-                            <div class="welcome-corner wc-tr"></div>
-                            <div class="welcome-corner wc-bl"></div>
-                            <div class="welcome-corner wc-br"></div>
-                        </div>
+                <!-- Phase 2: System Grid (1.5-3.5s) -->
+                <div class="boot-phase boot-phase-grid">
+                    <div class="boot-grid-bg"></div>
+                    <div class="boot-scan-line"></div>
+                    <div class="boot-data-streams">
+                        <div class="data-stream" style="left: 10%; animation-delay: 0s;"></div>
+                        <div class="data-stream" style="left: 30%; animation-delay: 0.3s;"></div>
+                        <div class="data-stream" style="left: 50%; animation-delay: 0.6s;"></div>
+                        <div class="data-stream" style="left: 70%; animation-delay: 0.9s;"></div>
+                        <div class="data-stream" style="left: 90%; animation-delay: 1.2s;"></div>
+                    </div>
+                    <div class="boot-sys-init">
+                        <div class="sys-line" style="animation-delay: 0.2s;">► INITIALIZING NEURAL CORE...</div>
+                        <div class="sys-line" style="animation-delay: 0.5s;">► LOADING COMBAT SYSTEMS...</div>
+                        <div class="sys-line" style="animation-delay: 0.8s;">► SYNCING PILOT INTERFACE...</div>
+                        <div class="sys-line" style="animation-delay: 1.1s;">► AFOQT TRAINING MODULE ACTIVE</div>
+                        <div class="sys-line sys-success" style="animation-delay: 1.4s;">✓ ALL SYSTEMS OPERATIONAL</div>
                     </div>
                 </div>
+
+                <!-- Phase 3: Title Reveal (3.5-5.5s) -->
+                <div class="boot-phase boot-phase-title">
+                    <div class="boot-title-bg">
+                        <div class="title-particle" style="left: 20%; top: 30%; animation-delay: 0s;"></div>
+                        <div class="title-particle" style="left: 80%; top: 20%; animation-delay: 0.2s;"></div>
+                        <div class="title-particle" style="left: 40%; top: 70%; animation-delay: 0.4s;"></div>
+                        <div class="title-particle" style="left: 60%; top: 50%; animation-delay: 0.6s;"></div>
+                    </div>
+                    <div class="boot-title-brackets">
+                        <div class="bracket bracket-tl"></div>
+                        <div class="bracket bracket-tr"></div>
+                        <div class="bracket bracket-bl"></div>
+                        <div class="bracket bracket-br"></div>
+                    </div>
+                    <div class="boot-main-title">
+                        <span class="title-char" style="animation-delay: 0s;">A</span>
+                        <span class="title-char" style="animation-delay: 0.05s;">F</span>
+                        <span class="title-char" style="animation-delay: 0.1s;">O</span>
+                        <span class="title-char" style="animation-delay: 0.15s;">Q</span>
+                        <span class="title-char" style="animation-delay: 0.2s;">T</span>
+                        <span class="title-spacer"></span>
+                        <span class="title-char" style="animation-delay: 0.3s;">Q</span>
+                        <span class="title-char" style="animation-delay: 0.35s;">U</span>
+                        <span class="title-char" style="animation-delay: 0.4s;">E</span>
+                        <span class="title-char" style="animation-delay: 0.45s;">S</span>
+                        <span class="title-char" style="animation-delay: 0.5s;">T</span>
+                    </div>
+                    <div class="boot-subtitle">NEURAL COMBAT TRAINING PROTOCOL</div>
+                    <div class="boot-version">v2.0 | OFFICER CANDIDATE PREP SYSTEM</div>
+                </div>
+
+                <!-- Skip Button -->
+                <button class="boot-skip-btn" id="boot-skip">SKIP ▶</button>
             </div>
         `;
         
         document.body.insertAdjacentHTML('afterbegin', bootHTML);
         
-        // Update welcome message with player name
-        const welcomeName = document.getElementById('welcome-player-name');
-        if (welcomeName && state.currentPlayer) {
-            welcomeName.textContent = `HELLO, ${state.currentPlayer.name.toUpperCase()}`;
-        }
-        
-        // Enable audio on first user interaction (required by browser autoplay policy)
-        // Note: Sound effects are scheduled throughout the boot animation. Those played before
-        // user interaction will fail silently, those after will play normally.
+        // Enable audio on first interaction
         const enableAudio = createAudioEnabler();
-        
-        // Listen for any user interaction to enable audio
         const bootSequence = document.getElementById('boot-sequence');
         if (bootSequence) {
             bootSequence.addEventListener('click', enableAudio, { once: true });
             document.addEventListener('keydown', enableAudio, { once: true });
         }
         
-        // Sound effects for boot sequence
-        playSfx('boot'); // Phase 1: System boot
-        setTimeout(() => playSfx('nav'), 1500); // Phase 1: Process loading
-        setTimeout(() => playSfx('correct'), 3500); // Phase 1: Systems online
-        setTimeout(() => playSfx('select'), 4000); // Phase 2: Welcome screen
+        // Sound effects timeline
+        playSfx('boot');
+        setTimeout(() => playSfx('nav'), 1500);
+        setTimeout(() => playSfx('correct'), 3500);
         
-        // Animate system boot percentage
-        const sysPercent = document.querySelector('.sys-percentage');
-        if (sysPercent) {
-            let percent = 0;
-            const percentInterval = setInterval(() => {
-                percent += 2;
-                if (percent <= 100) {
-                    sysPercent.textContent = percent + '%';
-                } else {
-                    clearInterval(percentInterval);
-                }
-            }, 35); // Complete in ~1.75s
+        // Skip button handler
+        const skipBtn = document.getElementById('boot-skip');
+        const skipBoot = () => {
+            const bootSeq = document.getElementById('boot-sequence');
+            if (bootSeq) {
+                bootSeq.remove();
+                resolve();
+            }
+        };
+        
+        if (skipBtn) {
+            skipBtn.addEventListener('click', skipBoot);
         }
         
-        // Remove boot sequence after 7 seconds
+        // Auto-complete after 5.5 seconds
         setTimeout(() => {
             const bootSeq = document.getElementById('boot-sequence');
             if (bootSeq) {
@@ -3942,7 +4088,7 @@ function showBootSequence() {
             } else {
                 resolve();
             }
-        }, 7000);
+        }, 5500);
     });
 }
 
@@ -3958,7 +4104,7 @@ function showAccessGranted() {
                 <div class="access-corner access-corner-bl"></div>
                 <div class="access-corner access-corner-br"></div>
                 <div class="access-text">ACCESS GRANTED</div>
-                <div class="access-subtext">PLAYER AUTHENTICATION COMPLETE</div>
+                <div class="access-subtext">PILOT AUTHENTICATION COMPLETE</div>
             </div>
         `;
         document.body.appendChild(container);
@@ -4430,6 +4576,9 @@ function render() {
     }
     
     attachEventListeners();
+    
+    // Apply panel style to all newly rendered panels
+    applyPanelStyle(state.settings.panelStyle || 'default');
 }
 
 function renderLogin() {
@@ -5474,11 +5623,12 @@ function renderSettings() {
                     <div class="setting-item">
                         <label class="setting-label">
                             <span class="setting-name">Color Theme</span>
+                            <span class="setting-description">21 themes based on mecha & terminal aesthetics</span>
                         </label>
-                        <div class="theme-selector">
+                        <div class="theme-selector" style="grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 8px;">
                             <button class="theme-btn ${currentTheme === 'default' ? 'active' : ''}" data-theme="default">
                                 <span class="theme-preview theme-preview-default"></span>
-                                <span>Default</span>
+                                <span>Cyan Tron</span>
                             </button>
                             <button class="theme-btn ${currentTheme === 'eva01' ? 'active' : ''}" data-theme="eva01">
                                 <span class="theme-preview theme-preview-eva01"></span>
@@ -5492,6 +5642,206 @@ function renderSettings() {
                                 <span class="theme-preview theme-preview-rx0"></span>
                                 <span>RX-0</span>
                             </button>
+                            <button class="theme-btn ${currentTheme === 'eva03' ? 'active' : ''}" data-theme="eva03">
+                                <span class="theme-preview theme-preview-eva03"></span>
+                                <span>EVA-03</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'purple-gundam' ? 'active' : ''}" data-theme="purple-gundam">
+                                <span class="theme-preview theme-preview-purple-gundam"></span>
+                                <span>Purple Gundam</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'gray-gundam' ? 'active' : ''}" data-theme="gray-gundam">
+                                <span class="theme-preview theme-preview-gray-gundam"></span>
+                                <span>Gray Gundam</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'celestial-pink' ? 'active' : ''}" data-theme="celestial-pink">
+                                <span class="theme-preview theme-preview-celestial-pink"></span>
+                                <span>Celestial Pink</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'blue-terminal' ? 'active' : ''}" data-theme="blue-terminal">
+                                <span class="theme-preview theme-preview-blue-terminal"></span>
+                                <span>Blue Terminal</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'green-terminal' ? 'active' : ''}" data-theme="green-terminal">
+                                <span class="theme-preview theme-preview-green-terminal"></span>
+                                <span>Green Terminal</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'orange-terminal' ? 'active' : ''}" data-theme="orange-terminal">
+                                <span class="theme-preview theme-preview-orange-terminal"></span>
+                                <span>Orange Terminal</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'red-terminal' ? 'active' : ''}" data-theme="red-terminal">
+                                <span class="theme-preview theme-preview-red-terminal"></span>
+                                <span>Red Terminal</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'solo-leveling' ? 'active' : ''}" data-theme="solo-leveling">
+                                <span class="theme-preview theme-preview-solo-leveling"></span>
+                                <span>Solo Leveling</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'nova-kit' ? 'active' : ''}" data-theme="nova-kit">
+                                <span class="theme-preview theme-preview-nova-kit"></span>
+                                <span>Nova Kit</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'hydra-kit' ? 'active' : ''}" data-theme="hydra-kit">
+                                <span class="theme-preview theme-preview-hydra-kit"></span>
+                                <span>Hydra Kit</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'cyberpunk-purple' ? 'active' : ''}" data-theme="cyberpunk-purple">
+                                <span class="theme-preview theme-preview-cyberpunk-purple"></span>
+                                <span>Cyberpunk</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'red-yellow-mech' ? 'active' : ''}" data-theme="red-yellow-mech">
+                                <span class="theme-preview theme-preview-red-yellow-mech"></span>
+                                <span>Red/Yellow</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'gray-white-gundam' ? 'active' : ''}" data-theme="gray-white-gundam">
+                                <span class="theme-preview theme-preview-gray-white-gundam"></span>
+                                <span>Gray/White</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'purple-white-gundam' ? 'active' : ''}" data-theme="purple-white-gundam">
+                                <span class="theme-preview theme-preview-purple-white-gundam"></span>
+                                <span>Purple/White</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'wb-mecha' ? 'active' : ''}" data-theme="wb-mecha">
+                                <span class="theme-preview theme-preview-wb-mecha"></span>
+                                <span>WB Mecha</span>
+                            </button>
+                            <button class="theme-btn ${currentTheme === 'yellow-terminal' ? 'active' : ''}" data-theme="yellow-terminal">
+                                <span class="theme-preview theme-preview-yellow-terminal"></span>
+                                <span>Yellow Terminal</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 style="margin: 30px 0 20px 0;">Panel Styles</h2>
+                
+                <div class="settings-section">
+                    <div class="setting-item" style="flex-direction: column; align-items: flex-start;">
+                        <label class="setting-label" style="width: 100%; margin-bottom: 12px;">
+                            <span class="setting-name">Choose Panel Design</span>
+                            <span class="setting-description">14 mecha-inspired panel geometries with unique shapes & lines</span>
+                        </label>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; width: 100%;">
+                            <button class="btn panel-style-btn ${state.settings.panelStyle === 'default' ? 'active' : ''}" data-panel-style="default">
+                                Default
+                            </button>
+                            <button class="btn panel-style-btn ${state.settings.panelStyle === 'blue-mech' ? 'active' : ''}" data-panel-style="blue-mech">
+                                Blue Mech
+                            </button>
+                            <button class="btn panel-style-btn ${state.settings.panelStyle === 'cyberpunk01' ? 'active' : ''}" data-panel-style="cyberpunk01">
+                                Cyberpunk 01
+                            </button>
+                            <button class="btn panel-style-btn ${state.settings.panelStyle === 'cyberpunk02' ? 'active' : ''}" data-panel-style="cyberpunk02">
+                                Cyberpunk 02
+                            </button>
+                            <button class="btn panel-style-btn ${state.settings.panelStyle === 'gungale' ? 'active' : ''}" data-panel-style="gungale">
+                                Gungale
+                            </button>
+                            <button class="btn panel-style-btn ${state.settings.panelStyle === 'pink-mech' ? 'active' : ''}" data-panel-style="pink-mech">
+                                Pink Mech
+                            </button>
+                            <button class="btn panel-style-btn ${state.settings.panelStyle === 'purple-mech' ? 'active' : ''}" data-panel-style="purple-mech">
+                                Purple Mech
+                            </button>
+                            <button class="btn panel-style-btn ${state.settings.panelStyle === 'unicorn' ? 'active' : ''}" data-panel-style="unicorn">
+                                Unicorn RX-0
+                            </button>
+                            <button class="btn panel-style-btn ${state.settings.panelStyle === 'wb-mecha' ? 'active' : ''}" data-panel-style="wb-mecha">
+                                WB Mecha
+                            </button>
+                            <button class="btn panel-style-btn ${state.settings.panelStyle === 'white-scifi01' ? 'active' : ''}" data-panel-style="white-scifi01">
+                                White SciFi 01
+                            </button>
+                            <button class="btn panel-style-btn ${state.settings.panelStyle === 'white-scifi02' ? 'active' : ''}" data-panel-style="white-scifi02">
+                                White SciFi 02
+                            </button>
+                            <button class="btn panel-style-btn ${state.settings.panelStyle === 'white-scifi03' ? 'active' : ''}" data-panel-style="white-scifi03">
+                                White SciFi 03
+                            </button>
+                            <button class="btn panel-style-btn ${state.settings.panelStyle === 'word-boxes' ? 'active' : ''}" data-panel-style="word-boxes">
+                                Word Boxes
+                            </button>
+                            <button class="btn panel-style-btn ${state.settings.panelStyle === 'yellow-mech' ? 'active' : ''}" data-panel-style="yellow-mech">
+                                Yellow Mech
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 style="margin: 30px 0 20px 0;">UI Layout Systems</h2>
+                
+                <div class="settings-section">
+                    <div class="setting-item" style="flex-direction: column; align-items: flex-start;">
+                        <label class="setting-label" style="width: 100%; margin-bottom: 12px;">
+                            <span class="setting-name">Choose UI Layout</span>
+                            <span class="setting-description">14 complete GUI restructuring options - changes nav, HUD, and data readouts</span>
+                        </label>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; width: 100%;">
+                            <button class="btn ui-layout-btn ${state.settings.uiLayout === 'default' ? 'active' : ''}" data-ui-layout="default">Default</button>
+                            <button class="btn ui-layout-btn ${state.settings.uiLayout === 'aida' ? 'active' : ''}" data-ui-layout="aida">Aida Tactical</button>
+                            <button class="btn ui-layout-btn ${state.settings.uiLayout === 'blue-mech' ? 'active' : ''}" data-ui-layout="blue-mech">Blue Mech HUD</button>
+                            <button class="btn ui-layout-btn ${state.settings.uiLayout === 'blue-terminal' ? 'active' : ''}" data-ui-layout="blue-terminal">Blue Terminal</button>
+                            <button class="btn ui-layout-btn ${state.settings.uiLayout === 'celestial-pink' ? 'active' : ''}" data-ui-layout="celestial-pink">Celestial Pink</button>
+                            <button class="btn ui-layout-btn ${state.settings.uiLayout === 'covert-ops' ? 'active' : ''}" data-ui-layout="covert-ops">Covert Ops</button>
+                            <button class="btn ui-layout-btn ${state.settings.uiLayout === 'green-terminal' ? 'active' : ''}" data-ui-layout="green-terminal">Green Terminal</button>
+                            <button class="btn ui-layout-btn ${state.settings.uiLayout === 'nova-kit' ? 'active' : ''}" data-ui-layout="nova-kit">Nova Kit</button>
+                            <button class="btn ui-layout-btn ${state.settings.uiLayout === 'orange-scifi' ? 'active' : ''}" data-ui-layout="orange-scifi">Orange SciFi</button>
+                            <button class="btn ui-layout-btn ${state.settings.uiLayout === 'orange-terminal' ? 'active' : ''}" data-ui-layout="orange-terminal">Orange Terminal</button>
+                            <button class="btn ui-layout-btn ${state.settings.uiLayout === 'pink-mech' ? 'active' : ''}" data-ui-layout="pink-mech">Pink Mech</button>
+                            <button class="btn ui-layout-btn ${state.settings.uiLayout === 'purple-mech' ? 'active' : ''}" data-ui-layout="purple-mech">Purple Mech</button>
+                            <button class="btn ui-layout-btn ${state.settings.uiLayout === 'yellow-mech' ? 'active' : ''}" data-ui-layout="yellow-mech">Yellow Mech</button>
+                            <button class="btn ui-layout-btn ${state.settings.uiLayout === 'yellow-terminal' ? 'active' : ''}" data-ui-layout="yellow-terminal">Yellow Terminal</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 style="margin: 30px 0 20px 0;">Boot Animation</h2>
+                
+                <div class="settings-section">
+                    <div class="setting-item" style="flex-direction: column; align-items: flex-start;">
+                        <label class="setting-label" style="width: 100%; margin-bottom: 12px;">
+                            <span class="setting-name">Startup Sequence Style</span>
+                            <span class="setting-description">Choose your preferred boot animation from 5 variants - click Preview to test</span>
+                        </label>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; width: 100%;">
+                            <div style="display: flex; flex-direction: column; gap: 5px;">
+                                <button class="btn boot-anim-btn ${state.settings.bootAnimation === 'classic' ? 'active' : ''}" data-boot-anim="classic">Classic Matrix</button>
+                                <button class="btn btn-small preview-boot-btn" data-preview-boot="classic" style="font-size: 11px; padding: 6px 12px;">▶ Preview</button>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 5px;">
+                                <button class="btn boot-anim-btn ${state.settings.bootAnimation === 'inspiration1' ? 'active' : ''}" data-boot-anim="inspiration1">Fast Tech</button>
+                                <button class="btn btn-small preview-boot-btn" data-preview-boot="inspiration1" style="font-size: 11px; padding: 6px 12px;">▶ Preview</button>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 5px;">
+                                <button class="btn boot-anim-btn ${state.settings.bootAnimation === 'inspiration2' ? 'active' : ''}" data-boot-anim="inspiration2">Minimalist</button>
+                                <button class="btn btn-small preview-boot-btn" data-preview-boot="inspiration2" style="font-size: 11px; padding: 6px 12px;">▶ Preview</button>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 5px;">
+                                <button class="btn boot-anim-btn ${state.settings.bootAnimation === 'inspiration3' ? 'active' : ''}" data-boot-anim="inspiration3">System Check</button>
+                                <button class="btn btn-small preview-boot-btn" data-preview-boot="inspiration3" style="font-size: 11px; padding: 6px 12px;">▶ Preview</button>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 5px;">
+                                <button class="btn boot-anim-btn ${state.settings.bootAnimation === 'retro-tech' ? 'active' : ''}" data-boot-anim="retro-tech">Retro CRT</button>
+                                <button class="btn btn-small preview-boot-btn" data-preview-boot="retro-tech" style="font-size: 11px; padding: 6px 12px;">▶ Preview</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 style="margin: 30px 0 20px 0;">Character Screen</h2>
+                
+                <div class="settings-section">
+                    <div class="setting-item" style="flex-direction: column; align-items: flex-start;">
+                        <label class="setting-label" style="width: 100%; margin-bottom: 12px;">
+                            <span class="setting-name">Status Screen Layout</span>
+                            <span class="setting-description">Choose how your character stats and equipment are displayed</span>
+                        </label>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; width: 100%;">
+                            <button class="btn char-layout-btn ${state.settings.characterLayout === 'default' ? 'active' : ''}" data-char-layout="default">Default</button>
+                            <button class="btn char-layout-btn ${state.settings.characterLayout === 'equipment-loadout' ? 'active' : ''}" data-char-layout="equipment-loadout">Equipment Loadout</button>
+                            <button class="btn char-layout-btn ${state.settings.characterLayout === 'gundam-loadout' ? 'active' : ''}" data-char-layout="gundam-loadout">Gundam Loadout</button>
+                            <button class="btn char-layout-btn ${state.settings.characterLayout === 'primary-stats' ? 'active' : ''}" data-char-layout="primary-stats">Primary Stats</button>
                         </div>
                     </div>
                 </div>
@@ -6365,6 +6715,65 @@ function attachEventListeners() {
         btn.addEventListener('click', () => {
             const themeName = btn.dataset.theme;
             applyTheme(themeName);
+            saveSettings();
+            playSfx('nav');
+            render(); // Re-render to update active state
+        });
+    });
+    
+    // Panel style selector buttons
+    const panelStyleBtns = document.querySelectorAll('.panel-style-btn');
+    panelStyleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const panelStyle = btn.dataset.panelStyle;
+            applyPanelStyle(panelStyle);
+            saveSettings();
+            playSfx('nav');
+            render(); // Re-render to update active state
+        });
+    });
+    
+    // UI Layout selector buttons
+    const uiLayoutBtns = document.querySelectorAll('.ui-layout-btn');
+    uiLayoutBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const uiLayout = btn.dataset.uiLayout;
+            applyUILayout(uiLayout);
+            saveSettings();
+            playSfx('nav');
+            render(); // Re-render to update active state
+        });
+    });
+    
+    // Boot Animation selector buttons
+    const bootAnimBtns = document.querySelectorAll('.boot-anim-btn');
+    bootAnimBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const bootAnim = btn.dataset.bootAnim;
+            applyBootAnimation(bootAnim);
+            saveSettings();
+            playSfx('nav');
+            render(); // Re-render to update active state
+        });
+    });
+    
+    // Boot Animation preview buttons
+    const previewBootBtns = document.querySelectorAll('.preview-boot-btn');
+    previewBootBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent parent button click
+            const bootAnim = btn.dataset.previewBoot;
+            playSfx('modal');
+            previewBootAnimation(bootAnim);
+        });
+    });
+    
+    // Character Layout selector buttons
+    const charLayoutBtns = document.querySelectorAll('.char-layout-btn');
+    charLayoutBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const charLayout = btn.dataset.charLayout;
+            applyCharacterLayout(charLayout);
             saveSettings();
             playSfx('nav');
             render(); // Re-render to update active state
