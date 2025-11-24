@@ -961,9 +961,23 @@ body::after {
     margin-bottom: 30px;
 }
 
-/* Action buttons - now floating for always visible navigation */
+/* Action buttons */
 .action-buttons {
-    position: fixed;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Hide regular action-buttons when floating-nav is present on the same page */
+body:has(.floating-nav) .action-buttons:not(.quiz-action-buttons) {
+    display: none;
+}
+
+/* Floating action buttons for quiz screen - always visible */
+.quiz-action-buttons {
+    position: fixed !important;
     bottom: 20px;
     right: 20px;
     display: flex;
@@ -971,58 +985,29 @@ body::after {
     gap: 10px;
     z-index: 1000;
     pointer-events: none; /* Allow clicking through the container */
-}
-
-.action-buttons .btn {
-    pointer-events: auto; /* Re-enable pointer events for buttons */
-    min-width: 140px;
-    text-align: center;
-    backdrop-filter: blur(5px);
-    background: var(--color-bg-panel);
-    box-shadow: 0 0 20px var(--color-primary-glow), 0 4px 6px rgba(0, 0, 0, 0.5);
-}
-
-.action-buttons .btn:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 0 30px var(--color-primary-glow), 0 6px 12px rgba(0, 0, 0, 0.7);
-}
-
-/* Legacy quiz-action-buttons - now uses .action-buttons */
-.quiz-action-buttons {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    z-index: 1000;
-    pointer-events: none;
+    /* Remove the old full-width background gradient */
 }
 
 .quiz-action-buttons .btn {
-    pointer-events: auto;
+    pointer-events: auto; /* Re-enable clicking for buttons */
     min-width: 140px;
-    text-align: center;
-    backdrop-filter: blur(5px);
-    background: var(--color-bg-panel);
-    box-shadow: 0 0 20px var(--color-primary-glow), 0 4px 6px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px); /* Add blur for better readability over content */
+    box-shadow: 0 0 20px var(--color-primary-glow), 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .quiz-action-buttons .btn:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 0 30px var(--color-primary-glow), 0 6px 12px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 30px var(--color-primary-glow), 0 6px 16px rgba(0, 0, 0, 0.8);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .action-buttons,
     .quiz-action-buttons {
         bottom: 10px;
         right: 10px;
         gap: 8px;
     }
     
-    .action-buttons .btn,
     .quiz-action-buttons .btn {
         padding: 10px 16px;
         font-size: 0.9rem;
@@ -5977,19 +5962,19 @@ textarea {
     font-weight: bold;
     cursor: pointer;
     border-radius: 8px;
-    box-shadow: 0 0 20px var(--color-primary-glow), 0 4px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px var(--color-primary-glow), 0 4px 12px rgba(0, 0, 0, 0.6);
     transition: all 0.3s ease;
     text-shadow: 0 0 5px var(--color-primary);
     min-width: 140px;
     text-align: center;
     pointer-events: auto; /* Re-enable for buttons */
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px); /* Add blur for better readability */
 }
 
 .floating-nav-btn:hover {
     background: var(--color-primary-dim);
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 0 30px var(--color-primary-glow), 0 6px 12px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 30px var(--color-primary-glow), 0 6px 16px rgba(0, 0, 0, 0.8);
 }
 
 .floating-nav-btn:active {
