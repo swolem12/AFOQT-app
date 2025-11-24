@@ -660,23 +660,27 @@ class AfoqtDatabase {
                     const trendComponent = (1 - recentAccuracy / 100) * WEIGHTS.recentTrend;
                     
                     // Component 3: Time Pressure (normalized response time)
+                    // Penalty only when exceeding target time
                     const avgTime = attempts.reduce((sum, a) => sum + (a.responseTime || 0), 0) / attempts.length;
-                    const timePressureFactor = Math.min(avgTime / TARGET_TIME, 1.0);
+                    const timePressureFactor = Math.max(0, Math.min((avgTime / TARGET_TIME) - 1, 1));
                     const timeComponent = timePressureFactor * WEIGHTS.timePressure;
                     
                     // Component 4: Consistency (variance in performance)
                     // Calculate accuracy for each attempt window (sliding window of 3)
                     const windowSize = 3;
-                    const windowAccuracies = [];
-                    for (let i = 0; i <= attempts.length - windowSize; i++) {
-                        const window = attempts.slice(i, i + windowSize);
-                        const windowCorrect = window.filter(a => a.correct).length;
-                        windowAccuracies.push(windowCorrect / windowSize);
-                    }
+                    let consistencyComponent = 0;
                     
-                    const variance = windowAccuracies.length > 0 ?
-                        this._calculateVariance(windowAccuracies) : 0;
-                    const consistencyComponent = Math.min(variance, 1.0) * WEIGHTS.consistency;
+                    if (attempts.length >= windowSize) {
+                        const windowAccuracies = [];
+                        for (let i = 0; i <= attempts.length - windowSize; i++) {
+                            const window = attempts.slice(i, i + windowSize);
+                            const windowCorrect = window.filter(a => a.correct).length;
+                            windowAccuracies.push(windowCorrect / windowSize);
+                        }
+                        
+                        const variance = this._calculateVariance(windowAccuracies);
+                        consistencyComponent = Math.min(variance, 1.0) * WEIGHTS.consistency;
+                    }
                     
                     // Component 5: Difficulty-Weighted Error Rate
                     let difficultyWeightedErrors = 0;
@@ -698,7 +702,8 @@ class AfoqtDatabase {
                     // Calculate final struggle score (0-100 scale)
                     const rawScore = (accuracyComponent + trendComponent + timeComponent + 
                                      consistencyComponent + difficultyComponent);
-                    const normalizedScore = Math.min(Math.max(rawScore * 100, 0), 100);
+                    // rawScore is already 0-1 range from weighted components
+                    const normalizedScore = Math.min(Math.max(rawScore, 0), 1) * 100;
                     
                     // Interpret the score
                     let interpretation;

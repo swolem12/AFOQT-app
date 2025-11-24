@@ -5287,27 +5287,29 @@ async function loadStruggleScores() {
             `;
         });
         
-        // Add recommendation based on highest struggle
-        const highestStruggle = sortedSubjects[0];
-        const highestScore = struggleScores[highestStruggle];
-        
-        html += `
-            <div style="margin-top: 20px; padding: 15px; background: rgba(0, 255, 255, 0.1); border-left: 4px solid #00ffff; border-radius: 4px;">
-                <div style="font-weight: bold; margin-bottom: 8px;">💡 AI Recommendation:</div>
-                <div style="font-size: 0.9rem;">
-                    ${highestScore.score >= 60 ? 
-                        `Focus heavily on <strong>${highestStruggle}</strong> (${highestScore.score.toFixed(0)} struggle score). 
-                        With ${highestScore.stats.accuracy}% accuracy and ${highestScore.stats.recentAccuracy}% recent performance, 
-                        concentrated practice in this area will yield the greatest improvement.` :
-                    highestScore.score >= 40 ?
-                        `Continue practicing <strong>${highestStruggle}</strong> to build confidence. 
-                        Your ${highestScore.stats.accuracy}% accuracy shows understanding, but consistency can improve.` :
-                        `Excellent work across all subjects! Maintain practice in <strong>${highestStruggle}</strong> 
-                        to prevent skill decay, but all areas show strong performance.`
-                    }
+        // Add recommendation based on highest struggle (if any subjects exist)
+        if (sortedSubjects.length > 0) {
+            const highestStruggle = sortedSubjects[0];
+            const highestScore = struggleScores[highestStruggle];
+            
+            html += `
+                <div style="margin-top: 20px; padding: 15px; background: rgba(0, 255, 255, 0.1); border-left: 4px solid #00ffff; border-radius: 4px;">
+                    <div style="font-weight: bold; margin-bottom: 8px;">💡 AI Recommendation:</div>
+                    <div style="font-size: 0.9rem;">
+                        ${highestScore.score >= 60 ? 
+                            `Focus heavily on <strong>${highestStruggle}</strong> (${highestScore.score.toFixed(0)} struggle score). 
+                            With ${highestScore.stats.accuracy}% accuracy and ${highestScore.stats.recentAccuracy}% recent performance, 
+                            concentrated practice in this area will yield the greatest improvement.` :
+                        highestScore.score >= 40 ?
+                            `Continue practicing <strong>${highestStruggle}</strong> to build confidence. 
+                            Your ${highestScore.stats.accuracy}% accuracy shows understanding, but consistency can improve.` :
+                            `Excellent work across all subjects! Maintain practice in <strong>${highestStruggle}</strong> 
+                            to prevent skill decay, but all areas show strong performance.`
+                        }
+                    </div>
                 </div>
-            </div>
-        `;
+            `;
+        }
         
         contentDiv.innerHTML = html;
         
