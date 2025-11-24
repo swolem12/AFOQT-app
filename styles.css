@@ -168,6 +168,11 @@ body::after {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Add extra bottom padding to panels with floating quiz buttons to prevent overlap */
+.panel:has(.quiz-action-buttons) {
+    padding-bottom: 140px;
+}
+
 @keyframes panelEnter {
     from {
         opacity: 0;
@@ -990,18 +995,37 @@ body:has(.floating-nav) .action-buttons:not(.quiz-action-buttons) {
     padding: 0; /* Override default padding */
     justify-content: flex-end; /* Override default justify */
     flex-wrap: nowrap; /* Override default wrap */
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Scroll-aware FAB behavior - hide on scroll down */
+.quiz-action-buttons.fab-hidden {
+    transform: translateY(10px);
+    opacity: 0.3;
 }
 
 .quiz-action-buttons .btn {
     pointer-events: auto; /* Re-enable clicking for buttons */
     min-width: 140px;
     backdrop-filter: blur(10px); /* Add blur for better readability over content */
-    box-shadow: 0 0 20px var(--color-primary-glow), 0 4px 12px rgba(0, 0, 0, 0.6);
+    /* Material Design elevation: 8-12dp shadow */
+    box-shadow: 
+        0 0 20px var(--color-primary-glow), 
+        0 4px 12px rgba(0, 0, 0, 0.6),
+        0 8px 16px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .quiz-action-buttons .btn:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 0 30px var(--color-primary-glow), 0 6px 16px rgba(0, 0, 0, 0.8);
+    /* Enhanced elevation on hover: 12-16dp */
+    box-shadow: 
+        0 0 30px var(--color-primary-glow), 
+        0 6px 16px rgba(0, 0, 0, 0.8),
+        0 12px 24px rgba(0, 0, 0, 0.6);
 }
 
 /* Responsive adjustments - tablet: move to left for thumb reach */
@@ -1017,6 +1041,11 @@ body:has(.floating-nav) .action-buttons:not(.quiz-action-buttons) {
         padding: 10px 16px;
         font-size: 0.9rem;
         min-width: 100px;
+    }
+    
+    /* Adjust panel padding for tablet */
+    .panel:has(.quiz-action-buttons) {
+        padding-bottom: 120px;
     }
     
     .panel-header {
@@ -1068,6 +1097,12 @@ body:has(.floating-nav) .action-buttons:not(.quiz-action-buttons) {
         padding: 12px 16px;
         font-size: 0.85rem;
     }
+    
+    /* Adjust panel padding for mobile to account for bottom bar */
+    .panel:has(.quiz-action-buttons) {
+        padding-bottom: 100px;
+    }
+}
     
     /* Add bottom padding to quiz content to prevent overlap with nav bar */
     .panel {

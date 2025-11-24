@@ -5857,6 +5857,60 @@ function attachEventListeners() {
             loadStruggleScoresBtn.textContent = 'Calculating...';
         });
     }
+    
+    // Scroll-aware FAB behavior for quiz action buttons
+    initScrollAwareFAB();
+}
+
+// Initialize scroll-aware floating action button behavior
+let scrollAwareFABInitialized = false;
+let lastScrollY = 0;
+let scrollTimeout = null;
+
+function initScrollAwareFAB() {
+    const quizButtons = document.querySelector('.quiz-action-buttons');
+    if (!quizButtons) {
+        // Clean up listener if not on quiz screen
+        if (scrollAwareFABInitialized) {
+            window.removeEventListener('scroll', handleScrollForFAB);
+            scrollAwareFABInitialized = false;
+        }
+        return;
+    }
+    
+    // Initialize only once
+    if (!scrollAwareFABInitialized) {
+        window.addEventListener('scroll', handleScrollForFAB, { passive: true });
+        scrollAwareFABInitialized = true;
+    }
+}
+
+function handleScrollForFAB() {
+    const quizButtons = document.querySelector('.quiz-action-buttons');
+    if (!quizButtons) return;
+    
+    const currentScrollY = window.scrollY || window.pageYOffset;
+    
+    // Clear existing timeout
+    if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+    }
+    
+    // Scrolling down - hide buttons (reduce opacity)
+    if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        quizButtons.classList.add('fab-hidden');
+    } 
+    // Scrolling up - show buttons
+    else if (currentScrollY < lastScrollY) {
+        quizButtons.classList.remove('fab-hidden');
+    }
+    
+    // Auto-show after scroll stops (1 second delay)
+    scrollTimeout = setTimeout(() => {
+        quizButtons.classList.remove('fab-hidden');
+    }, 1000);
+    
+    lastScrollY = currentScrollY;
 }
 
 // ============================================================================
