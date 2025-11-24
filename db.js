@@ -553,6 +553,230 @@ class AfoqtDatabase {
         });
     }
 
+    /**
+     * Calculate struggle scores for subjects using multi-factor analysis
+     * 
+     * Struggle Score Formula:
+     * S = w1 × (1 - A/100) + w2 × (1 - R/100) + w3 × T + w4 × C + w5 × D
+     * 
+     * Where:
+     * - A = Accuracy percentage (0-100)
+     * - R = Recent trend accuracy (0-100, last 5 attempts vs overall)
+     * - T = Time pressure factor (avgTime / targetTime, capped at 1)
+     * - C = Consistency variance (std deviation of accuracy across attempts)
+     * - D = Difficulty-weighted error rate (more weight to expert level errors)
+     * 
+     * Weights (sum to 1.0):
+     * - w1 = 0.35 (accuracy is primary indicator)
+     * - w2 = 0.25 (recent performance shows current struggle)
+     * - w3 = 0.15 (time pressure indicates difficulty)
+     * - w4 = 0.15 (consistency shows understanding vs guessing)
+     * - w5 = 0.10 (difficulty level reveals knowledge gaps)
+     * 
+     * @param {string} playerId
+     * @returns {Promise<Object>} Subject struggle scores (0-100, higher = more struggle)
+     */
+    async calculateStruggleScores(playerId) {
+        await this.init();
+        
+        const WEIGHTS = {
+            accuracy: 0.35,
+            recentTrend: 0.25,
+            timePressure: 0.15,
+            consistency: 0.15,
+            difficultyWeight: 0.10
+        };
+        
+        const TARGET_TIME = 10; // seconds - ideal answer time
+        const DIFFICULTY_MULTIPLIERS = {
+            'beginner': 0.5,
+            'advanced': 1.0,
+            'expert': 1.5
+        };
+        
+        return new Promise((resolve, reject) => {
+            const transaction = this.db.transaction([STORES.QUESTION_HISTORY], 'readonly');
+            const store = transaction.objectStore(STORES.QUESTION_HISTORY);
+            const index = store.index('playerId');
+            const request = index.getAll(playerId);
+
+            request.onsuccess = () => {
+                const records = request.result || [];
+                const subjectData = {};
+                
+                // Group records by subject (derived from subtopicId)
+                records.forEach(record => {
+                    // Map subtopics to subjects
+                    const subject = this._getSubjectFromSubtopic(record.subtopicId);
+                    
+                    if (!subjectData[subject]) {
+                        subjectData[subject] = {
+                            attempts: [],
+                            difficulties: {}
+                        };
+                    }
+                    
+                    subjectData[subject].attempts.push(record);
+                    
+                    if (!subjectData[subject].difficulties[record.difficulty]) {
+                        subjectData[subject].difficulties[record.difficulty] = {
+                            correct: 0,
+                            total: 0
+                        };
+                    }
+                    
+                    subjectData[subject].difficulties[record.difficulty].total++;
+                    if (record.correct) {
+                        subjectData[subject].difficulties[record.difficulty].correct++;
+                    }
+                });
+                
+                // Calculate struggle scores for each subject
+                const struggleScores = {};
+                
+                Object.keys(subjectData).forEach(subject => {
+                    const data = subjectData[subject];
+                    const attempts = data.attempts;
+                    
+                    if (attempts.length === 0) {
+                        struggleScores[subject] = {
+                            score: 0,
+                            components: {},
+                            interpretation: 'No data'
+                        };
+                        return;
+                    }
+                    
+                    // Component 1: Overall Accuracy (inverted - lower accuracy = higher struggle)
+                    const totalCorrect = attempts.filter(a => a.correct).length;
+                    const accuracy = (totalCorrect / attempts.length) * 100;
+                    const accuracyComponent = (1 - accuracy / 100) * WEIGHTS.accuracy;
+                    
+                    // Component 2: Recent Trend (last 5 attempts vs overall)
+                    const recentAttempts = attempts.slice(-5);
+                    const recentCorrect = recentAttempts.filter(a => a.correct).length;
+                    const recentAccuracy = recentAttempts.length > 0 ? 
+                        (recentCorrect / recentAttempts.length) * 100 : accuracy;
+                    const trendComponent = (1 - recentAccuracy / 100) * WEIGHTS.recentTrend;
+                    
+                    // Component 3: Time Pressure (normalized response time)
+                    const avgTime = attempts.reduce((sum, a) => sum + (a.responseTime || 0), 0) / attempts.length;
+                    const timePressureFactor = Math.min(avgTime / TARGET_TIME, 1.0);
+                    const timeComponent = timePressureFactor * WEIGHTS.timePressure;
+                    
+                    // Component 4: Consistency (variance in performance)
+                    // Calculate accuracy for each attempt window (sliding window of 3)
+                    const windowSize = 3;
+                    const windowAccuracies = [];
+                    for (let i = 0; i <= attempts.length - windowSize; i++) {
+                        const window = attempts.slice(i, i + windowSize);
+                        const windowCorrect = window.filter(a => a.correct).length;
+                        windowAccuracies.push(windowCorrect / windowSize);
+                    }
+                    
+                    const variance = windowAccuracies.length > 0 ?
+                        this._calculateVariance(windowAccuracies) : 0;
+                    const consistencyComponent = Math.min(variance, 1.0) * WEIGHTS.consistency;
+                    
+                    // Component 5: Difficulty-Weighted Error Rate
+                    let difficultyWeightedErrors = 0;
+                    let totalWeightedAttempts = 0;
+                    
+                    Object.keys(data.difficulties).forEach(difficulty => {
+                        const diffData = data.difficulties[difficulty];
+                        const multiplier = DIFFICULTY_MULTIPLIERS[difficulty] || 1.0;
+                        const errors = diffData.total - diffData.correct;
+                        
+                        difficultyWeightedErrors += errors * multiplier;
+                        totalWeightedAttempts += diffData.total * multiplier;
+                    });
+                    
+                    const weightedErrorRate = totalWeightedAttempts > 0 ?
+                        difficultyWeightedErrors / totalWeightedAttempts : 0;
+                    const difficultyComponent = weightedErrorRate * WEIGHTS.difficultyWeight;
+                    
+                    // Calculate final struggle score (0-100 scale)
+                    const rawScore = (accuracyComponent + trendComponent + timeComponent + 
+                                     consistencyComponent + difficultyComponent);
+                    const normalizedScore = Math.min(Math.max(rawScore * 100, 0), 100);
+                    
+                    // Interpret the score
+                    let interpretation;
+                    if (normalizedScore < 20) interpretation = 'Mastered';
+                    else if (normalizedScore < 40) interpretation = 'Comfortable';
+                    else if (normalizedScore < 60) interpretation = 'Developing';
+                    else if (normalizedScore < 80) interpretation = 'Struggling';
+                    else interpretation = 'Critical Focus Needed';
+                    
+                    struggleScores[subject] = {
+                        score: parseFloat(normalizedScore.toFixed(2)),
+                        components: {
+                            accuracy: parseFloat((accuracyComponent * 100).toFixed(2)),
+                            recentTrend: parseFloat((trendComponent * 100).toFixed(2)),
+                            timePressure: parseFloat((timeComponent * 100).toFixed(2)),
+                            consistency: parseFloat((consistencyComponent * 100).toFixed(2)),
+                            difficultyWeight: parseFloat((difficultyComponent * 100).toFixed(2))
+                        },
+                        stats: {
+                            totalAttempts: attempts.length,
+                            accuracy: parseFloat(accuracy.toFixed(1)),
+                            recentAccuracy: parseFloat(recentAccuracy.toFixed(1)),
+                            avgTime: parseFloat(avgTime.toFixed(1)),
+                            variance: parseFloat(variance.toFixed(3))
+                        },
+                        interpretation
+                    };
+                });
+                
+                resolve(struggleScores);
+            };
+            
+            request.onerror = () => reject(request.error);
+        });
+    }
+    
+    /**
+     * Map subtopic to subject (internal helper)
+     * @private
+     */
+    _getSubjectFromSubtopic(subtopicId) {
+        // Vocabulary subtopics
+        const vocabSubtopics = ['synonyms', 'antonyms', 'verbal_analogies', 'vocabulary_in_context', 
+                                'confusing_word_pairs', 'highfreq_vocab', 'sentence_completion', 'word_roots_affixes'];
+        if (vocabSubtopics.includes(subtopicId)) return 'vocabulary';
+        
+        // Math subtopics (if any are tracked)
+        if (subtopicId.includes('math') || subtopicId.includes('algebra') || 
+            subtopicId.includes('geometry') || subtopicId.includes('arithmetic')) {
+            return 'math';
+        }
+        
+        // Reading subtopics
+        if (subtopicId.includes('reading') || subtopicId.includes('comprehension')) {
+            return 'reading';
+        }
+        
+        // Science subtopics
+        if (subtopicId.includes('science') || subtopicId.includes('physics') || 
+            subtopicId.includes('chemistry')) {
+            return 'science';
+        }
+        
+        // Default: use subtopic as subject
+        return subtopicId;
+    }
+    
+    /**
+     * Calculate variance (internal helper)
+     * @private
+     */
+    _calculateVariance(values) {
+        if (values.length === 0) return 0;
+        const mean = values.reduce((sum, val) => sum + val, 0) / values.length;
+        const squaredDiffs = values.map(val => Math.pow(val - mean, 2));
+        return squaredDiffs.reduce((sum, val) => sum + val, 0) / values.length;
+    }
+
     // ============================================================================
     // Migration and Utility Operations
     // ============================================================================

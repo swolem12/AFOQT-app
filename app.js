@@ -5117,6 +5117,18 @@ function renderAnalytics() {
                 </div>
             </div>
             
+            <div id="struggle-score-section" class="analytics-section">
+                <h2 style="margin-top: 0; color: #ff6600; text-shadow: 0 0 10px #ff6600;">📊 Struggle Analysis (Mathematical Model)</h2>
+                <div style="margin-top: 15px;">
+                    <button class="btn" id="load-struggle-scores-btn" style="width: 100%;">
+                        Calculate Subject Struggle Scores
+                    </button>
+                    <div id="struggle-scores-content" style="margin-top: 15px; display: none;">
+                        <p style="text-align: center; opacity: 0.7;">Loading...</p>
+                    </div>
+                </div>
+            </div>
+            
             <div id="detailed-analytics-section" class="analytics-section">
                 <h2 style="margin-top: 0; color: #ff00ff; text-shadow: 0 0 10px #ff00ff;">🔍 Detailed Subtopic Analytics</h2>
                 <div style="margin-top: 15px;">
@@ -5135,6 +5147,174 @@ function renderAnalytics() {
         </div>
         ${renderFloatingNav()}
     `;
+}
+
+// ============================================================================
+// Struggle Score Analytics
+// ============================================================================
+async function loadStruggleScores() {
+    const contentDiv = document.getElementById('struggle-scores-content');
+    if (!contentDiv) return;
+    
+    contentDiv.style.display = 'block';
+    contentDiv.innerHTML = '<p style="text-align: center; opacity: 0.7;">Calculating struggle scores...</p>';
+    
+    try {
+        if (!state.currentPlayer || typeof afoqtDB === 'undefined') {
+            contentDiv.innerHTML = '<p style="text-align: center; opacity: 0.7;">Struggle analysis not available.</p>';
+            return;
+        }
+        
+        const struggleScores = await afoqtDB.calculateStruggleScores(state.currentPlayer.id);
+        const subjects = Object.keys(struggleScores);
+        
+        if (subjects.length === 0) {
+            contentDiv.innerHTML = '<p style="text-align: center; opacity: 0.7;">No struggle data yet. Complete some quizzes to see analysis!</p>';
+            return;
+        }
+        
+        // Sort by struggle score (highest struggle first)
+        const sortedSubjects = subjects.sort((a, b) => 
+            struggleScores[b].score - struggleScores[a].score
+        );
+        
+        let html = `
+            <div style="margin-bottom: 20px; padding: 15px; background: rgba(255, 102, 0, 0.1); border-left: 4px solid #ff6600; border-radius: 4px;">
+                <div style="font-weight: bold; margin-bottom: 10px;">📐 Mathematical Struggle Score Formula:</div>
+                <div style="font-size: 0.85rem; font-family: 'Courier New', monospace; opacity: 0.9;">
+                    <strong>S</strong> = (0.35 × Accuracy⁻¹) + (0.25 × Recent Trend⁻¹) + (0.15 × Time Pressure) + (0.15 × Consistency) + (0.10 × Difficulty Weight)
+                </div>
+                <div style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">
+                    • Higher scores (0-100) indicate more struggle<br>
+                    • Multi-factor analysis: accuracy, trends, speed, consistency, difficulty<br>
+                    • Weighted average of 5 key performance indicators
+                </div>
+            </div>
+        `;
+        
+        sortedSubjects.forEach((subject, index) => {
+            const data = struggleScores[subject];
+            const score = data.score;
+            
+            // Color coding based on score
+            let color, bgColor;
+            if (score < 20) {
+                color = '#00ff00'; // Green - Mastered
+                bgColor = 'rgba(0, 255, 0, 0.1)';
+            } else if (score < 40) {
+                color = '#88ff00'; // Yellow-green - Comfortable
+                bgColor = 'rgba(136, 255, 0, 0.1)';
+            } else if (score < 60) {
+                color = '#ffff00'; // Yellow - Developing
+                bgColor = 'rgba(255, 255, 0, 0.1)';
+            } else if (score < 80) {
+                color = '#ff8800'; // Orange - Struggling
+                bgColor = 'rgba(255, 136, 0, 0.1)';
+            } else {
+                color = '#ff0000'; // Red - Critical
+                bgColor = 'rgba(255, 0, 0, 0.1)';
+            }
+            
+            html += `
+                <div style="padding: 15px; margin-bottom: 15px; background: ${bgColor}; border-left: 4px solid ${color}; border-radius: 4px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <div>
+                            <div style="font-weight: bold; font-size: 1.2rem; text-transform: capitalize;">
+                                ${index + 1}. ${subject}
+                            </div>
+                            <div style="font-size: 0.9rem; margin-top: 5px;">
+                                <span style="color: ${color}; font-weight: bold;">${data.interpretation}</span>
+                                • ${data.stats.totalAttempts} attempts
+                                • ${data.stats.accuracy}% accuracy
+                            </div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: bold; color: ${color};">
+                                ${score.toFixed(0)}
+                            </div>
+                            <div style="font-size: 0.7rem; opacity: 0.7;">struggle score</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progress bar for overall score -->
+                    <div style="height: 12px; background: rgba(0, 0, 0, 0.3); border-radius: 6px; overflow: hidden; margin-bottom: 15px;">
+                        <div style="height: 100%; width: ${score}%; background: ${color}; transition: width 0.5s ease;"></div>
+                    </div>
+                    
+                    <!-- Component breakdown -->
+                    <details style="margin-top: 10px;">
+                        <summary style="cursor: pointer; opacity: 0.8; font-size: 0.9rem;">
+                            📊 View Component Breakdown
+                        </summary>
+                        <div style="margin-top: 10px; padding: 10px; background: rgba(0, 0, 0, 0.2); border-radius: 4px;">
+                            <div style="font-size: 0.85rem; margin-bottom: 8px;">
+                                <strong>Component Contributions (0-100 scale):</strong>
+                            </div>
+                            
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.8rem;">
+                                <div>
+                                    <div style="opacity: 0.7;">Accuracy Impact:</div>
+                                    <div style="font-weight: bold;">${data.components.accuracy.toFixed(1)} / 35</div>
+                                </div>
+                                <div>
+                                    <div style="opacity: 0.7;">Recent Trend:</div>
+                                    <div style="font-weight: bold;">${data.components.recentTrend.toFixed(1)} / 25</div>
+                                </div>
+                                <div>
+                                    <div style="opacity: 0.7;">Time Pressure:</div>
+                                    <div style="font-weight: bold;">${data.components.timePressure.toFixed(1)} / 15</div>
+                                </div>
+                                <div>
+                                    <div style="opacity: 0.7;">Consistency:</div>
+                                    <div style="font-weight: bold;">${data.components.consistency.toFixed(1)} / 15</div>
+                                </div>
+                                <div>
+                                    <div style="opacity: 0.7;">Difficulty Weight:</div>
+                                    <div style="font-weight: bold;">${data.components.difficultyWeight.toFixed(1)} / 10</div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.2); font-size: 0.8rem;">
+                                <div><strong>Performance Metrics:</strong></div>
+                                <div style="margin-top: 5px;">
+                                    • Overall: ${data.stats.accuracy}% | Recent: ${data.stats.recentAccuracy}%<br>
+                                    • Avg Time: ${data.stats.avgTime}s | Variance: ${data.stats.variance.toFixed(3)}
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            `;
+        });
+        
+        // Add recommendation based on highest struggle
+        const highestStruggle = sortedSubjects[0];
+        const highestScore = struggleScores[highestStruggle];
+        
+        html += `
+            <div style="margin-top: 20px; padding: 15px; background: rgba(0, 255, 255, 0.1); border-left: 4px solid #00ffff; border-radius: 4px;">
+                <div style="font-weight: bold; margin-bottom: 8px;">💡 AI Recommendation:</div>
+                <div style="font-size: 0.9rem;">
+                    ${highestScore.score >= 60 ? 
+                        `Focus heavily on <strong>${highestStruggle}</strong> (${highestScore.score.toFixed(0)} struggle score). 
+                        With ${highestScore.stats.accuracy}% accuracy and ${highestScore.stats.recentAccuracy}% recent performance, 
+                        concentrated practice in this area will yield the greatest improvement.` :
+                    highestScore.score >= 40 ?
+                        `Continue practicing <strong>${highestStruggle}</strong> to build confidence. 
+                        Your ${highestScore.stats.accuracy}% accuracy shows understanding, but consistency can improve.` :
+                        `Excellent work across all subjects! Maintain practice in <strong>${highestStruggle}</strong> 
+                        to prevent skill decay, but all areas show strong performance.`
+                    }
+                </div>
+            </div>
+        `;
+        
+        contentDiv.innerHTML = html;
+        
+    } catch (error) {
+        console.error('Error loading struggle scores:', error);
+        contentDiv.innerHTML = '<p style="text-align: center; color: #ff6666;">Error calculating struggle scores.</p>';
+    }
 }
 
 // ============================================================================
@@ -5663,6 +5843,16 @@ function attachEventListeners() {
             loadDetailedAnalytics();
             loadDetailedAnalyticsBtn.disabled = true;
             loadDetailedAnalyticsBtn.textContent = 'Loading...';
+        });
+    }
+    
+    // Struggle scores button
+    const loadStruggleScoresBtn = document.getElementById('load-struggle-scores-btn');
+    if (loadStruggleScoresBtn) {
+        loadStruggleScoresBtn.addEventListener('click', () => {
+            loadStruggleScores();
+            loadStruggleScoresBtn.disabled = true;
+            loadStruggleScoresBtn.textContent = 'Calculating...';
         });
     }
 }
