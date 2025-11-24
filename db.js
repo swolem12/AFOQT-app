@@ -4,13 +4,22 @@
 // ============================================================================
 
 const DB_NAME = 'afoqt-quest-db';
-const DB_VERSION = 1;
+const DB_VERSION = 2;
 
 // Object store names
 const STORES = {
     PLAYERS: 'players',
     SESSIONS: 'sessions',
-    SETTINGS: 'settings'
+    SETTINGS: 'settings',
+    QUESTION_HISTORY: 'questionHistory'
+};
+
+// Spaced repetition intervals (in days)
+const SPACED_REPETITION = {
+    INCORRECT: 0.5,      // 12 hours for incorrect answers
+    CORRECT_FIRST: 1,    // 1 day after first correct answer
+    CORRECT_SECOND: 3,   // 3 days after second correct answer
+    CORRECT_MASTERY: 7   // 7 days for mastered questions (3+ correct)
 };
 
 class AfoqtDatabase {
@@ -48,7 +57,8 @@ class AfoqtDatabase {
 
             request.onupgradeneeded = (event) => {
                 const db = event.target.result;
-                console.log('Upgrading database schema...');
+                const oldVersion = event.oldVersion;
+                console.log(`Upgrading database from version ${oldVersion} to ${DB_VERSION}...`);
 
                 // Create Players object store
                 if (!db.objectStoreNames.contains(STORES.PLAYERS)) {
@@ -74,6 +84,22 @@ class AfoqtDatabase {
                 if (!db.objectStoreNames.contains(STORES.SETTINGS)) {
                     db.createObjectStore(STORES.SETTINGS, { keyPath: 'id' });
                     console.log('Created settings object store');
+                }
+
+                // Create Question History object store (v2)
+                if (!db.objectStoreNames.contains(STORES.QUESTION_HISTORY)) {
+                    const questionHistoryStore = db.createObjectStore(STORES.QUESTION_HISTORY, { 
+                        keyPath: 'id', 
+                        autoIncrement: true 
+                    });
+                    questionHistoryStore.createIndex('playerId', 'playerId', { unique: false });
+                    questionHistoryStore.createIndex('questionId', 'questionId', { unique: false });
+                    questionHistoryStore.createIndex('subtopicId', 'subtopicId', { unique: false });
+                    questionHistoryStore.createIndex('playerIdQuestionId', ['playerId', 'questionId'], { unique: false });
+                    questionHistoryStore.createIndex('playerIdSubtopic', ['playerId', 'subtopicId'], { unique: false });
+                    questionHistoryStore.createIndex('nextReview', 'nextReview', { unique: false });
+                    questionHistoryStore.createIndex('playerIdNextReview', ['playerId', 'nextReview'], { unique: false });
+                    console.log('Created question history object store');
                 }
             };
         });
@@ -288,6 +314,475 @@ class AfoqtDatabase {
     }
 
     // ============================================================================
+    // Question History Operations (for spaced repetition)
+    // ============================================================================
+
+    /**
+     * Record a question attempt with atomic attempt count calculation
+     * @param {Object} questionRecord - must include playerId and questionId
+     * @returns {Promise<number>} record id
+     */
+    async recordQuestionAttemptAtomic(questionRecord) {
+        await this.init();
+        
+        return new Promise((resolve, reject) => {
+            // Use a single transaction to read history and write new attempt atomically
+            const transaction = this.db.transaction([STORES.QUESTION_HISTORY], 'readwrite');
+            const store = transaction.objectStore(STORES.QUESTION_HISTORY);
+            const index = store.index('playerIdQuestionId');
+            
+            // First, get the count of previous attempts
+            const countRequest = index.count([questionRecord.playerId, questionRecord.questionId]);
+            
+            countRequest.onsuccess = () => {
+                const attemptCount = countRequest.result + 1;
+                
+                // Calculate next review date based on performance (spaced repetition)
+                const now = Date.now();
+                let intervalDays = SPACED_REPETITION.CORRECT_FIRST;
+                
+                if (questionRecord.correct) {
+                    // Correct answer: increase interval based on attempt count
+                    if (attemptCount >= 3) {
+                        intervalDays = SPACED_REPETITION.CORRECT_MASTERY;
+                    } else if (attemptCount >= 2) {
+                        intervalDays = SPACED_REPETITION.CORRECT_SECOND;
+                    } else {
+                        intervalDays = SPACED_REPETITION.CORRECT_FIRST;
+                    }
+                } else {
+                    // Incorrect answer: review soon
+                    intervalDays = SPACED_REPETITION.INCORRECT;
+                }
+                
+                const nextReview = now + (intervalDays * 24 * 60 * 60 * 1000);
+                
+                const record = {
+                    ...questionRecord,
+                    attemptCount,
+                    nextReview,
+                    timestamp: now
+                };
+                
+                // Now add the new attempt record
+                const addRequest = store.add(record);
+                addRequest.onsuccess = () => resolve(addRequest.result);
+                addRequest.onerror = () => reject(addRequest.error);
+            };
+            
+            countRequest.onerror = () => reject(countRequest.error);
+            transaction.onerror = () => reject(transaction.error);
+        });
+    }
+
+    /**
+     * Record a question attempt
+     * @param {Object} questionRecord
+     * @returns {Promise<number>} record id
+     */
+    async recordQuestionAttempt(questionRecord) {
+        await this.init();
+        
+        // Calculate next review date based on performance (spaced repetition)
+        const now = Date.now();
+        let intervalDays = SPACED_REPETITION.CORRECT_FIRST; // Default: review tomorrow
+        
+        if (questionRecord.correct) {
+            // Correct answer: increase interval based on attempt count
+            if (questionRecord.attemptCount >= 3) {
+                intervalDays = SPACED_REPETITION.CORRECT_MASTERY;
+            } else if (questionRecord.attemptCount >= 2) {
+                intervalDays = SPACED_REPETITION.CORRECT_SECOND;
+            } else {
+                intervalDays = SPACED_REPETITION.CORRECT_FIRST;
+            }
+        } else {
+            // Incorrect answer: review soon
+            intervalDays = SPACED_REPETITION.INCORRECT;
+        }
+        
+        const nextReview = now + (intervalDays * 24 * 60 * 60 * 1000);
+        
+        const record = {
+            ...questionRecord,
+            nextReview,
+            timestamp: now
+        };
+        
+        return new Promise((resolve, reject) => {
+            const transaction = this.db.transaction([STORES.QUESTION_HISTORY], 'readwrite');
+            const store = transaction.objectStore(STORES.QUESTION_HISTORY);
+            const request = store.add(record);
+
+            request.onsuccess = () => resolve(request.result);
+            request.onerror = () => reject(request.error);
+        });
+    }
+
+    /**
+     * Get question history for a player and question
+     * @param {string} playerId
+     * @param {string} questionId
+     * @returns {Promise<Array>}
+     */
+    async getQuestionHistory(playerId, questionId) {
+        await this.init();
+        return new Promise((resolve, reject) => {
+            const transaction = this.db.transaction([STORES.QUESTION_HISTORY], 'readonly');
+            const store = transaction.objectStore(STORES.QUESTION_HISTORY);
+            const index = store.index('playerIdQuestionId');
+            const request = index.getAll([playerId, questionId]);
+
+            request.onsuccess = () => resolve(request.result || []);
+            request.onerror = () => reject(request.error);
+        });
+    }
+
+    /**
+     * Get questions due for review
+     * @param {string} playerId
+     * @param {number} limit
+     * @returns {Promise<Array>} Array of most recent attempts for each question due for review
+     */
+    async getQuestionsDueForReview(playerId, limit = 20) {
+        await this.init();
+        const now = Date.now();
+        
+        return new Promise((resolve, reject) => {
+            const transaction = this.db.transaction([STORES.QUESTION_HISTORY], 'readonly');
+            const store = transaction.objectStore(STORES.QUESTION_HISTORY);
+            const index = store.index('playerId');
+            const request = index.getAll(playerId);
+
+            request.onsuccess = () => {
+                const allRecords = request.result || [];
+                
+                // Group by questionId and keep only the most recent attempt for each
+                const latestByQuestion = new Map();
+                allRecords.forEach(record => {
+                    const existing = latestByQuestion.get(record.questionId);
+                    if (!existing || record.timestamp > existing.timestamp) {
+                        latestByQuestion.set(record.questionId, record);
+                    }
+                });
+                
+                // Filter for questions due for review (nextReview <= now)
+                const dueQuestions = Array.from(latestByQuestion.values())
+                    .filter(record => record.nextReview <= now)
+                    .sort((a, b) => a.nextReview - b.nextReview) // Earlier due dates first
+                    .slice(0, limit);
+                
+                resolve(dueQuestions);
+            };
+
+            request.onerror = () => reject(request.error);
+        });
+    }
+
+    /**
+     * Get all question attempts for a subtopic
+     * @param {string} playerId
+     * @param {string} subtopicId
+     * @returns {Promise<Array>}
+     */
+    async getSubtopicQuestionHistory(playerId, subtopicId) {
+        await this.init();
+        return new Promise((resolve, reject) => {
+            const transaction = this.db.transaction([STORES.QUESTION_HISTORY], 'readonly');
+            const store = transaction.objectStore(STORES.QUESTION_HISTORY);
+            const index = store.index('playerIdSubtopic');
+            const request = index.getAll([playerId, subtopicId]);
+
+            request.onsuccess = () => resolve(request.result || []);
+            request.onerror = () => reject(request.error);
+        });
+    }
+
+    /**
+     * Get analytics data per subtopic for a player
+     * @param {string} playerId
+     * @returns {Promise<Object>} Subtopic analytics
+     */
+    async getSubtopicAnalytics(playerId) {
+        await this.init();
+        
+        return new Promise((resolve, reject) => {
+            const transaction = this.db.transaction([STORES.QUESTION_HISTORY], 'readonly');
+            const store = transaction.objectStore(STORES.QUESTION_HISTORY);
+            const index = store.index('playerId');
+            const request = index.getAll(playerId);
+
+            request.onsuccess = () => {
+                const records = request.result || [];
+                const analytics = {};
+                
+                records.forEach(record => {
+                    const key = `${record.subtopicId}_${record.difficulty}`;
+                    if (!analytics[key]) {
+                        analytics[key] = {
+                            subtopicId: record.subtopicId,
+                            difficulty: record.difficulty,
+                            totalAttempts: 0,
+                            correctAttempts: 0,
+                            totalTime: 0,
+                            uniqueQuestions: new Set()
+                        };
+                    }
+                    
+                    analytics[key].totalAttempts++;
+                    if (record.correct) {
+                        analytics[key].correctAttempts++;
+                    }
+                    analytics[key].totalTime += (record.responseTime || 0);
+                    analytics[key].uniqueQuestions.add(record.questionId);
+                });
+                
+                // Convert sets to counts
+                Object.keys(analytics).forEach(key => {
+                    analytics[key].uniqueQuestionsCount = analytics[key].uniqueQuestions.size;
+                    delete analytics[key].uniqueQuestions;
+                    analytics[key].accuracy = analytics[key].totalAttempts > 0 ?
+                        (analytics[key].correctAttempts / analytics[key].totalAttempts * 100).toFixed(1) : 0;
+                    analytics[key].avgTime = analytics[key].totalAttempts > 0 ?
+                        (analytics[key].totalTime / analytics[key].totalAttempts).toFixed(1) : 0;
+                });
+                
+                resolve(analytics);
+            };
+            request.onerror = () => reject(request.error);
+        });
+    }
+
+    /**
+     * Calculate struggle scores for subjects using multi-factor analysis
+     * 
+     * Struggle Score Formula:
+     * S = w1 × (1 - A/100) + w2 × (1 - R/100) + w3 × T + w4 × C + w5 × D
+     * 
+     * Where:
+     * - A = Accuracy percentage (0-100)
+     * - R = Recent trend accuracy (0-100, last 5 attempts vs overall)
+     * - T = Time pressure factor (avgTime / targetTime, capped at 1)
+     * - C = Consistency variance (std deviation of accuracy across attempts)
+     * - D = Difficulty-weighted error rate (more weight to expert level errors)
+     * 
+     * Weights (sum to 1.0):
+     * - w1 = 0.35 (accuracy is primary indicator)
+     * - w2 = 0.25 (recent performance shows current struggle)
+     * - w3 = 0.15 (time pressure indicates difficulty)
+     * - w4 = 0.15 (consistency shows understanding vs guessing)
+     * - w5 = 0.10 (difficulty level reveals knowledge gaps)
+     * 
+     * @param {string} playerId
+     * @returns {Promise<Object>} Subject struggle scores (0-100, higher = more struggle)
+     */
+    async calculateStruggleScores(playerId) {
+        await this.init();
+        
+        const WEIGHTS = {
+            accuracy: 0.35,
+            recentTrend: 0.25,
+            timePressure: 0.15,
+            consistency: 0.15,
+            difficultyWeight: 0.10
+        };
+        
+        const TARGET_TIME = 10; // seconds - ideal answer time
+        const DIFFICULTY_MULTIPLIERS = {
+            'beginner': 0.5,
+            'advanced': 1.0,
+            'expert': 1.5
+        };
+        
+        return new Promise((resolve, reject) => {
+            const transaction = this.db.transaction([STORES.QUESTION_HISTORY], 'readonly');
+            const store = transaction.objectStore(STORES.QUESTION_HISTORY);
+            const index = store.index('playerId');
+            const request = index.getAll(playerId);
+
+            request.onsuccess = () => {
+                const records = request.result || [];
+                const subjectData = {};
+                
+                // Group records by subject (derived from subtopicId)
+                records.forEach(record => {
+                    // Map subtopics to subjects
+                    const subject = this._getSubjectFromSubtopic(record.subtopicId);
+                    
+                    if (!subjectData[subject]) {
+                        subjectData[subject] = {
+                            attempts: [],
+                            difficulties: {}
+                        };
+                    }
+                    
+                    subjectData[subject].attempts.push(record);
+                    
+                    if (!subjectData[subject].difficulties[record.difficulty]) {
+                        subjectData[subject].difficulties[record.difficulty] = {
+                            correct: 0,
+                            total: 0
+                        };
+                    }
+                    
+                    subjectData[subject].difficulties[record.difficulty].total++;
+                    if (record.correct) {
+                        subjectData[subject].difficulties[record.difficulty].correct++;
+                    }
+                });
+                
+                // Calculate struggle scores for each subject
+                const struggleScores = {};
+                
+                Object.keys(subjectData).forEach(subject => {
+                    const data = subjectData[subject];
+                    const attempts = data.attempts;
+                    
+                    if (attempts.length === 0) {
+                        struggleScores[subject] = {
+                            score: 0,
+                            components: {},
+                            interpretation: 'No data'
+                        };
+                        return;
+                    }
+                    
+                    // Component 1: Overall Accuracy (inverted - lower accuracy = higher struggle)
+                    const totalCorrect = attempts.filter(a => a.correct).length;
+                    const accuracy = (totalCorrect / attempts.length) * 100;
+                    const accuracyComponent = (1 - accuracy / 100) * WEIGHTS.accuracy;
+                    
+                    // Component 2: Recent Trend (last 5 attempts vs overall)
+                    const recentAttempts = attempts.slice(-5);
+                    const recentCorrect = recentAttempts.filter(a => a.correct).length;
+                    const recentAccuracy = recentAttempts.length > 0 ? 
+                        (recentCorrect / recentAttempts.length) * 100 : accuracy;
+                    const trendComponent = (1 - recentAccuracy / 100) * WEIGHTS.recentTrend;
+                    
+                    // Component 3: Time Pressure (normalized response time)
+                    // Penalty only when exceeding target time
+                    const avgTime = attempts.reduce((sum, a) => sum + (a.responseTime || 0), 0) / attempts.length;
+                    const timePressureFactor = Math.max(0, Math.min((avgTime / TARGET_TIME) - 1, 1));
+                    const timeComponent = timePressureFactor * WEIGHTS.timePressure;
+                    
+                    // Component 4: Consistency (variance in performance)
+                    // Calculate accuracy for each attempt window (sliding window of 3)
+                    const windowSize = 3;
+                    let consistencyComponent = 0;
+                    
+                    if (attempts.length >= windowSize) {
+                        const windowAccuracies = [];
+                        for (let i = 0; i <= attempts.length - windowSize; i++) {
+                            const window = attempts.slice(i, i + windowSize);
+                            const windowCorrect = window.filter(a => a.correct).length;
+                            windowAccuracies.push(windowCorrect / windowSize);
+                        }
+                        
+                        const variance = this._calculateVariance(windowAccuracies);
+                        consistencyComponent = Math.min(variance, 1.0) * WEIGHTS.consistency;
+                    }
+                    
+                    // Component 5: Difficulty-Weighted Error Rate
+                    let difficultyWeightedErrors = 0;
+                    let totalWeightedAttempts = 0;
+                    
+                    Object.keys(data.difficulties).forEach(difficulty => {
+                        const diffData = data.difficulties[difficulty];
+                        const multiplier = DIFFICULTY_MULTIPLIERS[difficulty] || 1.0;
+                        const errors = diffData.total - diffData.correct;
+                        
+                        difficultyWeightedErrors += errors * multiplier;
+                        totalWeightedAttempts += diffData.total * multiplier;
+                    });
+                    
+                    const weightedErrorRate = totalWeightedAttempts > 0 ?
+                        difficultyWeightedErrors / totalWeightedAttempts : 0;
+                    const difficultyComponent = weightedErrorRate * WEIGHTS.difficultyWeight;
+                    
+                    // Calculate final struggle score (0-100 scale)
+                    const rawScore = (accuracyComponent + trendComponent + timeComponent + 
+                                     consistencyComponent + difficultyComponent);
+                    // rawScore is already 0-1 range from weighted components
+                    const normalizedScore = Math.min(Math.max(rawScore, 0), 1) * 100;
+                    
+                    // Interpret the score
+                    let interpretation;
+                    if (normalizedScore < 20) interpretation = 'Mastered';
+                    else if (normalizedScore < 40) interpretation = 'Comfortable';
+                    else if (normalizedScore < 60) interpretation = 'Developing';
+                    else if (normalizedScore < 80) interpretation = 'Struggling';
+                    else interpretation = 'Critical Focus Needed';
+                    
+                    struggleScores[subject] = {
+                        score: parseFloat(normalizedScore.toFixed(2)),
+                        components: {
+                            accuracy: parseFloat((accuracyComponent * 100).toFixed(2)),
+                            recentTrend: parseFloat((trendComponent * 100).toFixed(2)),
+                            timePressure: parseFloat((timeComponent * 100).toFixed(2)),
+                            consistency: parseFloat((consistencyComponent * 100).toFixed(2)),
+                            difficultyWeight: parseFloat((difficultyComponent * 100).toFixed(2))
+                        },
+                        stats: {
+                            totalAttempts: attempts.length,
+                            accuracy: parseFloat(accuracy.toFixed(1)),
+                            recentAccuracy: parseFloat(recentAccuracy.toFixed(1)),
+                            avgTime: parseFloat(avgTime.toFixed(1)),
+                            variance: parseFloat(variance.toFixed(3))
+                        },
+                        interpretation
+                    };
+                });
+                
+                resolve(struggleScores);
+            };
+            
+            request.onerror = () => reject(request.error);
+        });
+    }
+    
+    /**
+     * Map subtopic to subject (internal helper)
+     * @private
+     */
+    _getSubjectFromSubtopic(subtopicId) {
+        // Vocabulary subtopics
+        const vocabSubtopics = ['synonyms', 'antonyms', 'verbal_analogies', 'vocabulary_in_context', 
+                                'confusing_word_pairs', 'highfreq_vocab', 'sentence_completion', 'word_roots_affixes'];
+        if (vocabSubtopics.includes(subtopicId)) return 'vocabulary';
+        
+        // Math subtopics (if any are tracked)
+        if (subtopicId.includes('math') || subtopicId.includes('algebra') || 
+            subtopicId.includes('geometry') || subtopicId.includes('arithmetic')) {
+            return 'math';
+        }
+        
+        // Reading subtopics
+        if (subtopicId.includes('reading') || subtopicId.includes('comprehension')) {
+            return 'reading';
+        }
+        
+        // Science subtopics
+        if (subtopicId.includes('science') || subtopicId.includes('physics') || 
+            subtopicId.includes('chemistry')) {
+            return 'science';
+        }
+        
+        // Default: use subtopic as subject
+        return subtopicId;
+    }
+    
+    /**
+     * Calculate variance (internal helper)
+     * @private
+     */
+    _calculateVariance(values) {
+        if (values.length === 0) return 0;
+        const mean = values.reduce((sum, val) => sum + val, 0) / values.length;
+        const squaredDiffs = values.map(val => Math.pow(val - mean, 2));
+        return squaredDiffs.reduce((sum, val) => sum + val, 0) / values.length;
+    }
+
+    // ============================================================================
     // Migration and Utility Operations
     // ============================================================================
 
@@ -382,28 +877,18 @@ class AfoqtDatabase {
     async clearAllData() {
         await this.init();
         
-        const transaction = this.db.transaction(
-            [STORES.PLAYERS, STORES.SESSIONS, STORES.SETTINGS], 
-            'readwrite'
-        );
+        const stores = [STORES.PLAYERS, STORES.SESSIONS, STORES.SETTINGS, STORES.QUESTION_HISTORY];
+        const transaction = this.db.transaction(stores, 'readwrite');
 
-        await Promise.all([
+        const clearPromises = stores.map(storeName =>
             new Promise((resolve, reject) => {
-                const request = transaction.objectStore(STORES.PLAYERS).clear();
-                request.onsuccess = () => resolve();
-                request.onerror = () => reject(request.error);
-            }),
-            new Promise((resolve, reject) => {
-                const request = transaction.objectStore(STORES.SESSIONS).clear();
-                request.onsuccess = () => resolve();
-                request.onerror = () => reject(request.error);
-            }),
-            new Promise((resolve, reject) => {
-                const request = transaction.objectStore(STORES.SETTINGS).clear();
+                const request = transaction.objectStore(storeName).clear();
                 request.onsuccess = () => resolve();
                 request.onerror = () => reject(request.error);
             })
-        ]);
+        );
+
+        await Promise.all(clearPromises);
 
         console.log('All database data cleared');
     }
