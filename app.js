@@ -4820,7 +4820,7 @@ function renderQuiz() {
             ` : ''}
             
             <div class="action-buttons quiz-action-buttons">
-                <button class="btn" id="home-btn">← Home</button>
+                <button class="btn" id="home-btn">← Return to Topics</button>
                 ${answered ? `
                     <button class="btn" id="next-btn">
                         ${state.quiz.currentIndex < state.quiz.questions.length - 1 ? 'Next →' : 'Finish'}
@@ -6516,7 +6516,19 @@ function attachEventListeners() {
     // Navigation buttons
     const homeBtn = document.getElementById('home-btn');
     if (homeBtn) {
-        homeBtn.addEventListener('click', goHome);
+        homeBtn.addEventListener('click', () => {
+            // If in quiz screen, go back to subject (topics) instead of home
+            if (state.screen === 'quiz') {
+                if (state.quiz.timerInterval) {
+                    clearInterval(state.quiz.timerInterval);
+                }
+                playSfx('nav');
+                state.screen = 'subject';
+                render();
+            } else {
+                goHome();
+            }
+        });
     }
     
     // Floating navigation buttons

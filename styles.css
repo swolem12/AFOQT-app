@@ -986,7 +986,7 @@ body:has(.floating-nav) .action-buttons:not(.quiz-action-buttons) {
     bottom: 20px;
     right: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     z-index: 1000;
     pointer-events: none; /* Allow clicking through the container */
