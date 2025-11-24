@@ -1537,25 +1537,60 @@ const aviationTopics = [
 // ============================================================================
 const instrumentTopics = [
     {
-        id: 'instrument-comprehension',
-        name: 'Instrument Comprehension',
-        description: 'Aircraft attitude and heading interpretation',
+        id: 'attitude-indicator-basic',
+        name: 'Attitude Indicator - Basic',
+        description: 'Basic aircraft attitude interpretation',
         subjectId: 'instrument',
         generateQuestion: (difficulty = 'beginner') => {
-            const attitudes = [
-                { heading: "North", bank: "Level", pitch: "Level", desc: "Straight and level flight heading North", img: "images/attitude-level.svg" },
-                { heading: "East", bank: "Right 30°", pitch: "Level", desc: "Banking right 30 degrees while heading East", img: "images/attitude-right-30.svg" },
-                { heading: "South", bank: "Level", pitch: "Climbing", desc: "Climbing while heading South", img: "images/attitude-climbing.svg" },
-                { heading: "West", bank: "Left 20°", pitch: "Descending", desc: "Banking left and descending while heading West", img: "images/attitude-left-20.svg" },
-                { heading: "Northeast", bank: "Level", pitch: "Level", desc: "Straight and level heading Northeast (045°)", img: "images/attitude-level.svg" },
-                { heading: "Southeast", bank: "Right 15°", pitch: "Climbing", desc: "Banking right and climbing heading Southeast", img: "images/attitude-right-15.svg" },
-                { heading: "Southwest", bank: "Left 25°", pitch: "Level", desc: "Banking left heading Southwest", img: "images/attitude-left-25.svg" },
-                { heading: "Northwest", bank: "Level", pitch: "Descending", desc: "Descending heading Northwest", img: "images/attitude-descending.svg" }
+            // Beginner: Simple attitudes with clear descriptions (9 questions)
+            const beginnerAttitudes = [
+                { heading: "North", bank: "Level", pitch: "Level", desc: "Straight and level flight", img: "images/attitude-level.svg", details: "No bank, no climb or descent" },
+                { heading: "East", bank: "Level", pitch: "Climbing", desc: "Climbing straight ahead", img: "images/attitude-climbing.svg", details: "Nose up, wings level" },
+                { heading: "South", bank: "Level", pitch: "Descending", desc: "Descending straight ahead", img: "images/attitude-descending.svg", details: "Nose down, wings level" },
+                { heading: "West", bank: "Right 30°", pitch: "Level", desc: "Banking right 30 degrees", img: "images/attitude-right-30.svg", details: "Right wing down, level pitch" },
+                { heading: "North", bank: "Left 20°", pitch: "Level", desc: "Banking left 20 degrees", img: "images/attitude-left-20.svg", details: "Left wing down, level pitch" },
+                { heading: "Southeast", bank: "Right 15°", pitch: "Level", desc: "Banking right 15 degrees", img: "images/attitude-right-15.svg", details: "Slight right bank, wings not level" },
+                { heading: "Northwest", bank: "Left 25°", pitch: "Level", desc: "Banking left 25 degrees", img: "images/attitude-left-25.svg", details: "Moderate left bank, level pitch" },
+                { heading: "Northeast", bank: "Level", pitch: "Climbing", desc: "Climbing with wings level", img: "images/attitude-climbing.svg", details: "Straight climb, no turn" },
+                { heading: "Southwest", bank: "Level", pitch: "Descending", desc: "Descending with wings level", img: "images/attitude-descending.svg", details: "Straight descent, no turn" }
             ];
             
-            const correct = attitudes[Math.floor(Math.random() * attitudes.length)];
+            // Advanced: Combined maneuvers (9 questions)
+            const advancedAttitudes = [
+                { heading: "Northeast", bank: "Right 15°", pitch: "Climbing", desc: "Climbing right turn", img: "images/attitude-right-15.svg", details: "Banking right 15° while climbing" },
+                { heading: "Southeast", bank: "Left 25°", pitch: "Descending", desc: "Descending left turn", img: "images/attitude-left-25.svg", details: "Banking left 25° while descending" },
+                { heading: "Southwest", bank: "Right 30°", pitch: "Descending", desc: "Steep descending right turn", img: "images/attitude-right-30.svg", details: "Banking right 30° with nose down" },
+                { heading: "Northwest", bank: "Left 20°", pitch: "Climbing", desc: "Climbing left turn", img: "images/attitude-left-20.svg", details: "Banking left 20° while climbing" },
+                { heading: "East", bank: "Right 30°", pitch: "Climbing", desc: "Steep climbing right turn", img: "images/attitude-right-30.svg", details: "Right 30° bank with climb" },
+                { heading: "West", bank: "Left 25°", pitch: "Climbing", desc: "Moderate climbing left turn", img: "images/attitude-left-25.svg", details: "Left 25° bank while ascending" },
+                { heading: "North", bank: "Right 15°", pitch: "Descending", desc: "Descending right turn", img: "images/attitude-right-15.svg", details: "Right 15° bank with descent" },
+                { heading: "South", bank: "Left 20°", pitch: "Descending", desc: "Descending left turn", img: "images/attitude-left-20.svg", details: "Left 20° bank while descending" },
+                { heading: "Northeast", bank: "Right 30°", pitch: "Level", desc: "Steep level right turn", img: "images/attitude-right-30.svg", details: "Sharp turn without altitude change" }
+            ];
             
-            // Generate distractors
+            // Expert: Precise identification with specific angles (9 questions)
+            const expertAttitudes = [
+                { heading: "045°", bank: "Right 15°", pitch: "5° climb", desc: "Right 15° bank, 5° nose up, heading 045°", img: "images/attitude-right-15.svg", details: "Shallow climbing right turn to northeast" },
+                { heading: "135°", bank: "Left 25°", pitch: "10° descent", desc: "Left 25° bank, 10° nose down, heading 135°", img: "images/attitude-left-25.svg", details: "Medium descending left turn to southeast" },
+                { heading: "225°", bank: "Right 30°", pitch: "Level", desc: "Right 30° bank, level pitch, heading 225°", img: "images/attitude-right-30.svg", details: "Steep right turn to southwest" },
+                { heading: "315°", bank: "Left 20°", pitch: "8° climb", desc: "Left 20° bank, 8° nose up, heading 315°", img: "images/attitude-left-20.svg", details: "Moderate climbing left turn to northwest" },
+                { heading: "090°", bank: "Right 30°", pitch: "12° descent", desc: "Right 30° bank, 12° nose down, heading 090°", img: "images/attitude-right-30.svg", details: "Steep descending right turn to east" },
+                { heading: "180°", bank: "Left 25°", pitch: "6° climb", desc: "Left 25° bank, 6° nose up, heading 180°", img: "images/attitude-left-25.svg", details: "Medium climbing left turn to south" },
+                { heading: "270°", bank: "Right 15°", pitch: "3° descent", desc: "Right 15° bank, 3° nose down, heading 270°", img: "images/attitude-right-15.svg", details: "Shallow descending right turn to west" },
+                { heading: "000°", bank: "Left 20°", pitch: "Level", desc: "Left 20° bank, level pitch, heading 000°", img: "images/attitude-left-20.svg", details: "Moderate left turn to north" },
+                { heading: "060°", bank: "Right 30°", pitch: "10° climb", desc: "Right 30° bank, 10° nose up, heading 060°", img: "images/attitude-right-30.svg", details: "Steep climbing right turn to ENE" }
+            ];
+            
+            let attitudes;
+            if (difficulty === 'expert') {
+                attitudes = expertAttitudes;
+            } else if (difficulty === 'advanced') {
+                attitudes = advancedAttitudes;
+            } else {
+                attitudes = beginnerAttitudes;
+            }
+            
+            const correct = attitudes[Math.floor(Math.random() * attitudes.length)];
             const otherAttitudes = attitudes.filter(a => a !== correct);
             const shuffledOthers = shuffleArray(otherAttitudes);
             const distractors = shuffledOthers.slice(0, 3);
@@ -1564,11 +1599,689 @@ const instrumentTopics = [
             const shuffled = shuffleArray(allOptions);
             
             return {
-                prompt: `Based on the instrument panel shown, the aircraft is:\nHeading: ${correct.heading}\nBank: ${correct.bank}\nPitch: ${correct.pitch}\n\nWhat is the aircraft attitude?`,
+                prompt: `What is the aircraft's attitude in the instrument panel shown?`,
                 options: shuffled.map(a => a.desc),
                 correctIndex: shuffled.indexOf(correct),
-                explanation: `The correct interpretation is: ${correct.desc}`,
+                explanation: `The correct interpretation is: ${correct.desc}. ${correct.details}`,
                 image: correct.img
+            };
+        }
+    },
+    {
+        id: 'aircraft-controls',
+        name: 'Aircraft Control Surfaces',
+        description: 'Understanding control surface functions',
+        subjectId: 'instrument',
+        generateQuestion: (difficulty = 'beginner') => {
+            // Beginner: Single control surface identification (9 questions)
+            const beginnerQuestions = [
+                {
+                    prompt: "Which control surface is primarily responsible for controlling the aircraft's roll (banking)?",
+                    correct: "Ailerons",
+                    wrong: ["Elevator", "Rudder", "Flaps"],
+                    explanation: "Ailerons are located on the outer trailing edge of the wings and control roll by moving oppositely to each other."
+                },
+                {
+                    prompt: "Which control surface controls the aircraft's pitch (nose up/down)?",
+                    correct: "Elevator",
+                    wrong: ["Ailerons", "Rudder", "Spoilers"],
+                    explanation: "The elevator is on the horizontal stabilizer and controls pitch by deflecting up or down."
+                },
+                {
+                    prompt: "Which control surface controls the aircraft's yaw (left/right turning)?",
+                    correct: "Rudder",
+                    wrong: ["Ailerons", "Elevator", "Trim tabs"],
+                    explanation: "The rudder is on the vertical stabilizer and controls yaw by deflecting left or right."
+                },
+                {
+                    prompt: "What axis does the elevator control?",
+                    correct: "Lateral axis (pitch)",
+                    wrong: ["Longitudinal axis (roll)", "Vertical axis (yaw)", "Diagonal axis"],
+                    explanation: "The elevator controls rotation around the lateral axis, which produces pitch changes."
+                },
+                {
+                    prompt: "To roll the aircraft to the right, which aileron moves up?",
+                    correct: "Right aileron",
+                    wrong: ["Left aileron", "Both ailerons", "Neither aileron"],
+                    explanation: "To roll right, the right aileron moves up (reducing lift on right wing) while the left aileron moves down."
+                },
+                {
+                    prompt: "What axis does the rudder control?",
+                    correct: "Vertical axis (yaw)",
+                    wrong: ["Lateral axis (pitch)", "Longitudinal axis (roll)", "Horizontal axis"],
+                    explanation: "The rudder controls rotation around the vertical axis, creating left or right yaw."
+                },
+                {
+                    prompt: "What axis do the ailerons control?",
+                    correct: "Longitudinal axis (roll)",
+                    wrong: ["Lateral axis (pitch)", "Vertical axis (yaw)", "Transverse axis"],
+                    explanation: "Ailerons control rotation around the longitudinal axis, causing the aircraft to roll left or right."
+                },
+                {
+                    prompt: "Where is the elevator typically located on an aircraft?",
+                    correct: "On the horizontal stabilizer at the tail",
+                    wrong: ["On the wings near the fuselage", "On the vertical stabilizer", "On the nose section"],
+                    explanation: "The elevator is mounted on the horizontal stabilizer (tail plane) and moves to control pitch."
+                },
+                {
+                    prompt: "When the pilot pushes the control yoke/stick forward, which direction does the elevator deflect?",
+                    correct: "Downward",
+                    wrong: ["Upward", "To the left", "To the right"],
+                    explanation: "Pushing forward deflects the elevator down, creating an upward force on the tail that pitches the nose down."
+                }
+            ];
+            
+            // Advanced: Combined controls and effects
+            const advancedQuestions = [
+                {
+                    prompt: "To execute a coordinated right turn, which combination of controls is needed?",
+                    correct: "Right aileron down, left aileron up, rudder right",
+                    wrong: ["Right aileron up, left aileron down, rudder left", "Both ailerons down, rudder right", "Elevator up, rudder right"],
+                    explanation: "A coordinated turn requires aileron input for bank and rudder input to prevent adverse yaw."
+                },
+                {
+                    prompt: "What happens when the pilot pulls back on the control yoke?",
+                    correct: "Elevator deflects up, nose pitches up",
+                    wrong: ["Elevator deflects down, nose pitches down", "Ailerons deflect up, aircraft rolls", "Rudder deflects, aircraft yaws"],
+                    explanation: "Pulling back raises the elevator's trailing edge, creating downward force on the tail and pitching the nose up."
+                },
+                {
+                    prompt: "During a left climbing turn, which three controls are coordinated?",
+                    correct: "Left aileron down, right aileron up, rudder left, elevator up",
+                    wrong: ["Left aileron up, rudder right, elevator down", "Both ailerons up, rudder left, elevator up", "Left aileron down, rudder right, elevator up"],
+                    explanation: "A climbing left turn requires left bank (ailerons), left yaw (rudder), and pitch up (elevator)."
+                },
+                {
+                    prompt: "What is 'adverse yaw' and which control surface corrects it?",
+                    correct: "Unwanted yaw during roll, corrected by rudder",
+                    wrong: ["Unwanted roll during yaw, corrected by ailerons", "Unwanted pitch during turn, corrected by elevator", "Excessive bank angle, corrected by trim"],
+                    explanation: "Adverse yaw occurs when the down aileron creates more drag, causing unwanted yaw opposite to the roll direction. Rudder corrects this."
+                },
+                {
+                    prompt: "In a steep right bank (45°), what additional control input is typically needed?",
+                    correct: "Back pressure on elevator to maintain altitude",
+                    wrong: ["Forward pressure on elevator to prevent climb", "Left rudder to prevent right yaw", "No additional input needed"],
+                    explanation: "In steep banks, vertical lift component decreases, requiring increased elevator back pressure to maintain altitude."
+                }
+            ];
+            
+            // Expert: Complex scenarios and aerodynamics
+            const expertQuestions = [
+                {
+                    prompt: "During a spin recovery, what is the correct sequence of control inputs?",
+                    correct: "1) Reduce power, 2) Opposite rudder, 3) Forward elevator, 4) Neutral ailerons",
+                    wrong: ["1) Full power, 2) Aileron into spin, 3) Pull elevator back", "1) Opposite aileron, 2) Back elevator, 3) Full rudder", "1) Neutral all controls, 2) Wait for recovery"],
+                    explanation: "Standard spin recovery: PARE - Power idle, Ailerons neutral, Rudder opposite spin, Elevator forward to break stall."
+                },
+                {
+                    prompt: "What causes 'overbanking tendency' in steep turns and how is it corrected?",
+                    correct: "Outer wing travels faster creating more lift; corrected with opposite aileron pressure",
+                    wrong: ["Inner wing stalls first; corrected with rudder", "Centrifugal force pulls aircraft outward; corrected with elevator", "Weight shifts to lower wing; no correction needed"],
+                    explanation: "In steep turns, the outer wing travels a longer path at higher speed, generating more lift and increasing bank. This requires opposite aileron to maintain constant bank."
+                },
+                {
+                    prompt: "During a power-off stall, why might the left wing drop first in a typical single-engine aircraft?",
+                    correct: "P-factor and torque create asymmetric airflow, left wing stalls first",
+                    wrong: ["Right wing always generates more lift at slow speeds", "Pilot weight is typically on left side", "Ailerons are designed with left bias"],
+                    explanation: "Propeller torque and P-factor (asymmetric thrust) create left-turning tendencies. At high angle of attack, the left wing may reach critical angle first."
+                },
+                {
+                    prompt: "What is the purpose of differential ailerons and when are they most beneficial?",
+                    correct: "Up aileron deflects more than down, reduces adverse yaw during roll entry",
+                    wrong: ["Both ailerons move equally, improves roll rate at high speed", "Down aileron deflects more, prevents tip stall", "Ailerons move in same direction, assists rudder"],
+                    explanation: "Differential ailerons have greater upward deflection than downward, creating more drag on the rising wing to counteract adverse yaw."
+                },
+                {
+                    prompt: "In a sideslip maneuver, how are the controls crossed?",
+                    correct: "Bank one direction with aileron, opposite rudder to prevent turn",
+                    wrong: ["Rudder and aileron in same direction for tight turn", "Elevator up, rudder neutral, ailerons neutral", "Both ailerons up, rudder centered"],
+                    explanation: "A sideslip uses crossed controls: bank with ailerons while applying opposite rudder to maintain heading, useful for crosswind landings or losing altitude."
+                }
+            ];
+            
+            let questions;
+            if (difficulty === 'expert') {
+                questions = expertQuestions;
+            } else if (difficulty === 'advanced') {
+                questions = advancedQuestions;
+            } else {
+                questions = beginnerQuestions;
+            }
+            
+            const q = questions[Math.floor(Math.random() * questions.length)];
+            const options = shuffleArray([q.correct, ...q.wrong]);
+            
+            return {
+                prompt: q.prompt,
+                options: options,
+                correctIndex: options.indexOf(q.correct),
+                explanation: q.explanation,
+                image: "images/aircraft-controls.svg"
+            };
+        }
+    },
+    {
+        id: 'aircraft-forces',
+        name: 'Four Forces of Flight',
+        description: 'Lift, Weight, Thrust, and Drag',
+        subjectId: 'instrument',
+        generateQuestion: (difficulty = 'beginner') => {
+            // Beginner: Basic force identification and direction
+            const beginnerQuestions = [
+                {
+                    prompt: "Which force acts upward on an aircraft in flight?",
+                    correct: "Lift",
+                    wrong: ["Weight", "Thrust", "Drag"],
+                    explanation: "Lift is the upward force created by the wings that opposes weight and keeps the aircraft airborne."
+                },
+                {
+                    prompt: "Which force always acts downward toward the center of the Earth?",
+                    correct: "Weight",
+                    wrong: ["Lift", "Thrust", "Drag"],
+                    explanation: "Weight is the downward force of gravity acting on the aircraft's mass."
+                },
+                {
+                    prompt: "Which force propels the aircraft forward?",
+                    correct: "Thrust",
+                    wrong: ["Lift", "Weight", "Drag"],
+                    explanation: "Thrust is the forward force produced by the engine/propeller that overcomes drag."
+                },
+                {
+                    prompt: "Which force opposes the aircraft's motion through the air?",
+                    correct: "Drag",
+                    wrong: ["Lift", "Weight", "Thrust"],
+                    explanation: "Drag is the rearward force caused by air resistance that opposes thrust."
+                },
+                {
+                    prompt: "In straight and level flight at constant speed, what is true about the four forces?",
+                    correct: "Lift equals Weight, Thrust equals Drag",
+                    wrong: ["All four forces are equal", "Thrust is greater than all other forces", "Weight is greater than Lift"],
+                    explanation: "In equilibrium flight, opposing forces are balanced: Lift = Weight and Thrust = Drag."
+                }
+            ];
+            
+            // Advanced: Force relationships and changes
+            const advancedQuestions = [
+                {
+                    prompt: "What happens to lift when the aircraft's angle of attack increases (up to the critical angle)?",
+                    correct: "Lift increases due to greater pressure differential",
+                    wrong: ["Lift decreases due to increased drag", "Lift remains constant", "Lift becomes negative"],
+                    explanation: "As angle of attack increases, the pressure differential between upper and lower wing surfaces increases, generating more lift until the critical angle is reached."
+                },
+                {
+                    prompt: "During a climb at constant airspeed, which forces are NOT equal?",
+                    correct: "Lift is less than Weight (vertical component of thrust helps support aircraft)",
+                    wrong: ["Lift equals Weight exactly", "Thrust is less than Drag", "All forces remain balanced as in level flight"],
+                    explanation: "In a climb, lift is less than weight because a component of thrust is directed upward, helping support the aircraft."
+                },
+                {
+                    prompt: "What are the two main types of drag?",
+                    correct: "Parasite drag and Induced drag",
+                    wrong: ["Front drag and Rear drag", "Wing drag and Fuselage drag", "Fast drag and Slow drag"],
+                    explanation: "Total drag consists of parasite drag (form, friction, interference) and induced drag (byproduct of lift generation)."
+                },
+                {
+                    prompt: "How does induced drag change with airspeed?",
+                    correct: "Induced drag decreases as speed increases",
+                    wrong: ["Induced drag increases as speed increases", "Induced drag remains constant", "Induced drag is independent of speed"],
+                    explanation: "Induced drag is inversely proportional to the square of airspeed - it's highest at low speeds and decreases as speed increases."
+                },
+                {
+                    prompt: "In a steady descent at constant airspeed, how does thrust compare to drag?",
+                    correct: "Thrust is less than Drag (gravity provides additional forward component)",
+                    wrong: ["Thrust equals Drag", "Thrust is greater than Drag", "Thrust and Drag are not related in descents"],
+                    explanation: "During descent, a component of weight acts forward along the flight path, so less thrust is needed than drag."
+                }
+            ];
+            
+            // Expert: Complex force interactions and performance
+            const expertQuestions = [
+                {
+                    prompt: "At what airspeed does total drag reach its minimum, and what is this speed called?",
+                    correct: "Where induced drag equals parasite drag; called L/D max or best glide speed",
+                    wrong: ["At maximum airspeed; called Vne", "At minimum controllable airspeed; called Vmc", "At cruise speed; called Vc"],
+                    explanation: "Total drag is minimized where the induced drag curve intersects the parasite drag curve. This is L/D max, the most efficient flight condition."
+                },
+                {
+                    prompt: "What is 'ground effect' and how does it affect the four forces during landing?",
+                    correct: "Reduced induced drag and increased lift due to disruption of wingtip vortices near ground",
+                    wrong: ["Increased drag due to ground friction on wheels", "Decreased lift due to downwash interference", "No effect on forces, only on handling"],
+                    explanation: "Ground effect occurs within one wingspan of the surface. The ground disrupts wingtip vortices, reducing induced drag and slightly increasing lift efficiency."
+                },
+                {
+                    prompt: "How does the lift equation (L = CL × ½ρV²S) change with altitude at constant airspeed and angle of attack?",
+                    correct: "Lift decreases because air density (ρ) decreases with altitude",
+                    wrong: ["Lift increases due to less air resistance", "Lift remains constant as speed compensates", "Lift increases because wing efficiency improves"],
+                    explanation: "At higher altitudes, lower air density (ρ) reduces lift for the same airspeed and angle of attack. Aircraft must fly faster or at higher angle of attack to maintain altitude."
+                },
+                {
+                    prompt: "What is 'region of reversed command' and why is it dangerous?",
+                    correct: "Flight regime where more power is needed to fly slower; risk of settling with power on",
+                    wrong: ["High-speed regime where controls reverse; causes loss of control", "Inverted flight where lift acts downward; very unstable", "Supersonic regime where shockwaves form; structural danger"],
+                    explanation: "Behind the drag curve (below L/D max speed), induced drag dominates and increases rapidly at slower speeds, requiring more power to maintain altitude - counterintuitive and dangerous if not managed properly."
+                },
+                {
+                    prompt: "In a coordinated level turn, how does the required lift compare to straight-and-level flight, and what generates this additional lift?",
+                    correct: "Lift must increase by the load factor (1/cos(bank angle)); generated by increased angle of attack",
+                    wrong: ["Lift remains the same; turn is generated by redirecting existing lift", "Lift decreases; centrifugal force helps support the aircraft", "Lift doubles in all turns regardless of bank angle"],
+                    explanation: "In a turn, lift must both support weight and provide centripetal force. A 60° bank requires 2G (twice the lift). This is achieved by increasing angle of attack, which also increases induced drag and requires more power."
+                }
+            ];
+            
+            let questions;
+            if (difficulty === 'expert') {
+                questions = expertQuestions;
+            } else if (difficulty === 'advanced') {
+                questions = advancedQuestions;
+            } else {
+                questions = beginnerQuestions;
+            }
+            
+            const q = questions[Math.floor(Math.random() * questions.length)];
+            const options = shuffleArray([q.correct, ...q.wrong]);
+            
+            return {
+                prompt: q.prompt,
+                options: options,
+                correctIndex: options.indexOf(q.correct),
+                explanation: q.explanation,
+                image: "images/aircraft-forces.svg"
+            };
+        }
+    },
+    {
+        id: 'airspeed-indicator',
+        name: 'Airspeed Indicator (ASI)',
+        description: 'Reading and interpreting airspeed',
+        subjectId: 'instrument',
+        generateQuestion: (difficulty = 'beginner') => {
+            const beginnerQuestions = [
+                {
+                    prompt: "What does the Airspeed Indicator (ASI) measure?",
+                    correct: "The speed of the aircraft through the air",
+                    wrong: ["The speed of the aircraft over the ground", "The altitude of the aircraft", "The rate of climb or descent"],
+                    explanation: "The ASI measures indicated airspeed (IAS) - the speed of the aircraft moving through the air mass, not ground speed."
+                },
+                {
+                    prompt: "What color is the arc on the ASI that represents the normal operating range?",
+                    correct: "Green arc",
+                    wrong: ["White arc", "Yellow arc", "Red line"],
+                    explanation: "The green arc shows the normal operating range from stall speed (dirty) to maximum structural cruise speed."
+                },
+                {
+                    prompt: "What does the white arc on the ASI represent?",
+                    correct: "Flap operating range",
+                    wrong: ["Normal operating range", "Caution range", "Never exceed speed"],
+                    explanation: "The white arc shows the range where full flaps can be safely deployed, from stall speed with flaps to maximum flap extension speed (VFE)."
+                },
+                {
+                    prompt: "What does the yellow arc on the ASI indicate?",
+                    correct: "Caution range - smooth air operations only",
+                    wrong: ["Normal operating range", "Flap operating range", "Stall warning range"],
+                    explanation: "The yellow arc is the caution range between maximum structural cruise speed and never-exceed speed, to be used only in smooth air."
+                },
+                {
+                    prompt: "What does the red radial line (VNE) on the ASI represent?",
+                    correct: "Never-exceed speed",
+                    wrong: ["Maximum cruise speed", "Maximum flap speed", "Stall speed"],
+                    explanation: "VNE (velocity never exceed) is the red line marking the maximum speed limit beyond which structural damage may occur."
+                },
+                {
+                    prompt: "The Airspeed Indicator works by measuring the difference between what two pressures?",
+                    correct: "Pitot pressure and static pressure",
+                    wrong: ["Engine pressure and ambient pressure", "Cabin pressure and outside pressure", "Dynamic pressure and vacuum pressure"],
+                    explanation: "The ASI measures the difference between ram air pressure from the pitot tube and static pressure from the static port."
+                },
+                {
+                    prompt: "If the pitot tube becomes blocked while in flight, what happens to the airspeed indication?",
+                    correct: "The airspeed reading freezes at the current indication",
+                    wrong: ["The airspeed drops to zero", "The airspeed shows maximum", "The airspeed becomes erratic"],
+                    explanation: "A blocked pitot tube traps the existing pressure, causing the ASI to freeze at the last indicated airspeed before blockage."
+                },
+                {
+                    prompt: "What is indicated airspeed (IAS)?",
+                    correct: "The speed shown directly on the airspeed indicator",
+                    wrong: ["The true speed through the air mass", "The speed over the ground", "The speed corrected for wind"],
+                    explanation: "IAS is the uncorrected speed reading directly from the instrument, before adjustments for altitude, temperature, or installation errors."
+                },
+                {
+                    prompt: "At what airspeed should a pilot be most concerned about operating in turbulent conditions?",
+                    correct: "In the yellow arc (caution range)",
+                    wrong: ["In the green arc (normal range)", "In the white arc (flap range)", "Below the green arc"],
+                    explanation: "The yellow arc indicates speeds that should only be used in smooth air. In turbulence, gusts could push the aircraft beyond structural limits."
+                }
+            ];
+            
+            const advancedQuestions = [
+                {
+                    prompt: "How does true airspeed (TAS) compare to indicated airspeed (IAS) as altitude increases?",
+                    correct: "TAS increases relative to IAS due to decreasing air density",
+                    wrong: ["TAS decreases relative to IAS", "TAS and IAS remain equal at all altitudes", "TAS becomes half of IAS at high altitude"],
+                    explanation: "At higher altitudes, thinner air means the aircraft must move faster through the air mass to maintain the same dynamic pressure, so TAS exceeds IAS by approximately 2% per 1,000 feet."
+                },
+                {
+                    prompt: "If both the pitot tube and static port become blocked simultaneously in flight, how will the ASI behave during a climb?",
+                    correct: "ASI will show an increase in airspeed",
+                    wrong: ["ASI will freeze at current reading", "ASI will show a decrease", "ASI will read zero"],
+                    explanation: "With both blocked, the trapped air in the system expands as altitude increases (pressure decreases), creating a false increase in the pressure differential that the ASI reads as increased airspeed."
+                },
+                {
+                    prompt: "What is the relationship between calibrated airspeed (CAS) and indicated airspeed (IAS)?",
+                    correct: "CAS is IAS corrected for installation and instrument errors",
+                    wrong: ["CAS is IAS corrected for altitude", "CAS is IAS corrected for temperature", "CAS and IAS are always identical"],
+                    explanation: "CAS corrects IAS for position error (installation location of the pitot-static system) and instrument error. This correction is usually small and varies with airspeed."
+                },
+                {
+                    prompt: "Why is it important to use indicated airspeed rather than ground speed for takeoff and landing?",
+                    correct: "Aerodynamic forces depend on airspeed, not ground speed",
+                    wrong: ["Ground speed is always less accurate", "Indicated airspeed accounts for wind", "Ground speed varies too much"],
+                    explanation: "Lift, drag, and stall characteristics are determined by the speed of air flowing over the wings (airspeed), regardless of how fast the aircraft is moving over the ground."
+                },
+                {
+                    prompt: "What is 'equivalent airspeed' (EAS)?",
+                    correct: "CAS corrected for adiabatic compressible flow at altitude",
+                    wrong: ["IAS corrected for temperature only", "TAS corrected for wind", "The average of IAS and TAS"],
+                    explanation: "EAS is CAS corrected for the compressibility of air. At high speeds and altitudes, air compression affects the pressure readings, and EAS accounts for this."
+                },
+                {
+                    prompt: "If an aircraft maintains a constant IAS while climbing, what is happening to its TAS?",
+                    correct: "TAS is increasing as altitude increases",
+                    wrong: ["TAS is decreasing", "TAS remains constant", "TAS oscillates unpredictably"],
+                    explanation: "To maintain constant IAS at higher altitudes where air is thinner, the aircraft must fly faster TAS to generate the same dynamic pressure on the pitot tube."
+                },
+                {
+                    prompt: "What speed is represented by the lower end of the green arc on the ASI?",
+                    correct: "VS1 - stall speed with flaps and gear up",
+                    wrong: ["VS0 - stall speed with flaps down", "VFE - maximum flap extension speed", "VNO - maximum structural cruise speed"],
+                    explanation: "The bottom of the green arc marks VS1, the stall speed in the clean configuration (gear and flaps up) at maximum gross weight."
+                },
+                {
+                    prompt: "During a rapid descent, if the static port becomes blocked, what will happen to the ASI indication?",
+                    correct: "ASI will show decreasing airspeed",
+                    wrong: ["ASI will show increasing airspeed", "ASI will freeze at current reading", "ASI will become erratic"],
+                    explanation: "With blocked static port during descent, the trapped static pressure remains high, making the pitot-static differential smaller, causing the ASI to read lower than actual."
+                },
+                {
+                    prompt: "What is 'Mach number' and how does it relate to true airspeed?",
+                    correct: "Ratio of TAS to speed of sound; varies with temperature",
+                    wrong: ["Ratio of IAS to cruise speed; constant value", "Ratio of ground speed to TAS; varies with wind", "Ratio of climb rate to airspeed; varies with altitude"],
+                    explanation: "Mach number is TAS divided by the local speed of sound. Since sound speed decreases with temperature (and altitude), the same TAS yields higher Mach numbers at altitude."
+                }
+            ];
+            
+            const expertQuestions = [
+                {
+                    prompt: "In the 'coffin corner' at high altitude, what aerodynamic limitation occurs?",
+                    correct: "Low-speed stall and high-speed buffet converge",
+                    wrong: ["Engines lose all thrust capability", "Controls become ineffective", "Mach tuck becomes unrecoverable"],
+                    explanation: "At high altitude where air is thin, the margin between stall speed (which increases with altitude in TAS terms) and critical Mach number (where shock waves form) becomes dangerously small."
+                },
+                {
+                    prompt: "What causes 'Mach tuck' and how does it affect aircraft control?",
+                    correct: "Shock wave formation moves center of pressure aft, pitching nose down",
+                    wrong: ["Engine thrust reduces at high Mach, nose drops", "Control surfaces stiffen, unable to pull up", "Airflow separation causes random pitch changes"],
+                    explanation: "At transonic speeds, shock waves form on the wing, shifting the center of pressure rearward, creating a strong nose-down pitching moment that can overpower elevator authority."
+                },
+                {
+                    prompt: "How does the ASI behave differently in a sideslip compared to coordinated flight?",
+                    correct: "May show errors due to altered airflow at pitot tube location",
+                    wrong: ["Reads exactly the same in all attitudes", "Always reads higher in a sideslip", "Becomes completely unreliable"],
+                    explanation: "In a sideslip, the relative wind approaches from a different angle, potentially causing position errors in the pitot-static system depending on probe location and aircraft attitude."
+                },
+                {
+                    prompt: "What is the significance of 'critical Mach number' (Mcrit)?",
+                    correct: "Mach number where local airflow first reaches sonic speed",
+                    wrong: ["Mach number where aircraft structure fails", "Mach number where engines flame out", "Mach number where controls reverse"],
+                    explanation: "Mcrit is when airflow accelerating over the wing first reaches Mach 1 locally (even though aircraft is subsonic), causing shock wave formation and increased drag."
+                },
+                {
+                    prompt: "In accelerated flight (turning or pulling g's), how does stall speed change relative to straight-and-level flight?",
+                    correct: "Stall speed increases proportionally to square root of load factor",
+                    wrong: ["Stall speed decreases due to increased airflow", "Stall speed remains constant regardless of g-load", "Stall speed doubles for each g of load factor"],
+                    explanation: "The stall speed increases by √(load factor). At 2g's, stall speed is 1.41 times higher; at 3g's, it's 1.73 times higher due to increased wing loading."
+                },
+                {
+                    prompt: "What is 'density altitude' and why is it critical for performance?",
+                    correct: "Pressure altitude corrected for temperature; affects engine and aerodynamic performance",
+                    wrong: ["True altitude corrected for pressure; only affects instruments", "Altitude where air density is standard; not important for performance", "Indicated altitude adjusted for wind; affects navigation only"],
+                    explanation: "Density altitude is what the aircraft 'feels' in performance. High density altitude (hot, high elevation) reduces engine power, propeller efficiency, and lift, degrading all performance metrics."
+                },
+                {
+                    prompt: "How do wing-mounted vortex generators affect the airspeed indicator accuracy?",
+                    correct: "Usually minimal effect, but can reduce position error at high AoA",
+                    wrong: ["Make the ASI read 10% high at all speeds", "Cause ASI to become unreliable in turns", "Have no effect on any instruments"],
+                    explanation: "Vortex generators energize the boundary layer, potentially improving airflow characteristics around the aircraft and reducing position error effects, especially near stall speeds."
+                },
+                {
+                    prompt: "What is 'ground effect' and how does it affect the ASI during landing?",
+                    correct: "Altered pressure field may cause slight indicated airspeed errors",
+                    wrong: ["ASI always reads 20 knots low in ground effect", "ASI becomes completely accurate in ground effect", "Ground effect only affects vertical speed, not airspeed"],
+                    explanation: "Ground effect alters the pressure distribution around the aircraft, potentially affecting both pitot and static pressures. Effects are usually small but can vary by aircraft design."
+                },
+                {
+                    prompt: "In a jet aircraft, what is the relationship between VMO (maximum operating velocity) and MMO (maximum operating Mach)?",
+                    correct: "VMO limits speed at low altitude, MMO limits at high altitude",
+                    wrong: ["VMO and MMO are always the same value", "MMO only applies in supersonic flight", "VMO is twice the value of MMO"],
+                    explanation: "VMO is an indicated airspeed limit (structural), while MMO is a Mach limit (compressibility). At low altitude, VMO is reached first; at high altitude, MMO is the limiting factor."
+                }
+            ];
+            
+            let questions;
+            if (difficulty === 'expert') {
+                questions = expertQuestions;
+            } else if (difficulty === 'advanced') {
+                questions = advancedQuestions;
+            } else {
+                questions = beginnerQuestions;
+            }
+            
+            const q = questions[Math.floor(Math.random() * questions.length)];
+            const options = shuffleArray([q.correct, ...q.wrong]);
+            
+            return {
+                prompt: q.prompt,
+                options: options,
+                correctIndex: options.indexOf(q.correct),
+                explanation: q.explanation,
+                image: "images/instruments/asi/asi.svg"
+            };
+        }
+    },
+    {
+        id: 'altimeter',
+        name: 'Altimeter (ALT)',
+        description: 'Reading altitude and pressure settings',
+        subjectId: 'instrument',
+        generateQuestion: (difficulty = 'beginner') => {
+            const beginnerQuestions = [
+                {
+                    prompt: "What does the altimeter measure?",
+                    correct: "The aircraft's height above a reference pressure level",
+                    wrong: ["The aircraft's height above ground level always", "The aircraft's true altitude above sea level", "The aircraft's distance from the nearest airport"],
+                    explanation: "The altimeter measures pressure altitude - height above a reference pressure datum set in the Kollsman window."
+                },
+                {
+                    prompt: "How many hands (pointers) does a standard altimeter have?",
+                    correct: "Three hands",
+                    wrong: ["One hand", "Two hands", "Four hands"],
+                    explanation: "A standard altimeter has three hands: a short wide hand for 10,000-foot increments, a medium hand for 1,000-foot increments, and a long thin hand for 100-foot increments."
+                },
+                {
+                    prompt: "What is the Kollsman window on an altimeter used for?",
+                    correct: "Setting the barometric pressure reference",
+                    wrong: ["Reading the outside air temperature", "Displaying ground speed", "Showing magnetic heading"],
+                    explanation: "The Kollsman window displays the barometric pressure setting (in inches of mercury or millibars) that establishes the altitude reference."
+                },
+                {
+                    prompt: "What barometric setting should be used when flying below 18,000 feet in the United States?",
+                    correct: "Local altimeter setting from the nearest station",
+                    wrong: ["Always 29.92 inches Hg", "Always 30.00 inches Hg", "No setting is needed"],
+                    explanation: "Below 18,000 feet, pilots set the local altimeter setting to show indicated altitude (height above sea level) for terrain clearance."
+                },
+                {
+                    prompt: "What altimeter setting is used at or above 18,000 feet (FL180) in the United States?",
+                    correct: "29.92 inches Hg (standard pressure)",
+                    wrong: ["Local barometric pressure", "30.00 inches Hg", "31.00 inches Hg"],
+                    explanation: "Above 18,000 feet (in the flight levels), all aircraft use 29.92 to ensure consistent altitude separation between aircraft."
+                },
+                {
+                    prompt: "If you fly from high pressure to low pressure without adjusting your altimeter, what happens?",
+                    correct: "The altimeter reads higher than actual altitude",
+                    wrong: ["The altimeter reads lower than actual altitude", "The altimeter remains accurate", "The altimeter stops working"],
+                    explanation: "Remember 'High to low, look out below.' Flying into lower pressure without resetting makes the altimeter read high while the aircraft is actually lower."
+                },
+                {
+                    prompt: "What does 'QNH' represent in aviation?",
+                    correct: "Altimeter setting to read field elevation on the ground",
+                    wrong: ["Aircraft's current altitude", "Height above ground level", "Cabin pressure setting"],
+                    explanation: "QNH is the barometric pressure setting that, when set in the altimeter on the ground, causes it to display the field elevation (airport altitude above sea level)."
+                },
+                {
+                    prompt: "The altimeter measures altitude based on:",
+                    correct: "Atmospheric pressure decreasing with height",
+                    wrong: ["Radio waves bouncing off the ground", "GPS satellite signals", "Magnetic field strength"],
+                    explanation: "The altimeter is essentially a barometer calibrated to show altitude based on the standard relationship between pressure and height in the atmosphere."
+                },
+                {
+                    prompt: "What is 'indicated altitude'?",
+                    correct: "The altitude shown on the altimeter with current setting",
+                    wrong: ["True height above mean sea level", "Height above ground level", "Pressure altitude corrected for temperature"],
+                    explanation: "Indicated altitude is simply what the altimeter reads with the current barometric pressure setting in the Kollsman window."
+                }
+            ];
+            
+            const advancedQuestions = [
+                {
+                    prompt: "What is 'pressure altitude'?",
+                    correct: "Indicated altitude when altimeter is set to 29.92 inches Hg",
+                    wrong: ["True altitude corrected for pressure", "Indicated altitude corrected for temperature", "Height above ground level"],
+                    explanation: "Pressure altitude is the height above the standard datum plane (29.92 inches Hg). It's the altitude used for flight levels and performance calculations."
+                },
+                {
+                    prompt: "What is 'density altitude' and why is it important?",
+                    correct: "Pressure altitude corrected for non-standard temperature; affects aircraft performance",
+                    wrong: ["Indicated altitude corrected for wind", "True altitude at standard temperature", "Altitude where air density is maximum"],
+                    explanation: "Density altitude is what the aircraft 'feels' for performance. High density altitude (hot, high) reduces engine power, propeller efficiency, and wing lift."
+                },
+                {
+                    prompt: "How does temperature affect the altimeter reading?",
+                    correct: "Cold temperatures make altimeter read higher than actual; warm makes it read lower",
+                    wrong: ["Temperature has no effect on altimeter", "Cold makes it read lower; warm makes it read higher", "Altimeter automatically compensates for temperature"],
+                    explanation: "On a cold day, air is denser than standard, so aircraft is actually lower than indicated. 'High to low or hot to cold, look out below.'"
+                },
+                {
+                    prompt: "What is 'true altitude'?",
+                    correct: "Actual height above mean sea level (MSL)",
+                    wrong: ["Height indicated on the altimeter", "Height above ground level", "Pressure altitude plus temperature correction"],
+                    explanation: "True altitude is the actual vertical distance above mean sea level, accounting for all pressure and temperature variations from standard atmosphere."
+                },
+                {
+                    prompt: "If the static port becomes blocked during a climb, what happens to the altimeter?",
+                    correct: "Altimeter freezes at the altitude where blockage occurred",
+                    wrong: ["Altimeter continues to show increasing altitude", "Altimeter shows decreasing altitude", "Altimeter shows maximum altitude"],
+                    explanation: "A blocked static port traps the air pressure at that altitude, causing the altimeter to freeze regardless of actual altitude changes."
+                },
+                {
+                    prompt: "What is the standard pressure lapse rate in the atmosphere?",
+                    correct: "Approximately 1 inch Hg per 1,000 feet",
+                    wrong: ["1 inch Hg per 100 feet", "1 inch Hg per 10,000 feet", "Pressure increases with altitude"],
+                    explanation: "In standard atmosphere near sea level, pressure decreases approximately 1 inch of mercury per 1,000 feet of altitude gain."
+                },
+                {
+                    prompt: "What is an 'altimeter error' and when is it most significant?",
+                    correct: "Difference between indicated and true altitude; significant in non-standard conditions",
+                    wrong: ["Manufacturing defect in the instrument", "Only occurs above 50,000 feet", "Can only happen if the instrument is broken"],
+                    explanation: "Altimeter errors occur because the atmosphere rarely matches the standard model used to calibrate the instrument, especially with temperature variations."
+                },
+                {
+                    prompt: "What does 'QFE' represent?",
+                    correct: "Altimeter setting to read zero at a particular airfield",
+                    wrong: ["Current barometric pressure at sea level", "Standard pressure of 29.92", "Temperature at field elevation"],
+                    explanation: "QFE sets the altimeter to read zero (or runway elevation) when on the ground at a specific airport, showing height above that airport."
+                },
+                {
+                    prompt: "How often should pilots update their altimeter setting during flight below 18,000 feet?",
+                    correct: "Each time passing near a reporting station or when ATC provides updated setting",
+                    wrong: ["Every 10 minutes regardless of location", "Only once at departure", "Only during approach"],
+                    explanation: "Pilots should update the altimeter setting periodically as they travel through areas of changing pressure and whenever ATC provides new settings for accurate terrain clearance."
+                }
+            ];
+            
+            const expertQuestions = [
+                {
+                    prompt: "What causes 'altimeter lag' and how can it affect flight safety?",
+                    correct: "Mechanical inertia in aneroid wafers causes delayed response to rapid pressure changes",
+                    wrong: ["Electrical delay in digital displays", "Pilot reaction time to altitude changes", "Wind effects on static pressure"],
+                    explanation: "Altimeter lag occurs during rapid altitude changes because the aneroid wafers and mechanical linkages take time to respond, potentially showing outdated altitude in critical situations."
+                },
+                {
+                    prompt: "In the international standard atmosphere (ISA), what is the temperature lapse rate?",
+                    correct: "2°C per 1,000 feet (or approximately 1.98°C)",
+                    wrong: ["1°C per 1,000 feet", "5°C per 1,000 feet", "Temperature is constant with altitude"],
+                    explanation: "ISA assumes standard temperature decreases at approximately 2°C (3.5°F) per 1,000 feet up to 36,089 feet (tropopause)."
+                },
+                {
+                    prompt: "What is the 'transition altitude' and 'transition level' concept?",
+                    correct: "Altitude where pilots switch from local QNH to standard 29.92; varies by country",
+                    wrong: ["Fixed at 18,000 feet worldwide", "Only applies to commercial aviation", "Altitude where pressurization is required"],
+                    explanation: "Transition altitude (where pilots change to 29.92) and transition level (lowest usable flight level) create the transition layer. It's 18,000 ft in the US but varies globally."
+                },
+                {
+                    prompt: "How does the '4 inch per degree' rule help pilots compensate for temperature on altitude?",
+                    correct: "For each degree Celsius below ISA, add 4 feet per 1,000 feet of altitude",
+                    wrong: ["Subtract 4 feet for each degree above ISA", "Add 4 inches of Hg for each degree of temperature", "Only applies to humidity, not temperature"],
+                    explanation: "This rule of thumb helps estimate true altitude corrections: on a cold day, actual altitude is lower than indicated by approximately 4 feet per 1,000 feet per degree below ISA."
+                },
+                {
+                    prompt: "What is an 'ICAO Standard Atmosphere' and what are its baseline conditions?",
+                    correct: "15°C and 29.92 inches Hg at sea level; basis for all aviation calculations",
+                    wrong: ["20°C and 30.00 inches Hg; only used in the tropics", "0°C and 29.92 inches Hg; winter standard", "10°C and 28.00 inches Hg; mountain standard"],
+                    explanation: "ICAO Standard Atmosphere defines 15°C (59°F) and 29.92 inches Hg (1013.25 mb) at sea level as the baseline for all performance calculations and altimeter calibration."
+                },
+                {
+                    prompt: "What is 'geometric altitude' and how does it differ from pressure altitude?",
+                    correct: "Actual vertical distance from a reference point; differs from pressure altitude in non-standard conditions",
+                    wrong: ["Altitude measured by GPS; always matches pressure altitude", "Altitude calculated from aircraft angle; unrelated to pressure", "A theoretical concept with no practical use"],
+                    explanation: "Geometric altitude is the actual physical height, often measured by GPS or radar. It differs from pressure altitude whenever atmospheric conditions deviate from the standard model."
+                },
+                {
+                    prompt: "How do 'blocking highs' or 'low pressure systems' affect large-area altimeter errors?",
+                    correct: "Create regional pressure deviations requiring pilots to update settings frequently for accurate altitude",
+                    wrong: ["Have no effect on modern GPS-based systems", "Only affect aircraft above 40,000 feet", "Automatically compensated by modern altimeters"],
+                    explanation: "Large weather systems create regional pressure anomalies from standard atmosphere. Without frequent altimeter updates, indicated altitude can deviate significantly from true altitude."
+                },
+                {
+                    prompt: "What is 'hypsometric equation' relevance to altitude measurement?",
+                    correct: "Relates pressure differences to geometric height considering temperature; basis of altimetry",
+                    wrong: ["Equation for calculating groundspeed from airspeed", "Formula for determining stall speed at altitude", "Calculation for fuel consumption at different altitudes"],
+                    explanation: "The hypsometric equation describes the relationship between pressure and height in the atmosphere, accounting for temperature. It's the theoretical foundation of pressure altimetry."
+                },
+                {
+                    prompt: "Why do some aircraft have 'servo altimeters' instead of traditional aneroid altimeters?",
+                    correct: "Provide more accurate readings by using electronic sensing and correction algorithms",
+                    wrong: ["Required by law for all commercial aircraft", "Only work above 50,000 feet", "Cheaper to manufacture than aneroid types"],
+                    explanation: "Servo altimeters use electronic pressure transducers and can apply corrections for temperature and other factors, providing greater accuracy than purely mechanical aneroid systems."
+                }
+            ];
+            
+            let questions;
+            if (difficulty === 'expert') {
+                questions = expertQuestions;
+            } else if (difficulty === 'advanced') {
+                questions = advancedQuestions;
+            } else {
+                questions = beginnerQuestions;
+            }
+            
+            const q = questions[Math.floor(Math.random() * questions.length)];
+            const options = shuffleArray([q.correct, ...q.wrong]);
+            
+            return {
+                prompt: q.prompt,
+                options: options,
+                correctIndex: options.indexOf(q.correct),
+                explanation: q.explanation,
+                image: "images/instruments/alt/alt.svg"
             };
         }
     }
