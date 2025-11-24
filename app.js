@@ -4597,11 +4597,10 @@ function renderSubject() {
                 `).join('')}
             </div>
             
-            <div class="action-buttons">
-                <button class="btn" id="home-btn">← Home</button>
+            <div class="action-buttons quiz-action-buttons">
+                <button class="btn" id="home-btn">🏠 Home</button>
             </div>
         </div>
-        ${renderFloatingNav()}
     `;
 }
 
@@ -4648,11 +4647,11 @@ function renderModeSelect() {
                 </div>
             </div>
             
-            <div class="action-buttons">
-                <button class="btn" id="back-to-subject-btn">← Back to Topics</button>
+            <div class="action-buttons quiz-action-buttons">
+                <button class="btn" id="back-to-subject-btn">← Return to Topics</button>
+                <button class="btn" id="home-btn">🏠 Home</button>
             </div>
         </div>
-        ${renderFloatingNav({ backAction: 'subject', backLabel: '← Topics' })}
     `;
 }
 
@@ -4699,11 +4698,11 @@ function renderDifficultySelect() {
                 </div>
             </div>
             
-            <div class="action-buttons">
+            <div class="action-buttons quiz-action-buttons">
                 <button class="btn" id="back-to-mode-btn">← Back to Modes</button>
+                <button class="btn" id="home-btn">🏠 Home</button>
             </div>
         </div>
-        ${renderFloatingNav({ backAction: 'mode', backLabel: '← Modes' })}
     `;
 }
 
@@ -4934,12 +4933,11 @@ function renderResults() {
                 </div>
             ` : ''}
             
-            <div class="action-buttons">
-                <button class="btn" id="home-btn">← Home</button>
+            <div class="action-buttons quiz-action-buttons">
+                <button class="btn" id="home-btn">🏠 Home</button>
                 <button class="btn" id="retry-btn">↻ Retry Topic</button>
             </div>
         </div>
-        ${renderFloatingNav()}
     `;
 }
 
@@ -5062,11 +5060,10 @@ function renderStatus() {
                 </div>
             </div>
             
-            <div class="action-buttons">
-                <button class="btn" id="home-btn">← Home</button>
+            <div class="action-buttons quiz-action-buttons">
+                <button class="btn" id="home-btn">🏠 Home</button>
             </div>
         </div>
-        ${renderFloatingNav()}
     `;
 }
 
@@ -5239,11 +5236,10 @@ function renderEquipment() {
                 </div>
             </div>
             
-            <div class="action-buttons">
-                <button class="btn" id="home-btn">← Home</button>
+            <div class="action-buttons quiz-action-buttons">
+                <button class="btn" id="home-btn">🏠 Home</button>
             </div>
         </div>
-        ${renderFloatingNav()}
     `;
 }
 
@@ -5456,11 +5452,10 @@ function renderAchievements() {
                 </div>
             </div>
             
-            <div class="action-buttons">
-                <button class="btn" id="home-btn">← Home</button>
+            <div class="action-buttons quiz-action-buttons">
+                <button class="btn" id="home-btn">🏠 Home</button>
             </div>
         </div>
-        ${renderFloatingNav()}
     `;
 }
 
@@ -5647,11 +5642,10 @@ function renderSettings() {
                 </div>
             </div>
             
-            <div class="action-buttons">
-                <button class="btn" id="home-btn">← Home</button>
+            <div class="action-buttons quiz-action-buttons">
+                <button class="btn" id="home-btn">🏠 Home</button>
             </div>
         </div>
-        ${renderFloatingNav()}
     `;
 }
 
@@ -5661,8 +5655,8 @@ function renderAnalytics() {
             <div class="panel">
                 <h1 class="panel-header">Results & Analytics</h1>
                 <p style="text-align: center; margin: 40px 0; opacity: 0.7;">No session data available. Complete some quizzes to see your analytics!</p>
-                <div class="action-buttons">
-                    <button class="btn" id="home-btn">← Home</button>
+                <div class="action-buttons quiz-action-buttons">
+                    <button class="btn" id="home-btn">🏠 Home</button>
                 </div>
             </div>
         `;
@@ -5856,11 +5850,10 @@ function renderAnalytics() {
                 </div>
             </div>
             
-            <div class="action-buttons">
-                <button class="btn" id="home-btn">← Home</button>
+            <div class="action-buttons quiz-action-buttons">
+                <button class="btn" id="home-btn">🏠 Home</button>
             </div>
         </div>
-        ${renderFloatingNav()}
     `;
 }
 
