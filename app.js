@@ -1537,25 +1537,60 @@ const aviationTopics = [
 // ============================================================================
 const instrumentTopics = [
     {
-        id: 'instrument-comprehension',
-        name: 'Instrument Comprehension',
-        description: 'Aircraft attitude and heading interpretation',
+        id: 'attitude-indicator-basic',
+        name: 'Attitude Indicator - Basic',
+        description: 'Basic aircraft attitude interpretation',
         subjectId: 'instrument',
         generateQuestion: (difficulty = 'beginner') => {
-            const attitudes = [
-                { heading: "North", bank: "Level", pitch: "Level", desc: "Straight and level flight heading North", img: "images/attitude-level.svg" },
-                { heading: "East", bank: "Right 30°", pitch: "Level", desc: "Banking right 30 degrees while heading East", img: "images/attitude-right-30.svg" },
-                { heading: "South", bank: "Level", pitch: "Climbing", desc: "Climbing while heading South", img: "images/attitude-climbing.svg" },
-                { heading: "West", bank: "Left 20°", pitch: "Descending", desc: "Banking left and descending while heading West", img: "images/attitude-left-20.svg" },
-                { heading: "Northeast", bank: "Level", pitch: "Level", desc: "Straight and level heading Northeast (045°)", img: "images/attitude-level.svg" },
-                { heading: "Southeast", bank: "Right 15°", pitch: "Climbing", desc: "Banking right and climbing heading Southeast", img: "images/attitude-right-15.svg" },
-                { heading: "Southwest", bank: "Left 25°", pitch: "Level", desc: "Banking left heading Southwest", img: "images/attitude-left-25.svg" },
-                { heading: "Northwest", bank: "Level", pitch: "Descending", desc: "Descending heading Northwest", img: "images/attitude-descending.svg" }
+            // Beginner: Simple attitudes with clear descriptions (9 questions)
+            const beginnerAttitudes = [
+                { heading: "North", bank: "Level", pitch: "Level", desc: "Straight and level flight", img: "images/attitude-level.svg", details: "No bank, no climb or descent" },
+                { heading: "East", bank: "Level", pitch: "Climbing", desc: "Climbing straight ahead", img: "images/attitude-climbing.svg", details: "Nose up, wings level" },
+                { heading: "South", bank: "Level", pitch: "Descending", desc: "Descending straight ahead", img: "images/attitude-descending.svg", details: "Nose down, wings level" },
+                { heading: "West", bank: "Right 30°", pitch: "Level", desc: "Banking right 30 degrees", img: "images/attitude-right-30.svg", details: "Right wing down, level pitch" },
+                { heading: "North", bank: "Left 20°", pitch: "Level", desc: "Banking left 20 degrees", img: "images/attitude-left-20.svg", details: "Left wing down, level pitch" },
+                { heading: "Southeast", bank: "Right 15°", pitch: "Level", desc: "Banking right 15 degrees", img: "images/attitude-right-15.svg", details: "Slight right bank, wings not level" },
+                { heading: "Northwest", bank: "Left 25°", pitch: "Level", desc: "Banking left 25 degrees", img: "images/attitude-left-25.svg", details: "Moderate left bank, level pitch" },
+                { heading: "Northeast", bank: "Level", pitch: "Climbing", desc: "Climbing with wings level", img: "images/attitude-climbing.svg", details: "Straight climb, no turn" },
+                { heading: "Southwest", bank: "Level", pitch: "Descending", desc: "Descending with wings level", img: "images/attitude-descending.svg", details: "Straight descent, no turn" }
             ];
             
-            const correct = attitudes[Math.floor(Math.random() * attitudes.length)];
+            // Advanced: Combined maneuvers (9 questions)
+            const advancedAttitudes = [
+                { heading: "Northeast", bank: "Right 15°", pitch: "Climbing", desc: "Climbing right turn", img: "images/attitude-right-15.svg", details: "Banking right 15° while climbing" },
+                { heading: "Southeast", bank: "Left 25°", pitch: "Descending", desc: "Descending left turn", img: "images/attitude-left-25.svg", details: "Banking left 25° while descending" },
+                { heading: "Southwest", bank: "Right 30°", pitch: "Descending", desc: "Steep descending right turn", img: "images/attitude-right-30.svg", details: "Banking right 30° with nose down" },
+                { heading: "Northwest", bank: "Left 20°", pitch: "Climbing", desc: "Climbing left turn", img: "images/attitude-left-20.svg", details: "Banking left 20° while climbing" },
+                { heading: "East", bank: "Right 30°", pitch: "Climbing", desc: "Steep climbing right turn", img: "images/attitude-right-30.svg", details: "Right 30° bank with climb" },
+                { heading: "West", bank: "Left 25°", pitch: "Climbing", desc: "Moderate climbing left turn", img: "images/attitude-left-25.svg", details: "Left 25° bank while ascending" },
+                { heading: "North", bank: "Right 15°", pitch: "Descending", desc: "Descending right turn", img: "images/attitude-right-15.svg", details: "Right 15° bank with descent" },
+                { heading: "South", bank: "Left 20°", pitch: "Descending", desc: "Descending left turn", img: "images/attitude-left-20.svg", details: "Left 20° bank while descending" },
+                { heading: "Northeast", bank: "Right 30°", pitch: "Level", desc: "Steep level right turn", img: "images/attitude-right-30.svg", details: "Sharp turn without altitude change" }
+            ];
             
-            // Generate distractors
+            // Expert: Precise identification with specific angles (9 questions)
+            const expertAttitudes = [
+                { heading: "045°", bank: "Right 15°", pitch: "5° climb", desc: "Right 15° bank, 5° nose up, heading 045°", img: "images/attitude-right-15.svg", details: "Shallow climbing right turn to northeast" },
+                { heading: "135°", bank: "Left 25°", pitch: "10° descent", desc: "Left 25° bank, 10° nose down, heading 135°", img: "images/attitude-left-25.svg", details: "Medium descending left turn to southeast" },
+                { heading: "225°", bank: "Right 30°", pitch: "Level", desc: "Right 30° bank, level pitch, heading 225°", img: "images/attitude-right-30.svg", details: "Steep right turn to southwest" },
+                { heading: "315°", bank: "Left 20°", pitch: "8° climb", desc: "Left 20° bank, 8° nose up, heading 315°", img: "images/attitude-left-20.svg", details: "Moderate climbing left turn to northwest" },
+                { heading: "090°", bank: "Right 30°", pitch: "12° descent", desc: "Right 30° bank, 12° nose down, heading 090°", img: "images/attitude-right-30.svg", details: "Steep descending right turn to east" },
+                { heading: "180°", bank: "Left 25°", pitch: "6° climb", desc: "Left 25° bank, 6° nose up, heading 180°", img: "images/attitude-left-25.svg", details: "Medium climbing left turn to south" },
+                { heading: "270°", bank: "Right 15°", pitch: "3° descent", desc: "Right 15° bank, 3° nose down, heading 270°", img: "images/attitude-right-15.svg", details: "Shallow descending right turn to west" },
+                { heading: "000°", bank: "Left 20°", pitch: "Level", desc: "Left 20° bank, level pitch, heading 000°", img: "images/attitude-left-20.svg", details: "Moderate left turn to north" },
+                { heading: "060°", bank: "Right 30°", pitch: "10° climb", desc: "Right 30° bank, 10° nose up, heading 060°", img: "images/attitude-right-30.svg", details: "Steep climbing right turn to ENE" }
+            ];
+            
+            let attitudes;
+            if (difficulty === 'expert') {
+                attitudes = expertAttitudes;
+            } else if (difficulty === 'advanced') {
+                attitudes = advancedAttitudes;
+            } else {
+                attitudes = beginnerAttitudes;
+            }
+            
+            const correct = attitudes[Math.floor(Math.random() * attitudes.length)];
             const otherAttitudes = attitudes.filter(a => a !== correct);
             const shuffledOthers = shuffleArray(otherAttitudes);
             const distractors = shuffledOthers.slice(0, 3);
@@ -1564,11 +1599,293 @@ const instrumentTopics = [
             const shuffled = shuffleArray(allOptions);
             
             return {
-                prompt: `Based on the instrument panel shown, the aircraft is:\nHeading: ${correct.heading}\nBank: ${correct.bank}\nPitch: ${correct.pitch}\n\nWhat is the aircraft attitude?`,
+                prompt: `What is the aircraft's attitude in the instrument panel shown?`,
                 options: shuffled.map(a => a.desc),
                 correctIndex: shuffled.indexOf(correct),
-                explanation: `The correct interpretation is: ${correct.desc}`,
+                explanation: `The correct interpretation is: ${correct.desc}. ${correct.details}`,
                 image: correct.img
+            };
+        }
+    },
+    {
+        id: 'aircraft-controls',
+        name: 'Aircraft Control Surfaces',
+        description: 'Understanding control surface functions',
+        subjectId: 'instrument',
+        generateQuestion: (difficulty = 'beginner') => {
+            // Beginner: Single control surface identification (9 questions)
+            const beginnerQuestions = [
+                {
+                    prompt: "Which control surface is primarily responsible for controlling the aircraft's roll (banking)?",
+                    correct: "Ailerons",
+                    wrong: ["Elevator", "Rudder", "Flaps"],
+                    explanation: "Ailerons are located on the outer trailing edge of the wings and control roll by moving oppositely to each other."
+                },
+                {
+                    prompt: "Which control surface controls the aircraft's pitch (nose up/down)?",
+                    correct: "Elevator",
+                    wrong: ["Ailerons", "Rudder", "Spoilers"],
+                    explanation: "The elevator is on the horizontal stabilizer and controls pitch by deflecting up or down."
+                },
+                {
+                    prompt: "Which control surface controls the aircraft's yaw (left/right turning)?",
+                    correct: "Rudder",
+                    wrong: ["Ailerons", "Elevator", "Trim tabs"],
+                    explanation: "The rudder is on the vertical stabilizer and controls yaw by deflecting left or right."
+                },
+                {
+                    prompt: "What axis does the elevator control?",
+                    correct: "Lateral axis (pitch)",
+                    wrong: ["Longitudinal axis (roll)", "Vertical axis (yaw)", "Diagonal axis"],
+                    explanation: "The elevator controls rotation around the lateral axis, which produces pitch changes."
+                },
+                {
+                    prompt: "To roll the aircraft to the right, which aileron moves up?",
+                    correct: "Right aileron",
+                    wrong: ["Left aileron", "Both ailerons", "Neither aileron"],
+                    explanation: "To roll right, the right aileron moves up (reducing lift on right wing) while the left aileron moves down."
+                },
+                {
+                    prompt: "What axis does the rudder control?",
+                    correct: "Vertical axis (yaw)",
+                    wrong: ["Lateral axis (pitch)", "Longitudinal axis (roll)", "Horizontal axis"],
+                    explanation: "The rudder controls rotation around the vertical axis, creating left or right yaw."
+                },
+                {
+                    prompt: "What axis do the ailerons control?",
+                    correct: "Longitudinal axis (roll)",
+                    wrong: ["Lateral axis (pitch)", "Vertical axis (yaw)", "Transverse axis"],
+                    explanation: "Ailerons control rotation around the longitudinal axis, causing the aircraft to roll left or right."
+                },
+                {
+                    prompt: "Where is the elevator typically located on an aircraft?",
+                    correct: "On the horizontal stabilizer at the tail",
+                    wrong: ["On the wings near the fuselage", "On the vertical stabilizer", "On the nose section"],
+                    explanation: "The elevator is mounted on the horizontal stabilizer (tail plane) and moves to control pitch."
+                },
+                {
+                    prompt: "When the pilot pushes the control yoke/stick forward, which direction does the elevator deflect?",
+                    correct: "Downward",
+                    wrong: ["Upward", "To the left", "To the right"],
+                    explanation: "Pushing forward deflects the elevator down, creating an upward force on the tail that pitches the nose down."
+                }
+            ];
+            
+            // Advanced: Combined controls and effects
+            const advancedQuestions = [
+                {
+                    prompt: "To execute a coordinated right turn, which combination of controls is needed?",
+                    correct: "Right aileron down, left aileron up, rudder right",
+                    wrong: ["Right aileron up, left aileron down, rudder left", "Both ailerons down, rudder right", "Elevator up, rudder right"],
+                    explanation: "A coordinated turn requires aileron input for bank and rudder input to prevent adverse yaw."
+                },
+                {
+                    prompt: "What happens when the pilot pulls back on the control yoke?",
+                    correct: "Elevator deflects up, nose pitches up",
+                    wrong: ["Elevator deflects down, nose pitches down", "Ailerons deflect up, aircraft rolls", "Rudder deflects, aircraft yaws"],
+                    explanation: "Pulling back raises the elevator's trailing edge, creating downward force on the tail and pitching the nose up."
+                },
+                {
+                    prompt: "During a left climbing turn, which three controls are coordinated?",
+                    correct: "Left aileron down, right aileron up, rudder left, elevator up",
+                    wrong: ["Left aileron up, rudder right, elevator down", "Both ailerons up, rudder left, elevator up", "Left aileron down, rudder right, elevator up"],
+                    explanation: "A climbing left turn requires left bank (ailerons), left yaw (rudder), and pitch up (elevator)."
+                },
+                {
+                    prompt: "What is 'adverse yaw' and which control surface corrects it?",
+                    correct: "Unwanted yaw during roll, corrected by rudder",
+                    wrong: ["Unwanted roll during yaw, corrected by ailerons", "Unwanted pitch during turn, corrected by elevator", "Excessive bank angle, corrected by trim"],
+                    explanation: "Adverse yaw occurs when the down aileron creates more drag, causing unwanted yaw opposite to the roll direction. Rudder corrects this."
+                },
+                {
+                    prompt: "In a steep right bank (45°), what additional control input is typically needed?",
+                    correct: "Back pressure on elevator to maintain altitude",
+                    wrong: ["Forward pressure on elevator to prevent climb", "Left rudder to prevent right yaw", "No additional input needed"],
+                    explanation: "In steep banks, vertical lift component decreases, requiring increased elevator back pressure to maintain altitude."
+                }
+            ];
+            
+            // Expert: Complex scenarios and aerodynamics
+            const expertQuestions = [
+                {
+                    prompt: "During a spin recovery, what is the correct sequence of control inputs?",
+                    correct: "1) Reduce power, 2) Opposite rudder, 3) Forward elevator, 4) Neutral ailerons",
+                    wrong: ["1) Full power, 2) Aileron into spin, 3) Pull elevator back", "1) Opposite aileron, 2) Back elevator, 3) Full rudder", "1) Neutral all controls, 2) Wait for recovery"],
+                    explanation: "Standard spin recovery: PARE - Power idle, Ailerons neutral, Rudder opposite spin, Elevator forward to break stall."
+                },
+                {
+                    prompt: "What causes 'overbanking tendency' in steep turns and how is it corrected?",
+                    correct: "Outer wing travels faster creating more lift; corrected with opposite aileron pressure",
+                    wrong: ["Inner wing stalls first; corrected with rudder", "Centrifugal force pulls aircraft outward; corrected with elevator", "Weight shifts to lower wing; no correction needed"],
+                    explanation: "In steep turns, the outer wing travels a longer path at higher speed, generating more lift and increasing bank. This requires opposite aileron to maintain constant bank."
+                },
+                {
+                    prompt: "During a power-off stall, why might the left wing drop first in a typical single-engine aircraft?",
+                    correct: "P-factor and torque create asymmetric airflow, left wing stalls first",
+                    wrong: ["Right wing always generates more lift at slow speeds", "Pilot weight is typically on left side", "Ailerons are designed with left bias"],
+                    explanation: "Propeller torque and P-factor (asymmetric thrust) create left-turning tendencies. At high angle of attack, the left wing may reach critical angle first."
+                },
+                {
+                    prompt: "What is the purpose of differential ailerons and when are they most beneficial?",
+                    correct: "Up aileron deflects more than down, reduces adverse yaw during roll entry",
+                    wrong: ["Both ailerons move equally, improves roll rate at high speed", "Down aileron deflects more, prevents tip stall", "Ailerons move in same direction, assists rudder"],
+                    explanation: "Differential ailerons have greater upward deflection than downward, creating more drag on the rising wing to counteract adverse yaw."
+                },
+                {
+                    prompt: "In a sideslip maneuver, how are the controls crossed?",
+                    correct: "Bank one direction with aileron, opposite rudder to prevent turn",
+                    wrong: ["Rudder and aileron in same direction for tight turn", "Elevator up, rudder neutral, ailerons neutral", "Both ailerons up, rudder centered"],
+                    explanation: "A sideslip uses crossed controls: bank with ailerons while applying opposite rudder to maintain heading, useful for crosswind landings or losing altitude."
+                }
+            ];
+            
+            let questions;
+            if (difficulty === 'expert') {
+                questions = expertQuestions;
+            } else if (difficulty === 'advanced') {
+                questions = advancedQuestions;
+            } else {
+                questions = beginnerQuestions;
+            }
+            
+            const q = questions[Math.floor(Math.random() * questions.length)];
+            const options = shuffleArray([q.correct, ...q.wrong]);
+            
+            return {
+                prompt: q.prompt,
+                options: options,
+                correctIndex: options.indexOf(q.correct),
+                explanation: q.explanation,
+                image: "images/aircraft-controls.svg"
+            };
+        }
+    },
+    {
+        id: 'aircraft-forces',
+        name: 'Four Forces of Flight',
+        description: 'Lift, Weight, Thrust, and Drag',
+        subjectId: 'instrument',
+        generateQuestion: (difficulty = 'beginner') => {
+            // Beginner: Basic force identification and direction
+            const beginnerQuestions = [
+                {
+                    prompt: "Which force acts upward on an aircraft in flight?",
+                    correct: "Lift",
+                    wrong: ["Weight", "Thrust", "Drag"],
+                    explanation: "Lift is the upward force created by the wings that opposes weight and keeps the aircraft airborne."
+                },
+                {
+                    prompt: "Which force always acts downward toward the center of the Earth?",
+                    correct: "Weight",
+                    wrong: ["Lift", "Thrust", "Drag"],
+                    explanation: "Weight is the downward force of gravity acting on the aircraft's mass."
+                },
+                {
+                    prompt: "Which force propels the aircraft forward?",
+                    correct: "Thrust",
+                    wrong: ["Lift", "Weight", "Drag"],
+                    explanation: "Thrust is the forward force produced by the engine/propeller that overcomes drag."
+                },
+                {
+                    prompt: "Which force opposes the aircraft's motion through the air?",
+                    correct: "Drag",
+                    wrong: ["Lift", "Weight", "Thrust"],
+                    explanation: "Drag is the rearward force caused by air resistance that opposes thrust."
+                },
+                {
+                    prompt: "In straight and level flight at constant speed, what is true about the four forces?",
+                    correct: "Lift equals Weight, Thrust equals Drag",
+                    wrong: ["All four forces are equal", "Thrust is greater than all other forces", "Weight is greater than Lift"],
+                    explanation: "In equilibrium flight, opposing forces are balanced: Lift = Weight and Thrust = Drag."
+                }
+            ];
+            
+            // Advanced: Force relationships and changes
+            const advancedQuestions = [
+                {
+                    prompt: "What happens to lift when the aircraft's angle of attack increases (up to the critical angle)?",
+                    correct: "Lift increases due to greater pressure differential",
+                    wrong: ["Lift decreases due to increased drag", "Lift remains constant", "Lift becomes negative"],
+                    explanation: "As angle of attack increases, the pressure differential between upper and lower wing surfaces increases, generating more lift until the critical angle is reached."
+                },
+                {
+                    prompt: "During a climb at constant airspeed, which forces are NOT equal?",
+                    correct: "Lift is less than Weight (vertical component of thrust helps support aircraft)",
+                    wrong: ["Lift equals Weight exactly", "Thrust is less than Drag", "All forces remain balanced as in level flight"],
+                    explanation: "In a climb, lift is less than weight because a component of thrust is directed upward, helping support the aircraft."
+                },
+                {
+                    prompt: "What are the two main types of drag?",
+                    correct: "Parasite drag and Induced drag",
+                    wrong: ["Front drag and Rear drag", "Wing drag and Fuselage drag", "Fast drag and Slow drag"],
+                    explanation: "Total drag consists of parasite drag (form, friction, interference) and induced drag (byproduct of lift generation)."
+                },
+                {
+                    prompt: "How does induced drag change with airspeed?",
+                    correct: "Induced drag decreases as speed increases",
+                    wrong: ["Induced drag increases as speed increases", "Induced drag remains constant", "Induced drag is independent of speed"],
+                    explanation: "Induced drag is inversely proportional to the square of airspeed - it's highest at low speeds and decreases as speed increases."
+                },
+                {
+                    prompt: "In a steady descent at constant airspeed, how does thrust compare to drag?",
+                    correct: "Thrust is less than Drag (gravity provides additional forward component)",
+                    wrong: ["Thrust equals Drag", "Thrust is greater than Drag", "Thrust and Drag are not related in descents"],
+                    explanation: "During descent, a component of weight acts forward along the flight path, so less thrust is needed than drag."
+                }
+            ];
+            
+            // Expert: Complex force interactions and performance
+            const expertQuestions = [
+                {
+                    prompt: "At what airspeed does total drag reach its minimum, and what is this speed called?",
+                    correct: "Where induced drag equals parasite drag; called L/D max or best glide speed",
+                    wrong: ["At maximum airspeed; called Vne", "At minimum controllable airspeed; called Vmc", "At cruise speed; called Vc"],
+                    explanation: "Total drag is minimized where the induced drag curve intersects the parasite drag curve. This is L/D max, the most efficient flight condition."
+                },
+                {
+                    prompt: "What is 'ground effect' and how does it affect the four forces during landing?",
+                    correct: "Reduced induced drag and increased lift due to disruption of wingtip vortices near ground",
+                    wrong: ["Increased drag due to ground friction on wheels", "Decreased lift due to downwash interference", "No effect on forces, only on handling"],
+                    explanation: "Ground effect occurs within one wingspan of the surface. The ground disrupts wingtip vortices, reducing induced drag and slightly increasing lift efficiency."
+                },
+                {
+                    prompt: "How does the lift equation (L = CL × ½ρV²S) change with altitude at constant airspeed and angle of attack?",
+                    correct: "Lift decreases because air density (ρ) decreases with altitude",
+                    wrong: ["Lift increases due to less air resistance", "Lift remains constant as speed compensates", "Lift increases because wing efficiency improves"],
+                    explanation: "At higher altitudes, lower air density (ρ) reduces lift for the same airspeed and angle of attack. Aircraft must fly faster or at higher angle of attack to maintain altitude."
+                },
+                {
+                    prompt: "What is 'region of reversed command' and why is it dangerous?",
+                    correct: "Flight regime where more power is needed to fly slower; risk of settling with power on",
+                    wrong: ["High-speed regime where controls reverse; causes loss of control", "Inverted flight where lift acts downward; very unstable", "Supersonic regime where shockwaves form; structural danger"],
+                    explanation: "Behind the drag curve (below L/D max speed), induced drag dominates and increases rapidly at slower speeds, requiring more power to maintain altitude - counterintuitive and dangerous if not managed properly."
+                },
+                {
+                    prompt: "In a coordinated level turn, how does the required lift compare to straight-and-level flight, and what generates this additional lift?",
+                    correct: "Lift must increase by the load factor (1/cos(bank angle)); generated by increased angle of attack",
+                    wrong: ["Lift remains the same; turn is generated by redirecting existing lift", "Lift decreases; centrifugal force helps support the aircraft", "Lift doubles in all turns regardless of bank angle"],
+                    explanation: "In a turn, lift must both support weight and provide centripetal force. A 60° bank requires 2G (twice the lift). This is achieved by increasing angle of attack, which also increases induced drag and requires more power."
+                }
+            ];
+            
+            let questions;
+            if (difficulty === 'expert') {
+                questions = expertQuestions;
+            } else if (difficulty === 'advanced') {
+                questions = advancedQuestions;
+            } else {
+                questions = beginnerQuestions;
+            }
+            
+            const q = questions[Math.floor(Math.random() * questions.length)];
+            const options = shuffleArray([q.correct, ...q.wrong]);
+            
+            return {
+                prompt: q.prompt,
+                options: options,
+                correctIndex: options.indexOf(q.correct),
+                explanation: q.explanation,
+                image: "images/aircraft-forces.svg"
             };
         }
     }
