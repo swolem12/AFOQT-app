@@ -5857,6 +5857,74 @@ function attachEventListeners() {
             loadStruggleScoresBtn.textContent = 'Calculating...';
         });
     }
+    
+    // Scroll-aware FAB behavior for quiz action buttons
+    initScrollAwareFAB();
+}
+
+// Scroll-aware floating action button configuration
+const SCROLL_FAB_CONFIG = {
+    SCROLL_THRESHOLD: 50,     // Pixels to scroll before hiding
+    AUTO_SHOW_DELAY: 1000     // Milliseconds before auto-showing buttons
+};
+
+// Initialize scroll-aware floating action button behavior
+let scrollAwareFABInitialized = false;
+let lastScrollY = 0;
+let scrollTimeout = null;
+
+function initScrollAwareFAB() {
+    const quizButtons = document.querySelector('.quiz-action-buttons');
+    if (!quizButtons) {
+        // Clean up listener if not on quiz screen
+        // This runs automatically on every render when navigating away from quiz
+        if (scrollAwareFABInitialized) {
+            window.removeEventListener('scroll', handleScrollForFAB);
+            scrollAwareFABInitialized = false;
+            // Reset to current position to avoid incorrect direction detection
+            lastScrollY = window.scrollY || window.pageYOffset;
+        }
+        return;
+    }
+    
+    // Initialize only once per quiz session
+    if (!scrollAwareFABInitialized) {
+        lastScrollY = window.scrollY || window.pageYOffset; // Initialize to current position
+        window.addEventListener('scroll', handleScrollForFAB, { passive: true });
+        scrollAwareFABInitialized = true;
+    }
+}
+
+function handleScrollForFAB() {
+    const quizButtons = document.querySelector('.quiz-action-buttons');
+    if (!quizButtons) return;
+    
+    const currentScrollY = window.scrollY || window.pageYOffset;
+    
+    // Clear existing timeout
+    if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+    }
+    
+    // Always show buttons at the top of the page
+    if (currentScrollY < SCROLL_FAB_CONFIG.SCROLL_THRESHOLD) {
+        quizButtons.classList.remove('fab-hidden');
+    }
+    // Scrolling down - hide buttons (reduce opacity)
+    else if (currentScrollY > lastScrollY && currentScrollY > SCROLL_FAB_CONFIG.SCROLL_THRESHOLD) {
+        quizButtons.classList.add('fab-hidden');
+    } 
+    // Scrolling up - show buttons
+    else if (currentScrollY < lastScrollY) {
+        quizButtons.classList.remove('fab-hidden');
+    }
+    
+    // Auto-show after scroll stops
+    scrollTimeout = setTimeout(() => {
+        quizButtons.classList.remove('fab-hidden');
+    }, SCROLL_FAB_CONFIG.AUTO_SHOW_DELAY);
+    
+    lastScrollY = currentScrollY;
 }
 
 // ============================================================================
