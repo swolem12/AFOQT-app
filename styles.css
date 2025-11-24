@@ -976,8 +976,8 @@ body:has(.floating-nav) .action-buttons:not(.quiz-action-buttons) {
 }
 
 /* Floating action buttons for quiz screen - always visible */
-.quiz-action-buttons {
-    position: fixed !important;
+.action-buttons.quiz-action-buttons {
+    position: fixed;
     bottom: 20px;
     right: 20px;
     display: flex;
@@ -986,6 +986,10 @@ body:has(.floating-nav) .action-buttons:not(.quiz-action-buttons) {
     z-index: 1000;
     pointer-events: none; /* Allow clicking through the container */
     /* Remove the old full-width background gradient */
+    margin: 0; /* Override default margin */
+    padding: 0; /* Override default padding */
+    justify-content: flex-end; /* Override default justify */
+    flex-wrap: nowrap; /* Override default wrap */
 }
 
 .quiz-action-buttons .btn {
