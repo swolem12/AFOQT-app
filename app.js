@@ -4520,6 +4520,7 @@ function renderHome() {
                 `).join('')}
             </div>
         </div>
+        ${renderFloatingNav({ showBack: false })}
         
         ${renderPlayerModal()}
     `;
@@ -4828,6 +4829,7 @@ function renderQuiz() {
                 ` : ''}
             </div>
         </div>
+        ${renderFloatingNav({ showBack: false })}
     `;
 }
 
