@@ -970,8 +970,8 @@ body::after {
     margin-top: 30px;
 }
 
-/* Sticky action buttons for quiz screen */
-.quiz-action-buttons {
+/* Legacy sticky action buttons - replaced by floating-nav */
+/* .quiz-action-buttons {
     position: sticky;
     bottom: 0;
     left: 0;
@@ -987,7 +987,7 @@ body::after {
     z-index: 100;
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.8);
     border-top: 1px solid rgba(0, 255, 255, 0.2);
-}
+} */
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -5926,6 +5926,7 @@ textarea {
     flex-direction: column;
     gap: 10px;
     z-index: 1000;
+    pointer-events: none; /* Allow clicking through the container */
 }
 
 .floating-nav-btn {
@@ -5935,6 +5936,7 @@ textarea {
     padding: 12px 20px;
     font-size: 1rem;
     font-family: 'Courier New', monospace;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 8px;
     box-shadow: 0 0 15px var(--color-primary-glow);
@@ -5942,16 +5944,18 @@ textarea {
     text-shadow: 0 0 5px var(--color-primary);
     min-width: 120px;
     text-align: center;
+    pointer-events: auto; /* Re-enable pointer events for buttons */
+    backdrop-filter: blur(5px); /* Slight blur for better readability */
 }
 
 .floating-nav-btn:hover {
     background: var(--color-primary-dim);
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.05);
     box-shadow: 0 0 25px var(--color-primary-glow);
 }
 
 .floating-nav-btn:active {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
 
 @media (max-width: 768px) {

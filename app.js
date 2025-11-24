@@ -3654,14 +3654,20 @@ function renderFloatingNav(options = {}) {
     const showHome = options.showHome !== false; // default true
     const backAction = options.backAction || null;
     const backLabel = options.backLabel || '← Back';
+    const customButtons = options.customButtons || []; // Array of {id, label} objects
     
-    if (!showBack && !showHome) return '';
+    if (!showBack && !showHome && customButtons.length === 0) return '';
     
     let buttons = [];
     
     if (showBack && backAction) {
         buttons.push(`<button class="floating-nav-btn" id="floating-back-btn">${backLabel}</button>`);
     }
+    
+    // Add custom buttons before home button
+    customButtons.forEach(btn => {
+        buttons.push(`<button class="floating-nav-btn" id="${btn.id}">${btn.label}</button>`);
+    });
     
     if (showHome) {
         buttons.push(`<button class="floating-nav-btn" id="floating-home-btn">🏠 Home</button>`);
@@ -3882,10 +3888,6 @@ function renderSubject() {
                     </div>
                 `).join('')}
             </div>
-            
-            <div class="action-buttons">
-                <button class="btn" id="home-btn">← Home</button>
-            </div>
         </div>
         ${renderFloatingNav()}
     `;
@@ -3933,10 +3935,6 @@ function renderModeSelect() {
                     </div>
                 </div>
             </div>
-            
-            <div class="action-buttons">
-                <button class="btn" id="back-to-subject-btn">← Back to Topics</button>
-            </div>
         </div>
         ${renderFloatingNav({ backAction: 'subject', backLabel: '← Topics' })}
     `;
@@ -3983,10 +3981,6 @@ function renderDifficultySelect() {
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="action-buttons">
-                <button class="btn" id="back-to-mode-btn">← Back to Modes</button>
             </div>
         </div>
         ${renderFloatingNav({ backAction: 'mode', backLabel: '← Modes' })}
@@ -4105,15 +4099,16 @@ function renderQuiz() {
                     </div>
                 </div>
             ` : ''}
-            
-            <div class="action-buttons quiz-action-buttons">
-                <button class="btn" id="home-btn">← Home</button>
-                ${answered ? `
-                    <button class="btn" id="next-btn">
-                        ${state.quiz.currentIndex < state.quiz.questions.length - 1 ? 'Next →' : 'Finish'}
-                    </button>
-                ` : ''}
-            </div>
+        </div>
+        
+        <!-- Floating navigation buttons -->
+        <div class="floating-nav">
+            <button class="floating-nav-btn" id="home-btn">🏠 Home</button>
+            ${answered ? `
+                <button class="floating-nav-btn" id="next-btn">
+                    ${state.quiz.currentIndex < state.quiz.questions.length - 1 ? 'Next →' : 'Finish ✓'}
+                </button>
+            ` : ''}
         </div>
     `;
 }
@@ -4218,13 +4213,8 @@ function renderResults() {
                     </div>
                 </div>
             ` : ''}
-            
-            <div class="action-buttons">
-                <button class="btn" id="home-btn">← Home</button>
-                <button class="btn" id="retry-btn">↻ Retry Topic</button>
-            </div>
         </div>
-        ${renderFloatingNav()}
+        ${renderFloatingNav({ customButtons: [{ id: 'retry-btn', label: '↻ Retry' }] })}
     `;
 }
 
