@@ -1238,18 +1238,7 @@ body.layout-orange-terminal .btn {
 }
 
 /* Pink Mech Layout - Pink gundam cockpit with feminine touch */
-body.layout-pink-mech #app-root::before {
-    content: '♦ COMBAT SYSTEM ONLINE ♦';
-    position: fixed;
-    top: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--color-primary);
-    font-size: 10px;
-    letter-spacing: 3px;
-    z-index: 1000;
-    animation: pulse 2s ease-in-out infinite;
-}
+/* Removed floating "Combat System Online" text that was appearing behind content */
 
 body.layout-pink-mech .panel {
     border: 2px solid;

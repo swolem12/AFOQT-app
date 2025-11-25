@@ -6278,11 +6278,8 @@ function renderStatus() {
                     </div>
                 </div>
             </div>
-            
-            <div class="action-buttons quiz-action-buttons">
-                <button class="btn" id="home-btn">🏠 Home</button>
-            </div>
         </div>
+        ${renderFloatingNav({ showBack: false })}
     `;
 }
 
@@ -6454,11 +6451,8 @@ function renderEquipment() {
                     </div>
                 </div>
             </div>
-            
-            <div class="action-buttons quiz-action-buttons">
-                <button class="btn" id="home-btn">🏠 Home</button>
-            </div>
         </div>
+        ${renderFloatingNav({ showBack: false })}
     `;
 }
 
@@ -6670,11 +6664,8 @@ function renderAchievements() {
                     }).join('')}
                 </div>
             </div>
-            
-            <div class="action-buttons quiz-action-buttons">
-                <button class="btn" id="home-btn">🏠 Home</button>
-            </div>
         </div>
+        ${renderFloatingNav({ showBack: false })}
     `;
 }
 
@@ -7061,11 +7052,8 @@ function renderSettings() {
                     </div>
                 </div>
             </div>
-            
-            <div class="action-buttons quiz-action-buttons">
-                <button class="btn" id="home-btn">🏠 Home</button>
-            </div>
         </div>
+        ${renderFloatingNav({ showBack: false })}
     `;
 }
 
@@ -7075,10 +7063,8 @@ function renderAnalytics() {
             <div class="panel">
                 <h1 class="panel-header">Results & Analytics</h1>
                 <p style="text-align: center; margin: 40px 0; opacity: 0.7;">No session data available. Complete some quizzes to see your analytics!</p>
-                <div class="action-buttons quiz-action-buttons">
-                    <button class="btn" id="home-btn">🏠 Home</button>
-                </div>
             </div>
+            ${renderFloatingNav({ showBack: false })}
         `;
     }
     
@@ -7269,11 +7255,8 @@ function renderAnalytics() {
                     </div>
                 </div>
             </div>
-            
-            <div class="action-buttons quiz-action-buttons">
-                <button class="btn" id="home-btn">🏠 Home</button>
-            </div>
         </div>
+        ${renderFloatingNav({ showBack: false })}
     `;
 }
 
