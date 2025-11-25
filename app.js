@@ -4298,6 +4298,10 @@ function applyPanelStyle(panelStyle) {
         'panel-word-boxes', 'panel-yellow-mech'
     ];
     
+    // Also remove body-level panel style classes for global styling
+    const bodyPanelStyles = panelStyles.map(s => `panel-style-${s.replace('panel-', '')}`);
+    bodyPanelStyles.forEach(style => document.body.classList.remove(style));
+    
     allPanels.forEach(panel => {
         panelStyles.forEach(style => panel.classList.remove(style));
         
@@ -4306,6 +4310,11 @@ function applyPanelStyle(panelStyle) {
             panel.classList.add(`panel-${panelStyle}`);
         }
     });
+    
+    // Add body-level class for global styling (buttons, cards, etc.)
+    if (panelStyle !== 'default') {
+        document.body.classList.add(`panel-style-${panelStyle}`);
+    }
     
     // Store current panel style
     state.settings.panelStyle = panelStyle;

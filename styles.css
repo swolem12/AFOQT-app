@@ -836,34 +836,51 @@ body::after {
 }
 
 /* White SciFi 02 - Minimal tech frames with center line */
+/* White SciFi 02 - Intricate clipped corners with double borders and hash decorations */
 .panel-white-scifi02 {
     border: 2px solid var(--color-primary);
     border-radius: 0;
     position: relative;
+    /* Clipped corners - top-left and bottom-right beveled */
+    clip-path: polygon(
+        20px 0%, 100% 0%, 100% calc(100% - 20px),
+        calc(100% - 20px) 100%, 0% 100%, 0% 20px
+    );
+    background: linear-gradient(
+        145deg,
+        var(--color-bg-panel) 0%,
+        rgba(0, 0, 0, 0.95) 100%
+    );
 }
 
 .panel-white-scifi02::before {
     content: '';
     position: absolute;
-    inset: 8px;
+    inset: 6px;
     border: 1px solid var(--color-primary);
-    opacity: 0.3;
+    opacity: 0.5;
+    clip-path: polygon(
+        16px 0%, 100% 0%, 100% calc(100% - 16px),
+        calc(100% - 16px) 100%, 0% 100%, 0% 16px
+    );
+    pointer-events: none;
 }
 
 .panel-white-scifi02::after {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        var(--color-primary) 50%,
-        transparent 100%
+    bottom: 8px;
+    right: 8px;
+    width: 40px;
+    height: 12px;
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--color-primary) 0px,
+        var(--color-primary) 2px,
+        transparent 2px,
+        transparent 4px
     );
-    opacity: 0.1;
+    opacity: 0.6;
 }
 
 /* White SciFi 03 - Modern panels with corner brackets */
@@ -1848,6 +1865,288 @@ body.boot-retro-tech .boot-line {
 
 .grid-4 {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* ============================================
+   SCI-FI INTRICATE PANEL STYLE
+   Inspired by White SciFi 02 reference
+   Clipped corners, double borders, hash marks
+   ============================================ */
+
+/* Sci-Fi Panel - applies to cards and buttons when using .scifi-panel class */
+.scifi-panel {
+    position: relative;
+    background: linear-gradient(
+        145deg,
+        var(--color-bg-panel) 0%,
+        rgba(0, 0, 0, 0.95) 100%
+    );
+    border: 2px solid var(--color-primary);
+    border-radius: 0 !important;
+    /* Clipped corners - top-left and bottom-right beveled */
+    clip-path: polygon(
+        15px 0%, calc(100% - 0px) 0%, 100% 0px,
+        100% calc(100% - 15px), calc(100% - 15px) 100%,
+        0px 100%, 0% calc(100% - 0px), 0% 15px
+    );
+    overflow: visible;
+}
+
+/* Inner border effect */
+.scifi-panel::before {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border: 1px solid var(--color-primary);
+    opacity: 0.4;
+    clip-path: polygon(
+        12px 0%, calc(100% - 0px) 0%, 100% 0px,
+        100% calc(100% - 12px), calc(100% - 12px) 100%,
+        0px 100%, 0% calc(100% - 0px), 0% 12px
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Hash decoration in corner */
+.scifi-panel::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    width: 30px;
+    height: 8px;
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--color-primary) 0px,
+        var(--color-primary) 2px,
+        transparent 2px,
+        transparent 4px
+    );
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.scifi-panel:hover {
+    border-color: var(--color-primary);
+    box-shadow: 
+        0 0 20px var(--color-primary-glow),
+        0 0 40px var(--color-primary-dim),
+        inset 0 0 30px var(--color-primary-dim);
+}
+
+.scifi-panel:hover::before {
+    opacity: 0.7;
+}
+
+.scifi-panel:hover::after {
+    opacity: 0.8;
+}
+
+/* Apply Sci-Fi style globally when panel style is white-scifi02 */
+body.panel-style-white-scifi02 .subject-card,
+body.panel-style-white-scifi02 .topic-card,
+body.panel-style-white-scifi02 .mode-card,
+body.panel-style-white-scifi02 .difficulty-card {
+    background: linear-gradient(
+        145deg,
+        var(--color-bg-panel) 0%,
+        rgba(0, 0, 0, 0.95) 100%
+    ) !important;
+    border: 2px solid var(--color-primary) !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    /* Beveled corners - top-left and bottom-right cut */
+    clip-path: polygon(
+        16px 0%, 
+        100% 0%, 
+        100% calc(100% - 16px), 
+        calc(100% - 16px) 100%, 
+        0% 100%, 
+        0% 16px
+    ) !important;
+}
+
+body.panel-style-white-scifi02 .subject-card::before,
+body.panel-style-white-scifi02 .topic-card::before,
+body.panel-style-white-scifi02 .mode-card::before,
+body.panel-style-white-scifi02 .difficulty-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 5px !important;
+    left: 5px !important;
+    right: 5px !important;
+    bottom: 5px !important;
+    width: auto !important;
+    height: auto !important;
+    border: 1px solid var(--color-primary) !important;
+    opacity: 0.5 !important;
+    clip-path: polygon(
+        13px 0%, 
+        100% 0%, 
+        100% calc(100% - 13px), 
+        calc(100% - 13px) 100%, 
+        0% 100%, 
+        0% 13px
+    ) !important;
+    pointer-events: none !important;
+    background: transparent !important;
+    transform: none !important;
+    z-index: 1 !important;
+}
+
+body.panel-style-white-scifi02 .subject-card::after,
+body.panel-style-white-scifi02 .topic-card::after,
+body.panel-style-white-scifi02 .mode-card::after,
+body.panel-style-white-scifi02 .difficulty-card::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 8px !important;
+    right: 8px !important;
+    top: auto !important;
+    left: auto !important;
+    width: 30px !important;
+    height: 8px !important;
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--color-primary) 0px,
+        var(--color-primary) 2px,
+        transparent 2px,
+        transparent 4px
+    ) !important;
+    opacity: 0.6 !important;
+    border: none !important;
+    border-top: none !important;
+    border-right: none !important;
+    z-index: 2 !important;
+}
+
+body.panel-style-white-scifi02 .subject-card:hover::after,
+body.panel-style-white-scifi02 .topic-card:hover::after,
+body.panel-style-white-scifi02 .mode-card:hover::after,
+body.panel-style-white-scifi02 .difficulty-card:hover::after {
+    opacity: 0.8;
+    width: 40px;
+    height: 12px;
+    box-shadow: none;
+}
+
+/* Sci-Fi style for buttons */
+body.panel-style-white-scifi02 .btn {
+    border-radius: 0 !important;
+    clip-path: polygon(
+        8px 0%, 
+        100% 0%, 
+        100% calc(100% - 8px), 
+        calc(100% - 8px) 100%, 
+        0% 100%, 
+        0% 8px
+    ) !important;
+    position: relative;
+}
+
+body.panel-style-white-scifi02 .btn::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 3px !important;
+    right: 3px !important;
+    width: 16px !important;
+    height: 5px !important;
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--color-primary) 0px,
+        var(--color-primary) 1.5px,
+        transparent 1.5px,
+        transparent 3px
+    ) !important;
+    opacity: 0.5 !important;
+    pointer-events: none !important;
+}
+
+body.panel-style-white-scifi02 .btn:hover::after {
+    opacity: 0.8 !important;
+}
+
+/* Sci-Fi style for panels */
+body.panel-style-white-scifi02 .panel {
+    border-radius: 0 !important;
+    clip-path: polygon(
+        20px 0%, 
+        100% 0%, 
+        100% calc(100% - 20px), 
+        calc(100% - 20px) 100%, 
+        0% 100%, 
+        0% 20px
+    ) !important;
+}
+
+/* Top-left hash decoration for panels */
+body.panel-style-white-scifi02 .panel::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 12px !important;
+    left: 12px !important;
+    width: 40px !important;
+    height: 10px !important;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--color-primary) 0px,
+        var(--color-primary) 2px,
+        transparent 2px,
+        transparent 4px
+    ) !important;
+    opacity: 0.5 !important;
+    pointer-events: none !important;
+    z-index: 10 !important;
+}
+
+/* Small circle connector decoration */
+body.panel-style-white-scifi02 .panel-header::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 20%;
+    width: 8px;
+    height: 8px;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    background: transparent;
+    opacity: 0.6;
+}
+
+/* Quiz option cards with sci-fi style */
+body.panel-style-white-scifi02 .option-btn {
+    border-radius: 0;
+    clip-path: polygon(
+        12px 0%, calc(100% - 12px) 0%, 100% 12px,
+        100% calc(100% - 0px), calc(100% - 0px) 100%,
+        0px 100%, 0% calc(100% - 0px), 0% 12px
+    );
+}
+
+body.panel-style-white-scifi02 .option-btn::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid var(--color-primary);
+    opacity: 0.3;
+    clip-path: polygon(
+        10px 0%, calc(100% - 10px) 0%, 100% 10px,
+        100% calc(100% - 0px), calc(100% - 0px) 100%,
+        0px 100%, 0% calc(100% - 0px), 0% 10px
+    );
+    pointer-events: none;
+}
+
+/* Settings cards/boxes */
+body.panel-style-white-scifi02 .settings-section {
+    border-radius: 0;
+    clip-path: polygon(
+        15px 0%, calc(100% - 15px) 0%, 100% 15px,
+        100% calc(100% - 0px), calc(100% - 0px) 100%,
+        0px 100%, 0% calc(100% - 0px), 0% 15px
+    );
 }
 
 /* Player selection section */
