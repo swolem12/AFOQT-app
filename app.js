@@ -6436,7 +6436,7 @@ function renderEquipment() {
                                 <span class="subject-level-value">Level ${subject.level}</span>
                             </div>
                         `).join('')}
-                    ${Object.values(subjectLevels).every(s => s.statPoints === 0) ? '<p style="opacity: 0.7; text-align: center;">Complete quizzes to level up subjects!</p>' : ''}
+                        ${Object.values(subjectLevels).every(s => s.statPoints === 0) ? '<p style="opacity: 0.7; text-align: center;">Complete quizzes to level up subjects!</p>' : ''}
                     </div>
                 </div>
             </div>
@@ -6651,7 +6651,6 @@ function renderAchievements() {
                             </div>
                         `;
                     }).join('')}
-                </div>
                 </div>
             </div>
         </div>
