@@ -2198,6 +2198,56 @@ body.panel-style-blue-mech .difficulty-card::after {
     opacity: 0.7 !important;
 }
 
+/* Blue Mech - Enhanced internal artwork */
+body.panel-style-blue-mech .subject-card .tile-title,
+body.panel-style-blue-mech .topic-card .tile-title,
+body.panel-style-blue-mech .mode-card .tile-title {
+    position: relative;
+    padding-left: 15px;
+}
+
+body.panel-style-blue-mech .subject-card .tile-title::before,
+body.panel-style-blue-mech .topic-card .tile-title::before,
+body.panel-style-blue-mech .mode-card .tile-title::before {
+    content: '▶' !important;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-secondary);
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+/* Add diagonal stripe decoration */
+body.panel-style-blue-mech .subject-card,
+body.panel-style-blue-mech .topic-card,
+body.panel-style-blue-mech .mode-card {
+    background: 
+        linear-gradient(135deg, transparent 48%, var(--color-secondary) 48%, var(--color-secondary) 52%, transparent 52%) !important,
+        linear-gradient(145deg, var(--color-bg-panel) 0%, rgba(0, 0, 0, 0.95) 100%) !important;
+    background-size: 100% 100%, 100% 100%;
+}
+
+/* Add type label in corner */
+body.panel-style-blue-mech .subject-card::after {
+    content: 'TYPE ▶' !important;
+    position: absolute !important;
+    bottom: 8px !important;
+    right: 8px !important;
+    top: auto !important;
+    left: auto !important;
+    width: auto !important;
+    height: auto !important;
+    border: none !important;
+    transform: none !important;
+    font-size: 8px !important;
+    letter-spacing: 1px;
+    color: var(--color-secondary) !important;
+    opacity: 0.6 !important;
+    background: transparent !important;
+}
+
 body.panel-style-blue-mech .btn {
     border-radius: 0 !important;
     clip-path: polygon(
@@ -2277,6 +2327,19 @@ body.panel-style-cyberpunk01 .difficulty-card::after {
     opacity: 0.7 !important;
     border: none !important;
     background: transparent !important;
+}
+
+/* Cyberpunk 01 - Enhanced tile decorations */
+body.panel-style-cyberpunk01 .tile-title::before {
+    content: '// ' !important;
+    color: var(--color-secondary);
+    opacity: 0.7;
+}
+
+body.panel-style-cyberpunk01 .tile-title::after {
+    content: ' <';
+    color: var(--color-secondary);
+    opacity: 0.5;
 }
 
 body.panel-style-cyberpunk01 .btn {
@@ -2489,6 +2552,22 @@ body.panel-style-pink-mech .difficulty-card::after {
     opacity: 0.6 !important;
     border: none !important;
     background: transparent !important;
+}
+
+/* Pink Mech - Enhanced decorations */
+body.panel-style-pink-mech .tile-title::before {
+    content: '◆ ' !important;
+    color: var(--color-secondary);
+    opacity: 0.8;
+    font-size: 0.7em;
+}
+
+body.panel-style-pink-mech .subject-card,
+body.panel-style-pink-mech .topic-card,
+body.panel-style-pink-mech .mode-card {
+    box-shadow: 
+        inset 0 0 20px var(--color-primary-dim),
+        0 0 15px var(--color-primary-dim) !important;
 }
 
 body.panel-style-pink-mech .btn {
