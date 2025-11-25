@@ -836,34 +836,51 @@ body::after {
 }
 
 /* White SciFi 02 - Minimal tech frames with center line */
+/* White SciFi 02 - Intricate clipped corners with double borders and hash decorations */
 .panel-white-scifi02 {
     border: 2px solid var(--color-primary);
     border-radius: 0;
     position: relative;
+    /* Clipped corners - top-left and bottom-right beveled */
+    clip-path: polygon(
+        20px 0%, 100% 0%, 100% calc(100% - 20px),
+        calc(100% - 20px) 100%, 0% 100%, 0% 20px
+    );
+    background: linear-gradient(
+        145deg,
+        var(--color-bg-panel) 0%,
+        rgba(0, 0, 0, 0.95) 100%
+    );
 }
 
 .panel-white-scifi02::before {
     content: '';
     position: absolute;
-    inset: 8px;
+    inset: 6px;
     border: 1px solid var(--color-primary);
-    opacity: 0.3;
+    opacity: 0.5;
+    clip-path: polygon(
+        16px 0%, 100% 0%, 100% calc(100% - 16px),
+        calc(100% - 16px) 100%, 0% 100%, 0% 16px
+    );
+    pointer-events: none;
 }
 
 .panel-white-scifi02::after {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        var(--color-primary) 50%,
-        transparent 100%
+    bottom: 8px;
+    right: 8px;
+    width: 40px;
+    height: 12px;
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--color-primary) 0px,
+        var(--color-primary) 2px,
+        transparent 2px,
+        transparent 4px
     );
-    opacity: 0.1;
+    opacity: 0.6;
 }
 
 /* White SciFi 03 - Modern panels with corner brackets */
@@ -1848,6 +1865,1132 @@ body.boot-retro-tech .boot-line {
 
 .grid-4 {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* ============================================
+   SCI-FI INTRICATE PANEL STYLE
+   Inspired by White SciFi 02 reference
+   Clipped corners, double borders, hash marks
+   ============================================ */
+
+/* Sci-Fi Panel - applies to cards and buttons when using .scifi-panel class */
+.scifi-panel {
+    position: relative;
+    background: linear-gradient(
+        145deg,
+        var(--color-bg-panel) 0%,
+        rgba(0, 0, 0, 0.95) 100%
+    );
+    border: 2px solid var(--color-primary);
+    border-radius: 0 !important;
+    /* Clipped corners - top-left and bottom-right beveled */
+    clip-path: polygon(
+        15px 0%, 100% 0%, 100% 0%,
+        100% calc(100% - 15px), calc(100% - 15px) 100%,
+        0% 100%, 0% 100%, 0% 15px
+    );
+    overflow: visible;
+}
+
+/* Inner border effect */
+.scifi-panel::before {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border: 1px solid var(--color-primary);
+    opacity: 0.4;
+    clip-path: polygon(
+        12px 0%, 100% 0%, 100% 0%,
+        100% calc(100% - 12px), calc(100% - 12px) 100%,
+        0% 100%, 0% 100%, 0% 12px
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Hash decoration in corner */
+.scifi-panel::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    width: 30px;
+    height: 8px;
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--color-primary) 0px,
+        var(--color-primary) 2px,
+        transparent 2px,
+        transparent 4px
+    );
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.scifi-panel:hover {
+    border-color: var(--color-primary);
+    box-shadow: 
+        0 0 20px var(--color-primary-glow),
+        0 0 40px var(--color-primary-dim),
+        inset 0 0 30px var(--color-primary-dim);
+}
+
+.scifi-panel:hover::before {
+    opacity: 0.7;
+}
+
+.scifi-panel:hover::after {
+    opacity: 0.8;
+}
+
+/* Apply Sci-Fi style globally when panel style is white-scifi02 */
+body.panel-style-white-scifi02 .subject-card,
+body.panel-style-white-scifi02 .topic-card,
+body.panel-style-white-scifi02 .mode-card,
+body.panel-style-white-scifi02 .difficulty-card {
+    background: linear-gradient(
+        145deg,
+        var(--color-bg-panel) 0%,
+        rgba(0, 0, 0, 0.95) 100%
+    ) !important;
+    border: 2px solid var(--color-primary) !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    /* Beveled corners - top-left and bottom-right cut */
+    clip-path: polygon(
+        16px 0%, 
+        100% 0%, 
+        100% calc(100% - 16px), 
+        calc(100% - 16px) 100%, 
+        0% 100%, 
+        0% 16px
+    ) !important;
+}
+
+body.panel-style-white-scifi02 .subject-card::before,
+body.panel-style-white-scifi02 .topic-card::before,
+body.panel-style-white-scifi02 .mode-card::before,
+body.panel-style-white-scifi02 .difficulty-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 5px !important;
+    left: 5px !important;
+    right: 5px !important;
+    bottom: 5px !important;
+    width: auto !important;
+    height: auto !important;
+    border: 1px solid var(--color-primary) !important;
+    opacity: 0.5 !important;
+    clip-path: polygon(
+        13px 0%, 
+        100% 0%, 
+        100% calc(100% - 13px), 
+        calc(100% - 13px) 100%, 
+        0% 100%, 
+        0% 13px
+    ) !important;
+    pointer-events: none !important;
+    background: transparent !important;
+    transform: none !important;
+    z-index: 1 !important;
+}
+
+body.panel-style-white-scifi02 .subject-card::after,
+body.panel-style-white-scifi02 .topic-card::after,
+body.panel-style-white-scifi02 .mode-card::after,
+body.panel-style-white-scifi02 .difficulty-card::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 8px !important;
+    right: 8px !important;
+    top: auto !important;
+    left: auto !important;
+    width: 30px !important;
+    height: 8px !important;
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--color-primary) 0px,
+        var(--color-primary) 2px,
+        transparent 2px,
+        transparent 4px
+    ) !important;
+    opacity: 0.6 !important;
+    border: none !important;
+    border-top: none !important;
+    border-right: none !important;
+    z-index: 2 !important;
+}
+
+body.panel-style-white-scifi02 .subject-card:hover::after,
+body.panel-style-white-scifi02 .topic-card:hover::after,
+body.panel-style-white-scifi02 .mode-card:hover::after,
+body.panel-style-white-scifi02 .difficulty-card:hover::after {
+    opacity: 0.8;
+    width: 40px;
+    height: 12px;
+    box-shadow: none;
+}
+
+/* Sci-Fi style for buttons */
+body.panel-style-white-scifi02 .btn {
+    border-radius: 0 !important;
+    clip-path: polygon(
+        8px 0%, 
+        100% 0%, 
+        100% calc(100% - 8px), 
+        calc(100% - 8px) 100%, 
+        0% 100%, 
+        0% 8px
+    ) !important;
+    position: relative;
+}
+
+body.panel-style-white-scifi02 .btn::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 3px !important;
+    right: 3px !important;
+    width: 16px !important;
+    height: 5px !important;
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--color-primary) 0px,
+        var(--color-primary) 1.5px,
+        transparent 1.5px,
+        transparent 3px
+    ) !important;
+    opacity: 0.5 !important;
+    pointer-events: none !important;
+}
+
+body.panel-style-white-scifi02 .btn:hover::after {
+    opacity: 0.8 !important;
+}
+
+/* Sci-Fi style for panels */
+body.panel-style-white-scifi02 .panel {
+    border-radius: 0 !important;
+    clip-path: polygon(
+        20px 0%, 
+        100% 0%, 
+        100% calc(100% - 20px), 
+        calc(100% - 20px) 100%, 
+        0% 100%, 
+        0% 20px
+    ) !important;
+}
+
+/* Top-left hash decoration for panels */
+body.panel-style-white-scifi02 .panel::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 12px !important;
+    left: 12px !important;
+    width: 40px !important;
+    height: 10px !important;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--color-primary) 0px,
+        var(--color-primary) 2px,
+        transparent 2px,
+        transparent 4px
+    ) !important;
+    opacity: 0.5 !important;
+    pointer-events: none !important;
+    z-index: 10 !important;
+}
+
+/* Small circle connector decoration */
+body.panel-style-white-scifi02 .panel-header::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 20%;
+    width: 8px;
+    height: 8px;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    background: transparent;
+    opacity: 0.6;
+}
+
+/* Quiz option cards with sci-fi style */
+body.panel-style-white-scifi02 .option-btn {
+    border-radius: 0;
+    clip-path: polygon(
+        12px 0%, calc(100% - 12px) 0%, 100% 12px,
+        100% 100%, 100% 100%,
+        0% 100%, 0% 100%, 0% 12px
+    );
+}
+
+body.panel-style-white-scifi02 .option-btn::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid var(--color-primary);
+    opacity: 0.3;
+    clip-path: polygon(
+        10px 0%, calc(100% - 10px) 0%, 100% 10px,
+        100% 100%, 100% 100%,
+        0% 100%, 0% 100%, 0% 10px
+    );
+    pointer-events: none;
+}
+
+/* Settings cards/boxes */
+body.panel-style-white-scifi02 .settings-section {
+    border-radius: 0;
+    clip-path: polygon(
+        15px 0%, calc(100% - 15px) 0%, 100% 15px,
+        100% 100%, 100% 100%,
+        0% 100%, 0% 100%, 0% 15px
+    );
+}
+
+/* ============================================
+   BLUE MECH INTRICATE PANEL STYLE
+   EVA-00 inspired with angular cuts and accent stripes
+   ============================================ */
+body.panel-style-blue-mech .subject-card,
+body.panel-style-blue-mech .topic-card,
+body.panel-style-blue-mech .mode-card,
+body.panel-style-blue-mech .difficulty-card {
+    background: linear-gradient(145deg, var(--color-bg-panel) 0%, rgba(0, 0, 0, 0.95) 100%) !important;
+    border: 3px solid var(--color-primary) !important;
+    border-radius: 0 !important;
+    clip-path: polygon(
+        0 0, 100% 0, 100% calc(100% - 18px), 
+        calc(100% - 18px) 100%, 0 100%
+    ) !important;
+}
+
+body.panel-style-blue-mech .subject-card::before,
+body.panel-style-blue-mech .topic-card::before,
+body.panel-style-blue-mech .mode-card::before,
+body.panel-style-blue-mech .difficulty-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 6px !important;
+    left: 6px !important;
+    right: 6px !important;
+    bottom: 6px !important;
+    width: auto !important;
+    height: auto !important;
+    border: 1px solid var(--color-primary) !important;
+    opacity: 0.4 !important;
+    pointer-events: none !important;
+    background: transparent !important;
+    transform: none !important;
+    clip-path: polygon(
+        0 0, 100% 0, 100% calc(100% - 14px), 
+        calc(100% - 14px) 100%, 0 100%
+    ) !important;
+}
+
+body.panel-style-blue-mech .subject-card::after,
+body.panel-style-blue-mech .topic-card::after,
+body.panel-style-blue-mech .mode-card::after,
+body.panel-style-blue-mech .difficulty-card::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    left: auto !important;
+    width: 20px !important;
+    height: 20px !important;
+    border-left: 2px solid var(--color-secondary) !important;
+    border-top: 2px solid var(--color-secondary) !important;
+    transform: rotate(45deg) !important;
+    transform-origin: bottom right !important;
+    background: transparent !important;
+    opacity: 0.7 !important;
+}
+
+body.panel-style-blue-mech .btn {
+    border-radius: 0 !important;
+    clip-path: polygon(
+        0 0, 100% 0, 100% calc(100% - 10px), 
+        calc(100% - 10px) 100%, 0 100%
+    ) !important;
+}
+
+body.panel-style-blue-mech .panel {
+    border-radius: 0 !important;
+    clip-path: polygon(
+        0 0, 100% 0, 100% calc(100% - 25px), 
+        calc(100% - 25px) 100%, 0 100%
+    ) !important;
+}
+
+/* ============================================
+   CYBERPUNK 01 INTRICATE PANEL STYLE
+   Tech panels with circuit grid and corner cuts
+   ============================================ */
+body.panel-style-cyberpunk01 .subject-card,
+body.panel-style-cyberpunk01 .topic-card,
+body.panel-style-cyberpunk01 .mode-card,
+body.panel-style-cyberpunk01 .difficulty-card {
+    background: linear-gradient(145deg, var(--color-bg-panel) 0%, rgba(0, 0, 0, 0.95) 100%) !important;
+    border: 2px solid var(--color-primary) !important;
+    border-radius: 0 !important;
+    clip-path: polygon(
+        15px 0, 100% 0, 100% calc(100% - 15px),
+        calc(100% - 15px) 100%, 0 100%, 0 15px
+    ) !important;
+}
+
+body.panel-style-cyberpunk01 .subject-card::before,
+body.panel-style-cyberpunk01 .topic-card::before,
+body.panel-style-cyberpunk01 .mode-card::before,
+body.panel-style-cyberpunk01 .difficulty-card::before {
+    content: '' !important;
+    position: absolute !important;
+    inset: 8px !important;
+    width: auto !important;
+    height: auto !important;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        transparent 3px,
+        var(--color-primary) 3px,
+        var(--color-primary) 4px
+    ),
+    repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        transparent 3px,
+        var(--color-primary) 3px,
+        var(--color-primary) 4px
+    ) !important;
+    opacity: 0.05 !important;
+    pointer-events: none !important;
+    border: none !important;
+    transform: none !important;
+}
+
+body.panel-style-cyberpunk01 .subject-card::after,
+body.panel-style-cyberpunk01 .topic-card::after,
+body.panel-style-cyberpunk01 .mode-card::after,
+body.panel-style-cyberpunk01 .difficulty-card::after {
+    content: '◢' !important;
+    position: absolute !important;
+    top: 5px !important;
+    right: 5px !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: auto !important;
+    height: auto !important;
+    color: var(--color-primary) !important;
+    font-size: 10px !important;
+    opacity: 0.7 !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+body.panel-style-cyberpunk01 .btn {
+    border-radius: 0 !important;
+    clip-path: polygon(
+        8px 0, 100% 0, 100% calc(100% - 8px),
+        calc(100% - 8px) 100%, 0 100%, 0 8px
+    ) !important;
+}
+
+body.panel-style-cyberpunk01 .panel {
+    border-radius: 0 !important;
+    clip-path: polygon(
+        20px 0, 100% 0, 100% calc(100% - 20px),
+        calc(100% - 20px) 100%, 0 100%, 0 20px
+    ) !important;
+}
+
+/* ============================================
+   CYBERPUNK 02 INTRICATE PANEL STYLE
+   Circuit board style with gradient borders
+   ============================================ */
+body.panel-style-cyberpunk02 .subject-card,
+body.panel-style-cyberpunk02 .topic-card,
+body.panel-style-cyberpunk02 .mode-card,
+body.panel-style-cyberpunk02 .difficulty-card {
+    background: linear-gradient(145deg, var(--color-bg-panel) 0%, rgba(0, 0, 0, 0.95) 100%) !important;
+    border: 2px solid var(--color-primary) !important;
+    border-radius: 0 !important;
+    box-shadow: 
+        inset 2px 2px 0 var(--color-secondary),
+        inset -2px -2px 0 var(--color-primary) !important;
+}
+
+body.panel-style-cyberpunk02 .subject-card::before,
+body.panel-style-cyberpunk02 .topic-card::before,
+body.panel-style-cyberpunk02 .mode-card::before,
+body.panel-style-cyberpunk02 .difficulty-card::before {
+    content: '' !important;
+    position: absolute !important;
+    inset: 10px !important;
+    width: auto !important;
+    height: auto !important;
+    border: 1px dashed var(--color-primary) !important;
+    opacity: 0.3 !important;
+    pointer-events: none !important;
+    background: transparent !important;
+    transform: none !important;
+}
+
+body.panel-style-cyberpunk02 .subject-card::after,
+body.panel-style-cyberpunk02 .topic-card::after,
+body.panel-style-cyberpunk02 .mode-card::after,
+body.panel-style-cyberpunk02 .difficulty-card::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 4px !important;
+    left: 4px !important;
+    bottom: auto !important;
+    right: auto !important;
+    width: 8px !important;
+    height: 8px !important;
+    background: var(--color-primary) !important;
+    opacity: 0.5 !important;
+    border: none !important;
+}
+
+body.panel-style-cyberpunk02 .btn {
+    border-radius: 0 !important;
+    box-shadow: 
+        inset 1px 1px 0 var(--color-secondary),
+        inset -1px -1px 0 var(--color-primary) !important;
+}
+
+body.panel-style-cyberpunk02 .panel {
+    border-radius: 0 !important;
+}
+
+/* ============================================
+   GUNGALE INTRICATE PANEL STYLE
+   Avengers/Military HUD angular cuts
+   ============================================ */
+body.panel-style-gungale .subject-card,
+body.panel-style-gungale .topic-card,
+body.panel-style-gungale .mode-card,
+body.panel-style-gungale .difficulty-card {
+    background: linear-gradient(145deg, var(--color-bg-panel) 0%, rgba(0, 0, 0, 0.95) 100%) !important;
+    border: 3px solid var(--color-primary) !important;
+    border-radius: 0 !important;
+    clip-path: polygon(
+        0 0, calc(100% - 25px) 0, 100% 25px,
+        100% 100%, 25px 100%, 0 calc(100% - 25px)
+    ) !important;
+}
+
+body.panel-style-gungale .subject-card::before,
+body.panel-style-gungale .topic-card::before,
+body.panel-style-gungale .mode-card::before,
+body.panel-style-gungale .difficulty-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 8px !important;
+    left: 8px !important;
+    right: 8px !important;
+    bottom: 8px !important;
+    width: auto !important;
+    height: auto !important;
+    border: 1px solid var(--color-primary) !important;
+    opacity: 0.3 !important;
+    pointer-events: none !important;
+    background: transparent !important;
+    transform: none !important;
+    clip-path: polygon(
+        0 0, calc(100% - 18px) 0, 100% 18px,
+        100% 100%, 18px 100%, 0 calc(100% - 18px)
+    ) !important;
+}
+
+body.panel-style-gungale .subject-card::after,
+body.panel-style-gungale .topic-card::after,
+body.panel-style-gungale .mode-card::after,
+body.panel-style-gungale .difficulty-card::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-top: 25px solid var(--color-secondary) !important;
+    border-left: 25px solid transparent !important;
+    background: transparent !important;
+    opacity: 0.5 !important;
+}
+
+body.panel-style-gungale .btn {
+    border-radius: 0 !important;
+    clip-path: polygon(
+        0 0, calc(100% - 12px) 0, 100% 12px,
+        100% 100%, 12px 100%, 0 calc(100% - 12px)
+    ) !important;
+}
+
+body.panel-style-gungale .panel {
+    border-radius: 0 !important;
+    clip-path: polygon(
+        0 0, calc(100% - 30px) 0, 100% 30px,
+        100% 100%, 30px 100%, 0 calc(100% - 30px)
+    ) !important;
+}
+
+/* ============================================
+   PINK MECH INTRICATE PANEL STYLE
+   Elegant technical panels with diamond accents
+   ============================================ */
+body.panel-style-pink-mech .subject-card,
+body.panel-style-pink-mech .topic-card,
+body.panel-style-pink-mech .mode-card,
+body.panel-style-pink-mech .difficulty-card {
+    background: linear-gradient(145deg, var(--color-bg-panel) 0%, rgba(0, 0, 0, 0.95) 100%) !important;
+    border: 2px solid var(--color-primary) !important;
+    border-radius: 0 !important;
+    clip-path: polygon(
+        10px 0, calc(100% - 10px) 0, 100% 10px,
+        100% calc(100% - 10px), calc(100% - 10px) 100%,
+        10px 100%, 0 calc(100% - 10px), 0 10px
+    ) !important;
+}
+
+body.panel-style-pink-mech .subject-card::before,
+body.panel-style-pink-mech .topic-card::before,
+body.panel-style-pink-mech .mode-card::before,
+body.panel-style-pink-mech .difficulty-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 6px !important;
+    left: 6px !important;
+    right: 6px !important;
+    bottom: 6px !important;
+    width: auto !important;
+    height: auto !important;
+    border: 1px solid var(--color-primary) !important;
+    opacity: 0.4 !important;
+    pointer-events: none !important;
+    background: transparent !important;
+    transform: none !important;
+    clip-path: polygon(
+        8px 0, calc(100% - 8px) 0, 100% 8px,
+        100% calc(100% - 8px), calc(100% - 8px) 100%,
+        8px 100%, 0 calc(100% - 8px), 0 8px
+    ) !important;
+}
+
+body.panel-style-pink-mech .subject-card::after,
+body.panel-style-pink-mech .topic-card::after,
+body.panel-style-pink-mech .mode-card::after,
+body.panel-style-pink-mech .difficulty-card::after {
+    content: '◆' !important;
+    position: absolute !important;
+    top: 50% !important;
+    right: 8px !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: auto !important;
+    height: auto !important;
+    transform: translateY(-50%) !important;
+    color: var(--color-primary) !important;
+    font-size: 12px !important;
+    opacity: 0.6 !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+body.panel-style-pink-mech .btn {
+    border-radius: 0 !important;
+    clip-path: polygon(
+        6px 0, calc(100% - 6px) 0, 100% 6px,
+        100% calc(100% - 6px), calc(100% - 6px) 100%,
+        6px 100%, 0 calc(100% - 6px), 0 6px
+    ) !important;
+}
+
+body.panel-style-pink-mech .panel {
+    border-radius: 0 !important;
+    clip-path: polygon(
+        15px 0, calc(100% - 15px) 0, 100% 15px,
+        100% calc(100% - 15px), calc(100% - 15px) 100%,
+        15px 100%, 0 calc(100% - 15px), 0 15px
+    ) !important;
+}
+
+/* ============================================
+   PURPLE MECH INTRICATE PANEL STYLE
+   Similar to blue mech with gradient accents
+   ============================================ */
+body.panel-style-purple-mech .subject-card,
+body.panel-style-purple-mech .topic-card,
+body.panel-style-purple-mech .mode-card,
+body.panel-style-purple-mech .difficulty-card {
+    background: linear-gradient(145deg, var(--color-bg-panel) 0%, rgba(0, 0, 0, 0.95) 100%) !important;
+    border: 2px solid var(--color-primary) !important;
+    border-radius: 0 !important;
+    clip-path: polygon(
+        0 0, calc(100% - 15px) 0, 100% 15px,
+        100% 100%, 0 100%
+    ) !important;
+}
+
+body.panel-style-purple-mech .subject-card::before,
+body.panel-style-purple-mech .topic-card::before,
+body.panel-style-purple-mech .mode-card::before,
+body.panel-style-purple-mech .difficulty-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 5px !important;
+    left: 5px !important;
+    right: 5px !important;
+    bottom: 5px !important;
+    width: auto !important;
+    height: auto !important;
+    border: 1px solid var(--color-primary) !important;
+    opacity: 0.3 !important;
+    pointer-events: none !important;
+    background: transparent !important;
+    transform: none !important;
+    clip-path: polygon(
+        0 0, calc(100% - 12px) 0, 100% 12px,
+        100% 100%, 0 100%
+    ) !important;
+}
+
+body.panel-style-purple-mech .subject-card::after,
+body.panel-style-purple-mech .topic-card::after,
+body.panel-style-purple-mech .mode-card::after,
+body.panel-style-purple-mech .difficulty-card::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-top: 15px solid var(--color-secondary) !important;
+    border-left: 15px solid transparent !important;
+    background: transparent !important;
+    opacity: 0.6 !important;
+}
+
+body.panel-style-purple-mech .btn {
+    border-radius: 0 !important;
+    clip-path: polygon(
+        0 0, calc(100% - 8px) 0, 100% 8px,
+        100% 100%, 0 100%
+    ) !important;
+}
+
+body.panel-style-purple-mech .panel {
+    border-radius: 0 !important;
+    clip-path: polygon(
+        0 0, calc(100% - 20px) 0, 100% 20px,
+        100% 100%, 0 100%
+    ) !important;
+}
+
+/* ============================================
+   UNICORN RX-0 INTRICATE PANEL STYLE
+   Clean lines with corner brackets
+   ============================================ */
+body.panel-style-unicorn .subject-card,
+body.panel-style-unicorn .topic-card,
+body.panel-style-unicorn .mode-card,
+body.panel-style-unicorn .difficulty-card {
+    background: linear-gradient(145deg, var(--color-bg-panel) 0%, rgba(0, 0, 0, 0.95) 100%) !important;
+    border: 2px solid var(--color-primary) !important;
+    border-radius: 0 !important;
+}
+
+body.panel-style-unicorn .subject-card::before,
+body.panel-style-unicorn .topic-card::before,
+body.panel-style-unicorn .mode-card::before,
+body.panel-style-unicorn .difficulty-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 6px !important;
+    left: 6px !important;
+    width: 20px !important;
+    height: 20px !important;
+    border-top: 2px solid var(--color-secondary) !important;
+    border-left: 2px solid var(--color-secondary) !important;
+    opacity: 0.7 !important;
+    pointer-events: none !important;
+    background: transparent !important;
+    transform: none !important;
+    right: auto !important;
+    bottom: auto !important;
+}
+
+body.panel-style-unicorn .subject-card::after,
+body.panel-style-unicorn .topic-card::after,
+body.panel-style-unicorn .mode-card::after,
+body.panel-style-unicorn .difficulty-card::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 6px !important;
+    right: 6px !important;
+    top: auto !important;
+    left: auto !important;
+    width: 20px !important;
+    height: 20px !important;
+    border-bottom: 2px solid var(--color-secondary) !important;
+    border-right: 2px solid var(--color-secondary) !important;
+    background: transparent !important;
+    opacity: 0.7 !important;
+}
+
+body.panel-style-unicorn .btn {
+    border-radius: 0 !important;
+}
+
+body.panel-style-unicorn .panel {
+    border-radius: 0 !important;
+}
+
+/* ============================================
+   WB MECHA INTRICATE PANEL STYLE
+   Black and white minimalist with thick borders
+   ============================================ */
+body.panel-style-wb-mecha .subject-card,
+body.panel-style-wb-mecha .topic-card,
+body.panel-style-wb-mecha .mode-card,
+body.panel-style-wb-mecha .difficulty-card {
+    background: linear-gradient(145deg, var(--color-bg-panel) 0%, rgba(0, 0, 0, 0.95) 100%) !important;
+    border: 4px solid var(--color-primary) !important;
+    border-radius: 0 !important;
+    clip-path: polygon(
+        0 0, 100% 0, 100% calc(100% - 12px),
+        calc(100% - 12px) 100%, 0 100%
+    ) !important;
+}
+
+body.panel-style-wb-mecha .subject-card::before,
+body.panel-style-wb-mecha .topic-card::before,
+body.panel-style-wb-mecha .mode-card::before,
+body.panel-style-wb-mecha .difficulty-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 8px !important;
+    left: 8px !important;
+    right: 8px !important;
+    bottom: 8px !important;
+    width: auto !important;
+    height: auto !important;
+    border: 2px solid var(--color-primary) !important;
+    opacity: 0.5 !important;
+    pointer-events: none !important;
+    background: transparent !important;
+    transform: none !important;
+    clip-path: polygon(
+        0 0, 100% 0, 100% calc(100% - 8px),
+        calc(100% - 8px) 100%, 0 100%
+    ) !important;
+}
+
+body.panel-style-wb-mecha .subject-card::after,
+body.panel-style-wb-mecha .topic-card::after,
+body.panel-style-wb-mecha .mode-card::after,
+body.panel-style-wb-mecha .difficulty-card::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    left: auto !important;
+    width: 12px !important;
+    height: 12px !important;
+    background: var(--color-primary) !important;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%) !important;
+    opacity: 0.8 !important;
+    border: none !important;
+}
+
+body.panel-style-wb-mecha .btn {
+    border-radius: 0 !important;
+    border-width: 3px !important;
+    clip-path: polygon(
+        0 0, 100% 0, 100% calc(100% - 8px),
+        calc(100% - 8px) 100%, 0 100%
+    ) !important;
+}
+
+body.panel-style-wb-mecha .panel {
+    border-radius: 0 !important;
+    border-width: 4px !important;
+    clip-path: polygon(
+        0 0, 100% 0, 100% calc(100% - 20px),
+        calc(100% - 20px) 100%, 0 100%
+    ) !important;
+}
+
+/* ============================================
+   WHITE SCIFI 01 INTRICATE PANEL STYLE
+   Clean white borders with corner accents
+   ============================================ */
+body.panel-style-white-scifi01 .subject-card,
+body.panel-style-white-scifi01 .topic-card,
+body.panel-style-white-scifi01 .mode-card,
+body.panel-style-white-scifi01 .difficulty-card {
+    background: linear-gradient(145deg, var(--color-bg-panel) 0%, rgba(0, 0, 0, 0.95) 100%) !important;
+    border: 2px solid var(--color-primary) !important;
+    border-radius: 0 !important;
+}
+
+body.panel-style-white-scifi01 .subject-card::before,
+body.panel-style-white-scifi01 .topic-card::before,
+body.panel-style-white-scifi01 .mode-card::before,
+body.panel-style-white-scifi01 .difficulty-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 4px !important;
+    left: 4px !important;
+    right: 4px !important;
+    bottom: 4px !important;
+    width: auto !important;
+    height: auto !important;
+    border: 1px solid var(--color-primary) !important;
+    opacity: 0.4 !important;
+    pointer-events: none !important;
+    background: transparent !important;
+    transform: none !important;
+}
+
+body.panel-style-white-scifi01 .subject-card::after,
+body.panel-style-white-scifi01 .topic-card::after,
+body.panel-style-white-scifi01 .mode-card::after,
+body.panel-style-white-scifi01 .difficulty-card::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 8px !important;
+    right: 8px !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: 15px !important;
+    height: 15px !important;
+    border-top: 2px solid var(--color-secondary) !important;
+    border-right: 2px solid var(--color-secondary) !important;
+    background: transparent !important;
+    opacity: 0.6 !important;
+}
+
+body.panel-style-white-scifi01 .btn {
+    border-radius: 0 !important;
+}
+
+body.panel-style-white-scifi01 .panel {
+    border-radius: 0 !important;
+}
+
+/* ============================================
+   WHITE SCIFI 03 INTRICATE PANEL STYLE
+   Modern panels with corner brackets
+   ============================================ */
+body.panel-style-white-scifi03 .subject-card,
+body.panel-style-white-scifi03 .topic-card,
+body.panel-style-white-scifi03 .mode-card,
+body.panel-style-white-scifi03 .difficulty-card {
+    background: linear-gradient(145deg, var(--color-bg-panel) 0%, rgba(0, 0, 0, 0.95) 100%) !important;
+    border: 1px solid var(--color-primary) !important;
+    border-radius: 4px !important;
+}
+
+body.panel-style-white-scifi03 .subject-card::before,
+body.panel-style-white-scifi03 .topic-card::before,
+body.panel-style-white-scifi03 .mode-card::before,
+body.panel-style-white-scifi03 .difficulty-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 8px !important;
+    left: 8px !important;
+    width: 25px !important;
+    height: 25px !important;
+    border-top: 2px solid var(--color-secondary) !important;
+    border-left: 2px solid var(--color-secondary) !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    opacity: 0.7 !important;
+    pointer-events: none !important;
+    background: transparent !important;
+    transform: none !important;
+    right: auto !important;
+    bottom: auto !important;
+}
+
+body.panel-style-white-scifi03 .subject-card::after,
+body.panel-style-white-scifi03 .topic-card::after,
+body.panel-style-white-scifi03 .mode-card::after,
+body.panel-style-white-scifi03 .difficulty-card::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 8px !important;
+    right: 8px !important;
+    top: auto !important;
+    left: auto !important;
+    width: 25px !important;
+    height: 25px !important;
+    border-bottom: 2px solid var(--color-secondary) !important;
+    border-right: 2px solid var(--color-secondary) !important;
+    border-top: none !important;
+    border-left: none !important;
+    background: transparent !important;
+    opacity: 0.7 !important;
+}
+
+body.panel-style-white-scifi03 .btn {
+    border-radius: 4px !important;
+}
+
+body.panel-style-white-scifi03 .panel {
+    border-radius: 4px !important;
+}
+
+/* ============================================
+   WORD BOXES INTRICATE PANEL STYLE
+   Text container style with system header bar
+   ============================================ */
+body.panel-style-word-boxes .subject-card,
+body.panel-style-word-boxes .topic-card,
+body.panel-style-word-boxes .mode-card,
+body.panel-style-word-boxes .difficulty-card {
+    background: linear-gradient(145deg, var(--color-bg-panel) 0%, rgba(0, 0, 0, 0.95) 100%) !important;
+    border: 2px solid var(--color-primary) !important;
+    border-radius: 0 !important;
+    padding-top: 30px !important;
+}
+
+body.panel-style-word-boxes .subject-card::before,
+body.panel-style-word-boxes .topic-card::before,
+body.panel-style-word-boxes .mode-card::before,
+body.panel-style-word-boxes .difficulty-card::before {
+    content: '// SYSTEM' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 24px !important;
+    width: auto !important;
+    background: var(--color-primary) !important;
+    color: var(--color-bg) !important;
+    font-family: 'Orbitron', monospace !important;
+    font-size: 10px !important;
+    line-height: 24px !important;
+    padding-left: 10px !important;
+    opacity: 1 !important;
+    pointer-events: none !important;
+    border: none !important;
+    transform: none !important;
+    bottom: auto !important;
+}
+
+body.panel-style-word-boxes .subject-card::after,
+body.panel-style-word-boxes .topic-card::after,
+body.panel-style-word-boxes .mode-card::after,
+body.panel-style-word-boxes .difficulty-card::after {
+    content: '×' !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 8px !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: auto !important;
+    height: 24px !important;
+    line-height: 24px !important;
+    color: var(--color-bg) !important;
+    font-size: 14px !important;
+    opacity: 0.8 !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+body.panel-style-word-boxes .btn {
+    border-radius: 0 !important;
+}
+
+body.panel-style-word-boxes .panel {
+    border-radius: 0 !important;
+}
+
+/* ============================================
+   YELLOW MECH INTRICATE PANEL STYLE
+   Warning/caution style with hazard stripes
+   ============================================ */
+body.panel-style-yellow-mech .subject-card,
+body.panel-style-yellow-mech .topic-card,
+body.panel-style-yellow-mech .mode-card,
+body.panel-style-yellow-mech .difficulty-card {
+    background: linear-gradient(145deg, var(--color-bg-panel) 0%, rgba(0, 0, 0, 0.95) 100%) !important;
+    border: 3px solid var(--color-primary) !important;
+    border-radius: 0 !important;
+    clip-path: polygon(
+        0 0, 100% 0, 100% calc(100% - 15px),
+        calc(100% - 15px) 100%, 0 100%
+    ) !important;
+}
+
+body.panel-style-yellow-mech .subject-card::before,
+body.panel-style-yellow-mech .topic-card::before,
+body.panel-style-yellow-mech .mode-card::before,
+body.panel-style-yellow-mech .difficulty-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 40px !important;
+    height: 100% !important;
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--color-primary) 0px,
+        var(--color-primary) 5px,
+        transparent 5px,
+        transparent 10px
+    ) !important;
+    opacity: 0.3 !important;
+    pointer-events: none !important;
+    border: none !important;
+    transform: none !important;
+}
+
+body.panel-style-yellow-mech .subject-card::after,
+body.panel-style-yellow-mech .topic-card::after,
+body.panel-style-yellow-mech .mode-card::after,
+body.panel-style-yellow-mech .difficulty-card::after {
+    content: '⚠' !important;
+    position: absolute !important;
+    top: 8px !important;
+    left: 10px !important;
+    bottom: auto !important;
+    right: auto !important;
+    width: auto !important;
+    height: auto !important;
+    color: var(--color-primary) !important;
+    font-size: 14px !important;
+    opacity: 0.8 !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+body.panel-style-yellow-mech .btn {
+    border-radius: 0 !important;
+    clip-path: polygon(
+        0 0, 100% 0, 100% calc(100% - 8px),
+        calc(100% - 8px) 100%, 0 100%
+    ) !important;
+}
+
+body.panel-style-yellow-mech .panel {
+    border-radius: 0 !important;
+    clip-path: polygon(
+        0 0, 100% 0, 100% calc(100% - 20px),
+        calc(100% - 20px) 100%, 0 100%
+    ) !important;
 }
 
 /* Player selection section */
@@ -5800,7 +6943,8 @@ select {
 }
 
 /* ============================================================================
-   BOOT INITIALIZATION SEQUENCE - Modern Video-Inspired Design
+   BOOT INITIALIZATION SEQUENCE - Cyberpunk HUD Style with Anime.js
+   Fusion of Boot Inspiration 2 (Arasaka/Red HUD) + Boot Inspiration 3 (3D Rotating Logo)
    ============================================================================ */
 
 #boot-sequence {
@@ -5809,21 +6953,70 @@ select {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+    background: #000000;
     z-index: 10000;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    perspective: 1200px;
 }
 
-.boot-fade-out {
-    animation: bootFadeOut 0.5s ease-out forwards !important;
+/* CRT Scanline Overlay */
+.boot-crt-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.1) 0px,
+            rgba(0, 0, 0, 0.1) 1px,
+            transparent 1px,
+            transparent 2px
+        );
+    pointer-events: none;
+    z-index: 1000;
+    animation: crtFlicker 0.15s infinite;
 }
 
-@keyframes bootFadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; pointer-events: none; }
+/* Glitch Overlay */
+.boot-glitch-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+    background: transparent;
+    animation: glitchFlash 4s infinite;
+}
+
+@keyframes crtFlicker {
+    0%, 100% { opacity: 0.95; }
+    50% { opacity: 1; }
+}
+
+@keyframes glitchFlash {
+    0%, 95%, 100% { 
+        background: transparent; 
+        transform: translateX(0);
+    }
+    96% { 
+        background: rgba(255, 0, 0, 0.03); 
+        transform: translateX(-2px);
+    }
+    97% { 
+        background: rgba(0, 255, 255, 0.03); 
+        transform: translateX(2px);
+    }
+    98% { 
+        background: transparent; 
+        transform: translateX(-1px);
+    }
 }
 
 /* Skip Button */
@@ -5832,20 +7025,628 @@ select {
     bottom: 30px;
     right: 30px;
     padding: 12px 24px;
-    background: rgba(0, 255, 255, 0.1);
-    border: 1px solid var(--color-primary);
-    color: var(--color-primary);
-    font-family: 'Orbitron', monospace;
-    font-size: 0.9rem;
+    background: rgba(255, 0, 0, 0.05);
+    border: 1px solid rgba(255, 0, 0, 0.6);
+    color: #ff0000;
+    font-family: 'Orbitron', 'Courier New', monospace;
+    font-size: 0.85rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    z-index: 10;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .boot-skip-btn:hover {
-    background: rgba(0, 255, 255, 0.2);
-    box-shadow: 0 0 20px var(--color-primary);
+    background: rgba(255, 0, 0, 0.15);
+    border-color: #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4), inset 0 0 10px rgba(255, 0, 0, 0.1);
     transform: scale(1.05);
+}
+
+.skip-text { font-weight: 500; }
+.skip-arrow { font-size: 0.7rem; }
+
+/* ===== PHASE SYSTEM ===== */
+.boot-phase {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ===== PHASE 1: HUD FRAME ===== */
+
+/* Corner Brackets */
+.hud-corner {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #ff0000;
+    opacity: 0;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+.hud-corner-tl {
+    top: 12%;
+    left: 8%;
+    border-right: none;
+    border-bottom: none;
+}
+
+.hud-corner-tr {
+    top: 12%;
+    right: 8%;
+    border-left: none;
+    border-bottom: none;
+}
+
+.hud-corner-bl {
+    bottom: 12%;
+    left: 8%;
+    border-right: none;
+    border-top: none;
+}
+
+.hud-corner-br {
+    bottom: 12%;
+    right: 8%;
+    border-left: none;
+    border-top: none;
+}
+
+/* Side Bars */
+.hud-sidebar {
+    position: absolute;
+    top: 25%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.hud-sidebar-left { left: 8%; }
+.hud-sidebar-right { right: 8%; }
+
+.sidebar-segment {
+    width: 4px;
+    height: 30px;
+    background: #ff0000;
+    opacity: 0;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    transform-origin: center;
+}
+
+/* Status Bar */
+.hud-status-bar {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+}
+
+.status-bar-line {
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff0000);
+    transform-origin: right center;
+}
+
+.status-bar-line.status-bar-right {
+    background: linear-gradient(90deg, #ff0000, transparent);
+    transform-origin: left center;
+}
+
+.status-text {
+    font-family: 'Orbitron', 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: #ff0000;
+    letter-spacing: 4px;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    white-space: nowrap;
+    opacity: 0;
+}
+
+/* Chevrons */
+.hud-chevrons {
+    position: absolute;
+    top: 20%;
+    display: flex;
+    gap: 3px;
+}
+
+.hud-chevrons-left {
+    left: 20%;
+}
+
+.hud-chevrons-right {
+    right: 20%;
+}
+
+.chevron {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    color: #ff0000;
+    opacity: 0;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+/* Three Circles Logo */
+.boot-logo-container {
+    position: relative;
+    width: 140px;
+    height: 160px;
+}
+
+.boot-circle {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ff4444, #ff0000, #cc0000);
+    opacity: 0;
+    box-shadow: 
+        0 0 20px rgba(255, 0, 0, 0.8),
+        0 0 40px rgba(255, 0, 0, 0.4),
+        inset 0 0 15px rgba(255, 100, 100, 0.3);
+}
+
+.boot-circle-1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.boot-circle-2 {
+    top: 40px;
+    left: 10px;
+}
+
+.boot-circle-3 {
+    top: 40px;
+    right: 10px;
+}
+
+.boot-circle-stem {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 50px;
+    background: linear-gradient(to bottom, #ff0000, #cc0000);
+    opacity: 0;
+    transform-origin: top center;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.boot-circle-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+/* Hash Marks */
+.hud-hash-marks {
+    position: absolute;
+    bottom: 16%;
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: #ff0000;
+    opacity: 0;
+    letter-spacing: -3px;
+}
+
+.hud-hash-left {
+    left: 12%;
+    transform: rotate(-25deg);
+}
+
+.hud-hash-right {
+    right: 12%;
+    transform: rotate(25deg);
+}
+
+/* Bottom Bar */
+.hud-bottom-bar {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
+
+.bottom-bar-segment {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ff0000, #ff0000, transparent);
+    opacity: 0;
+    transform-origin: center;
+}
+
+/* ===== PHASE 2: 3D TITLE ===== */
+
+.title-3d-scene {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.title-3d-container {
+    position: relative;
+    transform-style: preserve-3d;
+    opacity: 0;
+}
+
+.title-3d-layer {
+    font-family: 'Orbitron', 'Arial Black', sans-serif;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.title-3d-main {
+    position: relative;
+    color: #ffffff;
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.9),
+        0 0 30px rgba(255, 255, 255, 0.6),
+        0 0 60px rgba(0, 255, 255, 0.4),
+        0 2px 0 rgba(0, 0, 0, 0.3),
+        0 4px 0 rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
+
+.title-3d-red {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 0, 0, 0.7);
+    transform: translate(-3px, 0);
+    z-index: 1;
+}
+
+.title-3d-cyan {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(0, 255, 255, 0.7);
+    transform: translate(3px, 0);
+    z-index: 2;
+}
+
+/* Title Frame */
+.title-frame {
+    position: absolute;
+    width: 110%;
+    height: 180%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.frame-line {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    opacity: 0;
+}
+
+.frame-top { top: 0; }
+.frame-bottom { bottom: 0; }
+
+.frame-bracket {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.6);
+    opacity: 0;
+}
+
+.frame-bracket-left { left: 0; }
+.frame-bracket-right { right: 0; }
+
+/* Status Box */
+.boot-status-box {
+    margin-top: 40px;
+    padding: 12px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    backdrop-filter: blur(5px);
+}
+
+.status-bracket {
+    font-family: 'Courier New', monospace;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.status-box-text {
+    font-family: 'Orbitron', 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: #ffffff;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Bottom Indicator */
+.boot-bottom-indicator {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    opacity: 0;
+}
+
+.indicator-chevron {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 0.6;
+    transform: rotate(-90deg);
+}
+
+/* ===== PHASE 3: FINAL HUD ===== */
+
+/* Coordinates */
+.boot-coords {
+    position: absolute;
+    bottom: 30%;
+    left: 6%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    opacity: 0;
+}
+
+.coord-line {
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    display: flex;
+    gap: 5px;
+}
+
+.coord-label { font-weight: bold; }
+.coord-y .coord-label { color: #ff4444; }
+.coord-x .coord-label { color: #44ff44; }
+.coord-z .coord-label { color: #4488ff; }
+.coord-value { color: rgba(255, 255, 255, 0.7); }
+
+/* Radar */
+.boot-radar {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 80px;
+    opacity: 0;
+}
+
+.radar-ring {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50% 50% 0 0;
+    border-bottom: none;
+    opacity: 0;
+}
+
+.radar-ring-outer {
+    width: 160px;
+    height: 80px;
+}
+
+.radar-ring-mid {
+    width: 100px;
+    height: 50px;
+}
+
+.radar-ring-inner {
+    width: 50px;
+    height: 25px;
+}
+
+.radar-sweep {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 2px;
+    height: 80px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.9), transparent);
+    transform-origin: bottom center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.radar-dot {
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background: #ffffff;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+/* Progress Bar */
+.boot-progress {
+    position: absolute;
+    bottom: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    max-width: 350px;
+    opacity: 0;
+}
+
+.progress-track {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #00ff88, #00ffff);
+    box-shadow: 0 0 15px rgba(0, 255, 200, 0.6);
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progress-markers {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
+.progress-markers span {
+    font-family: 'Courier New', monospace;
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+}
+
+/* Labels */
+.boot-labels {
+    position: absolute;
+    bottom: 4%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4%;
+}
+
+.boot-labels span {
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+    opacity: 0;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .hud-corner {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .hud-corner-tl, .hud-corner-tr { top: 8%; }
+    .hud-corner-bl, .hud-corner-br { bottom: 8%; }
+    .hud-corner-tl, .hud-corner-bl { left: 4%; }
+    .hud-corner-tr, .hud-corner-br { right: 4%; }
+    
+    .hud-sidebar { display: none; }
+    
+    .status-bar-line { width: 60px; }
+    .status-text { font-size: 0.7rem; letter-spacing: 2px; }
+    
+    .hud-chevrons { display: none; }
+    
+    .boot-logo-container {
+        width: 100px;
+        height: 120px;
+    }
+    
+    .boot-circle {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .boot-circle-1 { top: 0; }
+    .boot-circle-2 { top: 28px; left: 8px; }
+    .boot-circle-3 { top: 28px; right: 8px; }
+    
+    .boot-circle-ring {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .boot-circle-stem {
+        height: 35px;
+        bottom: 8px;
+    }
+    
+    .hud-hash-marks { display: none; }
+    
+    .bottom-bar-segment { width: 50px; }
+    
+    .title-3d-layer {
+        font-size: clamp(1.6rem, 7vw, 2.8rem);
+    }
+    
+    .boot-status-box {
+        padding: 8px 15px;
+        margin-top: 25px;
+    }
+    
+    .status-box-text {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+    }
+    
+    .boot-coords { display: none; }
+    
+    .boot-radar {
+        width: 100px;
+        height: 50px;
+    }
+    
+    .radar-ring-outer { width: 100px; height: 50px; }
+    .radar-ring-mid { width: 60px; height: 30px; }
+    .radar-ring-inner { width: 30px; height: 15px; }
+    .radar-sweep { height: 50px; }
+    
+    .boot-progress { width: 70%; }
+    
+    .boot-skip-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 14px;
+        font-size: 0.7rem;
+    }
+    
+    .boot-labels span { font-size: 0.55rem; }
 }
 
 /* ===== PHASE SYSTEM ===== */
