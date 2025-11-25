@@ -10043,3 +10043,564 @@ textarea {
         font-size: 0.85rem;
     }
 }
+
+/* ============================================================================
+   ENHANCED CYBERPUNK PANEL DESIGNS
+   Inspired by mecha/Evangelion UI with internal artwork and unique shapes
+   ============================================================================ */
+
+/* Enhanced Tile Base with Internal Decorations */
+.tile {
+    position: relative;
+}
+
+/* Top-left corner bracket decoration */
+.tile::before {
+    content: '◢';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    font-size: 10px;
+    color: var(--color-primary);
+    opacity: 0.6;
+    z-index: 5;
+    text-shadow: 0 0 5px var(--color-primary);
+}
+
+/* Enhanced tile with internal circuit pattern */
+.tile::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(135deg, transparent 85%, var(--color-primary-dim) 85%),
+        linear-gradient(-135deg, transparent 95%, rgba(255,255,255,0.05) 95%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Subject tile enhanced decorations */
+[data-subject-id]::before {
+    content: '//SYS.MODULE';
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    font-size: 7px;
+    letter-spacing: 1px;
+    color: var(--color-primary);
+    opacity: 0.5;
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 3px var(--color-primary);
+}
+
+/* Add scan line effect to tiles */
+[data-subject-id]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 2px,
+            rgba(0, 255, 255, 0.02) 2px,
+            rgba(0, 255, 255, 0.02) 4px
+        ),
+        linear-gradient(135deg, transparent 80%, var(--color-primary-dim) 80%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Topic tiles with different decoration */
+[data-topic-id]::before {
+    content: '►QUEST';
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    font-size: 6px;
+    letter-spacing: 2px;
+    color: var(--color-secondary, var(--color-primary));
+    opacity: 0.7;
+    font-family: 'Courier New', monospace;
+}
+
+/* Add diagonal stripe accent to tiles */
+.grid .tile:nth-child(odd)::after {
+    background: 
+        repeating-linear-gradient(
+            -45deg,
+            transparent 0px,
+            transparent 8px,
+            rgba(255, 255, 255, 0.02) 8px,
+            rgba(255, 255, 255, 0.02) 10px
+        ),
+        linear-gradient(135deg, transparent 85%, var(--color-primary-dim) 85%);
+}
+
+/* Tile bottom status bar decoration */
+.tile-title::before {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+    opacity: 0.4;
+}
+
+/* Enhanced Panel with Mecha Frame */
+.panel {
+    position: relative;
+}
+
+/* Panel corner accents */
+.panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-left: 3px solid var(--color-primary);
+    border-top: 3px solid var(--color-primary);
+    opacity: 0.6;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.panel::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-right: 3px solid var(--color-primary);
+    border-bottom: 3px solid var(--color-primary);
+    opacity: 0.6;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* ============================================================================
+   ENHANCED BOOT ANIMATION EFFECTS
+   More intricate anime.js driven visuals with glitch and chromatic aberration
+   ============================================================================ */
+
+/* Enhanced glitch overlay with RGB split */
+.boot-glitch-overlay {
+    background: transparent;
+    animation: enhancedGlitch 3s infinite;
+}
+
+@keyframes enhancedGlitch {
+    0%, 90%, 100% { 
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    91% { 
+        opacity: 1;
+        background: linear-gradient(90deg, rgba(255,0,0,0.1) 33%, rgba(0,255,0,0.1) 33%, rgba(0,255,0,0.1) 66%, rgba(0,0,255,0.1) 66%);
+        transform: translate(-5px, 0);
+    }
+    93% { 
+        opacity: 1;
+        background: linear-gradient(90deg, rgba(0,255,255,0.1) 50%, rgba(255,0,255,0.1) 50%);
+        transform: translate(5px, 0);
+    }
+    95% {
+        opacity: 0.5;
+        transform: translate(-2px, 2px);
+    }
+}
+
+/* Enhanced HUD corners with glow animation */
+.hud-corner {
+    animation: cornerGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes cornerGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.3), inset 0 0 5px rgba(255, 0, 0, 0.1);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(255, 0, 0, 0.6), inset 0 0 10px rgba(255, 0, 0, 0.2);
+    }
+}
+
+/* Enhanced three circles with pulse effect */
+.boot-circle {
+    animation: circlePulse 1.5s ease-in-out infinite;
+}
+
+.boot-circle-1 { animation-delay: 0s; }
+.boot-circle-2 { animation-delay: 0.2s; }
+.boot-circle-3 { animation-delay: 0.4s; }
+
+@keyframes circlePulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.4);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 40px rgba(255, 0, 0, 1), 0 0 80px rgba(255, 0, 0, 0.6);
+    }
+}
+
+/* Enhanced 3D title with stronger chromatic aberration */
+.title-3d-red {
+    color: #ff0000;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    animation: chromaticRed 2s ease-in-out infinite;
+}
+
+.title-3d-cyan {
+    color: #00ffff;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+    animation: chromaticCyan 2s ease-in-out infinite;
+}
+
+@keyframes chromaticRed {
+    0%, 100% { transform: translateX(-3px) translateY(-1px); opacity: 0.7; }
+    50% { transform: translateX(-5px) translateY(-2px); opacity: 0.9; }
+}
+
+@keyframes chromaticCyan {
+    0%, 100% { transform: translateX(3px) translateY(1px); opacity: 0.7; }
+    50% { transform: translateX(5px) translateY(2px); opacity: 0.9; }
+}
+
+/* Enhanced radar sweep */
+.radar-sweep {
+    animation: radarSweep 2s linear infinite;
+}
+
+@keyframes radarSweep {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Scanning line effect for boot sequence */
+#boot-sequence::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.8), transparent);
+    animation: scanLine 3s linear infinite;
+    z-index: 1001;
+}
+
+@keyframes scanLine {
+    0% { top: 0; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+}
+
+/* Data stream effect on sides */
+.hud-sidebar-left .sidebar-segment,
+.hud-sidebar-right .sidebar-segment {
+    animation: dataStream 0.8s ease-in-out infinite;
+}
+
+.hud-sidebar-left .sidebar-segment:nth-child(1) { animation-delay: 0s; }
+.hud-sidebar-left .sidebar-segment:nth-child(2) { animation-delay: 0.15s; }
+.hud-sidebar-left .sidebar-segment:nth-child(3) { animation-delay: 0.3s; }
+.hud-sidebar-left .sidebar-segment:nth-child(4) { animation-delay: 0.45s; }
+.hud-sidebar-left .sidebar-segment:nth-child(5) { animation-delay: 0.6s; }
+
+.hud-sidebar-right .sidebar-segment:nth-child(1) { animation-delay: 0.1s; }
+.hud-sidebar-right .sidebar-segment:nth-child(2) { animation-delay: 0.25s; }
+.hud-sidebar-right .sidebar-segment:nth-child(3) { animation-delay: 0.4s; }
+.hud-sidebar-right .sidebar-segment:nth-child(4) { animation-delay: 0.55s; }
+.hud-sidebar-right .sidebar-segment:nth-child(5) { animation-delay: 0.7s; }
+
+@keyframes dataStream {
+    0%, 100% { 
+        opacity: 0.3;
+        transform: scaleY(0.8);
+    }
+    50% { 
+        opacity: 1;
+        transform: scaleY(1);
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+    }
+}
+
+/* Enhanced chevron animation */
+.hud-chevrons-left .chevron,
+.hud-chevrons-right .chevron {
+    animation: chevronPulse 1s ease-in-out infinite;
+}
+
+.hud-chevrons-left .chevron:nth-child(1) { animation-delay: 0s; }
+.hud-chevrons-left .chevron:nth-child(2) { animation-delay: 0.1s; }
+.hud-chevrons-left .chevron:nth-child(3) { animation-delay: 0.2s; }
+.hud-chevrons-left .chevron:nth-child(4) { animation-delay: 0.3s; }
+.hud-chevrons-left .chevron:nth-child(5) { animation-delay: 0.4s; }
+.hud-chevrons-left .chevron:nth-child(6) { animation-delay: 0.5s; }
+.hud-chevrons-left .chevron:nth-child(7) { animation-delay: 0.6s; }
+
+.hud-chevrons-right .chevron:nth-child(1) { animation-delay: 0.05s; }
+.hud-chevrons-right .chevron:nth-child(2) { animation-delay: 0.15s; }
+.hud-chevrons-right .chevron:nth-child(3) { animation-delay: 0.25s; }
+.hud-chevrons-right .chevron:nth-child(4) { animation-delay: 0.35s; }
+.hud-chevrons-right .chevron:nth-child(5) { animation-delay: 0.45s; }
+.hud-chevrons-right .chevron:nth-child(6) { animation-delay: 0.55s; }
+.hud-chevrons-right .chevron:nth-child(7) { animation-delay: 0.65s; }
+
+@keyframes chevronPulse {
+    0%, 100% { 
+        opacity: 0.4;
+        transform: translateX(0);
+    }
+    50% { 
+        opacity: 1;
+        transform: translateX(-5px);
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    }
+}
+
+.hud-chevrons-right .chevron {
+    animation-name: chevronPulseRight;
+}
+
+@keyframes chevronPulseRight {
+    0%, 100% { 
+        opacity: 0.4;
+        transform: translateX(0);
+    }
+    50% { 
+        opacity: 1;
+        transform: translateX(5px);
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    }
+}
+
+/* Progress bar fill animation */
+.progress-fill {
+    animation: progressFill 2s ease-out forwards;
+    background: linear-gradient(90deg, #ff0000, #ff4444, #ff0000);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+@keyframes progressFill {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* Boot labels flicker */
+.boot-labels span {
+    animation: labelFlicker 0.1s infinite;
+}
+
+.label-left { animation-delay: 0s; }
+.label-right { animation-delay: 0.05s; }
+
+@keyframes labelFlicker {
+    0%, 95%, 100% { opacity: 1; }
+    96% { opacity: 0.7; }
+}
+
+/* Enhanced status text typing cursor */
+.status-text::after {
+    content: '█';
+    animation: cursorBlink 0.6s infinite;
+    margin-left: 2px;
+}
+
+@keyframes cursorBlink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Hash marks animation */
+.hud-hash-marks {
+    animation: hashScroll 2s linear infinite;
+}
+
+.hud-hash-left {
+    animation-direction: normal;
+}
+
+.hud-hash-right {
+    animation-direction: reverse;
+}
+
+@keyframes hashScroll {
+    0% { opacity: 0.3; letter-spacing: 2px; }
+    50% { opacity: 0.6; letter-spacing: 4px; }
+    100% { opacity: 0.3; letter-spacing: 2px; }
+}
+
+/* Additional Boot Animation Elements */
+
+/* Hexagonal Grid Background */
+.boot-hex-grid {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(30deg, rgba(255, 0, 0, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(255, 0, 0, 0.03) 87.5%, rgba(255, 0, 0, 0.03)),
+        linear-gradient(150deg, rgba(255, 0, 0, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(255, 0, 0, 0.03) 87.5%, rgba(255, 0, 0, 0.03)),
+        linear-gradient(30deg, rgba(255, 0, 0, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(255, 0, 0, 0.03) 87.5%, rgba(255, 0, 0, 0.03)),
+        linear-gradient(150deg, rgba(255, 0, 0, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(255, 0, 0, 0.03) 87.5%, rgba(255, 0, 0, 0.03)),
+        linear-gradient(60deg, rgba(255, 0, 0, 0.05) 25%, transparent 25.5%, transparent 75%, rgba(255, 0, 0, 0.05) 75%, rgba(255, 0, 0, 0.05)),
+        linear-gradient(60deg, rgba(255, 0, 0, 0.05) 25%, transparent 25.5%, transparent 75%, rgba(255, 0, 0, 0.05) 75%, rgba(255, 0, 0, 0.05));
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+    opacity: 0.5;
+    animation: hexGridPulse 4s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes hexGridPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+/* Data Stream Effects */
+.boot-data-stream {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    z-index: 2;
+}
+
+.boot-data-stream-left {
+    left: 5%;
+    background: linear-gradient(to bottom, 
+        transparent 0%,
+        rgba(255, 0, 0, 0.8) 10%,
+        transparent 20%,
+        rgba(255, 0, 0, 0.4) 30%,
+        transparent 40%,
+        rgba(255, 0, 0, 0.6) 50%,
+        transparent 60%,
+        rgba(255, 0, 0, 0.3) 70%,
+        transparent 80%,
+        rgba(255, 0, 0, 0.7) 90%,
+        transparent 100%
+    );
+    animation: dataStreamFlow 2s linear infinite;
+}
+
+.boot-data-stream-right {
+    right: 5%;
+    background: linear-gradient(to bottom, 
+        transparent 0%,
+        rgba(255, 0, 0, 0.6) 15%,
+        transparent 25%,
+        rgba(255, 0, 0, 0.8) 35%,
+        transparent 45%,
+        rgba(255, 0, 0, 0.4) 55%,
+        transparent 65%,
+        rgba(255, 0, 0, 0.7) 75%,
+        transparent 85%,
+        rgba(255, 0, 0, 0.5) 95%,
+        transparent 100%
+    );
+    animation: dataStreamFlow 2.5s linear infinite reverse;
+}
+
+@keyframes dataStreamFlow {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+/* Corner Labels */
+.corner-label {
+    position: absolute;
+    font-size: 8px;
+    color: rgba(255, 0, 0, 0.6);
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1px;
+}
+
+.hud-corner-tl .corner-label { bottom: -15px; left: 0; }
+.hud-corner-tr .corner-label { bottom: -15px; right: 0; }
+.hud-corner-bl .corner-label { top: -15px; left: 0; }
+.hud-corner-br .corner-label { top: -15px; right: 0; }
+
+/* Binary Decoration */
+.binary-decoration {
+    font-size: 8px;
+    color: rgba(255, 0, 0, 0.4);
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    animation: binaryFlicker 0.5s infinite;
+}
+
+@keyframes binaryFlicker {
+    0%, 90%, 100% { opacity: 0.4; }
+    95% { opacity: 0.8; }
+}
+
+/* Outer Ring for Logo */
+.boot-circle-outer-ring {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: outerRingRotate 10s linear infinite;
+}
+
+@keyframes outerRingRotate {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Pulse Ring */
+.boot-circle-pulse {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulseRing 1.5s ease-out infinite;
+}
+
+@keyframes pulseRing {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Enhanced Sidebar Segments */
+.sidebar-segment:nth-child(6) { animation-delay: 0.75s; }
+.sidebar-segment:nth-child(7) { animation-delay: 0.9s; }
+
+/* More Chevrons */
+.hud-chevrons-left .chevron:nth-child(8) { animation-delay: 0.7s; }
+.hud-chevrons-left .chevron:nth-child(9) { animation-delay: 0.8s; }
+.hud-chevrons-right .chevron:nth-child(8) { animation-delay: 0.75s; }
+.hud-chevrons-right .chevron:nth-child(9) { animation-delay: 0.85s; }

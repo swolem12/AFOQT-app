@@ -4470,16 +4470,33 @@ function showBootSequence() {
                 <!-- Glitch Overlay -->
                 <div class="boot-glitch-overlay"></div>
                 
+                <!-- Hexagonal Grid Background -->
+                <div class="boot-hex-grid"></div>
+                
+                <!-- Data Stream Particles -->
+                <div class="boot-data-stream boot-data-stream-left"></div>
+                <div class="boot-data-stream boot-data-stream-right"></div>
+                
                 <!-- Phase 1: HUD Frame & Three Circles Logo -->
                 <div class="boot-phase boot-phase-hud">
-                    <!-- Corner Brackets -->
-                    <div class="hud-corner hud-corner-tl"></div>
-                    <div class="hud-corner hud-corner-tr"></div>
-                    <div class="hud-corner hud-corner-bl"></div>
-                    <div class="hud-corner hud-corner-br"></div>
+                    <!-- Corner Brackets with enhanced styling -->
+                    <div class="hud-corner hud-corner-tl">
+                        <span class="corner-label">SYS.01</span>
+                    </div>
+                    <div class="hud-corner hud-corner-tr">
+                        <span class="corner-label">SYS.02</span>
+                    </div>
+                    <div class="hud-corner hud-corner-bl">
+                        <span class="corner-label">SYS.03</span>
+                    </div>
+                    <div class="hud-corner hud-corner-br">
+                        <span class="corner-label">SYS.04</span>
+                    </div>
                     
-                    <!-- Side Bars -->
+                    <!-- Side Bars with more segments -->
                     <div class="hud-sidebar hud-sidebar-left">
+                        <div class="sidebar-segment"></div>
+                        <div class="sidebar-segment"></div>
                         <div class="sidebar-segment"></div>
                         <div class="sidebar-segment"></div>
                         <div class="sidebar-segment"></div>
@@ -4492,17 +4509,23 @@ function showBootSequence() {
                         <div class="sidebar-segment"></div>
                         <div class="sidebar-segment"></div>
                         <div class="sidebar-segment"></div>
+                        <div class="sidebar-segment"></div>
+                        <div class="sidebar-segment"></div>
                     </div>
                     
-                    <!-- Top Status Bar -->
+                    <!-- Top Status Bar with binary decoration -->
                     <div class="hud-status-bar hud-status-top">
+                        <div class="binary-decoration">01010101</div>
                         <div class="status-bar-line status-bar-left"></div>
                         <span class="status-text">NEURAL LINK ESTABLISHED</span>
                         <div class="status-bar-line status-bar-right"></div>
+                        <div class="binary-decoration">10101010</div>
                     </div>
                     
-                    <!-- Chevron Indicators -->
+                    <!-- Chevron Indicators with more arrows -->
                     <div class="hud-chevrons hud-chevrons-left">
+                        <span class="chevron">‹</span>
+                        <span class="chevron">‹</span>
                         <span class="chevron">‹</span>
                         <span class="chevron">‹</span>
                         <span class="chevron">‹</span>
@@ -4519,15 +4542,20 @@ function showBootSequence() {
                         <span class="chevron">›</span>
                         <span class="chevron">›</span>
                         <span class="chevron">›</span>
+                        <span class="chevron">›</span>
+                        <span class="chevron">›</span>
                     </div>
                     
-                    <!-- Three Circles Logo -->
+                    <!-- Three Circles Logo with ring effects -->
                     <div class="boot-logo-container">
+                        <div class="boot-circle-outer-ring"></div>
                         <div class="boot-circle boot-circle-1"></div>
                         <div class="boot-circle boot-circle-2"></div>
                         <div class="boot-circle boot-circle-3"></div>
                         <div class="boot-circle-stem"></div>
                         <div class="boot-circle-ring"></div>
+                        <div class="boot-circle-pulse"></div>
+                    </div>
                     </div>
                     
                     <!-- Hash Decorations -->
@@ -4704,10 +4732,17 @@ function runAnimeBootSequence(resolve, skipBoot, setTypingInterval) {
     const phase3d = bootSeq.querySelector('.boot-phase-3d-title');
     const phaseFinal = bootSeq.querySelector('.boot-phase-final');
     
-    // Ensure all phases start hidden
-    phaseHud.style.opacity = '0';
-    phase3d.style.opacity = '0';
-    phaseFinal.style.opacity = '0';
+    // Ensure all phases start hidden (with null checks)
+    if (phaseHud) phaseHud.style.opacity = '0';
+    if (phase3d) phase3d.style.opacity = '0';
+    if (phaseFinal) phaseFinal.style.opacity = '0';
+    
+    // If essential phases are missing, skip boot
+    if (!phaseHud || !phase3d || !phaseFinal) {
+        console.warn('Boot sequence phases not found, skipping animation');
+        skipBoot();
+        return;
+    }
     
     // Sound effects
     playSfx('boot');
