@@ -1885,9 +1885,9 @@ body.boot-retro-tech .boot-line {
     border-radius: 0 !important;
     /* Clipped corners - top-left and bottom-right beveled */
     clip-path: polygon(
-        15px 0%, calc(100% - 0px) 0%, 100% 0px,
+        15px 0%, 100% 0%, 100% 0%,
         100% calc(100% - 15px), calc(100% - 15px) 100%,
-        0px 100%, 0% calc(100% - 0px), 0% 15px
+        0% 100%, 0% 100%, 0% 15px
     );
     overflow: visible;
 }
@@ -1900,9 +1900,9 @@ body.boot-retro-tech .boot-line {
     border: 1px solid var(--color-primary);
     opacity: 0.4;
     clip-path: polygon(
-        12px 0%, calc(100% - 0px) 0%, 100% 0px,
+        12px 0%, 100% 0%, 100% 0%,
         100% calc(100% - 12px), calc(100% - 12px) 100%,
-        0px 100%, 0% calc(100% - 0px), 0% 12px
+        0% 100%, 0% 100%, 0% 12px
     );
     pointer-events: none;
     z-index: 1;
@@ -2120,8 +2120,8 @@ body.panel-style-white-scifi02 .option-btn {
     border-radius: 0;
     clip-path: polygon(
         12px 0%, calc(100% - 12px) 0%, 100% 12px,
-        100% calc(100% - 0px), calc(100% - 0px) 100%,
-        0px 100%, 0% calc(100% - 0px), 0% 12px
+        100% 100%, 100% 100%,
+        0% 100%, 0% 100%, 0% 12px
     );
 }
 
@@ -2133,8 +2133,8 @@ body.panel-style-white-scifi02 .option-btn::before {
     opacity: 0.3;
     clip-path: polygon(
         10px 0%, calc(100% - 10px) 0%, 100% 10px,
-        100% calc(100% - 0px), calc(100% - 0px) 100%,
-        0px 100%, 0% calc(100% - 0px), 0% 10px
+        100% 100%, 100% 100%,
+        0% 100%, 0% 100%, 0% 10px
     );
     pointer-events: none;
 }
@@ -2144,8 +2144,8 @@ body.panel-style-white-scifi02 .settings-section {
     border-radius: 0;
     clip-path: polygon(
         15px 0%, calc(100% - 15px) 0%, 100% 15px,
-        100% calc(100% - 0px), calc(100% - 0px) 100%,
-        0px 100%, 0% calc(100% - 0px), 0% 15px
+        100% 100%, 100% 100%,
+        0% 100%, 0% 100%, 0% 15px
     );
 }
 
