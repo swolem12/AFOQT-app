@@ -4556,7 +4556,6 @@ function showBootSequence() {
                         <div class="boot-circle-ring"></div>
                         <div class="boot-circle-pulse"></div>
                     </div>
-                    </div>
                     
                     <!-- Hash Decorations -->
                     <div class="hud-hash-marks hud-hash-left">////////////////////</div>
@@ -4710,22 +4709,28 @@ function showBootSequence() {
         };
         document.addEventListener('keydown', keyHandler);
         
-        // Run the animation sequence
-        if (hasAnime()) {
-            runAnimeBootSequence(resolve, cleanupAndSkip, (interval) => { typingInterval = interval; });
-        } else {
-            // Fallback - just show briefly and resolve
-            setTimeout(() => {
-                if (!isSkipped) cleanupAndSkip();
-            }, 3000);
-        }
+        // Run the animation sequence after DOM is ready
+        // Use setTimeout to ensure DOM is fully rendered before querying
+        setTimeout(() => {
+            if (hasAnime()) {
+                runAnimeBootSequence(resolve, cleanupAndSkip, (interval) => { typingInterval = interval; });
+            } else {
+                // Fallback - just show briefly and resolve
+                setTimeout(() => {
+                    if (!isSkipped) cleanupAndSkip();
+                }, 3000);
+            }
+        }, 50);
     });
 }
 
 // Main anime.js boot sequence
 function runAnimeBootSequence(resolve, skipBoot, setTypingInterval) {
     const bootSeq = document.getElementById('boot-sequence');
-    if (!bootSeq) return resolve();
+    if (!bootSeq) {
+        console.warn('Boot sequence element not found');
+        return resolve();
+    }
     
     // Phase elements
     const phaseHud = bootSeq.querySelector('.boot-phase-hud');
@@ -4964,50 +4969,65 @@ function runAnimeBootSequence(resolve, skipBoot, setTypingInterval) {
         const statusBox = phase3d.querySelector('.boot-status-box');
         const bottomIndicator = phase3d.querySelector('.boot-bottom-indicator');
         
-        // Title entrance with 3D rotation
+        // Title entrance with dramatic 3D rotation from behind
         anime.animate(titleContainer, {
             opacity: [0, 1],
-            rotateY: [-90, 0],
-            translateZ: [-200, 0],
-            duration: 1000,
+            rotateY: [-180, 0],
+            rotateX: [30, 0],
+            translateZ: [-500, 0],
+            scale: [0.3, 1],
+            duration: 1500,
             ease: 'outExpo'
         });
         
-        // Chromatic aberration effect
+        // Chromatic aberration effect - more dramatic shifts
         anime.animate(phase3d.querySelector('.title-3d-red'), {
-            translateX: [-4, -2, -4],
-            opacity: [0, 0.7, 0.7],
-            duration: 2000,
+            translateX: [-8, -3, -8],
+            translateY: [-2, 1, -2],
+            opacity: [0, 0.8, 0.8],
+            duration: 1500,
             loop: true,
             ease: 'inOutSine'
         });
         
         anime.animate(phase3d.querySelector('.title-3d-cyan'), {
-            translateX: [4, 2, 4],
-            opacity: [0, 0.7, 0.7],
-            duration: 2000,
+            translateX: [8, 3, 8],
+            translateY: [2, -1, 2],
+            opacity: [0, 0.8, 0.8],
+            duration: 1500,
             loop: true,
             ease: 'inOutSine',
-            delay: 100
+            delay: 75
         });
         
-        // Continuous Y-axis rotation
-        anime.animate(titleContainer, {
-            rotateY: [0, 15, 0, -15, 0],
-            duration: 4000,
-            loop: true,
-            ease: 'inOutSine',
-            delay: 1000
-        });
+        // Continuous full 360 Y-axis rotation like the reference
+        setTimeout(() => {
+            anime.animate(titleContainer, {
+                rotateY: [0, 360],
+                duration: 6000,
+                loop: true,
+                ease: 'linear'
+            });
+        }, 1500);
         
-        // Title glow pulse
+        // Add subtle X-axis tilt during rotation
+        setTimeout(() => {
+            anime.animate(titleContainer, {
+                rotateX: [0, 10, 0, -10, 0],
+                duration: 3000,
+                loop: true,
+                ease: 'inOutSine'
+            });
+        }, 1500);
+        
+        // Title glow pulse with more dramatic effect
         anime.animate(titleMain, {
             textShadow: [
                 '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.4)',
-                '0 0 40px rgba(255, 255, 255, 1), 0 0 80px rgba(0, 255, 255, 0.6)',
+                '0 0 60px rgba(255, 255, 255, 1), 0 0 120px rgba(0, 255, 255, 0.8)',
                 '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.4)'
             ],
-            duration: 2000,
+            duration: 1500,
             loop: true,
             ease: 'inOutSine',
             delay: 500

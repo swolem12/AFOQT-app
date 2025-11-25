@@ -7277,14 +7277,16 @@ select {
 /* ===== PHASE 2: 3D TITLE ===== */
 
 .title-3d-scene {
-    perspective: 1000px;
+    perspective: 1200px;
     transform-style: preserve-3d;
+    perspective-origin: center center;
 }
 
 .title-3d-container {
     position: relative;
     transform-style: preserve-3d;
     opacity: 0;
+    backface-visibility: visible;
 }
 
 .title-3d-layer {
