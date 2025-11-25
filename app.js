@@ -4622,11 +4622,23 @@ function showBootSequence() {
             document.addEventListener('keydown', enableAudio, { once: true });
         }
         
-        // Skip handler
+        // Skip handler with cleanup
         let isSkipped = false;
-        const skipBoot = () => {
+        let typingInterval = null;
+        
+        const cleanupAndSkip = () => {
             if (isSkipped) return;
             isSkipped = true;
+            
+            // Clear typing interval if running
+            if (typingInterval) {
+                clearInterval(typingInterval);
+                typingInterval = null;
+            }
+            
+            // Remove keyboard listener
+            document.removeEventListener('keydown', keyHandler);
+            
             const bootSeq = document.getElementById('boot-sequence');
             if (bootSeq) {
                 if (hasAnime()) {
@@ -4643,37 +4655,38 @@ function showBootSequence() {
                     bootSeq.remove();
                     resolve();
                 }
+            } else {
+                resolve();
             }
         };
         
         const skipBtn = document.getElementById('boot-skip');
         if (skipBtn) {
-            skipBtn.addEventListener('click', skipBoot);
+            skipBtn.addEventListener('click', cleanupAndSkip, { once: true });
         }
         
-        // Keyboard skip
+        // Keyboard skip - listen for any skip key
         const keyHandler = (e) => {
             if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
-                skipBoot();
-                document.removeEventListener('keydown', keyHandler);
+                cleanupAndSkip();
             }
         };
         document.addEventListener('keydown', keyHandler);
         
         // Run the animation sequence
         if (hasAnime()) {
-            runAnimeBootSequence(resolve, skipBoot);
+            runAnimeBootSequence(resolve, cleanupAndSkip, (interval) => { typingInterval = interval; });
         } else {
             // Fallback - just show briefly and resolve
             setTimeout(() => {
-                if (!isSkipped) skipBoot();
+                if (!isSkipped) cleanupAndSkip();
             }, 3000);
         }
     });
 }
 
 // Main anime.js boot sequence
-function runAnimeBootSequence(resolve, skipBoot) {
+function runAnimeBootSequence(resolve, skipBoot, setTypingInterval) {
     const bootSeq = document.getElementById('boot-sequence');
     if (!bootSeq) return resolve();
     
@@ -4755,7 +4768,7 @@ function runAnimeBootSequence(resolve, skipBoot) {
         ease: 'outQuart'
     });
     
-    // Status text typing effect
+    // Status text typing effect with interval tracking for cleanup
     if (statusText) {
         const text = statusText.textContent;
         statusText.textContent = '';
@@ -4769,6 +4782,11 @@ function runAnimeBootSequence(resolve, skipBoot) {
                 clearInterval(typeInterval);
             }
         }, 40);
+        
+        // Pass interval reference for cleanup on skip
+        if (setTypingInterval) {
+            setTypingInterval(typeInterval);
+        }
     }
     
     // Chevrons
@@ -5020,7 +5038,6 @@ function runAnimeBootSequence(resolve, skipBoot) {
         });
         
         const coords = phaseFinal.querySelector('.boot-coords');
-        const coordLines = phaseFinal.querySelectorAll('.coord-line');
         const radar = phaseFinal.querySelector('.boot-radar');
         const radarRings = phaseFinal.querySelectorAll('.radar-ring');
         const radarSweep = phaseFinal.querySelector('.radar-sweep');
@@ -5036,23 +5053,6 @@ function runAnimeBootSequence(resolve, skipBoot) {
             translateX: [-20, 0],
             duration: 400,
             ease: 'outQuart'
-        });
-        
-        // Animate coordinate values
-        coordLines.forEach((line, i) => {
-            const valueEl = line.querySelector('.coord-value');
-            if (valueEl) {
-                const targetVal = [0.00, 0.00, 0.00][i];
-                anime.animate({ val: 0 }, {
-                    val: targetVal,
-                    duration: 800,
-                    delay: i * 100,
-                    ease: 'outQuart',
-                    update: (anim) => {
-                        // valueEl.textContent = anim.animations[0].currentValue.toFixed(2);
-                    }
-                });
-            }
         });
         
         // Radar

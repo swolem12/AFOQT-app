@@ -6505,25 +6505,6 @@ select {
     
     .boot-labels span { font-size: 0.55rem; }
 }
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    padding: 12px 24px;
-    background: rgba(0, 255, 255, 0.1);
-    border: 1px solid var(--color-primary);
-    color: var(--color-primary);
-    font-family: 'Orbitron', monospace;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 10;
-}
-
-.boot-skip-btn:hover {
-    background: rgba(0, 255, 255, 0.2);
-    box-shadow: 0 0 20px var(--color-primary);
-    transform: scale(1.05);
-}
 
 /* ===== PHASE SYSTEM ===== */
 .boot-phase {
