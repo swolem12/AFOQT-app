@@ -383,6 +383,32 @@ animationStyles.textContent = `
         transform: translateY(0);
     }
     
+    /* Enhanced card hover effects */
+    .subject-card:hover, .topic-card:hover {
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 
+            0 0 20px var(--color-primary-glow, rgba(0, 255, 255, 0.5)),
+            0 0 40px var(--color-primary-dim, rgba(0, 255, 255, 0.3)),
+            0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .subject-card:active, .topic-card:active {
+        transform: translateY(-2px) scale(1.01);
+    }
+    
+    /* Mode card special effects */
+    .mode-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    
+    .mode-card:hover {
+        transform: translateY(-6px) scale(1.03);
+        border-color: var(--color-primary);
+        box-shadow: 
+            0 0 25px var(--color-primary-glow, rgba(0, 255, 255, 0.6)),
+            0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+    
     .ripple-effect {
         position: absolute;
         border-radius: 50%;
@@ -416,6 +442,52 @@ animationStyles.textContent = `
     @keyframes floatUpDown {
         0%, 100% { transform: translateY(0); }
         50% { transform: translateY(-10px); }
+    }
+    
+    /* Correct answer glow effect */
+    .option-btn.correct {
+        animation: correctPulse 0.5s ease-out;
+    }
+    
+    @keyframes correctPulse {
+        0% { box-shadow: 0 0 0 rgba(0, 255, 0, 0); }
+        50% { box-shadow: 0 0 30px rgba(0, 255, 0, 0.8); }
+        100% { box-shadow: 0 0 15px rgba(0, 255, 0, 0.4); }
+    }
+    
+    /* Wrong answer shake effect */
+    .option-btn.wrong {
+        animation: wrongShake 0.4s ease-out;
+    }
+    
+    @keyframes wrongShake {
+        0%, 100% { transform: translateX(0); }
+        20% { transform: translateX(-8px); }
+        40% { transform: translateX(8px); }
+        60% { transform: translateX(-6px); }
+        80% { transform: translateX(6px); }
+    }
+    
+    /* Score increase animation */
+    .score-increase {
+        animation: scoreUp 0.5s ease-out;
+    }
+    
+    @keyframes scoreUp {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.3); color: var(--color-success); }
+        100% { transform: scale(1); }
+    }
+    
+    /* Panel header typing cursor */
+    .panel-header::after {
+        content: '_';
+        animation: blink 1s step-end infinite;
+    }
+    
+    @keyframes blink {
+        0%, 50% { opacity: 1; }
+        51%, 100% { opacity: 0; }
     }
 `;
 document.head.appendChild(animationStyles);
@@ -3849,6 +3921,8 @@ function updatePlayerStats(player, topicId, correctCount, difficulty = 'beginner
     // Check if leveled up
     if (newLevel > oldLevel) {
         playSfx('levelup');
+        // Trigger celebration animation
+        createCelebration('levelup');
     }
     
     return player;
