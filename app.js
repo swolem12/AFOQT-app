@@ -6116,7 +6116,7 @@ function renderMathUI(uiSpec) {
  * Render a coordinate graph with grid, axes, and a line
  */
 function renderCoordinateGraphCss(uiSpec) {
-    const { width = 300, height = 300, xRange = [-5, 5], yRange = [-5, 5], line, showGrid = true, showAxes = true } = uiSpec;
+    const { width = 300, height = 300, xRange = [-5, 5], yRange = [-5, 5], line, showGrid = true, showAxes = true, showTicks = true } = uiSpec;
     const [xMin, xMax] = xRange;
     const [yMin, yMax] = yRange;
     
@@ -6146,20 +6146,35 @@ function renderCoordinateGraphCss(uiSpec) {
         `;
     }
     
-    return `
-      <div class="graphContainer" style="width:${width}px; height:${height}px;">
-        ${showGrid ? '<div class="graphGrid"></div>' : ''}
-        ${showAxes ? `<div class="graphAxis x" style="top:${origin.y}px;"></div><div class="graphAxis y" style="left:${origin.x}px;"></div>` : ''}
-        ${lineHtml}
-      </div>
-    `;
+        // Ticks and numeric labels
+        let ticksHtml = '';
+        if (showTicks) {
+                for (let xi = Math.ceil(xMin); xi <= Math.floor(xMax); xi++) {
+                        const px = ((xi - xMin) / (xMax - xMin)) * width;
+                        ticksHtml += `<div class="graphTick x" style="left:${px}px; top:${origin.y - 3}px;"></div>`;
+                        if (xi !== 0) ticksHtml += `<div class="graphTickLabel" style="left:${px + 2}px; top:${origin.y + 6}px;">${xi}</div>`;
+                }
+                for (let yi = Math.ceil(yMin); yi <= Math.floor(yMax); yi++) {
+                        const py = height - ((yi - yMin) / (yMax - yMin)) * height;
+                        ticksHtml += `<div class="graphTick y" style="left:${origin.x - 3}px; top:${py}px;"></div>`;
+                        if (yi !== 0) ticksHtml += `<div class="graphTickLabel" style="left:${origin.x + 6}px; top:${py - 10}px;">${yi}</div>`;
+                }
+        }
+        return `
+            <div class="graphContainer" style="width:${width}px; height:${height}px;">
+                ${showGrid ? '<div class="graphGrid"></div>' : ''}
+                ${showAxes ? `<div class="graphAxis x" style="top:${origin.y}px;"></div><div class="graphAxis y" style="left:${origin.x}px;"></div>` : ''}
+                ${showAxes && showTicks ? ticksHtml : ''}
+                ${lineHtml}
+            </div>
+        `;
 }
 
 /**
  * Render coordinate plane with labeled points
  */
 function renderCoordinatePointsCss(uiSpec) {
-    const { width = 300, height = 300, xRange = [-5, 5], yRange = [-5, 5], points = [], showGrid = true, line } = uiSpec;
+    const { width = 300, height = 300, xRange = [-5, 5], yRange = [-5, 5], points = [], showGrid = true, line, showTicks = true } = uiSpec;
     const [xMin, xMax] = xRange;
     const [yMin, yMax] = yRange;
     const toPx = (x, y) => ({
@@ -6183,14 +6198,29 @@ function renderCoordinatePointsCss(uiSpec) {
         const angle = Math.atan2(dy, dx) * (180/Math.PI);
         elements += `<div class="graphLine" style="left:${p1.x}px; top:${p1.y}px; width:${length}px; transform: rotate(${angle}deg);"></div>`;
     }
-    return `
-      <div class="graphContainer" style="width:${width}px; height:${height}px;">
-        ${showGrid ? '<div class="graphGrid"></div>' : ''}
-        <div class="graphAxis x" style="top:${origin.y}px;"></div>
-        <div class="graphAxis y" style="left:${origin.x}px;"></div>
-        ${elements}
-      </div>
-    `;
+        // Ticks and numeric labels
+        let ticksHtml = '';
+        if (showTicks) {
+                for (let xi = Math.ceil(xMin); xi <= Math.floor(xMax); xi++) {
+                        const px = ((xi - xMin) / (xMax - xMin)) * width;
+                        ticksHtml += `<div class="graphTick x" style="left:${px}px; top:${origin.y - 3}px;"></div>`;
+                        if (xi !== 0) ticksHtml += `<div class="graphTickLabel" style="left:${px + 2}px; top:${origin.y + 6}px;">${xi}</div>`;
+                }
+                for (let yi = Math.ceil(yMin); yi <= Math.floor(yMax); yi++) {
+                        const py = height - ((yi - yMin) / (yMax - yMin)) * height;
+                        ticksHtml += `<div class="graphTick y" style="left:${origin.x - 3}px; top:${py}px;"></div>`;
+                        if (yi !== 0) ticksHtml += `<div class="graphTickLabel" style="left:${origin.x + 6}px; top:${py - 10}px;">${yi}</div>`;
+                }
+        }
+        return `
+            <div class="graphContainer" style="width:${width}px; height:${height}px;">
+                ${showGrid ? '<div class="graphGrid"></div>' : ''}
+                <div class="graphAxis x" style="top:${origin.y}px;"></div>
+                <div class="graphAxis y" style="left:${origin.x}px;"></div>
+                ${showTicks ? ticksHtml : ''}
+                ${elements}
+            </div>
+        `;
 }
 
 /**

@@ -42,6 +42,26 @@
     width: 2px;
 }
 
+.graphTick {
+    position: absolute;
+    background: #006666;
+}
+.graphTick.x {
+    width: 2px;
+    height: 6px;
+}
+.graphTick.y {
+    width: 6px;
+    height: 2px;
+}
+.graphTickLabel {
+    position: absolute;
+    font-family: monospace;
+    font-size: 11px;
+    color: #00ffff;
+    text-shadow: 0 0 3px rgba(0,0,0,0.7);
+}
+
 .graphLine {
     position: absolute;
     height: 2px;
