@@ -5,6 +5,151 @@
     box-sizing: border-box;
 }
 
+/* Math UI - Coordinate Graphing */
+.graphContainer {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    background: #000;
+    border: 2px solid #00ffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.graphGrid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        repeating-linear-gradient(#001a1a 0 1px, transparent 1px 30px),
+        repeating-linear-gradient(90deg, #001a1a 0 1px, transparent 1px 30px);
+}
+
+.graphAxis {
+    position: absolute;
+    background: #006666;
+}
+
+.graphAxis.x {
+    left: 0;
+    right: 0;
+    height: 2px;
+}
+
+.graphAxis.y {
+    top: 0;
+    bottom: 0;
+    width: 2px;
+}
+
+.graphLine {
+    position: absolute;
+    height: 2px;
+    background: #00ffff;
+    transform-origin: left center;
+}
+
+.graphPoint {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #00ffff;
+    box-shadow: 0 0 6px #00ffff;
+}
+
+.graphLabel {
+    position: absolute;
+    font-family: monospace;
+    font-size: 13px;
+    font-weight: bold;
+    color: #00ffff;
+    transform: translate(12px, -16px);
+    text-shadow: 0 0 4px rgba(0,0,0,0.8);
+}
+
+.functionRuleBox {
+    margin: 20px auto;
+    padding: 12px 16px;
+    border: 2px solid #00ffff;
+    border-radius: 8px;
+    background: #001a1a;
+    color: #00ffff;
+    font-family: monospace;
+    max-width: 480px;
+}
+
+.functionTable,
+.dataTable {
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 2px solid #00ffff;
+}
+
+.functionTable th,
+.functionTable td,
+.dataTable th,
+.dataTable td {
+    border: 1px solid #00ffff;
+    padding: 8px 10px;
+    color: #fff;
+}
+
+.functionTable thead th,
+.dataTable thead th {
+    background: #001a1a;
+    color: #00ffff;
+}
+
+/* Math UI - Transformation helpers */
+.graphLineGhost {
+    position: absolute;
+    height: 2px;
+    background: rgba(0, 255, 255, 0.55);
+    transform-origin: left center;
+    box-shadow: 0 0 3px rgba(0, 255, 255, 0.3);
+}
+
+.graphPointGhost {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 255, 255, 0.45);
+    border: 2px solid rgba(0, 255, 255, 0.6);
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(0, 255, 255, 0.4);
+}
+
+.graphArrow {
+    position: absolute;
+    height: 2px;
+    background: #00ffff;
+    transform-origin: left center;
+    box-shadow: 0 0 4px rgba(0, 255, 255, 0.6);
+}
+
+.graphArrowHead {
+    position: absolute;
+    width: 0; height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 10px solid #00ffff;
+    right: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.graphMirror {
+    position: absolute;
+    background: repeating-linear-gradient(
+        to right,
+        rgba(0,255,255,0.65),
+        rgba(0,255,255,0.65) 6px,
+        rgba(0,255,255,0.15) 6px,
+        rgba(0,255,255,0.15) 12px
+    );
+}
+
 /* ============================================
    MODERNIZED DESIGN SYSTEM
    Enhanced with glassmorphism, advanced gradients,

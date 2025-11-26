@@ -303,20 +303,27 @@ async function loadAllMathKnowledgeContent() {
  * Convert JSON question format to app question format
  */
 function convertJsonQuestionToAppFormat(jsonQuestion) {
-    // JSON format: {id, question, choices: {A, B, C, D}, answer, explanation}
-    // App format: {prompt, options: [], correctIndex, explanation, id, originalQuestion}
+    // JSON format: {id, question, choices: {A, B, C, D}, answer, explanation, uiSpec}
+    // App format: {prompt, options: [], correctIndex, explanation, id, uiSpec}
     
     const choices = jsonQuestion.choices;
     const options = [choices.A, choices.B, choices.C, choices.D];
     const correctIndex = ['A', 'B', 'C', 'D'].indexOf(jsonQuestion.answer);
     
-    return {
+    const converted = {
         id: jsonQuestion.id, // Preserve question ID for tracking
         prompt: jsonQuestion.question,
         options: options,
         correctIndex: correctIndex,
         explanation: jsonQuestion.explanation
     };
+    
+    // Preserve uiSpec for math UI rendering
+    if (jsonQuestion.uiSpec) {
+        converted.uiSpec = jsonQuestion.uiSpec;
+    }
+    
+    return converted;
 }
 
 /**

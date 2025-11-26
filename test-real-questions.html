@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Math Question Smoke Test</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body { background:#000; color:#00ffff; font-family: monospace; padding: 16px; }
+    .question-block { margin-bottom: 48px; border: 1px solid #006666; padding: 16px; border-radius: 8px; }
+    .question-block h3 { margin-bottom: 8px; }
+    .question-block .prompt { margin: 12px 0; }
+    .question-block .choices { margin: 12px 0; }
+    .question-block .choices div { margin: 4px 0; }
+  </style>
+</head>
+<body>
+  <h1>Real Math Question Renderer Test</h1>
+  <div id="questions"></div>
+
+  <script src="patch-loader.js"></script>
+  <script>
+    // Minimal inline renderers (copied from app.js)
+    function renderCoordinateGraphCss(uiSpec) {
+      const { width = 300, height = 300, xRange = [-5, 5], yRange = [-5, 5], line, showGrid = true, showAxes = true } = uiSpec;
+      const [xMin, xMax] = xRange; const [yMin, yMax] = yRange;
+      const toPx = (x, y) => ({ x: ((x - xMin) / (xMax - xMin)) * width, y: height - ((y - yMin) / (yMax - yMin)) * height });
+      const origin = toPx(0, 0);
+      let lineHtml = '';
+      if (line && line.point1 && line.point2) {
+        const p1 = toPx(line.point1.x, line.point1.y);
+        const p2 = toPx(line.point2.x, line.point2.y);
+        const dx = p2.x - p1.x; const dy = p2.y - p1.y;
+        const length = Math.sqrt(dx*dx + dy*dy); const angle = Math.atan2(dy, dx) * (180/Math.PI);
+        lineHtml = `<div class="graphLine" style="left:${p1.x}px; top:${p1.y}px; width:${length}px; transform: rotate(${angle}deg);"></div>
+          <div class="graphPoint" style="left:${p1.x-4}px; top:${p1.y-4}px;"></div>
+          <div class="graphPoint" style="left:${p2.x-4}px; top:${p2.y-4}px;"></div>`;
+      }
+      return `<div class="graphContainer" style="width:${width}px; height:${height}px;">${showGrid ? '<div class="graphGrid"></div>' : ''}${showAxes ? `<div class="graphAxis x" style="top:${origin.y}px;"></div><div class="graphAxis y" style="left:${origin.x}px;"></div>` : ''}${lineHtml}</div>`;
+    }
+
+    function renderCoordinatePointsCss(uiSpec) {
+      const { width = 300, height = 300, xRange = [-5, 5], yRange = [-5, 5], points = [], showGrid = true, line } = uiSpec;
+      const [xMin, xMax] = xRange; const [yMin, yMax] = yRange;
+      const toPx = (x, y) => ({ x: ((x - xMin) / (xMax - xMin)) * width, y: height - ((y - yMin) / (yMax - yMin)) * height });
+      const origin = toPx(0, 0);
+      let elements = '';
+      points.forEach(p => {
+        const m = toPx(p.x, p.y);
+        elements += `<div class="graphPoint" style="left:${m.x-4}px; top:${m.y-4}px;"></div>`;
+        if (p.name) elements += `<div class="graphLabel" style="left:${m.x}px; top:${m.y}px;">${p.name}</div>`;
+      });
+      if (line && line.point1 && line.point2) {
+        const p1 = toPx(line.point1.x, line.point1.y);
+        const p2 = toPx(line.point2.x, line.point2.y);
+        const dx = p2.x - p1.x; const dy = p2.y - p1.y;
+        const length = Math.sqrt(dx*dx + dy*dy); const angle = Math.atan2(dy, dx) * (180/Math.PI);
+        elements += `<div class="graphLine" style="left:${p1.x}px; top:${p1.y}px; width:${length}px; transform: rotate(${angle}deg);"></div>`;
+      }
+      return `<div class="graphContainer" style="width:${width}px; height:${height}px;">${showGrid ? '<div class="graphGrid"></div>' : ''}<div class="graphAxis x" style="top:${origin.y}px;"></div><div class="graphAxis y" style="left:${origin.x}px;"></div>${elements}</div>`;
+    }
+
+    function renderReflectionCss(uiSpec) {
+      const { width=300,height=300,xRange=[-5,5],yRange=[-5,5],points=[],showGrid=true,type,lineValue }=uiSpec;
+      const [xMin,xMax]=xRange,[yMin,yMax]=yRange; const toPx=(x,y)=>({x:((x-xMin)/(xMax-xMin))*width,y:height-((y-yMin)/(yMax-yMin))*height});
+      const origin=toPx(0,0);
+      let mirrorCss='', reflect;
+      if(type==='reflection_vertical_line'){
+        const k=typeof lineValue==='number'?lineValue:0; const mx=toPx(k,0).x; mirrorCss=`<div class="graphMirror" style="left:${mx}px; top:0; width:2px; height:100%;"></div>`; reflect=p=>({name:p.name,x:2*k-p.x,y:p.y});
+      } else {
+        const k=typeof lineValue==='number'?lineValue:0; const my=toPx(0,k).y; mirrorCss=`<div class="graphMirror" style="left:0; top:${my}px; width:100%; height:2px;"></div>`; reflect=p=>({name:p.name,x:p.x,y:2*k-p.y});
+      }
+      const reflected=points.map(reflect);
+      const seg=(a,b,cls='graphLine')=>{const dx=b.x-a.x,dy=b.y-a.y,len=Math.hypot(dx,dy),ang=Math.atan2(dy,dx)*180/Math.PI;return `<div class="${cls}" style="left:${a.x}px; top:${a.y}px; width:${len}px; transform: rotate(${ang}deg);"></div>`};
+      const pt=(p,cls='graphPoint')=>`<div class="${cls}" style="left:${p.x-4}px; top:${p.y-4}px;"></div>`;
+      const lbl=(p,name)=>name?`<div class="graphLabel" style="left:${p.x}px; top:${p.y}px;">${name}</div>`:'';
+      const arr=(a,b)=>{const dx=b.x-a.x,dy=b.y-a.y,len=Math.hypot(dx,dy),ang=Math.atan2(dy,dx)*180/Math.PI;return `<div class="graphArrow" style="left:${a.x}px; top:${a.y}px; width:${len}px; transform: rotate(${ang}deg);"><div class="graphArrowHead"></div></div>`};
+      const mp=pts=>pts.map(p=>toPx(p.x,p.y)); const origPx=mp(points), refPx=mp(reflected);
+      let edgesOrig='',edgesGhost=''; if(origPx.length>=2){for(let i=0;i<origPx.length;i++){edgesOrig+=seg(origPx[i],origPx[(i+1)%origPx.length],'graphLine');edgesGhost+=seg(refPx[i],refPx[(i+1)%refPx.length],'graphLineGhost');}}
+      let ptsHtml='',ptsGhostHtml='',labelsHtml='',arrowsHtml=''; for(let i=0;i<origPx.length;i++){ptsHtml+=pt(origPx[i],'graphPoint');ptsGhostHtml+=pt(refPx[i],'graphPointGhost');labelsHtml+=lbl(origPx[i],points[i].name||'');arrowsHtml+=arr(origPx[i],refPx[i]);}
+      return `<div class="graphContainer" style="width:${width}px; height:${height}px;">${showGrid?'<div class="graphGrid"></div>':''}<div class="graphAxis x" style="top:${origin.y}px;"></div><div class="graphAxis y" style="left:${origin.x}px;"></div>${mirrorCss}${edgesGhost}${ptsGhostHtml}${edgesOrig}${ptsHtml}${labelsHtml}${arrowsHtml}</div>`;
+    }
+
+    function renderMathUI(uiSpec) {
+      if (!uiSpec || !uiSpec.type) return '';
+      switch (uiSpec.type) {
+        case 'slope_graph':
+        case 'coordinate_slope':
+          return renderCoordinateGraphCss(uiSpec);
+        case 'coordinate_grid_points':
+        case 'point_reflection':
+          return renderCoordinatePointsCss(uiSpec);
+        case 'reflection_vertical_line':
+        case 'reflection_horizontal_line':
+          return renderReflectionCss(uiSpec);
+        default:
+          return `<div style="color:#ff6666;">Unknown uiSpec type: ${uiSpec.type}</div>`;
+      }
+    }
+
+    // Load some sample questions
+    async function loadAndRender() {
+      const container = document.getElementById('questions');
+      
+      // Slope question
+      const slopeResp = await fetch('Test Content/Math/slope_beginner_part1.json');
+      const slopeData = await slopeResp.json();
+      const slopeQ = slopeData.questions[0];
+      
+      // Coordinate geometry question
+      const cgResp = await fetch('Test Content/Math/coordinate_geometry_beginner_part1.json');
+      const cgData = await cgResp.json();
+      const cgQ = cgData.questions[0];
+      
+      // Transformation question (reflection)
+      const tfResp = await fetch('Test Content/Math/transformations_beginner_part1.json');
+      const tfData = await tfResp.json();
+      const tfQ = tfData.questions[0];
+      
+      const questions = [slopeQ, cgQ, tfQ];
+      
+      questions.forEach((q, i) => {
+        const block = document.createElement('div');
+        block.className = 'question-block';
+        block.innerHTML = `
+          <h3>Question ${i+1}: ${q.id}</h3>
+          ${q.uiSpec ? renderMathUI(q.uiSpec) : ''}
+          <div class="prompt"><strong>Q:</strong> ${q.question}</div>
+          <div class="choices">
+            ${Object.entries(q.choices).map(([k,v]) => `<div>${k}. ${v}</div>`).join('')}
+          </div>
+          <div style="color:#00ff00;"><strong>Answer:</strong> ${q.answer} - ${q.explanation}</div>
+        `;
+        container.appendChild(block);
+      });
+    }
+    
+    loadAndRender().catch(err => {
+      document.getElementById('questions').innerHTML = `<div style="color:#ff6666;">Error: ${err.message}</div>`;
+    });
+  </script>
+</body>
+</html>

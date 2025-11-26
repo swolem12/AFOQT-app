@@ -6078,29 +6078,28 @@ function renderDifficultySelect() {
  */
 function renderMathUI(uiSpec) {
     if (!uiSpec || !uiSpec.type) return '';
-    
     switch (uiSpec.type) {
         case 'slope_graph':
         case 'coordinate_slope':
-            return renderCoordinateGraph(uiSpec);
+            return renderCoordinateGraphCss(uiSpec);
         case 'coordinate_grid_points':
         case 'point_reflection':
         case 'point_reflection_origin':
-            return renderCoordinatePoints(uiSpec);
+            return renderCoordinatePointsCss(uiSpec);
         case 'coordinate_segment':
-            return renderCoordinateSegment(uiSpec);
+            return renderCoordinateSegmentCss(uiSpec);
         case 'coordinate_triangle':
         case 'triangle_translation':
-            return renderCoordinateTriangle(uiSpec);
+            return renderCoordinateTriangleCss(uiSpec);
         case 'translation':
-            return renderTranslation(uiSpec);
+            return renderTranslationCss(uiSpec);
         case 'rotation_90':
         case 'rotation_90_clockwise':
         case 'rotation_180':
-            return renderRotation(uiSpec);
+            return renderRotationCss(uiSpec);
         case 'reflection_vertical_line':
         case 'reflection_horizontal_line':
-            return renderReflection(uiSpec);
+            return renderReflectionCss(uiSpec);
         case 'function_table':
             return renderFunctionTable(uiSpec);
         case 'function_rule':
@@ -6127,329 +6126,303 @@ function mapCoordinate(x, y, xRange, yRange, width, height) {
 /**
  * Render a coordinate graph with grid, axes, and a line
  */
-function renderCoordinateGraph(uiSpec) {
+function renderCoordinateGraphCss(uiSpec) {
     const { width = 300, height = 300, xRange = [-5, 5], yRange = [-5, 5], line, showGrid = true, showAxes = true } = uiSpec;
+    const [xMin, xMax] = xRange;
+    const [yMin, yMax] = yRange;
     
-    const canvas = document.createElement('canvas');
-    canvas.width = width;
-    canvas.height = height;
-    const ctx = canvas.getContext('2d');
+    // Map logical coords to pixels
+    const toPx = (x, y) => {
+        const px = ((x - xMin) / (xMax - xMin)) * width;
+        const py = height - ((y - yMin) / (yMax - yMin)) * height;
+        return { x: px, y: py };
+    };
     
-    // Clear background
-    ctx.fillStyle = '#000';
-    ctx.fillRect(0, 0, width, height);
+    // Axes positions
+    const origin = toPx(0, 0);
     
-    // Draw grid
-    if (showGrid) {
-        ctx.strokeStyle = '#333';
-        ctx.lineWidth = 1;
-        const [xMin, xMax] = xRange;
-        const [yMin, yMax] = yRange;
-        
-        for (let x = xMin; x <= xMax; x++) {
-            const px = mapCoordinate(x, 0, xRange, yRange, width, height).x;
-            ctx.beginPath();
-            ctx.moveTo(px, 0);
-            ctx.lineTo(px, height);
-            ctx.stroke();
-        }
-        
-        for (let y = yMin; y <= yMax; y++) {
-            const py = mapCoordinate(0, y, xRange, yRange, width, height).y;
-            ctx.beginPath();
-            ctx.moveTo(0, py);
-            ctx.lineTo(width, py);
-            ctx.stroke();
-        }
-    }
-    
-    // Draw axes
-    if (showAxes) {
-        ctx.strokeStyle = '#666';
-        ctx.lineWidth = 2;
-        
-        // X-axis
-        const yAxisY = mapCoordinate(0, 0, xRange, yRange, width, height).y;
-        ctx.beginPath();
-        ctx.moveTo(0, yAxisY);
-        ctx.lineTo(width, yAxisY);
-        ctx.stroke();
-        
-        // Y-axis
-        const xAxisX = mapCoordinate(0, 0, xRange, yRange, width, height).x;
-        ctx.beginPath();
-        ctx.moveTo(xAxisX, 0);
-        ctx.lineTo(xAxisX, height);
-        ctx.stroke();
-    }
-    
-    // Draw line
+    // Line positions
+    let lineHtml = '';
     if (line && line.point1 && line.point2) {
-        const p1 = mapCoordinate(line.point1.x, line.point1.y, xRange, yRange, width, height);
-        const p2 = mapCoordinate(line.point2.x, line.point2.y, xRange, yRange, width, height);
-        
-        ctx.strokeStyle = '#00ffff';
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.moveTo(p1.x, p1.y);
-        ctx.lineTo(p2.x, p2.y);
-        ctx.stroke();
-        
-        // Draw endpoint markers
-        ctx.fillStyle = '#00ffff';
-        [p1, p2].forEach(p => {
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, 4, 0, Math.PI * 2);
-            ctx.fill();
-        });
+        const p1 = toPx(line.point1.x, line.point1.y);
+        const p2 = toPx(line.point2.x, line.point2.y);
+        const dx = p2.x - p1.x;
+        const dy = p2.y - p1.y;
+        const length = Math.sqrt(dx*dx + dy*dy);
+        const angle = Math.atan2(dy, dx) * (180/Math.PI);
+        lineHtml = `
+          <div class="graphLine" style="left:${p1.x}px; top:${p1.y}px; width:${length}px; transform: rotate(${angle}deg);"></div>
+          <div class="graphPoint" style="left:${p1.x-4}px; top:${p1.y-4}px;"></div>
+          <div class="graphPoint" style="left:${p2.x-4}px; top:${p2.y-4}px;"></div>
+        `;
     }
     
-    return `<div class="math-ui-container" style="text-align: center; margin: 20px 0;">
-        <img src="${canvas.toDataURL()}" alt="Math graph" style="border: 2px solid #00ffff; border-radius: 8px; background: #000; max-width: 100%;">
-    </div>`;
+    return `
+      <div class="graphContainer" style="width:${width}px; height:${height}px;">
+        ${showGrid ? '<div class="graphGrid"></div>' : ''}
+        ${showAxes ? `<div class="graphAxis x" style="top:${origin.y}px;"></div><div class="graphAxis y" style="left:${origin.x}px;"></div>` : ''}
+        ${lineHtml}
+      </div>
+    `;
 }
 
 /**
  * Render coordinate plane with labeled points
  */
-function renderCoordinatePoints(uiSpec) {
-    const { width = 300, height = 300, xRange = [-5, 5], yRange = [-5, 5], points = [], showGrid = true } = uiSpec;
-    
-    const canvas = document.createElement('canvas');
-    canvas.width = width;
-    canvas.height = height;
-    const ctx = canvas.getContext('2d');
-    
-    // Clear background
-    ctx.fillStyle = '#000';
-    ctx.fillRect(0, 0, width, height);
-    
-    // Draw grid
-    if (showGrid) {
-        ctx.strokeStyle = '#333';
-        ctx.lineWidth = 1;
-        const [xMin, xMax] = xRange;
-        const [yMin, yMax] = yRange;
-        
-        for (let x = xMin; x <= xMax; x++) {
-            const px = mapCoordinate(x, 0, xRange, yRange, width, height).x;
-            ctx.beginPath();
-            ctx.moveTo(px, 0);
-            ctx.lineTo(px, height);
-            ctx.stroke();
-        }
-        
-        for (let y = yMin; y <= yMax; y++) {
-            const py = mapCoordinate(0, y, xRange, yRange, width, height).y;
-            ctx.beginPath();
-            ctx.moveTo(0, py);
-            ctx.lineTo(width, py);
-            ctx.stroke();
-        }
-    }
-    
-    // Draw axes
-    ctx.strokeStyle = '#666';
-    ctx.lineWidth = 2;
-    
-    const yAxisY = mapCoordinate(0, 0, xRange, yRange, width, height).y;
-    ctx.beginPath();
-    ctx.moveTo(0, yAxisY);
-    ctx.lineTo(width, yAxisY);
-    ctx.stroke();
-    
-    const xAxisX = mapCoordinate(0, 0, xRange, yRange, width, height).x;
-    ctx.beginPath();
-    ctx.moveTo(xAxisX, 0);
-    ctx.lineTo(xAxisX, height);
-    ctx.stroke();
-    
-    // Draw points
-    ctx.fillStyle = '#00ffff';
-    ctx.font = '14px monospace';
-    points.forEach(point => {
-        const p = mapCoordinate(point.x, point.y, xRange, yRange, width, height);
-        
-        // Draw point
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, 5, 0, Math.PI * 2);
-        ctx.fill();
-        
-        // Draw label
-        if (point.name) {
-            ctx.fillText(point.name, p.x + 10, p.y - 10);
-        }
+function renderCoordinatePointsCss(uiSpec) {
+    const { width = 300, height = 300, xRange = [-5, 5], yRange = [-5, 5], points = [], showGrid = true, line } = uiSpec;
+    const [xMin, xMax] = xRange;
+    const [yMin, yMax] = yRange;
+    const toPx = (x, y) => ({
+        x: ((x - xMin) / (xMax - xMin)) * width,
+        y: height - ((y - yMin) / (yMax - yMin)) * height
     });
-    
-    return `<div class="math-ui-container" style="text-align: center; margin: 20px 0;">
-        <img src="${canvas.toDataURL()}" alt="Coordinate points" style="border: 2px solid #00ffff; border-radius: 8px; background: #000; max-width: 100%;">
-    </div>`;
+    const origin = toPx(0, 0);
+    let elements = '';
+    points.forEach(p => {
+        const m = toPx(p.x, p.y);
+        elements += `<div class="graphPoint" style="left:${m.x-4}px; top:${m.y-4}px;"></div>`;
+        if (p.name) elements += `<div class="graphLabel" style="left:${m.x}px; top:${m.y}px;">${p.name}</div>`;
+    });
+    // optional line between two points if provided
+    if (line && line.point1 && line.point2) {
+        const p1 = toPx(line.point1.x, line.point1.y);
+        const p2 = toPx(line.point2.x, line.point2.y);
+        const dx = p2.x - p1.x;
+        const dy = p2.y - p1.y;
+        const length = Math.sqrt(dx*dx + dy*dy);
+        const angle = Math.atan2(dy, dx) * (180/Math.PI);
+        elements += `<div class="graphLine" style="left:${p1.x}px; top:${p1.y}px; width:${length}px; transform: rotate(${angle}deg);"></div>`;
+    }
+    return `
+      <div class="graphContainer" style="width:${width}px; height:${height}px;">
+        ${showGrid ? '<div class="graphGrid"></div>' : ''}
+        <div class="graphAxis x" style="top:${origin.y}px;"></div>
+        <div class="graphAxis y" style="left:${origin.x}px;"></div>
+        ${elements}
+      </div>
+    `;
 }
 
 /**
  * Render coordinate segment
  */
-function renderCoordinateSegment(uiSpec) {
+function renderCoordinateSegmentCss(uiSpec) {
     const { width = 300, height = 300, xRange = [-5, 5], yRange = [-5, 5], point1, point2, showGrid = true } = uiSpec;
-    
     if (!point1 || !point2) return '';
-    
-    const canvas = document.createElement('canvas');
-    canvas.width = width;
-    canvas.height = height;
-    const ctx = canvas.getContext('2d');
-    
-    ctx.fillStyle = '#000';
-    ctx.fillRect(0, 0, width, height);
-    
-    // Grid and axes (similar to previous functions)
-    if (showGrid) {
-        ctx.strokeStyle = '#333';
-        ctx.lineWidth = 1;
-        const [xMin, xMax] = xRange;
-        const [yMin, yMax] = yRange;
-        
-        for (let x = xMin; x <= xMax; x++) {
-            const px = mapCoordinate(x, 0, xRange, yRange, width, height).x;
-            ctx.beginPath();
-            ctx.moveTo(px, 0);
-            ctx.lineTo(px, height);
-            ctx.stroke();
-        }
-        
-        for (let y = yMin; y <= yMax; y++) {
-            const py = mapCoordinate(0, y, xRange, yRange, width, height).y;
-            ctx.beginPath();
-            ctx.moveTo(0, py);
-            ctx.lineTo(width, py);
-            ctx.stroke();
-        }
-    }
-    
-    ctx.strokeStyle = '#666';
-    ctx.lineWidth = 2;
-    
-    const yAxisY = mapCoordinate(0, 0, xRange, yRange, width, height).y;
-    ctx.beginPath();
-    ctx.moveTo(0, yAxisY);
-    ctx.lineTo(width, yAxisY);
-    ctx.stroke();
-    
-    const xAxisX = mapCoordinate(0, 0, xRange, yRange, width, height).x;
-    ctx.beginPath();
-    ctx.moveTo(xAxisX, 0);
-    ctx.lineTo(xAxisX, height);
-    ctx.stroke();
-    
-    // Draw segment
-    const p1 = mapCoordinate(point1.x, point1.y, xRange, yRange, width, height);
-    const p2 = mapCoordinate(point2.x, point2.y, xRange, yRange, width, height);
-    
-    ctx.strokeStyle = '#00ffff';
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    ctx.moveTo(p1.x, p1.y);
-    ctx.lineTo(p2.x, p2.y);
-    ctx.stroke();
-    
-    // Draw points with labels
-    ctx.fillStyle = '#00ffff';
-    ctx.font = '14px monospace';
-    
-    [{ p: p1, name: point1.name }, { p: p2, name: point2.name }].forEach(({ p, name }) => {
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, 5, 0, Math.PI * 2);
-        ctx.fill();
-        if (name) ctx.fillText(name, p.x + 10, p.y - 10);
+    const [xMin, xMax] = xRange;
+    const [yMin, yMax] = yRange;
+    const toPx = (x, y) => ({
+        x: ((x - xMin) / (xMax - xMin)) * width,
+        y: height - ((y - yMin) / (yMax - yMin)) * height
     });
-    
-    return `<div class="math-ui-container" style="text-align: center; margin: 20px 0;">
-        <img src="${canvas.toDataURL()}" alt="Coordinate segment" style="border: 2px solid #00ffff; border-radius: 8px; background: #000; max-width: 100%;">
-    </div>`;
+    const origin = toPx(0, 0);
+    const p1 = toPx(point1.x, point1.y);
+    const p2 = toPx(point2.x, point2.y);
+    const dx = p2.x - p1.x;
+    const dy = p2.y - p1.y;
+    const length = Math.sqrt(dx*dx + dy*dy);
+    const angle = Math.atan2(dy, dx) * (180/Math.PI);
+    return `
+      <div class="graphContainer" style="width:${width}px; height:${height}px;">
+        ${showGrid ? '<div class="graphGrid"></div>' : ''}
+        <div class="graphAxis x" style="top:${origin.y}px;"></div>
+        <div class="graphAxis y" style="left:${origin.x}px;"></div>
+        <div class="graphLine" style="left:${p1.x}px; top:${p1.y}px; width:${length}px; transform: rotate(${angle}deg);"></div>
+        <div class="graphPoint" style="left:${p1.x-4}px; top:${p1.y-4}px;"></div>
+        <div class="graphPoint" style="left:${p2.x-4}px; top:${p2.y-4}px;"></div>
+        ${point1.name ? `<div class="graphLabel" style="left:${p1.x}px; top:${p1.y}px;">${point1.name}</div>` : ''}
+        ${point2.name ? `<div class="graphLabel" style="left:${p2.x}px; top:${p2.y}px;">${point2.name}</div>` : ''}
+      </div>
+    `;
 }
 
 /**
  * Render coordinate triangle
  */
-function renderCoordinateTriangle(uiSpec) {
+function renderCoordinateTriangleCss(uiSpec) {
     const { width = 300, height = 300, xRange = [-5, 5], yRange = [-5, 5], points = [], showGrid = true } = uiSpec;
-    
     if (points.length < 3) return '';
-    
-    const canvas = document.createElement('canvas');
-    canvas.width = width;
-    canvas.height = height;
-    const ctx = canvas.getContext('2d');
-    
-    ctx.fillStyle = '#000';
-    ctx.fillRect(0, 0, width, height);
-    
-    // Grid
-    if (showGrid) {
-        ctx.strokeStyle = '#333';
-        ctx.lineWidth = 1;
-        const [xMin, xMax] = xRange;
-        const [yMin, yMax] = yRange;
-        
-        for (let x = xMin; x <= xMax; x++) {
-            const px = mapCoordinate(x, 0, xRange, yRange, width, height).x;
-            ctx.beginPath();
-            ctx.moveTo(px, 0);
-            ctx.lineTo(px, height);
-            ctx.stroke();
-        }
-        
-        for (let y = yMin; y <= yMax; y++) {
-            const py = mapCoordinate(0, y, xRange, yRange, width, height).y;
-            ctx.beginPath();
-            ctx.moveTo(0, py);
-            ctx.lineTo(width, py);
-            ctx.stroke();
+    const [xMin, xMax] = xRange;
+    const [yMin, yMax] = yRange;
+    const toPx = (x, y) => ({
+        x: ((x - xMin) / (xMax - xMin)) * width,
+        y: height - ((y - yMin) / (yMax - yMin)) * height
+    });
+    const origin = toPx(0, 0);
+    const p1 = toPx(points[0].x, points[0].y);
+    const p2 = toPx(points[1].x, points[1].y);
+    const p3 = toPx(points[2].x, points[2].y);
+    const seg = (a, b) => {
+        const dx = b.x - a.x; const dy = b.y - a.y; const len = Math.sqrt(dx*dx+dy*dy); const ang = Math.atan2(dy, dx)*(180/Math.PI);
+        return `<div class="graphLine" style="left:${a.x}px; top:${a.y}px; width:${len}px; transform: rotate(${ang}deg);"></div>`;
+    };
+    return `
+      <div class="graphContainer" style="width:${width}px; height:${height}px;">
+        ${showGrid ? '<div class="graphGrid"></div>' : ''}
+        <div class="graphAxis x" style="top:${origin.y}px;"></div>
+        <div class="graphAxis y" style="left:${origin.x}px;"></div>
+        ${seg(p1,p2)}${seg(p2,p3)}${seg(p3,p1)}
+        <div class="graphPoint" style="left:${p1.x-4}px; top:${p1.y-4}px;"></div>
+        <div class="graphPoint" style="left:${p2.x-4}px; top:${p2.y-4}px;"></div>
+        <div class="graphPoint" style="left:${p3.x-4}px; top:${p3.y-4}px;"></div>
+        ${points[0].name ? `<div class="graphLabel" style="left:${p1.x}px; top:${p1.y}px;">${points[0].name}</div>` : ''}
+        ${points[1].name ? `<div class="graphLabel" style="left:${p2.x}px; top:${p2.y}px;">${points[1].name}</div>` : ''}
+        ${points[2].name ? `<div class="graphLabel" style="left:${p3.x}px; top:${p3.y}px;">${points[2].name}</div>` : ''}
+      </div>
+    `;
+}
+
+function renderTranslationCss(uiSpec) {
+    const { width = 300, height = 300, xRange = [-5,5], yRange = [-5,5], points = [], vector, showGrid = true } = uiSpec;
+    if (!points || points.length === 0) return '';
+    const [xMin, xMax] = xRange; const [yMin, yMax] = yRange;
+    const toPx = (x,y) => ({ x: ((x-xMin)/(xMax-xMin))*width, y: height - ((y-yMin)/(yMax-yMin))*height });
+    const origin = toPx(0,0);
+    const translated = points.map(p => ({ name: p.name, x: p.x + (vector?.dx||0), y: p.y + (vector?.dy||0) }));
+    const seg = (a,b, cls='graphLine') => {
+        const dx=b.x-a.x, dy=b.y-a.y; const len=Math.hypot(dx,dy); const ang=Math.atan2(dy,dx)*180/Math.PI;
+        return `<div class="${cls}" style="left:${a.x}px; top:${a.y}px; width:${len}px; transform: rotate(${ang}deg);"></div>`;
+    };
+    const pt = (p, cls='graphPoint') => `<div class="${cls}" style="left:${p.x-4}px; top:${p.y-4}px;"></div>`;
+    const lbl = (p, name) => name ? `<div class="graphLabel" style="left:${p.x}px; top:${p.y}px;">${name}</div>` : '';
+    const arr = (a,b) => { const dx=b.x-a.x, dy=b.y-a.y; const len=Math.hypot(dx,dy); const ang=Math.atan2(dy,dx)*180/Math.PI; return `<div class="graphArrow" style="left:${a.x}px; top:${a.y}px; width:${len}px; transform: rotate(${ang}deg);"><div class="graphArrowHead"></div></div>`; };
+    const mp = pts => pts.map(p => toPx(p.x,p.y));
+    const origPx = mp(points);
+    const transPx = mp(translated);
+    let edgesOrig = '', edgesGhost = '';
+    if (origPx.length >= 2) {
+        for (let i=0;i<origPx.length;i++) {
+            const a=origPx[i], b=origPx[(i+1)%origPx.length];
+            edgesOrig += seg(a,b,'graphLine');
+            edgesGhost += seg(transPx[i], transPx[(i+1)%transPx.length], 'graphLineGhost');
         }
     }
-    
-    // Axes
-    ctx.strokeStyle = '#666';
-    ctx.lineWidth = 2;
-    
-    const yAxisY = mapCoordinate(0, 0, xRange, yRange, width, height).y;
-    ctx.beginPath();
-    ctx.moveTo(0, yAxisY);
-    ctx.lineTo(width, yAxisY);
-    ctx.stroke();
-    
-    const xAxisX = mapCoordinate(0, 0, xRange, yRange, width, height).x;
-    ctx.beginPath();
-    ctx.moveTo(xAxisX, 0);
-    ctx.lineTo(xAxisX, height);
-    ctx.stroke();
-    
-    // Draw triangle
-    const mappedPoints = points.slice(0, 3).map(p => mapCoordinate(p.x, p.y, xRange, yRange, width, height));
-    
-    ctx.strokeStyle = '#00ffff';
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    ctx.moveTo(mappedPoints[0].x, mappedPoints[0].y);
-    ctx.lineTo(mappedPoints[1].x, mappedPoints[1].y);
-    ctx.lineTo(mappedPoints[2].x, mappedPoints[2].y);
-    ctx.closePath();
-    ctx.stroke();
-    
-    // Draw vertices
-    ctx.fillStyle = '#00ffff';
-    ctx.font = '14px monospace';
-    points.slice(0, 3).forEach((point, i) => {
-        const p = mappedPoints[i];
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, 5, 0, Math.PI * 2);
-        ctx.fill();
-        if (point.name) ctx.fillText(point.name, p.x + 10, p.y - 10);
-    });
-    
-    return `<div class="math-ui-container" style="text-align: center; margin: 20px 0;">
-        <img src="${canvas.toDataURL()}" alt="Triangle" style="border: 2px solid #00ffff; border-radius: 8px; background: #000; max-width: 100%;">
-    </div>`;
+    let ptsHtml = '', ptsGhostHtml = '', labelsHtml = '', arrowsHtml = '';
+    for (let i=0;i<origPx.length;i++) {
+        ptsHtml += pt(origPx[i], 'graphPoint');
+        ptsGhostHtml += pt(transPx[i], 'graphPointGhost');
+        labelsHtml += lbl(origPx[i], points[i].name || '');
+        arrowsHtml += arr(origPx[i], transPx[i]);
+    }
+    return `
+      <div class="graphContainer" style="width:${width}px; height:${height}px;">
+        ${showGrid ? '<div class="graphGrid"></div>' : ''}
+        <div class="graphAxis x" style="top:${origin.y}px;"></div>
+        <div class="graphAxis y" style="left:${origin.x}px;"></div>
+        ${edgesGhost}${ptsGhostHtml}
+        ${edgesOrig}${ptsHtml}${labelsHtml}
+        ${arrowsHtml}
+      </div>
+    `;
+}
+
+function renderRotationCss(uiSpec) {
+    const { width = 300, height = 300, xRange=[-5,5], yRange=[-5,5], points = [], center = {x:0,y:0}, showGrid = true, type, angle } = uiSpec;
+    if (!points || points.length === 0) return '';
+    let deg = 0;
+    if (typeof angle === 'number') deg = angle;
+    else if (type === 'rotation_90' ) deg = 90;
+    else if (type === 'rotation_90_clockwise') deg = -90;
+    else if (type === 'rotation_180') deg = 180;
+    const rad = deg * Math.PI/180;
+    const [xMin,xMax]=xRange,[yMin,yMax]=yRange;
+    const toPx=(x,y)=>({x:((x-xMin)/(xMax-xMin))*width,y:height-((y-yMin)/(yMax-yMin))*height});
+    const origin=toPx(0,0);
+    const rot = p => {
+        const cx=center.x||0, cy=center.y||0;
+        const dx=p.x-cx, dy=p.y-cy;
+        const rx = cx + (dx*Math.cos(rad) - dy*Math.sin(rad));
+        const ry = cy + (dx*Math.sin(rad) + dy*Math.cos(rad));
+        return { name:p.name, x:rx, y:ry };
+    };
+    const rotated = points.map(rot);
+    const seg=(a,b,cls='graphLine')=>{const dx=b.x-a.x,dy=b.y-a.y,len=Math.hypot(dx,dy),ang=Math.atan2(dy,dx)*180/Math.PI;return `<div class="${cls}" style="left:${a.x}px; top:${a.y}px; width:${len}px; transform: rotate(${ang}deg);"></div>`};
+    const pt=(p,cls='graphPoint')=>`<div class="${cls}" style="left:${p.x-4}px; top:${p.y-4}px;"></div>`;
+    const lbl=(p,name)=>name?`<div class="graphLabel" style="left:${p.x}px; top:${p.y}px;">${name}</div>`:'';
+    const arr=(a,b)=>{const dx=b.x-a.x,dy=b.y-a.y,len=Math.hypot(dx,dy),ang=Math.atan2(dy,dx)*180/Math.PI;return `<div class="graphArrow" style="left:${a.x}px; top:${a.y}px; width:${len}px; transform: rotate(${ang}deg);"><div class="graphArrowHead"></div></div>`};
+    const mp=pts=>pts.map(p=>toPx(p.x,p.y));
+    const origPx=mp(points), rotPx=mp(rotated);
+    let edgesOrig='', edgesGhost='';
+    if (origPx.length>=2) {
+        for (let i=0;i<origPx.length;i++) {
+            edgesOrig += seg(origPx[i], origPx[(i+1)%origPx.length], 'graphLine');
+            edgesGhost += seg(rotPx[i], rotPx[(i+1)%rotPx.length], 'graphLineGhost');
+        }
+    }
+    let ptsHtml='', ptsGhostHtml='', labelsHtml='', arrowsHtml='';
+    for (let i=0;i<origPx.length;i++) {
+        ptsHtml += pt(origPx[i],'graphPoint');
+        ptsGhostHtml += pt(rotPx[i],'graphPointGhost');
+        labelsHtml += lbl(origPx[i], points[i].name||'');
+        arrowsHtml += arr(origPx[i], rotPx[i]);
+    }
+    // Optional center marker
+    const cpx = toPx(center.x||0, center.y||0);
+    const centerMark = `<div class="graphPoint" style="left:${cpx.x-2}px; top:${cpx.y-2}px; width:4px; height:4px;"></div>`;
+    return `
+      <div class="graphContainer" style="width:${width}px; height:${height}px;">
+        ${showGrid?'<div class="graphGrid"></div>':''}
+        <div class="graphAxis x" style="top:${origin.y}px;"></div>
+        <div class="graphAxis y" style="left:${origin.x}px;"></div>
+        ${edgesGhost}${ptsGhostHtml}
+        ${edgesOrig}${ptsHtml}${labelsHtml}
+        ${arrowsHtml}
+        ${centerMark}
+      </div>
+    `;
+}
+
+function renderReflectionCss(uiSpec) {
+    const { width=300, height=300, xRange=[-5,5], yRange=[-5,5], points=[], showGrid=true, type, lineValue } = uiSpec;
+    if (!points || points.length===0) return '';
+    const [xMin,xMax]=xRange,[yMin,yMax]=yRange; const toPx=(x,y)=>({x:((x-xMin)/(xMax-xMin))*width,y:height-((y-yMin)/(yMax-yMin))*height});
+    const origin=toPx(0,0);
+    let mirrorCss='';
+    let reflect;
+    if (type==='reflection_vertical_line') {
+        const k = typeof lineValue==='number' ? lineValue : 0;
+        const mx = toPx(k,0).x;
+        mirrorCss = `<div class="graphMirror" style="left:${mx}px; top:0; width:2px; height:100%;"></div>`;
+        reflect = p => ({ name:p.name, x: 2*k - p.x, y: p.y });
+    } else {
+        const k = typeof lineValue==='number' ? lineValue : 0;
+        const my = toPx(0,k).y;
+        mirrorCss = `<div class="graphMirror" style="left:0; top:${my}px; width:100%; height:2px;"></div>`;
+        reflect = p => ({ name:p.name, x: p.x, y: 2*k - p.y });
+    }
+    const reflected = points.map(reflect);
+    const seg=(a,b,cls='graphLine')=>{const dx=b.x-a.x,dy=b.y-a.y,len=Math.hypot(dx,dy),ang=Math.atan2(dy,dx)*180/Math.PI;return `<div class="${cls}" style="left:${a.x}px; top:${a.y}px; width:${len}px; transform: rotate(${ang}deg);"></div>`};
+    const pt=(p,cls='graphPoint')=>`<div class="${cls}" style="left:${p.x-4}px; top:${p.y-4}px;"></div>`;
+    const lbl=(p,name)=>name?`<div class="graphLabel" style="left:${p.x}px; top:${p.y}px;">${name}</div>`:'';
+    const arr=(a,b)=>{const dx=b.x-a.x,dy=b.y-a.y,len=Math.hypot(dx,dy),ang=Math.atan2(dy,dx)*180/Math.PI;return `<div class="graphArrow" style="left:${a.x}px; top:${a.y}px; width:${len}px; transform: rotate(${ang}deg);"><div class="graphArrowHead"></div></div>`};
+    const mp=pts=>pts.map(p=>toPx(p.x,p.y));
+    const origPx=mp(points), refPx=mp(reflected);
+    let edgesOrig='',edgesGhost='';
+    if (origPx.length>=2){
+        for (let i=0;i<origPx.length;i++){
+            edgesOrig += seg(origPx[i], origPx[(i+1)%origPx.length], 'graphLine');
+            edgesGhost += seg(refPx[i], refPx[(i+1)%refPx.length], 'graphLineGhost');
+        }
+    }
+    let ptsHtml='',ptsGhostHtml='',labelsHtml='',arrowsHtml='';
+    for (let i=0;i<origPx.length;i++){
+        ptsHtml += pt(origPx[i],'graphPoint');
+        ptsGhostHtml += pt(refPx[i],'graphPointGhost');
+        labelsHtml += lbl(origPx[i], points[i].name||'');
+        arrowsHtml += arr(origPx[i], refPx[i]);
+    }
+    return `
+      <div class="graphContainer" style="width:${width}px; height:${height}px;">
+        ${showGrid?'<div class="graphGrid"></div>':''}
+        <div class="graphAxis x" style="top:${origin.y}px;"></div>
+        <div class="graphAxis y" style="left:${origin.x}px;"></div>
+        ${mirrorCss}
+        ${edgesGhost}${ptsGhostHtml}
+        ${edgesOrig}${ptsHtml}${labelsHtml}
+        ${arrowsHtml}
+      </div>
+    `;
 }
 
 /**
