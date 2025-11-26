@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AFOQT Quest - Full Feature Test</title>
+  <style>
+    body { font-family: monospace; background: #000; color: #0f0; padding: 20px; }
+    h1 { color: #0ff; }
+    .section { margin: 20px 0; padding: 15px; border: 1px solid #0ff; }
+    .test { margin: 10px 0; }
+    .pass { color: #0f0; }
+    .fail { color: #f00; }
+    .pending { color: #ff0; }
+    button { background: #0ff; color: #000; padding: 8px 16px; margin: 5px; cursor: pointer; border: none; font-family: monospace; }
+    button:hover { background: #0f0; }
+    #results { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>🎮 AFOQT Quest - Feature Test Suite</h1>
+  
+  <div class="section">
+    <h2>Asset Loading Tests</h2>
+    <div id="asset-tests"></div>
+    <button onclick="testAssets()">Run Asset Tests</button>
+  </div>
+
+  <div class="section">
+    <h2>Core Functionality Tests</h2>
+    <div id="core-tests"></div>
+    <button onclick="testCore()">Run Core Tests</button>
+  </div>
+
+  <div class="section">
+    <h2>Content System Tests</h2>
+    <div id="content-tests"></div>
+    <button onclick="testContent()">Run Content Tests</button>
+  </div>
+
+  <div class="section">
+    <h2>Math UI Rendering Tests</h2>
+    <div id="math-tests"></div>
+    <button onclick="testMathUI()">Run Math UI Tests</button>
+  </div>
+
+  <div id="results"></div>
+
+  <script src="patch-loader.js"></script>
+  <script>
+    const results = {
+      passed: 0,
+      failed: 0,
+      pending: 0
+    };
+
+    function logTest(name, status, message = '') {
+      const container = document.getElementById('results');
+      const className = status ? 'pass' : 'fail';
+      const symbol = status ? '✓' : '✗';
+      container.innerHTML += `<div class="${className}">${symbol} ${name}: ${message}</div>`;
+      if (status) results.passed++;
+      else results.failed++;
+    }
+
+    async function testAssets() {
+      const container = document.getElementById('asset-tests');
+      container.innerHTML = '<div class="pending">Running asset tests...</div>';
+      
+      // Test anime.js
+      try {
+        const response = await fetch('assets/libs/anime.min.js');
+        logTest('anime.js', response.ok, `Status ${response.status}`);
+      } catch (e) {
+        logTest('anime.js', false, e.message);
+      }
+
+      // Test icons
+      try {
+        const response = await fetch('assets/icons/icon-192.png');
+        logTest('App Icon 192', response.ok, `Status ${response.status}`);
+      } catch (e) {
+        logTest('App Icon 192', false, e.message);
+      }
+
+      // Test manifest
+      try {
+        const response = await fetch('manifest.json');
+        const data = await response.json();
+        const iconPathCorrect = data.icons[0].src === 'assets/icons/icon-192.png';
+        logTest('Manifest Icons', iconPathCorrect, iconPathCorrect ? 'Paths updated' : 'Paths incorrect');
+      } catch (e) {
+        logTest('Manifest', false, e.message);
+      }
+
+      container.innerHTML = '<div class="pass">Asset tests complete</div>';
+    }
+
+    async function testCore() {
+      const container = document.getElementById('core-tests');
+      container.innerHTML = '<div class="pending">Running core tests...</div>';
+
+      // Test app.js loads
+      logTest('app.js loaded', typeof state !== 'undefined', typeof state);
+
+      // Test db.js loads
+      logTest('db.js loaded', typeof afoqtDB !== 'undefined', typeof afoqtDB);
+
+      // Test patch-loader.js loads
+      logTest('patch-loader.js loaded', typeof initializePatch18 !== 'undefined', typeof initializePatch18);
+
+      // Test state initialization
+      logTest('State object', state && typeof state.screen !== 'undefined', `screen: ${state?.screen}`);
+
+      container.innerHTML = '<div class="pass">Core tests complete</div>';
+    }
+
+    async function testContent() {
+      const container = document.getElementById('content-tests');
+      container.innerHTML = '<div class="pending">Running content tests...</div>';
+
+      try {
+        await initializePatch18();
+        
+        // Check question registry
+        logTest('Question Registry', typeof questionRegistry !== 'undefined', 'Initialized');
+        
+        // Check math content
+        const hasMath = questionRegistry.math_knowledge && 
+                       Object.keys(questionRegistry.math_knowledge).length > 0;
+        logTest('Math Content', hasMath, `${Object.keys(questionRegistry.math_knowledge || {}).length} subtopics`);
+
+        // Check vocab content
+        const hasVocab = questionRegistry.vocabulary && 
+                        Object.keys(questionRegistry.vocabulary).length > 0;
+        logTest('Vocabulary Content', hasVocab, `${Object.keys(questionRegistry.vocabulary || {}).length} subtopics`);
+
+        // Test question conversion
+        if (hasMath) {
+          const subtopicId = Object.keys(questionRegistry.math_knowledge)[0];
+          const difficulty = Object.keys(questionRegistry.math_knowledge[subtopicId])[0];
+          const questions = questionRegistry.math_knowledge[subtopicId][difficulty];
+          const hasUiSpec = questions.some(q => q.uiSpec);
+          logTest('uiSpec Preserved', hasUiSpec, `Found in ${subtopicId}`);
+        }
+
+      } catch (e) {
+        logTest('Content Loading', false, e.message);
+      }
+
+      container.innerHTML = '<div class="pass">Content tests complete</div>';
+    }
+
+    async function testMathUI() {
+      const container = document.getElementById('math-tests');
+      container.innerHTML = '<div class="pending">Running Math UI tests...</div>';
+
+      // Test renderer functions exist
+      logTest('renderMathUI', typeof renderMathUI !== 'undefined', 'Function exists');
+      logTest('renderCoordinateGraphCss', typeof renderCoordinateGraphCss !== 'undefined', 'Function exists');
+      logTest('renderCoordinatePointsCss', typeof renderCoordinatePointsCss !== 'undefined', 'Function exists');
+      logTest('renderTranslationCss', typeof renderTranslationCss !== 'undefined', 'Function exists');
+      logTest('renderRotationCss', typeof renderRotationCss !== 'undefined', 'Function exists');
+      logTest('renderReflectionCss', typeof renderReflectionCss !== 'undefined', 'Function exists');
+
+      // Test CSS classes exist
+      const testDiv = document.createElement('div');
+      testDiv.className = 'graphContainer';
+      document.body.appendChild(testDiv);
+      const styles = window.getComputedStyle(testDiv);
+      logTest('CSS Classes', styles.position === 'relative', 'graphContainer styled');
+      document.body.removeChild(testDiv);
+
+      container.innerHTML = '<div class="pass">Math UI tests complete</div>';
+    }
+
+    // Auto-run on load
+    window.addEventListener('load', async () => {
+      await new Promise(r => setTimeout(r, 1000));
+      await testAssets();
+      await testCore();
+      await testContent();
+      await testMathUI();
+      
+      document.getElementById('results').innerHTML += 
+        `<div style="margin-top:20px; padding:15px; border:2px solid #0ff;">
+          <h3>Summary</h3>
+          <div class="pass">Passed: ${results.passed}</div>
+          <div class="fail">Failed: ${results.failed}</div>
+        </div>`;
+    });
+  </script>
+</body>
+</html>

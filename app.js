@@ -6111,19 +6111,6 @@ function renderMathUI(uiSpec) {
 }
 
 /**
- * Map logical coordinates to pixel coordinates
- */
-function mapCoordinate(x, y, xRange, yRange, width, height) {
-    const [xMin, xMax] = xRange;
-    const [yMin, yMax] = yRange;
-    
-    const pixelX = ((x - xMin) / (xMax - xMin)) * width;
-    const pixelY = height - ((y - yMin) / (yMax - yMin)) * height; // Invert Y
-    
-    return { x: pixelX, y: pixelY };
-}
-
-/**
  * Render a coordinate graph with grid, axes, and a line
  */
 function renderCoordinateGraphCss(uiSpec) {
@@ -6423,27 +6410,6 @@ function renderReflectionCss(uiSpec) {
         ${arrowsHtml}
       </div>
     `;
-}
-
-/**
- * Render translation vector visualization
- */
-function renderTranslation(uiSpec) {
-    return renderCoordinatePoints(uiSpec); // Same as points but with vector arrow
-}
-
-/**
- * Render rotation visualization
- */
-function renderRotation(uiSpec) {
-    return renderCoordinatePoints(uiSpec);
-}
-
-/**
- * Render reflection with line
- */
-function renderReflection(uiSpec) {
-    return renderCoordinatePoints(uiSpec);
 }
 
 /**
