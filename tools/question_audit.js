@@ -159,9 +159,11 @@ function generateSummary(fileResults) {
         missingExplanation,
         missingFastStrategy,
         missingUiSpec,
+        // Calculate completeness: total possible fields = totalQuestions * 3
+        // Complete fields = total possible - missing fields
         completenessPercent: totalQuestions > 0 
-            ? ((totalQuestions - missingExplanation - missingFastStrategy - missingUiSpec) / (totalQuestions * 3) * 100).toFixed(1)
-            : 0
+            ? (((totalQuestions * 3) - missingExplanation - missingFastStrategy - missingUiSpec) / (totalQuestions * 3) * 100).toFixed(1)
+            : '0.0'
     };
 }
 

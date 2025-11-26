@@ -6107,7 +6107,13 @@ function renderMathUI(uiSpec) {
         case 'geometry_triangle_diagram':
             return renderGeometryTriangleDiagram(uiSpec);
         case 'geometry_angle_diagram':
+        case 'geometry_angle_pair_diagram':
+        case 'geometry_parallel_lines_diagram':
             return renderGeometryAngleDiagram(uiSpec);
+        case 'geometry_coordinate_segment':
+            return renderCoordinateSegmentCss(uiSpec);
+        case 'geometry_quadrilateral_diagram':
+            return renderGeometryQuadrilateralDiagram(uiSpec);
         default:
             console.warn('Unknown uiSpec type:', uiSpec.type);
             return '';
@@ -6558,14 +6564,17 @@ function renderGeometryAngleDiagram(uiSpec) {
     
     let svgContent = '';
     
+    // Generate unique ID to avoid collisions when multiple diagrams are rendered
+    const uniqueId = 'grid-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+    
     // Add grid if requested
     if (showGrid) {
         svgContent += `<defs>
-            <pattern id="grid-pattern" width="30" height="30" patternUnits="userSpaceOnUse">
+            <pattern id="${uniqueId}" width="30" height="30" patternUnits="userSpaceOnUse">
                 <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#001a1a" stroke-width="0.5"/>
             </pattern>
         </defs>
-        <rect width="${w}" height="${h}" fill="url(#grid-pattern)"/>`;
+        <rect width="${w}" height="${h}" fill="url(#${uniqueId})"/>`;
     }
     
     // Render lines (rays)
@@ -6669,12 +6678,51 @@ function renderGeometryAngleDiagram(uiSpec) {
 }
 
 /**
+ * Render a quadrilateral diagram (4-sided polygon)
+ * Used for parallelograms, rectangles, squares, trapezoids, etc.
+ */
+function renderGeometryQuadrilateralDiagram(uiSpec) {
+    const { width = 300, height = 300, points = [], angleLabels = [], styleHints = {} } = uiSpec;
+    if (!points || points.length < 4) return '';
+    
+    const p1 = points[0], p2 = points[1], p3 = points[2], p4 = points[3];
+    const seg = (a, b) => {
+        const dx = b.x - a.x; const dy = b.y - a.y; const len = Math.hypot(dx, dy); const ang = Math.atan2(dy, dx) * 180/Math.PI;
+        return `<div class="graphLine" style="left:${a.x}px; top:${a.y}px; width:${len}px; transform: rotate(${ang}deg);"></div>`;
+    };
+    const pt = a => `<div class="graphPoint" style="left:${a.x-4}px; top:${a.y-4}px;"></div>`;
+    const lblFor = (vertex) => angleLabels.find(al => al.vertex === vertex);
+    const angleLbl = (a) => {
+        const meta = lblFor(a.name);
+        if (!meta) return '';
+        const color = meta.highlight ? (styleHints.highlightAngleColor || '#ff3366') : (styleHints.labelColor || '#00ffff');
+        return `<div class="angleLabel" style="left:${a.x + 10}px; top:${a.y - 18}px; color:${color};">${meta.label}</div>`;
+    };
+    const nameLbl = (a) => `<div class="graphLabel" style="left:${a.x}px; top:${a.y}px;">${a.name || ''}</div>`;
+    return `
+      <div class="graphContainer" style="width:${width}px; height:${height}px;">
+        ${seg(p1, p2)}${seg(p2, p3)}${seg(p3, p4)}${seg(p4, p1)}
+        ${pt(p1)}${pt(p2)}${pt(p3)}${pt(p4)}
+        ${nameLbl(p1)}${nameLbl(p2)}${nameLbl(p3)}${nameLbl(p4)}
+        ${angleLbl(p1)}${angleLbl(p2)}${angleLbl(p3)}${angleLbl(p4)}
+      </div>
+    `;
+}
+
+/**
  * Render explanation and fast strategy panel
  * Shows explanation and fastStrategy in study mode after answer submission
  */
 function renderExplanationPanel(question, isCorrect) {
     const explanation = question.explanation || null;
     const fastStrategy = question.fastStrategy || null;
+    
+    // Validate correctIndex to prevent XSS
+    const correctIndex = typeof question.correctIndex === 'number' && 
+                         Number.isInteger(question.correctIndex) && 
+                         question.correctIndex >= 0 && 
+                         question.correctIndex < 26 
+                         ? question.correctIndex : 0;
     
     // If no explanation or fastStrategy, return minimal feedback
     if (!explanation && !fastStrategy) {
@@ -6685,7 +6733,7 @@ function renderExplanationPanel(question, isCorrect) {
                     <span class="explanation-panel-title">Explanation</span>
                 </div>
                 <div class="explanation-content">
-                    <p class="explanation-missing">Explanation pending review. The correct answer is ${String.fromCharCode(65 + question.correctIndex)}.</p>
+                    <p class="explanation-missing">Explanation pending review. The correct answer is ${String.fromCharCode(65 + correctIndex)}.</p>
                 </div>
             </div>
         `;

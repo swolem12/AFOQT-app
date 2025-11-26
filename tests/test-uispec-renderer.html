@@ -183,7 +183,7 @@
                     { 
                         from: { x: 100, y: 100 }, 
                         to: { x: 150, y: 50 },
-                        label: '<script>alert("xss")</script>'
+                        label: '\x3cscript\x3ealert("xss")\x3c/script\x3e'
                     }
                 ]
             };
@@ -192,7 +192,7 @@
             const svg3 = renderUiSpec(uiSpec3, container3);
             
             const html = container3.innerHTML;
-            if (html.indexOf('<script>') === -1 && html.indexOf('</script>') === -1) {
+            if (html.indexOf('\x3cscript\x3e') === -1 && html.indexOf('\x3c/script\x3e') === -1) {
                 log('Test 3: XSS script tags sanitized', true);
             } else {
                 log('Test 3: XSS script tags NOT sanitized', false);
