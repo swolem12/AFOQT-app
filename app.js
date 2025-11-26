@@ -6106,6 +6106,10 @@ function renderMathUI(uiSpec) {
             return renderFunctionRule(uiSpec);
         case 'geometry_triangle_diagram':
             return renderGeometryTriangleDiagram(uiSpec);
+        case 'geometry_angle_diagram':
+            return renderGeometryAngleDiagram(uiSpec);
+        case 'geometry_quadrilateral_diagram':
+            return renderGeometryQuadrilateralDiagram(uiSpec);
         default:
             console.warn('Unknown uiSpec type:', uiSpec.type);
             return '';
@@ -6521,6 +6525,151 @@ function renderGeometryTriangleDiagram(uiSpec) {
     `;
 }
 
+/**
+ * Render geometry angle diagram with rays and angle arc
+ * uiSpec shape:
+ * { type: 'geometry_angle_diagram', width, height, lines: [{from:{x,y}, to:{x,y}, label}], angleArc: {center, radius, label, measureDegrees}, styleHints }
+ */
+function renderGeometryAngleDiagram(uiSpec) {
+    const { width = 300, height = 300, lines = [], angleArc = null, styleHints = {} } = uiSpec;
+    const baseColor = styleHints.baseLineColor || '#00ffff';
+    const arcColor = styleHints.highlightAngleColor || '#ff6666';
+    const labelColor = styleHints.labelsColor || '#00ffff';
+    
+    // Render lines/rays
+    const renderLine = (line, idx) => {
+        const { from, to, label } = line;
+        const dx = to.x - from.x;
+        const dy = to.y - from.y;
+        const len = Math.hypot(dx, dy);
+        const ang = Math.atan2(dy, dx) * 180 / Math.PI;
+        
+        return `
+            <div class="graphLine" style="
+                left: ${from.x}px;
+                top: ${from.y}px;
+                width: ${len}px;
+                transform: rotate(${ang}deg);
+                background: ${baseColor};
+            "></div>
+            ${label ? `<div class="graphLabel" style="left: ${to.x}px; top: ${to.y - 15}px; color: ${labelColor};">${label}</div>` : ''}
+        `;
+    };
+    
+    // Render angle arc (as a curved border segment)
+    const renderArc = () => {
+        if (!angleArc) return '';
+        const { center, radius = 35, label, measureDegrees = 0 } = angleArc;
+        
+        // Calculate arc position - use SVG for smooth arc
+        const arcSvg = `
+            <svg class="angleSvg" style="position: absolute; left: 0; top: 0; width: ${width}px; height: ${height}px; pointer-events: none;">
+                <circle 
+                    cx="${center.x}" 
+                    cy="${center.y}" 
+                    r="${radius}" 
+                    stroke="${arcColor}" 
+                    stroke-width="2" 
+                    fill="none"
+                    stroke-dasharray="${Math.PI * radius * measureDegrees / 180} ${Math.PI * 2 * radius}"
+                    transform="rotate(-90 ${center.x} ${center.y})"
+                />
+            </svg>
+        `;
+        
+        // Label near the arc
+        const labelX = center.x + (radius + 15) * Math.cos((-90 + measureDegrees / 2) * Math.PI / 180);
+        const labelY = center.y + (radius + 15) * Math.sin((-90 + measureDegrees / 2) * Math.PI / 180);
+        const labelHtml = label ? `<div class="angleLabel" style="left: ${labelX}px; top: ${labelY}px; color: ${arcColor};">${label} = ${measureDegrees}°</div>` : '';
+        
+        return arcSvg + labelHtml;
+    };
+    
+    // Render center point
+    const renderCenter = () => {
+        if (!angleArc || !angleArc.center) return '';
+        const { center } = angleArc;
+        return `<div class="graphPoint" style="left: ${center.x - 4}px; top: ${center.y - 4}px;"></div>`;
+    };
+    
+    return `
+        <div class="graphContainer" style="width: ${width}px; height: ${height}px; position: relative;">
+            ${lines.map(renderLine).join('')}
+            ${renderArc()}
+            ${renderCenter()}
+        </div>
+    `;
+}
+
+/**
+ * Render geometry quadrilateral diagram (rectangle, square, parallelogram, etc.)
+ * uiSpec shape:
+ * { type: 'geometry_quadrilateral_diagram', width, height, vertices: [{x,y},...], labels: {length, width, etc.}, styleHints }
+ */
+function renderGeometryQuadrilateralDiagram(uiSpec) {
+    const { width = 300, height = 300, vertices = [], labels = {}, styleHints = {} } = uiSpec;
+    const baseColor = styleHints.lineColor || '#00ffff';
+    const labelColor = styleHints.labelsColor || '#00ffff';
+    
+    // If no vertices provided, render a default rectangle
+    if (vertices.length < 4) {
+        // Default rectangle centered in the container
+        const rectWidth = labels.length || 100;
+        const rectHeight = labels.width || 60;
+        const x = (width - rectWidth) / 2;
+        const y = (height - rectHeight) / 2;
+        
+        return `
+            <div class="graphContainer" style="width: ${width}px; height: ${height}px; position: relative;">
+                <div style="
+                    position: absolute;
+                    left: ${x}px;
+                    top: ${y}px;
+                    width: ${rectWidth}px;
+                    height: ${rectHeight}px;
+                    border: 2px solid ${baseColor};
+                    box-shadow: 0 0 5px ${baseColor};
+                "></div>
+                ${labels.length ? `<div class="graphLabel" style="left: ${x + rectWidth/2}px; top: ${y + rectHeight + 10}px; color: ${labelColor};">${labels.length}</div>` : ''}
+                ${labels.width ? `<div class="graphLabel" style="left: ${x + rectWidth + 10}px; top: ${y + rectHeight/2}px; color: ${labelColor};">${labels.width}</div>` : ''}
+            </div>
+        `;
+    }
+    
+    // Render custom vertices
+    const renderEdges = () => {
+        let html = '';
+        for (let i = 0; i < vertices.length; i++) {
+            const from = vertices[i];
+            const to = vertices[(i + 1) % vertices.length];
+            const dx = to.x - from.x;
+            const dy = to.y - from.y;
+            const len = Math.hypot(dx, dy);
+            const ang = Math.atan2(dy, dx) * 180 / Math.PI;
+            
+            html += `<div class="graphLine" style="
+                left: ${from.x}px;
+                top: ${from.y}px;
+                width: ${len}px;
+                transform: rotate(${ang}deg);
+                background: ${baseColor};
+            "></div>`;
+        }
+        return html;
+    };
+    
+    const renderVertices = () => {
+        return vertices.map(v => `<div class="graphPoint" style="left: ${v.x - 4}px; top: ${v.y - 4}px;"></div>`).join('');
+    };
+    
+    return `
+        <div class="graphContainer" style="width: ${width}px; height: ${height}px; position: relative;">
+            ${renderEdges()}
+            ${renderVertices()}
+        </div>
+    `;
+}
+
 function renderQuiz() {
     const currentQuestion = state.quiz.questions[state.quiz.currentIndex];
     const answered = state.quiz.selectedAnswer !== null;
@@ -6734,6 +6883,19 @@ function renderResults() {
                             <div class="review-explanation">
                                 <strong>Explanation:</strong> ${question.explanation}
                             </div>
+                            ${question.fastStrategy ? `
+                            <div class="feedback-fast-strategy" style="margin-top: 10px;">
+                                <strong>⚡ Fast Strategy:</strong> ${question.fastStrategy}
+                            </div>
+                            ` : ''}
+                            ${question.steps && question.steps.length > 0 ? `
+                            <div class="feedback-steps" style="margin-top: 10px;">
+                                <strong>📋 Steps:</strong>
+                                <ol>
+                                    ${question.steps.map(step => `<li>${step.replace(/^\d+\.\s*/, '')}</li>`).join('')}
+                                </ol>
+                            </div>
+                            ` : ''}
                         </div>
                     `;
                 }).join('')}
