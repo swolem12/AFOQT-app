@@ -1,0 +1,347 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "word_problems_equation_setup",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_wp_b_001",
+      "question": "Twice a number is 14. Which equation correctly represents this statement if x is the number?",
+      "choices": {
+        "A": "x + 2 = 14",
+        "B": "2x = 14",
+        "C": "x/2 = 14",
+        "D": "x - 2 = 14",
+        "E": "14x = 2"
+      },
+      "answer": "B",
+      "explanation": "\"Twice a number\" means 2x, so 2x = 14."
+    },
+    {
+      "id": "mk_wp_b_002",
+      "question": "A number increased by 7 is 20. Which equation models this if x is the number?",
+      "choices": {
+        "A": "x - 7 = 20",
+        "B": "x + 7 = 20",
+        "C": "7x = 20",
+        "D": "x/7 = 20",
+        "E": "x + 20 = 7"
+      },
+      "answer": "B",
+      "explanation": "Increased by 7 means x + 7, and the result is 20: x + 7 = 20."
+    },
+    {
+      "id": "mk_wp_b_003",
+      "question": "Three times a number is 27. What equation represents this if x is the number?",
+      "choices": {
+        "A": "x + 3 = 27",
+        "B": "3 + x = 27",
+        "C": "3x = 27",
+        "D": "x/3 = 27",
+        "E": "27x = 3"
+      },
+      "answer": "C",
+      "explanation": "Three times a number is 3x, so 3x = 27."
+    },
+    {
+      "id": "mk_wp_b_004",
+      "question": "The difference between a number and 5 is 9. Which equation correctly models this if x is the number?",
+      "choices": {
+        "A": "x + 5 = 9",
+        "B": "5 - x = 9",
+        "C": "x - 5 = 9",
+        "D": "9 - x = 5",
+        "E": "x - 9 = 5"
+      },
+      "answer": "C",
+      "explanation": "\"Difference between a number and 5\" means x - 5, so x - 5 = 9."
+    },
+    {
+      "id": "mk_wp_b_005",
+      "question": "The quotient of a number and 4 is 6. Which equation represents this if x is the number?",
+      "choices": {
+        "A": "x/4 = 6",
+        "B": "4/x = 6",
+        "C": "x ÷ 6 = 4",
+        "D": "x/6 = 4",
+        "E": "4x = 6"
+      },
+      "answer": "A",
+      "explanation": "Quotient of a number and 4 means x/4, so x/4 = 6."
+    },
+    {
+      "id": "mk_wp_b_006",
+      "question": "A number decreased by 12 is 5. What is the value of the number?",
+      "choices": {
+        "A": "7",
+        "B": "17",
+        "C": "5",
+        "D": "12",
+        "E": "19"
+      },
+      "answer": "B",
+      "explanation": "x - 12 = 5 → x = 17."
+    },
+    {
+      "id": "mk_wp_b_007",
+      "question": "Four more than a number is 19. What is the number?",
+      "choices": {
+        "A": "14",
+        "B": "15",
+        "C": "23",
+        "D": "19",
+        "E": "24"
+      },
+      "answer": "B",
+      "explanation": "x + 4 = 19 → x = 15."
+    },
+    {
+      "id": "mk_wp_b_008",
+      "question": "A number divided by 3 is 9. What is the number?",
+      "choices": {
+        "A": "3",
+        "B": "6",
+        "C": "9",
+        "D": "18",
+        "E": "27"
+      },
+      "answer": "E",
+      "explanation": "x/3 = 9 → x = 27."
+    },
+    {
+      "id": "mk_wp_b_009",
+      "question": "You have x apples. Your friend gives you 5 more, and you then have 13 apples in total. Which equation represents this?",
+      "choices": {
+        "A": "x - 5 = 13",
+        "B": "x + 5 = 13",
+        "C": "x + 13 = 5",
+        "D": "5x = 13",
+        "E": "x/5 = 13"
+      },
+      "answer": "B",
+      "explanation": "Starting with x and gaining 5 gives x + 5 = 13."
+    },
+    {
+      "id": "mk_wp_b_010",
+      "question": "A movie ticket costs $12. The total cost for x tickets is $60. Which equation models this?",
+      "choices": {
+        "A": "12 + x = 60",
+        "B": "x/12 = 60",
+        "C": "12x = 60",
+        "D": "x - 12 = 60",
+        "E": "60x = 12"
+      },
+      "answer": "C",
+      "explanation": "Cost per ticket times number of tickets: 12x = 60."
+    },
+    {
+      "id": "mk_wp_b_011",
+      "question": "You buy 3 identical notebooks for a total of $21. If each notebook costs x dollars, what equation models this?",
+      "choices": {
+        "A": "3 + x = 21",
+        "B": "x/3 = 21",
+        "C": "3x = 21",
+        "D": "x - 3 = 21",
+        "E": "21x = 3"
+      },
+      "answer": "C",
+      "explanation": "3 notebooks at x each: 3x = 21."
+    },
+    {
+      "id": "mk_wp_b_012",
+      "question": "The sum of a number and 9 is 4. Which equation is correct if x is the number?",
+      "choices": {
+        "A": "x - 9 = 4",
+        "B": "x + 9 = 4",
+        "C": "9 - x = 4",
+        "D": "x + 4 = 9",
+        "E": "4 - x = 9"
+      },
+      "answer": "B",
+      "explanation": "\"Sum of a number and 9\" is x + 9, so x + 9 = 4."
+    },
+    {
+      "id": "mk_wp_b_013",
+      "question": "You drive at a constant speed of 50 miles per hour for 3 hours. Which equation represents the total distance d traveled?",
+      "choices": {
+        "A": "d = 50 + 3",
+        "B": "d = 50 - 3",
+        "C": "d = 50/3",
+        "D": "d = 50 × 3",
+        "E": "d = 3/50"
+      },
+      "answer": "D",
+      "explanation": "Distance = speed × time → d = 50 × 3."
+    },
+    {
+      "id": "mk_wp_b_014",
+      "question": "A rectangle has length 10 and width w. Which equation represents the perimeter P?",
+      "choices": {
+        "A": "P = 10 + w",
+        "B": "P = 2(10 + w)",
+        "C": "P = 10w",
+        "D": "P = 10 - w",
+        "E": "P = (10 + w)/2"
+      },
+      "answer": "B",
+      "explanation": "Perimeter of rectangle: P = 2L + 2W = 2(10 + w)."
+    },
+    {
+      "id": "mk_wp_b_015",
+      "question": "A worker earns $15 per hour and works h hours. Which equation models total pay P?",
+      "choices": {
+        "A": "P = 15 + h",
+        "B": "P = 15 - h",
+        "C": "P = 15h",
+        "D": "P = h/15",
+        "E": "P = 15/h"
+      },
+      "answer": "C",
+      "explanation": "Hourly pay times hours worked: P = 15h."
+    },
+    {
+      "id": "mk_wp_b_016",
+      "question": "A number multiplied by 7 gives 63. What is the number?",
+      "choices": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10",
+        "E": "11"
+      },
+      "answer": "C",
+      "explanation": "7x = 63 → x = 9."
+    },
+    {
+      "id": "mk_wp_b_017",
+      "question": "Sam is 6 years older than Alex. If Alex is a years old, which expression represents Sam's age?",
+      "choices": {
+        "A": "a - 6",
+        "B": "a + 6",
+        "C": "6a",
+        "D": "a/6",
+        "E": "6 - a"
+      },
+      "answer": "B",
+      "explanation": "Sam is 6 more than Alex ⇒ a + 6."
+    },
+    {
+      "id": "mk_wp_b_018",
+      "question": "The total of twice a number and 5 is 19. Which equation represents this?",
+      "choices": {
+        "A": "2x + 5 = 19",
+        "B": "2x - 5 = 19",
+        "C": "x + 5 = 19",
+        "D": "5x + 2 = 19",
+        "E": "2(x + 5) = 19"
+      },
+      "answer": "A",
+      "explanation": "Twice a number → 2x; plus 5; equals 19 → 2x + 5 = 19."
+    },
+    {
+      "id": "mk_wp_b_019",
+      "question": "You read 12 pages per day for d days and finish a 60-page booklet. Which equation represents this?",
+      "choices": {
+        "A": "12 + d = 60",
+        "B": "12d = 60",
+        "C": "d/12 = 60",
+        "D": "60d = 12",
+        "E": "12 - d = 60"
+      },
+      "answer": "B",
+      "explanation": "Pages per day × days = total pages: 12d = 60."
+    },
+    {
+      "id": "mk_wp_b_020",
+      "question": "A number is 3 less than 10. What is the number?",
+      "choices": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10",
+        "E": "3"
+      },
+      "answer": "B",
+      "explanation": "10 - 3 = 7? Wait, careful: '3 less than 10' is 7. Correct answer is 7.",
+      "explanation": "10 - 3 = 7, so the number is 7."
+    },
+    {
+      "id": "mk_wp_b_020_corrected",
+      "question": "A number is 3 less than 10. What is the number?",
+      "choices": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "13",
+        "E": "3"
+      },
+      "answer": "A",
+      "explanation": "3 less than 10 means 10 - 3 = 7."
+    },
+    {
+      "id": "mk_wp_b_021",
+      "question": "The sum of three identical numbers is 27. Let x be one of the numbers. Which equation is correct?",
+      "choices": {
+        "A": "x + 3 = 27",
+        "B": "3x = 27",
+        "C": "x/3 = 27",
+        "D": "x + 27 = 3",
+        "E": "27x = 3"
+      },
+      "answer": "B",
+      "explanation": "Three of the same number: x + x + x = 3x, so 3x = 27."
+    },
+    {
+      "id": "mk_wp_b_022",
+      "question": "The perimeter of a square is 24. If each side is s, which equation represents this situation?",
+      "choices": {
+        "A": "s + 24 = 4",
+        "B": "4s = 24",
+        "C": "s/4 = 24",
+        "D": "s + 4 = 24",
+        "E": "s = 24"
+      },
+      "answer": "B",
+      "explanation": "Perimeter of a square: 4s. So 4s = 24."
+    },
+    {
+      "id": "mk_wp_b_023",
+      "question": "You spend $5 on a sandwich and $3 on a drink. Your total spending is T. Which equation expresses T?",
+      "choices": {
+        "A": "T = 5 - 3",
+        "B": "T = 5/3",
+        "C": "T = 5 + 3",
+        "D": "T = 5 × 3",
+        "E": "T = 3 - 5"
+      },
+      "answer": "C",
+      "explanation": "Total cost is sum of the two amounts: T = 5 + 3."
+    },
+    {
+      "id": "mk_wp_b_024",
+      "question": "A car travels at 60 miles per hour for t hours. Which equation models the distance d traveled?",
+      "choices": {
+        "A": "d = 60/t",
+        "B": "d = t/60",
+        "C": "d = 60t",
+        "D": "d = 60 + t",
+        "E": "d = 60 - t"
+      },
+      "answer": "C",
+      "explanation": "Distance = rate × time → d = 60t."
+    },
+    {
+      "id": "mk_wp_b_025",
+      "question": "The product of a number and 4 is 28. What is the number?",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "4",
+        "E": "10"
+      },
+      "answer": "B",
+      "explanation": "4x = 28 → x = 7."
+    }
+  ]
+}

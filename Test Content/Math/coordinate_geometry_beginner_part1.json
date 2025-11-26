@@ -1,0 +1,583 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "coordinate_geometry",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+
+    {
+      "uiSpec": {
+        "type": "coordinate_grid_points",
+        "width": 300,
+        "height": 300,
+        "showGrid": true,
+        "xRange": [-5, 5],
+        "yRange": [-5, 5],
+        "points": [
+          { "name": "A", "x": 2, "y": 3 }
+        ],
+        "styleHints": {
+          "pointColor": "black",
+          "labelColor": "black"
+        }
+      },
+      "copilotInstruction": "Render a 10x10 coordinate grid (-5 to 5). Plot point A at (2,3) as a solid dot with label 'A' slightly above-right. Use clean grid lines.",
+      "id": "cg_b_001",
+      "question": "On the coordinate plane, point A is plotted at (2, 3). In which quadrant is point A located?",
+      "choices": {
+        "A": "Quadrant I",
+        "B": "Quadrant II",
+        "C": "Quadrant III",
+        "D": "Quadrant IV",
+        "E": "On an axis"
+      },
+      "answer": "A",
+      "explanation": "Quadrant I contains all points with positive x and positive y. Since (2,3) has x>0 and y>0, it is in Quadrant I.",
+      "steps": [
+        "1. Identify the signs: x=2>0, y=3>0.",
+        "2. Quadrant I has (+,+).",
+        "3. Therefore, A lies in Quadrant I."
+      ],
+      "fastStrategy": "Quadrant I = (++), II = (-,+), III = (--), IV = (+,-)."
+    },
+
+    {
+      "uiSpec": {
+        "type": "coordinate_grid_points",
+        "width": 300,
+        "height": 300,
+        "showGrid": true,
+        "xRange": [-5, 5],
+        "yRange": [-5, 5],
+        "points": [
+          { "name": "B", "x": -4, "y": 1 }
+        ],
+        "styleHints": {
+          "pointColor": "black",
+          "labelColor": "black"
+        }
+      },
+      "copilotInstruction": "Plot point B at (-4,1) on the coordinate grid. Label it beside the dot.",
+      "id": "cg_b_002",
+      "question": "Point B is located at (−4, 1). Which quadrant contains point B?",
+      "choices": {
+        "A": "Quadrant I",
+        "B": "Quadrant II",
+        "C": "Quadrant III",
+        "D": "Quadrant IV",
+        "E": "On an axis"
+      },
+      "answer": "B",
+      "explanation": "Quadrant II includes points with negative x and positive y. Since (−4,1) has x<0 and y>0, B is in Quadrant II.",
+      "steps": [
+        "1. Check x = -4 (negative).",
+        "2. Check y = +1 (positive).",
+        "3. (−,+) corresponds to Quadrant II."
+      ],
+      "fastStrategy": "Look at the signs—don’t overthink it."
+    },
+
+    {
+      "uiSpec": {
+        "type": "coordinate_grid_points",
+        "width": 300,
+        "height": 300,
+        "showGrid": true,
+        "xRange": [-5, 5],
+        "yRange": [-5, 5],
+        "points": [
+          { "name": "C", "x": 0, "y": -3 }
+        ]
+      },
+      "copilotInstruction": "Plot C on the y-axis at (0,-3).",
+      "id": "cg_b_003",
+      "question": "Point C is located at (0, −3). Where is point C located?",
+      "choices": {
+        "A": "Quadrant III",
+        "B": "Quadrant IV",
+        "C": "On the x-axis",
+        "D": "On the y-axis",
+        "E": "At the origin"
+      },
+      "answer": "D",
+      "explanation": "Any point with x = 0 lies on the y-axis.",
+      "steps": [
+        "1. x = 0 means no horizontal position.",
+        "2. That places the point directly on the y-axis."
+      ],
+      "fastStrategy": "x=0 → y-axis. y=0 → x-axis."
+    },
+
+    {
+      "uiSpec": {
+        "type": "coordinate_segment",
+        "width": 300,
+        "height": 300,
+        "showGrid": true,
+        "xRange": [0, 9],
+        "yRange": [0, 9],
+        "points": [
+          { "name": "D", "x": 2, "y": 5 },
+          { "name": "E", "x": 7, "y": 5 }
+        ],
+        "segment": { "from": "D", "to": "E" }
+      },
+      "copilotInstruction": "Plot D(2,5) and E(7,5). Connect them with a horizontal blue segment.",
+      "id": "cg_b_004",
+      "question": "What is the distance between D(2, 5) and E(7, 5)?",
+      "choices": {
+        "A": "3 units",
+        "B": "4 units",
+        "C": "5 units",
+        "D": "6 units",
+        "E": "7 units"
+      },
+      "answer": "C",
+      "explanation": "The points share the same y-value, so distance is |7 − 2| = 5 units.",
+      "steps": [
+        "1. Horizontal segment since y-values match.",
+        "2. Subtract x-values: 7 − 2 = 5."
+      ],
+      "fastStrategy": "Same y → subtract x’s."
+    },
+
+    {
+      "uiSpec": {
+        "type": "coordinate_segment",
+        "width": 300,
+        "height": 300,
+        "showGrid": true,
+        "xRange": [0, 9],
+        "yRange": [0, 9],
+        "points": [
+          { "name": "F", "x": 4, "y": 1 },
+          { "name": "G", "x": 4, "y": 6 }
+        ],
+        "segment": { "from": "F", "to": "G" }
+      },
+      "copilotInstruction": "Plot F at (4,1) and G at (4,6). Connect with a vertical blue line.",
+      "id": "cg_b_005",
+      "question": "What is the distance between F(4, 1) and G(4, 6)?",
+      "choices": {
+        "A": "3 units",
+        "B": "4 units",
+        "C": "5 units",
+        "D": "6 units",
+        "E": "7 units"
+      },
+      "answer": "C",
+      "explanation": "Same x-value means vertical segment. Distance = |6 − 1| = 5 units.",
+      "steps": [
+        "1. Identify vertical alignment.",
+        "2. Subtract y-values: 6 − 1 = 5."
+      ],
+      "fastStrategy": "Same x → subtract y’s."
+    },
+
+    {
+      "uiSpec": {
+        "type": "coordinate_segment",
+        "width": 300,
+        "height": 300,
+        "showGrid": true,
+        "points": [
+          { "name": "H", "x": 1, "y": 2 },
+          { "name": "I", "x": 4, "y": 6 }
+        ],
+        "segment": { "from": "H", "to": "I" }
+      },
+      "copilotInstruction": "Draw segment HI between H(1,2) and I(4,6) on a grid.",
+      "id": "cg_b_006",
+      "question": "What is the distance between H(1, 2) and I(4, 6)?",
+      "choices": {
+        "A": "4 units",
+        "B": "5 units",
+        "C": "√13 units",
+        "D": "√20 units",
+        "E": "√25 units"
+      },
+      "answer": "B",
+      "explanation": "Use distance formula: √[(4−1)² + (6−2)²] = √(3² + 4²) = √25 = 5 units.",
+      "steps": [
+        "1. Compute Δx = 4−1 = 3.",
+        "2. Compute Δy = 6−2 = 4.",
+        "3. Use √(3² + 4²) = √25 = 5."
+      ],
+      "fastStrategy": "Spot the 3–4–5 triangle pattern."
+    },
+
+    {
+      "uiSpec": {
+        "type": "coordinate_segment",
+        "width": 300,
+        "height": 300,
+        "showGrid": true,
+        "points": [
+          { "name": "J", "x": -2, "y": -1 },
+          { "name": "K", "x": -5, "y": -5 }
+        ]
+      },
+      "copilotInstruction": "Plot J(-2,-1) and K(-5,-5), show segment.",
+      "id": "cg_b_007",
+      "question": "Find the distance between J(−2, −1) and K(−5, −5).",
+      "choices": {
+        "A": "5 units",
+        "B": "4 units",
+        "C": "3 units",
+        "D": "√16 units",
+        "E": "√32 units"
+      },
+      "answer": "A",
+      "explanation": "Δx = −5 − (−2) = −3. Δy = −5 − (−1) = −4. Distance = √(9 + 16) = √25 = 5.",
+      "steps": [
+        "1. Compute Δx = -3.",
+        "2. Compute Δy = -4.",
+        "3. √((-3)² + (-4)²) = √(25) = 5."
+      ],
+      "fastStrategy": "When both coordinates shift together (like -3, -4), look for 3–4–5."
+    },
+
+    {
+      "id": "cg_b_008",
+      "question": "What is the midpoint between points (2, 8) and (6, 4)?",
+      "choices": {
+        "A": "(3, 5)",
+        "B": "(4, 6)",
+        "C": "(5, 7)",
+        "D": "(8, 12)",
+        "E": "(2, 6)"
+      },
+      "answer": "B",
+      "explanation": "(2+6)/2 = 4, (8+4)/2 = 6 → midpoint is (4,6).",
+      "steps": [
+        "1. Average x values.",
+        "2. Average y values.",
+        "3. Combine to get midpoint."
+      ],
+      "fastStrategy": "Midpoint = average of each coordinate."
+    },
+
+    {
+      "id": "cg_b_009",
+      "question": "What is the midpoint between (0, 0) and (6, 6)?",
+      "choices": {
+        "A": "(3, 3)",
+        "B": "(6, 3)",
+        "C": "(2, 4)",
+        "D": "(4, 2)",
+        "E": "(1, 1)"
+      },
+      "answer": "A",
+      "explanation": "Average x: (0+6)/2 = 3. Average y: (0+6)/2 = 3.",
+      "steps": [
+        "1. Midpoint = ((0+6)/2, (0+6)/2).",
+        "2. Compute both = 3."
+      ],
+      "fastStrategy": "Midpoint of a diagonal from origin = (half, half)."
+    },
+
+    {
+      "id": "cg_b_010",
+      "question": "Which of the following points lies in Quadrant IV?",
+      "choices": {
+        "A": "(4, 5)",
+        "B": "(−2, 6)",
+        "C": "(−4, −3)",
+        "D": "(3, −2)",
+        "E": "(0, −4)"
+      },
+      "answer": "D",
+      "explanation": "Quadrant IV contains (+,−). (3,−2) fits.",
+      "steps": [
+        "1. Identify sign patterns.",
+        "2. Choose (+,−)."
+      ],
+      "fastStrategy": "IV = (+,−)."
+    },
+
+    {
+      "id": "cg_b_011",
+      "question": "Which point lies on the x-axis?",
+      "choices": {
+        "A": "(0, 4)",
+        "B": "(4, 0)",
+        "C": "(−3, 3)",
+        "D": "(−1, −1)",
+        "E": "(2, 7)"
+      },
+      "answer": "B",
+      "explanation": "Points on the x-axis always have y = 0.",
+      "steps": ["1. Find the point with y=0."],
+      "fastStrategy": "y=0 → x-axis."
+    },
+
+    {
+      "id": "cg_b_012",
+      "question": "Which point lies on the y-axis?",
+      "choices": {
+        "A": "(0, 5)",
+        "B": "(5, 0)",
+        "C": "(4, 2)",
+        "D": "(−2, −2)",
+        "E": "(7,−1)"
+      },
+      "answer": "A",
+      "explanation": "Points on the y-axis have x=0.",
+      "steps": ["1. Find x=0."],
+      "fastStrategy": "x=0 → y-axis."
+    },
+
+    {
+      "uiSpec": {
+        "type": "coordinate_slope",
+        "width": 300,
+        "height": 300,
+        "showGrid": true,
+        "points": [
+          { "name": "L", "x": 1, "y": 1 },
+          { "name": "M", "x": 3, "y": 5 }
+        ]
+      },
+      "copilotInstruction": "Plot L(1,1) and M(3,5). Draw a line through them.",
+      "id": "cg_b_013",
+      "question": "What is the slope of the line through L(1, 1) and M(3, 5)?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "1/2",
+        "E": "4"
+      },
+      "answer": "B",
+      "explanation": "Slope = (5−1)/(3−1) = 4/2 = 2.",
+      "steps": [
+        "1. Δy = 4.",
+        "2. Δx = 2.",
+        "3. Slope = 2."
+      ],
+      "fastStrategy": "Slope = rise/run."
+    },
+
+    {
+      "id": "cg_b_014",
+      "question": "What is the slope between points (2, 4) and (6, 4)?",
+      "choices": {
+        "A": "0",
+        "B": "1",
+        "C": "Undefined",
+        "D": "−1",
+        "E": "4"
+      },
+      "answer": "A",
+      "explanation": "Same y → horizontal → slope 0.",
+      "steps": ["1. y-values match.", "2. Horizontal slope = 0."],
+      "fastStrategy": "Horizontal line = slope 0."
+    },
+
+    {
+      "id": "cg_b_015",
+      "question": "What is the slope between points (5, 1) and (5, 6)?",
+      "choices": {
+        "A": "0",
+        "B": "1",
+        "C": "−1",
+        "D": "Undefined",
+        "E": "5"
+      },
+      "answer": "D",
+      "explanation": "Same x → vertical → undefined slope.",
+      "steps": ["1. x-values match.", "2. Vertical → undefined."],
+      "fastStrategy": "Vertical = undefined."
+    },
+
+    {
+      "uiSpec": {
+        "type": "coordinate_triangle",
+        "width": 300,
+        "height": 300,
+        "showGrid": true,
+        "points": [
+          { "name": "A", "x": 2, "y": 2 },
+          { "name": "B", "x": 6, "y": 2 },
+          { "name": "C", "x": 6, "y": 6 }
+        ]
+      },
+      "copilotInstruction": "Plot triangle ABC and shade lightly.",
+      "id": "cg_b_016",
+      "question": "Triangle ABC has vertices A(2,2), B(6,2), and C(6,6). What is its area?",
+      "choices": {
+        "A": "4",
+        "B": "8",
+        "C": "12",
+        "D": "16",
+        "E": "20"
+      },
+      "answer": "C",
+      "explanation": "Right triangle: base = 4 (2→6), height = 4 (2→6), area = ½(4×4)=8.",
+      "steps": [
+        "1. Base = 4.",
+        "2. Height = 4.",
+        "3. Area = 8."
+      ],
+      "fastStrategy": "Right triangle on grid = easy base×height/2."
+    },
+
+    {
+      "id": "cg_b_017",
+      "question": "Which of the following points is farthest from the origin?",
+      "choices": {
+        "A": "(3, 4)",
+        "B": "(2, 5)",
+        "C": "(1, 7)",
+        "D": "(6, 2)",
+        "E": "(5, 5)"
+      },
+      "answer": "E",
+      "explanation": "(5,5) distance = √(25+25)=√50≈7.07, largest of the options.",
+      "steps": [
+        "1. Compare squared distances.",
+        "2. 5²+5²=50 is largest."
+      ],
+      "fastStrategy": "Compare squared distances to avoid square roots."
+    },
+
+    {
+      "id": "cg_b_018",
+      "question": "Which point is closest to the origin?",
+      "choices": {
+        "A": "(3, 4)",
+        "B": "(0, 5)",
+        "C": "(1, 2)",
+        "D": "(4, 3)",
+        "E": "(2, 4)"
+      },
+      "answer": "C",
+      "explanation": "(1,2) distance = √(1+4)=√5≈2.23, smallest.",
+      "steps": [
+        "1. Compute squared distances.",
+        "2. Choose smallest."
+      ],
+      "fastStrategy": "Use x²+y² to compare quickly."
+    },
+
+    {
+      "id": "cg_b_019",
+      "question": "Which coordinate pair satisfies the equation y = 2x + 1?",
+      "choices": {
+        "A": "(1, 1)",
+        "B": "(1, 3)",
+        "C": "(2, 1)",
+        "D": "(2, 6)",
+        "E": "(3, 8)"
+      },
+      "answer": "B",
+      "explanation": "Plug x=1: 2(1)+1=3 → matches.",
+      "steps": ["1. Evaluate RHS.", "2. Match y value."],
+      "fastStrategy": "Plug x-values one at a time."
+    },
+
+    {
+      "id": "cg_b_020",
+      "question": "Which coordinate pair satisfies x + y = 7?",
+      "choices": {
+        "A": "(1, 6)",
+        "B": "(2, 2)",
+        "C": "(3, 1)",
+        "D": "(4, 1)",
+        "E": "(6, 1)"
+      },
+      "answer": "A",
+      "explanation": "1+6=7.",
+      "steps": ["1. Add x+y.", "2. Pick pair = 7."],
+      "fastStrategy": "Fast adding each pair."
+    },
+
+    {
+      "id": "cg_b_021",
+      "question": "Which of the following lines is horizontal?",
+      "choices": {
+        "A": "y = 3",
+        "B": "x = 3",
+        "C": "y = x",
+        "D": "y = −x",
+        "E": "y = 2x"
+      },
+      "answer": "A",
+      "explanation": "y=constant → horizontal line.",
+      "steps": ["1. Recognize y=c format."],
+      "fastStrategy": "y=c = horizontal, x=c = vertical."
+    },
+
+    {
+      "id": "cg_b_022",
+      "question": "Which line is vertical?",
+      "choices": {
+        "A": "x = 2",
+        "B": "y = 2",
+        "C": "y = x + 2",
+        "D": "y = −2x",
+        "E": "y = x − 2"
+      },
+      "answer": "A",
+      "explanation": "x=constant → vertical.",
+      "steps": ["1. Identify x=c form."],
+      "fastStrategy": "Vertical = x=c."
+    },
+
+    {
+      "id": "cg_b_023",
+      "question": "Which line has a negative slope?",
+      "choices": {
+        "A": "y = 2x + 1",
+        "B": "y = −3x + 4",
+        "C": "y = 5x − 1",
+        "D": "y = x + 7",
+        "E": "y = 0"
+      },
+      "answer": "B",
+      "explanation": "Slope is coefficient of x. −3 is negative.",
+      "steps": ["1. Look at coefficient of x."],
+      "fastStrategy": "Negative slope has a minus in front."
+    },
+
+    {
+      "id": "cg_b_024",
+      "question": "Which line is perpendicular to y = 2x?",
+      "choices": {
+        "A": "y = 1/2 x",
+        "B": "y = −1/2 x",
+        "C": "y = −2x",
+        "D": "y = −1/2x + 3",
+        "E": "y = −1/2x − 4"
+      },
+      "answer": "E",
+      "explanation": "Slope of perpendicular line = negative reciprocal (−1/2).",
+      "steps": [
+        "1. Original slope m=2.",
+        "2. Perpendicular slope = −1/2.",
+        "3. Choose equation with slope −1/2."
+      ],
+      "fastStrategy": "Flip & change sign."
+    },
+
+    {
+      "id": "cg_b_025",
+      "question": "Which line is parallel to y = −3x + 1?",
+      "choices": {
+        "A": "y = 3x + 2",
+        "B": "y = −3x − 4",
+        "C": "y = 1/3 x + 1",
+        "D": "y = x − 3",
+        "E": "y = −1/3 x + 1"
+      },
+      "answer": "B",
+      "explanation": "Parallel lines have identical slopes. Here, slope must be −3.",
+      "steps": [
+        "1. Find slope of original: −3.",
+        "2. Match slope exactly."
+      ],
+      "fastStrategy": "Parallel = same slope."
+    }
+
+  ]
+}

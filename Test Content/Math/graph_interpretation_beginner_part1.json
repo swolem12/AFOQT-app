@@ -1,0 +1,333 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "graph_interpretation",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_gi_b_001",
+      "question": "A line on a graph rises from left to right. What does this indicate?",
+      "choices": {
+        "A": "No change",
+        "B": "Negative trend",
+        "C": "Positive trend",
+        "D": "Constant decrease",
+        "E": "Fluctuation"
+      },
+      "answer": "C",
+      "explanation": "Rising left→right always signals a positive slope or upward trend."
+    },
+    {
+      "id": "mk_gi_b_002",
+      "question": "A flat horizontal line at y = 4 means:",
+      "choices": {
+        "A": "The value increases",
+        "B": "The value decreases",
+        "C": "The value stays at 4",
+        "D": "The line has a positive slope",
+        "E": "The line has a negative slope"
+      },
+      "answer": "C",
+      "explanation": "Horizontal line = constant value. No change in y."
+    },
+    {
+      "id": "mk_gi_b_003",
+      "question": "A line slopes downward from left to right. What is true?",
+      "choices": {
+        "A": "Slope is zero",
+        "B": "Slope is positive",
+        "C": "Slope is negative",
+        "D": "Slope is undefined",
+        "E": "Slope alternates"
+      },
+      "answer": "C",
+      "explanation": "Downward trend = negative slope. Quick rule: down-right = negative."
+    },
+    {
+      "id": "mk_gi_b_004",
+      "question": "If a graph shows a sharp upward spike, what does this represent?",
+      "choices": {
+        "A": "Sudden decrease",
+        "B": "No change",
+        "C": "Rapid increase",
+        "D": "Steady decline",
+        "E": "Random noise"
+      },
+      "answer": "C",
+      "explanation": "A spike visually means a sudden jump in value."
+    },
+    {
+      "id": "mk_gi_b_005",
+      "question": "Points on a line graph are equally spaced and increase steadily. This means:",
+      "choices": {
+        "A": "Constant rate of increase",
+        "B": "Accelerating increase",
+        "C": "Negative acceleration",
+        "D": "Random fluctuations",
+        "E": "No slope"
+      },
+      "answer": "A",
+      "explanation": "Equally spaced upward increases = constant slope = constant rate."
+    },
+    {
+      "id": "mk_gi_b_006",
+      "question": "On a bar graph, the tallest bar represents:",
+      "choices": {
+        "A": "The smallest value",
+        "B": "The average value",
+        "C": "The mode",
+        "D": "The largest value",
+        "E": "Undefined"
+      },
+      "answer": "D",
+      "explanation": "Highest bar always indicates the maximum measurement."
+    },
+    {
+      "id": "mk_gi_b_007",
+      "question": "What does the x-axis usually represent?",
+      "choices": {
+        "A": "Dependent variable",
+        "B": "Independent variable",
+        "C": "Always time",
+        "D": "Always frequency",
+        "E": "Always money"
+      },
+      "answer": "B",
+      "explanation": "X-axis is typically the independent variable—the input of the function."
+    },
+    {
+      "id": "mk_gi_b_008",
+      "question": "Which graph is best for showing parts of a whole?",
+      "choices": {
+        "A": "Line graph",
+        "B": "Bar graph",
+        "C": "Pie chart",
+        "D": "Scatterplot",
+        "E": "Histogram"
+      },
+      "answer": "C",
+      "explanation": "Pie charts visualize percentages or fractions of a whole quickly."
+    },
+    {
+      "id": "mk_gi_b_009",
+      "question": "A scatterplot with points forming an upward trend suggests:",
+      "choices": {
+        "A": "Negative correlation",
+        "B": "Positive correlation",
+        "C": "No correlation",
+        "D": "Inverse function",
+        "E": "Undefined slope"
+      },
+      "answer": "B",
+      "explanation": "Upward trend of dots = positive relationship between variables."
+    },
+    {
+      "id": "mk_gi_b_010",
+      "question": "If a graph shows repeated peaks and valleys, the data is:",
+      "choices": {
+        "A": "Constant",
+        "B": "Linear",
+        "C": "Fluctuating",
+        "D": "Decreasing",
+        "E": "Invalid"
+      },
+      "answer": "C",
+      "explanation": "Peaks and dips = oscillation or fluctuation."
+    },
+    {
+      "id": "mk_gi_b_011",
+      "question": "What does the point (0, 5) represent?",
+      "choices": {
+        "A": "x = 5, y = 0",
+        "B": "x = 0, y = 5",
+        "C": "x = 5, y = 5",
+        "D": "Undefined",
+        "E": "The slope"
+      },
+      "answer": "B",
+      "explanation": "(x,y) always means (horizontal, vertical)."
+    },
+    {
+      "id": "mk_gi_b_012",
+      "question": "If two lines on a graph never meet, they are:",
+      "choices": {
+        "A": "Intersecting",
+        "B": "Parallel",
+        "C": "Perpendicular",
+        "D": "Coinciding",
+        "E": "Random"
+      },
+      "answer": "B",
+      "explanation": "Parallel = same slope, never meet."
+    },
+    {
+      "id": "mk_gi_b_013",
+      "question": "The point where a line crosses the y-axis is called:",
+      "choices": {
+        "A": "Slope",
+        "B": "X-intercept",
+        "C": "Y-intercept",
+        "D": "Critical point",
+        "E": "Peak"
+      },
+      "answer": "C",
+      "explanation": "Y-intercept = the beginning of the line when x=0."
+    },
+    {
+      "id": "mk_gi_b_014",
+      "question": "If the y-intercept is 10, which point must be on the graph?",
+      "choices": {
+        "A": "(10, 0)",
+        "B": "(0, 10)",
+        "C": "(1, 10)",
+        "D": "(10, 10)",
+        "E": "(0, 0)"
+      },
+      "answer": "B",
+      "explanation": "Y-intercept always has x=0."
+    },
+    {
+      "id": "mk_gi_b_015",
+      "question": "On a time-series graph, the horizontal axis usually shows:",
+      "choices": {
+        "A": "Temperature",
+        "B": "Time",
+        "C": "Population",
+        "D": "Percentages",
+        "E": "Cost"
+      },
+      "answer": "B",
+      "explanation": "Time almost always runs along the x-axis in time-series charts."
+    },
+    {
+      "id": "mk_gi_b_016",
+      "question": "The steeper the line on a graph:",
+      "choices": {
+        "A": "The slower the change",
+        "B": "The faster the change",
+        "C": "The less consistent the data",
+        "D": "The more random the data",
+        "E": "The flatter the slope"
+      },
+      "answer": "B",
+      "explanation": "Steep = rapid increase or decrease."
+    },
+    {
+      "id": "mk_gi_b_017",
+      "question": "Which graph is best for showing how two variables relate?",
+      "choices": {
+        "A": "Bar graph",
+        "B": "Line graph",
+        "C": "Scatterplot",
+        "D": "Pie chart",
+        "E": "Histogram"
+      },
+      "answer": "C",
+      "explanation": "Scatterplots test strength/direction of relationships visually."
+    },
+    {
+      "id": "mk_gi_b_018",
+      "question": "What does it mean if a data point is far from the trend line?",
+      "choices": {
+        "A": "It indicates perfect correlation",
+        "B": "It is an outlier",
+        "C": "It proves causation",
+        "D": "It is the mean",
+        "E": "It must be removed"
+      },
+      "answer": "B",
+      "explanation": "Far from trend = outlier. Quick rule: big distance = outlier."
+    },
+    {
+      "id": "mk_gi_b_019",
+      "question": "If the x-value increases and y decreases, the graph shows:",
+      "choices": {
+        "A": "Positive trend",
+        "B": "No trend",
+        "C": "Negative trend",
+        "D": "Vertical slope",
+        "E": "Undefined pattern"
+      },
+      "answer": "C",
+      "explanation": "More x, less y = negative slope."
+    },
+    {
+      "id": "mk_gi_b_020",
+      "question": "A graph showing values grouped into bins is called:",
+      "choices": {
+        "A": "Bar graph",
+        "B": "Line graph",
+        "C": "Histogram",
+        "D": "Scatterplot",
+        "E": "Pie chart"
+      },
+      "answer": "C",
+      "explanation": "Histogram = bar graph showing frequency ranges."
+    },
+    {
+      "id": "mk_gi_b_021",
+      "question": "Which graph is best for showing change over time?",
+      "choices": {
+        "A": "Line graph",
+        "B": "Scatterplot",
+        "C": "Pie chart",
+        "D": "Histogram",
+        "E": "Box plot"
+      },
+      "answer": "A",
+      "explanation": "Line graphs visually track upward/downward change."
+    },
+    {
+      "id": "mk_gi_b_022",
+      "question": "A point with x = 0 and y < 0 lies:",
+      "choices": {
+        "A": "Above x-axis",
+        "B": "Below x-axis",
+        "C": "On x-axis",
+        "D": "Right of origin",
+        "E": "Left of origin"
+      },
+      "answer": "B",
+      "explanation": "Negative y = below the x-axis."
+    },
+    {
+      "id": "mk_gi_b_023",
+      "question": "Which feature shows the greatest value on a line graph?",
+      "choices": {
+        "A": "Minimum",
+        "B": "Peak",
+        "C": "Intercept",
+        "D": "Slope",
+        "E": "Range"
+      },
+      "answer": "B",
+      "explanation": "Peak = highest point. Fast visual max."
+    },
+    {
+      "id": "mk_gi_b_024",
+      "question": "Which graph type uses bars to show discrete categories?",
+      "choices": {
+        "A": "Line",
+        "B": "Scatterplot",
+        "C": "Pie chart",
+        "D": "Bar graph",
+        "E": "Histogram"
+      },
+      "answer": "D",
+      "explanation": "Bars represent distinct groups."
+    },
+    {
+      "id": "mk_gi_b_025",
+      "question": "If a graph shows a constant downward slope, it means:",
+      "choices": {
+        "A": "Increasing trend",
+        "B": "Constant decrease",
+        "C": "Random variation",
+        "D": "No change",
+        "E": "A sudden drop"
+      },
+      "answer": "B",
+      "explanation": "Straight line down = steady negative slope."
+    }
+  ]
+}

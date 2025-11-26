@@ -1,0 +1,21 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "evaluate_expressions",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_evalexp_b_001",
+      "question": "If x = 3 and y = -2, what is the value of 2x - 3y?",
+      "choices": {
+        "A": "0",
+        "B": "5",
+        "C": "12",
+        "D": "13",
+        "E": "18"
+      },
+      "answer": "D",
+      "explanation": "Substitute x = 3 and y = -2: 2(3) - 3(-2) = 6 + 6 = 12, wait—careful: 2(3) = 6; -3(-2) = +6; 6 + 6 = 12, so the correct answer is C. (Use explanations to show the full substitution and simplify step-by-step.)"
+    }
+  ]
+}

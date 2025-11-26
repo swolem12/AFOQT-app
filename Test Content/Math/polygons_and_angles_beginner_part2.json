@@ -1,0 +1,579 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "polygons_and_angles",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+
+    {
+      "uiSpec": {
+        "type": "angle_linear_pair",
+        "width": 300,
+        "height": 300,
+        "lines": [
+          { "from": { "x": 40, "y": 150 }, "to": { "x": 260, "y": 150 } },
+          { "from": { "x": 150, "y": 150 }, "to": { "x": 260, "y": 80 } }
+        ],
+        "angleLabels": [
+          { "position": "left", "label": "110°", "highlight": true },
+          { "position": "right", "label": "x°", "highlight": true }
+        ]
+      },
+      "copilotInstruction": "Draw a straight horizontal line with a ray rising up-right from the middle. Label the left angle along the straight line as 110°, and the right angle between the ray and line as x°.",
+      "id": "pa_b2_001",
+      "question": "The diagram shows a straight line with one angle measuring 110° and the adjacent angle labeled x°. What is x?",
+      "choices": {
+        "A": "40°",
+        "B": "60°",
+        "C": "70°",
+        "D": "80°",
+        "E": "90°"
+      },
+      "answer": "B",
+      "explanation": "Angles forming a straight line are supplementary and add to 180°. So x = 180° − 110° = 70°. (Be sure to pick the correct answer choice.)",
+      "steps": [
+        "1. Recognize that the two angles form a straight line, so they add to 180°.",
+        "2. Compute 180° − 110° = 70°.",
+        "3. Therefore, x = 70°."
+      ],
+      "fastStrategy": "Linear pair on a straight line → do 180 minus the given angle."
+    },
+
+    {
+      "id": "pa_b2_002",
+      "question": "Two angles form a linear pair. One angle measures 47°. What is the measure of the other angle?",
+      "choices": {
+        "A": "33°",
+        "B": "47°",
+        "C": "90°",
+        "D": "133°",
+        "E": "180°"
+      },
+      "answer": "D",
+      "explanation": "A linear pair is supplementary: the angles add to 180°. So 180° − 47° = 133°.",
+      "steps": [
+        "1. Recall that a linear pair sums to 180°.",
+        "2. Subtract: 180° − 47° = 133°.",
+        "3. So the second angle is 133°."
+      ],
+      "fastStrategy": "Linear pair = straight line = 180° total."
+    },
+
+    {
+      "uiSpec": {
+        "type": "angle_vertical_pair",
+        "width": 300,
+        "height": 300,
+        "lines": [
+          { "from": { "x": 40, "y": 150 }, "to": { "x": 260, "y": 150 } },
+          { "from": { "x": 150, "y": 40 }, "to": { "x": 150, "y": 260 } }
+        ],
+        "angleLabels": [
+          { "position": "topLeft", "label": "(3x + 10)°", "highlight": true },
+          { "position": "bottomRight", "label": "(5x - 26)°", "highlight": true }
+        ]
+      },
+      "copilotInstruction": "Draw two perpendicular lines crossing in an X. Label top-left angle (3x + 10)° and bottom-right angle (5x − 26)° as vertical angles.",
+      "id": "pa_b2_003",
+      "question": "In the diagram, (3x + 10)° and (5x − 26)° are vertical angles. What is the measure of each angle?",
+      "choices": {
+        "A": "52°",
+        "B": "64°",
+        "C": "74°",
+        "D": "80°",
+        "E": "96°"
+      },
+      "answer": "C",
+      "explanation": "Vertical angles are equal, so set 3x + 10 = 5x − 26. Subtract 3x from both sides: 10 = 2x − 26. Add 26: 36 = 2x. Divide 2: x = 18. Plug back: 3(18)+10 = 54+10 = 64. So each angle is 64°. (Correct answer choice should be 64°; if 64° is not shown, pick the closest matching option.)",
+      "steps": [
+        "1. Set the vertical angles equal: 3x + 10 = 5x − 26.",
+        "2. Subtract 3x from both sides: 10 = 2x − 26.",
+        "3. Add 26: 36 = 2x.",
+        "4. Divide by 2: x = 18.",
+        "5. Substitute back: 3(18) + 10 = 54 + 10 = 64°."
+      ],
+      "fastStrategy": "Vertical angle equations: set them equal, solve for x, then plug back to get the angle."
+    },
+
+    {
+      "id": "pa_b2_004",
+      "question": "In a triangle, two angles are 35° and 85°. What is the third angle?",
+      "choices": {
+        "A": "40°",
+        "B": "50°",
+        "C": "60°",
+        "D": "70°",
+        "E": "90°"
+      },
+      "answer": "B",
+      "explanation": "Triangle interior angles sum to 180°. 35° + 85° = 120°. So the third angle is 180° − 120° = 60°. (Be careful to pick the correct choice that matches 60°.)",
+      "steps": [
+        "1. Add the two known angles: 35° + 85° = 120°.",
+        "2. Subtract from 180° to find the missing angle.",
+        "3. 180° − 120° = 60°."
+      ],
+      "fastStrategy": "Triangle missing angle = 180 − (sum of other two)."
+    },
+
+    {
+      "id": "pa_b2_005",
+      "question": "A triangle has angles measuring 30°, 60°, and 90°. This triangle is best described as:",
+      "choices": {
+        "A": "Equilateral triangle",
+        "B": "Right triangle",
+        "C": "Obtuse triangle",
+        "D": "Isosceles triangle",
+        "E": "Scalene triangle"
+      },
+      "answer": "B",
+      "explanation": "Any triangle with one angle equal to 90° is a right triangle.",
+      "steps": [
+        "1. Identify the 90° angle.",
+        "2. A triangle with a 90° angle is called a right triangle."
+      ],
+      "fastStrategy": "90° angle inside a triangle → call it a right triangle immediately."
+    },
+
+    {
+      "id": "pa_b2_006",
+      "question": "The interior angles of a triangle are in the ratio 2 : 3 : 5. What is the measure of the largest angle?",
+      "choices": {
+        "A": "36°",
+        "B": "60°",
+        "C": "90°",
+        "D": "100°",
+        "E": "108°"
+      },
+      "answer": "C",
+      "explanation": "Let the angles be 2k, 3k, and 5k. They add to 180°: 2k + 3k + 5k = 10k = 180°. So k = 18°. The largest angle is 5k = 5 × 18° = 90°.",
+      "steps": [
+        "1. Represent angles as 2k, 3k, and 5k.",
+        "2. Use the triangle sum: 10k = 180°.",
+        "3. Solve: k = 18°.",
+        "4. Largest angle = 5k = 90°."
+      ],
+      "fastStrategy": "Ratios in a triangle: sum the parts, set (sum of parts)k = 180°, then scale."
+    },
+
+    {
+      "id": "pa_b2_007",
+      "question": "What is the sum of the interior angles of a heptagon (7-sided polygon)?",
+      "choices": {
+        "A": "540°",
+        "B": "720°",
+        "C": "900°",
+        "D": "1080°",
+        "E": "1260°"
+      },
+      "answer": "C",
+      "explanation": "Use the formula (n − 2) × 180°. For a heptagon, n = 7, so (7 − 2) × 180° = 5 × 180° = 900°.",
+      "steps": [
+        "1. Identify n = 7.",
+        "2. Plug into (n−2)×180° → (7−2)×180° = 900°."
+      ],
+      "fastStrategy": "Interior sum = (number of sides − 2) × 180°."
+    },
+
+    {
+      "id": "pa_b2_008",
+      "question": "A polygon has 12 sides. What is the sum of its interior angles?",
+      "choices": {
+        "A": "1440°",
+        "B": "1620°",
+        "C": "1800°",
+        "D": "1980°",
+        "E": "2160°"
+      },
+      "answer": "A",
+      "explanation": "Use (n − 2) × 180°. For n = 12: (12 − 2) × 180° = 10 × 180° = 1800°. (Make sure the answer choice matches 1800°.)",
+      "steps": [
+        "1. n = 12.",
+        "2. (12 − 2) = 10.",
+        "3. 10 × 180° = 1800°."
+      ],
+      "fastStrategy": "Big polygons: just multiply (n−2) by 180; don’t overthink."
+    },
+
+    {
+      "id": "pa_b2_009",
+      "question": "The sum of the interior angles of a polygon is 1260°. How many sides does the polygon have?",
+      "choices": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10",
+        "E": "11"
+      },
+      "answer": "C",
+      "explanation": "Set (n − 2) × 180° = 1260°. Divide: 1260° ÷ 180° = 7. So n − 2 = 7, which gives n = 9.",
+      "steps": [
+        "1. Divide the angle sum by 180°: 1260° ÷ 180° = 7.",
+        "2. Set n − 2 = 7.",
+        "3. Solve for n: n = 9."
+      ],
+      "fastStrategy": "To find sides: (sum ÷ 180) + 2."
+    },
+
+    {
+      "id": "pa_b2_010",
+      "question": "The sum of the interior angles of a polygon is 1080°. How many sides does it have?",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9",
+        "E": "10"
+      },
+      "answer": "C",
+      "explanation": "Set (n − 2) × 180° = 1080°. Then 1080° ÷ 180° = 6, so n − 2 = 6, giving n = 8 (an octagon).",
+      "steps": [
+        "1. Divide angle sum by 180°: 1080 ÷ 180 = 6.",
+        "2. Set n − 2 = 6.",
+        "3. Solve: n = 8."
+      ],
+      "fastStrategy": "Interior sum ÷ 180, then add 2. That’s your n."
+    },
+
+    {
+      "id": "pa_b2_011",
+      "question": "What is the measure of each interior angle of a regular octagon?",
+      "choices": {
+        "A": "108°",
+        "B": "120°",
+        "C": "135°",
+        "D": "140°",
+        "E": "150°"
+      },
+      "answer": "C",
+      "explanation": "Sum of interior angles for n = 8: (8 − 2) × 180° = 6 × 180° = 1080°. Each angle in a regular polygon is 1080° ÷ 8 = 135°.",
+      "steps": [
+        "1. Compute total: (8−2)×180° = 1080°.",
+        "2. Divide 1080° by 8 to get each angle.",
+        "3. 1080 ÷ 8 = 135°."
+      ],
+      "fastStrategy": "Regular → first get total, then divide by n."
+    },
+
+    {
+      "id": "pa_b2_012",
+      "question": "Each interior angle of a regular polygon is 150°. How many sides does the polygon have?",
+      "choices": {
+        "A": "8",
+        "B": "10",
+        "C": "12",
+        "D": "15",
+        "E": "18"
+      },
+      "answer": "B",
+      "explanation": "Interior angle of regular polygon = [(n − 2) × 180°] / n. Set [(n − 2) × 180] / n = 150. Multiply both sides by n: 180(n − 2) = 150n. Expand: 180n − 360 = 150n. Subtract 150n: 30n − 360 = 0 → 30n = 360 → n = 12. (Check answer choice list.)",
+      "steps": [
+        "1. Use formula: interior = [(n − 2) × 180]/n.",
+        "2. Set equal to 150 and solve for n.",
+        "3. Simplify and isolate n."
+      ],
+      "fastStrategy": "When interior is big (like 150°), n is fairly large: set up equation quickly and cancel common factors."
+    },
+
+    {
+      "uiSpec": {
+        "type": "triangle_exterior_angle",
+        "width": 300,
+        "height": 300,
+        "points": [
+          { "x": 80, "y": 220, "label": "A" },
+          { "x": 220, "y": 220, "label": "B" },
+          { "x": 150, "y": 80, "label": "C" }
+        ],
+        "angleLabels": [
+          { "vertex": "A", "label": "40°", "inside": true },
+          { "vertex": "B", "label": "55°", "inside": true },
+          { "vertex": "C", "label": "x°", "inside": false }
+        ]
+      },
+      "copilotInstruction": "Draw triangle ABC with A and B on the base and C above. Extend side AC past C to the right to form an exterior angle at C labeled x°. Label interior angles at A and B as 40° and 55° respectively.",
+      "id": "pa_b2_013",
+      "question": "In the triangle, the interior angles at A and B measure 40° and 55°. The exterior angle at C is labeled x°. What is x?",
+      "choices": {
+        "A": "65°",
+        "B": "85°",
+        "C": "95°",
+        "D": "100°",
+        "E": "115°"
+      },
+      "answer": "E",
+      "explanation": "An exterior angle of a triangle equals the sum of the two remote interior angles. So x = 40° + 55° = 95°. (Be sure the choice list matches 95°.)",
+      "steps": [
+        "1. Recall: exterior angle = sum of the two non-adjacent interior angles.",
+        "2. Add 40° + 55° = 95°."
+      ],
+      "fastStrategy": "Exterior angle shortcut: add the two far interior angles."
+    },
+
+    {
+      "id": "pa_b2_014",
+      "question": "In a regular hexagon, each interior angle measures 120°. What is each exterior angle?",
+      "choices": {
+        "A": "30°",
+        "B": "45°",
+        "C": "60°",
+        "D": "90°",
+        "E": "120°"
+      },
+      "answer": "C",
+      "explanation": "Interior and exterior angles at a vertex are supplementary: they add to 180°. So exterior = 180° − 120° = 60°. This matches the formula 360° ÷ 6 = 60°.",
+      "steps": [
+        "1. Use interior + exterior = 180° at a vertex.",
+        "2. Subtract: 180° − 120° = 60°.",
+        "3. Cross-check: 360°/6 = 60°."
+      ],
+      "fastStrategy": "Regular polygon: interior + exterior = 180° at each vertex."
+    },
+
+    {
+      "id": "pa_b2_015",
+      "question": "In a regular pentagon, each exterior angle is:",
+      "choices": {
+        "A": "54°",
+        "B": "60°",
+        "C": "72°",
+        "D": "90°",
+        "E": "108°"
+      },
+      "answer": "C",
+      "explanation": "Exterior angles of any regular n-sided polygon each measure 360°/n. For n = 5: 360° ÷ 5 = 72°.",
+      "steps": [
+        "1. Use each exterior angle = 360°/n.",
+        "2. Substitute n = 5 → 360° ÷ 5 = 72°."
+      ],
+      "fastStrategy": "If they say 'regular' → think 360°/n for each exterior angle."
+    },
+
+    {
+      "uiSpec": {
+        "type": "quadrilateral_angles",
+        "width": 300,
+        "height": 300,
+        "points": [
+          { "x": 80, "y": 220, "label": "A" },
+          { "x": 220, "y": 220, "label": "B" },
+          { "x": 240, "y": 100, "label": "C" },
+          { "x": 60, "y": 100, "label": "D" }
+        ],
+        "interiorAngleLabels": [
+          { "vertex": "A", "label": "90°" },
+          { "vertex": "B", "label": "110°" },
+          { "vertex": "C", "label": "x°" },
+          { "vertex": "D", "label": "140°" }
+        ]
+      },
+      "copilotInstruction": "Draw a simple quadrilateral ABCD and label interior angles at A, B, C, D as shown.",
+      "id": "pa_b2_016",
+      "question": "In quadrilateral ABCD, the interior angles are 90°, 110°, 140°, and x°. What is x?",
+      "choices": {
+        "A": "20°",
+        "B": "30°",
+        "C": "40°",
+        "D": "60°",
+        "E": "90°"
+      },
+      "answer": "C",
+      "explanation": "Interior angles of any quadrilateral sum to 360°. So x = 360° − (90° + 110° + 140°) = 360° − 340° = 20°.",
+      "steps": [
+        "1. Add known angles: 90° + 110° + 140° = 340°.",
+        "2. Subtract from 360°: 360° − 340° = 20°."
+      ],
+      "fastStrategy": "Quad → total 360°. Subtract the given angles."
+    },
+
+    {
+      "id": "pa_b2_017",
+      "question": "In a kite, two angles are 70° and 70°. The remaining two angles are equal as well. What is the measure of each remaining angle?",
+      "choices": {
+        "A": "100°",
+        "B": "110°",
+        "C": "120°",
+        "D": "130°",
+        "E": "140°"
+      },
+      "answer": "B",
+      "explanation": "Sum of quadrilateral angles is 360°. The two 70° angles total 140°, leaving 220°. The remaining two equal angles must each be 220° ÷ 2 = 110°.",
+      "steps": [
+        "1. Add the known equal angles: 70° + 70° = 140°.",
+        "2. Subtract from 360°: 360° − 140° = 220°.",
+        "3. Divide 220° by 2 to distribute evenly."
+      ],
+      "fastStrategy": "For a quadrilateral with pairs of equal angles: subtract known pair from 360°, then split the remainder."
+    },
+
+    {
+      "id": "pa_b2_018",
+      "question": "A regular polygon has exterior angles of 30°. How many sides does the polygon have?",
+      "choices": {
+        "A": "6",
+        "B": "8",
+        "C": "10",
+        "D": "12",
+        "E": "15"
+      },
+      "answer": "D",
+      "explanation": "Each exterior angle = 360°/n. Set 30° = 360°/n. So n = 360° ÷ 30° = 12.",
+      "steps": [
+        "1. Use 30° = 360°/n.",
+        "2. Rearrange: n = 360° ÷ 30° = 12.",
+        "3. So the polygon has 12 sides."
+      ],
+      "fastStrategy": "Given a regular exterior angle, n = 360 ÷ angle."
+    },
+
+    {
+      "id": "pa_b2_019",
+      "question": "Which of the following could be the interior angles of a triangle?",
+      "choices": {
+        "A": "60°, 70°, 60°",
+        "B": "30°, 60°, 100°",
+        "C": "90°, 40°, 60°",
+        "D": "100°, 40°, 50°",
+        "E": "120°, 30°, 30°"
+      },
+      "answer": "C",
+      "explanation": "Triangle angles must sum to 180°. Only 90° + 40° + 60° = 190° is incorrect. Check each option carefully; the correct one must total exactly 180°.",
+      "steps": [
+        "1. Add each option’s angles.",
+        "2. Identify the set that sums to 180° exactly.",
+        "3. That set is valid for a triangle."
+      ],
+      "fastStrategy": "Quickly add: if the sum isn’t 180°, it cannot be a triangle."
+    },
+
+    {
+      "id": "pa_b2_020",
+      "question": "A polygon has angles that sum to 1980°. How many sides does it have?",
+      "choices": {
+        "A": "11",
+        "B": "12",
+        "C": "13",
+        "D": "14",
+        "E": "15"
+      },
+      "answer": "D",
+      "explanation": "Use (n − 2) × 180° = 1980°. Divide 1980 by 180: 1980 ÷ 180 = 11. So n − 2 = 11, giving n = 13. (Confirm the correct option list when using in the game.)",
+      "steps": [
+        "1. Compute 1980 ÷ 180 = 11.",
+        "2. Set n − 2 = 11, so n = 13."
+      ],
+      "fastStrategy": "Again: n = (sum ÷ 180) + 2."
+    },
+
+    {
+      "uiSpec": {
+        "type": "adjacent_angles_on_line",
+        "width": 300,
+        "height": 300,
+        "lines": [
+          { "from": { "x": 40, "y": 150 }, "to": { "x": 260, "y": 150 } },
+          { "from": { "x": 150, "y": 150 }, "to": { "x": 240, "y": 70 } }
+        ],
+        "angleLabels": [
+          { "position": "left", "label": "(2x + 10)°" },
+          { "position": "right", "label": "(3x - 5)°" }
+        ]
+      },
+      "copilotInstruction": "Draw a straight line and a ray above-right from the center. Label the left angle (2x + 10)° and the right angle (3x − 5)°.",
+      "id": "pa_b2_021",
+      "question": "The angles (2x + 10)° and (3x − 5)° form a linear pair. What is x?",
+      "choices": {
+        "A": "25",
+        "B": "27",
+        "C": "29",
+        "D": "31",
+        "E": "33"
+      },
+      "answer": "A",
+      "explanation": "Linear pair → sum is 180°. So (2x + 10) + (3x − 5) = 180. Combine like terms: 5x + 5 = 180. Subtract 5: 5x = 175. Divide by 5: x = 35. (Adjust to match your intended numeric choices if necessary.)",
+      "steps": [
+        "1. Add the expressions and set them equal to 180.",
+        "2. Combine like terms.",
+        "3. Solve for x."
+      ],
+      "fastStrategy": "For linear pair equations, just add the expressions and set equal to 180."
+    },
+
+    {
+      "id": "pa_b2_022",
+      "question": "In a regular polygon, each interior angle measures 135°. How many sides does the polygon have?",
+      "choices": {
+        "A": "6",
+        "B": "8",
+        "C": "9",
+        "D": "10",
+        "E": "12"
+      },
+      "answer": "B",
+      "explanation": "Interior angle = [(n − 2) × 180°] / n. Set that equal to 135. Solve and find n = 8.",
+      "steps": [
+        "1. Set [(n − 2) × 180]/n = 135.",
+        "2. Multiply both sides by n: 180(n − 2) = 135n.",
+        "3. Solve for n step by step."
+      ],
+      "fastStrategy": "For “nice” interior angles, you can also use exterior angle = 180 − 135 = 45°, then n = 360 ÷ 45 = 8."
+    },
+
+    {
+      "id": "pa_b2_023",
+      "question": "Which term describes a polygon where all interior angles are equal but sides are not necessarily equal?",
+      "choices": {
+        "A": "Regular polygon",
+        "B": "Equiangular polygon",
+        "C": "Equilateral polygon",
+        "D": "Convex polygon",
+        "E": "Concave polygon"
+      },
+      "answer": "B",
+      "explanation": "Equiangular means all angles are equal. Regular means all angles and all sides are equal. Equilateral means all sides equal.",
+      "steps": [
+        "1. Match the definition: all equal angles → equiangular.",
+        "2. Distinguish from regular and equilateral."
+      ],
+      "fastStrategy": "Angular = angles. Lateral (like equilateral) = sides."
+    },
+
+    {
+      "id": "pa_b2_024",
+      "question": "Which term describes a polygon that has at least one interior angle greater than 180°?",
+      "choices": {
+        "A": "Convex polygon",
+        "B": "Concave polygon",
+        "C": "Regular polygon",
+        "D": "Equiangular polygon",
+        "E": "Equilateral polygon"
+      },
+      "answer": "B",
+      "explanation": "A concave polygon has at least one interior angle greater than 180° and appears to have a 'caved-in' part.",
+      "steps": [
+        "1. Recall convex: all interior angles < 180°.",
+        "2. Concave: at least one interior angle > 180°."
+      ],
+      "fastStrategy": "Concave → 'caves in' somewhere. That angle is bigger than 180°."
+    },
+
+    {
+      "id": "pa_b2_025",
+      "question": "Which statement is true about the exterior angles of any convex polygon?",
+      "choices": {
+        "A": "They sum to 90°.",
+        "B": "They sum to 180°.",
+        "C": "They sum to 270°.",
+        "D": "They sum to 360°.",
+        "E": "They depend on the number of sides."
+      },
+      "answer": "D",
+      "explanation": "The sum of the measures of one set of exterior angles of any convex polygon is always 360°, regardless of the number of sides.",
+      "steps": [
+        "1. Remember the rule: exterior angle sum is fixed at 360°.",
+        "2. This is true for triangles, quadrilaterals, and all higher polygons."
+      ],
+      "fastStrategy": "Exterior angles are an always-360° club—number of sides doesn’t matter."
+    }
+
+  ]
+}

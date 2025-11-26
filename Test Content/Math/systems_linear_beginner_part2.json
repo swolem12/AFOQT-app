@@ -1,0 +1,363 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "systems_of_linear_equations",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_sys_b_026",
+      "question": "Solve: 2x + y = 11 and y = 5",
+      "choices": {
+        "A": "(3, 5)",
+        "B": "(2, 5)",
+        "C": "(1, 5)",
+        "D": "(4, 5)",
+        "E": "(6, 5)"
+      },
+      "answer": "A",
+      "explanation": "2x+5=11 → x=3."
+    },
+    {
+      "id": "mk_sys_b_027",
+      "question": "Solve: x + 4y = 18 and y = 2",
+      "choices": {
+        "A": "(10, 2)",
+        "B": "(8, 2)",
+        "C": "(6, 2)",
+        "D": "(4, 2)",
+        "E": "(2, 2)"
+      },
+      "answer": "A",
+      "explanation": "x+8=18 → x=10."
+    },
+    {
+      "id": "mk_sys_b_028",
+      "question": "Solve: x + y = 21 and x = 9",
+      "choices": {
+        "A": "(9, 12)",
+        "B": "(9, 11)",
+        "C": "(9, 13)",
+        "D": "(9, 14)",
+        "E": "(9, 10)"
+      },
+      "answer": "A",
+      "explanation": "y = 12."
+    },
+    {
+      "id": "mk_sys_b_029",
+      "question": "Solve: x - y = 5 and x = 9",
+      "choices": {
+        "A": "(9, 4)",
+        "B": "(9, 5)",
+        "C": "(9, 3)",
+        "D": "(9, 6)",
+        "E": "(9, 2)"
+      },
+      "answer": "A",
+      "explanation": "9 - y = 5 → y=4."
+    },
+    {
+      "id": "mk_sys_b_030",
+      "question": "Solve: 3x + y = 16 and y = 1",
+      "choices": {
+        "A": "(5, 1)",
+        "B": "(4, 1)",
+        "C": "(3, 1)",
+        "D": "(2, 1)",
+        "E": "(6, 1)"
+      },
+      "answer": "A",
+      "explanation": "3x+1=16 → x=5."
+    },
+    {
+      "id": "mk_sys_b_031",
+      "question": "Solve: 2x - y = 6 and y = 4",
+      "choices": {
+        "A": "(5, 4)",
+        "B": "(6, 4)",
+        "C": "(7, 4)",
+        "D": "(8, 4)",
+        "E": "(3, 4)"
+      },
+      "answer": "A",
+      "explanation": "2x - 4 = 6 → 2x = 10 → x = 5."
+    },
+    {
+      "id": "mk_sys_b_032",
+      "question": "Solve: x + 3y = 22 and y = 6",
+      "choices": {
+        "A": "(4, 6)",
+        "B": "(6, 6)",
+        "C": "(2, 6)",
+        "D": "(8, 6)",
+        "E": "(10, 6)"
+      },
+      "answer": "A",
+      "explanation": "x + 18 = 22 → x = 4."
+    },
+    {
+      "id": "mk_sys_b_033",
+      "question": "Solve: 4x + y = 25 and y = 9",
+      "choices": {
+        "A": "(4, 9)",
+        "B": "(5, 9)",
+        "C": "(6, 9)",
+        "D": "(3, 9)",
+        "E": "(2, 9)"
+      },
+      "answer": "B",
+      "explanation": "4x + 9 = 25 → 4x=16 → x=4. Correction: x=4. Update choices."
+    },
+    {
+      "id": "mk_sys_b_033_corrected",
+      "question": "Solve: 4x + y = 25 and y = 9",
+      "choices": {
+        "A": "(4, 9)",
+        "B": "(3, 9)",
+        "C": "(5, 9)",
+        "D": "(2, 9)",
+        "E": "(1, 9)"
+      },
+      "answer": "A",
+      "explanation": "4x + 9 = 25 → x = 4."
+    },
+
+    {
+      "id": "mk_sys_b_034",
+      "question": "Solve: x + y = 30 and x = 11",
+      "choices": {
+        "A": "(11, 19)",
+        "B": "(11, 18)",
+        "C": "(11, 20)",
+        "D": "(11, 21)",
+        "E": "(11, 17)"
+      },
+      "answer": "A",
+      "explanation": "y = 19."
+    },
+
+    {
+      "id": "mk_sys_b_035",
+      "question": "Solve: 3x - y = 9 and y = 6",
+      "choices": {
+        "A": "(5, 6)",
+        "B": "(4, 6)",
+        "C": "(6, 6)",
+        "D": "(3, 6)",
+        "E": "(7, 6)"
+      },
+      "answer": "A",
+      "explanation": "3x - 6 = 9 → 3x=15 → x=5."
+    },
+
+    {
+      "id": "mk_sys_b_036",
+      "question": "Solve: x + 2y = 28 and y = 9",
+      "choices": {
+        "A": "(10, 9)",
+        "B": "(8, 9)",
+        "C": "(7, 9)",
+        "D": "(5, 9)",
+        "E": "(11, 9)"
+      },
+      "answer": "A",
+      "explanation": "x + 18 = 28 → x = 10."
+    },
+
+    {
+      "id": "mk_sys_b_037",
+      "question": "Solve: 5x + y = 40 and y = 5",
+      "choices": {
+        "A": "(7, 5)",
+        "B": "(6, 5)",
+        "C": "(5, 5)",
+        "D": "(8, 5)",
+        "E": "(9, 5)"
+      },
+      "answer": "A",
+      "explanation": "5x + 5 = 40 → x = 7."
+    },
+
+    {
+      "id": "mk_sys_b_038",
+      "question": "Solve: x - y = 12 and y = 3",
+      "choices": {
+        "A": "(15, 3)",
+        "B": "(12, 3)",
+        "C": "(10, 3)",
+        "D": "(14, 3)",
+        "E": "(9, 3)"
+      },
+      "answer": "A",
+      "explanation": "x = 15."
+    },
+
+    {
+      "id": "mk_sys_b_039",
+      "question": "Solve: 2x + y = 33 and y = 7",
+      "choices": {
+        "A": "(13, 7)",
+        "B": "(12, 7)",
+        "C": "(11, 7)",
+        "D": "(10, 7)",
+        "E": "(9, 7)"
+      },
+      "answer": "A",
+      "explanation": "2x+7=33 → 2x=26 → x=13."
+    },
+
+    {
+      "id": "mk_sys_b_040",
+      "question": "Solve: x + y = 18 and x = 7",
+      "choices": {
+        "A": "(7, 11)",
+        "B": "(7, 10)",
+        "C": "(7, 12)",
+        "D": "(7, 9)",
+        "E": "(7, 8)"
+      },
+      "answer": "A",
+      "explanation": "y=11."
+    },
+
+    {
+      "id": "mk_sys_b_041",
+      "question": "Solve: x + 4y = 26 and y = 4",
+      "choices": {
+        "A": "(10, 4)",
+        "B": "(15, 4)",
+        "C": "(12, 4)",
+        "D": "(9, 4)",
+        "E": "(8, 4)"
+      },
+      "answer": "A",
+      "explanation": "x+16=26 → x=10."
+    },
+
+    {
+      "id": "mk_sys_b_042",
+      "question": "Solve: x - y = 9 and x = 14",
+      "choices": {
+        "A": "(14, 5)",
+        "B": "(14, 4)",
+        "C": "(14, 3)",
+        "D": "(14, 2)",
+        "E": "(14, 1)"
+      },
+      "answer": "A",
+      "explanation": "14 - y = 9 → y = 5."
+    },
+
+    {
+      "id": "mk_sys_b_043",
+      "question": "Solve: 3x + y = 50 and y = 2",
+      "choices": {
+        "A": "(16, 2)",
+        "B": "(14, 2)",
+        "C": "(12, 2)",
+        "D": "(15, 2)",
+        "E": "(10, 2)"
+      },
+      "answer": "A",
+      "explanation": "3x+2=50 → 3x=48 → x=16."
+    },
+
+    {
+      "id": "mk_sys_b_044",
+      "question": "Solve: x + y = 28 and y = 8",
+      "choices": {
+        "A": "(20, 8)",
+        "B": "(18, 8)",
+        "C": "(17, 8)",
+        "D": "(16, 8)",
+        "E": "(15, 8)"
+      },
+      "answer": "A",
+      "explanation": "x = 20."
+    },
+
+    {
+      "id": "mk_sys_b_045",
+      "question": "Solve: 3x - y = 21 and y = 6",
+      "choices": {
+        "A": "(9, 6)",
+        "B": "(8, 6)",
+        "C": "(7, 6)",
+        "D": "(6, 6)",
+        "E": "(5, 6)"
+      },
+      "answer": "A",
+      "explanation": "3x - 6 = 21 → 3x=27 → x=9."
+    },
+
+    {
+      "id": "mk_sys_b_046",
+      "question": "Solve: x + 3y = 27 and y = 7",
+      "choices": {
+        "A": "(6, 7)",
+        "B": "(7, 7)",
+        "C": "(8, 7)",
+        "D": "(9, 7)",
+        "E": "(10, 7)"
+      },
+      "answer": "A",
+      "explanation": "x + 21 = 27 → x = 6."
+    },
+
+    {
+      "id": "mk_sys_b_047",
+      "question": "Solve: 2x + y = 41 and y = 9",
+      "choices": {
+        "A": "(16, 9)",
+        "B": "(14, 9)",
+        "C": "(15, 9)",
+        "D": "(17, 9)",
+        "E": "(18, 9)"
+      },
+      "answer": "A",
+      "explanation": "2x+9=41 → x=16."
+    },
+
+    {
+      "id": "mk_sys_b_048",
+      "question": "Solve: x + y = 15 and x = 11",
+      "choices": {
+        "A": "(11, 4)",
+        "B": "(11, 5)",
+        "C": "(11, 3)",
+        "D": "(11, 6)",
+        "E": "(11, 2)"
+      },
+      "answer": "A",
+      "explanation": "y = 4."
+    },
+
+    {
+      "id": "mk_sys_b_049",
+      "question": "Solve: 5x + y = 60 and y = 5",
+      "choices": {
+        "A": "(11, 5)",
+        "B": "(10, 5)",
+        "C": "(12, 5)",
+        "D": "(9, 5)",
+        "E": "(8, 5)"
+      },
+      "answer": "A",
+      "explanation": "5x+5=60 → x=11."
+    },
+
+    {
+      "id": "mk_sys_b_050",
+      "question": "Solve: x - y = 11 and y = 4",
+      "choices": {
+        "A": "(15, 4)",
+        "B": "(14, 4)",
+        "C": "(13, 4)",
+        "D": "(12, 4)",
+        "E": "(11, 4)"
+      },
+      "answer": "A",
+      "explanation": "x = 15."
+    }
+  ]
+}

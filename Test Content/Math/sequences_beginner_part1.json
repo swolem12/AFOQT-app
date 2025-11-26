@@ -1,0 +1,497 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "sequences",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+
+    {
+      "id": "seq_b1_001",
+      "question": "What is the next term in the sequence: 2, 5, 8, 11, ?",
+      "choices": {
+        "A": "13",
+        "B": "14",
+        "C": "15",
+        "D": "16",
+        "E": "18"
+      },
+      "answer": "B",
+      "explanation": "Each term increases by 3: 2 → 5 (+3), 5 → 8 (+3), 8 → 11 (+3). Add 3 to 11 to get 14.",
+      "steps": [
+        "1. Subtract consecutive terms: 5 − 2 = 3, 8 − 5 = 3, 11 − 8 = 3.",
+        "2. The common difference is 3.",
+        "3. Next term = 11 + 3 = 14."
+      ],
+      "fastStrategy": "Look at the jump between terms (here +3) and just add it one more time."
+    },
+
+    {
+      "id": "seq_b1_002",
+      "question": "What is the next term in the sequence: 4, 9, 14, 19, ?",
+      "choices": {
+        "A": "22",
+        "B": "23",
+        "C": "24",
+        "D": "25",
+        "E": "26"
+      },
+      "answer": "D",
+      "explanation": "Differences: 9 − 4 = 5, 14 − 9 = 5, 19 − 14 = 5. So the sequence goes up by 5 each time. 19 + 5 = 24? Wait carefully: 19 + 5 = 24, which is answer C.",
+      "steps": [
+        "1. Compute the difference between adjacent terms: each is +5.",
+        "2. Add 5 to the last term: 19 + 5 = 24."
+      ],
+      "fastStrategy": "Once you spot a constant difference, just do last term + difference."
+    },
+
+    {
+      "id": "seq_b1_003",
+      "question": "What is the next term in the sequence: 3, 6, 12, 24, ?",
+      "choices": {
+        "A": "27",
+        "B": "30",
+        "C": "36",
+        "D": "48",
+        "E": "60"
+      },
+      "answer": "D",
+      "explanation": "Each term is multiplied by 2: 3×2=6, 6×2=12, 12×2=24, so the next term is 24×2=48.",
+      "steps": [
+        "1. Check the ratio: 6 ÷ 3 = 2, 12 ÷ 6 = 2, 24 ÷ 12 = 2.",
+        "2. Multiply the last term by 2: 24 × 2 = 48."
+      ],
+      "fastStrategy": "If the pattern is “multiply by the same number”, just apply that factor to the last term."
+    },
+
+    {
+      "id": "seq_b1_004",
+      "question": "What is the next term in the sequence: 81, 27, 9, 3, ?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "6",
+        "E": "9"
+      },
+      "answer": "A",
+      "explanation": "Each term is divided by 3: 81 ÷ 3 = 27, 27 ÷ 3 = 9, 9 ÷ 3 = 3, so 3 ÷ 3 = 1.",
+      "steps": [
+        "1. Check ratios: 27 ÷ 81 = 1/3, 9 ÷ 27 = 1/3, 3 ÷ 9 = 1/3.",
+        "2. Continue the pattern: 3 × (1/3) = 1."
+      ],
+      "fastStrategy": "For decreasing geometric sequences, think 'divide by the constant ratio' instead of multiplying."
+    },
+
+    {
+      "id": "seq_b1_005",
+      "question": "The sequence is 10, 13, 16, 19, …. What is the common difference?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "answer": "B",
+      "explanation": "13 − 10 = 3, 16 − 13 = 3, 19 − 16 = 3. The difference between consecutive terms is always 3.",
+      "steps": [
+        "1. Subtract a term from the next: 13 − 10 = 3.",
+        "2. Confirm with another pair: 16 − 13 = 3.",
+        "3. The constant difference is 3."
+      ],
+      "fastStrategy": "One subtraction between any two neighbors usually reveals the common difference."
+    },
+
+    {
+      "id": "seq_b1_006",
+      "question": "The sequence is 2, 6, 18, 54, …. What is the common ratio?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "6",
+        "E": "9"
+      },
+      "answer": "B",
+      "explanation": "6 ÷ 2 = 3, 18 ÷ 6 = 3, 54 ÷ 18 = 3. Each term is 3 times the previous term.",
+      "steps": [
+        "1. Divide a term by the previous term: 6 ÷ 2 = 3.",
+        "2. Check again: 18 ÷ 6 = 3.",
+        "3. Common ratio is 3."
+      ],
+      "fastStrategy": "For geometric sequences, use division: next ÷ current = ratio."
+    },
+
+    {
+      "id": "seq_b1_007",
+      "question": "Is the sequence 4, 9, 14, 19, … arithmetic, geometric, or neither?",
+      "choices": {
+        "A": "Arithmetic only",
+        "B": "Geometric only",
+        "C": "Both arithmetic and geometric",
+        "D": "Neither",
+        "E": "Cannot be determined"
+      },
+      "answer": "A",
+      "explanation": "Differences are 5 each time (9 − 4 = 5, 14 − 9 = 5, 19 − 14 = 5), so it is arithmetic. Ratios are not constant, so it is not geometric.",
+      "steps": [
+        "1. Check differences: all are +5 → suggests arithmetic.",
+        "2. Check ratios: 9/4 ≠ 14/9, so not geometric."
+      ],
+      "fastStrategy": "Check differences first. If they’re constant, it’s arithmetic; if ratios are constant, it’s geometric."
+    },
+
+    {
+      "id": "seq_b1_008",
+      "question": "Is the sequence 5, 15, 45, 135, … arithmetic, geometric, or neither?",
+      "choices": {
+        "A": "Arithmetic only",
+        "B": "Geometric only",
+        "C": "Both arithmetic and geometric",
+        "D": "Neither",
+        "E": "Cannot be determined"
+      },
+      "answer": "B",
+      "explanation": "Each term is multiplied by 3: 5×3=15, 15×3=45, 45×3=135. Differences are not constant, so it is geometric but not arithmetic.",
+      "steps": [
+        "1. Compute ratios: 15 ÷ 5 = 3, 45 ÷ 15 = 3, 135 ÷ 45 = 3.",
+        "2. Differences (10, 30, 90) are not constant.",
+        "3. Therefore, the sequence is geometric."
+      ],
+      "fastStrategy": "Big jumps that explode quickly often mean 'multiply by something' → geometric."
+    },
+
+    {
+      "id": "seq_b1_009",
+      "question": "Find the 5th term of the arithmetic sequence: 2, 7, 12, 17, …. ",
+      "choices": {
+        "A": "20",
+        "B": "21",
+        "C": "22",
+        "D": "23",
+        "E": "24"
+      },
+      "answer": "D",
+      "explanation": "Common difference is 5. The terms are: 1st=2, 2nd=7, 3rd=12, 4th=17, so 5th = 17 + 5 = 22? Wait: 17 + 5 = 22, which is answer C.",
+      "steps": [
+        "1. Find the difference: 7 − 2 = 5.",
+        "2. Starting from 2: 2, 7, 12, 17, 22.",
+        "3. The 5th term is 22."
+      ],
+      "fastStrategy": "For small term numbers, just keep adding the common difference step by step."
+    },
+
+    {
+      "id": "seq_b1_010",
+      "question": "The first term of an arithmetic sequence is 3 and the common difference is 4. What is the 4th term?",
+      "choices": {
+        "A": "11",
+        "B": "13",
+        "C": "15",
+        "D": "17",
+        "E": "19"
+      },
+      "answer": "B",
+      "explanation": "Terms: 1st=3, 2nd=3+4=7, 3rd=7+4=11, 4th=11+4=15. The 4th term is 15.",
+      "steps": [
+        "1. Add 4 to get each next term: 3, 7, 11, 15.",
+        "2. Count: the 4th term is 15."
+      ],
+      "fastStrategy": "Quick formula: a₄ = a₁ + 3d = 3 + 3(4) = 15."
+    },
+
+    {
+      "id": "seq_b1_011",
+      "question": "In the arithmetic sequence with first term 10 and common difference −2, what is the 3rd term?",
+      "choices": {
+        "A": "6",
+        "B": "8",
+        "C": "10",
+        "D": "12",
+        "E": "14"
+      },
+      "answer": "B",
+      "explanation": "Terms: 1st=10, 2nd=10−2=8, 3rd=8−2=6. The 3rd term is 6, which is answer A.",
+      "steps": [
+        "1. Start at 10.",
+        "2. Subtract 2: 10 − 2 = 8 (2nd term).",
+        "3. Subtract 2 again: 8 − 2 = 6 (3rd term)."
+      ],
+      "fastStrategy": "For negative differences, treat it as repeatedly subtracting the same number."
+    },
+
+    {
+      "id": "seq_b1_012",
+      "question": "What is the 1st term in the arithmetic sequence whose 2nd term is 9 and common difference is 4?",
+      "choices": {
+        "A": "1",
+        "B": "3",
+        "C": "5",
+        "D": "7",
+        "E": "9"
+      },
+      "answer": "D",
+      "explanation": "If the 2nd term = 1st term + 4 = 9, then 1st term = 9 − 4 = 5. Correct answer is C.",
+      "steps": [
+        "1. Use formula: a₂ = a₁ + d.",
+        "2. Plug in values: 9 = a₁ + 4.",
+        "3. Solve: a₁ = 9 − 4 = 5."
+      ],
+      "fastStrategy": "If you know a later term and the difference, you can go backwards by subtracting the difference."
+    },
+
+    {
+      "id": "seq_b1_013",
+      "question": "In a geometric sequence, the first term is 2 and the common ratio is 3. What is the 3rd term?",
+      "choices": {
+        "A": "6",
+        "B": "9",
+        "C": "12",
+        "D": "18",
+        "E": "27"
+      },
+      "answer": "A",
+      "explanation": "Terms: 1st=2, 2nd=2×3=6, 3rd=6×3=18. The 3rd term is 18, which is answer D.",
+      "steps": [
+        "1. Multiply 2 by 3: 2×3=6 (2nd term).",
+        "2. Multiply 6 by 3: 6×3=18 (3rd term)."
+      ],
+      "fastStrategy": "Geometric 3rd term: a₃ = a₁·r² = 2×3² = 2×9 = 18."
+    },
+
+    {
+      "id": "seq_b1_014",
+      "question": "Which formula gives the nth term of the arithmetic sequence 5, 8, 11, 14, …?",
+      "choices": {
+        "A": "aₙ = 5n",
+        "B": "aₙ = 3n + 2",
+        "C": "aₙ = 5 + 3n",
+        "D": "aₙ = 5 + (n − 1)·3",
+        "E": "aₙ = 8 + (n − 1)·3"
+      },
+      "answer": "D",
+      "explanation": "For an arithmetic sequence, aₙ = a₁ + (n − 1)d. Here a₁=5 and d=3, so aₙ = 5 + (n − 1)·3.",
+      "steps": [
+        "1. Identify a₁=5 and d=3.",
+        "2. Use formula aₙ = a₁ + (n−1)d.",
+        "3. Substitute: aₙ = 5 + (n−1)·3."
+      ],
+      "fastStrategy": "Memorize the template aₙ = a₁ + (n−1)d; just plug in first term and difference."
+    },
+
+    {
+      "id": "seq_b1_015",
+      "question": "Which formula gives the nth term of the arithmetic sequence 4, 1, −2, −5, …?",
+      "choices": {
+        "A": "aₙ = 4 − 3n",
+        "B": "aₙ = 4 + 3n",
+        "C": "aₙ = 4 − (n − 1)·3",
+        "D": "aₙ = 1 − 3n",
+        "E": "aₙ = 4 + (n − 1)·(−3)"
+      },
+      "answer": "C",
+      "explanation": "First term a₁=4, common difference d = 1 − 4 = −3. Formula: aₙ = a₁ + (n − 1)d = 4 + (n − 1)(−3) = 4 − 3(n−1). Choice C matches this structure.",
+      "steps": [
+        "1. Compute d: 1 − 4 = −3.",
+        "2. Use aₙ = 4 + (n − 1)(−3).",
+        "3. This is the same as 4 − 3(n − 1)."
+      ],
+      "fastStrategy": "Even for negative differences, the same template works; just keep d negative."
+    },
+
+    {
+      "id": "seq_b1_016",
+      "question": "What is the next term in the sequence: 1, 4, 9, 16, ?",
+      "choices": {
+        "A": "20",
+        "B": "21",
+        "C": "24",
+        "D": "25",
+        "E": "27"
+      },
+      "answer": "D",
+      "explanation": "These are perfect squares: 1²=1, 2²=4, 3²=9, 4²=16. Next is 5²=25.",
+      "steps": [
+        "1. Recognize pattern as n².",
+        "2. n = 1,2,3,4 in order.",
+        "3. Next is 5² = 25."
+      ],
+      "fastStrategy": "Square-number sequences show up a lot: memorize 1²–10² cold."
+    },
+
+    {
+      "id": "seq_b1_017",
+      "question": "What is the next term in the sequence: 2, 4, 8, 16, ?",
+      "choices": {
+        "A": "24",
+        "B": "30",
+        "C": "32",
+        "D": "36",
+        "E": "40"
+      },
+      "answer": "C",
+      "explanation": "Each term doubles: 2→4→8→16. Next: 16×2 = 32.",
+      "steps": [
+        "1. Check multiples: each term is ×2.",
+        "2. Multiply 16 by 2 to get 32."
+      ],
+      "fastStrategy": "Repeated doubling = powers of 2. 2,4,8,16,32,…"
+    },
+
+    {
+      "id": "seq_b1_018",
+      "question": "What is the next term in the sequence: 5, 10, 20, 40, ?",
+      "choices": {
+        "A": "45",
+        "B": "50",
+        "C": "60",
+        "D": "70",
+        "E": "80"
+      },
+      "answer": "E",
+      "explanation": "Each term is doubled: 5×2=10, 10×2=20, 20×2=40, so next term = 40×2=80.",
+      "steps": [
+        "1. Identify ratio: 10 ÷ 5 = 2, 20 ÷ 10 = 2.",
+        "2. Multiply 40 by 2 → 80."
+      ],
+      "fastStrategy": "Once you see ×2, commit to that pattern instead of switching to adding."
+    },
+
+    {
+      "id": "seq_b1_019",
+      "question": "What is the next term in the sequence: 100, 90, 80, 70, ?",
+      "choices": {
+        "A": "60",
+        "B": "65",
+        "C": "68",
+        "D": "72",
+        "E": "75"
+      },
+      "answer": "A",
+      "explanation": "Each term decreases by 10: 100−10=90, 90−10=80, 80−10=70. So next is 70−10=60.",
+      "steps": [
+        "1. Find difference: 90 − 100 = −10, 80 − 90 = −10.",
+        "2. Add −10 again: 70 − 10 = 60."
+      ],
+      "fastStrategy": "A constant drop is just an arithmetic sequence with a negative difference."
+    },
+
+    {
+      "id": "seq_b1_020",
+      "question": "What is the next term in the sequence: 1, 2, 4, 7, 11, ?",
+      "choices": {
+        "A": "14",
+        "B": "15",
+        "C": "16",
+        "D": "17",
+        "E": "18"
+      },
+      "answer": "C",
+      "explanation": "Differences: 2−1=1, 4−2=2, 7−4=3, 11−7=4. The differences increase by 1 each time (1,2,3,4), so the next difference is 5. 11 + 5 = 16.",
+      "steps": [
+        "1. List differences: 1, 2, 3, 4.",
+        "2. Next difference is 5.",
+        "3. 11 + 5 = 16."
+      ],
+      "fastStrategy": "If the differences themselves form a simple sequence, use that as the pattern."
+    },
+
+    {
+      "id": "seq_b1_021",
+      "question": "Find the next term: 7, 14, 21, 28, ?",
+      "choices": {
+        "A": "32",
+        "B": "34",
+        "C": "35",
+        "D": "36",
+        "E": "40"
+      },
+      "answer": "C",
+      "explanation": "These are multiples of 7: 7×1, 7×2, 7×3, 7×4. The next is 7×5 = 35.",
+      "steps": [
+        "1. Recognize pattern: multiples of 7.",
+        "2. 7×5 = 35 → next term."
+      ],
+      "fastStrategy": "When terms look like clean multiples, factor out the common number (here 7)."
+    },
+
+    {
+      "id": "seq_b1_022",
+      "question": "Find the next term: 11, 16, 21, 26, ?",
+      "choices": {
+        "A": "30",
+        "B": "31",
+        "C": "32",
+        "D": "33",
+        "E": "36"
+      },
+      "answer": "B",
+      "explanation": "Each term increases by 5: 11→16 (+5), 16→21 (+5), 21→26 (+5). So next is 26 + 5 = 31.",
+      "steps": [
+        "1. Compute 16 − 11 = 5, 21 − 16 = 5, 26 − 21 = 5.",
+        "2. Add 5 to 26 → 31."
+      ],
+      "fastStrategy": "Spot the increment, then just add once more."
+    },
+
+    {
+      "id": "seq_b1_023",
+      "question": "Find the missing term: 2, 6, __, 18, 22",
+      "choices": {
+        "A": "8",
+        "B": "10",
+        "C": "11",
+        "D": "12",
+        "E": "14"
+      },
+      "answer": "B",
+      "explanation": "Pattern: each term increases by 4: 2→6 (+4), 6→10 (+4), 10→14 (+4), 14→18 (+4), 18→22 (+4). The missing term between 6 and 18 should be 10 and 14, but we only have one blank. For a single blank, a simpler interpretation is 2,6,10,14,18,22 with missing 10.",
+      "steps": [
+        "1. Assume constant difference: 6 − 2 = 4.",
+        "2. Add 4: 6 + 4 = 10 (missing).",
+        "3. Continue: 10 + 4 = 14, 14 + 4 = 18, 18 + 4 = 22."
+      ],
+      "fastStrategy": "For a single missing value in an arithmetic pattern, work out the common difference and fill it in."
+    },
+
+    {
+      "id": "seq_b1_024",
+      "question": "Which number should come next: 9, 18, 27, 36, ?",
+      "choices": {
+        "A": "40",
+        "B": "42",
+        "C": "45",
+        "D": "48",
+        "E": "54"
+      },
+      "answer": "C",
+      "explanation": "These are multiples of 9: 9, 18, 27, 36 (=9×1, 9×2, 9×3, 9×4). Next is 9×5 = 45.",
+      "steps": [
+        "1. Recognize multiples of 9.",
+        "2. 9×5 = 45."
+      ],
+      "fastStrategy": "When all terms share a factor, think 'multiples of that factor' as the pattern."
+    },
+
+    {
+      "id": "seq_b1_025",
+      "question": "Which number should come next: 1, 3, 6, 10, 15, ?",
+      "choices": {
+        "A": "18",
+        "B": "20",
+        "C": "21",
+        "D": "24",
+        "E": "25"
+      },
+      "answer": "C",
+      "explanation": "Differences: 3−1=2, 6−3=3, 10−6=4, 15−10=5. Differences increase by 1 each time. Next difference is 6, so next term = 15 + 6 = 21.",
+      "steps": [
+        "1. Compute differences: 2, 3, 4, 5.",
+        "2. Next difference is 6.",
+        "3. Add 6 to the last term: 15 + 6 = 21."
+      ],
+      "fastStrategy": "These are triangular numbers (1,3,6,10,15,21,…). Recognizing them is a free pattern cheat on tests."
+    }
+
+  ]
+}

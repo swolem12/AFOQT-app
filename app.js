@@ -916,7 +916,7 @@ const subjects = [
 // ============================================================================
 const mathTopics = [
     {
-        id: 'evaluate-expressions',
+        id: 'evaluate_expressions',
         name: 'Evaluate Expressions (Substitution)',
         description: 'Substitute values and evaluate',
         generateQuestion: () => {
@@ -941,7 +941,7 @@ const mathTopics = [
         }
     },
     {
-        id: 'distributive-foil',
+        id: 'distributive_foil',
         name: 'Distributive & FOIL',
         description: 'Expand expressions',
         generateQuestion: () => {
@@ -965,7 +965,7 @@ const mathTopics = [
         }
     },
     {
-        id: 'linear-equations',
+        id: 'linear_equations',
         name: 'Linear Equations (Solve for x)',
         description: 'Solve basic equations',
         generateQuestion: () => {
@@ -1011,7 +1011,7 @@ const mathTopics = [
         }
     },
     {
-        id: 'systems',
+        id: 'systems_linear',
         name: 'Systems (Solve systems)',
         description: 'Solve system of equations',
         generateQuestion: () => {
@@ -1059,7 +1059,7 @@ const mathTopics = [
         }
     },
     {
-        id: 'quadratic-equations',
+        id: 'quadratic_equations',
         name: 'Quadratic Equations (Solve quadratics)',
         description: 'Solve quadratic equations',
         generateQuestion: () => {
@@ -1083,7 +1083,7 @@ const mathTopics = [
         }
     },
     {
-        id: 'exponents',
+        id: 'exponents_roots',
         name: 'Exponents (Laws of exponents)',
         description: 'Apply exponent rules',
         generateQuestion: () => {
@@ -1155,7 +1155,7 @@ const mathTopics = [
         }
     },
     {
-        id: 'absolute-value',
+        id: 'absolute_value',
         name: 'Absolute Value (Solve |x − a| = b)',
         description: 'Solve absolute value equations',
         generateQuestion: () => {
@@ -1179,7 +1179,7 @@ const mathTopics = [
         }
     },
     {
-        id: 'rational-expressions',
+        id: 'rational_expressions',
         name: 'Rational Expressions (Simplify fractions)',
         description: 'Simplify algebraic fractions',
         generateQuestion: () => {
@@ -1366,7 +1366,7 @@ const mathTopics = [
         }
     },
     {
-        id: 'coordinate-geometry',
+        id: 'coordinate_geometry',
         name: 'Coordinate Geometry (Distance, midpoint, slope)',
         description: 'Work with coordinate plane',
         generateQuestion: () => {
@@ -2911,7 +2911,7 @@ const blockTopics = [
 
 // Combine all topics and add subject IDs
 const topics = [
-    ...mathTopics.map(t => ({ ...t, subjectId: 'math' })),
+    ...mathTopics.map(t => ({ ...t, subjectId: 'math_knowledge' })),
     ...vocabularyTopics,
     ...readingTopics,
     ...scienceTopics,
@@ -5294,8 +5294,8 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
         state.quiz.questions = generateAfoqtPracticeTest(topic.testConfig);
         state.quiz.mode = 'practiceTestMode'; // Force practice test mode
         state.quiz.showFeedback = false;
-    } else if (topic.subjectId === 'vocabulary' && typeof getQuestionsWithSpacedRepetition === 'function') {
-        // Patch 18: Use content-based questions with spaced repetition for vocabulary topics
+    } else if ((topic.subjectId === 'vocabulary' || topic.subjectId === 'math_knowledge') && typeof getQuestionsWithSpacedRepetition === 'function') {
+        // Patch 18: Use content-based questions with spaced repetition for vocabulary and math topics
         const questionCount = mode === 'sprint' ? 5 : 10;
         const playerId = state.currentPlayer ? state.currentPlayer.id : null;
         

@@ -1,0 +1,543 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "polygons_and_angles",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+
+    {
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          { "x": 80, "y": 220, "label": "A" },
+          { "x": 220, "y": 220, "label": "B" },
+          { "x": 250, "y": 120, "label": "C" },
+          { "x": 150, "y": 60, "label": "D" },
+          { "x": 50, "y": 120, "label": "E" }
+        ],
+        "labels": true,
+        "styleHints": {
+          "lineColor": "black",
+          "labelColor": "black"
+        }
+      },
+      "copilotInstruction": "Draw a 5-sided closed polygon labeled A–E. Use clean, straight edges and point labels above each vertex.",
+      "id": "pa_b1_001",
+      "question": "The diagram shows a 5-sided polygon. What is the correct classification of this shape?",
+      "choices": {
+        "A": "Quadrilateral",
+        "B": "Pentagon",
+        "C": "Hexagon",
+        "D": "Heptagon",
+        "E": "Octagon"
+      },
+      "answer": "B",
+      "explanation": "A pentagon is any 5-sided polygon. The diagram clearly shows five vertices A, B, C, D, and E.",
+      "steps": [
+        "1. Count the number of sides: there are 5.",
+        "2. The name for a 5-sided polygon is 'pentagon'."
+      ],
+      "fastStrategy": "Pentagon = 5 sides. Hexagon = 6. Octagon = 8."
+    },
+
+    {
+      "id": "pa_b1_002",
+      "question": "How many sides does a hexagon have?",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7",
+        "E": "8"
+      },
+      "answer": "C",
+      "explanation": "The prefix 'hex-' means six.",
+      "steps": [
+        "1. Memorize polygon prefixes: pent=5, hex=6, hept=7, oct=8.",
+        "2. Therefore, a hexagon has 6 sides."
+      ],
+      "fastStrategy": "Hex = six."
+    },
+
+    {
+      "id": "pa_b1_003",
+      "question": "How many sides does an octagon have?",
+      "choices": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8",
+        "E": "9"
+      },
+      "answer": "D",
+      "explanation": "An octagon has 8 sides (think stop sign).",
+      "steps": [
+        "1. Recall that 'oct-' means eight.",
+        "2. So an octagon has 8 sides."
+      ],
+      "fastStrategy": "Octopus has eight arms → octagon = 8."
+    },
+
+    {
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          { "x": 100, "y": 220 },
+          { "x": 200, "y": 220 },
+          { "x": 200, "y": 120 },
+          { "x": 100, "y": 120 }
+        ],
+        "labels": false
+      },
+      "copilotInstruction": "Draw a simple 4-sided rectangle-like quadrilateral.",
+      "id": "pa_b1_004",
+      "question": "Any 4-sided polygon is called a:",
+      "choices": {
+        "A": "Quadrilateral",
+        "B": "Pentagon",
+        "C": "Hexagon",
+        "D": "Square",
+        "E": "Rectangle"
+      },
+      "answer": "A",
+      "explanation": "Quadrilateral is the general name for any four-sided polygon.",
+      "steps": [
+        "1. A shape with 4 sides = quadrilateral.",
+        "2. Square and rectangle are specific types of quadrilaterals."
+      ],
+      "fastStrategy": "Quad = 4."
+    },
+
+    {
+      "id": "pa_b1_005",
+      "question": "What is the sum of the interior angles of a triangle?",
+      "choices": {
+        "A": "90°",
+        "B": "180°",
+        "C": "270°",
+        "D": "360°",
+        "E": "540°"
+      },
+      "answer": "B",
+      "explanation": "A triangle's interior angles always sum to 180°.",
+      "steps": [
+        "1. The basic polygon angle formula: (n−2)×180°.",
+        "2. For n=3: (3−2)×180° = 180°."
+      ],
+      "fastStrategy": "Triangle = 180° always."
+    },
+
+    {
+      "id": "pa_b1_006",
+      "question": "What is the sum of the interior angles of a quadrilateral?",
+      "choices": {
+        "A": "180°",
+        "B": "270°",
+        "C": "360°",
+        "D": "540°",
+        "E": "720°"
+      },
+      "answer": "C",
+      "explanation": "Interior sum = (n−2)×180°. For a quadrilateral, n=4 → (4−2)×180° = 360°.",
+      "steps": [
+        "1. Use formula (n−2)×180°.",
+        "2. Plug in n=4.",
+        "3. Get 360°."
+      ],
+      "fastStrategy": "Quad = 4 sides → two triangles → 2×180° = 360°."
+    },
+
+    {
+      "id": "pa_b1_007",
+      "question": "What is the sum of interior angles of a pentagon?",
+      "choices": {
+        "A": "360°",
+        "B": "450°",
+        "C": "540°",
+        "D": "600°",
+        "E": "720°"
+      },
+      "answer": "C",
+      "explanation": "Use (n−2)×180°. For n=5: 3×180°=540°.",
+      "steps": [
+        "1. Identify n=5.",
+        "2. Compute 3×180°.",
+        "3. Sum=540°."
+      ],
+      "fastStrategy": "Pentagon → 5 sides → 3 triangles → 540°."
+    },
+
+    {
+      "id": "pa_b1_008",
+      "question": "What is the sum of the interior angles of a hexagon?",
+      "choices": {
+        "A": "540°",
+        "B": "600°",
+        "C": "720°",
+        "D": "900°",
+        "E": "1080°"
+      },
+      "answer": "C",
+      "explanation": "A hexagon has n=6 sides. Sum = (6−2)×180° = 4×180° = 720°.",
+      "steps": [
+        "1. Use (n−2)×180°.",
+        "2. Plug in n=6.",
+        "3. Compute 4×180°=720°."
+      ],
+      "fastStrategy": "Hex → 6 sides → 4 triangles → 720°."
+    },
+
+    {
+      "id": "pa_b1_009",
+      "question": "A regular pentagon has interior angles of equal measure. What is the measure of each interior angle?",
+      "choices": {
+        "A": "90°",
+        "B": "108°",
+        "C": "120°",
+        "D": "135°",
+        "E": "140°"
+      },
+      "answer": "B",
+      "explanation": "Sum=540°. Divide by 5 → 108° each.",
+      "steps": [
+        "1. Sum interior = 540°.",
+        "2. Divide 540° by 5 = 108°."
+      ],
+      "fastStrategy": "Regular = all angles equal → divide total by n."
+    },
+
+    {
+      "id": "pa_b1_010",
+      "question": "A regular hexagon has interior angles of equal measure. What is each interior angle?",
+      "choices": {
+        "A": "100°",
+        "B": "108°",
+        "C": "120°",
+        "D": "135°",
+        "E": "150°"
+      },
+      "answer": "C",
+      "explanation": "Sum=720°. Divide by 6 →120°.",
+      "steps": [
+        "1. Use sum 720°.",
+        "2. Divide by 6."
+      ],
+      "fastStrategy": "Hexagon → 120° interior each."
+    },
+
+    {
+      "uiSpec": {
+        "type": "angle_pair_vertical",
+        "width": 300,
+        "height": 300,
+        "lines": [
+          { "from": { "x": 60, "y": 150 }, "to": { "x": 240, "y": 150 } },
+          { "from": { "x": 150, "y": 60 }, "to": { "x": 150, "y": 240 } }
+        ],
+        "angleLabels": [
+          { "position": "topRight", "label": "x°", "highlight": true },
+          { "position": "bottomLeft", "label": "120°", "highlight": true }
+        ]
+      },
+      "copilotInstruction": "Draw two perpendicular lines forming an X. Label the bottom-left angle as 120°, and the opposite angle top-right as x°.",
+      "id": "pa_b1_011",
+      "question": "In the diagram, the bottom-left angle measures 120°. What is the measure of the vertical angle x°?",
+      "choices": {
+        "A": "30°",
+        "B": "60°",
+        "C": "90°",
+        "D": "120°",
+        "E": "180°"
+      },
+      "answer": "D",
+      "explanation": "Vertical angles (opposite angles) are congruent.",
+      "steps": [
+        "1. Identify vertical angle pair.",
+        "2. Vertical angles = equal.",
+        "3. x° = 120°."
+      ],
+      "fastStrategy": "X intersection → opposite angles match."
+    },
+
+    {
+      "id": "pa_b1_012",
+      "question": "Two angles are supplementary. One measures 45°. What is the measure of the other angle?",
+      "choices": {
+        "A": "35°",
+        "B": "90°",
+        "C": "120°",
+        "D": "135°",
+        "E": "180°"
+      },
+      "answer": "D",
+      "explanation": "Supplementary = 180°. 180°−45°=135°.",
+      "steps": ["1. Use 180° sum.", "2. Subtract."],
+      "fastStrategy": "Supplementary → 180°."
+    },
+
+    {
+      "id": "pa_b1_013",
+      "question": "Two angles are complementary. One measures 70°. The other is:",
+      "choices": {
+        "A": "10°",
+        "B": "15°",
+        "C": "20°",
+        "D": "25°",
+        "E": "30°"
+      },
+      "answer": "C",
+      "explanation": "Complementary = 90°. 90°−70°=20°.",
+      "steps": [
+        "1. Use 90° total.",
+        "2. Subtract 70°."
+      ],
+      "fastStrategy": "Complementary = 90°."
+    },
+
+    {
+      "id": "pa_b1_014",
+      "question": "If one angle of a triangle is 100°, the triangle is:",
+      "choices": {
+        "A": "Acute",
+        "B": "Right",
+        "C": "Obtuse",
+        "D": "Equilateral",
+        "E": "Isosceles"
+      },
+      "answer": "C",
+      "explanation": "Any angle greater than 90° makes an obtuse triangle.",
+      "steps": [
+        "1. Compare 100° to 90°.",
+        "2. >90° means obtuse triangle."
+      ],
+      "fastStrategy": "One obtuse angle → whole triangle is obtuse."
+    },
+
+    {
+      "id": "pa_b1_015",
+      "question": "A triangle has angles 40° and 75°. What is the third angle?",
+      "choices": {
+        "A": "45°",
+        "B": "55°",
+        "C": "60°",
+        "D": "65°",
+        "E": "70°"
+      },
+      "answer": "B",
+      "explanation": "Sum = 180°. 180−(40+75)=180−115=65°.",
+      "steps": [
+        "1. Add known angles: 115°.",
+        "2. Subtract from 180°."
+      ],
+      "fastStrategy": "Third triangle angle = 180 minus the sum of the other two."
+    },
+
+    {
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          { "label": "A", "x": 80, "y": 220 },
+          { "label": "B", "x": 220, "y": 220 },
+          { "label": "C", "x": 260, "y": 140 },
+          { "label": "D", "x": 150, "y": 60 },
+          { "label": "E", "x": 60, "y": 140 }
+        ]
+      },
+      "copilotInstruction": "Draw a symmetrical five-sided polygon (regular-like).",
+      "id": "pa_b1_016",
+      "question": "A polygon with 5 congruent sides and 5 congruent interior angles is called a:",
+      "choices": {
+        "A": "Regular pentagon",
+        "B": "Irregular pentagon",
+        "C": "Regular hexagon",
+        "D": "Isosceles pentagon",
+        "E": "Symmetric quad"
+      },
+      "answer": "A",
+      "explanation": "Regular polygons have all sides and angles equal.",
+      "steps": [
+        "1. Regular = all sides equal AND all angles equal.",
+        "2. 5-sided = pentagon.",
+        "3. Thus regular pentagon."
+      ],
+      "fastStrategy": "Regular = equal everything."
+    },
+
+    {
+      "id": "pa_b1_017",
+      "question": "How many diagonals does a quadrilateral have?",
+      "choices": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3",
+        "E": "4"
+      },
+      "answer": "C",
+      "explanation": "Quadrilateral → 4 vertices. Diagonals = n(n−3)/2 = 4*1/2=2.",
+      "steps": [
+        "1. Use diagonals formula.",
+        "2. Compute 4×1/2=2."
+      ],
+      "fastStrategy": "Quad → always 2 diagonals."
+    },
+
+    {
+      "id": "pa_b1_018",
+      "question": "How many diagonals does a pentagon have?",
+      "choices": {
+        "A": "3",
+        "B": "5",
+        "C": "7",
+        "D": "10",
+        "E": "15"
+      },
+      "answer": "D",
+      "explanation": "Diagonals = n(n−3)/2 = 5(2)/2=5.",
+      "steps": [
+        "1. Plug n=5.",
+        "2. 5*(5−3)/2=5."
+      ],
+      "fastStrategy": "Pentagon = 5 diagonals always."
+    },
+
+    {
+      "id": "pa_b1_019",
+      "question": "How many diagonals does a hexagon have?",
+      "choices": {
+        "A": "6",
+        "B": "9",
+        "C": "12",
+        "D": "15",
+        "E": "18"
+      },
+      "answer": "D",
+      "explanation": "Diagonals = n(n−3)/2 = 6×3/2 = 9.",
+      "steps": [
+        "1. Compute 6×3/2 = 9."
+      ],
+      "fastStrategy": "Hexagon → 9 diagonals."
+    },
+
+    {
+      "id": "pa_b1_020",
+      "question": "What is the exterior angle sum of any polygon?",
+      "choices": {
+        "A": "90°",
+        "B": "180°",
+        "C": "270°",
+        "D": "360°",
+        "E": "540°"
+      },
+      "answer": "D",
+      "explanation": "Exterior angle sum of ANY polygon is always 360°.",
+      "steps": [
+        "1. Exterior sum constant = 360°.",
+        "2. Holds for all convex polygons."
+      ],
+      "fastStrategy": "Exterior total never changes: always 360°."
+    },
+
+    {
+      "id": "pa_b1_021",
+      "question": "In a regular octagon, each exterior angle measures:",
+      "choices": {
+        "A": "36°",
+        "B": "40°",
+        "C": "45°",
+        "D": "60°",
+        "E": "90°"
+      },
+      "answer": "C",
+      "explanation": "Each exterior angle = 360°/n = 360/8 = 45°.",
+      "steps": [
+        "1. Use 360°/n.",
+        "2. n=8 → 45°."
+      ],
+      "fastStrategy": "Regular → exterior = 360/n."
+    },
+
+    {
+      "id": "pa_b1_022",
+      "question": "In a regular hexagon, each exterior angle measures:",
+      "choices": {
+        "A": "30°",
+        "B": "45°",
+        "C": "60°",
+        "D": "90°",
+        "E": "120°"
+      },
+      "answer": "C",
+      "explanation": "Exterior angle = 360/6 = 60°.",
+      "steps": [
+        "1. Use exterior formula.",
+        "2. 360°/6=60°."
+      ],
+      "fastStrategy": "Hexagon → exterior = 60°."
+    },
+
+    {
+      "id": "pa_b1_023",
+      "question": "A triangle has angles measuring 55° and 65°. The triangle is:",
+      "choices": {
+        "A": "Obtuse",
+        "B": "Right",
+        "C": "Acute",
+        "D": "Equilateral",
+        "E": "Isosceles"
+      },
+      "answer": "C",
+      "explanation": "Third angle = 180−120=60°, all angles <90° → acute triangle.",
+      "steps": [
+        "1. Compute third angle.",
+        "2. All angles acute."
+      ],
+      "fastStrategy": "All angles less than 90° = acute."
+    },
+
+    {
+      "id": "pa_b1_024",
+      "question": "A polygon has interior angles that sum to 1260°. How many sides does it have?",
+      "choices": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10",
+        "E": "11"
+      },
+      "answer": "C",
+      "explanation": "(n−2)×180°=1260°. Solve: n−2=7 → n=9.",
+      "steps": [
+        "1. Divide 1260° by 180° → 7.",
+        "2. Add 2 → 9 sides."
+      ],
+      "fastStrategy": "Interior sum ÷ 180, then +2."
+    },
+
+    {
+      "id": "pa_b1_025",
+      "question": "A polygon has an interior angle sum of 900°. What kind of polygon is it?",
+      "choices": {
+        "A": "Hexagon",
+        "B": "Heptagon",
+        "C": "Pentagon",
+        "D": "Octagon",
+        "E": "Nonagon"
+      },
+      "answer": "B",
+      "explanation": "(n−2)×180° = 900° → n−2 = 5 → n=7 (heptagon).",
+      "steps": [
+        "1. 900° ÷ 180° = 5.",
+        "2. Add 2 gives n=7."
+      ],
+      "fastStrategy": "Interior sum ÷ 180 → add 2 → sides."
+    }
+
+  ]
+}

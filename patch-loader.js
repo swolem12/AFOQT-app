@@ -100,6 +100,24 @@ async function loadVocabularyFile(filename) {
 }
 
 /**
+ * Load a single math knowledge JSON file
+ */
+async function loadMathKnowledgeFile(filename) {
+    try {
+        const response = await fetch(`./Test Content/Math/${filename}`);
+        if (!response.ok) {
+            console.warn(`Failed to load ${filename}`);
+            return null;
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error(`Error loading ${filename}:`, error);
+        return null;
+    }
+}
+
+/**
  * Load all vocabulary files and build question registry
  */
 async function loadAllVocabularyContent() {
@@ -182,6 +200,101 @@ async function loadAllVocabularyContent() {
     
     console.log(`✓ Loaded ${loadedCount} vocabulary files (${errorCount} errors)`);
     console.log('Question registry:', questionRegistry);
+    
+    return questionRegistry;
+}
+
+/**
+ * Load all math knowledge files and build question registry
+ */
+async function loadAllMathKnowledgeContent() {
+    console.log('Loading math knowledge content...');
+    
+    // Get list of math knowledge files (hardcoded from directory listing)
+    const mathFiles = [
+        'word_problems_equation_setup_beginner_part1.json', 'word_problems_equation_setup_beginner_part2.json',
+        'absolute_value_beginner_part1.json', 'absolute_value_beginner_part2.json',
+        'coordinate_geometry_beginner_part1.json', 'coordinate_geometry_beginner_part2.json',
+        'distributive_foil_beginner_part1.json', 'distributive_foil_beginner_part2.json',
+        'evaluate_expressions_beginner_part1.json', 'evaluate_expressions_beginner_part2.json',
+        'evaluate_expressions_advanced_part1.json',
+        'exponents_roots_beginner_part1.json', 'exponents_roots_beginner_part2.json',
+        'factoring_beginner_part1.json', 'factoring_beginner_part2.json',
+        'fractions_beginner_part1.json', 'fractions_beginner_part2.json',
+        'function_evaluation_beginner_part1.json', 'function_evaluation_beginner_part2.json',
+        'functions_beginner_part1.json', 'functions_beginner_part2.json',
+        'geometry_basics_beginner_part1.json', 'geometry_basics_beginner_part2.json',
+        'graph_interpretation_beginner_part1.json', 'graph_interpretation_beginner_part2.json',
+        'graphing_linear_functions_beginner_part1.json', 'graphing_linear_functions_beginner_part2.json',
+        'inequalities_beginner_part1.json', 'inequalities_beginner_part2.json',
+        'inequalities_advanced_part1.json', 'inequalities_advanced_part2.json',
+        'inequalities_expert_part1.json', 'inequalities_expert_part2.json',
+        'linear_equations_beginner_part1.json', 'linear_equations_beginner_part2.json',
+        'number_sets_beginner_part1.json', 'number_sets_beginner_part2.json',
+        'order_of_operations_beginner_part1.json', 'order_of_operations_beginner_part2.json',
+        'polygons_and_angles_beginner_part1.json', 'polygons_and_angles_beginner_part2.json',
+        'polynomials_beginner_part1.json', 'polynomials_beginner_part2.json',
+        'probability_beginner_part1.json', 'probability_beginner_part2.json',
+        'quadratic_equations_beginner_part1.json', 'quadratic_equations_beginner_part2.json',
+        'radicals_beginner_part1.json', 'radicals_beginner_part2.json',
+        'ratio_and_proportion_beginner_part1.json', 'ratio_and_proportion_beginner_part2.json',
+        'rational_expressions_beginner_part1.json', 'rational_expressions_beginner_part2.json',
+        'sequences_beginner_part1.json', 'sequences_beginner_part2.json',
+        'slope_beginner_part1.json', 'slope_beginner_part2.json',
+        'statistics_beginner_part1.json', 'statistics_beginner_part2.json',
+        'systems_linear_beginner_part1.json', 'systems_linear_beginner_part2.json',
+        'transformations_beginner_part1.json', 'transformations_beginner_part2.json'
+    ];
+    
+    let loadedCount = 0;
+    let errorCount = 0;
+    
+    // Load all files in parallel
+    const loadPromises = mathFiles.map(async (filename) => {
+        const data = await loadMathKnowledgeFile(filename);
+        if (!data) {
+            errorCount++;
+            return;
+        }
+        
+        // Parse filename
+        const parsed = parseFilename(filename);
+        if (!parsed) {
+            errorCount++;
+            return;
+        }
+        
+        // Find subject mapping
+        const subjectInfo = findSubjectForSubtopic(parsed.subtopicId);
+        if (!subjectInfo) {
+            console.warn(`No subject mapping found for subtopic: ${parsed.subtopicId}`);
+            errorCount++;
+            return;
+        }
+        
+        // Initialize registry structure
+        if (!questionRegistry[subjectInfo.subjectId]) {
+            questionRegistry[subjectInfo.subjectId] = {};
+        }
+        if (!questionRegistry[subjectInfo.subjectId][parsed.subtopicId]) {
+            questionRegistry[subjectInfo.subjectId][parsed.subtopicId] = {
+                beginner: [],
+                advanced: [],
+                expert: []
+            };
+        }
+        
+        // Add questions to registry
+        if (data.questions && Array.isArray(data.questions)) {
+            questionRegistry[subjectInfo.subjectId][parsed.subtopicId][parsed.difficulty].push(...data.questions);
+            loadedCount++;
+        }
+    });
+    
+    await Promise.all(loadPromises);
+    
+    console.log(`✓ Loaded ${loadedCount} math knowledge files (${errorCount} errors)`);
+    console.log('Math question registry:', questionRegistry.math_knowledge);
     
     return questionRegistry;
 }
@@ -389,6 +502,9 @@ async function initializePatch18() {
     
     // Load vocabulary content
     await loadAllVocabularyContent();
+    
+    // Load math knowledge content
+    await loadAllMathKnowledgeContent();
     
     console.log('✓ Patch 18 initialized');
     return true;

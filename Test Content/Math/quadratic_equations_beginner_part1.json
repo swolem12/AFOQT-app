@@ -1,0 +1,333 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "quadratic_equations",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_qe_b_001",
+      "question": "Solve: x^2 = 9",
+      "choices": {
+        "A": "3",
+        "B": "-3",
+        "C": "0 or 3",
+        "D": "3 or -3",
+        "E": "9"
+      },
+      "answer": "D",
+      "explanation": "Square root shortcut: x = ±√9 = ±3."
+    },
+    {
+      "id": "mk_qe_b_002",
+      "question": "Solve: x^2 = 16",
+      "choices": {
+        "A": "4",
+        "B": "-4",
+        "C": "0 or 4",
+        "D": "4 or -4",
+        "E": "8"
+      },
+      "answer": "D",
+      "explanation": "Square root both sides: x = ±4."
+    },
+    {
+      "id": "mk_qe_b_003",
+      "question": "Solve: x^2 = 25",
+      "choices": {
+        "A": "5",
+        "B": "-5",
+        "C": "0 or 5",
+        "D": "5 or -5",
+        "E": "10"
+      },
+      "answer": "D",
+      "explanation": "Square root trick: x = ±5."
+    },
+    {
+      "id": "mk_qe_b_004",
+      "question": "Solve: x^2 - 9 = 0",
+      "choices": {
+        "A": "x = 3",
+        "B": "x = -3",
+        "C": "x = 3 or -3",
+        "D": "x = 9",
+        "E": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Add 9: x^2 = 9 → x = ±3."
+    },
+    {
+      "id": "mk_qe_b_005",
+      "question": "Solve: x^2 - 16 = 0",
+      "choices": {
+        "A": "x = 0 or 4",
+        "B": "x = 4 or -4",
+        "C": "x = 8",
+        "D": "x = -4 only",
+        "E": "No solution"
+      },
+      "answer": "B",
+      "explanation": "Add 16: x^2 = 16 → x = ±4."
+    },
+    {
+      "id": "mk_qe_b_006",
+      "question": "Solve: x^2 - 1 = 0",
+      "choices": {
+        "A": "x = 1 only",
+        "B": "x = -1 only",
+        "C": "x = 1 or -1",
+        "D": "x = 0",
+        "E": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Difference of squares shortcut: x = ±1."
+    },
+    {
+      "id": "mk_qe_b_007",
+      "question": "Solve: x^2 - 4 = 0",
+      "choices": {
+        "A": "x = 2 only",
+        "B": "x = -2 only",
+        "C": "x = 2 or -2",
+        "D": "x = 4 or -4",
+        "E": "No solution"
+      },
+      "answer": "C",
+      "explanation": "|x| = 2 → x = ±2."
+    },
+    {
+      "id": "mk_qe_b_008",
+      "question": "Solve: x^2 = 36",
+      "choices": {
+        "A": "x = 6",
+        "B": "x = -6",
+        "C": "x = 6 or -6",
+        "D": "x = 18",
+        "E": "No solution"
+      },
+      "answer": "C",
+      "explanation": "x = ±√36 = ±6."
+    },
+    {
+      "id": "mk_qe_b_009",
+      "question": "Solve: x^2 = 1",
+      "choices": {
+        "A": "x = 1",
+        "B": "x = -1",
+        "C": "x = 1 or -1",
+        "D": "x = 0",
+        "E": "No solution"
+      },
+      "answer": "C",
+      "explanation": "x = ±1."
+    },
+    {
+      "id": "mk_qe_b_010",
+      "question": "Solve: x^2 - 25 = 0",
+      "choices": {
+        "A": "x = 5 only",
+        "B": "x = -5 only",
+        "C": "x = 5 or -5",
+        "D": "x = 10",
+        "E": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Add 25: x^2 = 25 → x = ±5."
+    },
+    {
+      "id": "mk_qe_b_011",
+      "question": "Factor and solve: x^2 + 5x = 0",
+      "choices": {
+        "A": "x = -5 or 0",
+        "B": "x = 5 or 0",
+        "C": "x = -5 only",
+        "D": "x = 0 only",
+        "E": "No solution"
+      },
+      "answer": "A",
+      "explanation": "Factor shortcut: x(x + 5) = 0 → x = 0 or -5."
+    },
+    {
+      "id": "mk_qe_b_012",
+      "question": "Factor and solve: x^2 - 6x = 0",
+      "choices": {
+        "A": "x = 0 or 6",
+        "B": "x = -6 or 0",
+        "C": "x = 3 only",
+        "D": "x = -3 only",
+        "E": "No solution"
+      },
+      "answer": "A",
+      "explanation": "x(x - 6) = 0 → x = 0 or 6."
+    },
+    {
+      "id": "mk_qe_b_013",
+      "question": "Factor and solve: x^2 - 3x = 0",
+      "choices": {
+        "A": "x = 0 or 3",
+        "B": "x = -3 or 0",
+        "C": "x = 3 only",
+        "D": "x = 0 only",
+        "E": "No solution"
+      },
+      "answer": "A",
+      "explanation": "x(x - 3) = 0 → x = 0 or 3."
+    },
+    {
+      "id": "mk_qe_b_014",
+      "question": "Factor and solve: x^2 + 4x = 0",
+      "choices": {
+        "A": "x = 0 or -4",
+        "B": "x = 0 or 4",
+        "C": "x = 4 only",
+        "D": "x = -4 only",
+        "E": "No solution"
+      },
+      "answer": "A",
+      "explanation": "x(x + 4) = 0 → x = 0 or -4."
+    },
+    {
+      "id": "mk_qe_b_015",
+      "question": "Factor and solve: x^2 - x = 0",
+      "choices": {
+        "A": "x = 1 only",
+        "B": "x = 0 or 1",
+        "C": "x = -1 or 0",
+        "D": "x = 1 or -1",
+        "E": "No solution"
+      },
+      "answer": "B",
+      "explanation": "x(x - 1) = 0 → x = 0 or 1."
+    },
+    {
+      "id": "mk_qe_b_016",
+      "question": "Solve: (x - 4)(x + 4) = 0",
+      "choices": {
+        "A": "x = 4 only",
+        "B": "x = -4 only",
+        "C": "x = 4 or -4",
+        "D": "x = 0",
+        "E": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Zero product rule: each factor = 0 → x = ±4."
+    },
+    {
+      "id": "mk_qe_b_017",
+      "question": "Solve: (x - 6)(x + 2) = 0",
+      "choices": {
+        "A": "x = 6 or -2",
+        "B": "x = 2 or 6",
+        "C": "x = -6 or 2",
+        "D": "x = -2 only",
+        "E": "No solution"
+      },
+      "answer": "A",
+      "explanation": "Set each factor = 0."
+    },
+    {
+      "id": "mk_qe_b_018",
+      "question": "Solve: (x + 3)(x + 1) = 0",
+      "choices": {
+        "A": "x = -3 or -1",
+        "B": "x = 3 or -1",
+        "C": "x = -3 or 1",
+        "D": "x = 1 or -1",
+        "E": "No solution"
+      },
+      "answer": "A",
+      "explanation": "Zero product property."
+    },
+    {
+      "id": "mk_qe_b_019",
+      "question": "Solve: (x - 1)(x - 5) = 0",
+      "choices": {
+        "A": "x = 1 or 5",
+        "B": "x = -1 or -5",
+        "C": "x = 1 or -5",
+        "D": "x = 0 or 6",
+        "E": "No solution"
+      },
+      "answer": "A",
+      "explanation": "Set x - 1 = 0 or x - 5 = 0."
+    },
+    {
+      "id": "mk_qe_b_020",
+      "question": "Solve: x^2 + 2x + 1 = 0",
+      "choices": {
+        "A": "x = -1 only",
+        "B": "x = 1 only",
+        "C": "x = 0",
+        "D": "x = -1 or 1",
+        "E": "No solution"
+      },
+      "answer": "A",
+      "explanation": "Perfect square: (x + 1)^2 = 0 ⇒ x = -1."
+    },
+    {
+      "id": "mk_qe_b_021",
+      "question": "Solve: x^2 - 4x + 4 = 0",
+      "choices": {
+        "A": "x = 4",
+        "B": "x = -4",
+        "C": "x = 2 only",
+        "D": "x = 2 or -2",
+        "E": "No solution"
+      },
+      "answer": "C",
+      "explanation": "(x - 2)^2 = 0 ⇒ x = 2."
+    },
+    {
+      "id": "mk_qe_b_022",
+      "question": "Solve: x^2 + 6x + 9 = 0",
+      "choices": {
+        "A": "x = 3 only",
+        "B": "x = -3 only",
+        "C": "x = -3 or 3",
+        "D": "x = 0",
+        "E": "No solution"
+      },
+      "answer": "B",
+      "explanation": "(x + 3)^2 = 0 ⇒ x = -3."
+    },
+    {
+      "id": "mk_qe_b_023",
+      "question": "Solve: x^2 - 2x + 1 = 0",
+      "choices": {
+        "A": "x = 1 only",
+        "B": "x = -1 only",
+        "C": "x = 0",
+        "D": "x = ±1",
+        "E": "No solution"
+      },
+      "answer": "A",
+      "explanation": "(x - 1)^2 = 0 ⇒ x = 1."
+    },
+    {
+      "id": "mk_qe_b_024",
+      "question": "Solve: x(x - 7) = 0",
+      "choices": {
+        "A": "x = 7 only",
+        "B": "x = 0 only",
+        "C": "x = 0 or 7",
+        "D": "x = -7 or 0",
+        "E": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Zero product property."
+    },
+    {
+      "id": "mk_qe_b_025",
+      "question": "Solve: (x - 9)(x - 1) = 0",
+      "choices": {
+        "A": "x = 9 or 1",
+        "B": "x = -9 or 1",
+        "C": "x = 0 or 10",
+        "D": "x = 3 or -3",
+        "E": "No solution"
+      },
+      "answer": "A",
+      "explanation": "Set each factor = 0."
+    }
+  ]
+}

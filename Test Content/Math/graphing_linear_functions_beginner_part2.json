@@ -1,0 +1,558 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "graphing_linear_functions",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+
+    {
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [-6, 6],
+        "yRange": [-6, 6],
+        "line": {
+          "point1": { "x": -2, "y": 4 },
+          "point2": { "x": 2, "y": 0 }
+        },
+        "showGrid": true,
+        "showAxes": true
+      },
+      "copilotInstruction": "Create a 300x300 graph with gridlines and centered axes. Plot (-2, 4) and (2, 0). Draw a line connecting them exactly.",
+      "id": "mk_glf_b_026",
+      "question": "Which equation matches the line shown on the graph?",
+      "choices": {
+        "A": "y = -2x + 0",
+        "B": "y = -2x + 2",
+        "C": "y = -x + 2",
+        "D": "y = x + 2",
+        "E": "y = 2x - 4"
+      },
+      "answer": "B",
+      "explanation": "Slope = (0 - 4) / (2 - (-2)) = -4/4 = -1. Actually check carefully: rise = -4, run = 4 → slope = -1. Check intercept by using (2,0): 0 = -1(2) + b → b = 2. So the equation is y = -x + 2.",
+      "steps": [
+        "1. Compute the slope: (-?), rise = 0 - 4 = -4; run = 2 - (-2) = 4; slope = -1.",
+        "2. Use a known point to solve for b.",
+        "3. Plug in (2,0): 0 = -1(2) + b.",
+        "4. Solve: 0 = -2 + b → b = 2.",
+        "5. Final equation: y = -x + 2."
+      ],
+      "fastStrategy": "Grab slope from two visible points, then plug one into y = mx + b to get the intercept fast."
+    },
+
+    {
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [-6, 6],
+        "yRange": [-6, 6],
+        "line": {
+          "point1": { "x": -3, "y": -1 },
+          "point2": { "x": 3, "y": -1 }
+        },
+        "showGrid": true,
+        "showAxes": true
+      },
+      "copilotInstruction": "Draw a horizontal line at y = -1 extending from x=-3 to x=3.",
+      "id": "mk_glf_b_027",
+      "question": "What is the equation of the horizontal line shown?",
+      "choices": {
+        "A": "y = -1",
+        "B": "x = -1",
+        "C": "y = 1",
+        "D": "x = 1",
+        "E": "y = 0"
+      },
+      "answer": "A",
+      "explanation": "Horizontal lines are always y = constant. The line is at y = -1.",
+      "steps": [
+        "1. Horizontal line → slope 0.",
+        "2. The y-value stays -1 everywhere.",
+        "3. Equation: y = -1."
+      ],
+      "fastStrategy": "Horizontal → y = constant. Vertical → x = constant."
+    },
+
+    {
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [-6, 6],
+        "yRange": [-6, 6],
+        "line": {
+          "point1": { "x": 1, "y": -5 },
+          "point2": { "x": 1, "y": 5 }
+        }
+      },
+      "copilotInstruction": "Draw a vertical line at x = 1 from y=-5 to y=5.",
+      "id": "mk_glf_b_028",
+      "question": "What is the equation of the vertical line shown?",
+      "choices": {
+        "A": "y = 1",
+        "B": "x = 1",
+        "C": "y = -1",
+        "D": "x = -1",
+        "E": "x = 0"
+      },
+      "answer": "B",
+      "explanation": "Vertical lines keep x constant. Here, x = 1.",
+      "steps": [
+        "1. Notice x never changes.",
+        "2. Vertical line → x = constant.",
+        "3. So x = 1."
+      ],
+      "fastStrategy": "Vertical lines = undefined slope = x = (constant)."
+    },
+
+    {
+      "id": "mk_glf_b_029",
+      "question": "Which function has a y-intercept of 5?",
+      "choices": {
+        "A": "y = 2x + 5",
+        "B": "y = 5x + 2",
+        "C": "y = 2x - 5",
+        "D": "y = -2x - 5",
+        "E": "y = -5x"
+      },
+      "answer": "A",
+      "explanation": "In y = mx + b, b is the intercept. Only option A has b = 5.",
+      "steps": [
+        "1. Identify b in each option.",
+        "2. Only y = 2x + 5 has b = 5.",
+        "3. Thus it has y-intercept 5."
+      ],
+      "fastStrategy": "Ignore the slope when hunting intercepts: just grab the constant."
+    },
+
+    {
+      "id": "mk_glf_b_030",
+      "question": "Which equation represents a line with slope −3 and y-intercept 1?",
+      "choices": {
+        "A": "y = 3x + 1",
+        "B": "y = -3x + 1",
+        "C": "y = -3x - 1",
+        "D": "y = x - 3",
+        "E": "y = 1x - 3"
+      },
+      "answer": "B",
+      "explanation": "Plug slope m = -3 and intercept b = 1 into y = mx + b → y = -3x + 1.",
+      "steps": [
+        "1. Use y = mx + b.",
+        "2. Set m = -3, b = 1.",
+        "3. Equation: y = -3x + 1."
+      ],
+      "fastStrategy": "Template method: fill in m and b like slots."
+    },
+
+    {
+      "id": "mk_glf_b_031",
+      "question": "What is the slope of the line y = -4x + 6?",
+      "choices": {
+        "A": "6",
+        "B": "-6",
+        "C": "4",
+        "D": "-4",
+        "E": "0"
+      },
+      "answer": "D",
+      "explanation": "Slope is the coefficient of x: m = -4.",
+      "steps": [
+        "1. Compare to y = mx + b.",
+        "2. m = -4.",
+        "3. That is the slope."
+      ],
+      "fastStrategy": "Slope = number in front of x."
+    },
+
+    {
+      "id": "mk_glf_b_032",
+      "question": "What is the y-intercept of y = 9 - 2x?",
+      "choices": {
+        "A": "9",
+        "B": "-9",
+        "C": "2",
+        "D": "-2",
+        "E": "0"
+      },
+      "answer": "A",
+      "explanation": "Rewrite as y = -2x + 9. The intercept is 9.",
+      "steps": [
+        "1. Rearrange to slope-intercept form.",
+        "2. Identify b = 9.",
+        "3. Therefore y-intercept = 9."
+      ],
+      "fastStrategy": "Always rewrite y = mx + b if needed."
+    },
+
+    {
+      "id": "mk_glf_b_033",
+      "question": "Which line is steeper?",
+      "choices": {
+        "A": "y = 0.5x",
+        "B": "y = 3x",
+        "C": "y = -2x",
+        "D": "y = x",
+        "E": "y = -0.25x"
+      },
+      "answer": "B",
+      "explanation": "The steepness equals |m|. The largest absolute slope is 3.",
+      "steps": [
+        "1. Compare |0.5|, |3|, |2|, |1|, |0.25|.",
+        "2. |3| is biggest.",
+        "3. So y = 3x is steepest."
+      ],
+      "fastStrategy": "Steepness ignores sign — compare absolute values."
+    },
+
+    {
+      "id": "mk_glf_b_034",
+      "question": "A line crosses the y-axis at −2 and goes up as you move right. Which equation could describe it?",
+      "choices": {
+        "A": "y = -x - 2",
+        "B": "y = x - 2",
+        "C": "y = 2x + 2",
+        "D": "y = -2x - 2",
+        "E": "y = -2"
+      },
+      "answer": "B",
+      "explanation": "Crossing at −2 → b = -2. Going up means positive slope. y = x - 2 has slope +1 and intercept −2.",
+      "steps": [
+        "1. Choose equation with b = -2.",
+        "2. Ensure slope is positive.",
+        "3. y = x - 2 fits both."
+      ],
+      "fastStrategy": "Intercept nails b; direction nails sign of slope."
+    },
+
+    {
+      "id": "mk_glf_b_035",
+      "question": "A line passes through (0, 8) and (4, 0). What is the slope?",
+      "choices": {
+        "A": "-2",
+        "B": "2",
+        "C": "-1",
+        "D": "1",
+        "E": "0"
+      },
+      "answer": "A",
+      "explanation": "Rise = 0 - 8 = -8; run = 4 - 0 = 4; slope = -8/4 = -2.",
+      "steps": [
+        "1. Compute rise = -8.",
+        "2. Compute run = 4.",
+        "3. Divide to get slope = -2."
+      ],
+      "fastStrategy": "Two-point slope always: (y2-y1)/(x2-x1)."
+    },
+
+    {
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [-6, 6],
+        "yRange": [-6, 6],
+        "line": {
+          "point1": { "x": -4, "y": -2 },
+          "point2": { "x": 0, "y": 2 }
+        }
+      },
+      "copilotInstruction": "Draw a rising diagonal line from (-4,-2) to (0,2).",
+      "id": "mk_glf_b_036",
+      "question": "What is the slope of the line shown?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "-1",
+        "D": "-2",
+        "E": "0"
+      },
+      "answer": "A",
+      "explanation": "Rise = 2 - (-2) = 4. Run = 0 - (-4) = 4. Slope = 4/4 = 1.",
+      "steps": [
+        "1. Identify two plotted points.",
+        "2. Compute rise = 4.",
+        "3. Compute run = 4.",
+        "4. Slope = 1."
+      ],
+      "fastStrategy": "If the plotted line rises at a perfect 45°, slope is ±1."
+    },
+
+    {
+      "id": "mk_glf_b_037",
+      "question": "Which equation has slope 0?",
+      "choices": {
+        "A": "y = 3",
+        "B": "y = 3x",
+        "C": "x = 3",
+        "D": "y = -x + 3",
+        "E": "y = 2x - 3"
+      },
+      "answer": "A",
+      "explanation": "Slope 0 → horizontal → y = constant.",
+      "steps": [
+        "1. Identify which has no x-term.",
+        "2. y = 3 is horizontal with slope 0."
+      ],
+      "fastStrategy": "Slope 0: equation looks like y = #."
+    },
+
+    {
+      "id": "mk_glf_b_038",
+      "question": "Which line passes through the origin?",
+      "choices": {
+        "A": "y = 2x + 3",
+        "B": "y = -3x",
+        "C": "y = x + 4",
+        "D": "y = -x + 1",
+        "E": "x = 3"
+      },
+      "answer": "B",
+      "explanation": "To pass through (0,0), b must be 0. Only y = -3x fits.",
+      "steps": [
+        "1. Look for equation without +b.",
+        "2. y = -3x has intercept 0.",
+        "3. Therefore it passes through the origin."
+      ],
+      "fastStrategy": "y = mx is the only pattern that goes through (0,0)."
+    },
+
+    {
+      "id": "mk_glf_b_039",
+      "question": "Which equation represents a downward-sloping line that intersects the y-axis at 4?",
+      "choices": {
+        "A": "y = 2x + 4",
+        "B": "y = -2x + 4",
+        "C": "y = x - 4",
+        "D": "y = 4x - 2",
+        "E": "y = -4"
+      },
+      "answer": "B",
+      "explanation": "Downward → negative slope. y-intercept 4 → b = 4. y = -2x + 4 matches.",
+      "steps": [
+        "1. Choose negative slope.",
+        "2. Select b = 4.",
+        "3. y = -2x + 4 satisfies both."
+      ],
+      "fastStrategy": "Match slope sign first, then intercept."
+    },
+
+    {
+      "id": "mk_glf_b_040",
+      "question": "A line has slope 4. Which statement describes this line?",
+      "choices": {
+        "A": "It rises 4 units for every 1 unit right.",
+        "B": "It rises 1 unit for every 4 units right.",
+        "C": "It falls 4 units for every 1 unit right.",
+        "D": "It stays flat.",
+        "E": "It is vertical."
+      },
+      "answer": "A",
+      "explanation": "Slope = rise/run. m = 4 → rise 4 per run 1.",
+      "steps": [
+        "1. Translate slope to rise over run.",
+        "2. slope = 4/1.",
+        "3. Means up 4 for each step right."
+      ],
+      "fastStrategy": "Slope is always ‘up per right.’"
+    },
+
+    {
+      "id": "mk_glf_b_041",
+      "question": "What is the slope of y = 7?",
+      "choices": {
+        "A": "7",
+        "B": "1",
+        "C": "0",
+        "D": "-1",
+        "E": "undefined"
+      },
+      "answer": "C",
+      "explanation": "y = 7 is horizontal → slope 0.",
+      "steps": [
+        "1. y constant → horizontal.",
+        "2. Horizontal → slope 0."
+      ],
+      "fastStrategy": "y = constant → slope 0 always."
+    },
+
+    {
+      "id": "mk_glf_b_042",
+      "question": "What is the slope of x = 2?",
+      "choices": {
+        "A": "0",
+        "B": "1",
+        "C": "-1",
+        "D": "undefined",
+        "E": "2"
+      },
+      "answer": "D",
+      "explanation": "Vertical line → undefined slope.",
+      "steps": [
+        "1. x constant means vertical.",
+        "2. Vertical → undefined slope."
+      ],
+      "fastStrategy": "Vertical = undefined."
+    },
+
+    {
+      "id": "mk_glf_b_043",
+      "question": "Which equation represents a line with slope 1/3 and y-intercept −1?",
+      "choices": {
+        "A": "y = 3x - 1",
+        "B": "y = x - 1",
+        "C": "y = (1/3)x - 1",
+        "D": "y = -3x - 1",
+        "E": "y = -x + 1"
+      },
+      "answer": "C",
+      "explanation": "m = 1/3, b = -1 → y = (1/3)x - 1.",
+      "steps": [
+        "1. Plug into y = mx + b.",
+        "2. m = 1/3, b = -1.",
+        "3. y = (1/3)x - 1."
+      ],
+      "fastStrategy": "Keep fractions exactly as is when matching equations."
+    },
+
+    {
+      "id": "mk_glf_b_044",
+      "question": "A line rises 1 unit for every 4 units right. What is its slope?",
+      "choices": {
+        "A": "1/4",
+        "B": "4",
+        "C": "-1/4",
+        "D": "-4",
+        "E": "0"
+      },
+      "answer": "A",
+      "explanation": "Rise/run = 1/4 → slope = 1/4.",
+      "steps": [
+        "1. Translate words to numbers.",
+        "2. Rise = 1; run = 4.",
+        "3. slope = 1/4."
+      ],
+      "fastStrategy": "Slope = rise/run directly."
+    },
+
+    {
+      "id": "mk_glf_b_045",
+      "question": "Which equation describes a horizontal line through (0, −3)?",
+      "choices": {
+        "A": "y = -3",
+        "B": "x = -3",
+        "C": "y = 3",
+        "D": "x = 3",
+        "E": "y = -x - 3"
+      },
+      "answer": "A",
+      "explanation": "Horizontal → y = constant → y = -3.",
+      "steps": [
+        "1. Use the y-coordinate.",
+        "2. Horizontal → y = -3."
+      ],
+      "fastStrategy": "Horizontal lines use the y-value directly."
+    },
+
+    {
+      "id": "mk_glf_b_046",
+      "question": "Find the slope of the line through (4, 1) and (6, 5).",
+      "choices": {
+        "A": "2",
+        "B": "1/2",
+        "C": "4",
+        "D": "-2",
+        "E": "-1/2"
+      },
+      "answer": "A",
+      "explanation": "Rise = 5 - 1 = 4; run = 6 - 4 = 2; slope = 4/2 = 2.",
+      "steps": [
+        "1. Rise = 4.",
+        "2. Run = 2.",
+        "3. slope = 2."
+      ],
+      "fastStrategy": "Look for opportunities to simplify before dividing."
+    },
+
+    {
+      "id": "mk_glf_b_047",
+      "question": "Which graph feature corresponds to the y-intercept?",
+      "choices": {
+        "A": "Where the line crosses the x-axis",
+        "B": "Where the line crosses the y-axis",
+        "C": "The steepness of the line",
+        "D": "The direction of the line",
+        "E": "Where the line is undefined"
+      },
+      "answer": "B",
+      "explanation": "The y-intercept is where the graph meets the y-axis.",
+      "steps": [
+        "1. The y-axis is x = 0.",
+        "2. y-intercept = (0, b)."
+      ],
+      "fastStrategy": "InterCEPt → think ‘crosses axis’."
+    },
+
+    {
+      "id": "mk_glf_b_048",
+      "question": "Which line is vertical?",
+      "choices": {
+        "A": "y = 2",
+        "B": "y = x - 2",
+        "C": "x = -5",
+        "D": "y = -3x",
+        "E": "y = -x + 4"
+      },
+      "answer": "C",
+      "explanation": "Vertical → x = constant.",
+      "steps": [
+        "1. Scan for x = #.",
+        "2. x = -5 is vertical."
+      ],
+      "fastStrategy": "Vertical and undefined slope always appear as x = something."
+    },
+
+    {
+      "id": "mk_glf_b_049",
+      "question": "Which line goes through (0, 2) and has slope −1?",
+      "choices": {
+        "A": "y = x + 2",
+        "B": "y = -x + 2",
+        "C": "y = -x - 2",
+        "D": "y = x - 2",
+        "E": "y = 2x - 1"
+      },
+      "answer": "B",
+      "explanation": "Slope m = -1, intercept = 2 → y = -x + 2.",
+      "steps": [
+        "1. Use y = mx + b.",
+        "2. m = -1, b = 2.",
+        "3. y = -x + 2."
+      ],
+      "fastStrategy": "When given slope and intercept, fill them straight into y = mx + b."
+    },
+
+    {
+      "id": "mk_glf_b_050",
+      "question": "Which equation represents a line increasing from left to right and passing through the origin?",
+      "choices": {
+        "A": "y = -3x",
+        "B": "y = 3",
+        "C": "y = 0",
+        "D": "y = 2x",
+        "E": "x = 0"
+      },
+      "answer": "D",
+      "explanation": "A line through the origin has b = 0. Increasing → positive slope. y = 2x fits both.",
+      "steps": [
+        "1. Through origin → b = 0.",
+        "2. Increasing → m > 0.",
+        "3. y = 2x is the only match."
+      ],
+      "fastStrategy": "Origin + increasing → y = (positive m)x."
+    }
+
+  ]
+}

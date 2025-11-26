@@ -1,0 +1,499 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "radical_expressions",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_re_b_001",
+      "question": "What is the value of √25?",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6",
+        "E": "7"
+      },
+      "answer": "C",
+      "explanation": "A square root asks, 'What number multiplied by itself gives the number inside?' Since 5 × 5 = 25, √25 equals 5. This is a basic perfect square and one worth memorizing.",
+      "steps": [
+        "1. Identify whether 25 is a perfect square.",
+        "2. Recall that 5 × 5 = 25.",
+        "3. Therefore, √25 = 5."
+      ],
+      "fastStrategy": "Memorize perfect squares up to 15². The AFOQT heavily uses them to speed up simplification."
+    },
+    {
+      "id": "mk_re_b_002",
+      "question": "Simplify √36.",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7",
+        "E": "8"
+      },
+      "answer": "C",
+      "explanation": "36 is a perfect square because 6 × 6 = 36. When the number under the radical is a perfect square, the square root simplifies to a whole number.",
+      "steps": [
+        "1. Recognize that 36 = 6 × 6.",
+        "2. The square root of a perfect square is the base number.",
+        "3. Therefore, √36 = 6."
+      ],
+      "fastStrategy": "Perfect squares: 1, 4, 9, 16, 25, 36, 49, 64… When you see one, you instantly have the answer."
+    },
+    {
+      "id": "mk_re_b_003",
+      "question": "Which expression simplifies to √49?",
+      "choices": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8",
+        "E": "9"
+      },
+      "answer": "C",
+      "explanation": "Since 7 × 7 = 49, the square root of 49 is 7. This is one of the classic perfect squares.",
+      "steps": [
+        "1. Check if 49 is a perfect square.",
+        "2. 7 × 7 = 49 confirms this.",
+        "3. Therefore, √49 = 7."
+      ],
+      "fastStrategy": "49 is one of the most common perfect squares used on standardized tests. Lock it in your memory."
+    },
+    {
+      "id": "mk_re_b_004",
+      "question": "Simplify: √9 + √4",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6",
+        "E": "7"
+      },
+      "answer": "C",
+      "explanation": "Both 9 and 4 are perfect squares. Their roots are 3 and 2, which add to 5. Always simplify each radical separately before combining.",
+      "steps": [
+        "1. Simplify √9 = 3.",
+        "2. Simplify √4 = 2.",
+        "3. Add them: 3 + 2 = 5."
+      ],
+      "fastStrategy": "When radicals are perfect squares, simplify first, then add — never add inside the radical."
+    },
+    {
+      "id": "mk_re_b_005",
+      "question": "Which of the following is an irrational number?",
+      "choices": {
+        "A": "√36",
+        "B": "√4",
+        "C": "√18",
+        "D": "√49",
+        "E": "√9"
+      },
+      "answer": "C",
+      "explanation": "A number is irrational if it cannot be expressed as a fraction, which happens when the radicand is not a perfect square. 18 is not a perfect square, so √18 is irrational.",
+      "steps": [
+        "1. Perfect squares produce whole-number square roots.",
+        "2. 18 is not a perfect square.",
+        "3. Therefore, √18 is irrational."
+      ],
+      "fastStrategy": "Radicals of non–perfect squares are always irrational — fast rule."
+    },
+
+    {
+      "id": "mk_re_b_006",
+      "question": "Simplify √81.",
+      "choices": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10",
+        "E": "6"
+      },
+      "answer": "C",
+      "explanation": "81 is a perfect square because 9 × 9 = 81. That makes √81 equal to 9. Perfect squares should always pop out instantly.",
+      "steps": [
+        "1. Recognize that 81 = 9 × 9.",
+        "2. Square roots reverse the squaring operation.",
+        "3. Therefore, √81 = 9."
+      ],
+      "fastStrategy": "81 and 64 are two of the most frequently used squared values. Put them into automatic memory."
+    },
+    {
+      "id": "mk_re_b_007",
+      "question": "Simplify √64.",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9",
+        "E": "5"
+      },
+      "answer": "C",
+      "explanation": "64 is a perfect square because 8 × 8 = 64. Perfect square roots produce clean whole numbers.",
+      "steps": [
+        "1. Think of numbers that multiply to 64.",
+        "2. 8 × 8 = 64.",
+        "3. Therefore, √64 = 8."
+      ],
+      "fastStrategy": "Perfect squares between 50–100: 49, 64, 81, 100. These show up constantly."
+    },
+    {
+      "id": "mk_re_b_008",
+      "question": "Simplify √12.",
+      "choices": {
+        "A": "2√3",
+        "B": "3√2",
+        "C": "√6",
+        "D": "6",
+        "E": "4√3"
+      },
+      "answer": "A",
+      "explanation": "To simplify √12, look for the largest perfect square factor. 12 = 4 × 3. Since √4 = 2, rewrite √12 as 2√3. Always pull out the perfect-square factor.",
+      "steps": [
+        "1. Factor 12: 12 = 4 × 3.",
+        "2. √4 comes out as 2.",
+        "3. The leftover √3 stays inside.",
+        "4. Final answer: 2√3."
+      ],
+      "fastStrategy": "When the number is small (10–50), check for factors 4, 9, 16 in that order. One usually works."
+    },
+    {
+      "id": "mk_re_b_009",
+      "question": "Simplify √20.",
+      "choices": {
+        "A": "5√2",
+        "B": "2√5",
+        "C": "4√5",
+        "D": "√10",
+        "E": "2√2"
+      },
+      "answer": "B",
+      "explanation": "Break 20 into 4 × 5, because 4 is a perfect square. Then √20 becomes √4 × √5 = 2√5.",
+      "steps": [
+        "1. Recognize 20 = 4 × 5.",
+        "2. √4 becomes 2.",
+        "3. The leftover is √5.",
+        "4. Final answer: 2√5."
+      ],
+      "fastStrategy": "When the number ends in 0, always check for 25 or 4 as factors."
+    },
+    {
+      "id": "mk_re_b_010",
+      "question": "Simplify √2 × √8.",
+      "choices": {
+        "A": "4",
+        "B": "2√2",
+        "C": "4√2",
+        "D": "√6",
+        "E": "√10"
+      },
+      "answer": "A",
+      "explanation": "Combine radicals by multiplying inside: √2 × √8 = √16. Since √16 = 4, the expression simplifies to 4.",
+      "steps": [
+        "1. Multiply inside: 2 × 8 = 16.",
+        "2. √16 is a perfect square root: 4.",
+        "3. Final answer: 4."
+      ],
+      "fastStrategy": "When multiplying radicals, combine the insides first before simplifying — it often becomes a perfect square."
+    },
+
+    {
+      "id": "mk_re_b_011",
+      "question": "Simplify √50.",
+      "choices": {
+        "A": "5√2",
+        "B": "2√5",
+        "C": "10√2",
+        "D": "25√2",
+        "E": "√25"
+      },
+      "answer": "A",
+      "explanation": "Factor 50 as 25 × 2. Since 25 is a perfect square (5 × 5), rewrite √50 as 5√2.",
+      "steps": [
+        "1. Factor 50: 50 = 25 × 2.",
+        "2. √25 = 5 gets pulled out.",
+        "3. √2 stays inside.",
+        "4. Final answer: 5√2."
+      ],
+      "fastStrategy": "Numbers ending in 50 almost always hide a 25 inside."
+    },
+    {
+      "id": "mk_re_b_012",
+      "question": "Simplify √27.",
+      "choices": {
+        "A": "3√3",
+        "B": "9√3",
+        "C": "√9",
+        "D": "2√3",
+        "E": "6√3"
+      },
+      "answer": "A",
+      "explanation": "Break 27 into 9 × 3. √9 = 3, so √27 = 3√3. Always pull the perfect square (9) out.",
+      "steps": [
+        "1. Factor 27: 27 = 9 × 3.",
+        "2. √9 becomes 3.",
+        "3. The leftover is √3.",
+        "4. Final answer: 3√3."
+      ],
+      "fastStrategy": "Any number divisible by 9 simplifies easily. Check divisibility: digits sum to 9 → divisible by 9."
+    },
+    {
+      "id": "mk_re_b_013",
+      "question": "Simplify √3 × √12.",
+      "choices": {
+        "A": "6",
+        "B": "3√3",
+        "C": "3√4",
+        "D": "√36",
+        "E": "6√3"
+      },
+      "answer": "A",
+      "explanation": "Multiply inside: √3 × √12 = √36. Since √36 = 6, the expression simplifies nicely.",
+      "steps": [
+        "1. Combine the radicands: 3 × 12 = 36.",
+        "2. √36 = 6 because 6 × 6 = 36.",
+        "3. Final answer: 6."
+      ],
+      "fastStrategy": "When multiplying radicals, check if the product becomes a perfect square. This one does."
+    },
+    {
+      "id": "mk_re_b_014",
+      "question": "What is √121?",
+      "choices": {
+        "A": "9",
+        "B": "10",
+        "C": "11",
+        "D": "12",
+        "E": "13"
+      },
+      "answer": "C",
+      "explanation": "121 is a perfect square because 11 × 11 = 121. Therefore, √121 = 11.",
+      "steps": [
+        "1. Recognize that 121 appears in the perfect square list.",
+        "2. 11 × 11 = 121 confirms it.",
+        "3. Therefore, √121 = 11."
+      ],
+      "fastStrategy": "Memorize that 11² = 121 — it appears often in MK and AR test items."
+    },
+    {
+      "id": "mk_re_b_015",
+      "question": "Simplify √32.",
+      "choices": {
+        "A": "4√2",
+        "B": "2√8",
+        "C": "8√2",
+        "D": "√16",
+        "E": "2√4"
+      },
+      "answer": "A",
+      "explanation": "32 breaks into 16 × 2. Since √16 = 4, you can pull out 4 and leave √2 inside.",
+      "steps": [
+        "1. Factor 32: 32 = 16 × 2.",
+        "2. √16 becomes 4.",
+        "3. The leftover is √2.",
+        "4. Final answer: 4√2."
+      ],
+      "fastStrategy": "Always check for 16 when the radicand is between 17 and 50. It’s a common factor."
+    },
+
+    {
+      "id": "mk_re_b_016",
+      "question": "Compute √4 × √9.",
+      "choices": {
+        "A": "6",
+        "B": "12",
+        "C": "4√3",
+        "D": "3√2",
+        "E": "2√9"
+      },
+      "answer": "A",
+      "explanation": "Simplify each separately: √4 = 2, √9 = 3. Multiply them to get 6.",
+      "steps": [
+        "1. √4 = 2.",
+        "2. √9 = 3.",
+        "3. Multiply them: 2 × 3 = 6."
+      ],
+      "fastStrategy": "When both radicals are perfect squares: simplify first, multiply second."
+    },
+    {
+      "id": "mk_re_b_017",
+      "question": "Which of the following is a perfect square?",
+      "choices": {
+        "A": "30",
+        "B": "48",
+        "C": "64",
+        "D": "45",
+        "E": "12"
+      },
+      "answer": "C",
+      "explanation": "A perfect square is the result of n × n. 64 = 8 × 8, so it is a perfect square.",
+      "steps": [
+        "1. Test numbers: 8 × 8 = 64.",
+        "2. None of the other options match n × n exactly.",
+        "3. Therefore, 64 is the perfect square."
+      ],
+      "fastStrategy": "When trying to identify perfect squares, think of the sequence: 1, 4, 9, 16, 25, 36, 49, 64..."
+    },
+    {
+      "id": "mk_re_b_018",
+      "question": "Simplify √45.",
+      "choices": {
+        "A": "3√5",
+        "B": "9√5",
+        "C": "15√3",
+        "D": "5√3",
+        "E": "√9"
+      },
+      "answer": "A",
+      "explanation": "Factor 45 into 9 × 5. Since √9 = 3, rewrite √45 as 3√5.",
+      "steps": [
+        "1. Break 45 into 9 × 5.",
+        "2. √9 = 3 comes out.",
+        "3. √5 stays inside.",
+        "4. Final answer: 3√5."
+      ],
+      "fastStrategy": "If a number ends in 5, check for a 25 or 5-related factor — often hides a 9 for simplification."
+    },
+    {
+      "id": "mk_re_b_019",
+      "question": "Simplify √72.",
+      "choices": {
+        "A": "6√2",
+        "B": "3√8",
+        "C": "9√2",
+        "D": "4√6",
+        "E": "2√36"
+      },
+      "answer": "A",
+      "explanation": "Break 72 into 36 × 2. √36 = 6, so √72 becomes 6√2. Always pull out the perfect square.",
+      "steps": [
+        "1. Factor 72: 72 = 36 × 2.",
+        "2. √36 = 6 is the extracted value.",
+        "3. √2 remains inside.",
+        "4. Final answer: 6√2."
+      ],
+      "fastStrategy": "When a number is even and large, check for a 36 factor — very common in test problems."
+    },
+    {
+      "id": "mk_re_b_020",
+      "question": "Simplify √8 + √2.",
+      "choices": {
+        "A": "3√2",
+        "B": "2√3",
+        "C": "√10",
+        "D": "4√2",
+        "E": "2√2 + √2"
+      },
+      "answer": "A",
+      "explanation": "Simplify √8 into 2√2. Adding √2 gives 3√2. Only combine radicals if they have the same inside number.",
+      "steps": [
+        "1. Simplify √8 = 2√2.",
+        "2. Combine 2√2 + √2.",
+        "3. Add coefficients: 2 + 1 = 3.",
+        "4. Final answer: 3√2."
+      ],
+      "fastStrategy": "Treat radicals like algebra terms: you can only combine them when the radical part matches."
+    },
+
+    {
+      "id": "mk_re_b_021",
+      "question": "Simplify √18.",
+      "choices": {
+        "A": "3√2",
+        "B": "2√3",
+        "C": "√9",
+        "D": "6√3",
+        "E": "9√2"
+      },
+      "answer": "A",
+      "explanation": "Factor 18 into 9 × 2. √9 = 3, so √18 becomes 3√2. This is a very common simplification.",
+      "steps": [
+        "1. Recognize that 18 = 9 × 2.",
+        "2. √9 = 3 comes outside.",
+        "3. The leftover √2 stays.",
+        "4. Final answer: 3√2."
+      ],
+      "fastStrategy": "When a number is divisible by 9, that’s usually your perfect square shortcut."
+    },
+    {
+      "id": "mk_re_b_022",
+      "question": "Simplify √200.",
+      "choices": {
+        "A": "10√2",
+        "B": "5√8",
+        "C": "2√100",
+        "D": "4√25",
+        "E": "20√3"
+      },
+      "answer": "A",
+      "explanation": "Break 200 into 100 × 2. √100 = 10, so √200 becomes 10√2.",
+      "steps": [
+        "1. Factor 200: 200 = 100 × 2.",
+        "2. √100 = 10 is extracted.",
+        "3. √2 remains inside.",
+        "4. Final result: 10√2."
+      ],
+      "fastStrategy": "Numbers ending in two zeros nearly always hide a 100-factor."
+    },
+    {
+      "id": "mk_re_b_023",
+      "question": "Simplify √1.",
+      "choices": {
+        "A": "1",
+        "B": "0",
+        "C": "2",
+        "D": "3",
+        "E": "1√1"
+      },
+      "answer": "A",
+      "explanation": "Since 1 × 1 = 1, the square root of 1 is simply 1. It's the smallest perfect square.",
+      "steps": [
+        "1. Recognize 1 = 1 × 1.",
+        "2. The square root of a perfect square produces the base value.",
+        "3. Therefore, √1 = 1."
+      ],
+      "fastStrategy": "√1 = 1 is instant — no trick needed."
+    },
+    {
+      "id": "mk_re_b_024",
+      "question": "Simplify √3 × √3.",
+      "choices": {
+        "A": "3",
+        "B": "√6",
+        "C": "6",
+        "D": "9",
+        "E": "1"
+      },
+      "answer": "A",
+      "explanation": "√3 × √3 = √(3×3) = √9 = 3. This is the simplest radical multiplication case.",
+      "steps": [
+        "1. Multiply radicands: 3 × 3 = 9.",
+        "2. √9 = 3.",
+        "3. Final answer: 3."
+      ],
+      "fastStrategy": "A radical times itself equals the number inside — always."
+    },
+    {
+      "id": "mk_re_b_025",
+      "question": "Simplify √2 + √8 + √18.",
+      "choices": {
+        "A": "6√2",
+        "B": "5√2",
+        "C": "4√2",
+        "D": "3√2",
+        "E": "2√2"
+      },
+      "answer": "A",
+      "explanation": "Convert each radical: √8 = 2√2 and √18 = 3√2. Adding them with √2 gives 1√2 + 2√2 + 3√2 = 6√2.",
+      "steps": [
+        "1. Simplify √8 = 2√2.",
+        "2. Simplify √18 = 3√2.",
+        "3. Add coefficients: 1 + 2 + 3 = 6.",
+        "4. Final answer: 6√2."
+      ],
+      "fastStrategy": "Group like radicals the way you'd group like algebra terms: add coefficients only."
+    }
+  ]
+}
+w

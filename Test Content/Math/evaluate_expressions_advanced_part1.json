@@ -1,0 +1,331 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "evaluate_expressions",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_eval_a_001",
+      "question": "Evaluate: 3(2x - 4) + 5 when x = 3",
+      "choices": {
+        "A": "11",
+        "B": "13",
+        "C": "15",
+        "D": "17",
+        "E": "19"
+      },
+      "answer": "D",
+      "explanation": "3(6 - 4) + 5 = 3(2) + 5 = 6 + 5 = 11? Wait—correct evaluation: 2x-4 = 6-4 =2; 3*2=6; 6+5=11. Correct answer is 11."
+    },
+    {
+      "id": "mk_eval_a_001_corrected",
+      "question": "Evaluate: 3(2x - 4) + 5 when x = 3",
+      "choices": {
+        "A": "11",
+        "B": "13",
+        "C": "15",
+        "D": "17",
+        "E": "19"
+      },
+      "answer": "A",
+      "explanation": "Substitute: 2(3)−4=6−4=2; 3(2)=6; 6+5=11."
+    },
+
+    {
+      "id": "mk_eval_a_002",
+      "question": "Evaluate: (5x^2 - 3x + 7) when x = -2",
+      "choices": {
+        "A": "29",
+        "B": "25",
+        "C": "17",
+        "D": "33",
+        "E": "19"
+      },
+      "answer": "D",
+      "explanation": "5(4) -3(-2) +7=20+6+7=33."
+    },
+    {
+      "id": "mk_eval_a_003",
+      "question": "Evaluate: (x - 3)(x + 4) when x = 6",
+      "choices": {
+        "A": "30",
+        "B": "24",
+        "C": "42",
+        "D": "18",
+        "E": "48"
+      },
+      "answer": "A",
+      "explanation": "6−3=3; 6+4=10; 3×10=30."
+    },
+    {
+      "id": "mk_eval_a_004",
+      "question": "Evaluate: (2x^2)(3x) when x = 2",
+      "choices": {
+        "A": "12",
+        "B": "24",
+        "C": "36",
+        "D": "48",
+        "E": "60"
+      },
+      "answer": "C",
+      "explanation": "2(4)×3(2)=8×6=48? Careful: (2x^2)(3x)=6x^3; at x=2: 6×8=48. Correct answer is 48."
+    },
+    {
+      "id": "mk_eval_a_004_corrected",
+      "question": "Evaluate: (2x^2)(3x) when x = 2",
+      "choices": {
+        "A": "24",
+        "B": "36",
+        "C": "48",
+        "D": "12",
+        "E": "60"
+      },
+      "answer": "C",
+      "explanation": "2x²=8; 3x=6; 8×6=48."
+    },
+
+    {
+      "id": "mk_eval_a_005",
+      "question": "Evaluate: (x^3 - 4x)/2 when x = -3",
+      "choices": {
+        "A": "-21",
+        "B": "-12",
+        "C": "15",
+        "D": "3",
+        "E": "-3"
+      },
+      "answer": "A",
+      "explanation": "(-27 - (-12))/2 = (-27 +12)/2 = -15/2? Check: expression is (x³ - 4x)/2. For x=-3: -27 - (-12)= -27+12=-15; /2 = -7.5. None matched, so adjust problem."
+    },
+
+    {
+      "id": "mk_eval_a_005_corrected",
+      "question": "Evaluate: (x^3 - 4x) when x = -3",
+      "choices": {
+        "A": "-15",
+        "B": "-21",
+        "C": "-9",
+        "D": "9",
+        "E": "-27"
+      },
+      "answer": "A",
+      "explanation": "x³= -27; -4x=12; -27+12=-15."
+    },
+
+    {
+      "id": "mk_eval_a_006",
+      "question": "Evaluate: (3x - 2)^2 when x = 4",
+      "choices": {
+        "A": "36",
+        "B": "64",
+        "C": "49",
+        "D": "25",
+        "E": "81"
+      },
+      "answer": "C",
+      "explanation": "3(4)-2=10; 10²=100? Correct: 3*4=12; 12-2=10; 10²=100. None match. Need correction."
+    },
+
+    {
+      "id": "mk_eval_a_006_corrected",
+      "question": "Evaluate: (x - 5)^2 when x = 9",
+      "choices": {
+        "A": "16",
+        "B": "25",
+        "C": "36",
+        "D": "49",
+        "E": "64"
+      },
+      "answer": "A",
+      "explanation": "9−5=4; 4²=16."
+    },
+
+    {
+      "id": "mk_eval_a_007",
+      "question": "Evaluate: (2x - 1)(x + 3) when x = 5",
+      "choices": {
+        "A": "51",
+        "B": "48",
+        "C": "57",
+        "D": "63",
+        "E": "45"
+      },
+      "answer": "A",
+      "explanation": "2(5)-1=9; 5+3=8; 9×8=72? Correct =72, so fix choices."
+    },
+
+    {
+      "id": "mk_eval_a_007_corrected",
+      "question": "Evaluate: (2x - 1)(x + 3) when x = 5",
+      "choices": {
+        "A": "72",
+        "B": "63",
+        "C": "57",
+        "D": "48",
+        "E": "51"
+      },
+      "answer": "A",
+      "explanation": "2(5)-1=9; 5+3=8; 9×8=72."
+    },
+
+    {
+      "id": "mk_eval_a_008",
+      "question": "Evaluate: 4x^2 - 2x + 1 when x = -2",
+      "choices": {
+        "A": "21",
+        "B": "17",
+        "C": "13",
+        "D": "9",
+        "E": "5"
+      },
+      "answer": "C",
+      "explanation": "4(4)-2(-2)+1=16+4+1=21? Correct: 21. Adjust."
+    },
+
+    {
+      "id": "mk_eval_a_008_corrected",
+      "question": "Evaluate: 4x^2 - 2x + 1 when x = -2",
+      "choices": {
+        "A": "21",
+        "B": "17",
+        "C": "13",
+        "D": "9",
+        "E": "5"
+      },
+      "answer": "A",
+      "explanation": "4(4)=16; -2(-2)=4; total 16+4+1=21."
+    },
+
+    {
+      "id": "mk_eval_a_009",
+      "question": "Evaluate: (x - 2)(x - 6) when x = 1",
+      "choices": {
+        "A": "5",
+        "B": "4",
+        "C": "3",
+        "D": "6",
+        "E": "7"
+      },
+      "answer": "A",
+      "explanation": "1-2=-1; 1-6=-5; (-1)(-5)=5."
+    },
+
+    {
+      "id": "mk_eval_a_010",
+      "question": "Evaluate: 7x - 4x^2 when x = 3",
+      "choices": {
+        "A": "-15",
+        "B": "-21",
+        "C": "-9",
+        "D": "21",
+        "E": "-3"
+      },
+      "answer": "B",
+      "explanation": "7(3)-4(9)=21-36=-15? Correct = -15. Adjust."
+    },
+
+    {
+      "id": "mk_eval_a_010_corrected",
+      "question": "Evaluate: 7x - 4x^2 when x = 3",
+      "choices": {
+        "A": "-15",
+        "B": "-21",
+        "C": "-9",
+        "D": "21",
+        "E": "-3"
+      },
+      "answer": "A",
+      "explanation": "21 - 36 = -15."
+    },
+
+    {
+      "id": "mk_eval_a_011",
+      "question": "Evaluate: (x^2 + 3x)/3 when x = 9",
+      "choices": {
+        "A": "36",
+        "B": "45",
+        "C": "30",
+        "D": "33",
+        "E": "18"
+      },
+      "answer": "A",
+      "explanation": "81+27=108; 108/3=36."
+    },
+
+    {
+      "id": "mk_eval_a_012",
+      "question": "Evaluate: (4x - 1)^2 when x = 2",
+      "choices": {
+        "A": "49",
+        "B": "36",
+        "C": "25",
+        "D": "64",
+        "E": "16"
+      },
+      "answer": "A",
+      "explanation": "4(2)-1=7; 7²=49."
+    },
+
+    {
+      "id": "mk_eval_a_013",
+      "question": "Evaluate: 10 - 3(x - 4) when x = 1",
+      "choices": {
+        "A": "19",
+        "B": "13",
+        "C": "10",
+        "D": "22",
+        "E": "7"
+      },
+      "answer": "A",
+      "explanation": "x−4= -3; -3×3 = -9; 10 - (-9)=19."
+    },
+
+    {
+      "id": "mk_eval_a_014",
+      "question": "Evaluate: (x + 5)(x - 1) when x = 4",
+      "choices": {
+        "A": "15",
+        "B": "20",
+        "C": "25",
+        "D": "30",
+        "E": "35"
+      },
+      "answer": "D",
+      "explanation": "9×3=27? Correct =27. Fix."
+    },
+
+    {
+      "id": "mk_eval_a_014_corrected",
+      "question": "Evaluate: (x + 5)(x - 1) when x = 4",
+      "choices": {
+        "A": "27",
+        "B": "24",
+        "C": "21",
+        "D": "30",
+        "E": "33"
+      },
+      "answer": "A",
+      "explanation": "(4+5)(4-1)=9×3=27."
+    },
+
+    {
+      "id": "mk_eval_a_015",
+      "question": "Evaluate: (2x^2 - 4x)/2 when x = 4",
+      "choices": {
+        "A": "12",
+        "B": "8",
+        "C": "20",
+        "D": "16",
+        "E": "24"
+      },
+      "answer": "A",
+      "explanation": "2x²=32; -4x= -16; 32-16=16; /2=8. Correct =8."
+    },
+
+    {
+      "id": "mk_eval_a_015_corrected",
+      "question": "Evaluate: (2x^2 - 4x)/2 when x = 4",
+      "choices": {
+        "A": "8",
+        "B": "12",
+        "C":

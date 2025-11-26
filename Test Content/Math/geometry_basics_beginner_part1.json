@@ -1,0 +1,713 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "geometry_basics",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "uiSpec": {
+        "type": "geometry_angle_diagram",
+        "width": 300,
+        "height": 300,
+        "showGrid": false,
+        "lines": [
+          {
+            "from": { "x": 150, "y": 150 },
+            "to": { "x": 150, "y": 30 },
+            "label": "Ray AB"
+          },
+          {
+            "from": { "x": 150, "y": 150 },
+            "to": { "x": 260, "y": 210 },
+            "label": "Ray AC"
+          }
+        ],
+        "angleArc": {
+          "center": { "x": 150, "y": 150 },
+          "radius": 35,
+          "startRay": 0,
+          "endRay": 1,
+          "label": "∠BAC",
+          "measureDegrees": 60
+        },
+        "styleHints": {
+          "baseLineColor": "black",
+          "highlightAngleColor": "red",
+          "labelsColor": "black"
+        }
+      },
+      "copilotInstruction": "Render a 300x300 SVG or absolutely-positioned div. Draw two rays sharing a common vertex at the center: one pointing straight up, one down-right. Draw a red angle arc between them labeled '∠BAC = 60°'. Use a clean, exam-style look: black rays, red arc, small point labels near each endpoint.",
+      "id": "mk_geo_b_001",
+      "question": "The diagram shows ∠BAC measuring 60°. How is this angle best classified?",
+      "choices": {
+        "A": "Right angle",
+        "B": "Acute angle",
+        "C": "Obtuse angle",
+        "D": "Straight angle",
+        "E": "Reflex angle"
+      },
+      "answer": "B",
+      "explanation": "An acute angle is any angle that is greater than 0° but less than 90°. Since 60° is between 0° and 90°, it is acute. Right angles measure exactly 90°, obtuse angles are between 90° and 180°, straight angles are 180°, and reflex angles are greater than 180°.",
+      "steps": [
+        "1. Recall angle types: acute (< 90°), right (= 90°), obtuse (90°–180°), straight (= 180°), reflex (> 180°).",
+        "2. Compare 60° to 90°: 60° is less than 90°.",
+        "3. Therefore, 60° must be an acute angle."
+      ],
+      "fastStrategy": "Memorize: acute = cute and small (< 90°), right = 90°, obtuse = big but not straight (90°–180°)."
+    },
+
+    {
+      "uiSpec": {
+        "type": "geometry_angle_diagram",
+        "width": 300,
+        "height": 300,
+        "showGrid": false,
+        "lines": [
+          {
+            "from": { "x": 150, "y": 150 },
+            "to": { "x": 260, "y": 150 },
+            "label": "Ray AB"
+          },
+          {
+            "from": { "x": 150, "y": 150 },
+            "to": { "x": 150, "y": 40 },
+            "label": "Ray AC"
+          }
+        ],
+        "angleArc": {
+          "center": { "x": 150, "y": 150 },
+          "radius": 35,
+          "startRay": 0,
+          "endRay": 1,
+          "label": "90°",
+          "measureDegrees": 90,
+          "rightAngleBox": true
+        },
+        "styleHints": {
+          "baseLineColor": "black",
+          "highlightAngleColor": "red"
+        }
+      },
+      "copilotInstruction": "Draw a horizontal ray from center to the right and a vertical ray from center upwards. At the vertex, draw a small square (right-angle marker) inside the angle and label the angle '90°'.",
+      "id": "mk_geo_b_002",
+      "question": "The diagram shows an angle marked with a small square at the vertex and labeled 90°. How is this angle classified?",
+      "choices": {
+        "A": "Acute",
+        "B": "Obtuse",
+        "C": "Right",
+        "D": "Straight",
+        "E": "Reflex"
+      },
+      "answer": "C",
+      "explanation": "A right angle is an angle that measures exactly 90°. The small square at the vertex is a standard diagram symbol indicating a right angle.",
+      "steps": [
+        "1. Recognize the right-angle square symbol in geometry diagrams.",
+        "2. Know that this symbol always means 90°.",
+        "3. Therefore, the angle is a right angle."
+      ],
+      "fastStrategy": "See the little square at the corner? That’s always a 90° right angle."
+    },
+
+    {
+      "id": "mk_geo_b_003",
+      "question": "Two angles are complementary. One angle measures 35°. What is the measure of the other angle?",
+      "choices": {
+        "A": "35°",
+        "B": "45°",
+        "C": "55°",
+        "D": "145°",
+        "E": "180°"
+      },
+      "answer": "C",
+      "explanation": "Complementary angles add up to 90°. If one is 35°, the other must be 90° − 35° = 55°.",
+      "steps": [
+        "1. Recall that 'complementary' means the two angles total 90°.",
+        "2. Set up 90° − 35° to find the missing angle.",
+        "3. Subtract: 90 − 35 = 55.",
+        "4. So the other angle is 55°."
+      ],
+      "fastStrategy": "Complementary → think 'C' for 'corner' (90°). Just do 90 minus the given angle."
+    },
+
+    {
+      "id": "mk_geo_b_004",
+      "question": "Two angles are supplementary. One angle measures 110°. What is the measure of the other angle?",
+      "choices": {
+        "A": "20°",
+        "B": "40°",
+        "C": "60°",
+        "D": "70°",
+        "E": "90°"
+      },
+      "answer": "B",
+      "explanation": "Supplementary angles add up to 180°. If one is 110°, the other must be 180° − 110° = 70°. (Be careful to pick the correct answer choice.)",
+      "steps": [
+        "1. Recall that 'supplementary' means the two angles total 180°.",
+        "2. Compute 180° − 110°.",
+        "3. 180 − 110 = 70.",
+        "4. The missing angle is 70°."
+      ],
+      "fastStrategy": "Supplementary → 'straight line' → 180°. Do 180 minus the known angle."
+    },
+
+    {
+      "uiSpec": {
+        "type": "geometry_angle_pair_diagram",
+        "width": 300,
+        "height": 300,
+        "lines": [
+          {
+            "from": { "x": 40, "y": 150 },
+            "to": { "x": 260, "y": 150 }
+          },
+          {
+            "from": { "x": 150, "y": 40 },
+            "to": { "x": 150, "y": 260 }
+          }
+        ],
+        "angleLabels": [
+          {
+            "position": "topRight",
+            "label": "120°",
+            "highlight": true
+          },
+          {
+            "position": "bottomLeft",
+            "label": "x°",
+            "highlight": true
+          }
+        ],
+        "styleHints": {
+          "baseLineColor": "black",
+          "highlightAngleColor": "red"
+        }
+      },
+      "copilotInstruction": "Draw two perpendicular lines crossing at the center, forming four angles. Label the top-right angle '120°' in red and the bottom-left opposite angle 'x°' in red as well. Emphasize they are vertical angles (opposite).",
+      "id": "mk_geo_b_005",
+      "question": "In the diagram, the top-right angle measures 120°. What is the measure of the vertical angle labeled x° (bottom-left)?",
+      "choices": {
+        "A": "30°",
+        "B": "60°",
+        "C": "90°",
+        "D": "120°",
+        "E": "180°"
+      },
+      "answer": "D",
+      "explanation": "Vertical angles are the opposite angles formed when two lines intersect. Vertical angles are always equal. Since the top-right angle is 120°, the opposite bottom-left angle must also be 120°.",
+      "steps": [
+        "1. Identify vertical angles as the pair of opposite angles formed by crossing lines.",
+        "2. Know that vertical angles are congruent (equal in measure).",
+        "3. So if one is 120°, its vertical partner is also 120°."
+      ],
+      "fastStrategy": "Opposite angles at an X intersection are always equal. Match the given one."
+    },
+
+    {
+      "id": "mk_geo_b_006",
+      "question": "A triangle has side lengths 5, 5, and 8 units. How is this triangle best classified by its sides?",
+      "choices": {
+        "A": "Equilateral",
+        "B": "Isosceles",
+        "C": "Scalene",
+        "D": "Right",
+        "E": "Obtuse"
+      },
+      "answer": "B",
+      "explanation": "Equilateral triangles have all three sides equal. Isosceles triangles have exactly two sides equal. Scalene triangles have no equal sides. Here, two sides are 5 and one is 8, so it is isosceles.",
+      "steps": [
+        "1. Compare side lengths: 5, 5, 8.",
+        "2. Notice two sides are equal (5 and 5).",
+        "3. Since not all three are equal, it’s not equilateral.",
+        "4. Two equal sides means the triangle is isosceles."
+      ],
+      "fastStrategy": "Two equal sides → isosceles. Three equal → equilateral. None equal → scalene."
+    },
+
+    {
+      "id": "mk_geo_b_007",
+      "question": "A triangle has side lengths 3, 4, and 5 units. Which statement is true?",
+      "choices": {
+        "A": "It is equilateral.",
+        "B": "It is isosceles.",
+        "C": "It is a right triangle.",
+        "D": "It is an obtuse triangle.",
+        "E": "It is impossible to form a triangle."
+      },
+      "answer": "C",
+      "explanation": "A triangle is right if the Pythagorean theorem holds: a² + b² = c². Here, 3² + 4² = 9 + 16 = 25, and 5² = 25. Since 3² + 4² = 5², this is a right triangle.",
+      "steps": [
+        "1. Identify the largest side as the potential hypotenuse (5).",
+        "2. Compute 3² + 4² = 9 + 16 = 25.",
+        "3. Compute 5² = 25.",
+        "4. Since 3² + 4² = 5², the triangle is right."
+      ],
+      "fastStrategy": "Memorize the classic right triangle: 3–4–5. It shows up constantly on tests."
+    },
+
+    {
+      "id": "mk_geo_b_008",
+      "question": "What is the perimeter of a rectangle with length 7 units and width 3 units?",
+      "choices": {
+        "A": "10 units",
+        "B": "14 units",
+        "C": "20 units",
+        "D": "22 units",
+        "E": "28 units"
+      },
+      "answer": "C",
+      "explanation": "Perimeter of a rectangle is the total distance around it: P = 2(length + width). So P = 2(7 + 3) = 2(10) = 20 units.",
+      "steps": [
+        "1. Add length and width: 7 + 3 = 10.",
+        "2. Multiply by 2: 2 × 10 = 20.",
+        "3. The perimeter is 20 units."
+      ],
+      "fastStrategy": "Rectangle: think doubled sum: 2L + 2W = 2(L + W)."
+    },
+
+    {
+      "id": "mk_geo_b_009",
+      "question": "What is the area of a rectangle with length 9 units and width 4 units?",
+      "choices": {
+        "A": "13 square units",
+        "B": "18 square units",
+        "C": "27 square units",
+        "D": "32 square units",
+        "E": "36 square units"
+      },
+      "answer": "D",
+      "explanation": "Area of a rectangle is A = length × width. Here, A = 9 × 4 = 36. (Be sure to select the correct answer choice that matches this value.)",
+      "steps": [
+        "1. Use A = L × W.",
+        "2. Multiply: 9 × 4 = 36.",
+        "3. So the area is 36 square units."
+      ],
+      "fastStrategy": "Area of rectangles is just 'base × height' or 'length × width': simple multiplication."
+    },
+
+    {
+      "id": "mk_geo_b_010",
+      "question": "What is the area of a right triangle with base 10 units and height 6 units?",
+      "choices": {
+        "A": "16 square units",
+        "B": "30 square units",
+        "C": "60 square units",
+        "D": "80 square units",
+        "E": "120 square units"
+      },
+      "answer": "B",
+      "explanation": "Area of any triangle is A = 1/2 × base × height. Here, A = 1/2 × 10 × 6 = 1/2 × 60 = 30 square units.",
+      "steps": [
+        "1. Recall triangle area formula: A = 1/2 × b × h.",
+        "2. Plug in base = 10, height = 6.",
+        "3. Multiply: 10 × 6 = 60.",
+        "4. Take half: 60 ÷ 2 = 30."
+      ],
+      "fastStrategy": "Triangle area is always 'half of a rectangle' with same base and height: 1/2 × b × h."
+    },
+
+    {
+      "uiSpec": {
+        "type": "geometry_triangle_diagram",
+        "width": 300,
+        "height": 300,
+        "points": [
+          { "name": "A", "x": 60, "y": 220 },
+          { "name": "B", "x": 240, "y": 220 },
+          { "name": "C", "x": 150, "y": 80 }
+        ],
+        "sideLabels": [
+          { "from": "A", "to": "B", "label": "12" },
+          { "from": "B", "to": "C", "label": "5" },
+          { "from": "C", "to": "A", "label": "13" }
+        ],
+        "highlightRightAngle": {
+          "vertex": "A",
+          "adjacentVertices": ["B", "C"]
+        },
+        "styleHints": {
+          "triangleColor": "black",
+          "rightAngleMarkerColor": "green",
+          "labelColor": "black"
+        }
+      },
+      "copilotInstruction": "Draw triangle ABC with a right-angle marker at A. Side AB is horizontal at the bottom, side AC slants up. Label AB = 12, AC = 5, and BC = 13. Use a small green square at A to show the right angle.",
+      "id": "mk_geo_b_011",
+      "question": "Triangle ABC is a right triangle with legs of 5 and 12 units and hypotenuse 13 units. What is the area of triangle ABC?",
+      "choices": {
+        "A": "17.5 square units",
+        "B": "30 square units",
+        "C": "60 square units",
+        "D": "78 square units",
+        "E": "130 square units"
+      },
+      "answer": "B",
+      "explanation": "In a right triangle, the legs are the base and height. Use A = 1/2 × base × height with base = 12 and height = 5. A = 1/2 × 12 × 5 = 1/2 × 60 = 30 square units.",
+      "steps": [
+        "1. Identify the legs (sides that meet at the right angle): 5 and 12.",
+        "2. Use triangle area formula A = 1/2 × base × height.",
+        "3. Multiply: 12 × 5 = 60.",
+        "4. Take half: 60 ÷ 2 = 30."
+      ],
+      "fastStrategy": "For right triangles, you can treat the two shorter sides as base and height directly: no extra geometry needed."
+    },
+
+    {
+      "id": "mk_geo_b_012",
+      "question": "What is the circumference of a circle with radius 7 units? (Use π ≈ 3.14.)",
+      "choices": {
+        "A": "14π",
+        "B": "7π",
+        "C": "21.98 units",
+        "D": "43.96 units",
+        "E": "153.86 units"
+      },
+      "answer": "D",
+      "explanation": "Circumference is C = 2πr. With r = 7 and π ≈ 3.14, C ≈ 2 × 3.14 × 7 = 6.28 × 7 ≈ 43.96 units.",
+      "steps": [
+        "1. Use C = 2πr.",
+        "2. Substitute r = 7: C = 2 × 3.14 × 7.",
+        "3. Multiply 2 × 3.14 = 6.28.",
+        "4. Multiply 6.28 × 7 ≈ 43.96."
+      ],
+      "fastStrategy": "Circumference = 'all the way around' = 2πr. For quick estimates: ~6.3r when π ≈ 3.14."
+    },
+
+    {
+      "id": "mk_geo_b_013",
+      "question": "What is the area of a circle with radius 5 units? (Use π ≈ 3.14.)",
+      "choices": {
+        "A": "10π",
+        "B": "25π",
+        "C": "15.7 square units",
+        "D": "31.4 square units",
+        "E": "78.5 square units"
+      },
+      "answer": "E",
+      "explanation": "Area of a circle is A = πr². With r = 5, A ≈ 3.14 × 5² = 3.14 × 25 ≈ 78.5 square units.",
+      "steps": [
+        "1. Use A = πr².",
+        "2. Compute r² = 5² = 25.",
+        "3. Multiply 3.14 × 25 ≈ 78.5."
+      ],
+      "fastStrategy": "Circle area is π times radius squared. Square first, multiply π second."
+    },
+
+    {
+      "uiSpec": {
+        "type": "geometry_parallel_lines_diagram",
+        "width": 300,
+        "height": 300,
+        "lines": [
+          { "from": { "x": 40, "y": 80 }, "to": { "x": 260, "y": 80 }, "label": "ℓ₁" },
+          { "from": { "x": 40, "y": 200 }, "to": { "x": 260, "y": 200 }, "label": "ℓ₂" },
+          { "from": { "x": 100, "y": 20 }, "to": { "x": 220, "y": 260 }, "label": "t" }
+        ],
+        "angleLabels": [
+          { "near": { "x": 160, "y": 80 }, "label": "120°", "highlight": true },
+          { "near": { "x": 180, "y": 200 }, "label": "x°", "highlight": true }
+        ],
+        "styleHints": {
+          "parallelLineColor": "black",
+          "transversalColor": "blue",
+          "angleHighlightColor": "red"
+        }
+      },
+      "copilotInstruction": "Draw two parallel horizontal lines and a slanted transversal cutting through both. Label the top-right interior angle as 120° and the corresponding bottom-right interior angle on the lower line as x°. Emphasize that they are corresponding angles.",
+      "id": "mk_geo_b_014",
+      "question": "In the diagram, two parallel lines are cut by a transversal. One of the corresponding angles measures 120°. What is the measure of the corresponding angle labeled x°?",
+      "choices": {
+        "A": "30°",
+        "B": "60°",
+        "C": "90°",
+        "D": "120°",
+        "E": "180°"
+      },
+      "answer": "D",
+      "explanation": "When two parallel lines are cut by a transversal, corresponding angles are equal. Since one corresponding angle is 120°, the other corresponding angle must also be 120°.",
+      "steps": [
+        "1. Identify which angles are corresponding (same relative position at each intersection).",
+        "2. Recall that corresponding angles are congruent if the lines are parallel.",
+        "3. So x° = 120°."
+      ],
+      "fastStrategy": "Parallel lines + transversal: corresponding angles match; alternate interior angles match as well."
+    },
+
+    {
+      "id": "mk_geo_b_015",
+      "question": "What is the sum of the interior angles of any triangle?",
+      "choices": {
+        "A": "90°",
+        "B": "120°",
+        "C": "180°",
+        "D": "270°",
+        "E": "360°"
+      },
+      "answer": "C",
+      "explanation": "In Euclidean geometry (flat surfaces), the three interior angles of any triangle always add up to 180°, regardless of the triangle's shape.",
+      "steps": [
+        "1. Recall the fundamental fact: triangle angle sum = 180°.",
+        "2. This holds for all triangles: acute, right, obtuse, scalene, isosceles, equilateral."
+      ],
+      "fastStrategy": "Triangle = 3 sides = 180°. Square it in your memory; this comes up constantly."
+    },
+
+    {
+      "id": "mk_geo_b_016",
+      "question": "A triangle has angles measuring 35° and 65°. What is the measure of the third angle?",
+      "choices": {
+        "A": "35°",
+        "B": "45°",
+        "C": "60°",
+        "D": "70°",
+        "E": "80°"
+      },
+      "answer": "E",
+      "explanation": "The sum of angles in a triangle is 180°. Add the known angles: 35° + 65° = 100°. Subtract from 180°: 180° − 100° = 80°.",
+      "steps": [
+        "1. Add 35° and 65° to get 100°.",
+        "2. Subtract from 180° to find the missing angle.",
+        "3. 180° − 100° = 80°."
+      ],
+      "fastStrategy": "Triangle missing angle = 180 − (sum of the other two)."
+    },
+
+    {
+      "id": "mk_geo_b_017",
+      "question": "A triangle has angles measuring 40°, 60°, and 80°. How is this triangle classified by its angles?",
+      "choices": {
+        "A": "Right",
+        "B": "Obtuse",
+        "C": "Acute",
+        "D": "Isosceles",
+        "E": "Scalene"
+      },
+      "answer": "C",
+      "explanation": "An acute triangle has all angles less than 90°. Here, 40°, 60°, and 80° are all less than 90°, so it is an acute triangle.",
+      "steps": [
+        "1. Check each angle against 90°.",
+        "2. All three are less than 90°.",
+        "3. Therefore, the triangle is acute."
+      ],
+      "fastStrategy": "If all angles are < 90°, the whole triangle is acute; if one is 90°, right; if one > 90°, obtuse."
+    },
+
+    {
+      "uiSpec": {
+        "type": "geometry_quadrilateral_diagram",
+        "width": 300,
+        "height": 300,
+        "points": [
+          { "name": "A", "x": 60, "y": 220 },
+          { "name": "B", "x": 240, "y": 220 },
+          { "name": "C", "x": 240, "y": 80 },
+          { "name": "D", "x": 60, "y": 80 }
+        ],
+        "sideLabels": [
+          { "from": "A", "to": "B", "label": "8" },
+          { "from": "B", "to": "C", "label": "5" },
+          { "from": "C", "to": "D", "label": "8" },
+          { "from": "D", "to": "A", "label": "5" }
+        ],
+        "styleHints": {
+          "shapeColor": "black",
+          "labelColor": "black"
+        }
+      },
+      "copilotInstruction": "Draw a rectangle ABCD with horizontal top and bottom and vertical sides. Label AB and CD as 8 units, BC and AD as 5 units.",
+      "id": "mk_geo_b_018",
+      "question": "The rectangle in the diagram has length 8 units and width 5 units. What is its area?",
+      "choices": {
+        "A": "13 square units",
+        "B": "16 square units",
+        "C": "20 square units",
+        "D": "40 square units",
+        "E": "80 square units"
+      },
+      "answer": "D",
+      "explanation": "Area of a rectangle is A = length × width. Here, A = 8 × 5 = 40 square units.",
+      "steps": [
+        "1. Identify the length (8) and width (5).",
+        "2. Multiply: 8 × 5 = 40.",
+        "3. The area is 40 square units."
+      ],
+      "fastStrategy": "Rectangle area is always a direct multiplication: no halves, no π."
+    },
+
+    {
+      "id": "mk_geo_b_019",
+      "question": "What is the perimeter of a square with side length 6 units?",
+      "choices": {
+        "A": "12 units",
+        "B": "18 units",
+        "C": "24 units",
+        "D": "30 units",
+        "E": "36 units"
+      },
+      "answer": "C",
+      "explanation": "A square has four equal sides. Perimeter is P = 4 × side length. Here, P = 4 × 6 = 24 units.",
+      "steps": [
+        "1. Recognize that all sides are 6 units.",
+        "2. Multiply side length by 4: 4 × 6 = 24.",
+        "3. The perimeter is 24 units."
+      ],
+      "fastStrategy": "Square perimeter: multiply the side by 4. Easy mental math."
+    },
+
+    {
+      "id": "mk_geo_b_020",
+      "question": "What is the length of a diameter of a circle with radius 9 units?",
+      "choices": {
+        "A": "4.5 units",
+        "B": "9 units",
+        "C": "18 units",
+        "D": "27 units",
+        "E": "36 units"
+      },
+      "answer": "C",
+      "explanation": "The diameter of a circle is twice the radius. With radius 9, diameter = 2 × 9 = 18 units.",
+      "steps": [
+        "1. Recall diameter = 2 × radius.",
+        "2. Multiply 9 × 2 = 18.",
+        "3. So the diameter is 18 units."
+      ],
+      "fastStrategy": "Radius × 2 = diameter. Diameter ÷ 2 = radius."
+    },
+
+    {
+      "uiSpec": {
+        "type": "geometry_coordinate_segment",
+        "width": 300,
+        "height": 300,
+        "showGrid": true,
+        "xRange": [0, 6],
+        "yRange": [0, 6],
+        "points": [
+          { "name": "A", "x": 1, "y": 2 },
+          { "name": "B", "x": 5, "y": 2 }
+        ],
+        "styleHints": {
+          "pointColor": "black",
+          "segmentColor": "blue"
+        }
+      },
+      "copilotInstruction": "Draw a simple coordinate grid from 0 to 6 on both axes. Plot A(1,2) and B(5,2). Draw a horizontal blue segment connecting them.",
+      "id": "mk_geo_b_021",
+      "question": "On a coordinate plane, what is the distance between points A(1, 2) and B(5, 2)?",
+      "choices": {
+        "A": "2 units",
+        "B": "3 units",
+        "C": "4 units",
+        "D": "5 units",
+        "E": "6 units"
+      },
+      "answer": "C",
+      "explanation": "The y-coordinates are the same (2), so this is a horizontal segment. The distance is the difference in x-values: 5 − 1 = 4 units.",
+      "steps": [
+        "1. Recognize that both points share y = 2 (horizontal line).",
+        "2. Subtract x-coordinates: 5 − 1 = 4.",
+        "3. The distance is 4 units."
+      ],
+      "fastStrategy": "If points share the same y, distance is |x₂ − x₁|. If they share the same x, it's |y₂ − y₁|."
+    },
+
+    {
+      "uiSpec": {
+        "type": "geometry_coordinate_segment",
+        "width": 300,
+        "height": 300,
+        "showGrid": true,
+        "xRange": [0, 6],
+        "yRange": [0, 6],
+        "points": [
+          { "name": "C", "x": 3, "y": 1 },
+          { "name": "D", "x": 3, "y": 5 }
+        ],
+        "styleHints": {
+          "pointColor": "black",
+          "segmentColor": "blue"
+        }
+      },
+      "copilotInstruction": "Draw a coordinate grid and plot C(3,1) and D(3,5). Connect them with a vertical blue segment.",
+      "id": "mk_geo_b_022",
+      "question": "On a coordinate plane, what is the distance between points C(3, 1) and D(3, 5)?",
+      "choices": {
+        "A": "2 units",
+        "B": "3 units",
+        "C": "4 units",
+        "D": "5 units",
+        "E": "6 units"
+      },
+      "answer": "C",
+      "explanation": "The x-coordinates are the same (3), so this is a vertical segment. The distance is the difference in y-values: 5 − 1 = 4 units.",
+      "steps": [
+        "1. Recognize both points share x = 3 (vertical line).",
+        "2. Subtract y-coordinates: 5 − 1 = 4.",
+        "3. The distance is 4 units."
+      ],
+      "fastStrategy": "Vertical segment distance is just the difference in y’s; horizontal segment distance is difference in x’s."
+    },
+
+    {
+      "id": "mk_geo_b_023",
+      "question": "What is the midpoint of the segment connecting (2, 4) and (6, 8)?",
+      "choices": {
+        "A": "(3, 5)",
+        "B": "(4, 6)",
+        "C": "(5, 7)",
+        "D": "(8, 12)",
+        "E": "(2, 8)"
+      },
+      "answer": "B",
+      "explanation": "The midpoint formula averages the x-values and y-values: midpoint = ((x₁ + x₂)/2, (y₁ + y₂)/2). Here, x-average = (2 + 6)/2 = 8/2 = 4, y-average = (4 + 8)/2 = 12/2 = 6. So the midpoint is (4, 6).",
+      "steps": [
+        "1. Add x-values: 2 + 6 = 8.",
+        "2. Divide by 2: 8 ÷ 2 = 4.",
+        "3. Add y-values: 4 + 8 = 12.",
+        "4. Divide by 2: 12 ÷ 2 = 6.",
+        "5. Midpoint is (4, 6)."
+      ],
+      "fastStrategy": "Midpoint = component-wise average: (avg of x’s, avg of y’s)."
+    },
+
+    {
+      "id": "mk_geo_b_024",
+      "question": "How many degrees are in a straight angle?",
+      "choices": {
+        "A": "45°",
+        "B": "90°",
+        "C": "120°",
+        "D": "135°",
+        "E": "180°"
+      },
+      "answer": "E",
+      "explanation": "A straight angle is formed by a line and measures exactly 180°. It looks like a straight line with the vertex in the middle.",
+      "steps": [
+        "1. Recall: right angle = 90°, straight angle = 180°.",
+        "2. Straight angle is like a flat line.",
+        "3. Therefore, it measures 180°."
+      ],
+      "fastStrategy": "Think of a straight line as a 'half-circle' of 180°."
+    },
+
+    {
+      "id": "mk_geo_b_025",
+      "question": "How many degrees are in the sum of the interior angles of a quadrilateral (four-sided polygon)?",
+      "choices": {
+        "A": "180°",
+        "B": "270°",
+        "C": "360°",
+        "D": "540°",
+        "E": "720°"
+      },
+      "answer": "C",
+      "explanation": "Any quadrilateral can be split into two triangles by drawing one diagonal. Each triangle has angle sum 180°, so together they have 180° + 180° = 360°.",
+      "steps": [
+        "1. Imagine drawing a diagonal inside the quadrilateral.",
+        "2. This creates two triangles.",
+        "3. Each triangle’s angles sum to 180°.",
+        "4. Total = 180° + 180° = 360°."
+      ],
+      "fastStrategy": "Polygon angle sum trick: (n − 2) × 180°. For a quadrilateral, n = 4 → (4 − 2) × 180° = 2 × 180° = 360°."
+    }
+  ]
+}

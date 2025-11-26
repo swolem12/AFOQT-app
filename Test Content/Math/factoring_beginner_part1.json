@@ -1,0 +1,333 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "factoring",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_fact_b_001",
+      "question": "Factor: 6x + 12",
+      "choices": {
+        "A": "6(x + 2)",
+        "B": "3(2x + 12)",
+        "C": "2(3x + 6)",
+        "D": "6(x + 1)",
+        "E": "12(x + 1)"
+      },
+      "answer": "A",
+      "explanation": "Greatest common factor (GCF) is 6: 6x + 12 = 6(x + 2)."
+    },
+    {
+      "id": "mk_fact_b_002",
+      "question": "Factor: 8x - 4",
+      "choices": {
+        "A": "4(2x - 1)",
+        "B": "2(4x - 2)",
+        "C": "8(x - 4)",
+        "D": "4(2x + 1)",
+        "E": "2(4x + 1)"
+      },
+      "answer": "A",
+      "explanation": "GCF is 4: 8x - 4 = 4(2x - 1)."
+    },
+    {
+      "id": "mk_fact_b_003",
+      "question": "Factor: x^2 + 5x + 6",
+      "choices": {
+        "A": "(x + 2)(x + 3)",
+        "B": "(x + 1)(x + 6)",
+        "C": "(x + 6)(x - 1)",
+        "D": "(x + 3)(x - 2)",
+        "E": "(x + 1)(x + 5)"
+      },
+      "answer": "A",
+      "explanation": "Numbers that multiply to 6 and add to 5 are 2 and 3."
+    },
+    {
+      "id": "mk_fact_b_004",
+      "question": "Factor: x^2 + 7x + 12",
+      "choices": {
+        "A": "(x + 3)(x + 4)",
+        "B": "(x + 2)(x + 6)",
+        "C": "(x + 1)(x + 12)",
+        "D": "(x + 4)(x + 5)",
+        "E": "(x + 8)(x + 1)"
+      },
+      "answer": "A",
+      "explanation": "3×4 = 12 and 3 + 4 = 7."
+    },
+    {
+      "id": "mk_fact_b_005",
+      "question": "Factor: x^2 + 3x - 10",
+      "choices": {
+        "A": "(x + 5)(x - 2)",
+        "B": "(x - 5)(x + 2)",
+        "C": "(x + 10)(x - 1)",
+        "D": "(x + 1)(x - 10)",
+        "E": "(x + 4)(x - 3)"
+      },
+      "answer": "A",
+      "explanation": "5×(-2) = -10 and 5 + (-2) = 3."
+    },
+    {
+      "id": "mk_fact_b_006",
+      "question": "Factor: x^2 - x - 6",
+      "choices": {
+        "A": "(x - 3)(x + 2)",
+        "B": "(x + 3)(x - 2)",
+        "C": "(x - 2)(x - 3)",
+        "D": "(x + 6)(x - 1)",
+        "E": "(x + 1)(x - 6)"
+      },
+      "answer": "A",
+      "explanation": "Numbers: -3 and 2 → product -6, sum -1."
+    },
+    {
+      "id": "mk_fact_b_007",
+      "question": "Factor: x^2 + 4x + 3",
+      "choices": {
+        "A": "(x + 1)(x + 3)",
+        "B": "(x + 2)(x + 2)",
+        "C": "(x + 3)(x + 4)",
+        "D": "(x + 1)(x + 4)",
+        "E": "(x + 3)(x - 1)"
+      },
+      "answer": "A",
+      "explanation": "1×3 = 3 and 1 + 3 = 4."
+    },
+    {
+      "id": "mk_fact_b_008",
+      "question": "Factor: x^2 - 9",
+      "choices": {
+        "A": "(x - 3)(x + 3)",
+        "B": "(x - 9)(x + 1)",
+        "C": "(x - 1)(x + 9)",
+        "D": "(x - 3)^2",
+        "E": "(x + 3)^2"
+      },
+      "answer": "A",
+      "explanation": "Difference of squares: x^2 - 3^2 = (x - 3)(x + 3)."
+    },
+    {
+      "id": "mk_fact_b_009",
+      "question": "Factor: 5x + 15",
+      "choices": {
+        "A": "5(x + 3)",
+        "B": "5(x + 15)",
+        "C": "10(x + 1.5)",
+        "D": "3(5x + 5)",
+        "E": "x(5 + 15)"
+      },
+      "answer": "A",
+      "explanation": "GCF is 5: 5(x + 3)."
+    },
+    {
+      "id": "mk_fact_b_010",
+      "question": "Factor: 4x^2 + 4x",
+      "choices": {
+        "A": "4x(x + 1)",
+        "B": "4x(x + 4)",
+        "C": "2x(2x + 2)",
+        "D": "x(4x + 4)",
+        "E": "2x(2x + 1)"
+      },
+      "answer": "A",
+      "explanation": "GCF is 4x: 4x(x + 1)."
+    },
+    {
+      "id": "mk_fact_b_011",
+      "question": "Factor: x^2 + 8x + 15",
+      "choices": {
+        "A": "(x + 3)(x + 5)",
+        "B": "(x + 1)(x + 15)",
+        "C": "(x + 5)(x + 8)",
+        "D": "(x + 2)(x + 7)",
+        "E": "(x + 4)(x + 4)"
+      },
+      "answer": "A",
+      "explanation": "3×5 = 15 and 3 + 5 = 8."
+    },
+    {
+      "id": "mk_fact_b_012",
+      "question": "Factor: x^2 - 4x + 3",
+      "choices": {
+        "A": "(x - 1)(x - 3)",
+        "B": "(x - 3)(x + 1)",
+        "C": "(x + 1)(x + 3)",
+        "D": "(x - 2)(x - 2)",
+        "E": "(x - 1)(x - 4)"
+      },
+      "answer": "A",
+      "explanation": "Numbers: -1 and -3 → product 3, sum -4."
+    },
+    {
+      "id": "mk_fact_b_013",
+      "question": "Factor: 3x + 21",
+      "choices": {
+        "A": "3(x + 7)",
+        "B": "7(3x + 3)",
+        "C": "3(x + 21)",
+        "D": "21(x + 3)",
+        "E": "3(x + 6)"
+      },
+      "answer": "A",
+      "explanation": "GCF is 3: 3(x + 7)."
+    },
+    {
+      "id": "mk_fact_b_014",
+      "question": "Factor: 9x - 6",
+      "choices": {
+        "A": "3(3x - 2)",
+        "B": "9(x - 6)",
+        "C": "6(1.5x - 1)",
+        "D": "3(3x - 6)",
+        "E": "9(x - 2)"
+      },
+      "answer": "A",
+      "explanation": "GCF is 3: 3(3x - 2)."
+    },
+    {
+      "id": "mk_fact_b_015",
+      "question": "Factor: x^2 - 5x + 6",
+      "choices": {
+        "A": "(x - 2)(x - 3)",
+        "B": "(x - 1)(x - 6)",
+        "C": "(x + 2)(x - 3)",
+        "D": "(x - 2)(x + 3)",
+        "E": "(x + 1)(x + 6)"
+      },
+      "answer": "A",
+      "explanation": "-2×-3 = 6 and -2 + -3 = -5."
+    },
+    {
+      "id": "mk_fact_b_016",
+      "question": "Factor: x^2 + 2x - 8",
+      "choices": {
+        "A": "(x + 4)(x - 2)",
+        "B": "(x + 2)(x - 4)",
+        "C": "(x - 4)(x - 2)",
+        "D": "(x + 1)(x - 8)",
+        "E": "(x + 8)(x - 1)"
+      },
+      "answer": "A",
+      "explanation": "4×(-2) = -8 and 4 + (-2) = 2."
+    },
+    {
+      "id": "mk_fact_b_017",
+      "question": "Factor: x^2 - 16",
+      "choices": {
+        "A": "(x - 4)(x + 4)",
+        "B": "(x - 8)(x + 2)",
+        "C": "(x - 16)(x + 1)",
+        "D": "(x - 4)^2",
+        "E": "(x + 4)^2"
+      },
+      "answer": "A",
+      "explanation": "Difference of squares: x^2 - 4^2."
+    },
+    {
+      "id": "mk_fact_b_018",
+      "question": "Factor: 2x^2 + 4x",
+      "choices": {
+        "A": "2x(x + 2)",
+        "B": "2x(x + 4)",
+        "C": "4x(x + 2)",
+        "D": "x(2x + 4)",
+        "E": "2(x^2 + 4x)"
+      },
+      "answer": "A",
+      "explanation": "GCF is 2x: 2x(x + 2)."
+    },
+    {
+      "id": "mk_fact_b_019",
+      "question": "Factor: x^2 + x - 6",
+      "choices": {
+        "A": "(x + 3)(x - 2)",
+        "B": "(x - 3)(x + 2)",
+        "C": "(x + 6)(x - 1)",
+        "D": "(x + 2)(x - 4)",
+        "E": "(x + 1)(x - 6)"
+      },
+      "answer": "A",
+      "explanation": "3×(-2) = -6 and 3 + (-2) = 1."
+    },
+    {
+      "id": "mk_fact_b_020",
+      "question": "Factor: 12x + 18",
+      "choices": {
+        "A": "6(2x + 3)",
+        "B": "3(4x + 6)",
+        "C": "2(6x + 9)",
+        "D": "12(x + 18)",
+        "E": "9(2x + 2)"
+      },
+      "answer": "A",
+      "explanation": "GCF is 6: 12x + 18 = 6(2x + 3)."
+    },
+    {
+      "id": "mk_fact_b_021",
+      "question": "Factor: x^2 + 6x + 9",
+      "choices": {
+        "A": "(x + 3)(x + 3)",
+        "B": "(x + 1)(x + 9)",
+        "C": "(x + 2)(x + 4)",
+        "D": "(x + 9)(x - 3)",
+        "E": "(x + 6)(x + 1)"
+      },
+      "answer": "A",
+      "explanation": "Perfect square trinomial: (x + 3)^2."
+    },
+    {
+      "id": "mk_fact_b_022",
+      "question": "Factor: x^2 - 6x + 9",
+      "choices": {
+        "A": "(x - 3)(x - 3)",
+        "B": "(x - 1)(x - 9)",
+        "C": "(x - 2)(x - 4)",
+        "D": "(x - 9)(x + 3)",
+        "E": "(x - 6)(x + 1)"
+      },
+      "answer": "A",
+      "explanation": "Perfect square trinomial: (x - 3)^2."
+    },
+    {
+      "id": "mk_fact_b_023",
+      "question": "Factor: 15x - 5",
+      "choices": {
+        "A": "5(3x - 1)",
+        "B": "5(3x - 5)",
+        "C": "3(5x - 1)",
+        "D": "5(15x - 1)",
+        "E": "10(1.5x - 0.5)"
+      },
+      "answer": "A",
+      "explanation": "GCF is 5: 5(3x - 1)."
+    },
+    {
+      "id": "mk_fact_b_024",
+      "question": "Factor: x^2 + 10x + 16",
+      "choices": {
+        "A": "(x + 2)(x + 8)",
+        "B": "(x + 4)(x + 4)",
+        "C": "(x + 1)(x + 16)",
+        "D": "(x + 3)(x + 7)",
+        "E": "(x + 8)(x - 2)"
+      },
+      "answer": "A",
+      "explanation": "2×8 = 16 and 2 + 8 = 10."
+    },
+    {
+      "id": "mk_fact_b_025",
+      "question": "Factor: x^2 - 25",
+      "choices": {
+        "A": "(x - 5)(x + 5)",
+        "B": "(x - 25)(x + 1)",
+        "C": "(x - 5)^2",
+        "D": "(x + 5)^2",
+        "E": "(x - 1)(x + 25)"
+      },
+      "answer": "A",
+      "explanation": "Difference of squares: x^2 - 5^2."
+    }
+  ]
+}

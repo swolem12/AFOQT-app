@@ -1,0 +1,598 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "graphing_linear_functions",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [-5, 5],
+        "yRange": [-5, 5],
+        "line": {
+          "point1": { "x": -2, "y": -3 },
+          "point2": { "x": 2, "y": 5 }
+        },
+        "showGrid": true,
+        "showAxes": true
+      },
+      "copilotInstruction": "Render a 300x300 coordinate plane with light gray grid lines from -5 to 5 on both axes and darker x and y axes through the center. Draw a straight line through the points (-2, -3) and (2, 5). Make the line clearly pass through both points.",
+      "id": "mk_glf_b_001",
+      "question": "Which equation best matches the line shown on the coordinate plane?",
+      "choices": {
+        "A": "y = 2x + 1",
+        "B": "y = x + 1",
+        "C": "y = 2x - 1",
+        "D": "y = -2x + 1",
+        "E": "y = -x + 3"
+      },
+      "answer": "A",
+      "explanation": "Check if the line matches y = 2x + 1. At x = -2, y = 2(-2) + 1 = -4 + 1 = -3. At x = 2, y = 2(2) + 1 = 4 + 1 = 5. The line goes through (-2, -3) and (2, 5), so y = 2x + 1 is the correct equation.",
+      "steps": [
+        "1. Use the fact that a line is determined by its slope and intercept.",
+        "2. Test the candidate equation y = 2x + 1 with the given points.",
+        "3. Substitute x = -2: y = 2(-2) + 1 = -3, which matches.",
+        "4. Substitute x = 2: y = 2(2) + 1 = 5, which also matches.",
+        "5. Since the line passes through these points, y = 2x + 1 is correct."
+      ],
+      "fastStrategy": "When matching a line to an equation, plug one or two visible points into the equation instead of trying to eyeball the slope perfectly."
+    },
+
+    {
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [-5, 5],
+        "yRange": [-5, 5],
+        "line": {
+          "point1": { "x": 0, "y": 2 },
+          "point2": { "x": 2, "y": 0 }
+        },
+        "showGrid": true,
+        "showAxes": true
+      },
+      "copilotInstruction": "Render the same 300x300 coordinate grid. Draw a line through (0, 2) and (2, 0). Clearly show that the line crosses the y-axis at 2 and the x-axis at 0.",
+      "id": "mk_glf_b_002",
+      "question": "Which equation represents the line shown on the coordinate plane?",
+      "choices": {
+        "A": "y = -x + 2",
+        "B": "y = x + 2",
+        "C": "y = -2x + 2",
+        "D": "y = x - 2",
+        "E": "y = 2x - 2"
+      },
+      "answer": "A",
+      "explanation": "The line crosses the y-axis at (0, 2), so the y-intercept is 2. It also passes through (2, 0). A line with slope -1 and intercept 2 has equation y = -x + 2, which matches both points.",
+      "steps": [
+        "1. Read the y-intercept from the graph: the line crosses the y-axis at y = 2.",
+        "2. Notice another point on the line: (2, 0).",
+        "3. Compute slope: (0 - 2) / (2 - 0) = -2/2 = -1.",
+        "4. The equation with slope -1 and y-intercept 2 is y = -x + 2."
+      ],
+      "fastStrategy": "Grab the y-intercept from where the line hits the y-axis, then estimate the slope from an easy second point."
+    },
+
+    {
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [-5, 5],
+        "yRange": [-5, 5],
+        "line": {
+          "point1": { "x": -4, "y": 3 },
+          "point2": { "x": 4, "y": 3 }
+        },
+        "showGrid": true,
+        "showAxes": true
+      },
+      "copilotInstruction": "Render the 300x300 grid. Draw a horizontal line at y = 3 from x = -4 to x = 4.",
+      "id": "mk_glf_b_003",
+      "question": "What is the equation of the horizontal line shown on the coordinate plane?",
+      "choices": {
+        "A": "y = 3",
+        "B": "x = 3",
+        "C": "y = -3",
+        "D": "x = -3",
+        "E": "y = 0"
+      },
+      "answer": "A",
+      "explanation": "A horizontal line has the form y = constant. This line is at a height of 3 on the y-axis, so the equation is y = 3.",
+      "steps": [
+        "1. Recognize that the line is horizontal and does not change in y.",
+        "2. See that it crosses the y-axis at y = 3.",
+        "3. A horizontal line at height 3 is written y = 3."
+      ],
+      "fastStrategy": "Horizontal line → y = (that constant y-value). Vertical line → x = (constant x-value)."
+    },
+
+    {
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [-5, 5],
+        "yRange": [-5, 5],
+        "line": {
+          "point1": { "x": -1, "y": -4 },
+          "point2": { "x": -1, "y": 4 }
+        },
+        "showGrid": true,
+        "showAxes": true
+      },
+      "copilotInstruction": "Render the 300x300 grid and draw a vertical line at x = -1 from y = -4 to y = 4.",
+      "id": "mk_glf_b_004",
+      "question": "What is the equation of the vertical line shown on the coordinate plane?",
+      "choices": {
+        "A": "y = -1",
+        "B": "x = -1",
+        "C": "y = 1",
+        "D": "x = 1",
+        "E": "y = 0"
+      },
+      "answer": "B",
+      "explanation": "A vertical line has the form x = constant. This line is located at x = -1 for all y, so its equation is x = -1.",
+      "steps": [
+        "1. Observe that the line is vertical: x does not change.",
+        "2. See that every point on the line has x = -1.",
+        "3. Therefore, the equation is x = -1."
+      ],
+      "fastStrategy": "Vertical line → x = constant. Horizontal line → y = constant. Memorize that mapping."
+    },
+
+    {
+      "id": "mk_glf_b_005",
+      "question": "In the equation y = 2x - 3, what is the y-intercept of the line?",
+      "choices": {
+        "A": "-3",
+        "B": "2",
+        "C": "3",
+        "D": "-2",
+        "E": "0"
+      },
+      "answer": "A",
+      "explanation": "In slope-intercept form y = mx + b, b is the y-intercept. Here, b = -3, so the line crosses the y-axis at (0, -3).",
+      "steps": [
+        "1. Recognize that y = 2x - 3 is in the form y = mx + b.",
+        "2. Identify b = -3.",
+        "3. This is the y-intercept: the point where x = 0 and y = -3."
+      ],
+      "fastStrategy": "In y = mx + b, the constant term is where the graph hits the y-axis."
+    },
+
+    {
+      "id": "mk_glf_b_006",
+      "question": "In the equation y = -x + 4, what is the slope of the line?",
+      "choices": {
+        "A": "1",
+        "B": "-1",
+        "C": "4",
+        "D": "-4",
+        "E": "0"
+      },
+      "answer": "B",
+      "explanation": "In y = mx + b, m is the slope. Here, the coefficient of x is -1, so the slope is -1.",
+      "steps": [
+        "1. Compare the equation to y = mx + b.",
+        "2. See that m = -1.",
+        "3. Therefore, slope = -1."
+      ],
+      "fastStrategy": "Always grab the coefficient of x (including its sign) to get the slope quickly."
+    },
+
+    {
+      "id": "mk_glf_b_007",
+      "question": "Which equation represents a line with slope 3 and y-intercept -2?",
+      "choices": {
+        "A": "y = 3x + 2",
+        "B": "y = -3x - 2",
+        "C": "y = 3x - 2",
+        "D": "y = -2x + 3",
+        "E": "y = 2x - 3"
+      },
+      "answer": "C",
+      "explanation": "A line with slope m and y-intercept b has the form y = mx + b. Substituting m = 3 and b = -2 gives y = 3x - 2.",
+      "steps": [
+        "1. Recall the slope-intercept form y = mx + b.",
+        "2. Plug in m = 3 to get y = 3x + b.",
+        "3. Plug in b = -2 to get y = 3x - 2.",
+        "4. Match this to choice C."
+      ],
+      "fastStrategy": "Use y = mx + b like a template: plug in slope for m and y-intercept for b."
+    },
+
+    {
+      "id": "mk_glf_b_008",
+      "question": "A line has equation y = 0.5x + 1. What is the slope of this line?",
+      "choices": {
+        "A": "0.5",
+        "B": "1",
+        "C": "2",
+        "D": "-0.5",
+        "E": "-1"
+      },
+      "answer": "A",
+      "explanation": "In slope-intercept form, the coefficient of x is the slope. Here, the coefficient is 0.5, so the slope is 0.5.",
+      "steps": [
+        "1. Compare y = 0.5x + 1 with y = mx + b.",
+        "2. Identify m = 0.5.",
+        "3. Therefore, the slope is 0.5."
+      ],
+      "fastStrategy": "Decimal or fraction, it doesn’t matter; the coefficient of x is always the slope."
+    },
+
+    {
+      "id": "mk_glf_b_009",
+      "question": "A line has slope -2 and y-intercept 3. What is its equation in slope-intercept form?",
+      "choices": {
+        "A": "y = 2x + 3",
+        "B": "y = -2x + 3",
+        "C": "y = -2x - 3",
+        "D": "y = 3x - 2",
+        "E": "y = 3x + 2"
+      },
+      "answer": "B",
+      "explanation": "Using y = mx + b, with m = -2 and b = 3, the equation is y = -2x + 3.",
+      "steps": [
+        "1. Start with y = mx + b.",
+        "2. Substitute m = -2 to get y = -2x + b.",
+        "3. Substitute b = 3 to get y = -2x + 3."
+      ],
+      "fastStrategy": "Mentally map 'slope m, y-intercept b' straight into y = mx + b without overthinking."
+    },
+
+    {
+      "id": "mk_glf_b_010",
+      "question": "Which of the following lines is horizontal?",
+      "choices": {
+        "A": "y = 5",
+        "B": "x = 5",
+        "C": "y = 2x",
+        "D": "y = -x + 1",
+        "E": "x = -3"
+      },
+      "answer": "A",
+      "explanation": "A horizontal line has the form y = constant. The equation y = 5 fits this pattern, so it is horizontal.",
+      "steps": [
+        "1. Recall that horizontal lines are written y = constant.",
+        "2. Identify y = 5 as this form.",
+        "3. Therefore, y = 5 is a horizontal line."
+      ],
+      "fastStrategy": "Quick test: if the equation has only y = (number), it’s horizontal. If it has only x = (number), it’s vertical."
+    },
+
+    {
+      "id": "mk_glf_b_011",
+      "question": "Which of the following lines is vertical?",
+      "choices": {
+        "A": "y = 3x",
+        "B": "y = -2",
+        "C": "x = -4",
+        "D": "y = x + 4",
+        "E": "y = 0"
+      },
+      "answer": "C",
+      "explanation": "Vertical lines have the form x = constant. The equation x = -4 is a vertical line.",
+      "steps": [
+        "1. Recall that vertical lines are written x = constant.",
+        "2. Identify x = -4 as this form.",
+        "3. Therefore, x = -4 is a vertical line."
+      ],
+      "fastStrategy": "Scan for 'x = something' to instantly spot vertical lines (undefined slope)."
+    },
+
+    {
+      "id": "mk_glf_b_012",
+      "question": "What is the y-intercept of the line given by y = -3x + 7?",
+      "choices": {
+        "A": "7",
+        "B": "-3",
+        "C": "3",
+        "D": "-7",
+        "E": "0"
+      },
+      "answer": "A",
+      "explanation": "In y = mx + b, the y-intercept is b. Here, b = 7, so the line crosses the y-axis at (0, 7).",
+      "steps": [
+        "1. Compare y = -3x + 7 to y = mx + b.",
+        "2. Recognize b = 7.",
+        "3. The y-intercept is 7."
+      ],
+      "fastStrategy": "Don’t overthink: for y = mx + b, the standalone constant is the y-intercept."
+    },
+
+    {
+      "id": "mk_glf_b_013",
+      "question": "Which equation represents a line with slope 0 and y-intercept -4?",
+      "choices": {
+        "A": "y = -4x",
+        "B": "y = -4",
+        "C": "x = -4",
+        "D": "y = 4",
+        "E": "x = 4"
+      },
+      "answer": "B",
+      "explanation": "Slope 0 means the coefficient of x is 0, so the equation has the form y = constant. With y-intercept -4, the equation is y = -4.",
+      "steps": [
+        "1. Recall that slope 0 lines are written y = constant.",
+        "2. The y-intercept is -4, so the constant must be -4.",
+        "3. Therefore, the equation is y = -4."
+      ],
+      "fastStrategy": "Slope 0 + given y-intercept → y = (that intercept)."
+    },
+
+    {
+      "id": "mk_glf_b_014",
+      "question": "A line has slope 1 and y-intercept 2. Which equation represents this line?",
+      "choices": {
+        "A": "y = x + 2",
+        "B": "y = x - 2",
+        "C": "y = -x + 2",
+        "D": "y = 2x + 1",
+        "E": "y = -x - 2"
+      },
+      "answer": "A",
+      "explanation": "Slope 1 and y-intercept 2 in y = mx + b form gives y = 1x + 2, or simply y = x + 2.",
+      "steps": [
+        "1. Start from y = mx + b.",
+        "2. Plug in m = 1 and b = 2.",
+        "3. Get y = x + 2."
+      ],
+      "fastStrategy": "When slope is 1, the equation is y = x + b; just drop the 1."
+    },
+
+    {
+      "id": "mk_glf_b_015",
+      "question": "A line passes through (0, -1) and (2, 3). What is the slope of this line?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "-2",
+        "D": "3",
+        "E": "4"
+      },
+      "answer": "B",
+      "explanation": "Using the slope formula, rise = 3 - (-1) = 4 and run = 2 - 0 = 2. So slope = 4/2 = 2.",
+      "steps": [
+        "1. Label points: (x1, y1) = (0, -1), (x2, y2) = (2, 3).",
+        "2. Compute rise: 3 - (-1) = 4.",
+        "3. Compute run: 2 - 0 = 2.",
+        "4. Divide: 4/2 = 2."
+      ],
+      "fastStrategy": "Watch for double negatives: subtracting a negative becomes addition."
+    },
+
+    {
+      "id": "mk_glf_b_016",
+      "question": "A line passes through (0, -1) and (2, 3). What is its equation in slope-intercept form?",
+      "choices": {
+        "A": "y = 2x - 1",
+        "B": "y = 2x + 1",
+        "C": "y = x + 1",
+        "D": "y = -2x - 1",
+        "E": "y = -x - 1"
+      },
+      "answer": "A",
+      "explanation": "From the previous question, the slope is 2. The point (0, -1) is on the line, so the y-intercept is -1. Plugging into y = mx + b gives y = 2x - 1.",
+      "steps": [
+        "1. Use the slope found earlier: m = 2.",
+        "2. Recognize that (0, -1) means the y-intercept is -1.",
+        "3. Substitute m = 2 and b = -1 into y = mx + b.",
+        "4. Get y = 2x - 1."
+      ],
+      "fastStrategy": "If you already know the slope and a point with x = 0, you instantly know b."
+    },
+
+    {
+      "id": "mk_glf_b_017",
+      "question": "Which linear equation has a graph that passes through the origin (0, 0)?",
+      "choices": {
+        "A": "y = 2x + 1",
+        "B": "y = -x + 3",
+        "C": "y = 3x",
+        "D": "y = x + 4",
+        "E": "y = -2x + 5"
+      },
+      "answer": "C",
+      "explanation": "A line passing through the origin has y-intercept 0. In slope-intercept form, that means b = 0, so the equation is y = mx. Only y = 3x has no added constant term.",
+      "steps": [
+        "1. Recall that passing through the origin means (0, 0) is on the line.",
+        "2. In y = mx + b, this requires b = 0.",
+        "3. Among the choices, only y = 3x has b = 0."
+      ],
+      "fastStrategy": "No constant term (just y = mx) means the line goes through the origin."
+    },
+
+    {
+      "id": "mk_glf_b_018",
+      "question": "A line has the equation y = -1/2 x + 4. What is the y-intercept of this line?",
+      "choices": {
+        "A": "-1/2",
+        "B": "4",
+        "C": "-4",
+        "D": "1/2",
+        "E": "2"
+      },
+      "answer": "B",
+      "explanation": "In y = mx + b, b is the y-intercept. Here, b = 4, so the y-intercept is 4.",
+      "steps": [
+        "1. Compare y = -1/2 x + 4 with y = mx + b.",
+        "2. Identify b = 4.",
+        "3. The line crosses the y-axis at (0, 4)."
+      ],
+      "fastStrategy": "Even with fractions and negatives, the y-intercept is still just the constant term."
+    },
+
+    {
+      "id": "mk_glf_b_019",
+      "question": "A line is described by the phrase: 'y increases by 2 when x increases by 1.' What is the slope of this line?",
+      "choices": {
+        "A": "1/2",
+        "B": "2",
+        "C": "-2",
+        "D": "-1/2",
+        "E": "0"
+      },
+      "answer": "B",
+      "explanation": "Slope is rise/run. The description says rise = 2 for run = 1, so slope = 2/1 = 2.",
+      "steps": [
+        "1. Translate the wording into rise and run.",
+        "2. 'y increases by 2' → rise = 2.",
+        "3. 'x increases by 1' → run = 1.",
+        "4. Slope = 2/1 = 2."
+      ],
+      "fastStrategy": "Always convert words into 'rise/run' fractions to get the slope."
+    },
+
+    {
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [-5, 5],
+        "yRange": [-5, 5],
+        "line": {
+          "point1": { "x": 0, "y": -2 },
+          "point2": { "x": 2, "y": 0 }
+        },
+        "showGrid": true,
+        "showAxes": true
+      },
+      "copilotInstruction": "Render the 300x300 grid. Draw a line through (0, -2) and (2, 0). Make the intercepts clearly visible on the axes.",
+      "id": "mk_glf_b_020",
+      "question": "From the graph, what is the y-intercept of the line?",
+      "choices": {
+        "A": "-2",
+        "B": "0",
+        "C": "2",
+        "D": "-1",
+        "E": "1"
+      },
+      "answer": "A",
+      "explanation": "The y-intercept is where the line crosses the y-axis (x = 0). From the graph, the line crosses at (0, -2), so the y-intercept is -2.",
+      "steps": [
+        "1. Locate the point where the line meets the y-axis.",
+        "2. Note the y-coordinate of that point.",
+        "3. The point is (0, -2), so the y-intercept is -2."
+      ],
+      "fastStrategy": "For intercept questions, immediately look where the line hits the axes instead of any interior points."
+    },
+
+    {
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [-5, 5],
+        "yRange": [-5, 5],
+        "line": {
+          "point1": { "x": -3, "y": 0 },
+          "point2": { "x": 3, "y": 2 }
+        },
+        "showGrid": true,
+        "showAxes": true
+      },
+      "copilotInstruction": "Render the 300x300 grid and draw a line through (-3, 0) and (3, 2).",
+      "id": "mk_glf_b_021",
+      "question": "From the graph, what is the x-intercept of the line?",
+      "choices": {
+        "A": "-3",
+        "B": "0",
+        "C": "2",
+        "D": "3",
+        "E": "-2"
+      },
+      "answer": "A",
+      "explanation": "The x-intercept is where the line crosses the x-axis (y = 0). From the graph, the line crosses at (-3, 0), so the x-intercept is -3.",
+      "steps": [
+        "1. Find where the line crosses the x-axis.",
+        "2. At that point, y = 0.",
+        "3. The point is (-3, 0), so the x-intercept is -3."
+      ],
+      "fastStrategy": "x-intercept → look for y = 0 on the line; y-intercept → look for x = 0."
+    },
+
+    {
+      "id": "mk_glf_b_022",
+      "question": "A line has equation y = x - 4. What is the y-intercept of this line?",
+      "choices": {
+        "A": "-4",
+        "B": "4",
+        "C": "1",
+        "D": "-1",
+        "E": "0"
+      },
+      "answer": "A",
+      "explanation": "In y = mx + b, the y-intercept is b. Here, b = -4, so the line crosses the y-axis at (0, -4).",
+      "steps": [
+        "1. Compare y = x - 4 to y = mx + b.",
+        "2. Notice m = 1 and b = -4.",
+        "3. Therefore, the y-intercept is -4."
+      ],
+      "fastStrategy": "Just read the constant term as the y-intercept; the x part doesn't affect where it crosses the y-axis."
+    },
+
+    {
+      "id": "mk_glf_b_023",
+      "question": "A line passes through the points (1, 2) and (3, 2). Which statement is true about its graph?",
+      "choices": {
+        "A": "It is vertical and passes through x = 2.",
+        "B": "It is horizontal and passes through y = 2.",
+        "C": "It is diagonal with positive slope.",
+        "D": "It is diagonal with negative slope.",
+        "E": "It passes through the origin."
+      },
+      "answer": "B",
+      "explanation": "Both points have y = 2, so the line is horizontal at y = 2.",
+      "steps": [
+        "1. Note that y1 = y2 = 2 for the given points.",
+        "2. This means the line does not change in y; it is horizontal.",
+        "3. The equation is y = 2, so the line passes through y = 2 on the y-axis."
+      ],
+      "fastStrategy": "Same y-value in two points → horizontal line at that y-value."
+    },
+
+    {
+      "id": "mk_glf_b_024",
+      "question": "Which equation describes a line that goes down as you move to the right and crosses the y-axis at 1?",
+      "choices": {
+        "A": "y = x + 1",
+        "B": "y = -x + 1",
+        "C": "y = 2x + 1",
+        "D": "y = -2x - 1",
+        "E": "y = x - 1"
+      },
+      "answer": "B",
+      "explanation": "A line that goes down as you move to the right has a negative slope. Crossing the y-axis at 1 means y-intercept 1. The equation y = -x + 1 has negative slope (-1) and y-intercept 1.",
+      "steps": [
+        "1. Identify that 'goes down to the right' means negative slope.",
+        "2. Identify that 'crosses the y-axis at 1' means y-intercept b = 1.",
+        "3. Among the options, y = -x + 1 is the only equation with slope -1 and intercept 1."
+      ],
+      "fastStrategy": "Combine sign (uphill vs downhill) with intercept info to lock in y = mx + b quickly."
+    },
+
+    {
+      "id": "mk_glf_b_025",
+      "question": "A line has slope 0 and passes through (0, 6). Which equation represents this line?",
+      "choices": {
+        "A": "y = 6",
+        "B": "x = 6",
+        "C": "y = 0x + 6",
+        "D": "y = -6x",
+        "E": "y = -6"
+      },
+      "answer": "A",
+      "explanation": "Slope 0 means the line is horizontal, so the equation is y = constant. Since it passes through (0, 6), the constant is 6, giving y = 6.",
+      "steps": [
+        "1. Recognize that slope 0 means a horizontal line.",
+        "2. A horizontal line through (0, 6) has equation y = 6.",
+        "3. y = 0x + 6 is equivalent to y = 6, but the simplest form is y = 6."
+      ],
+      "fastStrategy": "For slope 0 and a given point (0, b), the line is always y = b."
+    }
+  ]
+}

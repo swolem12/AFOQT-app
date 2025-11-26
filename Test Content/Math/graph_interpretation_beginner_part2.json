@@ -1,0 +1,333 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "graph_interpretation",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_gi_b_026",
+      "question": "If the graph of a line crosses the x-axis at (4, 0), this means:",
+      "choices": {
+        "A": "The y value is always 4",
+        "B": "The slope is 4",
+        "C": "The x-intercept is 4",
+        "D": "The line is vertical",
+        "E": "The slope is 0"
+      },
+      "answer": "C",
+      "explanation": "Crossing x-axis at (4,0) means x-intercept = 4."
+    },
+    {
+      "id": "mk_gi_b_027",
+      "question": "What does a vertical line on a graph represent?",
+      "choices": {
+        "A": "x is constant",
+        "B": "y is constant",
+        "C": "Slope is 1",
+        "D": "Slope is positive",
+        "E": "Slope is negative"
+      },
+      "answer": "A",
+      "explanation": "Vertical lines fix x at a specific value."
+    },
+    {
+      "id": "mk_gi_b_028",
+      "question": "Which quadrant contains points where x < 0 and y > 0?",
+      "choices": {
+        "A": "I",
+        "B": "II",
+        "C": "III",
+        "D": "IV",
+        "E": "Origin"
+      },
+      "answer": "B",
+      "explanation": "Quadrant II = negative x, positive y."
+    },
+    {
+      "id": "mk_gi_b_029",
+      "question": "If the slope of a line is 0, the line is:",
+      "choices": {
+        "A": "Vertical",
+        "B": "Horizontal",
+        "C": "Diagonal",
+        "D": "Undefined",
+        "E": "Random"
+      },
+      "answer": "B",
+      "explanation": "Zero slope = horizontal line."
+    },
+    {
+      "id": "mk_gi_b_030",
+      "question": "If a line increases by 2 units in y for every 1 unit in x, the slope is:",
+      "choices": {
+        "A": "1/2",
+        "B": "-2",
+        "C": "2",
+        "D": "-1/2",
+        "E": "0"
+      },
+      "answer": "C",
+      "explanation": "Slope = rise/run = 2/1 = 2."
+    },
+    {
+      "id": "mk_gi_b_031",
+      "question": "A point at (−3, −4) lies in which quadrant?",
+      "choices": {
+        "A": "I",
+        "B": "II",
+        "C": "III",
+        "D": "IV",
+        "E": "On an axis"
+      },
+      "answer": "C",
+      "explanation": "Both x and y negative = Quadrant III."
+    },
+    {
+      "id": "mk_gi_b_032",
+      "question": "Which point lies on the y-axis?",
+      "choices": {
+        "A": "(0, 5)",
+        "B": "(5, 0)",
+        "C": "(1, 1)",
+        "D": "(−2, 3)",
+        "E": "(3, −2)"
+      },
+      "answer": "A",
+      "explanation": "Points on y-axis always have x=0."
+    },
+    {
+      "id": "mk_gi_b_033",
+      "question": "A line with an undefined slope is:",
+      "choices": {
+        "A": "Horizontal",
+        "B": "Vertical",
+        "C": "Diagonal",
+        "D": "Flat",
+        "E": "Random"
+      },
+      "answer": "B",
+      "explanation": "Undefined slope = vertical line."
+    },
+    {
+      "id": "mk_gi_b_034",
+      "question": "If a bar graph shows bars of equal height, the data is:",
+      "choices": {
+        "A": "Increasing",
+        "B": "Decreasing",
+        "C": "Constant",
+        "D": "Random",
+        "E": "Undefined"
+      },
+      "answer": "C",
+      "explanation": "Equal heights = no change between categories."
+    },
+    {
+      "id": "mk_gi_b_035",
+      "question": "If the y-intercept is −5, where does the line cross the y-axis?",
+      "choices": {
+        "A": "(5, 0)",
+        "B": "(0, −5)",
+        "C": "(-5,0)",
+        "D": "(5,5)",
+        "E": "(0,5)"
+      },
+      "answer": "B",
+      "explanation": "Y-intercept always uses x=0."
+    },
+    {
+      "id": "mk_gi_b_036",
+      "question": "Scatterplot points forming no pattern indicate:",
+      "choices": {
+        "A": "Strong correlation",
+        "B": "Weak or no correlation",
+        "C": "Negative correlation",
+        "D": "Positive correlation",
+        "E": "Constant slope"
+      },
+      "answer": "B",
+      "explanation": "Random dots = no consistent relationship."
+    },
+    {
+      "id": "mk_gi_b_037",
+      "question": "A histogram is best used for:",
+      "choices": {
+        "A": "Percentages",
+        "B": "Frequency ranges",
+        "C": "Causation analysis",
+        "D": "Showing lines of best fit",
+        "E": "Showing categories"
+      },
+      "answer": "B",
+      "explanation": "Histograms show distribution across bins or ranges."
+    },
+    {
+      "id": "mk_gi_b_038",
+      "question": "Two lines intersect at one point. This means:",
+      "choices": {
+        "A": "Parallel lines",
+        "B": "Infinite solutions",
+        "C": "One solution",
+        "D": "No solution",
+        "E": "Vertical slope"
+      },
+      "answer": "C",
+      "explanation": "Single intersection = one solution in systems terms."
+    },
+    {
+      "id": "mk_gi_b_039",
+      "question": "A steep negative slope indicates:",
+      "choices": {
+        "A": "Slow decrease",
+        "B": "Fast decrease",
+        "C": "Fast increase",
+        "D": "Random change",
+        "E": "Constant values"
+      },
+      "answer": "B",
+      "explanation": "Steeper = faster rate of change."
+    },
+    {
+      "id": "mk_gi_b_040",
+      "question": "A line passing through (2, 0) and (0, 2) shows:",
+      "choices": {
+        "A": "Positive slope",
+        "B": "Negative slope",
+        "C": "Undefined slope",
+        "D": "Zero slope",
+        "E": "Vertical line"
+      },
+      "answer": "B",
+      "explanation": "As x increases from 0→2, y decreases from 2→0."
+    },
+    {
+      "id": "mk_gi_b_041",
+      "question": "Which graph is ideal for showing distribution shape?",
+      "choices": {
+        "A": "Pie chart",
+        "B": "Histogram",
+        "C": "Line graph",
+        "D": "Scatterplot",
+        "E": "Bar graph"
+      },
+      "answer": "B",
+      "explanation": "Histograms reveal distribution curves quickly."
+    },
+    {
+      "id": "mk_gi_b_042",
+      "question": "If a graph has a point at (0, 0), what is this point called?",
+      "choices": {
+        "A": "Y-intercept",
+        "B": "X-intercept",
+        "C": "Slope",
+        "D": "Origin",
+        "E": "Midpoint"
+      },
+      "answer": "D",
+      "explanation": "Origin = (0,0)."
+    },
+    {
+      "id": "mk_gi_b_043",
+      "question": "Bars touching in a graph indicate:",
+      "choices": {
+        "A": "Bar graph",
+        "B": "Line graph",
+        "C": "Pie chart",
+        "D": "Histogram",
+        "E": "Scatterplot"
+      },
+      "answer": "D",
+      "explanation": "Histograms have touching bars because ranges are continuous."
+    },
+    {
+      "id": "mk_gi_b_044",
+      "question": "Which graph is best for showing comparison between distinct categories?",
+      "choices": {
+        "A": "Bar graph",
+        "B": "Histogram",
+        "C": "Scatterplot",
+        "D": "Line graph",
+        "E": "Pie chart"
+      },
+      "answer": "A",
+      "explanation": "Bar graphs excel at category comparisons."
+    },
+    {
+      "id": "mk_gi_b_045",
+      "question": "If a dataset has a single large spike, this is likely:",
+      "choices": {
+        "A": "An outlier",
+        "B": "A mean",
+        "C": "A mode",
+        "D": "A median",
+        "E": "A slope"
+      },
+      "answer": "A",
+      "explanation": "One tall bar or point indicates an outlier or anomaly."
+    },
+    {
+      "id": "mk_gi_b_046",
+      "question": "A graph showing variable frequency over ranges is:",
+      "choices": {
+        "A": "Scatterplot",
+        "B": "Pie chart",
+        "C": "Histogram",
+        "D": "Bar graph",
+        "E": "Line graph"
+      },
+      "answer": "C",
+      "explanation": "Histogram groups frequency into bins."
+    },
+    {
+      "id": "mk_gi_b_047",
+      "question": "If all points lie exactly on a line in a scatterplot, correlation is:",
+      "choices": {
+        "A": "None",
+        "B": "Weak",
+        "C": "Perfect",
+        "D": "Inverted",
+        "E": "Random"
+      },
+      "answer": "C",
+      "explanation": "Perfect alignment = perfect correlation."
+    },
+    {
+      "id": "mk_gi_b_048",
+      "question": "A line graph that rises steadily indicates:",
+      "choices": {
+        "A": "Constant increase",
+        "B": "Constant decrease",
+        "C": "Random change",
+        "D": "No change",
+        "E": "Rapid decrease"
+      },
+      "answer": "A",
+      "explanation": "Straight upward = constant rate of growth."
+    },
+    {
+      "id": "mk_gi_b_049",
+      "question": "Which point lies in quadrant IV?",
+      "choices": {
+        "A": "(3, 4)",
+        "B": "(-3, 4)",
+        "C": "(-3, -4)",
+        "D": "(3, -4)",
+        "E": "(0, -4)"
+      },
+      "answer": "D",
+      "explanation": "Quadrant IV = +x, -y."
+    },
+    {
+      "id": "mk_gi_b_050",
+      "question": "A flat line on a time graph means:",
+      "choices": {
+        "A": "Increase over time",
+        "B": "Decrease over time",
+        "C": "No change",
+        "D": "Sudden drop",
+        "E": "Sudden rise"
+      },
+      "answer": "C",
+      "explanation": "Flat = no change in value despite time passing."
+    }
+  ]
+}

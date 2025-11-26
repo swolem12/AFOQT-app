@@ -1,0 +1,232 @@
+{
+  "patchId": "math_patch_index_01",
+  "title": "Math Knowledge Content Index",
+  "description": "Index all AFOQT Math Knowledge JSON files and expose subtopics/difficulty structure for the game engine and Copilot.",
+  "subjects": [
+    {
+      "id": "math_knowledge",
+      "displayName": "AFOQT Math Knowledge",
+      "isAfoqtOfficialSubject": true,
+      "officialTopicsPerPdf": [
+        "word_problems_equation_setup",
+        "absolute_value",
+        "coordinate_geometry",
+        "distributive_foil",
+        "evaluate_expressions",
+        "exponents_roots",
+        "factoring",
+        "fractions",
+        "function_evaluation",
+        "functions",
+        "geometry_basics",
+        "graph_interpretation",
+        "graphing_linear_functions",
+        "inequalities",
+        "linear_equations",
+        "number_sets",
+        "order_of_operations",
+        "polygons_and_angles",
+        "polynomials",
+        "probability",
+        "quadratic_equations",
+        "radicals",
+        "ratio_and_proportion",
+        "rational_expressions",
+        "sequences",
+        "slope",
+        "statistics",
+        "systems_linear",
+        "transformations"
+      ],
+      "mappedGameSubtopics": [
+        {
+          "subtopicId": "word_problems_equation_setup",
+          "description": "Translating word problems into algebraic equations.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "absolute_value",
+          "description": "Understanding and solving problems with absolute value expressions and equations.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "coordinate_geometry",
+          "description": "Points, quadrants, distances, and simple shapes in the coordinate plane.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "distributive_foil",
+          "description": "Using the distributive property and FOIL to expand or simplify expressions.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "evaluate_expressions",
+          "description": "Plugging in values and simplifying expressions with proper order of operations.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced"]
+        },
+        {
+          "subtopicId": "exponents_roots",
+          "description": "Integer exponents, square roots, and basic power rules.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "factoring",
+          "description": "Factoring polynomials and simple quadratic expressions.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "fractions",
+          "description": "Operations with fractions, equivalent forms, and comparisons.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "function_evaluation",
+          "description": "Evaluating functions from rules, tables, or graphs.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "functions",
+          "description": "Recognizing function relationships and basic function notation.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "geometry_basics",
+          "description": "Lines, angles, area, and perimeter basics.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "graph_interpretation",
+          "description": "Reading information from line graphs and charts.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "graphing_linear_functions",
+          "description": "Graphing y = mx + b and interpreting linear graphs.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "inequalities",
+          "description": "Solving and graphing linear inequalities.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "linear_equations",
+          "description": "Solving one- and two-step linear equations.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "number_sets",
+          "description": "Integers, rational numbers, reals, and classification of numbers.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "order_of_operations",
+          "description": "Applying PEMDAS to simplify numeric and algebraic expressions.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "polygons_and_angles",
+          "description": "Interior and exterior angles in polygons, triangle angle facts.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "polynomials",
+          "description": "Adding, subtracting, and simplifying polynomial expressions.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "probability",
+          "description": "Basic probability of simple events and combined events.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "quadratic_equations",
+          "description": "Recognizing and solving simple quadratic equations.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "radicals",
+          "description": "Simplifying radical expressions and converting between radical and exponential form.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "ratio_and_proportion",
+          "description": "Setting up and solving ratio and proportion problems.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "rational_expressions",
+          "description": "Simplifying and evaluating simple rational expressions.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "sequences",
+          "description": "Recognizing arithmetic and simple geometric sequences.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "slope",
+          "description": "Slope as rise over run and interpreting steepness and direction.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "statistics",
+          "description": "Mean, median, mode, range, and reading data displays.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "systems_linear",
+          "description": "Solving simple systems of linear equations.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        },
+        {
+          "subtopicId": "transformations",
+          "description": "Reflections, translations, and rotations in the coordinate plane.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner"]
+        }
+      ]
+    }
+  ],
+  "questionRoutingRules": {
+    "bySubtopicAndDifficulty": {
+      "strategy": "filename_inference",
+      "logicForCopilot": [
+        "Scan the Math Knowledge content directory or zip for all JSON files except math_schema.json.",
+        "Assume filenames follow the pattern `<subtopicId>_<difficulty>_part<index>.json`.",
+        "Infer `subtopicId` and `difficulty` from the filename; normalize difficulty to one of: `beginner`, `advanced`, `expert`.",
+        "Load each file and append all `questions[]` into an in-memory registry keyed as `questions['math_knowledge'][subtopicId][difficulty]`.",
+        "Use `subjects[].mappedGameSubtopics` to validate that `subtopicId` is recognized and mark whether it is an official AFOQT topic.",
+        "Use this registry for study mode, drill mode, and AFOQT-style practice tests for Math Knowledge."
+      ]
+    }
+  }
+}

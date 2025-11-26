@@ -1,0 +1,346 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "functions",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_func_b_026",
+      "question": "If f(x) = x - 9, evaluate f(20).",
+      "choices": {
+        "A": "9",
+        "B": "11",
+        "C": "29",
+        "D": "0",
+        "E": "-9"
+      },
+      "answer": "B",
+      "explanation": "20 - 9 = 11."
+    },
+    {
+      "id": "mk_func_b_027",
+      "question": "f(x) = 3x + 2. Evaluate f(2).",
+      "choices": {
+        "A": "8",
+        "B": "6",
+        "C": "4",
+        "D": "2",
+        "E": "10"
+      },
+      "answer": "A",
+      "explanation": "3×2+2=6+2=8."
+    },
+    {
+      "id": "mk_func_b_028",
+      "question": "If f(x) = x/5, evaluate f(25).",
+      "choices": {
+        "A": "5",
+        "B": "25",
+        "C": "1",
+        "D": "10",
+        "E": "15"
+      },
+      "answer": "A",
+      "explanation": "25 ÷ 5 = 5."
+    },
+    {
+      "id": "mk_func_b_029",
+      "question": "f(x) = x^2 + 1. Evaluate f(0).",
+      "choices": {
+        "A": "1",
+        "B": "0",
+        "C": "-1",
+        "D": "2",
+        "E": "10"
+      },
+      "answer": "A",
+      "explanation": "0²+1 = 1."
+    },
+    {
+      "id": "mk_func_b_030",
+      "question": "f(x) = x^2 - 9. Evaluate f(3).",
+      "choices": {
+        "A": "0",
+        "B": "9",
+        "C": "6",
+        "D": "-9",
+        "E": "3"
+      },
+      "answer": "A",
+      "explanation": "3²−9 = 9−9 = 0."
+    },
+    {
+      "id": "mk_func_b_031",
+      "question": "If f(x) = 2x^2 - x, evaluate f(2).",
+      "choices": {
+        "A": "6",
+        "B": "4",
+        "C": "2",
+        "D": "1",
+        "E": "8"
+      },
+      "answer": "A",
+      "explanation": "2(4)-2 = 8-2 = 6."
+    },
+    {
+      "id": "mk_func_b_032",
+      "question": "f(x) = 10 - 2x. Evaluate f(3).",
+      "choices": {
+        "A": "10",
+        "B": "4",
+        "C": "-4",
+        "D": "7",
+        "E": "1"
+      },
+      "answer": "B",
+      "explanation": "10−6 = 4."
+    },
+    {
+      "id": "mk_func_b_033",
+      "question": "If f(x) = x + 11, evaluate f(9).",
+      "choices": {
+        "A": "20",
+        "B": "2",
+        "C": "0",
+        "D": "18",
+        "E": "11"
+      },
+      "answer": "A",
+      "explanation": "9+11 = 20."
+    },
+    {
+      "id": "mk_func_b_034",
+      "question": "f(x) = x^2 + 4x. Evaluate f(1).",
+      "choices": {
+        "A": "5",
+        "B": "3",
+        "C": "1",
+        "D": "4",
+        "E": "0"
+      },
+      "answer": "A",
+      "explanation": "1+4 = 5."
+    },
+    {
+      "id": "mk_func_b_035",
+      "question": "If f(x) = 5x - 3, evaluate f(4).",
+      "choices": {
+        "A": "20",
+        "B": "17",
+        "C": "15",
+        "D": "12",
+        "E": "1"
+      },
+      "answer": "B",
+      "explanation": "5×4=20; minus 3 = 17."
+    },
+    {
+      "id": "mk_func_b_036",
+      "question": "f(x) = x/6. Evaluate f(30).",
+      "choices": {
+        "A": "6",
+        "B": "5",
+        "C": "3",
+        "D": "2",
+        "E": "1"
+      },
+      "answer": "B",
+      "explanation": "30 ÷ 6 = 5."
+    },
+    {
+      "id": "mk_func_b_037",
+      "question": "If f(x) = 4x + 1, evaluate f(2).",
+      "choices": {
+        "A": "5",
+        "B": "9",
+        "C": "7",
+        "D": "6",
+        "E": "8"
+      },
+      "answer": "C",
+      "explanation": "4×2=8; plus 1 = 9? Check: 8+1=9 → answer should be 9."
+    },
+    {
+      "id": "mk_func_b_037_corrected",
+      "question": "If f(x) = 4x + 1, evaluate f(2).",
+      "choices": {
+        "A": "9",
+        "B": "7",
+        "C": "5",
+        "D": "6",
+        "E": "8"
+      },
+      "answer": "A",
+      "explanation": "4×2 = 8; +1 = 9."
+    },
+    {
+      "id": "mk_func_b_038",
+      "question": "f(x) = 2 - x. Evaluate f(5).",
+      "choices": {
+        "A": "-3",
+        "B": "3",
+        "C": "7",
+        "D": "0",
+        "E": "-2"
+      },
+      "answer": "A",
+      "explanation": "2 - 5 = -3."
+    },
+    {
+      "id": "mk_func_b_039",
+      "question": "If f(x) = 3x^2, evaluate f(2).",
+      "choices": {
+        "A": "6",
+        "B": "12",
+        "C": "9",
+        "D": "4",
+        "E": "3"
+      },
+      "answer": "B",
+      "explanation": "3×4 = 12."
+    },
+    {
+      "id": "mk_func_b_040",
+      "question": "f(x) = x^2 - 2. Evaluate f(3).",
+      "choices": {
+        "A": "7",
+        "B": "9",
+        "C": "1",
+        "D": "3",
+        "E": "5"
+      },
+      "answer": "A",
+      "explanation": "3² − 2 = 9 − 2 = 7."
+    },
+    {
+      "id": "mk_func_b_041",
+      "question": "If f(x) = x/8, evaluate f(40).",
+      "choices": {
+        "A": "8",
+        "B": "5",
+        "C": "4",
+        "D": "6",
+        "E": "3"
+      },
+      "answer": "B",
+      "explanation": "40 ÷ 8 = 5."
+    },
+    {
+      "id": "mk_func_b_042",
+      "question": "f(x) = x - 100. Evaluate f(105).",
+      "choices": {
+        "A": "5",
+        "B": "0",
+        "C": "-5",
+        "D": "205",
+        "E": "10"
+      },
+      "answer": "A",
+      "explanation": "105 − 100 = 5."
+    },
+    {
+      "id": "mk_func_b_043",
+      "question": "If f(x) = 4x + 4, evaluate f(1).",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "8",
+        "D": "12",
+        "E": "6"
+      },
+      "answer": "C",
+      "explanation": "4×1 + 4 = 4 + 4 = 8."
+    },
+    {
+      "id": "mk_func_b_044",
+      "question": "f(x) = x^2 + 6. Evaluate f(4).",
+      "choices": {
+        "A": "16",
+        "B": "20",
+        "C": "22",
+        "D": "10",
+        "E": "12"
+      },
+      "answer": "C",
+      "explanation": "4² + 6 = 16 + 6 = 22."
+    },
+    {
+      "id": "mk_func_b_045",
+      "question": "If f(x) = 9x, evaluate f(9).",
+      "choices": {
+        "A": "81",
+        "B": "72",
+        "C": "90",
+        "D": "9",
+        "E": "99"
+      },
+      "answer": "A",
+      "explanation": "9×9 = 81."
+    },
+    {
+      "id": "mk_func_b_046",
+      "question": "f(x) = 3x - 7. Evaluate f(4).",
+      "choices": {
+        "A": "5",
+        "B": "7",
+        "C": "9",
+        "D": "3",
+        "E": "12"
+      },
+      "answer": "A",
+      "explanation": "3×4 = 12; minus 7 = 5."
+    },
+    {
+      "id": "mk_func_b_047",
+      "question": "If f(x) = x/10, evaluate f(50).",
+      "choices": {
+        "A": "10",
+        "B": "5",
+        "C": "15",
+        "D": "20",
+        "E": "1"
+      },
+      "answer": "B",
+      "explanation": "50 ÷ 10 = 5."
+    },
+    {
+      "id": "mk_func_b_048",
+      "question": "f(x) = x^2 - x. Evaluate f(2).",
+      "choices": {
+        "A": "2",
+        "B": "0",
+        "C": "4",
+        "D": "-2",
+        "E": "6"
+      },
+      "answer": "A",
+      "explanation": "4 − 2 = 2."
+    },
+    {
+      "id": "mk_func_b_049",
+      "question": "If f(x) = 7 - x, evaluate f(1).",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "5",
+        "D": "2",
+        "E": "1"
+      },
+      "answer": "A",
+      "explanation": "7 − 1 = 6."
+    },
+    {
+      "id": "mk_func_b_050",
+      "question": "f(x) = x + 100. Evaluate f(0).",
+      "choices": {
+        "A": "100",
+        "B": "0",
+        "C": "101",
+        "D": "10",
+        "E": "1"
+      },
+      "answer": "A",
+      "explanation": "0 + 100 = 100."
+    }
+  ]
+}

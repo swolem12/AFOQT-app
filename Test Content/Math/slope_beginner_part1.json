@@ -1,0 +1,578 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "slope_and_rate_of_change",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [-5, 5],
+        "yRange": [-5, 5],
+        "line": {
+          "point1": { "x": -4, "y": -2 },
+          "point2": { "x": 4, "y": 3 }
+        },
+        "showGrid": true,
+        "showAxes": true
+      },
+      "copilotInstruction": "Render a 300x300 coordinate plane with light gray grid lines from -5 to 5 on both axes. Draw darker x and y axes through the center. Plot and connect (-4, -2) and (4, 3) with a straight line so the line clearly rises from left to right.",
+      "id": "mk_slope_b_001",
+      "question": "Based on the line shown on the coordinate plane, what type of slope does the line have?",
+      "choices": {
+        "A": "Positive slope",
+        "B": "Negative slope",
+        "C": "Zero slope",
+        "D": "Undefined slope",
+        "E": "No slope"
+      },
+      "answer": "A",
+      "explanation": "When you read a graph from left to right, this line goes upward: the left point is lower and the right point is higher. That means as x increases, y also increases, which is exactly what a positive slope means.",
+      "steps": [
+        "1. Imagine tracing the line starting from the leftmost point and moving to the right.",
+        "2. Notice that as you move right, you also move up on the grid.",
+        "3. When y goes up as x increases, the slope is positive."
+      ],
+      "fastStrategy": "If the right end of the line is higher than the left end, the slope is positive. No calculation needed."
+    },
+
+    {
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [-5, 5],
+        "yRange": [-5, 5],
+        "line": {
+          "point1": { "x": -4, "y": 3 },
+          "point2": { "x": 4, "y": -2 }
+        },
+        "showGrid": true,
+        "showAxes": true
+      },
+      "copilotInstruction": "Render the same style 300x300 grid and axes as in question 1, but this time draw a line connecting (-4, 3) and (4, -2) so the line clearly falls from left to right.",
+      "id": "mk_slope_b_002",
+      "question": "Looking at this line on the coordinate plane, what type of slope does the line have?",
+      "choices": {
+        "A": "Positive slope",
+        "B": "Negative slope",
+        "C": "Zero slope",
+        "D": "Undefined slope",
+        "E": "No slope"
+      },
+      "answer": "B",
+      "explanation": "As you move along the line from left to right, the graph goes downward. That means as x increases, y decreases, which is the definition of a negative slope.",
+      "steps": [
+        "1. Start on the left side of the line and mentally move to the right.",
+        "2. Notice that as you move right, you go down on the grid.",
+        "3. Decreasing y-values as x increases means the slope is negative."
+      ],
+      "fastStrategy": "Right side lower than left side = negative slope."
+    },
+
+    {
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [-5, 5],
+        "yRange": [-5, 5],
+        "line": {
+          "point1": { "x": -4, "y": 2 },
+          "point2": { "x": 4, "y": 2 }
+        },
+        "showGrid": true,
+        "showAxes": true
+      },
+      "copilotInstruction": "Render the 300x300 grid with axes, then draw a horizontal line through y = 2 that stretches from x = -4 to x = 4.",
+      "id": "mk_slope_b_003",
+      "question": "The line shown on the coordinate plane is perfectly horizontal. What is the slope of this line?",
+      "choices": {
+        "A": "Positive slope",
+        "B": "Negative slope",
+        "C": "Zero slope",
+        "D": "Undefined slope",
+        "E": "No slope"
+      },
+      "answer": "C",
+      "explanation": "A horizontal line does not rise or fall as you move from left to right. That means the change in y (the rise) is 0. Since slope = rise/run, a rise of 0 produces a slope of 0.",
+      "steps": [
+        "1. Notice that all points on the line have the same y-value.",
+        "2. This means there is no vertical change: rise = 0.",
+        "3. Slope = rise/run = 0 divided by any nonzero run, which equals 0."
+      ],
+      "fastStrategy": "Flat line = slope 0. Think of a level road."
+    },
+
+    {
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [-5, 5],
+        "yRange": [-5, 5],
+        "line": {
+          "point1": { "x": 1, "y": -4 },
+          "point2": { "x": 1, "y": 4 }
+        },
+        "showGrid": true,
+        "showAxes": true
+      },
+      "copilotInstruction": "Render the 300x300 grid and axes. Draw a vertical line at x = 1 from y = -4 to y = 4.",
+      "id": "mk_slope_b_004",
+      "question": "The line shown on the coordinate plane is vertical. What is the slope of this line?",
+      "choices": {
+        "A": "Positive slope",
+        "B": "Negative slope",
+        "C": "Zero slope",
+        "D": "Undefined slope",
+        "E": "No slope"
+      },
+      "answer": "D",
+      "explanation": "A vertical line has no horizontal movement, so the change in x (the run) is 0. Since slope = rise/run, and division by 0 is not allowed, the slope is undefined.",
+      "steps": [
+        "1. Observe that all points on the line have the same x-value.",
+        "2. This means the run (change in x) is 0.",
+        "3. Slope uses run in the denominator, so you would be dividing by 0.",
+        "4. Division by 0 is undefined, so the slope is undefined."
+      ],
+      "fastStrategy": "Straight up and down line = undefined slope."
+    },
+
+    {
+      "id": "mk_slope_b_005",
+      "question": "Find the slope of the line that passes through the points (1, 2) and (3, 6).",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "6"
+      },
+      "answer": "B",
+      "explanation": "Slope is calculated using the formula (y2 - y1) / (x2 - x1). Using (1, 2) and (3, 6), the rise is 6 - 2 = 4 and the run is 3 - 1 = 2. So the slope is 4/2, which simplifies to 2.",
+      "steps": [
+        "1. Label the points: (x1, y1) = (1, 2) and (x2, y2) = (3, 6).",
+        "2. Compute the rise: y2 - y1 = 6 - 2 = 4.",
+        "3. Compute the run: x2 - x1 = 3 - 1 = 2.",
+        "4. Divide rise by run: 4 ÷ 2 = 2."
+      ],
+      "fastStrategy": "Always subtract y-values first to see if the slope will be positive or negative, then compute the run."
+    },
+
+    {
+      "id": "mk_slope_b_006",
+      "question": "Find the slope of the line through the points (2, 5) and (6, 5).",
+      "choices": {
+        "A": "0",
+        "B": "1",
+        "C": "-1",
+        "D": "Undefined",
+        "E": "5"
+      },
+      "answer": "A",
+      "explanation": "Both points share the same y-value of 5, which means there is no vertical change. The rise is 5 - 5 = 0. Any nonzero run with zero rise gives a slope of 0.",
+      "steps": [
+        "1. Label the points: (2, 5) and (6, 5).",
+        "2. Compute rise: 5 - 5 = 0.",
+        "3. Compute run: 6 - 2 = 4.",
+        "4. Slope = rise/run = 0/4 = 0."
+      ],
+      "fastStrategy": "Same y-values = horizontal line = slope 0."
+    },
+
+    {
+      "id": "mk_slope_b_007",
+      "question": "Find the slope of the line through the points (4, 1) and (4, 8).",
+      "choices": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "Undefined",
+        "E": "7"
+      },
+      "answer": "D",
+      "explanation": "Both points share the same x-value of 4, which means the line is vertical. Vertical lines have a run of 0, and slope = rise/run cannot be computed when the denominator is 0, so the slope is undefined.",
+      "steps": [
+        "1. Label the points: (4, 1) and (4, 8).",
+        "2. Compute run: 4 - 4 = 0.",
+        "3. Slope = rise/run would divide by 0.",
+        "4. Division by 0 is undefined, so the slope is undefined."
+      ],
+      "fastStrategy": "Same x-values = vertical line = undefined slope."
+    },
+
+    {
+      "id": "mk_slope_b_008",
+      "question": "Use the slope formula to find the slope between (0, 0) and (4, 2).",
+      "choices": {
+        "A": "1/2",
+        "B": "2",
+        "C": "4",
+        "D": "1",
+        "E": "0"
+      },
+      "answer": "A",
+      "explanation": "Using slope = (y2 - y1) / (x2 - x1), the rise is 2 - 0 = 2 and the run is 4 - 0 = 4. So the slope is 2/4, which simplifies to 1/2.",
+      "steps": [
+        "1. Label the points: (x1, y1) = (0, 0), (x2, y2) = (4, 2).",
+        "2. Compute rise: y2 - y1 = 2 - 0 = 2.",
+        "3. Compute run: x2 - x1 = 4 - 0 = 4.",
+        "4. Reduce 2/4 to 1/2."
+      ],
+      "fastStrategy": "When one point is at the origin, the arithmetic is usually very quick and clean."
+    },
+
+    {
+      "id": "mk_slope_b_009",
+      "question": "Find the slope of the line that passes through the points (-2, 3) and (2, 3).",
+      "choices": {
+        "A": "Undefined",
+        "B": "0",
+        "C": "1",
+        "D": "-1",
+        "E": "3"
+      },
+      "answer": "B",
+      "explanation": "The y-values are both 3, so there is no vertical change; the line is horizontal. That means rise = 3 - 3 = 0, so the slope is 0.",
+      "steps": [
+        "1. Label points: (-2, 3) and (2, 3).",
+        "2. Compute rise: 3 - 3 = 0.",
+        "3. Compute run: 2 - (-2) = 4.",
+        "4. Slope = 0/4 = 0."
+      ],
+      "fastStrategy": "Same y-value in a pair of points? You can immediately say slope = 0."
+    },
+
+    {
+      "id": "mk_slope_b_010",
+      "question": "Find the slope of the line through (-1, -2) and (3, 6).",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "8"
+      },
+      "answer": "B",
+      "explanation": "Using the slope formula, rise = 6 - (-2) = 8 and run = 3 - (-1) = 4. The slope is 8/4, which simplifies to 2.",
+      "steps": [
+        "1. Label points: (x1, y1) = (-1, -2), (x2, y2) = (3, 6).",
+        "2. Compute rise: y2 - y1 = 6 - (-2) = 8.",
+        "3. Compute run: x2 - x1 = 3 - (-1) = 4.",
+        "4. Divide: 8/4 = 2."
+      ],
+      "fastStrategy": "Be careful with double negatives in the formula; treat '-(-2)' as '+2'."
+    },
+
+    {
+      "id": "mk_slope_b_011",
+      "question": "What is the slope of the line given by the equation y = 3x + 1?",
+      "choices": {
+        "A": "-3",
+        "B": "3",
+        "C": "1",
+        "D": "-1",
+        "E": "0"
+      },
+      "answer": "B",
+      "explanation": "In slope-intercept form, y = mx + b, m is the slope. Here, the coefficient of x is 3, so the slope is 3.",
+      "steps": [
+        "1. Recognize y = 3x + 1 is in slope-intercept form y = mx + b.",
+        "2. Identify m, the coefficient of x, as 3.",
+        "3. Therefore the slope is 3."
+      ],
+      "fastStrategy": "In y = mx + b, just grab the number in front of x. That’s your slope."
+    },
+
+    {
+      "id": "mk_slope_b_012",
+      "question": "What is the slope of the line given by the equation y = -2x + 5?",
+      "choices": {
+        "A": "2",
+        "B": "-2",
+        "C": "5",
+        "D": "-5",
+        "E": "0"
+      },
+      "answer": "B",
+      "explanation": "Again using y = mx + b, the slope is the coefficient of x. Here, m = -2, so the slope is -2.",
+      "steps": [
+        "1. Identify the form y = mx + b.",
+        "2. The coefficient of x is -2.",
+        "3. Therefore the slope of the line is -2."
+      ],
+      "fastStrategy": "Sign matters: a minus sign in front of the x-coefficient means the slope is negative."
+    },
+
+    {
+      "id": "mk_slope_b_013",
+      "question": "Which of the following equations has a slope of 0?",
+      "choices": {
+        "A": "y = 4",
+        "B": "y = 2x + 4",
+        "C": "y = -3x",
+        "D": "y = x - 1",
+        "E": "y = -x + 2"
+      },
+      "answer": "A",
+      "explanation": "A line with equation y = constant is horizontal. The y-value never changes, so the slope is 0. In y = 4, the graph is a horizontal line four units above the x-axis.",
+      "steps": [
+        "1. Recognize that y = 4 has no x-term.",
+        "2. That means as x changes, y stays at 4.",
+        "3. No change in y means rise = 0, so slope = 0."
+      ],
+      "fastStrategy": "If the equation is just y = (number), it’s a flat horizontal line with slope 0."
+    },
+
+    {
+      "id": "mk_slope_b_014",
+      "question": "Which of the following equations represents a vertical line (undefined slope)?",
+      "choices": {
+        "A": "y = 3x + 1",
+        "B": "y = -2",
+        "C": "x = 3",
+        "D": "y = 0",
+        "E": "y = -x"
+      },
+      "answer": "C",
+      "explanation": "Vertical lines have equations of the form x = constant. In x = 3, all points on the line have x-value 3. This creates a vertical line with undefined slope.",
+      "steps": [
+        "1. Recall that vertical lines are written x = constant.",
+        "2. The equation x = 3 fits this form.",
+        "3. Therefore it represents a vertical line with undefined slope."
+      ],
+      "fastStrategy": "x = number → vertical line → undefined slope. y = number → horizontal → slope 0."
+    },
+
+    {
+      "id": "mk_slope_b_015",
+      "question": "A line increases 4 units in y for every 2 units in x. What is its slope?",
+      "choices": {
+        "A": "2",
+        "B": "4",
+        "C": "1/2",
+        "D": "-2",
+        "E": "-1/2"
+      },
+      "answer": "A",
+      "explanation": "Slope is rise over run. Here, the rise is 4 and the run is 2, so slope = 4/2 = 2.",
+      "steps": [
+        "1. Interpret the description: rise = 4, run = 2.",
+        "2. Compute the fraction: 4/2.",
+        "3. Simplify to get 2."
+      ],
+      "fastStrategy": "Whenever you see 'for every' in a slope description, think rise/run = that fraction."
+    },
+
+    {
+      "id": "mk_slope_b_016",
+      "question": "Find the slope of the line through (5, -1) and (1, -5).",
+      "choices": {
+        "A": "1",
+        "B": "-1",
+        "C": "2",
+        "D": "-2",
+        "E": "0"
+      },
+      "answer": "A",
+      "explanation": "Using the slope formula, rise = -5 - (-1) = -4 and run = 1 - 5 = -4. The slope is -4/-4, which simplifies to 1.",
+      "steps": [
+        "1. Label points: (x1, y1) = (5, -1), (x2, y2) = (1, -5).",
+        "2. Compute rise: y2 - y1 = -5 - (-1) = -4.",
+        "3. Compute run: x2 - x1 = 1 - 5 = -4.",
+        "4. Slope = (-4)/(-4) = 1."
+      ],
+      "fastStrategy": "When both rise and run are negative, the slope is positive because a negative divided by a negative is positive."
+    },
+
+    {
+      "id": "mk_slope_b_017",
+      "question": "Find the slope of the line through (0, 5) and (2, 1).",
+      "choices": {
+        "A": "2",
+        "B": "-2",
+        "C": "1/2",
+        "D": "-1/2",
+        "E": "0"
+      },
+      "answer": "B",
+      "explanation": "Using the slope formula, rise = 1 - 5 = -4 and run = 2 - 0 = 2. So the slope is -4/2 = -2.",
+      "steps": [
+        "1. Label points: (x1, y1) = (0, 5), (x2, y2) = (2, 1).",
+        "2. Compute rise: y2 - y1 = 1 - 5 = -4.",
+        "3. Compute run: x2 - x1 = 2 - 0 = 2.",
+        "4. Divide: -4/2 = -2."
+      ],
+      "fastStrategy": "If y goes down while x goes up, expect a negative slope before you even calculate."
+    },
+
+    {
+      "id": "mk_slope_b_018",
+      "question": "A line decreases 3 units in y for every 1 unit increase in x. What is its slope?",
+      "choices": {
+        "A": "3",
+        "B": "-3",
+        "C": "1/3",
+        "D": "-1/3",
+        "E": "0"
+      },
+      "answer": "B",
+      "explanation": "If y decreases by 3 as x increases by 1, the rise is -3 and the run is 1. So slope = -3/1 = -3.",
+      "steps": [
+        "1. Interpret the phrase: 'decreases 3' means rise = -3.",
+        "2. 'For every 1 unit in x' means run = 1.",
+        "3. Compute slope: -3/1 = -3."
+      ],
+      "fastStrategy": "Decreases in y with increases in x always produce a negative slope."
+    },
+
+    {
+      "id": "mk_slope_b_019",
+      "question": "Find the slope of the line through (2, -1) and (8, 2).",
+      "choices": {
+        "A": "1/2",
+        "B": "2",
+        "C": "3/2",
+        "D": "1/3",
+        "E": "0"
+      },
+      "answer": "A",
+      "explanation": "Using the slope formula, rise = 2 - (-1) = 3 and run = 8 - 2 = 6. So the slope is 3/6, which reduces to 1/2.",
+      "steps": [
+        "1. Label points: (x1, y1) = (2, -1), (x2, y2) = (8, 2).",
+        "2. Compute rise: y2 - y1 = 2 - (-1) = 3.",
+        "3. Compute run: x2 - x1 = 8 - 2 = 6.",
+        "4. Simplify 3/6 to 1/2."
+      ],
+      "fastStrategy": "Always reduce the fraction at the end; small ratios like 3/6 show up often as 1/2."
+    },
+
+    {
+      "id": "mk_slope_b_020",
+      "question": "A table of values shows the points (1, 2), (2, 4), and (3, 6) on a line. What is the slope of this line?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "6"
+      },
+      "answer": "B",
+      "explanation": "Pick any two points and use the slope formula. Using (1, 2) and (2, 4), rise = 4 - 2 = 2 and run = 2 - 1 = 1. So the slope is 2/1 = 2.",
+      "steps": [
+        "1. Choose two of the points, for example (1, 2) and (2, 4).",
+        "2. Compute rise: 4 - 2 = 2.",
+        "3. Compute run: 2 - 1 = 1.",
+        "4. Slope = 2/1 = 2."
+      ],
+      "fastStrategy": "In equally spaced x-values, just compare how much y increases each time to see the slope."
+    },
+
+    {
+      "id": "mk_slope_b_021",
+      "question": "Find the slope of the line through (-3, 4) and (1, 4).",
+      "choices": {
+        "A": "0",
+        "B": "1",
+        "C": "-1",
+        "D": "Undefined",
+        "E": "4"
+      },
+      "answer": "A",
+      "explanation": "The y-values are both 4, which means the line is horizontal. The rise is 4 - 4 = 0, so the slope is 0.",
+      "steps": [
+        "1. Label points: (-3, 4) and (1, 4).",
+        "2. Compute rise: 4 - 4 = 0.",
+        "3. Compute run: 1 - (-3) = 4.",
+        "4. Slope = 0/4 = 0."
+      ],
+      "fastStrategy": "Same y-value in both points = slope 0. You don’t need to go further."
+    },
+
+    {
+      "id": "mk_slope_b_022",
+      "question": "Find the slope of the line through (2, 3) and (2, -1).",
+      "choices": {
+        "A": "0",
+        "B": "1",
+        "C": "-1",
+        "D": "Undefined",
+        "E": "4"
+      },
+      "answer": "D",
+      "explanation": "Both points have x = 2, so the line is vertical. The run is 2 - 2 = 0. Division by zero makes the slope undefined.",
+      "steps": [
+        "1. Label points: (2, 3) and (2, -1).",
+        "2. Compute run: 2 - 2 = 0.",
+        "3. Slope = rise/run would divide by 0.",
+        "4. So the slope is undefined."
+      ],
+      "fastStrategy": "Same x-values → vertical line → undefined slope. Instant recognition."
+    },
+
+    {
+      "id": "mk_slope_b_023",
+      "question": "What is the slope of the line given by y = 1/2 x - 3?",
+      "choices": {
+        "A": "1/2",
+        "B": "-1/2",
+        "C": "2",
+        "D": "-2",
+        "E": "3"
+      },
+      "answer": "A",
+      "explanation": "In y = mx + b, m is the slope. The coefficient of x is 1/2, so the slope is 1/2.",
+      "steps": [
+        "1. Recognize that y = 1/2 x - 3 is in slope-intercept form y = mx + b.",
+        "2. The coefficient of x is 1/2.",
+        "3. Therefore the slope is 1/2."
+      ],
+      "fastStrategy": "Train your eye to immediately lock onto the x coefficient whenever you see y = mx + b."
+    },
+
+    {
+      "id": "mk_slope_b_024",
+      "question": "A line passes through the origin (0, 0) and the point (3, 9). What is its slope?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "9",
+        "E": "1/3"
+      },
+      "answer": "C",
+      "explanation": "Using the slope formula, rise = 9 - 0 = 9 and run = 3 - 0 = 3. So the slope is 9/3 = 3.",
+      "steps": [
+        "1. Label points: (x1, y1) = (0, 0), (x2, y2) = (3, 9).",
+        "2. Compute rise: y2 - y1 = 9 - 0 = 9.",
+        "3. Compute run: x2 - x1 = 3 - 0 = 3.",
+        "4. Divide: 9/3 = 3."
+      ],
+      "fastStrategy": "With one point at the origin, slope is just y/x for the other point."
+    },
+
+    {
+      "id": "mk_slope_b_025",
+      "question": "A line has a slope of -1 and passes through the point (2, 4). Which of the following points also lies on this line?",
+      "choices": {
+        "A": "(3, 3)",
+        "B": "(3, 5)",
+        "C": "(4, 4)",
+        "D": "(1, 5)",
+        "E": "(0, 4)"
+      },
+      "answer": "A",
+      "explanation": "A slope of -1 means that for every 1 unit increase in x, y decreases by 1. Starting from (2, 4), increasing x to 3 means y should go from 4 down to 3. That point is (3, 3).",
+      "steps": [
+        "1. Understand that slope -1 means 'up 1, left 1' or 'right 1, down 1'.",
+        "2. From (2, 4), move right 1 unit in x to x = 3.",
+        "3. Then move down 1 in y to y = 3.",
+        "4. The resulting point is (3, 3), which matches choice A."
+      ],
+      "fastStrategy": "For slope -1, x and y move in opposite directions by the same amount (right/down or left/up)."
+    }
+  ]
+}

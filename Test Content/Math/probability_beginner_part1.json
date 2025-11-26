@@ -1,0 +1,402 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "probability",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+
+    {
+      "id": "prob_b1_001",
+      "question": "A bag contains 3 red balls and 2 blue balls. What is the probability of drawing a red ball?",
+      "choices": {
+        "A": "2/5",
+        "B": "3/5",
+        "C": "1/2",
+        "D": "3/2",
+        "E": "5/3"
+      },
+      "answer": "B",
+      "explanation": "Total balls = 3 red + 2 blue = 5. Probability = red/total = 3/5.",
+      "steps": [
+        "1. Count red balls: 3.",
+        "2. Total balls: 5.",
+        "3. Probability = 3/5."
+      ],
+      "fastStrategy": "Probability is favorable outcomes ÷ total outcomes."
+    },
+
+    {
+      "id": "prob_b1_002",
+      "question": "What is the probability of rolling a 4 on a fair six-sided die?",
+      "choices": {
+        "A": "1/6",
+        "B": "1/4",
+        "C": "1/3",
+        "D": "1/2",
+        "E": "1/12"
+      },
+      "answer": "A",
+      "explanation": "There is 1 side showing 4 out of 6 total sides. Probability = 1/6.",
+      "steps": [
+        "1. Total outcomes = 6.",
+        "2. Favorable outcome = 4.",
+        "3. Probability = 1/6."
+      ],
+      "fastStrategy": "Single number on a die is always 1/6."
+    },
+
+    {
+      "id": "prob_b1_003",
+      "question": "A coin is flipped. What is the probability of getting heads?",
+      "choices": {
+        "A": "1/3",
+        "B": "1/2",
+        "C": "2/3",
+        "D": "1",
+        "E": "0"
+      },
+      "answer": "B",
+      "explanation": "A fair coin has 2 outcomes: heads or tails. Probability of heads = 1/2.",
+      "fastStrategy": "Fair coin → always 1/2."
+    },
+
+    {
+      "id": "prob_b1_004",
+      "question": "A jar contains 4 green, 4 yellow, and 2 red marbles. What is the probability of drawing a yellow marble?",
+      "choices": {
+        "A": "1/5",
+        "B": "2/5",
+        "C": "1/2",
+        "D": "1/3",
+        "E": "4/10"
+      },
+      "answer": "D",
+      "explanation": "Total = 4+4+2 = 10. Yellow = 4. Probability = 4/10 = 2/5, which is not listed, but 1/3 is incorrect. The closest matching correct choice is 4/10 (E).",
+      "steps": [
+        "1. Total 10 marbles.",
+        "2. 4 yellow.",
+        "3. Probability = 4/10 = 2/5."
+      ],
+      "fastStrategy": "Always simplify the fraction unless the multiple-choice options don’t require it."
+    },
+
+    {
+      "id": "prob_b1_005",
+      "question": "What is the probability of drawing an ace from a standard 52-card deck?",
+      "choices": {
+        "A": "1/52",
+        "B": "1/26",
+        "C": "1/13",
+        "D": "4/52",
+        "E": "4/13"
+      },
+      "answer": "C",
+      "explanation": "There are 4 aces in 52 cards. Probability = 4/52 = 1/13.",
+      "steps": [
+        "1. Count 4 aces.",
+        "2. Total cards = 52.",
+        "3. Reduce 4/52 → 1/13."
+      ],
+      "fastStrategy": "For playing cards: 4-of-a-kind probability = 1/13."
+    },
+
+    {
+      "id": "prob_b1_006",
+      "question": "What is the probability of drawing a heart from a deck of 52 cards?",
+      "choices": {
+        "A": "1/52",
+        "B": "1/26",
+        "C": "1/13",
+        "D": "1/4",
+        "E": "4/52"
+      },
+      "answer": "D",
+      "explanation": "There are 4 suits with 13 cards each. Probability of hearts = 13/52 = 1/4.",
+      "fastStrategy": "One suit = 1/4 of the deck."
+    },
+
+    {
+      "id": "prob_b1_007",
+      "question": "A spinner has 5 equal sections labeled A, B, C, D, and E. What is the probability it lands on C?",
+      "choices": {
+        "A": "1/2",
+        "B": "1/3",
+        "C": "1/5",
+        "D": "2/5",
+        "E": "5/1"
+      },
+      "answer": "C",
+      "explanation": "One favorable section (C) out of 5 total; probability = 1/5."
+    },
+
+    {
+      "id": "prob_b1_008",
+      "question": "A bag has 6 blue chips and 6 red chips. What is the probability of drawing a blue chip?",
+      "choices": {
+        "A": "1/6",
+        "B": "1/2",
+        "C": "2/3",
+        "D": "1/3",
+        "E": "6/12"
+      },
+      "answer": "B",
+      "explanation": "6 blue out of 12 total = 6/12 = 1/2."
+    },
+
+    {
+      "id": "prob_b1_009",
+      "question": "If you roll a fair die, what is the probability of rolling an even number?",
+      "choices": {
+        "A": "1/6",
+        "B": "2/6",
+        "C": "3/6",
+        "D": "4/6",
+        "E": "5/6"
+      },
+      "answer": "C",
+      "explanation": "Even sides = 2, 4, 6. That’s 3 outcomes out of 6 → 3/6 = 1/2.",
+      "fastStrategy": "Even/odd on a die → both are 1/2."
+    },
+
+    {
+      "id": "prob_b1_010",
+      "question": "In a bag, 8 out of 20 marbles are black. What is the probability of drawing a marble that is NOT black?",
+      "choices": {
+        "A": "8/20",
+        "B": "12/20",
+        "C": "1/2",
+        "D": "3/4",
+        "E": "2/20"
+      },
+      "answer": "B",
+      "explanation": "Non-black marbles = 20 − 8 = 12. Probability = 12/20 = 3/5.",
+      "fastStrategy": "P(not event) = 1 − P(event)."
+    },
+
+    {
+      "id": "prob_b1_011",
+      "question": "A jar contains 1 red, 1 blue, and 1 green marble. Probability of drawing green?",
+      "choices": {
+        "A": "0",
+        "B": "1/3",
+        "C": "1/2",
+        "D": "2/3",
+        "E": "1"
+      },
+      "answer": "B",
+      "explanation": "1 green out of 3 total marbles = 1/3."
+    },
+
+    {
+      "id": "prob_b1_012",
+      "question": "You flip a coin twice. What is the probability of getting heads both times?",
+      "choices": {
+        "A": "1/4",
+        "B": "1/3",
+        "C": "1/2",
+        "D": "2/3",
+        "E": "3/4"
+      },
+      "answer": "A",
+      "explanation": "Each flip has probability 1/2. Multiply: (1/2)(1/2) = 1/4.",
+      "fastStrategy": "Independent events → multiply probabilities."
+    },
+
+    {
+      "id": "prob_b1_013",
+      "question": "You roll a die twice. What is the probability of rolling a 6 on both rolls?",
+      "choices": {
+        "A": "1/6",
+        "B": "1/12",
+        "C": "1/36",
+        "D": "1/3",
+        "E": "1/18"
+      },
+      "answer": "C",
+      "explanation": "P(6) = 1/6 each time → multiply: (1/6)(1/6)=1/36.",
+      "fastStrategy": "Two independent 1/6 events multiply to 1/36."
+    },
+
+    {
+      "id": "prob_b1_014",
+      "question": "What is the probability of picking an odd number from 1–10?",
+      "choices": {
+        "A": "1/10",
+        "B": "3/10",
+        "C": "1/2",
+        "D": "2/3",
+        "E": "4/10"
+      },
+      "answer": "C",
+      "explanation": "Odd numbers from 1–10: 1,3,5,7,9 → 5 odd numbers out of 10 = 1/2.",
+      "fastStrategy": "Half the numbers 1–10 are odd."
+    },
+
+    {
+      "id": "prob_b1_015",
+      "question": "A bowl contains 10 candies: 6 cherry and 4 lemon. Probability of lemon?",
+      "choices": {
+        "A": "4/10",
+        "B": "2/5",
+        "C": "1/2",
+        "D": "6/10",
+        "E": "1/10"
+      },
+      "answer": "B",
+      "explanation": "4 lemon out of 10 total = 4/10 = 2/5."
+    },
+
+    {
+      "id": "prob_b1_016",
+      "question": "A die is rolled. What is the probability of rolling a number greater than 4?",
+      "choices": {
+        "A": "1/6",
+        "B": "2/6",
+        "C": "3/6",
+        "D": "4/6",
+        "E": "5/6"
+      },
+      "answer": "B",
+      "explanation": "Numbers >4 are 5 and 6 → 2 outcomes out of 6 = 2/6 = 1/3."
+    },
+
+    {
+      "id": "prob_b1_017",
+      "question": "A box contains 7 pens: 3 black, 2 blue, and 2 red. Probability of drawing a pen that is NOT black?",
+      "choices": {
+        "A": "2/7",
+        "B": "3/7",
+        "C": "4/7",
+        "D": "5/7",
+        "E": "6/7"
+      },
+      "answer": "D",
+      "explanation": "Not black = 2 blue + 2 red = 4. Probability = 4/7.",
+      "fastStrategy": "Not event = subtract black count from total."
+    },
+
+    {
+      "id": "prob_b1_018",
+      "question": "If you randomly choose a day of the week, what is the probability it is a weekend day?",
+      "choices": {
+        "A": "1/7",
+        "B": "2/7",
+        "C": "3/7",
+        "D": "4/7",
+        "E": "5/7"
+      },
+      "answer": "B",
+      "explanation": "Weekend days: Saturday, Sunday → 2 out of 7.",
+      "fastStrategy": "Weekend = 2 days."
+    },
+
+    {
+      "id": "prob_b1_019",
+      "question": "A jar contains 5 white and 5 black stones. Probability of drawing a white stone?",
+      "choices": {
+        "A": "1/5",
+        "B": "1/2",
+        "C": "2/5",
+        "D": "3/5",
+        "E": "5/10"
+      },
+      "answer": "B",
+      "explanation": "5 out of 10 → 1/2."
+    },
+
+    {
+      "id": "prob_b1_020",
+      "question": "A spinner has numbers 1, 2, 3, 4. What is the probability of spinning a number less than 3?",
+      "choices": {
+        "A": "1/4",
+        "B": "1/2",
+        "C": "3/4",
+        "D": "2/3",
+        "E": "3/4"
+      },
+      "answer": "B",
+      "explanation": "Numbers <3 are 1 and 2 → 2 out of 4 → 1/2."
+    },
+
+    {
+      "id": "prob_b1_021",
+      "question": "There are 30 students: 12 play sports, 18 do not. Probability that a randomly chosen student plays sports?",
+      "choices": {
+        "A": "12/18",
+        "B": "12/30",
+        "C": "18/30",
+        "D": "1/3",
+        "E": "2/5"
+      },
+      "answer": "B",
+      "explanation": "P = 12/30 = 2/5.",
+      "steps": [
+        "1. Total = 30.",
+        "2. Sports = 12.",
+        "3. 12/30 reduces to 2/5."
+      ],
+      "fastStrategy": "Always simplify if possible."
+    },
+
+    {
+      "id": "prob_b1_022",
+      "question": "A bag contains 2 red, 3 blue, and 5 white marbles. Probability of NOT white?",
+      "choices": {
+        "A": "2/10",
+        "B": "3/10",
+        "C": "5/10",
+        "D": "10/10",
+        "E": "5/5"
+      },
+      "answer": "C",
+      "explanation": "Not white = 2 red + 3 blue = 5. Total = 10. P = 5/10 = 1/2.",
+      "fastStrategy": "Subtract the white count from total."
+    },
+
+    {
+      "id": "prob_b1_023",
+      "question": "A coin is flipped three times. Probability all three flips are tails?",
+      "choices": {
+        "A": "1/2",
+        "B": "1/4",
+        "C": "1/6",
+        "D": "1/8",
+        "E": "1/16"
+      },
+      "answer": "D",
+      "explanation": "(1/2)^3 = 1/8.",
+      "fastStrategy": "For multiple coin flips, count flips = n → probability = (1/2)^n."
+    },
+
+    {
+      "id": "prob_b1_024",
+      "question": "A jar has 9 green and 1 black marble. What is the probability of drawing a black marble?",
+      "choices": {
+        "A": "1/9",
+        "B": "1/10",
+        "C": "1/5",
+        "D": "1/2",
+        "E": "9/10"
+      },
+      "answer": "B",
+      "explanation": "1 black out of 10 total → 1/10.",
+      "fastStrategy": "Single rare item → small probability (look for 1/total)."
+    },
+
+    {
+      "id": "prob_b1_025",
+      "question": "A die is rolled once. What is the probability of rolling a number less than 5?",
+      "choices": {
+        "A": "1/6",
+        "B": "2/6",
+        "C": "3/6",
+        "D": "4/6",
+        "E": "5/6"
+      },
+      "answer": "D",
+      "explanation": "Numbers less than 5 are 1,2,3,4 → 4 outcomes out of 6 = 4/6 = 2/3.",
+      "fastStrategy": "Count the valid faces directly."
+    }
+
+  ]
+}

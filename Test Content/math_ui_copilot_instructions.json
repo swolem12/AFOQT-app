@@ -1,0 +1,244 @@
+{
+  "patchId": "math_ui_01",
+  "title": "Math Knowledge UI Rendering Instructions",
+  "description": "Define how GitHub Copilot should render math question UI elements (graphs, tables, function rules) using HTML/CSS (Option A) and HTML5 Canvas (Option B), based on the uiSpec objects embedded in Math Knowledge JSON files.",
+  "cssClassConventions": {
+    "graphContainer": "Outer div that defines width/height for the graph area and acts as the positioning context.",
+    "graphGrid": "Optional inner div responsible for drawing the background grid (can also be merged with container).",
+    "graphAxis": "Horizontal or vertical axes, drawn as absolutely positioned lines inside the container.",
+    "graphLine": "Line representing a function or segment, drawn as an absolutely positioned, rotated div.",
+    "graphPoint": "Small circular marker (border-radius: 50%) positioned at a coordinate.",
+    "graphLabel": "Text label for points, axes, or segments, positioned near the related element.",
+    "functionRuleBox": "Container for displaying a function rule such as f(x) = 2x + 5.",
+    "functionTable": "Table for displaying (x, f(x)) pairs.",
+    "dataTable": "Generic table for statistics or sequences."
+  },
+  "uiTypes": [
+    {
+      "type": "slope_graph",
+      "description": "Render a 2D coordinate plane and a single straight line, based on two points and an x/y range. Used for slope and graphing linear functions.",
+      "expectedJsonShape": {
+        "width": "number (pixels)",
+        "height": "number (pixels)",
+        "xRange": ["[minX, maxX] integer range for x-axis"],
+        "yRange": ["[minY, maxY] integer range for y-axis"],
+        "line": {
+          "point1": { "x": "number", "y": "number" },
+          "point2": { "x": "number", "y": "number" }
+        },
+        "showGrid": "boolean",
+        "showAxes": "boolean"
+      },
+      "renderingStrategies": {
+        "cssHtml": [
+          "1. Create a container div with class 'graphContainer' and inline styles: position: relative; width: uiSpec.width px; height: uiSpec.height px.",
+          "2. If showGrid is true, use a background with CSS repeating-linear-gradient to draw vertical and horizontal grid lines based on xRange and yRange.",
+          "3. If showAxes is true, add two absolutely positioned divs with class 'graphAxis' for x and y axes. Center them according to where x=0 and y=0 fall in the pixel grid.",
+          "4. Convert each logical (x, y) point to pixel coordinates using a linear mapping from xRange/yRange to [0, width] and [height, 0] (note that y is inverted in screen space).",
+          "5. Draw the line between the mapped pixel points by either:\n   - using an absolutely positioned div with small height and transform: rotate(...) to match the slope, or\n   - using an SVG <line> element inside the container if SVG is permitted.",
+          "6. If the question involves labeling or highlighting slope, optionally add endpoints as 'graphPoint' elements at each point with labels (A, B, etc.)."
+        ],
+        "canvas2d": [
+          "1. Create a <canvas> element with the given width/height wrapped in a container div.",
+          "2. Get the 2D rendering context and clear the canvas.",
+          "3. If showGrid is true, compute step size for integer x and y and draw light grey grid lines with context.moveTo() and context.lineTo().",
+          "4. If showAxes is true, draw thicker x and y axes at the mapped position of x=0 and y=0.",
+          "5. Map logical (x, y) coordinates from xRange/yRange into canvas coordinates and draw the line from point1 to point2 using context.beginPath(), moveTo(), lineTo(), and stroke().",
+          "6. Optionally draw endpoints as small filled circles for visual clarity."
+        ]
+      }
+    },
+    {
+      "type": "coordinate_grid_points",
+      "description": "Render a coordinate plane with one or more labeled points A, B, C, etc.",
+      "expectedJsonShape": {
+        "width": "number",
+        "height": "number",
+        "showGrid": "boolean",
+        "xRange": ["[minX, maxX]"],
+        "yRange": ["[minY, maxY]"],
+        "points": [
+          { "name": "string label, e.g., 'A'", "x": "number", "y": "number" }
+        ],
+        "styleHints": {
+          "pointColor": "optional CSS color string",
+          "labelColor": "optional CSS color string"
+        }
+      },
+      "renderingStrategies": {
+        "cssHtml": [
+          "1. Render the grid and axes exactly as in slope_graph.",
+          "2. For each point, map (x, y) to pixel coordinates based on xRange and yRange.",
+          "3. Create a div with class 'graphPoint' positioned with CSS top/left according to the pixel coordinates, e.g., position:absolute; width:8px; height:8px; border-radius:50%.",
+          "4. Place the label using a separate span with class 'graphLabel' slightly offset from the point.",
+          "5. Use styleHints.pointColor and styleHints.labelColor if present; otherwise fall back to theme defaults."
+        ],
+        "canvas2d": [
+          "1. Draw grid and axes as in slope_graph.",
+          "2. For each point, map the logical coordinates to canvas coordinates and draw a small filled circle with context.arc() and fill().",
+          "3. Use context.fillText() for labels near each point, using labelColor if provided."
+        ]
+      }
+    },
+    {
+      "type": "coordinate_segment",
+      "description": "Coordinate plane with a line segment between two labeled points.",
+      "expectedJsonShape": {
+        "width": "number",
+        "height": "number",
+        "xRange": ["[minX, maxX]"],
+        "yRange": ["[minY, maxY]"],
+        "point1": { "name": "string", "x": "number", "y": "number" },
+        "point2": { "name": "string", "x": "number", "y": "number" },
+        "showGrid": "boolean",
+        "showAxes": "boolean"
+      },
+      "renderingStrategies": {
+        "cssHtml": [
+          "1. Render a grid/axes container as in slope_graph.",
+          "2. Map point1 and point2 into pixel coordinates.",
+          "3. Draw a 'graphLine' between the two points using an absolutely positioned, rotated div or SVG line.",
+          "4. Render each endpoint as a 'graphPoint' plus 'graphLabel' as needed."
+        ],
+        "canvas2d": [
+          "1. Render grid and axes as in slope_graph.",
+          "2. Map both endpoints and draw a line from point1 to point2 using the canvas 2D API.",
+          "3. Optionally draw endpoints as filled circles and label them."
+        ]
+      }
+    },
+    {
+      "type": "coordinate_slope",
+      "description": "Specialized coordinate graph used for slope questions; effectively identical to slope_graph but may emphasize rise/run.",
+      "expectedJsonShape": {
+        "width": "number",
+        "height": "number",
+        "xRange": ["[minX, maxX]"],
+        "yRange": ["[minY, maxY]"],
+        "line": {
+          "point1": { "x": "number", "y": "number" },
+          "point2": { "x": "number", "y": "number" }
+        },
+        "showGrid": "boolean",
+        "showAxes": "boolean"
+      },
+      "renderingStrategies": {
+        "cssHtml": [
+          "Treat exactly like slope_graph for rendering, but ensure endpoints and grid lines are crisp so learners can count rise and run visually."
+        ],
+        "canvas2d": [
+          "Same implementation as slope_graph but allow for thicker line width to emphasize the slope."
+        ]
+      }
+    },
+    {
+      "type": "coordinate_triangle",
+      "description": "Coordinate plane with three points connected to form a triangle (used in coordinate geometry and transformations).",
+      "expectedJsonShape": {
+        "width": "number",
+        "height": "number",
+        "xRange": ["[minX, maxX]"],
+        "yRange": ["[minY, maxY]"],
+        "points": [
+          { "name": "string", "x": "number", "y": "number" },
+          { "name": "string", "x": "number", "y": "number" },
+          { "name": "string", "x": "number", "y": "number" }
+        ],
+        "showGrid": "boolean",
+        "showAxes": "boolean"
+      },
+      "renderingStrategies": {
+        "cssHtml": [
+          "1. Render the grid/axes as in coordinate_grid_points.",
+          "2. Map the three vertices to pixel coordinates and draw the outline of the triangle using either:\n   - multiple 'graphLine' divs between each pair, or\n   - a single SVG <polygon> element.",
+          "3. Render each vertex as a 'graphPoint' with a nearby 'graphLabel'."
+        ],
+        "canvas2d": [
+          "1. Draw grid and axes.",
+          "2. Move to the first vertex then lineTo the second and third, closing the path with lineTo back to the first vertex.",
+          "3. Stroke (and optionally fill) the triangle and draw vertex labels with fillText."
+        ]
+      }
+    },
+    {
+      "type": "function_rule",
+      "description": "Textual display of a function definition like f(x) = 2x + 5.",
+      "expectedJsonShape": {
+        "functionText": "string that should be rendered exactly, e.g., 'f(x) = 2x + 5'.",
+        "width": "optional number for layout width",
+        "height": "optional number for layout height"
+      },
+      "renderingStrategies": {
+        "cssHtml": [
+          "1. Render a div with class 'functionRuleBox'.",
+          "2. Center the text inside using text-align: center and optionally a monospace or math-friendly font.",
+          "3. Respect width/height if provided; otherwise fit content."
+        ],
+        "canvas2d": [
+          "1. If drawn on canvas, simply place the function text at a visually centered coordinate with fillText.",
+          "2. Use a consistent font size and style so function rules match the rest of the math UI."
+        ]
+      }
+    },
+    {
+      "type": "function_table",
+      "description": "Tabular display of (x, f(x)) pairs.",
+      "expectedJsonShape": {
+        "columns": ["array of column header strings, e.g., ['x', 'f(x)']"],
+        "rows": [
+          ["each row is an array of values aligned with columns"]
+        ]
+      },
+      "renderingStrategies": {
+        "cssHtml": [
+          "1. Render a <table> with class 'functionTable' or 'dataTable'.",
+          "2. Use a <thead> row for the column headers from uiSpec.columns.",
+          "3. Render uiSpec.rows as <tbody> rows.",
+          "4. Keep borders and padding minimal but readable to match the overall exam aesthetic."
+        ],
+        "canvas2d": [
+          "1. Canvas table rendering is optional; if the hosting UI uses HTML, prefer the HTML table version.",
+          "2. If canvas-only, manually draw table lines and text; however, this is not recommended unless necessary."
+        ]
+      }
+    },
+    {
+      "type": "function_graph_point_lookup",
+      "description": "Scatter of discrete points on a coordinate plane representing f(x) values.",
+      "expectedJsonShape": {
+        "width": "number",
+        "height": "number",
+        "xRange": ["[minX, maxX]"],
+        "yRange": ["[minY, maxY]"],
+        "pointsPlotted": [
+          { "x": "number", "y": "number" }
+        ],
+        "showGrid": "optional boolean (default true)",
+        "showAxes": "optional boolean (default true)"
+      },
+      "renderingStrategies": {
+        "cssHtml": [
+          "1. Render grid and axes as in coordinate_grid_points.",
+          "2. Plot each (x, y) as a 'graphPoint' div.",
+          "3. Optionally connect points if the style of question calls for a connected graph, but by default leave them as discrete markers."
+        ],
+        "canvas2d": [
+          "1. Same as coordinate_grid_points but use context.arc() for each point.",
+          "2. If needed, draw small plus or cross markers instead of circles for visual variety."
+        ]
+      }
+    }
+  ],
+  "implementationNotesForCopilot": [
+    "1. When rendering a math question, first check if the JSON object has a `uiSpec` field. If not, fall back to plain text rendering of `question`, `choices`, and `explanation`.",
+    "2. If `uiSpec.type` is present, use `uiTypes` definitions as the authoritative contract for required fields and rendering behavior.",
+    "3. Prefer the CSS/HTML strategy (`renderingStrategies.cssHtml`) when the host environment is a browser-based UI with standard DOM access; this keeps implementation simple and consistent with the rest of the game.",
+    "4. If the app already has a dedicated canvas rendering utility (for performance or animation), you may instead call into `renderingStrategies.canvas2d` semantics and centralize that in a `mathCanvasRenderer` helper.",
+    "5. Always respect `width` and `height` from `uiSpec` when provided. When missing, pick sensible defaults (e.g., 250x250 or 300x300) and keep aspect ratio square for coordinate planes.",
+    "6. Coordinate mappings: map logical xRange and yRange linearly to pixel space. Remember that canvas and CSS top/left coordinates treat y increasing downward, so invert the y-axis where necessary.",
+    "7. Do not hardcode colors; use CSS variables or theme tokens where possible, falling back to grayscale lines and dark text that align with AFOQT-style printed test visuals.",
+    "8. For accessibility and responsiveness, avoid rendering critical information solely via color. Make sure axis lines, points, and labels remain visually distinct even in monochrome themes.",
+    "9. Handle unknown `uiSpec.type` values defensively: log or surface a non-fatal warning and render the question as text-only so the user is never blocked.",
+    "10. Keep question logic (correct/incorrect checking, scoring, analytics) completely independent of the rendering path. UI is purely visual; correctness always comes from the `answer` field."
+  ]
+}

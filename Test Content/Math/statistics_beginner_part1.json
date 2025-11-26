@@ -1,0 +1,372 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "statistics",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+
+    {
+      "id": "stat_b1_001",
+      "question": "Find the mean of the data set: 4, 6, 8, 10.",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "5",
+        "E": "9"
+      },
+      "answer": "B",
+      "explanation": "Mean is the average. Add all values: 4 + 6 + 8 + 10 = 28. Divide by 4 → 7.",
+      "steps": [
+        "1. Add the numbers: 28.",
+        "2. Divide by number of values: 28/4 = 7."
+      ],
+      "fastStrategy": "Mean = sum ÷ count."
+    },
+
+    {
+      "id": "stat_b1_002",
+      "question": "Find the median of the data set: 1, 3, 5, 7, 9.",
+      "choices": {
+        "A": "1",
+        "B": "3",
+        "C": "5",
+        "D": "7",
+        "E": "9"
+      },
+      "answer": "C",
+      "explanation": "Median is the middle number. For 5 values, the center is the 3rd number → 5.",
+      "steps": [
+        "1. Data is already sorted.",
+        "2. Middle value is 5."
+      ],
+      "fastStrategy": "Odd count → middle number."
+    },
+
+    {
+      "id": "stat_b1_003",
+      "question": "Find the mode of the data set: 2, 4, 4, 6, 8.",
+      "choices": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8",
+        "E": "No mode"
+      },
+      "answer": "B",
+      "explanation": "Mode is the value that appears most often. 4 appears twice; all others appear once.",
+      "fastStrategy": "Mode = most frequent value."
+    },
+
+    {
+      "id": "stat_b1_004",
+      "question": "Find the range of the data set: 5, 12, 7, 3.",
+      "choices": {
+        "A": "9",
+        "B": "8",
+        "C": "6",
+        "D": "7",
+        "E": "10"
+      },
+      "answer": "A",
+      "explanation": "Range = max − min. Max = 12, min = 3 → 12 − 3 = 9.",
+      "fastStrategy": "Biggest minus smallest."
+    },
+
+    {
+      "id": "stat_b1_005",
+      "question": "The mean of five numbers is 6. What is their total sum?",
+      "choices": {
+        "A": "6",
+        "B": "12",
+        "C": "18",
+        "D": "24",
+        "E": "30"
+      },
+      "answer": "E",
+      "explanation": "Mean = sum ÷ count. So sum = mean × count = 6 × 5 = 30.",
+      "fastStrategy": "Reverse mean by multiplying."
+    },
+
+    {
+      "id": "stat_b1_006",
+      "question": "Find the mean of the data set: 10, 15, 20.",
+      "choices": {
+        "A": "10",
+        "B": "12",
+        "C": "15",
+        "D": "18",
+        "E": "20"
+      },
+      "answer": "C",
+      "explanation": "Average = (10 + 15 + 20)/3 = 45/3 = 15."
+    },
+
+    {
+      "id": "stat_b1_007",
+      "question": "Find the median of the data set: 2, 4, 6, 8.",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7",
+        "E": "8"
+      },
+      "answer": "B",
+      "explanation": "Even number of values → average of middle two = (4 + 6)/2 = 5."
+    },
+
+    {
+      "id": "stat_b1_008",
+      "question": "Find the mode: 7, 7, 8, 9, 10.",
+      "choices": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10",
+        "E": "No mode"
+      },
+      "answer": "A",
+      "explanation": "7 appears twice; others appear once."
+    },
+
+    {
+      "id": "stat_b1_009",
+      "question": "Find the range: 14, 5, 9, 20.",
+      "choices": {
+        "A": "5",
+        "B": "9",
+        "C": "15",
+        "D": "20",
+        "E": "25"
+      },
+      "answer": "C",
+      "explanation": "Range = 20 − 5 = 15."
+    },
+
+    {
+      "id": "stat_b1_010",
+      "question": "The median of 3, 5, 9 is:",
+      "choices": {
+        "A": "3",
+        "B": "5",
+        "C": "7",
+        "D": "9",
+        "E": "4"
+      },
+      "answer": "B",
+      "explanation": "Middle number of sorted set 3,5,9 is 5."
+    },
+
+    {
+      "id": "stat_b1_011",
+      "question": "Find the mean: 2, 3, 7, 8.",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7",
+        "E": "8"
+      },
+      "answer": "B",
+      "explanation": "Sum = 20; mean = 20/4 = 5."
+    },
+
+    {
+      "id": "stat_b1_012",
+      "question": "What is the mode of: 1, 2, 3, 4?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "No mode"
+      },
+      "answer": "E",
+      "explanation": "All values appear once → no mode."
+    },
+
+    {
+      "id": "stat_b1_013",
+      "question": "Find the range: 25, 30, 35.",
+      "choices": {
+        "A": "5",
+        "B": "10",
+        "C": "15",
+        "D": "20",
+        "E": "25"
+      },
+      "answer": "B",
+      "explanation": "35 − 25 = 10."
+    },
+
+    {
+      "id": "stat_b1_014",
+      "question": "Find the median: 4, 9, 11, 15, 20.",
+      "choices": {
+        "A": "9",
+        "B": "11",
+        "C": "15",
+        "D": "14",
+        "E": "13"
+      },
+      "answer": "B",
+      "explanation": "Middle number is the 3rd → 11."
+    },
+
+    {
+      "id": "stat_b1_015",
+      "question": "Find the mean: 100, 120.",
+      "choices": {
+        "A": "100",
+        "B": "110",
+        "C": "115",
+        "D": "120",
+        "E": "130"
+      },
+      "answer": "B",
+      "explanation": "(100+120)/2 = 220/2 = 110."
+    },
+
+    {
+      "id": "stat_b1_016",
+      "question": "Find the mode of: 3, 3, 3, 7, 7.",
+      "choices": {
+        "A": "3",
+        "B": "7",
+        "C": "10",
+        "D": "No mode",
+        "E": "None of the above"
+      },
+      "answer": "A",
+      "explanation": "3 appears most."
+    },
+
+    {
+      "id": "stat_b1_017",
+      "question": "Find the mean: 9, 11, 13, 15.",
+      "choices": {
+        "A": "11",
+        "B": "12",
+        "C": "13",
+        "D": "14",
+        "E": "15"
+      },
+      "answer": "B",
+      "explanation": "Sum=48; mean=48/4=12."
+    },
+
+    {
+      "id": "stat_b1_018",
+      "question": "Find the median: 5, 8, 12, 15.",
+      "choices": {
+        "A": "8",
+        "B": "9",
+        "C": "10",
+        "D": "11",
+        "E": "12"
+      },
+      "answer": "C",
+      "explanation": "Even count → average of middle two: (8+12)/2 = 10."
+    },
+
+    {
+      "id": "stat_b1_019",
+      "question": "Find the range: 40, 28, 33.",
+      "choices": {
+        "A": "7",
+        "B": "10",
+        "C": "12",
+        "D": "15",
+        "E": "20"
+      },
+      "answer": "C",
+      "explanation": "40 − 28 = 12."
+    },
+
+    {
+      "id": "stat_b1_020",
+      "question": "A student scored 80, 90, and 100 on three tests. What is the mean score?",
+      "choices": {
+        "A": "80",
+        "B": "85",
+        "C": "90",
+        "D": "95",
+        "E": "100"
+      },
+      "answer": "C",
+      "explanation": "Sum=270 → mean=270/3=90."
+    },
+
+    {
+      "id": "stat_b1_021",
+      "question": "Find the median of: 12, 14, 18.",
+      "choices": {
+        "A": "12",
+        "B": "14",
+        "C": "18",
+        "D": "15",
+        "E": "16"
+      },
+      "answer": "B",
+      "explanation": "Middle is 14."
+    },
+
+    {
+      "id": "stat_b1_022",
+      "question": "Find the mode: 6, 7, 6, 8.",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "No mode",
+        "E": "None"
+      },
+      "answer": "A",
+      "explanation": "6 appears twice."
+    },
+
+    {
+      "id": "stat_b1_023",
+      "question": "Find the range: 1, 9.",
+      "choices": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8",
+        "E": "9"
+      },
+      "answer": "D",
+      "explanation": "9 − 1 = 8."
+    },
+
+    {
+      "id": "stat_b1_024",
+      "question": "What is the mean of 2, 6, 10, 14?",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9",
+        "E": "10"
+      },
+      "answer": "C",
+      "explanation": "Sum=32 → mean=32/4=8."
+    },
+
+    {
+      "id": "stat_b1_025",
+      "question": "Find the median of: 3, 9, 15, 21, 27.",
+      "choices": {
+        "A": "9",
+        "B": "15",
+        "C": "21",
+        "D": "27",
+        "E": "12"
+      },
+      "answer": "B",
+      "explanation": "Middle value is 15."
+    }
+
+  ]
+}

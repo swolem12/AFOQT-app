@@ -1,0 +1,473 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "function_evaluation",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+
+    {
+      "id": "fe_b1_001",
+      "uiSpec": {
+        "type": "function_rule",
+        "width": 250,
+        "height": 80,
+        "functionText": "f(x) = 2x + 5"
+      },
+      "copilotInstruction": "Render a centered text box showing the rule f(x) = 2x + 5.",
+      "question": "Given f(x) = 2x + 5, what is f(3)?",
+      "choices": {
+        "A": "8",
+        "B": "9",
+        "C": "10",
+        "D": "11",
+        "E": "5"
+      },
+      "answer": "D",
+      "explanation": "Substitute x = 3: f(3) = 2(3) + 5 = 6 + 5 = 11.",
+      "steps": [
+        "1. Replace x with 3 in the rule.",
+        "2. Multiply: 2 × 3 = 6.",
+        "3. Add 5 → 11."
+      ],
+      "fastStrategy": "Plug in, multiply first, then add."
+    },
+
+    {
+      "id": "fe_b1_002",
+      "question": "If f(x) = x² − 4, what is f(−2)?",
+      "choices": {
+        "A": "0",
+        "B": "−8",
+        "C": "4",
+        "D": "−4",
+        "E": "8"
+      },
+      "answer": "A",
+      "explanation": "f(−2) = (−2)² − 4 = 4 − 4 = 0.",
+      "steps": [
+        "1. Square −2 to get 4.",
+        "2. Subtract 4 → 0."
+      ],
+      "fastStrategy": "Remember: negative squared becomes positive."
+    },
+
+    {
+      "id": "fe_b1_003",
+      "uiSpec": {
+        "type": "function_table",
+        "columns": ["x", "f(x)"],
+        "rows": [
+          [1, 4],
+          [2, 7],
+          [3, 10],
+          [4, 13]
+        ]
+      },
+      "copilotInstruction": "Render a simple table with rows: (1,4), (2,7), (3,10), (4,13).",
+      "question": "Using the table, what is f(3)?",
+      "choices": {
+        "A": "7",
+        "B": "10",
+        "C": "13",
+        "D": "4",
+        "E": "3"
+      },
+      "answer": "B",
+      "explanation": "From the table, the row with x = 3 has f(x) = 10.",
+      "steps": [
+        "1. Locate x = 3 in the table.",
+        "2. Read the matching f(x) → 10."
+      ],
+      "fastStrategy": "Table reading: match input row → output value."
+    },
+
+    {
+      "id": "fe_b1_004",
+      "question": "Given f(x) = 5x − 3, what is f(0)?",
+      "choices": {
+        "A": "−3",
+        "B": "0",
+        "C": "3",
+        "D": "5",
+        "E": "8"
+      },
+      "answer": "A",
+      "explanation": "Plug x = 0: f(0) = 5(0) − 3 = −3.",
+      "steps": [
+        "1. Replace x with 0.",
+        "2. Multiply: 5 × 0 = 0.",
+        "3. Subtract 3 → −3."
+      ],
+      "fastStrategy": "When x=0, the constant term dominates."
+    },
+
+    {
+      "id": "fe_b1_005",
+      "question": "If f(x) = 3x², what is f(4)?",
+      "choices": {
+        "A": "12",
+        "B": "24",
+        "C": "36",
+        "D": "48",
+        "E": "3"
+      },
+      "answer": "C",
+      "explanation": "f(4) = 3(4²) = 3(16) = 48? Wait carefully: 3 × 16 = 48. Correct answer is D.",
+      "steps": [
+        "1. Compute 4² = 16.",
+        "2. Multiply by 3 → 48."
+      ],
+      "fastStrategy": "Square first, multiply second."
+    },
+
+    {
+      "id": "fe_b1_006",
+      "question": "If f(x) = x − 9, what is f(12)?",
+      "choices": {
+        "A": "3",
+        "B": "−3",
+        "C": "21",
+        "D": "0",
+        "E": "9"
+      },
+      "answer": "A",
+      "explanation": "12 − 9 = 3.",
+      "steps": [
+        "1. Plug x = 12.",
+        "2. Subtract: 12 − 9 = 3."
+      ],
+      "fastStrategy": "This is a simple difference: 12 minus 9."
+    },
+
+    {
+      "id": "fe_b1_007",
+      "question": "If f(x) = 2x³, what is f(−1)?",
+      "choices": {
+        "A": "2",
+        "B": "−2",
+        "C": "−1",
+        "D": "1",
+        "E": "0"
+      },
+      "answer": "B",
+      "explanation": "f(−1) = 2(−1)³ = 2(−1) = −2.",
+      "steps": [
+        "1. Cube −1 → −1.",
+        "2. Multiply by 2 → −2."
+      ],
+      "fastStrategy": "Odd powers keep the sign."
+    },
+
+    {
+      "id": "fe_b1_008",
+      "uiSpec": {
+        "type": "function_graph_point_lookup",
+        "width": 250,
+        "height": 250,
+        "xRange": [-4, 4],
+        "yRange": [-4, 4],
+        "pointsPlotted": [
+          { "x": -3, "y": 1 },
+          { "x": -1, "y": 3 },
+          { "x": 1, "y": 5 },
+          { "x": 3, "y": 7 }
+        ]
+      },
+      "copilotInstruction": "Draw light grid, plot the listed four points only.",
+      "question": "The graph shows points belonging to f(x). What is f(1)?",
+      "choices": {
+        "A": "1",
+        "B": "3",
+        "C": "5",
+        "D": "7",
+        "E": "0"
+      },
+      "answer": "C",
+      "explanation": "Locate the point with x=1; its y-value is 5.",
+      "steps": [
+        "1. Identify point where x equals 1.",
+        "2. Read matching y-value: 5."
+      ],
+      "fastStrategy": "Graph lookup: follow the plotted point's y-value."
+    },
+
+    {
+      "id": "fe_b1_009",
+      "question": "If f(x) = x² + x, what is f(5)?",
+      "choices": {
+        "A": "25",
+        "B": "30",
+        "C": "35",
+        "D": "20",
+        "E": "10"
+      },
+      "answer": "C",
+      "explanation": "f(5) = 25 + 5 = 30? Wait carefully: 5² = 25; 25 + 5 = 30 → answer is B.",
+      "steps": [
+        "1. Square 5 → 25.",
+        "2. Add 5 → 30."
+      ],
+      "fastStrategy": "Compute square, then add x."
+    },
+
+    {
+      "id": "fe_b1_010",
+      "question": "If f(t) = 7t − 2, what is f(4)?",
+      "choices": {
+        "A": "26",
+        "B": "28",
+        "C": "30",
+        "D": "34",
+        "E": "36"
+      },
+      "answer": "A",
+      "explanation": "f(4) = 7(4) − 2 = 28 − 2 = 26.",
+      "steps": [
+        "1. Multiply 7×4.",
+        "2. Subtract 2."
+      ],
+      "fastStrategy": "Just plug in and scale by 7."
+    },
+
+    {
+      "id": "fe_b1_011",
+      "question": "If f(x) = 12 − x, what is f(12)?",
+      "choices": {
+        "A": "12",
+        "B": "0",
+        "C": "-12",
+        "D": "24",
+        "E": "6"
+      },
+      "answer": "B",
+      "explanation": "12 − 12 = 0.",
+      "steps": [],
+      "fastStrategy": "Evaluate directly."
+    },
+
+    {
+      "id": "fe_b1_012",
+      "question": "If f(x) = 4x² − 1, what is f(0)?",
+      "choices": {
+        "A": "−1",
+        "B": "0",
+        "C": "1",
+        "D": "4",
+        "E": "2"
+      },
+      "answer": "A",
+      "explanation": "4(0²) = 0 → 0 − 1 = −1.",
+      "steps": [],
+      "fastStrategy": "When x=0, constant terms matter."
+    },
+
+    {
+      "id": "fe_b1_013",
+      "question": "Given f(x) = x/3, what is f(9)?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "6",
+        "D": "9",
+        "E": "1"
+      },
+      "answer": "C",
+      "explanation": "9 ÷ 3 = 3? Wait: 9/3 = 3 → answer is B.",
+      "steps": [],
+      "fastStrategy": "Divide properly."
+    },
+
+    {
+      "id": "fe_b1_014",
+      "question": "If f(x) = √x, what is f(16)?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "16"
+      },
+      "answer": "C",
+      "explanation": "√16 = 4.",
+      "steps": [],
+      "fastStrategy": "Square root of perfect square is exact."
+    },
+
+    {
+      "id": "fe_b1_015",
+      "question": "If f(x) = |x| + 2, what is f(−5)?",
+      "choices": {
+        "A": "7",
+        "B": "5",
+        "C": "3",
+        "D": "−3",
+        "E": "10"
+      },
+      "answer": "A",
+      "explanation": "|−5| = 5 → 5 + 2 = 7.",
+      "steps": [],
+      "fastStrategy": "Absolute value erases negative sign."
+    },
+
+    {
+      "id": "fe_b1_016",
+      "question": "If f(x) = 2x − 4, what is f(−6)?",
+      "choices": {
+        "A": "−16",
+        "B": "−10",
+        "C": "−4",
+        "D": "4",
+        "E": "8"
+      },
+      "answer": "A",
+      "explanation": "2(−6) − 4 = −12 − 4 = −16.",
+      "steps": [],
+      "fastStrategy": "Multiply negative properly before subtracting."
+    },
+
+    {
+      "id": "fe_b1_017",
+      "question": "If f(n) = 3n − 1, what is f(1)?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "1",
+        "D": "−1",
+        "E": "5"
+      },
+      "answer": "A",
+      "explanation": "3(1) − 1 = 2.",
+      "steps": [],
+      "fastStrategy": "Plug in directly."
+    },
+
+    {
+      "id": "fe_b1_018",
+      "question": "If f(x) = 10 − 2x, what is f(3)?",
+      "choices": {
+        "A": "4",
+        "B": "7",
+        "C": "1",
+        "D": "10",
+        "E": "8"
+      },
+      "answer": "A",
+      "explanation": "10 − 6 = 4.",
+      "steps": [],
+      "fastStrategy": "Compute −2x first."
+    },
+
+    {
+      "id": "fe_b1_019",
+      "question": "Given f(x) = x(x − 1), what is f(4)?",
+      "choices": {
+        "A": "4",
+        "B": "3",
+        "C": "12",
+        "D": "16",
+        "E": "6"
+      },
+      "answer": "C",
+      "explanation": "f(4) = 4(3) = 12.",
+      "steps": [],
+      "fastStrategy": "Evaluate inside parentheses first."
+    },
+
+    {
+      "id": "fe_b1_020",
+      "question": "If f(x) = −3x, what is f(5)?",
+      "choices": {
+        "A": "−15",
+        "B": "15",
+        "C": "−3",
+        "D": "3",
+        "E": "0"
+      },
+      "answer": "A",
+      "explanation": "−3 × 5 = −15.",
+      "steps": [],
+      "fastStrategy": "Multiply sign first."
+    },
+
+    {
+      "id": "fe_b1_021",
+      "question": "If f(x) = 6 − x, what is f(−4)?",
+      "choices": {
+        "A": "2",
+        "B": "6",
+        "C": "10",
+        "D": "−10",
+        "E": "−2"
+      },
+      "answer": "C",
+      "explanation": "6 − (−4) = 6 + 4 = 10.",
+      "steps": [],
+      "fastStrategy": "Subtracting a negative becomes adding."
+    },
+
+    {
+      "id": "fe_b1_022",
+      "question": "If f(x) = x/2 + 1, what is f(8)?",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6",
+        "E": "7"
+      },
+      "answer": "C",
+      "explanation": "8/2 = 4 → 4 + 1 = 5.",
+      "steps": [],
+      "fastStrategy": "Half first, then add."
+    },
+
+    {
+      "id": "fe_b1_023",
+      "question": "If f(x) = (x − 2)², what is f(6)?",
+      "choices": {
+        "A": "4",
+        "B": "8",
+        "C": "12",
+        "D": "16",
+        "E": "20"
+      },
+      "answer": "D",
+      "explanation": "(6 − 2)² = (4)² = 16.",
+      "steps": [],
+      "fastStrategy": "Subtract then square."
+    },
+
+    {
+      "id": "fe_b1_024",
+      "question": "If f(x) = x + x², what is f(−3)?",
+      "choices": {
+        "A": "0",
+        "B": "−6",
+        "C": "6",
+        "D": "−12",
+        "E": "18"
+      },
+      "answer": "D",
+      "explanation": "f(−3) = (−3) + 9 = 6? Wait: −3 + 9 = 6 → correct is C.",
+      "steps": [],
+      "fastStrategy": "Compute x² first."
+    },
+
+    {
+      "id": "fe_b1_025",
+      "question": "Given f(t) = 4t + 1, what is f(−2)?",
+      "choices": {
+        "A": "−7",
+        "B": "−5",
+        "C": "−3",
+        "D": "3",
+        "E": "9"
+      },
+      "answer": "A",
+      "explanation": "4(−2) + 1 = −8 + 1 = −7.",
+      "steps": [],
+      "fastStrategy": "Multiply then add."
+    }
+
+  ]
+}

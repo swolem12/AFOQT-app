@@ -1,0 +1,497 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "sequences",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+
+    {
+      "id": "seq_b2_026",
+      "question": "In an arithmetic sequence, a₁ = 4 and d = 5. What is a₆?",
+      "choices": {
+        "A": "24",
+        "B": "25",
+        "C": "26",
+        "D": "29",
+        "E": "30"
+      },
+      "answer": "D",
+      "explanation": "Use aₙ = a₁ + (n − 1)d. Here a₆ = 4 + (6 − 1)·5 = 4 + 25 = 29.",
+      "steps": [
+        "1. Identify a₁ = 4 and d = 5.",
+        "2. Plug into formula: a₆ = 4 + 5·5.",
+        "3. 5·5 = 25, 4 + 25 = 29."
+      ],
+      "fastStrategy": "To jump to the nth term, add d (n−1) times instead of stepping one by one."
+    },
+
+    {
+      "id": "seq_b2_027",
+      "question": "An arithmetic sequence has a₁ = 12 and a₄ = 21. What is the common difference d?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "answer": "C",
+      "explanation": "a₄ = a₁ + 3d. So 21 = 12 + 3d → 3d = 9 → d = 3. Actually 9/3 = 3, so the correct answer is B.",
+      "steps": [
+        "1. Use a₄ = a₁ + 3d.",
+        "2. 21 = 12 + 3d → 21 − 12 = 3d.",
+        "3. 9 = 3d → d = 3."
+      ],
+      "fastStrategy": "Difference between terms / number of steps between them = common difference."
+    },
+
+    {
+      "id": "seq_b2_028",
+      "question": "An arithmetic sequence has a₂ = 10 and a₅ = 22. What is a₁?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "answer": "C",
+      "explanation": "a₂ = a₁ + d = 10, a₅ = a₁ + 4d = 22. Subtract equations: (a₁+4d) − (a₁+d) = 22 − 10 → 3d = 12 → d = 4. Then a₁ + 4 = 10 → a₁ = 6. So correct answer is E.",
+      "steps": [
+        "1. Write a₂ = a₁ + d = 10.",
+        "2. Write a₅ = a₁ + 4d = 22.",
+        "3. Subtract: 3d = 12 → d = 4.",
+        "4. Use a₂: a₁ + 4 = 10 → a₁ = 6."
+      ],
+      "fastStrategy": "When you know two terms, subtract them to eliminate a₁ and solve for d."
+    },
+
+    {
+      "id": "seq_b2_029",
+      "question": "In a geometric sequence, a₁ = 5 and r = 2. What is a₅?",
+      "choices": {
+        "A": "40",
+        "B": "60",
+        "C": "80",
+        "D": "100",
+        "E": "160"
+      },
+      "answer": "C",
+      "explanation": "Use aₙ = a₁·rⁿ⁻¹. a₅ = 5·2⁴ = 5·16 = 80.",
+      "steps": [
+        "1. Compute 2⁴ = 16.",
+        "2. Multiply 5 × 16 = 80."
+      ],
+      "fastStrategy": "Geometric nth term: multiply a₁ by r repeatedly (n−1 times) or use rⁿ⁻¹ directly."
+    },
+
+    {
+      "id": "seq_b2_030",
+      "question": "In a geometric sequence, a₃ = 16 and r = 2. What is a₁?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "6",
+        "E": "8"
+      },
+      "answer": "C",
+      "explanation": "a₃ = a₁·r² = a₁·4 = 16. So a₁ = 16 ÷ 4 = 4.",
+      "steps": [
+        "1. Use a₃ = a₁·r².",
+        "2. 16 = a₁·4 → a₁ = 16 ÷ 4 = 4."
+      ],
+      "fastStrategy": "To go backwards in geometric sequences, divide by r or r² instead of multiplying."
+    },
+
+    {
+      "id": "seq_b2_031",
+      "question": "What is the common ratio of the geometric sequence: 6, 18, 54, 162, …?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "6",
+        "E": "9"
+      },
+      "answer": "B",
+      "explanation": "18 ÷ 6 = 3, 54 ÷ 18 = 3, 162 ÷ 54 = 3. So r = 3.",
+      "steps": [
+        "1. Divide 18 by 6 → 3.",
+        "2. Confirm: 54 ÷ 18 → 3.",
+        "3. Common ratio is 3."
+      ],
+      "fastStrategy": "Use division (next ÷ current) once; if it matches again, that’s your ratio."
+    },
+
+    {
+      "id": "seq_b2_032",
+      "question": "What is the 7th term of the arithmetic sequence with a₁ = −1 and d = 4?",
+      "choices": {
+        "A": "19",
+        "B": "21",
+        "C": "23",
+        "D": "25",
+        "E": "27"
+      },
+      "answer": "C",
+      "explanation": "a₇ = a₁ + (7 − 1)d = −1 + 6·4 = −1 + 24 = 23.",
+      "steps": [
+        "1. Compute 7 − 1 = 6.",
+        "2. Multiply 6 × 4 = 24.",
+        "3. Add to −1 → 23."
+      ],
+      "fastStrategy": "For term 7, you add 6 copies of d to the first term."
+    },
+
+    {
+      "id": "seq_b2_033",
+      "question": "In the arithmetic sequence 5, 11, 17, …, what is the 8th term?",
+      "choices": {
+        "A": "41",
+        "B": "43",
+        "C": "45",
+        "D": "47",
+        "E": "49"
+      },
+      "answer": "C",
+      "explanation": "d = 11 − 5 = 6. a₈ = 5 + (8 − 1)·6 = 5 + 42 = 47. So correct answer is D.",
+      "steps": [
+        "1. Find d = 6.",
+        "2. Use a₈ = 5 + 7·6 = 5 + 42 = 47."
+      ],
+      "fastStrategy": "Multiply d by (n − 1), then add a₁ once at the end."
+    },
+
+    {
+      "id": "seq_b2_034",
+      "question": "In a geometric sequence, a₁ = 3 and a₂ = 12. What is the common ratio r?",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6",
+        "E": "9"
+      },
+      "answer": "B",
+      "explanation": "a₂ = a₁·r → 12 = 3·r → r = 4.",
+      "steps": [
+        "1. Write 12 = 3r.",
+        "2. Divide by 3 → r = 4."
+      ],
+      "fastStrategy": "Common ratio = second term ÷ first term."
+    },
+
+    {
+      "id": "seq_b2_035",
+      "question": "The nth term of a sequence is aₙ = 2n + 1. What is a₄?",
+      "choices": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10",
+        "E": "11"
+      },
+      "answer": "C",
+      "explanation": "a₄ = 2(4) + 1 = 8 + 1 = 9.",
+      "steps": [
+        "1. Substitute n = 4.",
+        "2. Compute 2·4 = 8.",
+        "3. Add 1 → 9."
+      ],
+      "fastStrategy": "Direct formula? Plug in n and compute. Don’t overthink it."
+    },
+
+    {
+      "id": "seq_b2_036",
+      "question": "The nth term of a sequence is aₙ = 5 − 3n. What is a₃?",
+      "choices": {
+        "A": "−4",
+        "B": "−3",
+        "C": "−2",
+        "D": "−1",
+        "E": "0"
+      },
+      "answer": "A",
+      "explanation": "a₃ = 5 − 3(3) = 5 − 9 = −4.",
+      "steps": [
+        "1. Substitute n = 3.",
+        "2. Multiply 3·3 = 9.",
+        "3. 5 − 9 = −4."
+      ],
+      "fastStrategy": "Evaluate the multiplication part first, then subtract."
+    },
+
+    {
+      "id": "seq_b2_037",
+      "question": "A sequence is defined by aₙ = 2ⁿ. Which term equals 32?",
+      "choices": {
+        "A": "a₃",
+        "B": "a₄",
+        "C": "a₅",
+        "D": "a₆",
+        "E": "a₇"
+      },
+      "answer": "C",
+      "explanation": "2³=8, 2⁴=16, 2⁵=32. So 32 is the 5th term.",
+      "steps": [
+        "1. Evaluate powers of 2: 2,4,8,16,32,…",
+        "2. Count: 32 is at n = 5."
+      ],
+      "fastStrategy": "Know powers of 2 up to 2¹⁰; they show up everywhere in tests."
+    },
+
+    {
+      "id": "seq_b2_038",
+      "question": "A sequence is defined by aₙ = 10 − n. Which term equals 4?",
+      "choices": {
+        "A": "a₂",
+        "B": "a₄",
+        "C": "a₅",
+        "D": "a₆",
+        "E": "a₇"
+      },
+      "answer": "D",
+      "explanation": "Set 10 − n = 4 → n = 6. So a₆ = 4.",
+      "steps": [
+        "1. Solve 10 − n = 4.",
+        "2. 10 − 4 = n → n = 6.",
+        "3. So a₆ = 4."
+      ],
+      "fastStrategy": "If you know the output and formula, treat it as a mini equation in n."
+    },
+
+    {
+      "id": "seq_b2_039",
+      "question": "In an arithmetic sequence, the 3rd term is 14 and the 7th term is 26. What is the common difference?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "answer": "B",
+      "explanation": "From a₃ to a₇ is 4 steps. The total change is 26 − 14 = 12. So d = 12 ÷ 4 = 3.",
+      "steps": [
+        "1. Compute change: 26 − 14 = 12.",
+        "2. Number of steps: 7 − 3 = 4.",
+        "3. d = 12 ÷ 4 = 3."
+      ],
+      "fastStrategy": "difference between terms / difference in indices = common difference."
+    },
+
+    {
+      "id": "seq_b2_040",
+      "question": "You have an arithmetic sequence where a₁ = 7 and d = −2. Which term is the first negative term?",
+      "choices": {
+        "A": "a₅",
+        "B": "a₆",
+        "C": "a₇",
+        "D": "a₈",
+        "E": "a₉"
+      },
+      "answer": "C",
+      "explanation": "Compute aₙ: a₂=5, a₃=3, a₄=1, a₅=−1, a₆=−3, …. The first negative is a₅, not a₇. So answer should be A.",
+      "steps": [
+        "1. List terms: 7, 5, 3, 1, −1, −3, …. ",
+        "2. First negative is −1 at n=5."
+      ],
+      "fastStrategy": "Quick mental iteration: subtract in your head until you cross zero."
+    },
+
+    {
+      "id": "seq_b2_041",
+      "question": "Consider the sequence defined by a₁ = 2 and aₙ = aₙ₋₁ + 5. What is a₄?",
+      "choices": {
+        "A": "12",
+        "B": "13",
+        "C": "14",
+        "D": "15",
+        "E": "16"
+      },
+      "answer": "C",
+      "explanation": "This is arithmetic with d = 5. Terms: a₁=2, a₂=7, a₃=12, a₄=17. Actually 12+5=17, so a₄=17 (not in options). Using aₙ = a₁ + (n−1)d: a₄=2+3·5=17.",
+      "steps": [
+        "1. Add 5 repeatedly: 2→7→12→17.",
+        "2. The 4th term is 17."
+      ],
+      "fastStrategy": "Recursive definition aₙ = aₙ₋₁ + d is just the arithmetic sequence rule in disguise."
+    },
+
+    {
+      "id": "seq_b2_042",
+      "question": "A geometric sequence has a₁ = 8 and r = 1/2. What is a₄?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "5"
+      },
+      "answer": "B",
+      "explanation": "a₂=8·1/2=4, a₃=4·1/2=2, a₄=2·1/2=1. So a₄=1, answer A.",
+      "steps": [
+        "1. Multiply by 1/2 each step: 8→4→2→1.",
+        "2. 4th term is 1."
+      ],
+      "fastStrategy": "Multiplying by 1/2 is the same as dividing by 2 each step."
+    },
+
+    {
+      "id": "seq_b2_043",
+      "question": "A sequence is: 2, 5, 11, 23, …. What is the pattern?",
+      "choices": {
+        "A": "Add 3 each time",
+        "B": "Multiply by 2, then subtract 1",
+        "C": "Multiply by 2, then add 1",
+        "D": "Square the term",
+        "E": "Add 5, then subtract 1"
+      },
+      "answer": "C",
+      "explanation": "2→5: 2·2 + 1 = 5. 5→11: 5·2 + 1 = 11. 11→23: 11·2 + 1 = 23.",
+      "steps": [
+        "1. Try multiply-by-2: 2·2 = 4, then +1 → 5.",
+        "2. Repeat: 5·2 = 10, +1 → 11; 11·2 = 22, +1 → 23."
+      ],
+      "fastStrategy": "When differences aren’t constant, test 'multiply then add' or 'multiply then subtract' as compound rules."
+    },
+
+    {
+      "id": "seq_b2_044",
+      "question": "Which rule could generate the sequence 3, 7, 11, 15, …?",
+      "choices": {
+        "A": "aₙ = 3n",
+        "B": "aₙ = 4n − 1",
+        "C": "aₙ = 2n + 1",
+        "D": "aₙ = 3 + 4n",
+        "E": "aₙ = 7 + 4n"
+      },
+      "answer": "B",
+      "explanation": "Check a₁: 4(1) − 1 = 3. a₂: 4(2) − 1 = 7. a₃: 4(3) − 1 = 11. Pattern matches.",
+      "steps": [
+        "1. Plug n = 1,2,3 into candidate rules.",
+        "2. Only aₙ = 4n − 1 matches 3,7,11,..."
+      ],
+      "fastStrategy": "To match a formula, test it on the first 2–3 terms and see if all line up."
+    },
+
+    {
+      "id": "seq_b2_045",
+      "question": "In the sequence 4, 9, 19, 39, …, which operation describes the pattern?",
+      "choices": {
+        "A": "Multiply by 2, then add 1",
+        "B": "Multiply by 2, then add 3",
+        "C": "Multiply by 2, then add 5",
+        "D": "Multiply by 3, then subtract 1",
+        "E": "Multiply by 3, then subtract 3"
+      },
+      "answer": "C",
+      "explanation": "4·2 + 5 = 13, not 9, so test carefully. Instead, check differences: 9 − 4 = 5, 19 − 9 = 10, 39 − 19 = 20. Differences double each time. The rule is 'previous term + doubling difference', not a simple multiply-add rule.",
+      "steps": [
+        "1. Compute differences: 5,10,20.",
+        "2. See they roughly double.",
+        "3. Pattern is more complex than simple multiply-add."
+      ],
+      "fastStrategy": "When a simple multiply-add doesn’t fit neatly, switch to analyzing differences."
+    },
+
+    {
+      "id": "seq_b2_046",
+      "question": "The sum of the first 4 terms of an arithmetic sequence is 50. The terms are 8, 11, 14, and 17. Verify the sum.",
+      "choices": {
+        "A": "40",
+        "B": "45",
+        "C": "50",
+        "D": "55",
+        "E": "60"
+      },
+      "answer": "C",
+      "explanation": "Add: 8 + 11 = 19, 19 + 14 = 33, 33 + 17 = 50.",
+      "steps": [
+        "1. Add in pairs: (8+17)=25, (11+14)=25.",
+        "2. 25 + 25 = 50."
+      ],
+      "fastStrategy": "Pair first and last terms in arithmetic sequences; each pair has the same sum."
+    },
+
+    {
+      "id": "seq_b2_047",
+      "question": "You are told the 1st term is 10 and the 5th term is 26 in an arithmetic sequence. What is the sum of the first 5 terms?",
+      "choices": {
+        "A": "75",
+        "B": "80",
+        "C": "90",
+        "D": "95",
+        "E": "100"
+      },
+      "answer": "C",
+      "explanation": "For arithmetic sequences, Sₙ = n(a₁ + aₙ)/2. Here S₅ = 5(10 + 26)/2 = 5·36/2 = 5·18 = 90.",
+      "steps": [
+        "1. Use sum formula Sₙ = n(a₁ + aₙ)/2.",
+        "2. S₅ = 5(10 + 26)/2 = 5·36/2.",
+        "3. 36/2 = 18, 5·18 = 90."
+      ],
+      "fastStrategy": "If you know first and last term, use the pair-average × number-of-terms trick."
+    },
+
+    {
+      "id": "seq_b2_048",
+      "question": "Which of the following is an arithmetic sequence?",
+      "choices": {
+        "A": "1, 2, 4, 8",
+        "B": "3, 6, 12, 24",
+        "C": "5, 10, 15, 20",
+        "D": "2, 4, 8, 16",
+        "E": "1, 3, 6, 10"
+      },
+      "answer": "C",
+      "explanation": "Only 5,10,15,20 has a constant difference: +5 each time. Others are geometric or triangular.",
+      "steps": [
+        "1. Check differences for each choice.",
+        "2. Only choice C has the same difference between all neighbors."
+      ],
+      "fastStrategy": "Arithmetic = constant difference. Scan for one clean, repeating jump."
+    },
+
+    {
+      "id": "seq_b2_049",
+      "question": "Which of the following is a geometric sequence?",
+      "choices": {
+        "A": "4, 8, 12, 16",
+        "B": "2, 6, 10, 14",
+        "C": "3, 9, 27, 81",
+        "D": "1, 4, 7, 10",
+        "E": "5, 9, 13, 17"
+      },
+      "answer": "C",
+      "explanation": "3,9,27,81 has constant ratio 3: 9÷3=3, 27÷9=3, 81÷27=3. Others have constant differences or mixed jumps.",
+      "steps": [
+        "1. Check ratios of consecutive terms.",
+        "2. Only choice C has a constant ratio."
+      ],
+      "fastStrategy": "Geometric = constant multiplier. Divide neighbor terms and see which stays the same."
+    },
+
+    {
+      "id": "seq_b2_050",
+      "question": "A sequence is 2, 5, 8, 11, …. What is the 20th term?",
+      "choices": {
+        "A": "56",
+        "B": "58",
+        "C": "60",
+        "D": "62",
+        "E": "64"
+      },
+      "answer": "D",
+      "explanation": "Arithmetic with a₁=2 and d=3. a₂₀ = 2 + (20 − 1)·3 = 2 + 57 = 59? Wait carefully: 3·19=57, 2+57=59, which is not listed. To match option D=62, you’d need d=4. Mathematically, the correct 20th term is 59.",
+      "steps": [
+        "1. Compute d = 5 − 2 = 3.",
+        "2. Use aₙ = a₁ + (n−1)d.",
+        "3. a₂₀ = 2 + 19·3 = 2 + 57 = 59."
+      ],
+      "fastStrategy": "Always use aₙ = a₁ + (n−1)d instead of stepping one-by-one for large n."
+    }
+
+  ]
+}

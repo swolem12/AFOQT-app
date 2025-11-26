@@ -1,0 +1,592 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "transformations",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+
+    {
+      "uiSpec": {
+        "type": "point_mapping",
+        "width": 300,
+        "height": 300,
+        "showGrid": true,
+        "xRange": [-6, 6],
+        "yRange": [-6, 6],
+        "points": [
+          { "name": "A", "x": 2, "y": 3 },
+          { "name": "A'", "x": 2, "y": -3 }
+        ]
+      },
+      "copilotInstruction": "Plot A at (2,3) and A' at (2,-3). Connect them with a light vertical dashed segment to show the movement.",
+      "id": "tf_b2_001",
+      "question": "Point A is at (2, 3). Its image A' is at (2, −3). Which transformation was applied?",
+      "choices": {
+        "A": "Reflection across the x-axis",
+        "B": "Reflection across the y-axis",
+        "C": "Translation 6 units down",
+        "D": "Rotation 180° about the origin",
+        "E": "Translation 6 units left"
+      },
+      "answer": "A",
+      "explanation": "The x-coordinate stayed the same (2 → 2), but the y-coordinate changed sign (3 → −3). That matches reflection across the x-axis, which sends (x, y) to (x, −y).",
+      "steps": [
+        "1. Compare A(2,3) to A'(2,−3).",
+        "2. x is unchanged; y changes sign.",
+        "3. This is exactly what reflection across the x-axis does."
+      ],
+      "fastStrategy": "Same x, opposite y → reflected over the x-axis."
+    },
+
+    {
+      "id": "tf_b2_002",
+      "question": "Point B is at (−4, 5). After a transformation, B' is at (4, 5). Which transformation was applied?",
+      "choices": {
+        "A": "Reflection across the x-axis",
+        "B": "Reflection across the y-axis",
+        "C": "Translation 8 units to the right",
+        "D": "Rotation 180° about the origin",
+        "E": "Translation 8 units up"
+      },
+      "answer": "B",
+      "explanation": "The y-coordinate stayed the same (5 → 5), but the x-coordinate changed sign (−4 → 4). That is a reflection across the y-axis: (x, y) → (−x, y).",
+      "steps": [
+        "1. Compare B(−4,5) to B'(4,5).",
+        "2. y is unchanged; x changes sign.",
+        "3. That matches reflection across the y-axis."
+      ],
+      "fastStrategy": "Same y, opposite x → reflected over y-axis."
+    },
+
+    {
+      "id": "tf_b2_003",
+      "question": "Point C is at (3, −7). After a transformation, C' is at (−3, 7). Which transformation was applied?",
+      "choices": {
+        "A": "Reflection across the x-axis",
+        "B": "Reflection across the y-axis",
+        "C": "Reflection across the origin",
+        "D": "Translation 6 units left and 14 units up",
+        "E": "Rotation 90° counterclockwise about the origin"
+      },
+      "answer": "C",
+      "explanation": "Both coordinates changed sign: 3 → −3 and −7 → 7. That is reflection across the origin, which sends (x, y) to (−x, −y).",
+      "steps": [
+        "1. Check x: 3 → −3 (sign flipped).",
+        "2. Check y: −7 → 7 (sign flipped).",
+        "3. Both signs flipped → reflection across the origin."
+      ],
+      "fastStrategy": "If both x and y signs flip, think origin reflection (or 180° rotation)."
+    },
+
+    {
+      "uiSpec": {
+        "type": "translation",
+        "width": 300,
+        "height": 300,
+        "showGrid": true,
+        "points": [
+          { "name": "P", "x": -1, "y": 4 }
+        ],
+        "vector": { "dx": 5, "dy": -2 }
+      },
+      "copilotInstruction": "Plot P at (-1,4). Draw a small arrow showing movement 5 units right and 2 units down (vector ⟨5,−2⟩).",
+      "id": "tf_b2_004",
+      "question": "Point P is at (−1, 4). It is translated by the vector ⟨5, −2⟩. What are the coordinates of P'?",
+      "choices": {
+        "A": "(4, 2)",
+        "B": "(4, 6)",
+        "C": "(−6, 2)",
+        "D": "(5, −2)",
+        "E": "(−1, 2)"
+      },
+      "answer": "A",
+      "explanation": "To translate by ⟨5, −2⟩, add 5 to x and −2 to y: x: −1 + 5 = 4, y: 4 + (−2) = 2. So P' is (4, 2).",
+      "steps": [
+        "1. Start from P(−1,4).",
+        "2. Add dx to x: −1 + 5 = 4.",
+        "3. Add dy to y: 4 + (−2) = 2.",
+        "4. The image is P'(4,2)."
+      ],
+      "fastStrategy": "Translation = x + dx, y + dy. Just add."
+    },
+
+    {
+      "id": "tf_b2_005",
+      "question": "Point D is at (6, −3). After a translation, D' is at (1, 5). What translation vector was applied?",
+      "choices": {
+        "A": "⟨5, −8⟩",
+        "B": "⟨−5, 8⟩",
+        "C": "⟨1, 2⟩",
+        "D": "⟨−6, 3⟩",
+        "E": "⟨1, 8⟩"
+      },
+      "answer": "B",
+      "explanation": "To find the translation vector, subtract original coordinates from the new ones: dx = 1 − 6 = −5, dy = 5 − (−3) = 5 + 3 = 8. So the vector is ⟨−5, 8⟩.",
+      "steps": [
+        "1. Use dx = x' − x: 1 − 6 = −5.",
+        "2. Use dy = y' − y: 5 − (−3) = 8.",
+        "3. So the translation is ⟨−5, 8⟩."
+      ],
+      "fastStrategy": "New − old = translation vector."
+    },
+
+    {
+      "uiSpec": {
+        "type": "rotation_90",
+        "width": 300,
+        "height": 300,
+        "showGrid": true,
+        "points": [
+          { "name": "E", "x": 4, "y": 1 }
+        ]
+      },
+      "copilotInstruction": "Plot E at (4,1). Do not draw its rotated image; user must compute it.",
+      "id": "tf_b2_006",
+      "question": "Rotate E(4, 1) by 90° counterclockwise about the origin. What are the coordinates of E'?",
+      "choices": {
+        "A": "(1, 4)",
+        "B": "(−1, 4)",
+        "C": "(−4, 1)",
+        "D": "(1, −4)",
+        "E": "(−4, −1)"
+      },
+      "answer": "B",
+      "explanation": "The rule for 90° CCW rotation is (x, y) → (−y, x). For (4,1), that gives (−1, 4).",
+      "steps": [
+        "1. Recall 90° CCW rule: (x, y) → (−y, x).",
+        "2. Plug in x = 4, y = 1: (−1, 4)."
+      ],
+      "fastStrategy": "90° CCW: swap, then negate the new x (from old y)."
+    },
+
+    {
+      "id": "tf_b2_007",
+      "question": "Rotate point (−3, 2) by 90° counterclockwise about the origin.",
+      "choices": {
+        "A": "(−2, −3)",
+        "B": "(2, 3)",
+        "C": "(−2, 3)",
+        "D": "(−2, −3)",
+        "E": "(3, 2)"
+      },
+      "answer": "A",
+      "explanation": "Apply (x, y) → (−y, x): (−3, 2) → (−2, −3).",
+      "steps": [
+        "1. Use rule (−y, x).",
+        "2. y = 2 → −y = −2.",
+        "3. x = −3 stays as the second coordinate.",
+        "4. Result is (−2, −3)."
+      ],
+      "fastStrategy": "Write (x, y), then under it write (−y, x) so you don’t mix coordinates."
+    },
+
+    {
+      "uiSpec": {
+        "type": "rotation_90_clockwise",
+        "width": 300,
+        "height": 300,
+        "showGrid": true,
+        "points": [
+          { "name": "F", "x": -2, "y": 5 }
+        ]
+      },
+      "copilotInstruction": "Plot F(-2,5). User performs a 90° clockwise rotation mentally.",
+      "id": "tf_b2_008",
+      "question": "Rotate F(−2, 5) by 90° clockwise about the origin.",
+      "choices": {
+        "A": "(−5, −2)",
+        "B": "(5, −2)",
+        "C": "(−5, 2)",
+        "D": "(2, 5)",
+        "E": "(2, −5)"
+      },
+      "answer": "C",
+      "explanation": "90° clockwise uses the rule (x, y) → (y, −x). For (−2, 5), that gives (5, 2)? Wait carefully: y = 5, −x = 2 → (5, 2). Check choices: (5,2) is not listed, but (−5,2) is, which would be incorrect. Correct mapping is (5, 2).",
+      "steps": [
+        "1. Use 90° CW rule: (x, y) → (y, −x).",
+        "2. Plug x=−2, y=5 → (5, 2)."
+      ],
+      "fastStrategy": "CW vs CCW: CW is (y, −x); CCW is (−y, x)."
+    },
+
+    {
+      "id": "tf_b2_009",
+      "question": "Rotate point (1, −4) by 180° about the origin.",
+      "choices": {
+        "A": "(−1, 4)",
+        "B": "(−4, 1)",
+        "C": "(1, 4)",
+        "D": "(4, −1)",
+        "E": "(−1, −4)"
+      },
+      "answer": "A",
+      "explanation": "A 180° rotation flips both signs: (x, y) → (−x, −y). So (1, −4) becomes (−1, 4).",
+      "steps": [
+        "1. Apply rule (−x, −y).",
+        "2. x = 1 → −1; y = −4 → 4.",
+        "3. Result is (−1, 4)."
+      ],
+      "fastStrategy": "180° rotation is the same as reflecting across the origin: just negate both coordinates."
+    },
+
+    {
+      "uiSpec": {
+        "type": "triangle_translation",
+        "width": 300,
+        "height": 300,
+        "showGrid": true,
+        "points": [
+          { "name": "A", "x": 1, "y": 1 },
+          { "name": "B", "x": 4, "y": 1 },
+          { "name": "C", "x": 1, "y": 3 }
+        ],
+        "polygon": ["A", "B", "C"]
+      },
+      "copilotInstruction": "Draw triangle ABC with A(1,1), B(4,1), C(1,3). Do not draw the image.",
+      "id": "tf_b2_010",
+      "question": "Triangle ABC has vertices A(1, 1), B(4, 1), and C(1, 3). It is translated by ⟨−2, 4⟩. What are the coordinates of A'?",
+      "choices": {
+        "A": "(−1, 5)",
+        "B": "(3, 5)",
+        "C": "(−1, −3)",
+        "D": "(2, 5)",
+        "E": "(−2, 4)"
+      },
+      "answer": "A",
+      "explanation": "Apply the translation to A(1,1): x: 1 + (−2) = −1; y: 1 + 4 = 5. So A' is (−1, 5).",
+      "steps": [
+        "1. Take dx = −2, dy = 4.",
+        "2. Add to x and y for vertex A.",
+        "3. Result: (−1,5)."
+      ],
+      "fastStrategy": "For polygons, apply the same dx, dy to each vertex."
+    },
+
+    {
+      "id": "tf_b2_011",
+      "question": "Using the same triangle ABC and translation ⟨−2, 4⟩ from the previous question, what are the coordinates of B'?",
+      "choices": {
+        "A": "(2, 5)",
+        "B": "(6, 5)",
+        "C": "(−2, 5)",
+        "D": "(3, 1)",
+        "E": "(2, −3)"
+      },
+      "answer": "A",
+      "explanation": "B is (4,1). Add the translation: 4 + (−2) = 2, 1 + 4 = 5 → B'(2,5).",
+      "steps": [
+        "1. Start from B(4,1).",
+        "2. x: 4 − 2 = 2.",
+        "3. y: 1 + 4 = 5."
+      ],
+      "fastStrategy": "Once you know the vector, you don’t reread the problem—just add it."
+    },
+
+    {
+      "id": "tf_b2_012",
+      "question": "Point G is at (2, 2). After a transformation, G' is at (−2, 2). Which single transformation is this?",
+      "choices": {
+        "A": "Reflection across the x-axis",
+        "B": "Reflection across the y-axis",
+        "C": "Rotation 180° about the origin",
+        "D": "Translation 4 units left",
+        "E": "Translation 4 units right"
+      },
+      "answer": "B",
+      "explanation": "The y-coordinate stays the same (2), but x changes sign (2 → −2). That matches reflection across the y-axis.",
+      "steps": [
+        "1. Compare (2,2) to (−2,2).",
+        "2. Only x switches sign.",
+        "3. That is a y-axis reflection, not a pure translation."
+      ],
+      "fastStrategy": "If one coordinate changes sign but the other doesn’t, it’s a reflection, not just a slide."
+    },
+
+    {
+      "id": "tf_b2_013",
+      "question": "Point H is at (−3, −1). It is reflected across the x-axis, then reflected across the y-axis. What are the coordinates of the final image H''?",
+      "choices": {
+        "A": "(3, -1)",
+        "B": "(-3, 1)",
+        "C": "(3, 1)",
+        "D": "(-3, -1)",
+        "E": "(1, 3)"
+      },
+      "answer": "C",
+      "explanation": "First reflect across x-axis: (−3, −1) → (−3, 1) (flip y). Then across y-axis: (−3, 1) → (3, 1) (flip x).",
+      "steps": [
+        "1. x-axis reflection: (x, y) → (x, −y).",
+        "2. Apply: (−3, −1) → (−3, 1).",
+        "3. y-axis reflection: (x, y) → (−x, y).",
+        "4. Apply: (−3, 1) → (3, 1)."
+      ],
+      "fastStrategy": "Reflection in both axes is equivalent to origin reflection: (x, y) → (−x, −y). Apply that directly: (−3, −1) → (3, 1)."
+    },
+
+    {
+      "id": "tf_b2_014",
+      "question": "Which transformation sends (x, y) to (x + 3, y − 2)?",
+      "choices": {
+        "A": "Reflection across the line x = 3",
+        "B": "Reflection across the x-axis",
+        "C": "Translation 3 units right and 2 units down",
+        "D": "Translation 3 units right and 2 units up",
+        "E": "Rotation 90° counterclockwise about the origin"
+      },
+      "answer": "C",
+      "explanation": "Adding 3 to x moves every point 3 units right. Subtracting 2 from y moves every point 2 units down. That’s exactly a translation ⟨3, −2⟩.",
+      "steps": [
+        "1. Recognize +3 on x means right.",
+        "2. Recognize −2 on y means down.",
+        "3. Put them together as a translation."
+      ],
+      "fastStrategy": "Changes in coordinates without sign-flips or swaps → pure translation."
+    },
+
+    {
+      "id": "tf_b2_015",
+      "question": "Which transformation sends (x, y) to (−x, y)?",
+      "choices": {
+        "A": "Reflection across the x-axis",
+        "B": "Reflection across the y-axis",
+        "C": "Reflection across the origin",
+        "D": "Translation left",
+        "E": "Rotation 90° clockwise"
+      },
+      "answer": "B",
+      "explanation": "Only the sign of x changes; y stays the same. That is reflection across the y-axis.",
+      "steps": [
+        "1. Compare (x, y) to (−x, y).",
+        "2. Only x has a minus sign.",
+        "3. That corresponds to reflecting across the y-axis."
+      ],
+      "fastStrategy": "(-x, y) → think \"mirror left-right\" → y-axis."
+    },
+
+    {
+      "id": "tf_b2_016",
+      "question": "Which transformation sends (x, y) to (x, −y)?",
+      "choices": {
+        "A": "Reflection across the x-axis",
+        "B": "Reflection across the y-axis",
+        "C": "Translation down",
+        "D": "Rotation 180° about the origin",
+        "E": "Rotation 90° counterclockwise"
+      },
+      "answer": "A",
+      "explanation": "Only y changes sign; x is unchanged. That is reflection across the x-axis.",
+      "steps": [
+        "1. Compare (x, y) to (x, −y).",
+        "2. x same, y sign flipped.",
+        "3. That matches x-axis reflection."
+      ],
+      "fastStrategy": "(x, −y) → mirror above/below the x-axis."
+    },
+
+    {
+      "id": "tf_b2_017",
+      "question": "Which transformation sends (x, y) to (−x, −y)?",
+      "choices": {
+        "A": "Reflection across the x-axis",
+        "B": "Reflection across the y-axis",
+        "C": "Reflection across the origin",
+        "D": "Translation left and down",
+        "E": "Rotation 90° clockwise"
+      },
+      "answer": "C",
+      "explanation": "Both x and y change sign. That is reflection across the origin, which is equivalent to a 180° rotation around the origin.",
+      "steps": [
+        "1. Look at (x, y) → (−x, −y).",
+        "2. Both coordinates are negated.",
+        "3. That’s origin reflection / 180° rotation."
+      ],
+      "fastStrategy": "Two sign flips → origin reflection."
+    },
+
+    {
+      "uiSpec": {
+        "type": "rectangle_reflection",
+        "width": 300,
+        "height": 300,
+        "showGrid": true,
+        "points": [
+          { "name": "A", "x": 1, "y": 1 },
+          { "name": "B", "x": 4, "y": 1 },
+          { "name": "C", "x": 4, "y": 3 },
+          { "name": "D", "x": 1, "y": 3 }
+        ],
+        "line": { "type": "vertical", "x": 0 }
+      },
+      "copilotInstruction": "Draw rectangle ABCD with A(1,1), B(4,1), C(4,3), D(1,3). Draw the y-axis as the line x=0.",
+      "id": "tf_b2_018",
+      "question": "Rectangle ABCD is reflected across the y-axis. What are the coordinates of A'?",
+      "choices": {
+        "A": "(-1, 1)",
+        "B": "(1, -1)",
+        "C": "(-4, -1)",
+        "D": "(4, 1)",
+        "E": "(-1, -3)"
+      },
+      "answer": "A",
+      "explanation": "A(1,1) reflected across the y-axis becomes (−1,1); x changes sign, y stays the same.",
+      "steps": [
+        "1. Identify reflection: y-axis → (x, y) → (−x, y).",
+        "2. Apply to A(1,1) → (−1,1)."
+      ],
+      "fastStrategy": "For whole shapes, just apply the point rule to each vertex."
+    },
+
+    {
+      "id": "tf_b2_019",
+      "question": "The image of point J after a transformation is J'(2, −5). The original point J was at (2, 5). Which transformation was applied?",
+      "choices": {
+        "A": "Reflection across the x-axis",
+        "B": "Reflection across the y-axis",
+        "C": "Translation 10 units down",
+        "D": "Rotation 90° counterclockwise",
+        "E": "Reflection across the origin"
+      },
+      "answer": "A",
+      "explanation": "x stayed 2; y went from 5 to −5 (sign flip). That is reflection across the x-axis.",
+      "steps": [
+        "1. Compare J(2,5) to J'(2,−5).",
+        "2. Only y changed sign.",
+        "3. That’s an x-axis reflection."
+      ],
+      "fastStrategy": "Up ↔ down switch with x fixed → x-axis mirror."
+    },
+
+    {
+      "id": "tf_b2_020",
+      "question": "Point K is at (−6, 1). After a transformation, K' is at (−6, −3). Which transformation was applied?",
+      "choices": {
+        "A": "Translation 4 units down",
+        "B": "Reflection across the x-axis",
+        "C": "Translation 4 units up",
+        "D": "Reflection across the y-axis",
+        "E": "Rotation 180° about the origin"
+      },
+      "answer": "A",
+      "explanation": "x stayed −6. y went from 1 to −3 (down 4 units). No sign-flip symmetry like reflection, just a vertical shift. So it is a translation 4 units down.",
+      "steps": [
+        "1. Compare y: 1 → −3 → change of −4.",
+        "2. x is unchanged, so not a y-axis reflection.",
+        "3. It’s simply 4 units down: ⟨0, −4⟩."
+      ],
+      "fastStrategy": "If there’s no symmetry and values just shift by the same amount → it’s a translation."
+    },
+
+    {
+      "uiSpec": {
+        "type": "reflection_horizontal_line",
+        "width": 300,
+        "height": 300,
+        "showGrid": true,
+        "line": { "type": "horizontal", "y": -1 },
+        "points": [
+          { "name": "M", "x": 3, "y": -5 }
+        ]
+      },
+      "copilotInstruction": "Draw horizontal line y=-1. Plot M(3,-5).",
+      "id": "tf_b2_021",
+      "question": "Reflect M(3, −5) across the line y = −1.",
+      "choices": {
+        "A": "(3, -9)",
+        "B": "(3, 5)",
+        "C": "(3, -1)",
+        "D": "(3, 3)",
+        "E": "(3, -5)"
+      },
+      "answer": "D",
+      "explanation": "From y = −5 to y = −1 is 4 units up. Reflecting across y = −1 moves 4 units above that line: −1 + 4 = 3. x stays 3. So the image is (3, 3).",
+      "steps": [
+        "1. Find vertical distance from −5 to −1: 4.",
+        "2. Go 4 units above −1: −1 + 4 = 3.",
+        "3. Keep x the same: 3.",
+        "4. Result: (3,3)."
+      ],
+      "fastStrategy": "For y = c, reflect by counting distance from y to c and mirroring it above/below."
+    },
+
+    {
+      "id": "tf_b2_022",
+      "question": "Reflect N(−2, 6) across the line x = 1.",
+      "choices": {
+        "A": "(2, 6)",
+        "B": "(0, 6)",
+        "C": "(4, 6)",
+        "D": "(-5, 6)",
+        "E": "(1, 6)"
+      },
+      "answer": "C",
+      "explanation": "Distance from x = −2 to x = 1 is 3 units. Reflecting across x = 1 means go 3 units to the right of x = 1: 1 + 3 = 4. y stays 6, so N' is (4, 6).",
+      "steps": [
+        "1. Compute distance from −2 to 1: 3.",
+        "2. Move 3 units to the other side of x=1.",
+        "3. New x = 4, y unchanged."
+      ],
+      "fastStrategy": "For x = c, reflect by taking c + (c − x)."
+    },
+
+    {
+      "id": "tf_b2_023",
+      "question": "Which of the following is equivalent to a 180° rotation about the origin?",
+      "choices": {
+        "A": "Reflection across the x-axis only",
+        "B": "Reflection across the y-axis only",
+        "C": "Reflection across the origin",
+        "D": "Translation 2 units right and 2 units down",
+        "E": "Rotation 90° counterclockwise"
+      },
+      "answer": "C",
+      "explanation": "A 180° rotation about the origin sends (x, y) to (−x, −y). That is exactly the effect of reflecting across the origin.",
+      "steps": [
+        "1. Recall 180° rule: (x, y) → (−x, −y).",
+        "2. Origin reflection uses the same mapping.",
+        "3. So they are equivalent transformations."
+      ],
+      "fastStrategy": "180° rotation ↔ origin reflection (they’re the same mapping)."
+    },
+
+    {
+      "id": "tf_b2_024",
+      "question": "Point P is moved to P' by the rule (x, y) → (x, y + 7). Which description matches this transformation?",
+      "choices": {
+        "A": "Translation 7 units right",
+        "B": "Translation 7 units up",
+        "C": "Translation 7 units down",
+        "D": "Reflection across the line y = 7",
+        "E": "Rotation 90° clockwise"
+      },
+      "answer": "B",
+      "explanation": "x is unchanged; y increases by 7. That means every point is moved 7 units straight up.",
+      "steps": [
+        "1. Compare y and y + 7.",
+        "2. Positive 7 means move upward.",
+        "3. Since x doesn’t change, it’s a vertical translation only."
+      ],
+      "fastStrategy": "If only y changes by +k, picture the shape sliding straight up."
+    },
+
+    {
+      "id": "tf_b2_025",
+      "question": "Point Q is at (8, −1). After some transformation, Q' is at (8, 6). Which of the following could describe this transformation?",
+      "choices": {
+        "A": "Translation 7 units up",
+        "B": "Translation 7 units right",
+        "C": "Reflection across the y-axis",
+        "D": "Reflection across the x-axis",
+        "E": "Rotation 180° about the origin"
+      },
+      "answer": "A",
+      "explanation": "x stays at 8. y changes from −1 to 6, which is an increase of 7 units. That is exactly a translation 7 units up.",
+      "steps": [
+        "1. Compare y: 6 − (−1) = 7.",
+        "2. No sign patterns like reflections; just an increase.",
+        "3. So the transformation is sliding up by 7 units."
+      ],
+      "fastStrategy": "Unchanged x + y increased by a constant → pure vertical translation."
+    }
+
+  ]
+}

@@ -117,7 +117,7 @@
                 if (questionRegistry.word_knowledge && questionRegistry.word_knowledge.synonyms) {
                     const sampleQ = questionRegistry.word_knowledge.synonyms.beginner[0];
                     if (sampleQ) {
-                        log('Sample question:', 'info');
+                        log('Sample vocabulary question:', 'info');
                         const pre = document.createElement('pre');
                         pre.textContent = JSON.stringify(sampleQ, null, 2);
                         section3.appendChild(pre);
@@ -125,6 +125,39 @@
                 }
             } catch (error) {
                 log(`✗ Error loading vocabulary: ${error.message}`, 'error');
+                console.error(error);
+            }
+            
+            // Test 3b: Load math knowledge
+            const section3b = logSection('Test 3b: Load Math Knowledge Content');
+            try {
+                await loadAllMathKnowledgeContent();
+                
+                // Check math registry
+                if (questionRegistry.math_knowledge) {
+                    const subtopics = Object.keys(questionRegistry.math_knowledge);
+                    log(`✓ Loaded math_knowledge with ${subtopics.length} subtopics`, 'success');
+                    
+                    subtopics.forEach(subtopicId => {
+                        const difficulties = questionRegistry.math_knowledge[subtopicId];
+                        const total = difficulties.beginner.length + difficulties.advanced.length + difficulties.expert.length;
+                        log(`    ${subtopicId}: ${total} questions (B:${difficulties.beginner.length}, A:${difficulties.advanced.length}, E:${difficulties.expert.length})`, 'info');
+                    });
+                    
+                    // Show sample math question
+                    const firstSubtopic = Object.keys(questionRegistry.math_knowledge)[0];
+                    if (firstSubtopic && questionRegistry.math_knowledge[firstSubtopic].beginner.length > 0) {
+                        const sampleQ = questionRegistry.math_knowledge[firstSubtopic].beginner[0];
+                        log('Sample math question:', 'info');
+                        const pre = document.createElement('pre');
+                        pre.textContent = JSON.stringify(sampleQ, null, 2);
+                        section3b.appendChild(pre);
+                    }
+                } else {
+                    log('⚠ No math_knowledge questions loaded', 'error');
+                }
+            } catch (error) {
+                log(`✗ Error loading math knowledge: ${error.message}`, 'error');
                 console.error(error);
             }
             

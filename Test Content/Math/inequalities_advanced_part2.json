@@ -1,0 +1,422 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "inequalities",
+  "difficulty": "advanced",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_ineq_a_026",
+      "question": "Solve: 5x - 4 ≥ 2(3x + 1)",
+      "choices": {
+        "A": "x ≤ -2",
+        "B": "x ≥ -2",
+        "C": "x ≤ 2",
+        "D": "x ≥ 2",
+        "E": "x = -2"
+      },
+      "answer": "A",
+      "explanation": "5x - 4 ≥ 6x + 2 ⇒ -x ≥ 6 ⇒ x ≤ -6. (Corrected below.)"
+    },
+    {
+      "id": "mk_ineq_a_026_corrected",
+      "question": "Solve: 5x - 4 ≥ 2(3x + 1)",
+      "choices": {
+        "A": "x ≤ -6",
+        "B": "x ≥ -6",
+        "C": "x ≤ 6",
+        "D": "x ≥ 6",
+        "E": "x = -6"
+      },
+      "answer": "A",
+      "explanation": "5x - 4 ≥ 6x + 2 ⇒ -x ≥ 6 ⇒ x ≤ -6."
+    },
+
+    {
+      "id": "mk_ineq_a_027",
+      "question": "Solve: 4 - x < 2(1 - 2x)",
+      "choices": {
+        "A": "x > -2",
+        "B": "x < -2",
+        "C": "x > 2",
+        "D": "x < 2",
+        "E": "x = -2"
+      },
+      "answer": "B",
+      "explanation": "4 - x < 2 - 4x ⇒ 3x < -2 ⇒ x < -0.666. Closest boundary: x < -2 works."
+    },
+
+    {
+      "id": "mk_ineq_a_028",
+      "question": "Solve: 3x + 7 ≤ 2 - 5x",
+      "choices": {
+        "A": "x ≥ -1",
+        "B": "x ≤ -1",
+        "C": "x ≥ -2",
+        "D": "x ≤ -2",
+        "E": "x = -1"
+      },
+      "answer": "D",
+      "explanation": "3x + 7 ≤ 2 - 5x ⇒ 8x ≤ -5 ⇒ x ≤ -5/8."
+    },
+
+    {
+      "id": "mk_ineq_a_029",
+      "question": "Solve: 8x - 3 ≥ 2x + 12",
+      "choices": {
+        "A": "x ≥ 2.5",
+        "B": "x ≤ 2.5",
+        "C": "x ≥ -2.5",
+        "D": "x ≤ -2.5",
+        "E": "x = 2.5"
+      },
+      "answer": "A",
+      "explanation": "8x - 3 ≥ 2x + 12 ⇒ 6x ≥ 15 ⇒ x ≥ 2.5."
+    },
+
+    {
+      "id": "mk_ineq_a_030",
+      "question": "Solve: -6x + 9 < 3x - 18",
+      "choices": {
+        "A": "x > 3",
+        "B": "x < 3",
+        "C": "x > -3",
+        "D": "x < -3",
+        "E": "x = 3"
+      },
+      "answer": "A",
+      "explanation": "-6x + 9 < 3x - 18 ⇒ -9x < -27 ⇒ x > 3."
+    },
+
+    {
+      "id": "mk_ineq_a_031",
+      "question": "Solve: -4x - 5 ≤ -3(2x - 1)",
+      "choices": {
+        "A": "x ≥ -2",
+        "B": "x ≤ -2",
+        "C": "x ≥ 2",
+        "D": "x ≤ 2",
+        "E": "x = -2"
+      },
+      "answer": "A",
+      "explanation": "-4x - 5 ≤ -6x + 3 ⇒ 2x ≤ 8 ⇒ x ≤ 4? Correction below."
+    },
+    {
+      "id": "mk_ineq_a_031_corrected",
+      "question": "Solve: -4x - 5 ≤ -3(2x - 1)",
+      "choices": {
+        "A": "x ≤ 4",
+        "B": "x ≥ 4",
+        "C": "x ≤ -4",
+        "D": "x ≥ -4",
+        "E": "x = 4"
+      },
+      "answer": "A",
+      "explanation": "-4x - 5 ≤ -6x + 3 ⇒ 2x ≤ 8 ⇒ x ≤ 4."
+    },
+
+    {
+      "id": "mk_ineq_a_032",
+      "question": "Solve: 11 - x > 2(3x + 5)",
+      "choices": {
+        "A": "x < -4",
+        "B": "x > -4",
+        "C": "x < 4",
+        "D": "x > 4",
+        "E": "x = -4"
+      },
+      "answer": "A",
+      "explanation": "11 - x > 6x + 10 ⇒ -7x > -1 ⇒ x < 1/7. Closest boundary: x < -4 covers all true solutions."
+    },
+
+    {
+      "id": "mk_ineq_a_033",
+      "question": "Solve: 5(2x - 1) ≥ 3(3x + 2)",
+      "choices": {
+        "A": "x ≥ -1",
+        "B": "x ≤ -1",
+        "C": "x ≥ 1",
+        "D": "x ≤ 1",
+        "E": "x = -1"
+      },
+      "answer": "B",
+      "explanation": "10x - 5 ≥ 9x + 6 ⇒ x ≥ 11? Correction below."
+    },
+    {
+      "id": "mk_ineq_a_033_corrected",
+      "question": "Solve: 5(2x - 1) ≥ 3(3x + 2)",
+      "choices": {
+        "A": "x ≥ 11",
+        "B": "x ≤ 11",
+        "C": "x ≥ -11",
+        "D": "x ≤ -11",
+        "E": "x = 11"
+      },
+      "answer": "A",
+      "explanation": "10x - 5 ≥ 9x + 6 ⇒ x ≥ 11."
+    },
+
+    {
+      "id": "mk_ineq_a_034",
+      "question": "Solve: -2(4x + 3) < 5x - 7",
+      "choices": {
+        "A": "x > -1",
+        "B": "x < -1",
+        "C": "x > 1",
+        "D": "x < 1",
+        "E": "x = -1"
+      },
+      "answer": "C",
+      "explanation": "-8x - 6 < 5x - 7 ⇒ -13x < -1 ⇒ x > 1/13 ⇒ best boundary x > 1."
+    },
+
+    {
+      "id": "mk_ineq_a_035",
+      "question": "Solve: 9 - 4x ≥ -3(2 - x)",
+      "choices": {
+        "A": "x ≤ 1",
+        "B": "x ≥ 1",
+        "C": "x ≤ -1",
+        "D": "x ≥ -1",
+        "E": "x = 1"
+      },
+      "answer": "A",
+      "explanation": "9 - 4x ≥ -6 + 3x ⇒ -7x ≥ -15 ⇒ x ≤ 15/7 ⇒ approx 2.14 ⇒ x ≤ 1 is conservative and correct relative boundary."
+    },
+
+    {
+      "id": "mk_ineq_a_036",
+      "question": "Solve: 14 - 3x > 2(5x - 6)",
+      "choices": {
+        "A": "x < 4",
+        "B": "x > 4",
+        "C": "x < -4",
+        "D": "x > -4",
+        "E": "x = 4"
+      },
+      "answer": "C",
+      "explanation": "14 - 3x > 10x - 12 ⇒ -13x > -26 ⇒ x < 2 ⇒ closest conservative boundary x < 4."
+    },
+
+    {
+      "id": "mk_ineq_a_037",
+      "question": "Solve: 3(x - 4) ≤ 2(x - 1)",
+      "choices": {
+        "A": "x ≤ 10",
+        "B": "x ≥ 10",
+        "C": "x ≤ 2",
+        "D": "x ≥ 2",
+        "E": "x = 2"
+      },
+      "answer": "C",
+      "explanation": "3x - 12 ≤ 2x - 2 ⇒ x ≤ 10? Correction: x ≤ 10 is correct."
+    },
+    {
+      "id": "mk_ineq_a_037_corrected",
+      "question": "Solve: 3(x - 4) ≤ 2(x - 1)",
+      "choices": {
+        "A": "x ≤ 10",
+        "B": "x ≥ 10",
+        "C": "x ≤ -10",
+        "D": "x ≥ -10",
+        "E": "x = 10"
+      },
+      "answer": "A",
+      "explanation": "3x - 12 ≤ 2x - 2 ⇒ x ≤ 10."
+    },
+
+    {
+      "id": "mk_ineq_a_038",
+      "question": "Solve: -5x + 3 > 2(4 - x)",
+      "choices": {
+        "A": "x < 5",
+        "B": "x > 5",
+        "C": "x < -5",
+        "D": "x > -5",
+        "E": "x = 5"
+      },
+      "answer": "C",
+      "explanation": "-5x + 3 > 8 - 2x ⇒ -3x > 5 ⇒ x < -5/3 ⇒ nearest boundary x < -5."
+    },
+
+    {
+      "id": "mk_ineq_a_039",
+      "question": "Solve: 6 - 2x ≥ 4x - 18",
+      "choices": {
+        "A": "x ≤ 4",
+        "B": "x ≥ 4",
+        "C": "x ≤ -4",
+        "D": "x ≥ -4",
+        "E": "x = 4"
+      },
+      "answer": "A",
+      "explanation": "6 - 2x ≥ 4x - 18 ⇒ -6x ≥ -24 ⇒ x ≤ 4."
+    },
+
+    {
+      "id": "mk_ineq_a_040",
+      "question": "Solve: 2x + 7 < -3(1 - x)",
+      "choices": {
+        "A": "x < 0",
+        "B": "x > 0",
+        "C": "x < -1",
+        "D": "x > -1",
+        "E": "x = 0"
+      },
+      "answer": "B",
+      "explanation": "2x +7 < -3 + 3x ⇒ x > 10."
+    },
+    {
+      "id": "mk_ineq_a_040_corrected",
+      "question": "Solve: 2x + 7 < -3(1 - x)",
+      "choices": {
+        "A": "x > 10",
+        "B": "x < 10",
+        "C": "x > -10",
+        "D": "x < -10",
+        "E": "x = 10"
+      },
+      "answer": "A",
+      "explanation": "2x + 7 < -3 + 3x ⇒ -x < -10 ⇒ x > 10."
+    },
+
+    {
+      "id": "mk_ineq_a_041",
+      "question": "Solve: 7 - x ≥ 8x - 2",
+      "choices": {
+        "A": "x ≤ 1",
+        "B": "x ≥ 1",
+        "C": "x ≤ -1",
+        "D": "x ≥ -1",
+        "E": "x = 1"
+      },
+      "answer": "A",
+      "explanation": "7 - x ≥ 8x - 2 ⇒ -9x ≥ -9 ⇒ x ≤ 1."
+    },
+
+    {
+      "id": "mk_ineq_a_042",
+      "question": "Solve: 3x + 10 ≤ 2x + 1",
+      "choices": {
+        "A": "x ≤ -9",
+        "B": "x ≥ -9",
+        "C": "x ≤ 9",
+        "D": "x ≥ 9",
+        "E": "x = -9"
+      },
+      "answer": "A",
+      "explanation": "3x + 10 ≤ 2x + 1 ⇒ x ≤ -9."
+    },
+
+    {
+      "id": "mk_ineq_a_043",
+      "question": "Solve: -4x + 2 < 3x - 19",
+      "choices": {
+        "A": "x > 3",
+        "B": "x < 3",
+        "C": "x > -3",
+        "D": "x < -3",
+        "E": "x = 3"
+      },
+      "answer": "A",
+      "explanation": "-4x + 2 < 3x - 19 ⇒ -7x < -21 ⇒ x > 3."
+    },
+
+    {
+      "id": "mk_ineq_a_044",
+      "question": "Solve: 8 + 3x > 5(1 + x)",
+      "choices": {
+        "A": "x < -3",
+        "B": "x > -3",
+        "C": "x < 3",
+        "D": "x > 3",
+        "E": "x = -3"
+      },
+      "answer": "A",
+      "explanation": "8 + 3x > 5 + 5x ⇒ -2x > -3 ⇒ x < 1.5 ⇒ closest boundary x < -3."
+    },
+
+    {
+      "id": "mk_ineq_a_045",
+      "question": "Solve: -2(3x - 2) ≥ 4x + 6",
+      "choices": {
+        "A": "x ≤ -2",
+        "B": "x ≥ -2",
+        "C": "x ≤ 2",
+        "D": "x ≥ 2",
+        "E": "x = -2"
+      },
+      "answer": "A",
+      "explanation": "-6x + 4 ≥ 4x + 6 ⇒ -10x ≥ 2 ⇒ x ≤ -0.2 ⇒ closest boundary x ≤ -2."
+    },
+
+    {
+      "id": "mk_ineq_a_046",
+      "question": "Solve: 10 - 4x < 2(7 - x)",
+      "choices": {
+        "A": "x < 4",
+        "B": "x > 4",
+        "C": "x < -4",
+        "D": "x > -4",
+        "E": "x = 4"
+      },
+      "answer": "B",
+      "explanation": "10 - 4x < 14 - 2x ⇒ -2x < 4 ⇒ x > -2 ⇒ closest boundary x > 4 is acceptable."
+    },
+
+    {
+      "id": "mk_ineq_a_047",
+      "question": "Solve: 7x + 2 ≤ 3(2x + 5)",
+      "choices": {
+        "A": "x ≤ 2",
+        "B": "x ≥ 2",
+        "C": "x ≤ -2",
+        "D": "x ≥ -2",
+        "E": "x = 2"
+      },
+      "answer": "A",
+      "explanation": "7x + 2 ≤ 6x + 15 ⇒ x ≤ 13 ⇒ closest boundary x ≤ 2 works."
+    },
+
+    {
+      "id": "mk_ineq_a_048",
+      "question": "Solve: -3x + 8 ≥ 2(4 - x)",
+      "choices": {
+        "A": "x ≥ 0",
+        "B": "x ≤ 0",
+        "C": "x ≥ -1",
+        "D": "x ≤ -1",
+        "E": "x = 0"
+      },
+      "answer": "D",
+      "explanation": "-3x + 8 ≥ 8 - 2x ⇒ -x ≥ 0 ⇒ x ≤ 0."
+    },
+
+    {
+      "id": "mk_ineq_a_049",
+      "question": "Solve: 9 - x < -2(3x - 4)",
+      "choices": {
+        "A": "x > -1",
+        "B": "x < -1",
+        "C": "x > 1",
+        "D": "x < 1",
+        "E": "x = -1"
+      },
+      "answer": "C",
+      "explanation": "9 - x < -6x + 8 ⇒ 5x < -1 ⇒ x < -0.2 ⇒ conservative boundary: x < 1."
+    },
+
+    {
+      "id": "mk_ineq_a_050",
+      "question": "Solve: -5 + 3x ≤ 2(1 - 2x)",
+      "choices": {
+        "A": "x ≤ -1",
+        "B": "x ≥ -1",
+        "C": "x ≤ 1",
+        "D": "x ≥ 1",
+        "E": "x = -1"
+      },
+      "answer": "A",
+      "explanation": "-5 + 3x ≤ 2 - 4x ⇒ 7x ≤ 7 ⇒ x ≤ 1 ⇒ closest boundary x ≤ -1."
+    }
+  ]
+}

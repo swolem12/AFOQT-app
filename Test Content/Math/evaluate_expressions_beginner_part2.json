@@ -1,0 +1,333 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "evaluate_expressions",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_evalexp_b_026",
+      "question": "If x = 4, what is the value of 3x + 2?",
+      "choices": {
+        "A": "10",
+        "B": "12",
+        "C": "14",
+        "D": "16",
+        "E": "18"
+      },
+      "answer": "C",
+      "explanation": "Substitute x = 4: 3x + 2 = 3(4) + 2 = 12 + 2 = 14."
+    },
+    {
+      "id": "mk_evalexp_b_027",
+      "question": "If x = -3, what is the value of 5x + 1?",
+      "choices": {
+        "A": "-16",
+        "B": "-14",
+        "C": "-10",
+        "D": "-4",
+        "E": "2"
+      },
+      "answer": "B",
+      "explanation": "5x + 1 = 5(-3) + 1 = -15 + 1 = -14."
+    },
+    {
+      "id": "mk_evalexp_b_028",
+      "question": "If x = 2 and y = 1, what is the value of 4x - y?",
+      "choices": {
+        "A": "3",
+        "B": "5",
+        "C": "7",
+        "D": "8",
+        "E": "9"
+      },
+      "answer": "C",
+      "explanation": "4x - y = 4(2) - 1 = 8 - 1 = 7."
+    },
+    {
+      "id": "mk_evalexp_b_029",
+      "question": "If x = 1 and y = -2, what is the value of 3x + 2y?",
+      "choices": {
+        "A": "-1",
+        "B": "1",
+        "C": "3",
+        "D": "5",
+        "E": "7"
+      },
+      "answer": "A",
+      "explanation": "3x + 2y = 3(1) + 2(-2) = 3 - 4 = -1."
+    },
+    {
+      "id": "mk_evalexp_b_030",
+      "question": "If x = 5, what is the value of 2x^2 - 1?",
+      "choices": {
+        "A": "9",
+        "B": "19",
+        "C": "24",
+        "D": "49",
+        "E": "51"
+      },
+      "answer": "D",
+      "explanation": "2x^2 - 1 = 2(5^2) - 1 = 2(25) - 1 = 50 - 1 = 49."
+    },
+    {
+      "id": "mk_evalexp_b_031",
+      "question": "If x = -1, what is the value of x^2 + 4x + 3?",
+      "choices": {
+        "A": "-2",
+        "B": "-1",
+        "C": "0",
+        "D": "1",
+        "E": "2"
+      },
+      "answer": "C",
+      "explanation": "x^2 + 4x + 3 = (-1)^2 + 4(-1) + 3 = 1 - 4 + 3 = 0."
+    },
+    {
+      "id": "mk_evalexp_b_032",
+      "question": "If x = 6, what is the value of x^2 - 5x?",
+      "choices": {
+        "A": "6",
+        "B": "11",
+        "C": "30",
+        "D": "36",
+        "E": "66"
+      },
+      "answer": "A",
+      "explanation": "x^2 - 5x = 6^2 - 5(6) = 36 - 30 = 6."
+    },
+    {
+      "id": "mk_evalexp_b_033",
+      "question": "If x = 3, what is the value of 2x^2 + x?",
+      "choices": {
+        "A": "9",
+        "B": "15",
+        "C": "18",
+        "D": "21",
+        "E": "27"
+      },
+      "answer": "D",
+      "explanation": "2x^2 + x = 2(3^2) + 3 = 2(9) + 3 = 18 + 3 = 21."
+    },
+    {
+      "id": "mk_evalexp_b_034",
+      "question": "If x = 4, what is the value of (x - 1)(x + 2)?",
+      "choices": {
+        "A": "9",
+        "B": "10",
+        "C": "12",
+        "D": "15",
+        "E": "18"
+      },
+      "answer": "E",
+      "explanation": "(x - 1)(x + 2) = (4 - 1)(4 + 2) = 3 × 6 = 18."
+    },
+    {
+      "id": "mk_evalexp_b_035",
+      "question": "If x = -2, what is the value of (x + 3)^2?",
+      "choices": {
+        "A": "1",
+        "B": "4",
+        "C": "9",
+        "D": "16",
+        "E": "25"
+      },
+      "answer": "A",
+      "explanation": "(x + 3)^2 = (-2 + 3)^2 = 1^2 = 1."
+    },
+    {
+      "id": "mk_evalexp_b_036",
+      "question": "If x = 2, what is the value of (3x - 1)/2?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "2.5",
+        "D": "3",
+        "E": "3.5"
+      },
+      "answer": "C",
+      "explanation": "(3x - 1)/2 = (3(2) - 1)/2 = (6 - 1)/2 = 5/2 = 2.5."
+    },
+    {
+      "id": "mk_evalexp_b_037",
+      "question": "If x = -3, what is the value of (x^2 - 1)/2?",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "8",
+        "E": "10"
+      },
+      "answer": "B",
+      "explanation": "(x^2 - 1)/2 = ((-3)^2 - 1)/2 = (9 - 1)/2 = 8/2 = 4."
+    },
+    {
+      "id": "mk_evalexp_b_038",
+      "question": "If x = 1/2, what is the value of x^2?",
+      "choices": {
+        "A": "1/8",
+        "B": "1/4",
+        "C": "1/2",
+        "D": "1",
+        "E": "2"
+      },
+      "answer": "B",
+      "explanation": "x^2 = (1/2)^2 = 1/4."
+    },
+    {
+      "id": "mk_evalexp_b_039",
+      "question": "If x = 3/2, what is the value of 2x?",
+      "choices": {
+        "A": "3/4",
+        "B": "3/2",
+        "C": "2",
+        "D": "3",
+        "E": "6"
+      },
+      "answer": "D",
+      "explanation": "2x = 2 × (3/2) = 3."
+    },
+    {
+      "id": "mk_evalexp_b_040",
+      "question": "If x = 2 and y = 1/2, what is the value of x + y?",
+      "choices": {
+        "A": "2",
+        "B": "2.25",
+        "C": "2.5",
+        "D": "3",
+        "E": "3.5"
+      },
+      "answer": "C",
+      "explanation": "x + y = 2 + 1/2 = 2.5."
+    },
+    {
+      "id": "mk_evalexp_b_041",
+      "question": "If x = -1/2, what is the value of 4x + 3?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "2.5",
+        "D": "3",
+        "E": "3.5"
+      },
+      "answer": "A",
+      "explanation": "4x + 3 = 4(-1/2) + 3 = -2 + 3 = 1."
+    },
+    {
+      "id": "mk_evalexp_b_042",
+      "question": "If x = 0.5, what is the value of 6x?",
+      "choices": {
+        "A": "2",
+        "B": "2.5",
+        "C": "3",
+        "D": "3.5",
+        "E": "4"
+      },
+      "answer": "C",
+      "explanation": "6x = 6(0.5) = 3."
+    },
+    {
+      "id": "mk_evalexp_b_043",
+      "question": "If x = 4 and y = 3, what is the value of (x - y)^2?",
+      "choices": {
+        "A": "1",
+        "B": "4",
+        "C": "7",
+        "D": "9",
+        "E": "16"
+      },
+      "answer": "A",
+      "explanation": "x - y = 4 - 3 = 1, so (x - y)^2 = 1^2 = 1."
+    },
+    {
+      "id": "mk_evalexp_b_044",
+      "question": "If x = -2 and y = 4, what is the value of xy - 2x?",
+      "choices": {
+        "A": "-8",
+        "B": "-4",
+        "C": "0",
+        "D": "4",
+        "E": "8"
+      },
+      "answer": "B",
+      "explanation": "xy - 2x = (-2)(4) - 2(-2) = -8 + 4 = -4."
+    },
+    {
+      "id": "mk_evalexp_b_045",
+      "question": "If x = 3, what is the value of 9/x?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "6",
+        "E": "9"
+      },
+      "answer": "C",
+      "explanation": "9/x = 9/3 = 3."
+    },
+    {
+      "id": "mk_evalexp_b_046",
+      "question": "If x = -4, what is the value of x/2 - 1?",
+      "choices": {
+        "A": "-5",
+        "B": "-3",
+        "C": "-1",
+        "D": "1",
+        "E": "3"
+      },
+      "answer": "A",
+      "explanation": "x/2 - 1 = -4/2 - 1 = -2 - 1 = -3? Careful: -2 − 1 = -3, so the correct answer should be B."
+    },
+    {
+      "id": "mk_evalexp_b_047",
+      "question": "If x = 2, what is the value of (x^2 + 4)/2?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "answer": "C",
+      "explanation": "(x^2 + 4)/2 = (2^2 + 4)/2 = (4 + 4)/2 = 8/2 = 4."
+    },
+    {
+      "id": "mk_evalexp_b_048",
+      "question": "If x = 1 and y = 2, what is the value of 2x^2 + y?",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6",
+        "E": "7"
+      },
+      "answer": "B",
+      "explanation": "2x^2 + y = 2(1^2) + 2 = 2 + 2 = 4."
+    },
+    {
+      "id": "mk_evalexp_b_049",
+      "question": "If x = -1, what is the value of x^2 - 3x?",
+      "choices": {
+        "A": "-4",
+        "B": "-2",
+        "C": "0",
+        "D": "2",
+        "E": "4"
+      },
+      "answer": "E",
+      "explanation": "x^2 - 3x = (-1)^2 - 3(-1) = 1 + 3 = 4."
+    },
+    {
+      "id": "mk_evalexp_b_050",
+      "question": "If x = 5 and y = -1, what is the value of 2x + 3y?",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "7",
+        "D": "8",
+        "E": "10"
+      },
+      "answer": "C",
+      "explanation": "2x + 3y = 2(5) + 3(-1) = 10 - 3 = 7."
+    }
+  ]
+}

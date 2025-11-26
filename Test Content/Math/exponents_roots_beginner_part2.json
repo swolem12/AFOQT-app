@@ -1,0 +1,333 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "exponents_roots",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_er_b_026",
+      "question": "Simplify: x^2 × x^3",
+      "choices": {
+        "A": "x^5",
+        "B": "x^6",
+        "C": "x^9",
+        "D": "x^1",
+        "E": "x^0"
+      },
+      "answer": "A",
+      "explanation": "Add exponents: x^2 × x^3 = x^(2+3) = x^5."
+    },
+    {
+      "id": "mk_er_b_027",
+      "question": "Simplify: x^4 ÷ x^2 (x ≠ 0)",
+      "choices": {
+        "A": "x^2",
+        "B": "x^6",
+        "C": "x^8",
+        "D": "x^3",
+        "E": "x^1"
+      },
+      "answer": "A",
+      "explanation": "Subtract exponents: x^4 ÷ x^2 = x^(4−2) = x^2."
+    },
+    {
+      "id": "mk_er_b_028",
+      "question": "Simplify: (x^2)^3",
+      "choices": {
+        "A": "x^5",
+        "B": "x^6",
+        "C": "x^9",
+        "D": "x^8",
+        "E": "x^3"
+      },
+      "answer": "B",
+      "explanation": "Power of a power: (x^2)^3 = x^(2×3) = x^6."
+    },
+    {
+      "id": "mk_er_b_029",
+      "question": "Simplify: x^3 × x",
+      "choices": {
+        "A": "x^3",
+        "B": "x^4",
+        "C": "x^5",
+        "D": "x^2",
+        "E": "x"
+      },
+      "answer": "B",
+      "explanation": "x is x^1, so x^3 × x^1 = x^4."
+    },
+    {
+      "id": "mk_er_b_030",
+      "question": "Simplify: x^5 ÷ x (x ≠ 0)",
+      "choices": {
+        "A": "x^4",
+        "B": "x^6",
+        "C": "x^3",
+        "D": "x^2",
+        "E": "x^0"
+      },
+      "answer": "A",
+      "explanation": "x^5 ÷ x^1 = x^(5−1) = x^4."
+    },
+    {
+      "id": "mk_er_b_031",
+      "question": "Simplify: (2x)^2",
+      "choices": {
+        "A": "2x^2",
+        "B": "4x",
+        "C": "4x^2",
+        "D": "x^2",
+        "E": "2x"
+      },
+      "answer": "C",
+      "explanation": "(2x)^2 = 2^2 × x^2 = 4x^2."
+    },
+    {
+      "id": "mk_er_b_032",
+      "question": "Simplify: (3x)^2",
+      "choices": {
+        "A": "3x^2",
+        "B": "6x",
+        "C": "9x^2",
+        "D": "9x",
+        "E": "x^2"
+      },
+      "answer": "C",
+      "explanation": "(3x)^2 = 3^2 × x^2 = 9x^2."
+    },
+    {
+      "id": "mk_er_b_033",
+      "question": "Simplify: √(x^2) (x ≥ 0)",
+      "choices": {
+        "A": "x^2",
+        "B": "x",
+        "C": "√x",
+        "D": "1/x",
+        "E": "x^3"
+      },
+      "answer": "B",
+      "explanation": "For x ≥ 0, √(x^2) = x."
+    },
+    {
+      "id": "mk_er_b_034",
+      "question": "Simplify: √(25x^2) (x ≥ 0)",
+      "choices": {
+        "A": "5x^2",
+        "B": "25x",
+        "C": "5x",
+        "D": "x/5",
+        "E": "√25x"
+      },
+      "answer": "C",
+      "explanation": "√25 = 5 and √(x^2) = x, so √(25x^2) = 5x."
+    },
+    {
+      "id": "mk_er_b_035",
+      "question": "Simplify: √(9x^2) (x ≥ 0)",
+      "choices": {
+        "A": "3x",
+        "B": "9x",
+        "C": "x^2",
+        "D": "3x^2",
+        "E": "x/3"
+      },
+      "answer": "A",
+      "explanation": "√9 = 3 and √(x^2) = x, so √(9x^2) = 3x."
+    },
+    {
+      "id": "mk_er_b_036",
+      "question": "Simplify: x^0 (x ≠ 0)",
+      "choices": {
+        "A": "0",
+        "B": "1",
+        "C": "x",
+        "D": "x^2",
+        "E": "-1"
+      },
+      "answer": "B",
+      "explanation": "Any nonzero base to the zero power equals 1."
+    },
+    {
+      "id": "mk_er_b_037",
+      "question": "Simplify: (x^3)^2",
+      "choices": {
+        "A": "x^5",
+        "B": "x^6",
+        "C": "x^9",
+        "D": "x^3",
+        "E": "x^4"
+      },
+      "answer": "B",
+      "explanation": "Power of a power: (x^3)^2 = x^(3×2) = x^6."
+    },
+    {
+      "id": "mk_er_b_038",
+      "question": "Simplify: x^4 × x^4",
+      "choices": {
+        "A": "x^7",
+        "B": "x^8",
+        "C": "x^6",
+        "D": "x^5",
+        "E": "x^4"
+      },
+      "answer": "B",
+      "explanation": "Add exponents: x^(4+4) = x^8."
+    },
+    {
+      "id": "mk_er_b_039",
+      "question": "Simplify: x^7 ÷ x^3 (x ≠ 0)",
+      "choices": {
+        "A": "x^4",
+        "B": "x^5",
+        "C": "x^3",
+        "D": "x^2",
+        "E": "x^6"
+      },
+      "answer": "A",
+      "explanation": "Subtract exponents: x^(7−3) = x^4."
+    },
+    {
+      "id": "mk_er_b_040",
+      "question": "Simplify: (4x^2)^2",
+      "choices": {
+        "A": "4x^4",
+        "B": "8x^2",
+        "C": "16x^2",
+        "D": "16x^4",
+        "E": "8x^4"
+      },
+      "answer": "D",
+      "explanation": "(4x^2)^2 = 4^2 × x^4 = 16x^4."
+    },
+    {
+      "id": "mk_er_b_041",
+      "question": "Simplify: √(16x^2) (x ≥ 0)",
+      "choices": {
+        "A": "4x",
+        "B": "16x",
+        "C": "4x^2",
+        "D": "2x",
+        "E": "x/4"
+      },
+      "answer": "A",
+      "explanation": "√16 = 4 and √(x^2) = x, so √(16x^2) = 4x."
+    },
+    {
+      "id": "mk_er_b_042",
+      "question": "Simplify: √(4x^2) (x ≥ 0)",
+      "choices": {
+        "A": "4x",
+        "B": "2x",
+        "C": "x^2",
+        "D": "2x^2",
+        "E": "x/2"
+      },
+      "answer": "B",
+      "explanation": "√4 = 2 and √(x^2) = x, so √(4x^2) = 2x."
+    },
+    {
+      "id": "mk_er_b_043",
+      "question": "Simplify: (x^2)(x^0)",
+      "choices": {
+        "A": "x^2",
+        "B": "x^0",
+        "C": "x",
+        "D": "1",
+        "E": "x^3"
+      },
+      "answer": "A",
+      "explanation": "x^0 = 1, so x^2 × 1 = x^2."
+    },
+    {
+      "id": "mk_er_b_044",
+      "question": "Simplify: (2x^2)(3x)",
+      "choices": {
+        "A": "5x^3",
+        "B": "6x^3",
+        "C": "6x^4",
+        "D": "6x^2",
+        "E": "2x^4"
+      },
+      "answer": "B",
+      "explanation": "2×3 = 6 and x^2×x = x^3, so 6x^3."
+    },
+    {
+      "id": "mk_er_b_045",
+      "question": "Simplify: (5x)(5x)",
+      "choices": {
+        "A": "10x",
+        "B": "10x^2",
+        "C": "25x",
+        "D": "25x^2",
+        "E": "5x^2"
+      },
+      "answer": "D",
+      "explanation": "(5x)(5x) = 25x^2."
+    },
+    {
+      "id": "mk_er_b_046",
+      "question": "Simplify: (x^2y)(x^3)",
+      "choices": {
+        "A": "x^5y",
+        "B": "x^6y",
+        "C": "x^2y^3",
+        "D": "x^3y^2",
+        "E": "x^4y"
+      },
+      "answer": "A",
+      "explanation": "x^2 × x^3 = x^5; y stays, so x^5y."
+    },
+    {
+      "id": "mk_er_b_047",
+      "question": "Simplify: (2x^2)(3x^2)",
+      "choices": {
+        "A": "5x^4",
+        "B": "6x^2",
+        "C": "6x^4",
+        "D": "6x^3",
+        "E": "x^4"
+      },
+      "answer": "C",
+      "explanation": "2×3 = 6 and x^2×x^2 = x^4, so 6x^4."
+    },
+    {
+      "id": "mk_er_b_048",
+      "question": "Simplify: x^5 ÷ x^2 (x ≠ 0)",
+      "choices": {
+        "A": "x^2",
+        "B": "x^3",
+        "C": "x^4",
+        "D": "x",
+        "E": "1"
+      },
+      "answer": "B",
+      "explanation": "x^(5−2) = x^3."
+    },
+    {
+      "id": "mk_er_b_049",
+      "question": "Simplify: (x^2)^0 (x ≠ 0)",
+      "choices": {
+        "A": "x^2",
+        "B": "x",
+        "C": "0",
+        "D": "1",
+        "E": "x^0"
+      },
+      "answer": "D",
+      "explanation": "Any nonzero expression to the zero power equals 1."
+    },
+    {
+      "id": "mk_er_b_050",
+      "question": "Simplify: √(81x^2) (x ≥ 0)",
+      "choices": {
+        "A": "3x",
+        "B": "9x",
+        "C": "81x",
+        "D": "9x^2",
+        "E": "x/9"
+      },
+      "answer": "B",
+      "explanation": "√81 = 9 and √(x^2) = x, so √(81x^2) = 9x."
+    }
+  ]
+}

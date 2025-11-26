@@ -1,0 +1,357 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "inequalities",
+  "difficulty": "expert",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_ineq_e_026",
+      "question": "Solve: |x - 12| > |3x + 4|",
+      "choices": {
+        "A": "x < -8 or x > 4",
+        "B": "x < 4 or x > -8",
+        "C": "x > 8 or x < -4",
+        "D": "x < -4 or x > 8",
+        "E": "x = 4"
+      },
+      "answer": "D",
+      "explanation": "Square both sides; simplify inequality → x < -4 or x > 8."
+    },
+
+    {
+      "id": "mk_ineq_e_027",
+      "question": "Solve: (x² - 4x - 5)/(x + 3) ≤ 0",
+      "choices": {
+        "A": "x ≤ -3 or x ≥ 5",
+        "B": "-3 < x ≤ 5",
+        "C": "-5 ≤ x ≤ 1",
+        "D": "x ≤ -5 or x ≥ 1",
+        "E": "-5 < x < 1"
+      },
+      "answer": "E",
+      "explanation": "Factor numerator: (x - 5)(x + 1). Sign chart → -5 < x < 1 (excluding -3)."
+    },
+
+    {
+      "id": "mk_ineq_e_028",
+      "question": "Solve: |3 - 2x| < x + 8",
+      "choices": {
+        "A": "x > -5",
+        "B": "x < -5",
+        "C": "-5 < x < 5",
+        "D": "x > -4",
+        "E": "x ≥ -4"
+      },
+      "answer": "A",
+      "explanation": "RHS must be positive; solving absolute value inequality yields x > -5."
+    },
+
+    {
+      "id": "mk_ineq_e_029",
+      "question": "Solve: |x + 2| + |x - 5| ≥ 12",
+      "choices": {
+        "A": "x ≤ -5 or x ≥ 7",
+        "B": "x ≤ -7 or x ≥ 5",
+        "C": "x ≤ -7 or x ≥ 7",
+        "D": "x ≤ -5 or x ≥ 5",
+        "E": "x ≤ -7 or x ≥ 9"
+      },
+      "answer": "A",
+      "explanation": "Testing regions around -2 and 5; inequality resolves to x ≤ -5 or x ≥ 7."
+    },
+
+    {
+      "id": "mk_ineq_e_030",
+      "question": "Solve: (5x + 7)/(x - 3) > 0",
+      "choices": {
+        "A": "x < -7/5 or x > 3",
+        "B": "-7/5 < x < 3",
+        "C": "-3 < x < 7/5",
+        "D": "x < 3 or x > 7/5",
+        "E": "x = 3"
+      },
+      "answer": "A",
+      "explanation": "Expression positive when numerator and denominator have same sign."
+    },
+
+    {
+      "id": "mk_ineq_e_031",
+      "question": "Solve: |2x + 1| ≥ 3x - 2",
+      "choices": {
+        "A": "x ≤ 3 or x ≥ -3",
+        "B": "x ≤ -3 or x ≥ 3",
+        "C": "x ≥ 3 or x ≤ -1",
+        "D": "x ≤ -1 or x ≥ 3",
+        "E": "x ≤ -1 or x ≥ 2"
+      },
+      "answer": "D",
+      "explanation": "Split absolute value and reduce; solution x ≤ -1 or x ≥ 3."
+    },
+
+    {
+      "id": "mk_ineq_e_032",
+      "question": "Solve: |x - 1| < |x + 6|",
+      "choices": {
+        "A": "x > -2.5",
+        "B": "x < -2.5",
+        "C": "x < 2.5",
+        "D": "x > -1",
+        "E": "x > -6"
+      },
+      "answer": "A",
+      "explanation": "Distance from x to 1 less than distance to -6 ⇒ x closer to 1 ⇒ boundary at midpoint -2.5 ⇒ x > -2.5."
+    },
+
+    {
+      "id": "mk_ineq_e_033",
+      "question": "Solve: (x² - 16)/(x + 1) ≥ 0",
+      "choices": {
+        "A": "x ≤ -4 or x ≥ 4, x ≠ -1",
+        "B": "x ≥ -4 or x ≤ 4",
+        "C": "-4 < x < 4",
+        "D": "x > -1 and x < 4",
+        "E": "x > -4 and x < -1"
+      },
+      "answer": "A",
+      "explanation": "Factor numerator: (x - 4)(x + 4). Do sign chart excluding x = -1."
+    },
+
+    {
+      "id": "mk_ineq_e_034",
+      "question": "Solve: |5x - 2| ≥ |4 - x|",
+      "choices": {
+        "A": "x ≤ 0 or x ≥ 2",
+        "B": "x ≤ -2 or x ≥ 4",
+        "C": "x ≤ -4 or x ≥ 2",
+        "D": "x ≥ -4 or x ≤ 2",
+        "E": "x = 2"
+      },
+      "answer": "C",
+      "explanation": "Square both sides; roots and intervals yield x ≤ -4 or x ≥ 2."
+    },
+
+    {
+      "id": "mk_ineq_e_035",
+      "question": "Solve: (2x - 1)(x + 5) < 0",
+      "choices": {
+        "A": "x < -5 or x > 1/2",
+        "B": "-5 < x < 1/2",
+        "C": "x ≤ -5 or x ≥ 1/2",
+        "D": "-1/2 < x < 5",
+        "E": "x > -5"
+      },
+      "answer": "B",
+      "explanation": "Product negative between roots: -5 < x < 1/2."
+    },
+
+    {
+      "id": "mk_ineq_e_036",
+      "question": "Solve: |x + 8| < 2|x - 3|",
+      "choices": {
+        "A": "x > 5",
+        "B": "x < 5",
+        "C": "x < -5 or x > 5",
+        "D": "x < -5 or x > 3",
+        "E": "x > -5"
+      },
+      "answer": "C",
+      "explanation": "Square both sides; inequality reduces to x < -5 or x > 5."
+    },
+
+    {
+      "id": "mk_ineq_e_037",
+      "question": "Solve: (3 - x)/(x² - 9) ≥ 0",
+      "choices": {
+        "A": "x ≤ -3 or x ≥ 3",
+        "B": "-3 < x < 3 and x ≠ 1",
+        "C": "x < -3 or -3 < x < 1 or x > 3",
+        "D": "x < -3 or 1 < x < 3",
+        "E": "x = 3"
+      },
+      "answer": "C",
+      "explanation": "Denominator zeros at ±3; sign chart gives three intervals where expression ≥ 0."
+    },
+
+    {
+      "id": "mk_ineq_e_038",
+      "question": "Solve: |4 - 3x| ≥ x + 10",
+      "choices": {
+        "A": "x ≤ -14 or x ≥ 2",
+        "B": "x ≤ 2 or x ≥ 14",
+        "C": "x ≤ -2 or x ≥ 14",
+        "D": "x ≤ -14 or x ≥ -2",
+        "E": "x ≥ -14"
+      },
+      "answer": "A",
+      "explanation": "Split cases; inequality reduces to x ≤ -14 or x ≥ 2."
+    },
+
+    {
+      "id": "mk_ineq_e_039",
+      "question": "Solve: (x - 9)/(x + 2) ≤ 1",
+      "choices": {
+        "A": "x ≤ -2 or x ≥ 7",
+        "B": "x ≤ 7 or x ≥ -2",
+        "C": "x ≥ -2 or x ≤ 7",
+        "D": "x < -2 or x > 7",
+        "E": "-2 < x < 7"
+      },
+      "answer": "A",
+      "explanation": "Bring terms together: (x - 9 - (x + 2))/(x + 2) ≤ 0 ⇒ (-11)/(x + 2) ≤ 0 ⇒ denominator negative ⇒ x < -2 OR numerator sign flip gives x ≥ 7."
+    },
+
+    {
+      "id": "mk_ineq_e_040",
+      "question": "Solve: |x² - 4| ≥ x + 6",
+      "choices": {
+        "A": "x ≤ -4 or x ≥ 3",
+        "B": "x ≤ -3 or x ≥ 4",
+        "C": "x ≤ -5 or x ≥ 2",
+        "D": "x ≤ -2 or x ≥ 5",
+        "E": "x ≥ -2"
+      },
+      "answer": "B",
+      "explanation": "Solve two inequalities: x² - 4 ≥ x + 6 and x² - 4 ≤ -x - 6."
+    },
+
+    {
+      "id": "mk_ineq_e_041",
+      "question": "Solve: (2x + 9)/(5 - x) < 1",
+      "choices": {
+        "A": "x < -4 or x > 5",
+        "B": "x > -4 or x < 5",
+        "C": "-4 < x < 5",
+        "D": "x < -4 or x > 5",
+        "E": "x ≠ 5"
+      },
+      "answer": "A",
+      "explanation": "Move all terms: (2x + 9 - (5 - x))/(5 - x) < 0 ⇒ (3x + 4)/(5 - x) < 0 ⇒ numerator and denominator opposite signs."
+    },
+
+    {
+      "id": "mk_ineq_e_042",
+      "question": "Solve: |5 - x| + |x - 2| ≥ 10",
+      "choices": {
+        "A": "x ≤ -3 or x ≥ 8",
+        "B": "x ≤ -8 or x ≥ 3",
+        "C": "x ≤ -4 or x ≥ 6",
+        "D": "x ≤ -6 or x ≥ 4",
+        "E": "x ≥ 4"
+      },
+      "answer": "A",
+      "explanation": "By testing regions around 2 and 5, inequality holds for x ≤ -3 or x ≥ 8."
+    },
+
+    {
+      "id": "mk_ineq_e_043",
+      "question": "Solve: (x² - 11x + 24)/(x - 6) ≥ 0",
+      "choices": {
+        "A": "x ≤ 3 or x ≥ 8, x ≠ 6",
+        "B": "x ≥ 3 or x ≤ 8, x ≠ 6",
+        "C": "x ≤ 3 or x ≥ 8",
+        "D": "x < 3 or x > 8",
+        "E": "x = 6"
+      },
+      "answer": "A",
+      "explanation": "Factor numerator: (x - 3)(x - 8). Exclude 6. Sign chart yields ≤3 or ≥8."
+    },
+
+    {
+      "id": "mk_ineq_e_044",
+      "question": "Solve: |x + 6| ≤ |2x - 3|",
+      "choices": {
+        "A": "x ≥ 1",
+        "B": "x ≤ 1",
+        "C": "x ≤ -1 or x ≥ 3",
+        "D": "x ≥ -1 or x ≤ 3",
+        "E": "x ≤ -3 or x ≥ 1"
+      },
+      "answer": "C",
+      "explanation": "Square both sides, solve quadratic inequality → x ≤ -1 or x ≥ 3."
+    },
+
+    {
+      "id": "mk_ineq_e_045",
+      "question": "Solve: (3x - 1)/(x² - 4) > 0",
+      "choices": {
+        "A": "x > 1/3 and x > 2",
+        "B": "x < -2 or (1/3 < x < 2)",
+        "C": "x < 1/3 or x > 2",
+        "D": "x < -2 or x > 2",
+        "E": "(x > -2 and x < -1/3) or (x > 1/3 and x < 2)"
+      },
+      "answer": "B",
+      "explanation": "Denominator zero at ±2; numerator zero at 1/3. Sign chart gives x < -2 OR 1/3 < x < 2."
+    },
+
+    {
+      "id": "mk_ineq_e_046",
+      "question": "Solve: |3x + 4| ≥ 2|x - 1|",
+      "choices": {
+        "A": "x ≤ -5 or x ≥ 3",
+        "B": "x ≤ -2 or x ≥ 5",
+        "C": "x ≤ -3 or x ≥ 2",
+        "D": "x ≥ -5 or x ≤ 3",
+        "E": "x ≤ -4 or x ≥ 2"
+      },
+      "answer": "C",
+      "explanation": "Square both sides, simplify quadratic inequality → x ≤ -3 or x ≥ 2."
+    },
+
+    {
+      "id": "mk_ineq_e_047",
+      "question": "Solve: (x + 7)/(x² + x - 6) ≤ 0",
+      "choices": {
+        "A": "-7 < x ≤ -3 or x ≥ 2",
+        "B": "-7 < x < -3 or x > 2",
+        "C": "x ≤ -7 or -3 < x ≤ 2",
+        "D": "x < -7 or -3 < x < 2",
+        "E": "x > -7 and x < 2"
+      },
+      "answer": "B",
+      "explanation": "Denominator factors to (x + 3)(x - 2). Sign chart gives open intervals."
+    },
+
+    {
+      "id": "mk_ineq_e_048",
+      "question": "Solve: |2 - x| > x + 4",
+      "choices": {
+        "A": "x < -3",
+        "B": "x > -3",
+        "C": "x < 3",
+        "D": "x > 3",
+        "E": "x ≤ -3 or x ≥ 3"
+      },
+      "answer": "A",
+      "explanation": "Solve two inequalities; solution reduces to x < -3."
+    },
+
+    {
+      "id": "mk_ineq_e_049",
+      "question": "Solve: |x² - 1| ≤ 3x - 7",
+      "choices": {
+        "A": "x ≥ 4",
+        "B": "x ≤ 4",
+        "C": "x ≥ 3",
+        "D": "x ≤ 3",
+        "E": "no solution"
+      },
+      "answer": "E",
+      "explanation": "RHS must be ≥ 0 ⇒ x ≥ 7/3. Testing inequality yields no x satisfies all constraints."
+    },
+
+    {
+      "id": "mk_ineq_e_050",
+      "question": "Solve: (x² - 25)/(x - 7) ≥ 0",
+      "choices": {
+        "A": "x ≤ -5 or x ≥ 5, x ≠ 7",
+        "B": "x ≥ -5 or x ≤ 5",
+        "C": "x > 7 only",
+        "D": "x = 5 or x = -5",
+        "E": "x ≤ -5 or (5 ≤ x < 7) or x > 7"
+      },
+      "answer": "E",
+      "explanation": "Factor numerator: (x - 5)(x + 5). Sign chart with excluded 7 produces three valid intervals."
+    }
+  ]
+}

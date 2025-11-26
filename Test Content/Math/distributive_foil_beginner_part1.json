@@ -1,0 +1,333 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "distributive_foil",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_distfoil_b_001",
+      "question": "Which is the simplified form of 3(x + 4)?",
+      "choices": {
+        "A": "3x + 4",
+        "B": "x + 12",
+        "C": "3x + 12",
+        "D": "7x + 4",
+        "E": "12x + 4"
+      },
+      "answer": "C",
+      "explanation": "Apply the distributive property: 3(x + 4) = 3·x + 3·4 = 3x + 12."
+    },
+    {
+      "id": "mk_distfoil_b_002",
+      "question": "Which expression is equivalent to 5(2x - 1)?",
+      "choices": {
+        "A": "10x - 1",
+        "B": "10x - 5",
+        "C": "2x - 5",
+        "D": "5x - 2",
+        "E": "10x + 5"
+      },
+      "answer": "B",
+      "explanation": "5(2x - 1) = 5·2x - 5·1 = 10x - 5."
+    },
+    {
+      "id": "mk_distfoil_b_003",
+      "question": "Simplify: -2(x - 3).",
+      "choices": {
+        "A": "-2x - 3",
+        "B": "-2x + 3",
+        "C": "2x - 6",
+        "D": "-2x + 6",
+        "E": "2x + 6"
+      },
+      "answer": "D",
+      "explanation": "-2(x - 3) = -2·x + (-2)(-3) = -2x + 6."
+    },
+    {
+      "id": "mk_distfoil_b_004",
+      "question": "Which is the simplified form of 4(x + 2) + 3x?",
+      "choices": {
+        "A": "4x + 5",
+        "B": "7x + 2",
+        "C": "7x + 8",
+        "D": "4x + 8",
+        "E": "3x + 8"
+      },
+      "answer": "C",
+      "explanation": "4(x + 2) = 4x + 8. Then 4x + 8 + 3x = 7x + 8."
+    },
+    {
+      "id": "mk_distfoil_b_005",
+      "question": "Simplify: 6(2x + 1).",
+      "choices": {
+        "A": "12x + 1",
+        "B": "12x + 6",
+        "C": "8x + 1",
+        "D": "6x + 2",
+        "E": "6x + 7"
+      },
+      "answer": "B",
+      "explanation": "6(2x + 1) = 6·2x + 6·1 = 12x + 6."
+    },
+    {
+      "id": "mk_distfoil_b_006",
+      "question": "Which expression is equivalent to 2(x - 5)?",
+      "choices": {
+        "A": "2x - 5",
+        "B": "2x - 10",
+        "C": "x - 10",
+        "D": "2x + 10",
+        "E": "x - 7"
+      },
+      "answer": "B",
+      "explanation": "2(x - 5) = 2x - 10."
+    },
+    {
+      "id": "mk_distfoil_b_007",
+      "question": "Simplify: -3(2x + 4).",
+      "choices": {
+        "A": "-6x - 4",
+        "B": "-6x - 12",
+        "C": "-6x + 12",
+        "D": "6x - 12",
+        "E": "6x + 12"
+      },
+      "answer": "B",
+      "explanation": "-3(2x + 4) = -3·2x + (-3)·4 = -6x - 12."
+    },
+    {
+      "id": "mk_distfoil_b_008",
+      "question": "Simplify: (x + 3)(x + 2).",
+      "choices": {
+        "A": "x^2 + 3x + 2",
+        "B": "x^2 + 5x + 6",
+        "C": "x^2 + 6x + 5",
+        "D": "x^2 + 2x + 6",
+        "E": "x^2 + 5x + 2"
+      },
+      "answer": "B",
+      "explanation": "FOIL: x·x + x·2 + 3·x + 3·2 = x^2 + 2x + 3x + 6 = x^2 + 5x + 6."
+    },
+    {
+      "id": "mk_distfoil_b_009",
+      "question": "Simplify: (x + 4)(x + 1).",
+      "choices": {
+        "A": "x^2 + 4x + 1",
+        "B": "x^2 + 5x + 4",
+        "C": "x^2 + x + 4",
+        "D": "x^2 + 3x + 4",
+        "E": "x^2 + 5x + 1"
+      },
+      "answer": "B",
+      "explanation": "FOIL: x^2 + x + 4x + 4 = x^2 + 5x + 4."
+    },
+    {
+      "id": "mk_distfoil_b_010",
+      "question": "Which expression is equivalent to (x + 2)(x + 2)?",
+      "choices": {
+        "A": "x^2 + 2x + 2",
+        "B": "x^2 + 4x + 4",
+        "C": "x^2 + 2x + 4",
+        "D": "x^2 + 4x + 2",
+        "E": "x^2 + 2x + 1"
+      },
+      "answer": "B",
+      "explanation": "(x + 2)^2 = x^2 + 2x + 2x + 4 = x^2 + 4x + 4."
+    },
+    {
+      "id": "mk_distfoil_b_011",
+      "question": "Simplify: (x + 5)(x + 1).",
+      "choices": {
+        "A": "x^2 + 5x + 1",
+        "B": "x^2 + 6x + 5",
+        "C": "x^2 + x + 5",
+        "D": "x^2 + 6x + 1",
+        "E": "x^2 + 5x + 6"
+      },
+      "answer": "B",
+      "explanation": "FOIL: x^2 + x + 5x + 5 = x^2 + 6x + 5."
+    },
+    {
+      "id": "mk_distfoil_b_012",
+      "question": "Simplify: (x + 3)(x - 1).",
+      "choices": {
+        "A": "x^2 + 2x - 3",
+        "B": "x^2 + 2x + 3",
+        "C": "x^2 + x - 3",
+        "D": "x^2 - x - 3",
+        "E": "x^2 + 3x - 1"
+      },
+      "answer": "A",
+      "explanation": "FOIL: x^2 - x + 3x - 3 = x^2 + 2x - 3."
+    },
+    {
+      "id": "mk_distfoil_b_013",
+      "question": "Simplify: (x - 2)(x - 3).",
+      "choices": {
+        "A": "x^2 - 5x + 6",
+        "B": "x^2 - 5x - 6",
+        "C": "x^2 + 5x - 6",
+        "D": "x^2 + 5x + 6",
+        "E": "x^2 - x - 6"
+      },
+      "answer": "A",
+      "explanation": "FOIL: x^2 - 3x - 2x + 6 = x^2 - 5x + 6."
+    },
+    {
+      "id": "mk_distfoil_b_014",
+      "question": "Which expression is equivalent to 2(x + 3)?",
+      "choices": {
+        "A": "2x + 3",
+        "B": "x + 5",
+        "C": "2x + 6",
+        "D": "x + 6",
+        "E": "2x - 6"
+      },
+      "answer": "C",
+      "explanation": "2(x + 3) = 2x + 6."
+    },
+    {
+      "id": "mk_distfoil_b_015",
+      "question": "Simplify: 3(x - 4).",
+      "choices": {
+        "A": "3x - 4",
+        "B": "3x - 12",
+        "C": "x - 12",
+        "D": "3x + 12",
+        "E": "x + 12"
+      },
+      "answer": "B",
+      "explanation": "3(x - 4) = 3x - 12."
+    },
+    {
+      "id": "mk_distfoil_b_016",
+      "question": "Simplify: (2x + 1)(x + 3).",
+      "choices": {
+        "A": "2x^2 + 7x + 3",
+        "B": "2x^2 + 5x + 3",
+        "C": "2x^2 + 3x + 1",
+        "D": "x^2 + 7x + 3",
+        "E": "2x^2 + 6x + 3"
+      },
+      "answer": "A",
+      "explanation": "FOIL: 2x·x + 2x·3 + 1·x + 1·3 = 2x^2 + 6x + x + 3 = 2x^2 + 7x + 3."
+    },
+    {
+      "id": "mk_distfoil_b_017",
+      "question": "Simplify: (x - 1)(x + 4).",
+      "choices": {
+        "A": "x^2 + 3x - 4",
+        "B": "x^2 + 3x + 4",
+        "C": "x^2 - 3x - 4",
+        "D": "x^2 - 3x + 4",
+        "E": "x^2 + x - 4"
+      },
+      "answer": "A",
+      "explanation": "FOIL: x^2 + 4x - x - 4 = x^2 + 3x - 4."
+    },
+    {
+      "id": "mk_distfoil_b_018",
+      "question": "Simplify: 4(2x - 3).",
+      "choices": {
+        "A": "8x - 3",
+        "B": "8x - 12",
+        "C": "6x - 3",
+        "D": "4x - 12",
+        "E": "8x + 12"
+      },
+      "answer": "B",
+      "explanation": "4(2x - 3) = 8x - 12."
+    },
+    {
+      "id": "mk_distfoil_b_019",
+      "question": "Which expression is equivalent to -2(x + 5)?",
+      "choices": {
+        "A": "-2x + 5",
+        "B": "-2x - 5",
+        "C": "-2x - 10",
+        "D": "2x - 10",
+        "E": "2x + 10"
+      },
+      "answer": "C",
+      "explanation": "-2(x + 5) = -2x - 10."
+    },
+    {
+      "id": "mk_distfoil_b_020",
+      "question": "Simplify: (x + 6)(x - 1).",
+      "choices": {
+        "A": "x^2 + 7x - 6",
+        "B": "x^2 + 5x - 6",
+        "C": "x^2 + 5x + 6",
+        "D": "x^2 - 7x - 6",
+        "E": "x^2 + x - 6"
+      },
+      "answer": "B",
+      "explanation": "FOIL: x^2 - x + 6x - 6 = x^2 + 5x - 6."
+    },
+    {
+      "id": "mk_distfoil_b_021",
+      "question": "Simplify: (x + 1)(x + 1).",
+      "choices": {
+        "A": "x^2 + x + 1",
+        "B": "x^2 + 2x + 1",
+        "C": "x^2 + 2x + 2",
+        "D": "x^2 + x + 2",
+        "E": "x^2 + 1"
+      },
+      "answer": "B",
+      "explanation": "(x + 1)^2 = x^2 + 2x + 1."
+    },
+    {
+      "id": "mk_distfoil_b_022",
+      "question": "Which is the simplified form of 2(x + 4) + x?",
+      "choices": {
+        "A": "2x + 4",
+        "B": "3x + 4",
+        "C": "2x + 8",
+        "D": "3x + 8",
+        "E": "x + 8"
+      },
+      "answer": "D",
+      "explanation": "2(x + 4) = 2x + 8. Then 2x + 8 + x = 3x + 8."
+    },
+    {
+      "id": "mk_distfoil_b_023",
+      "question": "Simplify: 5(x - 2) - x.",
+      "choices": {
+        "A": "4x - 10",
+        "B": "4x - 2",
+        "C": "5x - 2",
+        "D": "4x + 10",
+        "E": "6x - 10"
+      },
+      "answer": "A",
+      "explanation": "5(x - 2) = 5x - 10. Then 5x - 10 - x = 4x - 10."
+    },
+    {
+      "id": "mk_distfoil_b_024",
+      "question": "Which expression is equivalent to 3(x + 2) + 2(x - 1)?",
+      "choices": {
+        "A": "5x + 4",
+        "B": "5x + 1",
+        "C": "5x + 8",
+        "D": "x + 4",
+        "E": "x + 1"
+      },
+      "answer": "A",
+      "explanation": "3(x + 2) = 3x + 6; 2(x - 1) = 2x - 2. Sum: 3x + 6 + 2x - 2 = 5x + 4."
+    },
+    {
+      "id": "mk_distfoil_b_025",
+      "question": "Simplify: (x - 4)(x + 2).",
+      "choices": {
+        "A": "x^2 - 2x - 8",
+        "B": "x^2 - 2x + 8",
+        "C": "x^2 + 2x - 8",
+        "D": "x^2 + 2x + 8",
+        "E": "x^2 - 6x - 8"
+      },
+      "answer": "A",
+      "explanation": "FOIL: x^2 + 2x - 4x - 8 = x^2 - 2x - 8."
+    }
+  ]
+}

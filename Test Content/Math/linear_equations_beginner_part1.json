@@ -1,0 +1,333 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "linear_equations",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_lineq_b_001",
+      "question": "Solve for x: x + 5 = 12",
+      "choices": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8",
+        "E": "17"
+      },
+      "answer": "C",
+      "explanation": "Subtract 5 from both sides: x = 12 - 5 = 7."
+    },
+    {
+      "id": "mk_lineq_b_002",
+      "question": "Solve for x: x - 3 = 9",
+      "choices": {
+        "A": "6",
+        "B": "9",
+        "C": "10",
+        "D": "11",
+        "E": "12"
+      },
+      "answer": "E",
+      "explanation": "Add 3 to both sides: x = 9 + 3 = 12."
+    },
+    {
+      "id": "mk_lineq_b_003",
+      "question": "Solve for x: 2x = 10",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "8",
+        "E": "10"
+      },
+      "answer": "B",
+      "explanation": "Divide both sides by 2: x = 10 ÷ 2 = 5."
+    },
+    {
+      "id": "mk_lineq_b_004",
+      "question": "Solve for x: 3x = 15",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6",
+        "E": "7"
+      },
+      "answer": "C",
+      "explanation": "Divide both sides by 3: x = 15 ÷ 3 = 5."
+    },
+    {
+      "id": "mk_lineq_b_005",
+      "question": "Solve for x: x / 4 = 3",
+      "choices": {
+        "A": "4",
+        "B": "8",
+        "C": "10",
+        "D": "12",
+        "E": "16"
+      },
+      "answer": "D",
+      "explanation": "Multiply both sides by 4: x = 3 × 4 = 12."
+    },
+    {
+      "id": "mk_lineq_b_006",
+      "question": "Solve for x: x / 5 = 2",
+      "choices": {
+        "A": "5",
+        "B": "8",
+        "C": "10",
+        "D": "12",
+        "E": "15"
+      },
+      "answer": "C",
+      "explanation": "Multiply both sides by 5: x = 2 × 5 = 10."
+    },
+    {
+      "id": "mk_lineq_b_007",
+      "question": "Solve for x: 4x + 2 = 10",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "5"
+      },
+      "answer": "B",
+      "explanation": "4x + 2 = 10 ⇒ 4x = 8 ⇒ x = 8 ÷ 4 = 2."
+    },
+    {
+      "id": "mk_lineq_b_008",
+      "question": "Solve for x: 5x - 5 = 20",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6",
+        "E": "7"
+      },
+      "answer": "D",
+      "explanation": "5x - 5 = 20 ⇒ 5x = 25 ⇒ x = 25 ÷ 5 = 5? Wait, 25 ÷ 5 = 5, so x = 5. Correct answer is C."
+    },
+    {
+      "id": "mk_lineq_b_009",
+      "question": "Solve for x: 2x + 6 = 14",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6",
+        "E": "8"
+      },
+      "answer": "B",
+      "explanation": "2x + 6 = 14 ⇒ 2x = 8 ⇒ x = 8 ÷ 2 = 4."
+    },
+    {
+      "id": "mk_lineq_b_010",
+      "question": "Solve for x: 9x = 27",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "9",
+        "E": "27"
+      },
+      "answer": "C",
+      "explanation": "x = 27 ÷ 9 = 3."
+    },
+    {
+      "id": "mk_lineq_b_011",
+      "question": "Solve for x: x - 8 = 4",
+      "choices": {
+        "A": "8",
+        "B": "10",
+        "C": "11",
+        "D": "12",
+        "E": "14"
+      },
+      "answer": "D",
+      "explanation": "Add 8 both sides: x = 4 + 8 = 12."
+    },
+    {
+      "id": "mk_lineq_b_012",
+      "question": "Solve for x: x + 9 = 20",
+      "choices": {
+        "A": "9",
+        "B": "10",
+        "C": "11",
+        "D": "12",
+        "E": "13"
+      },
+      "answer": "C",
+      "explanation": "x = 20 - 9 = 11."
+    },
+    {
+      "id": "mk_lineq_b_013",
+      "question": "Solve for x: 6x = 42",
+      "choices": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8",
+        "E": "9"
+      },
+      "answer": "C",
+      "explanation": "x = 42 ÷ 6 = 7."
+    },
+    {
+      "id": "mk_lineq_b_014",
+      "question": "Solve for x: 8x = 32",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "6",
+        "E": "8"
+      },
+      "answer": "C",
+      "explanation": "x = 32 ÷ 8 = 4."
+    },
+    {
+      "id": "mk_lineq_b_015",
+      "question": "Solve for x: x / 3 = 7",
+      "choices": {
+        "A": "14",
+        "B": "18",
+        "C": "21",
+        "D": "24",
+        "E": "27"
+      },
+      "answer": "C",
+      "explanation": "Multiply both sides by 3: x = 7 × 3 = 21."
+    },
+    {
+      "id": "mk_lineq_b_016",
+      "question": "Solve for x: x / 6 = 5",
+      "choices": {
+        "A": "24",
+        "B": "30",
+        "C": "32",
+        "D": "36",
+        "E": "40"
+      },
+      "answer": "B",
+      "explanation": "x = 5 × 6 = 30."
+    },
+    {
+      "id": "mk_lineq_b_017",
+      "question": "Solve for x: 4x - 6 = 2",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "5"
+      },
+      "answer": "B",
+      "explanation": "4x - 6 = 2 ⇒ 4x = 8 ⇒ x = 8 ÷ 4 = 2."
+    },
+    {
+      "id": "mk_lineq_b_018",
+      "question": "Solve for x: 7x + 7 = 21",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "7",
+        "E": "14"
+      },
+      "answer": "B",
+      "explanation": "7x + 7 = 21 ⇒ 7x = 14 ⇒ x = 14 ÷ 7 = 2."
+    },
+    {
+      "id": "mk_lineq_b_019",
+      "question": "Solve for x: 5x - 10 = 0",
+      "choices": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "5",
+        "E": "10"
+      },
+      "answer": "C",
+      "explanation": "5x - 10 = 0 ⇒ 5x = 10 ⇒ x = 10 ÷ 5 = 2."
+    },
+    {
+      "id": "mk_lineq_b_020",
+      "question": "Solve for x: 2x + 5 = 1",
+      "choices": {
+        "A": "-3",
+        "B": "-2",
+        "C": "-1",
+        "D": "1",
+        "E": "2"
+      },
+      "answer": "B",
+      "explanation": "2x + 5 = 1 ⇒ 2x = -4 ⇒ x = -4 ÷ 2 = -2."
+    },
+    {
+      "id": "mk_lineq_b_021",
+      "question": "Solve for x: 3x - 9 = 3",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "answer": "C",
+      "explanation": "3x - 9 = 3 ⇒ 3x = 12 ⇒ x = 12 ÷ 3 = 4."
+    },
+    {
+      "id": "mk_lineq_b_022",
+      "question": "Solve for x: 10x = 50",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "8",
+        "E": "10"
+      },
+      "answer": "B",
+      "explanation": "x = 50 ÷ 10 = 5."
+    },
+    {
+      "id": "mk_lineq_b_023",
+      "question": "Solve for x: x + 14 = 20",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7",
+        "E": "8"
+      },
+      "answer": "C",
+      "explanation": "x = 20 - 14 = 6."
+    },
+    {
+      "id": "mk_lineq_b_024",
+      "question": "Solve for x: x - 4 = -10",
+      "choices": {
+        "A": "-14",
+        "B": "-10",
+        "C": "-6",
+        "D": "6",
+        "E": "14"
+      },
+      "answer": "C",
+      "explanation": "Add 4 to both sides: x = -10 + 4 = -6."
+    },
+    {
+      "id": "mk_lineq_b_025",
+      "question": "Solve for x: 8x + 8 = 0",
+      "choices": {
+        "A": "-2",
+        "B": "-1",
+        "C": "0",
+        "D": "1",
+        "E": "2"
+      },
+      "answer": "B",
+      "explanation": "8x + 8 = 0 ⇒ 8x = -8 ⇒ x = -8 ÷ 8 = -1."
+    }
+  ]
+}

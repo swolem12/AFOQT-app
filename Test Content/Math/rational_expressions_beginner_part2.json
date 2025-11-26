@@ -1,0 +1,347 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "rational_expressions",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_rat_b_026",
+      "question": "Simplify: (20/x) × (x/5)",
+      "choices": {
+        "A": "4",
+        "B": "20/(5x)",
+        "C": "5/x",
+        "D": "x/4",
+        "E": "1"
+      },
+      "answer": "A",
+      "explanation": "20x/(5x)=4."
+    },
+    {
+      "id": "mk_rat_b_027",
+      "question": "Simplify: (8/x) + (4/x)",
+      "choices": {
+        "A": "12/x",
+        "B": "8/(4x)",
+        "C": "4/x",
+        "D": "2x",
+        "E": "1"
+      },
+      "answer": "A",
+      "explanation": "(8+4)/x."
+    },
+    {
+      "id": "mk_rat_b_028",
+      "question": "Simplify: (x/10) - (x/5)",
+      "choices": {
+        "A": "-x/10",
+        "B": "x/2",
+        "C": "x/15",
+        "D": "2x/10",
+        "E": "0"
+      },
+      "answer": "A",
+      "explanation": "x/10 - 2x/10 = -x/10."
+    },
+    {
+      "id": "mk_rat_b_029",
+      "question": "Simplify: (5x)/25",
+      "choices": {
+        "A": "x/5",
+        "B": "5/x",
+        "C": "x/25",
+        "D": "1/x",
+        "E": "5x"
+      },
+      "answer": "A",
+      "explanation": "5/25=1/5 → x/5."
+    },
+    {
+      "id": "mk_rat_b_030",
+      "question": "Simplify: (3/x) × (x/12)",
+      "choices": {
+        "A": "1/4",
+        "B": "1/3",
+        "C": "1",
+        "D": "4",
+        "E": "x/36"
+      },
+      "answer": "A",
+      "explanation": "3x/(12x)=1/4."
+    },
+    {
+      "id": "mk_rat_b_031",
+      "question": "Simplify: (12/x) ÷ 2",
+      "choices": {
+        "A": "6/x",
+        "B": "12/(2x)",
+        "C": "24/x",
+        "D": "x/6",
+        "E": "1/x"
+      },
+      "answer": "A",
+      "explanation": "12/x ÷ 2 = 12/(2x) = 6/x."
+    },
+    {
+      "id": "mk_rat_b_032",
+      "question": "Simplify: x/(3x)",
+      "choices": {
+        "A": "1/3",
+        "B": "x/3",
+        "C": "3/x",
+        "D": "1/x",
+        "E": "x^2/3"
+      },
+      "answer": "A",
+      "explanation": "x/(3x)=1/3."
+    },
+    {
+      "id": "mk_rat_b_033",
+      "question": "Simplify: 15/(5x)",
+      "choices": {
+        "A": "3/x",
+        "B": "15x/5",
+        "C": "3x",
+        "D": "1/(5x)",
+        "E": "5/x"
+      },
+      "answer": "A",
+      "explanation": "15/(5x)=3/x."
+    },
+    {
+      "id": "mk_rat_b_034",
+      "question": "Simplify: (4x)/(16x)",
+      "choices": {
+        "A": "1/4",
+        "B": "4",
+        "C": "x/4",
+        "D": "1",
+        "E": "4/x"
+      },
+      "answer": "A",
+      "explanation": "4x/16x = 1/4."
+    },
+    {
+      "id": "mk_rat_b_035",
+      "question": "Simplify: (9/x) × (x/3)",
+      "choices": {
+        "A": "3",
+        "B": "1/3",
+        "C": "6",
+        "D": "9",
+        "E": "3/x"
+      },
+      "answer": "A",
+      "explanation": "9x/(3x)=3."
+    },
+    {
+      "id": "mk_rat_b_036",
+      "question": "Simplify: (10/x) - (6/x)",
+      "choices": {
+        "A": "4/x",
+        "B": "16/x",
+        "C": "6/x",
+        "D": "x/4",
+        "E": "2/x"
+      },
+      "answer": "A",
+      "explanation": "(10-6)/x=4/x."
+    },
+    {
+      "id": "mk_rat_b_037",
+      "question": "Simplify: (x/2) × (4/x)",
+      "choices": {
+        "A": "2",
+        "B": "4/x^2",
+        "C": "x^2/8",
+        "D": "1/2",
+        "E": "4"
+      },
+      "answer": "A",
+      "explanation": "4/(2)=2."
+    },
+    {
+      "id": "mk_rat_b_038",
+      "question": "Simplify: (7/x) + (14/x)",
+      "choices": {
+        "A": "21/x",
+        "B": "7/(14x)",
+        "C": "14/x",
+        "D": "x/21",
+        "E": "1/x"
+      },
+      "answer": "A",
+      "explanation": "7+14=21."
+    },
+    {
+      "id": "mk_rat_b_039",
+      "question": "Simplify: (18x)/(9x)",
+      "choices": {
+        "A": "2",
+        "B": "9",
+        "C": "18",
+        "D": "1/2",
+        "E": "1"
+      },
+      "answer": "A",
+      "explanation": "18x/9x=2."
+    },
+    {
+      "id": "mk_rat_b_040",
+      "question": "Simplify: (6/x) ÷ 2",
+      "choices": {
+        "A": "3/x",
+        "B": "6/(2x)",
+        "C": "12/x",
+        "D": "x/3",
+        "E": "1/x"
+      },
+      "answer": "A",
+      "explanation": "(6/x)/2=6/(2x)=3/x."
+    },
+    {
+      "id": "mk_rat_b_041",
+      "question": "Simplify: (x/8) + (3x/8)",
+      "choices": {
+        "A": "4x/8",
+        "B": "x/8",
+        "C": "3x/8",
+        "D": "x/2",
+        "E": "x/4"
+      },
+      "answer": "A",
+      "explanation": "(1x+3x)/8=4x/8=x/2."
+    },
+    {
+      "id": "mk_rat_b_041_corrected",
+      "question": "Simplify: (x/8) + (3x/8)",
+      "choices": {
+        "A": "x/2",
+        "B": "4x/8",
+        "C": "x/3",
+        "D": "x/8",
+        "E": "3x/8"
+      },
+      "answer": "A",
+      "explanation": "4x/8 reduces to x/2."
+    },
+
+    {
+      "id": "mk_rat_b_042",
+      "question": "Simplify: (16/x) × (x/4)",
+      "choices": {
+        "A": "4",
+        "B": "16/(4x)",
+        "C": "4/x",
+        "D": "x/4",
+        "E": "1"
+      },
+      "answer": "A",
+      "explanation": "16x/(4x)=4."
+    },
+    {
+      "id": "mk_rat_b_043",
+      "question": "Simplify: (15/x) - (5/x)",
+      "choices": {
+        "A": "10/x",
+        "B": "5/x",
+        "C": "x/10",
+        "D": "20/x",
+        "E": "15/x"
+      },
+      "answer": "A",
+      "explanation": "(15-5)/x=10/x."
+    },
+    {
+      "id": "mk_rat_b_044",
+      "question": "Simplify: 21/(7x)",
+      "choices": {
+        "A": "3/x",
+        "B": "21/(x)",
+        "C": "7/(3x)",
+        "D": "1/3x",
+        "E": "x/3"
+      },
+      "answer": "A",
+      "explanation": "21/(7x)=3/x."
+    },
+    {
+      "id": "mk_rat_b_045",
+      "question": "Simplify: (x/12) + (x/6)",
+      "choices": {
+        "A": "x/4",
+        "B": "x/6",
+        "C": "x/3",
+        "D": "2x/12",
+        "E": "x/12"
+      },
+      "answer": "A",
+      "explanation": "x/12 + 2x/12 = 3x/12 = x/4."
+    },
+    {
+      "id": "mk_rat_b_046",
+      "question": "Simplify: (5/x) × (x/25)",
+      "choices": {
+        "A": "1/5",
+        "B": "5",
+        "C": "25/x^2",
+        "D": "x/5",
+        "E": "1"
+      },
+      "answer": "A",
+      "explanation": "5x/(25x)=1/5."
+    },
+    {
+      "id": "mk_rat_b_047",
+      "question": "Simplify: (3x/9)",
+      "choices": {
+        "A": "x/3",
+        "B": "3/x",
+        "C": "x/9",
+        "D": "1/x",
+        "E": "x"
+      },
+      "answer": "A",
+      "explanation": "3x/9 = x/3."
+    },
+    {
+      "id": "mk_rat_b_048",
+      "question": "Simplify: (2/x) + (8/x)",
+      "choices": {
+        "A": "10/x",
+        "B": "2/(8x)",
+        "C": "8/x",
+        "D": "x/10",
+        "E": "1/x"
+      },
+      "answer": "A",
+      "explanation": "(2+8)/x=10/x."
+    },
+    {
+      "id": "mk_rat_b_049",
+      "question": "Simplify: (x/3) × (6/x)",
+      "choices": {
+        "A": "2",
+        "B": "6/x^2",
+        "C": "x/18",
+        "D": "1/3",
+        "E": "3"
+      },
+      "answer": "A",
+      "explanation": "6/3=2."
+    },
+    {
+      "id": "mk_rat_b_050",
+      "question": "Simplify: (25x)/(5x)",
+      "choices": {
+        "A": "5",
+        "B": "25",
+        "C": "1/5",
+        "D": "x/25",
+        "E": "10"
+      },
+      "answer": "A",
+      "explanation": "25x/5x = 5."
+    }
+  ]
+}
