@@ -1949,45 +1949,45 @@ const aviationTopics = [
             // Expanding to 100 questions per difficulty would require significant content creation.
             const questionsByDifficulty = {
                 beginner: [
-                    { q: "What are the four forces of flight?", a: "Lift, Weight, Thrust, Drag", opts: ["Lift, Gravity, Speed, Wind", "Up, Down, Forward, Backward", "Pitch, Roll, Yaw, Speed"], exp: "The four forces are Lift (up), Weight (down), Thrust (forward), and Drag (backward)", img: "images/aircraft-forces.svg" },
-                    { q: "What does the rudder control?", a: "Yaw", opts: ["Pitch", "Roll", "Altitude"], exp: "The rudder controls yaw, which is rotation around the vertical axis", img: "images/aircraft-controls.svg" },
-                    { q: "What does the elevator control?", a: "Pitch", opts: ["Yaw", "Roll", "Speed"], exp: "The elevator controls pitch, which is rotation around the lateral axis", img: "images/aircraft-controls.svg" },
-                    { q: "What does the aileron control?", a: "Roll", opts: ["Pitch", "Yaw", "Altitude"], exp: "Ailerons control roll, which is rotation around the longitudinal axis", img: "images/aircraft-controls.svg" },
-                    { q: "What is the purpose of flaps?", a: "Increase lift and drag at lower speeds", opts: ["Increase speed", "Control direction", "Reduce weight"], exp: "Flaps increase wing camber to generate more lift and drag for takeoff and landing", img: "images/aircraft-controls.svg" },
-                    { q: "What instrument shows rate of climb or descent?", a: "Vertical Speed Indicator", opts: ["Altimeter", "Airspeed Indicator", "Attitude Indicator"], exp: "The VSI (Vertical Speed Indicator) shows rate of climb or descent", img: "images/flight-instruments.svg" },
-                    { q: "Which direction does a propeller rotate (viewed from cockpit) in most single-engine aircraft?", a: "Clockwise", opts: ["Counterclockwise", "Either direction", "Depends on altitude"], exp: "Most single-engine aircraft have propellers that rotate clockwise when viewed from the cockpit", img: "images/aircraft-controls.svg" },
-                    { q: "What is the altimeter used for?", a: "Measuring altitude", opts: ["Measuring speed", "Measuring direction", "Measuring fuel"], exp: "The altimeter measures the aircraft's altitude above sea level or ground level", img: "images/flight-instruments.svg" },
-                    { q: "What does AGL stand for?", a: "Above Ground Level", opts: ["Above Glide Level", "Air Ground Limit", "Altitude Gain Level"], exp: "AGL means Above Ground Level, measuring height above the terrain", img: "images/attitude-level.svg" },
-                    { q: "What is the airspeed indicator used for?", a: "Measuring speed through the air", opts: ["Measuring altitude", "Measuring fuel", "Measuring direction"], exp: "The airspeed indicator shows how fast the aircraft is moving through the air", img: "images/flight-instruments.svg" },
-                    { q: "What does MSL stand for?", a: "Mean Sea Level", opts: ["Maximum Speed Limit", "Minimum Safe Level", "Medium Service Level"], exp: "MSL stands for Mean Sea Level, a standard reference for altitude measurements", img: "images/attitude-level.svg" },
-                    { q: "What is the heading indicator used for?", a: "Showing aircraft direction", opts: ["Showing altitude", "Showing speed", "Showing fuel level"], exp: "The heading indicator displays the direction the aircraft is pointing", img: "images/flight-instruments.svg" },
-                    { q: "What does the turn coordinator show?", a: "Rate of turn and bank angle", opts: ["Only altitude", "Only speed", "Only direction"], exp: "The turn coordinator displays the rate of turn and the bank angle of the aircraft", img: "images/flight-instruments.svg" },
+                    { q: "What are the four forces of flight?", a: "Lift, Weight, Thrust, Drag", opts: ["Lift, Gravity, Speed, Wind", "Up, Down, Forward, Backward", "Pitch, Roll, Yaw, Speed"], exp: "The four forces are Lift (up), Weight (down), Thrust (forward), and Drag (backward)", img: "assets/icons/aircraft-forces.svg" },
+                    { q: "What does the rudder control?", a: "Yaw", opts: ["Pitch", "Roll", "Altitude"], exp: "The rudder controls yaw, which is rotation around the vertical axis", img: "assets/icons/aircraft-controls.svg" },
+                    { q: "What does the elevator control?", a: "Pitch", opts: ["Yaw", "Roll", "Speed"], exp: "The elevator controls pitch, which is rotation around the lateral axis", img: "assets/icons/aircraft-controls.svg" },
+                    { q: "What does the aileron control?", a: "Roll", opts: ["Pitch", "Yaw", "Altitude"], exp: "Ailerons control roll, which is rotation around the longitudinal axis", img: "assets/icons/aircraft-controls.svg" },
+                    { q: "What is the purpose of flaps?", a: "Increase lift and drag at lower speeds", opts: ["Increase speed", "Control direction", "Reduce weight"], exp: "Flaps increase wing camber to generate more lift and drag for takeoff and landing", img: "assets/icons/aircraft-controls.svg" },
+                    { q: "What instrument shows rate of climb or descent?", a: "Vertical Speed Indicator", opts: ["Altimeter", "Airspeed Indicator", "Attitude Indicator"], exp: "The VSI (Vertical Speed Indicator) shows rate of climb or descent", img: "assets/icons/flight-instruments.svg" },
+                    { q: "Which direction does a propeller rotate (viewed from cockpit) in most single-engine aircraft?", a: "Clockwise", opts: ["Counterclockwise", "Either direction", "Depends on altitude"], exp: "Most single-engine aircraft have propellers that rotate clockwise when viewed from the cockpit", img: "assets/icons/aircraft-controls.svg" },
+                    { q: "What is the altimeter used for?", a: "Measuring altitude", opts: ["Measuring speed", "Measuring direction", "Measuring fuel"], exp: "The altimeter measures the aircraft's altitude above sea level or ground level", img: "assets/icons/flight-instruments.svg" },
+                    { q: "What does AGL stand for?", a: "Above Ground Level", opts: ["Above Glide Level", "Air Ground Limit", "Altitude Gain Level"], exp: "AGL means Above Ground Level, measuring height above the terrain", img: "assets/icons/attitude-level.svg" },
+                    { q: "What is the airspeed indicator used for?", a: "Measuring speed through the air", opts: ["Measuring altitude", "Measuring fuel", "Measuring direction"], exp: "The airspeed indicator shows how fast the aircraft is moving through the air", img: "assets/icons/flight-instruments.svg" },
+                    { q: "What does MSL stand for?", a: "Mean Sea Level", opts: ["Maximum Speed Limit", "Minimum Safe Level", "Medium Service Level"], exp: "MSL stands for Mean Sea Level, a standard reference for altitude measurements", img: "assets/icons/attitude-level.svg" },
+                    { q: "What is the heading indicator used for?", a: "Showing aircraft direction", opts: ["Showing altitude", "Showing speed", "Showing fuel level"], exp: "The heading indicator displays the direction the aircraft is pointing", img: "assets/icons/flight-instruments.svg" },
+                    { q: "What does the turn coordinator show?", a: "Rate of turn and bank angle", opts: ["Only altitude", "Only speed", "Only direction"], exp: "The turn coordinator displays the rate of turn and the bank angle of the aircraft", img: "assets/icons/flight-instruments.svg" },
                 ],
                 advanced: [
-                    { q: "What is the standard sea level atmospheric pressure?", a: "29.92 inches Hg", opts: ["30.00 inches Hg", "14.7 psi only", "1013 mb only"], exp: "Standard sea level pressure is 29.92 inches of mercury (or 1013.25 mb)", img: "images/flight-instruments.svg" },
-                    { q: "What is V1 speed?", a: "Decision speed for takeoff", opts: ["Landing speed", "Cruise speed", "Stall speed"], exp: "V1 is the critical engine failure recognition speed during takeoff", img: "images/attitude-climbing.svg" },
-                    { q: "What does 'angle of attack' mean?", a: "Angle between chord line and relative wind", opts: ["Angle of the aircraft to ground", "Angle of climb", "Bank angle"], exp: "Angle of attack is the angle between the wing's chord line and the oncoming airflow", img: "images/aircraft-forces.svg" },
-                    { q: "What is the minimum safe altitude over congested areas?", a: "1,000 feet above highest obstacle within 2,000 feet", opts: ["500 feet AGL", "1,500 feet MSL", "Any altitude"], exp: "FAA regulations require 1,000 feet above the highest obstacle within a 2,000-foot radius", img: "images/attitude-level.svg" },
-                    { q: "What is VR speed?", a: "Rotation speed for takeoff", opts: ["Refusal speed", "Range speed", "Reduced speed"], exp: "VR is the speed at which the player rotates the aircraft nose up during takeoff", img: "images/attitude-climbing.svg" },
-                    { q: "What is the purpose of trim tabs?", a: "Reduce control pressure", opts: ["Increase speed", "Control temperature", "Measure altitude"], exp: "Trim tabs help reduce the control pressure needed to maintain a desired flight attitude", img: "images/aircraft-controls.svg" },
-                    { q: "What does the compass deviation card show?", a: "Magnetic compass errors", opts: ["Altitude errors", "Speed errors", "Fuel errors"], exp: "The compass deviation card shows corrections for magnetic compass errors in the aircraft", img: "images/flight-instruments.svg" },
-                    { q: "What is ground effect?", a: "Increased lift near the ground", opts: ["Decreased lift near ground", "No change in lift", "Only affects helicopters"], exp: "Ground effect provides increased lift and reduced drag when flying close to the ground", img: "images/aircraft-forces.svg" },
-                    { q: "What does METAR stand for?", a: "Aviation Routine Weather Report", opts: ["Meteorological Terminal Report", "Measure Temperature And Range", "Medium Altitude Reading"], exp: "METAR is the format for reporting aviation routine weather observations", img: "images/flight-instruments.svg" },
-                    { q: "What is the purpose of the pitot tube?", a: "Measure dynamic air pressure", opts: ["Measure temperature", "Measure altitude", "Measure fuel"], exp: "The pitot tube measures dynamic air pressure to determine airspeed", img: "images/flight-instruments.svg" },
-                    { q: "What is carburetor ice?", a: "Ice formation in the carburetor", opts: ["Ice on the wings", "Ice on the windshield", "Ice in the fuel"], exp: "Carburetor ice forms when moisture freezes in the carburetor, reducing engine power", img: "images/aircraft-controls.svg" },
+                    { q: "What is the standard sea level atmospheric pressure?", a: "29.92 inches Hg", opts: ["30.00 inches Hg", "14.7 psi only", "1013 mb only"], exp: "Standard sea level pressure is 29.92 inches of mercury (or 1013.25 mb)", img: "assets/icons/flight-instruments.svg" },
+                    { q: "What is V1 speed?", a: "Decision speed for takeoff", opts: ["Landing speed", "Cruise speed", "Stall speed"], exp: "V1 is the critical engine failure recognition speed during takeoff", img: "assets/icons/attitude-climbing.svg" },
+                    { q: "What does 'angle of attack' mean?", a: "Angle between chord line and relative wind", opts: ["Angle of the aircraft to ground", "Angle of climb", "Bank angle"], exp: "Angle of attack is the angle between the wing's chord line and the oncoming airflow", img: "assets/icons/aircraft-forces.svg" },
+                    { q: "What is the minimum safe altitude over congested areas?", a: "1,000 feet above highest obstacle within 2,000 feet", opts: ["500 feet AGL", "1,500 feet MSL", "Any altitude"], exp: "FAA regulations require 1,000 feet above the highest obstacle within a 2,000-foot radius", img: "assets/icons/attitude-level.svg" },
+                    { q: "What is VR speed?", a: "Rotation speed for takeoff", opts: ["Refusal speed", "Range speed", "Reduced speed"], exp: "VR is the speed at which the player rotates the aircraft nose up during takeoff", img: "assets/icons/attitude-climbing.svg" },
+                    { q: "What is the purpose of trim tabs?", a: "Reduce control pressure", opts: ["Increase speed", "Control temperature", "Measure altitude"], exp: "Trim tabs help reduce the control pressure needed to maintain a desired flight attitude", img: "assets/icons/aircraft-controls.svg" },
+                    { q: "What does the compass deviation card show?", a: "Magnetic compass errors", opts: ["Altitude errors", "Speed errors", "Fuel errors"], exp: "The compass deviation card shows corrections for magnetic compass errors in the aircraft", img: "assets/icons/flight-instruments.svg" },
+                    { q: "What is ground effect?", a: "Increased lift near the ground", opts: ["Decreased lift near ground", "No change in lift", "Only affects helicopters"], exp: "Ground effect provides increased lift and reduced drag when flying close to the ground", img: "assets/icons/aircraft-forces.svg" },
+                    { q: "What does METAR stand for?", a: "Aviation Routine Weather Report", opts: ["Meteorological Terminal Report", "Measure Temperature And Range", "Medium Altitude Reading"], exp: "METAR is the format for reporting aviation routine weather observations", img: "assets/icons/flight-instruments.svg" },
+                    { q: "What is the purpose of the pitot tube?", a: "Measure dynamic air pressure", opts: ["Measure temperature", "Measure altitude", "Measure fuel"], exp: "The pitot tube measures dynamic air pressure to determine airspeed", img: "assets/icons/flight-instruments.svg" },
+                    { q: "What is carburetor ice?", a: "Ice formation in the carburetor", opts: ["Ice on the wings", "Ice on the windshield", "Ice in the fuel"], exp: "Carburetor ice forms when moisture freezes in the carburetor, reducing engine power", img: "assets/icons/aircraft-controls.svg" },
                 ],
                 expert: [
-                    { q: "What causes an aircraft to stall?", a: "Exceeding critical angle of attack", opts: ["Flying too fast", "Running out of fuel", "Engine failure"], exp: "A stall occurs when the wing exceeds its critical angle of attack, disrupting airflow", img: "images/aircraft-forces.svg" },
-                    { q: "What is P-factor?", a: "Asymmetric propeller thrust", opts: ["Power factor", "Pressure factor", "Pitch factor"], exp: "P-factor is the asymmetric thrust produced by a propeller at high angles of attack", img: "images/aircraft-forces.svg" },
-                    { q: "What is the purpose of a mixture control?", a: "Adjust fuel-to-air ratio", opts: ["Control speed", "Control altitude", "Control direction"], exp: "The mixture control adjusts the fuel-to-air ratio for optimal engine performance at different altitudes", img: "images/aircraft-controls.svg" },
-                    { q: "What is adverse yaw?", a: "Yaw opposite to turn direction", opts: ["Yaw in turn direction", "No yaw during turn", "Vertical yaw only"], exp: "Adverse yaw is the tendency of an aircraft to yaw in the opposite direction of a turn due to differential drag", img: "images/aircraft-controls.svg" },
-                    { q: "What is Dutch roll?", a: "Combined yaw and roll oscillation", opts: ["Only pitch oscillation", "Only yaw oscillation", "Controlled maneuver"], exp: "Dutch roll is an oscillatory instability involving coupled rolling and yawing motions", img: "images/aircraft-controls.svg" },
-                    { q: "What is the coffin corner?", a: "Where stall speed meets max speed", opts: ["Landing pattern corner", "Fuel tank corner", "Cockpit corner"], exp: "Coffin corner is the altitude where stall speed and maximum speed converge, limiting flight envelope", img: "images/aircraft-forces.svg" },
-                    { q: "What causes a spin?", a: "Stalled condition with yaw", opts: ["High speed turn", "Engine failure", "Low fuel"], exp: "A spin occurs when one wing is more stalled than the other, combined with yaw", img: "images/aircraft-forces.svg" },
-                    { q: "What is load factor in a 60° bank?", a: "2G", opts: ["1G", "1.5G", "3G"], exp: "In a 60-degree coordinated turn, the load factor is 2G, doubling the aircraft's weight", img: "images/aircraft-forces.svg" },
-                    { q: "What is Mach tuck?", a: "Nose-down pitch at high Mach", opts: ["Nose-up pitch", "Wing flutter", "Engine surge"], exp: "Mach tuck is a nose-down pitching moment that occurs at high Mach numbers due to shock wave formation", img: "images/aircraft-forces.svg" },
-                    { q: "What is the critical Mach number?", a: "Speed where supersonic flow first appears", opts: ["Speed of sound", "Stall speed", "Maximum speed"], exp: "Critical Mach number is the speed at which airflow over some part of the aircraft first reaches Mach 1", img: "images/aircraft-forces.svg" },
-                    { q: "What is the area rule?", a: "Design to reduce transonic drag", opts: ["Fuel capacity rule", "Weight limit rule", "Speed limit rule"], exp: "The area rule is a design principle that reduces drag at transonic speeds by maintaining constant cross-sectional area", img: "images/aircraft-forces.svg" },
+                    { q: "What causes an aircraft to stall?", a: "Exceeding critical angle of attack", opts: ["Flying too fast", "Running out of fuel", "Engine failure"], exp: "A stall occurs when the wing exceeds its critical angle of attack, disrupting airflow", img: "assets/icons/aircraft-forces.svg" },
+                    { q: "What is P-factor?", a: "Asymmetric propeller thrust", opts: ["Power factor", "Pressure factor", "Pitch factor"], exp: "P-factor is the asymmetric thrust produced by a propeller at high angles of attack", img: "assets/icons/aircraft-forces.svg" },
+                    { q: "What is the purpose of a mixture control?", a: "Adjust fuel-to-air ratio", opts: ["Control speed", "Control altitude", "Control direction"], exp: "The mixture control adjusts the fuel-to-air ratio for optimal engine performance at different altitudes", img: "assets/icons/aircraft-controls.svg" },
+                    { q: "What is adverse yaw?", a: "Yaw opposite to turn direction", opts: ["Yaw in turn direction", "No yaw during turn", "Vertical yaw only"], exp: "Adverse yaw is the tendency of an aircraft to yaw in the opposite direction of a turn due to differential drag", img: "assets/icons/aircraft-controls.svg" },
+                    { q: "What is Dutch roll?", a: "Combined yaw and roll oscillation", opts: ["Only pitch oscillation", "Only yaw oscillation", "Controlled maneuver"], exp: "Dutch roll is an oscillatory instability involving coupled rolling and yawing motions", img: "assets/icons/aircraft-controls.svg" },
+                    { q: "What is the coffin corner?", a: "Where stall speed meets max speed", opts: ["Landing pattern corner", "Fuel tank corner", "Cockpit corner"], exp: "Coffin corner is the altitude where stall speed and maximum speed converge, limiting flight envelope", img: "assets/icons/aircraft-forces.svg" },
+                    { q: "What causes a spin?", a: "Stalled condition with yaw", opts: ["High speed turn", "Engine failure", "Low fuel"], exp: "A spin occurs when one wing is more stalled than the other, combined with yaw", img: "assets/icons/aircraft-forces.svg" },
+                    { q: "What is load factor in a 60° bank?", a: "2G", opts: ["1G", "1.5G", "3G"], exp: "In a 60-degree coordinated turn, the load factor is 2G, doubling the aircraft's weight", img: "assets/icons/aircraft-forces.svg" },
+                    { q: "What is Mach tuck?", a: "Nose-down pitch at high Mach", opts: ["Nose-up pitch", "Wing flutter", "Engine surge"], exp: "Mach tuck is a nose-down pitching moment that occurs at high Mach numbers due to shock wave formation", img: "assets/icons/aircraft-forces.svg" },
+                    { q: "What is the critical Mach number?", a: "Speed where supersonic flow first appears", opts: ["Speed of sound", "Stall speed", "Maximum speed"], exp: "Critical Mach number is the speed at which airflow over some part of the aircraft first reaches Mach 1", img: "assets/icons/aircraft-forces.svg" },
+                    { q: "What is the area rule?", a: "Design to reduce transonic drag", opts: ["Fuel capacity rule", "Weight limit rule", "Speed limit rule"], exp: "The area rule is a design principle that reduces drag at transonic speeds by maintaining constant cross-sectional area", img: "assets/icons/aircraft-forces.svg" },
                 ]
             };
             
@@ -2020,41 +2020,41 @@ const instrumentTopics = [
         generateQuestion: (difficulty = 'beginner') => {
             // Beginner: Simple attitudes with clear descriptions (9 questions)
             const beginnerAttitudes = [
-                { heading: "North", bank: "Level", pitch: "Level", desc: "Straight and level flight", img: "images/attitude-level.svg", details: "No bank, no climb or descent" },
-                { heading: "East", bank: "Level", pitch: "Climbing", desc: "Climbing straight ahead", img: "images/attitude-climbing.svg", details: "Nose up, wings level" },
-                { heading: "South", bank: "Level", pitch: "Descending", desc: "Descending straight ahead", img: "images/attitude-descending.svg", details: "Nose down, wings level" },
-                { heading: "West", bank: "Right 30°", pitch: "Level", desc: "Banking right 30 degrees", img: "images/attitude-right-30.svg", details: "Right wing down, level pitch" },
-                { heading: "North", bank: "Left 20°", pitch: "Level", desc: "Banking left 20 degrees", img: "images/attitude-left-20.svg", details: "Left wing down, level pitch" },
-                { heading: "Southeast", bank: "Right 15°", pitch: "Level", desc: "Banking right 15 degrees", img: "images/attitude-right-15.svg", details: "Slight right bank, wings not level" },
-                { heading: "Northwest", bank: "Left 25°", pitch: "Level", desc: "Banking left 25 degrees", img: "images/attitude-left-25.svg", details: "Moderate left bank, level pitch" },
-                { heading: "Northeast", bank: "Level", pitch: "Climbing", desc: "Climbing with wings level", img: "images/attitude-climbing.svg", details: "Straight climb, no turn" },
-                { heading: "Southwest", bank: "Level", pitch: "Descending", desc: "Descending with wings level", img: "images/attitude-descending.svg", details: "Straight descent, no turn" }
+                { heading: "North", bank: "Level", pitch: "Level", desc: "Straight and level flight", img: "assets/icons/attitude-level.svg", details: "No bank, no climb or descent" },
+                { heading: "East", bank: "Level", pitch: "Climbing", desc: "Climbing straight ahead", img: "assets/icons/attitude-climbing.svg", details: "Nose up, wings level" },
+                { heading: "South", bank: "Level", pitch: "Descending", desc: "Descending straight ahead", img: "assets/icons/attitude-descending.svg", details: "Nose down, wings level" },
+                { heading: "West", bank: "Right 30°", pitch: "Level", desc: "Banking right 30 degrees", img: "assets/icons/attitude-right-30.svg", details: "Right wing down, level pitch" },
+                { heading: "North", bank: "Left 20°", pitch: "Level", desc: "Banking left 20 degrees", img: "assets/icons/attitude-left-20.svg", details: "Left wing down, level pitch" },
+                { heading: "Southeast", bank: "Right 15°", pitch: "Level", desc: "Banking right 15 degrees", img: "assets/icons/attitude-right-15.svg", details: "Slight right bank, wings not level" },
+                { heading: "Northwest", bank: "Left 25°", pitch: "Level", desc: "Banking left 25 degrees", img: "assets/icons/attitude-left-25.svg", details: "Moderate left bank, level pitch" },
+                { heading: "Northeast", bank: "Level", pitch: "Climbing", desc: "Climbing with wings level", img: "assets/icons/attitude-climbing.svg", details: "Straight climb, no turn" },
+                { heading: "Southwest", bank: "Level", pitch: "Descending", desc: "Descending with wings level", img: "assets/icons/attitude-descending.svg", details: "Straight descent, no turn" }
             ];
             
             // Advanced: Combined maneuvers (9 questions)
             const advancedAttitudes = [
-                { heading: "Northeast", bank: "Right 15°", pitch: "Climbing", desc: "Climbing right turn", img: "images/attitude-right-15.svg", details: "Banking right 15° while climbing" },
-                { heading: "Southeast", bank: "Left 25°", pitch: "Descending", desc: "Descending left turn", img: "images/attitude-left-25.svg", details: "Banking left 25° while descending" },
-                { heading: "Southwest", bank: "Right 30°", pitch: "Descending", desc: "Steep descending right turn", img: "images/attitude-right-30.svg", details: "Banking right 30° with nose down" },
-                { heading: "Northwest", bank: "Left 20°", pitch: "Climbing", desc: "Climbing left turn", img: "images/attitude-left-20.svg", details: "Banking left 20° while climbing" },
-                { heading: "East", bank: "Right 30°", pitch: "Climbing", desc: "Steep climbing right turn", img: "images/attitude-right-30.svg", details: "Right 30° bank with climb" },
-                { heading: "West", bank: "Left 25°", pitch: "Climbing", desc: "Moderate climbing left turn", img: "images/attitude-left-25.svg", details: "Left 25° bank while ascending" },
-                { heading: "North", bank: "Right 15°", pitch: "Descending", desc: "Descending right turn", img: "images/attitude-right-15.svg", details: "Right 15° bank with descent" },
-                { heading: "South", bank: "Left 20°", pitch: "Descending", desc: "Descending left turn", img: "images/attitude-left-20.svg", details: "Left 20° bank while descending" },
-                { heading: "Northeast", bank: "Right 30°", pitch: "Level", desc: "Steep level right turn", img: "images/attitude-right-30.svg", details: "Sharp turn without altitude change" }
+                { heading: "Northeast", bank: "Right 15°", pitch: "Climbing", desc: "Climbing right turn", img: "assets/icons/attitude-right-15.svg", details: "Banking right 15° while climbing" },
+                { heading: "Southeast", bank: "Left 25°", pitch: "Descending", desc: "Descending left turn", img: "assets/icons/attitude-left-25.svg", details: "Banking left 25° while descending" },
+                { heading: "Southwest", bank: "Right 30°", pitch: "Descending", desc: "Steep descending right turn", img: "assets/icons/attitude-right-30.svg", details: "Banking right 30° with nose down" },
+                { heading: "Northwest", bank: "Left 20°", pitch: "Climbing", desc: "Climbing left turn", img: "assets/icons/attitude-left-20.svg", details: "Banking left 20° while climbing" },
+                { heading: "East", bank: "Right 30°", pitch: "Climbing", desc: "Steep climbing right turn", img: "assets/icons/attitude-right-30.svg", details: "Right 30° bank with climb" },
+                { heading: "West", bank: "Left 25°", pitch: "Climbing", desc: "Moderate climbing left turn", img: "assets/icons/attitude-left-25.svg", details: "Left 25° bank while ascending" },
+                { heading: "North", bank: "Right 15°", pitch: "Descending", desc: "Descending right turn", img: "assets/icons/attitude-right-15.svg", details: "Right 15° bank with descent" },
+                { heading: "South", bank: "Left 20°", pitch: "Descending", desc: "Descending left turn", img: "assets/icons/attitude-left-20.svg", details: "Left 20° bank while descending" },
+                { heading: "Northeast", bank: "Right 30°", pitch: "Level", desc: "Steep level right turn", img: "assets/icons/attitude-right-30.svg", details: "Sharp turn without altitude change" }
             ];
             
             // Expert: Precise identification with specific angles (9 questions)
             const expertAttitudes = [
-                { heading: "045°", bank: "Right 15°", pitch: "5° climb", desc: "Right 15° bank, 5° nose up, heading 045°", img: "images/attitude-right-15.svg", details: "Shallow climbing right turn to northeast" },
-                { heading: "135°", bank: "Left 25°", pitch: "10° descent", desc: "Left 25° bank, 10° nose down, heading 135°", img: "images/attitude-left-25.svg", details: "Medium descending left turn to southeast" },
-                { heading: "225°", bank: "Right 30°", pitch: "Level", desc: "Right 30° bank, level pitch, heading 225°", img: "images/attitude-right-30.svg", details: "Steep right turn to southwest" },
-                { heading: "315°", bank: "Left 20°", pitch: "8° climb", desc: "Left 20° bank, 8° nose up, heading 315°", img: "images/attitude-left-20.svg", details: "Moderate climbing left turn to northwest" },
-                { heading: "090°", bank: "Right 30°", pitch: "12° descent", desc: "Right 30° bank, 12° nose down, heading 090°", img: "images/attitude-right-30.svg", details: "Steep descending right turn to east" },
-                { heading: "180°", bank: "Left 25°", pitch: "6° climb", desc: "Left 25° bank, 6° nose up, heading 180°", img: "images/attitude-left-25.svg", details: "Medium climbing left turn to south" },
-                { heading: "270°", bank: "Right 15°", pitch: "3° descent", desc: "Right 15° bank, 3° nose down, heading 270°", img: "images/attitude-right-15.svg", details: "Shallow descending right turn to west" },
-                { heading: "000°", bank: "Left 20°", pitch: "Level", desc: "Left 20° bank, level pitch, heading 000°", img: "images/attitude-left-20.svg", details: "Moderate left turn to north" },
-                { heading: "060°", bank: "Right 30°", pitch: "10° climb", desc: "Right 30° bank, 10° nose up, heading 060°", img: "images/attitude-right-30.svg", details: "Steep climbing right turn to ENE" }
+                { heading: "045°", bank: "Right 15°", pitch: "5° climb", desc: "Right 15° bank, 5° nose up, heading 045°", img: "assets/icons/attitude-right-15.svg", details: "Shallow climbing right turn to northeast" },
+                { heading: "135°", bank: "Left 25°", pitch: "10° descent", desc: "Left 25° bank, 10° nose down, heading 135°", img: "assets/icons/attitude-left-25.svg", details: "Medium descending left turn to southeast" },
+                { heading: "225°", bank: "Right 30°", pitch: "Level", desc: "Right 30° bank, level pitch, heading 225°", img: "assets/icons/attitude-right-30.svg", details: "Steep right turn to southwest" },
+                { heading: "315°", bank: "Left 20°", pitch: "8° climb", desc: "Left 20° bank, 8° nose up, heading 315°", img: "assets/icons/attitude-left-20.svg", details: "Moderate climbing left turn to northwest" },
+                { heading: "090°", bank: "Right 30°", pitch: "12° descent", desc: "Right 30° bank, 12° nose down, heading 090°", img: "assets/icons/attitude-right-30.svg", details: "Steep descending right turn to east" },
+                { heading: "180°", bank: "Left 25°", pitch: "6° climb", desc: "Left 25° bank, 6° nose up, heading 180°", img: "assets/icons/attitude-left-25.svg", details: "Medium climbing left turn to south" },
+                { heading: "270°", bank: "Right 15°", pitch: "3° descent", desc: "Right 15° bank, 3° nose down, heading 270°", img: "assets/icons/attitude-right-15.svg", details: "Shallow descending right turn to west" },
+                { heading: "000°", bank: "Left 20°", pitch: "Level", desc: "Left 20° bank, level pitch, heading 000°", img: "assets/icons/attitude-left-20.svg", details: "Moderate left turn to north" },
+                { heading: "060°", bank: "Right 30°", pitch: "10° climb", desc: "Right 30° bank, 10° nose up, heading 060°", img: "assets/icons/attitude-right-30.svg", details: "Steep climbing right turn to ENE" }
             ];
             
             let attitudes;
@@ -2232,7 +2232,7 @@ const instrumentTopics = [
                 options: options,
                 correctIndex: options.indexOf(q.correct),
                 explanation: q.explanation,
-                image: "images/aircraft-controls.svg"
+                image: "assets/icons/aircraft-controls.svg"
             };
         }
     },
@@ -2361,7 +2361,7 @@ const instrumentTopics = [
                 options: options,
                 correctIndex: options.indexOf(q.correct),
                 explanation: q.explanation,
-                image: "images/aircraft-forces.svg"
+                image: "assets/icons/aircraft-forces.svg"
             };
         }
     },
@@ -2559,7 +2559,7 @@ const instrumentTopics = [
                 options: options,
                 correctIndex: options.indexOf(q.correct),
                 explanation: q.explanation,
-                image: "images/instruments/asi/asi.svg"
+                image: "assets/icons/instruments/asi/asi.svg"
             };
         }
     },
@@ -2757,7 +2757,7 @@ const instrumentTopics = [
                 options: options,
                 correctIndex: options.indexOf(q.correct),
                 explanation: q.explanation,
-                image: "images/instruments/alt/alt.svg"
+                image: "assets/icons/instruments/alt/alt.svg"
             };
         }
     }
@@ -2820,7 +2820,7 @@ const tableTopics = [
                 options: shuffled,
                 correctIndex: shuffled.indexOf(String(correctValue)),
                 explanation: `The value at Row ${targetRow}, Column ${targetCol} is ${correctValue}`,
-                image: "images/table-sample.svg"
+                image: "assets/icons/table-sample.svg"
             };
         }
     }
@@ -2842,35 +2842,35 @@ const blockTopics = [
                     blocks: 27,
                     hidden: 1,
                     touching: 6,
-                    img: "images/blocks-3x3x3.svg"
+                    img: "assets/icons/blocks-3x3x3.svg"
                 },
                 {
                     desc: "A 4×4×4 cube",
                     blocks: 64,
                     hidden: 8,
                     touching: 24,
-                    img: "images/blocks-4x4x4.svg"
+                    img: "assets/icons/blocks-4x4x4.svg"
                 },
                 {
                     desc: "A 2×3×4 rectangular configuration",
                     blocks: 24,
                     hidden: 0,
                     touching: 11,
-                    img: "images/blocks-2x3x4.svg"
+                    img: "assets/icons/blocks-2x3x4.svg"
                 },
                 {
                     desc: "A pyramid with a 4×4 base, 3 layers",
                     blocks: 30,
                     hidden: 1,
                     touching: 13,
-                    img: "images/blocks-pyramid.svg"
+                    img: "assets/icons/blocks-pyramid.svg"
                 },
                 {
                     desc: "An L-shaped configuration: 5 blocks on bottom row, 3 on second layer",
                     blocks: 8,
                     hidden: 0,
                     touching: 4,
-                    img: "images/blocks-l-shape.svg"
+                    img: "assets/icons/blocks-l-shape.svg"
                 }
             ];
             
