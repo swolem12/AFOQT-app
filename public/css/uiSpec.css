@@ -1,0 +1,399 @@
+/**
+ * uiSpec.css - Styles for uiSpec diagrams and explanation/fastStrategy panels
+ * 
+ * Matches the retro terminal theme with cyan (#00ffff) primary color,
+ * glow effects, and CRT-style aesthetics.
+ */
+
+/* ============================================================================
+ * Diagram Container Styles
+ * ============================================================================ */
+
+.uispec-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px solid #00ffff;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #000a0a 0%, #001a1a 100%);
+    box-shadow: 
+        0 0 15px rgba(0, 255, 255, 0.2),
+        inset 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.uispec-diagram {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #00ffff;
+    border-radius: 8px;
+    background: #000000;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* SVG text styling */
+.uispec-diagram text {
+    user-select: none;
+    pointer-events: none;
+}
+
+/* ============================================================================
+ * Explanation and FastStrategy Panel Styles
+ * ============================================================================ */
+
+.explanation-panel {
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #00ffff;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #001a1a 0%, #002a2a 100%);
+    box-shadow: 
+        0 0 20px rgba(0, 255, 255, 0.15),
+        inset 0 0 40px rgba(0, 0, 0, 0.3);
+    animation: panel-fade-in 0.3s ease-out;
+}
+
+@keyframes panel-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.explanation-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+.explanation-panel-icon {
+    font-size: 1.5rem;
+}
+
+.explanation-panel-title {
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00ffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.explanation-content {
+    color: #e0e0e0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.explanation-content p {
+    margin-bottom: 10px;
+}
+
+.explanation-content strong {
+    color: #00ffff;
+}
+
+/* Fast Strategy Section */
+.fast-strategy-section {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px dashed #ff9900;
+    border-radius: 8px;
+    background: rgba(255, 153, 0, 0.05);
+}
+
+.fast-strategy-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.fast-strategy-icon {
+    font-size: 1.2rem;
+}
+
+.fast-strategy-title {
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff9900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px rgba(255, 153, 0, 0.4);
+}
+
+.fast-strategy-content {
+    color: #ffcc80;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+/* ============================================================================
+ * Missing Field Placeholders
+ * ============================================================================ */
+
+.explanation-missing,
+.fast-strategy-missing {
+    opacity: 0.6;
+    font-style: italic;
+    color: #666;
+}
+
+.explanation-missing::before {
+    content: "📝 ";
+}
+
+.fast-strategy-missing::before {
+    content: "⏳ ";
+}
+
+/* ============================================================================
+ * Study Mode vs Practice Test Mode Indicators
+ * ============================================================================ */
+
+.feedback-mode-indicator {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.feedback-mode-indicator.study-mode {
+    background: rgba(0, 255, 0, 0.2);
+    border: 1px solid #00ff00;
+    color: #00ff00;
+}
+
+.feedback-mode-indicator.practice-mode {
+    background: rgba(255, 153, 0, 0.2);
+    border: 1px solid #ff9900;
+    color: #ff9900;
+}
+
+/* ============================================================================
+ * Deferred Feedback Notice (for practice test mode)
+ * ============================================================================ */
+
+.feedback-deferred-notice {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid rgba(255, 153, 0, 0.5);
+    border-radius: 8px;
+    background: rgba(255, 153, 0, 0.1);
+    text-align: center;
+}
+
+.feedback-deferred-notice-icon {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.feedback-deferred-notice-text {
+    color: #ff9900;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+/* ============================================================================
+ * Answer Feedback Styles (enhanced)
+ * ============================================================================ */
+
+.feedback-with-explanation {
+    margin-top: 20px;
+}
+
+.feedback-status-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+.feedback-answer-display {
+    padding: 10px 15px;
+    border-radius: 6px;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    margin-bottom: 15px;
+}
+
+.feedback-answer-label {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.feedback-answer-text {
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    color: #00ff00;
+    font-weight: bold;
+}
+
+/* ============================================================================
+ * Summary Report Styles (for end of practice test)
+ * ============================================================================ */
+
+.summary-explanation-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px dashed rgba(0, 255, 255, 0.3);
+}
+
+.summary-explanation-header {
+    font-family: 'Courier New', monospace;
+    font-size: 1.3rem;
+    color: #00ffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.summary-question-card {
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    border-radius: 10px;
+    background: rgba(0, 20, 20, 0.5);
+}
+
+.summary-question-number {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.summary-question-status {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.summary-question-status.correct {
+    background: rgba(0, 255, 0, 0.2);
+    color: #00ff00;
+    border: 1px solid #00ff00;
+}
+
+.summary-question-status.incorrect {
+    background: rgba(255, 0, 0, 0.2);
+    color: #ff4444;
+    border: 1px solid #ff4444;
+}
+
+/* ============================================================================
+ * Responsive Adjustments
+ * ============================================================================ */
+
+@media (max-width: 600px) {
+    .uispec-container {
+        padding: 10px;
+        margin: 15px auto;
+    }
+    
+    .explanation-panel {
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
+    .explanation-panel-title {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+    
+    .explanation-content {
+        font-size: 0.85rem;
+    }
+    
+    .fast-strategy-section {
+        padding: 12px;
+    }
+    
+    .fast-strategy-content {
+        font-size: 0.85rem;
+    }
+}
+
+/* ============================================================================
+ * CRT Scanline Effect (optional enhancement)
+ * ============================================================================ */
+
+.uispec-container.with-scanlines::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.1) 2px,
+        rgba(0, 0, 0, 0.1) 4px
+    );
+    pointer-events: none;
+    border-radius: 12px;
+}
+
+/* ============================================================================
+ * Animation Effects
+ * ============================================================================ */
+
+.explanation-panel.animate-in {
+    animation: slide-up-fade 0.4s ease-out;
+}
+
+@keyframes slide-up-fade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fast-strategy-section.animate-in {
+    animation: highlight-pulse 0.5s ease-out;
+}
+
+@keyframes highlight-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 153, 0, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 15px 5px rgba(255, 153, 0, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 153, 0, 0);
+    }
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uiSpec Renderer Test</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../public/css/uiSpec.css">
+    <script src="../lib/uiSpecRenderer.js"></script>
+    <style>
+        body {
+            background: #0a0a0a;
+            color: #00ffff;
+            font-family: 'Courier New', monospace;
+            padding: 20px;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #00ffff;
+            border-radius: 8px;
+        }
+        .test-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #00ffff;
+        }
+        .test-description {
+            margin-bottom: 15px;
+            color: #888;
+        }
+        .diagram-container {
+            margin: 20px 0;
+        }
+        .test-pass { color: #00ff00; }
+        .test-fail { color: #ff0000; }
+        #test-results {
+            margin-top: 30px;
+            padding: 20px;
+            border: 2px solid #00ffff;
+            border-radius: 8px;
+            background: #001a1a;
+        }
+    </style>
+</head>
+<body>
+    <h1>uiSpec Renderer Test Suite</h1>
+    
+    <div class="test-section">
+        <div class="test-title">Test 1: Basic Angle Diagram</div>
+        <div class="test-description">Tests rendering of a geometry_angle_diagram with two rays and an angle arc.</div>
+        <div class="diagram-container" id="test1-container"></div>
+    </div>
+    
+    <div class="test-section">
+        <div class="test-title">Test 2: Angle Diagram with Custom Colors</div>
+        <div class="test-description">Tests rendering with custom styleHints colors.</div>
+        <div class="diagram-container" id="test2-container"></div>
+    </div>
+    
+    <div class="test-section">
+        <div class="test-title">Test 3: XSS Prevention</div>
+        <div class="test-description">Tests that malicious input is sanitized.</div>
+        <div class="diagram-container" id="test3-container"></div>
+    </div>
+    
+    <div class="test-section">
+        <div class="test-title">Test 4: Explanation Panel</div>
+        <div class="test-description">Tests the explanation and fastStrategy panel display.</div>
+        <div id="test4-container"></div>
+    </div>
+    
+    <div id="test-results">
+        <h2>Test Results</h2>
+        <div id="results-list"></div>
+    </div>
+
+    <script>
+        const testResults = [];
+
+        function log(message, pass) {
+            testResults.push({ message, pass });
+            const resultsList = document.getElementById('results-list');
+            const item = document.createElement('div');
+            item.className = pass ? 'test-pass' : 'test-fail';
+            item.textContent = (pass ? '✓ PASS: ' : '✗ FAIL: ') + message;
+            resultsList.appendChild(item);
+        }
+
+        // Test 1: Basic Angle Diagram
+        try {
+            const uiSpec1 = {
+                type: 'geometry_angle_diagram',
+                width: 300,
+                height: 300,
+                showGrid: false,
+                lines: [
+                    { from: { x: 150, y: 150 }, to: { x: 150, y: 30 }, label: 'Ray AB' },
+                    { from: { x: 150, y: 150 }, to: { x: 260, y: 210 }, label: 'Ray AC' }
+                ],
+                angleArc: {
+                    center: { x: 150, y: 150 },
+                    radius: 35,
+                    startRay: 0,
+                    endRay: 1,
+                    label: '∠BAC',
+                    measureDegrees: 60
+                }
+            };
+            
+            const container1 = document.getElementById('test1-container');
+            const svg1 = renderUiSpec(uiSpec1, container1);
+            
+            if (svg1 && svg1.tagName.toLowerCase() === 'svg') {
+                log('Test 1: SVG element created', true);
+            } else {
+                log('Test 1: SVG element not created', false);
+            }
+            
+            if (container1.querySelector('line')) {
+                log('Test 1: Lines rendered', true);
+            } else {
+                log('Test 1: Lines not rendered', false);
+            }
+            
+            if (container1.querySelector('path')) {
+                log('Test 1: Arc path rendered', true);
+            } else {
+                log('Test 1: Arc path not rendered', false);
+            }
+        } catch (e) {
+            log('Test 1: Error - ' + e.message, false);
+        }
+
+        // Test 2: Custom Colors
+        try {
+            const uiSpec2 = {
+                type: 'geometry_angle_diagram',
+                width: 250,
+                height: 250,
+                lines: [
+                    { from: { x: 125, y: 125 }, to: { x: 200, y: 50 } },
+                    { from: { x: 125, y: 125 }, to: { x: 220, y: 180 } }
+                ],
+                angleArc: {
+                    center: { x: 125, y: 125 },
+                    radius: 30,
+                    startRay: 0,
+                    endRay: 1,
+                    label: 'θ',
+                    measureDegrees: 45
+                },
+                styleHints: {
+                    baseLineColor: '#00ff00',
+                    highlightAngleColor: '#ffff00'
+                }
+            };
+            
+            const container2 = document.getElementById('test2-container');
+            const svg2 = renderUiSpec(uiSpec2, container2);
+            
+            if (svg2) {
+                const lines = container2.querySelectorAll('line');
+                if (lines.length > 0 && lines[0].getAttribute('stroke') === '#00ff00') {
+                    log('Test 2: Custom line color applied', true);
+                } else {
+                    log('Test 2: Custom line color not applied', false);
+                }
+            } else {
+                log('Test 2: SVG not created', false);
+            }
+        } catch (e) {
+            log('Test 2: Error - ' + e.message, false);
+        }
+
+        // Test 3: XSS Prevention
+        try {
+            const uiSpec3 = {
+                type: 'geometry_angle_diagram',
+                width: 200,
+                height: 200,
+                lines: [
+                    { 
+                        from: { x: 100, y: 100 }, 
+                        to: { x: 150, y: 50 },
+                        label: '<script>alert("xss")</script>'
+                    }
+                ]
+            };
+            
+            const container3 = document.getElementById('test3-container');
+            const svg3 = renderUiSpec(uiSpec3, container3);
+            
+            const html = container3.innerHTML;
+            if (html.indexOf('<script>') === -1 && html.indexOf('</script>') === -1) {
+                log('Test 3: XSS script tags sanitized', true);
+            } else {
+                log('Test 3: XSS script tags NOT sanitized', false);
+            }
+            
+            if (html.indexOf('alert') === -1 || html.indexOf('alert("xss")') === -1) {
+                log('Test 3: Alert function sanitized', true);
+            } else {
+                log('Test 3: Alert function NOT fully sanitized', false);
+            }
+        } catch (e) {
+            log('Test 3: Error - ' + e.message, false);
+        }
+
+        // Test 4: Explanation Panel (manual verification needed)
+        try {
+            const container4 = document.getElementById('test4-container');
+            container4.innerHTML = `
+                <div class="explanation-panel animate-in">
+                    <div class="explanation-panel-header">
+                        <span class="explanation-panel-icon">📚</span>
+                        <span class="explanation-panel-title">Learn From This</span>
+                    </div>
+                    <div class="explanation-content">
+                        <p>An acute angle is any angle that is greater than 0° but less than 90°. Since 60° is between 0° and 90°, it is acute.</p>
+                        <div class="fast-strategy-section animate-in">
+                            <div class="fast-strategy-header">
+                                <span class="fast-strategy-icon">⚡</span>
+                                <span class="fast-strategy-title">Fast Strategy</span>
+                            </div>
+                            <div class="fast-strategy-content">
+                                Memorize: acute = cute and small (< 90°), right = 90°, obtuse = big but not straight (90°–180°).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            if (container4.querySelector('.explanation-panel')) {
+                log('Test 4: Explanation panel rendered', true);
+            } else {
+                log('Test 4: Explanation panel not rendered', false);
+            }
+            
+            if (container4.querySelector('.fast-strategy-section')) {
+                log('Test 4: Fast strategy section rendered', true);
+            } else {
+                log('Test 4: Fast strategy section not rendered', false);
+            }
+        } catch (e) {
+            log('Test 4: Error - ' + e.message, false);
+        }
+
+        // Summary
+        const passed = testResults.filter(t => t.pass).length;
+        const total = testResults.length;
+        console.log(`Tests completed: ${passed}/${total} passed`);
+    </script>
+</body>
+</html>

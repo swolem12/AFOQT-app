@@ -6106,6 +6106,8 @@ function renderMathUI(uiSpec) {
             return renderFunctionRule(uiSpec);
         case 'geometry_triangle_diagram':
             return renderGeometryTriangleDiagram(uiSpec);
+        case 'geometry_angle_diagram':
+            return renderGeometryAngleDiagram(uiSpec);
         default:
             console.warn('Unknown uiSpec type:', uiSpec.type);
             return '';
@@ -6521,6 +6523,221 @@ function renderGeometryTriangleDiagram(uiSpec) {
     `;
 }
 
+/**
+ * Render geometry angle diagram with rays and angle arc
+ * Safe SVG rendering using whitelist approach
+ * uiSpec shape:
+ * { type: 'geometry_angle_diagram', width, height, showGrid, lines: [{from:{x,y}, to:{x,y}, label}], 
+ *   angleArc: {center:{x,y}, radius, startRay, endRay, label, measureDegrees}, styleHints }
+ */
+function renderGeometryAngleDiagram(uiSpec) {
+    const { width = 300, height = 300, lines = [], angleArc, styleHints = {}, showGrid = false } = uiSpec;
+    
+    if (!lines || lines.length < 2) return '';
+    
+    // Validate and sanitize numeric values
+    const sanitizeNum = (val, min, max, def) => {
+        const num = parseFloat(val);
+        if (isNaN(num) || !isFinite(num)) return def;
+        return Math.max(min, Math.min(max, num));
+    };
+    
+    // Sanitize string for safe rendering (prevent XSS)
+    const sanitizeStr = (str) => {
+        if (typeof str !== 'string') str = String(str || '');
+        return str.replace(/[<>'"&]/g, '').replace(/[^\w\s°∠αβγδεζηθικλμνξοπρστυφχψω\-+=/().,:;!?]/gi, '').substring(0, 100);
+    };
+    
+    const w = sanitizeNum(width, 50, 800, 300);
+    const h = sanitizeNum(height, 50, 800, 300);
+    
+    // Generate SVG elements
+    const lineColor = styleHints.baseLineColor || '#00ffff';
+    const arcColor = styleHints.highlightAngleColor || '#ff3366';
+    const labelColor = styleHints.labelsColor || styleHints.labelColor || '#00ffff';
+    
+    let svgContent = '';
+    
+    // Add grid if requested
+    if (showGrid) {
+        svgContent += `<defs>
+            <pattern id="grid-pattern" width="30" height="30" patternUnits="userSpaceOnUse">
+                <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#001a1a" stroke-width="0.5"/>
+            </pattern>
+        </defs>
+        <rect width="${w}" height="${h}" fill="url(#grid-pattern)"/>`;
+    }
+    
+    // Render lines (rays)
+    const lineData = [];
+    lines.forEach((line, idx) => {
+        if (!line.from || !line.to) return;
+        const x1 = sanitizeNum(line.from.x, 0, w, w/2);
+        const y1 = sanitizeNum(line.from.y, 0, h, h/2);
+        const x2 = sanitizeNum(line.to.x, 0, w, w/2);
+        const y2 = sanitizeNum(line.to.y, 0, h, h/2);
+        
+        lineData.push({ x1, y1, x2, y2 });
+        
+        // Draw line
+        svgContent += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${lineColor}" stroke-width="2" stroke-linecap="round"/>`;
+        
+        // Draw arrowhead at the end (for rays)
+        const angle = Math.atan2(y2 - y1, x2 - x1);
+        const arrowLen = 8;
+        const arrowAngle = Math.PI / 7;
+        const ax1 = x2 - arrowLen * Math.cos(angle - arrowAngle);
+        const ay1 = y2 - arrowLen * Math.sin(angle - arrowAngle);
+        const ax2 = x2 - arrowLen * Math.cos(angle + arrowAngle);
+        const ay2 = y2 - arrowLen * Math.sin(angle + arrowAngle);
+        svgContent += `<path d="M ${x2} ${y2} L ${ax1} ${ay1} M ${x2} ${y2} L ${ax2} ${ay2}" stroke="${lineColor}" stroke-width="2" stroke-linecap="round" fill="none"/>`;
+        
+        // Draw label if present
+        if (line.label) {
+            const labelX = x2 + 8;
+            const labelY = y2 - 8;
+            svgContent += `<text x="${labelX}" y="${labelY}" fill="${labelColor}" font-family="monospace" font-size="11" font-weight="bold">${sanitizeStr(line.label)}</text>`;
+        }
+        
+        // Draw vertex point
+        svgContent += `<circle cx="${x1}" cy="${y1}" r="4" fill="${lineColor}" stroke="${lineColor}" stroke-width="1"/>`;
+    });
+    
+    // Render angle arc if present
+    if (angleArc && typeof angleArc === 'object' && lineData.length >= 2) {
+        const center = angleArc.center;
+        if (center) {
+            const cx = sanitizeNum(center.x, 0, w, w/2);
+            const cy = sanitizeNum(center.y, 0, h, h/2);
+            const radius = sanitizeNum(angleArc.radius, 10, 100, 35);
+            
+            // Calculate angles from line data
+            const startIdx = sanitizeNum(angleArc.startRay, 0, lineData.length - 1, 0);
+            const endIdx = sanitizeNum(angleArc.endRay, 0, lineData.length - 1, 1);
+            
+            const startLine = lineData[startIdx];
+            const endLine = lineData[endIdx];
+            
+            if (startLine && endLine) {
+                // Calculate angles in degrees
+                let startAngle = Math.atan2(startLine.y2 - startLine.y1, startLine.x2 - startLine.x1) * 180 / Math.PI;
+                let endAngle = Math.atan2(endLine.y2 - endLine.y1, endLine.x2 - endLine.x1) * 180 / Math.PI;
+                
+                // Convert to SVG arc format (0° is at 3 o'clock, going clockwise)
+                const polarToCart = (r, angleDeg) => {
+                    const rad = angleDeg * Math.PI / 180;
+                    return {
+                        x: cx + r * Math.cos(rad),
+                        y: cy + r * Math.sin(rad)
+                    };
+                };
+                
+                const start = polarToCart(radius, startAngle);
+                const end = polarToCart(radius, endAngle);
+                
+                // Determine arc direction
+                let angleDiff = endAngle - startAngle;
+                if (angleDiff < 0) angleDiff += 360;
+                const largeArc = angleDiff > 180 ? 1 : 0;
+                const sweepFlag = 1;
+                
+                svgContent += `<path d="M ${start.x} ${start.y} A ${radius} ${radius} 0 ${largeArc} ${sweepFlag} ${end.x} ${end.y}" fill="none" stroke="${arcColor}" stroke-width="2"/>`;
+                
+                // Add label at midpoint of arc
+                if (angleArc.label) {
+                    const midAngle = startAngle + angleDiff / 2;
+                    const labelPos = polarToCart(radius + 18, midAngle);
+                    let labelText = sanitizeStr(angleArc.label);
+                    if (angleArc.measureDegrees) {
+                        const degrees = sanitizeNum(angleArc.measureDegrees, 0, 360, 0);
+                        labelText += ` = ${degrees}°`;
+                    }
+                    svgContent += `<text x="${labelPos.x}" y="${labelPos.y}" fill="${arcColor}" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">${labelText}</text>`;
+                }
+            }
+        }
+    }
+    
+    return `
+        <div class="uispec-container" style="display: flex; justify-content: center; margin: 20px auto;">
+            <svg class="uispec-diagram" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" 
+                 style="background: #000; border: 2px solid #00ffff; border-radius: 8px; box-shadow: 0 0 10px rgba(0,255,255,0.3);">
+                ${svgContent}
+            </svg>
+        </div>
+    `;
+}
+
+/**
+ * Render explanation and fast strategy panel
+ * Shows explanation and fastStrategy in study mode after answer submission
+ */
+function renderExplanationPanel(question, isCorrect) {
+    const explanation = question.explanation || null;
+    const fastStrategy = question.fastStrategy || null;
+    
+    // If no explanation or fastStrategy, return minimal feedback
+    if (!explanation && !fastStrategy) {
+        return `
+            <div class="explanation-panel">
+                <div class="explanation-panel-header">
+                    <span class="explanation-panel-icon">📚</span>
+                    <span class="explanation-panel-title">Explanation</span>
+                </div>
+                <div class="explanation-content">
+                    <p class="explanation-missing">Explanation pending review. The correct answer is ${String.fromCharCode(65 + question.correctIndex)}.</p>
+                </div>
+            </div>
+        `;
+    }
+    
+    let panelHtml = `
+        <div class="explanation-panel animate-in">
+            <div class="explanation-panel-header">
+                <span class="explanation-panel-icon">${isCorrect ? '✅' : '📚'}</span>
+                <span class="explanation-panel-title">${isCorrect ? 'Great Job!' : 'Learn From This'}</span>
+            </div>
+            <div class="explanation-content">
+    `;
+    
+    if (explanation) {
+        panelHtml += `<p>${escapeHtml(explanation)}</p>`;
+    } else {
+        panelHtml += `<p class="explanation-missing">Explanation pending review.</p>`;
+    }
+    
+    if (fastStrategy) {
+        panelHtml += `
+            <div class="fast-strategy-section animate-in">
+                <div class="fast-strategy-header">
+                    <span class="fast-strategy-icon">⚡</span>
+                    <span class="fast-strategy-title">Fast Strategy</span>
+                </div>
+                <div class="fast-strategy-content">
+                    ${escapeHtml(fastStrategy)}
+                </div>
+            </div>
+        `;
+    }
+    
+    panelHtml += `
+            </div>
+        </div>
+    `;
+    
+    return panelHtml;
+}
+
+/**
+ * Escape HTML special characters to prevent XSS
+ */
+function escapeHtml(text) {
+    if (typeof text !== 'string') return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
 function renderQuiz() {
     const currentQuestion = state.quiz.questions[state.quiz.currentIndex];
     const answered = state.quiz.selectedAnswer !== null;
@@ -6619,10 +6836,8 @@ function renderQuiz() {
                     <div class="feedback-answer">
                         Correct answer: ${String.fromCharCode(65 + currentQuestion.correctIndex)}. ${currentQuestion.options[currentQuestion.correctIndex]}
                     </div>
-                    <div class="feedback-explanation">
-                        ${currentQuestion.explanation}
-                    </div>
                 </div>
+                ${renderExplanationPanel(currentQuestion, isCorrect)}
             ` : ''}
             
             ${answered && !showFeedback ? `

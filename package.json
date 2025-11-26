@@ -1,0 +1,23 @@
+{
+  "name": "afoqt-quest",
+  "version": "1.0.0",
+  "description": "AFOQT Quest - RPG-style study app with procedurally generated questions",
+  "main": "app.js",
+  "scripts": {
+    "audit:questions": "node tools/question_audit.js 'Test Content/Math' tools/report_question_audit.json",
+    "audit:questions:verbose": "node tools/question_audit.js 'Test Content/Math' tools/report_question_audit.json --verbose"
+  },
+  "keywords": [
+    "afoqt",
+    "study",
+    "quiz",
+    "pwa",
+    "education"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swolem12/AFOQT-app"
+  }
+}
