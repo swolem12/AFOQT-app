@@ -2909,9 +2909,98 @@ const blockTopics = [
     }
 ];
 
+// Function to create math topics from questionRegistry
+function createMathTopicsFromRegistry() {
+    if (!questionRegistry || !questionRegistry.math_knowledge) {
+        console.warn('Math knowledge content not loaded, using procedural fallbacks');
+        return mathTopics.map(t => ({ ...t, subjectId: 'math_knowledge' }));
+    }
+    
+    const mathContent = questionRegistry.math_knowledge;
+    const dynamicTopics = [];
+    
+    // Topic name mapping
+    const topicNames = {
+        'word_problems_equation_setup': 'Word Problems (Equation setup)',
+        'absolute_value': 'Absolute Value (Solve |x - a| = b)',
+        'coordinate_geometry': 'Coordinate Geometry (Distance, midpoint, slopes)',
+        'distributive_foil': 'Distributive & FOIL',
+        'evaluate_expressions': 'Evaluate Expressions (Substitution)',
+        'exponents_roots': 'Exponents (Laws of exponents)',
+        'factoring': 'Factoring (Factor quadratics)',
+        'fractions': 'Fractions (Add/subtract/multiply/divide)',
+        'function_evaluation': 'Functions (Evaluate f(x))',
+        'functions': 'Functions (Evaluate f(x))',
+        'geometry_basics': 'Geometry Basics (Perimeter/Area)',
+        'graph_interpretation': 'Graph Interpretation (Read charts/graphs)',
+        'graphing_linear_functions': 'Graphing Linear Functions (y=mx+b)',
+        'inequalities': 'Inequalities (Solve inequalities)',
+        'linear_equations': 'Linear Equations (Solve for x)',
+        'number_sets': 'Number Classification (real/irrational/integers/etc)',
+        'order_of_operations': 'Order of Operations (PEMDAS)',
+        'polygons_and_angles': 'Polygons & Angles (Interior/exterior angles)',
+        'polynomials': 'Polynomials (Add/subtract)',
+        'probability': 'Probability (Simple events)',
+        'quadratic_equations': 'Quadratic Equations (Solve quadratics)',
+        'radicals': 'Radicals (Simplify radicals)',
+        'ratio_and_proportion': 'Ratio & Proportion (Solve proportions)',
+        'rational_expressions': 'Rational Expressions (Simplify fractions)',
+        'sequences': 'Sequences (Arithmetic/geometric)',
+        'slope': 'Slope (Rise over run)',
+        'statistics': 'Statistics (Mean/median/range)',
+        'systems_linear': 'Systems (Solve systems)',
+        'transformations': 'Transformations (Reflections/rotations)'
+    };
+    
+    const topicDescriptions = {
+        'word_problems_equation_setup': 'Translating word problems into equations',
+        'absolute_value': 'Solve absolute value equations',
+        'coordinate_geometry': 'Work with coordinate planes',
+        'distributive_foil': 'Expand expressions',
+        'evaluate_expressions': 'Substitute values and evaluate',
+        'exponents_roots': 'Apply exponent rules',
+        'factoring': 'Factor quadratic expressions',
+        'fractions': 'Operations with fractions',
+        'function_evaluation': 'Evaluate function values',
+        'functions': 'Evaluate function values',
+        'geometry_basics': 'Calculate area and perimeter',
+        'graph_interpretation': 'Read data from graphs',
+        'graphing_linear_functions': 'Graph linear functions',
+        'inequalities': 'Solve inequality expressions',
+        'linear_equations': 'Solve basic equations',
+        'number_sets': 'Classify number types',
+        'order_of_operations': 'Apply PEMDAS correctly',
+        'polygons_and_angles': 'Work with polygon angles',
+        'polynomials': 'Polynomial operations',
+        'probability': 'Calculate probabilities',
+        'quadratic_equations': 'Solve quadratic equations',
+        'radicals': 'Simplify square roots',
+        'ratio_and_proportion': 'Solve proportions',
+        'rational_expressions': 'Simplify algebraic fractions',
+        'sequences': 'Find sequence terms',
+        'slope': 'Calculate line slopes',
+        'statistics': 'Calculate basic statistics',
+        'systems_linear': 'Solve system of equations',
+        'transformations': 'Apply geometric transformations'
+    };
+    
+    // Create topics from loaded content
+    for (const subtopicId in mathContent) {
+        dynamicTopics.push({
+            id: subtopicId,
+            name: topicNames[subtopicId] || subtopicId.replace(/_/g, ' '),
+            description: topicDescriptions[subtopicId] || 'Math practice',
+            subjectId: 'math_knowledge',
+            hasContent: true
+        });
+    }
+    
+    console.log(`Created ${dynamicTopics.length} math topics from content`);
+    return dynamicTopics;
+}
+
 // Combine all topics and add subject IDs
-const topics = [
-    ...mathTopics.map(t => ({ ...t, subjectId: 'math_knowledge' })),
+let topics = [
     ...vocabularyTopics,
     ...readingTopics,
     ...scienceTopics,
@@ -5862,6 +5951,10 @@ function renderSubject() {
         <div class="panel">
             <h1 class="panel-header">${state.currentSubject.name}</h1>
             
+            <div class="action-buttons quiz-action-buttons" style="margin-bottom: 20px;">
+                <button class="btn" id="home-btn">🏠 Home</button>
+            </div>
+            
             <div class="grid grid-3">
                 ${subjectTopics.map(topic => `
                     <div class="tile" data-topic-id="${topic.id}">
@@ -5869,10 +5962,6 @@ function renderSubject() {
                         <div class="tile-description">${topic.description}</div>
                     </div>
                 `).join('')}
-            </div>
-            
-            <div class="action-buttons quiz-action-buttons">
-                <button class="btn" id="home-btn">🏠 Home</button>
             </div>
         </div>
     `;
@@ -8208,6 +8297,13 @@ async function init() {
             if (success) {
                 state.patch18Loaded = true;
                 console.log('✓ Patch 18 active');
+                
+                // Replace old math topics with content-based ones
+                const mathContentTopics = createMathTopicsFromRegistry();
+                // Remove old math topics and add new ones
+                topics = topics.filter(t => t.subjectId !== 'math_knowledge');
+                topics.push(...mathContentTopics);
+                console.log(`✓ Loaded ${mathContentTopics.length} math topics from content`);
                 
                 // Add AFOQT practice test topics if available
                 if (typeof createAfoqtPracticeTestTopics === 'function') {
