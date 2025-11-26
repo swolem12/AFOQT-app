@@ -6622,6 +6622,19 @@ function renderQuiz() {
                     <div class="feedback-explanation">
                         ${currentQuestion.explanation}
                     </div>
+                    ${currentQuestion.fastStrategy ? `
+                    <div class="feedback-fast-strategy">
+                        <strong>⚡ Fast Strategy:</strong> ${currentQuestion.fastStrategy}
+                    </div>
+                    ` : ''}
+                    ${currentQuestion.steps && currentQuestion.steps.length > 0 ? `
+                    <div class="feedback-steps">
+                        <strong>📋 Steps:</strong>
+                        <ol>
+                            ${currentQuestion.steps.map(step => `<li>${step.replace(/^\d+\.\s*/, '')}</li>`).join('')}
+                        </ol>
+                    </div>
+                    ` : ''}
                 </div>
             ` : ''}
             

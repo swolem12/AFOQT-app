@@ -3725,6 +3725,47 @@ body.panel-style-yellow-mech .panel {
     transition: border-color 0.3s ease;
 }
 
+.feedback-fast-strategy {
+    margin-top: 12px;
+    padding: 10px 15px;
+    background: rgba(255, 215, 0, 0.15);
+    border-left: 3px solid #ffd700;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.feedback-fast-strategy strong {
+    color: #ffd700;
+    font-weight: 600;
+}
+
+.feedback-steps {
+    margin-top: 12px;
+    padding: 10px 15px;
+    background: rgba(0, 255, 255, 0.08);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.feedback-steps strong {
+    color: var(--color-primary);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.feedback-steps ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.feedback-steps li {
+    margin-bottom: 5px;
+}
+
 /* Results screen */
 .results-summary {
     text-align: center;
