@@ -6104,6 +6104,8 @@ function renderMathUI(uiSpec) {
             return renderFunctionTable(uiSpec);
         case 'function_rule':
             return renderFunctionRule(uiSpec);
+        case 'geometry_triangle_diagram':
+            return renderGeometryTriangleDiagram(uiSpec);
         default:
             console.warn('Unknown uiSpec type:', uiSpec.type);
             return '';
@@ -6454,6 +6456,38 @@ function renderFunctionRule(uiSpec) {
                 ${functionText}
             </div>
         </div>
+    `;
+}
+
+/**
+ * Render a simple geometry triangle diagram with pixel-space points
+ * uiSpec shape:
+ * { type: 'geometry_triangle_diagram', width, height, points: [{name,x,y},...], angleLabels: [{vertex,label,highlight}], styleHints }
+ */
+function renderGeometryTriangleDiagram(uiSpec) {
+    const { width = 300, height = 300, points = [], angleLabels = [], styleHints = {} } = uiSpec;
+    if (!points || points.length < 3) return '';
+    const p1 = points[0], p2 = points[1], p3 = points[2];
+    const seg = (a, b) => {
+        const dx = b.x - a.x; const dy = b.y - a.y; const len = Math.hypot(dx, dy); const ang = Math.atan2(dy, dx) * 180/Math.PI;
+        return `<div class="graphLine" style="left:${a.x}px; top:${a.y}px; width:${len}px; transform: rotate(${ang}deg);"></div>`;
+    };
+    const pt = a => `<div class="graphPoint" style="left:${a.x-4}px; top:${a.y-4}px;"></div>`;
+    const lblFor = (vertex) => angleLabels.find(al => al.vertex === vertex);
+    const angleLbl = (a) => {
+        const meta = lblFor(a.name);
+        if (!meta) return '';
+        const color = meta.highlight ? (styleHints.highlightAngleColor || '#ff3366') : (styleHints.labelColor || '#00ffff');
+        return `<div class="angleLabel" style="left:${a.x + 10}px; top:${a.y - 18}px; color:${color};">${meta.label}</div>`;
+    };
+    const nameLbl = (a) => `<div class="graphLabel" style="left:${a.x}px; top:${a.y}px;">${a.name || ''}</div>`;
+    return `
+      <div class="graphContainer" style="width:${width}px; height:${height}px;">
+        ${seg(p1, p2)}${seg(p2, p3)}${seg(p3, p1)}
+        ${pt(p1)}${pt(p2)}${pt(p3)}
+        ${nameLbl(p1)}${nameLbl(p2)}${nameLbl(p3)}
+        ${angleLbl(p1)}${angleLbl(p2)}${angleLbl(p3)}
+      </div>
     `;
 }
 

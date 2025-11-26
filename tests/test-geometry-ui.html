@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Test Geometry UI</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    body { background: #000; color: #00ffff; font-family: monospace; }
+    .panel { max-width: 720px; margin: 20px auto; padding: 20px; border: 2px solid #00ffff; border-radius: 10px; background: #001a1a; }
+    .question-prompt { margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <div class="panel" id="mount"></div>
+  <script>
+    // Minimal versions of helpers from app.js
+    function renderGeometryTriangleDiagram(uiSpec) {
+      const { width = 300, height = 300, points = [], angleLabels = [], styleHints = {} } = uiSpec;
+      if (!points || points.length < 3) return '';
+      const p1 = points[0], p2 = points[1], p3 = points[2];
+      const seg = (a, b) => {
+        const dx = b.x - a.x; const dy = b.y - a.y; const len = Math.hypot(dx, dy); const ang = Math.atan2(dy, dx) * 180/Math.PI;
+        return `<div class="graphLine" style="left:${a.x}px; top:${a.y}px; width:${len}px; transform: rotate(${ang}deg);"></div>`;
+      };
+      const pt = a => `<div class="graphPoint" style="left:${a.x-4}px; top:${a.y-4}px;"></div>`;
+      const lblFor = (vertex) => angleLabels.find(al => al.vertex === vertex);
+      const angleLbl = (a) => {
+        const meta = lblFor(a.name);
+        if (!meta) return '';
+        const color = meta.highlight ? (styleHints.highlightAngleColor || '#ff3366') : (styleHints.labelColor || '#00ffff');
+        return `<div class="angleLabel" style="left:${a.x + 10}px; top:${a.y - 18}px; color:${color};">${meta.label}</div>`;
+      };
+      const nameLbl = (a) => `<div class="graphLabel" style="left:${a.x}px; top:${a.y}px;">${a.name || ''}</div>`;
+      return `
+        <div class="graphContainer" style="width:${width}px; height:${height}px;">
+          ${seg(p1, p2)}${seg(p2, p3)}${seg(p3, p1)}
+          ${pt(p1)}${pt(p2)}${pt(p3)}
+          ${nameLbl(p1)}${nameLbl(p2)}${nameLbl(p3)}
+          ${angleLbl(p1)}${angleLbl(p2)}${angleLbl(p3)}
+        </div>
+      `;
+    }
+    function renderMathUI(uiSpec) {
+      if (!uiSpec || !uiSpec.type) return '';
+      if (uiSpec.type === 'geometry_triangle_diagram') return renderGeometryTriangleDiagram(uiSpec);
+      return '';
+    }
+    const sample = {
+      prompt: "In triangle ABC, ∠A = 50° and ∠B = 60°. What is ∠C?",
+      uiSpec: {
+        type: 'geometry_triangle_diagram',
+        width: 300,
+        height: 300,
+        points: [
+          { name: 'A', x: 60, y: 220 },
+          { name: 'B', x: 240, y: 220 },
+          { name: 'C', x: 150, y: 80 }
+        ],
+        angleLabels: [
+          { vertex: 'A', label: '50°' },
+          { vertex: 'B', label: '60°' },
+          { vertex: 'C', label: 'x°', highlight: true }
+        ],
+        styleHints: { highlightAngleColor: '#ff3366' }
+      }
+    };
+    document.getElementById('mount').innerHTML = `
+      ${renderMathUI(sample.uiSpec)}
+      <div class="question-prompt">${sample.prompt}</div>
+    `;
+  </script>
+</body>
+</html>
