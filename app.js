@@ -6069,6 +6069,455 @@ function renderDifficultySelect() {
     `;
 }
 
+// ============================================================================
+// Math UI Rendering Functions
+// ============================================================================
+
+/**
+ * Render math UI visualizations based on uiSpec in question JSON
+ */
+function renderMathUI(uiSpec) {
+    if (!uiSpec || !uiSpec.type) return '';
+    
+    switch (uiSpec.type) {
+        case 'slope_graph':
+        case 'coordinate_slope':
+            return renderCoordinateGraph(uiSpec);
+        case 'coordinate_grid_points':
+        case 'point_reflection':
+        case 'point_reflection_origin':
+            return renderCoordinatePoints(uiSpec);
+        case 'coordinate_segment':
+            return renderCoordinateSegment(uiSpec);
+        case 'coordinate_triangle':
+        case 'triangle_translation':
+            return renderCoordinateTriangle(uiSpec);
+        case 'translation':
+            return renderTranslation(uiSpec);
+        case 'rotation_90':
+        case 'rotation_90_clockwise':
+        case 'rotation_180':
+            return renderRotation(uiSpec);
+        case 'reflection_vertical_line':
+        case 'reflection_horizontal_line':
+            return renderReflection(uiSpec);
+        case 'function_table':
+            return renderFunctionTable(uiSpec);
+        case 'function_rule':
+            return renderFunctionRule(uiSpec);
+        default:
+            console.warn('Unknown uiSpec type:', uiSpec.type);
+            return '';
+    }
+}
+
+/**
+ * Map logical coordinates to pixel coordinates
+ */
+function mapCoordinate(x, y, xRange, yRange, width, height) {
+    const [xMin, xMax] = xRange;
+    const [yMin, yMax] = yRange;
+    
+    const pixelX = ((x - xMin) / (xMax - xMin)) * width;
+    const pixelY = height - ((y - yMin) / (yMax - yMin)) * height; // Invert Y
+    
+    return { x: pixelX, y: pixelY };
+}
+
+/**
+ * Render a coordinate graph with grid, axes, and a line
+ */
+function renderCoordinateGraph(uiSpec) {
+    const { width = 300, height = 300, xRange = [-5, 5], yRange = [-5, 5], line, showGrid = true, showAxes = true } = uiSpec;
+    
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext('2d');
+    
+    // Clear background
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, width, height);
+    
+    // Draw grid
+    if (showGrid) {
+        ctx.strokeStyle = '#333';
+        ctx.lineWidth = 1;
+        const [xMin, xMax] = xRange;
+        const [yMin, yMax] = yRange;
+        
+        for (let x = xMin; x <= xMax; x++) {
+            const px = mapCoordinate(x, 0, xRange, yRange, width, height).x;
+            ctx.beginPath();
+            ctx.moveTo(px, 0);
+            ctx.lineTo(px, height);
+            ctx.stroke();
+        }
+        
+        for (let y = yMin; y <= yMax; y++) {
+            const py = mapCoordinate(0, y, xRange, yRange, width, height).y;
+            ctx.beginPath();
+            ctx.moveTo(0, py);
+            ctx.lineTo(width, py);
+            ctx.stroke();
+        }
+    }
+    
+    // Draw axes
+    if (showAxes) {
+        ctx.strokeStyle = '#666';
+        ctx.lineWidth = 2;
+        
+        // X-axis
+        const yAxisY = mapCoordinate(0, 0, xRange, yRange, width, height).y;
+        ctx.beginPath();
+        ctx.moveTo(0, yAxisY);
+        ctx.lineTo(width, yAxisY);
+        ctx.stroke();
+        
+        // Y-axis
+        const xAxisX = mapCoordinate(0, 0, xRange, yRange, width, height).x;
+        ctx.beginPath();
+        ctx.moveTo(xAxisX, 0);
+        ctx.lineTo(xAxisX, height);
+        ctx.stroke();
+    }
+    
+    // Draw line
+    if (line && line.point1 && line.point2) {
+        const p1 = mapCoordinate(line.point1.x, line.point1.y, xRange, yRange, width, height);
+        const p2 = mapCoordinate(line.point2.x, line.point2.y, xRange, yRange, width, height);
+        
+        ctx.strokeStyle = '#00ffff';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(p1.x, p1.y);
+        ctx.lineTo(p2.x, p2.y);
+        ctx.stroke();
+        
+        // Draw endpoint markers
+        ctx.fillStyle = '#00ffff';
+        [p1, p2].forEach(p => {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, 4, 0, Math.PI * 2);
+            ctx.fill();
+        });
+    }
+    
+    return `<div class="math-ui-container" style="text-align: center; margin: 20px 0;">
+        <img src="${canvas.toDataURL()}" alt="Math graph" style="border: 2px solid #00ffff; border-radius: 8px; background: #000; max-width: 100%;">
+    </div>`;
+}
+
+/**
+ * Render coordinate plane with labeled points
+ */
+function renderCoordinatePoints(uiSpec) {
+    const { width = 300, height = 300, xRange = [-5, 5], yRange = [-5, 5], points = [], showGrid = true } = uiSpec;
+    
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext('2d');
+    
+    // Clear background
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, width, height);
+    
+    // Draw grid
+    if (showGrid) {
+        ctx.strokeStyle = '#333';
+        ctx.lineWidth = 1;
+        const [xMin, xMax] = xRange;
+        const [yMin, yMax] = yRange;
+        
+        for (let x = xMin; x <= xMax; x++) {
+            const px = mapCoordinate(x, 0, xRange, yRange, width, height).x;
+            ctx.beginPath();
+            ctx.moveTo(px, 0);
+            ctx.lineTo(px, height);
+            ctx.stroke();
+        }
+        
+        for (let y = yMin; y <= yMax; y++) {
+            const py = mapCoordinate(0, y, xRange, yRange, width, height).y;
+            ctx.beginPath();
+            ctx.moveTo(0, py);
+            ctx.lineTo(width, py);
+            ctx.stroke();
+        }
+    }
+    
+    // Draw axes
+    ctx.strokeStyle = '#666';
+    ctx.lineWidth = 2;
+    
+    const yAxisY = mapCoordinate(0, 0, xRange, yRange, width, height).y;
+    ctx.beginPath();
+    ctx.moveTo(0, yAxisY);
+    ctx.lineTo(width, yAxisY);
+    ctx.stroke();
+    
+    const xAxisX = mapCoordinate(0, 0, xRange, yRange, width, height).x;
+    ctx.beginPath();
+    ctx.moveTo(xAxisX, 0);
+    ctx.lineTo(xAxisX, height);
+    ctx.stroke();
+    
+    // Draw points
+    ctx.fillStyle = '#00ffff';
+    ctx.font = '14px monospace';
+    points.forEach(point => {
+        const p = mapCoordinate(point.x, point.y, xRange, yRange, width, height);
+        
+        // Draw point
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 5, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Draw label
+        if (point.name) {
+            ctx.fillText(point.name, p.x + 10, p.y - 10);
+        }
+    });
+    
+    return `<div class="math-ui-container" style="text-align: center; margin: 20px 0;">
+        <img src="${canvas.toDataURL()}" alt="Coordinate points" style="border: 2px solid #00ffff; border-radius: 8px; background: #000; max-width: 100%;">
+    </div>`;
+}
+
+/**
+ * Render coordinate segment
+ */
+function renderCoordinateSegment(uiSpec) {
+    const { width = 300, height = 300, xRange = [-5, 5], yRange = [-5, 5], point1, point2, showGrid = true } = uiSpec;
+    
+    if (!point1 || !point2) return '';
+    
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext('2d');
+    
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, width, height);
+    
+    // Grid and axes (similar to previous functions)
+    if (showGrid) {
+        ctx.strokeStyle = '#333';
+        ctx.lineWidth = 1;
+        const [xMin, xMax] = xRange;
+        const [yMin, yMax] = yRange;
+        
+        for (let x = xMin; x <= xMax; x++) {
+            const px = mapCoordinate(x, 0, xRange, yRange, width, height).x;
+            ctx.beginPath();
+            ctx.moveTo(px, 0);
+            ctx.lineTo(px, height);
+            ctx.stroke();
+        }
+        
+        for (let y = yMin; y <= yMax; y++) {
+            const py = mapCoordinate(0, y, xRange, yRange, width, height).y;
+            ctx.beginPath();
+            ctx.moveTo(0, py);
+            ctx.lineTo(width, py);
+            ctx.stroke();
+        }
+    }
+    
+    ctx.strokeStyle = '#666';
+    ctx.lineWidth = 2;
+    
+    const yAxisY = mapCoordinate(0, 0, xRange, yRange, width, height).y;
+    ctx.beginPath();
+    ctx.moveTo(0, yAxisY);
+    ctx.lineTo(width, yAxisY);
+    ctx.stroke();
+    
+    const xAxisX = mapCoordinate(0, 0, xRange, yRange, width, height).x;
+    ctx.beginPath();
+    ctx.moveTo(xAxisX, 0);
+    ctx.lineTo(xAxisX, height);
+    ctx.stroke();
+    
+    // Draw segment
+    const p1 = mapCoordinate(point1.x, point1.y, xRange, yRange, width, height);
+    const p2 = mapCoordinate(point2.x, point2.y, xRange, yRange, width, height);
+    
+    ctx.strokeStyle = '#00ffff';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(p1.x, p1.y);
+    ctx.lineTo(p2.x, p2.y);
+    ctx.stroke();
+    
+    // Draw points with labels
+    ctx.fillStyle = '#00ffff';
+    ctx.font = '14px monospace';
+    
+    [{ p: p1, name: point1.name }, { p: p2, name: point2.name }].forEach(({ p, name }) => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 5, 0, Math.PI * 2);
+        ctx.fill();
+        if (name) ctx.fillText(name, p.x + 10, p.y - 10);
+    });
+    
+    return `<div class="math-ui-container" style="text-align: center; margin: 20px 0;">
+        <img src="${canvas.toDataURL()}" alt="Coordinate segment" style="border: 2px solid #00ffff; border-radius: 8px; background: #000; max-width: 100%;">
+    </div>`;
+}
+
+/**
+ * Render coordinate triangle
+ */
+function renderCoordinateTriangle(uiSpec) {
+    const { width = 300, height = 300, xRange = [-5, 5], yRange = [-5, 5], points = [], showGrid = true } = uiSpec;
+    
+    if (points.length < 3) return '';
+    
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext('2d');
+    
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, width, height);
+    
+    // Grid
+    if (showGrid) {
+        ctx.strokeStyle = '#333';
+        ctx.lineWidth = 1;
+        const [xMin, xMax] = xRange;
+        const [yMin, yMax] = yRange;
+        
+        for (let x = xMin; x <= xMax; x++) {
+            const px = mapCoordinate(x, 0, xRange, yRange, width, height).x;
+            ctx.beginPath();
+            ctx.moveTo(px, 0);
+            ctx.lineTo(px, height);
+            ctx.stroke();
+        }
+        
+        for (let y = yMin; y <= yMax; y++) {
+            const py = mapCoordinate(0, y, xRange, yRange, width, height).y;
+            ctx.beginPath();
+            ctx.moveTo(0, py);
+            ctx.lineTo(width, py);
+            ctx.stroke();
+        }
+    }
+    
+    // Axes
+    ctx.strokeStyle = '#666';
+    ctx.lineWidth = 2;
+    
+    const yAxisY = mapCoordinate(0, 0, xRange, yRange, width, height).y;
+    ctx.beginPath();
+    ctx.moveTo(0, yAxisY);
+    ctx.lineTo(width, yAxisY);
+    ctx.stroke();
+    
+    const xAxisX = mapCoordinate(0, 0, xRange, yRange, width, height).x;
+    ctx.beginPath();
+    ctx.moveTo(xAxisX, 0);
+    ctx.lineTo(xAxisX, height);
+    ctx.stroke();
+    
+    // Draw triangle
+    const mappedPoints = points.slice(0, 3).map(p => mapCoordinate(p.x, p.y, xRange, yRange, width, height));
+    
+    ctx.strokeStyle = '#00ffff';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(mappedPoints[0].x, mappedPoints[0].y);
+    ctx.lineTo(mappedPoints[1].x, mappedPoints[1].y);
+    ctx.lineTo(mappedPoints[2].x, mappedPoints[2].y);
+    ctx.closePath();
+    ctx.stroke();
+    
+    // Draw vertices
+    ctx.fillStyle = '#00ffff';
+    ctx.font = '14px monospace';
+    points.slice(0, 3).forEach((point, i) => {
+        const p = mappedPoints[i];
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 5, 0, Math.PI * 2);
+        ctx.fill();
+        if (point.name) ctx.fillText(point.name, p.x + 10, p.y - 10);
+    });
+    
+    return `<div class="math-ui-container" style="text-align: center; margin: 20px 0;">
+        <img src="${canvas.toDataURL()}" alt="Triangle" style="border: 2px solid #00ffff; border-radius: 8px; background: #000; max-width: 100%;">
+    </div>`;
+}
+
+/**
+ * Render translation vector visualization
+ */
+function renderTranslation(uiSpec) {
+    return renderCoordinatePoints(uiSpec); // Same as points but with vector arrow
+}
+
+/**
+ * Render rotation visualization
+ */
+function renderRotation(uiSpec) {
+    return renderCoordinatePoints(uiSpec);
+}
+
+/**
+ * Render reflection with line
+ */
+function renderReflection(uiSpec) {
+    return renderCoordinatePoints(uiSpec);
+}
+
+/**
+ * Render function table
+ */
+function renderFunctionTable(uiSpec) {
+    const { columns = [], rows = [] } = uiSpec;
+    
+    if (columns.length === 0 || rows.length === 0) return '';
+    
+    return `
+        <div class="math-ui-container" style="text-align: center; margin: 20px 0;">
+            <table style="margin: 0 auto; border-collapse: collapse; border: 2px solid #00ffff;">
+                <thead>
+                    <tr>
+                        ${columns.map(col => `<th style="border: 1px solid #00ffff; padding: 10px; background: #001a1a; color: #00ffff;">${col}</th>`).join('')}
+                    </tr>
+                </thead>
+                <tbody>
+                    ${rows.map(row => `
+                        <tr>
+                            ${row.map(cell => `<td style="border: 1px solid #00ffff; padding: 10px; color: #fff;">${cell}</td>`).join('')}
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        </div>
+    `;
+}
+
+/**
+ * Render function rule
+ */
+function renderFunctionRule(uiSpec) {
+    const { functionText = '' } = uiSpec;
+    
+    if (!functionText) return '';
+    
+    return `
+        <div class="math-ui-container" style="text-align: center; margin: 20px 0; padding: 15px; border: 2px solid #00ffff; border-radius: 8px; background: #001a1a;">
+            <div style="font-family: monospace; font-size: 1.2rem; color: #00ffff;">
+                ${functionText}
+            </div>
+        </div>
+    `;
+}
+
 function renderQuiz() {
     const currentQuestion = state.quiz.questions[state.quiz.currentIndex];
     const answered = state.quiz.selectedAnswer !== null;
@@ -6125,6 +6574,8 @@ function renderQuiz() {
                     <img src="${currentQuestion.image}" alt="Question diagram" style="max-width: 100%; height: auto; margin: 20px auto; display: block; border: 2px solid #00ffff; border-radius: 8px; background: #000;">
                 </div>
             ` : ''}
+            
+            ${currentQuestion.uiSpec ? renderMathUI(currentQuestion.uiSpec) : ''}
             
             <div class="question-prompt">
                 ${currentQuestion.prompt}
