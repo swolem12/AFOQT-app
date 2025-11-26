@@ -14,7 +14,15 @@ open http://localhost:8000
 ```
 
 ### Live App
-Visit the deployed PWA at your GitHub Pages URL or install as a mobile app.
+Play the game on GitHub Pages:
+
+`https://swolem12.github.io/AFOQT-app/`
+
+If you use a custom repo for Pages (e.g., `AFOQT-Quest`), the link is:
+
+`https://swolem12.github.io/AFOQT-Quest/`
+
+Note: After updates, do a hard refresh (Ctrl+Shift+R) to get the latest service worker cache.
 
 ## 📋 Features
 
