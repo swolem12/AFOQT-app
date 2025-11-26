@@ -863,7 +863,7 @@ const state = {
 // ============================================================================
 const subjects = [
     {
-        id: 'math',
+        id: 'math_knowledge',
         name: 'Math',
         description: 'AFOQT quantitative reasoning'
     },
