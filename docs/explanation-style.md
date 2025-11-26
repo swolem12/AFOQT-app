@@ -166,9 +166,10 @@ Before submitting question content, verify:
 
 ## Auditing Content
 
-Use the question audit tool to check content for missing fields:
+Use the question audit tool to check content for missing fields. Run from the project root directory:
 
 ```bash
+# Run from AFOQT-app/ directory
 node tools/question_audit.js "Test Content/Math" "tools/report_question_audit.json"
 ```
 

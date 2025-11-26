@@ -35,12 +35,19 @@ function findJsonFiles(dir, files = []) {
     
     const entries = fs.readdirSync(dir, { withFileTypes: true });
     
+    // Files to exclude from audit (metadata files, not question content)
+    const excludedPatterns = ['schema', 'index'];
+    
     for (const entry of entries) {
         const fullPath = path.join(dir, entry.name);
         if (entry.isDirectory()) {
             findJsonFiles(fullPath, files);
-        } else if (entry.isFile() && entry.name.endsWith('.json') && !entry.name.includes('schema') && !entry.name.includes('index')) {
-            files.push(fullPath);
+        } else if (entry.isFile() && entry.name.endsWith('.json')) {
+            // Skip metadata files that don't contain questions
+            const isExcluded = excludedPatterns.some(pattern => entry.name.includes(pattern));
+            if (!isExcluded) {
+                files.push(fullPath);
+            }
         }
     }
     
