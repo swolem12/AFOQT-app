@@ -6110,6 +6110,14 @@ function renderMathUI(uiSpec) {
             return renderGeometryAngleDiagram(uiSpec);
         case 'geometry_quadrilateral_diagram':
             return renderGeometryQuadrilateralDiagram(uiSpec);
+        case 'polygon_basic':
+            return renderPolygonBasic(uiSpec);
+        case 'geometry_angle_pair_diagram':
+            return renderGeometryAnglePairDiagram(uiSpec);
+        case 'geometry_coordinate_segment':
+            return renderCoordinateSegmentCss(uiSpec);
+        case 'function_graph_point_lookup':
+            return renderCoordinateGraphCss(uiSpec);
         default:
             console.warn('Unknown uiSpec type:', uiSpec.type);
             return '';
@@ -6666,6 +6674,116 @@ function renderGeometryQuadrilateralDiagram(uiSpec) {
         <div class="graphContainer" style="width: ${width}px; height: ${height}px; position: relative;">
             ${renderEdges()}
             ${renderVertices()}
+        </div>
+    `;
+}
+
+/**
+ * Render a basic polygon (pentagon, hexagon, etc.)
+ * uiSpec: { type: 'polygon_basic', width, height, points: [{x, y, label}], labels, styleHints }
+ */
+function renderPolygonBasic(uiSpec) {
+    const { width = 300, height = 300, points = [], labels = true, styleHints = {} } = uiSpec;
+    const lineColor = styleHints.lineColor || '#00ffff';
+    const labelColor = styleHints.labelsColor || styleHints.labelColor || '#00ffff';
+    
+    if (points.length < 3) return '';
+    
+    // Render edges
+    const renderEdges = () => {
+        let html = '';
+        for (let i = 0; i < points.length; i++) {
+            const from = points[i];
+            const to = points[(i + 1) % points.length];
+            const dx = to.x - from.x;
+            const dy = to.y - from.y;
+            const len = Math.hypot(dx, dy);
+            const ang = Math.atan2(dy, dx) * 180 / Math.PI;
+            
+            html += `<div class="graphLine" style="
+                left: ${from.x}px;
+                top: ${from.y}px;
+                width: ${len}px;
+                transform: rotate(${ang}deg);
+                background: ${lineColor};
+            "></div>`;
+        }
+        return html;
+    };
+    
+    // Render vertices with labels
+    const renderVertices = () => {
+        return points.map(p => {
+            const pointHtml = `<div class="graphPoint" style="left: ${p.x - 4}px; top: ${p.y - 4}px;"></div>`;
+            const labelHtml = labels && p.label ? `<div class="graphLabel" style="left: ${p.x}px; top: ${p.y - 20}px; color: ${labelColor};">${p.label}</div>` : '';
+            return pointHtml + labelHtml;
+        }).join('');
+    };
+    
+    return `
+        <div class="graphContainer" style="width: ${width}px; height: ${height}px; position: relative;">
+            ${renderEdges()}
+            ${renderVertices()}
+        </div>
+    `;
+}
+
+/**
+ * Render angle pair diagram (vertical angles, linear pairs, etc.)
+ * uiSpec: { type: 'geometry_angle_pair_diagram', width, height, lines: [{from, to}], angleLabels: [{position, label, highlight}], styleHints }
+ */
+function renderGeometryAnglePairDiagram(uiSpec) {
+    const { width = 300, height = 300, lines = [], angleLabels = [], styleHints = {} } = uiSpec;
+    const baseColor = styleHints.baseLineColor || '#00ffff';
+    const highlightColor = styleHints.highlightAngleColor || '#ff6666';
+    
+    // Render lines
+    const renderLines = () => {
+        return lines.map(line => {
+            const { from, to } = line;
+            const dx = to.x - from.x;
+            const dy = to.y - from.y;
+            const len = Math.hypot(dx, dy);
+            const ang = Math.atan2(dy, dx) * 180 / Math.PI;
+            
+            return `<div class="graphLine" style="
+                left: ${from.x}px;
+                top: ${from.y}px;
+                width: ${len}px;
+                transform: rotate(${ang}deg);
+                background: ${baseColor};
+            "></div>`;
+        }).join('');
+    };
+    
+    // Render angle labels at specified positions
+    const renderAngleLabels = () => {
+        // Find intersection point (center)
+        const centerX = width / 2;
+        const centerY = height / 2;
+        
+        const positionOffsets = {
+            'topRight': { x: centerX + 30, y: centerY - 30 },
+            'topLeft': { x: centerX - 50, y: centerY - 30 },
+            'bottomRight': { x: centerX + 30, y: centerY + 15 },
+            'bottomLeft': { x: centerX - 50, y: centerY + 15 },
+            'right': { x: centerX + 40, y: centerY - 10 },
+            'left': { x: centerX - 60, y: centerY - 10 },
+            'top': { x: centerX - 15, y: centerY - 45 },
+            'bottom': { x: centerX - 15, y: centerY + 30 }
+        };
+        
+        return angleLabels.map(al => {
+            const pos = positionOffsets[al.position] || { x: centerX, y: centerY };
+            const color = al.highlight ? highlightColor : baseColor;
+            return `<div class="angleLabel" style="left: ${pos.x}px; top: ${pos.y}px; color: ${color};">${al.label}</div>`;
+        }).join('');
+    };
+    
+    return `
+        <div class="graphContainer" style="width: ${width}px; height: ${height}px; position: relative;">
+            ${renderLines()}
+            ${renderAngleLabels()}
         </div>
     `;
 }
