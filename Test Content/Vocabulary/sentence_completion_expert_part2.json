@@ -20,7 +20,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Signal: contrast (despite/although). This means 'erratic' is the logical choice."
     },
     {
       "id": "sc_exp_027",
@@ -32,14 +32,14 @@
         "D": "anodyne"
       },
       "answer": "A",
-      "explanation": "Demanding and realistic training is 'rigorous.'",
+      "explanation": "Demanding and realistic training is 'rigorous.'. 'rigorous' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Cover choices and predict a word. 'rigorous' is the closest match."
     },
     {
       "id": "sc_exp_028",
@@ -58,7 +58,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Look for signal words (continuation). They point to 'acerbity'."
     },
     {
       "id": "sc_exp_029",
@@ -77,7 +77,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Read the full sentence for tone. Only 'synthesize' fits logically."
     },
     {
       "id": "sc_exp_030",
@@ -96,7 +96,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Test each choice in the blank. 'candor' makes the sentence coherent."
     },
     {
       "id": "sc_exp_031",
@@ -115,7 +115,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Signal: cause-effect (because/therefore). This means 'palliative' is the logical choice."
     },
     {
       "id": "sc_exp_032",
@@ -134,7 +134,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Cover choices and predict a word. 'probing' is the closest match."
     },
     {
       "id": "sc_exp_033",
@@ -146,14 +146,14 @@
         "D": "combative"
       },
       "answer": "A",
-      "explanation": "Subtle concern is expressed in a 'cautious' tone.",
+      "explanation": "Subtle concern is expressed in a 'cautious' tone. 'cautious' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Look for signal words (continuation). They point to 'cautious'."
     },
     {
       "id": "sc_exp_034",
@@ -172,7 +172,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Read the full sentence for tone. Only 'portentous' fits logically."
     },
     {
       "id": "sc_exp_035",
@@ -184,14 +184,14 @@
         "D": "didactic"
       },
       "answer": "A",
-      "explanation": "Appearing casually unconcerned is 'nonchalant.'",
+      "explanation": "Appearing casually unconcerned is 'nonchalant.'. 'nonchalant' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Test each choice in the blank. 'nonchalant' makes the sentence coherent."
     },
     {
       "id": "sc_exp_036",
@@ -203,14 +203,14 @@
         "D": "equivocal"
       },
       "answer": "A",
-      "explanation": "Balancing agility with consistency is 'adaptive.'",
+      "explanation": "Balancing agility with consistency is 'adaptive.'. 'adaptive' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Signal: continuation. This means 'adaptive' is the logical choice."
     },
     {
       "id": "sc_exp_037",
@@ -229,7 +229,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Cover choices and predict a word. 'consequential' is the closest match."
     },
     {
       "id": "sc_exp_038",
@@ -248,7 +248,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Look for signal words (continuation). They point to 'conciliatory'."
     },
     {
       "id": "sc_exp_039",
@@ -260,14 +260,14 @@
         "D": "capricious"
       },
       "answer": "A",
-      "explanation": "Logical, well-organized structure is 'coherent.'",
+      "explanation": "Logical, well-organized structure is 'coherent.'. 'coherent' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Read the full sentence for tone. Only 'coherent' fits logically."
     },
     {
       "id": "sc_exp_040",
@@ -286,7 +286,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Test each choice in the blank. 'judicious' makes the sentence coherent."
     },
     {
       "id": "sc_exp_041",
@@ -298,14 +298,14 @@
         "D": "obscure"
       },
       "answer": "A",
-      "explanation": "Fixing contradictions is to 'reconcile' them.",
+      "explanation": "Fixing contradictions is to 'reconcile' them. 'reconcile' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Signal: continuation. This means 'reconcile' is the logical choice."
     },
     {
       "id": "sc_exp_042",
@@ -324,7 +324,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Cover choices and predict a word. 'rhetorical' is the closest match."
     },
     {
       "id": "sc_exp_043",
@@ -343,7 +343,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Look for signal words (continuation). They point to 'insidious'."
     },
     {
       "id": "sc_exp_044",
@@ -362,7 +362,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Read the full sentence for tone. Only 'abrasive' fits logically."
     },
     {
       "id": "sc_exp_045",
@@ -374,14 +374,14 @@
         "D": "nonchalant"
       },
       "answer": "A",
-      "explanation": "Sharp, penetrating criticism is 'trenchant.'",
+      "explanation": "Sharp, penetrating criticism is 'trenchant.'. 'trenchant' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Test each choice in the blank. 'trenchant' makes the sentence coherent."
     },
     {
       "id": "sc_exp_046",
@@ -393,14 +393,14 @@
         "D": "equable"
       },
       "answer": "A",
-      "explanation": "A very tight, inflexible timeline is 'stringent.'",
+      "explanation": "A very tight, inflexible timeline is 'stringent.'. 'stringent' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Signal: cause-effect (because/therefore). This means 'stringent' is the logical choice."
     },
     {
       "id": "sc_exp_047",
@@ -419,7 +419,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Cover choices and predict a word. 'principled' is the closest match."
     },
     {
       "id": "sc_exp_048",
@@ -438,7 +438,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Look for signal words (continuation). They point to 'byzantine'."
     },
     {
       "id": "sc_exp_049",
@@ -457,7 +457,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Read the full sentence for tone. Only 'egalitarian' fits logically."
     },
     {
       "id": "sc_exp_050",
@@ -469,14 +469,14 @@
         "D": "facile"
       },
       "answer": "A",
-      "explanation": "Serious, weighty consequences are 'grave.'",
+      "explanation": "Serious, weighty consequences are 'grave.'. 'grave' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Test each choice in the blank. 'grave' makes the sentence coherent."
     }
   ]
 }

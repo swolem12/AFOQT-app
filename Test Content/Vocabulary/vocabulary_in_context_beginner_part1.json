@@ -20,7 +20,7 @@
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Predict the meaning first, then find 'importance' as the best match."
     },
     {
       "id": "vic_beg_002",
@@ -39,7 +39,7 @@
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Use the surrounding words in the sentence. It points to 'careful'."
     },
     {
       "id": "vic_beg_003",
@@ -51,14 +51,14 @@
         "D": "critical"
       },
       "answer": "B",
-      "explanation": "Temporary = short-term.",
+      "explanation": "In this sentence, 'Temporary' means short-term. 'short-term' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Substitute each choice into the sentence. Only 'short-term' makes logical sense."
     },
     {
       "id": "vic_beg_004",
@@ -70,14 +70,14 @@
         "D": "accurate"
       },
       "answer": "B",
-      "explanation": "Vague = unclear or lacking detail.",
+      "explanation": "In this sentence, 'Vague' means unclear or lacking detail. 'uncertain' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Look for surrounding words. The context tells you 'uncertain' is correct."
     },
     {
       "id": "vic_beg_005",
@@ -89,14 +89,14 @@
         "D": "strengthen"
       },
       "answer": "D",
-      "explanation": "Bolster = support or strengthen.",
+      "explanation": "In this sentence, 'Bolster' means support or strengthen. 'strengthen' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Read the full sentence—the tone and logic require 'strengthen'."
     },
     {
       "id": "vic_beg_006",
@@ -108,14 +108,14 @@
         "D": "hidden"
       },
       "answer": "C",
-      "explanation": "Minor = slight.",
+      "explanation": "In this sentence, 'Minor' means slight. 'slight' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Predict the meaning first, then find 'slight' as the best match."
     },
     {
       "id": "vic_beg_007",
@@ -127,14 +127,14 @@
         "D": "certain"
       },
       "answer": "B",
-      "explanation": "Reluctant = unwilling or hesitant.",
+      "explanation": "In this sentence, 'Reluctant' means unwilling or hesitant. 'unwilling' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Use the surrounding words in the sentence. It points to 'unwilling'."
     },
     {
       "id": "vic_beg_008",
@@ -146,14 +146,14 @@
         "D": "polite"
       },
       "answer": "B",
-      "explanation": "Stern = strict, firm.",
+      "explanation": "In this sentence, 'Stern' means strict, firm. 'strict' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Substitute each choice into the sentence. Only 'strict' makes logical sense."
     },
     {
       "id": "vic_beg_009",
@@ -165,14 +165,14 @@
         "D": "confusing"
       },
       "answer": "C",
-      "explanation": "Concise = brief and to the point.",
+      "explanation": "In this sentence, 'Concise' means brief and to the point. 'brief' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Look for surrounding words. The context tells you 'brief' is correct."
     },
     {
       "id": "vic_beg_010",
@@ -184,14 +184,14 @@
         "D": "accurate"
       },
       "answer": "C",
-      "explanation": "Timid = shy or lacking confidence.",
+      "explanation": "In this sentence, 'Timid' means shy or lacking confidence. 'shy' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Read the full sentence—the tone and logic require 'shy'."
     },
     {
       "id": "vic_beg_011",
@@ -203,14 +203,14 @@
         "D": "routine"
       },
       "answer": "B",
-      "explanation": "Hazardous = dangerous.",
+      "explanation": "In this sentence, 'Hazardous' means dangerous. 'dangerous' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Predict the meaning first, then find 'dangerous' as the best match."
     },
     {
       "id": "vic_beg_012",
@@ -222,14 +222,14 @@
         "D": "aggressive"
       },
       "answer": "C",
-      "explanation": "Candid = honest, straightforward.",
+      "explanation": "In this sentence, 'Candid' means honest, straightforward. 'honest' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Use the cause-effect clue in the sentence. It points to 'honest'."
     },
     {
       "id": "vic_beg_013",
@@ -241,14 +241,14 @@
         "D": "hasty"
       },
       "answer": "B",
-      "explanation": "Rational = logical.",
+      "explanation": "In this sentence, 'Rational' means logical. 'logical' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Substitute each choice into the sentence. Only 'logical' makes logical sense."
     },
     {
       "id": "vic_beg_014",
@@ -260,14 +260,14 @@
         "D": "aggressive"
       },
       "answer": "B",
-      "explanation": "Composed = calm and steady.",
+      "explanation": "In this sentence, 'Composed' means calm and steady. 'calm' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Look for surrounding words. The context tells you 'calm' is correct."
     },
     {
       "id": "vic_beg_015",
@@ -279,14 +279,14 @@
         "D": "incomplete"
       },
       "answer": "D",
-      "explanation": "Partial = incomplete.",
+      "explanation": "In this sentence, 'Partial' means incomplete. 'incomplete' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Read the full sentence—the tone and logic require 'incomplete'."
     },
     {
       "id": "vic_beg_016",
@@ -298,14 +298,14 @@
         "D": "careless"
       },
       "answer": "B",
-      "explanation": "Generous = giving or charitable.",
+      "explanation": "In this sentence, 'Generous' means giving or charitable. 'giving' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Predict the meaning first, then find 'giving' as the best match."
     },
     {
       "id": "vic_beg_017",
@@ -317,14 +317,14 @@
         "D": "optional"
       },
       "answer": "B",
-      "explanation": "Explicit = clear and detailed.",
+      "explanation": "In this sentence, 'Explicit' means clear and detailed. 'direct' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Use the surrounding words in the sentence. It points to 'direct'."
     },
     {
       "id": "vic_beg_018",
@@ -336,14 +336,14 @@
         "D": "delayed"
       },
       "answer": "C",
-      "explanation": "Swift = quick.",
+      "explanation": "In this sentence, 'Swift' means quick. 'quick' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Substitute each choice into the sentence. Only 'quick' makes logical sense."
     },
     {
       "id": "vic_beg_019",
@@ -355,14 +355,14 @@
         "D": "loose"
       },
       "answer": "B",
-      "explanation": "Immaculate = spotless.",
+      "explanation": "In this sentence, 'Immaculate' means spotless. 'perfectly clean' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Look for surrounding words. The context tells you 'perfectly clean' is correct."
     },
     {
       "id": "vic_beg_020",
@@ -374,14 +374,14 @@
         "D": "detailed"
       },
       "answer": "C",
-      "explanation": "Brief = short.",
+      "explanation": "In this sentence, 'Brief' means short. 'short' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Read the full sentence—the tone and logic require 'short'."
     },
     {
       "id": "vic_beg_021",
@@ -393,14 +393,14 @@
         "D": "flawed"
       },
       "answer": "A",
-      "explanation": "Innovative = creative, new.",
+      "explanation": "In this sentence, 'Innovative' means creative, new. 'creative' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Predict the meaning first, then find 'creative' as the best match."
     },
     {
       "id": "vic_beg_022",
@@ -412,14 +412,14 @@
         "D": "rising"
       },
       "answer": "A",
-      "explanation": "Steady = stable or constant.",
+      "explanation": "In this sentence, 'Steady' means stable or constant. 'constant' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Use the surrounding words in the sentence. It points to 'constant'."
     },
     {
       "id": "vic_beg_023",
@@ -431,14 +431,14 @@
         "D": "neutral"
       },
       "answer": "B",
-      "explanation": "Anxious = worried.",
+      "explanation": "In this sentence, 'Anxious' means worried. 'worried' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Substitute each choice into the sentence. Only 'worried' makes logical sense."
     },
     {
       "id": "vic_beg_024",
@@ -450,14 +450,14 @@
         "D": "complicated"
       },
       "answer": "C",
-      "explanation": "Feasible = practical or workable.",
+      "explanation": "In this sentence, 'Feasible' means practical or workable. 'practical' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Look for surrounding words. The context tells you 'practical' is correct."
     },
     {
       "id": "vic_beg_025",
@@ -469,14 +469,14 @@
         "D": "disagreement"
       },
       "answer": "B",
-      "explanation": "Unity = teamwork.",
+      "explanation": "In this sentence, 'Unity' means teamwork. 'teamwork' is correct because it matches this meaning based on the context clues.",
       "steps": [
         "1. Read the sentence carefully, noting the blank or underlined word.",
         "2. Look for context clues (other words that hint at meaning).",
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Replace the word with each choice mentally; the one that sounds natural is usually correct."
+      "fastStrategy": "Read the full sentence—the tone and logic require 'teamwork'."
     }
   ]
 }
