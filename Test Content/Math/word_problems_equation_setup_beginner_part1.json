@@ -15,7 +15,13 @@
         "E": "14x = 2"
       },
       "answer": "B",
-      "explanation": "\"Twice a number\" means 2x, so 2x = 14."
+      "explanation": "\"Twice a number\" means 2x, so 2x = 14.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_002",
@@ -28,7 +34,13 @@
         "E": "x + 20 = 7"
       },
       "answer": "B",
-      "explanation": "Increased by 7 means x + 7, and the result is 20: x + 7 = 20."
+      "explanation": "Increased by 7 means x + 7, and the result is 20: x + 7 = 20.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_003",
@@ -41,7 +53,13 @@
         "E": "27x = 3"
       },
       "answer": "C",
-      "explanation": "Three times a number is 3x, so 3x = 27."
+      "explanation": "Three times a number is 3x, so 3x = 27.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_004",
@@ -54,7 +72,13 @@
         "E": "x - 9 = 5"
       },
       "answer": "C",
-      "explanation": "\"Difference between a number and 5\" means x - 5, so x - 5 = 9."
+      "explanation": "\"Difference between a number and 5\" means x - 5, so x - 5 = 9.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_005",
@@ -67,7 +91,13 @@
         "E": "4x = 6"
       },
       "answer": "A",
-      "explanation": "Quotient of a number and 4 means x/4, so x/4 = 6."
+      "explanation": "Quotient of a number and 4 means x/4, so x/4 = 6.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_006",
@@ -80,7 +110,13 @@
         "E": "19"
       },
       "answer": "B",
-      "explanation": "x - 12 = 5 → x = 17."
+      "explanation": "x - 12 = 5 → x = 17.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_007",
@@ -93,7 +129,13 @@
         "E": "24"
       },
       "answer": "B",
-      "explanation": "x + 4 = 19 → x = 15."
+      "explanation": "x + 4 = 19 → x = 15.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_008",
@@ -106,7 +148,13 @@
         "E": "27"
       },
       "answer": "E",
-      "explanation": "x/3 = 9 → x = 27."
+      "explanation": "x/3 = 9 → x = 27.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_009",
@@ -119,7 +167,13 @@
         "E": "x/5 = 13"
       },
       "answer": "B",
-      "explanation": "Starting with x and gaining 5 gives x + 5 = 13."
+      "explanation": "Starting with x and gaining 5 gives x + 5 = 13.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_010",
@@ -132,7 +186,13 @@
         "E": "60x = 12"
       },
       "answer": "C",
-      "explanation": "Cost per ticket times number of tickets: 12x = 60."
+      "explanation": "Cost per ticket times number of tickets: 12x = 60.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_011",
@@ -145,7 +205,13 @@
         "E": "21x = 3"
       },
       "answer": "C",
-      "explanation": "3 notebooks at x each: 3x = 21."
+      "explanation": "3 notebooks at x each: 3x = 21.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_012",
@@ -158,7 +224,13 @@
         "E": "4 - x = 9"
       },
       "answer": "B",
-      "explanation": "\"Sum of a number and 9\" is x + 9, so x + 9 = 4."
+      "explanation": "\"Sum of a number and 9\" is x + 9, so x + 9 = 4.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_013",
@@ -171,7 +243,13 @@
         "E": "d = 3/50"
       },
       "answer": "D",
-      "explanation": "Distance = speed × time → d = 50 × 3."
+      "explanation": "Distance = speed × time → d = 50 × 3.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_014",
@@ -184,7 +262,13 @@
         "E": "P = (10 + w)/2"
       },
       "answer": "B",
-      "explanation": "Perimeter of rectangle: P = 2L + 2W = 2(10 + w)."
+      "explanation": "Perimeter of rectangle: P = 2L + 2W = 2(10 + w).",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_015",
@@ -197,7 +281,13 @@
         "E": "P = 15/h"
       },
       "answer": "C",
-      "explanation": "Hourly pay times hours worked: P = 15h."
+      "explanation": "Hourly pay times hours worked: P = 15h.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_016",
@@ -210,7 +300,13 @@
         "E": "11"
       },
       "answer": "C",
-      "explanation": "7x = 63 → x = 9."
+      "explanation": "7x = 63 → x = 9.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_017",
@@ -223,7 +319,13 @@
         "E": "6 - a"
       },
       "answer": "B",
-      "explanation": "Sam is 6 more than Alex ⇒ a + 6."
+      "explanation": "Sam is 6 more than Alex ⇒ a + 6.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_018",
@@ -236,7 +338,13 @@
         "E": "2(x + 5) = 19"
       },
       "answer": "A",
-      "explanation": "Twice a number → 2x; plus 5; equals 19 → 2x + 5 = 19."
+      "explanation": "Twice a number → 2x; plus 5; equals 19 → 2x + 5 = 19.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_019",
@@ -249,7 +357,13 @@
         "E": "12 - d = 60"
       },
       "answer": "B",
-      "explanation": "Pages per day × days = total pages: 12d = 60."
+      "explanation": "Pages per day × days = total pages: 12d = 60.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_020",
@@ -262,8 +376,13 @@
         "E": "3"
       },
       "answer": "B",
-      "explanation": "10 - 3 = 7? Wait, careful: '3 less than 10' is 7. Correct answer is 7.",
-      "explanation": "10 - 3 = 7, so the number is 7."
+      "explanation": "10 - 3 = 7, so the number is 7.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_020_corrected",
@@ -276,7 +395,13 @@
         "E": "3"
       },
       "answer": "A",
-      "explanation": "3 less than 10 means 10 - 3 = 7."
+      "explanation": "3 less than 10 means 10 - 3 = 7.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_021",
@@ -289,7 +414,13 @@
         "E": "27x = 3"
       },
       "answer": "B",
-      "explanation": "Three of the same number: x + x + x = 3x, so 3x = 27."
+      "explanation": "Three of the same number: x + x + x = 3x, so 3x = 27.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_022",
@@ -302,7 +433,13 @@
         "E": "s = 24"
       },
       "answer": "B",
-      "explanation": "Perimeter of a square: 4s. So 4s = 24."
+      "explanation": "Perimeter of a square: 4s. So 4s = 24.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_023",
@@ -315,7 +452,13 @@
         "E": "T = 3 - 5"
       },
       "answer": "C",
-      "explanation": "Total cost is sum of the two amounts: T = 5 + 3."
+      "explanation": "Total cost is sum of the two amounts: T = 5 + 3.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_024",
@@ -328,7 +471,13 @@
         "E": "d = 60 - t"
       },
       "answer": "C",
-      "explanation": "Distance = rate × time → d = 60t."
+      "explanation": "Distance = rate × time → d = 60t.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_wp_b_025",
@@ -341,7 +490,13 @@
         "E": "10"
       },
       "answer": "B",
-      "explanation": "4x = 28 → x = 7."
+      "explanation": "4x = 28 → x = 7.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     }
   ]
 }

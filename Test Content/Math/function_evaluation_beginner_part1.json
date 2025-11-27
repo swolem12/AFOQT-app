@@ -4,7 +4,6 @@
   "difficulty": "beginner",
   "part": 1,
   "questions": [
-
     {
       "id": "fe_b1_001",
       "uiSpec": {
@@ -31,7 +30,6 @@
       ],
       "fastStrategy": "Plug in, multiply first, then add."
     },
-
     {
       "id": "fe_b1_002",
       "question": "If f(x) = x² − 4, what is f(−2)?",
@@ -50,17 +48,31 @@
       ],
       "fastStrategy": "Remember: negative squared becomes positive."
     },
-
     {
       "id": "fe_b1_003",
       "uiSpec": {
         "type": "function_table",
-        "columns": ["x", "f(x)"],
+        "columns": [
+          "x",
+          "f(x)"
+        ],
         "rows": [
-          [1, 4],
-          [2, 7],
-          [3, 10],
-          [4, 13]
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            13
+          ]
         ]
       },
       "copilotInstruction": "Render a simple table with rows: (1,4), (2,7), (3,10), (4,13).",
@@ -80,7 +92,6 @@
       ],
       "fastStrategy": "Table reading: match input row → output value."
     },
-
     {
       "id": "fe_b1_004",
       "question": "Given f(x) = 5x − 3, what is f(0)?",
@@ -100,7 +111,6 @@
       ],
       "fastStrategy": "When x=0, the constant term dominates."
     },
-
     {
       "id": "fe_b1_005",
       "question": "If f(x) = 3x², what is f(4)?",
@@ -119,7 +129,6 @@
       ],
       "fastStrategy": "Square first, multiply second."
     },
-
     {
       "id": "fe_b1_006",
       "question": "If f(x) = x − 9, what is f(12)?",
@@ -138,7 +147,6 @@
       ],
       "fastStrategy": "This is a simple difference: 12 minus 9."
     },
-
     {
       "id": "fe_b1_007",
       "question": "If f(x) = 2x³, what is f(−1)?",
@@ -157,20 +165,37 @@
       ],
       "fastStrategy": "Odd powers keep the sign."
     },
-
     {
       "id": "fe_b1_008",
       "uiSpec": {
         "type": "function_graph_point_lookup",
         "width": 250,
         "height": 250,
-        "xRange": [-4, 4],
-        "yRange": [-4, 4],
+        "xRange": [
+          -4,
+          4
+        ],
+        "yRange": [
+          -4,
+          4
+        ],
         "pointsPlotted": [
-          { "x": -3, "y": 1 },
-          { "x": -1, "y": 3 },
-          { "x": 1, "y": 5 },
-          { "x": 3, "y": 7 }
+          {
+            "x": -3,
+            "y": 1
+          },
+          {
+            "x": -1,
+            "y": 3
+          },
+          {
+            "x": 1,
+            "y": 5
+          },
+          {
+            "x": 3,
+            "y": 7
+          }
         ]
       },
       "copilotInstruction": "Draw light grid, plot the listed four points only.",
@@ -190,7 +215,6 @@
       ],
       "fastStrategy": "Graph lookup: follow the plotted point's y-value."
     },
-
     {
       "id": "fe_b1_009",
       "question": "If f(x) = x² + x, what is f(5)?",
@@ -209,7 +233,6 @@
       ],
       "fastStrategy": "Compute square, then add x."
     },
-
     {
       "id": "fe_b1_010",
       "question": "If f(t) = 7t − 2, what is f(4)?",
@@ -228,7 +251,6 @@
       ],
       "fastStrategy": "Just plug in and scale by 7."
     },
-
     {
       "id": "fe_b1_011",
       "question": "If f(x) = 12 − x, what is f(12)?",
@@ -241,10 +263,13 @@
       },
       "answer": "B",
       "explanation": "12 − 12 = 0.",
-      "steps": [],
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
       "fastStrategy": "Evaluate directly."
     },
-
     {
       "id": "fe_b1_012",
       "question": "If f(x) = 4x² − 1, what is f(0)?",
@@ -257,10 +282,13 @@
       },
       "answer": "A",
       "explanation": "4(0²) = 0 → 0 − 1 = −1.",
-      "steps": [],
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
       "fastStrategy": "When x=0, constant terms matter."
     },
-
     {
       "id": "fe_b1_013",
       "question": "Given f(x) = x/3, what is f(9)?",
@@ -273,10 +301,13 @@
       },
       "answer": "C",
       "explanation": "9 ÷ 3 = 3? Wait: 9/3 = 3 → answer is B.",
-      "steps": [],
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
       "fastStrategy": "Divide properly."
     },
-
     {
       "id": "fe_b1_014",
       "question": "If f(x) = √x, what is f(16)?",
@@ -289,10 +320,13 @@
       },
       "answer": "C",
       "explanation": "√16 = 4.",
-      "steps": [],
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
       "fastStrategy": "Square root of perfect square is exact."
     },
-
     {
       "id": "fe_b1_015",
       "question": "If f(x) = |x| + 2, what is f(−5)?",
@@ -305,10 +339,13 @@
       },
       "answer": "A",
       "explanation": "|−5| = 5 → 5 + 2 = 7.",
-      "steps": [],
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
       "fastStrategy": "Absolute value erases negative sign."
     },
-
     {
       "id": "fe_b1_016",
       "question": "If f(x) = 2x − 4, what is f(−6)?",
@@ -321,10 +358,13 @@
       },
       "answer": "A",
       "explanation": "2(−6) − 4 = −12 − 4 = −16.",
-      "steps": [],
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
       "fastStrategy": "Multiply negative properly before subtracting."
     },
-
     {
       "id": "fe_b1_017",
       "question": "If f(n) = 3n − 1, what is f(1)?",
@@ -337,10 +377,13 @@
       },
       "answer": "A",
       "explanation": "3(1) − 1 = 2.",
-      "steps": [],
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
       "fastStrategy": "Plug in directly."
     },
-
     {
       "id": "fe_b1_018",
       "question": "If f(x) = 10 − 2x, what is f(3)?",
@@ -353,10 +396,13 @@
       },
       "answer": "A",
       "explanation": "10 − 6 = 4.",
-      "steps": [],
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
       "fastStrategy": "Compute −2x first."
     },
-
     {
       "id": "fe_b1_019",
       "question": "Given f(x) = x(x − 1), what is f(4)?",
@@ -369,10 +415,13 @@
       },
       "answer": "C",
       "explanation": "f(4) = 4(3) = 12.",
-      "steps": [],
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
       "fastStrategy": "Evaluate inside parentheses first."
     },
-
     {
       "id": "fe_b1_020",
       "question": "If f(x) = −3x, what is f(5)?",
@@ -385,10 +434,13 @@
       },
       "answer": "A",
       "explanation": "−3 × 5 = −15.",
-      "steps": [],
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
       "fastStrategy": "Multiply sign first."
     },
-
     {
       "id": "fe_b1_021",
       "question": "If f(x) = 6 − x, what is f(−4)?",
@@ -401,10 +453,13 @@
       },
       "answer": "C",
       "explanation": "6 − (−4) = 6 + 4 = 10.",
-      "steps": [],
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
       "fastStrategy": "Subtracting a negative becomes adding."
     },
-
     {
       "id": "fe_b1_022",
       "question": "If f(x) = x/2 + 1, what is f(8)?",
@@ -417,10 +472,13 @@
       },
       "answer": "C",
       "explanation": "8/2 = 4 → 4 + 1 = 5.",
-      "steps": [],
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
       "fastStrategy": "Half first, then add."
     },
-
     {
       "id": "fe_b1_023",
       "question": "If f(x) = (x − 2)², what is f(6)?",
@@ -433,10 +491,13 @@
       },
       "answer": "D",
       "explanation": "(6 − 2)² = (4)² = 16.",
-      "steps": [],
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
       "fastStrategy": "Subtract then square."
     },
-
     {
       "id": "fe_b1_024",
       "question": "If f(x) = x + x², what is f(−3)?",
@@ -449,10 +510,13 @@
       },
       "answer": "D",
       "explanation": "f(−3) = (−3) + 9 = 6? Wait: −3 + 9 = 6 → correct is C.",
-      "steps": [],
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
       "fastStrategy": "Compute x² first."
     },
-
     {
       "id": "fe_b1_025",
       "question": "Given f(t) = 4t + 1, what is f(−2)?",
@@ -465,9 +529,12 @@
       },
       "answer": "A",
       "explanation": "4(−2) + 1 = −8 + 1 = −7.",
-      "steps": [],
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
       "fastStrategy": "Multiply then add."
     }
-
   ]
 }

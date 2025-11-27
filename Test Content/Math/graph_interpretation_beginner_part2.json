@@ -15,7 +15,14 @@
         "E": "The slope is 0"
       },
       "answer": "C",
-      "explanation": "Crossing x-axis at (4,0) means x-intercept = 4."
+      "explanation": "Crossing x-axis at (4,0) means x-intercept = 4.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_027",
@@ -28,7 +35,14 @@
         "E": "Slope is negative"
       },
       "answer": "A",
-      "explanation": "Vertical lines fix x at a specific value."
+      "explanation": "Vertical lines fix x at a specific value.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_028",
@@ -41,7 +55,14 @@
         "E": "Origin"
       },
       "answer": "B",
-      "explanation": "Quadrant II = negative x, positive y."
+      "explanation": "Quadrant II = negative x, positive y.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_029",
@@ -54,7 +75,14 @@
         "E": "Random"
       },
       "answer": "B",
-      "explanation": "Zero slope = horizontal line."
+      "explanation": "Zero slope = horizontal line.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_030",
@@ -67,7 +95,14 @@
         "E": "0"
       },
       "answer": "C",
-      "explanation": "Slope = rise/run = 2/1 = 2."
+      "explanation": "Slope = rise/run = 2/1 = 2.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_031",
@@ -80,7 +115,14 @@
         "E": "On an axis"
       },
       "answer": "C",
-      "explanation": "Both x and y negative = Quadrant III."
+      "explanation": "Both x and y negative = Quadrant III.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_032",
@@ -93,7 +135,14 @@
         "E": "(3, −2)"
       },
       "answer": "A",
-      "explanation": "Points on y-axis always have x=0."
+      "explanation": "Points on y-axis always have x=0.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_033",
@@ -106,7 +155,14 @@
         "E": "Random"
       },
       "answer": "B",
-      "explanation": "Undefined slope = vertical line."
+      "explanation": "Undefined slope = vertical line.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_034",
@@ -119,7 +175,14 @@
         "E": "Undefined"
       },
       "answer": "C",
-      "explanation": "Equal heights = no change between categories."
+      "explanation": "Equal heights = no change between categories.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_035",
@@ -132,7 +195,14 @@
         "E": "(0,5)"
       },
       "answer": "B",
-      "explanation": "Y-intercept always uses x=0."
+      "explanation": "Y-intercept always uses x=0.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_036",
@@ -145,7 +215,14 @@
         "E": "Constant slope"
       },
       "answer": "B",
-      "explanation": "Random dots = no consistent relationship."
+      "explanation": "Random dots = no consistent relationship.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_037",
@@ -158,7 +235,14 @@
         "E": "Showing categories"
       },
       "answer": "B",
-      "explanation": "Histograms show distribution across bins or ranges."
+      "explanation": "Histograms show distribution across bins or ranges.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_038",
@@ -171,7 +255,14 @@
         "E": "Vertical slope"
       },
       "answer": "C",
-      "explanation": "Single intersection = one solution in systems terms."
+      "explanation": "Single intersection = one solution in systems terms.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_039",
@@ -184,7 +275,14 @@
         "E": "Constant values"
       },
       "answer": "B",
-      "explanation": "Steeper = faster rate of change."
+      "explanation": "Steeper = faster rate of change.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_040",
@@ -197,7 +295,14 @@
         "E": "Vertical line"
       },
       "answer": "B",
-      "explanation": "As x increases from 0→2, y decreases from 2→0."
+      "explanation": "As x increases from 0→2, y decreases from 2→0.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_041",
@@ -210,7 +315,14 @@
         "E": "Bar graph"
       },
       "answer": "B",
-      "explanation": "Histograms reveal distribution curves quickly."
+      "explanation": "Histograms reveal distribution curves quickly.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_042",
@@ -223,7 +335,14 @@
         "E": "Midpoint"
       },
       "answer": "D",
-      "explanation": "Origin = (0,0)."
+      "explanation": "Origin = (0,0).",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_043",
@@ -236,7 +355,14 @@
         "E": "Scatterplot"
       },
       "answer": "D",
-      "explanation": "Histograms have touching bars because ranges are continuous."
+      "explanation": "Histograms have touching bars because ranges are continuous.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_044",
@@ -249,7 +375,14 @@
         "E": "Pie chart"
       },
       "answer": "A",
-      "explanation": "Bar graphs excel at category comparisons."
+      "explanation": "Bar graphs excel at category comparisons.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_045",
@@ -262,7 +395,14 @@
         "E": "A slope"
       },
       "answer": "A",
-      "explanation": "One tall bar or point indicates an outlier or anomaly."
+      "explanation": "One tall bar or point indicates an outlier or anomaly.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_046",
@@ -275,7 +415,14 @@
         "E": "Line graph"
       },
       "answer": "C",
-      "explanation": "Histogram groups frequency into bins."
+      "explanation": "Histogram groups frequency into bins.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_047",
@@ -288,7 +435,14 @@
         "E": "Random"
       },
       "answer": "C",
-      "explanation": "Perfect alignment = perfect correlation."
+      "explanation": "Perfect alignment = perfect correlation.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_048",
@@ -301,7 +455,14 @@
         "E": "Rapid decrease"
       },
       "answer": "A",
-      "explanation": "Straight upward = constant rate of growth."
+      "explanation": "Straight upward = constant rate of growth.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_049",
@@ -314,7 +475,14 @@
         "E": "(0, -4)"
       },
       "answer": "D",
-      "explanation": "Quadrant IV = +x, -y."
+      "explanation": "Quadrant IV = +x, -y.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     },
     {
       "id": "mk_gi_b_050",
@@ -327,7 +495,14 @@
         "E": "Sudden rise"
       },
       "answer": "C",
-      "explanation": "Flat = no change in value despite time passing."
+      "explanation": "Flat = no change in value despite time passing.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
     }
   ]
 }

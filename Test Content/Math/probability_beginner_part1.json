@@ -4,7 +4,6 @@
   "difficulty": "beginner",
   "part": 1,
   "questions": [
-
     {
       "id": "prob_b1_001",
       "question": "A bag contains 3 red balls and 2 blue balls. What is the probability of drawing a red ball?",
@@ -24,7 +23,6 @@
       ],
       "fastStrategy": "Probability is favorable outcomes ÷ total outcomes."
     },
-
     {
       "id": "prob_b1_002",
       "question": "What is the probability of rolling a 4 on a fair six-sided die?",
@@ -44,7 +42,6 @@
       ],
       "fastStrategy": "Single number on a die is always 1/6."
     },
-
     {
       "id": "prob_b1_003",
       "question": "A coin is flipped. What is the probability of getting heads?",
@@ -57,9 +54,13 @@
       },
       "answer": "B",
       "explanation": "A fair coin has 2 outcomes: heads or tails. Probability of heads = 1/2.",
-      "fastStrategy": "Fair coin → always 1/2."
+      "fastStrategy": "Fair coin → always 1/2.",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ]
     },
-
     {
       "id": "prob_b1_004",
       "question": "A jar contains 4 green, 4 yellow, and 2 red marbles. What is the probability of drawing a yellow marble?",
@@ -79,7 +80,6 @@
       ],
       "fastStrategy": "Always simplify the fraction unless the multiple-choice options don’t require it."
     },
-
     {
       "id": "prob_b1_005",
       "question": "What is the probability of drawing an ace from a standard 52-card deck?",
@@ -99,7 +99,6 @@
       ],
       "fastStrategy": "For playing cards: 4-of-a-kind probability = 1/13."
     },
-
     {
       "id": "prob_b1_006",
       "question": "What is the probability of drawing a heart from a deck of 52 cards?",
@@ -112,9 +111,13 @@
       },
       "answer": "D",
       "explanation": "There are 4 suits with 13 cards each. Probability of hearts = 13/52 = 1/4.",
-      "fastStrategy": "One suit = 1/4 of the deck."
+      "fastStrategy": "One suit = 1/4 of the deck.",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ]
     },
-
     {
       "id": "prob_b1_007",
       "question": "A spinner has 5 equal sections labeled A, B, C, D, and E. What is the probability it lands on C?",
@@ -126,9 +129,14 @@
         "E": "5/1"
       },
       "answer": "C",
-      "explanation": "One favorable section (C) out of 5 total; probability = 1/5."
+      "explanation": "One favorable section (C) out of 5 total; probability = 1/5.",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ],
+      "fastStrategy": "Probability = favorable outcomes ÷ total outcomes. Always between 0 and 1."
     },
-
     {
       "id": "prob_b1_008",
       "question": "A bag has 6 blue chips and 6 red chips. What is the probability of drawing a blue chip?",
@@ -140,9 +148,14 @@
         "E": "6/12"
       },
       "answer": "B",
-      "explanation": "6 blue out of 12 total = 6/12 = 1/2."
+      "explanation": "6 blue out of 12 total = 6/12 = 1/2.",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ],
+      "fastStrategy": "Probability = favorable outcomes ÷ total outcomes. Always between 0 and 1."
     },
-
     {
       "id": "prob_b1_009",
       "question": "If you roll a fair die, what is the probability of rolling an even number?",
@@ -155,9 +168,13 @@
       },
       "answer": "C",
       "explanation": "Even sides = 2, 4, 6. That’s 3 outcomes out of 6 → 3/6 = 1/2.",
-      "fastStrategy": "Even/odd on a die → both are 1/2."
+      "fastStrategy": "Even/odd on a die → both are 1/2.",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ]
     },
-
     {
       "id": "prob_b1_010",
       "question": "In a bag, 8 out of 20 marbles are black. What is the probability of drawing a marble that is NOT black?",
@@ -170,9 +187,13 @@
       },
       "answer": "B",
       "explanation": "Non-black marbles = 20 − 8 = 12. Probability = 12/20 = 3/5.",
-      "fastStrategy": "P(not event) = 1 − P(event)."
+      "fastStrategy": "P(not event) = 1 − P(event).",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ]
     },
-
     {
       "id": "prob_b1_011",
       "question": "A jar contains 1 red, 1 blue, and 1 green marble. Probability of drawing green?",
@@ -184,9 +205,14 @@
         "E": "1"
       },
       "answer": "B",
-      "explanation": "1 green out of 3 total marbles = 1/3."
+      "explanation": "1 green out of 3 total marbles = 1/3.",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ],
+      "fastStrategy": "Probability = favorable outcomes ÷ total outcomes. Always between 0 and 1."
     },
-
     {
       "id": "prob_b1_012",
       "question": "You flip a coin twice. What is the probability of getting heads both times?",
@@ -199,9 +225,13 @@
       },
       "answer": "A",
       "explanation": "Each flip has probability 1/2. Multiply: (1/2)(1/2) = 1/4.",
-      "fastStrategy": "Independent events → multiply probabilities."
+      "fastStrategy": "Independent events → multiply probabilities.",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ]
     },
-
     {
       "id": "prob_b1_013",
       "question": "You roll a die twice. What is the probability of rolling a 6 on both rolls?",
@@ -214,9 +244,13 @@
       },
       "answer": "C",
       "explanation": "P(6) = 1/6 each time → multiply: (1/6)(1/6)=1/36.",
-      "fastStrategy": "Two independent 1/6 events multiply to 1/36."
+      "fastStrategy": "Two independent 1/6 events multiply to 1/36.",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ]
     },
-
     {
       "id": "prob_b1_014",
       "question": "What is the probability of picking an odd number from 1–10?",
@@ -229,9 +263,13 @@
       },
       "answer": "C",
       "explanation": "Odd numbers from 1–10: 1,3,5,7,9 → 5 odd numbers out of 10 = 1/2.",
-      "fastStrategy": "Half the numbers 1–10 are odd."
+      "fastStrategy": "Half the numbers 1–10 are odd.",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ]
     },
-
     {
       "id": "prob_b1_015",
       "question": "A bowl contains 10 candies: 6 cherry and 4 lemon. Probability of lemon?",
@@ -243,9 +281,14 @@
         "E": "1/10"
       },
       "answer": "B",
-      "explanation": "4 lemon out of 10 total = 4/10 = 2/5."
+      "explanation": "4 lemon out of 10 total = 4/10 = 2/5.",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ],
+      "fastStrategy": "Probability = favorable outcomes ÷ total outcomes. Always between 0 and 1."
     },
-
     {
       "id": "prob_b1_016",
       "question": "A die is rolled. What is the probability of rolling a number greater than 4?",
@@ -257,9 +300,14 @@
         "E": "5/6"
       },
       "answer": "B",
-      "explanation": "Numbers >4 are 5 and 6 → 2 outcomes out of 6 = 2/6 = 1/3."
+      "explanation": "Numbers >4 are 5 and 6 → 2 outcomes out of 6 = 2/6 = 1/3.",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ],
+      "fastStrategy": "Probability = favorable outcomes ÷ total outcomes. Always between 0 and 1."
     },
-
     {
       "id": "prob_b1_017",
       "question": "A box contains 7 pens: 3 black, 2 blue, and 2 red. Probability of drawing a pen that is NOT black?",
@@ -272,9 +320,13 @@
       },
       "answer": "D",
       "explanation": "Not black = 2 blue + 2 red = 4. Probability = 4/7.",
-      "fastStrategy": "Not event = subtract black count from total."
+      "fastStrategy": "Not event = subtract black count from total.",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ]
     },
-
     {
       "id": "prob_b1_018",
       "question": "If you randomly choose a day of the week, what is the probability it is a weekend day?",
@@ -287,9 +339,13 @@
       },
       "answer": "B",
       "explanation": "Weekend days: Saturday, Sunday → 2 out of 7.",
-      "fastStrategy": "Weekend = 2 days."
+      "fastStrategy": "Weekend = 2 days.",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ]
     },
-
     {
       "id": "prob_b1_019",
       "question": "A jar contains 5 white and 5 black stones. Probability of drawing a white stone?",
@@ -301,9 +357,14 @@
         "E": "5/10"
       },
       "answer": "B",
-      "explanation": "5 out of 10 → 1/2."
+      "explanation": "5 out of 10 → 1/2.",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ],
+      "fastStrategy": "Probability = favorable outcomes ÷ total outcomes. Always between 0 and 1."
     },
-
     {
       "id": "prob_b1_020",
       "question": "A spinner has numbers 1, 2, 3, 4. What is the probability of spinning a number less than 3?",
@@ -315,9 +376,14 @@
         "E": "3/4"
       },
       "answer": "B",
-      "explanation": "Numbers <3 are 1 and 2 → 2 out of 4 → 1/2."
+      "explanation": "Numbers <3 are 1 and 2 → 2 out of 4 → 1/2.",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ],
+      "fastStrategy": "Probability = favorable outcomes ÷ total outcomes. Always between 0 and 1."
     },
-
     {
       "id": "prob_b1_021",
       "question": "There are 30 students: 12 play sports, 18 do not. Probability that a randomly chosen student plays sports?",
@@ -337,7 +403,6 @@
       ],
       "fastStrategy": "Always simplify if possible."
     },
-
     {
       "id": "prob_b1_022",
       "question": "A bag contains 2 red, 3 blue, and 5 white marbles. Probability of NOT white?",
@@ -350,9 +415,13 @@
       },
       "answer": "C",
       "explanation": "Not white = 2 red + 3 blue = 5. Total = 10. P = 5/10 = 1/2.",
-      "fastStrategy": "Subtract the white count from total."
+      "fastStrategy": "Subtract the white count from total.",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ]
     },
-
     {
       "id": "prob_b1_023",
       "question": "A coin is flipped three times. Probability all three flips are tails?",
@@ -365,9 +434,13 @@
       },
       "answer": "D",
       "explanation": "(1/2)^3 = 1/8.",
-      "fastStrategy": "For multiple coin flips, count flips = n → probability = (1/2)^n."
+      "fastStrategy": "For multiple coin flips, count flips = n → probability = (1/2)^n.",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ]
     },
-
     {
       "id": "prob_b1_024",
       "question": "A jar has 9 green and 1 black marble. What is the probability of drawing a black marble?",
@@ -380,9 +453,13 @@
       },
       "answer": "B",
       "explanation": "1 black out of 10 total → 1/10.",
-      "fastStrategy": "Single rare item → small probability (look for 1/total)."
+      "fastStrategy": "Single rare item → small probability (look for 1/total).",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ]
     },
-
     {
       "id": "prob_b1_025",
       "question": "A die is rolled once. What is the probability of rolling a number less than 5?",
@@ -395,8 +472,12 @@
       },
       "answer": "D",
       "explanation": "Numbers less than 5 are 1,2,3,4 → 4 outcomes out of 6 = 4/6 = 2/3.",
-      "fastStrategy": "Count the valid faces directly."
+      "fastStrategy": "Count the valid faces directly.",
+      "steps": [
+        "1. Count the favorable outcomes.",
+        "2. Count the total possible outcomes.",
+        "3. Divide: P = favorable / total."
+      ]
     }
-
   ]
 }

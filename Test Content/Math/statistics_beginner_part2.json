@@ -4,7 +4,6 @@
   "difficulty": "beginner",
   "part": 2,
   "questions": [
-
     {
       "id": "stat_b2_026",
       "question": "Find the mean of: 3, 12, 15, 20.",
@@ -16,9 +15,14 @@
         "E": "17.5"
       },
       "answer": "B",
-      "explanation": "Sum=50 → mean=50/4=12.5."
+      "explanation": "Sum=50 → mean=50/4=12.5.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_027",
       "question": "Find the median of: 8, 2, 5, 12.",
@@ -30,9 +34,14 @@
         "E": "12"
       },
       "answer": "B",
-      "explanation": "Sort: 2,5,8,12 → median = (5+8)/2 = 6.5."
+      "explanation": "Sort: 2,5,8,12 → median = (5+8)/2 = 6.5.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_028",
       "question": "Find the mode: 5, 7, 7, 8, 10, 10, 10.",
@@ -44,9 +53,14 @@
         "E": "No mode"
       },
       "answer": "D",
-      "explanation": "10 appears three times, the most."
+      "explanation": "10 appears three times, the most.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_029",
       "question": "Find the range: 50, 30, 90, 70.",
@@ -58,9 +72,14 @@
         "E": "90"
       },
       "answer": "C",
-      "explanation": "90 − 30 = 60."
+      "explanation": "90 − 30 = 60.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_030",
       "question": "A data set has a mean of 12 with 4 numbers. What is their total?",
@@ -72,9 +91,14 @@
         "E": "60"
       },
       "answer": "D",
-      "explanation": "Total = mean × count = 12 × 4 = 48."
+      "explanation": "Total = mean × count = 12 × 4 = 48.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_031",
       "question": "Find the mean: 9, 9, 12, 15.",
@@ -86,9 +110,14 @@
         "E": "13"
       },
       "answer": "C",
-      "explanation": "Sum=45 → mean=45/4=11.25."
+      "explanation": "Sum=45 → mean=45/4=11.25.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_032",
       "question": "Find the median of: 6, 1, 3.",
@@ -100,9 +129,14 @@
         "E": "5"
       },
       "answer": "B",
-      "explanation": "Sorted: 1,3,6 → middle=3."
+      "explanation": "Sorted: 1,3,6 → middle=3.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_033",
       "question": "Find the mode: 4, 4, 4, 2, 2, 8.",
@@ -114,9 +148,14 @@
         "E": "6"
       },
       "answer": "B",
-      "explanation": "4 appears three times."
+      "explanation": "4 appears three times.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_034",
       "question": "Find the range: 2, 18.",
@@ -128,9 +167,14 @@
         "E": "18"
       },
       "answer": "D",
-      "explanation": "18 − 2 = 16."
+      "explanation": "18 − 2 = 16.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_035",
       "question": "Find the mean: 7, 14, 21, 28.",
@@ -142,9 +186,14 @@
         "E": "22"
       },
       "answer": "B",
-      "explanation": "Sum=70 → mean=70/4=17.5."
+      "explanation": "Sum=70 → mean=70/4=17.5.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_036",
       "question": "Find the median: 10, 20, 30, 40, 50.",
@@ -156,9 +205,14 @@
         "E": "35"
       },
       "answer": "B",
-      "explanation": "Middle number = 30."
+      "explanation": "Middle number = 30.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_037",
       "question": "Find the mode: 1, 1, 2, 2.",
@@ -170,9 +224,14 @@
         "E": "None"
       },
       "answer": "D",
-      "explanation": "1 and 2 appear twice each → two modes."
+      "explanation": "1 and 2 appear twice each → two modes.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_038",
       "question": "Find the range: 12, 4, 25.",
@@ -184,9 +243,14 @@
         "E": "25"
       },
       "answer": "D",
-      "explanation": "25 − 4 = 21."
+      "explanation": "25 − 4 = 21.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_039",
       "question": "Find the mean: 5, 10, 15.",
@@ -198,9 +262,14 @@
         "E": "12"
       },
       "answer": "C",
-      "explanation": "Sum=30 → mean=10."
+      "explanation": "Sum=30 → mean=10.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_040",
       "question": "Find the median: 1, 4, 9, 16.",
@@ -212,9 +281,14 @@
         "E": "7.5"
       },
       "answer": "B",
-      "explanation": "(4+9)/2 = 6.5."
+      "explanation": "(4+9)/2 = 6.5.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_041",
       "question": "Find the mode: 9, 12, 12, 12, 15.",
@@ -226,9 +300,14 @@
         "E": "9 and 12"
       },
       "answer": "B",
-      "explanation": "12 appears most."
+      "explanation": "12 appears most.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_042",
       "question": "Find the range: 100, 120, 150.",
@@ -240,9 +319,14 @@
         "E": "50"
       },
       "answer": "C",
-      "explanation": "150 − 120 = 30? Actually max=150, min=100 → 50 (choice E)."
+      "explanation": "150 − 120 = 30? Actually max=150, min=100 → 50 (choice E).",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_043",
       "question": "Find the mean: 13, 17, 21.",
@@ -254,9 +338,14 @@
         "E": "20"
       },
       "answer": "C",
-      "explanation": "(13+17+21)=51 → mean=17? Wait carefully: 51/3=17 (choice B)."
+      "explanation": "(13+17+21)=51 → mean=17? Wait carefully: 51/3=17 (choice B).",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_044",
       "question": "Find the median: 5, 7, 9.",
@@ -268,9 +357,14 @@
         "E": "8"
       },
       "answer": "B",
-      "explanation": "Middle is 7."
+      "explanation": "Middle is 7.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_045",
       "question": "Find the mode: 10, 20, 30, 40.",
@@ -282,9 +376,14 @@
         "E": "No mode"
       },
       "answer": "E",
-      "explanation": "All appear once → no mode."
+      "explanation": "All appear once → no mode.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_046",
       "question": "Find the range: 9, 6, 3.",
@@ -296,9 +395,14 @@
         "E": "9"
       },
       "answer": "D",
-      "explanation": "9 − 3 = 6."
+      "explanation": "9 − 3 = 6.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_047",
       "question": "Find the mean: 4, 6, 10, 20.",
@@ -310,9 +414,14 @@
         "E": "12"
       },
       "answer": "B",
-      "explanation": "Sum=40 → mean=40/4=10? Wait: 4+6+10+20=40 → 40/4=10 → correct is C."
+      "explanation": "Sum=40 → mean=40/4=10? Wait: 4+6+10+20=40 → 40/4=10 → correct is C.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_048",
       "question": "Find the median: 10, 11, 12, 13, 14.",
@@ -324,9 +433,14 @@
         "E": "14"
       },
       "answer": "B",
-      "explanation": "Middle = 12."
+      "explanation": "Middle = 12.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_049",
       "question": "Find the mode: 1, 1, 2, 3, 4.",
@@ -338,9 +452,14 @@
         "E": "No mode"
       },
       "answer": "A",
-      "explanation": "1 appears twice."
+      "explanation": "1 appears twice.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     },
-
     {
       "id": "stat_b2_050",
       "question": "Find the range: 16, 8, 4.",
@@ -352,8 +471,13 @@
         "E": "20"
       },
       "answer": "C",
-      "explanation": "16 − 4 = 12."
+      "explanation": "16 − 4 = 12.",
+      "steps": [
+        "1. Arrange data in order if needed.",
+        "2. Apply the appropriate formula (mean, median, or range).",
+        "3. Calculate and simplify."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
     }
-
   ]
 }

@@ -15,7 +15,13 @@
         "E": "(3, 7)"
       },
       "answer": "A",
-      "explanation": "Add equations: 2x = 14 → x = 7; substitute: y = 3."
+      "explanation": "Add equations: 2x = 14 → x = 7; substitute: y = 3.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_sys_b_002",
@@ -28,7 +34,13 @@
         "E": "(1, 5)"
       },
       "answer": "B",
-      "explanation": "Subtract equations: x = 3; then y = 3; closest match is (4,2)? Correction: solving gives x=3, y=3. But not in choices. Adjusted solutions below."
+      "explanation": "Subtract equations: x = 3; then y = 3; closest match is (4,2)? Correction: solving gives x=3, y=3. But not in choices. Adjusted solutions below.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_sys_b_002_corrected",
@@ -41,9 +53,14 @@
         "E": "(6, 0)"
       },
       "answer": "A",
-      "explanation": "Subtract equations: x = 4; substitute → y = 2."
+      "explanation": "Subtract equations: x = 4; substitute → y = 2.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_003",
       "question": "Solve: x + 2y = 12 and x = 6",
@@ -55,9 +72,14 @@
         "E": "(6, 4)"
       },
       "answer": "A",
-      "explanation": "6 + 2y = 12 → y = 3."
+      "explanation": "6 + 2y = 12 → y = 3.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_004",
       "question": "Solve: 3x + y = 10 and y = 1",
@@ -69,7 +91,13 @@
         "E": "(5, 1)"
       },
       "answer": "B",
-      "explanation": "3x + 1 = 10 → x = 3; correction: 3x=9 → x=3, but answer shows (3,1). Fixing choice below."
+      "explanation": "3x + 1 = 10 → x = 3; correction: 3x=9 → x=3, but answer shows (3,1). Fixing choice below.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_sys_b_004_corrected",
@@ -82,9 +110,14 @@
         "E": "(0, 1)"
       },
       "answer": "A",
-      "explanation": "3x + 1 = 10 → x = 3."
+      "explanation": "3x + 1 = 10 → x = 3.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_005",
       "question": "Solve: 2x - y = 4 and x + y = 10",
@@ -96,9 +129,14 @@
         "E": "(3, 7)"
       },
       "answer": "A",
-      "explanation": "Add equations: 3x = 14 → x=14/3? Incorrect. Solve system → x=7, y=3."
+      "explanation": "Add equations: 3x = 14 → x=14/3? Incorrect. Solve system → x=7, y=3.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_006",
       "question": "Solve: x - y = 2 and x + y = 8",
@@ -110,9 +148,14 @@
         "E": "(3, 5)"
       },
       "answer": "A",
-      "explanation": "Add equations: 2x=10 → x=5; y=3."
+      "explanation": "Add equations: 2x=10 → x=5; y=3.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_007",
       "question": "Solve: x + y = 7 and y = 4",
@@ -124,9 +167,14 @@
         "E": "(7, 0)"
       },
       "answer": "A",
-      "explanation": "x = 3."
+      "explanation": "x = 3.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_008",
       "question": "Solve: 3x + 3y = 12 and x + y = 4",
@@ -138,9 +186,14 @@
         "E": "(0, 4)"
       },
       "answer": "B",
-      "explanation": "System is dependent: infinite solutions; x+y=4 represents all solutions. Closest consistent pair: (2,2)."
+      "explanation": "System is dependent: infinite solutions; x+y=4 represents all solutions. Closest consistent pair: (2,2).",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_009",
       "question": "Solve: 4x - y = 7 and y = x",
@@ -152,7 +205,13 @@
         "E": "(0, 0)"
       },
       "answer": "A",
-      "explanation": "4x - x = 7 → 3x = 7 → x=7/3 ≈ 2.33. None exact; rewriting system."
+      "explanation": "4x - x = 7 → 3x = 7 → x=7/3 ≈ 2.33. None exact; rewriting system.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_sys_b_009_corrected",
@@ -165,9 +224,14 @@
         "E": "(0, 0)"
       },
       "answer": "A",
-      "explanation": "3x - x = 4 → 2x = 4 → x = 2."
+      "explanation": "3x - x = 4 → 2x = 4 → x = 2.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_010",
       "question": "Solve: 5x + y = 20 and x = 4",
@@ -179,9 +243,14 @@
         "E": "(4, 2)"
       },
       "answer": "A",
-      "explanation": "5(4)+y=20 → y=0."
+      "explanation": "5(4)+y=20 → y=0.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_011",
       "question": "Solve: x + 3y = 15 and y = 2",
@@ -193,9 +262,14 @@
         "E": "(6, 2)"
       },
       "answer": "A",
-      "explanation": "x+6=15 → x=9."
+      "explanation": "x+6=15 → x=9.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_012",
       "question": "Solve: 2x + 5y = 20 and y = 2",
@@ -207,9 +281,14 @@
         "E": "(2, 2)"
       },
       "answer": "A",
-      "explanation": "2x + 10 = 20 → x = 5."
+      "explanation": "2x + 10 = 20 → x = 5.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_013",
       "question": "Solve: 4x + y = 9 and y = 1",
@@ -221,9 +300,14 @@
         "E": "(0, 1)"
       },
       "answer": "A",
-      "explanation": "4x + 1 = 9 → x = 2."
+      "explanation": "4x + 1 = 9 → x = 2.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_014",
       "question": "Solve: x - 3y = 6 and y = 2",
@@ -235,7 +319,13 @@
         "E": "(9, 2)"
       },
       "answer": "E",
-      "explanation": "x - 6 = 6 → x = 12. Correction: x=12, not 9; updating choices."
+      "explanation": "x - 6 = 6 → x = 12. Correction: x=12, not 9; updating choices.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_sys_b_014_corrected",
@@ -248,9 +338,14 @@
         "E": "(3, 2)"
       },
       "answer": "A",
-      "explanation": "x - 6 = 6 → x = 12."
+      "explanation": "x - 6 = 6 → x = 12.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_015",
       "question": "Solve: x + y = 14 and y = 9",
@@ -262,9 +357,14 @@
         "E": "(1, 9)"
       },
       "answer": "A",
-      "explanation": "x = 5."
+      "explanation": "x = 5.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_016",
       "question": "Solve: 3x - y = 2 and y = 1",
@@ -276,7 +376,13 @@
         "E": "(4, 1)"
       },
       "answer": "C",
-      "explanation": "3x - 1 = 2 → 3x = 3 → x = 1. Correction needed. Fix below."
+      "explanation": "3x - 1 = 2 → 3x = 3 → x = 1. Correction needed. Fix below.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_sys_b_016_corrected",
@@ -289,9 +395,14 @@
         "E": "(4, 1)"
       },
       "answer": "A",
-      "explanation": "3x - 1 = 2 → 3x = 3 → x = 1."
+      "explanation": "3x - 1 = 2 → 3x = 3 → x = 1.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_017",
       "question": "Solve: x = y and x + y = 16",
@@ -303,9 +414,14 @@
         "E": "(4, 4)"
       },
       "answer": "A",
-      "explanation": "2x = 16 → x = 8."
+      "explanation": "2x = 16 → x = 8.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_018",
       "question": "Solve: 2x = y and x + y = 12",
@@ -317,9 +433,14 @@
         "E": "(2, 4)"
       },
       "answer": "A",
-      "explanation": "y=2x → x+2x=12 → x=4, y=8."
+      "explanation": "y=2x → x+2x=12 → x=4, y=8.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_019",
       "question": "Solve: y = 3x and x + y = 16",
@@ -331,9 +452,14 @@
         "E": "(6, 18)"
       },
       "answer": "A",
-      "explanation": "x + 3x = 16 → x = 4."
+      "explanation": "x + 3x = 16 → x = 4.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_020",
       "question": "Solve: x - y = 8 and y = 2",
@@ -345,9 +471,14 @@
         "E": "(4, 2)"
       },
       "answer": "A",
-      "explanation": "x - 2 = 8 → x = 10."
+      "explanation": "x - 2 = 8 → x = 10.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_021",
       "question": "Solve: 2x + y = 14 and y = 4",
@@ -359,9 +490,14 @@
         "E": "(8, 4)"
       },
       "answer": "A",
-      "explanation": "2x+4=14 → x=5."
+      "explanation": "2x+4=14 → x=5.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_022",
       "question": "Solve: x + 2y = 18 and y = 7",
@@ -373,9 +509,14 @@
         "E": "(8, 7)"
       },
       "answer": "A",
-      "explanation": "x + 14 = 18 → x = 4."
+      "explanation": "x + 14 = 18 → x = 4.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_023",
       "question": "Solve: x - 4y = 6 and y = 1",
@@ -387,9 +528,14 @@
         "E": "(12, 1)"
       },
       "answer": "A",
-      "explanation": "x - 4 = 6 → x = 10."
+      "explanation": "x - 4 = 6 → x = 10.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_024",
       "question": "Solve: 3x + 2y = 20 and y = 2",
@@ -401,7 +547,13 @@
         "E": "(8, 2)"
       },
       "answer": "A",
-      "explanation": "3x + 4 = 20 → x = 16/3 ≈ 5.33; adjust system. New equation: 3x+2y=18 gives x=5."
+      "explanation": "3x + 4 = 20 → x = 16/3 ≈ 5.33; adjust system. New equation: 3x+2y=18 gives x=5.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_sys_b_024_corrected",
@@ -414,9 +566,14 @@
         "E": "(2, 2)"
       },
       "answer": "A",
-      "explanation": "3x+4=18 → x=5."
+      "explanation": "3x+4=18 → x=5.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
-
     {
       "id": "mk_sys_b_025",
       "question": "Solve: x + y = 9 and y = 3",
@@ -428,7 +585,13 @@
         "E": "(8, 3)"
       },
       "answer": "A",
-      "explanation": "x = 6."
+      "explanation": "x = 6.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     }
   ]
 }

@@ -4,17 +4,27 @@
   "difficulty": "beginner",
   "part": 1,
   "questions": [
-
     {
       "uiSpec": {
         "type": "point_reflection",
         "width": 300,
         "height": 300,
         "showGrid": true,
-        "xRange": [-6, 6],
-        "yRange": [-6, 6],
+        "xRange": [
+          -6,
+          6
+        ],
+        "yRange": [
+          -6,
+          6
+        ],
         "points": [
-          { "name": "P", "x": 3, "y": 2, "color": "black" }
+          {
+            "name": "P",
+            "x": 3,
+            "y": 2,
+            "color": "black"
+          }
         ]
       },
       "copilotInstruction": "Draw a coordinate plane from -6 to 6 with point P at (3,2). No transformed point drawn.",
@@ -36,7 +46,6 @@
       ],
       "fastStrategy": "Across x-axis → (x, -y)."
     },
-
     {
       "id": "tf_b1_002",
       "question": "Point Q is at (–4, –3). What is its reflection across the x-axis?",
@@ -49,10 +58,11 @@
       },
       "answer": "A",
       "explanation": "Reflection over x-axis → flip y-value: -3 → 3.",
-      "steps": ["Apply (x, -y)."],
+      "steps": [
+        "Apply (x, -y)."
+      ],
       "fastStrategy": "Only y changes sign."
     },
-
     {
       "uiSpec": {
         "type": "point_reflection",
@@ -60,7 +70,11 @@
         "height": 300,
         "showGrid": true,
         "points": [
-          { "name": "A", "x": -2, "y": 5 }
+          {
+            "name": "A",
+            "x": -2,
+            "y": 5
+          }
         ]
       },
       "copilotInstruction": "Draw point A at (-2,5).",
@@ -81,7 +95,6 @@
       ],
       "fastStrategy": "Across y-axis → (-x, y)."
     },
-
     {
       "id": "tf_b1_004",
       "question": "Reflect the point (6, –1) across the y-axis.",
@@ -94,10 +107,13 @@
       },
       "answer": "B",
       "explanation": "Flip x-value: 6 → -6.",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "Across y-axis → x changes sign."
     },
-
     {
       "uiSpec": {
         "type": "point_reflection_origin",
@@ -105,7 +121,11 @@
         "height": 300,
         "showGrid": true,
         "points": [
-          {"name": "K", "x": 4, "y": -3}
+          {
+            "name": "K",
+            "x": 4,
+            "y": -3
+          }
         ]
       },
       "copilotInstruction": "Plot K(4,-3).",
@@ -120,10 +140,11 @@
       },
       "answer": "B",
       "explanation": "Reflection across the origin → flip both signs.",
-      "steps": ["(4,-3) → (-4,3)."],
+      "steps": [
+        "(4,-3) → (-4,3)."
+      ],
       "fastStrategy": "Across origin → (-x, -y)."
     },
-
     {
       "id": "tf_b1_006",
       "question": "Reflect (–8, 2) across the origin.",
@@ -136,10 +157,13 @@
       },
       "answer": "B",
       "explanation": "Origin reflection → both signs change.",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "Flip both signs."
     },
-
     {
       "uiSpec": {
         "type": "translation",
@@ -147,9 +171,16 @@
         "height": 300,
         "showGrid": true,
         "points": [
-          {"name": "P", "x": 1, "y": 2}
+          {
+            "name": "P",
+            "x": 1,
+            "y": 2
+          }
         ],
-        "vector": { "dx": 3, "dy": -1 }
+        "vector": {
+          "dx": 3,
+          "dy": -1
+        }
       },
       "copilotInstruction": "Plot P at (1,2). Show vector (3,-1) but do NOT draw transformed point.",
       "id": "tf_b1_007",
@@ -163,10 +194,13 @@
       },
       "answer": "A",
       "explanation": "(1+3, 2−1) = (4,1).",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "Add dx to x, dy to y."
     },
-
     {
       "id": "tf_b1_008",
       "question": "Translate (–5, 7) by ⟨2, –4⟩.",
@@ -179,17 +213,26 @@
       },
       "answer": "B",
       "explanation": "-5+2 = -3, 7-4 = 3.",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "Just add using signs."
     },
-
     {
       "uiSpec": {
         "type": "rotation_90",
         "width": 300,
         "height": 300,
         "showGrid": true,
-        "points": [{ "name": "R", "x": 2, "y": 5 }]
+        "points": [
+          {
+            "name": "R",
+            "x": 2,
+            "y": 5
+          }
+        ]
       },
       "copilotInstruction": "Plot R at (2,5). User must rotate it 90° CCW mentally.",
       "id": "tf_b1_009",
@@ -203,10 +246,13 @@
       },
       "answer": "B",
       "explanation": "90° CCW rotation → (x, y) → (–y, x). So (2,5) → (-5,2).",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "90° CCW = (-y, x)."
     },
-
     {
       "id": "tf_b1_010",
       "question": "Rotate point (–3, 4) by 90° CCW about the origin.",
@@ -219,17 +265,26 @@
       },
       "answer": "A",
       "explanation": "Apply (-y, x): (–3,4) → (–4, –3).",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "Swap, flip y."
     },
-
     {
       "uiSpec": {
         "type": "rotation_180",
         "width": 300,
         "height": 300,
         "showGrid": true,
-        "points":[{"name":"M","x":4,"y":-1}]
+        "points": [
+          {
+            "name": "M",
+            "x": 4,
+            "y": -1
+          }
+        ]
       },
       "copilotInstruction": "Plot M(4,-1). User rotates 180° mentally.",
       "id": "tf_b1_011",
@@ -243,10 +298,13 @@
       },
       "answer": "C",
       "explanation": "180° rotation flips both signs: (4,-1) → (-4,1). Check choices. Correct is (-4,1).",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "180° = (-x, -y)."
     },
-
     {
       "id": "tf_b1_012",
       "question": "Rotate (–6, –2) by 180°.",
@@ -259,18 +317,30 @@
       },
       "answer": "A",
       "explanation": "Flip both signs: (−6,−2) → (6,2).",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "180° rotates both signs."
     },
-
     {
       "uiSpec": {
         "type": "reflection_vertical_line",
         "width": 300,
         "height": 300,
         "showGrid": true,
-        "points":[{"name":"P","x":1,"y":4}],
-        "line": { "type": "vertical", "x": 3 }
+        "points": [
+          {
+            "name": "P",
+            "x": 1,
+            "y": 4
+          }
+        ],
+        "line": {
+          "type": "vertical",
+          "x": 3
+        }
       },
       "copilotInstruction": "Draw dashed vertical line x=3. Plot P at (1,4).",
       "id": "tf_b1_013",
@@ -284,10 +354,11 @@
       },
       "answer": "A",
       "explanation": "Distance to line: from x=1 to x=3 is 2 units. Reflecting means go 2 units beyond → x=5.",
-      "steps": ["1 → 3 is 2 units; reflect to 5."],
+      "steps": [
+        "1 → 3 is 2 units; reflect to 5."
+      ],
       "fastStrategy": "Count horizontal distance to line, mirror it."
     },
-
     {
       "id": "tf_b1_014",
       "question": "Reflect (–2, 5) across x = 1.",
@@ -300,18 +371,30 @@
       },
       "answer": "A",
       "explanation": "Distance from -2 to 1 is 3 units. Reflect to x = 4.",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "x-reflection over vertical lines — mirror left/right."
     },
-
     {
       "uiSpec": {
         "type": "reflection_horizontal_line",
         "width": 300,
         "height": 300,
         "showGrid": true,
-        "points":[{"name":"T","x":-4,"y":-1}],
-        "line": { "type": "horizontal", "y": 2 }
+        "points": [
+          {
+            "name": "T",
+            "x": -4,
+            "y": -1
+          }
+        ],
+        "line": {
+          "type": "horizontal",
+          "y": 2
+        }
       },
       "copilotInstruction": "Plot T(-4,-1). Draw dashed horizontal line y=2.",
       "id": "tf_b1_015",
@@ -325,10 +408,13 @@
       },
       "answer": "A",
       "explanation": "-1 is 3 below y=2; reflect → 3 above: y=5.",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "Horizontal reflection → mirror vertically."
     },
-
     {
       "id": "tf_b1_016",
       "question": "Reflect (6, –4) across y = –2.",
@@ -341,18 +427,30 @@
       },
       "answer": "C",
       "explanation": "-4 is 2 below y=-2, so reflect to 2 above: y=0.",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "Count vertical distance to line."
     },
-
     {
       "uiSpec": {
         "type": "translation",
         "width": 300,
         "height": 300,
         "showGrid": true,
-        "points":[{"name":"H","x":2,"y":-3}],
-        "vector": { "dx": -5, "dy": 6 }
+        "points": [
+          {
+            "name": "H",
+            "x": 2,
+            "y": -3
+          }
+        ],
+        "vector": {
+          "dx": -5,
+          "dy": 6
+        }
       },
       "copilotInstruction": "Plot H(2,-3) and show arrow indicating vector (-5,6).",
       "id": "tf_b1_017",
@@ -366,10 +464,13 @@
       },
       "answer": "A",
       "explanation": "2-5 = -3; -3+6 = 3.",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "Add dx, then dy."
     },
-
     {
       "id": "tf_b1_018",
       "question": "Translate (–7, 2) by ⟨4, –6⟩.",
@@ -382,17 +483,26 @@
       },
       "answer": "A",
       "explanation": "-7+4 = -3; 2-6 = -4.",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "Translation is always add-op."
     },
-
     {
       "uiSpec": {
         "type": "rotation_90",
         "width": 300,
         "height": 300,
         "showGrid": true,
-        "points":[{"name":"J","x":5,"y":-2}]
+        "points": [
+          {
+            "name": "J",
+            "x": 5,
+            "y": -2
+          }
+        ]
       },
       "copilotInstruction": "Plot J at (5,-2).",
       "id": "tf_b1_019",
@@ -406,10 +516,13 @@
       },
       "answer": "B",
       "explanation": "Apply (-y, x): (5,-2)→(2,5)? Actually (-(-2),5) = (2,5). Use choices. Correct = (2,5).",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "(-y, x)."
     },
-
     {
       "id": "tf_b1_020",
       "question": "Rotate (3, 1) by 180°.",
@@ -422,18 +535,30 @@
       },
       "answer": "A",
       "explanation": "Flip both signs: (3,1)→(-3,-1).",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "180° is easy: flip x and y signs."
     },
-
     {
       "uiSpec": {
         "type": "reflection_vertical_line",
         "width": 300,
         "height": 300,
         "showGrid": true,
-        "line": {"type":"vertical","x":-1},
-        "points":[{"name":"W","x":-5,"y":3}]
+        "line": {
+          "type": "vertical",
+          "x": -1
+        },
+        "points": [
+          {
+            "name": "W",
+            "x": -5,
+            "y": 3
+          }
+        ]
       },
       "copilotInstruction": "Draw vertical dashed line x=-1. Plot W(-5,3).",
       "id": "tf_b1_021",
@@ -447,10 +572,13 @@
       },
       "answer": "B",
       "explanation": "Distance from -5 to -1 = 4 units. Reflect → -1+4 = 3.",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "Subtract line x-value from point to find distance."
     },
-
     {
       "id": "tf_b1_022",
       "question": "Reflect (4, –2) across x = 0 (the y-axis).",
@@ -463,10 +591,13 @@
       },
       "answer": "A",
       "explanation": "Reflection across y-axis flips x to -4.",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "x → -x."
     },
-
     {
       "id": "tf_b1_023",
       "question": "Reflect (1, –8) across y = –5.",
@@ -479,10 +610,13 @@
       },
       "answer": "A",
       "explanation": "-8 is 3 below y=-5; reflect to 3 above: y=-2.",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "Distance to line then mirror."
     },
-
     {
       "id": "tf_b1_024",
       "question": "Rotate (–2, –7) by 180°.",
@@ -495,10 +629,13 @@
       },
       "answer": "A",
       "explanation": "Flip signs: (−2,−7)→(2,7).",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "180° always flips both components."
     },
-
     {
       "id": "tf_b1_025",
       "question": "Translate (0, –9) by ⟨–4, 3⟩.",
@@ -511,9 +648,12 @@
       },
       "answer": "A",
       "explanation": "0–4 = -4; -9+3 = -6.",
-      "steps": [],
+      "steps": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. Plot or describe the new position."
+      ],
       "fastStrategy": "Translation = add dx, add dy."
     }
-
   ]
 }
