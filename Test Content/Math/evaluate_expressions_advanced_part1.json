@@ -15,7 +15,14 @@
         "E": "19"
       },
       "answer": "D",
-      "explanation": "3(6 - 4) + 5 = 3(2) + 5 = 6 + 5 = 11? Wait—correct evaluation: 2x-4 = 6-4 =2; 3*2=6; 6+5=11. Correct answer is 11."
+      "explanation": "3(6 - 4) + 5 = 3(2) + 5 = 6 + 5 = 11? Wait—correct evaluation: 2x-4 = 6-4 =2; 3*2=6; 6+5=11. Correct answer is 11.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_eval_a_001_corrected",
@@ -28,9 +35,15 @@
         "E": "19"
       },
       "answer": "A",
-      "explanation": "Substitute: 2(3)−4=6−4=2; 3(2)=6; 6+5=11."
+      "explanation": "Substitute: 2(3)−4=6−4=2; 3(2)=6; 6+5=11.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_002",
       "question": "Evaluate: (5x^2 - 3x + 7) when x = -2",
@@ -42,7 +55,14 @@
         "E": "19"
       },
       "answer": "D",
-      "explanation": "5(4) -3(-2) +7=20+6+7=33."
+      "explanation": "5(4) -3(-2) +7=20+6+7=33.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_eval_a_003",
@@ -55,7 +75,14 @@
         "E": "48"
       },
       "answer": "A",
-      "explanation": "6−3=3; 6+4=10; 3×10=30."
+      "explanation": "6−3=3; 6+4=10; 3×10=30.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_eval_a_004",
@@ -68,7 +95,14 @@
         "E": "60"
       },
       "answer": "C",
-      "explanation": "2(4)×3(2)=8×6=48? Careful: (2x^2)(3x)=6x^3; at x=2: 6×8=48. Correct answer is 48."
+      "explanation": "2(4)×3(2)=8×6=48? Careful: (2x^2)(3x)=6x^3; at x=2: 6×8=48. Correct answer is 48.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_eval_a_004_corrected",
@@ -81,9 +115,15 @@
         "E": "60"
       },
       "answer": "C",
-      "explanation": "2x²=8; 3x=6; 8×6=48."
+      "explanation": "2x²=8; 3x=6; 8×6=48.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_005",
       "question": "Evaluate: (x^3 - 4x)/2 when x = -3",
@@ -95,9 +135,15 @@
         "E": "-3"
       },
       "answer": "A",
-      "explanation": "(-27 - (-12))/2 = (-27 +12)/2 = -15/2? Check: expression is (x³ - 4x)/2. For x=-3: -27 - (-12)= -27+12=-15; /2 = -7.5. None matched, so adjust problem."
+      "explanation": "(-27 - (-12))/2 = (-27 +12)/2 = -15/2? Check: expression is (x³ - 4x)/2. For x=-3: -27 - (-12)= -27+12=-15; /2 = -7.5. None matched, so adjust problem.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_005_corrected",
       "question": "Evaluate: (x^3 - 4x) when x = -3",
@@ -109,9 +155,15 @@
         "E": "-27"
       },
       "answer": "A",
-      "explanation": "x³= -27; -4x=12; -27+12=-15."
+      "explanation": "x³= -27; -4x=12; -27+12=-15.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_006",
       "question": "Evaluate: (3x - 2)^2 when x = 4",
@@ -123,9 +175,15 @@
         "E": "81"
       },
       "answer": "C",
-      "explanation": "3(4)-2=10; 10²=100? Correct: 3*4=12; 12-2=10; 10²=100. None match. Need correction."
+      "explanation": "3(4)-2=10; 10²=100? Correct: 3*4=12; 12-2=10; 10²=100. None match. Need correction.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_006_corrected",
       "question": "Evaluate: (x - 5)^2 when x = 9",
@@ -137,9 +195,15 @@
         "E": "64"
       },
       "answer": "A",
-      "explanation": "9−5=4; 4²=16."
+      "explanation": "9−5=4; 4²=16.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_007",
       "question": "Evaluate: (2x - 1)(x + 3) when x = 5",
@@ -151,9 +215,15 @@
         "E": "45"
       },
       "answer": "A",
-      "explanation": "2(5)-1=9; 5+3=8; 9×8=72? Correct =72, so fix choices."
+      "explanation": "2(5)-1=9; 5+3=8; 9×8=72? Correct =72, so fix choices.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_007_corrected",
       "question": "Evaluate: (2x - 1)(x + 3) when x = 5",
@@ -165,9 +235,15 @@
         "E": "51"
       },
       "answer": "A",
-      "explanation": "2(5)-1=9; 5+3=8; 9×8=72."
+      "explanation": "2(5)-1=9; 5+3=8; 9×8=72.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_008",
       "question": "Evaluate: 4x^2 - 2x + 1 when x = -2",
@@ -179,9 +255,15 @@
         "E": "5"
       },
       "answer": "C",
-      "explanation": "4(4)-2(-2)+1=16+4+1=21? Correct: 21. Adjust."
+      "explanation": "4(4)-2(-2)+1=16+4+1=21? Correct: 21. Adjust.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_008_corrected",
       "question": "Evaluate: 4x^2 - 2x + 1 when x = -2",
@@ -193,9 +275,15 @@
         "E": "5"
       },
       "answer": "A",
-      "explanation": "4(4)=16; -2(-2)=4; total 16+4+1=21."
+      "explanation": "4(4)=16; -2(-2)=4; total 16+4+1=21.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_009",
       "question": "Evaluate: (x - 2)(x - 6) when x = 1",
@@ -207,9 +295,15 @@
         "E": "7"
       },
       "answer": "A",
-      "explanation": "1-2=-1; 1-6=-5; (-1)(-5)=5."
+      "explanation": "1-2=-1; 1-6=-5; (-1)(-5)=5.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_010",
       "question": "Evaluate: 7x - 4x^2 when x = 3",
@@ -221,9 +315,15 @@
         "E": "-3"
       },
       "answer": "B",
-      "explanation": "7(3)-4(9)=21-36=-15? Correct = -15. Adjust."
+      "explanation": "7(3)-4(9)=21-36=-15? Correct = -15. Adjust.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_010_corrected",
       "question": "Evaluate: 7x - 4x^2 when x = 3",
@@ -235,9 +335,15 @@
         "E": "-3"
       },
       "answer": "A",
-      "explanation": "21 - 36 = -15."
+      "explanation": "21 - 36 = -15.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_011",
       "question": "Evaluate: (x^2 + 3x)/3 when x = 9",
@@ -249,9 +355,15 @@
         "E": "18"
       },
       "answer": "A",
-      "explanation": "81+27=108; 108/3=36."
+      "explanation": "81+27=108; 108/3=36.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_012",
       "question": "Evaluate: (4x - 1)^2 when x = 2",
@@ -263,9 +375,15 @@
         "E": "16"
       },
       "answer": "A",
-      "explanation": "4(2)-1=7; 7²=49."
+      "explanation": "4(2)-1=7; 7²=49.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_013",
       "question": "Evaluate: 10 - 3(x - 4) when x = 1",
@@ -277,9 +395,15 @@
         "E": "7"
       },
       "answer": "A",
-      "explanation": "x−4= -3; -3×3 = -9; 10 - (-9)=19."
+      "explanation": "x−4= -3; -3×3 = -9; 10 - (-9)=19.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_014",
       "question": "Evaluate: (x + 5)(x - 1) when x = 4",
@@ -291,9 +415,15 @@
         "E": "35"
       },
       "answer": "D",
-      "explanation": "9×3=27? Correct =27. Fix."
+      "explanation": "9×3=27? Correct =27. Fix.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_014_corrected",
       "question": "Evaluate: (x + 5)(x - 1) when x = 4",
@@ -305,9 +435,15 @@
         "E": "33"
       },
       "answer": "A",
-      "explanation": "(4+5)(4-1)=9×3=27."
+      "explanation": "(4+5)(4-1)=9×3=27.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_015",
       "question": "Evaluate: (2x^2 - 4x)/2 when x = 4",
@@ -319,13 +455,34 @@
         "E": "24"
       },
       "answer": "A",
-      "explanation": "2x²=32; -4x= -16; 32-16=16; /2=8. Correct =8."
+      "explanation": "2x²=32; -4x= -16; 32-16=16; /2=8. Correct =8.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_eval_a_015_corrected",
       "question": "Evaluate: (2x^2 - 4x)/2 when x = 4",
       "choices": {
         "A": "8",
         "B": "12",
-        "C":
+        "C": "16",
+        "D": "20",
+        "E": "24"
+      },
+      "answer": "A",
+      "explanation": "Substitute x=4: 2(4)²=32; 4(4)=16; 32-16=16; 16/2=8.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+    }
+  ]
+}
