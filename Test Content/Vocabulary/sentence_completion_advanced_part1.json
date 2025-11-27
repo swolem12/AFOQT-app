@@ -20,7 +20,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Signal: contrast (despite/although). This means 'reserved' is the logical choice."
     },
     {
       "id": "sc_adv_002",
@@ -32,14 +32,14 @@
         "D": "implied"
       },
       "answer": "A",
-      "explanation": "Lucid = clear; fits thorough + simple.",
+      "explanation": "Lucid = clear; fits thorough + simple. 'lucid' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Cover choices and predict a word. 'lucid' is the closest match."
     },
     {
       "id": "sc_adv_003",
@@ -51,14 +51,14 @@
         "D": "tedious"
       },
       "answer": "A",
-      "explanation": "Ingenious matches a breakthrough solution.",
+      "explanation": "Ingenious matches a breakthrough solution. 'ingenious' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Look for signal words (continuation). They point to 'ingenious'."
     },
     {
       "id": "sc_adv_004",
@@ -77,7 +77,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Read the full sentence for tone. Only 'consistent' fits logically."
     },
     {
       "id": "sc_adv_005",
@@ -89,14 +89,14 @@
         "D": "tactical"
       },
       "answer": "A",
-      "explanation": "Idealistic implies lacking practical realism.",
+      "explanation": "Idealistic implies lacking practical realism. 'idealistic' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Test each choice in the blank. 'idealistic' makes the sentence coherent."
     },
     {
       "id": "sc_adv_006",
@@ -115,7 +115,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Signal: continuation. This means 'subtle' is the logical choice."
     },
     {
       "id": "sc_adv_007",
@@ -127,14 +127,14 @@
         "D": "ambivalent"
       },
       "answer": "A",
-      "explanation": "Unequivocal = completely clear.",
+      "explanation": "Unequivocal = completely clear. 'unequivocal' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Cover choices and predict a word. 'unequivocal' is the closest match."
     },
     {
       "id": "sc_adv_008",
@@ -146,14 +146,14 @@
         "D": "ambiguous"
       },
       "answer": "A",
-      "explanation": "Pivotal = essential or central.",
+      "explanation": "Pivotal = essential or central. 'pivotal' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Look for signal words (continuation). They point to 'pivotal'."
     },
     {
       "id": "sc_adv_009",
@@ -165,14 +165,14 @@
         "D": "retrospective"
       },
       "answer": "B",
-      "explanation": "Preliminary = early and cautionary.",
+      "explanation": "Preliminary = early and cautionary. 'preliminary' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Read the full sentence for tone. Only 'preliminary' fits logically."
     },
     {
       "id": "sc_adv_010",
@@ -184,14 +184,14 @@
         "D": "validity"
       },
       "answer": "A",
-      "explanation": "Sentimentality over logic weakens an argument.",
+      "explanation": "Sentimentality over logic weakens an argument. 'sentimentality' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Test each choice in the blank. 'sentimentality' makes the sentence coherent."
     },
     {
       "id": "sc_adv_011",
@@ -203,14 +203,14 @@
         "D": "opaque"
       },
       "answer": "A",
-      "explanation": "Salutary = beneficial.",
+      "explanation": "Salutary = beneficial. 'salutary' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Signal: continuation. This means 'salutary' is the logical choice."
     },
     {
       "id": "sc_adv_012",
@@ -222,14 +222,14 @@
         "D": "reckless"
       },
       "answer": "A",
-      "explanation": "Measured = deliberate, balanced.",
+      "explanation": "Measured = deliberate, balanced. 'measured' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Cover choices and predict a word. 'measured' is the closest match."
     },
     {
       "id": "sc_adv_013",
@@ -241,14 +241,14 @@
         "D": "redundant"
       },
       "answer": "A",
-      "explanation": "General instructions allow flexibility.",
+      "explanation": "General instructions allow flexibility. 'general' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Look for signal words (continuation). They point to 'general'."
     },
     {
       "id": "sc_adv_014",
@@ -260,14 +260,14 @@
         "D": "reinforce"
       },
       "answer": "A",
-      "explanation": "Compromise = weaken.",
+      "explanation": "Compromise = weaken. 'compromise' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Read the full sentence for tone. Only 'compromise' fits logically."
     },
     {
       "id": "sc_adv_015",
@@ -279,14 +279,14 @@
         "D": "tentative"
       },
       "answer": "A",
-      "explanation": "Conscientious = thorough and careful.",
+      "explanation": "Conscientious = thorough and careful. 'conscientious' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Test each choice in the blank. 'conscientious' makes the sentence coherent."
     },
     {
       "id": "sc_adv_016",
@@ -298,14 +298,14 @@
         "D": "belated"
       },
       "answer": "A",
-      "explanation": "Covert = hidden/secretive.",
+      "explanation": "Covert = hidden/secretive. 'covert' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Signal: continuation. This means 'covert' is the logical choice."
     },
     {
       "id": "sc_adv_017",
@@ -317,14 +317,14 @@
         "D": "obscured"
       },
       "answer": "A",
-      "explanation": "Bolstered = strengthened.",
+      "explanation": "Bolstered = strengthened. 'bolstered' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Cover choices and predict a word. 'bolstered' is the closest match."
     },
     {
       "id": "sc_adv_018",
@@ -343,7 +343,7 @@
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Look for signal words (continuation). They point to 'visionary'."
     },
     {
       "id": "sc_adv_019",
@@ -355,14 +355,14 @@
         "D": "redundant"
       },
       "answer": "A",
-      "explanation": "Opaque = difficult to understand.",
+      "explanation": "Opaque = difficult to understand. 'opaque' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Read the full sentence for tone. Only 'opaque' fits logically."
     },
     {
       "id": "sc_adv_020",
@@ -374,14 +374,14 @@
         "D": "ambivalence"
       },
       "answer": "A",
-      "explanation": "Initiative drives adaptation.",
+      "explanation": "Initiative drives adaptation. 'initiative' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Test each choice in the blank. 'initiative' makes the sentence coherent."
     },
     {
       "id": "sc_adv_021",
@@ -393,14 +393,14 @@
         "D": "propel"
       },
       "answer": "A",
-      "explanation": "Assuage = calm or reduce.",
+      "explanation": "Assuage = calm or reduce. 'assuage' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Signal: continuation. This means 'assuage' is the logical choice."
     },
     {
       "id": "sc_adv_022",
@@ -412,14 +412,14 @@
         "D": "peripheral"
       },
       "answer": "A",
-      "explanation": "Groundbreaking = revolutionary.",
+      "explanation": "Groundbreaking = revolutionary. 'groundbreaking' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Cover choices and predict a word. 'groundbreaking' is the closest match."
     },
     {
       "id": "sc_adv_023",
@@ -431,14 +431,14 @@
         "D": "exhaustive"
       },
       "answer": "A",
-      "explanation": "Flexibility aids dynamic operations.",
+      "explanation": "Flexibility aids dynamic operations. 'flexible' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Look for signal words (continuation). They point to 'flexible'."
     },
     {
       "id": "sc_adv_024",
@@ -450,14 +450,14 @@
         "D": "constrained"
       },
       "answer": "A",
-      "explanation": "Coherent = logical and organized.",
+      "explanation": "Coherent = logical and organized. 'coherent' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Read the full sentence for tone. Only 'coherent' fits logically."
     },
     {
       "id": "sc_adv_025",
@@ -469,14 +469,14 @@
         "D": "hasty"
       },
       "answer": "A",
-      "explanation": "Meticulous coordination complements discipline.",
+      "explanation": "Meticulous coordination complements discipline. 'meticulous' is the correct answer because it logically and grammatically completes the sentence.",
       "steps": [
         "1. Read the entire sentence to understand the overall meaning.",
         "2. Identify signal words (but, therefore, although) that indicate direction.",
         "3. Predict the type of word needed (positive/negative, action/description).",
         "4. Choose the word that logically completes the thought."
       ],
-      "fastStrategy": "Cover the choices, predict your own word, then find the closest match."
+      "fastStrategy": "Test each choice in the blank. 'meticulous' makes the sentence coherent."
     }
   ]
 }
