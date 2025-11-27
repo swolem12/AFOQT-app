@@ -10,14 +10,36 @@
         "width": 300,
         "height": 300,
         "points": [
-          { "name": "A", "x": 60, "y": 220 },
-          { "name": "B", "x": 240, "y": 220 },
-          { "name": "C", "x": 150, "y": 80 }
+          {
+            "name": "A",
+            "x": 60,
+            "y": 220
+          },
+          {
+            "name": "B",
+            "x": 240,
+            "y": 220
+          },
+          {
+            "name": "C",
+            "x": 150,
+            "y": 80
+          }
         ],
         "angleLabels": [
-          { "vertex": "A", "label": "50°" },
-          { "vertex": "B", "label": "60°" },
-          { "vertex": "C", "label": "x°", "highlight": true }
+          {
+            "vertex": "A",
+            "label": "50°"
+          },
+          {
+            "vertex": "B",
+            "label": "60°"
+          },
+          {
+            "vertex": "C",
+            "label": "x°",
+            "highlight": true
+          }
         ],
         "styleHints": {
           "triangleColor": "black",
@@ -62,7 +84,47 @@
         "2. The other two angles are 30° and 60°.",
         "3. That specific combination is called a 30-60-90 triangle."
       ],
-      "fastStrategy": "Memorize 30-60-90 and 45-45-90 as the two classic special right triangles."
+      "fastStrategy": "Memorize 30-60-90 and 45-45-90 as the two classic special right triangles.",
+      "uiSpec": {
+        "type": "geometry_triangle_diagram",
+        "width": 300,
+        "height": 300,
+        "vertices": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 80,
+            "y": 220,
+            "label": "B"
+          },
+          {
+            "x": 220,
+            "y": 220,
+            "label": "C"
+          }
+        ],
+        "angles": [
+          {
+            "vertex": 0,
+            "label": "30°"
+          },
+          {
+            "vertex": 1,
+            "label": "x°"
+          },
+          {
+            "vertex": 2,
+            "label": "y°"
+          }
+        ],
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
     {
       "id": "mk_geo_b_028",
@@ -80,7 +142,44 @@
         "1. Recall the standard polygon names.",
         "2. Match 5 sides to 'pentagon'."
       ],
-      "fastStrategy": "Think of 'Pentagon' building (DOD HQ) to remember 5 sides = pentagon."
+      "fastStrategy": "Think of 'Pentagon' building (DOD HQ) to remember 5 sides = pentagon.",
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 245,
+            "y": 119,
+            "label": "B"
+          },
+          {
+            "x": 209,
+            "y": 231,
+            "label": "C"
+          },
+          {
+            "x": 91,
+            "y": 231,
+            "label": "D"
+          },
+          {
+            "x": 55,
+            "y": 119,
+            "label": "E"
+          }
+        ],
+        "labels": true,
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
     {
       "id": "mk_geo_b_029",
@@ -99,7 +198,49 @@
         "2. Substitute n = 6 → (6 − 2) × 180° = 4 × 180°.",
         "3. Compute 4 × 180° = 720°."
       ],
-      "fastStrategy": "Polygon sum formula: (n − 2) × 180°. For quick checks, a quadrilateral (n=4) gives 360°; that anchors the pattern."
+      "fastStrategy": "Polygon sum formula: (n − 2) × 180°. For quick checks, a quadrilateral (n=4) gives 360°; that anchors the pattern.",
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 237,
+            "y": 100,
+            "label": "B"
+          },
+          {
+            "x": 237,
+            "y": 200,
+            "label": "C"
+          },
+          {
+            "x": 150,
+            "y": 250,
+            "label": "D"
+          },
+          {
+            "x": 63,
+            "y": 200,
+            "label": "E"
+          },
+          {
+            "x": 63,
+            "y": 100,
+            "label": "F"
+          }
+        ],
+        "labels": true,
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
     {
       "id": "mk_geo_b_030",
@@ -118,7 +259,39 @@
         "2. That is the definition of a square.",
         "3. Other quadrilaterals miss either equal sides or right angles."
       ],
-      "fastStrategy": "Square = rectangle + rhombus: both equal sides and right angles."
+      "fastStrategy": "Square = rectangle + rhombus: both equal sides and right angles.",
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 250,
+            "y": 150,
+            "label": "B"
+          },
+          {
+            "x": 150,
+            "y": 250,
+            "label": "C"
+          },
+          {
+            "x": 50,
+            "y": 150,
+            "label": "D"
+          }
+        ],
+        "labels": true,
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
     {
       "uiSpec": {
@@ -126,14 +299,37 @@
         "width": 300,
         "height": 300,
         "points": [
-          { "name": "A", "x": 80, "y": 220 },
-          { "name": "B", "x": 220, "y": 220 },
-          { "name": "C", "x": 150, "y": 100 }
+          {
+            "name": "A",
+            "x": 80,
+            "y": 220
+          },
+          {
+            "name": "B",
+            "x": 220,
+            "y": 220
+          },
+          {
+            "name": "C",
+            "x": 150,
+            "y": 100
+          }
         ],
         "angleLabels": [
-          { "vertex": "A", "label": "x°", "highlight": true },
-          { "vertex": "B", "label": "x°", "highlight": true },
-          { "vertex": "C", "label": "40°" }
+          {
+            "vertex": "A",
+            "label": "x°",
+            "highlight": true
+          },
+          {
+            "vertex": "B",
+            "label": "x°",
+            "highlight": true
+          },
+          {
+            "vertex": "C",
+            "label": "40°"
+          }
         ]
       },
       "copilotInstruction": "Draw an isosceles triangle with base AB horizontal and equal legs AC and BC. Label ∠A and ∠B each as x° and ∠C as 40°.",
@@ -173,7 +369,47 @@
         "3. Add: 64 + 225 = 289.",
         "4. √289 = 17."
       ],
-      "fastStrategy": "8–15–17 is another standard Pythagorean triple to memorize (along with 3–4–5 and 5–12–13)."
+      "fastStrategy": "8–15–17 is another standard Pythagorean triple to memorize (along with 3–4–5 and 5–12–13).",
+      "uiSpec": {
+        "type": "geometry_triangle_diagram",
+        "width": 300,
+        "height": 300,
+        "vertices": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 80,
+            "y": 220,
+            "label": "B"
+          },
+          {
+            "x": 220,
+            "y": 220,
+            "label": "C"
+          }
+        ],
+        "angles": [
+          {
+            "vertex": 0,
+            "label": "60°"
+          },
+          {
+            "vertex": 1,
+            "label": "x°"
+          },
+          {
+            "vertex": 2,
+            "label": "y°"
+          }
+        ],
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
     {
       "id": "mk_geo_b_033",
@@ -220,12 +456,38 @@
         "width": 300,
         "height": 300,
         "lines": [
-          { "from": { "x": 40, "y": 150 }, "to": { "x": 260, "y": 150 } },
-          { "from": { "x": 150, "y": 150 }, "to": { "x": 260, "y": 80 } }
+          {
+            "from": {
+              "x": 40,
+              "y": 150
+            },
+            "to": {
+              "x": 260,
+              "y": 150
+            }
+          },
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 260,
+              "y": 80
+            }
+          }
         ],
         "angleLabels": [
-          { "position": "right", "label": "130°", "highlight": true },
-          { "position": "left", "label": "x°", "highlight": true }
+          {
+            "position": "right",
+            "label": "130°",
+            "highlight": true
+          },
+          {
+            "position": "left",
+            "label": "x°",
+            "highlight": true
+          }
         ]
       },
       "copilotInstruction": "Draw a straight horizontal line and another ray sharing the same vertex on the right, forming a straight-line pair. Label the larger angle on the right as 130° and the adjacent angle on the left along the straight line as x°.",
@@ -291,14 +553,38 @@
         "width": 300,
         "height": 300,
         "points": [
-          { "name": "A", "x": 70, "y": 220 },
-          { "name": "B", "x": 230, "y": 220 },
-          { "name": "C", "x": 260, "y": 120 },
-          { "name": "D", "x": 40, "y": 120 }
+          {
+            "name": "A",
+            "x": 70,
+            "y": 220
+          },
+          {
+            "name": "B",
+            "x": 230,
+            "y": 220
+          },
+          {
+            "name": "C",
+            "x": 260,
+            "y": 120
+          },
+          {
+            "name": "D",
+            "x": 40,
+            "y": 120
+          }
         ],
         "sideLabels": [
-          { "from": "A", "to": "B", "label": "parallel" },
-          { "from": "D", "to": "C", "label": "parallel" }
+          {
+            "from": "A",
+            "to": "B",
+            "label": "parallel"
+          },
+          {
+            "from": "D",
+            "to": "C",
+            "label": "parallel"
+          }
         ]
       },
       "copilotInstruction": "Draw a trapezoid with top and bottom bases horizontal. Label the top and bottom bases as 'parallel'. Leave the legs slanted.",
@@ -356,18 +642,73 @@
         "2. Opposite sides are parallel, but that is also true of parallelograms.",
         "3. Equal sides are not required; that is a square."
       ],
-      "fastStrategy": "Rectangles: four 90° angles; squares are 'special rectangles' with all sides equal."
+      "fastStrategy": "Rectangles: four 90° angles; squares are 'special rectangles' with all sides equal.",
+      "uiSpec": {
+        "type": "geometry_angle_diagram",
+        "width": 300,
+        "height": 300,
+        "showGrid": false,
+        "lines": [
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 250,
+              "y": 150
+            }
+          },
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 221,
+              "y": 79
+            }
+          }
+        ],
+        "angleArc": {
+          "center": {
+            "x": 150,
+            "y": 150
+          },
+          "radius": 35,
+          "startRay": 0,
+          "endRay": 1,
+          "label": "45°",
+          "measureDegrees": 45
+        },
+        "styleHints": {
+          "baseLineColor": "#00ffff",
+          "highlightAngleColor": "#ffff00",
+          "labelsColor": "#00ffff"
+        }
+      }
     },
     {
       "uiSpec": {
         "type": "geometry_circle_diagram",
         "width": 300,
         "height": 300,
-        "center": { "x": 150, "y": 150 },
+        "center": {
+          "x": 150,
+          "y": 150
+        },
         "radius": 80,
         "radii": [
-          { "from": "center", "toAngleDegrees": 0, "label": "r" },
-          { "from": "center", "toAngleDegrees": 180, "label": "r" }
+          {
+            "from": "center",
+            "toAngleDegrees": 0,
+            "label": "r"
+          },
+          {
+            "from": "center",
+            "toAngleDegrees": 180,
+            "label": "r"
+          }
         ],
         "diameter": {
           "throughCenter": true,
@@ -457,13 +798,55 @@
         "width": 300,
         "height": 300,
         "lines": [
-          { "from": { "x": 150, "y": 150 }, "to": { "x": 250, "y": 150 } },
-          { "from": { "x": 150, "y": 150 }, "to": { "x": 150, "y": 50 } },
-          { "from": { "x": 150, "y": 150 }, "to": { "x": 70, "y": 210 } }
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 250,
+              "y": 150
+            }
+          },
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 150,
+              "y": 50
+            }
+          },
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 70,
+              "y": 210
+            }
+          }
         ],
         "angleLabels": [
-          { "vertex": "center", "label": "30°", "betweenRays": [0, 1] },
-          { "vertex": "center", "label": "x°", "betweenRays": [1, 2], "highlight": true }
+          {
+            "vertex": "center",
+            "label": "30°",
+            "betweenRays": [
+              0,
+              1
+            ]
+          },
+          {
+            "vertex": "center",
+            "label": "x°",
+            "betweenRays": [
+              1,
+              2
+            ],
+            "highlight": true
+          }
         ]
       },
       "copilotInstruction": "Draw three rays from a common vertex forming adjacent angles on a straight half-plane. Label the first angle (between right and up rays) 30°, and the next angle (between up and down-left rays) as x°. Show that together they form a right angle (90°).",
@@ -502,7 +885,51 @@
         "2. Only the square guarantees both equal sides and 90° angles.",
         "3. So the answer is square."
       ],
-      "fastStrategy": "Square = 'perfect quadrilateral': equal sides AND right angles."
+      "fastStrategy": "Square = 'perfect quadrilateral': equal sides AND right angles.",
+      "uiSpec": {
+        "type": "geometry_angle_diagram",
+        "width": 300,
+        "height": 300,
+        "showGrid": false,
+        "lines": [
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 250,
+              "y": 150
+            }
+          },
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 221,
+              "y": 79
+            }
+          }
+        ],
+        "angleArc": {
+          "center": {
+            "x": 150,
+            "y": 150
+          },
+          "radius": 35,
+          "startRay": 0,
+          "endRay": 1,
+          "label": "45°",
+          "measureDegrees": 45
+        },
+        "styleHints": {
+          "baseLineColor": "#00ffff",
+          "highlightAngleColor": "#ffff00",
+          "labelsColor": "#00ffff"
+        }
+      }
     },
     {
       "id": "mk_geo_b_047",
@@ -521,7 +948,51 @@
         "2. Identify the statement that is only true for squares, not general rectangles: all sides equal.",
         "3. Thus option D is not a required rectangle property."
       ],
-      "fastStrategy": "If you see 'all sides equal', think 'square or rhombus', not generic rectangle."
+      "fastStrategy": "If you see 'all sides equal', think 'square or rhombus', not generic rectangle.",
+      "uiSpec": {
+        "type": "geometry_angle_diagram",
+        "width": 300,
+        "height": 300,
+        "showGrid": false,
+        "lines": [
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 250,
+              "y": 150
+            }
+          },
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 221,
+              "y": 79
+            }
+          }
+        ],
+        "angleArc": {
+          "center": {
+            "x": 150,
+            "y": 150
+          },
+          "radius": 35,
+          "startRay": 0,
+          "endRay": 1,
+          "label": "45°",
+          "measureDegrees": 45
+        },
+        "styleHints": {
+          "baseLineColor": "#00ffff",
+          "highlightAngleColor": "#ffff00",
+          "labelsColor": "#00ffff"
+        }
+      }
     },
     {
       "id": "mk_geo_b_048",
@@ -562,7 +1033,47 @@
         "3. Check: 13 > 12 → inequality satisfied.",
         "4. Therefore, these sides can form a triangle."
       ],
-      "fastStrategy": "Quick test: add the two smallest sides; if that sum is bigger than the largest, the triangle works."
+      "fastStrategy": "Quick test: add the two smallest sides; if that sum is bigger than the largest, the triangle works.",
+      "uiSpec": {
+        "type": "geometry_triangle_diagram",
+        "width": 300,
+        "height": 300,
+        "vertices": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 80,
+            "y": 220,
+            "label": "B"
+          },
+          {
+            "x": 220,
+            "y": 220,
+            "label": "C"
+          }
+        ],
+        "angles": [
+          {
+            "vertex": 0,
+            "label": "60°"
+          },
+          {
+            "vertex": 1,
+            "label": "x°"
+          },
+          {
+            "vertex": 2,
+            "label": "y°"
+          }
+        ],
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
     {
       "id": "mk_geo_b_050",
@@ -582,7 +1093,47 @@
         "3. Compare: 5 < 6 → triangle inequality fails.",
         "4. Therefore, these lengths cannot form a triangle."
       ],
-      "fastStrategy": "If the sum of the two smallest sides is less than or equal to the largest, triangle is impossible."
+      "fastStrategy": "If the sum of the two smallest sides is less than or equal to the largest, triangle is impossible.",
+      "uiSpec": {
+        "type": "geometry_triangle_diagram",
+        "width": 300,
+        "height": 300,
+        "vertices": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 80,
+            "y": 220,
+            "label": "B"
+          },
+          {
+            "x": 220,
+            "y": 220,
+            "label": "C"
+          }
+        ],
+        "angles": [
+          {
+            "vertex": 0,
+            "label": "60°"
+          },
+          {
+            "vertex": 1,
+            "label": "x°"
+          },
+          {
+            "vertex": 2,
+            "label": "y°"
+          }
+        ],
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     }
   ]
 }

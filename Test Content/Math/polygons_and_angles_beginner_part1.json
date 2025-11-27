@@ -4,18 +4,37 @@
   "difficulty": "beginner",
   "part": 1,
   "questions": [
-
     {
       "uiSpec": {
         "type": "polygon_basic",
         "width": 300,
         "height": 300,
         "points": [
-          { "x": 80, "y": 220, "label": "A" },
-          { "x": 220, "y": 220, "label": "B" },
-          { "x": 250, "y": 120, "label": "C" },
-          { "x": 150, "y": 60, "label": "D" },
-          { "x": 50, "y": 120, "label": "E" }
+          {
+            "x": 80,
+            "y": 220,
+            "label": "A"
+          },
+          {
+            "x": 220,
+            "y": 220,
+            "label": "B"
+          },
+          {
+            "x": 250,
+            "y": 120,
+            "label": "C"
+          },
+          {
+            "x": 150,
+            "y": 60,
+            "label": "D"
+          },
+          {
+            "x": 50,
+            "y": 120,
+            "label": "E"
+          }
         ],
         "labels": true,
         "styleHints": {
@@ -41,7 +60,6 @@
       ],
       "fastStrategy": "Pentagon = 5 sides. Hexagon = 6. Octagon = 8."
     },
-
     {
       "id": "pa_b1_002",
       "question": "How many sides does a hexagon have?",
@@ -58,9 +76,50 @@
         "1. Memorize polygon prefixes: pent=5, hex=6, hept=7, oct=8.",
         "2. Therefore, a hexagon has 6 sides."
       ],
-      "fastStrategy": "Hex = six."
+      "fastStrategy": "Hex = six.",
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 237,
+            "y": 100,
+            "label": "B"
+          },
+          {
+            "x": 237,
+            "y": 200,
+            "label": "C"
+          },
+          {
+            "x": 150,
+            "y": 250,
+            "label": "D"
+          },
+          {
+            "x": 63,
+            "y": 200,
+            "label": "E"
+          },
+          {
+            "x": 63,
+            "y": 100,
+            "label": "F"
+          }
+        ],
+        "labels": true,
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "pa_b1_003",
       "question": "How many sides does an octagon have?",
@@ -77,19 +136,82 @@
         "1. Recall that 'oct-' means eight.",
         "2. So an octagon has 8 sides."
       ],
-      "fastStrategy": "Octopus has eight arms → octagon = 8."
+      "fastStrategy": "Octopus has eight arms → octagon = 8.",
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 221,
+            "y": 79,
+            "label": "B"
+          },
+          {
+            "x": 250,
+            "y": 150,
+            "label": "C"
+          },
+          {
+            "x": 221,
+            "y": 221,
+            "label": "D"
+          },
+          {
+            "x": 150,
+            "y": 250,
+            "label": "E"
+          },
+          {
+            "x": 79,
+            "y": 221,
+            "label": "F"
+          },
+          {
+            "x": 50,
+            "y": 150,
+            "label": "G"
+          },
+          {
+            "x": 79,
+            "y": 79,
+            "label": "H"
+          }
+        ],
+        "labels": true,
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "uiSpec": {
         "type": "polygon_basic",
         "width": 300,
         "height": 300,
         "points": [
-          { "x": 100, "y": 220 },
-          { "x": 200, "y": 220 },
-          { "x": 200, "y": 120 },
-          { "x": 100, "y": 120 }
+          {
+            "x": 100,
+            "y": 220
+          },
+          {
+            "x": 200,
+            "y": 220
+          },
+          {
+            "x": 200,
+            "y": 120
+          },
+          {
+            "x": 100,
+            "y": 120
+          }
         ],
         "labels": false
       },
@@ -111,7 +233,6 @@
       ],
       "fastStrategy": "Quad = 4."
     },
-
     {
       "id": "pa_b1_005",
       "question": "What is the sum of the interior angles of a triangle?",
@@ -128,9 +249,48 @@
         "1. The basic polygon angle formula: (n−2)×180°.",
         "2. For n=3: (3−2)×180° = 180°."
       ],
-      "fastStrategy": "Triangle = 180° always."
+      "fastStrategy": "Triangle = 180° always.",
+      "uiSpec": {
+        "type": "geometry_triangle_diagram",
+        "width": 300,
+        "height": 300,
+        "vertices": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 80,
+            "y": 220,
+            "label": "B"
+          },
+          {
+            "x": 220,
+            "y": 220,
+            "label": "C"
+          }
+        ],
+        "angles": [
+          {
+            "vertex": 0,
+            "label": "60°"
+          },
+          {
+            "vertex": 1,
+            "label": "x°"
+          },
+          {
+            "vertex": 2,
+            "label": "y°"
+          }
+        ],
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "pa_b1_006",
       "question": "What is the sum of the interior angles of a quadrilateral?",
@@ -148,9 +308,52 @@
         "2. Plug in n=4.",
         "3. Get 360°."
       ],
-      "fastStrategy": "Quad = 4 sides → two triangles → 2×180° = 360°."
+      "fastStrategy": "Quad = 4 sides → two triangles → 2×180° = 360°.",
+      "uiSpec": {
+        "type": "geometry_angle_diagram",
+        "width": 300,
+        "height": 300,
+        "showGrid": false,
+        "lines": [
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 250,
+              "y": 150
+            }
+          },
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 221,
+              "y": 79
+            }
+          }
+        ],
+        "angleArc": {
+          "center": {
+            "x": 150,
+            "y": 150
+          },
+          "radius": 35,
+          "startRay": 0,
+          "endRay": 1,
+          "label": "45°",
+          "measureDegrees": 45
+        },
+        "styleHints": {
+          "baseLineColor": "#00ffff",
+          "highlightAngleColor": "#ffff00",
+          "labelsColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "pa_b1_007",
       "question": "What is the sum of interior angles of a pentagon?",
@@ -168,9 +371,45 @@
         "2. Compute 3×180°.",
         "3. Sum=540°."
       ],
-      "fastStrategy": "Pentagon → 5 sides → 3 triangles → 540°."
+      "fastStrategy": "Pentagon → 5 sides → 3 triangles → 540°.",
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 245,
+            "y": 119,
+            "label": "B"
+          },
+          {
+            "x": 209,
+            "y": 231,
+            "label": "C"
+          },
+          {
+            "x": 91,
+            "y": 231,
+            "label": "D"
+          },
+          {
+            "x": 55,
+            "y": 119,
+            "label": "E"
+          }
+        ],
+        "labels": true,
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "pa_b1_008",
       "question": "What is the sum of the interior angles of a hexagon?",
@@ -188,9 +427,50 @@
         "2. Plug in n=6.",
         "3. Compute 4×180°=720°."
       ],
-      "fastStrategy": "Hex → 6 sides → 4 triangles → 720°."
+      "fastStrategy": "Hex → 6 sides → 4 triangles → 720°.",
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 237,
+            "y": 100,
+            "label": "B"
+          },
+          {
+            "x": 237,
+            "y": 200,
+            "label": "C"
+          },
+          {
+            "x": 150,
+            "y": 250,
+            "label": "D"
+          },
+          {
+            "x": 63,
+            "y": 200,
+            "label": "E"
+          },
+          {
+            "x": 63,
+            "y": 100,
+            "label": "F"
+          }
+        ],
+        "labels": true,
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "pa_b1_009",
       "question": "A regular pentagon has interior angles of equal measure. What is the measure of each interior angle?",
@@ -207,9 +487,45 @@
         "1. Sum interior = 540°.",
         "2. Divide 540° by 5 = 108°."
       ],
-      "fastStrategy": "Regular = all angles equal → divide total by n."
+      "fastStrategy": "Regular = all angles equal → divide total by n.",
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 245,
+            "y": 119,
+            "label": "B"
+          },
+          {
+            "x": 209,
+            "y": 231,
+            "label": "C"
+          },
+          {
+            "x": 91,
+            "y": 231,
+            "label": "D"
+          },
+          {
+            "x": 55,
+            "y": 119,
+            "label": "E"
+          }
+        ],
+        "labels": true,
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "pa_b1_010",
       "question": "A regular hexagon has interior angles of equal measure. What is each interior angle?",
@@ -226,21 +542,88 @@
         "1. Use sum 720°.",
         "2. Divide by 6."
       ],
-      "fastStrategy": "Hexagon → 120° interior each."
+      "fastStrategy": "Hexagon → 120° interior each.",
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 237,
+            "y": 100,
+            "label": "B"
+          },
+          {
+            "x": 237,
+            "y": 200,
+            "label": "C"
+          },
+          {
+            "x": 150,
+            "y": 250,
+            "label": "D"
+          },
+          {
+            "x": 63,
+            "y": 200,
+            "label": "E"
+          },
+          {
+            "x": 63,
+            "y": 100,
+            "label": "F"
+          }
+        ],
+        "labels": true,
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "uiSpec": {
         "type": "angle_pair_vertical",
         "width": 300,
         "height": 300,
         "lines": [
-          { "from": { "x": 60, "y": 150 }, "to": { "x": 240, "y": 150 } },
-          { "from": { "x": 150, "y": 60 }, "to": { "x": 150, "y": 240 } }
+          {
+            "from": {
+              "x": 60,
+              "y": 150
+            },
+            "to": {
+              "x": 240,
+              "y": 150
+            }
+          },
+          {
+            "from": {
+              "x": 150,
+              "y": 60
+            },
+            "to": {
+              "x": 150,
+              "y": 240
+            }
+          }
         ],
         "angleLabels": [
-          { "position": "topRight", "label": "x°", "highlight": true },
-          { "position": "bottomLeft", "label": "120°", "highlight": true }
+          {
+            "position": "topRight",
+            "label": "x°",
+            "highlight": true
+          },
+          {
+            "position": "bottomLeft",
+            "label": "120°",
+            "highlight": true
+          }
         ]
       },
       "copilotInstruction": "Draw two perpendicular lines forming an X. Label the bottom-left angle as 120°, and the opposite angle top-right as x°.",
@@ -262,7 +645,6 @@
       ],
       "fastStrategy": "X intersection → opposite angles match."
     },
-
     {
       "id": "pa_b1_012",
       "question": "Two angles are supplementary. One measures 45°. What is the measure of the other angle?",
@@ -275,10 +657,56 @@
       },
       "answer": "D",
       "explanation": "Supplementary = 180°. 180°−45°=135°.",
-      "steps": ["1. Use 180° sum.", "2. Subtract."],
-      "fastStrategy": "Supplementary → 180°."
+      "steps": [
+        "1. Use 180° sum.",
+        "2. Subtract."
+      ],
+      "fastStrategy": "Supplementary → 180°.",
+      "uiSpec": {
+        "type": "geometry_angle_diagram",
+        "width": 300,
+        "height": 300,
+        "showGrid": false,
+        "lines": [
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 250,
+              "y": 150
+            }
+          },
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 221,
+              "y": 79
+            }
+          }
+        ],
+        "angleArc": {
+          "center": {
+            "x": 150,
+            "y": 150
+          },
+          "radius": 35,
+          "startRay": 0,
+          "endRay": 1,
+          "label": "45°",
+          "measureDegrees": 45
+        },
+        "styleHints": {
+          "baseLineColor": "#00ffff",
+          "highlightAngleColor": "#ffff00",
+          "labelsColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "pa_b1_013",
       "question": "Two angles are complementary. One measures 70°. The other is:",
@@ -295,9 +723,52 @@
         "1. Use 90° total.",
         "2. Subtract 70°."
       ],
-      "fastStrategy": "Complementary = 90°."
+      "fastStrategy": "Complementary = 90°.",
+      "uiSpec": {
+        "type": "geometry_angle_diagram",
+        "width": 300,
+        "height": 300,
+        "showGrid": false,
+        "lines": [
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 250,
+              "y": 150
+            }
+          },
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 184,
+              "y": 56
+            }
+          }
+        ],
+        "angleArc": {
+          "center": {
+            "x": 150,
+            "y": 150
+          },
+          "radius": 35,
+          "startRay": 0,
+          "endRay": 1,
+          "label": "70°",
+          "measureDegrees": 70
+        },
+        "styleHints": {
+          "baseLineColor": "#00ffff",
+          "highlightAngleColor": "#ffff00",
+          "labelsColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "pa_b1_014",
       "question": "If one angle of a triangle is 100°, the triangle is:",
@@ -314,9 +785,48 @@
         "1. Compare 100° to 90°.",
         "2. >90° means obtuse triangle."
       ],
-      "fastStrategy": "One obtuse angle → whole triangle is obtuse."
+      "fastStrategy": "One obtuse angle → whole triangle is obtuse.",
+      "uiSpec": {
+        "type": "geometry_triangle_diagram",
+        "width": 300,
+        "height": 300,
+        "vertices": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 80,
+            "y": 220,
+            "label": "B"
+          },
+          {
+            "x": 220,
+            "y": 220,
+            "label": "C"
+          }
+        ],
+        "angles": [
+          {
+            "vertex": 0,
+            "label": "100°"
+          },
+          {
+            "vertex": 1,
+            "label": "x°"
+          },
+          {
+            "vertex": 2,
+            "label": "y°"
+          }
+        ],
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "pa_b1_015",
       "question": "A triangle has angles 40° and 75°. What is the third angle?",
@@ -333,20 +843,79 @@
         "1. Add known angles: 115°.",
         "2. Subtract from 180°."
       ],
-      "fastStrategy": "Third triangle angle = 180 minus the sum of the other two."
+      "fastStrategy": "Third triangle angle = 180 minus the sum of the other two.",
+      "uiSpec": {
+        "type": "geometry_triangle_diagram",
+        "width": 300,
+        "height": 300,
+        "vertices": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 80,
+            "y": 220,
+            "label": "B"
+          },
+          {
+            "x": 220,
+            "y": 220,
+            "label": "C"
+          }
+        ],
+        "angles": [
+          {
+            "vertex": 0,
+            "label": "40°"
+          },
+          {
+            "vertex": 1,
+            "label": "x°"
+          },
+          {
+            "vertex": 2,
+            "label": "y°"
+          }
+        ],
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "uiSpec": {
         "type": "polygon_basic",
         "width": 300,
         "height": 300,
         "points": [
-          { "label": "A", "x": 80, "y": 220 },
-          { "label": "B", "x": 220, "y": 220 },
-          { "label": "C", "x": 260, "y": 140 },
-          { "label": "D", "x": 150, "y": 60 },
-          { "label": "E", "x": 60, "y": 140 }
+          {
+            "label": "A",
+            "x": 80,
+            "y": 220
+          },
+          {
+            "label": "B",
+            "x": 220,
+            "y": 220
+          },
+          {
+            "label": "C",
+            "x": 260,
+            "y": 140
+          },
+          {
+            "label": "D",
+            "x": 150,
+            "y": 60
+          },
+          {
+            "label": "E",
+            "x": 60,
+            "y": 140
+          }
         ]
       },
       "copilotInstruction": "Draw a symmetrical five-sided polygon (regular-like).",
@@ -368,7 +937,6 @@
       ],
       "fastStrategy": "Regular = equal everything."
     },
-
     {
       "id": "pa_b1_017",
       "question": "How many diagonals does a quadrilateral have?",
@@ -387,7 +955,6 @@
       ],
       "fastStrategy": "Quad → always 2 diagonals."
     },
-
     {
       "id": "pa_b1_018",
       "question": "How many diagonals does a pentagon have?",
@@ -404,9 +971,45 @@
         "1. Plug n=5.",
         "2. 5*(5−3)/2=5."
       ],
-      "fastStrategy": "Pentagon = 5 diagonals always."
+      "fastStrategy": "Pentagon = 5 diagonals always.",
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 245,
+            "y": 119,
+            "label": "B"
+          },
+          {
+            "x": 209,
+            "y": 231,
+            "label": "C"
+          },
+          {
+            "x": 91,
+            "y": 231,
+            "label": "D"
+          },
+          {
+            "x": 55,
+            "y": 119,
+            "label": "E"
+          }
+        ],
+        "labels": true,
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "pa_b1_019",
       "question": "How many diagonals does a hexagon have?",
@@ -422,9 +1025,50 @@
       "steps": [
         "1. Compute 6×3/2 = 9."
       ],
-      "fastStrategy": "Hexagon → 9 diagonals."
+      "fastStrategy": "Hexagon → 9 diagonals.",
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 237,
+            "y": 100,
+            "label": "B"
+          },
+          {
+            "x": 237,
+            "y": 200,
+            "label": "C"
+          },
+          {
+            "x": 150,
+            "y": 250,
+            "label": "D"
+          },
+          {
+            "x": 63,
+            "y": 200,
+            "label": "E"
+          },
+          {
+            "x": 63,
+            "y": 100,
+            "label": "F"
+          }
+        ],
+        "labels": true,
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "pa_b1_020",
       "question": "What is the exterior angle sum of any polygon?",
@@ -441,9 +1085,45 @@
         "1. Exterior sum constant = 360°.",
         "2. Holds for all convex polygons."
       ],
-      "fastStrategy": "Exterior total never changes: always 360°."
+      "fastStrategy": "Exterior total never changes: always 360°.",
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 245,
+            "y": 119,
+            "label": "B"
+          },
+          {
+            "x": 209,
+            "y": 231,
+            "label": "C"
+          },
+          {
+            "x": 91,
+            "y": 231,
+            "label": "D"
+          },
+          {
+            "x": 55,
+            "y": 119,
+            "label": "E"
+          }
+        ],
+        "labels": true,
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "pa_b1_021",
       "question": "In a regular octagon, each exterior angle measures:",
@@ -460,9 +1140,60 @@
         "1. Use 360°/n.",
         "2. n=8 → 45°."
       ],
-      "fastStrategy": "Regular → exterior = 360/n."
+      "fastStrategy": "Regular → exterior = 360/n.",
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 221,
+            "y": 79,
+            "label": "B"
+          },
+          {
+            "x": 250,
+            "y": 150,
+            "label": "C"
+          },
+          {
+            "x": 221,
+            "y": 221,
+            "label": "D"
+          },
+          {
+            "x": 150,
+            "y": 250,
+            "label": "E"
+          },
+          {
+            "x": 79,
+            "y": 221,
+            "label": "F"
+          },
+          {
+            "x": 50,
+            "y": 150,
+            "label": "G"
+          },
+          {
+            "x": 79,
+            "y": 79,
+            "label": "H"
+          }
+        ],
+        "labels": true,
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "pa_b1_022",
       "question": "In a regular hexagon, each exterior angle measures:",
@@ -479,9 +1210,50 @@
         "1. Use exterior formula.",
         "2. 360°/6=60°."
       ],
-      "fastStrategy": "Hexagon → exterior = 60°."
+      "fastStrategy": "Hexagon → exterior = 60°.",
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 237,
+            "y": 100,
+            "label": "B"
+          },
+          {
+            "x": 237,
+            "y": 200,
+            "label": "C"
+          },
+          {
+            "x": 150,
+            "y": 250,
+            "label": "D"
+          },
+          {
+            "x": 63,
+            "y": 200,
+            "label": "E"
+          },
+          {
+            "x": 63,
+            "y": 100,
+            "label": "F"
+          }
+        ],
+        "labels": true,
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "pa_b1_023",
       "question": "A triangle has angles measuring 55° and 65°. The triangle is:",
@@ -498,9 +1270,48 @@
         "1. Compute third angle.",
         "2. All angles acute."
       ],
-      "fastStrategy": "All angles less than 90° = acute."
+      "fastStrategy": "All angles less than 90° = acute.",
+      "uiSpec": {
+        "type": "geometry_triangle_diagram",
+        "width": 300,
+        "height": 300,
+        "vertices": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 80,
+            "y": 220,
+            "label": "B"
+          },
+          {
+            "x": 220,
+            "y": 220,
+            "label": "C"
+          }
+        ],
+        "angles": [
+          {
+            "vertex": 0,
+            "label": "55°"
+          },
+          {
+            "vertex": 1,
+            "label": "x°"
+          },
+          {
+            "vertex": 2,
+            "label": "y°"
+          }
+        ],
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "pa_b1_024",
       "question": "A polygon has interior angles that sum to 1260°. How many sides does it have?",
@@ -517,9 +1328,45 @@
         "1. Divide 1260° by 180° → 7.",
         "2. Add 2 → 9 sides."
       ],
-      "fastStrategy": "Interior sum ÷ 180, then +2."
+      "fastStrategy": "Interior sum ÷ 180, then +2.",
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 245,
+            "y": 119,
+            "label": "B"
+          },
+          {
+            "x": 209,
+            "y": 231,
+            "label": "C"
+          },
+          {
+            "x": 91,
+            "y": 231,
+            "label": "D"
+          },
+          {
+            "x": 55,
+            "y": 119,
+            "label": "E"
+          }
+        ],
+        "labels": true,
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "pa_b1_025",
       "question": "A polygon has an interior angle sum of 900°. What kind of polygon is it?",
@@ -536,8 +1383,44 @@
         "1. 900° ÷ 180° = 5.",
         "2. Add 2 gives n=7."
       ],
-      "fastStrategy": "Interior sum ÷ 180 → add 2 → sides."
+      "fastStrategy": "Interior sum ÷ 180 → add 2 → sides.",
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 245,
+            "y": 119,
+            "label": "B"
+          },
+          {
+            "x": 209,
+            "y": 231,
+            "label": "C"
+          },
+          {
+            "x": 91,
+            "y": 231,
+            "label": "D"
+          },
+          {
+            "x": 55,
+            "y": 119,
+            "label": "E"
+          }
+        ],
+        "labels": true,
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     }
-
   ]
 }

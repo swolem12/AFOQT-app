@@ -268,7 +268,51 @@
         "2. Isolate the variable using inverse operations.",
         "3. Simplify and check your answer."
       ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division).",
+      "uiSpec": {
+        "type": "geometry_angle_diagram",
+        "width": 300,
+        "height": 300,
+        "showGrid": false,
+        "lines": [
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 250,
+              "y": 150
+            }
+          },
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 221,
+              "y": 79
+            }
+          }
+        ],
+        "angleArc": {
+          "center": {
+            "x": 150,
+            "y": 150
+          },
+          "radius": 35,
+          "startRay": 0,
+          "endRay": 1,
+          "label": "45°",
+          "measureDegrees": 45
+        },
+        "styleHints": {
+          "baseLineColor": "#00ffff",
+          "highlightAngleColor": "#ffff00",
+          "labelsColor": "#00ffff"
+        }
+      }
     },
     {
       "id": "mk_wp_b_015",

@@ -61,7 +61,29 @@
       "steps": [
         "Apply (x, -y)."
       ],
-      "fastStrategy": "Only y changes sign."
+      "fastStrategy": "Only y changes sign.",
+      "uiSpec": {
+        "type": "reflection_horizontal_line",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
     {
       "uiSpec": {
@@ -112,7 +134,29 @@
         "2. Apply the transformation rule to each point.",
         "3. Plot or describe the new position."
       ],
-      "fastStrategy": "Across y-axis → x changes sign."
+      "fastStrategy": "Across y-axis → x changes sign.",
+      "uiSpec": {
+        "type": "reflection_vertical_line",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
     {
       "uiSpec": {
@@ -162,7 +206,29 @@
         "2. Apply the transformation rule to each point.",
         "3. Plot or describe the new position."
       ],
-      "fastStrategy": "Flip both signs."
+      "fastStrategy": "Flip both signs.",
+      "uiSpec": {
+        "type": "reflection_horizontal_line",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
     {
       "uiSpec": {
@@ -218,7 +284,29 @@
         "2. Apply the transformation rule to each point.",
         "3. Plot or describe the new position."
       ],
-      "fastStrategy": "Just add using signs."
+      "fastStrategy": "Just add using signs.",
+      "uiSpec": {
+        "type": "coordinate_grid_points",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
     {
       "uiSpec": {
@@ -270,7 +358,29 @@
         "2. Apply the transformation rule to each point.",
         "3. Plot or describe the new position."
       ],
-      "fastStrategy": "Swap, flip y."
+      "fastStrategy": "Swap, flip y.",
+      "uiSpec": {
+        "type": "rotation_90",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
     {
       "uiSpec": {
@@ -322,7 +432,29 @@
         "2. Apply the transformation rule to each point.",
         "3. Plot or describe the new position."
       ],
-      "fastStrategy": "180° rotates both signs."
+      "fastStrategy": "180° rotates both signs.",
+      "uiSpec": {
+        "type": "rotation_90",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
     {
       "uiSpec": {
@@ -376,7 +508,29 @@
         "2. Apply the transformation rule to each point.",
         "3. Plot or describe the new position."
       ],
-      "fastStrategy": "x-reflection over vertical lines — mirror left/right."
+      "fastStrategy": "x-reflection over vertical lines — mirror left/right.",
+      "uiSpec": {
+        "type": "reflection_horizontal_line",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
     {
       "uiSpec": {
@@ -432,7 +586,29 @@
         "2. Apply the transformation rule to each point.",
         "3. Plot or describe the new position."
       ],
-      "fastStrategy": "Count vertical distance to line."
+      "fastStrategy": "Count vertical distance to line.",
+      "uiSpec": {
+        "type": "reflection_horizontal_line",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
     {
       "uiSpec": {
@@ -488,7 +664,29 @@
         "2. Apply the transformation rule to each point.",
         "3. Plot or describe the new position."
       ],
-      "fastStrategy": "Translation is always add-op."
+      "fastStrategy": "Translation is always add-op.",
+      "uiSpec": {
+        "type": "coordinate_grid_points",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
     {
       "uiSpec": {
@@ -540,7 +738,29 @@
         "2. Apply the transformation rule to each point.",
         "3. Plot or describe the new position."
       ],
-      "fastStrategy": "180° is easy: flip x and y signs."
+      "fastStrategy": "180° is easy: flip x and y signs.",
+      "uiSpec": {
+        "type": "rotation_90",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 3,
+            "y": 1
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
     {
       "uiSpec": {
@@ -596,7 +816,29 @@
         "2. Apply the transformation rule to each point.",
         "3. Plot or describe the new position."
       ],
-      "fastStrategy": "x → -x."
+      "fastStrategy": "x → -x.",
+      "uiSpec": {
+        "type": "reflection_vertical_line",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
     {
       "id": "tf_b1_023",
@@ -615,7 +857,29 @@
         "2. Apply the transformation rule to each point.",
         "3. Plot or describe the new position."
       ],
-      "fastStrategy": "Distance to line then mirror."
+      "fastStrategy": "Distance to line then mirror.",
+      "uiSpec": {
+        "type": "reflection_horizontal_line",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
     {
       "id": "tf_b1_024",
@@ -634,7 +898,29 @@
         "2. Apply the transformation rule to each point.",
         "3. Plot or describe the new position."
       ],
-      "fastStrategy": "180° always flips both components."
+      "fastStrategy": "180° always flips both components.",
+      "uiSpec": {
+        "type": "rotation_90",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
     {
       "id": "tf_b1_025",
@@ -653,7 +939,29 @@
         "2. Apply the transformation rule to each point.",
         "3. Plot or describe the new position."
       ],
-      "fastStrategy": "Translation = add dx, add dy."
+      "fastStrategy": "Translation = add dx, add dy.",
+      "uiSpec": {
+        "type": "coordinate_grid_points",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     }
   ]
 }

@@ -9,11 +9,23 @@
         "type": "slope_graph",
         "width": 300,
         "height": 300,
-        "xRange": [-5, 5],
-        "yRange": [-5, 5],
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
         "line": {
-          "point1": { "x": -4, "y": -2 },
-          "point2": { "x": 4, "y": 3 }
+          "point1": {
+            "x": -4,
+            "y": -2
+          },
+          "point2": {
+            "x": 4,
+            "y": 3
+          }
         },
         "showGrid": true,
         "showAxes": true
@@ -37,17 +49,28 @@
       ],
       "fastStrategy": "If the right end of the line is higher than the left end, the slope is positive. No calculation needed."
     },
-
     {
       "uiSpec": {
         "type": "slope_graph",
         "width": 300,
         "height": 300,
-        "xRange": [-5, 5],
-        "yRange": [-5, 5],
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
         "line": {
-          "point1": { "x": -4, "y": 3 },
-          "point2": { "x": 4, "y": -2 }
+          "point1": {
+            "x": -4,
+            "y": 3
+          },
+          "point2": {
+            "x": 4,
+            "y": -2
+          }
         },
         "showGrid": true,
         "showAxes": true
@@ -71,17 +94,28 @@
       ],
       "fastStrategy": "Right side lower than left side = negative slope."
     },
-
     {
       "uiSpec": {
         "type": "slope_graph",
         "width": 300,
         "height": 300,
-        "xRange": [-5, 5],
-        "yRange": [-5, 5],
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
         "line": {
-          "point1": { "x": -4, "y": 2 },
-          "point2": { "x": 4, "y": 2 }
+          "point1": {
+            "x": -4,
+            "y": 2
+          },
+          "point2": {
+            "x": 4,
+            "y": 2
+          }
         },
         "showGrid": true,
         "showAxes": true
@@ -105,17 +139,28 @@
       ],
       "fastStrategy": "Flat line = slope 0. Think of a level road."
     },
-
     {
       "uiSpec": {
         "type": "slope_graph",
         "width": 300,
         "height": 300,
-        "xRange": [-5, 5],
-        "yRange": [-5, 5],
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
         "line": {
-          "point1": { "x": 1, "y": -4 },
-          "point2": { "x": 1, "y": 4 }
+          "point1": {
+            "x": 1,
+            "y": -4
+          },
+          "point2": {
+            "x": 1,
+            "y": 4
+          }
         },
         "showGrid": true,
         "showAxes": true
@@ -140,7 +185,6 @@
       ],
       "fastStrategy": "Straight up and down line = undefined slope."
     },
-
     {
       "id": "mk_slope_b_005",
       "question": "Find the slope of the line that passes through the points (1, 2) and (3, 6).",
@@ -159,9 +203,33 @@
         "3. Compute the run: x2 - x1 = 3 - 1 = 2.",
         "4. Divide rise by run: 4 ÷ 2 = 2."
       ],
-      "fastStrategy": "Always subtract y-values first to see if the slope will be positive or negative, then compute the run."
+      "fastStrategy": "Always subtract y-values first to see if the slope will be positive or negative, then compute the run.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": 1,
+            "y": 2
+          },
+          "point2": {
+            "x": 3,
+            "y": 6
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_006",
       "question": "Find the slope of the line through the points (2, 5) and (6, 5).",
@@ -180,9 +248,33 @@
         "3. Compute run: 6 - 2 = 4.",
         "4. Slope = rise/run = 0/4 = 0."
       ],
-      "fastStrategy": "Same y-values = horizontal line = slope 0."
+      "fastStrategy": "Same y-values = horizontal line = slope 0.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": 2,
+            "y": 5
+          },
+          "point2": {
+            "x": 6,
+            "y": 5
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_007",
       "question": "Find the slope of the line through the points (4, 1) and (4, 8).",
@@ -201,9 +293,33 @@
         "3. Slope = rise/run would divide by 0.",
         "4. Division by 0 is undefined, so the slope is undefined."
       ],
-      "fastStrategy": "Same x-values = vertical line = undefined slope."
+      "fastStrategy": "Same x-values = vertical line = undefined slope.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": 4,
+            "y": 1
+          },
+          "point2": {
+            "x": 4,
+            "y": 8
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_008",
       "question": "Use the slope formula to find the slope between (0, 0) and (4, 2).",
@@ -222,9 +338,33 @@
         "3. Compute run: x2 - x1 = 4 - 0 = 4.",
         "4. Reduce 2/4 to 1/2."
       ],
-      "fastStrategy": "When one point is at the origin, the arithmetic is usually very quick and clean."
+      "fastStrategy": "When one point is at the origin, the arithmetic is usually very quick and clean.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": 0,
+            "y": 0
+          },
+          "point2": {
+            "x": 4,
+            "y": 2
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_009",
       "question": "Find the slope of the line that passes through the points (-2, 3) and (2, 3).",
@@ -243,9 +383,33 @@
         "3. Compute run: 2 - (-2) = 4.",
         "4. Slope = 0/4 = 0."
       ],
-      "fastStrategy": "Same y-value in a pair of points? You can immediately say slope = 0."
+      "fastStrategy": "Same y-value in a pair of points? You can immediately say slope = 0.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -2,
+            "y": 3
+          },
+          "point2": {
+            "x": 2,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_010",
       "question": "Find the slope of the line through (-1, -2) and (3, 6).",
@@ -264,9 +428,33 @@
         "3. Compute run: x2 - x1 = 3 - (-1) = 4.",
         "4. Divide: 8/4 = 2."
       ],
-      "fastStrategy": "Be careful with double negatives in the formula; treat '-(-2)' as '+2'."
+      "fastStrategy": "Be careful with double negatives in the formula; treat '-(-2)' as '+2'.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -1,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 6
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_011",
       "question": "What is the slope of the line given by the equation y = 3x + 1?",
@@ -284,9 +472,33 @@
         "2. Identify m, the coefficient of x, as 3.",
         "3. Therefore the slope is 3."
       ],
-      "fastStrategy": "In y = mx + b, just grab the number in front of x. That’s your slope."
+      "fastStrategy": "In y = mx + b, just grab the number in front of x. That’s your slope.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_012",
       "question": "What is the slope of the line given by the equation y = -2x + 5?",
@@ -304,9 +516,33 @@
         "2. The coefficient of x is -2.",
         "3. Therefore the slope of the line is -2."
       ],
-      "fastStrategy": "Sign matters: a minus sign in front of the x-coefficient means the slope is negative."
+      "fastStrategy": "Sign matters: a minus sign in front of the x-coefficient means the slope is negative.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_013",
       "question": "Which of the following equations has a slope of 0?",
@@ -324,9 +560,33 @@
         "2. That means as x changes, y stays at 4.",
         "3. No change in y means rise = 0, so slope = 0."
       ],
-      "fastStrategy": "If the equation is just y = (number), it’s a flat horizontal line with slope 0."
+      "fastStrategy": "If the equation is just y = (number), it’s a flat horizontal line with slope 0.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_014",
       "question": "Which of the following equations represents a vertical line (undefined slope)?",
@@ -344,9 +604,33 @@
         "2. The equation x = 3 fits this form.",
         "3. Therefore it represents a vertical line with undefined slope."
       ],
-      "fastStrategy": "x = number → vertical line → undefined slope. y = number → horizontal → slope 0."
+      "fastStrategy": "x = number → vertical line → undefined slope. y = number → horizontal → slope 0.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": 2,
+            "y": -3
+          },
+          "point2": {
+            "x": 2,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_015",
       "question": "A line increases 4 units in y for every 2 units in x. What is its slope?",
@@ -364,9 +648,33 @@
         "2. Compute the fraction: 4/2.",
         "3. Simplify to get 2."
       ],
-      "fastStrategy": "Whenever you see 'for every' in a slope description, think rise/run = that fraction."
+      "fastStrategy": "Whenever you see 'for every' in a slope description, think rise/run = that fraction.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_016",
       "question": "Find the slope of the line through (5, -1) and (1, -5).",
@@ -385,9 +693,33 @@
         "3. Compute run: x2 - x1 = 1 - 5 = -4.",
         "4. Slope = (-4)/(-4) = 1."
       ],
-      "fastStrategy": "When both rise and run are negative, the slope is positive because a negative divided by a negative is positive."
+      "fastStrategy": "When both rise and run are negative, the slope is positive because a negative divided by a negative is positive.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": 5,
+            "y": -1
+          },
+          "point2": {
+            "x": 1,
+            "y": -5
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_017",
       "question": "Find the slope of the line through (0, 5) and (2, 1).",
@@ -406,9 +738,33 @@
         "3. Compute run: x2 - x1 = 2 - 0 = 2.",
         "4. Divide: -4/2 = -2."
       ],
-      "fastStrategy": "If y goes down while x goes up, expect a negative slope before you even calculate."
+      "fastStrategy": "If y goes down while x goes up, expect a negative slope before you even calculate.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": 0,
+            "y": 5
+          },
+          "point2": {
+            "x": 2,
+            "y": 1
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_018",
       "question": "A line decreases 3 units in y for every 1 unit increase in x. What is its slope?",
@@ -426,9 +782,33 @@
         "2. 'For every 1 unit in x' means run = 1.",
         "3. Compute slope: -3/1 = -3."
       ],
-      "fastStrategy": "Decreases in y with increases in x always produce a negative slope."
+      "fastStrategy": "Decreases in y with increases in x always produce a negative slope.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_019",
       "question": "Find the slope of the line through (2, -1) and (8, 2).",
@@ -447,9 +827,33 @@
         "3. Compute run: x2 - x1 = 8 - 2 = 6.",
         "4. Simplify 3/6 to 1/2."
       ],
-      "fastStrategy": "Always reduce the fraction at the end; small ratios like 3/6 show up often as 1/2."
+      "fastStrategy": "Always reduce the fraction at the end; small ratios like 3/6 show up often as 1/2.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": 2,
+            "y": -1
+          },
+          "point2": {
+            "x": 8,
+            "y": 2
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_020",
       "question": "A table of values shows the points (1, 2), (2, 4), and (3, 6) on a line. What is the slope of this line?",
@@ -468,9 +872,33 @@
         "3. Compute run: 2 - 1 = 1.",
         "4. Slope = 2/1 = 2."
       ],
-      "fastStrategy": "In equally spaced x-values, just compare how much y increases each time to see the slope."
+      "fastStrategy": "In equally spaced x-values, just compare how much y increases each time to see the slope.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": 1,
+            "y": 2
+          },
+          "point2": {
+            "x": 3,
+            "y": 6
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_021",
       "question": "Find the slope of the line through (-3, 4) and (1, 4).",
@@ -489,9 +917,33 @@
         "3. Compute run: 1 - (-3) = 4.",
         "4. Slope = 0/4 = 0."
       ],
-      "fastStrategy": "Same y-value in both points = slope 0. You don’t need to go further."
+      "fastStrategy": "Same y-value in both points = slope 0. You don’t need to go further.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": 4
+          },
+          "point2": {
+            "x": 1,
+            "y": 4
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_022",
       "question": "Find the slope of the line through (2, 3) and (2, -1).",
@@ -510,9 +962,33 @@
         "3. Slope = rise/run would divide by 0.",
         "4. So the slope is undefined."
       ],
-      "fastStrategy": "Same x-values → vertical line → undefined slope. Instant recognition."
+      "fastStrategy": "Same x-values → vertical line → undefined slope. Instant recognition.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": 2,
+            "y": 3
+          },
+          "point2": {
+            "x": 2,
+            "y": -1
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_023",
       "question": "What is the slope of the line given by y = 1/2 x - 3?",
@@ -530,9 +1006,33 @@
         "2. The coefficient of x is 1/2.",
         "3. Therefore the slope is 1/2."
       ],
-      "fastStrategy": "Train your eye to immediately lock onto the x coefficient whenever you see y = mx + b."
+      "fastStrategy": "Train your eye to immediately lock onto the x coefficient whenever you see y = mx + b.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_024",
       "question": "A line passes through the origin (0, 0) and the point (3, 9). What is its slope?",
@@ -551,9 +1051,33 @@
         "3. Compute run: x2 - x1 = 3 - 0 = 3.",
         "4. Divide: 9/3 = 3."
       ],
-      "fastStrategy": "With one point at the origin, slope is just y/x for the other point."
+      "fastStrategy": "With one point at the origin, slope is just y/x for the other point.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": 0,
+            "y": 0
+          },
+          "point2": {
+            "x": 3,
+            "y": 9
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_slope_b_025",
       "question": "A line has a slope of -1 and passes through the point (2, 4). Which of the following points also lies on this line?",
@@ -572,7 +1096,32 @@
         "3. Then move down 1 in y to y = 3.",
         "4. The resulting point is (3, 3), which matches choice A."
       ],
-      "fastStrategy": "For slope -1, x and y move in opposite directions by the same amount (right/down or left/up)."
+      "fastStrategy": "For slope -1, x and y move in opposite directions by the same amount (right/down or left/up).",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     }
   ]
 }

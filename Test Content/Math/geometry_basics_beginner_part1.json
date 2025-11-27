@@ -12,18 +12,33 @@
         "showGrid": false,
         "lines": [
           {
-            "from": { "x": 150, "y": 150 },
-            "to": { "x": 150, "y": 30 },
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 150,
+              "y": 30
+            },
             "label": "Ray AB"
           },
           {
-            "from": { "x": 150, "y": 150 },
-            "to": { "x": 260, "y": 210 },
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 260,
+              "y": 210
+            },
             "label": "Ray AC"
           }
         ],
         "angleArc": {
-          "center": { "x": 150, "y": 150 },
+          "center": {
+            "x": 150,
+            "y": 150
+          },
           "radius": 35,
           "startRay": 0,
           "endRay": 1,
@@ -55,7 +70,6 @@
       ],
       "fastStrategy": "Memorize: acute = cute and small (< 90°), right = 90°, obtuse = big but not straight (90°–180°)."
     },
-
     {
       "uiSpec": {
         "type": "geometry_angle_diagram",
@@ -64,18 +78,33 @@
         "showGrid": false,
         "lines": [
           {
-            "from": { "x": 150, "y": 150 },
-            "to": { "x": 260, "y": 150 },
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 260,
+              "y": 150
+            },
             "label": "Ray AB"
           },
           {
-            "from": { "x": 150, "y": 150 },
-            "to": { "x": 150, "y": 40 },
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 150,
+              "y": 40
+            },
             "label": "Ray AC"
           }
         ],
         "angleArc": {
-          "center": { "x": 150, "y": 150 },
+          "center": {
+            "x": 150,
+            "y": 150
+          },
           "radius": 35,
           "startRay": 0,
           "endRay": 1,
@@ -107,7 +136,6 @@
       ],
       "fastStrategy": "See the little square at the corner? That’s always a 90° right angle."
     },
-
     {
       "id": "mk_geo_b_003",
       "question": "Two angles are complementary. One angle measures 35°. What is the measure of the other angle?",
@@ -126,9 +154,52 @@
         "3. Subtract: 90 − 35 = 55.",
         "4. So the other angle is 55°."
       ],
-      "fastStrategy": "Complementary → think 'C' for 'corner' (90°). Just do 90 minus the given angle."
+      "fastStrategy": "Complementary → think 'C' for 'corner' (90°). Just do 90 minus the given angle.",
+      "uiSpec": {
+        "type": "geometry_angle_diagram",
+        "width": 300,
+        "height": 300,
+        "showGrid": false,
+        "lines": [
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 250,
+              "y": 150
+            }
+          },
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 232,
+              "y": 93
+            }
+          }
+        ],
+        "angleArc": {
+          "center": {
+            "x": 150,
+            "y": 150
+          },
+          "radius": 35,
+          "startRay": 0,
+          "endRay": 1,
+          "label": "35°",
+          "measureDegrees": 35
+        },
+        "styleHints": {
+          "baseLineColor": "#00ffff",
+          "highlightAngleColor": "#ffff00",
+          "labelsColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "mk_geo_b_004",
       "question": "Two angles are supplementary. One angle measures 110°. What is the measure of the other angle?",
@@ -147,9 +218,52 @@
         "3. 180 − 110 = 70.",
         "4. The missing angle is 70°."
       ],
-      "fastStrategy": "Supplementary → 'straight line' → 180°. Do 180 minus the known angle."
+      "fastStrategy": "Supplementary → 'straight line' → 180°. Do 180 minus the known angle.",
+      "uiSpec": {
+        "type": "geometry_angle_diagram",
+        "width": 300,
+        "height": 300,
+        "showGrid": false,
+        "lines": [
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 250,
+              "y": 150
+            }
+          },
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 116,
+              "y": 56
+            }
+          }
+        ],
+        "angleArc": {
+          "center": {
+            "x": 150,
+            "y": 150
+          },
+          "radius": 35,
+          "startRay": 0,
+          "endRay": 1,
+          "label": "110°",
+          "measureDegrees": 110
+        },
+        "styleHints": {
+          "baseLineColor": "#00ffff",
+          "highlightAngleColor": "#ffff00",
+          "labelsColor": "#00ffff"
+        }
+      }
     },
-
     {
       "uiSpec": {
         "type": "geometry_angle_pair_diagram",
@@ -157,12 +271,24 @@
         "height": 300,
         "lines": [
           {
-            "from": { "x": 40, "y": 150 },
-            "to": { "x": 260, "y": 150 }
+            "from": {
+              "x": 40,
+              "y": 150
+            },
+            "to": {
+              "x": 260,
+              "y": 150
+            }
           },
           {
-            "from": { "x": 150, "y": 40 },
-            "to": { "x": 150, "y": 260 }
+            "from": {
+              "x": 150,
+              "y": 40
+            },
+            "to": {
+              "x": 150,
+              "y": 260
+            }
           }
         ],
         "angleLabels": [
@@ -201,7 +327,6 @@
       ],
       "fastStrategy": "Opposite angles at an X intersection are always equal. Match the given one."
     },
-
     {
       "id": "mk_geo_b_006",
       "question": "A triangle has side lengths 5, 5, and 8 units. How is this triangle best classified by its sides?",
@@ -220,9 +345,48 @@
         "3. Since not all three are equal, it’s not equilateral.",
         "4. Two equal sides means the triangle is isosceles."
       ],
-      "fastStrategy": "Two equal sides → isosceles. Three equal → equilateral. None equal → scalene."
+      "fastStrategy": "Two equal sides → isosceles. Three equal → equilateral. None equal → scalene.",
+      "uiSpec": {
+        "type": "geometry_triangle_diagram",
+        "width": 300,
+        "height": 300,
+        "vertices": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 80,
+            "y": 220,
+            "label": "B"
+          },
+          {
+            "x": 220,
+            "y": 220,
+            "label": "C"
+          }
+        ],
+        "angles": [
+          {
+            "vertex": 0,
+            "label": "60°"
+          },
+          {
+            "vertex": 1,
+            "label": "x°"
+          },
+          {
+            "vertex": 2,
+            "label": "y°"
+          }
+        ],
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "mk_geo_b_007",
       "question": "A triangle has side lengths 3, 4, and 5 units. Which statement is true?",
@@ -241,9 +405,48 @@
         "3. Compute 5² = 25.",
         "4. Since 3² + 4² = 5², the triangle is right."
       ],
-      "fastStrategy": "Memorize the classic right triangle: 3–4–5. It shows up constantly on tests."
+      "fastStrategy": "Memorize the classic right triangle: 3–4–5. It shows up constantly on tests.",
+      "uiSpec": {
+        "type": "geometry_triangle_diagram",
+        "width": 300,
+        "height": 300,
+        "vertices": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 80,
+            "y": 220,
+            "label": "B"
+          },
+          {
+            "x": 220,
+            "y": 220,
+            "label": "C"
+          }
+        ],
+        "angles": [
+          {
+            "vertex": 0,
+            "label": "60°"
+          },
+          {
+            "vertex": 1,
+            "label": "x°"
+          },
+          {
+            "vertex": 2,
+            "label": "y°"
+          }
+        ],
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "mk_geo_b_008",
       "question": "What is the perimeter of a rectangle with length 7 units and width 3 units?",
@@ -261,9 +464,52 @@
         "2. Multiply by 2: 2 × 10 = 20.",
         "3. The perimeter is 20 units."
       ],
-      "fastStrategy": "Rectangle: think doubled sum: 2L + 2W = 2(L + W)."
+      "fastStrategy": "Rectangle: think doubled sum: 2L + 2W = 2(L + W).",
+      "uiSpec": {
+        "type": "geometry_angle_diagram",
+        "width": 300,
+        "height": 300,
+        "showGrid": false,
+        "lines": [
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 250,
+              "y": 150
+            }
+          },
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 221,
+              "y": 79
+            }
+          }
+        ],
+        "angleArc": {
+          "center": {
+            "x": 150,
+            "y": 150
+          },
+          "radius": 35,
+          "startRay": 0,
+          "endRay": 1,
+          "label": "45°",
+          "measureDegrees": 45
+        },
+        "styleHints": {
+          "baseLineColor": "#00ffff",
+          "highlightAngleColor": "#ffff00",
+          "labelsColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "mk_geo_b_009",
       "question": "What is the area of a rectangle with length 9 units and width 4 units?",
@@ -281,9 +527,52 @@
         "2. Multiply: 9 × 4 = 36.",
         "3. So the area is 36 square units."
       ],
-      "fastStrategy": "Area of rectangles is just 'base × height' or 'length × width': simple multiplication."
+      "fastStrategy": "Area of rectangles is just 'base × height' or 'length × width': simple multiplication.",
+      "uiSpec": {
+        "type": "geometry_angle_diagram",
+        "width": 300,
+        "height": 300,
+        "showGrid": false,
+        "lines": [
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 250,
+              "y": 150
+            }
+          },
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 221,
+              "y": 79
+            }
+          }
+        ],
+        "angleArc": {
+          "center": {
+            "x": 150,
+            "y": 150
+          },
+          "radius": 35,
+          "startRay": 0,
+          "endRay": 1,
+          "label": "45°",
+          "measureDegrees": 45
+        },
+        "styleHints": {
+          "baseLineColor": "#00ffff",
+          "highlightAngleColor": "#ffff00",
+          "labelsColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "mk_geo_b_010",
       "question": "What is the area of a right triangle with base 10 units and height 6 units?",
@@ -302,27 +591,93 @@
         "3. Multiply: 10 × 6 = 60.",
         "4. Take half: 60 ÷ 2 = 30."
       ],
-      "fastStrategy": "Triangle area is always 'half of a rectangle' with same base and height: 1/2 × b × h."
+      "fastStrategy": "Triangle area is always 'half of a rectangle' with same base and height: 1/2 × b × h.",
+      "uiSpec": {
+        "type": "geometry_triangle_diagram",
+        "width": 300,
+        "height": 300,
+        "vertices": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 80,
+            "y": 220,
+            "label": "B"
+          },
+          {
+            "x": 220,
+            "y": 220,
+            "label": "C"
+          }
+        ],
+        "angles": [
+          {
+            "vertex": 0,
+            "label": "60°"
+          },
+          {
+            "vertex": 1,
+            "label": "x°"
+          },
+          {
+            "vertex": 2,
+            "label": "y°"
+          }
+        ],
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "uiSpec": {
         "type": "geometry_triangle_diagram",
         "width": 300,
         "height": 300,
         "points": [
-          { "name": "A", "x": 60, "y": 220 },
-          { "name": "B", "x": 240, "y": 220 },
-          { "name": "C", "x": 150, "y": 80 }
+          {
+            "name": "A",
+            "x": 60,
+            "y": 220
+          },
+          {
+            "name": "B",
+            "x": 240,
+            "y": 220
+          },
+          {
+            "name": "C",
+            "x": 150,
+            "y": 80
+          }
         ],
         "sideLabels": [
-          { "from": "A", "to": "B", "label": "12" },
-          { "from": "B", "to": "C", "label": "5" },
-          { "from": "C", "to": "A", "label": "13" }
+          {
+            "from": "A",
+            "to": "B",
+            "label": "12"
+          },
+          {
+            "from": "B",
+            "to": "C",
+            "label": "5"
+          },
+          {
+            "from": "C",
+            "to": "A",
+            "label": "13"
+          }
         ],
         "highlightRightAngle": {
           "vertex": "A",
-          "adjacentVertices": ["B", "C"]
+          "adjacentVertices": [
+            "B",
+            "C"
+          ]
         },
         "styleHints": {
           "triangleColor": "black",
@@ -350,7 +705,6 @@
       ],
       "fastStrategy": "For right triangles, you can treat the two shorter sides as base and height directly: no extra geometry needed."
     },
-
     {
       "id": "mk_geo_b_012",
       "question": "What is the circumference of a circle with radius 7 units? (Use π ≈ 3.14.)",
@@ -371,7 +725,6 @@
       ],
       "fastStrategy": "Circumference = 'all the way around' = 2πr. For quick estimates: ~6.3r when π ≈ 3.14."
     },
-
     {
       "id": "mk_geo_b_013",
       "question": "What is the area of a circle with radius 5 units? (Use π ≈ 3.14.)",
@@ -391,20 +744,63 @@
       ],
       "fastStrategy": "Circle area is π times radius squared. Square first, multiply π second."
     },
-
     {
       "uiSpec": {
         "type": "geometry_parallel_lines_diagram",
         "width": 300,
         "height": 300,
         "lines": [
-          { "from": { "x": 40, "y": 80 }, "to": { "x": 260, "y": 80 }, "label": "ℓ₁" },
-          { "from": { "x": 40, "y": 200 }, "to": { "x": 260, "y": 200 }, "label": "ℓ₂" },
-          { "from": { "x": 100, "y": 20 }, "to": { "x": 220, "y": 260 }, "label": "t" }
+          {
+            "from": {
+              "x": 40,
+              "y": 80
+            },
+            "to": {
+              "x": 260,
+              "y": 80
+            },
+            "label": "ℓ₁"
+          },
+          {
+            "from": {
+              "x": 40,
+              "y": 200
+            },
+            "to": {
+              "x": 260,
+              "y": 200
+            },
+            "label": "ℓ₂"
+          },
+          {
+            "from": {
+              "x": 100,
+              "y": 20
+            },
+            "to": {
+              "x": 220,
+              "y": 260
+            },
+            "label": "t"
+          }
         ],
         "angleLabels": [
-          { "near": { "x": 160, "y": 80 }, "label": "120°", "highlight": true },
-          { "near": { "x": 180, "y": 200 }, "label": "x°", "highlight": true }
+          {
+            "near": {
+              "x": 160,
+              "y": 80
+            },
+            "label": "120°",
+            "highlight": true
+          },
+          {
+            "near": {
+              "x": 180,
+              "y": 200
+            },
+            "label": "x°",
+            "highlight": true
+          }
         ],
         "styleHints": {
           "parallelLineColor": "black",
@@ -431,7 +827,6 @@
       ],
       "fastStrategy": "Parallel lines + transversal: corresponding angles match; alternate interior angles match as well."
     },
-
     {
       "id": "mk_geo_b_015",
       "question": "What is the sum of the interior angles of any triangle?",
@@ -448,9 +843,48 @@
         "1. Recall the fundamental fact: triangle angle sum = 180°.",
         "2. This holds for all triangles: acute, right, obtuse, scalene, isosceles, equilateral."
       ],
-      "fastStrategy": "Triangle = 3 sides = 180°. Square it in your memory; this comes up constantly."
+      "fastStrategy": "Triangle = 3 sides = 180°. Square it in your memory; this comes up constantly.",
+      "uiSpec": {
+        "type": "geometry_triangle_diagram",
+        "width": 300,
+        "height": 300,
+        "vertices": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 80,
+            "y": 220,
+            "label": "B"
+          },
+          {
+            "x": 220,
+            "y": 220,
+            "label": "C"
+          }
+        ],
+        "angles": [
+          {
+            "vertex": 0,
+            "label": "60°"
+          },
+          {
+            "vertex": 1,
+            "label": "x°"
+          },
+          {
+            "vertex": 2,
+            "label": "y°"
+          }
+        ],
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "mk_geo_b_016",
       "question": "A triangle has angles measuring 35° and 65°. What is the measure of the third angle?",
@@ -468,9 +902,48 @@
         "2. Subtract from 180° to find the missing angle.",
         "3. 180° − 100° = 80°."
       ],
-      "fastStrategy": "Triangle missing angle = 180 − (sum of the other two)."
+      "fastStrategy": "Triangle missing angle = 180 − (sum of the other two).",
+      "uiSpec": {
+        "type": "geometry_triangle_diagram",
+        "width": 300,
+        "height": 300,
+        "vertices": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 80,
+            "y": 220,
+            "label": "B"
+          },
+          {
+            "x": 220,
+            "y": 220,
+            "label": "C"
+          }
+        ],
+        "angles": [
+          {
+            "vertex": 0,
+            "label": "35°"
+          },
+          {
+            "vertex": 1,
+            "label": "x°"
+          },
+          {
+            "vertex": 2,
+            "label": "y°"
+          }
+        ],
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "mk_geo_b_017",
       "question": "A triangle has angles measuring 40°, 60°, and 80°. How is this triangle classified by its angles?",
@@ -488,25 +961,96 @@
         "2. All three are less than 90°.",
         "3. Therefore, the triangle is acute."
       ],
-      "fastStrategy": "If all angles are < 90°, the whole triangle is acute; if one is 90°, right; if one > 90°, obtuse."
+      "fastStrategy": "If all angles are < 90°, the whole triangle is acute; if one is 90°, right; if one > 90°, obtuse.",
+      "uiSpec": {
+        "type": "geometry_triangle_diagram",
+        "width": 300,
+        "height": 300,
+        "vertices": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 80,
+            "y": 220,
+            "label": "B"
+          },
+          {
+            "x": 220,
+            "y": 220,
+            "label": "C"
+          }
+        ],
+        "angles": [
+          {
+            "vertex": 0,
+            "label": "40°"
+          },
+          {
+            "vertex": 1,
+            "label": "x°"
+          },
+          {
+            "vertex": 2,
+            "label": "y°"
+          }
+        ],
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "uiSpec": {
         "type": "geometry_quadrilateral_diagram",
         "width": 300,
         "height": 300,
         "points": [
-          { "name": "A", "x": 60, "y": 220 },
-          { "name": "B", "x": 240, "y": 220 },
-          { "name": "C", "x": 240, "y": 80 },
-          { "name": "D", "x": 60, "y": 80 }
+          {
+            "name": "A",
+            "x": 60,
+            "y": 220
+          },
+          {
+            "name": "B",
+            "x": 240,
+            "y": 220
+          },
+          {
+            "name": "C",
+            "x": 240,
+            "y": 80
+          },
+          {
+            "name": "D",
+            "x": 60,
+            "y": 80
+          }
         ],
         "sideLabels": [
-          { "from": "A", "to": "B", "label": "8" },
-          { "from": "B", "to": "C", "label": "5" },
-          { "from": "C", "to": "D", "label": "8" },
-          { "from": "D", "to": "A", "label": "5" }
+          {
+            "from": "A",
+            "to": "B",
+            "label": "8"
+          },
+          {
+            "from": "B",
+            "to": "C",
+            "label": "5"
+          },
+          {
+            "from": "C",
+            "to": "D",
+            "label": "8"
+          },
+          {
+            "from": "D",
+            "to": "A",
+            "label": "5"
+          }
         ],
         "styleHints": {
           "shapeColor": "black",
@@ -532,7 +1076,6 @@
       ],
       "fastStrategy": "Rectangle area is always a direct multiplication: no halves, no π."
     },
-
     {
       "id": "mk_geo_b_019",
       "question": "What is the perimeter of a square with side length 6 units?",
@@ -552,7 +1095,6 @@
       ],
       "fastStrategy": "Square perimeter: multiply the side by 4. Easy mental math."
     },
-
     {
       "id": "mk_geo_b_020",
       "question": "What is the length of a diameter of a circle with radius 9 units?",
@@ -572,18 +1114,31 @@
       ],
       "fastStrategy": "Radius × 2 = diameter. Diameter ÷ 2 = radius."
     },
-
     {
       "uiSpec": {
         "type": "geometry_coordinate_segment",
         "width": 300,
         "height": 300,
         "showGrid": true,
-        "xRange": [0, 6],
-        "yRange": [0, 6],
+        "xRange": [
+          0,
+          6
+        ],
+        "yRange": [
+          0,
+          6
+        ],
         "points": [
-          { "name": "A", "x": 1, "y": 2 },
-          { "name": "B", "x": 5, "y": 2 }
+          {
+            "name": "A",
+            "x": 1,
+            "y": 2
+          },
+          {
+            "name": "B",
+            "x": 5,
+            "y": 2
+          }
         ],
         "styleHints": {
           "pointColor": "black",
@@ -609,18 +1164,31 @@
       ],
       "fastStrategy": "If points share the same y, distance is |x₂ − x₁|. If they share the same x, it's |y₂ − y₁|."
     },
-
     {
       "uiSpec": {
         "type": "geometry_coordinate_segment",
         "width": 300,
         "height": 300,
         "showGrid": true,
-        "xRange": [0, 6],
-        "yRange": [0, 6],
+        "xRange": [
+          0,
+          6
+        ],
+        "yRange": [
+          0,
+          6
+        ],
         "points": [
-          { "name": "C", "x": 3, "y": 1 },
-          { "name": "D", "x": 3, "y": 5 }
+          {
+            "name": "C",
+            "x": 3,
+            "y": 1
+          },
+          {
+            "name": "D",
+            "x": 3,
+            "y": 5
+          }
         ],
         "styleHints": {
           "pointColor": "black",
@@ -646,7 +1214,6 @@
       ],
       "fastStrategy": "Vertical segment distance is just the difference in y’s; horizontal segment distance is difference in x’s."
     },
-
     {
       "id": "mk_geo_b_023",
       "question": "What is the midpoint of the segment connecting (2, 4) and (6, 8)?",
@@ -668,7 +1235,6 @@
       ],
       "fastStrategy": "Midpoint = component-wise average: (avg of x’s, avg of y’s)."
     },
-
     {
       "id": "mk_geo_b_024",
       "question": "How many degrees are in a straight angle?",
@@ -686,9 +1252,52 @@
         "2. Straight angle is like a flat line.",
         "3. Therefore, it measures 180°."
       ],
-      "fastStrategy": "Think of a straight line as a 'half-circle' of 180°."
+      "fastStrategy": "Think of a straight line as a 'half-circle' of 180°.",
+      "uiSpec": {
+        "type": "geometry_angle_diagram",
+        "width": 300,
+        "height": 300,
+        "showGrid": false,
+        "lines": [
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 250,
+              "y": 150
+            }
+          },
+          {
+            "from": {
+              "x": 150,
+              "y": 150
+            },
+            "to": {
+              "x": 221,
+              "y": 79
+            }
+          }
+        ],
+        "angleArc": {
+          "center": {
+            "x": 150,
+            "y": 150
+          },
+          "radius": 35,
+          "startRay": 0,
+          "endRay": 1,
+          "label": "45°",
+          "measureDegrees": 45
+        },
+        "styleHints": {
+          "baseLineColor": "#00ffff",
+          "highlightAngleColor": "#ffff00",
+          "labelsColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "mk_geo_b_025",
       "question": "How many degrees are in the sum of the interior angles of a quadrilateral (four-sided polygon)?",
@@ -707,7 +1316,39 @@
         "3. Each triangle’s angles sum to 180°.",
         "4. Total = 180° + 180° = 360°."
       ],
-      "fastStrategy": "Polygon angle sum trick: (n − 2) × 180°. For a quadrilateral, n = 4 → (4 − 2) × 180° = 2 × 180° = 360°."
+      "fastStrategy": "Polygon angle sum trick: (n − 2) × 180°. For a quadrilateral, n = 4 → (4 − 2) × 180° = 2 × 180° = 360°.",
+      "uiSpec": {
+        "type": "polygon_basic",
+        "width": 300,
+        "height": 300,
+        "points": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 250,
+            "y": 150,
+            "label": "B"
+          },
+          {
+            "x": 150,
+            "y": 250,
+            "label": "C"
+          },
+          {
+            "x": 50,
+            "y": 150,
+            "label": "D"
+          }
+        ],
+        "labels": true,
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     }
   ]
 }

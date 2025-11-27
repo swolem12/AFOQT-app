@@ -22,7 +22,32 @@
         "3. Substitute values and solve step by step.",
         "4. Check your answer against the choices."
       ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis).",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
     {
       "id": "mk_gi_b_027",
@@ -42,7 +67,32 @@
         "3. Substitute values and solve step by step.",
         "4. Check your answer against the choices."
       ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis).",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": 2,
+            "y": -3
+          },
+          "point2": {
+            "x": 2,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
     {
       "id": "mk_gi_b_028",
@@ -82,7 +132,32 @@
         "3. Substitute values and solve step by step.",
         "4. Check your answer against the choices."
       ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis).",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
     {
       "id": "mk_gi_b_030",
@@ -102,7 +177,32 @@
         "3. Substitute values and solve step by step.",
         "4. Check your answer against the choices."
       ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis).",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
     {
       "id": "mk_gi_b_031",
@@ -162,7 +262,32 @@
         "3. Substitute values and solve step by step.",
         "4. Check your answer against the choices."
       ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis).",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": 2,
+            "y": -3
+          },
+          "point2": {
+            "x": 2,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
     {
       "id": "mk_gi_b_034",
@@ -282,7 +407,32 @@
         "3. Substitute values and solve step by step.",
         "4. Check your answer against the choices."
       ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis).",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": 3
+          },
+          "point2": {
+            "x": 3,
+            "y": -2
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
     {
       "id": "mk_gi_b_040",
@@ -462,7 +612,32 @@
         "3. Substitute values and solve step by step.",
         "4. Check your answer against the choices."
       ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis).",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
     {
       "id": "mk_gi_b_049",
@@ -502,7 +677,32 @@
         "3. Substitute values and solve step by step.",
         "4. Check your answer against the choices."
       ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis).",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     }
   ]
 }

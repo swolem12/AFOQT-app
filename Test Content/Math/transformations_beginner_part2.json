@@ -4,18 +4,31 @@
   "difficulty": "beginner",
   "part": 2,
   "questions": [
-
     {
       "uiSpec": {
         "type": "point_mapping",
         "width": 300,
         "height": 300,
         "showGrid": true,
-        "xRange": [-6, 6],
-        "yRange": [-6, 6],
+        "xRange": [
+          -6,
+          6
+        ],
+        "yRange": [
+          -6,
+          6
+        ],
         "points": [
-          { "name": "A", "x": 2, "y": 3 },
-          { "name": "A'", "x": 2, "y": -3 }
+          {
+            "name": "A",
+            "x": 2,
+            "y": 3
+          },
+          {
+            "name": "A'",
+            "x": 2,
+            "y": -3
+          }
         ]
       },
       "copilotInstruction": "Plot A at (2,3) and A' at (2,-3). Connect them with a light vertical dashed segment to show the movement.",
@@ -37,7 +50,6 @@
       ],
       "fastStrategy": "Same x, opposite y → reflected over the x-axis."
     },
-
     {
       "id": "tf_b2_002",
       "question": "Point B is at (−4, 5). After a transformation, B' is at (4, 5). Which transformation was applied?",
@@ -55,9 +67,30 @@
         "2. y is unchanged; x changes sign.",
         "3. That matches reflection across the y-axis."
       ],
-      "fastStrategy": "Same y, opposite x → reflected over y-axis."
+      "fastStrategy": "Same y, opposite x → reflected over y-axis.",
+      "uiSpec": {
+        "type": "coordinate_grid_points",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 4,
+            "y": 5
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
-
     {
       "id": "tf_b2_003",
       "question": "Point C is at (3, −7). After a transformation, C' is at (−3, 7). Which transformation was applied?",
@@ -75,9 +108,30 @@
         "2. Check y: −7 → 7 (sign flipped).",
         "3. Both signs flipped → reflection across the origin."
       ],
-      "fastStrategy": "If both x and y signs flip, think origin reflection (or 180° rotation)."
+      "fastStrategy": "If both x and y signs flip, think origin reflection (or 180° rotation).",
+      "uiSpec": {
+        "type": "coordinate_grid_points",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
-
     {
       "uiSpec": {
         "type": "translation",
@@ -85,9 +139,16 @@
         "height": 300,
         "showGrid": true,
         "points": [
-          { "name": "P", "x": -1, "y": 4 }
+          {
+            "name": "P",
+            "x": -1,
+            "y": 4
+          }
         ],
-        "vector": { "dx": 5, "dy": -2 }
+        "vector": {
+          "dx": 5,
+          "dy": -2
+        }
       },
       "copilotInstruction": "Plot P at (-1,4). Draw a small arrow showing movement 5 units right and 2 units down (vector ⟨5,−2⟩).",
       "id": "tf_b2_004",
@@ -109,7 +170,6 @@
       ],
       "fastStrategy": "Translation = x + dx, y + dy. Just add."
     },
-
     {
       "id": "tf_b2_005",
       "question": "Point D is at (6, −3). After a translation, D' is at (1, 5). What translation vector was applied?",
@@ -127,9 +187,30 @@
         "2. Use dy = y' − y: 5 − (−3) = 8.",
         "3. So the translation is ⟨−5, 8⟩."
       ],
-      "fastStrategy": "New − old = translation vector."
+      "fastStrategy": "New − old = translation vector.",
+      "uiSpec": {
+        "type": "coordinate_grid_points",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 1,
+            "y": 5
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
-
     {
       "uiSpec": {
         "type": "rotation_90",
@@ -137,7 +218,11 @@
         "height": 300,
         "showGrid": true,
         "points": [
-          { "name": "E", "x": 4, "y": 1 }
+          {
+            "name": "E",
+            "x": 4,
+            "y": 1
+          }
         ]
       },
       "copilotInstruction": "Plot E at (4,1). Do not draw its rotated image; user must compute it.",
@@ -158,7 +243,6 @@
       ],
       "fastStrategy": "90° CCW: swap, then negate the new x (from old y)."
     },
-
     {
       "id": "tf_b2_007",
       "question": "Rotate point (−3, 2) by 90° counterclockwise about the origin.",
@@ -177,9 +261,30 @@
         "3. x = −3 stays as the second coordinate.",
         "4. Result is (−2, −3)."
       ],
-      "fastStrategy": "Write (x, y), then under it write (−y, x) so you don’t mix coordinates."
+      "fastStrategy": "Write (x, y), then under it write (−y, x) so you don’t mix coordinates.",
+      "uiSpec": {
+        "type": "rotation_90",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
-
     {
       "uiSpec": {
         "type": "rotation_90_clockwise",
@@ -187,7 +292,11 @@
         "height": 300,
         "showGrid": true,
         "points": [
-          { "name": "F", "x": -2, "y": 5 }
+          {
+            "name": "F",
+            "x": -2,
+            "y": 5
+          }
         ]
       },
       "copilotInstruction": "Plot F(-2,5). User performs a 90° clockwise rotation mentally.",
@@ -208,7 +317,6 @@
       ],
       "fastStrategy": "CW vs CCW: CW is (y, −x); CCW is (−y, x)."
     },
-
     {
       "id": "tf_b2_009",
       "question": "Rotate point (1, −4) by 180° about the origin.",
@@ -226,9 +334,30 @@
         "2. x = 1 → −1; y = −4 → 4.",
         "3. Result is (−1, 4)."
       ],
-      "fastStrategy": "180° rotation is the same as reflecting across the origin: just negate both coordinates."
+      "fastStrategy": "180° rotation is the same as reflecting across the origin: just negate both coordinates.",
+      "uiSpec": {
+        "type": "rotation_90",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
-
     {
       "uiSpec": {
         "type": "triangle_translation",
@@ -236,11 +365,27 @@
         "height": 300,
         "showGrid": true,
         "points": [
-          { "name": "A", "x": 1, "y": 1 },
-          { "name": "B", "x": 4, "y": 1 },
-          { "name": "C", "x": 1, "y": 3 }
+          {
+            "name": "A",
+            "x": 1,
+            "y": 1
+          },
+          {
+            "name": "B",
+            "x": 4,
+            "y": 1
+          },
+          {
+            "name": "C",
+            "x": 1,
+            "y": 3
+          }
         ],
-        "polygon": ["A", "B", "C"]
+        "polygon": [
+          "A",
+          "B",
+          "C"
+        ]
       },
       "copilotInstruction": "Draw triangle ABC with A(1,1), B(4,1), C(1,3). Do not draw the image.",
       "id": "tf_b2_010",
@@ -261,7 +406,6 @@
       ],
       "fastStrategy": "For polygons, apply the same dx, dy to each vertex."
     },
-
     {
       "id": "tf_b2_011",
       "question": "Using the same triangle ABC and translation ⟨−2, 4⟩ from the previous question, what are the coordinates of B'?",
@@ -279,9 +423,48 @@
         "2. x: 4 − 2 = 2.",
         "3. y: 1 + 4 = 5."
       ],
-      "fastStrategy": "Once you know the vector, you don’t reread the problem—just add it."
+      "fastStrategy": "Once you know the vector, you don’t reread the problem—just add it.",
+      "uiSpec": {
+        "type": "geometry_triangle_diagram",
+        "width": 300,
+        "height": 300,
+        "vertices": [
+          {
+            "x": 150,
+            "y": 50,
+            "label": "A"
+          },
+          {
+            "x": 80,
+            "y": 220,
+            "label": "B"
+          },
+          {
+            "x": 220,
+            "y": 220,
+            "label": "C"
+          }
+        ],
+        "angles": [
+          {
+            "vertex": 0,
+            "label": "60°"
+          },
+          {
+            "vertex": 1,
+            "label": "x°"
+          },
+          {
+            "vertex": 2,
+            "label": "y°"
+          }
+        ],
+        "styleHints": {
+          "lineColor": "#00ffff",
+          "labelColor": "#00ffff"
+        }
+      }
     },
-
     {
       "id": "tf_b2_012",
       "question": "Point G is at (2, 2). After a transformation, G' is at (−2, 2). Which single transformation is this?",
@@ -299,9 +482,30 @@
         "2. Only x switches sign.",
         "3. That is a y-axis reflection, not a pure translation."
       ],
-      "fastStrategy": "If one coordinate changes sign but the other doesn’t, it’s a reflection, not just a slide."
+      "fastStrategy": "If one coordinate changes sign but the other doesn’t, it’s a reflection, not just a slide.",
+      "uiSpec": {
+        "type": "coordinate_grid_points",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 2
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
-
     {
       "id": "tf_b2_013",
       "question": "Point H is at (−3, −1). It is reflected across the x-axis, then reflected across the y-axis. What are the coordinates of the final image H''?",
@@ -320,9 +524,30 @@
         "3. y-axis reflection: (x, y) → (−x, y).",
         "4. Apply: (−3, 1) → (3, 1)."
       ],
-      "fastStrategy": "Reflection in both axes is equivalent to origin reflection: (x, y) → (−x, −y). Apply that directly: (−3, −1) → (3, 1)."
+      "fastStrategy": "Reflection in both axes is equivalent to origin reflection: (x, y) → (−x, −y). Apply that directly: (−3, −1) → (3, 1).",
+      "uiSpec": {
+        "type": "reflection_vertical_line",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
-
     {
       "id": "tf_b2_014",
       "question": "Which transformation sends (x, y) to (x + 3, y − 2)?",
@@ -340,9 +565,30 @@
         "2. Recognize −2 on y means down.",
         "3. Put them together as a translation."
       ],
-      "fastStrategy": "Changes in coordinates without sign-flips or swaps → pure translation."
+      "fastStrategy": "Changes in coordinates without sign-flips or swaps → pure translation.",
+      "uiSpec": {
+        "type": "coordinate_grid_points",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
-
     {
       "id": "tf_b2_015",
       "question": "Which transformation sends (x, y) to (−x, y)?",
@@ -360,9 +606,30 @@
         "2. Only x has a minus sign.",
         "3. That corresponds to reflecting across the y-axis."
       ],
-      "fastStrategy": "(-x, y) → think \"mirror left-right\" → y-axis."
+      "fastStrategy": "(-x, y) → think \"mirror left-right\" → y-axis.",
+      "uiSpec": {
+        "type": "coordinate_grid_points",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
-
     {
       "id": "tf_b2_016",
       "question": "Which transformation sends (x, y) to (x, −y)?",
@@ -380,9 +647,30 @@
         "2. x same, y sign flipped.",
         "3. That matches x-axis reflection."
       ],
-      "fastStrategy": "(x, −y) → mirror above/below the x-axis."
+      "fastStrategy": "(x, −y) → mirror above/below the x-axis.",
+      "uiSpec": {
+        "type": "coordinate_grid_points",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
-
     {
       "id": "tf_b2_017",
       "question": "Which transformation sends (x, y) to (−x, −y)?",
@@ -400,9 +688,30 @@
         "2. Both coordinates are negated.",
         "3. That’s origin reflection / 180° rotation."
       ],
-      "fastStrategy": "Two sign flips → origin reflection."
+      "fastStrategy": "Two sign flips → origin reflection.",
+      "uiSpec": {
+        "type": "coordinate_grid_points",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
-
     {
       "uiSpec": {
         "type": "rectangle_reflection",
@@ -410,12 +719,31 @@
         "height": 300,
         "showGrid": true,
         "points": [
-          { "name": "A", "x": 1, "y": 1 },
-          { "name": "B", "x": 4, "y": 1 },
-          { "name": "C", "x": 4, "y": 3 },
-          { "name": "D", "x": 1, "y": 3 }
+          {
+            "name": "A",
+            "x": 1,
+            "y": 1
+          },
+          {
+            "name": "B",
+            "x": 4,
+            "y": 1
+          },
+          {
+            "name": "C",
+            "x": 4,
+            "y": 3
+          },
+          {
+            "name": "D",
+            "x": 1,
+            "y": 3
+          }
         ],
-        "line": { "type": "vertical", "x": 0 }
+        "line": {
+          "type": "vertical",
+          "x": 0
+        }
       },
       "copilotInstruction": "Draw rectangle ABCD with A(1,1), B(4,1), C(4,3), D(1,3). Draw the y-axis as the line x=0.",
       "id": "tf_b2_018",
@@ -435,7 +763,6 @@
       ],
       "fastStrategy": "For whole shapes, just apply the point rule to each vertex."
     },
-
     {
       "id": "tf_b2_019",
       "question": "The image of point J after a transformation is J'(2, −5). The original point J was at (2, 5). Which transformation was applied?",
@@ -453,9 +780,30 @@
         "2. Only y changed sign.",
         "3. That’s an x-axis reflection."
       ],
-      "fastStrategy": "Up ↔ down switch with x fixed → x-axis mirror."
+      "fastStrategy": "Up ↔ down switch with x fixed → x-axis mirror.",
+      "uiSpec": {
+        "type": "coordinate_grid_points",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 5
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
-
     {
       "id": "tf_b2_020",
       "question": "Point K is at (−6, 1). After a transformation, K' is at (−6, −3). Which transformation was applied?",
@@ -473,18 +821,46 @@
         "2. x is unchanged, so not a y-axis reflection.",
         "3. It’s simply 4 units down: ⟨0, −4⟩."
       ],
-      "fastStrategy": "If there’s no symmetry and values just shift by the same amount → it’s a translation."
+      "fastStrategy": "If there’s no symmetry and values just shift by the same amount → it’s a translation.",
+      "uiSpec": {
+        "type": "coordinate_grid_points",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
-
     {
       "uiSpec": {
         "type": "reflection_horizontal_line",
         "width": 300,
         "height": 300,
         "showGrid": true,
-        "line": { "type": "horizontal", "y": -1 },
+        "line": {
+          "type": "horizontal",
+          "y": -1
+        },
         "points": [
-          { "name": "M", "x": 3, "y": -5 }
+          {
+            "name": "M",
+            "x": 3,
+            "y": -5
+          }
         ]
       },
       "copilotInstruction": "Draw horizontal line y=-1. Plot M(3,-5).",
@@ -507,7 +883,6 @@
       ],
       "fastStrategy": "For y = c, reflect by counting distance from y to c and mirroring it above/below."
     },
-
     {
       "id": "tf_b2_022",
       "question": "Reflect N(−2, 6) across the line x = 1.",
@@ -525,9 +900,30 @@
         "2. Move 3 units to the other side of x=1.",
         "3. New x = 4, y unchanged."
       ],
-      "fastStrategy": "For x = c, reflect by taking c + (c − x)."
+      "fastStrategy": "For x = c, reflect by taking c + (c − x).",
+      "uiSpec": {
+        "type": "reflection_horizontal_line",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
-
     {
       "id": "tf_b2_023",
       "question": "Which of the following is equivalent to a 180° rotation about the origin?",
@@ -545,9 +941,30 @@
         "2. Origin reflection uses the same mapping.",
         "3. So they are equivalent transformations."
       ],
-      "fastStrategy": "180° rotation ↔ origin reflection (they’re the same mapping)."
+      "fastStrategy": "180° rotation ↔ origin reflection (they’re the same mapping).",
+      "uiSpec": {
+        "type": "rotation_90",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
-
     {
       "id": "tf_b2_024",
       "question": "Point P is moved to P' by the rule (x, y) → (x, y + 7). Which description matches this transformation?",
@@ -565,9 +982,30 @@
         "2. Positive 7 means move upward.",
         "3. Since x doesn’t change, it’s a vertical translation only."
       ],
-      "fastStrategy": "If only y changes by +k, picture the shape sliding straight up."
+      "fastStrategy": "If only y changes by +k, picture the shape sliding straight up.",
+      "uiSpec": {
+        "type": "coordinate_grid_points",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     },
-
     {
       "id": "tf_b2_025",
       "question": "Point Q is at (8, −1). After some transformation, Q' is at (8, 6). Which of the following could describe this transformation?",
@@ -585,8 +1023,29 @@
         "2. No sign patterns like reflections; just an increase.",
         "3. So the transformation is sliding up by 7 units."
       ],
-      "fastStrategy": "Unchanged x + y increased by a constant → pure vertical translation."
+      "fastStrategy": "Unchanged x + y increased by a constant → pure vertical translation.",
+      "uiSpec": {
+        "type": "coordinate_grid_points",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "points": [
+          {
+            "x": 8,
+            "y": 6
+          }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "highlightPoint": true
+      }
     }
-
   ]
 }
