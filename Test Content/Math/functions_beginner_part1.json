@@ -15,7 +15,13 @@
         "E": "10"
       },
       "answer": "B",
-      "explanation": "Substitute quickly: 3 + 5 = 8. Functions = replace x."
+      "explanation": "Substitute quickly: 3 + 5 = 8. Functions = replace x.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_002",
@@ -28,7 +34,13 @@
         "E": "9"
       },
       "answer": "A",
-      "explanation": "Plug in: 2(4) - 1 = 8 - 1 = 7."
+      "explanation": "Plug in: 2(4) - 1 = 8 - 1 = 7.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_003",
@@ -41,7 +53,13 @@
         "E": "3"
       },
       "answer": "B",
-      "explanation": "Multiply fast: 3 × 6 = 18."
+      "explanation": "Multiply fast: 3 × 6 = 18.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_004",
@@ -54,7 +72,13 @@
         "E": "5"
       },
       "answer": "C",
-      "explanation": "Square quickly: 5² = 25."
+      "explanation": "Square quickly: 5² = 25.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_005",
@@ -67,7 +91,13 @@
         "E": "9"
       },
       "answer": "C",
-      "explanation": "10 - 7 = 3."
+      "explanation": "10 - 7 = 3.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_006",
@@ -80,7 +110,13 @@
         "E": "6"
       },
       "answer": "A",
-      "explanation": "4 - 2 = 2. Fast subtraction."
+      "explanation": "4 - 2 = 2. Fast subtraction.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_007",
@@ -93,7 +129,13 @@
         "E": "2"
       },
       "answer": "A",
-      "explanation": "Divide fast: 12 ÷ 2 = 6."
+      "explanation": "Divide fast: 12 ÷ 2 = 6.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_008",
@@ -106,7 +148,13 @@
         "E": "6"
       },
       "answer": "D",
-      "explanation": "2(1)+3=5. Simple substitution."
+      "explanation": "2(1)+3=5. Simple substitution.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_009",
@@ -119,7 +167,13 @@
         "E": "7"
       },
       "answer": "A",
-      "explanation": "Plug x=0: 10 - 0 = 10."
+      "explanation": "Plug x=0: 10 - 0 = 10.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_010",
@@ -132,7 +186,13 @@
         "E": "18"
       },
       "answer": "B",
-      "explanation": "4² - 1 = 16 - 1 = 15."
+      "explanation": "4² - 1 = 16 - 1 = 15.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_011",
@@ -145,7 +205,13 @@
         "E": "7"
       },
       "answer": "A",
-      "explanation": "3×5=15, minus 4 = 11."
+      "explanation": "3×5=15, minus 4 = 11.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_012",
@@ -158,7 +224,13 @@
         "E": "1"
       },
       "answer": "A",
-      "explanation": "9 ÷ 3 = 3."
+      "explanation": "9 ÷ 3 = 3.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_013",
@@ -171,7 +243,13 @@
         "E": "8"
       },
       "answer": "B",
-      "explanation": "6 - 2 = 4."
+      "explanation": "6 - 2 = 4.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_014",
@@ -184,7 +262,13 @@
         "E": "0"
       },
       "answer": "C",
-      "explanation": "x+x = 2x → 2×7 = 14."
+      "explanation": "x+x = 2x → 2×7 = 14.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_015",
@@ -197,7 +281,13 @@
         "E": "3"
       },
       "answer": "D",
-      "explanation": "3²+3 = 9+3 = 12? Wait, check: 9+3 = 12. Correct answer is 12."
+      "explanation": "3²+3 = 9+3 = 12? Wait, check: 9+3 = 12. Correct answer is 12.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_015_corrected",
@@ -210,7 +300,13 @@
         "E": "15"
       },
       "answer": "A",
-      "explanation": "3² + 3 = 9 + 3 = 12."
+      "explanation": "3² + 3 = 9 + 3 = 12.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_016",
@@ -223,7 +319,13 @@
         "E": "0"
       },
       "answer": "A",
-      "explanation": "(2+4)/2 = 6/2 = 3."
+      "explanation": "(2+4)/2 = 6/2 = 3.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_017",
@@ -236,7 +338,13 @@
         "E": "6"
       },
       "answer": "B",
-      "explanation": "5(0)+1 = 1."
+      "explanation": "5(0)+1 = 1.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_018",
@@ -249,7 +357,13 @@
         "E": "3"
       },
       "answer": "A",
-      "explanation": "2×9 = 18? Check: 2×9 =18. Correct answer: 18."
+      "explanation": "2×9 = 18? Check: 2×9 =18. Correct answer: 18.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_018_corrected",
@@ -262,7 +376,13 @@
         "E": "3"
       },
       "answer": "A",
-      "explanation": "Square 3 → 9; then ×2 → 18."
+      "explanation": "Square 3 → 9; then ×2 → 18.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_019",
@@ -275,7 +395,13 @@
         "E": "-3"
       },
       "answer": "B",
-      "explanation": "15 - 12 = 3."
+      "explanation": "15 - 12 = 3.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_020",
@@ -288,7 +414,13 @@
         "E": "1"
       },
       "answer": "A",
-      "explanation": "9 - 9 = 0."
+      "explanation": "9 - 9 = 0.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_021",
@@ -301,7 +433,13 @@
         "E": "2"
       },
       "answer": "A",
-      "explanation": "16 ÷ 4 = 4."
+      "explanation": "16 ÷ 4 = 4.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_022",
@@ -314,7 +452,13 @@
         "E": "8"
       },
       "answer": "B",
-      "explanation": "2²−4×2=4−8 = -4? Check: 4-8=-4. Correct is -4."
+      "explanation": "2²−4×2=4−8 = -4? Check: 4-8=-4. Correct is -4.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_022_corrected",
@@ -327,7 +471,13 @@
         "E": "8"
       },
       "answer": "A",
-      "explanation": "4 - 8 = -4."
+      "explanation": "4 - 8 = -4.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_023",
@@ -340,7 +490,13 @@
         "E": "3"
       },
       "answer": "B",
-      "explanation": "7×3 = 21."
+      "explanation": "7×3 = 21.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_024",
@@ -353,7 +509,13 @@
         "E": "12"
       },
       "answer": "A",
-      "explanation": "12 - 4 = 8."
+      "explanation": "12 - 4 = 8.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     },
     {
       "id": "mk_func_b_025",
@@ -366,7 +528,13 @@
         "E": "5"
       },
       "answer": "A",
-      "explanation": "0 + 15 = 15."
+      "explanation": "0 + 15 = 15.",
+      "steps": [
+        "1. Identify the input value to substitute.",
+        "2. Replace x with the given value in the function.",
+        "3. Simplify using order of operations."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
     }
   ]
 }

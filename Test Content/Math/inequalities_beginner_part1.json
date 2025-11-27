@@ -15,7 +15,13 @@
         "E": "x = 7"
       },
       "answer": "A",
-      "explanation": "Subtract 5 from both sides: x < 12 - 5 = 7."
+      "explanation": "Subtract 5 from both sides: x < 12 - 5 = 7.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_002",
@@ -28,7 +34,13 @@
         "E": "x = 7"
       },
       "answer": "B",
-      "explanation": "Add 3 to both sides: x > 4 + 3 = 7."
+      "explanation": "Add 3 to both sides: x > 4 + 3 = 7.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_003",
@@ -41,7 +53,13 @@
         "E": "x = 2"
       },
       "answer": "A",
-      "explanation": "Subtract 8: x >= 10 - 8 = 2."
+      "explanation": "Subtract 8: x >= 10 - 8 = 2.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_004",
@@ -54,7 +72,13 @@
         "E": "x = 11"
       },
       "answer": "A",
-      "explanation": "Add 6: x <= 5 + 6 = 11."
+      "explanation": "Add 6: x <= 5 + 6 = 11.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_005",
@@ -67,7 +91,13 @@
         "E": "x = -7"
       },
       "answer": "B",
-      "explanation": "Add 2: x < -5 + 2 = -3? Careful: -5 + 2 = -3, but inequality was x - 2 < -5, so x < -3. Correct answer is A."
+      "explanation": "Add 2: x < -5 + 2 = -3? Careful: -5 + 2 = -3, but inequality was x - 2 < -5, so x < -3. Correct answer is A.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_006",
@@ -80,7 +110,13 @@
         "E": "8"
       },
       "answer": "D",
-      "explanation": "x + 4 > 9 ⇒ x > 5. Any number greater than 5 works; 7 is one such value."
+      "explanation": "x + 4 > 9 ⇒ x > 5. Any number greater than 5 works; 7 is one such value.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_007",
@@ -93,7 +129,13 @@
         "E": "x = 5"
       },
       "answer": "A",
-      "explanation": "Divide both sides by 2: x > 10 ÷ 2 = 5."
+      "explanation": "Divide both sides by 2: x > 10 ÷ 2 = 5.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_008",
@@ -106,7 +148,13 @@
         "E": "x = 4"
       },
       "answer": "C",
-      "explanation": "Divide both sides by 3: x < 12 ÷ 3 = 4."
+      "explanation": "Divide both sides by 3: x < 12 ÷ 3 = 4.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_009",
@@ -119,7 +167,13 @@
         "E": "x = 4"
       },
       "answer": "C",
-      "explanation": "Divide by 4: x >= 16 ÷ 4 = 4."
+      "explanation": "Divide by 4: x >= 16 ÷ 4 = 4.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_010",
@@ -132,7 +186,13 @@
         "E": "x = 4"
       },
       "answer": "C",
-      "explanation": "Divide by 5: x <= 20 ÷ 5 = 4."
+      "explanation": "Divide by 5: x <= 20 ÷ 5 = 4.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_011",
@@ -145,7 +205,13 @@
         "E": "x = 6"
       },
       "answer": "C",
-      "explanation": "2x < 9 ⇒ x < 4.5. Among choices, x = 3 satisfies this."
+      "explanation": "2x < 9 ⇒ x < 4.5. Among choices, x = 3 satisfies this.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_012",
@@ -158,7 +224,13 @@
         "E": "x = 6"
       },
       "answer": "B",
-      "explanation": "Multiply by 3: x > 2 × 3 = 6."
+      "explanation": "Multiply by 3: x > 2 × 3 = 6.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_013",
@@ -171,7 +243,13 @@
         "E": "x >= 12"
       },
       "answer": "D",
-      "explanation": "Multiply by 4: x <= 3 × 4 = 12."
+      "explanation": "Multiply by 4: x <= 3 × 4 = 12.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_014",
@@ -184,7 +262,13 @@
         "E": "x = -10"
       },
       "answer": "A",
-      "explanation": "Multiply both sides by 5: x >= -2 × 5 = -10."
+      "explanation": "Multiply both sides by 5: x >= -2 × 5 = -10.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_015",
@@ -197,7 +281,13 @@
         "E": "x = 4"
       },
       "answer": "A",
-      "explanation": "2x + 3 < 11 ⇒ 2x < 8 ⇒ x < 4."
+      "explanation": "2x + 3 < 11 ⇒ 2x < 8 ⇒ x < 4.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_016",
@@ -210,7 +300,13 @@
         "E": "x = 4"
       },
       "answer": "C",
-      "explanation": "3x - 5 <= 7 ⇒ 3x <= 12 ⇒ x <= 4."
+      "explanation": "3x - 5 <= 7 ⇒ 3x <= 12 ⇒ x <= 4.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_017",
@@ -223,7 +319,13 @@
         "E": "x = 2"
       },
       "answer": "B",
-      "explanation": "4x + 1 >= 9 ⇒ 4x >= 8 ⇒ x >= 2."
+      "explanation": "4x + 1 >= 9 ⇒ 4x >= 8 ⇒ x >= 2.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_018",
@@ -236,7 +338,13 @@
         "E": "x = 1"
       },
       "answer": "A",
-      "explanation": "5x - 2 > 3 ⇒ 5x > 5 ⇒ x > 1."
+      "explanation": "5x - 2 > 3 ⇒ 5x > 5 ⇒ x > 1.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_019",
@@ -249,7 +357,13 @@
         "E": "x = -4"
       },
       "answer": "B",
-      "explanation": "Divide by -2 and flip the inequality: x < 8 ÷ (-2) = -4."
+      "explanation": "Divide by -2 and flip the inequality: x < 8 ÷ (-2) = -4.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_020",
@@ -262,7 +376,13 @@
         "E": "x = -4"
       },
       "answer": "B",
-      "explanation": "Divide by -3 and flip sign: x > 12 ÷ (-3) = -4."
+      "explanation": "Divide by -3 and flip sign: x > 12 ÷ (-3) = -4.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_021",
@@ -275,7 +395,13 @@
         "E": "x = 4"
       },
       "answer": "B",
-      "explanation": "Divide by -4 and flip sign: x <= (-16) ÷ (-4) = 4."
+      "explanation": "Divide by -4 and flip sign: x <= (-16) ÷ (-4) = 4.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_022",
@@ -288,7 +414,13 @@
         "E": "x = -2"
       },
       "answer": "A",
-      "explanation": "Divide by -5 and flip sign: x >= 10 ÷ (-5) = -2."
+      "explanation": "Divide by -5 and flip sign: x >= 10 ÷ (-5) = -2.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_023",
@@ -301,7 +433,13 @@
         "E": "x = 5"
       },
       "answer": "B",
-      "explanation": "\"Greater than or equal to\" is written as x >= 5."
+      "explanation": "\"Greater than or equal to\" is written as x >= 5.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_024",
@@ -314,7 +452,13 @@
         "E": "x = 3"
       },
       "answer": "C",
-      "explanation": "\"Less than\" means x < 3."
+      "explanation": "\"Less than\" means x < 3.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_b_025",
@@ -327,7 +471,13 @@
         "E": "x = 10"
       },
       "answer": "B",
-      "explanation": "\"At most 10\" means x can be 10 or less, so x <= 10."
+      "explanation": "\"At most 10\" means x can be 10 or less, so x <= 10.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     }
   ]
 }

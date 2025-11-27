@@ -15,7 +15,13 @@
         "E": "9"
       },
       "answer": "D",
-      "explanation": "Square root shortcut: x = ±√9 = ±3."
+      "explanation": "Square root shortcut: x = ±√9 = ±3.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_002",
@@ -28,7 +34,13 @@
         "E": "8"
       },
       "answer": "D",
-      "explanation": "Square root both sides: x = ±4."
+      "explanation": "Square root both sides: x = ±4.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_003",
@@ -41,7 +53,13 @@
         "E": "10"
       },
       "answer": "D",
-      "explanation": "Square root trick: x = ±5."
+      "explanation": "Square root trick: x = ±5.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_004",
@@ -54,7 +72,13 @@
         "E": "No solution"
       },
       "answer": "C",
-      "explanation": "Add 9: x^2 = 9 → x = ±3."
+      "explanation": "Add 9: x^2 = 9 → x = ±3.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_005",
@@ -67,7 +91,13 @@
         "E": "No solution"
       },
       "answer": "B",
-      "explanation": "Add 16: x^2 = 16 → x = ±4."
+      "explanation": "Add 16: x^2 = 16 → x = ±4.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_006",
@@ -80,7 +110,13 @@
         "E": "No solution"
       },
       "answer": "C",
-      "explanation": "Difference of squares shortcut: x = ±1."
+      "explanation": "Difference of squares shortcut: x = ±1.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_007",
@@ -93,7 +129,13 @@
         "E": "No solution"
       },
       "answer": "C",
-      "explanation": "|x| = 2 → x = ±2."
+      "explanation": "|x| = 2 → x = ±2.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_008",
@@ -106,7 +148,13 @@
         "E": "No solution"
       },
       "answer": "C",
-      "explanation": "x = ±√36 = ±6."
+      "explanation": "x = ±√36 = ±6.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_009",
@@ -119,7 +167,13 @@
         "E": "No solution"
       },
       "answer": "C",
-      "explanation": "x = ±1."
+      "explanation": "x = ±1.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_010",
@@ -132,7 +186,13 @@
         "E": "No solution"
       },
       "answer": "C",
-      "explanation": "Add 25: x^2 = 25 → x = ±5."
+      "explanation": "Add 25: x^2 = 25 → x = ±5.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_011",
@@ -145,7 +205,13 @@
         "E": "No solution"
       },
       "answer": "A",
-      "explanation": "Factor shortcut: x(x + 5) = 0 → x = 0 or -5."
+      "explanation": "Factor shortcut: x(x + 5) = 0 → x = 0 or -5.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_012",
@@ -158,7 +224,13 @@
         "E": "No solution"
       },
       "answer": "A",
-      "explanation": "x(x - 6) = 0 → x = 0 or 6."
+      "explanation": "x(x - 6) = 0 → x = 0 or 6.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_013",
@@ -171,7 +243,13 @@
         "E": "No solution"
       },
       "answer": "A",
-      "explanation": "x(x - 3) = 0 → x = 0 or 3."
+      "explanation": "x(x - 3) = 0 → x = 0 or 3.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_014",
@@ -184,7 +262,13 @@
         "E": "No solution"
       },
       "answer": "A",
-      "explanation": "x(x + 4) = 0 → x = 0 or -4."
+      "explanation": "x(x + 4) = 0 → x = 0 or -4.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_015",
@@ -197,7 +281,13 @@
         "E": "No solution"
       },
       "answer": "B",
-      "explanation": "x(x - 1) = 0 → x = 0 or 1."
+      "explanation": "x(x - 1) = 0 → x = 0 or 1.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_016",
@@ -210,7 +300,13 @@
         "E": "No solution"
       },
       "answer": "C",
-      "explanation": "Zero product rule: each factor = 0 → x = ±4."
+      "explanation": "Zero product rule: each factor = 0 → x = ±4.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_017",
@@ -223,7 +319,13 @@
         "E": "No solution"
       },
       "answer": "A",
-      "explanation": "Set each factor = 0."
+      "explanation": "Set each factor = 0.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_018",
@@ -236,7 +338,13 @@
         "E": "No solution"
       },
       "answer": "A",
-      "explanation": "Zero product property."
+      "explanation": "Zero product property.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_019",
@@ -249,7 +357,13 @@
         "E": "No solution"
       },
       "answer": "A",
-      "explanation": "Set x - 1 = 0 or x - 5 = 0."
+      "explanation": "Set x - 1 = 0 or x - 5 = 0.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_020",
@@ -262,7 +376,13 @@
         "E": "No solution"
       },
       "answer": "A",
-      "explanation": "Perfect square: (x + 1)^2 = 0 ⇒ x = -1."
+      "explanation": "Perfect square: (x + 1)^2 = 0 ⇒ x = -1.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_021",
@@ -275,7 +395,13 @@
         "E": "No solution"
       },
       "answer": "C",
-      "explanation": "(x - 2)^2 = 0 ⇒ x = 2."
+      "explanation": "(x - 2)^2 = 0 ⇒ x = 2.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_022",
@@ -288,7 +414,13 @@
         "E": "No solution"
       },
       "answer": "B",
-      "explanation": "(x + 3)^2 = 0 ⇒ x = -3."
+      "explanation": "(x + 3)^2 = 0 ⇒ x = -3.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_023",
@@ -301,7 +433,13 @@
         "E": "No solution"
       },
       "answer": "A",
-      "explanation": "(x - 1)^2 = 0 ⇒ x = 1."
+      "explanation": "(x - 1)^2 = 0 ⇒ x = 1.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_024",
@@ -314,7 +452,13 @@
         "E": "No solution"
       },
       "answer": "C",
-      "explanation": "Zero product property."
+      "explanation": "Zero product property.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     },
     {
       "id": "mk_qe_b_025",
@@ -327,7 +471,13 @@
         "E": "No solution"
       },
       "answer": "A",
-      "explanation": "Set each factor = 0."
+      "explanation": "Set each factor = 0.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
     }
   ]
 }

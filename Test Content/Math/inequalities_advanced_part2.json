@@ -15,7 +15,13 @@
         "E": "x = -2"
       },
       "answer": "A",
-      "explanation": "5x - 4 ≥ 6x + 2 ⇒ -x ≥ 6 ⇒ x ≤ -6. (Corrected below.)"
+      "explanation": "5x - 4 ≥ 6x + 2 ⇒ -x ≥ 6 ⇒ x ≤ -6. (Corrected below.)",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_a_026_corrected",
@@ -28,9 +34,14 @@
         "E": "x = -6"
       },
       "answer": "A",
-      "explanation": "5x - 4 ≥ 6x + 2 ⇒ -x ≥ 6 ⇒ x ≤ -6."
+      "explanation": "5x - 4 ≥ 6x + 2 ⇒ -x ≥ 6 ⇒ x ≤ -6.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_027",
       "question": "Solve: 4 - x < 2(1 - 2x)",
@@ -42,9 +53,14 @@
         "E": "x = -2"
       },
       "answer": "B",
-      "explanation": "4 - x < 2 - 4x ⇒ 3x < -2 ⇒ x < -0.666. Closest boundary: x < -2 works."
+      "explanation": "4 - x < 2 - 4x ⇒ 3x < -2 ⇒ x < -0.666. Closest boundary: x < -2 works.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_028",
       "question": "Solve: 3x + 7 ≤ 2 - 5x",
@@ -56,9 +72,14 @@
         "E": "x = -1"
       },
       "answer": "D",
-      "explanation": "3x + 7 ≤ 2 - 5x ⇒ 8x ≤ -5 ⇒ x ≤ -5/8."
+      "explanation": "3x + 7 ≤ 2 - 5x ⇒ 8x ≤ -5 ⇒ x ≤ -5/8.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_029",
       "question": "Solve: 8x - 3 ≥ 2x + 12",
@@ -70,9 +91,14 @@
         "E": "x = 2.5"
       },
       "answer": "A",
-      "explanation": "8x - 3 ≥ 2x + 12 ⇒ 6x ≥ 15 ⇒ x ≥ 2.5."
+      "explanation": "8x - 3 ≥ 2x + 12 ⇒ 6x ≥ 15 ⇒ x ≥ 2.5.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_030",
       "question": "Solve: -6x + 9 < 3x - 18",
@@ -84,9 +110,14 @@
         "E": "x = 3"
       },
       "answer": "A",
-      "explanation": "-6x + 9 < 3x - 18 ⇒ -9x < -27 ⇒ x > 3."
+      "explanation": "-6x + 9 < 3x - 18 ⇒ -9x < -27 ⇒ x > 3.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_031",
       "question": "Solve: -4x - 5 ≤ -3(2x - 1)",
@@ -98,7 +129,13 @@
         "E": "x = -2"
       },
       "answer": "A",
-      "explanation": "-4x - 5 ≤ -6x + 3 ⇒ 2x ≤ 8 ⇒ x ≤ 4? Correction below."
+      "explanation": "-4x - 5 ≤ -6x + 3 ⇒ 2x ≤ 8 ⇒ x ≤ 4? Correction below.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_a_031_corrected",
@@ -111,9 +148,14 @@
         "E": "x = 4"
       },
       "answer": "A",
-      "explanation": "-4x - 5 ≤ -6x + 3 ⇒ 2x ≤ 8 ⇒ x ≤ 4."
+      "explanation": "-4x - 5 ≤ -6x + 3 ⇒ 2x ≤ 8 ⇒ x ≤ 4.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_032",
       "question": "Solve: 11 - x > 2(3x + 5)",
@@ -125,9 +167,14 @@
         "E": "x = -4"
       },
       "answer": "A",
-      "explanation": "11 - x > 6x + 10 ⇒ -7x > -1 ⇒ x < 1/7. Closest boundary: x < -4 covers all true solutions."
+      "explanation": "11 - x > 6x + 10 ⇒ -7x > -1 ⇒ x < 1/7. Closest boundary: x < -4 covers all true solutions.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_033",
       "question": "Solve: 5(2x - 1) ≥ 3(3x + 2)",
@@ -139,7 +186,13 @@
         "E": "x = -1"
       },
       "answer": "B",
-      "explanation": "10x - 5 ≥ 9x + 6 ⇒ x ≥ 11? Correction below."
+      "explanation": "10x - 5 ≥ 9x + 6 ⇒ x ≥ 11? Correction below.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_a_033_corrected",
@@ -152,9 +205,14 @@
         "E": "x = 11"
       },
       "answer": "A",
-      "explanation": "10x - 5 ≥ 9x + 6 ⇒ x ≥ 11."
+      "explanation": "10x - 5 ≥ 9x + 6 ⇒ x ≥ 11.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_034",
       "question": "Solve: -2(4x + 3) < 5x - 7",
@@ -166,9 +224,14 @@
         "E": "x = -1"
       },
       "answer": "C",
-      "explanation": "-8x - 6 < 5x - 7 ⇒ -13x < -1 ⇒ x > 1/13 ⇒ best boundary x > 1."
+      "explanation": "-8x - 6 < 5x - 7 ⇒ -13x < -1 ⇒ x > 1/13 ⇒ best boundary x > 1.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_035",
       "question": "Solve: 9 - 4x ≥ -3(2 - x)",
@@ -180,9 +243,14 @@
         "E": "x = 1"
       },
       "answer": "A",
-      "explanation": "9 - 4x ≥ -6 + 3x ⇒ -7x ≥ -15 ⇒ x ≤ 15/7 ⇒ approx 2.14 ⇒ x ≤ 1 is conservative and correct relative boundary."
+      "explanation": "9 - 4x ≥ -6 + 3x ⇒ -7x ≥ -15 ⇒ x ≤ 15/7 ⇒ approx 2.14 ⇒ x ≤ 1 is conservative and correct relative boundary.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_036",
       "question": "Solve: 14 - 3x > 2(5x - 6)",
@@ -194,9 +262,14 @@
         "E": "x = 4"
       },
       "answer": "C",
-      "explanation": "14 - 3x > 10x - 12 ⇒ -13x > -26 ⇒ x < 2 ⇒ closest conservative boundary x < 4."
+      "explanation": "14 - 3x > 10x - 12 ⇒ -13x > -26 ⇒ x < 2 ⇒ closest conservative boundary x < 4.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_037",
       "question": "Solve: 3(x - 4) ≤ 2(x - 1)",
@@ -208,7 +281,13 @@
         "E": "x = 2"
       },
       "answer": "C",
-      "explanation": "3x - 12 ≤ 2x - 2 ⇒ x ≤ 10? Correction: x ≤ 10 is correct."
+      "explanation": "3x - 12 ≤ 2x - 2 ⇒ x ≤ 10? Correction: x ≤ 10 is correct.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_a_037_corrected",
@@ -221,9 +300,14 @@
         "E": "x = 10"
       },
       "answer": "A",
-      "explanation": "3x - 12 ≤ 2x - 2 ⇒ x ≤ 10."
+      "explanation": "3x - 12 ≤ 2x - 2 ⇒ x ≤ 10.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_038",
       "question": "Solve: -5x + 3 > 2(4 - x)",
@@ -235,9 +319,14 @@
         "E": "x = 5"
       },
       "answer": "C",
-      "explanation": "-5x + 3 > 8 - 2x ⇒ -3x > 5 ⇒ x < -5/3 ⇒ nearest boundary x < -5."
+      "explanation": "-5x + 3 > 8 - 2x ⇒ -3x > 5 ⇒ x < -5/3 ⇒ nearest boundary x < -5.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_039",
       "question": "Solve: 6 - 2x ≥ 4x - 18",
@@ -249,9 +338,14 @@
         "E": "x = 4"
       },
       "answer": "A",
-      "explanation": "6 - 2x ≥ 4x - 18 ⇒ -6x ≥ -24 ⇒ x ≤ 4."
+      "explanation": "6 - 2x ≥ 4x - 18 ⇒ -6x ≥ -24 ⇒ x ≤ 4.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_040",
       "question": "Solve: 2x + 7 < -3(1 - x)",
@@ -263,7 +357,13 @@
         "E": "x = 0"
       },
       "answer": "B",
-      "explanation": "2x +7 < -3 + 3x ⇒ x > 10."
+      "explanation": "2x +7 < -3 + 3x ⇒ x > 10.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
     {
       "id": "mk_ineq_a_040_corrected",
@@ -276,9 +376,14 @@
         "E": "x = 10"
       },
       "answer": "A",
-      "explanation": "2x + 7 < -3 + 3x ⇒ -x < -10 ⇒ x > 10."
+      "explanation": "2x + 7 < -3 + 3x ⇒ -x < -10 ⇒ x > 10.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_041",
       "question": "Solve: 7 - x ≥ 8x - 2",
@@ -290,9 +395,14 @@
         "E": "x = 1"
       },
       "answer": "A",
-      "explanation": "7 - x ≥ 8x - 2 ⇒ -9x ≥ -9 ⇒ x ≤ 1."
+      "explanation": "7 - x ≥ 8x - 2 ⇒ -9x ≥ -9 ⇒ x ≤ 1.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_042",
       "question": "Solve: 3x + 10 ≤ 2x + 1",
@@ -304,9 +414,14 @@
         "E": "x = -9"
       },
       "answer": "A",
-      "explanation": "3x + 10 ≤ 2x + 1 ⇒ x ≤ -9."
+      "explanation": "3x + 10 ≤ 2x + 1 ⇒ x ≤ -9.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_043",
       "question": "Solve: -4x + 2 < 3x - 19",
@@ -318,9 +433,14 @@
         "E": "x = 3"
       },
       "answer": "A",
-      "explanation": "-4x + 2 < 3x - 19 ⇒ -7x < -21 ⇒ x > 3."
+      "explanation": "-4x + 2 < 3x - 19 ⇒ -7x < -21 ⇒ x > 3.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_044",
       "question": "Solve: 8 + 3x > 5(1 + x)",
@@ -332,9 +452,14 @@
         "E": "x = -3"
       },
       "answer": "A",
-      "explanation": "8 + 3x > 5 + 5x ⇒ -2x > -3 ⇒ x < 1.5 ⇒ closest boundary x < -3."
+      "explanation": "8 + 3x > 5 + 5x ⇒ -2x > -3 ⇒ x < 1.5 ⇒ closest boundary x < -3.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_045",
       "question": "Solve: -2(3x - 2) ≥ 4x + 6",
@@ -346,9 +471,14 @@
         "E": "x = -2"
       },
       "answer": "A",
-      "explanation": "-6x + 4 ≥ 4x + 6 ⇒ -10x ≥ 2 ⇒ x ≤ -0.2 ⇒ closest boundary x ≤ -2."
+      "explanation": "-6x + 4 ≥ 4x + 6 ⇒ -10x ≥ 2 ⇒ x ≤ -0.2 ⇒ closest boundary x ≤ -2.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_046",
       "question": "Solve: 10 - 4x < 2(7 - x)",
@@ -360,9 +490,14 @@
         "E": "x = 4"
       },
       "answer": "B",
-      "explanation": "10 - 4x < 14 - 2x ⇒ -2x < 4 ⇒ x > -2 ⇒ closest boundary x > 4 is acceptable."
+      "explanation": "10 - 4x < 14 - 2x ⇒ -2x < 4 ⇒ x > -2 ⇒ closest boundary x > 4 is acceptable.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_047",
       "question": "Solve: 7x + 2 ≤ 3(2x + 5)",
@@ -374,9 +509,14 @@
         "E": "x = 2"
       },
       "answer": "A",
-      "explanation": "7x + 2 ≤ 6x + 15 ⇒ x ≤ 13 ⇒ closest boundary x ≤ 2 works."
+      "explanation": "7x + 2 ≤ 6x + 15 ⇒ x ≤ 13 ⇒ closest boundary x ≤ 2 works.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_048",
       "question": "Solve: -3x + 8 ≥ 2(4 - x)",
@@ -388,9 +528,14 @@
         "E": "x = 0"
       },
       "answer": "D",
-      "explanation": "-3x + 8 ≥ 8 - 2x ⇒ -x ≥ 0 ⇒ x ≤ 0."
+      "explanation": "-3x + 8 ≥ 8 - 2x ⇒ -x ≥ 0 ⇒ x ≤ 0.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_049",
       "question": "Solve: 9 - x < -2(3x - 4)",
@@ -402,9 +547,14 @@
         "E": "x = -1"
       },
       "answer": "C",
-      "explanation": "9 - x < -6x + 8 ⇒ 5x < -1 ⇒ x < -0.2 ⇒ conservative boundary: x < 1."
+      "explanation": "9 - x < -6x + 8 ⇒ 5x < -1 ⇒ x < -0.2 ⇒ conservative boundary: x < 1.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     },
-
     {
       "id": "mk_ineq_a_050",
       "question": "Solve: -5 + 3x ≤ 2(1 - 2x)",
@@ -416,7 +566,13 @@
         "E": "x = -1"
       },
       "answer": "A",
-      "explanation": "-5 + 3x ≤ 2 - 4x ⇒ 7x ≤ 7 ⇒ x ≤ 1 ⇒ closest boundary x ≤ -1."
+      "explanation": "-5 + 3x ≤ 2 - 4x ⇒ 7x ≤ 7 ⇒ x ≤ 1 ⇒ closest boundary x ≤ -1.",
+      "steps": [
+        "1. Solve as you would an equation.",
+        "2. Remember: flip the sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
     }
   ]
 }

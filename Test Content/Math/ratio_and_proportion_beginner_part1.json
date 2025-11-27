@@ -4,7 +4,6 @@
   "difficulty": "beginner",
   "part": 1,
   "questions": [
-
     {
       "id": "ratprop_b1_001",
       "question": "Simplify the ratio 6:9.",
@@ -24,7 +23,6 @@
       ],
       "fastStrategy": "Reduce ratios just like fractions."
     },
-
     {
       "id": "ratprop_b1_002",
       "question": "Simplify the ratio 12:20.",
@@ -37,9 +35,13 @@
       },
       "answer": "A",
       "explanation": "Divide both by 4 → 12/4 : 20/4 = 3:5.",
-      "fastStrategy": "Look for a common factor, reduce quickly."
+      "fastStrategy": "Look for a common factor, reduce quickly.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ]
     },
-
     {
       "id": "ratprop_b1_003",
       "question": "The ratio of cats to dogs is 4:6. What is the simplified form?",
@@ -51,9 +53,14 @@
         "E": "1:3"
       },
       "answer": "B",
-      "explanation": "4:6 reduces by dividing both by 2 → 2:3."
+      "explanation": "4:6 reduces by dividing both by 2 → 2:3.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "ratprop_b1_004",
       "question": "If a recipe uses sugar and flour in a ratio of 3:5, how much flour is needed for 9 cups of sugar?",
@@ -72,7 +79,6 @@
       ],
       "fastStrategy": "Match the ratio’s first number to the new value, scale the second."
     },
-
     {
       "id": "ratprop_b1_005",
       "question": "Solve the proportion: 2/3 = x/9.",
@@ -85,9 +91,13 @@
       },
       "answer": "D",
       "explanation": "Cross-multiply: 2 × 9 = 3 × x → 18 = 3x → x = 6.",
-      "fastStrategy": "Proportions = cross multiplication."
+      "fastStrategy": "Proportions = cross multiplication.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ]
     },
-
     {
       "id": "ratprop_b1_006",
       "question": "Solve the proportion: x/4 = 6/8.",
@@ -99,9 +109,14 @@
         "E": "8"
       },
       "answer": "B",
-      "explanation": "Cross multiply: x × 8 = 4 × 6 → 8x = 24 → x = 3."
+      "explanation": "Cross multiply: x × 8 = 4 × 6 → 8x = 24 → x = 3.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "ratprop_b1_007",
       "question": "If a map uses a scale of 1 inch = 5 miles, how many miles do 3 inches represent?",
@@ -114,9 +129,13 @@
       },
       "answer": "C",
       "explanation": "Multiply: 1 in → 5 miles, so 3 in → 15 miles.",
-      "fastStrategy": "Scaling is direct multiplication."
+      "fastStrategy": "Scaling is direct multiplication.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ]
     },
-
     {
       "id": "ratprop_b1_008",
       "question": "Solve the proportion: 4/x = 8/12.",
@@ -128,9 +147,14 @@
         "E": "12"
       },
       "answer": "C",
-      "explanation": "Cross multiply: 4 × 12 = 8 × x → 48 = 8x → x = 6."
+      "explanation": "Cross multiply: 4 × 12 = 8 × x → 48 = 8x → x = 6.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "ratprop_b1_009",
       "question": "A class has boys and girls in a 2:3 ratio. If there are 10 boys, how many girls are there?",
@@ -143,9 +167,13 @@
       },
       "answer": "D",
       "explanation": "2 → 10 is ×5, so 3 × 5 = 15 girls.",
-      "fastStrategy": "Find the multiplier and scale the second number."
+      "fastStrategy": "Find the multiplier and scale the second number.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ]
     },
-
     {
       "id": "ratprop_b1_010",
       "question": "Simplify the ratio 16:24.",
@@ -157,9 +185,14 @@
         "E": "8:10"
       },
       "answer": "A",
-      "explanation": "Divide both numbers by 8 → 2:3."
+      "explanation": "Divide both numbers by 8 → 2:3.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "ratprop_b1_011",
       "question": "Solve: 3/7 = x/21.",
@@ -172,9 +205,13 @@
       },
       "answer": "B",
       "explanation": "Multiply numerator 3 → 9 to get denominator 7 → 21 by ×3.",
-      "fastStrategy": "Match the jump in denominators to jump in numerators."
+      "fastStrategy": "Match the jump in denominators to jump in numerators.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ]
     },
-
     {
       "id": "ratprop_b1_012",
       "question": "A car travels 120 miles in 3 hours. How far does it travel in 1 hour?",
@@ -187,9 +224,13 @@
       },
       "answer": "B",
       "explanation": "120 miles ÷ 3 hours = 40 mph.",
-      "fastStrategy": "Unit rate = divide."
+      "fastStrategy": "Unit rate = divide.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ]
     },
-
     {
       "id": "ratprop_b1_013",
       "question": "You earn $45 for 3 hours of work. What is your hourly rate?",
@@ -205,9 +246,9 @@
       "steps": [
         "1. Total pay ÷ total hours.",
         "2. 45/3 = 15."
-      ]
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "ratprop_b1_014",
       "question": "Simplify the ratio 25:100.",
@@ -219,9 +260,14 @@
         "E": "5:10"
       },
       "answer": "C",
-      "explanation": "Divide by 25 → 1:4? Wait: 25/25=1 and 100/25=4 → correct is 1:4 (choice A)."
+      "explanation": "Divide by 25 → 1:4? Wait: 25/25=1 and 100/25=4 → correct is 1:4 (choice A).",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "ratprop_b1_015",
       "question": "Solve: x/5 = 9/15.",
@@ -233,9 +279,14 @@
         "E": "5"
       },
       "answer": "C",
-      "explanation": "9/15 simplifies to 3/5, so x = 3."
+      "explanation": "9/15 simplifies to 3/5, so x = 3.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "ratprop_b1_016",
       "question": "The ratio of apples to oranges is 5:2. If there are 20 apples, how many oranges?",
@@ -247,9 +298,14 @@
         "E": "12"
       },
       "answer": "C",
-      "explanation": "5 → 20 is ×4, so 2 × 4 = 8."
+      "explanation": "5 → 20 is ×4, so 2 × 4 = 8.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "ratprop_b1_017",
       "question": "Solve: 8/x = 4/10.",
@@ -261,9 +317,14 @@
         "E": "20"
       },
       "answer": "D",
-      "explanation": "Cross multiply: 8 × 10 = 4x → 80 = 4x → x = 20? Wait: 80/4=20 → correct is E."
+      "explanation": "Cross multiply: 8 × 10 = 4x → 80 = 4x → x = 20? Wait: 80/4=20 → correct is E.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "ratprop_b1_018",
       "question": "A map scale shows 2 cm = 10 km. How many km are 6 cm?",
@@ -275,9 +336,14 @@
         "E": "50"
       },
       "answer": "C",
-      "explanation": "Scale factor = ×3. So 10 km × 3 = 30 km."
+      "explanation": "Scale factor = ×3. So 10 km × 3 = 30 km.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "ratprop_b1_019",
       "question": "Simplify the ratio 15:45.",
@@ -289,9 +355,14 @@
         "E": "5:15"
       },
       "answer": "A",
-      "explanation": "Divide both by 15 → 1:3."
+      "explanation": "Divide both by 15 → 1:3.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "ratprop_b1_020",
       "question": "Solve for x: x/9 = 4/12.",
@@ -303,9 +374,14 @@
         "E": "8"
       },
       "answer": "B",
-      "explanation": "4/12 = 1/3 → x/9 = 1/3 → x = 3."
+      "explanation": "4/12 = 1/3 → x/9 = 1/3 → x = 3.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "ratprop_b1_021",
       "question": "If 3 notebooks cost $9, what is the cost of 1 notebook?",
@@ -317,9 +393,14 @@
         "E": "5"
       },
       "answer": "C",
-      "explanation": "9 ÷ 3 = 3."
+      "explanation": "9 ÷ 3 = 3.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "ratprop_b1_022",
       "question": "Simplify the ratio 9:27.",
@@ -331,9 +412,14 @@
         "E": "3:2"
       },
       "answer": "B",
-      "explanation": "Divide both by 9 → 1:3."
+      "explanation": "Divide both by 9 → 1:3.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "ratprop_b1_023",
       "question": "Solve: 5/x = 10/20.",
@@ -345,9 +431,14 @@
         "E": "10"
       },
       "answer": "A",
-      "explanation": "10/20 = 1/2 → 5/x = 1/2 → x = 10? Wait: cross multiply: 5×20=10x → 100=10x → x=10 (choice E)."
+      "explanation": "10/20 = 1/2 → 5/x = 1/2 → x = 10? Wait: cross multiply: 5×20=10x → 100=10x → x=10 (choice E).",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "ratprop_b1_024",
       "question": "A recipe calls for 2 cups of rice per 3 cups of water. How much water is needed for 8 cups of rice?",
@@ -360,9 +451,13 @@
       },
       "answer": "C",
       "explanation": "2 → 8 is ×4. So 3 × 4 = 12.",
-      "fastStrategy": "Scale ratios by the same multiplier."
+      "fastStrategy": "Scale ratios by the same multiplier.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ]
     },
-
     {
       "id": "ratprop_b1_025",
       "question": "Simplify 30:45.",
@@ -374,8 +469,13 @@
         "E": "6:9"
       },
       "answer": "B",
-      "explanation": "Divide by 15 → 2:3."
+      "explanation": "Divide by 15 → 2:3.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     }
-
   ]
 }

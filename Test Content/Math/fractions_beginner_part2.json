@@ -4,7 +4,6 @@
   "difficulty": "beginner",
   "part": 2,
   "questions": [
-
     {
       "id": "frac_b2_026",
       "question": "Simplify 18/27.",
@@ -16,9 +15,14 @@
         "E": "6/9"
       },
       "answer": "B",
-      "explanation": "Divide top and bottom by 9 → 2/3."
+      "explanation": "Divide top and bottom by 9 → 2/3.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_027",
       "question": "Which fraction is equivalent to 6/8?",
@@ -30,9 +34,14 @@
         "E": "6/16"
       },
       "answer": "A",
-      "explanation": "Divide by 2 → 3/4."
+      "explanation": "Divide by 2 → 3/4.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_028",
       "question": "Convert 11/4 into a mixed number.",
@@ -44,9 +53,14 @@
         "E": "1 3/4"
       },
       "answer": "A",
-      "explanation": "11 ÷ 4 = 2 remainder 3 → 2 3/4? Actually: 4×2=8; 11−8=3 → 2 3/4 (choice B)."
+      "explanation": "11 ÷ 4 = 2 remainder 3 → 2 3/4? Actually: 4×2=8; 11−8=3 → 2 3/4 (choice B).",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_029",
       "question": "Convert the mixed number 3 2/3 to an improper fraction.",
@@ -58,9 +72,14 @@
         "E": "10/3"
       },
       "answer": "E",
-      "explanation": "3×3=9; 9+2=11 → correct is 11/3 (choice C)."
+      "explanation": "3×3=9; 9+2=11 → correct is 11/3 (choice C).",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_030",
       "question": "Add: 2/3 + 1/6.",
@@ -72,9 +91,14 @@
         "E": "3/4"
       },
       "answer": "C",
-      "explanation": "2/3 = 4/6 → 4/6+1/6=5/6."
+      "explanation": "2/3 = 4/6 → 4/6+1/6=5/6.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_031",
       "question": "Subtract: 3/4 − 1/8.",
@@ -86,9 +110,14 @@
         "E": "1/8"
       },
       "answer": "B",
-      "explanation": "3/4=6/8 → 6/8−1/8=5/8."
+      "explanation": "3/4=6/8 → 6/8−1/8=5/8.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_032",
       "question": "Multiply: 5/8 × 4/5.",
@@ -100,9 +129,14 @@
         "E": "1/8"
       },
       "answer": "A",
-      "explanation": "Cancel 5 → (1/8)×4 = 4/8 = 1/2."
+      "explanation": "Cancel 5 → (1/8)×4 = 4/8 = 1/2.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_033",
       "question": "Divide: 7/9 ÷ 7/3.",
@@ -114,9 +148,14 @@
         "E": "3/9"
       },
       "answer": "A",
-      "explanation": "Flip second: (7/9)×(3/7)=3/9 = 1/3."
+      "explanation": "Flip second: (7/9)×(3/7)=3/9 = 1/3.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_034",
       "question": "Which is larger: 7/12 or 2/3?",
@@ -128,9 +167,14 @@
         "E": "Not comparable"
       },
       "answer": "B",
-      "explanation": "2/3 = 8/12 > 7/12."
+      "explanation": "2/3 = 8/12 > 7/12.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_035",
       "question": "Convert 0.2 to a fraction.",
@@ -142,9 +186,14 @@
         "E": "3/5"
       },
       "answer": "A",
-      "explanation": "0.2 = 2/10 = 1/5."
+      "explanation": "0.2 = 2/10 = 1/5.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_036",
       "question": "Convert 0.75 to a fraction.",
@@ -156,9 +205,14 @@
         "E": "4/5"
       },
       "answer": "B",
-      "explanation": "0.75 = 75/100 = 3/4."
+      "explanation": "0.75 = 75/100 = 3/4.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_037",
       "question": "Add: 1/3 + 1/4.",
@@ -170,9 +224,14 @@
         "E": "1/2"
       },
       "answer": "D",
-      "explanation": "Common denominator = 12 → 4/12+3/12=7/12."
+      "explanation": "Common denominator = 12 → 4/12+3/12=7/12.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_038",
       "question": "Subtract: 5/8 − 1/2.",
@@ -184,9 +243,14 @@
         "E": "5/8"
       },
       "answer": "A",
-      "explanation": "1/2=4/8 → 5/8−4/8=1/8."
+      "explanation": "1/2=4/8 → 5/8−4/8=1/8.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_039",
       "question": "Multiply: 3/7 × 14/3.",
@@ -198,9 +262,14 @@
         "E": "7"
       },
       "answer": "B",
-      "explanation": "Cross cancel → (1/7)×14 = 2."
+      "explanation": "Cross cancel → (1/7)×14 = 2.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_040",
       "question": "Divide: 9/10 ÷ 3/5.",
@@ -212,9 +281,14 @@
         "E": "1"
       },
       "answer": "C",
-      "explanation": "Flip second: (9/10)×(5/3)=45/30=3/2."
+      "explanation": "Flip second: (9/10)×(5/3)=45/30=3/2.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_041",
       "question": "Which is smaller: 3/5 or 5/9?",
@@ -226,9 +300,14 @@
         "E": "Both are equal"
       },
       "answer": "B",
-      "explanation": "Cross multiply: 3×9=27, 5×5=25 → 25<27 so 5/9 is smaller."
+      "explanation": "Cross multiply: 3×9=27, 5×5=25 → 25<27 so 5/9 is smaller.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_042",
       "question": "Convert 1.2 to a fraction.",
@@ -240,9 +319,14 @@
         "E": "4/5"
       },
       "answer": "A",
-      "explanation": "1.2 = 12/10 = 6/5."
+      "explanation": "1.2 = 12/10 = 6/5.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_043",
       "question": "Simplify 40/56.",
@@ -254,9 +338,14 @@
         "E": "6/8"
       },
       "answer": "C",
-      "explanation": "Divide by 8 → 5/7."
+      "explanation": "Divide by 8 → 5/7.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_044",
       "question": "Add: 7/10 + 2/5.",
@@ -268,9 +357,14 @@
         "E": "12/10"
       },
       "answer": "A",
-      "explanation": "2/5=4/10 → 7/10+4/10=11/10=1 1/10? Since 1 is closest, choice A."
+      "explanation": "2/5=4/10 → 7/10+4/10=11/10=1 1/10? Since 1 is closest, choice A.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_045",
       "question": "Subtract: 11/12 − 5/6.",
@@ -282,9 +376,14 @@
         "E": "5/12"
       },
       "answer": "A",
-      "explanation": "5/6=10/12 → 11/12−10/12=1/12."
+      "explanation": "5/6=10/12 → 11/12−10/12=1/12.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_046",
       "question": "Multiply: 2/9 × 27/4.",
@@ -296,9 +395,14 @@
         "E": "5"
       },
       "answer": "C",
-      "explanation": "Cancel 9 → (2/1)×(3/4)=6/4=3/2? Actually 27/9=3 → (2×3)/4=6/4=3/2 (choice C)."
+      "explanation": "Cancel 9 → (2/1)×(3/4)=6/4=3/2? Actually 27/9=3 → (2×3)/4=6/4=3/2 (choice C).",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_047",
       "question": "Divide: 4/7 ÷ 2/3.",
@@ -310,9 +414,14 @@
         "E": "12/14"
       },
       "answer": "C",
-      "explanation": "Flip second: (4/7)×(3/2)=12/14=6/7."
+      "explanation": "Flip second: (4/7)×(3/2)=12/14=6/7.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_048",
       "question": "Convert 2.5 to a fraction.",
@@ -324,9 +433,14 @@
         "E": "3/2"
       },
       "answer": "A",
-      "explanation": "2.5 = 25/10 = 5/2."
+      "explanation": "2.5 = 25/10 = 5/2.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_049",
       "question": "Which is greater: 9/10 or 5/6?",
@@ -338,9 +452,14 @@
         "E": "They match"
       },
       "answer": "A",
-      "explanation": "Cross multiply: 9×6=54, 5×10=50 → 54>50 so 9/10 is greater."
+      "explanation": "Cross multiply: 9×6=54, 5×10=50 → 54>50 so 9/10 is greater.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     },
-
     {
       "id": "frac_b2_050",
       "question": "Simplify 14/42.",
@@ -352,8 +471,13 @@
         "E": "3/7"
       },
       "answer": "C",
-      "explanation": "Divide by 14 → 1/3."
+      "explanation": "Divide by 14 → 1/3.",
+      "steps": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. Find common denominators if adding/subtracting.",
+        "3. Perform the operation and simplify."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
     }
-
   ]
 }

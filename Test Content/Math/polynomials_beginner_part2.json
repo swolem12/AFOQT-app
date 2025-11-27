@@ -7,198 +7,502 @@
     {
       "id": "mk_poly_b_026",
       "question": "Simplify: (6x + 4) + (3x + 1)",
-      "choices": { "A": "9x + 5", "B": "6x + 5", "C": "9x + 3", "D": "7x + 5", "E": "8x + 5" },
+      "choices": {
+        "A": "9x + 5",
+        "B": "6x + 5",
+        "C": "9x + 3",
+        "D": "7x + 5",
+        "E": "8x + 5"
+      },
       "answer": "A",
-      "explanation": "6x+3x=9x; 4+1=5."
+      "explanation": "6x+3x=9x; 4+1=5.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
     {
       "id": "mk_poly_b_027",
       "question": "Simplify: (10x - 3) - (4x - 2)",
-      "choices": { "A": "6x - 1", "B": "6x - 5", "C": "8x - 1", "D": "4x - 1", "E": "14x - 1" },
+      "choices": {
+        "A": "6x - 1",
+        "B": "6x - 5",
+        "C": "8x - 1",
+        "D": "4x - 1",
+        "E": "14x - 1"
+      },
       "answer": "A",
-      "explanation": "10x-4x=6x; -3 - (-2)= -1."
+      "explanation": "10x-4x=6x; -3 - (-2)= -1.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
     {
       "id": "mk_poly_b_028",
       "question": "Simplify: (x + 6)(x + 4)",
-      "choices": { "A": "x^2 + 10x + 24", "B": "x^2 + 10x + 20", "C": "x^2 + 4x + 6", "D": "x^2 + 6x + 4", "E": "x^2 + 8x + 24" },
+      "choices": {
+        "A": "x^2 + 10x + 24",
+        "B": "x^2 + 10x + 20",
+        "C": "x^2 + 4x + 6",
+        "D": "x^2 + 6x + 4",
+        "E": "x^2 + 8x + 24"
+      },
       "answer": "A",
-      "explanation": "FOIL."
+      "explanation": "FOIL.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
     {
       "id": "mk_poly_b_029",
       "question": "Simplify: (3x + 2)(x)",
-      "choices": { "A": "3x^2 + 2x", "B": "3x^2 + x", "C": "3x + 2x", "D": "5x^2", "E": "2x^2 + 3x" },
+      "choices": {
+        "A": "3x^2 + 2x",
+        "B": "3x^2 + x",
+        "C": "3x + 2x",
+        "D": "5x^2",
+        "E": "2x^2 + 3x"
+      },
       "answer": "A",
-      "explanation": "Multiply each term by x."
+      "explanation": "Multiply each term by x.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_030",
       "question": "Simplify: 2x² + 5x²",
-      "choices": { "A": "5x²", "B": "7x²", "C": "3x²", "D": "6x²", "E": "4x²" },
+      "choices": {
+        "A": "5x²",
+        "B": "7x²",
+        "C": "3x²",
+        "D": "6x²",
+        "E": "4x²"
+      },
       "answer": "B",
-      "explanation": "2x² + 5x² = 7x²."
+      "explanation": "2x² + 5x² = 7x².",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_031",
       "question": "Simplify: x² + x² + 3x",
-      "choices": { "A": "3x² + 3x", "B": "2x² + 3x", "C": "x² + 3x", "D": "4x² + 3x", "E": "3x² + x" },
+      "choices": {
+        "A": "3x² + 3x",
+        "B": "2x² + 3x",
+        "C": "x² + 3x",
+        "D": "4x² + 3x",
+        "E": "3x² + x"
+      },
       "answer": "B",
-      "explanation": "x² + x² = 2x²."
+      "explanation": "x² + x² = 2x².",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_032",
       "question": "Simplify: (5x)(x + 1)",
-      "choices": { "A": "5x² + 5x", "B": "5x + x", "C": "5x² + x", "D": "6x²", "E": "4x² + x" },
+      "choices": {
+        "A": "5x² + 5x",
+        "B": "5x + x",
+        "C": "5x² + x",
+        "D": "6x²",
+        "E": "4x² + x"
+      },
       "answer": "A",
-      "explanation": "Distribute 5x."
+      "explanation": "Distribute 5x.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_033",
       "question": "Simplify: (x - 1)(x - 4)",
-      "choices": { "A": "x^2 - 5x + 4", "B": "x^2 - 3x - 4", "C": "x^2 + 3x - 4", "D": "x^2 - 4x - 1", "E": "x^2 + x + 4" },
+      "choices": {
+        "A": "x^2 - 5x + 4",
+        "B": "x^2 - 3x - 4",
+        "C": "x^2 + 3x - 4",
+        "D": "x^2 - 4x - 1",
+        "E": "x^2 + x + 4"
+      },
       "answer": "A",
-      "explanation": "FOIL → x² - 5x + 4."
+      "explanation": "FOIL → x² - 5x + 4.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_034",
       "question": "Simplify: 3(x + 7)",
-      "choices": { "A": "3x + 21", "B": "x + 21", "C": "3x + 7", "D": "3x + 14", "E": "4x + 21" },
+      "choices": {
+        "A": "3x + 21",
+        "B": "x + 21",
+        "C": "3x + 7",
+        "D": "3x + 14",
+        "E": "4x + 21"
+      },
       "answer": "A",
-      "explanation": "Multiply each term by 3."
+      "explanation": "Multiply each term by 3.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_035",
       "question": "Simplify: (2x + 4) + (3x + 6)",
-      "choices": { "A": "5x + 10", "B": "6x + 10", "C": "5x + 6", "D": "4x + 10", "E": "5x + 12" },
+      "choices": {
+        "A": "5x + 10",
+        "B": "6x + 10",
+        "C": "5x + 6",
+        "D": "4x + 10",
+        "E": "5x + 12"
+      },
       "answer": "A",
-      "explanation": "Combine like terms."
+      "explanation": "Combine like terms.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_036",
       "question": "Simplify: (4x)(x - 2)",
-      "choices": { "A": "4x^2 - 8x", "B": "4x^2 + 8x", "C": "2x^2 - 8x", "D": "8x^2 - 4x", "E": "4x^2 - 4x" },
+      "choices": {
+        "A": "4x^2 - 8x",
+        "B": "4x^2 + 8x",
+        "C": "2x^2 - 8x",
+        "D": "8x^2 - 4x",
+        "E": "4x^2 - 4x"
+      },
       "answer": "A",
-      "explanation": "Distribute 4x."
+      "explanation": "Distribute 4x.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_037",
       "question": "Simplify: x² - 3x + x",
-      "choices": { "A": "x² - 2x", "B": "x² - 4x", "C": "2x² - 3x", "D": "x²", "E": "x² + x" },
+      "choices": {
+        "A": "x² - 2x",
+        "B": "x² - 4x",
+        "C": "2x² - 3x",
+        "D": "x²",
+        "E": "x² + x"
+      },
       "answer": "A",
-      "explanation": "-3x + x = -2x."
+      "explanation": "-3x + x = -2x.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_038",
       "question": "Simplify: (x + 7)(2)",
-      "choices": { "A": "2x + 7", "B": "x + 14", "C": "2x + 14", "D": "x + 9", "E": "2x + 12" },
+      "choices": {
+        "A": "2x + 7",
+        "B": "x + 14",
+        "C": "2x + 14",
+        "D": "x + 9",
+        "E": "2x + 12"
+      },
       "answer": "C",
-      "explanation": "2(x+7)=2x+14."
+      "explanation": "2(x+7)=2x+14.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_039",
       "question": "Simplify: (x + 5) - (x + 2)",
-      "choices": { "A": "3", "B": "5", "C": "2x + 3", "D": "x + 3", "E": "3x + 5" },
+      "choices": {
+        "A": "3",
+        "B": "5",
+        "C": "2x + 3",
+        "D": "x + 3",
+        "E": "3x + 5"
+      },
       "answer": "A",
-      "explanation": "x-x cancels; 5-2 = 3."
+      "explanation": "x-x cancels; 5-2 = 3.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_040",
       "question": "Simplify: (3x)(4x)",
-      "choices": { "A": "12x", "B": "7x^2", "C": "12x^2", "D": "6x^2", "E": "3x^2" },
+      "choices": {
+        "A": "12x",
+        "B": "7x^2",
+        "C": "12x^2",
+        "D": "6x^2",
+        "E": "3x^2"
+      },
       "answer": "C",
-      "explanation": "Multiply coefficients: 3×4=12; x·x = x²."
+      "explanation": "Multiply coefficients: 3×4=12; x·x = x².",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_041",
       "question": "Simplify: (x + 2)(x)",
-      "choices": { "A": "x^2 + 2x", "B": "2x^2 + x", "C": "x + 2x", "D": "x^2 + x", "E": "2x^2" },
+      "choices": {
+        "A": "x^2 + 2x",
+        "B": "2x^2 + x",
+        "C": "x + 2x",
+        "D": "x^2 + x",
+        "E": "2x^2"
+      },
       "answer": "A",
-      "explanation": "Distribute x."
+      "explanation": "Distribute x.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_042",
       "question": "Simplify: (x + 4)(x - 4)",
-      "choices": { "A": "x^2 - 16", "B": "x^2 + 16", "C": "x^2 - 4x", "D": "x^2 + 4x - 16", "E": "x^2 - 8x" },
+      "choices": {
+        "A": "x^2 - 16",
+        "B": "x^2 + 16",
+        "C": "x^2 - 4x",
+        "D": "x^2 + 4x - 16",
+        "E": "x^2 - 8x"
+      },
       "answer": "A",
-      "explanation": "Difference of squares."
+      "explanation": "Difference of squares.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_043",
       "question": "Simplify: 2x^2 + 2x^2",
-      "choices": { "A": "2x^2", "B": "3x^2", "C": "4x^2", "D": "x^2", "E": "5x^2" },
+      "choices": {
+        "A": "2x^2",
+        "B": "3x^2",
+        "C": "4x^2",
+        "D": "x^2",
+        "E": "5x^2"
+      },
       "answer": "C",
-      "explanation": "Add coefficients."
+      "explanation": "Add coefficients.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_044",
       "question": "Simplify: (3x + 2)(1)",
-      "choices": { "A": "3x + 2", "B": "3x + 3", "C": "2x + 3", "D": "3x + 1", "E": "3x - 2" },
+      "choices": {
+        "A": "3x + 2",
+        "B": "3x + 3",
+        "C": "2x + 3",
+        "D": "3x + 1",
+        "E": "3x - 2"
+      },
       "answer": "A",
-      "explanation": "Multiply by 1."
+      "explanation": "Multiply by 1.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_045",
       "question": "Simplify: (5x - 1)(x)",
-      "choices": { "A": "5x^2 - x", "B": "5x^2 + x", "C": "6x^2 - x", "D": "4x^2 - x", "E": "5x - x" },
+      "choices": {
+        "A": "5x^2 - x",
+        "B": "5x^2 + x",
+        "C": "6x^2 - x",
+        "D": "4x^2 - x",
+        "E": "5x - x"
+      },
       "answer": "A",
-      "explanation": "Distribute x."
+      "explanation": "Distribute x.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_046",
       "question": "Simplify: (4x + 1)(x - 1)",
-      "choices": { "A": "4x^2 - 3x - 1", "B": "4x^2 - x - 1", "C": "4x^2 - x - 1", "D": "4x^2 - 4x + 1", "E": "4x^2 + x - 1" },
+      "choices": {
+        "A": "4x^2 - 3x - 1",
+        "B": "4x^2 - x - 1",
+        "C": "4x^2 - x - 1",
+        "D": "4x^2 - 4x + 1",
+        "E": "4x^2 + x - 1"
+      },
       "answer": "B",
-      "explanation": "FOIL correctly → 4x² - 4x + x -1 = 4x² - 3x - 1."
+      "explanation": "FOIL correctly → 4x² - 4x + x -1 = 4x² - 3x - 1.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_047",
       "question": "Simplify: (x - 3) + (x + 7)",
-      "choices": { "A": "2x + 4", "B": "x + 7", "C": "2x + 10", "D": "x + 4", "E": "3x + 4" },
+      "choices": {
+        "A": "2x + 4",
+        "B": "x + 7",
+        "C": "2x + 10",
+        "D": "x + 4",
+        "E": "3x + 4"
+      },
       "answer": "A",
-      "explanation": "x+x=2x; -3+7=4."
+      "explanation": "x+x=2x; -3+7=4.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_048",
       "question": "Simplify: 6x² - 2x²",
-      "choices": { "A": "2x²", "B": "3x²", "C": "4x²", "D": "6x²", "E": "x²" },
+      "choices": {
+        "A": "2x²",
+        "B": "3x²",
+        "C": "4x²",
+        "D": "6x²",
+        "E": "x²"
+      },
       "answer": "C",
-      "explanation": "6 - 2 = 4."
+      "explanation": "6 - 2 = 4.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_049",
       "question": "Simplify: (x + 5)(x)",
-      "choices": { "A": "x^2 + 5x", "B": "5x + x", "C": "5x^2 + x", "D": "x + 5", "E": "x^2" },
+      "choices": {
+        "A": "x^2 + 5x",
+        "B": "5x + x",
+        "C": "5x^2 + x",
+        "D": "x + 5",
+        "E": "x^2"
+      },
       "answer": "A",
-      "explanation": "Distribute x."
+      "explanation": "Distribute x.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     },
-
     {
       "id": "mk_poly_b_050",
       "question": "Simplify: (x + 3)(x + 5)",
-      "choices": { "A": "x^2 + 8x + 15", "B": "x^2 + 5x + 8", "C": "x^2 + 3x + 5", "D": "x^2 + 6x + 15", "E": "x^2 + 10x + 15" },
+      "choices": {
+        "A": "x^2 + 8x + 15",
+        "B": "x^2 + 5x + 8",
+        "C": "x^2 + 3x + 5",
+        "D": "x^2 + 6x + 15",
+        "E": "x^2 + 10x + 15"
+      },
       "answer": "A",
-      "explanation": "x² + 5x + 3x + 15 = x² + 8x + 15."
+      "explanation": "x² + 5x + 3x + 15 = x² + 8x + 15.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
     }
   ]
 }

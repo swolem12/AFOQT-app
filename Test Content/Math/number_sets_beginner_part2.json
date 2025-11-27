@@ -7,181 +7,502 @@
     {
       "id": "mk_ns_b_026",
       "question": "Which of the following is both real and irrational?",
-      "choices": { "A": "4", "B": "√11", "C": "1/3", "D": "-2", "E": "0.25" },
+      "choices": {
+        "A": "4",
+        "B": "√11",
+        "C": "1/3",
+        "D": "-2",
+        "E": "0.25"
+      },
       "answer": "B",
-      "explanation": "√11 cannot be expressed as a fraction → irrational."
+      "explanation": "√11 cannot be expressed as a fraction → irrational.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_027",
       "question": "Which number is a rational number?",
-      "choices": { "A": "√2", "B": "π", "C": "e", "D": "7/9", "E": "√5" },
+      "choices": {
+        "A": "√2",
+        "B": "π",
+        "C": "e",
+        "D": "7/9",
+        "E": "√5"
+      },
       "answer": "D",
-      "explanation": "7/9 is a ratio of integers, so it is rational."
+      "explanation": "7/9 is a ratio of integers, so it is rational.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_028",
       "question": "Which value is an integer but NOT natural?",
-      "choices": { "A": "5", "B": "0", "C": "-1", "D": "7", "E": "12" },
+      "choices": {
+        "A": "5",
+        "B": "0",
+        "C": "-1",
+        "D": "7",
+        "E": "12"
+      },
       "answer": "C",
-      "explanation": "Natural numbers are 1,2,3,...; integers include negatives."
+      "explanation": "Natural numbers are 1,2,3,...; integers include negatives.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_029",
       "question": "Which set does the number 1 belong to?",
-      "choices": { "A": "Natural", "B": "Whole", "C": "Integer", "D": "Rational", "E": "All of the above" },
+      "choices": {
+        "A": "Natural",
+        "B": "Whole",
+        "C": "Integer",
+        "D": "Rational",
+        "E": "All of the above"
+      },
       "answer": "E",
-      "explanation": "1 fits into all major sets except irrationals."
+      "explanation": "1 fits into all major sets except irrationals.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_030",
       "question": "Which number is imaginary?",
-      "choices": { "A": "√9", "B": "3", "C": "-5", "D": "√(-16)", "E": "1/2" },
+      "choices": {
+        "A": "√9",
+        "B": "3",
+        "C": "-5",
+        "D": "√(-16)",
+        "E": "1/2"
+      },
       "answer": "D",
-      "explanation": "√(-16) = 4i, not real."
+      "explanation": "√(-16) = 4i, not real.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_ns_b_031",
       "question": "Which of the following is NOT rational?",
-      "choices": { "A": "5/6", "B": "0.3333 repeating", "C": "-8", "D": "√8", "E": "1.25" },
+      "choices": {
+        "A": "5/6",
+        "B": "0.3333 repeating",
+        "C": "-8",
+        "D": "√8",
+        "E": "1.25"
+      },
       "answer": "D",
-      "explanation": "√8 is irrational."
+      "explanation": "√8 is irrational.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_032",
       "question": "Which is a whole number?",
-      "choices": { "A": "-3", "B": "0", "C": "2.5", "D": "√2", "E": "1.1" },
+      "choices": {
+        "A": "-3",
+        "B": "0",
+        "C": "2.5",
+        "D": "√2",
+        "E": "1.1"
+      },
       "answer": "B",
-      "explanation": "Whole numbers start at 0."
+      "explanation": "Whole numbers start at 0.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_033",
       "question": "Which set contains numbers like 1/5, 3/4, and -7?",
-           "choices": { "A": "Irrational", "B": "Rational", "C": "Whole", "D": "Natural", "E": "None" },
+      "choices": {
+        "A": "Irrational",
+        "B": "Rational",
+        "C": "Whole",
+        "D": "Natural",
+        "E": "None"
+      },
       "answer": "B",
-      "explanation": "Fractions and integers are rational."
+      "explanation": "Fractions and integers are rational.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_034",
       "question": "Which of the following numbers is real?",
-      "choices": { "A": "i", "B": "√(-25)", "C": "4", "D": "−√(-9)", "E": "None" },
+      "choices": {
+        "A": "i",
+        "B": "√(-25)",
+        "C": "4",
+        "D": "−√(-9)",
+        "E": "None"
+      },
       "answer": "C",
-      "explanation": "4 is real; the others involve imaginary values."
+      "explanation": "4 is real; the others involve imaginary values.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_035",
       "question": "Which number is irrational?",
-      "choices": { "A": "0.5", "B": "3/8", "C": "√13", "D": "2", "E": "-4" },
+      "choices": {
+        "A": "0.5",
+        "B": "3/8",
+        "C": "√13",
+        "D": "2",
+        "E": "-4"
+      },
       "answer": "C",
-      "explanation": "√13 is not a perfect square."
+      "explanation": "√13 is not a perfect square.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_ns_b_036",
       "question": "Which value is a natural number?",
-      "choices": { "A": "-1", "B": "0", "C": "2", "D": "1/2", "E": "√5" },
+      "choices": {
+        "A": "-1",
+        "B": "0",
+        "C": "2",
+        "D": "1/2",
+        "E": "√5"
+      },
       "answer": "C",
-      "explanation": "Natural numbers: 1,2,3,..."
+      "explanation": "Natural numbers: 1,2,3,...",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_037",
       "question": "Which is the best description of the number -10?",
-      "choices": { "A": "Natural", "B": "Whole", "C": "Integer", "D": "Irrational", "E": "Non-real" },
+      "choices": {
+        "A": "Natural",
+        "B": "Whole",
+        "C": "Integer",
+        "D": "Irrational",
+        "E": "Non-real"
+      },
       "answer": "C",
-      "explanation": "Negative whole values fall under integers."
+      "explanation": "Negative whole values fall under integers.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_038",
       "question": "Which is irrational?",
-      "choices": { "A": "4/7", "B": "-5", "C": "3.2", "D": "√3", "E": "0" },
+      "choices": {
+        "A": "4/7",
+        "B": "-5",
+        "C": "3.2",
+        "D": "√3",
+        "E": "0"
+      },
       "answer": "D",
-      "explanation": "√3 is not a perfect square."
+      "explanation": "√3 is not a perfect square.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_039",
       "question": "Which belongs to the rational numbers?",
-      "choices": { "A": "π", "B": "√2", "C": "e", "D": "-3/4", "E": "√5" },
+      "choices": {
+        "A": "π",
+        "B": "√2",
+        "C": "e",
+        "D": "-3/4",
+        "E": "√5"
+      },
       "answer": "D",
-      "explanation": "A ratio of integers → rational."
+      "explanation": "A ratio of integers → rational.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_040",
       "question": "Which number is a real number?",
-      "choices": { "A": "3i", "B": "√(-4)", "C": "-12", "D": "None", "E": "i" },
+      "choices": {
+        "A": "3i",
+        "B": "√(-4)",
+        "C": "-12",
+        "D": "None",
+        "E": "i"
+      },
       "answer": "C",
-      "explanation": "Negative integers are real."
+      "explanation": "Negative integers are real.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_ns_b_041",
       "question": "Which number is an integer?",
-      "choices": { "A": "5.2", "B": "−6", "C": "√2", "D": "1/8", "E": "3.14" },
+      "choices": {
+        "A": "5.2",
+        "B": "−6",
+        "C": "√2",
+        "D": "1/8",
+        "E": "3.14"
+      },
       "answer": "B",
-      "explanation": "Integers have no decimals or fractions."
+      "explanation": "Integers have no decimals or fractions.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_042",
       "question": "Which value is rational?",
-      "choices": { "A": "π", "B": "√7", "C": "1.25", "D": "e", "E": "√3" },
+      "choices": {
+        "A": "π",
+        "B": "√7",
+        "C": "1.25",
+        "D": "e",
+        "E": "√3"
+      },
       "answer": "C",
-      "explanation": "1.25 = 125/100, so rational."
+      "explanation": "1.25 = 125/100, so rational.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_043",
       "question": "Which set does 0.3333 repeating belong to?",
-      "choices": { "A": "Whole", "B": "Natural", "C": "Irrational", "D": "Rational", "E": "Integer" },
+      "choices": {
+        "A": "Whole",
+        "B": "Natural",
+        "C": "Irrational",
+        "D": "Rational",
+        "E": "Integer"
+      },
       "answer": "D",
-      "explanation": "Repeating decimals are rational."
+      "explanation": "Repeating decimals are rational.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_044",
       "question": "Which number is whole but NOT natural?",
-      "choices": { "A": "1", "B": "0", "C": "5", "D": "9", "E": "7" },
+      "choices": {
+        "A": "1",
+        "B": "0",
+        "C": "5",
+        "D": "9",
+        "E": "7"
+      },
       "answer": "B",
-      "explanation": "0 is whole but not natural."
+      "explanation": "0 is whole but not natural.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_045",
       "question": "Which number is NOT real?",
-      "choices": { "A": "0", "B": "-3", "C": "√(-1)", "D": "12", "E": "5/6" },
+      "choices": {
+        "A": "0",
+        "B": "-3",
+        "C": "√(-1)",
+        "D": "12",
+        "E": "5/6"
+      },
       "answer": "C",
-      "explanation": "√(-1) = i is imaginary."
+      "explanation": "√(-1) = i is imaginary.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_ns_b_046",
       "question": "Which set includes all rational and irrational numbers?",
-      "choices": { "A": "Integers", "B": "Real numbers", "C": "Whole numbers", "D": "Natural numbers", "E": "Imaginary numbers" },
+      "choices": {
+        "A": "Integers",
+        "B": "Real numbers",
+        "C": "Whole numbers",
+        "D": "Natural numbers",
+        "E": "Imaginary numbers"
+      },
       "answer": "B",
-      "explanation": "Real numbers = rational + irrational."
+      "explanation": "Real numbers = rational + irrational.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_047",
       "question": "Which number is irrational?",
-      "choices": { "A": "0.2", "B": "4/5", "C": "-9", "D": "√15", "E": "1.5" },
+      "choices": {
+        "A": "0.2",
+        "B": "4/5",
+        "C": "-9",
+        "D": "√15",
+        "E": "1.5"
+      },
       "answer": "D",
-      "explanation": "√15 is not a perfect square."
+      "explanation": "√15 is not a perfect square.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_048",
       "question": "Which number is real?",
-      "choices": { "A": "i", "B": "√(-36)", "C": "−2.5", "D": "None", "E": "i√3" },
+      "choices": {
+        "A": "i",
+        "B": "√(-36)",
+        "C": "−2.5",
+        "D": "None",
+        "E": "i√3"
+      },
       "answer": "C",
-      "explanation": "−2.5 is real; the others are imaginary."
+      "explanation": "−2.5 is real; the others are imaginary.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_049",
       "question": "Which value is a natural number?",
-      "choices": { "A": "√7", "B": "0", "C": "5", "D": "−5", "E": "1/4" },
+      "choices": {
+        "A": "√7",
+        "B": "0",
+        "C": "5",
+        "D": "−5",
+        "E": "1/4"
+      },
       "answer": "C",
-      "explanation": "Natural numbers: 1,2,3,..."
+      "explanation": "Natural numbers: 1,2,3,...",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_ns_b_050",
       "question": "Which number belongs to the integers?",
-      "choices": { "A": "0.9", "B": "1/2", "C": "7", "D": "√3", "E": "π" },
+      "choices": {
+        "A": "0.9",
+        "B": "1/2",
+        "C": "7",
+        "D": "√3",
+        "E": "π"
+      },
       "answer": "C",
-      "explanation": "7 is a whole number → integer → rational → real."
+      "explanation": "7 is a whole number → integer → rational → real.",
+      "steps": [
+        "1. Read the problem and identify what's being asked.",
+        "2. Write down the relevant formula or rule.",
+        "3. Substitute values and solve step by step.",
+        "4. Check your answer against the choices."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     }
   ]
 }

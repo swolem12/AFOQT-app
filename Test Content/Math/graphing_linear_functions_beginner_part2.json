@@ -4,17 +4,28 @@
   "difficulty": "beginner",
   "part": 2,
   "questions": [
-
     {
       "uiSpec": {
         "type": "slope_graph",
         "width": 300,
         "height": 300,
-        "xRange": [-6, 6],
-        "yRange": [-6, 6],
+        "xRange": [
+          -6,
+          6
+        ],
+        "yRange": [
+          -6,
+          6
+        ],
         "line": {
-          "point1": { "x": -2, "y": 4 },
-          "point2": { "x": 2, "y": 0 }
+          "point1": {
+            "x": -2,
+            "y": 4
+          },
+          "point2": {
+            "x": 2,
+            "y": 0
+          }
         },
         "showGrid": true,
         "showAxes": true
@@ -40,17 +51,28 @@
       ],
       "fastStrategy": "Grab slope from two visible points, then plug one into y = mx + b to get the intercept fast."
     },
-
     {
       "uiSpec": {
         "type": "slope_graph",
         "width": 300,
         "height": 300,
-        "xRange": [-6, 6],
-        "yRange": [-6, 6],
+        "xRange": [
+          -6,
+          6
+        ],
+        "yRange": [
+          -6,
+          6
+        ],
         "line": {
-          "point1": { "x": -3, "y": -1 },
-          "point2": { "x": 3, "y": -1 }
+          "point1": {
+            "x": -3,
+            "y": -1
+          },
+          "point2": {
+            "x": 3,
+            "y": -1
+          }
         },
         "showGrid": true,
         "showAxes": true
@@ -74,17 +96,28 @@
       ],
       "fastStrategy": "Horizontal → y = constant. Vertical → x = constant."
     },
-
     {
       "uiSpec": {
         "type": "slope_graph",
         "width": 300,
         "height": 300,
-        "xRange": [-6, 6],
-        "yRange": [-6, 6],
+        "xRange": [
+          -6,
+          6
+        ],
+        "yRange": [
+          -6,
+          6
+        ],
         "line": {
-          "point1": { "x": 1, "y": -5 },
-          "point2": { "x": 1, "y": 5 }
+          "point1": {
+            "x": 1,
+            "y": -5
+          },
+          "point2": {
+            "x": 1,
+            "y": 5
+          }
         }
       },
       "copilotInstruction": "Draw a vertical line at x = 1 from y=-5 to y=5.",
@@ -106,7 +139,6 @@
       ],
       "fastStrategy": "Vertical lines = undefined slope = x = (constant)."
     },
-
     {
       "id": "mk_glf_b_029",
       "question": "Which function has a y-intercept of 5?",
@@ -124,9 +156,33 @@
         "2. Only y = 2x + 5 has b = 5.",
         "3. Thus it has y-intercept 5."
       ],
-      "fastStrategy": "Ignore the slope when hunting intercepts: just grab the constant."
+      "fastStrategy": "Ignore the slope when hunting intercepts: just grab the constant.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_030",
       "question": "Which equation represents a line with slope −3 and y-intercept 1?",
@@ -144,9 +200,33 @@
         "2. Set m = -3, b = 1.",
         "3. Equation: y = -3x + 1."
       ],
-      "fastStrategy": "Template method: fill in m and b like slots."
+      "fastStrategy": "Template method: fill in m and b like slots.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_031",
       "question": "What is the slope of the line y = -4x + 6?",
@@ -164,9 +244,33 @@
         "2. m = -4.",
         "3. That is the slope."
       ],
-      "fastStrategy": "Slope = number in front of x."
+      "fastStrategy": "Slope = number in front of x.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_032",
       "question": "What is the y-intercept of y = 9 - 2x?",
@@ -184,9 +288,33 @@
         "2. Identify b = 9.",
         "3. Therefore y-intercept = 9."
       ],
-      "fastStrategy": "Always rewrite y = mx + b if needed."
+      "fastStrategy": "Always rewrite y = mx + b if needed.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_033",
       "question": "Which line is steeper?",
@@ -204,9 +332,33 @@
         "2. |3| is biggest.",
         "3. So y = 3x is steepest."
       ],
-      "fastStrategy": "Steepness ignores sign — compare absolute values."
+      "fastStrategy": "Steepness ignores sign — compare absolute values.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_034",
       "question": "A line crosses the y-axis at −2 and goes up as you move right. Which equation could describe it?",
@@ -224,9 +376,33 @@
         "2. Ensure slope is positive.",
         "3. y = x - 2 fits both."
       ],
-      "fastStrategy": "Intercept nails b; direction nails sign of slope."
+      "fastStrategy": "Intercept nails b; direction nails sign of slope.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_035",
       "question": "A line passes through (0, 8) and (4, 0). What is the slope?",
@@ -244,19 +420,55 @@
         "2. Compute run = 4.",
         "3. Divide to get slope = -2."
       ],
-      "fastStrategy": "Two-point slope always: (y2-y1)/(x2-x1)."
+      "fastStrategy": "Two-point slope always: (y2-y1)/(x2-x1).",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": 0,
+            "y": 8
+          },
+          "point2": {
+            "x": 4,
+            "y": 0
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "uiSpec": {
         "type": "slope_graph",
         "width": 300,
         "height": 300,
-        "xRange": [-6, 6],
-        "yRange": [-6, 6],
+        "xRange": [
+          -6,
+          6
+        ],
+        "yRange": [
+          -6,
+          6
+        ],
         "line": {
-          "point1": { "x": -4, "y": -2 },
-          "point2": { "x": 0, "y": 2 }
+          "point1": {
+            "x": -4,
+            "y": -2
+          },
+          "point2": {
+            "x": 0,
+            "y": 2
+          }
         }
       },
       "copilotInstruction": "Draw a rising diagonal line from (-4,-2) to (0,2).",
@@ -279,7 +491,6 @@
       ],
       "fastStrategy": "If the plotted line rises at a perfect 45°, slope is ±1."
     },
-
     {
       "id": "mk_glf_b_037",
       "question": "Which equation has slope 0?",
@@ -296,9 +507,33 @@
         "1. Identify which has no x-term.",
         "2. y = 3 is horizontal with slope 0."
       ],
-      "fastStrategy": "Slope 0: equation looks like y = #."
+      "fastStrategy": "Slope 0: equation looks like y = #.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_038",
       "question": "Which line passes through the origin?",
@@ -316,9 +551,33 @@
         "2. y = -3x has intercept 0.",
         "3. Therefore it passes through the origin."
       ],
-      "fastStrategy": "y = mx is the only pattern that goes through (0,0)."
+      "fastStrategy": "y = mx is the only pattern that goes through (0,0).",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_039",
       "question": "Which equation represents a downward-sloping line that intersects the y-axis at 4?",
@@ -336,9 +595,33 @@
         "2. Select b = 4.",
         "3. y = -2x + 4 satisfies both."
       ],
-      "fastStrategy": "Match slope sign first, then intercept."
+      "fastStrategy": "Match slope sign first, then intercept.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_040",
       "question": "A line has slope 4. Which statement describes this line?",
@@ -356,9 +639,33 @@
         "2. slope = 4/1.",
         "3. Means up 4 for each step right."
       ],
-      "fastStrategy": "Slope is always ‘up per right.’"
+      "fastStrategy": "Slope is always ‘up per right.’",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_041",
       "question": "What is the slope of y = 7?",
@@ -375,9 +682,33 @@
         "1. y constant → horizontal.",
         "2. Horizontal → slope 0."
       ],
-      "fastStrategy": "y = constant → slope 0 always."
+      "fastStrategy": "y = constant → slope 0 always.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_042",
       "question": "What is the slope of x = 2?",
@@ -394,9 +725,33 @@
         "1. x constant means vertical.",
         "2. Vertical → undefined slope."
       ],
-      "fastStrategy": "Vertical = undefined."
+      "fastStrategy": "Vertical = undefined.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_043",
       "question": "Which equation represents a line with slope 1/3 and y-intercept −1?",
@@ -414,9 +769,33 @@
         "2. m = 1/3, b = -1.",
         "3. y = (1/3)x - 1."
       ],
-      "fastStrategy": "Keep fractions exactly as is when matching equations."
+      "fastStrategy": "Keep fractions exactly as is when matching equations.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_044",
       "question": "A line rises 1 unit for every 4 units right. What is its slope?",
@@ -434,9 +813,33 @@
         "2. Rise = 1; run = 4.",
         "3. slope = 1/4."
       ],
-      "fastStrategy": "Slope = rise/run directly."
+      "fastStrategy": "Slope = rise/run directly.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_045",
       "question": "Which equation describes a horizontal line through (0, −3)?",
@@ -453,9 +856,33 @@
         "1. Use the y-coordinate.",
         "2. Horizontal → y = -3."
       ],
-      "fastStrategy": "Horizontal lines use the y-value directly."
+      "fastStrategy": "Horizontal lines use the y-value directly.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": 2
+          },
+          "point2": {
+            "x": 3,
+            "y": 2
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_046",
       "question": "Find the slope of the line through (4, 1) and (6, 5).",
@@ -473,9 +900,33 @@
         "2. Run = 2.",
         "3. slope = 2."
       ],
-      "fastStrategy": "Look for opportunities to simplify before dividing."
+      "fastStrategy": "Look for opportunities to simplify before dividing.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": 4,
+            "y": 1
+          },
+          "point2": {
+            "x": 6,
+            "y": 5
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_047",
       "question": "Which graph feature corresponds to the y-intercept?",
@@ -492,9 +943,33 @@
         "1. The y-axis is x = 0.",
         "2. y-intercept = (0, b)."
       ],
-      "fastStrategy": "InterCEPt → think ‘crosses axis’."
+      "fastStrategy": "InterCEPt → think ‘crosses axis’.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_048",
       "question": "Which line is vertical?",
@@ -511,9 +986,33 @@
         "1. Scan for x = #.",
         "2. x = -5 is vertical."
       ],
-      "fastStrategy": "Vertical and undefined slope always appear as x = something."
+      "fastStrategy": "Vertical and undefined slope always appear as x = something.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": 2,
+            "y": -3
+          },
+          "point2": {
+            "x": 2,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_049",
       "question": "Which line goes through (0, 2) and has slope −1?",
@@ -531,9 +1030,33 @@
         "2. m = -1, b = 2.",
         "3. y = -x + 2."
       ],
-      "fastStrategy": "When given slope and intercept, fill them straight into y = mx + b."
+      "fastStrategy": "When given slope and intercept, fill them straight into y = mx + b.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     },
-
     {
       "id": "mk_glf_b_050",
       "question": "Which equation represents a line increasing from left to right and passing through the origin?",
@@ -551,8 +1074,32 @@
         "2. Increasing → m > 0.",
         "3. y = 2x is the only match."
       ],
-      "fastStrategy": "Origin + increasing → y = (positive m)x."
+      "fastStrategy": "Origin + increasing → y = (positive m)x.",
+      "uiSpec": {
+        "type": "slope_graph",
+        "width": 300,
+        "height": 300,
+        "xRange": [
+          -5,
+          5
+        ],
+        "yRange": [
+          -5,
+          5
+        ],
+        "line": {
+          "point1": {
+            "x": -3,
+            "y": -2
+          },
+          "point2": {
+            "x": 3,
+            "y": 3
+          }
+        },
+        "showGrid": true,
+        "showAxes": true
+      }
     }
-
   ]
 }

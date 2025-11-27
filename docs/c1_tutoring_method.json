@@ -1,0 +1,446 @@
+{
+  "version": "1.0",
+  "name": "C1 Tutoring Method & Fast Strategy Framework",
+  "description": "Teaching methodology for AFOQT Math Knowledge question enrichment. Use this as the reference standard when adding or fixing explanation, steps, and fastStrategy fields.",
+  
+  "philosophy": {
+    "core_principle": "Teach like a patient human tutor who assumes the user is rusty, not stupid.",
+    "target_audience": "Adults who haven't done math in 10-15 years and need handholding, not condescension.",
+    "goal": "Every question becomes a micro-tutor + speed-run mode baked in."
+  },
+
+  "three_layers_of_guidance": {
+    "explanation": {
+      "purpose": "Clear, plain-English 'here's what's going on' answer",
+      "requirements": [
+        "Connect the question to the concept (e.g., 'this is a proportion', 'this is slope = rise/run')",
+        "Walk through the solution without skipping the logic",
+        "Name the concept being tested",
+        "Show the full arithmetic to reach the answer",
+        "Use simple language, avoid heavy jargon",
+        "Do NOT talk down to the user"
+      ],
+      "example": "This is a proportion problem. To find the unknown, cross-multiply: 3 × x = 4 × 6, so 3x = 24, and x = 8."
+    },
+    
+    "steps": {
+      "purpose": "Numbered mini-algorithm for procedural breakdown",
+      "requirements": [
+        "2-5 numbered steps",
+        "Each step is a low-level, concrete action",
+        "Start with a number and period (e.g., '1. Identify...')",
+        "Steps should be short and actionable",
+        "Targeted at someone who needs handholding, not just 'do the algebra'"
+      ],
+      "format": [
+        "1. Identify the type of problem or operation.",
+        "2. Write down the key numbers or setup.",
+        "3. Apply the formula or rule step by step.",
+        "4. Simplify and check your answer."
+      ],
+      "example": [
+        "1. Recognize this as a proportion: a/b = c/d.",
+        "2. Cross-multiply: a × d = b × c.",
+        "3. Solve for the unknown variable.",
+        "4. Check by substituting back into the original proportion."
+      ]
+    },
+    
+    "fastStrategy": {
+      "purpose": "One-line test-speed shortcut for 30-45 second solving",
+      "requirements": [
+        "Single sentence only",
+        "Mental rule or pattern recognition trick",
+        "Focused on speed, not full understanding",
+        "Conversational tone",
+        "Should help user recognize and solve quickly under time pressure"
+      ],
+      "example": "For proportions, cross-multiply instead of trying to guess."
+    }
+  },
+
+  "question_schema": {
+    "required_fields": {
+      "id": "Unique identifier (e.g., 'subtopic_b1_001')",
+      "question": "The question text",
+      "choices": "Object with keys A, B, C, D, E",
+      "answer": "Single letter (A-E)",
+      "explanation": "C1 tutoring explanation",
+      "steps": "Array of 2-5 numbered procedural steps",
+      "fastStrategy": "One-sentence speed trick"
+    },
+    "optional_fields": {
+      "uiSpec": "Visual diagram specification (for geometry, graphs, etc.)",
+      "copilotInstruction": "Instructions for rendering the uiSpec"
+    }
+  },
+
+  "topic_specific_strategies": {
+    "absolute_value": {
+      "concept": "Distance from zero on number line, always non-negative",
+      "steps_template": [
+        "1. Identify the expression inside the absolute value bars.",
+        "2. If it's a simple number, the absolute value is its distance from 0.",
+        "3. If it's an equation |x - a| = b, split into two cases: x - a = b OR x - a = -b.",
+        "4. Solve each case and check both answers."
+      ],
+      "fastStrategy": "For |x - a| = b, split into two cases: x - a = b or x - a = -b."
+    },
+    
+    "coordinate_geometry": {
+      "concept": "Working with points, distances, and midpoints on coordinate plane",
+      "steps_template": [
+        "1. Identify the coordinates of the given points.",
+        "2. Choose the correct formula (distance, midpoint, or slope).",
+        "3. Substitute the coordinates into the formula.",
+        "4. Simplify carefully, especially under square roots."
+      ],
+      "fastStrategy": "Distance = √[(x₂-x₁)² + (y₂-y₁)²]; Midpoint = ((x₁+x₂)/2, (y₁+y₂)/2)."
+    },
+    
+    "distributive_foil": {
+      "concept": "Expanding expressions by distributing or using FOIL",
+      "steps_template": [
+        "1. Identify if you're distributing a single term or multiplying binomials.",
+        "2. For distribution: multiply the outside term by each inside term.",
+        "3. For FOIL: First, Outer, Inner, Last.",
+        "4. Combine like terms."
+      ],
+      "fastStrategy": "FOIL = First, Outer, Inner, Last. Distribute each term to every other term."
+    },
+    
+    "evaluate_expressions": {
+      "concept": "Substituting values and computing the result",
+      "steps_template": [
+        "1. Write down the expression.",
+        "2. Replace each variable with its given value.",
+        "3. Follow order of operations (PEMDAS) to simplify.",
+        "4. Double-check your arithmetic."
+      ],
+      "fastStrategy": "Substitute the given values carefully, then follow order of operations (PEMDAS)."
+    },
+    
+    "exponents_roots": {
+      "concept": "Laws of exponents and simplifying radicals",
+      "steps_template": [
+        "1. Identify which exponent rule applies to the expression.",
+        "2. Apply the rule: product rule, power rule, quotient rule, etc.",
+        "3. Simplify the base and exponent.",
+        "4. Convert to a number if possible."
+      ],
+      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+    },
+    
+    "factoring": {
+      "concept": "Breaking expressions into products of simpler factors",
+      "steps_template": [
+        "1. Look for a greatest common factor (GCF) first.",
+        "2. Check for special patterns: difference of squares, perfect square trinomials.",
+        "3. For ax² + bx + c, find two numbers that multiply to ac and add to b.",
+        "4. Factor completely and verify by multiplying back."
+      ],
+      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+    },
+    
+    "fractions": {
+      "concept": "Operations with fractions: add, subtract, multiply, divide",
+      "steps_template": [
+        "1. Identify the operation (add, subtract, multiply, divide).",
+        "2. For add/subtract: find a common denominator first.",
+        "3. For multiply: multiply numerators together, denominators together.",
+        "4. For divide: flip the second fraction and multiply. Simplify the result."
+      ],
+      "fastStrategy": "Find common denominators for add/subtract; multiply straight across; flip and multiply for division."
+    },
+    
+    "functions": {
+      "concept": "Evaluating functions at specific input values",
+      "steps_template": [
+        "1. Identify the input value to substitute.",
+        "2. Replace every x in f(x) with that value.",
+        "3. Simplify using order of operations.",
+        "4. The result is your output, f(input)."
+      ],
+      "fastStrategy": "f(a) means plug a into the function wherever you see x."
+    },
+    
+    "geometry_basics": {
+      "concept": "Perimeter, area, angles, and basic shapes",
+      "steps_template": [
+        "1. Identify the shape and what's being asked (perimeter, area, angle, etc.).",
+        "2. Recall the relevant formula.",
+        "3. Substitute the given values.",
+        "4. Calculate and include correct units."
+      ],
+      "fastStrategy": "Memorize key formulas: Area of rectangle = l×w; Triangle = ½bh; Circle = πr².",
+      "needs_uiSpec": true,
+      "uiSpec_types": ["geometry_triangle_diagram", "geometry_quadrilateral_diagram", "geometry_angle_diagram"]
+    },
+    
+    "graph_interpretation": {
+      "concept": "Reading and interpreting data from graphs and charts",
+      "steps_template": [
+        "1. Read the title and axis labels to understand what's shown.",
+        "2. Locate the specific data point or trend asked about.",
+        "3. Read the value carefully from the graph.",
+        "4. Answer the question based on what you found."
+      ],
+      "fastStrategy": "Read axes labels first, then find the point or trend the question asks about.",
+      "needs_uiSpec": true,
+      "uiSpec_types": ["bar_chart", "line_graph", "pie_chart"]
+    },
+    
+    "graphing_linear_functions": {
+      "concept": "Understanding and graphing lines in slope-intercept form",
+      "steps_template": [
+        "1. Identify the equation form (slope-intercept: y = mx + b).",
+        "2. Find the slope (m) and y-intercept (b).",
+        "3. Plot the y-intercept on the y-axis.",
+        "4. Use the slope to find another point, then draw the line."
+      ],
+      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis).",
+      "needs_uiSpec": true,
+      "uiSpec_types": ["coordinate_slope", "slope_graph"]
+    },
+    
+    "inequalities": {
+      "concept": "Solving and graphing inequalities",
+      "steps_template": [
+        "1. Solve the inequality like you would an equation.",
+        "2. IMPORTANT: Flip the inequality sign when multiplying/dividing by a negative.",
+        "3. Express the solution as an inequality or interval.",
+        "4. If graphing, use open circle for < or >, closed for ≤ or ≥."
+      ],
+      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
+    },
+    
+    "linear_equations": {
+      "concept": "Solving equations for a single variable",
+      "steps_template": [
+        "1. Simplify each side if needed (distribute, combine like terms).",
+        "2. Get all variable terms on one side, constants on the other.",
+        "3. Isolate the variable using inverse operations.",
+        "4. Check your answer by substituting back."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+    },
+    
+    "number_classification": {
+      "concept": "Classifying numbers into sets (integers, rationals, irrationals, etc.)",
+      "steps_template": [
+        "1. Recall the definitions: Natural (1,2,3...), Whole (0,1,2...), Integers (...-1,0,1...), Rational (fractions), Irrational (non-repeating decimals).",
+        "2. Determine what type the given number is.",
+        "3. Remember: every integer is rational (can be written as n/1).",
+        "4. Irrationals include √2, π, e."
+      ],
+      "fastStrategy": "Integers = whole numbers (positive, negative, zero); Rationals = fractions; Irrationals = non-repeating decimals like √2, π."
+    },
+    
+    "order_of_operations": {
+      "concept": "PEMDAS - the order to perform operations",
+      "steps_template": [
+        "1. Start with Parentheses (innermost first).",
+        "2. Evaluate Exponents.",
+        "3. Do Multiplication and Division from left to right.",
+        "4. Do Addition and Subtraction from left to right."
+      ],
+      "fastStrategy": "PEMDAS: Parentheses, Exponents, Multiply/Divide (left to right), Add/Subtract (left to right)."
+    },
+    
+    "polygons_and_angles": {
+      "concept": "Interior and exterior angles of polygons",
+      "steps_template": [
+        "1. Identify the polygon and count its sides (n).",
+        "2. Use the formula: Sum of interior angles = (n-2) × 180°.",
+        "3. For regular polygons, each angle = sum ÷ n.",
+        "4. Exterior angles of any polygon always sum to 360°."
+      ],
+      "fastStrategy": "Interior angles sum = (n-2)×180°. Triangle = 180°, Quadrilateral = 360°.",
+      "needs_uiSpec": true,
+      "uiSpec_types": ["polygon_basic", "geometry_angle_diagram", "geometry_angle_pair_diagram"]
+    },
+    
+    "polynomials": {
+      "concept": "Adding, subtracting, and working with polynomials",
+      "steps_template": [
+        "1. Identify like terms (same variable and exponent).",
+        "2. Combine like terms by adding/subtracting coefficients.",
+        "3. Keep the variable and exponent the same.",
+        "4. Write the result in standard form (descending powers)."
+      ],
+      "fastStrategy": "Combine like terms only (same variable and exponent). Watch your signs!"
+    },
+    
+    "probability": {
+      "concept": "Calculating probability of events",
+      "steps_template": [
+        "1. Count the number of favorable outcomes.",
+        "2. Count the total number of possible outcomes.",
+        "3. Divide: P = favorable ÷ total.",
+        "4. Express as a fraction, decimal, or percentage as needed."
+      ],
+      "fastStrategy": "Probability = favorable outcomes ÷ total outcomes. Always between 0 and 1."
+    },
+    
+    "quadratic_equations": {
+      "concept": "Solving equations of the form ax² + bx + c = 0",
+      "steps_template": [
+        "1. Write the equation in standard form: ax² + bx + c = 0.",
+        "2. Try factoring first (fastest if it works).",
+        "3. If factoring fails, use the quadratic formula: x = (-b ± √(b²-4ac)) / 2a.",
+        "4. Check both solutions in the original equation."
+      ],
+      "fastStrategy": "Try factoring first; if stuck, use quadratic formula: x = (-b ± √(b²-4ac)) / 2a."
+    },
+    
+    "radicals": {
+      "concept": "Simplifying square roots and other radicals",
+      "steps_template": [
+        "1. Factor the number under the radical.",
+        "2. Look for perfect square factors.",
+        "3. Take the square root of perfect squares and move outside.",
+        "4. Multiply any numbers outside; leave non-perfect squares inside."
+      ],
+      "fastStrategy": "Simplify by finding perfect square factors: √50 = √25·√2 = 5√2."
+    },
+    
+    "ratio_proportion": {
+      "concept": "Setting up and solving proportions",
+      "steps_template": [
+        "1. Set up the proportion with equal ratios: a/b = c/d.",
+        "2. Cross-multiply: a × d = b × c.",
+        "3. Solve the resulting equation for the unknown.",
+        "4. Check by substituting back into the original proportion."
+      ],
+      "fastStrategy": "Cross-multiply to solve proportions: if a/b = c/d, then ad = bc."
+    },
+    
+    "rational_expressions": {
+      "concept": "Simplifying algebraic fractions",
+      "steps_template": [
+        "1. Factor the numerator completely.",
+        "2. Factor the denominator completely.",
+        "3. Cancel any common factors.",
+        "4. Write the simplified expression."
+      ],
+      "fastStrategy": "Factor numerator and denominator, then cancel common factors."
+    },
+    
+    "sequences": {
+      "concept": "Arithmetic and geometric sequences",
+      "steps_template": [
+        "1. Determine if arithmetic (constant difference) or geometric (constant ratio).",
+        "2. Find the common difference (d) or common ratio (r).",
+        "3. Use the formula: Arithmetic: aₙ = a₁ + (n-1)d; Geometric: aₙ = a₁ · rⁿ⁻¹.",
+        "4. Calculate the requested term."
+      ],
+      "fastStrategy": "Arithmetic: add constant (aₙ = a₁ + (n-1)d). Geometric: multiply constant (aₙ = a₁ · rⁿ⁻¹)."
+    },
+    
+    "slope": {
+      "concept": "Rise over run, rate of change between two points",
+      "steps_template": [
+        "1. Identify the two points: (x₁, y₁) and (x₂, y₂).",
+        "2. Apply the slope formula: m = (y₂ - y₁) / (x₂ - x₁).",
+        "3. Simplify the fraction.",
+        "4. Positive slope = uphill; Negative = downhill; Zero = horizontal; Undefined = vertical."
+      ],
+      "fastStrategy": "Slope = rise/run = (y₂-y₁)/(x₂-x₁). Positive = uphill, Negative = downhill, Zero = flat.",
+      "needs_uiSpec": true,
+      "uiSpec_types": ["slope_graph", "coordinate_slope"]
+    },
+    
+    "statistics": {
+      "concept": "Mean, median, mode, and range",
+      "steps_template": [
+        "1. Arrange data in order if finding median.",
+        "2. Mean = sum of all values ÷ count of values.",
+        "3. Median = middle value (or average of two middle values).",
+        "4. Range = maximum - minimum."
+      ],
+      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+    },
+    
+    "systems_linear": {
+      "concept": "Solving systems of two linear equations",
+      "steps_template": [
+        "1. Choose method: substitution (if one variable is isolated) or elimination.",
+        "2. For substitution: solve one equation for a variable, plug into the other.",
+        "3. For elimination: multiply to get opposite coefficients, add equations.",
+        "4. Solve for one variable, then substitute back to find the other."
+      ],
+      "fastStrategy": "Substitution or elimination. Pick the method that avoids fractions."
+    },
+    
+    "transformations": {
+      "concept": "Reflections, rotations, and translations on coordinate plane",
+      "steps_template": [
+        "1. Identify the transformation type (reflection, rotation, translation).",
+        "2. Apply the transformation rule to each point.",
+        "3. For reflection: flip over the line of reflection.",
+        "4. For rotation: rotate about the center point by the given angle."
+      ],
+      "fastStrategy": "Reflection flips, Rotation turns, Translation slides. Track one point through the transformation.",
+      "needs_uiSpec": true,
+      "uiSpec_types": ["coordinate_grid_points", "point_reflection", "rotation_90", "translation"]
+    },
+    
+    "word_problems": {
+      "concept": "Translating word problems into equations",
+      "steps_template": [
+        "1. Read carefully and identify the unknown (what you're solving for).",
+        "2. Assign a variable to the unknown.",
+        "3. Translate the words into a mathematical equation.",
+        "4. Solve the equation and answer the original question (with units)."
+      ],
+      "fastStrategy": "Identify unknowns, translate words to math symbols, set up the equation before solving."
+    }
+  },
+
+  "uiSpec_guidance": {
+    "when_to_add": [
+      "Geometry problems involving shapes, angles, or diagrams",
+      "Coordinate plane problems (slope, distance, midpoint)",
+      "Graph interpretation problems",
+      "Transformation problems (reflection, rotation, translation)",
+      "Any problem where a visual would clarify the concept"
+    ],
+    "available_types": {
+      "slope_graph": "Coordinate plane with a line showing slope",
+      "coordinate_grid_points": "Coordinate plane with plotted points",
+      "coordinate_segment": "Line segment between two points",
+      "geometry_triangle_diagram": "Triangle with labeled vertices and angles",
+      "geometry_quadrilateral_diagram": "Rectangle or other quadrilateral",
+      "geometry_angle_diagram": "Angle with rays and arc",
+      "geometry_angle_pair_diagram": "Intersecting lines showing angle relationships",
+      "polygon_basic": "N-sided polygon with labeled vertices",
+      "function_table": "Input/output table for functions",
+      "translation": "Before/after positions for translation",
+      "rotation_90": "Before/after positions for 90° rotation",
+      "point_reflection": "Point and its reflection"
+    }
+  },
+
+  "quality_checklist": [
+    "Does the explanation name the concept being tested?",
+    "Does the explanation show the complete solution process?",
+    "Are the steps numbered and concrete (not vague)?",
+    "Is the fastStrategy a single, actionable sentence?",
+    "Would a rusty adult learner understand this without feeling talked down to?",
+    "For visual topics: is there an appropriate uiSpec?"
+  ],
+
+  "implementation_notes": {
+    "tools": {
+      "enrich_questions.js": "Adds missing steps and fastStrategy fields based on topic",
+      "question_audit.js": "Reports coverage of explanation, steps, fastStrategy, and uiSpec"
+    },
+    "process": [
+      "1. Run question_audit.js to identify gaps",
+      "2. Use enrich_questions.js for bulk addition of missing fields",
+      "3. Manually review and improve topic-specific content",
+      "4. Add uiSpec diagrams to visual topics",
+      "5. Re-run audit to verify 100% coverage"
+    ]
+  }
+}

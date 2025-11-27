@@ -323,6 +323,16 @@ function convertJsonQuestionToAppFormat(jsonQuestion) {
         converted.uiSpec = jsonQuestion.uiSpec;
     }
     
+    // Preserve fastStrategy for quick tips display
+    if (jsonQuestion.fastStrategy) {
+        converted.fastStrategy = jsonQuestion.fastStrategy;
+    }
+    
+    // Preserve steps for step-by-step solution display
+    if (jsonQuestion.steps) {
+        converted.steps = jsonQuestion.steps;
+    }
+    
     return converted;
 }
 

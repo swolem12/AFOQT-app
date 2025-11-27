@@ -7,181 +7,477 @@
     {
       "id": "mk_oo_b_026",
       "question": "Evaluate: 4 + 12 ÷ 3",
-      "choices": { "A": "6", "B": "4", "C": "10", "D": "8", "E": "12" },
+      "choices": {
+        "A": "6",
+        "B": "4",
+        "C": "10",
+        "D": "8",
+        "E": "12"
+      },
       "answer": "D",
-      "explanation": "12÷3=4; 4+4=8."
+      "explanation": "12÷3=4; 4+4=8.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_027",
       "question": "Compute: (18 − 6) ÷ 4",
-      "choices": { "A": "3", "B": "4", "C": "12", "D": "6", "E": "8" },
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "12",
+        "D": "6",
+        "E": "8"
+      },
       "answer": "A",
-      "explanation": "18−6=12; 12÷4=3."
+      "explanation": "18−6=12; 12÷4=3.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_028",
       "question": "Simplify: 2 × (10 − 5)",
-      "choices": { "A": "10", "B": "5", "C": "15", "D": "20", "E": "25" },
+      "choices": {
+        "A": "10",
+        "B": "5",
+        "C": "15",
+        "D": "20",
+        "E": "25"
+      },
       "answer": "A",
-      "explanation": "10−5=5; 2×5=10."
+      "explanation": "10−5=5; 2×5=10.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_029",
       "question": "Evaluate: 9 − 3 × 2",
-      "choices": { "A": "3", "B": "9", "C": "6", "D": "12", "E": "1" },
+      "choices": {
+        "A": "3",
+        "B": "9",
+        "C": "6",
+        "D": "12",
+        "E": "1"
+      },
       "answer": "A",
-      "explanation": "3×2=6; 9−6=3."
+      "explanation": "3×2=6; 9−6=3.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_030",
       "question": "Compute: (4 + 6) × 2",
-      "choices": { "A": "20", "B": "16", "C": "12", "D": "8", "E": "6" },
+      "choices": {
+        "A": "20",
+        "B": "16",
+        "C": "12",
+        "D": "8",
+        "E": "6"
+      },
       "answer": "A",
-      "explanation": "(4+6)=10; 10×2=20."
+      "explanation": "(4+6)=10; 10×2=20.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_oo_b_031",
       "question": "Evaluate: 5 × (3 + 1)",
-      "choices": { "A": "15", "B": "10", "C": "20", "D": "25", "E": "12" },
+      "choices": {
+        "A": "15",
+        "B": "10",
+        "C": "20",
+        "D": "25",
+        "E": "12"
+      },
       "answer": "C",
-      "explanation": "3+1=4; 5×4=20."
+      "explanation": "3+1=4; 5×4=20.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_032",
       "question": "What is 7 + 4 × 3?",
-      "choices": { "A": "19", "B": "21", "C": "12", "D": "24", "E": "10" },
+      "choices": {
+        "A": "19",
+        "B": "21",
+        "C": "12",
+        "D": "24",
+        "E": "10"
+      },
       "answer": "A",
-      "explanation": "4×3=12; 7+12=19."
+      "explanation": "4×3=12; 7+12=19.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_033",
       "question": "Simplify: 30 ÷ 3 × 2",
-      "choices": { "A": "6", "B": "20", "C": "18", "D": "10", "E": "30" },
+      "choices": {
+        "A": "6",
+        "B": "20",
+        "C": "18",
+        "D": "10",
+        "E": "30"
+      },
       "answer": "B",
-      "explanation": "30÷3=10; 10×2=20."
+      "explanation": "30÷3=10; 10×2=20.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_034",
       "question": "Compute: (8 × 2) − 5",
-      "choices": { "A": "11", "B": "6", "C": "8", "D": "5", "E": "3" },
+      "choices": {
+        "A": "11",
+        "B": "6",
+        "C": "8",
+        "D": "5",
+        "E": "3"
+      },
       "answer": "A",
-      "explanation": "8×2=16; 16−5=11."
+      "explanation": "8×2=16; 16−5=11.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_035",
       "question": "Evaluate: (14 − 4) ÷ 2",
-      "choices": { "A": "5", "B": "6", "C": "7", "D": "10", "E": "4" },
+      "choices": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "10",
+        "E": "4"
+      },
       "answer": "C",
-      "explanation": "14−4=10; 10÷2=5."
+      "explanation": "14−4=10; 10÷2=5.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_oo_b_036",
       "question": "Evaluate: 6 × 3 − 4",
-      "choices": { "A": "14", "B": "18", "C": "2", "D": "10", "E": "8" },
+      "choices": {
+        "A": "14",
+        "B": "18",
+        "C": "2",
+        "D": "10",
+        "E": "8"
+      },
       "answer": "A",
-      "explanation": "6×3=18; 18−4=14."
+      "explanation": "6×3=18; 18−4=14.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_037",
       "question": "Compute: (9 + 3) ÷ 3",
-      "choices": { "A": "3", "B": "2", "C": "4", "D": "6", "E": "1" },
+      "choices": {
+        "A": "3",
+        "B": "2",
+        "C": "4",
+        "D": "6",
+        "E": "1"
+      },
       "answer": "C",
-      "explanation": "9+3=12; 12÷3=4."
+      "explanation": "9+3=12; 12÷3=4.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_038",
       "question": "What is 2 × (4 + 2)?",
-      "choices": { "A": "6", "B": "12", "C": "4", "D": "10", "E": "8" },
+      "choices": {
+        "A": "6",
+        "B": "12",
+        "C": "4",
+        "D": "10",
+        "E": "8"
+      },
       "answer": "B",
-      "explanation": "4+2=6; 2×6=12."
+      "explanation": "4+2=6; 2×6=12.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_039",
       "question": "Simplify: 15 ÷ (5 − 2)",
-      "choices": { "A": "5", "B": "3", "C": "15", "D": "10", "E": "1" },
+      "choices": {
+        "A": "5",
+        "B": "3",
+        "C": "15",
+        "D": "10",
+        "E": "1"
+      },
       "answer": "A",
-      "explanation": "5−2=3; 15÷3=5."
+      "explanation": "5−2=3; 15÷3=5.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_040",
       "question": "Evaluate: (12 ÷ 4) + 3",
-      "choices": { "A": "5", "B": "6", "C": "7", "D": "4", "E": "10" },
+      "choices": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "4",
+        "E": "10"
+      },
       "answer": "C",
-      "explanation": "12÷4=3; 3+3=6."
+      "explanation": "12÷4=3; 3+3=6.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_oo_b_041",
       "question": "Compute: (5 × 5) − 10",
-      "choices": { "A": "10", "B": "5", "C": "15", "D": "20", "E": "25" },
+      "choices": {
+        "A": "10",
+        "B": "5",
+        "C": "15",
+        "D": "20",
+        "E": "25"
+      },
       "answer": "A",
-      "explanation": "5×5=25; 25−10=15."
+      "explanation": "5×5=25; 25−10=15.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_042",
       "question": "Evaluate: 21 ÷ 7 × 4",
-      "choices": { "A": "3", "B": "21", "C": "12", "D": "28", "E": "14" },
+      "choices": {
+        "A": "3",
+        "B": "21",
+        "C": "12",
+        "D": "28",
+        "E": "14"
+      },
       "answer": "C",
-      "explanation": "21÷7=3; 3×4=12."
+      "explanation": "21÷7=3; 3×4=12.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_043",
       "question": "Simplify: (6 + 2) × 3",
-      "choices": { "A": "12", "B": "15", "C": "18", "D": "24", "E": "9" },
+      "choices": {
+        "A": "12",
+        "B": "15",
+        "C": "18",
+        "D": "24",
+        "E": "9"
+      },
       "answer": "C",
-      "explanation": "(6+2)=8; 8×3=24."
+      "explanation": "(6+2)=8; 8×3=24.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_044",
       "question": "Evaluate: 10 − (8 ÷ 2)",
-      "choices": { "A": "6", "B": "4", "C": "8", "D": "2", "E": "10" },
+      "choices": {
+        "A": "6",
+        "B": "4",
+        "C": "8",
+        "D": "2",
+        "E": "10"
+      },
       "answer": "B",
-      "explanation": "8÷2=4; 10−4=6."
+      "explanation": "8÷2=4; 10−4=6.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_045",
       "question": "Compute: 3 × (5 − 1)",
-      "choices": { "A": "12", "B": "8", "C": "6", "D": "15", "E": "4" },
+      "choices": {
+        "A": "12",
+        "B": "8",
+        "C": "6",
+        "D": "15",
+        "E": "4"
+      },
       "answer": "A",
-      "explanation": "5−1=4; 3×4=12."
+      "explanation": "5−1=4; 3×4=12.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
-
     {
       "id": "mk_oo_b_046",
       "question": "Simplify: (8 + 8) ÷ 4",
-      "choices": { "A": "2", "B": "4", "C": "6", "D": "8", "E": "16" },
+      "choices": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8",
+        "E": "16"
+      },
       "answer": "B",
-      "explanation": "8+8=16; 16÷4=4."
+      "explanation": "8+8=16; 16÷4=4.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_047",
       "question": "Evaluate: 16 ÷ 2 − 3",
-      "choices": { "A": "5", "B": "3", "C": "8", "D": "10", "E": "13" },
+      "choices": {
+        "A": "5",
+        "B": "3",
+        "C": "8",
+        "D": "10",
+        "E": "13"
+      },
       "answer": "A",
-      "explanation": "16÷2=8; 8−3=5."
+      "explanation": "16÷2=8; 8−3=5.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_048",
       "question": "Compute: (9 − 1) × 2",
-      "choices": { "A": "18", "B": "8", "C": "16", "D": "10", "E": "4" },
+      "choices": {
+        "A": "18",
+        "B": "8",
+        "C": "16",
+        "D": "10",
+        "E": "4"
+      },
       "answer": "C",
-      "explanation": "9−1=8; 8×2=16."
+      "explanation": "9−1=8; 8×2=16.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_049",
       "question": "Evaluate: 24 ÷ (6 × 2)",
-      "choices": { "A": "2", "B": "4", "C": "6", "D": "1", "E": "8" },
+      "choices": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "1",
+        "E": "8"
+      },
       "answer": "D",
-      "explanation": "6×2=12; 24÷12=2."
+      "explanation": "6×2=12; 24÷12=2.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_oo_b_050",
       "question": "Simplify: (3 × 3) + 4",
-      "choices": { "A": "7", "B": "9", "C": "11", "D": "13", "E": "6" },
+      "choices": {
+        "A": "7",
+        "B": "9",
+        "C": "11",
+        "D": "13",
+        "E": "6"
+      },
       "answer": "C",
-      "explanation": "3×3=9; 9+4=13."
+      "explanation": "3×3=9; 9+4=13.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     }
   ]
 }

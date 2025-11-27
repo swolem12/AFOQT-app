@@ -15,7 +15,13 @@
         "E": "3/x"
       },
       "answer": "A",
-      "explanation": "6/x ÷ 3 = 6/(3x) = 2/x."
+      "explanation": "6/x ÷ 3 = 6/(3x) = 2/x.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_002",
@@ -28,7 +34,13 @@
         "E": "1"
       },
       "answer": "A",
-      "explanation": "(x/2) ÷ (x/4)= (x/2)*(4/x)=2."
+      "explanation": "(x/2) ÷ (x/4)= (x/2)*(4/x)=2.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_003",
@@ -41,7 +53,13 @@
         "E": "5"
       },
       "answer": "A",
-      "explanation": "3x × 10/(5x)=30x/(5x)=6."
+      "explanation": "3x × 10/(5x)=30x/(5x)=6.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_004",
@@ -54,7 +72,13 @@
         "E": "1/x"
       },
       "answer": "A",
-      "explanation": "Same denominator: (2+3)/x = 5/x."
+      "explanation": "Same denominator: (2+3)/x = 5/x.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_005",
@@ -67,7 +91,13 @@
         "E": "2x/3"
       },
       "answer": "A",
-      "explanation": "Common denominator 6: (2x − x)/6 = x/6."
+      "explanation": "Common denominator 6: (2x − x)/6 = x/6.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_006",
@@ -80,7 +110,13 @@
         "E": "4x"
       },
       "answer": "A",
-      "explanation": "12/(4x)=3/x."
+      "explanation": "12/(4x)=3/x.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_007",
@@ -93,7 +129,13 @@
         "E": "4"
       },
       "answer": "A",
-      "explanation": "x cancels; 16/8 = 2."
+      "explanation": "x cancels; 16/8 = 2.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_008",
@@ -106,7 +148,13 @@
         "E": "1/x"
       },
       "answer": "A",
-      "explanation": "Add numerators: (5+10)/x = 15/x."
+      "explanation": "Add numerators: (5+10)/x = 15/x.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_009",
@@ -119,7 +167,13 @@
         "E": "6"
       },
       "answer": "A",
-      "explanation": "6x²/3x = 2x."
+      "explanation": "6x²/3x = 2x.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_010",
@@ -132,7 +186,13 @@
         "E": "3"
       },
       "answer": "A",
-      "explanation": "3x/(9x)=1/3."
+      "explanation": "3x/(9x)=1/3.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_011",
@@ -145,7 +205,13 @@
         "E": "x"
       },
       "answer": "A",
-      "explanation": "(2x+x)/3 = 3x/3 = x."
+      "explanation": "(2x+x)/3 = 3x/3 = x.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_012",
@@ -158,7 +224,13 @@
         "E": "x/2"
       },
       "answer": "A",
-      "explanation": "x/(2x) = 1/2."
+      "explanation": "x/(2x) = 1/2.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_013",
@@ -171,7 +243,13 @@
         "E": "x/8"
       },
       "answer": "A",
-      "explanation": "4x/(2x)=2."
+      "explanation": "4x/(2x)=2.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_014",
@@ -184,7 +262,13 @@
         "E": "4/x"
       },
       "answer": "A",
-      "explanation": "(10-4)/x=6/x."
+      "explanation": "(10-4)/x=6/x.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_015",
@@ -197,7 +281,13 @@
         "E": "x/5"
       },
       "answer": "A",
-      "explanation": "5/15 = 1/3 → x/3."
+      "explanation": "5/15 = 1/3 → x/3.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_016",
@@ -210,7 +300,13 @@
         "E": "1/(3x)"
       },
       "answer": "A",
-      "explanation": "9/(3x) = 3/x."
+      "explanation": "9/(3x) = 3/x.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_017",
@@ -223,7 +319,13 @@
         "E": "4"
       },
       "answer": "A",
-      "explanation": "x cancels; 8/4 = 2."
+      "explanation": "x cancels; 8/4 = 2.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_018",
@@ -236,7 +338,13 @@
         "E": "1/x"
       },
       "answer": "A",
-      "explanation": "(4+12)/x=16/x."
+      "explanation": "(4+12)/x=16/x.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_019",
@@ -249,7 +357,13 @@
         "E": "14"
       },
       "answer": "A",
-      "explanation": "7x/14x = 1/2."
+      "explanation": "7x/14x = 1/2.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_020",
@@ -262,7 +376,13 @@
         "E": "x/3"
       },
       "answer": "A",
-      "explanation": "Cancels to 1."
+      "explanation": "Cancels to 1.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_021",
@@ -275,7 +395,13 @@
         "E": "4/x"
       },
       "answer": "A",
-      "explanation": "(12/x)/4 = 12/(4x)=3/x."
+      "explanation": "(12/x)/4 = 12/(4x)=3/x.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_022",
@@ -288,7 +414,13 @@
         "E": "2x/3"
       },
       "answer": "A",
-      "explanation": "Common denom 6: x/6 + 2x/6 = 3x/6 = x/2."
+      "explanation": "Common denom 6: x/6 + 2x/6 = 3x/6 = x/2.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_023",
@@ -301,7 +433,13 @@
         "E": "1/(2x)"
       },
       "answer": "A",
-      "explanation": "2x²/4x = x/2."
+      "explanation": "2x²/4x = x/2.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_024",
@@ -314,7 +452,13 @@
         "E": "1/x"
       },
       "answer": "A",
-      "explanation": "4/(2x)=2/x."
+      "explanation": "4/(2x)=2/x.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     },
     {
       "id": "mk_rat_b_025",
@@ -327,7 +471,13 @@
         "E": "1/x"
       },
       "answer": "A",
-      "explanation": "(9-3)/x=6/x."
+      "explanation": "(9-3)/x=6/x.",
+      "steps": [
+        "1. Set up the proportion with equal ratios.",
+        "2. Cross-multiply to create an equation.",
+        "3. Solve for the unknown."
+      ],
+      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
     }
   ]
 }
