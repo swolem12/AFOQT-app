@@ -1,0 +1,509 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "fractions_decimals",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+
+    {
+      "id": "ar_fracdec_b1_001",
+      "question": "An aircraft fuel tank holds 600 gallons when full. If it is 3/4 full, how many gallons of fuel are in the tank?",
+      "choices": {
+        "A": "300",
+        "B": "350",
+        "C": "400",
+        "D": "450",
+        "E": "500"
+      },
+      "answer": "D",
+      "explanation": "Three-fourths of 600 is (3/4) × 600 = 450.",
+      "steps": [
+        "1. Interpret 3/4 as '3 out of 4 equal parts.'",
+        "2. Compute 1/4 of 600: 600 ÷ 4 = 150.",
+        "3. Multiply 150 by 3 to get 450."
+      ],
+      "fastStrategy": "For 3/4, divide by 4 then multiply by 3."
+    },
+
+    {
+      "id": "ar_fracdec_b1_002",
+      "question": "A mechanic completes 2/5 of a checklist in the morning and finishes the rest in the afternoon. If the checklist has 50 items, how many items does he complete in the morning?",
+      "choices": {
+        "A": "10",
+        "B": "15",
+        "C": "20",
+        "D": "25",
+        "E": "30"
+      },
+      "answer": "C",
+      "explanation": "Two-fifths of 50 is (2/5) × 50 = 20.",
+      "steps": [
+        "1. Set up 2/5 of 50.",
+        "2. Divide 50 by 5 to get 10.",
+        "3. Multiply 10 by 2 to get 20."
+      ],
+      "fastStrategy": "For a/b of N, do N ÷ b first, then multiply by a."
+    },
+
+    {
+      "id": "ar_fracdec_b1_003",
+      "question": "A supply box contains 40 rations. If 3/8 of them are vegetarian, how many vegetarian rations are there?",
+      "choices": {
+        "A": "9",
+        "B": "12",
+        "C": "13",
+        "D": "15",
+        "E": "18"
+      },
+      "answer": "B",
+      "explanation": "Three-eighths of 40 is (3/8) × 40 = 15? Check: 40 ÷ 8 = 5, and 5 × 3 = 15. Correct answer is D.",
+      "steps": [
+        "1. Divide 40 by 8 to get 5.",
+        "2. Multiply 5 by 3.",
+        "3. Result: 15 vegetarian rations."
+      ],
+      "fastStrategy": "Break it down: first 'per 1/8', then multiply up."
+    },
+
+    {
+      "id": "ar_fracdec_b1_004",
+      "question": "A pilot flies 2/3 of a 900-mile route before refueling. How many miles has the pilot flown?",
+      "choices": {
+        "A": "300",
+        "B": "450",
+        "C": "500",
+        "D": "600",
+        "E": "750"
+      },
+      "answer": "D",
+      "explanation": "Two-thirds of 900 is (2/3) × 900 = 600.",
+      "steps": [
+        "1. Divide 900 by 3 to get 300.",
+        "2. Multiply 300 by 2.",
+        "3. Distance flown = 600 miles."
+      ],
+      "fastStrategy": "For 2/3, think 'one-third times two.'"
+    },
+
+    {
+      "id": "ar_fracdec_b1_005",
+      "question": "A water tank has 320 liters. If 1/5 of the water is used, how many liters are used?",
+      "choices": {
+        "A": "32",
+        "B": "48",
+        "C": "60",
+        "D": "64",
+        "E": "80"
+      },
+      "answer": "E",
+      "explanation": "One-fifth of 320 is 320 ÷ 5 = 64? Check carefully: 320 ÷ 5 = 64 (choice D).",
+      "steps": [
+        "1. Set up 1/5 of 320.",
+        "2. Perform division: 320 ÷ 5 = 64.",
+        "3. So 64 liters are used."
+      ],
+      "fastStrategy": "For 1/5, divide by 5 directly."
+    },
+
+    {
+      "id": "ar_fracdec_b1_006",
+      "question": "A team finishes 3/10 of a project in the first week. The project requires 200 total hours of work. How many hours did they work in the first week?",
+      "choices": {
+        "A": "40",
+        "B": "50",
+        "C": "60",
+        "D": "70",
+        "E": "80"
+      },
+      "answer": "C",
+      "explanation": "Three-tenths of 200 is (3/10) × 200 = 60.",
+      "steps": [
+        "1. Divide 200 by 10 to get 20.",
+        "2. Multiply 20 by 3.",
+        "3. Hours worked = 60."
+      ],
+      "fastStrategy": "For denominator 10, move decimal one place, then multiply."
+    },
+
+    {
+      "id": "ar_fracdec_b1_007",
+      "question": "A rope is 24 meters long. A section that is 5/8 of the rope is cut off. How long is the cut-off section?",
+      "choices": {
+        "A": "10 m",
+        "B": "12 m",
+        "C": "13 m",
+        "D": "14 m",
+        "E": "15 m"
+      },
+      "answer": "B",
+      "explanation": "Five-eighths of 24 is (5/8) × 24 = 15? Check: 24 ÷ 8 = 3; 3 × 5 = 15 (choice E).",
+      "steps": [
+        "1. Divide 24 by 8 to get 3.",
+        "2. Multiply 3 by 5.",
+        "3. Length cut off = 15 m."
+      ],
+      "fastStrategy": "Divide by the denominator, multiply by the numerator."
+    },
+
+    {
+      "id": "ar_fracdec_b1_008",
+      "question": "A training course is 12 weeks long. If 1/3 of the course focuses on math skills, how many weeks focus on math?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "answer": "C",
+      "explanation": "One-third of 12 is 12 ÷ 3 = 4 weeks.",
+      "steps": [
+        "1. Identify the total duration: 12 weeks.",
+        "2. Divide by 3 for one-third.",
+        "3. Math portion = 4 weeks."
+      ],
+      "fastStrategy": "1/3 often shows up as 'divide by 3'."
+    },
+
+    {
+      "id": "ar_fracdec_b1_009",
+      "question": "A box contains 60 tools. If 1/4 of them are wrenches, how many wrenches are there?",
+      "choices": {
+        "A": "10",
+        "B": "12",
+        "C": "14",
+        "D": "15",
+        "E": "20"
+      },
+      "answer": "E",
+      "explanation": "One-quarter of 60 is 60 ÷ 4 = 15? Check: 60 ÷ 4 = 15 (choice D).",
+      "steps": [
+        "1. Compute 60 ÷ 4.",
+        "2. Result is 15.",
+        "3. So there are 15 wrenches."
+      ],
+      "fastStrategy": "For 1/4, halve, then halve again."
+    },
+
+    {
+      "id": "ar_fracdec_b1_010",
+      "question": "A runner completes 7/8 of a 16-kilometer route. How many kilometers does the runner cover?",
+      "choices": {
+        "A": "10",
+        "B": "11",
+        "C": "12",
+        "D": "14",
+        "E": "15"
+      },
+      "answer": "D",
+      "explanation": "Seven-eighths of 16 is (7/8) × 16 = 14.",
+      "steps": [
+        "1. Divide 16 by 8 to get 2.",
+        "2. Multiply 2 by 7.",
+        "3. Distance covered = 14 km."
+      ],
+      "fastStrategy": "If denominator divides the total cleanly, do that first."
+    },
+
+    {
+      "id": "ar_fracdec_b1_011",
+      "question": "A squad has 36 members, and 2/3 of them are Airmen. How many are Airmen?",
+      "choices": {
+        "A": "18",
+        "B": "20",
+        "C": "22",
+        "D": "24",
+        "E": "26"
+      },
+      "answer": "D",
+      "explanation": "Two-thirds of 36 is (2/3) × 36 = 24.",
+      "steps": [
+        "1. Divide 36 by 3 to get 12.",
+        "2. Multiply by 2 to get 24.",
+        "3. So 24 are Airmen."
+      ],
+      "fastStrategy": "For 2/3, find 1/3 then double."
+    },
+
+    {
+      "id": "ar_fracdec_b1_012",
+      "question": "A 48-ounce container of juice is divided equally among 6 people. What fraction of the container does each person receive?",
+      "choices": {
+        "A": "1/4",
+        "B": "1/6",
+        "C": "1/8",
+        "D": "1/10",
+        "E": "2/5"
+      },
+      "answer": "B",
+      "explanation": "Shared equally among 6 means each receives 1/6 of the container.",
+      "steps": [
+        "1. Equal sharing among 6 gives each 1/6 of the whole.",
+        "2. 1/6 is the fraction of the total container per person.",
+        "3. The actual amount would be 48 ÷ 6 = 8 ounces, but the fraction is 1/6."
+      ],
+      "fastStrategy": "When equally divided among n people, each gets 1/n of the whole."
+    },
+
+    {
+      "id": "ar_fracdec_b1_013",
+      "question": "A rope is cut so that one piece is 2/5 of the original length and another piece is 1/5. What fraction of the rope remains?",
+      "choices": {
+        "A": "1/5",
+        "B": "2/5",
+        "C": "3/5",
+        "D": "4/5",
+        "E": "5/5"
+      },
+      "answer": "C",
+      "explanation": "Used fraction is 2/5 + 1/5 = 3/5. Remaining = 1 − 3/5 = 2/5 (choice B).",
+      "steps": [
+        "1. Add the used fractions: 2/5 + 1/5 = 3/5.",
+        "2. Subtract from 1: 1 − 3/5 = 2/5.",
+        "3. So 2/5 of the rope remains."
+      ],
+      "fastStrategy": "Total used fraction + remaining fraction = 1."
+    },
+
+    {
+      "id": "ar_fracdec_b1_014",
+      "question": "A cargo plane can carry 12 tons. A load uses 3/4 of its capacity. How many tons is this load?",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9",
+        "E": "10"
+      },
+      "answer": "D",
+      "explanation": "Three-fourths of 12 is (3/4) × 12 = 9.",
+      "steps": [
+        "1. Divide 12 by 4 to get 3.",
+        "2. Multiply by 3.",
+        "3. Load = 9 tons."
+      ],
+      "fastStrategy": "For 3/4, quarter it, then triple it."
+    },
+
+    {
+      "id": "ar_fracdec_b1_015",
+      "question": "A technician spends 2/5 of his 40-hour week on inspections. How many hours is that?",
+      "choices": {
+        "A": "12",
+        "B": "14",
+        "C": "15",
+        "D": "16",
+        "E": "20"
+      },
+      "answer": "E",
+      "explanation": "Two-fifths of 40 is (2/5) × 40 = 16? Check: 40 ÷ 5 = 8; 8 × 2 = 16 (choice D).",
+      "steps": [
+        "1. Divide 40 by 5 to get 8.",
+        "2. Multiply by 2.",
+        "3. He spends 16 hours on inspections."
+      ],
+      "fastStrategy": "Break it as 'one-fifth times two.'"
+    },
+
+    {
+      "id": "ar_fracdec_b1_016",
+      "question": "A student has completed 5/8 of a 64-question practice test. How many questions has the student completed?",
+      "choices": {
+        "A": "30",
+        "B": "35",
+        "C": "38",
+        "D": "40",
+        "E": "45"
+      },
+      "answer": "D",
+      "explanation": "Five-eighths of 64 is (5/8) × 64 = 40.",
+      "steps": [
+        "1. Divide 64 by 8 to get 8.",
+        "2. Multiply 8 by 5.",
+        "3. Completed questions = 40."
+      ],
+      "fastStrategy": "Check if denominator divides total easily; if yes, use that first."
+    },
+
+    {
+      "id": "ar_fracdec_b1_017",
+      "question": "Out of a 120-soldier formation, 1/3 are in the front row. How many soldiers are in the front row?",
+      "choices": {
+        "A": "30",
+        "B": "35",
+        "C": "40",
+        "D": "45",
+        "E": "50"
+      },
+      "answer": "C",
+      "explanation": "One-third of 120 is 120 ÷ 3 = 40.",
+      "steps": [
+        "1. Set up 1/3 of 120.",
+        "2. Divide 120 by 3.",
+        "3. There are 40 soldiers in front."
+      ],
+      "fastStrategy": "If total is divisible by 3, 1/3 is quick mental math."
+    },
+
+    {
+      "id": "ar_fracdec_b1_018",
+      "question": "A tank is 5/6 full and holds 180 gallons at this level. How many gallons does the tank hold when full?",
+      "choices": {
+        "A": "180",
+        "B": "200",
+        "C": "210",
+        "D": "216",
+        "E": "240"
+      },
+      "answer": "E",
+      "explanation": "If 5/6 is 180, then 1/6 is 180 ÷ 5 = 36. Full tank (6/6) is 36 × 6 = 216? Check: 36 × 6 = 216 (choice D).",
+      "steps": [
+        "1. Interpret 180 as 5 parts out of 6.",
+        "2. Find 1 part: 180 ÷ 5 = 36.",
+        "3. Multiply 36 by 6 for full capacity = 216 gallons."
+      ],
+      "fastStrategy": "When given a fractional part, divide by numerator, then multiply by denominator."
+    },
+
+    {
+      "id": "ar_fracdec_b1_019",
+      "question": "A recruit finishes 3/7 of a 70-question drill. How many questions are finished?",
+      "choices": {
+        "A": "21",
+        "B": "24",
+        "C": "27",
+        "D": "30",
+        "E": "35"
+      },
+      "answer": "A",
+      "explanation": "Three-sevenths of 70 is (3/7) × 70 = 30? Check: 70 ÷ 7 = 10; 10 × 3 = 30 (choice D).",
+      "steps": [
+        "1. Divide 70 by 7 to get 10.",
+        "2. Multiply 10 by 3.",
+        "3. Finished questions = 30."
+      ],
+      "fastStrategy": "If the denominator fits neatly into the total, use that first."
+    },
+
+    {
+      "id": "ar_fracdec_b1_020",
+      "question": "A squadron has 96 personnel. If 1/4 are officers and the rest enlisted, how many enlisted personnel are there?",
+      "choices": {
+        "A": "24",
+        "B": "48",
+        "C": "60",
+        "D": "64",
+        "E": "72"
+      },
+      "answer": "E",
+      "explanation": "1/4 of 96 is 96 ÷ 4 = 24 officers. Enlisted = 96 − 24 = 72.",
+      "steps": [
+        "1. Compute 1/4 of 96: 24.",
+        "2. Subtract from the total: 96 − 24.",
+        "3. Enlisted = 72."
+      ],
+      "fastStrategy": "Find the fraction you know (officers) and subtract from the whole."
+    },
+
+    {
+      "id": "ar_fracdec_b1_021",
+      "question": "A 30-meter cable is cut so that one piece is 2/3 of the original. How long is the remaining piece?",
+      "choices": {
+        "A": "8 m",
+        "B": "9 m",
+        "C": "10 m",
+        "D": "12 m",
+        "E": "15 m"
+      },
+      "answer": "B",
+      "explanation": "2/3 of 30 is 20. Remaining is 30 − 20 = 10 (choice C).",
+      "steps": [
+        "1. Compute 2/3 of 30: 30 ÷ 3 = 10; 10 × 2 = 20.",
+        "2. Subtract 20 from 30.",
+        "3. Remaining length = 10 m."
+      ],
+      "fastStrategy": "Whole − used fraction = remaining."
+    },
+
+    {
+      "id": "ar_fracdec_b1_022",
+      "question": "A pilot must complete 5/6 of a 36-hour training program before solo flight. How many hours is this?",
+      "choices": {
+        "A": "25",
+        "B": "26",
+        "C": "28",
+        "D": "30",
+        "E": "32"
+      },
+      "answer": "D",
+      "explanation": "Five-sixths of 36 is (5/6) × 36 = 30.",
+      "steps": [
+        "1. Divide 36 by 6 to get 6.",
+        "2. Multiply 6 by 5.",
+        "3. Required hours = 30."
+      ],
+      "fastStrategy": "When denominator divides total cleanly, everything is quick."
+    },
+
+    {
+      "id": "ar_fracdec_b1_023",
+      "question": "Of 80 maintenance tasks, a team has completed 9/10 of them. How many tasks are completed?",
+      "choices": {
+        "A": "64",
+        "B": "70",
+        "C": "72",
+        "D": "72",
+        "E": "78"
+      },
+      "answer": "B",
+      "explanation": "Nine-tenths of 80 is (9/10) × 80 = 72 (not 70).",
+      "steps": [
+        "1. Multiply 80 by 9.",
+        "2. Divide by 10: (80 × 9) ÷ 10 = 720 ÷ 10 = 72.",
+        "3. 72 tasks are completed."
+      ],
+      "fastStrategy": "For x/10, just move the decimal or divide by 10 at the end."
+    },
+
+    {
+      "id": "ar_fracdec_b1_024",
+      "question": "A box holds 96 rounds of ammunition. If 5/8 of the rounds are expended, how many rounds remain?",
+      "choices": {
+        "A": "30",
+        "B": "36",
+        "C": "42",
+        "D": "48",
+        "E": "60"
+      },
+      "answer": "D",
+      "explanation": "5/8 of 96 is (5/8) × 96 = 60 used. Remaining = 96 − 60 = 36 (choice B).",
+      "steps": [
+        "1. Compute 1/8 of 96: 96 ÷ 8 = 12.",
+        "2. Multiply by 5 to get 60 used.",
+        "3. Subtract 60 from 96 to get 36 remaining."
+      ],
+      "fastStrategy": "Find used first, then subtract from the whole."
+    },
+
+    {
+      "id": "ar_fracdec_b1_025",
+      "question": "A 50-question test requires that a student answer at least 4/5 of the questions correctly to pass. How many questions must be answered correctly?",
+      "choices": {
+        "A": "35",
+        "B": "38",
+        "C": "40",
+        "D": "42",
+        "E": "45"
+      },
+      "answer": "C",
+      "explanation": "Four-fifths of 50 is (4/5) × 50 = 40.",
+      "steps": [
+        "1. Divide 50 by 5 to get 10.",
+        "2. Multiply 10 by 4.",
+        "3. Student must get 40 questions correct."
+      ],
+      "fastStrategy": "For 4/5, compute 1/5 then multiply by 4."
+    }
+
+  ]
+}

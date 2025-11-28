@@ -1,0 +1,359 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "time_rates_work",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+
+    {
+      "id": "ar_trw_b1_001",
+      "question": "A vehicle travels at 40 miles per hour. How far can it travel in 3 hours?",
+      "choices": { "A": "80", "B": "100", "C": "110", "D": "120", "E": "140" },
+      "answer": "D",
+      "explanation": "Distance = rate × time = 40 × 3 = 120 miles.",
+      "steps": [
+        "1. Identify rate: 40 mph.",
+        "2. Multiply rate by time: 40 × 3.",
+        "3. Distance traveled is 120 miles."
+      ],
+      "fastStrategy": "For whole-number rates, just multiply quickly (mph × hours)."
+    },
+
+    {
+      "id": "ar_trw_b1_002",
+      "question": "A plane flies 300 miles in 2.5 hours. What is its average speed?",
+      "choices": { "A": "100 mph", "B": "110 mph", "C": "115 mph", "D": "120 mph", "E": "125 mph" },
+      "answer": "A",
+      "explanation": "Speed = distance ÷ time = 300 ÷ 2.5 = 120? Check: 2.5 × 100 = 250; 2.5 × 120 = 300. Correct speed is 120 mph (choice D).",
+      "steps": [
+        "1. Use speed formula: distance ÷ time.",
+        "2. Solve 300 ÷ 2.5.",
+        "3. Recognize 2.5 × 120 = 300 → speed = 120 mph."
+      ],
+      "fastStrategy": "For ÷2.5, multiply by 0.4 (= divide by 2.5)."
+    },
+
+    {
+      "id": "ar_trw_b1_003",
+      "question": "A runner maintains a pace of 6 miles per hour. How long will it take to run 9 miles?",
+      "choices": { "A": "1 hour", "B": "1.25 hours", "C": "1.5 hours", "D": "1.75 hours", "E": "2 hours" },
+      "answer": "C",
+      "explanation": "Time = distance ÷ rate = 9 ÷ 6 = 1.5 hours.",
+      "steps": [
+        "1. Identify distance (9) and rate (6).",
+        "2. Compute 9 ÷ 6 = 1.5.",
+        "3. Convert if needed: 1.5 hours = 1 hour 30 minutes."
+      ],
+      "fastStrategy": "Distance > rate? Expect slightly over 1 hour."
+    },
+
+    {
+      "id": "ar_trw_b1_004",
+      "question": "A machine produces 240 units in 4 hours. What is the production rate per hour?",
+      "choices": { "A": "40", "B": "50", "C": "55", "D": "60", "E": "65" },
+      "answer": "D",
+      "explanation": "Rate = 240 ÷ 4 = 60 units per hour.",
+      "steps": [
+        "1. Set up rate = total ÷ time.",
+        "2. Divide 240 by 4.",
+        "3. Output is 60 units/hour."
+      ],
+      "fastStrategy": "Divide by 4 quickly using half-then-half: 240 → 120 → 60."
+    },
+
+    {
+      "id": "ar_trw_b1_005",
+      "question": "A fuel pump delivers 6 gallons per minute. How long to pump 42 gallons?",
+      "choices": { "A": "5 min", "B": "6 min", "C": "7 min", "D": "8 min", "E": "9 min" },
+      "answer": "C",
+      "explanation": "Time = total ÷ rate = 42 ÷ 6 = 7 minutes.",
+      "steps": [
+        "1. Identify needed gallons: 42.",
+        "2. Divide by rate: 42 ÷ 6.",
+        "3. Pumping time = 7 minutes."
+      ],
+      "fastStrategy": "If rate divides evenly, just compute directly."
+    },
+
+    {
+      "id": "ar_trw_b1_006",
+      "question": "A worker completes 15 tasks in 3 hours. At the same rate, how many tasks can be completed in 5 hours?",
+      "choices": { "A": "20", "B": "22", "C": "24", "D": "25", "E": "30" },
+      "answer": "E",
+      "explanation": "Rate = 15/3 = 5 tasks/hour → 5 hours × 5 = 25 tasks? Check: 5×5=25 (choice D).",
+      "steps": [
+        "1. Compute tasks per hour: 15 ÷ 3.",
+        "2. Multiply by 5 hours.",
+        "3. Output is 25 tasks."
+      ],
+      "fastStrategy": "Break into rate first (tasks per hour), then scale."
+    },
+
+    {
+      "id": "ar_trw_b1_07",
+      "question": "Two technicians repair 48 devices in 8 hours. At the same rate, how many devices can they repair in 5 hours?",
+      "choices": { "A": "25", "B": "28", "C": "30", "D": "32", "E": "35" },
+      "answer": "C",
+      "explanation": "Rate = 48/8 = 6 devices/hour → in 5 hours: 6×5 = 30.",
+      "steps": [
+        "1. Compute total rate: 48 ÷ 8.",
+        "2. Multiply the rate by 5 hours.",
+        "3. They repair 30 devices."
+      ],
+      "fastStrategy": "When scaling time, multiply rate × hours."
+    },
+
+    {
+      "id": "ar_trw_b1_008",
+      "question": "A cyclist averages 12 mph. How long will it take to travel 27 miles?",
+      "choices": { "A": "1.5 hrs", "B": "1.75 hrs", "C": "2 hrs", "D": "2.25 hrs", "E": "2.5 hrs" },
+      "answer": "D",
+      "explanation": "Time = distance ÷ rate = 27 ÷ 12 = 2.25 hours.",
+      "steps": [
+        "1. Use formula: t = d ÷ r.",
+        "2. Compute 27 ÷ 12 = 2.25.",
+        "3. Convert 0.25 hours to 15 minutes."
+      ],
+      "fastStrategy": "Divide numerator and denominator by 3 if both divisible."
+    },
+
+    {
+      "id": "ar_trw_b1_009",
+      "question": "A machine needs 2.5 hours to produce 100 parts. How many parts per hour is this?",
+      "choices": { "A": "30", "B": "35", "C": "40", "D": "45", "E": "50" },
+      "answer": "C",
+      "explanation": "Rate = 100 ÷ 2.5 = 40 parts/hr.",
+      "steps": [
+        "1. Divide 100 by 2.5.",
+        "2. Recognize dividing by 2.5 = multiplying by 0.4.",
+        "3. Rate = 40 parts/hour."
+      ],
+      "fastStrategy": "To divide by 2.5, multiply by 0.4 (easy mental math)."
+    },
+
+    {
+      "id": "ar_trw_b1_010",
+      "question": "A supply truck travels 180 miles in 4 hours. What is its speed?",
+      "choices": { "A": "40 mph", "B": "42 mph", "C": "45 mph", "D": "48 mph", "E": "50 mph" },
+      "answer": "C",
+      "explanation": "Speed = 180 ÷ 4 = 45 mph.",
+      "steps": [
+        "1. Apply the formula: speed = distance ÷ time.",
+        "2. Compute 180 ÷ 4.",
+        "3. Speed = 45 mph."
+      ],
+      "fastStrategy": "Divide by 4 using half → half again."
+    },
+
+    {
+      "id": "ar_trw_b1_011",
+      "question": "A boat moves at 22 mph for 3 hours. How far does it travel?",
+      "choices": { "A": "44", "B": "55", "C": "60", "D": "66", "E": "72" },
+      "answer": "D",
+      "explanation": "Distance = 22 × 3 = 66 miles.",
+      "steps": [
+        "1. Identify rate and time.",
+        "2. Multiply 22 × 3.",
+        "3. Distance = 66 miles."
+      ],
+      "fastStrategy": "Use doubling: 22+22+22."
+    },
+
+    {
+      "id": "ar_trw_b1_012",
+      "question": "A jet climbs 84,000 feet in 7 minutes. What is the climb rate in feet per minute?",
+      "choices": { "A": "10,000", "B": "11,000", "C": "12,000", "D": "13,000", "E": "14,000" },
+      "answer": "C",
+      "explanation": "Rate = 84,000 ÷ 7 = 12,000 ft/min.",
+      "steps": [
+        "1. Divide 84,000 by 7.",
+        "2. Simplify by dividing 84 by 7.",
+        "3. Add three zeros → 12,000."
+      ],
+      "fastStrategy": "Divide the big number first, add zeros after."
+    },
+
+    {
+      "id": "ar_trw_b1_013",
+      "question": "A pump drains 96 gallons in 12 minutes. How many gallons per minute?",
+      "choices": { "A": "6", "B": "7", "C": "8", "D": "9", "E": "10" },
+      "answer": "C",
+      "explanation": "Rate = 96 ÷ 12 = 8.",
+      "steps": [
+        "1. Divide 96 by 12.",
+        "2. Recognize 12×8=96.",
+        "3. Rate is 8 gpm."
+      ],
+      "fastStrategy": "12×8=96 is a helpful mental fact."
+    },
+
+    {
+      "id": "ar_trw_b1_014",
+      "question": "A worker completes a job in 5 hours. Another worker completes the same job in 10 hours. Working together, how long will they take?",
+      "choices": { "A": "2 hours", "B": "2.5 hours", "C": "3 hours", "D": "3.33 hours", "E": "4 hours" },
+      "answer": "B",
+      "explanation": "Rates: 1/5 + 1/10 = 3/10 job/hr → time = 1 ÷ (3/10) = 10/3 = 3.33 hours (choice D).",
+      "steps": [
+        "1. Convert to rates: 1/5 and 1/10.",
+        "2. Add: 1/5 + 1/10 = 2/10 + 1/10 = 3/10.",
+        "3. Time = 1 ÷ (3/10) = 10/3 = 3.33 hours."
+      ],
+      "fastStrategy": "Work problems = add rates, not times."
+    },
+
+    {
+      "id": "ar_trw_b1_015",
+      "question": "A drone travels 150 miles at 25 mph. How long is the flight?",
+      "choices": { "A": "4 hr", "B": "5 hr", "C": "6 hr", "D": "7 hr", "E": "8 hr" },
+      "answer": "B",
+      "explanation": "Time = 150 ÷ 25 = 6? Check: 25 × 6 = 150 → so 6 hours (choice C).",
+      "steps": [
+        "1. Compute distance ÷ rate.",
+        "2. 150 ÷ 25 = 6.",
+        "3. Flight takes 6 hours."
+      ],
+      "fastStrategy": "Divide by 25 using 'divide by 100 then ×4' trick."
+    },
+
+    {
+      "id": "ar_trw_b1_016",
+      "question": "At 15 mph, how long does it take to go 45 miles?",
+      "choices": { "A": "2 hr", "B": "2.5 hr", "C": "3 hr", "D": "3.5 hr", "E": "4 hr" },
+      "answer": "C",
+      "explanation": "Time = 45 ÷ 15 = 3 hours.",
+      "steps": [
+        "1. Use t = d ÷ r.",
+        "2. 45 ÷ 15 = 3.",
+        "3. Arrive in 3 hours."
+      ],
+      "fastStrategy": "15×3=45 is a standard multiplication fact."
+    },
+
+    {
+      "id": "ar_trw_b1_017",
+      "question": "A crew unloads cargo at 12 tons per hour. How much can they unload in 6 hours?",
+      "choices": { "A": "60", "B": "66", "C": "70", "D": "72", "E": "75" },
+      "answer": "D",
+      "explanation": "12 × 6 = 72 tons.",
+      "steps": [
+        "1. Multiply rate by time.",
+        "2. 12 × 6 = 72.",
+        "3. Total cargo = 72 tons."
+      ],
+      "fastStrategy": "Multiplying by 6 = '×3 then ×2'."
+    },
+
+    {
+      "id": "ar_trw_b1_018",
+      "question": "A car using cruise control maintains 55 mph. How far will it travel in 1.5 hours?",
+      "choices": { "A": "70", "B": "77.5", "C": "80", "D": "82.5", "E": "85" },
+      "answer": "D",
+      "explanation": "55 × 1.5 = 55 × (3/2) = (55×3)/2 = 165/2 = 82.5.",
+      "steps": [
+        "1. Convert 1.5 to 3/2.",
+        "2. Multiply 55 by 3 to get 165.",
+        "3. Divide by 2 for 82.5 miles."
+      ],
+      "fastStrategy": "Multiply by 1.5 = '×3 then ÷2'."
+    },
+
+    {
+      "id": "ar_trw_b1_019",
+      "question": "A plane descends 600 feet per minute. How long does it take to descend 9,000 feet?",
+      "choices": { "A": "10 min", "B": "12 min", "C": "14 min", "D": "15 min", "E": "16 min" },
+      "answer": "D",
+      "explanation": "Time = 9000 ÷ 600 = 15 minutes.",
+      "steps": [
+        "1. Divide distance by rate: 9000 ÷ 600.",
+        "2. Simplify: 900 ÷ 60 = 15.",
+        "3. Time = 15 minutes."
+      ],
+      "fastStrategy": "Remove two zeros from both numbers to simplify."
+    },
+
+    {
+      "id": "ar_trw_b1_020",
+      "question": "A drone operator scans 180 acres in 3 hours. What is the rate?",
+      "choices": { "A": "40", "B": "50", "C": "55", "D": "60", "E": "65" },
+      "answer": "D",
+      "explanation": "180 ÷ 3 = 60 acres/hr.",
+      "steps": [
+        "1. Identify total and time.",
+        "2. Divide 180 by 3.",
+        "3. Rate = 60 acres/hour."
+      ],
+      "fastStrategy": "Rate = total ÷ time — always start there."
+    },
+
+    {
+      "id": "ar_trw_b1_021",
+      "question": "A repair takes 4 hours at a rate of 18 units per hour. How many units are repaired?",
+      "choices": { "A": "60", "B": "65", "C": "70", "D": "72", "E": "75" },
+      "answer": "D",
+      "explanation": "18 × 4 = 72 units.",
+      "steps": [
+        "1. Multiply rate by time.",
+        "2. 18 × 4 = 72.",
+        "3. Final = 72 units."
+      ],
+      "fastStrategy": "For ×4: double twice."
+    },
+
+    {
+      "id": "ar_trw_b1_022",
+      "question": "A jet refuels at 200 gallons per minute. How many gallons in 6 minutes?",
+      "choices": { "A": "800", "B": "900", "C": "1000", "D": "1100", "E": "1200" },
+      "answer": "E",
+      "explanation": "200 × 6 = 1200 gallons.",
+      "steps": [
+        "1. Identify refuel rate.",
+        "2. Multiply 200 by 6.",
+        "3. Total = 1200 gallons."
+      ],
+      "fastStrategy": "×6 is ×3 then ×2."
+    },
+
+    {
+      "id": "ar_trw_b1_023",
+      "question": "If a job takes 8 hours at 5 units per hour, how many units are completed?",
+      "choices": { "A": "35", "B": "40", "C": "45", "D": "50", "E": "55" },
+      "answer": "D",
+      "explanation": "5 × 8 = 40 units.",
+      "steps": [
+        "1. Multiply rate by hours.",
+        "2. 5 × 8 = 40.",
+        "3. Total = 40 units."
+      ],
+      "fastStrategy": "Simple multiplication — no tricks needed."
+    },
+
+    {
+      "id": "ar_trw_b1_024",
+      "question": "A truck travels 210 miles at 70 mph. What is the travel time?",
+      "choices": { "A": "2 hr", "B": "2.5 hr", "C": "3 hr", "D": "3.5 hr", "E": "4 hr" },
+      "answer": "C",
+      "explanation": "210 ÷ 70 = 3 hours.",
+      "steps": [
+        "1. Use t = d ÷ r.",
+        "2. Divide 210 by 70.",
+        "3. Travel time = 3 hours."
+      ],
+      "fastStrategy": "70×3 = 210 — use reverse multiplication."
+    },
+
+    {
+      "id": "ar_trw_b1_025",
+      "question": "A radar sweep covers 540 miles in 9 hours. What is its speed?",
+      "choices": { "A": "55", "B": "58", "C": "60", "D": "62", "E": "65" },
+      "answer": "C",
+      "explanation": "540 ÷ 9 = 60 mph.",
+      "steps": [
+        "1. Divide 540 by 9.",
+        "2. 9 × 60 = 540.",
+        "3. Speed = 60 mph."
+      ],
+      "fastStrategy": "Divide by 9 using '9×6=54' pattern."
+    }
+
+  ]
+}

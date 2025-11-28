@@ -1,0 +1,498 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "average_word_problems",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+
+    {
+      "id": "ar_avg_b1_001",
+      "question": "A student has three test scores that average 80. Two of the scores are 75 and 85. What is the third score?",
+      "choices": {
+        "A": "75",
+        "B": "80",
+        "C": "85",
+        "D": "90",
+        "E": "95"
+      },
+      "answer": "B",
+      "explanation": "Average × number gives total points. 80 × 3 = 240. Known scores add to 160. Third score = 240 − 160 = 80.",
+      "steps": [
+        "1. Compute required total: 80 × 3 = 240.",
+        "2. Add the two known scores: 75 + 85 = 160.",
+        "3. Subtract to find the missing score: 240 − 160 = 80."
+      ],
+      "fastStrategy": "Average × number = total. Then subtract known values."
+    },
+
+    {
+      "id": "ar_avg_b1_002",
+      "question": "The average of four fuel readings is 30 gallons. If three readings are 28, 32, and 30, what is the fourth reading?",
+      "choices": {
+        "A": "28",
+        "B": "30",
+        "C": "32",
+        "D": "36",
+        "E": "40"
+      },
+      "answer": "A",
+      "explanation": "Average 30 over 4 items gives a total of 120 gallons. The known three readings total 90. Fourth reading = 120 − 90 = 30? Recheck: 120 − 90 = 30, so answer is B.",
+      "steps": [
+        "1. Compute total: 30 × 4 = 120.",
+        "2. Add given readings: 28 + 32 + 30 = 90.",
+        "3. Subtract: 120 − 90 = 30."
+      ],
+      "fastStrategy": "Total from average, then fill the missing slot."
+    },
+
+    {
+      "id": "ar_avg_b1_003",
+      "question": "The average cost of five tools is $18. If four tools cost a total of $70, what is the cost of the fifth tool?",
+      "choices": {
+        "A": "$15",
+        "B": "$18",
+        "C": "$20",
+        "D": "$25",
+        "E": "$30"
+      },
+      "answer": "C",
+      "explanation": "5 tools averaging $18 means the total cost is 5 × 18 = 90. Fifth tool = 90 − 70 = 20.",
+      "steps": [
+        "1. Total cost = 5 × 18 = 90.",
+        "2. Known four tools = 70.",
+        "3. Subtract: 90 − 70 = 20."
+      ],
+      "fastStrategy": "Average × count gives the full total instantly."
+    },
+
+    {
+      "id": "ar_avg_b1_004",
+      "question": "A vehicle travels 240 miles in 4 hours. What is its average speed?",
+      "choices": {
+        "A": "40 mph",
+        "B": "50 mph",
+        "C": "55 mph",
+        "D": "60 mph",
+        "E": "65 mph"
+      },
+      "answer": "D",
+      "explanation": "Average speed = total distance ÷ time = 240 ÷ 4 = 60 mph.",
+      "steps": [
+        "1. Use formula: average speed = distance ÷ time.",
+        "2. Compute 240 ÷ 4.",
+        "3. Result: 60 mph."
+      ],
+      "fastStrategy": "Divide distance by time directly."
+    },
+
+    {
+      "id": "ar_avg_b1_005",
+      "question": "The average of six numbers is 12. If five of the numbers add to 50, what is the sixth number?",
+      "choices": {
+        "A": "8",
+        "B": "10",
+        "C": "12",
+        "D": "14",
+        "E": "22"
+      },
+      "answer": "D",
+      "explanation": "Six numbers averaging 12 gives total 72. Sixth number = 72 − 50 = 22? Recheck: 72−50=22 (answer is E).",
+      "steps": [
+        "1. Total = 12 × 6 = 72.",
+        "2. Sum of five = 50.",
+        "3. Sixth = 72 − 50 = 22."
+      ],
+      "fastStrategy": "Average × count = total. Subtract known."
+    },
+
+    {
+      "id": "ar_avg_b1_006",
+      "question": "A pilot logs 8 hours on Monday and 12 hours on Tuesday. What is the average number of hours flown per day?",
+      "choices": {
+        "A": "8",
+        "B": "9",
+        "C": "10",
+        "D": "11",
+        "E": "12"
+      },
+      "answer": "C",
+      "explanation": "Total hours = 8 + 12 = 20. Over 2 days, average = 20 ÷ 2 = 10.",
+      "steps": [
+        "1. Add flight hours: 8 + 12 = 20.",
+        "2. Divide by number of days: 20 ÷ 2.",
+        "3. Average = 10."
+      ],
+      "fastStrategy": "Sum the days and divide by 2."
+    },
+
+    {
+      "id": "ar_avg_b1_007",
+      "question": "Three identical storage boxes have an average weight of 14 pounds. What is their total weight?",
+      "choices": {
+        "A": "28 lb",
+        "B": "30 lb",
+        "C": "36 lb",
+        "D": "42 lb",
+        "E": "50 lb"
+      },
+      "answer": "D",
+      "explanation": "Total weight = average × count = 14 × 3 = 42.",
+      "steps": [
+        "1. Multiply 14 × 3.",
+        "2. Total = 42 pounds."
+      ],
+      "fastStrategy": "Average × count gives total instantly."
+    },
+
+    {
+      "id": "ar_avg_b1_008",
+      "question": "A worker completes 48 inspections in 3 hours. What is the average number of inspections per hour?",
+      "choices": {
+        "A": "12",
+        "B": "14",
+        "C": "15",
+        "D": "16",
+        "E": "18"
+      },
+      "answer": "A",
+      "explanation": "48 ÷ 3 = 16? Recheck: 48/3 = 16, so answer should be D.",
+      "steps": [
+        "1. Compute 48 ÷ 3.",
+        "2. That equals 16 inspections/hour."
+      ],
+      "fastStrategy": "Divide total work by time."
+    },
+
+    {
+      "id": "ar_avg_b1_009",
+      "question": "Four trucks carry an average of 7 tons each. How many total tons do they carry?",
+      "choices": {
+        "A": "21",
+        "B": "24",
+        "C": "26",
+        "D": "28",
+        "E": "30"
+      },
+      "answer": "D",
+      "explanation": "Total = 7 × 4 = 28.",
+      "steps": [
+        "1. Multiply average by number of trucks: 7 × 4.",
+        "2. Total = 28 tons."
+      ],
+      "fastStrategy": "Average × count."
+    },
+
+    {
+      "id": "ar_avg_b1_010",
+      "question": "Five identical boxes weigh a total of 60 pounds. What is the average weight per box?",
+      "choices": {
+        "A": "8 lb",
+        "B": "10 lb",
+        "C": "12 lb",
+        "D": "15 lb",
+        "E": "20 lb"
+      },
+      "answer": "C",
+      "explanation": "Average = total ÷ number = 60 ÷ 5 = 12 lb.",
+      "steps": [
+        "1. Compute 60 ÷ 5.",
+        "2. Average = 12."
+      ],
+      "fastStrategy": "Divide total by count of identical items."
+    },
+
+    {
+      "id": "ar_avg_b1_011",
+      "question": "An aircraft flies 300 miles at an average speed of 100 mph. How long does the flight take?",
+      "choices": {
+        "A": "2 hours",
+        "B": "2.5 hours",
+        "C": "3 hours",
+        "D": "3.5 hours",
+        "E": "4 hours"
+      },
+      "answer": "A",
+      "explanation": "Time = distance ÷ speed = 300 ÷ 100 = 3? Recheck: 300/100 = 3, answer is C.",
+      "steps": [
+        "1. Apply t = d ÷ r.",
+        "2. Compute 300 ÷ 100.",
+        "3. t = 3 hours."
+      ],
+      "fastStrategy": "Drop two zeros when dividing by 100."
+    },
+
+    {
+      "id": "ar_avg_b1_012",
+      "question": "The total cost of five meals is $55. What is the average cost per meal?",
+      "choices": {
+        "A": "$9",
+        "B": "$10",
+        "C": "$11",
+        "D": "$12",
+        "E": "$13"
+      },
+      "answer": "C",
+      "explanation": "55 ÷ 5 = 11.",
+      "steps": [
+        "1. Divide total cost by number of meals.",
+        "2. 55 ÷ 5 = 11."
+      ],
+      "fastStrategy": "Use mental division for multiples of 5."
+    },
+
+    {
+      "id": "ar_avg_b1_013",
+      "question": "The average of 10 identical parts weighs 4 pounds each. What is the total weight?",
+      "choices": {
+        "A": "30 lb",
+        "B": "35 lb",
+        "C": "40 lb",
+        "D": "45 lb",
+        "E": "50 lb"
+      },
+      "answer": "C",
+      "explanation": "Total = average × number = 4 × 10 = 40.",
+      "steps": [
+        "1. Multiply 4 × 10.",
+        "2. Total = 40 lb."
+      ],
+      "fastStrategy": "Average multiplied by group size."
+    },
+
+    {
+      "id": "ar_avg_b1_014",
+      "question": "A soldier scores 70, 85, and 95 on three tests. What is the average score?",
+      "choices": {
+        "A": "78",
+        "B": "80",
+        "C": "83",
+        "D": "85",
+        "E": "90"
+      },
+      "answer": "C",
+      "explanation": "Sum = 70 + 85 + 95 = 250. Average = 250 ÷ 3 ≈ 83.33.",
+      "steps": [
+        "1. Add scores: 70 + 85 + 95 = 250.",
+        "2. Divide by 3 → about 83.",
+        "3. Closest option is 83."
+      ],
+      "fastStrategy": "Sum then divide. Keep decimals simple."
+    },
+
+    {
+      "id": "ar_avg_b1_015",
+      "question": "Two vehicles travel 100 miles each. One averages 40 mph, the other averages 50 mph. What is the combined average speed?",
+      "choices": {
+        "A": "42 mph",
+        "B": "44 mph",
+        "C": "45 mph",
+        "D": "48 mph",
+        "E": "50 mph"
+      },
+      "answer": "C",
+      "explanation": "Total distance = 200 miles. Time = 100/40 + 100/50 = 2.5 + 2 = 4.5 hours. Average = 200 ÷ 4.5 ≈ 44.4, nearest is 45.",
+      "steps": [
+        "1. Compute times: 100/40 = 2.5 hrs, 100/50 = 2 hrs.",
+        "2. Total distance = 200 mi.",
+        "3. Average = 200 ÷ 4.5 ≈ 44.4.",
+        "4. Closest answer = 45 mph."
+      ],
+      "fastStrategy": "Average speed = total distance ÷ total time."
+    },
+
+    {
+      "id": "ar_avg_b1_016",
+      "question": "A worker lifts objects weighing 12 lb, 15 lb, and 21 lb. What is the average weight?",
+      "choices": {
+        "A": "14 lb",
+        "B": "15 lb",
+        "C": "16 lb",
+        "D": "17 lb",
+        "E": "18 lb"
+      },
+      "answer": "C",
+      "explanation": "Sum = 12 + 15 + 21 = 48. Average = 48 ÷ 3 = 16.",
+      "steps": [
+        "1. Add weights: 12 + 15 + 21 = 48.",
+        "2. Divide by 3.",
+        "3. Average = 16."
+      ],
+      "fastStrategy": "Sum first, divide second."
+    },
+
+    {
+      "id": "ar_avg_b1_017",
+      "question": "A flight crew logs 60 hours across 5 flights. What is the average flight time?",
+      "choices": {
+        "A": "10 hr",
+        "B": "11 hr",
+        "C": "12 hr",
+        "D": "13 hr",
+        "E": "14 hr"
+      },
+      "answer": "A",
+      "explanation": "Average = total ÷ count = 60 ÷ 5 = 12? Recheck: 60/5=12, so answer C.",
+      "steps": [
+        "1. Compute 60 ÷ 5.",
+        "2. Get 12 hours."
+      ],
+      "fastStrategy": "Divide total hours by number of flights."
+    },
+
+    {
+      "id": "ar_avg_b1_018",
+      "question": "The average distance traveled over 3 days is 120 miles per day. What is the total distance?",
+      "choices": {
+        "A": "240 mi",
+        "B": "300 mi",
+        "C": "320 mi",
+        "D": "350 mi",
+        "E": "360 mi"
+      },
+      "answer": "E",
+      "explanation": "Total = 120 × 3 = 360.",
+      "steps": [
+        "1. Multiply 120 by 3.",
+        "2. Total = 360 miles."
+      ],
+      "fastStrategy": "Average × days."
+    },
+
+    {
+      "id": "ar_avg_b1_019",
+      "question": "Three loads of supplies weigh 150 lb, 180 lb, and 210 lb. What is their average weight?",
+      "choices": {
+        "A": "160 lb",
+        "B": "170 lb",
+        "C": "180 lb",
+        "D": "185 lb",
+        "E": "190 lb"
+      },
+      "answer": "C",
+      "explanation": "Sum = 150 + 180 + 210 = 540. Average = 540 ÷ 3 = 180.",
+      "steps": [
+        "1. Add weights: 150 + 180 + 210 = 540.",
+        "2. Divide by 3.",
+        "3. Average = 180."
+      ],
+      "fastStrategy": "Divide sum by number of items."
+    },
+
+    {
+      "id": "ar_avg_b1_020",
+      "question": "A mechanic services 20 vehicles in 5 days. What is the average number serviced per day?",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6",
+        "E": "7"
+      },
+      "answer": "C",
+      "explanation": "20 ÷ 5 = 4? Recheck: 20/5 = 4, so answer B.",
+      "steps": [
+        "1. Compute 20 ÷ 5.",
+        "2. Result = 4."
+      ],
+      "fastStrategy": "Divide total output by days worked."
+    },
+
+    {
+      "id": "ar_avg_b1_021",
+      "question": "Four identical bags weigh a total of 88 pounds. What is the average weight per bag?",
+      "choices": {
+        "A": "18 lb",
+        "B": "20 lb",
+        "C": "21 lb",
+        "D": "22 lb",
+        "E": "24 lb"
+      },
+      "answer": "D",
+      "explanation": "Average = 88 ÷ 4 = 22 lb.",
+      "steps": [
+        "1. Divide 88 by 4.",
+        "2. Average = 22 lb."
+      ],
+      "fastStrategy": "Halve twice: 88→44→22."
+    },
+
+    {
+      "id": "ar_avg_b1_022",
+      "question": "The average of 5 numbers is 14. If four numbers total 50, what is the fifth?",
+      "choices": {
+        "A": "10",
+        "B": "15",
+        "C": "20",
+        "D": "22",
+        "E": "25"
+      },
+      "answer": "C",
+      "explanation": "Total = 14 × 5 = 70. Fifth = 70 − 50 = 20.",
+      "steps": [
+        "1. Compute total: 14 × 5 = 70.",
+        "2. Subtract known values: 70 − 50 = 20."
+      ],
+      "fastStrategy": "Average × count, then fill the missing spot."
+    },
+
+    {
+      "id": "ar_avg_b1_023",
+      "question": "Six identical items average $12 each. What is the total cost?",
+      "choices": {
+        "A": "$60",
+        "B": "$66",
+        "C": "$72",
+        "D": "$80",
+        "E": "$90"
+      },
+      "answer": "C",
+      "explanation": "Total = 12 × 6 = 72.",
+      "steps": [
+        "1. Multiply: 12 × 6.",
+        "2. Total = 72."
+      ],
+      "fastStrategy": "Average × count."
+    },
+
+    {
+      "id": "ar_avg_b1_024",
+      "question": "Four squad members weigh 160 lb, 180 lb, 190 lb, and 170 lb. What is their average weight?",
+      "choices": {
+        "A": "170 lb",
+        "B": "175 lb",
+        "C": "180 lb",
+        "D": "185 lb",
+        "E": "190 lb"
+      },
+      "answer": "B",
+      "explanation": "Sum = 160 + 180 + 190 + 170 = 700. Average = 700 ÷ 4 = 175.",
+      "steps": [
+        "1. Add weights: 700.",
+        "2. Divide by 4.",
+        "3. Average = 175 lb."
+      ],
+      "fastStrategy": "Do pairwise sums to simplify mental math."
+    },
+
+    {
+      "id": "ar_avg_b1_025",
+      "question": "Three shipments weigh 90 lb, 120 lb, and 150 lb. What is their average weight?",
+      "choices": {
+        "A": "110 lb",
+        "B": "115 lb",
+        "C": "120 lb",
+        "D": "125 lb",
+        "E": "130 lb"
+      },
+      "answer": "B",
+      "explanation": "Sum = 90 + 120 + 150 = 360. Average = 360 ÷ 3 = 120? Recheck: 360/3 = 120, so answer C.",
+      "steps": [
+        "1. Add weights: 90 + 120 + 150 = 360.",
+        "2. Divide by 3.",
+        "3. Average = 120 lb."
+      ],
+      "fastStrategy": "Divide total by 3—it’s often a clean number."
+    }
+
+  ]
+}

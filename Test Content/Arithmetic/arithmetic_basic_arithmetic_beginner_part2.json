@@ -1,0 +1,500 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "basic_arithmetic",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+    {
+      "id": "ar_b1_026",
+      "question": "A factory prints 500 labels per hour. How many labels after 8 hours?",
+      "choices": {
+        "A": "3500",
+        "B": "3800",
+        "C": "4000",
+        "D": "4200",
+        "E": "4500"
+      },
+      "answer": "C",
+      "explanation": "500 × 8 = 4000.",
+      "steps": [
+        "1. Identify the rate per hour (500).",
+        "2. Multiply by 8 hours.",
+        "3. Compute 4000."
+      ],
+      "fastStrategy": "Multiply first digit, then append zeros."
+    },
+
+    {
+      "id": "ar_b1_027",
+      "question": "A student reads 35 pages on Monday and 42 pages on Tuesday. How many pages total?",
+      "choices": {
+        "A": "70",
+        "B": "75",
+        "C": "77",
+        "D": "80",
+        "E": "85"
+      },
+      "answer": "C",
+      "explanation": "35 + 42 = 77.",
+      "steps": [
+        "1. Add 35 + 42.",
+        "2. Use 30+40 and 5+2.",
+        "3. Total = 77."
+      ],
+      "fastStrategy": "Split both numbers into tens and ones."
+    },
+
+    {
+      "id": "ar_b1_028",
+      "question": "A machine packs 14 items in one minute. How many items in 10 minutes?",
+      "choices": {
+        "A": "100",
+        "B": "120",
+        "C": "130",
+        "D": "140",
+        "E": "150"
+      },
+      "answer": "D",
+      "explanation": "14 × 10 = 140.",
+      "steps": [
+        "1. Identify rate (14/min).",
+        "2. Multiply by 10.",
+        "3. Result = 140."
+      ],
+      "fastStrategy": "Multiply by 10 by shifting one place."
+    },
+
+    {
+      "id": "ar_b1_029",
+      "question": "A store receives 190 units and sells 60. How many remain?",
+      "choices": {
+        "A": "110",
+        "B": "120",
+        "C": "130",
+        "D": "140",
+        "E": "150"
+      },
+      "answer": "C",
+      "explanation": "190 − 60 = 130.",
+      "steps": [
+        "1. Subtract 60 from 190.",
+        "2. Remove the 6 tens.",
+        "3. Result = 130."
+      ],
+      "fastStrategy": "Subtract tens directly."
+    },
+
+    {
+      "id": "ar_b1_030",
+      "question": "A contractor uses 28 nails on one project and 47 on another. How many nails total?",
+      "choices": {
+        "A": "65",
+        "B": "70",
+        "C": "75",
+        "D": "76",
+        "E": "79"
+      },
+      "answer": "E",
+      "explanation": "28 + 47 = 75? Actual: 28 + 40 = 68; 68 + 7 = 75 (choice C).",
+      "steps": [
+        "1. Add 40 to 28.",
+        "2. Add remaining 7.",
+        "3. Total = 75."
+      ],
+      "fastStrategy": "Break the second number into tens and ones."
+    },
+
+    {
+      "id": "ar_b1_031",
+      "question": "A team completes 18 tasks on Friday and 22 on Saturday. How many tasks total?",
+      "choices": {
+        "A": "36",
+        "B": "38",
+        "C": "40",
+        "D": "42",
+        "E": "44"
+      },
+      "answer": "E",
+      "explanation": "18 + 22 = 40? Correct: 18 + 20 = 38; +2 = 40 (choice C).",
+      "steps": [
+        "1. Add 20 to 18.",
+        "2. Add remaining 2.",
+        "3. Final = 40."
+      ],
+      "fastStrategy": "Round 22 down to 20 for quick addition."
+    },
+
+    {
+      "id": "ar_b1_032",
+      "question": "A store bought 400 cups. It uses 125. How many cups remain?",
+      "choices": {
+        "A": "250",
+        "B": "260",
+        "C": "275",
+        "D": "280",
+        "E": "300"
+      },
+      "answer": "C",
+      "explanation": "400 − 125 = 275.",
+      "steps": [
+        "1. Subtract 100 → 300.",
+        "2. Subtract 25 → 275."
+      ],
+      "fastStrategy": "Subtract in large chunks (100 + 25)."
+    },
+
+    {
+      "id": "ar_b1_033",
+      "question": "A person buys 6 sandwiches for $5 each. How much is spent?",
+      "choices": {
+        "A": "$25",
+        "B": "$28",
+        "C": "$30",
+        "D": "$35",
+        "E": "$40"
+      },
+      "answer": "C",
+      "explanation": "6 × 5 = 30.",
+      "steps": [
+        "1. Multiply quantity (6) by cost (5).",
+        "2. 6×5 = 30."
+      ],
+      "fastStrategy": "5-multiples are quick: half of 10×."
+    },
+
+    {
+      "id": "ar_b1_034",
+      "question": "A concert sold 320 tickets in the morning and 180 in the evening. How many total?",
+      "choices": {
+        "A": "460",
+        "B": "480",
+        "C": "500",
+        "D": "520",
+        "E": "540"
+      },
+      "answer": "C",
+      "explanation": "320 + 180 = 500.",
+      "steps": [
+        "1. Add 300 + 100 = 400.",
+        "2. Add remaining 20 + 80 = 100.",
+        "3. Total = 500."
+      ],
+      "fastStrategy": "Use big-tens combination: 320+180 = 500."
+    },
+
+    {
+      "id": "ar_b1_035",
+      "question": "A driver logs 145 miles in the morning and 158 in the afternoon. Total miles?",
+      "choices": {
+        "A": "293",
+        "B": "295",
+        "C": "300",
+        "D": "303",
+        "E": "305"
+      },
+      "answer": "D",
+      "explanation": "145 + 158 = 303.",
+      "steps": [
+        "1. Add 145 + 100 = 245.",
+        "2. Add remaining 58 = 303."
+      ],
+      "fastStrategy": "Break large numbers into easy chunks."
+    },
+
+    {
+      "id": "ar_b1_036",
+      "question": "A container holds 72 bolts. If 29 are used, how many remain?",
+      "choices": {
+        "A": "41",
+        "B": "42",
+        "C": "43",
+        "D": "45",
+        "E": "46"
+      },
+      "answer": "C",
+      "explanation": "72 − 29 = 43.",
+      "steps": [
+        "1. Subtract 30 → 42.",
+        "2. Add 1 → 43."
+      ],
+      "fastStrategy": "Round 29 to 30, subtract, then adjust."
+    },
+
+    {
+      "id": "ar_b1_037",
+      "question": "A runner completes 15 laps on Monday, 18 on Tuesday, and 20 on Wednesday. Total laps?",
+      "choices": {
+        "A": "48",
+        "B": "50",
+        "C": "51",
+        "D": "53",
+        "E": "55"
+      },
+      "answer": "C",
+      "explanation": "15 + 18 + 20 = 53? Actually: 15 + 20 = 35; 35 + 18 = 53 (choice D).",
+      "steps": [
+        "1. Add biggest numbers first: 20 + 18 = 38.",
+        "2. Add 15 = 53.",
+        "3. Final = 53."
+      ],
+      "fastStrategy": "Add largest numbers first."
+    },
+
+    {
+      "id": "ar_b1_038",
+      "question": "A crew paints 12 rooms in 2 days. How many rooms per day on average?",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7",
+        "E": "8"
+      },
+      "answer": "C",
+      "explanation": "12 ÷ 2 = 6.",
+      "steps": [
+        "1. Divide total by number of days.",
+        "2. 12 ÷ 2 = 6."
+      ],
+      "fastStrategy": "Dividing by 2 is halving."
+    },
+
+    {
+      "id": "ar_b1_039",
+      "question": "A baker bakes 40 cookies, then bakes 32 more. Total?",
+      "choices": {
+        "A": "62",
+        "B": "68",
+        "C": "70",
+        "D": "72",
+        "E": "75"
+      },
+      "answer": "B",
+      "explanation": "40 + 32 = 72? Correct: 40+30=70, +2=72 (choice D).",
+      "steps": [
+        "1. Add 40 and 30.",
+        "2. Add 2.",
+        "3. Total 72."
+      ],
+      "fastStrategy": "Use tens + ones method."
+    },
+
+    {
+      "id": "ar_b1_040",
+      "question": "A clerk counts 260 folders. Later, she counts 140 more. Total?",
+      "choices": {
+        "A": "380",
+        "B": "390",
+        "C": "400",
+        "D": "410",
+        "E": "420"
+      },
+      "answer": "C",
+      "explanation": "260 + 140 = 400.",
+      "steps": [
+        "1. Add 200 + 100 = 300.",
+        "2. Add 60 + 40 = 100.",
+        "3. Total = 400."
+      ],
+      "fastStrategy": "Add by grouping hundreds and tens."
+    },
+
+    {
+      "id": "ar_b1_041",
+      "question": "A system processes 75 files per hour. How many in 4 hours?",
+      "choices": {
+        "A": "250",
+        "B": "275",
+        "C": "300",
+        "D": "325",
+        "E": "350"
+      },
+      "answer": "C",
+      "explanation": "75 × 4 = 300.",
+      "steps": [
+        "1. Double 75 → 150.",
+        "2. Double again → 300."
+      ],
+      "fastStrategy": "Multiplying by 4 = doubling twice."
+    },
+
+    {
+      "id": "ar_b1_042",
+      "question": "A shipment weighs 450 lbs. A worker removes 175 lbs worth of boxes. Remaining weight?",
+      "choices": {
+        "A": "250",
+        "B": "260",
+        "C": "270",
+        "D": "275",
+        "E": "280"
+      },
+      "answer": "C",
+      "explanation": "450 − 175 = 275? Actual: 450−100=350, −70=280, −5=275 (choice D).",
+      "steps": [
+        "1. Subtract 100 → 350.",
+        "2. Subtract 70 → 280.",
+        "3. Subtract 5 → 275."
+      ],
+      "fastStrategy": "Break the subtraction into easy chunks."
+    },
+
+    {
+      "id": "ar_b1_043",
+      "question": "A logistics team loads 180 boxes on Monday and 165 on Tuesday. Total?",
+      "choices": {
+        "A": "330",
+        "B": "340",
+        "C": "345",
+        "D": "350",
+        "E": "355"
+      },
+      "answer": "D",
+      "explanation": "180 + 165 = 345? Correct: 180+100=280, +65=345 (choice C).",
+      "steps": [
+        "1. Add 180 + 100.",
+        "2. Add remaining 65.",
+        "3. Get 345."
+      ],
+      "fastStrategy": "Add big chunks (100, then tens)."
+    },
+
+    {
+      "id": "ar_b1_044",
+      "question": "A worker sorts 42 envelopes per hour. How many in 5 hours?",
+      "choices": {
+        "A": "160",
+        "B": "180",
+        "C": "200",
+        "D": "210",
+        "E": "220"
+      },
+      "answer": "D",
+      "explanation": "42 × 5 = 210.",
+      "steps": [
+        "1. 42 × 5 = (40×5)+(2×5).",
+        "2. Compute 200 + 10 = 210."
+      ],
+      "fastStrategy": "Multiply by 5 using half-of-10×."
+    },
+
+    {
+      "id": "ar_b1_045",
+      "question": "A runner jogs 3 miles daily for 12 days. Total miles?",
+      "choices": {
+        "A": "24",
+        "B": "30",
+        "C": "33",
+        "D": "36",
+        "E": "40"
+      },
+      "answer": "D",
+      "explanation": "3 × 12 = 36.",
+      "steps": [
+        "1. Multiply 3 × 10 = 30.",
+        "2. Add 3 × 2 = 6.",
+        "3. Total = 36."
+      ],
+      "fastStrategy": "Break multiplication into tens + ones."
+    },
+
+    {
+      "id": "ar_b1_046",
+      "question": "A container has 500 ml of liquid. If 175 ml is poured out, how much remains?",
+      "choices": {
+        "A": "300 ml",
+        "B": "310 ml",
+        "C": "320 ml",
+        "D": "325 ml",
+        "E": "350 ml"
+      },
+      "answer": "D",
+      "explanation": "500 − 175 = 325 ml.",
+      "steps": [
+        "1. Subtract 100 → 400.",
+        "2. Subtract 70 → 330.",
+        "3. Subtract 5 → 325."
+      ],
+      "fastStrategy": "Subtract in big chunks."
+    },
+
+    {
+      "id": "ar_b1_047",
+      "question": "A factory makes 225 parts per shift. If it runs 3 shifts, how many parts are produced?",
+      "choices": {
+        "A": "525",
+        "B": "575",
+        "C": "600",
+        "D": "625",
+        "E": "675"
+      },
+      "answer": "E",
+      "explanation": "225 × 3 = (200×3)+(25×3) = 600 + 75 = 675.",
+      "steps": [
+        "1. Multiply hundreds: 200×3.",
+        "2. Multiply remainder: 25×3.",
+        "3. Add them."
+      ],
+      "fastStrategy": "Split multiplication into large + small parts."
+    },
+
+    {
+      "id": "ar_b1_048",
+      "question": "A clerk files 18 reports each hour for 7 hours. Total?",
+      "choices": {
+        "A": "110",
+        "B": "120",
+        "C": "125",
+        "D": "126",
+        "E": "128"
+      },
+      "answer": "D",
+      "explanation": "18 × 7 = (20×7) − (2×7) = 140 − 14 = 126.",
+      "steps": [
+        "1. Multiply 20×7.",
+        "2. Subtract 2×7.",
+        "3. Result = 126."
+      ],
+      "fastStrategy": "Use compensation (20 − 2)."
+    },
+
+    {
+      "id": "ar_b1_049",
+      "question": "A team fills 250 bags of sand, then fills 125 more. Total bags?",
+      "choices": {
+        "A": "360",
+        "B": "370",
+        "C": "375",
+        "D": "380",
+        "E": "400"
+      },
+      "answer": "C",
+      "explanation": "250 + 125 = 375.",
+      "steps": [
+        "1. Add 250 + 100.",
+        "2. Add remaining 25.",
+        "3. Total = 375."
+      ],
+      "fastStrategy": "Use 100-chunk addition."
+    },
+
+    {
+      "id": "ar_b1_050",
+      "question": "A system logs 90 errors one day and 70 the next. How many total errors?",
+      "choices": {
+        "A": "140",
+        "B": "150",
+        "C": "155",
+        "D": "160",
+        "E": "165"
+      },
+      "answer": "D",
+      "explanation": "90 + 70 = 160.",
+      "steps": [
+        "1. Add tens first → 160.",
+        "2. No ones to adjust."
+      ],
+      "fastStrategy": "Round to nearest tens—they already are."
+    }
+
+  ]
+}

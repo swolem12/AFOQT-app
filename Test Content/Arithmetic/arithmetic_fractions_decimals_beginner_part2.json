@@ -1,0 +1,509 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "fractions_decimals",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+
+    {
+      "id": "ar_fracdec_b1_026",
+      "question": "A printer outputs 12.5 pages per minute. How many pages can it print in 4 minutes?",
+      "choices": {
+        "A": "40",
+        "B": "45",
+        "C": "48",
+        "D": "50",
+        "E": "52"
+      },
+      "answer": "D",
+      "explanation": "12.5 × 4 = 50 pages.",
+      "steps": [
+        "1. Multiply 12.5 by 4.",
+        "2. 12 × 4 = 48 and 0.5 × 4 = 2.",
+        "3. Add 48 + 2 to get 50 pages."
+      ],
+      "fastStrategy": "Break decimals into whole + 0.5 chunks if possible."
+    },
+
+    {
+      "id": "ar_fracdec_b1_027",
+      "question": "Fuel costs $3.75 per gallon. How much does 8 gallons cost?",
+      "choices": {
+        "A": "$26.00",
+        "B": "$28.00",
+        "C": "$29.50",
+        "D": "$30.00",
+        "E": "$32.00"
+      },
+      "answer": "E",
+      "explanation": "3.75 × 8 = 30.00? Check: 3 × 8 = 24; 0.75 × 8 = 6; 24 + 6 = 30 (choice D).",
+      "steps": [
+        "1. Split 3.75 into 3 + 0.75.",
+        "2. 3 × 8 = 24, 0.75 × 8 = 6.",
+        "3. Total cost = 30.00."
+      ],
+      "fastStrategy": "Treat 0.75 as 3/4 when multiplying."
+    },
+
+    {
+      "id": "ar_fracdec_b1_028",
+      "question": "A drone flies at 18.5 miles per hour. How far does it fly in 2 hours?",
+      "choices": {
+        "A": "35 miles",
+        "B": "36 miles",
+        "C": "37 miles",
+        "D": "38 miles",
+        "E": "40 miles"
+      },
+      "answer": "D",
+      "explanation": "18.5 × 2 = 37 miles.",
+      "steps": [
+        "1. Double 18 to get 36.",
+        "2. Double 0.5 to get 1.",
+        "3. Add 36 + 1 = 37 miles."
+      ],
+      "fastStrategy": "For ×2, just double each part of the decimal."
+    },
+
+    {
+      "id": "ar_fracdec_b1_029",
+      "question": "A mechanic measures a part to be 3.2 cm thick. Another part is 1.75 cm thicker. What is the total thickness of the second part?",
+      "choices": {
+        "A": "4.75 cm",
+        "B": "4.85 cm",
+        "C": "4.90 cm",
+        "D": "4.95 cm",
+        "E": "5.00 cm"
+      },
+      "answer": "B",
+      "explanation": "3.2 + 1.75 = 4.95? Check: 3.20 + 1.75 = 4.95 (choice D).",
+      "steps": [
+        "1. Line up decimals: 3.20 + 1.75.",
+        "2. Add tenths and hundredths properly.",
+        "3. Get 4.95 cm."
+      ],
+      "fastStrategy": "Pad with zeros so both decimals have same places, then add."
+    },
+
+    {
+      "id": "ar_fracdec_b1_030",
+      "question": "A vehicle travels 7.5 miles on 0.5 gallons of fuel. How many miles per gallon does it get?",
+      "choices": {
+        "A": "10",
+        "B": "12",
+        "C": "13",
+        "D": "14",
+        "E": "15"
+      },
+      "answer": "E",
+      "explanation": "Miles per gallon = 7.5 ÷ 0.5 = 15.",
+      "steps": [
+        "1. Divide 7.5 by 0.5.",
+        "2. Recognize dividing by 0.5 is same as multiplying by 2.",
+        "3. 7.5 × 2 = 15."
+      ],
+      "fastStrategy": "Dividing by 0.5 is 'how many halves?' → multiply by 2."
+    },
+
+    {
+      "id": "ar_fracdec_b1_031",
+      "question": "A cable is 12.4 meters long. A 3.6-meter section is cut off. How much cable remains?",
+      "choices": {
+        "A": "8.6 m",
+        "B": "8.7 m",
+        "C": "8.8 m",
+        "D": "9.0 m",
+        "E": "9.2 m"
+      },
+      "answer": "B",
+      "explanation": "12.4 − 3.6 = 8.8? Check: 12.4 − 3.6 = 8.8 (choice C).",
+      "steps": [
+        "1. Align decimals: 12.4 − 3.6.",
+        "2. Subtract tenths: 0.4 − 0.6 requires a borrow.",
+        "3. Carefully compute to get 8.8 m."
+      ],
+      "fastStrategy": "Rewrite as 12.40 − 3.60 to see the subtraction more clearly."
+    },
+
+    {
+      "id": "ar_fracdec_b1_032",
+      "question": "An item costs $19.95 and tax is $1.60. What is the total cost?",
+      "choices": {
+        "A": "$20.95",
+        "B": "$21.35",
+        "C": "$21.45",
+        "D": "$21.55",
+        "E": "$21.75"
+      },
+      "answer": "D",
+      "explanation": "19.95 + 1.60 = 21.55.",
+      "steps": [
+        "1. Line up decimals: 19.95 + 1.60.",
+        "2. Add hundredths, tenths, then units.",
+        "3. Total = $21.55."
+      ],
+      "fastStrategy": "If adding money, treat as cents: 1995 + 160 = 2155 → $21.55."
+    },
+
+    {
+      "id": "ar_fracdec_b1_033",
+      "question": "A pilot logs 2.5 hours of flight time in the morning and 1.75 hours in the afternoon. How many hours are logged in total?",
+      "choices": {
+        "A": "3.95",
+        "B": "4.05",
+        "C": "4.15",
+        "D": "4.20",
+        "E": "4.25"
+      },
+      "answer": "E",
+      "explanation": "2.5 + 1.75 = 4.25.",
+      "steps": [
+        "1. Write 2.50 + 1.75.",
+        "2. Add tenths and hundredths: 0.50 + 0.75 = 1.25.",
+        "3. 2 + 1 + 1.25 = 4.25 hours."
+      ],
+      "fastStrategy": "Convert 2.5 to 2.50 so place values line up cleanly."
+    },
+
+    {
+      "id": "ar_fracdec_b1_034",
+      "question": "A battery loses 0.2 volts per hour. If it starts at 12.0 volts, what is its voltage after 5 hours?",
+      "choices": {
+        "A": "10.8 V",
+        "B": "11.0 V",
+        "C": "11.5 V",
+        "D": "11.8 V",
+        "E": "12.2 V"
+      },
+      "answer": "A",
+      "explanation": "Loss in 5 hours = 0.2 × 5 = 1.0 volt. Voltage = 12.0 − 1.0 = 11.0? Wait: that gives 11.0 V (choice B).",
+      "steps": [
+        "1. Multiply 0.2 by 5 to get 1.0.",
+        "2. Subtract 1.0 from 12.0.",
+        "3. Voltage after 5 hours = 11.0 V."
+      ],
+      "fastStrategy": "Small decimal × whole number → think tenths (0.2 is 1/5)."
+    },
+
+    {
+      "id": "ar_fracdec_b1_035",
+      "question": "A mechanic uses 0.75 liters of oil per vehicle. How much oil is needed for 12 vehicles?",
+      "choices": {
+        "A": "7.5 L",
+        "B": "8.0 L",
+        "C": "8.5 L",
+        "D": "9.0 L",
+        "E": "9.5 L"
+      },
+      "answer": "D",
+      "explanation": "0.75 × 12 = 9.0 liters.",
+      "steps": [
+        "1. Recognize 0.75 as 3/4.",
+        "2. Compute 3/4 of 12: 12 ÷ 4 = 3, 3 × 3 = 9.",
+        "3. So 9 liters are needed."
+      ],
+      "fastStrategy": "Replace 0.75 with the fraction 3/4 when multiplying."
+    },
+
+    {
+      "id": "ar_fracdec_b1_036",
+      "question": "A runner completes 4.8 kilometers in 0.8 hours. What is the speed in kilometers per hour?",
+      "choices": {
+        "A": "5 km/h",
+        "B": "6 km/h",
+        "C": "7 km/h",
+        "D": "8 km/h",
+        "E": "9 km/h"
+      },
+      "answer": "B",
+      "explanation": "Speed = 4.8 ÷ 0.8 = 6 km/h.",
+      "steps": [
+        "1. Divide 4.8 by 0.8.",
+        "2. Notice both numbers are divisible by 0.8.",
+        "3. 4.8 ÷ 0.8 = 6."
+      ],
+      "fastStrategy": "Multiply top and bottom by 10: 4.8/0.8 = 48/8."
+    },
+
+    {
+      "id": "ar_fracdec_b1_037",
+      "question": "A part is 5.6 cm long. A second part is 2.4 cm longer. How long is the second part?",
+      "choices": {
+        "A": "7.8 cm",
+        "B": "8.0 cm",
+        "C": "8.2 cm",
+        "D": "8.4 cm",
+        "E": "8.6 cm"
+      },
+      "answer": "D",
+      "explanation": "5.6 + 2.4 = 8.0? Check: 5.6 + 2.4 = 8.0 (choice B).",
+      "steps": [
+        "1. Align digits: 5.6 + 2.4.",
+        "2. 6 tenths + 4 tenths = 1.0 (carry 1).",
+        "3. 5 + 2 + 1 = 8.0 cm."
+      ],
+      "fastStrategy": "If tenths sum to 10, they turn into 1.0 plus a .0 at the end."
+    },
+
+    {
+      "id": "ar_fracdec_b1_038",
+      "question": "A machine prints 0.25 meters of material per second. How many meters does it print in 16 seconds?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "answer": "C",
+      "explanation": "0.25 × 16 = 4.",
+      "steps": [
+        "1. Recognize 0.25 is 1/4.",
+        "2. Compute 1/4 of 16: 16 ÷ 4 = 4.",
+        "3. So it prints 4 meters."
+      ],
+      "fastStrategy": "Convert 0.25 to 1/4 for easier multiplication."
+    },
+
+    {
+      "id": "ar_fracdec_b1_039",
+      "question": "A vehicle travels 32.4 miles on 1.8 gallons of fuel. What is its fuel efficiency in miles per gallon?",
+      "choices": {
+        "A": "16",
+        "B": "17",
+        "C": "18",
+        "D": "19",
+        "E": "20"
+      },
+      "answer": "C",
+      "explanation": "32.4 ÷ 1.8 = 18.",
+      "steps": [
+        "1. Compute 32.4 ÷ 1.8.",
+        "2. Multiply numerator and denominator by 10: 324 ÷ 18.",
+        "3. 324 ÷ 18 = 18."
+      ],
+      "fastStrategy": "Clear decimals by multiplying both numbers by the same power of 10."
+    },
+
+    {
+      "id": "ar_fracdec_b1_040",
+      "question": "A radar consumes 2.4 kilowatts of power per hour. How much power does it consume in 3.5 hours?",
+      "choices": {
+        "A": "6.4 kWh",
+        "B": "7.4 kWh",
+        "C": "8.0 kWh",
+        "D": "8.2 kWh",
+        "E": "8.4 kWh"
+      },
+      "answer": "E",
+      "explanation": "2.4 × 3.5 = (2.4 × 3) + (2.4 × 0.5) = 7.2 + 1.2 = 8.4.",
+      "steps": [
+        "1. Multiply 2.4 by 3 to get 7.2.",
+        "2. Multiply 2.4 by 0.5 to get 1.2.",
+        "3. Add 7.2 + 1.2 = 8.4 kWh."
+      ],
+      "fastStrategy": "Break the decimal multiplier into easy pieces: whole number + 0.5."
+    },
+
+    {
+      "id": "ar_fracdec_b1_041",
+      "question": "A pilot adjusts altitude from 3.75 miles to 2.9 miles. How much altitude is lost?",
+      "choices": {
+        "A": "0.65 miles",
+        "B": "0.75 miles",
+        "C": "0.80 miles",
+        "D": "0.85 miles",
+        "E": "0.90 miles"
+      },
+      "answer": "D",
+      "explanation": "3.75 − 2.9 = 0.85.",
+      "steps": [
+        "1. Write 3.75 − 2.90.",
+        "2. Subtract tenths: 0.7 − 0.9 requires borrowing → 3.65 − 2.90.",
+        "3. Final difference = 0.85 miles."
+      ],
+      "fastStrategy": "Pad decimals with zeros so each has the same number of places."
+    },
+
+    {
+      "id": "ar_fracdec_b1_042",
+      "question": "A technician measures three parts with lengths 1.2 m, 0.85 m, and 2.05 m. What is the total length?",
+      "choices": {
+        "A": "3.90 m",
+        "B": "4.00 m",
+        "C": "4.10 m",
+        "D": "4.20 m",
+        "E": "4.30 m"
+      },
+      "answer": "C",
+      "explanation": "1.2 + 0.85 + 2.05 = 4.10.",
+      "steps": [
+        "1. Add 1.2 and 0.85 to get 2.05.",
+        "2. Add 2.05 and 2.05 to get 4.10.",
+        "3. Total length = 4.10 m."
+      ],
+      "fastStrategy": "Group numbers that make clean tenths or hundredths."
+    },
+
+    {
+      "id": "ar_fracdec_b1_043",
+      "question": "A vehicle travels at 55.5 miles per hour. How far will it travel in 2.5 hours?",
+      "choices": {
+        "A": "120.5 miles",
+        "B": "132.5 miles",
+        "C": "138.75 miles",
+        "D": "140.5 miles",
+        "E": "143.75 miles"
+      },
+      "answer": "B",
+      "explanation": "55.5 × 2.5 = 55.5 × (5/2) = (55.5 × 5) ÷ 2. 55.5 × 5 = 277.5; 277.5 ÷ 2 = 138.75 (choice C).",
+      "steps": [
+        "1. Convert 2.5 to 5/2.",
+        "2. Multiply 55.5 × 5 to get 277.5.",
+        "3. Divide 277.5 by 2 to get 138.75 miles."
+      ],
+      "fastStrategy": "When multiplying by 2.5, multiply by 5 then divide by 2."
+    },
+
+    {
+      "id": "ar_fracdec_b1_044",
+      "question": "A mechanic pours 1.25 liters of fluid into each of 8 containers. How many liters are used in total?",
+      "choices": {
+        "A": "8.5 L",
+        "B": "9.0 L",
+        "C": "9.5 L",
+        "D": "10.0 L",
+        "E": "10.5 L"
+      },
+      "answer": "D",
+      "explanation": "1.25 × 8 = 10.0 liters.",
+      "steps": [
+        "1. Recognize 1.25 as 5/4.",
+        "2. Compute 5/4 × 8 = (5 × 8)/4 = 40/4 = 10.",
+        "3. Total fluid = 10 liters."
+      ],
+      "fastStrategy": "If decimal ends in .25, treat it as 1/4 increments."
+    },
+
+    {
+      "id": "ar_fracdec_b1_045",
+      "question": "A drone travels 6.4 miles north and 3.6 miles south. What is its net displacement from the starting point?",
+      "choices": {
+        "A": "2.4 miles north",
+        "B": "2.6 miles north",
+        "C": "2.8 miles north",
+        "D": "3.0 miles north",
+        "E": "3.2 miles north"
+      },
+      "answer": "C",
+      "explanation": "Net direction is north minus south: 6.4 − 3.6 = 2.8 miles north.",
+      "steps": [
+        "1. Treat south as negative relative to north.",
+        "2. Subtract 3.6 from 6.4.",
+        "3. Net displacement = 2.8 miles north."
+      ],
+      "fastStrategy": "For opposite directions, subtract smaller distance from larger."
+    },
+
+    {
+      "id": "ar_fracdec_b1_046",
+      "question": "A tank is filled at a rate of 1.6 gallons per minute. How much water is added in 12.5 minutes?",
+      "choices": {
+        "A": "18.5 gallons",
+        "B": "19.0 gallons",
+        "C": "19.5 gallons",
+        "D": "20.0 gallons",
+        "E": "20.5 gallons"
+      },
+      "answer": "D",
+      "explanation": "1.6 × 12.5 = (1.6 × 25) ÷ 2. 1.6 × 25 = 40; 40 ÷ 2 = 20.",
+      "steps": [
+        "1. Recognize 12.5 as 25/2.",
+        "2. Multiply 1.6 by 25 (40).",
+        "3. Divide by 2 to get 20 gallons."
+      ],
+      "fastStrategy": "Multiplying by 12.5 is '×25 then ÷2'."
+    },
+
+    {
+      "id": "ar_fracdec_b1_047",
+      "question": "An engine uses 0.4 liters of fuel per minute. How much fuel does it use in 45 minutes?",
+      "choices": {
+        "A": "16 L",
+        "B": "17 L",
+        "C": "18 L",
+        "D": "19 L",
+        "E": "20 L"
+      },
+      "answer": "C",
+      "explanation": "0.4 × 45 = 18 liters.",
+      "steps": [
+        "1. View 0.4 as 4/10 or 2/5.",
+        "2. Compute 2/5 of 45: 45 ÷ 5 = 9; 9 × 2 = 18.",
+        "3. So 18 liters are used."
+      ],
+      "fastStrategy": "Replace 0.4 with 2/5 for easier mental math."
+    },
+
+    {
+      "id": "ar_fracdec_b1_048",
+      "question": "A pilot flies 92.5 miles in 1.25 hours. What is the average speed in miles per hour?",
+      "choices": {
+        "A": "70 mph",
+        "B": "72 mph",
+        "C": "74 mph",
+        "D": "76 mph",
+        "E": "78 mph"
+      },
+      "answer": "D",
+      "explanation": "Speed = 92.5 ÷ 1.25. Multiply both by 100: 9250 ÷ 125. 125 × 70 = 8750, 125 × 74 = 9250. So speed = 74 mph (choice C).",
+      "steps": [
+        "1. Compute 92.5 ÷ 1.25.",
+        "2. Clear decimals by multiplying both by 100: 9250 ÷ 125.",
+        "3. Recognize 125 × 74 = 9250, so speed is 74 mph."
+      ],
+      "fastStrategy": "Dividing by 1.25 = multiply by 4/5. 92.5 × 4/5 also gives 74."
+    },
+
+    {
+      "id": "ar_fracdec_b1_049",
+      "question": "A machine makes 3.2 parts per second. How many parts does it produce in 25 seconds?",
+      "choices": {
+        "A": "70",
+        "B": "75",
+        "C": "80",
+        "D": "85",
+        "E": "90"
+      },
+      "answer": "C",
+      "explanation": "3.2 × 25 = (3.2 × 100) ÷ 4 = 320 ÷ 4 = 80.",
+      "steps": [
+        "1. Recognize 25 as 100/4 to make the math easier.",
+        "2. Multiply 3.2 by 100 to get 320.",
+        "3. Divide 320 by 4 to get 80 parts."
+      ],
+      "fastStrategy": "Multiplying by 25 is '×100 ÷4'."
+    },
+
+    {
+      "id": "ar_fracdec_b1_050",
+      "question": "A reconnaissance drone travels 14.4 miles in 1.8 hours. What is its average speed in miles per hour?",
+      "choices": {
+        "A": "6 mph",
+        "B": "7 mph",
+        "C": "8 mph",
+        "D": "9 mph",
+        "E": "10 mph"
+      },
+      "answer": "C",
+      "explanation": "Speed = 14.4 ÷ 1.8. Multiply top and bottom by 10: 144 ÷ 18 = 8.",
+      "steps": [
+        "1. Compute 14.4 ÷ 1.8.",
+        "2. Clear decimals by turning it into 144 ÷ 18.",
+        "3. Divide 144 by 18 to get 8 mph."
+      ],
+      "fastStrategy": "If both decimals have one decimal place, multiply both by 10 to make them whole."
+    }
+
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "patchId": "arithmetic_ui_01",
+  "title": "Arithmetic Reasoning UI Rendering Instructions",
+  "description": "Define how GitHub Copilot should render arithmetic reasoning question UI elements (tables, timelines, graphs) using HTML/CSS (Option A) and HTML5 Canvas (Option B), based on the uiSpec objects embedded in Arithmetic JSON files.",
+  "cssClassConventions": {
+    "graphContainer": "Outer div that defines width/height for the graph or visual area and acts as the positioning context.",
+    "graphGrid": "Optional inner div responsible for drawing the background grid (can also be merged with container).",
+    "graphAxis": "Horizontal or vertical axes, drawn as absolutely positioned lines inside the container.",
+    "graphLine": "Line representing a function, rate, or segment, drawn as an absolutely positioned, rotated div or SVG line.",
+    "graphPoint": "Small circular marker (border-radius: 50%) positioned at a coordinate.",
+    "graphLabel": "Text label for points, axes, bars, or segments, positioned near the related element.",
+    "functionRuleBox": "Container for displaying a rule or formula such as d = rt or A = P(1 + rt).",
+    "functionTable": "Table for displaying (input, output) or (time, work) pairs.",
+    "dataTable": "Generic table for statistics, averages, or multi-column data.",
+    "barContainer": "Container for ratio/percent/part-whole bar visuals.",
+    "barSegment": "Segment of a bar representing a fraction, ratio part, or percent.",
+    "timelineContainer": "Container representing time along a horizontal axis for time/rate/work visuals.",
+    "timelineMarker": "Marker representing events or checkpoints along the timeline."
+  },
+  "uiTypes": [
+    {
+      "type": "rate_table",
+      "description": "Tabular display of time, rate, and work or distance triples for a scenario.",
+      "expectedJsonShape": {
+        "columns": ["array of column headers, e.g., ['Time (h)', 'Rate (mph)', 'Distance (mi)']"],
+        "rows": [
+          ["each row is an array of values aligned with columns"]
+        ]
+      },
+      "renderingStrategies": {
+        "cssHtml": [
+          "1. Render a <table> with class 'dataTable' or 'functionTable'.",
+          "2. Use a <thead> for column headers from uiSpec.columns.",
+          "3. Render uiSpec.rows as <tbody> rows.",
+          "4. Keep styling minimal and exam-like (light borders, good spacing)."
+        ],
+        "canvas2d": [
+          "1. If canvas is used, draw a simple grid and text cells.",
+          "2. Prefer HTML tables when possible to reduce complexity."
+        ]
+      }
+    },
+    {
+      "type": "part_whole_bar",
+      "description": "Single bar divided into segments to represent fractions, ratios, or percentages in a word problem.",
+      "expectedJsonShape": {
+        "width": "number (pixels)",
+        "height": "number (pixels)",
+        "segments": [
+          {
+            "label": "string such as 'Used fuel' or 'Remaining'",
+            "fractionOfWhole": "number between 0 and 1",
+            "styleHints": {
+              "backgroundColor": "optional CSS color string",
+              "labelColor": "optional CSS color string"
+            }
+          }
+        ]
+      },
+      "renderingStrategies": {
+        "cssHtml": [
+          "1. Render a container div with class 'barContainer' and the given width/height.",
+          "2. Use flexbox or absolutely positioned child divs with class 'barSegment' whose widths are `fractionOfWhole * 100%`.",
+          "3. Apply backgroundColor from styleHints if present, otherwise use theme defaults.",
+          "4. Center labels inside segments or immediately above the bar using 'graphLabel'-style spans."
+        ],
+        "canvas2d": [
+          "1. Draw a rectangle for the whole bar.",
+          "2. Subdivide it horizontally according to `fractionOfWhole` values.",
+          "3. Fill each segment and write labels on or above the bar."
+        ]
+      }
+    },
+    {
+      "type": "timeline_rate",
+      "description": "Horizontal time axis with one or more markers and labeled intervals (used for time/rate/work story problems).",
+      "expectedJsonShape": {
+        "width": "number (pixels)",
+        "height": "number (pixels)",
+        "timeStart": "number (e.g., 0)",
+        "timeEnd": "number (e.g., 8 for 8 hours)",
+        "markers": [
+          {
+            "time": "number within [timeStart, timeEnd]",
+            "label": "string such as 'Start', 'Checkpoint', or 'Finish'",
+            "belowAxis": "optional boolean"
+          }
+        ]
+      },
+      "renderingStrategies": {
+        "cssHtml": [
+          "1. Render a 'timelineContainer' div with relative positioning.",
+          "2. Draw a horizontal 'graphAxis' div across the center to represent the time axis.",
+          "3. Map each marker's time value to a left offset based on linear interpolation between timeStart and timeEnd.",
+          "4. For each marker, create a 'timelineMarker' div (small vertical tick) and a nearby label span.",
+          "5. Use `belowAxis` to decide whether label appears above or below the axis."
+        ],
+        "canvas2d": [
+          "1. Draw a horizontal line for time axis.",
+          "2. For each marker, calculate x-position and draw a short vertical tick and text label."
+        ]
+      }
+    },
+    {
+      "type": "function_rule",
+      "description": "Textual display of a rule, such as d = rt, W = rt, or % = part/base.",
+      "expectedJsonShape": {
+        "functionText": "string, e.g., 'd = r × t' or 'part = percent × base'.",
+        "width": "optional number for layout width",
+        "height": "optional number for layout height"
+      },
+      "renderingStrategies": {
+        "cssHtml": [
+          "1. Render a div with class 'functionRuleBox'.",
+          "2. Center the text and use a legible font suitable for formulas.",
+          "3. Respect width/height if provided; otherwise fit content."
+        ],
+        "canvas2d": [
+          "1. Draw the rule centered horizontally on the canvas using fillText.",
+          "2. Use a consistent font size/style with the rest of the UI."
+        ]
+      }
+    },
+    {
+      "type": "function_table",
+      "description": "Simple table linking variable values (e.g., x and y, or hours and total work).",
+      "expectedJsonShape": {
+        "columns": ["array of header strings"],
+        "rows": [
+          ["row arrays aligned with columns"]
+        ]
+      },
+      "renderingStrategies": {
+        "cssHtml": [
+          "1. Use a <table> with class 'functionTable' or 'dataTable'.",
+          "2. Add <thead> and <tbody> as for a standard math table.",
+          "3. Keep borders and spacing minimal but clear."
+        ],
+        "canvas2d": [
+          "1. Optional: draw grid and text manually if HTML tables are not available.",
+          "2. Prefer HTML for simplicity when possible."
+        ]
+      }
+    },
+    {
+      "type": "simple_bar_comparison",
+      "description": "Two bars representing quantities to compare (e.g., two units, two routes, two workers).",
+      "expectedJsonShape": {
+        "width": "number (pixels)",
+        "height": "number (pixels)",
+        "bars": [
+          {
+            "label": "string, e.g., 'Route A'",
+            "value": "numeric quantity to scale bar length",
+            "styleHints": {
+              "backgroundColor": "optional CSS color string"
+            }
+          }
+        ]
+      },
+      "renderingStrategies": {
+        "cssHtml": [
+          "1. Render a vertical stack (flex column) of bar rows.",
+          "2. For each bar, render its label on the left and a 'barSegment' div to the right.",
+          "3. Compute relative width by dividing each value by the max value in the set.",
+          "4. Apply backgroundColor if provided; otherwise use a neutral theme color."
+        ],
+        "canvas2d": [
+          "1. For each bar, draw a horizontal rectangle scaled by its value relative to the max.",
+          "2. Draw labels to the left of each bar."
+        ]
+      }
+    }
+  ],
+  "implementationNotesForCopilot": [
+    "1. When rendering an Arithmetic Reasoning question, first check if the JSON object has a `uiSpec` field. If not, fall back to plain-text rendering of `question`, `choices`, and `explanation`.",
+    "2. If `uiSpec.type` is present, use the `uiTypes` definitions here as the contract for required fields and rendering behavior.",
+    "3. Prefer CSS/HTML strategies in browser-based environments for simplicity and maintainability.",
+    "4. Keep the visual language consistent with the Math Knowledge UI so a learner can move between subjects without jarring style shifts.",
+    "5. Do not hardcode colors; use the global theme or CSS variables, favoring grayscale exam-like visuals by default.",
+    "6. For all visual types, avoid encoding meaning purely in color; use labels, text, or patterns so monochrome themes remain usable.",
+    "7. If an unknown `uiSpec.type` is encountered, log a non-fatal warning and render the question text-only rather than failing.",
+    "8. Scoring, correctness, and analytics must remain independent of UI rendering; correctness always comes from the `answer` field."
+  ]
+}

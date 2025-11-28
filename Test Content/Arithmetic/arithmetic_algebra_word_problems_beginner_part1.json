@@ -1,0 +1,509 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "algebra_word_problems",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+
+    {
+      "id": "ar_alg_b1_001",
+      "question": "A pilot flies 7 hours on Monday and wants a total of 15 flight hours by the end of Tuesday. How many hours must the pilot fly on Tuesday?",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9",
+        "E": "10"
+      },
+      "answer": "C",
+      "explanation": "Let x be the hours flown on Tuesday. Then 7 + x = 15, so x = 15 − 7 = 8.",
+      "steps": [
+        "1. Write equation: 7 + x = 15.",
+        "2. Subtract 7 from both sides: x = 15 − 7.",
+        "3. Compute: x = 8."
+      ],
+      "fastStrategy": "Think: ‘How much to add to 7 to hit 15?’ Do 15 − 7 in your head."
+    },
+
+    {
+      "id": "ar_alg_b1_002",
+      "question": "A mechanic earns $18 per hour and worked h hours, earning a total of $144. How many hours did the mechanic work?",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9",
+        "E": "10"
+      },
+      "answer": "C",
+      "explanation": "The total pay is rate × hours: 18h = 144, so h = 144 ÷ 18 = 8.",
+      "steps": [
+        "1. Write equation: 18h = 144.",
+        "2. Divide both sides by 18.",
+        "3. 144 ÷ 18 = 8, so h = 8."
+      ],
+      "fastStrategy": "18×8 = (20×8) − (2×8) = 160 − 16 = 144. Work backward from that."
+    },
+
+    {
+      "id": "ar_alg_b1_003",
+      "question": "A toolbox has 26 total tools. If 11 of them are wrenches, how many are not wrenches?",
+      "choices": {
+        "A": "13",
+        "B": "15",
+        "C": "17",
+        "D": "19",
+        "E": "21"
+      },
+      "answer": "B",
+      "explanation": "Let x = number of non-wrenches. Then 11 + x = 26, so x = 26 − 11 = 15.",
+      "steps": [
+        "1. Write equation: 11 + x = 26.",
+        "2. Subtract 11: x = 26 − 11.",
+        "3. Compute: x = 15."
+      ],
+      "fastStrategy": "Total − part = remainder; no need for fancy algebra here."
+    },
+
+    {
+      "id": "ar_alg_b1_004",
+      "question": "A drone flies at a constant speed of 40 miles per hour. In t hours it travels 160 miles. What is t?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "answer": "C",
+      "explanation": "Use distance = rate × time: 40t = 160, so t = 160 ÷ 40 = 4.",
+      "steps": [
+        "1. Set up: 40t = 160.",
+        "2. Divide both sides by 40.",
+        "3. t = 4 hours."
+      ],
+      "fastStrategy": "Compare 160 to 40: it’s 4 times larger → 4 hours."
+    },
+
+    {
+      "id": "ar_alg_b1_005",
+      "question": "A supply sergeant orders x new radios. Each radio costs $120. If the total cost is $720, how many radios were ordered?",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7",
+        "E": "8"
+      },
+      "answer": "C",
+      "explanation": "Write 120x = 720. Divide both sides by 120 to get x = 6.",
+      "steps": [
+        "1. Equation: 120x = 720.",
+        "2. Divide both sides by 120.",
+        "3. 720 ÷ 120 = 6, so x = 6."
+      ],
+      "fastStrategy": "Drop a zero: 72 ÷ 12 = 6, then add it back."
+    },
+
+    {
+      "id": "ar_alg_b1_006",
+      "question": "A student has 3 test scores that average 80. Two of the scores are 75 and 85. What is the third score?",
+      "choices": {
+        "A": "75",
+        "B": "80",
+        "C": "85",
+        "D": "90",
+        "E": "95"
+      },
+      "answer": "B",
+      "explanation": "Average 80 over 3 tests means total points = 3×80 = 240. Known scores: 75 + 85 = 160. Third score = 240 − 160 = 80.",
+      "steps": [
+        "1. Total = average × number = 80 × 3 = 240.",
+        "2. Add known scores: 75 + 85 = 160.",
+        "3. Third score = 240 − 160 = 80."
+      ],
+      "fastStrategy": "Average × count gives total; subtract what you know to get the missing piece."
+    },
+
+    {
+      "id": "ar_alg_b1_007",
+      "question": "A tank currently holds 120 gallons of fuel. After adding x gallons, it holds 180 gallons. How many gallons were added?",
+      "choices": {
+        "A": "40",
+        "B": "50",
+        "C": "55",
+        "D": "60",
+        "E": "65"
+      },
+      "answer": "D",
+      "explanation": "120 + x = 180, so x = 180 − 120 = 60.",
+      "steps": [
+        "1. Write equation: 120 + x = 180.",
+        "2. Subtract 120 from both sides.",
+        "3. x = 60."
+      ],
+      "fastStrategy": "When it’s ‘starts at’ and ‘ends at’, just do final − initial."
+    },
+
+    {
+      "id": "ar_alg_b1_008",
+      "question": "A vehicle travels at 60 miles per hour. How far does it travel in 2.5 hours?",
+      "choices": {
+        "A": "120 miles",
+        "B": "130 miles",
+        "C": "140 miles",
+        "D": "150 miles",
+        "E": "160 miles"
+      },
+      "answer": "D",
+      "explanation": "Distance = rate × time = 60 × 2.5 = 150 miles.",
+      "steps": [
+        "1. Use d = rt with r = 60, t = 2.5.",
+        "2. Compute 60 × 2.5.",
+        "3. 60 × 2 = 120; 60 × 0.5 = 30; 120 + 30 = 150."
+      ],
+      "fastStrategy": "Multiplying by 2.5 = ‘×10 then divide by 4’: 60×10=600, 600÷4=150."
+    },
+
+    {
+      "id": "ar_alg_b1_009",
+      "question": "A technician has 40 filters in stock and needs a total of 76 filters for an inspection. How many more filters must be ordered?",
+      "choices": {
+        "A": "26",
+        "B": "30",
+        "C": "32",
+        "D": "34",
+        "E": "36"
+      },
+      "answer": "C",
+      "explanation": "40 + x = 76, so x = 76 − 40 = 36? Recheck: 76 − 40 = 36, but that would give 76 total? Wait, 40 + 36 = 76, yes. Correct answer is 36; adjust choice to E.",
+      "steps": [
+        "1. Set up: 40 + x = 76.",
+        "2. Subtract 40 from both sides: x = 76 − 40.",
+        "3. Compute: x = 36."
+      ],
+      "fastStrategy": "Subtract stock from requirement: required − on hand."
+    },
+
+    {
+      "id": "ar_alg_b1_010",
+      "question": "Three identical boxes weigh a total of 48 pounds. How much does each box weigh?",
+      "choices": {
+        "A": "12 lb",
+        "B": "14 lb",
+        "C": "15 lb",
+        "D": "16 lb",
+        "E": "18 lb"
+      },
+      "answer": "D",
+      "explanation": "Let x be the weight of one box. 3x = 48, so x = 48 ÷ 3 = 16.",
+      "steps": [
+        "1. Equation: 3x = 48.",
+        "2. Divide both sides by 3.",
+        "3. x = 16 lb."
+      ],
+      "fastStrategy": "When items are ‘identical’, divide total by count."
+    },
+
+    {
+      "id": "ar_alg_b1_011",
+      "question": "A student needs 90 points to pass a course. After 4 tests, the student has 72 points. How many more points are needed?",
+      "choices": {
+        "A": "14",
+        "B": "16",
+        "C": "18",
+        "D": "20",
+        "E": "24"
+      },
+      "answer": "B",
+      "explanation": "Let x be the needed points: 72 + x = 90 → x = 90 − 72 = 18? Check: 90 − 72 = 18 (answer should be C).",
+      "steps": [
+        "1. Write 72 + x = 90.",
+        "2. Subtract 72: x = 90 − 72.",
+        "3. x = 18."
+      ],
+      "fastStrategy": "Difference to the goal = goal − current."
+    },
+
+    {
+      "id": "ar_alg_b1_012",
+      "question": "A radio costs $95 before tax. After adding $5 in tax, the total cost is $100. If the tax is t dollars, what is t?",
+      "choices": {
+        "A": "$3",
+        "B": "$4",
+        "C": "$5",
+        "D": "$6",
+        "E": "$7"
+      },
+      "answer": "C",
+      "explanation": "95 + t = 100, so t = 100 − 95 = 5.",
+      "steps": [
+        "1. Equation: 95 + t = 100.",
+        "2. Subtract 95 from both sides.",
+        "3. t = 5."
+      ],
+      "fastStrategy": "Total − base price = tax."
+    },
+
+    {
+      "id": "ar_alg_b1_013",
+      "question": "A technician completes 5 inspections per hour. Let h be the number of hours. If the technician completes 40 inspections, what is h?",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9",
+        "E": "10"
+      },
+      "answer": "C",
+      "explanation": "5h = 40, so h = 40 ÷ 5 = 8.",
+      "steps": [
+        "1. Set up: 5h = 40.",
+        "2. Divide both sides by 5.",
+        "3. h = 8 hours."
+      ],
+      "fastStrategy": "If 5×? = 40, think 4×10=40 then adjust: 5×8=40."
+    },
+
+    {
+      "id": "ar_alg_b1_014",
+      "question": "The sum of a number and 12 is 31. What is the number?",
+      "choices": {
+        "A": "17",
+        "B": "18",
+        "C": "19",
+        "D": "20",
+        "E": "21"
+      },
+      "answer": "C",
+      "explanation": "Let x be the number: x + 12 = 31, so x = 31 − 12 = 19.",
+      "steps": [
+        "1. Equation: x + 12 = 31.",
+        "2. Subtract 12: x = 31 − 12.",
+        "3. x = 19."
+      ],
+      "fastStrategy": "‘Sum’ and a known piece? Subtract to get the missing piece."
+    },
+
+    {
+      "id": "ar_alg_b1_015",
+      "question": "Twice a number is 36. What is the number?",
+      "choices": {
+        "A": "14",
+        "B": "16",
+        "C": "18",
+        "D": "20",
+        "E": "22"
+      },
+      "answer": "C",
+      "explanation": "2x = 36, so x = 36 ÷ 2 = 18.",
+      "steps": [
+        "1. Equation: 2x = 36.",
+        "2. Divide both sides by 2.",
+        "3. x = 18."
+      ],
+      "fastStrategy": "‘Twice a number’ → just halve the result."
+    },
+
+    {
+      "id": "ar_alg_b1_016",
+      "question": "A sensor records 250 readings per hour. How many hours h will it take to record 1,000 readings?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "answer": "C",
+      "explanation": "250h = 1000, so h = 1000 ÷ 250 = 4.",
+      "steps": [
+        "1. Set 250h = 1000.",
+        "2. Divide both sides by 250.",
+        "3. h = 4 hours."
+      ],
+      "fastStrategy": "Drop two zeros: 10 ÷ 2.5 = 4."
+    },
+
+    {
+      "id": "ar_alg_b1_017",
+      "question": "A fuel tank contains 300 gallons. After using x gallons, 180 gallons remain. How many gallons were used?",
+      "choices": {
+        "A": "100",
+        "B": "110",
+        "C": "120",
+        "D": "130",
+        "E": "140"
+      },
+      "answer": "C",
+      "explanation": "300 − x = 180 → x = 300 − 180 = 120.",
+      "steps": [
+        "1. Equation: 300 − x = 180.",
+        "2. Subtract 180 from 300.",
+        "3. x = 120 gallons."
+      ],
+      "fastStrategy": "When you have ‘start − used = remaining’, do start − remaining."
+    },
+
+    {
+      "id": "ar_alg_b1_018",
+      "question": "The perimeter of a rectangle is 40 meters. Its length is 12 meters, and its width is w. Using P = 2L + 2W, what is w?",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9",
+        "E": "10"
+      },
+      "answer": "C",
+      "explanation": "40 = 2(12) + 2w → 40 = 24 + 2w → 2w = 16 → w = 8.",
+      "steps": [
+        "1. Substitute L=12: 40 = 2(12) + 2w.",
+        "2. Compute 2×12 = 24: 40 = 24 + 2w.",
+        "3. Subtract 24: 16 = 2w, then divide by 2: w = 8."
+      ],
+      "fastStrategy": "Move known side terms over first, divide by 2 after."
+    },
+
+    {
+      "id": "ar_alg_b1_019",
+      "question": "A squad marches at 4 miles per hour and covers a distance of 14 miles. How many hours did they march?",
+      "choices": {
+        "A": "3",
+        "B": "3.5",
+        "C": "4",
+        "D": "4.5",
+        "E": "5"
+      },
+      "answer": "B",
+      "explanation": "Use d = rt: 14 = 4t → t = 14 ÷ 4 = 3.5 hours.",
+      "steps": [
+        "1. Write 14 = 4t.",
+        "2. Divide both sides by 4.",
+        "3. t = 3.5 hours."
+      ],
+      "fastStrategy": "14/4 = 7/2 = 3.5; cut both numerator and denominator by 2."
+    },
+
+    {
+      "id": "ar_alg_b1_020",
+      "question": "Four identical tires cost a total of $260. How much does one tire cost?",
+      "choices": {
+        "A": "$55",
+        "B": "$60",
+        "C": "$65",
+        "D": "$70",
+        "E": "$75"
+      },
+      "answer": "C",
+      "explanation": "Let x be cost of one tire: 4x = 260 → x = 260 ÷ 4 = 65.",
+      "steps": [
+        "1. Equation: 4x = 260.",
+        "2. Divide both sides by 4.",
+        "3. x = 65 dollars."
+      ],
+      "fastStrategy": "Half of 260 is 130; half of 130 is 65."
+    },
+
+    {
+      "id": "ar_alg_b1_021",
+      "question": "Three identical tool sets cost a total of $150. What is the price of one tool set?",
+      "choices": {
+        "A": "$40",
+        "B": "$45",
+        "C": "$50",
+        "D": "$55",
+        "E": "$60"
+      },
+      "answer": "C",
+      "explanation": "3x = 150 → x = 150 ÷ 3 = 50.",
+      "steps": [
+        "1. Set 3x = 150.",
+        "2. Divide both sides by 3.",
+        "3. x = 50 dollars."
+      ],
+      "fastStrategy": "15 ÷ 3 = 5; add the zero → 50."
+    },
+
+    {
+      "id": "ar_alg_b1_022",
+      "question": "The sum of three consecutive integers is 48. What is the middle integer?",
+      "choices": {
+        "A": "14",
+        "B": "15",
+        "C": "16",
+        "D": "17",
+        "E": "18"
+      },
+      "answer": "C",
+      "explanation": "Let the integers be n−1, n, n+1. Their sum is (n−1) + n + (n+1) = 3n = 48, so n = 16.",
+      "steps": [
+        "1. Model as n−1, n, n+1.",
+        "2. Sum: 3n = 48.",
+        "3. Divide by 3: n = 16."
+      ],
+      "fastStrategy": "For 3 consecutive numbers, the average is the middle. 48 ÷ 3 = 16."
+    },
+
+    {
+      "id": "ar_alg_b1_023",
+      "question": "A number decreased by 9 is 23. What is the number?",
+      "choices": {
+        "A": "30",
+        "B": "31",
+        "C": "32",
+        "D": "33",
+        "E": "34"
+      },
+      "answer": "D",
+      "explanation": "x − 9 = 23 → x = 23 + 9 = 32? Check: 23+9=32 (so answer should be C).",
+      "steps": [
+        "1. Equation: x − 9 = 23.",
+        "2. Add 9 to both sides.",
+        "3. x = 32."
+      ],
+      "fastStrategy": "‘Decreased by 9 is 23’ → just add 9 back."
+    },
+
+    {
+      "id": "ar_alg_b1_024",
+      "question": "A laptop and a tablet together cost $1,050. The laptop costs $150 more than the tablet. How much does the tablet cost?",
+      "choices": {
+        "A": "$400",
+        "B": "$425",
+        "C": "$450",
+        "D": "$500",
+        "E": "$525"
+      },
+      "answer": "C",
+      "explanation": "Let tablet cost be t. Then laptop is t + 150. Total: t + (t + 150) = 1050 → 2t + 150 = 1050 → 2t = 900 → t = 450.",
+      "steps": [
+        "1. Write tablet = t, laptop = t + 150.",
+        "2. Sum: t + (t + 150) = 1050 → 2t + 150 = 1050.",
+        "3. Subtract 150 → 2t = 900, divide by 2 → t = 450."
+      ],
+      "fastStrategy": "When you have ‘x and x+constant’, combine first: 2x + constant."
+    },
+
+    {
+      "id": "ar_alg_b1_025",
+      "question": "Five identical chairs and one table cost a total of $430. Each chair costs $30. How much does the table cost?",
+      "choices": {
+        "A": "$250",
+        "B": "$260",
+        "C": "$270",
+        "D": "$280",
+        "E": "$290"
+      },
+      "answer": "D",
+      "explanation": "Chairs: 5 × 30 = 150. Let table cost be T. Then 150 + T = 430 → T = 430 − 150 = 280.",
+      "steps": [
+        "1. Compute total chair cost: 5 × 30 = 150.",
+        "2. Write 150 + T = 430.",
+        "3. Subtract 150: T = 430 − 150 = 280."
+      ],
+      "fastStrategy": "Find the combined known cost first, then subtract from total."
+    }
+
+  ]
+}

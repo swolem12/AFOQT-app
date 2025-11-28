@@ -1,0 +1,509 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "percent_problems",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+
+    {
+      "id": "ar_pct_b1_001",
+      "question": "What is 25% of 80?",
+      "choices": {
+        "A": "15",
+        "B": "18",
+        "C": "20",
+        "D": "24",
+        "E": "30"
+      },
+      "answer": "C",
+      "explanation": "25% means one-quarter. One-quarter of 80 is 80 ÷ 4 = 20.",
+      "steps": [
+        "1. Recognize that 25% = 1/4.",
+        "2. Compute 80 ÷ 4.",
+        "3. The result is 20."
+      ],
+      "fastStrategy": "Any time you see 25%, divide by 4."
+    },
+
+    {
+      "id": "ar_pct_b1_002",
+      "question": "A jacket originally costs $60 and is on sale for 20% off. What is the sale price?",
+      "choices": {
+        "A": "$44",
+        "B": "$46",
+        "C": "$48",
+        "D": "$50",
+        "E": "$52"
+      },
+      "answer": "C",
+      "explanation": "20% of 60 is 0.20 × 60 = 12. Subtract the discount: 60 − 12 = 48.",
+      "steps": [
+        "1. Find 20% of 60: 0.20 × 60 = 12.",
+        "2. Subtract the discount from the original: 60 − 12.",
+        "3. Get the sale price: $48."
+      ],
+      "fastStrategy": "For 20% off, find 10% and double it."
+    },
+
+    {
+      "id": "ar_pct_b1_003",
+      "question": "An item costs $50 and the sales tax is 8%. What is the total cost including tax?",
+      "choices": {
+        "A": "$52",
+        "B": "$53",
+        "C": "$54",
+        "D": "$55",
+        "E": "$58"
+      },
+      "answer": "C",
+      "explanation": "8% of 50 is 0.08 × 50 = 4. Add tax: 50 + 4 = 54.",
+      "steps": [
+        "1. Compute 8% of 50: 0.08 × 50 = 4.",
+        "2. Add this tax to the original price: 50 + 4.",
+        "3. Total cost is $54."
+      ],
+      "fastStrategy": "To find 8% of 50, think 10% of 50 is 5, then subtract 2% (which is 1)."
+    },
+
+    {
+      "id": "ar_pct_b1_004",
+      "question": "A test has 40 questions. If a student answers 30 correctly, what percent of the questions did the student answer correctly?",
+      "choices": {
+        "A": "65%",
+        "B": "70%",
+        "C": "75%",
+        "D": "80%",
+        "E": "85%"
+      },
+      "answer": "C",
+      "explanation": "Percent correct is 30 ÷ 40 = 0.75, which is 75%.",
+      "steps": [
+        "1. Set up the fraction: correct/total = 30/40.",
+        "2. Simplify 30/40 to 3/4.",
+        "3. 3/4 as a percent is 75%."
+      ],
+      "fastStrategy": "Remember: 3/4 = 75%."
+    },
+
+    {
+      "id": "ar_pct_b1_005",
+      "question": "A town has 800 residents. If the population increases by 10%, what will the new population be?",
+      "choices": {
+        "A": "820",
+        "B": "840",
+        "C": "880",
+        "D": "900",
+        "E": "920"
+      },
+      "answer": "C",
+      "explanation": "10% of 800 is 0.10 × 800 = 80. New population: 800 + 80 = 880.",
+      "steps": [
+        "1. Find 10% of 800 by moving the decimal: 80.",
+        "2. Add 80 to the original 800.",
+        "3. New population is 880."
+      ],
+      "fastStrategy": "10% is just dividing by 10 (move the decimal one place left)."
+    },
+
+    {
+      "id": "ar_pct_b1_006",
+      "question": "A shirt costs $32 and is discounted by 25%. What is the sale price?",
+      "choices": {
+        "A": "$22",
+        "B": "$24",
+        "C": "$26",
+        "D": "$28",
+        "E": "$30"
+      },
+      "answer": "B",
+      "explanation": "25% of 32 is 32 ÷ 4 = 8. Sale price is 32 − 8 = 24.",
+      "steps": [
+        "1. Recognize 25% = 1/4.",
+        "2. Compute 32 ÷ 4 = 8.",
+        "3. Subtract 8 from 32 to get $24."
+      ],
+      "fastStrategy": "For 25% off, divide by 4 and subtract."
+    },
+
+    {
+      "id": "ar_pct_b1_007",
+      "question": "A person earns $400 per week and saves 15% of their pay. How much do they save each week?",
+      "choices": {
+        "A": "$45",
+        "B": "$50",
+        "C": "$55",
+        "D": "$60",
+        "E": "$65"
+      },
+      "answer": "D",
+      "explanation": "15% of 400 is 0.15 × 400 = 60.",
+      "steps": [
+        "1. Convert 15% to a decimal: 0.15.",
+        "2. Multiply 0.15 × 400.",
+        "3. Savings = $60."
+      ],
+      "fastStrategy": "15% of a round number: find 10% and add half of that again (5%)."
+    },
+
+    {
+      "id": "ar_pct_b1_008",
+      "question": "A laptop costs $900. The price increases by 10%. What is the new price?",
+      "choices": {
+        "A": "$930",
+        "B": "$960",
+        "C": "$980",
+        "D": "$990",
+        "E": "$1,000"
+      },
+      "answer": "D",
+      "explanation": "10% of 900 is 90. New price = 900 + 90 = 990.",
+      "steps": [
+        "1. Find 10%: 900 ÷ 10 = 90.",
+        "2. Add 90 to 900.",
+        "3. New price is $990."
+      ],
+      "fastStrategy": "10% bump = add one-tenth of the original."
+    },
+
+    {
+      "id": "ar_pct_b1_009",
+      "question": "A student scores 72 points out of 90 on a test. What percent did the student score?",
+      "choices": {
+        "A": "70%",
+        "B": "75%",
+        "C": "78%",
+        "D": "80%",
+        "E": "82%"
+      },
+      "answer": "D",
+      "explanation": "72 ÷ 90 = 0.8, which is 80%.",
+      "steps": [
+        "1. Form the fraction 72/90.",
+        "2. Simplify by dividing both by 9: 8/10.",
+        "3. 8/10 = 0.8 = 80%."
+      ],
+      "fastStrategy": "If you can simplify to a fraction over 10 or 100, the percent is easy."
+    },
+
+    {
+      "id": "ar_pct_b1_010",
+      "question": "A store marks up an item that costs $40 by 25%. What is the new price?",
+      "choices": {
+        "A": "$45",
+        "B": "$48",
+        "C": "$50",
+        "D": "$52",
+        "E": "$55"
+      },
+      "answer": "C",
+      "explanation": "25% of 40 is 40 ÷ 4 = 10. New price: 40 + 10 = 50.",
+      "steps": [
+        "1. Find 25% of 40 by dividing by 4.",
+        "2. 40 ÷ 4 = 10.",
+        "3. Add 10 to 40 for a new price of $50."
+      ],
+      "fastStrategy": "For 25% markup, add one-quarter of the original price."
+    },
+
+    {
+      "id": "ar_pct_b1_011",
+      "question": "A fuel tank holds 200 gallons when full. If it is currently 60% full, how many gallons of fuel are in the tank?",
+      "choices": {
+        "A": "100",
+        "B": "110",
+        "C": "115",
+        "D": "120",
+        "E": "130"
+      },
+      "answer": "D",
+      "explanation": "60% of 200 is 0.60 × 200 = 120 gallons.",
+      "steps": [
+        "1. Convert 60% to decimal: 0.60.",
+        "2. Multiply 0.60 × 200.",
+        "3. There are 120 gallons in the tank."
+      ],
+      "fastStrategy": "50% of 200 is 100; add another 10% (20) to reach 60%."
+    },
+
+    {
+      "id": "ar_pct_b1_012",
+      "question": "At a base, 40% of the 250 personnel are officers. How many officers are there?",
+      "choices": {
+        "A": "80",
+        "B": "90",
+        "C": "95",
+        "D": "100",
+        "E": "110"
+      },
+      "answer": "D",
+      "explanation": "40% of 250 is 0.40 × 250 = 100.",
+      "steps": [
+        "1. Convert 40% to 0.40.",
+        "2. Multiply 0.40 × 250.",
+        "3. The result is 100 officers."
+      ],
+      "fastStrategy": "10% of 250 is 25; multiply by 4 to get 40% = 100."
+    },
+
+    {
+      "id": "ar_pct_b1_013",
+      "question": "An item’s price drops from $80 to $60. What percent discount is this?",
+      "choices": {
+        "A": "15%",
+        "B": "20%",
+        "C": "25%",
+        "D": "30%",
+        "E": "35%"
+      },
+      "answer": "C",
+      "explanation": "The discount is 80 − 60 = 20. Percent discount = 20 ÷ 80 = 0.25 = 25%.",
+      "steps": [
+        "1. Find the amount of decrease: 20.",
+        "2. Divide by the original price: 20 ÷ 80.",
+        "3. Convert 0.25 to 25%."
+      ],
+      "fastStrategy": "Percent change = (difference ÷ original) × 100."
+    },
+
+    {
+      "id": "ar_pct_b1_014",
+      "question": "A restaurant bill is $50 before tip. If you tip 18%, how much is the tip?",
+      "choices": {
+        "A": "$7",
+        "B": "$8",
+        "C": "$9",
+        "D": "$10",
+        "E": "$12"
+      },
+      "answer": "C",
+      "explanation": "18% of 50 is 0.18 × 50 = 9.",
+      "steps": [
+        "1. Convert 18% to 0.18.",
+        "2. Multiply 0.18 × 50.",
+        "3. Tip amount is $9."
+      ],
+      "fastStrategy": "20% of 50 is 10; subtract 2% (1) to get 18% = 9."
+    },
+
+    {
+      "id": "ar_pct_b1_015",
+      "question": "A phone costs $500 and the sales tax is 12%. What is the total cost including tax?",
+      "choices": {
+        "A": "$540",
+        "B": "$550",
+        "C": "$560",
+        "D": "$580",
+        "E": "$600"
+      },
+      "answer": "C",
+      "explanation": "12% of 500 is 0.12 × 500 = 60. Total cost: 500 + 60 = 560.",
+      "steps": [
+        "1. Multiply 500 by 0.12 to find the tax.",
+        "2. 0.12 × 500 = 60.",
+        "3. Add 60 to 500 for a total of $560."
+      ],
+      "fastStrategy": "10% of 500 is 50; 2% more is 10; total tax 60."
+    },
+
+    {
+      "id": "ar_pct_b1_016",
+      "question": "The value of a piece of equipment drops from $1,000 to $800. What percent decrease is this?",
+      "choices": {
+        "A": "10%",
+        "B": "15%",
+        "C": "20%",
+        "D": "25%",
+        "E": "30%"
+      },
+      "answer": "C",
+      "explanation": "Decrease is 1,000 − 800 = 200. Percent decrease = 200 ÷ 1,000 = 0.20 = 20%.",
+      "steps": [
+        "1. Find the difference: 200.",
+        "2. Divide by the original value: 200 ÷ 1,000.",
+        "3. Convert 0.20 to 20%."
+      ],
+      "fastStrategy": "Percent decrease = (drop ÷ original) × 100."
+    },
+
+    {
+      "id": "ar_pct_b1_017",
+      "question": "A company hires 30 new employees, and this represents 20% of its total workforce. How many employees does the company have in total?",
+      "choices": {
+        "A": "120",
+        "B": "130",
+        "C": "140",
+        "D": "150",
+        "E": "160"
+      },
+      "answer": "D",
+      "explanation": "If 30 is 20%, then total = 30 ÷ 0.20 = 150.",
+      "steps": [
+        "1. Recognize that 30 = 20% of total.",
+        "2. Convert 20% to 0.20.",
+        "3. Divide 30 by 0.20 to get 150."
+      ],
+      "fastStrategy": "To find the whole from a percent, divide the part by the percent-as-decimal."
+    },
+
+    {
+      "id": "ar_pct_b1_018",
+      "question": "A student earns 45 points out of 60 on a quiz. What percent score is this?",
+      "choices": {
+        "A": "70%",
+        "B": "72%",
+        "C": "75%",
+        "D": "80%",
+        "E": "85%"
+      },
+      "answer": "C",
+      "explanation": "45 ÷ 60 = 0.75, which is 75%.",
+      "steps": [
+        "1. Compute 45/60.",
+        "2. Simplify 45/60 by dividing by 15 → 3/4.",
+        "3. 3/4 = 75%."
+      ],
+      "fastStrategy": "Recognize 3/4 as 75% to speed things up."
+    },
+
+    {
+      "id": "ar_pct_b1_019",
+      "question": "A bill is $80 and is discounted by 15%. What is the sale price?",
+      "choices": {
+        "A": "$64",
+        "B": "$66",
+        "C": "$68",
+        "D": "$70",
+        "E": "$72"
+      },
+      "answer": "C",
+      "explanation": "15% of 80 is 0.15 × 80 = 12. Sale price = 80 − 12 = 68.",
+      "steps": [
+        "1. Find 10% of 80 (8) and 5% of 80 (4).",
+        "2. Add 8 + 4 = 12 (this is 15%).",
+        "3. Subtract 12 from 80 to get $68."
+      ],
+      "fastStrategy": "Break 15% into 10% + 5% to compute mentally."
+    },
+
+    {
+      "id": "ar_pct_b1_020",
+      "question": "A backpack’s price rises from $40 to $50. What is the percent increase?",
+      "choices": {
+        "A": "15%",
+        "B": "20%",
+        "C": "22.5%",
+        "D": "25%",
+        "E": "30%"
+      },
+      "answer": "D",
+      "explanation": "Increase is 10. Percent increase = 10 ÷ 40 = 0.25 = 25%.",
+      "steps": [
+        "1. Find the difference: 50 − 40 = 10.",
+        "2. Divide by the original: 10 ÷ 40.",
+        "3. Convert 0.25 to 25%."
+      ],
+      "fastStrategy": "Always divide the change by the original amount, not the new one."
+    },
+
+    {
+      "id": "ar_pct_b1_021",
+      "question": "A container has a capacity of 500 mL. If it is filled to 30% of its capacity, how many milliliters are in the container?",
+      "choices": {
+        "A": "100 mL",
+        "B": "120 mL",
+        "C": "140 mL",
+        "D": "150 mL",
+        "E": "160 mL"
+      },
+      "answer": "D",
+      "explanation": "30% of 500 is 0.30 × 500 = 150 mL.",
+      "steps": [
+        "1. Convert 30% to 0.30.",
+        "2. Multiply 0.30 × 500.",
+        "3. Result is 150 mL."
+      ],
+      "fastStrategy": "10% of 500 is 50, so 30% is 3 × 50 = 150."
+    },
+
+    {
+      "id": "ar_pct_b1_022",
+      "question": "In a unit, 25% of the 200 members are officers and the rest are enlisted. How many enlisted members are there?",
+      "choices": {
+        "A": "120",
+        "B": "130",
+        "C": "140",
+        "D": "145",
+        "E": "150"
+      },
+      "answer": "E",
+      "explanation": "25% of 200 is 50 officers, so enlisted = 200 − 50 = 150.",
+      "steps": [
+        "1. Find 25% of 200: 200 ÷ 4 = 50.",
+        "2. Subtract officers from total: 200 − 50.",
+        "3. 150 enlisted members remain."
+      ],
+      "fastStrategy": "For 25%, divide by 4, then subtract from the total."
+    },
+
+    {
+      "id": "ar_pct_b1_023",
+      "question": "A battery’s charge increases from 30% to 75%. By how many percentage points did the charge increase?",
+      "choices": {
+        "A": "35 percentage points",
+        "B": "40 percentage points",
+        "C": "45 percentage points",
+        "D": "50 percentage points",
+        "E": "55 percentage points"
+      },
+      "answer": "C",
+      "explanation": "Increase in percentage points is 75 − 30 = 45.",
+      "steps": [
+        "1. Subtract the starting percentage from the final percentage.",
+        "2. 75 − 30 = 45.",
+        "3. The increase is 45 percentage points."
+      ],
+      "fastStrategy": "Percentage point change = final percent − initial percent."
+    },
+
+    {
+      "id": "ar_pct_b1_024",
+      "question": "A stock price falls from $40 to $30. What is the percent decrease?",
+      "choices": {
+        "A": "15%",
+        "B": "20%",
+        "C": "22.5%",
+        "D": "25%",
+        "E": "30%"
+      },
+      "answer": "D",
+      "explanation": "Decrease is 10. Percent decrease = 10 ÷ 40 = 0.25 = 25%.",
+      "steps": [
+        "1. Compute difference: 40 − 30 = 10.",
+        "2. Divide by original price 40: 10 ÷ 40.",
+        "3. Convert to 25%."
+      ],
+      "fastStrategy": "Always base percent change on the original value."
+    },
+
+    {
+      "id": "ar_pct_b1_025",
+      "question": "A quiz has 20 questions. A student answers 85% of them correctly. How many questions did the student answer correctly?",
+      "choices": {
+        "A": "15",
+        "B": "16",
+        "C": "17",
+        "D": "18",
+        "E": "19"
+      },
+      "answer": "C",
+      "explanation": "85% of 20 is 0.85 × 20 = 17.",
+      "steps": [
+        "1. Convert 85% to 0.85.",
+        "2. Multiply 0.85 × 20.",
+        "3. The student answered 17 questions correctly."
+      ],
+      "fastStrategy": "10% of 20 is 2; 80% is 16; add 5% (1) to reach 85% = 17."
+    }
+
+  ]
+}

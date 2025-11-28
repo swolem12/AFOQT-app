@@ -1,0 +1,509 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "ratio_and_proportion",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+
+    {
+      "id": "ar_ratprop_b1_001",
+      "question": "A recipe uses a ratio of 2 cups of rice to 3 cups of water. If you use 6 cups of rice, how many cups of water do you need?",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9",
+        "E": "12"
+      },
+      "answer": "D",
+      "explanation": "The ratio 2:3 scales to 6:x. Multiply 2→6 by ×3, so water must also multiply by 3: 3×3 = 9.",
+      "steps": [
+        "1. Write the ratio: 2/3 = 6/x.",
+        "2. Note 2→6 is ×3.",
+        "3. Apply ×3 to the water amount: 3×3 = 9."
+      ],
+      "fastStrategy": "Find the scale factor, then apply it to the other side of the ratio."
+    },
+
+    {
+      "id": "ar_ratprop_b1_002",
+      "question": "A map scale shows 1 inch represents 5 miles. How many miles does 3 inches represent?",
+      "choices": {
+        "A": "10",
+        "B": "12",
+        "C": "15",
+        "D": "18",
+        "E": "20"
+      },
+      "answer": "C",
+      "explanation": "Multiply 1→3 inches by 3; miles must scale the same: 5×3 = 15 miles.",
+      "steps": [
+        "1. Identify the scale: 1 in = 5 mi.",
+        "2. Multiply inches: 1→3 (×3).",
+        "3. Multiply miles by 3: 5→15."
+      ],
+      "fastStrategy": "Direct proportion: multiply both parts by the same scale factor."
+    },
+
+    {
+      "id": "ar_ratprop_b1_003",
+      "question": "A crew mixes fuel in a 4:1 ratio (4 parts fuel A to 1 part fuel B). If they use 16 parts of fuel A, how many parts of fuel B are needed?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "answer": "C",
+      "explanation": "4→16 is ×4. Apply ×4 to 1 → 4.",
+      "steps": [
+        "1. Set up ratio: 4/1 = 16/x.",
+        "2. Determine scale: 4→16 is ×4.",
+        "3. Apply ×4 to 1 to get B = 4."
+      ],
+      "fastStrategy": "Find how the known value scaled, then match the scaling."
+    },
+
+    {
+      "id": "ar_ratprop_b1_004",
+      "question": "A photograph is enlarged so that a 2-inch width becomes 8 inches. If the original height is 3 inches, what is the new height?",
+      "choices": {
+        "A": "6",
+        "B": "10",
+        "C": "12",
+        "D": "14",
+        "E": "16"
+      },
+      "answer": "C",
+      "explanation": "Width scales 2→8 (×4). Apply the same factor to the height: 3×4 = 12.",
+      "steps": [
+        "1. Compare original width to new width.",
+        "2. Determine scale factor (×4).",
+        "3. Multiply the original height by 4."
+      ],
+      "fastStrategy": "When an image scales, both dimensions scale by the same factor."
+    },
+
+    {
+      "id": "ar_ratprop_b1_005",
+      "question": "A class has 12 boys and 8 girls. What is the ratio of boys to girls?",
+      "choices": {
+        "A": "2:1",
+        "B": "3:2",
+        "C": "4:3",
+        "D": "5:4",
+        "E": "6:5"
+      },
+      "answer": "B",
+      "explanation": "Simplify 12:8 by dividing both by 4 → 3:2.",
+      "steps": [
+        "1. Start with 12:8.",
+        "2. Divide both by 4.",
+        "3. Result is 3:2."
+      ],
+      "fastStrategy": "Always reduce ratios using GCF."
+    },
+
+    {
+      "id": "ar_ratprop_b1_006",
+      "question": "If 5 notebooks cost $20, how much do 8 notebooks cost at the same rate?",
+      "choices": {
+        "A": "$28",
+        "B": "$30",
+        "C": "$32",
+        "D": "$34",
+        "E": "$36"
+      },
+      "answer": "C",
+      "explanation": "Cost per notebook = 20/5 = $4. Then 8×4 = $32.",
+      "steps": [
+        "1. Compute unit rate (divide 20 by 5).",
+        "2. Multiply unit cost by 8.",
+        "3. Result = 32."
+      ],
+      "fastStrategy": "Convert ratio word problems into unit-rate form for speed."
+    },
+
+    {
+      "id": "ar_ratprop_b1_007",
+      "question": "A machine stamps 45 parts in 3 minutes. At the same rate, how many parts in 9 minutes?",
+      "choices": {
+        "A": "75",
+        "B": "90",
+        "C": "120",
+        "D": "135",
+        "E": "150"
+      },
+      "answer": "D",
+      "explanation": "Time triples (3→9), so output triples: 45×3 = 135.",
+      "steps": [
+        "1. Identify scale factor (9 ÷ 3 = 3).",
+        "2. Multiply 45 by 3.",
+        "3. Get 135."
+      ],
+      "fastStrategy": "When time scales evenly, output scales by the same factor."
+    },
+
+    {
+      "id": "ar_ratprop_b1_008",
+      "question": "A squad consists of 18 Airmen and 6 NCOs. What is the simplified ratio of Airmen to NCOs?",
+      "choices": {
+        "A": "2:1",
+        "B": "3:1",
+        "C": "4:1",
+        "D": "3:2",
+        "E": "6:1"
+      },
+      "answer": "B",
+      "explanation": "18:6 divides by 6 → 3:1.",
+      "steps": [
+        "1. Write 18:6.",
+        "2. Divide both by 6.",
+        "3. Get 3:1."
+      ],
+      "fastStrategy": "Divide both sides of the ratio by the largest factor possible."
+    },
+
+    {
+      "id": "ar_ratprop_b1_009",
+      "question": "A drone flies 12 miles on 3 gallons of fuel. How far can it fly on 5 gallons at the same rate?",
+      "choices": {
+        "A": "15 miles",
+        "B": "18 miles",
+        "C": "20 miles",
+        "D": "22 miles",
+        "E": "24 miles"
+      },
+      "answer": "C",
+      "explanation": "Miles per gallon = 12 ÷ 3 = 4. Then 4×5 = 20 miles.",
+      "steps": [
+        "1. Compute unit rate (12/3).",
+        "2. Multiply by 5 gallons.",
+        "3. Result = 20."
+      ],
+      "fastStrategy": "Convert to unit rate, multiply up."
+    },
+
+    {
+      "id": "ar_ratprop_b1_010",
+      "question": "A mix contains red and blue beads in a 5:2 ratio. If there are 20 red beads, how many blue beads are there?",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9",
+        "E": "12"
+      },
+      "answer": "C",
+      "explanation": "5→20 (×4). Apply ×4 to 2 → 8.",
+      "steps": [
+        "1. Determine scale factor (20 ÷ 5 = 4).",
+        "2. Multiply 2 by 4.",
+        "3. Result = 8."
+      ],
+      "fastStrategy": "Ratios scale equally on both sides."
+    },
+
+    {
+      "id": "ar_ratprop_b1_011",
+      "question": "A photo has a width-to-height ratio of 3:2. If the width is enlarged to 15 inches, what is the height?",
+      "choices": {
+        "A": "8",
+        "B": "9",
+        "C": "10",
+        "D": "12",
+        "E": "15"
+      },
+      "answer": "C",
+      "explanation": "3→15 (×5). Apply ×5 to 2 → 10.",
+      "steps": [
+        "1. Set ratio 3:2.",
+        "2. Apply ×5 scale factor.",
+        "3. Height = 10."
+      ],
+      "fastStrategy": "Find the multiplier from one side and use it on the other."
+    },
+
+    {
+      "id": "ar_ratprop_b1_012",
+      "question": "If 9 markers cost $27, how much do 4 markers cost at the same rate?",
+      "choices": {
+        "A": "$9",
+        "B": "$10",
+        "C": "$11",
+        "D": "$12",
+        "E": "$15"
+      },
+      "answer": "D",
+      "explanation": "Unit cost = 27/9 = $3. Then 4×3 = $12.",
+      "steps": [
+        "1. Divide total cost by quantity.",
+        "2. Multiply unit cost by 4.",
+        "3. Get 12."
+      ],
+      "fastStrategy": "Compute unit price first to avoid proportion mistakes."
+    },
+
+    {
+      "id": "ar_ratprop_b1_013",
+      "question": "A soldier mixes drink powder in a 1:4 ratio (1 scoop powder to 4 scoops water). If he uses 3 scoops of powder, how much water is needed?",
+      "choices": {
+        "A": "6",
+        "B": "8",
+        "C": "10",
+        "D": "12",
+        "E": "15"
+      },
+      "answer": "D",
+      "explanation": "1→3 (×3). Apply ×3 to 4 → 12.",
+      "steps": [
+        "1. Identify scaling (×3).",
+        "2. Multiply the water part by 3.",
+        "3. Result = 12."
+      ],
+      "fastStrategy": "Scale each side of the ratio equally."
+    },
+
+    {
+      "id": "ar_ratprop_b1_014",
+      "question": "A model airplane uses 2 mL of oil for every 5 mL of fuel. If it uses 25 mL of fuel, how much oil is used?",
+      "choices": {
+        "A": "5",
+        "B": "7",
+        "C": "8",
+        "D": "9",
+        "E": "10"
+      },
+      "answer": "A",
+      "explanation": "5→25 is ×5. Apply ×5 to 2 → 10.",
+      "steps": [
+        "1. Find scale factor (25÷5=5).",
+        "2. Multiply 2 by 5.",
+        "3. Oil = 10 mL."
+      ],
+      "fastStrategy": "Identify the base ratio and scale it."
+    },
+
+    {
+      "id": "ar_ratprop_b1_015",
+      "question": "A bucket of marbles contains red and green marbles in a 7:3 ratio. If there are 21 red marbles, how many green ones are there?",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9",
+        "E": "10"
+      },
+      "answer": "D",
+      "explanation": "7→21 is ×3. Apply ×3 to 3 → 9.",
+      "steps": [
+        "1. Determine scale factor.",
+        "2. Apply it to the second part.",
+        "3. Output is 9 green."
+      ],
+      "fastStrategy": "Find multiplier from known side, then apply."
+    },
+
+    {
+      "id": "ar_ratprop_b1_016",
+      "question": "A team completes 12 tasks in 30 minutes. At this rate, how many tasks in 90 minutes?",
+      "choices": {
+        "A": "24",
+        "B": "30",
+        "C": "32",
+        "D": "36",
+        "E": "40"
+      },
+      "answer": "D",
+      "explanation": "30→90 is ×3, so tasks: 12×3 = 36.",
+      "steps": [
+        "1. Identify scaling of time.",
+        "2. Multiply tasks by the same factor.",
+        "3. Result = 36."
+      ],
+      "fastStrategy": "If time triples, output triples."
+    },
+
+    {
+      "id": "ar_ratprop_b1_017",
+      "question": "A blueprint has a scale of 2 cm representing 8 ft. How many feet does 5 cm represent?",
+      "choices": {
+        "A": "10",
+        "B": "15",
+        "C": "18",
+        "D": "20",
+        "E": "25"
+      },
+      "answer": "D",
+      "explanation": "Compute unit scale: 8 ÷ 2 = 4 feet per cm. Then 5×4 = 20.",
+      "steps": [
+        "1. Calculate feet per cm.",
+        "2. Multiply by 5 cm.",
+        "3. Get 20."
+      ],
+      "fastStrategy": "Convert to unit rate whenever numbers are uneven."
+    },
+
+    {
+      "id": "ar_ratprop_b1_018",
+      "question": "A drink is mixed in a 3:5 ratio. If there are 15 parts of the second ingredient, how many parts of the first ingredient are needed?",
+      "choices": {
+        "A": "6",
+        "B": "8",
+        "C": "9",
+        "D": "12",
+        "E": "18"
+      },
+      "answer": "C",
+      "explanation": "5→15 is ×3; apply ×3 to 3 → 9.",
+      "steps": [
+        "1. Identify ratio parts.",
+        "2. Apply scale factor.",
+        "3. Compute 9."
+      ],
+      "fastStrategy": "Look for how the known value scaled."
+    },
+
+    {
+      "id": "ar_ratprop_b1_019",
+      "question": "A vehicle travels 60 miles on 3 gallons of gas. How many miles per gallon is this?",
+      "choices": {
+        "A": "10",
+        "B": "15",
+        "C": "18",
+        "D": "20",
+        "E": "25"
+      },
+      "answer": "D",
+      "explanation": "Divide miles by gallons: 60 ÷ 3 = 20.",
+      "steps": [
+        "1. Identify total miles.",
+        "2. Divide by gallons.",
+        "3. Get 20 mpg."
+      ],
+      "fastStrategy": "Unit rate = total ÷ quantity."
+    },
+
+    {
+      "id": "ar_ratprop_b1_020",
+      "question": "A mural is painted at a ratio of 9 ft of width to 6 ft of height. If the height becomes 12 ft, what is the width?",
+      "choices": {
+        "A": "15",
+        "B": "16",
+        "C": "18",
+        "D": "20",
+        "E": "24"
+      },
+      "answer": "C",
+      "explanation": "6→12 is ×2; apply ×2 to 9 → 18.",
+      "steps": [
+        "1. Find height scale.",
+        "2. Apply same scaling to width.",
+        "3. Result = 18."
+      ],
+      "fastStrategy": "Proportion means both sides scale equally."
+    },
+
+    {
+      "id": "ar_ratprop_b1_021",
+      "question": "A mix uses sugar and flour in a ratio of 1:3. If you need 9 cups of flour, how much sugar is needed?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "answer": "B",
+      "explanation": "3→9 is ×3; apply ×3 to 1 → 3.",
+      "steps": [
+        "1. Determine flour scaling.",
+        "2. Apply to sugar.",
+        "3. Result = 3."
+      ],
+      "fastStrategy": "Find the multiplier and use it."
+    },
+
+    {
+      "id": "ar_ratprop_b1_022",
+      "question": "A computer uploads 120 MB in 4 minutes. At the same rate, how long to upload 60 MB?",
+      "choices": {
+        "A": "1 min",
+        "B": "2 min",
+        "C": "3 min",
+        "D": "4 min",
+        "E": "5 min"
+      },
+      "answer": "B",
+      "explanation": "Rate = 120 ÷ 4 = 30 MB/min. Then 60 ÷ 30 = 2 minutes.",
+      "steps": [
+        "1. Compute MB per minute.",
+        "2. Divide required MB by rate.",
+        "3. Get 2 minutes."
+      ],
+      "fastStrategy": "Always reduce to unit rate first."
+    },
+
+    {
+      "id": "ar_ratprop_b1_023",
+      "question": "A drone completes 8 patrols using 16 minutes of battery. How many patrols per minute?",
+      "choices": {
+        "A": "0.25",
+        "B": "0.5",
+        "C": "1",
+        "D": "2",
+        "E": "4"
+      },
+      "answer": "B",
+      "explanation": "Patrol rate = 8 ÷ 16 = 0.5 patrol per minute.",
+      "steps": [
+        "1. Set up division (8 ÷ 16).",
+        "2. Reduce.",
+        "3. Get 0.5."
+      ],
+      "fastStrategy": "Divide smaller by larger to get fractional rates."
+    },
+
+    {
+      "id": "ar_ratprop_b1_024",
+      "question": "A mixture has 24 ounces and contains ingredients in a 3:1 ratio. How many ounces of the smaller ingredient?",
+      "choices": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "12",
+        "E": "18"
+      },
+      "answer": "C",
+      "explanation": "Total ratio parts: 3+1 = 4. Each part = 24÷4 = 6. Smaller ingredient = 6.",
+      "steps": [
+        "1. Add ratio parts.",
+        "2. Divide total amount by parts.",
+        "3. Identify smaller ingredient amount."
+      ],
+      "fastStrategy": "Total mixture ÷ total parts = value of one part."
+    },
+
+    {
+      "id": "ar_ratprop_b1_025",
+      "question": "A squad has a ratio of 4 medics to 20 infantry. If the squad doubles in size evenly, how many medics will it have?",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "10",
+        "E": "12"
+      },
+      "answer": "C",
+      "explanation": "Doubling squad size doubles medics: 4×2 = 8.",
+      "steps": [
+        "1. Identify original medics (4).",
+        "2. Double because squad doubles.",
+        "3. Result = 8."
+      ],
+      "fastStrategy": "If all numbers grow proportionally, multiply by the scale factor."
+    }
+
+  ]
+}

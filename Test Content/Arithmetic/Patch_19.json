@@ -1,0 +1,191 @@
+{
+  "patchId": "patch_19",
+  "title": "Patch 19 - Arithmetic Reasoning Content & AFOQT Practice Test",
+  "description": "Align Arithmetic Reasoning content with topic/difficulty structure, index question JSON files, and stand up an AFOQT-style Arithmetic Reasoning practice test.",
+  "arithmeticContent": {
+    "contentRoot": "Arithmetic Reasoning Content",
+    "fileNamingConvention": {
+      "pattern": "<subtopicId>_<difficulty>_part<index>.json",
+      "subtopicIdExamples": [
+        "basic_arithmetic_word_problems",
+        "ratio_proportion_word_problems",
+        "percent_word_problems",
+        "fractions_decimals_word_problems",
+        "time_rate_work_word_problems",
+        "probability_word_problems",
+        "algebra_word_problems",
+        "average_word_problems"
+      ],
+      "difficultyLevels": [
+        "beginner",
+        "advanced",
+        "expert"
+      ],
+      "notesForCopilot": [
+        "Each JSON file represents a batch of questions for a single Arithmetic Reasoning subtopic and difficulty level.",
+        "Use the filename to infer subtopicId and difficulty (e.g., `ratio_proportion_word_problems_beginner_part1.json` → subtopicId = `ratio_proportion_word_problems`, difficulty = `beginner`).",
+        "Aggregate all parts for the same (subtopicId, difficulty) pair into a single in-memory question pool when the app loads."
+      ]
+    }
+  },
+  "subjects": [
+    {
+      "id": "arithmetic_reasoning",
+      "displayName": "AFOQT Arithmetic Reasoning",
+      "isAfoqtOfficialSubject": true,
+      "officialTopicsPerPdf": [
+        "basic_arithmetic_word_problems",
+        "ratio_and_proportion",
+        "percent_problems",
+        "fractions_and_decimals",
+        "time_rate_work",
+        "probability",
+        "algebra_word_problems",
+        "average_word_problems"
+      ],
+      "mappedGameSubtopics": [
+        {
+          "subtopicId": "basic_arithmetic_word_problems",
+          "description": "Straightforward story problems using basic operations and rate = work/time setups.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "ratio_proportion_word_problems",
+          "description": "Word problems where the core step is building and solving a proportion or interpreting ratios.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "percent_word_problems",
+          "description": "Percent-of, discount/markup, and basic interest-like problems framed verbally.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "fractions_decimals_word_problems",
+          "description": "Mixing, comparing, and operating with fractions/decimals in context (fuel usage, distances, etc.).",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "time_rate_work_word_problems",
+          "description": "Multiple workers, pipelines, and travel problems where time, rate, and work interact.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "probability_word_problems",
+          "description": "Simple probability with dice, cards, selections, and basic independent events.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "algebra_word_problems",
+          "description": "Translating word problems into linear equations and solving for unknown quantities.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "average_word_problems",
+          "description": "Mean and weighted mean in context, including finding missing value given average and count.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        }
+      ]
+    }
+  ],
+  "questionRoutingRules": {
+    "bySubtopicAndDifficulty": {
+      "strategy": "filename_inference",
+      "logicForCopilot": [
+        "When loading Arithmetic Reasoning questions, iterate over all JSON files in the Arithmetic content directory.",
+        "Parse each filename according to the pattern `<subtopicId>_<difficulty>_part<index>.json`.",
+        "Normalize `difficulty` to one of: `beginner`, `advanced`, `expert`.",
+        "Insert questions into an in-memory registry keyed as: `questions['arithmetic_reasoning'][subtopicId][difficulty]`.",
+        "For example, `time_rate_work_word_problems_beginner_part1.json` and `time_rate_work_word_problems_beginner_part2.json` both append to `questions['arithmetic_reasoning']['time_rate_work_word_problems']['beginner']`.",
+        "Use `subjects[].mappedGameSubtopics` to confirm that a given subtopicId is known and to drive UI labels."
+      ]
+    }
+  },
+  "testModeRules": {
+    "modes": {
+      "studyMode": {
+        "id": "studyMode",
+        "description": "Immediate feedback after each question for learning.",
+        "perQuestionFeedback": true,
+        "showScoreAtEnd": true,
+        "showCorrectAnswerAfterEachQuestion": true
+      },
+      "practiceTestMode": {
+        "id": "practiceTestMode",
+        "description": "Simulated AFOQT environment; no feedback until test completion.",
+        "perQuestionFeedback": false,
+        "showCorrectAnswerAfterEachQuestion": false,
+        "showScoreAtEnd": true,
+        "summaryReportConfig": {
+          "showOverallScore": true,
+          "showPercentCorrect": true,
+          "showBySubjectBreakdown": true,
+          "showBySubtopicAndDifficultyBreakdown": true,
+          "showListOfMissedQuestions": true,
+          "suppressRationaleUntilEnd": true
+        }
+      }
+    },
+    "globalInstructionForCopilot": [
+      "Update Arithmetic Reasoning to support both `studyMode` and `practiceTestMode` aligned with other AFOQT subjects.",
+      "In `studyMode`, show correctness and explanation immediately after each question.",
+      "In `practiceTestMode`, hide correctness and explanations until the entire Arithmetic section is complete, then show a summary report.",
+      "Ensure the UI clearly indicates which mode is active before the user begins answering questions."
+    ]
+  },
+  "afoqtPracticeTests": {
+    "globalRules": [
+      "For each main AFOQT subject flagged with `isAfoqtOfficialSubject = true`, including Arithmetic Reasoning, create a dedicated practice test entry titled `AFOQT <DisplayName> Practice Test`.",
+      "Each AFOQT practice test must only pull questions from subtopics where `isOfficialAfoqtTopic = true`.",
+      "Each AFOQT practice test automatically runs in `practiceTestMode` by default to simulate real test conditions.",
+      "Within a subject, question selection should sample across all difficulty levels with a bias toward `advanced` and `beginner`, with a smaller share from `expert`."
+    ],
+    "subjectConfigs": [
+      {
+        "subjectId": "arithmetic_reasoning",
+        "practiceTestId": "afoqt_arithmetic_reasoning_practice_test",
+        "displayName": "AFOQT Arithmetic Reasoning Practice Test",
+        "questionSelectionPolicy": {
+          "subtopicsIncluded": [
+            "basic_arithmetic_word_problems",
+            "ratio_proportion_word_problems",
+            "percent_word_problems",
+            "fractions_decimals_word_problems",
+            "time_rate_work_word_problems",
+            "probability_word_problems",
+            "algebra_word_problems",
+            "average_word_problems"
+          ],
+          "difficultyDistribution": {
+            "beginner": 0.35,
+            "advanced": 0.45,
+            "expert": 0.20
+          },
+          "selectionLogicForCopilot": [
+            "Merge all questions for the included Arithmetic subtopics and difficulty tiers into a temporary pool.",
+            "Randomly sample questions according to the configured difficultyDistribution.",
+            "Avoid duplicate questions within a single test run.",
+            "If a requested quota for a given difficulty cannot be met (pool too small), backfill from the nearest difficulty level (e.g., advanced → beginner or expert) while maintaining total test length."
+          ],
+          "defaultTestLength": 40
+        },
+        "mode": "practiceTestMode"
+      }
+    ]
+  },
+  "implementationNotesForCopilot": [
+    "1. Index all Arithmetic Reasoning JSON files at startup using the naming convention described in `arithmeticContent.fileNamingConvention`.",
+    "2. Build an in-memory registry: `registry['arithmetic_reasoning'][subtopicId][difficulty] = Question[]`.",
+    "3. Wire the Arithmetic Reasoning practice test entry into the game's test selection UI alongside other AFOQT practice tests.",
+    "4. Ensure that mode behavior (study vs practiceTestMode) is consistent with what Patch 18 introduced for vocabulary-style subjects.",
+    "5. Keep implementation generic so that adding new Arithmetic JSON content (new parts, new difficulties) automatically expands the pool without requiring code changes.",
+    "6. Do not expose internal file paths to the end user; only use `displayName` and high-level labels in the UI."
+  ]
+}

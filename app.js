@@ -868,6 +868,12 @@ const subjects = [
         description: 'AFOQT quantitative reasoning'
     },
     {
+        id: 'arithmetic_reasoning',
+        name: 'Arithmetic Reasoning',
+        description: 'AFOQT arithmetic reasoning word problems',
+        isAfoqtOfficialSubject: true
+    },
+    {
         id: 'vocabulary',
         name: 'Vocabulary',
         description: 'Word knowledge and analogies',
@@ -2997,6 +3003,47 @@ function createMathTopicsFromRegistry() {
     
     console.log(`Created ${dynamicTopics.length} math topics from content`);
     return dynamicTopics;
+}
+
+// Function to create arithmetic reasoning topics from questionRegistry (Patch 19)
+function createArithmeticTopicsFromRegistry() {
+    if (!questionRegistry || !questionRegistry.arithmetic_reasoning) {
+        console.warn('Arithmetic content not loaded');
+        return [];
+    }
+    const arContent = questionRegistry.arithmetic_reasoning;
+    const names = {
+        'basic_arithmetic': 'Basic Arithmetic',
+        'basic_word_problems': 'Word Problems (Basic)',
+        'fractions_decimals': 'Fractions & Decimals',
+        'percent_problems': 'Percent Problems',
+        'ratio_proportion': 'Ratio & Proportion',
+        'time_rates_work': 'Time/Rates/Work',
+        'average_word_problems': 'Average Word Problems',
+        'algebra_word_problems': 'Algebra Word Problems'
+    };
+    const desc = {
+        'basic_arithmetic': 'Add/subtract/multiply/divide whole numbers',
+        'basic_word_problems': 'Translate and solve basic word problems',
+        'fractions_decimals': 'Operate on fractions and decimals',
+        'percent_problems': 'Compute percents, increases, discounts',
+        'ratio_proportion': 'Solve ratios and proportions',
+        'time_rates_work': 'Solve rate and work problems',
+        'average_word_problems': 'Compute averages from word problems',
+        'algebra_word_problems': 'Form equations to solve word problems'
+    };
+    const topicsAR = [];
+    for (const subtopicId in arContent) {
+        topicsAR.push({
+            id: subtopicId,
+            name: names[subtopicId] || subtopicId.replace(/_/g, ' '),
+            description: desc[subtopicId] || 'Arithmetic reasoning practice',
+            subjectId: 'arithmetic_reasoning',
+            hasContent: true
+        });
+    }
+    console.log(`Created ${topicsAR.length} arithmetic topics from content`);
+    return topicsAR;
 }
 
 // Combine all topics and add subject IDs
@@ -9051,6 +9098,15 @@ async function init() {
                 topics = topics.filter(t => t.subjectId !== 'math_knowledge');
                 topics.push(...mathContentTopics);
                 console.log(`✓ Loaded ${mathContentTopics.length} math topics from content`);
+
+                // Add Arithmetic Reasoning topics from Patch 19 content
+                const arTopics = createArithmeticTopicsFromRegistry();
+                if (arTopics.length > 0) {
+                    // Remove any procedural AR topics if existed (none by default)
+                    topics = topics.filter(t => t.subjectId !== 'arithmetic_reasoning');
+                    topics.push(...arTopics);
+                    console.log(`✓ Loaded ${arTopics.length} arithmetic topics from content`);
+                }
                 
                 // Add AFOQT practice test topics if available
                 if (typeof createAfoqtPracticeTestTopics === 'function') {

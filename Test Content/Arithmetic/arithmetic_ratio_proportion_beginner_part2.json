@@ -1,0 +1,509 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "ratio_and_proportion",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+
+    {
+      "id": "ar_ratprop_b2_026",
+      "question": "A recipe uses ingredients in a 5:2 ratio. If 15 cups of the first ingredient are used, how many cups of the second ingredient are needed?",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7",
+        "E": "8"
+      },
+      "answer": "C",
+      "explanation": "5→15 is ×3; apply to 2 → 6.",
+      "steps": [
+        "1. Find multiplier (15 ÷ 5 = 3).",
+        "2. Multiply 2 by 3.",
+        "3. Result: 6."
+      ],
+      "fastStrategy": "Identify multiplier from one ratio side, apply to the other."
+    },
+
+    {
+      "id": "ar_ratprop_b2_027",
+      "question": "A toy car is built at a ratio of 1 inch representing 4 feet. What does 3 inches represent?",
+      "choices": {
+        "A": "8 feet",
+        "B": "10 feet",
+        "C": "12 feet",
+        "D": "14 feet",
+        "E": "16 feet"
+      },
+      "answer": "C",
+      "explanation": "1→3 is ×3; 4×3 = 12 feet.",
+      "steps": [
+        "1. Multiply model dimension by 3.",
+        "2. Multiply real dimension by 3.",
+        "3. Real size = 12."
+      ],
+      "fastStrategy": "Use direct scaling."
+    },
+
+    {
+      "id": "ar_ratprop_b2_028",
+      "question": "A painter mixes paint in a 3:4 ratio. If she uses 12 liters of the second paint, how much of the first paint does she need?",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9",
+        "E": "12"
+      },
+      "answer": "C",
+      "explanation": "4→12 is ×3; apply ×3 to 3 → 9.",
+      "steps": [
+        "1. Compute the scale from second ingredient.",
+        "2. Apply multiplier to first ingredient.",
+        "3. Get 9 liters."
+      ],
+      "fastStrategy": "Scale from whichever ratio part is known."
+    },
+
+    {
+      "id": "ar_ratprop_b2_029",
+      "question": "A vehicle uses 2 gallons of oil for every 10 gallons of fuel. If it uses 40 gallons of fuel, how many gallons of oil are needed?",
+      "choices": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "10",
+        "E": "12"
+      },
+      "answer": "C",
+      "explanation": "10→40 is ×4; 2×4 = 8.",
+      "steps": [
+        "1. Determine scaling (40÷10=4).",
+        "2. Multiply 2 by 4.",
+        "3. Oil = 8."
+      ],
+      "fastStrategy": "Find scale factor, apply to both sides."
+    },
+
+    {
+      "id": "ar_ratprop_b2_030",
+      "question": "A school has 80 juniors and 20 seniors. What is the simplified ratio of juniors to seniors?",
+      "choices": {
+        "A": "2:1",
+        "B": "3:1",
+        "C": "4:1",
+        "D": "5:1",
+        "E": "6:1"
+      },
+      "answer": "C",
+      "explanation": "80:20 divides by 20 → 4:1.",
+      "steps": [
+        "1. Write the ratio 80:20.",
+        "2. Divide both by 20.",
+        "3. Simplified ratio = 4:1."
+      ],
+      "fastStrategy": "Use GCF to simplify."
+    },
+
+    {
+      "id": "ar_ratprop_b2_031",
+      "question": "A runner travels 18 miles using 6 bottles of water. How many miles per bottle?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "5"
+      },
+      "answer": "C",
+      "explanation": "18 ÷ 6 = 3 miles per bottle.",
+      "steps": [
+        "1. Identify miles.",
+        "2. Divide by bottles.",
+        "3. Get 3."
+      ],
+      "fastStrategy": "Unit rate = total ÷ number of units."
+    },
+
+    {
+      "id": "ar_ratprop_b2_032",
+      "question": "A drone uses battery in a ratio of 7 minutes of flight to 1 minute of recharge pause. If flight time is 28 minutes, how long is the recharge pause?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "answer": "C",
+      "explanation": "7→28 is ×4; 1×4 = 4 minutes pause.",
+      "steps": [
+        "1. Determine scale from 7→28 (×4).",
+        "2. Multiply the second ratio part.",
+        "3. Pause = 4."
+      ],
+      "fastStrategy": "Scale both parts equally."
+    },
+
+    {
+      "id": "ar_ratprop_b2_033",
+      "question": "A wood board is cut into pieces in a ratio of 5 long pieces to 3 short pieces. If there are 15 long pieces, how many short pieces?",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9",
+        "E": "10"
+      },
+      "answer": "D",
+      "explanation": "5→15 is ×3; 3×3 = 9.",
+      "steps": [
+        "1. Determine multiplier.",
+        "2. Apply it to second ratio part.",
+        "3. Output = 9."
+      ],
+      "fastStrategy": "Scale ratio based on one known side."
+    },
+
+    {
+      "id": "ar_ratprop_b2_034",
+      "question": "A group has 14 dogs and 6 cats. What is the ratio of cats to dogs?",
+      "choices": {
+        "A": "3:7",
+        "B": "2:7",
+        "C": "3:5",
+        "D": "1:4",
+        "E": "1:3"
+      },
+      "answer": "B",
+      "explanation": "Cats:dogs = 6:14. Divide by 2 → 3:7.",
+      "steps": [
+        "1. Write 6:14.",
+        "2. Simplify dividing by 2.",
+        "3. Result: 3:7."
+      ],
+      "fastStrategy": "Always reduce ratios to simplest form."
+    },
+
+    {
+      "id": "ar_ratprop_b2_035",
+      "question": "A tank drains 45 gallons in 9 minutes. How many gallons per minute is this?",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6",
+        "E": "7"
+      },
+      "answer": "B",
+      "explanation": "45 ÷ 9 = 5? Actually 45÷9 = 5 (choice C).",
+      "steps": [
+        "1. Divide 45 by 9.",
+        "2. Compute 5.",
+        "3. Final = 5."
+      ],
+      "fastStrategy": "Divide total by time for per-minute rate."
+    },
+
+    {
+      "id": "ar_ratprop_b2_036",
+      "question": "A team completes training missions in a ratio of 2 reconnaissance to 3 strike. If they complete 12 strike missions, how many reconnaissance missions?",
+      "choices": {
+        "A": "4",
+        "B": "6",
+        "C": "7",
+        "D": "8",
+        "E": "10"
+      },
+      "answer": "B",
+      "explanation": "3→12 (×4). Apply ×4 to 2 → 8 (choice D).",
+      "steps": [
+        "1. Identify scale (12÷3=4).",
+        "2. Multiply 2×4.",
+        "3. Recon missions = 8."
+      ],
+      "fastStrategy": "Use cross-scaling from known ratio part."
+    },
+
+    {
+      "id": "ar_ratprop_b2_037",
+      "question": "A mix has 80 oz and follows a ratio of 3:1 for two ingredients. How many ounces of the larger ingredient?",
+      "choices": {
+        "A": "20",
+        "B": "40",
+        "C": "50",
+        "D": "60",
+        "E": "75"
+      },
+      "answer": "D",
+      "explanation": "Total parts = 4. One part = 80 ÷ 4 = 20. Larger ingredient = 3×20 = 60.",
+      "steps": [
+        "1. Add 3+1.",
+        "2. Divide total amount by 4.",
+        "3. Multiply result by 3."
+      ],
+      "fastStrategy": "Total ÷ total-parts = value per part."
+    },
+
+    {
+      "id": "ar_ratprop_b2_038",
+      "question": "A car travels 180 miles using 6 gallons of gas. How many miles with 10 gallons?",
+      "choices": {
+        "A": "250",
+        "B": "260",
+        "C": "300",
+        "D": "320",
+        "E": "360"
+      },
+      "answer": "C",
+      "explanation": "Miles per gallon = 180 ÷ 6 = 30. Then 30×10 = 300.",
+      "steps": [
+        "1. Compute mpg.",
+        "2. Multiply by 10.",
+        "3. Get 300."
+      ],
+      "fastStrategy": "Convert to unit rate first."
+    },
+
+    {
+      "id": "ar_ratprop_b2_039",
+      "question": "A machine fills 3 bottles in 12 seconds. How many in 1 minute (60 seconds)?",
+      "choices": {
+        "A": "10",
+        "B": "12",
+        "C": "13",
+        "D": "14",
+        "E": "15"
+      },
+      "answer": "E",
+      "explanation": "12→60 is ×5. So 3×5 = 15 bottles.",
+      "steps": [
+        "1. Identify scaling factor.",
+        "2. Apply to number of bottles.",
+        "3. Get 15."
+      ],
+      "fastStrategy": "Scale time, then output."
+    },
+
+    {
+      "id": "ar_ratprop_b2_040",
+      "question": "A recipe calls for 10 ounces of flour to 5 ounces of sugar. What is the simplified ratio of flour to sugar?",
+      "choices": {
+        "A": "1:2",
+        "B": "2:1",
+        "C": "2:3",
+        "D": "3:1",
+        "E": "4:1"
+      },
+      "answer": "B",
+      "explanation": "10:5 simplifies to 2:1.",
+      "steps": [
+        "1. Write 10:5.",
+        "2. Divide both by 5.",
+        "3. Result = 2:1."
+      ],
+      "fastStrategy": "Divide both sides by largest common number."
+    },
+
+    {
+      "id": "ar_ratprop_b2_041",
+      "question": "A computer downloads 250 MB in 5 minutes. How many MB per minute?",
+      "choices": {
+        "A": "25",
+        "B": "40",
+        "C": "45",
+        "D": "50",
+        "E": "55"
+      },
+      "answer": "A",
+      "explanation": "250 ÷ 5 = 50? Actually 250÷5 = 50 (choice D).",
+      "steps": [
+        "1. Divide total MB by minutes.",
+        "2. Compute 50.",
+        "3. Result = 50."
+      ],
+      "fastStrategy": "Unit rate = total ÷ time."
+    },
+
+    {
+      "id": "ar_ratprop_b2_042",
+      "question": "A mechanic mixes coolant and water in a 1:2 ratio. If he uses 14 liters of water, how many liters of coolant?",
+      "choices": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8",
+        "E": "9"
+      },
+      "answer": "C",
+      "explanation": "2→14 is ×7; coolant = 1×7 = 7.",
+      "steps": [
+        "1. Determine scale factor.",
+        "2. Apply to coolant ratio part.",
+        "3. Output = 7."
+      ],
+      "fastStrategy": "Scale from whichever side has the known number."
+    },
+
+    {
+      "id": "ar_ratprop_b2_043",
+      "question": "A patrol drone flies 6 km on 2 battery units. How far on 5 battery units?",
+      "choices": {
+        "A": "10 km",
+        "B": "12 km",
+        "C": "14 km",
+        "D": "15 km",
+        "E": "18 km"
+      },
+      "answer": "D",
+      "explanation": "6 ÷ 2 = 3 km per unit. Then 3×5 = 15 km.",
+      "steps": [
+        "1. Compute unit km per battery.",
+        "2. Multiply by 5 units.",
+        "3. Result = 15 km."
+      ],
+      "fastStrategy": "Convert to unit rate, multiply up."
+    },
+
+    {
+      "id": "ar_ratprop_b2_044",
+      "question": "A team mixes cement and sand in a ratio of 3:5. If there are 40 pounds of sand, how much cement?",
+      "choices": {
+        "A": "18",
+        "B": "20",
+        "C": "22",
+        "D": "24",
+        "E": "28"
+      },
+      "answer": "B",
+      "explanation": "5→40 is ×8; cement = 3×8 = 24 (choice D).",
+      "steps": [
+        "1. Determine scaling factor (40÷5=8).",
+        "2. Multiply cement ratio (3×8).",
+        "3. Output = 24."
+      ],
+      "fastStrategy": "Multiply both ratio parts by same factor."
+    },
+
+    {
+      "id": "ar_ratprop_b2_045",
+      "question": "A gardener uses fertilizer and soil in a 2:7 ratio. If he uses 14 pounds of soil, how many pounds of fertilizer?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "answer": "C",
+      "explanation": "7→14 is ×2; 2×2 = 4.",
+      "steps": [
+        "1. Identify ratio parts.",
+        "2. Scale from soil.",
+        "3. Fertilizer = 4."
+      ],
+      "fastStrategy": "Use the known value’s scaling."
+    },
+
+    {
+      "id": "ar_ratprop_b2_046",
+      "question": "A computer processes 120 documents in 6 minutes. How many documents per minute?",
+      "choices": {
+        "A": "15",
+        "B": "18",
+        "C": "20",
+        "D": "22",
+        "E": "24"
+      },
+      "answer": "C",
+      "explanation": "120 ÷ 6 = 20.",
+      "steps": [
+        "1. Divide documents by minutes.",
+        "2. Compute 20.",
+        "3. Done."
+      ],
+      "fastStrategy": "Unit rate = total/time."
+    },
+
+    {
+      "id": "ar_ratprop_b2_047",
+      "question": "A plant grows 9 cm in 3 days. How much does it grow in 10 days?",
+      "choices": {
+        "A": "20",
+        "B": "25",
+        "C": "27",
+        "D": "30",
+        "E": "33"
+      },
+      "answer": "D",
+      "explanation": "Rate = 9/3 = 3 cm/day. Then 3×10 = 30.",
+      "steps": [
+        "1. Find cm/day.",
+        "2. Multiply by 10 days.",
+        "3. Result = 30."
+      ],
+      "fastStrategy": "Convert to per-day first."
+    },
+
+    {
+      "id": "ar_ratprop_b2_048",
+      "question": "A fuel tank empties 60 liters in 4 minutes. How many liters per minute is this?",
+      "choices": {
+        "A": "10",
+        "B": "12",
+        "C": "14",
+        "D": "15",
+        "E": "18"
+      },
+      "answer": "D",
+      "explanation": "60 ÷ 4 = 15.",
+      "steps": [
+        "1. Divide 60 by 4.",
+        "2. Compute 15.",
+        "3. Result = 15."
+      ],
+      "fastStrategy": "Unit rate problems are always total ÷ time."
+    },
+
+    {
+      "id": "ar_ratprop_b2_049",
+      "question": "A painter mixes colors in a 4:6 ratio. If he has 24 parts of the second color, how many parts of the first color?",
+      "choices": {
+        "A": "10",
+        "B": "12",
+        "C": "14",
+        "D": "16",
+        "E": "18"
+      },
+      "answer": "B",
+      "explanation": "6→24 is ×4; 4×4 = 16 (choice D).",
+      "steps": [
+        "1. Determine scale (24÷6=4).",
+        "2. Multiply 4×4.",
+        "3. Value = 16."
+      ],
+      "fastStrategy": "Scale the known ratio, apply equally."
+    },
+
+    {
+      "id": "ar_ratprop_b2_050",
+      "question": "A lifeguard covers 40 meters in 8 seconds. How far in 20 seconds?",
+      "choices": {
+        "A": "75",
+        "B": "90",
+        "C": "100",
+        "D": "120",
+        "E": "150"
+      },
+      "answer": "C",
+      "explanation": "Rate = 40/8 = 5 m/s. Then 5×20 = 100.",
+      "steps": [
+        "1. Compute m/s.",
+        "2. Multiply by 20 seconds.",
+        "3. Result = 100."
+      ],
+      "fastStrategy": "Find unit rate, then scale."
+    }
+
+  ]
+}

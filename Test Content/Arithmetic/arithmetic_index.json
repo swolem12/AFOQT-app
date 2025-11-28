@@ -1,0 +1,85 @@
+{
+  "patchId": "arithmetic_patch_index_01",
+  "title": "Arithmetic Reasoning Content Index",
+  "description": "Index all AFOQT Arithmetic Reasoning JSON files and expose subtopics/difficulty structure for the game engine and Copilot.",
+  "subjects": [
+    {
+      "id": "arithmetic_reasoning",
+      "displayName": "AFOQT Arithmetic Reasoning",
+      "isAfoqtOfficialSubject": true,
+      "officialTopicsPerPdf": [
+        "basic_arithmetic_word_problems",
+        "ratio_and_proportion",
+        "percent_problems",
+        "fractions_and_decimals",
+        "time_rate_work",
+        "probability",
+        "algebra_word_problems",
+        "average_word_problems"
+      ],
+      "mappedGameSubtopics": [
+        {
+          "subtopicId": "basic_arithmetic_word_problems",
+          "description": "Straightforward word problems involving basic operations and rate = work/time style reasoning.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "ratio_proportion_word_problems",
+          "description": "Setting up and solving ratio and proportion equations inside word problems (mixtures, scaling, map reading, etc.).",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "percent_word_problems",
+          "description": "Percent increase/decrease, simple interest-style problems, and percent-of/base/amount translation in word form.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "fractions_decimals_word_problems",
+          "description": "Word problems requiring conversions between fractions, decimals, and mixed numbers; operations in context.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "time_rate_work_word_problems",
+          "description": "Time, rate, and work problems including combined work, travel time, and productivity style scenarios.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "probability_word_problems",
+          "description": "Simple discrete probability, equally likely outcomes, and basic compound events framed as word problems.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "algebra_word_problems",
+          "description": "Using variables and simple linear equations to solve unknowns in word problems (age, mixtures, motion, etc.).",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "average_word_problems",
+          "description": "Average/mean word problems, weighted averages, and solving for missing value given total and count.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        }
+      ]
+    }
+  ],
+  "questionRoutingRules": {
+    "bySubtopicAndDifficulty": {
+      "strategy": "filename_inference",
+      "logicForCopilot": [
+        "Scan the Arithmetic Reasoning content directory (or zip) for all JSON files except shared schema/metadata files.",
+        "Assume filenames follow the pattern `<subtopicId>_<difficulty>_part<index>.json`.",
+        "Infer `subtopicId` and `difficulty` from the filename; normalize difficulty to one of: `beginner`, `advanced`, `expert`.",
+        "Load each file and append all `questions[]` into an in-memory registry keyed as `questions['arithmetic_reasoning'][subtopicId][difficulty]`.",
+        "Use `subjects[].mappedGameSubtopics` to validate that `subtopicId` is recognized and mark whether it is an official AFOQT topic.",
+        "Use this registry for study mode, drill mode, and AFOQT-style practice tests for Arithmetic Reasoning."
+      ]
+    }
+  }
+}

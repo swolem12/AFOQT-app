@@ -1,0 +1,509 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "time_rates_work",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+
+    {
+      "id": "ar_trw_b1_026",
+      "question": "A truck travels at a constant speed of 50 miles per hour. How long will it take to travel 125 miles?",
+      "choices": {
+        "A": "1.5 hours",
+        "B": "2 hours",
+        "C": "2.5 hours",
+        "D": "3 hours",
+        "E": "3.5 hours"
+      },
+      "answer": "C",
+      "explanation": "Time equals distance divided by rate. Divide 125 miles by 50 miles per hour to find the travel time.",
+      "steps": [
+        "1. Use t = d ÷ r (time = distance ÷ rate).",
+        "2. Compute 125 ÷ 50 = 2.5.",
+        "3. So the truck takes 2.5 hours."
+      ],
+      "fastStrategy": "Think: 50 mph → 100 miles takes 2 hours, then another 25 miles is half an hour."
+    },
+
+    {
+      "id": "ar_trw_b1_027",
+      "question": "A plane flies 420 miles in 3.5 hours. What is its average speed?",
+      "choices": {
+        "A": "100 mph",
+        "B": "110 mph",
+        "C": "115 mph",
+        "D": "120 mph",
+        "E": "130 mph"
+      },
+      "answer": "B",
+      "explanation": "Average speed is distance divided by time. Divide 420 miles by 3.5 hours.",
+      "steps": [
+        "1. Use r = d ÷ t.",
+        "2. Compute 420 ÷ 3.5.",
+        "3. 420 ÷ 3.5 = 120? Check: 3.5 × 100 = 350; 3.5 × 110 = 385; 3.5 × 120 = 420 → so r = 120 mph."
+      ],
+      "fastStrategy": "Multiply trial speeds by time to see which reconstructs the distance quickly."
+    },
+
+    {
+      "id": "ar_trw_b1_028",
+      "question": "A machine can fill 300 bottles in 10 minutes at a constant rate. How many bottles can it fill in 25 minutes?",
+      "choices": {
+        "A": "600",
+        "B": "650",
+        "C": "700",
+        "D": "725",
+        "E": "750"
+      },
+      "answer": "E",
+      "explanation": "First find the rate per minute, then multiply by the new time.",
+      "steps": [
+        "1. Rate = 300 ÷ 10 = 30 bottles per minute.",
+        "2. In 25 minutes: 30 × 25 = 750 bottles.",
+        "3. So the machine fills 750 bottles."
+      ],
+      "fastStrategy": "Scale proportionally: 25 is 2.5 times 10, so multiply 300 by 2.5."
+    },
+
+    {
+      "id": "ar_trw_b1_029",
+      "question": "A boat travels downstream at 18 mph and upstream at 12 mph. How long does it take to travel 36 miles upstream?",
+      "choices": {
+        "A": "1.5 hours",
+        "B": "2 hours",
+        "C": "2.5 hours",
+        "D": "3 hours",
+        "E": "3.5 hours"
+      },
+      "answer": "D",
+      "explanation": "Use the upstream speed because that is the direction of travel.",
+      "steps": [
+        "1. Upstream rate is 12 mph.",
+        "2. Time = distance ÷ rate = 36 ÷ 12.",
+        "3. 36 ÷ 12 = 3 hours."
+      ],
+      "fastStrategy": "Ignore the other direction’s speed unless the problem explicitly uses both."
+    },
+
+    {
+      "id": "ar_trw_b1_030",
+      "question": "Two cars start toward each other from towns 210 miles apart. One car travels at 45 mph and the other at 55 mph. How long until they meet?",
+      "choices": {
+        "A": "1.5 hours",
+        "B": "2 hours",
+        "C": "2.1 hours",
+        "D": "2.25 hours",
+        "E": "2.5 hours"
+      },
+      "answer": "B",
+      "explanation": "When moving toward each other, add their speeds to get the closing rate.",
+      "steps": [
+        "1. Closing rate = 45 + 55 = 100 mph.",
+        "2. Time = distance ÷ rate = 210 ÷ 100 = 2.1 hours.",
+        "3. 2.1 hours is just over 2 hours; the exact time is 2.1 hours."
+      ],
+      "fastStrategy": "For head-on motion, think 'combined speed' = sum of both speeds."
+    },
+
+    {
+      "id": "ar_trw_b1_031",
+      "question": "A worker assembles 96 parts in 6 hours. At the same rate, how many parts can be assembled in 9 hours?",
+      "choices": {
+        "A": "120",
+        "B": "132",
+        "C": "140",
+        "D": "144",
+        "E": "150"
+      },
+      "answer": "D",
+      "explanation": "Find the hourly rate, then scale up to 9 hours.",
+      "steps": [
+        "1. Rate = 96 ÷ 6 = 16 parts per hour.",
+        "2. In 9 hours: 16 × 9 = 144 parts.",
+        "3. So 144 parts can be assembled."
+      ],
+      "fastStrategy": "Once you have 'per hour', any new time is just a multiplier."
+    },
+
+    {
+      "id": "ar_trw_b1_032",
+      "question": "A plane flies at 480 mph. How far can it travel in 2 hours 15 minutes?",
+      "choices": {
+        "A": "960 miles",
+        "B": "1,000 miles",
+        "C": "1,050 miles",
+        "D": "1,080 miles",
+        "E": "1,120 miles"
+      },
+      "answer": "D",
+      "explanation": "Convert the time to hours, then multiply by the speed.",
+      "steps": [
+        "1. Convert 2 hours 15 minutes to hours: 15 minutes = 0.25 hours, so total = 2.25 hours.",
+        "2. Distance = 480 × 2.25.",
+        "3. 480 × 2 = 960 and 480 × 0.25 = 120; sum = 1,080 miles."
+      ],
+      "fastStrategy": "Quarter-hours (15 minutes) are 0.25 hours; multiply in two pieces: ×2 and ×0.25."
+    },
+
+    {
+      "id": "ar_trw_b1_033",
+      "question": "A team can complete a project in 12 days working 6 hours per day. If they instead work 8 hours per day at the same rate, how many days will they need?",
+      "choices": {
+        "A": "8 days",
+        "B": "9 days",
+        "C": "10 days",
+        "D": "11 days",
+        "E": "12 days"
+      },
+      "answer": "A",
+      "explanation": "Total work is hours × days. That total stays the same when you change hours per day.",
+      "steps": [
+        "1. Original total hours: 12 days × 6 hours/day = 72 hours of work.",
+        "2. New hours per day: 8 hours/day.",
+        "3. Days = total hours ÷ hours per day = 72 ÷ 8 = 9 days."
+      ],
+      "fastStrategy": "Keep 'total hours of work' constant; then divide by new hours/day."
+    },
+
+    {
+      "id": "ar_trw_b1_034",
+      "question": "A pump empties a tank in 7 hours at a constant rate of 400 gallons per hour. How many gallons does the tank hold?",
+      "choices": {
+        "A": "1,800",
+        "B": "2,400",
+        "C": "2,800",
+        "D": "3,000",
+        "E": "3,200"
+      },
+      "answer": "E",
+      "explanation": "Total amount is rate times time.",
+      "steps": [
+        "1. Rate = 400 gallons/hour.",
+        "2. Time = 7 hours.",
+        "3. Capacity = 400 × 7 = 2,800 gallons."
+      ],
+      "fastStrategy": "For 'empties in X hours', multiply rate by hours to get total capacity."
+    },
+
+    {
+      "id": "ar_trw_b1_035",
+      "question": "At a steady pace, a jogger runs 4 miles in 32 minutes. At this pace, how long will it take to run 10 miles?",
+      "choices": {
+        "A": "60 minutes",
+        "B": "70 minutes",
+        "C": "75 minutes",
+        "D": "80 minutes",
+        "E": "90 minutes"
+      },
+      "answer": "D",
+      "explanation": "Find the time per mile, then scale to 10 miles.",
+      "steps": [
+        "1. Time per mile = 32 minutes ÷ 4 miles = 8 minutes per mile.",
+        "2. For 10 miles: 8 × 10 = 80 minutes.",
+        "3. So it takes 80 minutes."
+      ],
+      "fastStrategy": "When rates are 'per mile', divide first, then multiply by the new distance."
+    },
+
+    {
+      "id": "ar_trw_b1_036",
+      "question": "Two workers together can finish a job in 4 hours. One worker alone takes 12 hours. How long does the other worker take alone?",
+      "choices": {
+        "A": "5 hours",
+        "B": "6 hours",
+        "C": "7 hours",
+        "D": "8 hours",
+        "E": "9 hours"
+      },
+      "answer": "B",
+      "explanation": "Treat each time as a rate (jobs per hour) and use rate addition.",
+      "steps": [
+        "1. Together they do 1 job in 4 hours → rate = 1/4 job per hour.",
+        "2. Worker A alone takes 12 hours → rate = 1/12 job per hour.",
+        "3. Let worker B’s rate be 1/x. Then 1/12 + 1/x = 1/4. Subtract 1/12 from 1/4: 1/4 − 1/12 = 2/12 = 1/6 → so 1/x = 1/6 and x = 6 hours."
+      ],
+      "fastStrategy": "Work problems = add/subtract rates (fractions of a job per hour), not times."
+    },
+
+    {
+      "id": "ar_trw_b1_037",
+      "question": "A bus averages 36 miles per hour. How far can it travel in 2 hours 30 minutes?",
+      "choices": {
+        "A": "72 miles",
+        "B": "80 miles",
+        "C": "84 miles",
+        "D": "90 miles",
+        "E": "96 miles"
+      },
+      "answer": "C",
+      "explanation": "Convert 2 hours 30 minutes to 2.5 hours and multiply by the speed.",
+      "steps": [
+        "1. 30 minutes = 0.5 hours, so total time = 2.5 hours.",
+        "2. Distance = 36 × 2.5.",
+        "3. 36 × 2 = 72 and 36 × 0.5 = 18; 72 + 18 = 90 miles."
+      ],
+      "fastStrategy": "×2.5 = ×5 then ÷2; or split as ×2 plus ×0.5."
+    },
+
+    {
+      "id": "ar_trw_b1_038",
+      "question": "An aircraft travels 960 miles in 3 hours. What is its speed in miles per hour?",
+      "choices": {
+        "A": "280 mph",
+        "B": "300 mph",
+        "C": "310 mph",
+        "D": "320 mph",
+        "E": "340 mph"
+      },
+      "answer": "D",
+      "explanation": "Use the speed formula: distance divided by time.",
+      "steps": [
+        "1. Speed = distance ÷ time.",
+        "2. Compute 960 ÷ 3 = 320.",
+        "3. So the speed is 320 mph."
+      ],
+      "fastStrategy": "Divide 96 by 3 (32), then add the zero back (320)."
+    },
+
+    {
+      "id": "ar_trw_b1_039",
+      "question": "A repair crew can resurface 3 miles of road in 6 hours. How many miles can they resurface in 15 hours at the same rate?",
+      "choices": {
+        "A": "5 miles",
+        "B": "6 miles",
+        "C": "7.5 miles",
+        "D": "8 miles",
+        "E": "9 miles"
+      },
+      "answer": "E",
+      "explanation": "Find miles per hour, then scale up to 15 hours.",
+      "steps": [
+        "1. Rate = 3 ÷ 6 = 0.5 miles per hour.",
+        "2. In 15 hours: 0.5 × 15 = 7.5 miles.",
+        "3. So they can resurface 7.5 miles."
+      ],
+      "fastStrategy": "If rate is 0.5 per hour, it's 'half the hours' as miles."
+    },
+
+    {
+      "id": "ar_trw_b1_040",
+      "question": "A small pump drains a pool in 10 hours. A larger pump drains the same pool in 5 hours. If both pumps work together, how long will it take to drain the pool?",
+      "choices": {
+        "A": "2 hours",
+        "B": "3 hours",
+        "C": "3.33 hours",
+        "D": "4 hours",
+        "E": "4.5 hours"
+      },
+      "answer": "D",
+      "explanation": "Add their work rates (fraction of the pool drained per hour).",
+      "steps": [
+        "1. Small pump rate = 1/10 pool per hour.",
+        "2. Large pump rate = 1/5 pool per hour.",
+        "3. Combined rate = 1/10 + 1/5 = 1/10 + 2/10 = 3/10 pool per hour → time = 1 ÷ (3/10) = 10/3 ≈ 3.33 hours."
+      ],
+      "fastStrategy": "Convert times to 'jobs per hour', add them, then invert to find time."
+    },
+
+    {
+      "id": "ar_trw_b1_041",
+      "question": "A drone surveys 120 acres in 2 hours. At the same rate, how long will it take to survey 300 acres?",
+      "choices": {
+        "A": "4 hours",
+        "B": "4.5 hours",
+        "C": "5 hours",
+        "D": "5.5 hours",
+        "E": "6 hours"
+      },
+      "answer": "C",
+      "explanation": "Find acres per hour, then divide the new total by that rate.",
+      "steps": [
+        "1. Rate = 120 ÷ 2 = 60 acres per hour.",
+        "2. Time = 300 ÷ 60 = 5 hours.",
+        "3. So it takes 5 hours."
+      ],
+      "fastStrategy": "If you know 'per hour', just do new total ÷ rate."
+    },
+
+    {
+      "id": "ar_trw_b1_042",
+      "question": "A cyclist rides 18 miles in 1.5 hours. If they ride at the same speed, how far will they travel in 4 hours?",
+      "choices": {
+        "A": "40 miles",
+        "B": "42 miles",
+        "C": "44 miles",
+        "D": "46 miles",
+        "E": "48 miles"
+      },
+      "answer": "E",
+      "explanation": "First find the speed, then multiply by 4 hours.",
+      "steps": [
+        "1. Speed = 18 ÷ 1.5 = 12 mph.",
+        "2. Distance in 4 hours = 12 × 4 = 48 miles.",
+        "3. So they travel 48 miles."
+      ],
+      "fastStrategy": "When time is 1.5 hours, think 'divide by 3 then ×2' to find speed."
+    },
+
+    {
+      "id": "ar_trw_b1_043",
+      "question": "A technician completes a task in 9 hours. If another technician works at twice that rate, how long would the faster technician take alone?",
+      "choices": {
+        "A": "3 hours",
+        "B": "4.5 hours",
+        "C": "5 hours",
+        "D": "6 hours",
+        "E": "7.5 hours"
+      },
+      "answer": "B",
+      "explanation": "‘Twice the rate’ means half the time.",
+      "steps": [
+        "1. Original time = 9 hours.",
+        "2. Faster tech works at twice the rate.",
+        "3. Time = 9 ÷ 2 = 4.5 hours."
+      ],
+      "fastStrategy": "If rate doubles, time is cut in half."
+    },
+
+    {
+      "id": "ar_trw_b1_044",
+      "question": "A bus leaves base at 08:00 and arrives at a city 156 miles away at 11:54. What is its average speed?",
+      "choices": {
+        "A": "35 mph",
+        "B": "40 mph",
+        "C": "42 mph",
+        "D": "45 mph",
+        "E": "48 mph"
+      },
+      "answer": "C",
+      "explanation": "Convert the time interval into hours, then divide distance by time.",
+      "steps": [
+        "1. Time from 08:00 to 11:54 is 3 hours 54 minutes.",
+        "2. 54 minutes is 54/60 = 0.9 hours, so total time = 3.9 hours.",
+        "3. Speed = 156 ÷ 3.9 = 40 mph."
+      ],
+      "fastStrategy": "Use approximate fractions of an hour: 54 minutes is close to 0.9 hours."
+    },
+
+    {
+      "id": "ar_trw_b1_045",
+      "question": "A small printer can print a report in 18 minutes. A faster printer can do the same job in 12 minutes. If both printers work together, how many minutes will it take to print the report?",
+      "choices": {
+        "A": "7.2 minutes",
+        "B": "7.5 minutes",
+        "C": "8 minutes",
+        "D": "9 minutes",
+        "E": "10 minutes"
+      },
+      "answer": "D",
+      "explanation": "Work problems use rates (jobs per minute) that you add together.",
+      "steps": [
+        "1. Small printer rate = 1/18 job per minute.",
+        "2. Fast printer rate = 1/12 job per minute.",
+        "3. Combined rate = 1/18 + 1/12 = (2/36 + 3/36) = 5/36 job/min → time = 1 ÷ (5/36) = 36/5 = 7.2 minutes."
+      ],
+      "fastStrategy": "Convert times to fractions of a job per minute, add, then invert the sum."
+    },
+
+    {
+      "id": "ar_trw_b1_046",
+      "question": "A convoy travels at an average speed of 32 mph. How long will it take to travel 120 miles?",
+      "choices": {
+        "A": "3 hours",
+        "B": "3.5 hours",
+        "C": "3.75 hours",
+        "D": "4 hours",
+        "E": "4.5 hours"
+      },
+      "answer": "C",
+      "explanation": "Time equals distance divided by speed.",
+      "steps": [
+        "1. Time = 120 ÷ 32.",
+        "2. Simplify: 120 ÷ 32 = 3.75 hours.",
+        "3. So it takes 3.75 hours (3 hours 45 minutes)."
+      ],
+      "fastStrategy": "Estimate first: 32×4 = 128 (too big), 32×3.5 = 112, so answer should be a bit more than 3.5."
+    },
+
+    {
+      "id": "ar_trw_b1_047",
+      "question": "A satellite completes one orbit in 90 minutes. How many orbits will it complete in 7.5 hours?",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7",
+        "E": "8"
+      },
+      "answer": "C",
+      "explanation": "Convert 7.5 hours to minutes, then divide by 90 minutes per orbit.",
+      "steps": [
+        "1. 7.5 hours = 7.5 × 60 = 450 minutes.",
+        "2. Orbits = 450 ÷ 90.",
+        "3. 450 ÷ 90 = 5 orbits."
+      ],
+      "fastStrategy": "Always match units: hours to hours, or minutes to minutes, before dividing."
+    },
+
+    {
+      "id": "ar_trw_b1_048",
+      "question": "A mechanic can complete 20 inspections in 5 hours. How many inspections can be completed in 8 hours at the same rate?",
+      "choices": {
+        "A": "28",
+        "B": "30",
+        "C": "32",
+        "D": "34",
+        "E": "36"
+      },
+      "answer": "C",
+      "explanation": "Find inspections per hour, then multiply by 8.",
+      "steps": [
+        "1. Rate = 20 ÷ 5 = 4 inspections per hour.",
+        "2. In 8 hours: 4 × 8 = 32 inspections.",
+        "3. So 32 inspections can be completed."
+      ],
+      "fastStrategy": "Simple proportion: hours increased by factor of 8/5, so inspections increase by same factor."
+    },
+
+    {
+      "id": "ar_trw_b1_049",
+      "question": "A train averages 72 mph. How long does it take to go 180 miles?",
+      "choices": {
+        "A": "2 hours",
+        "B": "2.25 hours",
+        "C": "2.5 hours",
+        "D": "2.75 hours",
+        "E": "3 hours"
+      },
+      "answer": "B",
+      "explanation": "Use time = distance ÷ rate.",
+      "steps": [
+        "1. Time = 180 ÷ 72.",
+        "2. Simplify by dividing both by 12: 180 ÷ 12 = 15, 72 ÷ 12 = 6 → 15 ÷ 6 = 2.5.",
+        "3. So time is 2.5 hours."
+      ],
+      "fastStrategy": "Reduce the fraction by common factors before dividing."
+    },
+
+    {
+      "id": "ar_trw_b1_050",
+      "question": "A technician cleans 18 filters in 3 hours. At this rate, how long will it take to clean 54 filters?",
+      "choices": {
+        "A": "6 hours",
+        "B": "7 hours",
+        "C": "8 hours",
+        "D": "9 hours",
+        "E": "10 hours"
+      },
+      "answer": "A",
+      "explanation": "Find filters per hour, then divide the new total by that rate.",
+      "steps": [
+        "1. Rate = 18 ÷ 3 = 6 filters per hour.",
+        "2. Time for 54 filters = 54 ÷ 6.",
+        "3. 54 ÷ 6 = 9 hours."
+      ],
+      "fastStrategy": "Spot that 54 is 3 times 18; the time is also 3 times the original 3 hours (9 hours)."
+    }
+
+  ]
+}

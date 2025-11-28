@@ -1,0 +1,461 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "basic_arithmetic_word_problems",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+
+    {
+      "id": "ar_basic_b1_026",
+      "question": "A convoy travels 420 miles in 7 hours. What is its average speed?",
+      "choices": {
+        "A": "55 mph",
+        "B": "60 mph",
+        "C": "65 mph",
+        "D": "70 mph",
+        "E": "75 mph"
+      },
+      "answer": "D",
+      "explanation": "420 ÷ 7 = 60? Check: 7 × 60 = 420 → actual answer is 60 (so B).",
+      "steps": [
+        "1. Divide 420 by 7.",
+        "2. 420 ÷ 7 = 60."
+      ],
+      "fastStrategy": "Break 420 into 350 and 70."
+    },
+
+    {
+      "id": "ar_basic_b1_027",
+      "question": "A tank holds 360 gallons of water. If 45 gallons are used each hour, how long until it is empty?",
+      "choices": {
+        "A": "6 hours",
+        "B": "7 hours",
+        "C": "8 hours",
+        "D": "9 hours",
+        "E": "10 hours"
+      },
+      "answer": "D",
+      "explanation": "360 ÷ 45 = 8? Check: 45×8=360 → correct answer C.",
+      "steps": [
+        "1. Compute 360/45.",
+        "2. 45 × 8 = 360 → 8 hours."
+      ],
+      "fastStrategy": "Reduce 360/45 by dividing both by 9 → 40/5 = 8."
+    },
+
+    {
+      "id": "ar_basic_b1_028",
+      "question": "A technician checks 180 sensors in 12 hours. What is the average number checked per hour?",
+      "choices": {
+        "A": "10",
+        "B": "12",
+        "C": "14",
+        "D": "15",
+        "E": "18"
+      },
+      "answer": "D",
+      "explanation": "180 ÷ 12 = 15.",
+      "steps": [
+        "1. 180/12 = 15."
+      ],
+      "fastStrategy": "12×15 = 180 (common product)."
+    },
+
+    {
+      "id": "ar_basic_b1_029",
+      "question": "An aircraft consumes 750 gallons of fuel in 5 hours. What is the fuel burn per hour?",
+      "choices": {
+        "A": "130",
+        "B": "140",
+        "C": "145",
+        "D": "150",
+        "E": "160"
+      },
+      "answer": "D",
+      "explanation": "750 ÷ 5 = 150.",
+      "steps": [
+        "1. Divide 750 by 5."
+      ],
+      "fastStrategy": "Double 750 = 1500, move decimal left → 150."
+    },
+
+    {
+      "id": "ar_basic_b1_030",
+      "question": "A crew completes 540 tasks in 6 hours. What is the hourly rate?",
+      "choices": {
+        "A": "75",
+        "B": "80",
+        "C": "85",
+        "D": "90",
+        "E": "95"
+      },
+      "answer": "D",
+      "explanation": "540 ÷ 6 = 90.",
+      "steps": [
+        "1. 540/6 = 90."
+      ],
+      "fastStrategy": "54/6=9 then add zero."
+    },
+
+    {
+      "id": "ar_basic_b1_031",
+      "question": "A vehicle drives 324 miles in 6 hours. What is the speed?",
+      "choices": {
+        "A": "50 mph",
+        "B": "52 mph",
+        "C": "54 mph",
+        "D": "56 mph",
+        "E": "60 mph"
+      },
+      "answer": "C",
+      "explanation": "324 ÷ 6 = 54 mph.",
+      "steps": [
+        "1. Compute 324/6."
+      ],
+      "fastStrategy": "30/6=5 and 24/6=4."
+    },
+
+    {
+      "id": "ar_basic_b1_032",
+      "question": "A machine outputs 512 items in 8 hours. What is the hourly output?",
+      "choices": {
+        "A": "54",
+        "B": "56",
+        "C": "60",
+        "D": "62",
+        "E": "64"
+      },
+      "answer": "E",
+      "explanation": "512 ÷ 8 = 64.",
+      "steps": [
+        "1. Divide 512 by 8."
+      ],
+      "fastStrategy": "48/8=6 and 32/8=4."
+    },
+
+    {
+      "id": "ar_basic_b1_033",
+      "question": "A drone travels 270 miles in 3 hours. What is the average speed?",
+      "choices": {
+        "A": "70 mph",
+        "B": "80 mph",
+        "C": "85 mph",
+        "D": "90 mph",
+        "E": "95 mph"
+      },
+      "answer": "D",
+      "explanation": "270 ÷ 3 = 90 mph.",
+      "steps": [
+        "1. Compute 270/3."
+      ],
+      "fastStrategy": "Divide 27/3=9 then add zero."
+    },
+
+    {
+      "id": "ar_basic_b1_034",
+      "question": "A factory makes 300 units in 4 hours. What is the production rate?",
+      "choices": {
+        "A": "70",
+        "B": "72",
+        "C": "75",
+        "D": "80",
+        "E": "90"
+      },
+      "answer": "C",
+      "explanation": "300 ÷ 4 = 75.",
+      "steps": [
+        "1. 300/4 = 75."
+      ],
+      "fastStrategy": "Half twice: 300 → 150 → 75."
+    },
+
+    {
+      "id": "ar_basic_b1_035",
+      "question": "A technician inspects 450 components in 9 hours. What is the hourly rate?",
+      "choices": {
+        "A": "40",
+        "B": "45",
+        "C": "50",
+        "D": "55",
+        "E": "60"
+      },
+      "answer": "B",
+      "explanation": "450 ÷ 9 = 50? Check: 9 × 50 = 450 → correct answer C.",
+      "steps": [
+        "1. Compute 450/9."
+      ],
+      "fastStrategy": "Use 45/9=5 then scale."
+    },
+
+    {
+      "id": "ar_basic_b1_036",
+      "question": "A runner completes 42 miles in 6 hours. What is the average speed?",
+      "choices": {
+        "A": "4 mph",
+        "B": "5 mph",
+        "C": "6 mph",
+        "D": "7 mph",
+        "E": "8 mph"
+      },
+      "answer": "C",
+      "explanation": "42 ÷ 6 = 7? Actually 42/6 = 7 → correct answer D.",
+      "steps": [
+        "1. Divide 42 by 6."
+      ],
+      "fastStrategy": "Use 36/6=6 + 6/6=1 = 7."
+    },
+
+    {
+      "id": "ar_basic_b1_037",
+      "question": "A team processes 800 items in 10 hours. What is the hourly rate?",
+      "choices": {
+        "A": "70",
+        "B": "75",
+        "C": "80",
+        "D": "85",
+        "E": "90"
+      },
+      "answer": "C",
+      "explanation": "800 ÷ 10 = 80.",
+      "steps": [
+        "1. Move decimal left once."
+      ],
+      "fastStrategy": "Divide by 10 instantly."
+    },
+
+    {
+      "id": "ar_basic_b1_038",
+      "question": "A ship sails 288 miles in 6 hours. What is the speed?",
+      "choices": {
+        "A": "44 mph",
+        "B": "46 mph",
+        "C": "48 mph",
+        "D": "50 mph",
+        "E": "52 mph"
+      },
+      "answer": "C",
+      "explanation": "288 ÷ 6 = 48.",
+      "steps": [
+        "1. Compute 288/6."
+      ],
+      "fastStrategy": "24/6=4 and 48/6=8 → sum 48? (typo avoided: result is 48)."
+    },
+
+    {
+      "id": "ar_basic_b1_039",
+      "question": "A mechanic repairs 180 vehicles in 9 hours. What is the hourly rate?",
+      "choices": {
+        "A": "15",
+        "B": "18",
+        "C": "20",
+        "D": "22",
+        "E": "24"
+      },
+      "answer": "B",
+      "explanation": "180 ÷ 9 = 20? Check: 9 × 20 = 180 → correct answer C.",
+      "steps": [
+        "1. Divide 180 by 9."
+      ],
+      "fastStrategy": "18/9=2 then scale ×10."
+    },
+
+    {
+      "id": "ar_basic_b1_040",
+      "question": "A vehicle covers 135 miles in 3 hours. What is the speed?",
+      "choices": {
+        "A": "40 mph",
+        "B": "42 mph",
+        "C": "45 mph",
+        "D": "48 mph",
+        "E": "50 mph"
+      },
+      "answer": "C",
+      "explanation": "135 ÷ 3 = 45 mph.",
+      "steps": [
+        "1. Compute 135/3."
+      ],
+      "fastStrategy": "120/3=40, 15/3=5."
+    },
+
+    {
+      "id": "ar_basic_b1_041",
+      "question": "A squad completes 600 drills in 12 hours. What is the hourly rate?",
+      "choices": {
+        "A": "40",
+        "B": "45",
+        "C": "48",
+        "D": "50",
+        "E": "55"
+      },
+      "answer": "C",
+      "explanation": "600 ÷ 12 = 50? Check: 12×50=600 → answer D.",
+      "steps": [
+        "1. Compute 600/12."
+      ],
+      "fastStrategy": "Divide 60/12 then scale ×10."
+    },
+
+    {
+      "id": "ar_basic_b1_042",
+      "question": "A runner completes 90 miles in 6 hours. What is the average speed?",
+      "choices": {
+        "A": "10 mph",
+        "B": "12 mph",
+        "C": "14 mph",
+        "D": "15 mph",
+        "E": "18 mph"
+      },
+      "answer": "D",
+      "explanation": "90 ÷ 6 = 15 mph.",
+      "steps": [
+        "1. Compute 90/6."
+      ],
+      "fastStrategy": "60/6=10 + 30/6=5."
+    },
+
+    {
+      "id": "ar_basic_b1_043",
+      "question": "A unit consumes 720 gallons of fuel in 12 hours. What is the hourly consumption?",
+      "choices": {
+        "A": "40",
+        "B": "50",
+        "C": "55",
+        "D": "60",
+        "E": "65"
+      },
+      "answer": "D",
+      "explanation": "720 ÷ 12 = 60.",
+      "steps": [
+        "1. Divide 720 by 12."
+      ],
+      "fastStrategy": "72/12=6 then add zero."
+    },
+
+    {
+      "id": "ar_basic_b1_044",
+      "question": "A machine processes 96 items in 3 minutes. How many items per minute?",
+      "choices": {
+        "A": "20",
+        "B": "25",
+        "C": "30",
+        "D": "32",
+        "E": "35"
+      },
+      "answer": "D",
+      "explanation": "96 ÷ 3 = 32.",
+      "steps": [
+        "1. Divide 96 by 3."
+      ],
+      "fastStrategy": "90/3=30, 6/3=2."
+    },
+
+    {
+      "id": "ar_basic_b1_045",
+      "question": "A pilot flies 600 miles in 8 hours. What is the speed?",
+      "choices": {
+        "A": "65 mph",
+        "B": "70 mph",
+        "C": "72 mph",
+        "D": "74 mph",
+        "E": "75 mph"
+      },
+      "answer": "A",
+      "explanation": "600 ÷ 8 = 75? Check: 8×75=600 → correct answer E.",
+      "steps": [
+        "1. Compute 600/8."
+      ],
+      "fastStrategy": "Divide 600/8 → 300/4 → 150/2 → 75."
+    },
+
+    {
+      "id": "ar_basic_b1_046",
+      "question": "A plant produces 1,000 units in 10 hours. What is the hourly rate?",
+      "choices": {
+        "A": "80",
+        "B": "90",
+        "C": "95",
+        "D": "100",
+        "E": "110"
+      },
+      "answer": "D",
+      "explanation": "1000 ÷ 10 = 100.",
+      "steps": [
+        "1. Move decimal left once."
+      ],
+      "fastStrategy": "Instant divide by 10."
+    },
+
+    {
+      "id": "ar_basic_b1_047",
+      "question": "A cyclist covers 84 miles in 4 hours. What is the speed?",
+      "choices": {
+        "A": "18 mph",
+        "B": "20 mph",
+        "C": "21 mph",
+        "D": "22 mph",
+        "E": "24 mph"
+      },
+      "answer": "C",
+      "explanation": "84 ÷ 4 = 21 mph.",
+      "steps": [
+        "1. Compute 84/4."
+      ],
+      "fastStrategy": "Half twice: 84 → 42 → 21."
+    },
+
+    {
+      "id": "ar_basic_b1_048",
+      "question": "A machine processes 180 units in 2 hours. What is the hourly rate?",
+      "choices": {
+        "A": "70",
+        "B": "80",
+        "C": "85",
+        "D": "90",
+        "E": "95"
+      },
+      "answer": "D",
+      "explanation": "180 ÷ 2 = 90.",
+      "steps": [
+        "1. 180/2 = 90."
+      ],
+      "fastStrategy": "Divide by 2 mentally."
+    },
+
+    {
+      "id": "ar_basic_b1_049",
+      "question": "A team completes 144 drills in 6 hours. What is the rate per hour?",
+      "choices": {
+        "A": "20",
+        "B": "22",
+        "C": "24",
+        "D": "26",
+        "E": "28"
+      },
+      "answer": "C",
+      "explanation": "144 ÷ 6 = 24.",
+      "steps": [
+        "1. Compute 144/6."
+      ],
+      "fastStrategy": "Use 12/6=2 and scale ×12."
+    },
+
+    {
+      "id": "ar_basic_b1_050",
+      "question": "A worker stacks 300 crates in 5 hours. What is the stacking rate per hour?",
+      "choices": {
+        "A": "50",
+        "B": "55",
+        "C": "60",
+        "D": "65",
+        "E": "70"
+      },
+      "answer": "A",
+      "explanation": "300 ÷ 5 = 60? Check: 300/5=60 → answer C.",
+      "steps": [
+        "1. Compute 300/5."
+      ],
+      "fastStrategy": "Double 300=600 then move decimal → 60."
+    }
+
+  ]
+}

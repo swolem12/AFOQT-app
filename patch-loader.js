@@ -28,6 +28,25 @@ async function loadPatch18Config() {
     }
 }
 
+// Patch 19 configuration (Arithmetic Reasoning)
+let patch19Config = null;
+
+async function loadPatch19Config() {
+    try {
+        const response = await fetch('./Test Content/Arithmetic/Patch_19.json');
+        if (!response.ok) {
+            console.warn('Patch 19 config not found');
+            return null;
+        }
+        patch19Config = await response.json();
+        console.log('✓ Patch 19 config loaded');
+        return patch19Config;
+    } catch (error) {
+        console.error('Failed to load Patch 19 config:', error);
+        return null;
+    }
+}
+
 /**
  * Parse filename to extract subtopicId and difficulty
  * Pattern: <subtopicId>_<difficulty>_part<N>.json
@@ -66,8 +85,23 @@ function parseFilename(filename) {
  */
 function findSubjectForSubtopic(subtopicId) {
     if (!patch18Config) return null;
-    
     for (const subject of patch18Config.subjects) {
+        const mapping = subject.mappedGameSubtopics.find(m => m.subtopicId === subtopicId);
+        if (mapping) {
+            return {
+                subjectId: subject.id,
+                displayName: subject.displayName,
+                isAfoqtOfficial: subject.isAfoqtOfficialSubject,
+                mapping: mapping
+            };
+        }
+    }
+    return null;
+}
+
+function findSubjectForSubtopicPatch19(subtopicId) {
+    if (!patch19Config) return null;
+    for (const subject of patch19Config.subjects) {
         const mapping = subject.mappedGameSubtopics.find(m => m.subtopicId === subtopicId);
         if (mapping) {
             return {
@@ -105,6 +139,21 @@ async function loadVocabularyFile(filename) {
 async function loadMathKnowledgeFile(filename) {
     try {
         const response = await fetch(`./Test Content/Math/${filename}`);
+        if (!response.ok) {
+            console.warn(`Failed to load ${filename}`);
+            return null;
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error(`Error loading ${filename}:`, error);
+        return null;
+    }
+}
+
+async function loadArithmeticFile(filename) {
+    try {
+        const response = await fetch(`./Test Content/Arithmetic/${filename}`);
         if (!response.ok) {
             console.warn(`Failed to load ${filename}`);
             return null;
@@ -296,6 +345,56 @@ async function loadAllMathKnowledgeContent() {
     console.log(`✓ Loaded ${loadedCount} math knowledge files (${errorCount} errors)`);
     console.log('Math question registry:', questionRegistry.math_knowledge);
     
+    return questionRegistry;
+}
+
+/**
+ * Load all arithmetic reasoning files (Patch 19) and build question registry
+ */
+async function loadAllArithmeticContent() {
+    if (!patch19Config) {
+        console.warn('Patch 19 config not loaded; skipping arithmetic content');
+        return questionRegistry;
+    }
+    console.log('Loading arithmetic reasoning content...');
+
+    // Derive file list by scanning known subtopics/difficulties; allow parts 1..5
+    const subtopics = patch19Config.arithmeticContent.fileNamingConvention.subtopicIdExamples;
+    const difficulties = patch19Config.arithmeticContent.fileNamingConvention.difficultyLevels;
+    const files = [];
+    for (const s of subtopics) {
+        for (const d of difficulties) {
+            for (let part = 1; part <= 5; part++) {
+                files.push(`${s}_${d}_part${part}.json`);
+            }
+        }
+    }
+
+    let loadedCount = 0;
+    let errorCount = 0;
+    const loadPromises = files.map(async (filename) => {
+        const data = await loadArithmeticFile(filename);
+        if (!data || !data.questions) {
+            return; // not all generated files exist; skip silently
+        }
+        const parsed = parseFilename(filename);
+        if (!parsed) return;
+        const subjectInfo = findSubjectForSubtopicPatch19(parsed.subtopicId);
+        if (!subjectInfo) {
+            console.warn(`No subject mapping (Patch 19) for subtopic: ${parsed.subtopicId}`);
+            return;
+        }
+        if (!questionRegistry[subjectInfo.subjectId]) questionRegistry[subjectInfo.subjectId] = {};
+        if (!questionRegistry[subjectInfo.subjectId][parsed.subtopicId]) {
+            questionRegistry[subjectInfo.subjectId][parsed.subtopicId] = { beginner: [], advanced: [], expert: [] };
+        }
+        questionRegistry[subjectInfo.subjectId][parsed.subtopicId][parsed.difficulty].push(...data.questions);
+        loadedCount++;
+    });
+
+    await Promise.all(loadPromises);
+    console.log(`✓ Loaded ${loadedCount} arithmetic files (${errorCount} errors)`);
+    console.log('Arithmetic question registry:', questionRegistry.arithmetic_reasoning);
     return questionRegistry;
 }
 
@@ -522,6 +621,12 @@ async function initializePatch18() {
     
     // Load math knowledge content
     await loadAllMathKnowledgeContent();
+
+    // Load Patch 19 and arithmetic content
+    await loadPatch19Config();
+    if (patch19Config) {
+        await loadAllArithmeticContent();
+    }
     
     console.log('✓ Patch 18 initialized');
     return true;

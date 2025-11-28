@@ -1,0 +1,509 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "percent_problems",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+
+    {
+      "id": "ar_pct_b1_026",
+      "question": "What is 10% of 250?",
+      "choices": {
+        "A": "20",
+        "B": "22",
+        "C": "25",
+        "D": "30",
+        "E": "35"
+      },
+      "answer": "C",
+      "explanation": "10% of 250 is 250 ÷ 10 = 25.",
+      "steps": [
+        "1. Recognize 10% means one-tenth.",
+        "2. Divide 250 by 10.",
+        "3. Result is 25."
+      ],
+      "fastStrategy": "For 10%, just move the decimal one place to the left."
+    },
+
+    {
+      "id": "ar_pct_b1_027",
+      "question": "What is 12% of 200?",
+      "choices": {
+        "A": "20",
+        "B": "22",
+        "C": "24",
+        "D": "26",
+        "E": "28"
+      },
+      "answer": "C",
+      "explanation": "12% of 200 is 0.12 × 200 = 24.",
+      "steps": [
+        "1. Convert 12% to 0.12.",
+        "2. Multiply 0.12 × 200.",
+        "3. The result is 24."
+      ],
+      "fastStrategy": "10% of 200 is 20; 2% is 4; add them to get 24."
+    },
+
+    {
+      "id": "ar_pct_b1_028",
+      "question": "A store offers 30% off a $90 jacket. What is the sale price?",
+      "choices": {
+        "A": "$60",
+        "B": "$63",
+        "C": "$65",
+        "D": "$67",
+        "E": "$69"
+      },
+      "answer": "B",
+      "explanation": "30% of 90 is 0.30 × 90 = 27. Sale price = 90 − 27 = 63.",
+      "steps": [
+        "1. Compute 30% of 90 by multiplying 0.30 × 90.",
+        "2. Get 27 as the discount.",
+        "3. Subtract 27 from 90 for a sale price of $63."
+      ],
+      "fastStrategy": "Think 3 × 9 = 27 and then attach the zero to go 90 → 27."
+    },
+
+    {
+      "id": "ar_pct_b1_029",
+      "question": "A TV originally costs $800. It is discounted by 15%, and then a 5% sales tax is applied to the sale price. What is the final price?",
+      "choices": {
+        "A": "$680",
+        "B": "$700",
+        "C": "$714",
+        "D": "$720",
+        "E": "$740"
+      },
+      "answer": "C",
+      "explanation": "First discount: 15% of 800 is 120, so sale price is 800 − 120 = 680. Then 5% tax on 680 is 0.05 × 680 = 34. Final price: 680 + 34 = 714.",
+      "steps": [
+        "1. Find 15% of 800 (0.15 × 800 = 120).",
+        "2. Subtract 120 from 800 to get 680.",
+        "3. Find 5% of 680 (0.05 × 680 = 34) and add it to 680 for a final price of $714."
+      ],
+      "fastStrategy": "Apply percentage changes step by step: discount first, then tax on the reduced price."
+    },
+
+    {
+      "id": "ar_pct_b1_030",
+      "question": "A vehicle uses 8% of its 50-gallon fuel tank per hour. How many gallons does it use in one hour?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "answer": "C",
+      "explanation": "8% of 50 is 0.08 × 50 = 4 gallons.",
+      "steps": [
+        "1. Convert 8% to 0.08.",
+        "2. Multiply 0.08 × 50.",
+        "3. The vehicle uses 4 gallons per hour."
+      ],
+      "fastStrategy": "10% of 50 is 5; 8% is a bit less, so 4 makes sense as a quick check."
+    },
+
+    {
+      "id": "ar_pct_b1_031",
+      "question": "If 70% of a class of 40 students pass a test, how many students pass?",
+      "choices": {
+        "A": "26",
+        "B": "27",
+        "C": "28",
+        "D": "29",
+        "E": "30"
+      },
+      "answer": "C",
+      "explanation": "70% of 40 is 0.70 × 40 = 28.",
+      "steps": [
+        "1. Convert 70% to 0.70.",
+        "2. Multiply 0.70 × 40.",
+        "3. Result: 28 students pass."
+      ],
+      "fastStrategy": "10% of 40 is 4; 70% is 7 × 4 = 28."
+    },
+
+    {
+      "id": "ar_pct_b1_032",
+      "question": "A computer completes 120 out of 150 scheduled tasks. What percent of the tasks were completed?",
+      "choices": {
+        "A": "70%",
+        "B": "75%",
+        "C": "78%",
+        "D": "80%",
+        "E": "85%"
+      },
+      "answer": "D",
+      "explanation": "120 ÷ 150 = 0.8, which is 80%.",
+      "steps": [
+        "1. Form the fraction 120/150.",
+        "2. Simplify by dividing by 30 to get 4/5.",
+        "3. 4/5 = 0.8 = 80%."
+      ],
+      "fastStrategy": "Recognize 4/5 as 80% for quick conversions."
+    },
+
+    {
+      "id": "ar_pct_b1_033",
+      "question": "After a 10% price decrease, an item costs $90. What was its original price?",
+      "choices": {
+        "A": "$90",
+        "B": "$95",
+        "C": "$100",
+        "D": "$105",
+        "E": "$110"
+      },
+      "answer": "C",
+      "explanation": "A 10% decrease means the new price is 90% of original. So 0.90 × original = 90. Original = 90 ÷ 0.90 = 100.",
+      "steps": [
+        "1. Recognize that 90 is 90% of the original.",
+        "2. Convert 90% to 0.90.",
+        "3. Divide 90 by 0.90 to get $100."
+      ],
+      "fastStrategy": "If 10% off gets you 90, divide by 0.9 (or think: add back one-ninth)."
+    },
+
+    {
+      "id": "ar_pct_b1_034",
+      "question": "An account balance increases from $500 to $575. What is the percent increase?",
+      "choices": {
+        "A": "10%",
+        "B": "12%",
+        "C": "15%",
+        "D": "18%",
+        "E": "20%"
+      },
+      "answer": "C",
+      "explanation": "Increase is 575 − 500 = 75. Percent increase = 75 ÷ 500 = 0.15 = 15%.",
+      "steps": [
+        "1. Compute the change: 75.",
+        "2. Divide by the original amount: 75 ÷ 500.",
+        "3. Convert 0.15 to 15%."
+      ],
+      "fastStrategy": "Divide the increase by the original, not the final, to get percent change."
+    },
+
+    {
+      "id": "ar_pct_b1_035",
+      "question": "One number is 25% of 64. What is the number?",
+      "choices": {
+        "A": "12",
+        "B": "14",
+        "C": "16",
+        "D": "18",
+        "E": "20"
+      },
+      "answer": "C",
+      "explanation": "25% of 64 is 64 ÷ 4 = 16.",
+      "steps": [
+        "1. Recognize 25% as one-quarter.",
+        "2. Divide 64 by 4.",
+        "3. The number is 16."
+      ],
+      "fastStrategy": "25% means you can just divide by 4."
+    },
+
+    {
+      "id": "ar_pct_b1_036",
+      "question": "A city's population of 50,000 is expected to grow by 8%. What is the expected new population?",
+      "choices": {
+        "A": "52,000",
+        "B": "53,000",
+        "C": "54,000",
+        "D": "55,000",
+        "E": "56,000"
+      },
+      "answer": "C",
+      "explanation": "8% of 50,000 is 0.08 × 50,000 = 4,000. New population = 50,000 + 4,000 = 54,000.",
+      "steps": [
+        "1. Convert 8% to 0.08.",
+        "2. Multiply 0.08 × 50,000.",
+        "3. Add 4,000 to 50,000 to get 54,000."
+      ],
+      "fastStrategy": "1% of 50,000 is 500; multiply by 8 to get 4,000."
+    },
+
+    {
+      "id": "ar_pct_b1_037",
+      "question": "A student answers 27 questions correctly out of 30. What percent of the questions did the student answer incorrectly?",
+      "choices": {
+        "A": "5%",
+        "B": "8%",
+        "C": "10%",
+        "D": "12%",
+        "E": "15%"
+      },
+      "answer": "C",
+      "explanation": "Incorrect questions = 30 − 27 = 3. Percent incorrect = 3 ÷ 30 = 0.10 = 10%.",
+      "steps": [
+        "1. Find how many are wrong: 3.",
+        "2. Divide wrong/total: 3 ÷ 30.",
+        "3. Convert 0.10 to 10%."
+      ],
+      "fastStrategy": "If 27/30 are correct (90%), then 10% are incorrect."
+    },
+
+    {
+      "id": "ar_pct_b1_038",
+      "question": "A unit spends 60% of its $5,000 budget on equipment. How much is spent on equipment?",
+      "choices": {
+        "A": "$2,500",
+        "B": "$2,800",
+        "C": "$3,000",
+        "D": "$3,200",
+        "E": "$3,500"
+      },
+      "answer": "C",
+      "explanation": "60% of 5,000 is 0.60 × 5,000 = 3,000.",
+      "steps": [
+        "1. Convert 60% to 0.60.",
+        "2. Multiply 0.60 × 5,000.",
+        "3. 3,000 is spent on equipment."
+      ],
+      "fastStrategy": "Half of 5,000 is 2,500 (50%); add 10% (500) to get 60% = 3,000."
+    },
+
+    {
+      "id": "ar_pct_b1_039",
+      "question": "A radar system successfully detects 80% of 250 incoming aircraft. How many aircraft are detected?",
+      "choices": {
+        "A": "180",
+        "B": "190",
+        "C": "195",
+        "D": "200",
+        "E": "210"
+      },
+      "answer": "D",
+      "explanation": "80% of 250 is 0.80 × 250 = 200.",
+      "steps": [
+        "1. Convert 80% to 0.80.",
+        "2. Multiply 0.80 × 250.",
+        "3. 200 aircraft are detected."
+      ],
+      "fastStrategy": "10% of 250 is 25; 80% is 8 × 25 = 200."
+    },
+
+    {
+      "id": "ar_pct_b1_040",
+      "question": "A factory reduces its weekly waste from 500 kilograms to 350 kilograms. What is the percent reduction in waste?",
+      "choices": {
+        "A": "20%",
+        "B": "25%",
+        "C": "28%",
+        "D": "30%",
+        "E": "35%"
+      },
+      "answer": "D",
+      "explanation": "Reduction is 500 − 350 = 150. Percent reduction = 150 ÷ 500 = 0.30 = 30%.",
+      "steps": [
+        "1. Find the decrease: 150.",
+        "2. Divide by the original amount: 150 ÷ 500.",
+        "3. Convert 0.30 to 30%."
+      ],
+      "fastStrategy": "Think: 150 is 3/10 of 500 → 30%."
+    },
+
+    {
+      "id": "ar_pct_b1_041",
+      "question": "Cargo weight increases from 1,200 pounds to 1,500 pounds. What is the percent increase?",
+      "choices": {
+        "A": "20%",
+        "B": "22%",
+        "C": "25%",
+        "D": "28%",
+        "E": "30%"
+      },
+      "answer": "C",
+      "explanation": "Increase is 300. Percent increase = 300 ÷ 1,200 = 0.25 = 25%.",
+      "steps": [
+        "1. Subtract 1,200 from 1,500 to get 300.",
+        "2. Divide 300 by the original 1,200.",
+        "3. Convert 0.25 to 25%."
+      ],
+      "fastStrategy": "300 is one-quarter of 1,200, so the increase is 25%."
+    },
+
+    {
+      "id": "ar_pct_b1_042",
+      "question": "A laptop battery stores 60 watt-hours (Wh) when full. If it is at 40% of its capacity, how many watt-hours remain?",
+      "choices": {
+        "A": "18 Wh",
+        "B": "20 Wh",
+        "C": "22 Wh",
+        "D": "24 Wh",
+        "E": "30 Wh"
+      },
+      "answer": "D",
+      "explanation": "40% of 60 is 0.40 × 60 = 24 Wh.",
+      "steps": [
+        "1. Convert 40% to 0.40.",
+        "2. Multiply 0.40 × 60.",
+        "3. The remaining energy is 24 Wh."
+      ],
+      "fastStrategy": "10% of 60 is 6; 40% is 4 × 6 = 24."
+    },
+
+    {
+      "id": "ar_pct_b1_043",
+      "question": "A test requires a score of 70% to pass. If the exam is worth 80 points, what is the minimum passing score?",
+      "choices": {
+        "A": "54",
+        "B": "55",
+        "C": "56",
+        "D": "57",
+        "E": "60"
+      },
+      "answer": "C",
+      "explanation": "70% of 80 is 0.70 × 80 = 56.",
+      "steps": [
+        "1. Convert 70% to 0.70.",
+        "2. Multiply 0.70 × 80.",
+        "3. Minimum passing score is 56."
+      ],
+      "fastStrategy": "10% of 80 is 8; 70% is 7 × 8 = 56."
+    },
+
+    {
+      "id": "ar_pct_b1_044",
+      "question": "A $200 item is discounted by 40%, and then an additional 10% discount is applied to the sale price. What is the final price?",
+      "choices": {
+        "A": "$96",
+        "B": "$100",
+        "C": "$108",
+        "D": "$110",
+        "E": "$120"
+      },
+      "answer": "C",
+      "explanation": "First discount: 40% of 200 is 80, so price becomes 200 − 80 = 120. Second discount: 10% of 120 is 12, so final price is 120 − 12 = 108.",
+      "steps": [
+        "1. Find 40% of 200 (80) and subtract: 200 − 80 = 120.",
+        "2. Find 10% of 120 (12).",
+        "3. Subtract 12 from 120 to get $108."
+      ],
+      "fastStrategy": "Apply percentage discounts one at a time to avoid mistakes."
+    },
+
+    {
+      "id": "ar_pct_b1_045",
+      "question": "A customer pays $106 for an item after a 6% sales tax is added. What was the price before tax?",
+      "choices": {
+        "A": "$94",
+        "B": "$96",
+        "C": "$98",
+        "D": "$100",
+        "E": "$104"
+      },
+      "answer": "D",
+      "explanation": "After tax, the price is 106% of the original. So 1.06 × original = 106. Original = 106 ÷ 1.06 = 100.",
+      "steps": [
+        "1. Recognize that the paid price equals 106% of the original.",
+        "2. Convert 106% to 1.06.",
+        "3. Divide 106 by 1.06 to get $100."
+      ],
+      "fastStrategy": "If total is 106 and tax is 6%, reverse by dividing by 1.06."
+    },
+
+    {
+      "id": "ar_pct_b1_046",
+      "question": "An item is on sale for $72 after a 20% discount. What was the original price?",
+      "choices": {
+        "A": "$80",
+        "B": "$85",
+        "C": "$88",
+        "D": "$90",
+        "E": "$92"
+      },
+      "answer": "D",
+      "explanation": "After a 20% discount, the sale price is 80% of original. So 0.80 × original = 72. Original = 72 ÷ 0.80 = 90.",
+      "steps": [
+        "1. Notice that 100% − 20% = 80%, so sale price is 80% of original.",
+        "2. Convert 80% to 0.80.",
+        "3. Compute 72 ÷ 0.80 = 90."
+      ],
+      "fastStrategy": "To undo a percent discount, divide by (1 − discount rate)."
+    },
+
+    {
+      "id": "ar_pct_b1_047",
+      "question": "An employee’s salary is $40,000 per year and they receive a 5% raise. What is the new salary?",
+      "choices": {
+        "A": "$40,500",
+        "B": "$41,000",
+        "C": "$41,500",
+        "D": "$42,000",
+        "E": "$44,000"
+      },
+      "answer": "D",
+      "explanation": "5% of 40,000 is 0.05 × 40,000 = 2,000. New salary is 40,000 + 2,000 = 42,000.",
+      "steps": [
+        "1. Compute 5% of 40,000: 0.05 × 40,000.",
+        "2. Get 2,000 as the raise.",
+        "3. Add 2,000 to 40,000 to get 42,000."
+      ],
+      "fastStrategy": "5% is half of 10%, so find 10% then divide by 2."
+    },
+
+    {
+      "id": "ar_pct_b1_048",
+      "question": "A maintenance team completes 65% of 200 scheduled tasks. How many tasks remain unfinished?",
+      "choices": {
+        "A": "60",
+        "B": "65",
+        "C": "70",
+        "D": "75",
+        "E": "80"
+      },
+      "answer": "C",
+      "explanation": "65% of 200 is 0.65 × 200 = 130 completed. Remaining tasks: 200 − 130 = 70.",
+      "steps": [
+        "1. Compute 65% of 200 (130).",
+        "2. Subtract 130 from 200.",
+        "3. 70 tasks are unfinished."
+      ],
+      "fastStrategy": "You can also find 35% of 200 (70) directly for what’s left."
+    },
+
+    {
+      "id": "ar_pct_b1_049",
+      "question": "An engineer finishes 18 of the 30 required design tasks. What percent of the tasks are complete?",
+      "choices": {
+        "A": "50%",
+        "B": "55%",
+        "C": "60%",
+        "D": "65%",
+        "E": "70%"
+      },
+      "answer": "C",
+      "explanation": "18 ÷ 30 = 0.6, which is 60%.",
+      "steps": [
+        "1. Form the fraction 18/30.",
+        "2. Simplify by dividing both numerator and denominator by 6 → 3/5.",
+        "3. 3/5 = 0.6 = 60%."
+      ],
+      "fastStrategy": "Remember: 3/5 = 60%."
+    },
+
+    {
+      "id": "ar_pct_b1_050",
+      "question": "A pilot must log at least 75% of 40 required training hours to qualify. How many hours must the pilot log?",
+      "choices": {
+        "A": "25",
+        "B": "28",
+        "C": "29",
+        "D": "30",
+        "E": "32"
+      },
+      "answer": "D",
+      "explanation": "75% of 40 is 0.75 × 40 = 30.",
+      "steps": [
+        "1. Recognize 75% as 3/4.",
+        "2. Compute 3/4 of 40 by doing 40 ÷ 4 = 10, then 10 × 3 = 30.",
+        "3. The pilot must log 30 hours."
+      ],
+      "fastStrategy": "When you see 75%, think 'three-quarters' and use divide-by-4-then-multiply-by-3."
+    }
+
+  ]
+}
