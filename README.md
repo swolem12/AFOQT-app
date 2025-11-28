@@ -271,6 +271,12 @@ MIT License - See LICENSE file for details
 
 ---
 
-**Version**: Patch 18 (Content-Based Questions + Math UI)  
-**Last Updated**: November 26, 2025  
-**Service Worker Cache**: v62
+**Version**: Patch 19 (Arithmetic Reasoning content + Patch 18 system)  
+**Last Updated**: November 28, 2025  
+**Service Worker Cache**: v73
+
+### Patch 19 Highlights
+- Added Arithmetic Reasoning JSON content set (word problems, percent, ratio/proportion, rates/time/work, fractions/decimals, algebra basics)
+- Integrated registry loader for Arithmetic (`patch-loader.js`) and dynamic topic creation
+- Resolved merge conflicts and upgraded service worker cache to `v73` for deployment
+- Prepared groundwork for upcoming Arithmetic-specific UI renderers (part-whole bars, rate timelines, comparison bars)
