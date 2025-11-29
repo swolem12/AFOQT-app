@@ -6553,8 +6553,8 @@ function renderLearn() {
                     </div>
                 </div>
                 
-                <div class="learn-section" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 140, 0, 0.1) 100%); border: 2px solid #FFD700; border-radius: 8px; padding: 25px; margin-bottom: 25px;">
-                    <h2 style="color: #FFD700; margin-bottom: 15px; font-size: 1.3rem;">⚡ Fast Strategy</h2>
+                <div class="learn-section" style="background: linear-gradient(135deg, var(--color-warning, rgba(255, 215, 0, 0.1)) 0%, var(--color-primary-dim) 100%); border: 2px solid var(--color-warning); border-radius: 8px; padding: 25px; margin-bottom: 25px;">
+                    <h2 style="color: var(--color-warning); margin-bottom: 15px; font-size: 1.3rem;">⚡ Fast Strategy</h2>
                     <p style="font-size: 1.1rem; font-weight: bold; color: var(--color-text);">${content.fastStrategy}</p>
                 </div>
                 
@@ -6562,13 +6562,13 @@ function renderLearn() {
                 <div class="learn-section" style="background: var(--color-bg-panel); border: 2px solid var(--color-accent); border-radius: 8px; padding: 25px; margin-bottom: 25px;">
                     <h2 style="color: var(--color-accent); margin-bottom: 15px; font-size: 1.3rem;">📌 Examples</h2>
                     <div style="font-size: 1rem; line-height: 1.8;">
-                        ${content.examples.map(ex => `<div style="margin-bottom: 10px; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 4px; font-family: monospace;">${ex}</div>`).join('')}
+                        ${content.examples.map(ex => `<div style="margin-bottom: 10px; padding: 10px; background: var(--color-primary-dim); border-radius: 4px; font-family: monospace;">${ex}</div>`).join('')}
                     </div>
                 </div>
                 ` : ''}
                 
                 <div style="text-align: center; margin-top: 30px;">
-                    <p style="opacity: 0.8; margin-bottom: 20px;">Ready to practice? Choose your difficulty level:</p>
+                    <p style="opacity: 0.8; margin-bottom: 20px;">Ready to practice what you learned?</p>
                     <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
                         <button class="btn" id="learn-to-practice-btn">⚔ Start Practice</button>
                     </div>
