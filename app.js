@@ -6508,6 +6508,140 @@ const topicLearningContent = {
         ],
         fastStrategy: 'Common prefixes: un/dis = not, pre = before, re = again. Suffixes: -tion = noun, -ly = adverb.',
         examples: ['UNHAPPINESS = un (not) + happy + ness (state of) = state of not being happy']
+    },
+    // Reading Comprehension Topics
+    'reading-comprehension': {
+        concept: 'Reading comprehension tests your ability to understand, analyze, and draw conclusions from written passages. Focus on main ideas, supporting details, and implied meanings.',
+        steps: [
+            '1. Skim the passage first to get the main idea and structure.',
+            '2. Read each question carefully before re-reading relevant parts.',
+            '3. Look for keywords in the question that point to specific sections.',
+            '4. Eliminate obviously wrong answers, then choose the best remaining option.',
+            '5. Base answers ONLY on what the passage states—not outside knowledge.'
+        ],
+        fastStrategy: 'Read questions first, then hunt for answers in the passage. Main idea = first/last paragraph.',
+        examples: ['If a passage discusses the Wright Brothers\' first flight, questions may ask about dates, distances, or the significance of the event.']
+    },
+    // Physical Science Topics
+    'physics-basics': {
+        concept: 'Physics basics cover the fundamental forces and laws of motion. Key concepts: Force = Mass × Acceleration (F=ma), Newton\'s Three Laws, and types of energy (kinetic, potential).',
+        steps: [
+            '1. Identify what physical concept is being tested (force, motion, energy).',
+            '2. Recall the relevant formula or law.',
+            '3. Identify the given values and what you need to find.',
+            '4. Substitute values and solve, paying attention to units.'
+        ],
+        fastStrategy: 'Memorize: F=ma, Speed=Distance/Time, Four forces of flight: Lift, Weight, Thrust, Drag.',
+        examples: ['Newton\'s First Law: Object at rest stays at rest unless acted on by a force.', 'Kinetic energy = energy of motion.']
+    },
+    'chemistry-basics': {
+        concept: 'Chemistry basics cover atomic structure, periodic table trends, chemical reactions, and states of matter. Know element symbols and basic reaction types.',
+        steps: [
+            '1. Identify the chemistry concept (atoms, reactions, states of matter).',
+            '2. Recall periodic table trends (metals left, nonmetals right).',
+            '3. For reactions: balance equations and identify products.',
+            '4. Use elimination to narrow down answer choices.'
+        ],
+        fastStrategy: 'Metals = left side of periodic table, conduct electricity. Water = H₂O. Salt = NaCl.',
+        examples: ['Protons determine element identity.', 'pH < 7 = acid, pH > 7 = base, pH 7 = neutral.']
+    },
+    // Situational Judgement Topics
+    'situational-judgement': {
+        concept: 'Situational Judgement tests your ability to handle workplace scenarios using sound judgment, leadership, and ethical decision-making. Focus on professionalism, communication, and solving problems constructively.',
+        steps: [
+            '1. Read the scenario carefully and identify the core problem.',
+            '2. Consider all stakeholders affected by the decision.',
+            '3. Eliminate extreme responses (ignoring issues or overreacting).',
+            '4. Choose the response that shows leadership, communication, and professionalism.',
+            '5. Prefer collaborative solutions over unilateral actions.'
+        ],
+        fastStrategy: 'Best answers: communicate openly, involve stakeholders, address issues constructively. Avoid: ignoring problems, blame, or extreme reactions.',
+        examples: ['Team conflict → facilitate open communication.', 'Policy not working → acknowledge, gather feedback, adjust.']
+    },
+    // Aviation Knowledge Topics
+    'aviation-knowledge': {
+        concept: 'Aviation Knowledge covers the four forces of flight (Lift, Weight, Thrust, Drag), aircraft controls (ailerons, elevator, rudder), and flight instruments. Understanding how aircraft fly is essential.',
+        steps: [
+            '1. Memorize the four forces: Lift (up), Weight (down), Thrust (forward), Drag (backward).',
+            '2. Know the three axes: Pitch (lateral), Roll (longitudinal), Yaw (vertical).',
+            '3. Learn which control affects which axis: Elevator=Pitch, Ailerons=Roll, Rudder=Yaw.',
+            '4. Understand basic instruments: Altimeter, Airspeed Indicator, Attitude Indicator.'
+        ],
+        fastStrategy: 'Elevator=Pitch, Ailerons=Roll, Rudder=Yaw. Four forces: LWTD (Lift, Weight, Thrust, Drag).',
+        examples: ['Flaps increase lift and drag for landing.', 'Stall = exceeding critical angle of attack.']
+    },
+    // Instrument Comprehension Topics
+    'attitude-indicator-basic': {
+        concept: 'The Attitude Indicator (artificial horizon) shows the aircraft\'s orientation relative to the horizon. Bank angle is shown by wing position; pitch is shown by the miniature aircraft\'s position relative to the horizon line.',
+        steps: [
+            '1. Look at the miniature aircraft wings to determine bank direction and angle.',
+            '2. Look at the horizon bar position to determine climb or descent.',
+            '3. Combine bank and pitch to describe the attitude (e.g., "banking left, climbing").',
+            '4. Match your assessment to the answer choices.'
+        ],
+        fastStrategy: 'Wings tilted = bank direction. Nose above horizon = climbing. Nose below = descending.',
+        examples: ['Horizon below miniature aircraft = nose up = climbing.', 'Left wing down = banking left.']
+    },
+    'heading-indicator-basic': {
+        concept: 'The Heading Indicator shows which direction the aircraft is pointing using a compass rose (N, E, S, W). It\'s more stable than a magnetic compass during turns.',
+        steps: [
+            '1. Read the heading from the top of the indicator (where the aircraft is pointing).',
+            '2. Convert if needed: N=0°/360°, E=90°, S=180°, W=270°.',
+            '3. Combine with attitude indicator to fully describe aircraft state.',
+            '4. Remember: heading shows direction of nose, not direction of travel.'
+        ],
+        fastStrategy: 'Read heading from top of dial. Cardinal directions: N=0°, E=90°, S=180°, W=270°.',
+        examples: ['Heading 045° = Northeast', 'Heading 270° = West']
+    },
+    'combined-instruments': {
+        concept: 'Combined instrument reading requires analyzing both the attitude indicator and heading indicator together to determine the complete flight attitude of an aircraft.',
+        steps: [
+            '1. First read the attitude indicator for bank and pitch.',
+            '2. Then read the heading indicator for direction.',
+            '3. Combine into a complete description: "Banking [direction], [climbing/descending/level], heading [direction]".',
+            '4. Match your complete assessment to the answer choices.'
+        ],
+        fastStrategy: 'Attitude first (bank + pitch), then heading. Practice combining them quickly.',
+        examples: ['Wings level, nose up, heading North = Climbing straight ahead toward North.']
+    },
+    // Table Reading Topics
+    'table-reading': {
+        concept: 'Table Reading tests your ability to quickly and accurately extract data from tables using X and Y coordinates. Speed and accuracy are both critical—practice finding intersections fast.',
+        steps: [
+            '1. Identify the X-value (usually columns) and Y-value (usually rows).',
+            '2. Use your finger or eyes to trace from X to the intersection.',
+            '3. Verify by tracing from Y to the same intersection.',
+            '4. Read the value at the intersection carefully.',
+            '5. Work quickly—this section is time-sensitive.'
+        ],
+        fastStrategy: 'Trace X horizontally, Y vertically until they meet. Practice speed with accuracy.',
+        examples: ['X = 5, Y = 3 → Find column 5, row 3, read the value at intersection.']
+    },
+    // Block Counting Topics
+    'block-counting': {
+        concept: 'Block Counting tests spatial reasoning by asking you to count blocks in 3D figures, including hidden blocks. Systematic counting and visualization of hidden blocks is key.',
+        steps: [
+            '1. Start by counting visible blocks layer by layer, from bottom to top.',
+            '2. Identify "support" blocks—hidden blocks needed to hold visible blocks up.',
+            '3. Count each layer systematically (e.g., bottom layer first).',
+            '4. Add visible + hidden blocks for total.',
+            '5. Double-check by counting from a different angle or direction.'
+        ],
+        fastStrategy: 'If a block is floating, there must be blocks underneath. Count bottom-up, layer by layer.',
+        examples: ['A block on top of the pile requires a block beneath it for support.']
+    },
+    // Additional Arithmetic Reasoning Topics
+    'arithmetic-word-problems': {
+        concept: 'Arithmetic word problems require translating written scenarios into mathematical operations. Identify what\'s being asked, extract numbers, and choose the right operation.',
+        steps: [
+            '1. Read the problem completely before doing any math.',
+            '2. Identify what the question is asking for (total, difference, rate, etc.).',
+            '3. Extract the relevant numbers from the problem.',
+            '4. Choose the operation: add (combine), subtract (difference), multiply (groups of), divide (split/rate).',
+            '5. Solve and verify the answer makes sense in context.'
+        ],
+        fastStrategy: 'Keywords: "total" = add, "difference" = subtract, "each" = multiply/divide, "per" = rate.',
+        examples: ['If 3 items cost $12, how much for 5 items? → $12/3 = $4 each → 5 × $4 = $20']
     }
 };
 
