@@ -809,7 +809,7 @@ const DIFFICULTY_LEVELS = ['beginner', 'advanced', 'expert'];
 // Global State
 // ============================================================================
 const state = {
-    screen: 'login', // 'login' | 'home' | 'subject' | 'mode-select' | 'difficulty-select' | 'quiz' | 'results' | 'status' | 'equipment' | 'settings'
+    screen: 'login', // 'login' | 'home' | 'subject' | 'mode-select' | 'learn' | 'difficulty-select' | 'quiz' | 'results' | 'status' | 'equipment' | 'settings'
     players: [],
     currentPlayer: null,
     currentSubject: null,
@@ -5804,6 +5804,9 @@ function render() {
         case 'mode-select':
             root.innerHTML = renderModeSelect();
             break;
+        case 'learn':
+            root.innerHTML = renderLearn();
+            break;
         case 'difficulty-select':
             root.innerHTML = renderDifficultySelect();
             break;
@@ -6022,9 +6025,19 @@ function renderModeSelect() {
             <h1 class="panel-header">${state.currentTopic.name}</h1>
             
             <div style="margin: 40px 0;">
-                <h2 style="text-align: center; margin-bottom: 30px;">Select Quiz Mode</h2>
+                <h2 style="text-align: center; margin-bottom: 30px;">Select Mode</h2>
                 
-                <div class="grid grid-3" style="max-width: 900px; margin: 0 auto;">
+                <div class="grid grid-4" style="max-width: 1100px; margin: 0 auto;">
+                    <div class="tile mode-tile" id="learn-mode-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">📚 Learn</div>
+                        <div class="tile-description">
+                            • Concept overview<br>
+                            • Step-by-step guide<br>
+                            • Quick strategies<br>
+                            • Master the basics
+                        </div>
+                    </div>
+                    
                     <div class="tile mode-tile" id="practice-mode-btn" style="cursor: pointer; padding: 30px;">
                         <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">⚔ Practice</div>
                         <div class="tile-description">
@@ -6104,6 +6117,594 @@ function renderDifficultySelect() {
                             • 2x XP multiplier<br>
                             • Maximum rewards!
                         </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons quiz-action-buttons">
+                <button class="btn" id="back-to-mode-btn">← Back to Modes</button>
+                <button class="btn" id="home-btn">🏠 Home</button>
+            </div>
+        </div>
+    `;
+}
+
+// ============================================================================
+// Topic Learning Content (C1 Tutoring Method)
+// ============================================================================
+const topicLearningContent = {
+    // Math Topics
+    'evaluate_expressions': {
+        concept: 'Substituting values into algebraic expressions and computing the result using order of operations (PEMDAS).',
+        steps: [
+            '1. Write down the expression.',
+            '2. Replace each variable with its given value.',
+            '3. Follow order of operations (PEMDAS) to simplify.',
+            '4. Double-check your arithmetic.'
+        ],
+        fastStrategy: 'Substitute the given values carefully, then follow order of operations (PEMDAS).',
+        examples: ['If x = 3 and y = 2, evaluate 2x + 3y → 2(3) + 3(2) = 6 + 6 = 12']
+    },
+    'distributive_foil': {
+        concept: 'Expanding expressions by distributing a single term or using FOIL (First, Outer, Inner, Last) for binomials.',
+        steps: [
+            '1. Identify if you\'re distributing a single term or multiplying binomials.',
+            '2. For distribution: multiply the outside term by each inside term.',
+            '3. For FOIL: First, Outer, Inner, Last.',
+            '4. Combine like terms.'
+        ],
+        fastStrategy: 'FOIL = First, Outer, Inner, Last. Distribute each term to every other term.',
+        examples: ['3(x + 4) = 3x + 12', '(x + 2)(x + 3) = x² + 3x + 2x + 6 = x² + 5x + 6']
+    },
+    'linear_equations': {
+        concept: 'Solving equations to find the value of an unknown variable by isolating it on one side.',
+        steps: [
+            '1. Simplify each side if needed (distribute, combine like terms).',
+            '2. Get all variable terms on one side, constants on the other.',
+            '3. Isolate the variable using inverse operations.',
+            '4. Check your answer by substituting back.'
+        ],
+        fastStrategy: 'Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division).',
+        examples: ['Solve 3x + 5 = 14 → 3x = 9 → x = 3']
+    },
+    'inequalities': {
+        concept: 'Solving inequalities like equations, but remembering to flip the inequality sign when multiplying or dividing by a negative.',
+        steps: [
+            '1. Solve the inequality like you would an equation.',
+            '2. IMPORTANT: Flip the inequality sign when multiplying/dividing by a negative.',
+            '3. Express the solution as an inequality or interval.',
+            '4. If graphing, use open circle for < or >, closed for ≤ or ≥.'
+        ],
+        fastStrategy: 'Solve like equations, but flip the inequality sign when multiplying/dividing by a negative.',
+        examples: ['Solve -2x > 6 → x < -3 (flipped because of negative)']
+    },
+    'systems_linear': {
+        concept: 'Finding values that satisfy two equations simultaneously using substitution or elimination methods.',
+        steps: [
+            '1. Choose method: substitution (if one variable is isolated) or elimination.',
+            '2. For substitution: solve one equation for a variable, plug into the other.',
+            '3. For elimination: multiply to get opposite coefficients, add equations.',
+            '4. Solve for one variable, then substitute back to find the other.'
+        ],
+        fastStrategy: 'Substitution or elimination. Pick the method that avoids fractions.',
+        examples: ['x + y = 5 and x - y = 1 → Add equations: 2x = 6 → x = 3, y = 2']
+    },
+    'factoring': {
+        concept: 'Breaking down expressions into products of simpler factors to simplify or solve equations.',
+        steps: [
+            '1. Look for a greatest common factor (GCF) first.',
+            '2. Check for special patterns: difference of squares, perfect square trinomials.',
+            '3. For ax² + bx + c, find two numbers that multiply to ac and add to b.',
+            '4. Factor completely and verify by multiplying back.'
+        ],
+        fastStrategy: 'Look for common factors first, then try factoring patterns (difference of squares, trinomials).',
+        examples: ['x² + 5x + 6 = (x + 2)(x + 3)', 'x² - 9 = (x + 3)(x - 3)']
+    },
+    'quadratic_equations': {
+        concept: 'Solving equations of the form ax² + bx + c = 0 by factoring or using the quadratic formula.',
+        steps: [
+            '1. Write the equation in standard form: ax² + bx + c = 0.',
+            '2. Try factoring first (fastest if it works).',
+            '3. If factoring fails, use the quadratic formula: x = (-b ± √(b²-4ac)) / 2a.',
+            '4. Check both solutions in the original equation.'
+        ],
+        fastStrategy: 'Try factoring first; if stuck, use quadratic formula: x = (-b ± √(b²-4ac)) / 2a.',
+        examples: ['x² - 5x + 6 = 0 → (x - 2)(x - 3) = 0 → x = 2 or x = 3']
+    },
+    'exponents_roots': {
+        concept: 'Laws of exponents help simplify expressions with powers. Remember: when multiplying same bases, add exponents.',
+        steps: [
+            '1. Identify which exponent rule applies to the expression.',
+            '2. Apply the rule: product rule, power rule, quotient rule, etc.',
+            '3. Simplify the base and exponent.',
+            '4. Convert to a number if possible.'
+        ],
+        fastStrategy: 'Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2).',
+        examples: ['2³ × 2² = 2⁵ = 32', '(3²)³ = 3⁶ = 729']
+    },
+    'radicals': {
+        concept: 'Simplifying square roots by finding perfect square factors and moving them outside the radical.',
+        steps: [
+            '1. Factor the number under the radical.',
+            '2. Look for perfect square factors.',
+            '3. Take the square root of perfect squares and move outside.',
+            '4. Multiply any numbers outside; leave non-perfect squares inside.'
+        ],
+        fastStrategy: 'Simplify by finding perfect square factors: √50 = √25·√2 = 5√2.',
+        examples: ['√72 = √36·√2 = 6√2', '√48 = √16·√3 = 4√3']
+    },
+    'scientific-notation': {
+        concept: 'A way to write very large or very small numbers using powers of 10.',
+        steps: [
+            '1. For standard to scientific: move decimal to get a number between 1 and 10.',
+            '2. Count how many places you moved the decimal.',
+            '3. For large numbers, exponent is positive; for small numbers, negative.',
+            '4. Write as: (number between 1-10) × 10^(exponent).'
+        ],
+        fastStrategy: 'Count decimal places moved. Large numbers → positive exponent. Small numbers → negative exponent.',
+        examples: ['5,400,000 = 5.4 × 10⁶', '0.00032 = 3.2 × 10⁻⁴']
+    },
+    'absolute_value': {
+        concept: 'The absolute value is the distance from zero on a number line—always non-negative.',
+        steps: [
+            '1. Identify the expression inside the absolute value bars.',
+            '2. If it\'s a simple number, the absolute value is its distance from 0.',
+            '3. If it\'s an equation |x - a| = b, split into two cases: x - a = b OR x - a = -b.',
+            '4. Solve each case and check both answers.'
+        ],
+        fastStrategy: 'For |x - a| = b, split into two cases: x - a = b or x - a = -b.',
+        examples: ['|x - 5| = 3 → x - 5 = 3 OR x - 5 = -3 → x = 8 or x = 2']
+    },
+    'rational_expressions': {
+        concept: 'Algebraic fractions that can be simplified by factoring and canceling common factors.',
+        steps: [
+            '1. Factor the numerator completely.',
+            '2. Factor the denominator completely.',
+            '3. Cancel any common factors.',
+            '4. Write the simplified expression.'
+        ],
+        fastStrategy: 'Factor numerator and denominator, then cancel common factors.',
+        examples: ['(x² - 4)/(x + 2) = (x+2)(x-2)/(x+2) = x - 2']
+    },
+    'functions': {
+        concept: 'A function takes an input and produces an output. f(x) means "plug x into the function."',
+        steps: [
+            '1. Identify the input value to substitute.',
+            '2. Replace every x in f(x) with that value.',
+            '3. Simplify using order of operations.',
+            '4. The result is your output, f(input).'
+        ],
+        fastStrategy: 'f(a) means plug a into the function wherever you see x.',
+        examples: ['If f(x) = 2x + 1, then f(3) = 2(3) + 1 = 7']
+    },
+    'angles': {
+        concept: 'Complementary angles sum to 90°. Supplementary angles sum to 180°.',
+        steps: [
+            '1. Identify whether angles are complementary (90°) or supplementary (180°).',
+            '2. Set up an equation: angle1 + angle2 = target sum.',
+            '3. Solve for the unknown angle.',
+            '4. Verify your answer adds to the correct total.'
+        ],
+        fastStrategy: 'Complementary = 90° total. Supplementary = 180° total.',
+        examples: ['Find complement of 35° → 90° - 35° = 55°']
+    },
+    'triangles': {
+        concept: 'The three interior angles of any triangle always sum to exactly 180°.',
+        steps: [
+            '1. Write down the known angles.',
+            '2. Add the known angles together.',
+            '3. Subtract from 180° to find the missing angle.',
+            '4. Verify all three angles sum to 180°.'
+        ],
+        fastStrategy: 'Triangle angles always sum to 180°. Subtract known angles from 180.',
+        examples: ['If two angles are 60° and 70°, third angle = 180° - 60° - 70° = 50°']
+    },
+    'quadrilaterals': {
+        concept: 'The four interior angles of any quadrilateral sum to 360°.',
+        steps: [
+            '1. Write down the known angles.',
+            '2. Add the known angles together.',
+            '3. Subtract from 360° to find the missing angle.',
+            '4. Verify all four angles sum to 360°.'
+        ],
+        fastStrategy: 'Quadrilateral angles always sum to 360°. Rectangles have four 90° angles.',
+        examples: ['If three angles are 90°, 90°, and 100°, fourth = 360° - 280° = 80°']
+    },
+    'circles': {
+        concept: 'Key formulas: Area = πr², Circumference = 2πr (or πd).',
+        steps: [
+            '1. Identify what\'s being asked (area or circumference).',
+            '2. Identify the radius (r) or diameter (d). Remember: r = d/2.',
+            '3. Plug into the appropriate formula.',
+            '4. Simplify and include π in your answer or use π ≈ 3.14.'
+        ],
+        fastStrategy: 'Area = πr². Circumference = 2πr. Diameter = 2r.',
+        examples: ['Circle with r = 5: Area = π(5)² = 25π ≈ 78.5']
+    },
+    'area-volume': {
+        concept: 'Area is 2D (square units). Volume is 3D (cubic units).',
+        steps: [
+            '1. Identify the shape (rectangle, triangle, box, etc.).',
+            '2. Recall the formula: Rectangle Area = l×w, Box Volume = l×w×h.',
+            '3. Substitute the given values.',
+            '4. Include correct units (square for area, cubic for volume).'
+        ],
+        fastStrategy: 'Rectangle: A = l×w. Triangle: A = ½bh. Box: V = l×w×h.',
+        examples: ['Box 3×4×5: Volume = 3×4×5 = 60 cubic units']
+    },
+    'pythagorean': {
+        concept: 'In right triangles: a² + b² = c², where c is the hypotenuse (longest side).',
+        steps: [
+            '1. Identify the right triangle and label the sides.',
+            '2. Identify which side you\'re solving for.',
+            '3. Plug into a² + b² = c² and solve.',
+            '4. Remember: c is always the longest side (hypotenuse).'
+        ],
+        fastStrategy: 'a² + b² = c². Common Pythagorean triples: 3-4-5, 5-12-13, 8-15-17.',
+        examples: ['Legs 3 and 4: c² = 9 + 16 = 25, so c = 5']
+    },
+    'coordinate_geometry': {
+        concept: 'Working with points on the coordinate plane using distance, midpoint, and slope formulas.',
+        steps: [
+            '1. Identify the coordinates of the given points.',
+            '2. Choose the correct formula (distance, midpoint, or slope).',
+            '3. Substitute the coordinates into the formula.',
+            '4. Simplify carefully, especially under square roots.'
+        ],
+        fastStrategy: 'Distance = √[(x₂-x₁)² + (y₂-y₁)²]; Midpoint = ((x₁+x₂)/2, (y₁+y₂)/2).',
+        examples: ['Distance from (1,2) to (4,6) = √[(3)² + (4)²] = √25 = 5']
+    },
+    'slope': {
+        concept: 'Slope measures steepness: rise over run, or the change in y divided by the change in x.',
+        steps: [
+            '1. Identify the two points: (x₁, y₁) and (x₂, y₂).',
+            '2. Apply the slope formula: m = (y₂ - y₁) / (x₂ - x₁).',
+            '3. Simplify the fraction.',
+            '4. Positive = uphill; Negative = downhill; Zero = horizontal; Undefined = vertical.'
+        ],
+        fastStrategy: 'Slope = rise/run = (y₂-y₁)/(x₂-x₁). Positive = uphill, Negative = downhill.',
+        examples: ['Points (1,2) and (3,6): slope = (6-2)/(3-1) = 4/2 = 2']
+    },
+    'graphing_linear': {
+        concept: 'Linear equations in slope-intercept form y = mx + b graph as straight lines.',
+        steps: [
+            '1. Identify the equation form (slope-intercept: y = mx + b).',
+            '2. Find the slope (m) and y-intercept (b).',
+            '3. Plot the y-intercept on the y-axis.',
+            '4. Use the slope to find another point, then draw the line.'
+        ],
+        fastStrategy: 'y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis).',
+        examples: ['y = 2x + 3: slope = 2, y-intercept = 3']
+    },
+    'ratio_proportion': {
+        concept: 'A proportion is an equation stating two ratios are equal. Cross-multiply to solve.',
+        steps: [
+            '1. Set up the proportion with equal ratios: a/b = c/d.',
+            '2. Cross-multiply: a × d = b × c.',
+            '3. Solve the resulting equation for the unknown.',
+            '4. Check by substituting back into the original proportion.'
+        ],
+        fastStrategy: 'Cross-multiply to solve proportions: if a/b = c/d, then ad = bc.',
+        examples: ['If 3/4 = x/12, then 3×12 = 4×x → 36 = 4x → x = 9']
+    },
+    'percent': {
+        concept: 'Percent means "per hundred." Convert between percent, decimal, and fraction forms.',
+        steps: [
+            '1. Identify what\'s being asked (find percent, find part, or find whole).',
+            '2. Use the formula: part = percent × whole.',
+            '3. Convert percent to decimal by dividing by 100.',
+            '4. Solve and convert back to percent if needed.'
+        ],
+        fastStrategy: 'Part = percent × whole. To find percent: (part/whole) × 100.',
+        examples: ['30% of 80 = 0.30 × 80 = 24']
+    },
+    'statistics': {
+        concept: 'Mean is average, median is middle value, mode is most frequent, range is max minus min.',
+        steps: [
+            '1. Arrange data in order if finding median.',
+            '2. Mean = sum of all values ÷ count of values.',
+            '3. Median = middle value (or average of two middle values).',
+            '4. Range = maximum - minimum.'
+        ],
+        fastStrategy: 'Mean = sum ÷ count; Median = middle value; Range = max - min.',
+        examples: ['Data: 2, 4, 4, 6, 8 → Mean = 24/5 = 4.8, Median = 4, Mode = 4, Range = 6']
+    },
+    'probability': {
+        concept: 'Probability measures how likely an event is to occur, expressed as favorable outcomes over total outcomes.',
+        steps: [
+            '1. Count the number of favorable outcomes.',
+            '2. Count the total number of possible outcomes.',
+            '3. Divide: P = favorable ÷ total.',
+            '4. Express as a fraction, decimal, or percentage as needed.'
+        ],
+        fastStrategy: 'Probability = favorable outcomes ÷ total outcomes. Always between 0 and 1.',
+        examples: ['Drawing a red card from a deck: 26/52 = 1/2 = 50%']
+    },
+    // Vocabulary Topics
+    'synonyms': {
+        concept: 'Synonyms are words with similar meanings. Finding synonyms tests your vocabulary breadth.',
+        steps: [
+            '1. Read the target word carefully.',
+            '2. Think of words with similar meanings.',
+            '3. Eliminate options that are opposites or unrelated.',
+            '4. Choose the word closest in meaning.'
+        ],
+        fastStrategy: 'Look for the word that could replace the given word in a sentence.',
+        examples: ['HAPPY → joyful, glad, pleased (all synonyms)']
+    },
+    'antonyms': {
+        concept: 'Antonyms are words with opposite meanings. This tests your understanding of word relationships.',
+        steps: [
+            '1. Read the target word and understand its meaning.',
+            '2. Think of words with the opposite meaning.',
+            '3. Eliminate synonyms and unrelated words.',
+            '4. Choose the true opposite.'
+        ],
+        fastStrategy: 'Find the word that means the exact opposite. Watch for tricky near-opposites.',
+        examples: ['HOT → cold (antonym), NOT warm or heat (those are related, not opposite)']
+    },
+    'verbal_analogies': {
+        concept: 'Analogies show relationships between word pairs. Identify the relationship first.',
+        steps: [
+            '1. Determine the relationship between the first pair of words.',
+            '2. Express it as "A is to B as..." (e.g., adult to young, part to whole).',
+            '3. Apply the same relationship to find the missing word.',
+            '4. Verify the relationship holds for both pairs.'
+        ],
+        fastStrategy: 'Name the relationship (synonym, antonym, part-whole, cause-effect) then match it.',
+        examples: ['CAT : KITTEN :: DOG : ? → Adult to young relationship → PUPPY']
+    },
+    'vocabulary_in_context': {
+        concept: 'Understanding word meaning from surrounding context clues in a sentence.',
+        steps: [
+            '1. Read the entire sentence, not just the target word.',
+            '2. Look for context clues (synonyms, antonyms, examples nearby).',
+            '3. Try substituting each answer choice into the sentence.',
+            '4. Choose the word that makes the sentence make sense.'
+        ],
+        fastStrategy: 'Use the surrounding words as clues. Which option makes the sentence logical?',
+        examples: ['The COGENT argument convinced everyone. → Cogent means convincing/persuasive']
+    },
+    'confusing_word_pairs': {
+        concept: 'Words that sound similar or are often confused (affect/effect, their/there/they\'re).',
+        steps: [
+            '1. Identify which confusing pair is being tested.',
+            '2. Recall the specific difference between the words.',
+            '3. Determine which meaning fits the context.',
+            '4. Double-check by substituting the definition.'
+        ],
+        fastStrategy: 'Memorize common pairs: affect (verb) vs effect (noun), their (possession) vs there (place).',
+        examples: ['The rain will AFFECT the game. (affect = verb, to influence)']
+    },
+    'highfreq_vocab': {
+        concept: 'High-frequency vocabulary words that commonly appear on standardized tests.',
+        steps: [
+            '1. If you know the word, use your knowledge.',
+            '2. If unsure, look for word roots, prefixes, or suffixes.',
+            '3. Eliminate obviously wrong answers.',
+            '4. Make an educated guess based on word parts.'
+        ],
+        fastStrategy: 'Learn common roots: bene = good, mal = bad, vert = turn, dict = say.',
+        examples: ['BENEVOLENT = bene (good) + vol (wish) = wishing good = kind']
+    },
+    'sentence_completion': {
+        concept: 'Fill in the blank with the word that best completes the sentence\'s meaning.',
+        steps: [
+            '1. Read the sentence and predict what word fits.',
+            '2. Look for signal words (however, therefore, although).',
+            '3. Determine if the blank needs a positive or negative word.',
+            '4. Choose the option that matches your prediction.'
+        ],
+        fastStrategy: 'Predict the answer before looking at choices. Signal words show contrast or continuation.',
+        examples: ['Although tired, she was ___ to finish. → Need positive word → "determined"']
+    },
+    'word_roots_affixes': {
+        concept: 'Breaking words into roots, prefixes, and suffixes to understand meaning.',
+        steps: [
+            '1. Identify any prefixes (beginning) or suffixes (ending).',
+            '2. Isolate the root word.',
+            '3. Combine the meanings: prefix + root + suffix.',
+            '4. Match to the best definition.'
+        ],
+        fastStrategy: 'Common prefixes: un/dis = not, pre = before, re = again. Suffixes: -tion = noun, -ly = adverb.',
+        examples: ['UNHAPPINESS = un (not) + happy + ness (state of) = state of not being happy']
+    },
+    // Reading Comprehension Topics
+    'reading-comprehension': {
+        concept: 'Reading comprehension tests your ability to understand, analyze, and draw conclusions from written passages. Focus on main ideas, supporting details, and implied meanings.',
+        steps: [
+            '1. Skim the passage first to get the main idea and structure.',
+            '2. Read each question carefully before re-reading relevant parts.',
+            '3. Look for keywords in the question that point to specific sections.',
+            '4. Eliminate obviously wrong answers, then choose the best remaining option.',
+            '5. Base answers ONLY on what the passage states—not outside knowledge.'
+        ],
+        fastStrategy: 'Read questions first, then hunt for answers in the passage. Main idea = first/last paragraph.',
+        examples: ['If a passage discusses the Wright Brothers\' first flight, questions may ask about dates, distances, or the significance of the event.']
+    },
+    // Physical Science Topics
+    'physics-basics': {
+        concept: 'Physics basics cover the fundamental forces and laws of motion. Key concepts: Force = Mass × Acceleration (F=ma), Newton\'s Three Laws, and types of energy (kinetic, potential).',
+        steps: [
+            '1. Identify what physical concept is being tested (force, motion, energy).',
+            '2. Recall the relevant formula or law.',
+            '3. Identify the given values and what you need to find.',
+            '4. Substitute values and solve, paying attention to units.'
+        ],
+        fastStrategy: 'Memorize: F=ma, Speed=Distance/Time, Four forces of flight: Lift, Weight, Thrust, Drag.',
+        examples: ['Newton\'s First Law: Object at rest stays at rest unless acted on by a force.', 'Kinetic energy = energy of motion.']
+    },
+    'chemistry-basics': {
+        concept: 'Chemistry basics cover atomic structure, periodic table trends, chemical reactions, and states of matter. Know element symbols and basic reaction types.',
+        steps: [
+            '1. Identify the chemistry concept (atoms, reactions, states of matter).',
+            '2. Recall periodic table trends (metals left, nonmetals right).',
+            '3. For reactions: balance equations and identify products.',
+            '4. Use elimination to narrow down answer choices.'
+        ],
+        fastStrategy: 'Metals = left side of periodic table, conduct electricity. Water = H₂O. Salt = NaCl.',
+        examples: ['Protons determine element identity.', 'pH < 7 = acid, pH > 7 = base, pH 7 = neutral.']
+    },
+    // Situational Judgement Topics
+    'situational-judgement': {
+        concept: 'Situational Judgement tests your ability to handle workplace scenarios using sound judgment, leadership, and ethical decision-making. Focus on professionalism, communication, and solving problems constructively.',
+        steps: [
+            '1. Read the scenario carefully and identify the core problem.',
+            '2. Consider all stakeholders affected by the decision.',
+            '3. Eliminate extreme responses (ignoring issues or overreacting).',
+            '4. Choose the response that shows leadership, communication, and professionalism.',
+            '5. Prefer collaborative solutions over unilateral actions.'
+        ],
+        fastStrategy: 'Best answers: communicate openly, involve stakeholders, address issues constructively. Avoid: ignoring problems, blame, or extreme reactions.',
+        examples: ['Team conflict → facilitate open communication.', 'Policy not working → acknowledge, gather feedback, adjust.']
+    },
+    // Aviation Knowledge Topics
+    'aviation-knowledge': {
+        concept: 'Aviation Knowledge covers the four forces of flight (Lift, Weight, Thrust, Drag), aircraft controls (ailerons, elevator, rudder), and flight instruments. Understanding how aircraft fly is essential.',
+        steps: [
+            '1. Memorize the four forces: Lift (up), Weight (down), Thrust (forward), Drag (backward).',
+            '2. Know the three axes of rotation: Pitch (around lateral axis), Roll (around longitudinal axis), Yaw (around vertical axis).',
+            '3. Learn which control affects which axis: Elevator=Pitch, Ailerons=Roll, Rudder=Yaw.',
+            '4. Understand basic instruments: Altimeter, Airspeed Indicator, Attitude Indicator.'
+        ],
+        fastStrategy: 'Elevator=Pitch, Ailerons=Roll, Rudder=Yaw. Four forces: LWTD (Lift, Weight, Thrust, Drag).',
+        examples: ['Flaps increase lift and drag for landing.', 'Stall = exceeding critical angle of attack.']
+    },
+    // Instrument Comprehension Topics
+    'attitude-indicator-basic': {
+        concept: 'The Attitude Indicator (artificial horizon) shows the aircraft\'s orientation relative to the horizon. Bank angle is shown by wing position; pitch is shown by the miniature aircraft\'s position relative to the horizon line.',
+        steps: [
+            '1. Look at the miniature aircraft wings to determine bank direction and angle.',
+            '2. Look at the horizon bar position to determine climb or descent.',
+            '3. Combine bank and pitch to describe the attitude (e.g., "banking left, climbing").',
+            '4. Match your assessment to the answer choices.'
+        ],
+        fastStrategy: 'Wings tilted = bank direction. Nose above horizon = climbing. Nose below = descending.',
+        examples: ['Horizon below miniature aircraft = nose up = climbing.', 'Left wing down = banking left.']
+    },
+    'heading-indicator-basic': {
+        concept: 'The Heading Indicator shows which direction the aircraft is pointing using a compass rose (N, E, S, W). It\'s more stable than a magnetic compass during turns.',
+        steps: [
+            '1. Read the heading from the top of the indicator (where the aircraft is pointing).',
+            '2. Convert if needed: N=0°/360°, E=90°, S=180°, W=270°.',
+            '3. Combine with attitude indicator to fully describe aircraft state.',
+            '4. Remember: heading shows direction of nose, not direction of travel.'
+        ],
+        fastStrategy: 'Read heading from top of dial. Cardinal directions: N=0°, E=90°, S=180°, W=270°.',
+        examples: ['Heading 045° = Northeast', 'Heading 270° = West']
+    },
+    'combined-instruments': {
+        concept: 'Combined instrument reading requires analyzing both the attitude indicator and heading indicator together to determine the complete flight attitude of an aircraft.',
+        steps: [
+            '1. First read the attitude indicator for bank and pitch.',
+            '2. Then read the heading indicator for direction.',
+            '3. Combine into a complete description: "Banking [direction], [climbing/descending/level], heading [direction]".',
+            '4. Match your complete assessment to the answer choices.'
+        ],
+        fastStrategy: 'Attitude first (bank + pitch), then heading. Practice combining them quickly.',
+        examples: ['Wings level, nose up, heading North = Climbing straight ahead toward North.']
+    },
+    // Table Reading Topics
+    'table-reading': {
+        concept: 'Table Reading tests your ability to quickly and accurately extract data from tables using X and Y coordinates. Speed and accuracy are both critical—practice finding intersections fast.',
+        steps: [
+            '1. Identify the X-value (usually columns) and Y-value (usually rows).',
+            '2. Use your finger or eyes to trace from X to the intersection.',
+            '3. Verify by tracing from Y to the same intersection.',
+            '4. Read the value at the intersection carefully.',
+            '5. Work quickly—this section is time-sensitive.'
+        ],
+        fastStrategy: 'Trace X horizontally, Y vertically until they meet. Practice speed with accuracy.',
+        examples: ['X = 5, Y = 3 → Find column 5, row 3, read the value at intersection.']
+    },
+    // Block Counting Topics
+    'block-counting': {
+        concept: 'Block Counting tests spatial reasoning by asking you to count blocks in 3D figures, including hidden blocks. Systematic counting and visualization of hidden blocks is key.',
+        steps: [
+            '1. Start by counting visible blocks layer by layer, from bottom to top.',
+            '2. Identify "support" blocks—hidden blocks needed to hold visible blocks up.',
+            '3. Count each layer systematically (e.g., bottom layer first).',
+            '4. Add visible + hidden blocks for total.',
+            '5. Double-check by counting from a different angle or direction.'
+        ],
+        fastStrategy: 'If a block is floating, there must be blocks underneath. Count bottom-up, layer by layer.',
+        examples: ['A block on top of the pile requires a block beneath it for support.']
+    },
+    // Additional Arithmetic Reasoning Topics
+    'arithmetic-word-problems': {
+        concept: 'Arithmetic word problems require translating written scenarios into mathematical operations. Identify what\'s being asked, extract numbers, and choose the right operation.',
+        steps: [
+            '1. Read the problem completely before doing any math.',
+            '2. Identify what the question is asking for (total, difference, rate, etc.).',
+            '3. Extract the relevant numbers from the problem.',
+            '4. Choose the operation: add (combining totals), subtract (finding difference), multiply (repeated addition), divide (splitting equally or finding unit rate).',
+            '5. Solve and verify the answer makes sense in context.'
+        ],
+        fastStrategy: 'Keywords: "total" = add, "difference" = subtract, "each" = multiply/divide, "per" = rate.',
+        examples: ['If 3 items cost $12, how much for 5 items? → $12/3 = $4 each → 5 × $4 = $20']
+    }
+};
+
+// Get learning content for a topic (with fallback)
+function getTopicLearningContent(topicId) {
+    if (topicLearningContent[topicId]) {
+        return topicLearningContent[topicId];
+    }
+    
+    // Fallback for topics without specific content
+    return {
+        concept: 'This topic covers important concepts that will help you succeed on the AFOQT.',
+        steps: [
+            '1. Review the basic concept and understand what\'s being asked.',
+            '2. Practice with example problems to build familiarity.',
+            '3. Focus on recognizing patterns and common question types.',
+            '4. Review your mistakes to learn from them.'
+        ],
+        fastStrategy: 'Practice regularly and review explanations for problems you miss.',
+        examples: ['Check the Practice mode for example questions on this topic.']
+    };
+}
+
+function renderLearn() {
+    if (!state.currentTopic) return '';
+    
+    const content = getTopicLearningContent(state.currentTopic.id);
+    
+    return `
+        <div class="panel">
+            <h1 class="panel-header">📚 ${state.currentTopic.name}</h1>
+            
+            <div style="margin: 30px 0;">
+                <div class="learn-section" style="background: var(--color-bg-panel); border: 2px solid var(--color-primary); border-radius: 8px; padding: 25px; margin-bottom: 25px;">
+                    <h2 style="color: var(--color-primary); margin-bottom: 15px; font-size: 1.3rem;">💡 Core Concept</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.6; color: var(--color-text);">${content.concept}</p>
+                </div>
+                
+                <div class="learn-section" style="background: var(--color-bg-panel); border: 2px solid var(--color-secondary); border-radius: 8px; padding: 25px; margin-bottom: 25px;">
+                    <h2 style="color: var(--color-secondary); margin-bottom: 15px; font-size: 1.3rem;">📝 Step-by-Step Guide</h2>
+                    <div style="font-size: 1rem; line-height: 1.8;">
+                        ${content.steps.map(step => `<div style="margin-bottom: 10px; padding-left: 10px; border-left: 3px solid var(--color-primary-dim);">${step}</div>`).join('')}
+                    </div>
+                </div>
+                
+                <div class="learn-section" style="background: linear-gradient(135deg, var(--color-warning, rgba(255, 215, 0, 0.1)) 0%, var(--color-primary-dim) 100%); border: 2px solid var(--color-warning); border-radius: 8px; padding: 25px; margin-bottom: 25px;">
+                    <h2 style="color: var(--color-warning); margin-bottom: 15px; font-size: 1.3rem;">⚡ Fast Strategy</h2>
+                    <p style="font-size: 1.1rem; font-weight: bold; color: var(--color-text);">${content.fastStrategy}</p>
+                </div>
+                
+                ${content.examples && content.examples.length > 0 ? `
+                <div class="learn-section" style="background: var(--color-bg-panel); border: 2px solid var(--color-accent); border-radius: 8px; padding: 25px; margin-bottom: 25px;">
+                    <h2 style="color: var(--color-accent); margin-bottom: 15px; font-size: 1.3rem;">📌 Examples</h2>
+                    <div style="font-size: 1rem; line-height: 1.8;">
+                        ${content.examples.map(ex => `<div style="margin-bottom: 10px; padding: 10px; background: var(--color-primary-dim); border-radius: 4px; font-family: monospace;">${ex}</div>`).join('')}
+                    </div>
+                </div>
+                ` : ''}
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <p style="opacity: 0.8; margin-bottom: 20px;">Ready to practice what you learned?</p>
+                    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                        <button class="btn" id="learn-to-practice-btn">⚔ Start Practice</button>
                     </div>
                 </div>
             </div>
@@ -8835,6 +9436,17 @@ function attachEventListeners() {
     });
     
     // Mode selection buttons
+    const learnModeBtn = document.getElementById('learn-mode-btn');
+    if (learnModeBtn) {
+        learnModeBtn.addEventListener('click', () => {
+            if (state.currentTopic) {
+                state.screen = 'learn';
+                playSfx('select');
+                render();
+            }
+        });
+    }
+    
     const practiceModeBtn = document.getElementById('practice-mode-btn');
     if (practiceModeBtn) {
         practiceModeBtn.addEventListener('click', () => {
@@ -8910,6 +9522,18 @@ function attachEventListeners() {
         });
     }
     
+    // Learn screen - Start Practice button
+    const learnToPracticeBtn = document.getElementById('learn-to-practice-btn');
+    if (learnToPracticeBtn) {
+        learnToPracticeBtn.addEventListener('click', () => {
+            if (state.currentTopic) {
+                state.screen = 'difficulty-select';
+                playSfx('select');
+                render();
+            }
+        });
+    }
+    
     // Quiz options
     const optionBtns = document.querySelectorAll('[data-option-index]');
     optionBtns.forEach(btn => {
@@ -8949,6 +9573,8 @@ function attachEventListeners() {
             // Determine which screen to go back to based on current screen
             if (state.screen === 'mode-select') {
                 state.screen = 'subject';
+            } else if (state.screen === 'learn') {
+                state.screen = 'mode-select';
             } else if (state.screen === 'difficulty-select') {
                 state.screen = 'mode-select';
             } else {
