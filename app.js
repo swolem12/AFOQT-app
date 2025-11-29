@@ -6563,7 +6563,7 @@ const topicLearningContent = {
         concept: 'Aviation Knowledge covers the four forces of flight (Lift, Weight, Thrust, Drag), aircraft controls (ailerons, elevator, rudder), and flight instruments. Understanding how aircraft fly is essential.',
         steps: [
             '1. Memorize the four forces: Lift (up), Weight (down), Thrust (forward), Drag (backward).',
-            '2. Know the three axes: Pitch (lateral), Roll (longitudinal), Yaw (vertical).',
+            '2. Know the three axes of rotation: Pitch (around lateral axis), Roll (around longitudinal axis), Yaw (around vertical axis).',
             '3. Learn which control affects which axis: Elevator=Pitch, Ailerons=Roll, Rudder=Yaw.',
             '4. Understand basic instruments: Altimeter, Airspeed Indicator, Attitude Indicator.'
         ],
@@ -6637,7 +6637,7 @@ const topicLearningContent = {
             '1. Read the problem completely before doing any math.',
             '2. Identify what the question is asking for (total, difference, rate, etc.).',
             '3. Extract the relevant numbers from the problem.',
-            '4. Choose the operation: add (combine), subtract (difference), multiply (groups of), divide (split/rate).',
+            '4. Choose the operation: add (combining totals), subtract (finding difference), multiply (repeated addition), divide (splitting equally or finding unit rate).',
             '5. Solve and verify the answer makes sense in context.'
         ],
         fastStrategy: 'Keywords: "total" = add, "difference" = subtract, "each" = multiply/divide, "per" = rate.',
