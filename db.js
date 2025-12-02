@@ -4,14 +4,15 @@
 // ============================================================================
 
 const DB_NAME = 'afoqt-quest-db';
-const DB_VERSION = 2;
+const DB_VERSION = 3;
 
 // Object store names
 const STORES = {
     PLAYERS: 'players',
     SESSIONS: 'sessions',
     SETTINGS: 'settings',
-    QUESTION_HISTORY: 'questionHistory'
+    QUESTION_HISTORY: 'questionHistory',
+    USERS: 'users'
 };
 
 // Spaced repetition intervals (in days)
@@ -101,6 +102,13 @@ class AfoqtDatabase {
                     questionHistoryStore.createIndex('playerIdNextReview', ['playerId', 'nextReview'], { unique: false });
                     console.log('Created question history object store');
                 }
+
+                // Create Users object store for authentication (v3)
+                if (!db.objectStoreNames.contains(STORES.USERS)) {
+                    const usersStore = db.createObjectStore(STORES.USERS, { keyPath: 'id' });
+                    usersStore.createIndex('username', 'username', { unique: true });
+                    console.log('Created users object store');
+                }
             };
         });
 
@@ -176,6 +184,221 @@ class AfoqtDatabase {
             request.onsuccess = () => resolve();
             request.onerror = () => reject(request.error);
         });
+    }
+
+    // ============================================================================
+    // User Authentication Operations
+    // ============================================================================
+
+    /**
+     * Hash a password using Web Crypto API (SHA-256 with salt)
+     * @param {string} password
+     * @param {string} salt (optional, will be generated if not provided)
+     * @returns {Promise<{hash: string, salt: string}>}
+     */
+    async hashPassword(password, salt = null) {
+        // Generate salt if not provided
+        if (!salt) {
+            const saltArray = new Uint8Array(16);
+            crypto.getRandomValues(saltArray);
+            salt = Array.from(saltArray).map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+        
+        // Combine password with salt
+        const encoder = new TextEncoder();
+        const data = encoder.encode(password + salt);
+        
+        // Hash using SHA-256
+        const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        const hash = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        
+        return { hash, salt };
+    }
+
+    /**
+     * Verify a password against a stored hash
+     * @param {string} password
+     * @param {string} storedHash
+     * @param {string} salt
+     * @returns {Promise<boolean>}
+     */
+    async verifyPassword(password, storedHash, salt) {
+        const { hash } = await this.hashPassword(password, salt);
+        return hash === storedHash;
+    }
+
+    /**
+     * Register a new user
+     * @param {string} username
+     * @param {string} password
+     * @returns {Promise<{success: boolean, error?: string, userId?: string}>}
+     */
+    async registerUser(username, password) {
+        await this.init();
+        
+        // Validate input
+        if (!username || username.trim().length < 3) {
+            return { success: false, error: 'Username must be at least 3 characters' };
+        }
+        if (!password || password.length < 6) {
+            return { success: false, error: 'Password must be at least 6 characters' };
+        }
+        
+        // Check if username already exists
+        const existingUser = await this.getUserByUsername(username.trim().toLowerCase());
+        if (existingUser) {
+            return { success: false, error: 'Username already exists' };
+        }
+        
+        // Hash password
+        const { hash, salt } = await this.hashPassword(password);
+        
+        // Create user object
+        const user = {
+            id: Date.now().toString(),
+            username: username.trim().toLowerCase(),
+            passwordHash: hash,
+            salt: salt,
+            createdAt: Date.now(),
+            lastLogin: null
+        };
+        
+        return new Promise((resolve, reject) => {
+            const transaction = this.db.transaction([STORES.USERS], 'readwrite');
+            const store = transaction.objectStore(STORES.USERS);
+            const request = store.add(user);
+            
+            request.onsuccess = () => resolve({ success: true, userId: user.id });
+            request.onerror = () => {
+                if (request.error.name === 'ConstraintError') {
+                    resolve({ success: false, error: 'Username already exists' });
+                } else {
+                    reject(request.error);
+                }
+            };
+        });
+    }
+
+    /**
+     * Authenticate a user with username and password
+     * @param {string} username
+     * @param {string} password
+     * @returns {Promise<{success: boolean, error?: string, user?: Object}>}
+     */
+    async authenticateUser(username, password) {
+        await this.init();
+        
+        const user = await this.getUserByUsername(username.trim().toLowerCase());
+        if (!user) {
+            return { success: false, error: 'Invalid username or password' };
+        }
+        
+        const isValid = await this.verifyPassword(password, user.passwordHash, user.salt);
+        if (!isValid) {
+            return { success: false, error: 'Invalid username or password' };
+        }
+        
+        // Update last login time
+        user.lastLogin = Date.now();
+        await this.updateUser(user);
+        
+        // Return user info without sensitive data
+        const { passwordHash, salt, ...safeUser } = user;
+        return { success: true, user: safeUser };
+    }
+
+    /**
+     * Get user by username
+     * @param {string} username
+     * @returns {Promise<Object|null>}
+     */
+    async getUserByUsername(username) {
+        await this.init();
+        return new Promise((resolve, reject) => {
+            const transaction = this.db.transaction([STORES.USERS], 'readonly');
+            const store = transaction.objectStore(STORES.USERS);
+            const index = store.index('username');
+            const request = index.get(username.toLowerCase());
+            
+            request.onsuccess = () => resolve(request.result || null);
+            request.onerror = () => reject(request.error);
+        });
+    }
+
+    /**
+     * Get user by ID
+     * @param {string} userId
+     * @returns {Promise<Object|null>}
+     */
+    async getUserById(userId) {
+        await this.init();
+        return new Promise((resolve, reject) => {
+            const transaction = this.db.transaction([STORES.USERS], 'readonly');
+            const store = transaction.objectStore(STORES.USERS);
+            const request = store.get(userId);
+            
+            request.onsuccess = () => resolve(request.result || null);
+            request.onerror = () => reject(request.error);
+        });
+    }
+
+    /**
+     * Update user data
+     * @param {Object} user
+     * @returns {Promise<void>}
+     */
+    async updateUser(user) {
+        await this.init();
+        return new Promise((resolve, reject) => {
+            const transaction = this.db.transaction([STORES.USERS], 'readwrite');
+            const store = transaction.objectStore(STORES.USERS);
+            const request = store.put(user);
+            
+            request.onsuccess = () => resolve();
+            request.onerror = () => reject(request.error);
+        });
+    }
+
+    /**
+     * Delete a user and optionally their player data
+     * @param {string} userId
+     * @param {boolean} deletePlayerData - whether to also delete associated player
+     * @returns {Promise<void>}
+     */
+    async deleteUser(userId, deletePlayerData = false) {
+        await this.init();
+        
+        // Get user to find linked player
+        const user = await this.getUserById(userId);
+        if (user && deletePlayerData && user.playerId) {
+            await this.deletePlayer(user.playerId);
+            await this.deletePlayerSessions(user.playerId);
+        }
+        
+        return new Promise((resolve, reject) => {
+            const transaction = this.db.transaction([STORES.USERS], 'readwrite');
+            const store = transaction.objectStore(STORES.USERS);
+            const request = store.delete(userId);
+            
+            request.onsuccess = () => resolve();
+            request.onerror = () => reject(request.error);
+        });
+    }
+
+    /**
+     * Link a user to a player profile
+     * @param {string} userId
+     * @param {string} playerId
+     * @returns {Promise<void>}
+     */
+    async linkUserToPlayer(userId, playerId) {
+        await this.init();
+        const user = await this.getUserById(userId);
+        if (user) {
+            user.playerId = playerId;
+            await this.updateUser(user);
+        }
     }
 
     // ============================================================================
@@ -877,7 +1100,7 @@ class AfoqtDatabase {
     async clearAllData() {
         await this.init();
         
-        const stores = [STORES.PLAYERS, STORES.SESSIONS, STORES.SETTINGS, STORES.QUESTION_HISTORY];
+        const stores = [STORES.PLAYERS, STORES.SESSIONS, STORES.SETTINGS, STORES.QUESTION_HISTORY, STORES.USERS];
         const transaction = this.db.transaction(stores, 'readwrite');
 
         const clearPromises = stores.map(storeName =>

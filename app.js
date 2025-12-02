@@ -809,7 +809,9 @@ const DIFFICULTY_LEVELS = ['beginner', 'advanced', 'expert'];
 // Global State
 // ============================================================================
 const state = {
-    screen: 'login', // 'login' | 'home' | 'subject' | 'mode-select' | 'learn' | 'difficulty-select' | 'quiz' | 'results' | 'status' | 'equipment' | 'settings'
+    screen: 'auth', // 'auth' | 'login' | 'home' | 'subject' | 'mode-select' | 'learn' | 'difficulty-select' | 'quiz' | 'results' | 'status' | 'equipment' | 'settings'
+    authScreen: 'login', // 'login' | 'register' - sub-screen for auth
+    currentUser: null, // Authenticated user info
     players: [],
     currentPlayer: null,
     currentSubject: null,
@@ -5408,6 +5410,187 @@ function selectPlayer(playerId) {
 }
 
 // ============================================================================
+// Authentication Handlers
+// ============================================================================
+
+/**
+ * Show auth error message
+ */
+function showAuthError(message) {
+    const errorDiv = document.getElementById('auth-error');
+    if (errorDiv) {
+        errorDiv.textContent = message;
+        errorDiv.style.display = 'block';
+        playSfx('wrong');
+    }
+}
+
+/**
+ * Handle login form submission
+ */
+async function handleAuthLogin() {
+    const usernameInput = document.getElementById('auth-username');
+    const passwordInput = document.getElementById('auth-password');
+    
+    if (!usernameInput || !passwordInput) return;
+    
+    const username = usernameInput.value.trim();
+    const password = passwordInput.value;
+    
+    if (!username || !password) {
+        showAuthError('Please enter both User ID and password');
+        return;
+    }
+    
+    try {
+        const result = await afoqtDB.authenticateUser(username, password);
+        
+        if (!result.success) {
+            showAuthError(result.error);
+            return;
+        }
+        
+        // Store current user
+        state.currentUser = result.user;
+        
+        // Save login session to sessionStorage
+        sessionStorage.setItem('afoqt-current-user', JSON.stringify(result.user));
+        
+        playSfx('correct');
+        
+        // Load players and find the one linked to this user
+        state.players = await loadPlayers();
+        
+        if (result.user.playerId) {
+            state.currentPlayer = state.players.find(p => p.id === result.user.playerId) || null;
+        }
+        
+        // If user has a linked player, go to home, otherwise go to character select
+        if (state.currentPlayer) {
+            state.screen = 'home';
+        } else {
+            state.screen = 'login';
+        }
+        
+        render();
+        
+    } catch (error) {
+        console.error('Login error:', error);
+        showAuthError('An error occurred. Please try again.');
+    }
+}
+
+/**
+ * Handle registration form submission
+ */
+async function handleAuthRegister() {
+    const usernameInput = document.getElementById('auth-username');
+    const passwordInput = document.getElementById('auth-password');
+    const passwordConfirmInput = document.getElementById('auth-password-confirm');
+    const playerNameInput = document.getElementById('auth-player-name');
+    
+    if (!usernameInput || !passwordInput || !passwordConfirmInput || !playerNameInput) return;
+    
+    const username = usernameInput.value.trim();
+    const password = passwordInput.value;
+    const passwordConfirm = passwordConfirmInput.value;
+    const playerName = playerNameInput.value.trim();
+    
+    // Validation
+    if (!username) {
+        showAuthError('Please enter a User ID');
+        return;
+    }
+    
+    if (username.length < 3) {
+        showAuthError('User ID must be at least 3 characters');
+        return;
+    }
+    
+    if (!password) {
+        showAuthError('Please enter a password');
+        return;
+    }
+    
+    if (password.length < 6) {
+        showAuthError('Password must be at least 6 characters');
+        return;
+    }
+    
+    if (password !== passwordConfirm) {
+        showAuthError('Passwords do not match');
+        return;
+    }
+    
+    if (!playerName) {
+        showAuthError('Please enter a character name');
+        return;
+    }
+    
+    try {
+        // Register the user
+        const registerResult = await afoqtDB.registerUser(username, password);
+        
+        if (!registerResult.success) {
+            showAuthError(registerResult.error);
+            return;
+        }
+        
+        // Create the player profile
+        const player = {
+            id: Date.now().toString(),
+            name: playerName,
+            sessions: [],
+            achievements: [],
+            challengeProgress: {}
+        };
+        
+        state.players.push(player);
+        await savePlayers(state.players);
+        
+        // Link user to player
+        await afoqtDB.linkUserToPlayer(registerResult.userId, player.id);
+        
+        // Log the user in
+        state.currentUser = {
+            id: registerResult.userId,
+            username: username,
+            playerId: player.id
+        };
+        state.currentPlayer = player;
+        
+        // Save login session
+        sessionStorage.setItem('afoqt-current-user', JSON.stringify(state.currentUser));
+        
+        playSfx('levelup');
+        
+        // Go to home screen
+        state.screen = 'home';
+        render();
+        
+    } catch (error) {
+        console.error('Registration error:', error);
+        showAuthError('An error occurred. Please try again.');
+    }
+}
+
+/**
+ * Handle logout
+ */
+function handleLogout() {
+    state.currentUser = null;
+    state.currentPlayer = null;
+    state.screen = 'auth';
+    state.authScreen = 'login';
+    
+    // Clear session
+    sessionStorage.removeItem('afoqt-current-user');
+    
+    playSfx('nav');
+    render();
+}
+
+// ============================================================================
 // Quiz Management
 // ============================================================================
 async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
@@ -5792,6 +5975,9 @@ function render() {
     if (!root) return;
     
     switch (state.screen) {
+        case 'auth':
+            root.innerHTML = renderAuth();
+            break;
         case 'login':
             root.innerHTML = renderLogin();
             break;
@@ -5843,6 +6029,112 @@ function render() {
     
     // Animate panel entrances
     animatePanelEntrance();
+}
+
+// ============================================================================
+// Authentication Screen Rendering
+// ============================================================================
+function renderAuth() {
+    if (state.authScreen === 'register') {
+        return renderAuthRegister();
+    }
+    return renderAuthLogin();
+}
+
+function renderAuthLogin() {
+    return `
+        <div class="panel auth-panel">
+            <h1 class="panel-header">AFOQT QUEST</h1>
+            
+            <div class="auth-section">
+                <div class="auth-logo">
+                    <div class="auth-icon">🎮</div>
+                    <h2>Welcome Back, Pilot</h2>
+                    <p class="auth-subtitle">Enter your credentials to continue your journey</p>
+                </div>
+                
+                <div class="auth-form">
+                    <div class="auth-error" id="auth-error" style="display: none;"></div>
+                    
+                    <div class="auth-field">
+                        <label for="auth-username">User ID</label>
+                        <input type="text" id="auth-username" placeholder="Enter your User ID" maxlength="30" autocomplete="username" />
+                    </div>
+                    
+                    <div class="auth-field">
+                        <label for="auth-password">Password</label>
+                        <input type="password" id="auth-password" placeholder="Enter your password" maxlength="50" autocomplete="current-password" />
+                    </div>
+                    
+                    <button class="btn btn-primary auth-submit" id="auth-login-btn">
+                        LOG IN →
+                    </button>
+                    
+                    <div class="auth-divider">
+                        <span>or</span>
+                    </div>
+                    
+                    <button class="btn btn-secondary" id="auth-goto-register-btn">
+                        CREATE NEW ACCOUNT
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function renderAuthRegister() {
+    return `
+        <div class="panel auth-panel">
+            <h1 class="panel-header">CREATE ACCOUNT</h1>
+            
+            <div class="auth-section">
+                <div class="auth-logo">
+                    <div class="auth-icon">🚀</div>
+                    <h2>Join the Mission</h2>
+                    <p class="auth-subtitle">Create your account to start training</p>
+                </div>
+                
+                <div class="auth-form">
+                    <div class="auth-error" id="auth-error" style="display: none;"></div>
+                    
+                    <div class="auth-field">
+                        <label for="auth-username">User ID</label>
+                        <input type="text" id="auth-username" placeholder="Choose a User ID (min 3 chars)" maxlength="30" autocomplete="username" />
+                        <small class="auth-hint">This will be your unique login identifier</small>
+                    </div>
+                    
+                    <div class="auth-field">
+                        <label for="auth-password">Password</label>
+                        <input type="password" id="auth-password" placeholder="Create a password (min 6 chars)" maxlength="50" autocomplete="new-password" />
+                    </div>
+                    
+                    <div class="auth-field">
+                        <label for="auth-password-confirm">Confirm Password</label>
+                        <input type="password" id="auth-password-confirm" placeholder="Confirm your password" maxlength="50" autocomplete="new-password" />
+                    </div>
+                    
+                    <div class="auth-field">
+                        <label for="auth-player-name">Character Name</label>
+                        <input type="text" id="auth-player-name" placeholder="Enter your character name" maxlength="20" />
+                        <small class="auth-hint">This is your in-game display name</small>
+                    </div>
+                    
+                    <button class="btn btn-primary auth-submit" id="auth-register-btn">
+                        CREATE ACCOUNT →
+                    </button>
+                    
+                    <div class="auth-divider">
+                        <span>already have an account?</span>
+                    </div>
+                    
+                    <button class="btn btn-secondary" id="auth-goto-login-btn">
+                        BACK TO LOGIN
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
 }
 
 function renderLogin() {
@@ -5919,6 +6211,9 @@ function renderHome() {
                     ` : ''}
                     <button class="btn btn-small" id="settings-btn">
                         ⚙ Settings
+                    </button>
+                    <button class="btn btn-small btn-logout" id="logout-btn">
+                        🚪 Logout
                     </button>
                 </div>
             </div>
@@ -9067,7 +9362,79 @@ async function loadDetailedAnalytics() {
 // Event Listeners
 // ============================================================================
 function attachEventListeners() {
+    // ============================================================================
+    // Authentication Screen Event Listeners
+    // ============================================================================
+    
+    // Auth Login Button
+    const authLoginBtn = document.getElementById('auth-login-btn');
+    if (authLoginBtn) {
+        authLoginBtn.addEventListener('click', handleAuthLogin);
+    }
+    
+    // Auth Register Button
+    const authRegisterBtn = document.getElementById('auth-register-btn');
+    if (authRegisterBtn) {
+        authRegisterBtn.addEventListener('click', handleAuthRegister);
+    }
+    
+    // Switch to Register Screen
+    const gotoRegisterBtn = document.getElementById('auth-goto-register-btn');
+    if (gotoRegisterBtn) {
+        gotoRegisterBtn.addEventListener('click', () => {
+            state.authScreen = 'register';
+            playSfx('nav');
+            render();
+        });
+    }
+    
+    // Switch to Login Screen
+    const gotoLoginBtn = document.getElementById('auth-goto-login-btn');
+    if (gotoLoginBtn) {
+        gotoLoginBtn.addEventListener('click', () => {
+            state.authScreen = 'login';
+            playSfx('nav');
+            render();
+        });
+    }
+    
+    // Enter key support for auth forms
+    const authPassword = document.getElementById('auth-password');
+    if (authPassword && state.authScreen === 'login') {
+        authPassword.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                handleAuthLogin();
+            }
+        });
+    }
+    
+    const authPasswordConfirm = document.getElementById('auth-password-confirm');
+    if (authPasswordConfirm) {
+        authPasswordConfirm.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                handleAuthRegister();
+            }
+        });
+    }
+    
+    const authPlayerName = document.getElementById('auth-player-name');
+    if (authPlayerName) {
+        authPlayerName.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                handleAuthRegister();
+            }
+        });
+    }
+    
+    // Logout button
+    const logoutBtn = document.getElementById('logout-btn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', handleLogout);
+    }
+    
+    // ============================================================================
     // Login screen - Character selection
+    // ============================================================================
     const selectPlayerBtns = document.querySelectorAll('.select-player-btn');
     selectPlayerBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -9706,8 +10073,29 @@ async function init() {
     
     state.players = await loadPlayers();
     await loadSettings(); // Load settings from database
-    if (state.players.length > 0) {
-        state.currentPlayer = state.players[0];
+    
+    // Check for saved login session
+    const savedUser = sessionStorage.getItem('afoqt-current-user');
+    if (savedUser) {
+        try {
+            state.currentUser = JSON.parse(savedUser);
+            // Find the linked player
+            if (state.currentUser.playerId) {
+                state.currentPlayer = state.players.find(p => p.id === state.currentUser.playerId) || null;
+            }
+            // If logged in, start at home or character select
+            if (state.currentPlayer) {
+                state.screen = 'home';
+            } else {
+                state.screen = 'login';
+            }
+        } catch (e) {
+            console.warn('Could not restore user session:', e);
+            state.screen = 'auth';
+        }
+    } else {
+        // Not logged in - show auth screen
+        state.screen = 'auth';
     }
     
     // Patch 18: Initialize content-based question system
