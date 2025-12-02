@@ -254,9 +254,9 @@ class AfoqtDatabase {
         // Hash password
         const { hash, salt } = await this.hashPassword(password);
         
-        // Create user object
+        // Create user object with secure random ID
         const user = {
-            id: Date.now().toString(),
+            id: crypto.randomUUID(),
             username: username.trim().toLowerCase(),
             passwordHash: hash,
             salt: salt,

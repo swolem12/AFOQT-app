@@ -5385,7 +5385,7 @@ function showAccessGranted() {
 // ============================================================================
 function createPlayer(name) {
     const player = {
-        id: Date.now().toString(),
+        id: crypto.randomUUID(),
         name: name.trim(),
         sessions: [],
         achievements: [], // Track unlocked achievement IDs
@@ -5453,8 +5453,8 @@ async function handleAuthLogin() {
         // Store current user
         state.currentUser = result.user;
         
-        // Save login session to sessionStorage
-        sessionStorage.setItem('afoqt-current-user', JSON.stringify(result.user));
+        // Save only user ID to sessionStorage (not full credentials)
+        sessionStorage.setItem('afoqt-user-id', result.user.id);
         
         playSfx('correct');
         
@@ -5536,9 +5536,9 @@ async function handleAuthRegister() {
             return;
         }
         
-        // Create the player profile
+        // Create the player profile with secure random ID
         const player = {
-            id: Date.now().toString(),
+            id: crypto.randomUUID(),
             name: playerName,
             sessions: [],
             achievements: [],
@@ -5559,8 +5559,8 @@ async function handleAuthRegister() {
         };
         state.currentPlayer = player;
         
-        // Save login session
-        sessionStorage.setItem('afoqt-current-user', JSON.stringify(state.currentUser));
+        // Save only user ID to sessionStorage (not full credentials)
+        sessionStorage.setItem('afoqt-user-id', registerResult.userId);
         
         playSfx('levelup');
         
@@ -5584,7 +5584,7 @@ function handleLogout() {
     state.authScreen = 'login';
     
     // Clear session
-    sessionStorage.removeItem('afoqt-current-user');
+    sessionStorage.removeItem('afoqt-user-id');
     
     playSfx('nav');
     render();
@@ -10074,20 +10074,33 @@ async function init() {
     state.players = await loadPlayers();
     await loadSettings(); // Load settings from database
     
-    // Check for saved login session
-    const savedUser = sessionStorage.getItem('afoqt-current-user');
-    if (savedUser) {
+    // Check for saved login session (only userId is stored)
+    const savedUserId = sessionStorage.getItem('afoqt-user-id');
+    if (savedUserId) {
         try {
-            state.currentUser = JSON.parse(savedUser);
-            // Find the linked player
-            if (state.currentUser.playerId) {
-                state.currentPlayer = state.players.find(p => p.id === state.currentUser.playerId) || null;
-            }
-            // If logged in, start at home or character select
-            if (state.currentPlayer) {
-                state.screen = 'home';
+            // Look up user by ID from database
+            const user = await afoqtDB.getUserById(savedUserId);
+            if (user) {
+                // Don't store sensitive data in state
+                state.currentUser = {
+                    id: user.id,
+                    username: user.username,
+                    playerId: user.playerId
+                };
+                // Find the linked player
+                if (state.currentUser.playerId) {
+                    state.currentPlayer = state.players.find(p => p.id === state.currentUser.playerId) || null;
+                }
+                // If logged in, start at home or character select
+                if (state.currentPlayer) {
+                    state.screen = 'home';
+                } else {
+                    state.screen = 'login';
+                }
             } else {
-                state.screen = 'login';
+                // User not found - clear invalid session
+                sessionStorage.removeItem('afoqt-user-id');
+                state.screen = 'auth';
             }
         } catch (e) {
             console.warn('Could not restore user session:', e);
