@@ -809,13 +809,14 @@ const DIFFICULTY_LEVELS = ['beginner', 'advanced', 'expert'];
 // Global State
 // ============================================================================
 const state = {
-    screen: 'login', // 'login' | 'home' | 'subject' | 'mode-select' | 'learn' | 'difficulty-select' | 'quiz' | 'results' | 'status' | 'equipment' | 'settings'
+    screen: 'login', // 'login' | 'create-account' | 'home' | 'subject' | 'mode-select' | 'difficulty-select' | 'quiz' | 'results' | 'status' | 'equipment' | 'settings'
     players: [],
     currentPlayer: null,
     currentSubject: null,
     currentTopic: null,
     quizMode: 'practice', // 'practice' | 'test' | 'sprint'
     difficulty: 'beginner', // 'beginner' | 'advanced' | 'expert'
+    lastScreenBeforeBoot: 'login', // Save user's last screen for session persistence
     settings: {
         theme: 'default', // 21 themes: default, eva01, eva02, rx0, eva03, purple-gundam, gray-gundam, celestial-pink, blue-terminal, green-terminal, orange-terminal, red-terminal, solo-leveling, nova-kit, hydra-kit, cyberpunk-purple, red-yellow-mech, gray-white-gundam, purple-white-gundam, wb-mecha, yellow-terminal
         panelStyle: 'default', // 14 panel styles: default, blue-mech, cyberpunk01, cyberpunk02, gungale, pink-mech, purple-mech, unicorn, wb-mecha, white-scifi01, white-scifi02, white-scifi03, word-boxes, yellow-mech
@@ -5710,6 +5711,7 @@ function goHome() {
     }
     playSfx('nav');
     state.screen = 'home';
+    state.lastScreenBeforeBoot = 'home';
     render();
 }
 
@@ -5717,6 +5719,7 @@ function goToSubject(subjectId) {
     playSfx('nav');
     state.currentSubject = subjects.find(s => s.id === subjectId);
     state.screen = 'subject';
+    state.lastScreenBeforeBoot = `subject:${subjectId}`;
     render();
 }
 
@@ -5762,6 +5765,20 @@ function goToAnalytics() {
     render();
 }
 
+function goToLogin() {
+    playSfx('nav');
+    state.screen = 'login';
+    state.lastScreenBeforeBoot = 'login';
+    render();
+}
+
+function goToCreateAccount() {
+    playSfx('nav');
+    state.screen = 'create-account';
+    state.lastScreenBeforeBoot = 'create-account';
+    render();
+}
+
 // Helper function to generate floating navigation buttons
 function renderFloatingNav(options = {}) {
     const showBack = options.showBack !== false; // default true
@@ -5794,6 +5811,9 @@ function render() {
     switch (state.screen) {
         case 'login':
             root.innerHTML = renderLogin();
+            break;
+        case 'create-account':
+            root.innerHTML = renderCreateAccount();
             break;
         case 'home':
             root.innerHTML = renderHome();
@@ -9614,6 +9634,77 @@ function attachEventListeners() {
         });
     }
     
+    // Create Account screen - Navigate to create account
+    const goToCreateAccountBtn = document.getElementById('go-to-create-account-btn');
+    if (goToCreateAccountBtn) {
+        goToCreateAccountBtn.addEventListener('click', goToCreateAccount);
+    }
+    
+    // Create Account screen - Form submission
+    const createAccountForm = document.getElementById('create-account-form');
+    if (createAccountForm) {
+        createAccountForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nameInput = document.getElementById('new-player-name-input');
+            const errorDiv = document.getElementById('create-account-error');
+            
+            if (!nameInput || nameInput.value.trim().length === 0) {
+                if (errorDiv) {
+                    errorDiv.textContent = 'Please enter a pilot name';
+                    errorDiv.style.display = 'block';
+                }
+                return;
+            }
+            
+            if (nameInput.value.trim().length < 2) {
+                if (errorDiv) {
+                    errorDiv.textContent = 'Pilot name must be at least 2 characters';
+                    errorDiv.style.display = 'block';
+                }
+                return;
+            }
+            
+            // Create the player and auto-select
+            const playerName = nameInput.value.trim();
+            createPlayer(playerName);
+            const newPlayer = state.players[state.players.length - 1];
+            if (newPlayer) {
+                state.currentPlayer = newPlayer;
+                playSfx('player');
+            }
+            nameInput.value = '';
+            if (errorDiv) errorDiv.style.display = 'none';
+            
+            // Redirect to home screen
+            state.screen = 'home';
+            state.lastScreenBeforeBoot = 'home';
+            playSfx('select');
+            render();
+        });
+    }
+    
+    // Create Account screen - Cancel button
+    const cancelCreateAccountBtn = document.getElementById('cancel-create-account-btn');
+    if (cancelCreateAccountBtn) {
+        cancelCreateAccountBtn.addEventListener('click', () => {
+            state.screen = 'login';
+            state.lastScreenBeforeBoot = 'login';
+            playSfx('nav');
+            render();
+        });
+    }
+    
+    // Create Account screen - Enter key support
+    const newPlayerNameInput = document.getElementById('new-player-name-input');
+    if (newPlayerNameInput) {
+        newPlayerNameInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                const form = document.getElementById('create-account-form');
+                if (form) form.dispatchEvent(new Event('submit'));
+            }
+        });
+    }
+    
     // Scroll-aware FAB behavior for quiz action buttons
     initScrollAwareFAB();
 }
@@ -9708,6 +9799,11 @@ async function init() {
     await loadSettings(); // Load settings from database
     if (state.players.length > 0) {
         state.currentPlayer = state.players[0];
+        // Restore session state after boot (user should see their last screen)
+        await restoreSessionState();
+    } else {
+        // No players, show login
+        state.screen = 'login';
     }
     
     // Patch 18: Initialize content-based question system
@@ -9777,4 +9873,170 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
 } else {
     init();
+}
+
+// ============================================================================
+// SESSION PERSISTENCE - Added below main app flow
+// ============================================================================
+
+/**
+ * Save current screen state to database for session persistence
+ */
+function saveSessionState() {
+    const sessionState = {
+        screen: state.screen,
+        lastScreenBeforeBoot: state.lastScreenBeforeBoot,
+        currentPlayerId: state.currentPlayer?.id || null,
+        currentSubjectId: state.currentSubject?.id || null,
+        currentTopicId: state.currentTopic?.id || null,
+        timestamp: Date.now()
+    };
+    
+    if (typeof afoqtDB !== 'undefined' && afoqtDB) {
+        afoqtDB.saveSettings({ id: 'session-state', ...sessionState }).catch(err => {
+            console.warn('Failed to save session state:', err);
+            // Fallback to localStorage
+            localStorage.setItem('afoqt-session-state', JSON.stringify(sessionState));
+        });
+    } else {
+        localStorage.setItem('afoqt-session-state', JSON.stringify(sessionState));
+    }
+}
+
+/**
+ * Restore previous session state after boot
+ */
+async function restoreSessionState() {
+    let sessionState = null;
+    
+    // Try to load from database first
+    if (typeof afoqtDB !== 'undefined' && afoqtDB) {
+        try {
+            sessionState = await afoqtDB.getSettings('session-state');
+        } catch (err) {
+            console.warn('Failed to restore session state from database:', err);
+        }
+    }
+    
+    // Fallback to localStorage
+    if (!sessionState) {
+        const saved = localStorage.getItem('afoqt-session-state');
+        if (saved) {
+            try {
+                sessionState = JSON.parse(saved);
+            } catch (err) {
+                console.warn('Failed to parse session state from localStorage:', err);
+            }
+        }
+    }
+    
+    if (!sessionState || !state.currentPlayer) {
+        // No session to restore or no player, go to login
+        state.screen = 'login';
+        return;
+    }
+    
+    // Check if session is recent (within 7 days)
+    const sessionAge = Date.now() - sessionState.timestamp;
+    const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
+    if (sessionAge > SEVEN_DAYS) {
+        // Session too old, start fresh
+        state.screen = 'login';
+        return;
+    }
+    
+    // Restore screen state
+    if (sessionState.currentSubjectId && sessionState.screen === 'subject') {
+        state.currentSubject = subjects.find(s => s.id === sessionState.currentSubjectId);
+        state.screen = 'subject';
+    } else if (sessionState.currentTopicId && ['mode-select', 'difficulty-select', 'quiz', 'results'].includes(sessionState.screen)) {
+        state.currentTopic = topics.find(t => t.id === sessionState.currentTopicId);
+        // Only restore quiz states if we have questions (avoid loading incomplete quizzes)
+        if (sessionState.screen !== 'quiz' || state.quiz.questions.length > 0) {
+            state.screen = sessionState.screen;
+        } else {
+            state.screen = 'home'; // Quiz questions lost, go home
+        }
+    } else if (sessionState.screen === 'home' || sessionState.screen === 'settings' || sessionState.screen === 'status' || sessionState.screen === 'equipment' || sessionState.screen === 'achievements' || sessionState.screen === 'analytics') {
+        state.screen = sessionState.screen;
+    } else {
+        // Unknown or invalid state, go home
+        state.screen = 'home';
+    }
+    
+    state.lastScreenBeforeBoot = sessionState.lastScreenBeforeBoot;
+    console.log(`✓ Session restored to screen: ${state.screen}`);
+}
+
+/**
+ * Navigate to create account screen
+ */
+function goToCreateAccount() {
+    playSfx('nav');
+    state.screen = 'create-account';
+    state.lastScreenBeforeBoot = 'create-account';
+    render();
+}
+
+/**
+ * Navigate to login screen
+ */
+function goToLogin() {
+    playSfx('nav');
+    state.screen = 'login';
+    state.lastScreenBeforeBoot = 'login';
+    render();
+}
+
+/**
+ * Render create account screen
+ */
+function renderCreateAccount() {
+    return `
+        <div class="panel">
+            <h1 class="panel-header">CREATE CHARACTER</h1>
+            
+            <div class="login-section" style="max-width: 500px; margin: 0 auto;">
+                <h2 style="text-align: center; margin-bottom: 40px;">New Pilot Registration</h2>
+                
+                <form id="create-account-form" style="display: flex; flex-direction: column; gap: 20px;">
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <label for="new-player-name-input" style="font-size: 1rem; font-weight: bold; color: var(--color-primary); text-transform: uppercase; letter-spacing: 1px;">
+                            Callsign (Name)
+                        </label>
+                        <input 
+                            type="text" 
+                            id="new-player-name-input" 
+                            placeholder="Enter your pilot name"
+                            maxlength="20"
+                            required
+                            style="
+                                background: var(--color-bg-input, rgba(0, 255, 255, 0.05));
+                                border: 2px solid var(--color-primary);
+                                border-radius: 4px;
+                                padding: 12px 15px;
+                                color: var(--color-primary);
+                                font-family: 'Courier New', monospace;
+                                font-size: 1em;
+                                outline: none;
+                                transition: all 0.3s;
+                            "
+                        />
+                        <small style="opacity: 0.7; font-size: 0.9rem;">Your unique pilot identifier (2-20 characters)</small>
+                    </div>
+                    
+                    <div style="display: flex; gap: 10px; margin-top: 20px;">
+                        <button type="submit" class="btn" id="confirm-create-account-btn" style="flex: 1;">
+                            ✓ CREATE PILOT
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="cancel-create-account-btn" style="flex: 1;">
+                            ✗ BACK
+                        </button>
+                    </div>
+                </form>
+                
+                <div id="create-account-error" style="margin-top: 20px; display: none; color: #ff6666; text-align: center; border: 1px solid #ff6666; padding: 10px; border-radius: 4px;"></div>
+            </div>
+        </div>
+    `;
 }
