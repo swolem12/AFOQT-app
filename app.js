@@ -6919,57 +6919,63 @@ function renderInstrumentChoiceSprite(spriteData) {
     if (!spriteData) return '';
     const { view = 'side', bankDegrees = 0, pitchDegrees = 0, headingDegrees = 0 } = spriteData;
     
-    // Simple SVG-based aircraft representation
-    const width = 120;
-    const height = 80;
+    const width = 160;
+    const height = 120;
     
     if (view === 'side') {
-        // Side view: show pitch and heading direction
-        const noseY = height/2 - pitchDegrees * 1.5; // pitch up moves nose up
-        const tailY = height/2 + pitchDegrees * 1.5;
-        const rotation = headingDegrees > 180 ? 180 : 0; // flip if heading west
+        // Side view: realistic aircraft silhouette showing pitch and heading
+        const pitchOffset = pitchDegrees * 0.8; // Nose up/down
+        const flipHorizontal = (headingDegrees > 90 && headingDegrees < 270); // Flip if heading west
         
         return `
-            <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" style="display: block; margin: 0 auto; transform: rotate(${rotation}deg);">
-                <defs>
-                    <linearGradient id="jet-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style="stop-color:#00aaff;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#0066aa;stop-opacity:1" />
-                    </linearGradient>
-                </defs>
-                <!-- Fuselage -->
-                <polygon points="${width*0.1},${height/2} ${width*0.3},${noseY} ${width*0.9},${noseY} ${width*0.9},${tailY} ${width*0.3},${tailY}" fill="url(#jet-gradient)" stroke="#00ffff" stroke-width="1.5"/>
-                <!-- Cockpit -->
-                <circle cx="${width*0.7}" cy="${(noseY+tailY)/2}" r="8" fill="#00ffff" opacity="0.6"/>
-                <!-- Wing -->
-                <rect x="${width*0.4}" y="${height/2 - 3}" width="${width*0.3}" height="6" fill="#00aaff" stroke="#00ffff" stroke-width="1"/>
-                <!-- Tail -->
-                <polygon points="${width*0.1},${height/2-10} ${width*0.1},${height/2+10} ${width*0.15},${height/2}" fill="#00aaff" stroke="#00ffff" stroke-width="1"/>
+            <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" style="display: block; margin: 0 auto; transform: scaleX(${flipHorizontal ? -1 : 1});">
+                <g transform="translate(${width/2}, ${height/2}) rotate(${pitchDegrees * 0.6})">
+                    <!-- Fuselage -->
+                    <ellipse cx="0" cy="0" rx="55" ry="8" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1.5"/>
+                    <!-- Cockpit -->
+                    <ellipse cx="35" cy="-2" rx="12" ry="6" fill="#3a3a3a" stroke="#1a1a1a" stroke-width="1"/>
+                    <path d="M 35,-6 L 45,-6 L 48,-2 L 45,2 L 35,2 Z" fill="#4a4a4a" stroke="#1a1a1a" stroke-width="0.8"/>
+                    <!-- Main wings -->
+                    <ellipse cx="-5" cy="0" rx="12" ry="32" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1.5"/>
+                    <!-- Tail -->
+                    <path d="M -50,-2 L -60,-2 L -60,-12 L -52,-8 Z" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1.2"/>
+                    <path d="M -50,2 L -60,2 L -60,6 L -52,4 Z" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1.2"/>
+                    <!-- Horizontal stabilizer -->
+                    <rect x="-58" y="-1" width="10" height="2" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1"/>
+                    <!-- Engine details -->
+                    <ellipse cx="8" cy="-20" rx="4" ry="5" fill="#1a1a1a" stroke="#0a0a0a" stroke-width="0.8"/>
+                    <ellipse cx="8" cy="20" rx="4" ry="5" fill="#1a1a1a" stroke="#0a0a0a" stroke-width="0.8"/>
+                </g>
             </svg>
         `;
     } else {
-        // Front view: show bank angle
-        const wingTilt = bankDegrees; // positive = right wing down
-        const leftWingY = height*0.6 + Math.sin(wingTilt * Math.PI/180) * 25;
-        const rightWingY = height*0.6 - Math.sin(wingTilt * Math.PI/180) * 25;
+        // Front view: realistic aircraft silhouette showing bank angle
+        const bankAngle = -bankDegrees; // Negative for correct visual rotation
         
         return `
             <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" style="display: block; margin: 0 auto;">
-                <defs>
-                    <linearGradient id="jet-gradient-front" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style="stop-color:#00aaff;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#0066aa;stop-opacity:1" />
-                    </linearGradient>
-                </defs>
-                <!-- Fuselage -->
-                <rect x="${width/2 - 8}" y="${height*0.3}" width="16" height="${height*0.5}" fill="url(#jet-gradient-front)" stroke="#00ffff" stroke-width="1.5" rx="2"/>
-                <!-- Cockpit -->
-                <circle cx="${width/2}" cy="${height*0.35}" r="6" fill="#00ffff" opacity="0.6"/>
-                <!-- Wings -->
-                <line x1="${width*0.1}" y1="${leftWingY}" x2="${width*0.9}" y2="${rightWingY}" stroke="#00aaff" stroke-width="8" stroke-linecap="round"/>
-                <!-- Engines -->
-                <circle cx="${width*0.25}" cy="${leftWingY}" r="5" fill="#ff6666" opacity="0.8"/>
-                <circle cx="${width*0.75}" cy="${rightWingY}" r="5" fill="#ff6666" opacity="0.8"/>
+                <g transform="translate(${width/2}, ${height/2}) rotate(${bankAngle})">
+                    <!-- Fuselage (vertical in front view) -->
+                    <rect x="-6" y="-25" width="12" height="50" rx="4" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1.5"/>
+                    <!-- Cockpit -->
+                    <ellipse cx="0" cy="-18" rx="8" ry="6" fill="#3a3a3a" stroke="#1a1a1a" stroke-width="1"/>
+                    <circle cx="0" cy="-18" r="3" fill="#4a4a4a" opacity="0.6"/>
+                    <!-- Main wings (horizontal span) -->
+                    <rect x="-60" y="-3" width="120" height="6" rx="2" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1.5"/>
+                    <!-- Wing tips angled up slightly -->
+                    <path d="M -60,-3 L -70,-8 L -70,-5 L -60,0 Z" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1"/>
+                    <path d="M 60,-3 L 70,-8 L 70,-5 L 60,0 Z" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1"/>
+                    <!-- Engines under wings -->
+                    <ellipse cx="-25" cy="4" rx="6" ry="10" fill="#1a1a1a" stroke="#0a0a0a" stroke-width="1.2"/>
+                    <ellipse cx="25" cy="4" rx="6" ry="10" fill="#1a1a1a" stroke="#0a0a0a" stroke-width="1.2"/>
+                    <!-- Engine intakes -->
+                    <ellipse cx="-25" cy="2" rx="4" ry="6" fill="#0a0a0a"/>
+                    <ellipse cx="25" cy="2" rx="4" ry="6" fill="#0a0a0a"/>
+                    <!-- Vertical stabilizer (tail) -->
+                    <path d="M -2,25 L -2,38 L -8,42 L 0,40 L 8,42 L 2,38 L 2,25 Z" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1.2"/>
+                    <!-- Horizontal stabilizer -->
+                    <rect x="-18" y="30" width="36" height="3" rx="1" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1"/>
+                </g>
             </svg>
         `;
     }
