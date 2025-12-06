@@ -1,0 +1,643 @@
+{
+  "subjectId": "instrument_comprehension",
+  "subtopicId": "basic_attitude_and_heading",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ic_b1_001",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "width": 420,
+        "height": 260,
+        "artificialHorizon": {
+          "bankDegrees": 0,
+          "pitchDegrees": 0
+        },
+        "compass": {
+          "headingDegrees": 90
+        },
+        "choiceSprites": {
+          "A": {
+            "spriteId": "jet_side_level_east",
+            "view": "side",
+            "headingDegrees": 90,
+            "bankDegrees": 0,
+            "pitchDegrees": 0
+          },
+          "B": {
+            "spriteId": "jet_side_level_north",
+            "view": "side",
+            "headingDegrees": 0,
+            "bankDegrees": 0,
+            "pitchDegrees": 0
+          },
+          "C": {
+            "spriteId": "jet_side_bank_right_east",
+            "view": "side",
+            "headingDegrees": 90,
+            "bankDegrees": 20,
+            "pitchDegrees": 0
+          },
+          "D": {
+            "spriteId": "jet_side_level_east_climb",
+            "view": "side",
+            "headingDegrees": 90,
+            "bankDegrees": 0,
+            "pitchDegrees": 10
+          }
+        }
+      },
+      "copilotInstruction": "Render an attitude indicator with wings level and nose level, and a heading indicator pointing to 090 (east). Choices A–D are side-view jet silhouettes; only one should be level and pointed east.",
+      "question": "Which airplane best matches the instruments (wings level, nose level, heading east)?",
+      "choices": {
+        "A": "IMAGE",
+        "B": "IMAGE",
+        "C": "IMAGE",
+        "D": "IMAGE"
+      },
+      "answer": "A",
+      "explanation": "The instruments show wings level (no bank), nose level (no pitch), and heading east (090°).",
+      "steps": [
+        "1. Identify bank: the horizon line is level, so bank = 0°.",
+        "2. Identify pitch: the nose is on the horizon bar, so pitch = 0°.",
+        "3. Identify heading: the compass card shows 090°, which is east.",
+        "4. Compare each airplane: only one is wings level, nose level, and pointed east.",
+        "5. Match that airplane to its letter; that choice is correct."
+      ],
+      "fastStrategy": "Read heading first for quick eliminations, then match wings (bank) and nose (pitch)."
+    },
+    {
+      "id": "ic_b1_002",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "width": 420,
+        "height": 260,
+        "artificialHorizon": {
+          "bankDegrees": 20,
+          "pitchDegrees": 0
+        },
+        "compass": {
+          "headingDegrees": 0
+        },
+        "choiceSprites": {
+          "A": {
+            "spriteId": "jet_front_bank_left_north",
+            "view": "front",
+            "headingDegrees": 0,
+            "bankDegrees": -20,
+            "pitchDegrees": 0
+          },
+          "B": {
+            "spriteId": "jet_front_level_north",
+            "view": "front",
+            "headingDegrees": 0,
+            "bankDegrees": 0,
+            "pitchDegrees": 0
+          },
+          "C": {
+            "spriteId": "jet_front_bank_right_north",
+            "view": "front",
+            "headingDegrees": 0,
+            "bankDegrees": 20,
+            "pitchDegrees": 0
+          },
+          "D": {
+            "spriteId": "jet_front_bank_right_south",
+            "view": "front",
+            "headingDegrees": 180,
+            "bankDegrees": 20,
+            "pitchDegrees": 0
+          }
+        }
+      },
+      "copilotInstruction": "Attitude indicator shows a right bank of about 20° with nose level. Heading indicator shows 000 (north). Draw four front-view jets; only one should bank right while pointing north.",
+      "question": "Which airplane best matches the instruments (right bank, nose level, heading north)?",
+      "choices": {
+        "A": "IMAGE",
+        "B": "IMAGE",
+        "C": "IMAGE",
+        "D": "IMAGE"
+      },
+      "answer": "C",
+      "explanation": "The aircraft is in a right bank, nose level, and heading north (000°).",
+      "steps": [
+        "1. Read bank on the attitude indicator: the horizon tilts so the right wing is lower, meaning a right bank (~20°).",
+        "2. Check pitch: the center symbol sits on the horizon line, so pitch is level.",
+        "3. Read heading: the heading index points to 000°, indicating north.",
+        "4. Compare each jet: find the one banking right (right wing down) and pointing north.",
+        "5. Pick that option as the correct answer."
+      ],
+      "fastStrategy": "Use the direction of the lowered wing to decide left vs right bank before checking pitch."
+    },
+    {
+      "id": "ic_b1_003",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "width": 420,
+        "height": 260,
+        "artificialHorizon": {
+          "bankDegrees": -20,
+          "pitchDegrees": 0
+        },
+        "compass": {
+          "headingDegrees": 180
+        },
+        "choiceSprites": {
+          "A": {
+            "spriteId": "jet_front_bank_left_south",
+            "view": "front",
+            "headingDegrees": 180,
+            "bankDegrees": -20,
+            "pitchDegrees": 0
+          },
+          "B": {
+            "spriteId": "jet_front_bank_right_south",
+            "view": "front",
+            "headingDegrees": 180,
+            "bankDegrees": 20,
+            "pitchDegrees": 0
+          },
+          "C": {
+            "spriteId": "jet_front_level_south",
+            "view": "front",
+            "headingDegrees": 180,
+            "bankDegrees": 0,
+            "pitchDegrees": 0
+          },
+          "D": {
+            "spriteId": "jet_front_bank_left_north",
+            "view": "front",
+            "headingDegrees": 0,
+            "bankDegrees": -20,
+            "pitchDegrees": 0
+          }
+        }
+      },
+      "copilotInstruction": "Attitude shows a left bank (~20°) with nose level. Compass shows 180 (south). Only one front-view jet should be banking left while heading south.",
+      "question": "Which airplane best matches the instruments (left bank, nose level, heading south)?",
+      "choices": {
+        "A": "IMAGE",
+        "B": "IMAGE",
+        "C": "IMAGE",
+        "D": "IMAGE"
+      },
+      "answer": "A",
+      "explanation": "The instruments indicate a left bank with level pitch and a heading of 180° (south).",
+      "steps": [
+        "1. Observe the attitude indicator: the left wing is lower, indicating a left bank.",
+        "2. The center symbol is on the horizon bar, so the nose is level.",
+        "3. The heading index points to 180°, so the aircraft is going south.",
+        "4. Compare each jet silhouette: find the one turning left (left wing down) while pointing south.",
+        "5. Select that airplane as the correct choice."
+      ],
+      "fastStrategy": "Bank direction comes from which wing is low; heading comes from the number under the index."
+    },
+    {
+      "id": "ic_b1_004",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "width": 420,
+        "height": 260,
+        "artificialHorizon": {
+          "bankDegrees": 0,
+          "pitchDegrees": 10
+        },
+        "compass": {
+          "headingDegrees": 270
+        },
+        "choiceSprites": {
+          "A": {
+            "spriteId": "jet_side_climb_west",
+            "view": "side",
+            "headingDegrees": 270,
+            "bankDegrees": 0,
+            "pitchDegrees": 10
+          },
+          "B": {
+            "spriteId": "jet_side_dive_west",
+            "view": "side",
+            "headingDegrees": 270,
+            "bankDegrees": 0,
+            "pitchDegrees": -10
+          },
+          "C": {
+            "spriteId": "jet_side_climb_north",
+            "view": "side",
+            "headingDegrees": 0,
+            "bankDegrees": 0,
+            "pitchDegrees": 10
+          },
+          "D": {
+            "spriteId": "jet_side_climb_west_bank_right",
+            "view": "side",
+            "headingDegrees": 270,
+            "bankDegrees": 20,
+            "pitchDegrees": 10
+          }
+        }
+      },
+      "copilotInstruction": "Attitude shows wings level with the nose above the horizon (climb). Compass shows 270 (west). Only one side-view jet should be climbing while heading west.",
+      "question": "Which airplane best matches the instruments (wings level, climbing, heading west)?",
+      "choices": {
+        "A": "IMAGE",
+        "B": "IMAGE",
+        "C": "IMAGE",
+        "D": "IMAGE"
+      },
+      "answer": "A",
+      "explanation": "The horizon is centered but the airplane symbol is above it, so the nose is up. The compass shows 270°, which is west.",
+      "steps": [
+        "1. Check bank: the horizon line is straight, so wings are level.",
+        "2. Check pitch: the miniature airplane is above the horizon, indicating a climb.",
+        "3. Read heading: the heading index points to 270°, meaning west.",
+        "4. Compare jets: look for the side view that is pitched up and pointed west.",
+        "5. Choose that silhouette as the correct answer."
+      ],
+      "fastStrategy": "Use pitch bar position (above or below horizon) to decide climb vs descent quickly."
+    },
+    {
+      "id": "ic_b1_005",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "width": 420,
+        "height": 260,
+        "artificialHorizon": {
+          "bankDegrees": 0,
+          "pitchDegrees": -10
+        },
+        "compass": {
+          "headingDegrees": 0
+        },
+        "choiceSprites": {
+          "A": {
+            "spriteId": "jet_side_dive_north",
+            "view": "side",
+            "headingDegrees": 0,
+            "bankDegrees": 0,
+            "pitchDegrees": -10
+          },
+          "B": {
+            "spriteId": "jet_side_climb_north",
+            "view": "side",
+            "headingDegrees": 0,
+            "bankDegrees": 0,
+            "pitchDegrees": 10
+          },
+          "C": {
+            "spriteId": "jet_side_dive_east",
+            "view": "side",
+            "headingDegrees": 90,
+            "bankDegrees": 0,
+            "pitchDegrees": -10
+          },
+          "D": {
+            "spriteId": "jet_side_dive_north_bank_right",
+            "view": "side",
+            "headingDegrees": 0,
+            "bankDegrees": 20,
+            "pitchDegrees": -10
+          }
+        }
+      },
+      "copilotInstruction": "Attitude shows wings level and nose below the horizon (descent). Heading is 000 (north). Only one side-view jet should be descending while pointing north.",
+      "question": "Which airplane best matches the instruments (wings level, descending, heading north)?",
+      "choices": {
+        "A": "IMAGE",
+        "B": "IMAGE",
+        "C": "IMAGE",
+        "D": "IMAGE"
+      },
+      "answer": "A",
+      "explanation": "The airplane symbol is below the horizon line (nose down), the wings are level, and the heading is 000° (north).",
+      "steps": [
+        "1. Determine bank: the horizon is not tilted, so there is no bank.",
+        "2. Look at pitch: the center symbol is below the horizon line, indicating a descent.",
+        "3. Read the compass: the index points to 000°, which is north.",
+        "4. Find the jet that is wings level, nose slightly down, and heading north.",
+        "5. Select that jet as the correct answer."
+      ],
+      "fastStrategy": "Check heading and pitch first; they quickly eliminate most wrong airplanes."
+    },
+
+    {
+      "id": "ic_b1_006",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "width": 420,
+        "height": 260,
+        "artificialHorizon": {
+          "bankDegrees": 20,
+          "pitchDegrees": 10
+        },
+        "compass": {
+          "headingDegrees": 45
+        },
+        "choiceSprites": {
+          "A": {
+            "spriteId": "jet_oblique_climb_right_ne",
+            "view": "oblique",
+            "headingDegrees": 45,
+            "bankDegrees": 20,
+            "pitchDegrees": 10
+          },
+          "B": {
+            "spriteId": "jet_oblique_climb_left_ne",
+            "view": "oblique",
+            "headingDegrees": 45,
+            "bankDegrees": -20,
+            "pitchDegrees": 10
+          },
+          "C": {
+            "spriteId": "jet_oblique_dive_right_ne",
+            "view": "oblique",
+            "headingDegrees": 45,
+            "bankDegrees": 20,
+            "pitchDegrees": -10
+          },
+          "D": {
+            "spriteId": "jet_oblique_climb_right_nw",
+            "view": "oblique",
+            "headingDegrees": 315,
+            "bankDegrees": 20,
+            "pitchDegrees": 10
+          }
+        }
+      },
+      "copilotInstruction": "Attitude shows a right bank and nose up (climbing right turn). Heading is about 045 (northeast). Only one oblique jet should show a climbing right turn toward the northeast.",
+      "question": "Which airplane best matches a climbing right turn toward the northeast?",
+      "choices": {
+        "A": "IMAGE",
+        "B": "IMAGE",
+        "C": "IMAGE",
+        "D": "IMAGE"
+      },
+      "answer": "A",
+      "explanation": "The instruments show a right bank, climb, and heading of 045°, which is northeast.",
+      "steps": [
+        "1. Read bank: right wing down means a right bank.",
+        "2. Read pitch: the nose is above the horizon, indicating a climb.",
+        "3. Read heading: about 045° on the compass, pointing to the northeast.",
+        "4. Compare each oblique jet: match right bank, nose up, and NE heading.",
+        "5. Choose the option that matches all three conditions."
+      ],
+      "fastStrategy": "Match the turn direction and climb/descend first, then verify the compass heading."
+    },
+
+    {
+      "id": "ic_b1_007",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "width": 420,
+        "height": 260,
+        "artificialHorizon": {
+          "bankDegrees": -20,
+          "pitchDegrees": 10
+        },
+        "compass": {
+          "headingDegrees": 315
+        },
+        "choiceSprites": {
+          "A": {
+            "spriteId": "jet_oblique_climb_left_nw",
+            "view": "oblique",
+            "headingDegrees": 315,
+            "bankDegrees": -20,
+            "pitchDegrees": 10
+          },
+          "B": {
+            "spriteId": "jet_oblique_climb_right_nw",
+            "view": "oblique",
+            "headingDegrees": 315,
+            "bankDegrees": 20,
+            "pitchDegrees": 10
+          },
+          "C": {
+            "spriteId": "jet_oblique_dive_left_nw",
+            "view": "oblique",
+            "headingDegrees": 315,
+            "bankDegrees": -20,
+            "pitchDegrees": -10
+          },
+          "D": {
+            "spriteId": "jet_oblique_climb_left_ne",
+            "view": "oblique",
+            "headingDegrees": 45,
+            "bankDegrees": -20,
+            "pitchDegrees": 10
+          }
+        }
+      },
+      "copilotInstruction": "Attitude: left bank with nose up (climbing left turn). Heading: about 315 (northwest). Only one oblique jet should be climbing left toward the northwest.",
+      "question": "Which airplane best matches a climbing left turn toward the northwest?",
+      "choices": {
+        "A": "IMAGE",
+        "B": "IMAGE",
+        "C": "IMAGE",
+        "D": "IMAGE"
+      },
+      "answer": "A",
+      "explanation": "The left bank and nose-up pitch show a climbing left turn, and heading 315° points northwest.",
+      "steps": [
+        "1. Notice the attitude indicator: left wing down means a left bank.",
+        "2. The nose is above the horizon, so the aircraft is climbing.",
+        "3. Heading indicator reads about 315°, which is northwest.",
+        "4. Look for the jet with left bank, nose up, and heading NW.",
+        "5. Select that jet as the answer."
+      ],
+      "fastStrategy": "Pair the bank direction with the quadrant (NE, NW, etc.) to quickly spot matching jets."
+    },
+
+    {
+      "id": "ic_b1_008",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "width": 420,
+        "height": 260,
+        "artificialHorizon": {
+          "bankDegrees": 20,
+          "pitchDegrees": -10
+        },
+        "compass": {
+          "headingDegrees": 135
+        },
+        "choiceSprites": {
+          "A": {
+            "spriteId": "jet_oblique_climb_right_se",
+            "view": "oblique",
+            "headingDegrees": 135,
+            "bankDegrees": 20,
+            "pitchDegrees": 10
+          },
+          "B": {
+            "spriteId": "jet_oblique_dive_right_se",
+            "view": "oblique",
+            "headingDegrees": 135,
+            "bankDegrees": 20,
+            "pitchDegrees": -10
+          },
+          "C": {
+            "spriteId": "jet_oblique_dive_left_se",
+            "view": "oblique",
+            "headingDegrees": 135,
+            "bankDegrees": -20,
+            "pitchDegrees": -10
+          },
+          "D": {
+            "spriteId": "jet_oblique_dive_right_sw",
+            "view": "oblique",
+            "headingDegrees": 225,
+            "bankDegrees": 20,
+            "pitchDegrees": -10
+          }
+        }
+      },
+      "copilotInstruction": "Attitude: right bank with nose down (descending right turn). Heading: about 135 (southeast). Only one oblique jet should be descending in a right turn toward the southeast.",
+      "question": "Which airplane best matches a descending right turn toward the southeast?",
+      "choices": {
+        "A": "IMAGE",
+        "B": "IMAGE",
+        "C": "IMAGE",
+        "D": "IMAGE"
+      },
+      "answer": "B",
+      "explanation": "Right bank, nose down, and heading 135° together indicate a descending right turn toward the southeast.",
+      "steps": [
+        "1. On the attitude indicator, the right wing is lower and the nose is below the horizon.",
+        "2. This means the aircraft is in a right bank and descending.",
+        "3. The compass heading around 135° places the aircraft in the southeast quadrant.",
+        "4. Compare jets: find the one banking right, nose down, heading SE.",
+        "5. Choose that jet as the correct response."
+      ],
+      "fastStrategy": "Treat SE/NE/SW/NW as quadrants and quickly match the compass angle to a quadrant before checking details."
+    },
+
+    {
+      "id": "ic_b1_009",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "width": 420,
+        "height": 260,
+        "artificialHorizon": {
+          "bankDegrees": -20,
+          "pitchDegrees": -10
+        },
+        "compass": {
+          "headingDegrees": 225
+        },
+        "choiceSprites": {
+          "A": {
+            "spriteId": "jet_oblique_dive_left_sw",
+            "view": "oblique",
+            "headingDegrees": 225,
+            "bankDegrees": -20,
+            "pitchDegrees": -10
+          },
+          "B": {
+            "spriteId": "jet_oblique_dive_right_sw",
+            "view": "oblique",
+            "headingDegrees": 225,
+            "bankDegrees": 20,
+            "pitchDegrees": -10
+          },
+          "C": {
+            "spriteId": "jet_oblique_climb_left_sw",
+            "view": "oblique",
+            "headingDegrees": 225,
+            "bankDegrees": -20,
+            "pitchDegrees": 10
+          },
+          "D": {
+            "spriteId": "jet_oblique_dive_left_se",
+            "view": "oblique",
+            "headingDegrees": 135,
+            "bankDegrees": -20,
+            "pitchDegrees": -10
+          }
+        }
+      },
+      "copilotInstruction": "Attitude: left bank with nose down (descending left turn). Heading: about 225 (southwest). Only one oblique jet should descend in a left turn toward the southwest.",
+      "question": "Which airplane best matches a descending left turn toward the southwest?",
+      "choices": {
+        "A": "IMAGE",
+        "B": "IMAGE",
+        "C": "IMAGE",
+        "D": "IMAGE"
+      },
+      "answer": "A",
+      "explanation": "Left bank, nose down, and heading 225° indicate a descending left turn toward the southwest.",
+      "steps": [
+        "1. Note the left wing lower than the right on the attitude indicator: left bank.",
+        "2. The nose symbol is below the horizon, so the aircraft is descending.",
+        "3. Heading indicator reads near 225°, which is southwest.",
+        "4. Among the jets, choose the one with left bank, nose down, and heading SW.",
+        "5. That jet must match all three instrument cues."
+      ],
+      "fastStrategy": "Use bank sign (left/right) plus climb vs descent to narrow to one or two jets before checking heading."
+    },
+
+    {
+      "id": "ic_b1_010",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "width": 420,
+        "height": 260,
+        "artificialHorizon": {
+          "bankDegrees": 10,
+          "pitchDegrees": 0
+        },
+        "compass": {
+          "headingDegrees": 270
+        },
+        "choiceSprites": {
+          "A": {
+            "spriteId": "jet_front_bank_right_west",
+            "view": "front",
+            "headingDegrees": 270,
+            "bankDegrees": 10,
+            "pitchDegrees": 0
+          },
+          "B": {
+            "spriteId": "jet_front_bank_left_west",
+            "view": "front",
+            "headingDegrees": 270,
+            "bankDegrees": -10,
+            "pitchDegrees": 0
+          },
+          "C": {
+            "spriteId": "jet_front_level_west",
+            "view": "front",
+            "headingDegrees": 270,
+            "bankDegrees": 0,
+            "pitchDegrees": 0
+          },
+          "D": {
+            "spriteId": "jet_front_bank_right_east",
+            "view": "front",
+            "headingDegrees": 90,
+            "bankDegrees": 10,
+            "pitchDegrees": 0
+          }
+        }
+      },
+      "copilotInstruction": "Attitude: shallow right bank (~10°), nose level. Heading: 270 (west). Only one front-view jet should show a gentle right turn while heading west.",
+      "question": "Which airplane best matches a shallow right turn, wings slightly banked, heading west?",
+      "choices": {
+        "A": "IMAGE",
+        "B": "IMAGE",
+        "C": "IMAGE",
+        "D": "IMAGE"
+      },
+      "answer": "A",
+      "explanation": "A small right bank with no climb or descent and a heading of 270° gives a shallow right turn to the west.",
+      "steps": [
+        "1. Check the tilt: the right side of the horizon is lower, so this is a right bank.",
+        "2. The airplane symbol stays on the horizon, so pitch is level.",
+        "3. Heading 270° means the aircraft is flying west.",
+        "4. Match these with the jet that is slightly banked right and heading west.",
+        "5. Select that jet as the answer."
+      ],
+      "fastStrategy": "Shallow banks look only slightly tilted; avoid picking jets with extreme lean or wrong heading."
+    }
+  ]
+}

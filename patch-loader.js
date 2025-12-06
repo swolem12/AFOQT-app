@@ -34,6 +34,9 @@ let patch19Config = null;
 // Patch 20 configuration (Reading Comprehension)
 let patch20Config = null;
 
+// Patch 21 configuration (Instrument Comprehension)
+let patch21Config = null;
+
 async function loadPatch19Config() {
     try {
         const response = await fetch('./Test Content/Arithmetic/Patch_19.json');
@@ -62,6 +65,22 @@ async function loadPatch20Config() {
         return patch20Config;
     } catch (error) {
         console.error('Failed to load Patch 20 config:', error);
+        return null;
+    }
+}
+
+async function loadPatch21Config() {
+    try {
+        const response = await fetch('./Test Content/Instrument Comprehension/patch_21_instrument_comprehension_generator_meta.json');
+        if (!response.ok) {
+            console.warn('Patch 21 config not found');
+            return null;
+        }
+        patch21Config = await response.json();
+        console.log('✓ Patch 21 config loaded');
+        return patch21Config;
+    } catch (error) {
+        console.error('Failed to load Patch 21 config:', error);
         return null;
     }
 }
@@ -197,6 +216,21 @@ async function loadReadingComprehensionFile(filename) {
         return await response.json();
     } catch (error) {
         console.warn('Failed to load reading comprehension file', filename, error);
+        return null;
+    }
+}
+
+// Patch 21: Instrument Comprehension loader
+async function loadInstrumentComprehensionFile(filename) {
+    try {
+        const url = `./Test Content/Instrument Comprehension/${filename}`;
+        const response = await fetch(url);
+        if (!response.ok) {
+            return null;
+        }
+        return await response.json();
+    } catch (error) {
+        console.warn('Failed to load instrument comprehension file', filename, error);
         return null;
     }
 }
@@ -498,6 +532,59 @@ async function loadAllReadingComprehensionContent() {
 }
 
 /**
+ * Load all Instrument Comprehension files (Patch 21) and build question registry
+ */
+async function loadAllInstrumentComprehensionContent() {
+    if (!patch21Config) {
+        console.warn('Patch 21 config not loaded; skipping instrument comprehension content');
+        return questionRegistry;
+    }
+    console.log('Loading instrument comprehension content...');
+
+    const difficulties = ['beginner', 'advanced', 'expert'];
+    const maxParts = 5; // scan for part1, part2, etc.
+    const files = [];
+    for (const d of difficulties) {
+        for (let part = 1; part <= maxParts; part++) {
+            files.push(`instrument_comprehension_${d}_part${part}.json`);
+        }
+    }
+
+    let loadedCount = 0;
+    const loadPromises = files.map(async (filename) => {
+        const data = await loadInstrumentComprehensionFile(filename);
+        if (!data || !data.questions) {
+            return; // skip missing files silently
+        }
+
+        // Registry setup
+        if (!questionRegistry['instrument_comprehension']) {
+            questionRegistry['instrument_comprehension'] = {};
+        }
+        if (!questionRegistry['instrument_comprehension']['basic_attitude_and_heading']) {
+            questionRegistry['instrument_comprehension']['basic_attitude_and_heading'] = {
+                beginner: [],
+                advanced: [],
+                expert: []
+            };
+        }
+
+        const difficulty = data.difficulty || 'beginner';
+        if (!questionRegistry['instrument_comprehension']['basic_attitude_and_heading'][difficulty]) {
+            questionRegistry['instrument_comprehension']['basic_attitude_and_heading'][difficulty] = [];
+        }
+
+        questionRegistry['instrument_comprehension']['basic_attitude_and_heading'][difficulty].push(...data.questions);
+        loadedCount++;
+    });
+
+    await Promise.all(loadPromises);
+    console.log(`✓ Loaded ${loadedCount} instrument comprehension files`);
+    console.log('IC question registry:', questionRegistry.instrument_comprehension);
+    return questionRegistry;
+}
+
+/**
  * Convert JSON question format to app question format
  */
 function convertJsonQuestionToAppFormat(jsonQuestion) {
@@ -677,7 +764,7 @@ function generateAfoqtPracticeTest(practiceTestConfig) {
  * Create AFOQT practice test topics from Patch 18 config
  */
 function createAfoqtPracticeTestTopics() {
-    if (!patch18Config && !patch19Config && !patch20Config) {
+    if (!patch18Config && !patch19Config && !patch20Config && !patch21Config) {
         return [];
     }
     
@@ -708,6 +795,23 @@ function createAfoqtPracticeTestTopics() {
                 subtopicsIncluded: ['rc_passage_comprehension'],
                 difficultyDistribution,
                 defaultTestLength: rules.defaultTestLength || 20
+            },
+            mode: 'practiceTestMode'
+        }));
+    }
+
+    // Add Patch 21 (Instrument Comprehension) practice test using rules
+    if (patch21Config && patch21Config.subjectsIncluded && patch21Config.subjectsIncluded.includes('instrument_comprehension')) {
+        const rules = patch21Config.rules || {};
+        const difficultyDistribution = rules.difficultyMix || { beginner: 0.35, advanced: 0.45, expert: 0.2 };
+        practiceTests.push(createPracticeTestTopic({
+            practiceTestId: 'afoqt_instrument_comprehension_practice_test',
+            displayName: 'AFOQT Instrument Comprehension Practice Test',
+            subjectId: 'instrument_comprehension',
+            questionSelectionPolicy: {
+                subtopicsIncluded: ['basic_attitude_and_heading'],
+                difficultyDistribution,
+                defaultTestLength: rules.defaultTestLength || 25
             },
             mode: 'practiceTestMode'
         }));
@@ -765,6 +869,12 @@ async function initializePatch18() {
     if (patch20Config) {
         await loadAllReadingComprehensionContent();
     }
+
+    // Load Patch 21 and instrument comprehension content
+    await loadPatch21Config();
+    if (patch21Config) {
+        await loadAllInstrumentComprehensionContent();
+    }
     
     console.log('✓ Patch 18 initialized');
     return true;
@@ -779,6 +889,8 @@ if (typeof module !== 'undefined' && module.exports) {
         generateAfoqtPracticeTest,
         loadPatch20Config,
         loadAllReadingComprehensionContent,
+        loadPatch21Config,
+        loadAllInstrumentComprehensionContent,
         questionRegistry
     };
 }

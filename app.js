@@ -903,9 +903,10 @@ const subjects = [
         description: 'Aircraft and flight principles'
     },
     {
-        id: 'instrument',
+        id: 'instrument_comprehension',
         name: 'Instrument Comprehension',
-        description: 'Aircraft attitude and heading'
+        description: 'AFOQT aircraft attitude and heading from instruments',
+        isAfoqtOfficialSubject: true
     },
     {
         id: 'table',
@@ -2024,7 +2025,7 @@ const instrumentTopics = [
         id: 'attitude-indicator-basic',
         name: 'Attitude Indicator - Basic',
         description: 'Basic aircraft attitude interpretation',
-        subjectId: 'instrument',
+        subjectId: 'instrument_comprehension',
         generateQuestion: (difficulty = 'beginner') => {
             // Beginner: Simple attitudes with clear descriptions (9 questions)
             const beginnerAttitudes = [
@@ -2095,7 +2096,7 @@ const instrumentTopics = [
         id: 'aircraft-controls',
         name: 'Aircraft Control Surfaces',
         description: 'Understanding control surface functions',
-        subjectId: 'instrument',
+        subjectId: 'instrument_comprehension',
         generateQuestion: (difficulty = 'beginner') => {
             // Beginner: Single control surface identification (9 questions)
             const beginnerQuestions = [
@@ -2248,7 +2249,7 @@ const instrumentTopics = [
         id: 'aircraft-forces',
         name: 'Four Forces of Flight',
         description: 'Lift, Weight, Thrust, and Drag',
-        subjectId: 'instrument',
+        subjectId: 'instrument_comprehension',
         generateQuestion: (difficulty = 'beginner') => {
             // Beginner: Basic force identification and direction
             const beginnerQuestions = [
@@ -2377,7 +2378,7 @@ const instrumentTopics = [
         id: 'airspeed-indicator',
         name: 'Airspeed Indicator (ASI)',
         description: 'Reading and interpreting airspeed',
-        subjectId: 'instrument',
+        subjectId: 'instrument_comprehension',
         generateQuestion: (difficulty = 'beginner') => {
             const beginnerQuestions = [
                 {
@@ -2575,7 +2576,7 @@ const instrumentTopics = [
         id: 'altimeter',
         name: 'Altimeter (ALT)',
         description: 'Reading altitude and pressure settings',
-        subjectId: 'instrument',
+        subjectId: 'instrument_comprehension',
         generateQuestion: (difficulty = 'beginner') => {
             const beginnerQuestions = [
                 {
@@ -3067,6 +3068,27 @@ function createReadingTopicsFromRegistry() {
     }
     console.log(`Created ${topicsRC.length} reading topics from content`);
     return topicsRC;
+}
+
+// Function to create Instrument Comprehension topics from questionRegistry (Patch 21)
+function createInstrumentTopicsFromRegistry() {
+    if (!questionRegistry || !questionRegistry.instrument_comprehension) {
+        console.warn('Instrument comprehension content not loaded');
+        return [];
+    }
+    const icContent = questionRegistry.instrument_comprehension;
+    const topicsIC = [];
+    for (const subtopicId in icContent) {
+        topicsIC.push({
+            id: subtopicId,
+            name: 'Basic Attitude and Heading',
+            description: 'Interpret aircraft instruments - attitude indicator, compass, and heading',
+            subjectId: 'instrument_comprehension',
+            hasContent: true
+        });
+    }
+    console.log(`Created ${topicsIC.length} instrument topics from content`);
+    return topicsIC;
 }
 
 // Combine all topics and add subject IDs
@@ -6812,6 +6834,8 @@ function renderMathUI(uiSpec) {
             return renderRCPassageBlock(uiSpec);
         case 'rc_question_block':
             return renderRCQuestionBlock(uiSpec);
+        case 'instrument_panel':
+            return renderInstrumentPanel(uiSpec);
         default:
             console.warn('Unknown uiSpec type:', uiSpec.type);
             return '';
@@ -6841,6 +6865,114 @@ function renderRCQuestionBlock(uiSpec) {
             </ul>
         </div>
     `;
+}
+
+// Instrument Comprehension renderer (Patch 21)
+function renderInstrumentPanel(uiSpec) {
+    if (!uiSpec) return '';
+    const { artificialHorizon, compass, choiceSprites } = uiSpec;
+    
+    // Render artificial horizon (attitude indicator)
+    let horizonHtml = '';
+    if (artificialHorizon) {
+        const { bankDegrees = 0, pitchDegrees = 0 } = artificialHorizon;
+        horizonHtml = `
+            <div class="instrument-horizon" style="width: 200px; height: 200px; margin: 0 auto 20px; position: relative; border: 3px solid rgba(0,255,255,0.6); border-radius: 50%; background: linear-gradient(to bottom, #1a4d6d 0%, #1a4d6d 50%, #4a2c1a 50%, #4a2c1a 100%); overflow: hidden;">
+                <div class="horizon-line" style="position: absolute; width: 100%; height: 2px; background: #00ffff; top: 50%; left: 0; transform: rotate(${-bankDegrees}deg) translateY(${-pitchDegrees * 2}px); transform-origin: center;"></div>
+                <div class="bank-indicator" style="position: absolute; top: 10px; left: 50%; width: 2px; height: 20px; background: #00ffff; transform: translateX(-50%) rotate(${-bankDegrees}deg); transform-origin: center bottom;"></div>
+                <div class="instrument-label" style="position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%); font-size: 11px; color: #00ffff;">Attitude</div>
+            </div>
+        `;
+    }
+    
+    // Render compass (heading indicator)
+    let compassHtml = '';
+    if (compass) {
+        const { headingDegrees = 0 } = compass;
+        compassHtml = `
+            <div class="instrument-compass" style="width: 200px; height: 200px; margin: 0 auto 20px; position: relative; border: 3px solid rgba(0,255,255,0.6); border-radius: 50%; background: radial-gradient(circle, rgba(0,30,50,0.9) 0%, rgba(0,20,40,0.95) 100%);">
+                <div class="compass-rose" style="position: absolute; width: 100%; height: 100%; transform: rotate(${-headingDegrees}deg);">
+                    <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: #ff4444; font-weight: 700; font-size: 16px;">N</div>
+                    <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); color: #00ffff; font-weight: 700; font-size: 14px;">S</div>
+                    <div style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #00ffff; font-weight: 700; font-size: 14px;">W</div>
+                    <div style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #00ffff; font-weight: 700; font-size: 14px;">E</div>
+                </div>
+                <div class="heading-marker" style="position: absolute; top: 5px; left: 50%; width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 12px solid #ffff00; transform: translateX(-50%);"></div>
+                <div class="instrument-label" style="position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%); font-size: 11px; color: #00ffff;">Heading ${headingDegrees}°</div>
+            </div>
+        `;
+    }
+    
+    return `
+        <div class="instrument-panel-container" style="background: rgba(0,0,0,0.4); border: 1px solid rgba(0,255,255,0.2); padding: 20px; margin: 10px 0; border-radius: 6px;">
+            <div style="text-align: center; color: #00ffff; font-weight: 700; margin-bottom: 15px; letter-spacing: 0.5px;">AIRCRAFT INSTRUMENTS</div>
+            <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 20px;">
+                ${horizonHtml}
+                ${compassHtml}
+            </div>
+        </div>
+    `;
+}
+
+// Render instrument choice sprite (Patch 21)
+function renderInstrumentChoiceSprite(spriteData) {
+    if (!spriteData) return '';
+    const { view = 'side', bankDegrees = 0, pitchDegrees = 0, headingDegrees = 0 } = spriteData;
+    
+    // Simple SVG-based aircraft representation
+    const width = 120;
+    const height = 80;
+    
+    if (view === 'side') {
+        // Side view: show pitch and heading direction
+        const noseY = height/2 - pitchDegrees * 1.5; // pitch up moves nose up
+        const tailY = height/2 + pitchDegrees * 1.5;
+        const rotation = headingDegrees > 180 ? 180 : 0; // flip if heading west
+        
+        return `
+            <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" style="display: block; margin: 0 auto; transform: rotate(${rotation}deg);">
+                <defs>
+                    <linearGradient id="jet-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#00aaff;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#0066aa;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <!-- Fuselage -->
+                <polygon points="${width*0.1},${height/2} ${width*0.3},${noseY} ${width*0.9},${noseY} ${width*0.9},${tailY} ${width*0.3},${tailY}" fill="url(#jet-gradient)" stroke="#00ffff" stroke-width="1.5"/>
+                <!-- Cockpit -->
+                <circle cx="${width*0.7}" cy="${(noseY+tailY)/2}" r="8" fill="#00ffff" opacity="0.6"/>
+                <!-- Wing -->
+                <rect x="${width*0.4}" y="${height/2 - 3}" width="${width*0.3}" height="6" fill="#00aaff" stroke="#00ffff" stroke-width="1"/>
+                <!-- Tail -->
+                <polygon points="${width*0.1},${height/2-10} ${width*0.1},${height/2+10} ${width*0.15},${height/2}" fill="#00aaff" stroke="#00ffff" stroke-width="1"/>
+            </svg>
+        `;
+    } else {
+        // Front view: show bank angle
+        const wingTilt = bankDegrees; // positive = right wing down
+        const leftWingY = height*0.6 + Math.sin(wingTilt * Math.PI/180) * 25;
+        const rightWingY = height*0.6 - Math.sin(wingTilt * Math.PI/180) * 25;
+        
+        return `
+            <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" style="display: block; margin: 0 auto;">
+                <defs>
+                    <linearGradient id="jet-gradient-front" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#00aaff;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#0066aa;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <!-- Fuselage -->
+                <rect x="${width/2 - 8}" y="${height*0.3}" width="16" height="${height*0.5}" fill="url(#jet-gradient-front)" stroke="#00ffff" stroke-width="1.5" rx="2"/>
+                <!-- Cockpit -->
+                <circle cx="${width/2}" cy="${height*0.35}" r="6" fill="#00ffff" opacity="0.6"/>
+                <!-- Wings -->
+                <line x1="${width*0.1}" y1="${leftWingY}" x2="${width*0.9}" y2="${rightWingY}" stroke="#00aaff" stroke-width="8" stroke-linecap="round"/>
+                <!-- Engines -->
+                <circle cx="${width*0.25}" cy="${leftWingY}" r="5" fill="#ff6666" opacity="0.8"/>
+                <circle cx="${width*0.75}" cy="${rightWingY}" r="5" fill="#ff6666" opacity="0.8"/>
+            </svg>
+        `;
+    }
 }
 
 /**
@@ -7584,6 +7716,16 @@ function renderQuiz() {
                         classes += ' selected';
                     }
                     
+                    // Patch 21: Handle IMAGE choices with choiceSprites
+                    let optionContent = option;
+                    if (option === 'IMAGE' && currentQuestion.uiSpec && currentQuestion.uiSpec.choiceSprites) {
+                        const optionLetter = String.fromCharCode(65 + idx);
+                        const spriteData = currentQuestion.uiSpec.choiceSprites[optionLetter];
+                        if (spriteData) {
+                            optionContent = renderInstrumentChoiceSprite(spriteData);
+                        }
+                    }
+                    
                     return `
                         <button 
                             class="${classes}" 
@@ -7591,7 +7733,7 @@ function renderQuiz() {
                             ${answered ? 'disabled' : ''}
                         >
                             <span class="option-label">${String.fromCharCode(65 + idx)}.</span>
-                            ${option}
+                            ${optionContent}
                         </button>
                     `;
                 }).join('')}
@@ -9887,6 +10029,14 @@ async function init() {
                     topics = topics.filter(t => t.subjectId !== 'reading_comprehension');
                     topics.push(...rcTopics);
                     console.log(`✓ Loaded ${rcTopics.length} reading comprehension topics from content`);
+                }
+
+                // Add Instrument Comprehension topics from Patch 21 content
+                const icTopics = createInstrumentTopicsFromRegistry();
+                if (icTopics.length > 0) {
+                    topics = topics.filter(t => t.subjectId !== 'instrument_comprehension');
+                    topics.push(...icTopics);
+                    console.log(`✓ Loaded ${icTopics.length} instrument comprehension topics from content`);
                 }
                 
                 // Add AFOQT practice test topics if available

@@ -1,0 +1,300 @@
+{
+  "instructionId": "afoqt_instrument_comprehension_generator_v1",
+  "audience": "GitHub Copilot (repo-level / workspace-level instructions)",
+  "summary": "This repo contains an AFOQT study app. Copilot must auto-generate Instrument Comprehension (IC) beginner JSON files using a simple profile list and a Node.js generator script.",
+  "goals": [
+    "Generate two JSON files for Instrument Comprehension beginner level: instrument_comprehension_beginner_part1.json and instrument_comprehension_beginner_part2.json.",
+    "Each part must contain exactly 25 questions (ic_b1_001–ic_b1_025 for part 1, ic_b1_026–ic_b1_050 for part 2).",
+    "Each question defines an instrument panel and four airplane image choices (choiceSprites A–D); only A is correct.",
+    "Use a small JavaScript generator (Node.js) to build these JSON files from a simple list of flight profiles."
+  ],
+  "fileConventions": {
+    "subjectId": "instrument_comprehension",
+    "subtopicId": "basic_attitude_and_heading",
+    "difficulty": "beginner",
+    "parts": {
+      "1": {
+        "file": "instrument_comprehension_beginner_part1.json",
+        "questionIds": "ic_b1_001–ic_b1_025"
+      },
+      "2": {
+        "file": "instrument_comprehension_beginner_part2.json",
+        "questionIds": "ic_b1_026–ic_b1_050"
+      }
+    },
+    "folderSuggestion": "Spatial/InstrumentComprehension/questions/"
+  },
+  "questionSchema": {
+    "description": "All IC beginner questions must match this JSON structure.",
+    "fields": {
+      "id": "string; format ic_b1_### (e.g., ic_b1_001, ic_b1_026)",
+      "uiSpec": {
+        "type": "object",
+        "required": [
+          "type",
+          "width",
+          "height",
+          "artificialHorizon",
+          "compass",
+          "choiceSprites"
+        ],
+        "example": {
+          "type": "instrument_panel",
+          "width": 420,
+          "height": 260,
+          "artificialHorizon": {
+            "bankDegrees": 20,
+            "pitchDegrees": 10
+          },
+          "compass": {
+            "headingDegrees": 45
+          },
+          "choiceSprites": {
+            "A": {
+              "spriteId": "jet_oblique_climb_right_ne",
+              "view": "oblique",
+              "headingDegrees": 45,
+              "bankDegrees": 20,
+              "pitchDegrees": 10
+            },
+            "B": {
+              "spriteId": "jet_oblique_climb_right_ne_wrongHeading",
+              "view": "oblique",
+              "headingDegrees": 135,
+              "bankDegrees": 20,
+              "pitchDegrees": 10
+            },
+            "C": {
+              "spriteId": "jet_oblique_climb_right_ne_wrongBank",
+              "view": "oblique",
+              "headingDegrees": 45,
+              "bankDegrees": -20,
+              "pitchDegrees": 10
+            },
+            "D": {
+              "spriteId": "jet_oblique_climb_right_ne_wrongPitch",
+              "view": "oblique",
+              "headingDegrees": 45,
+              "bankDegrees": 20,
+              "pitchDegrees": -10
+            }
+          }
+        }
+      },
+      "copilotInstruction": "Short description telling the renderer to draw an attitude indicator and compass matching the uiSpec values and to use choiceSprites A–D as aircraft images.",
+      "question": "String; phrased as: 'Which airplane best matches the instruments (DESCRIPTION)?'",
+      "choices": {
+        "A": "always 'IMAGE'",
+        "B": "always 'IMAGE'",
+        "C": "always 'IMAGE'",
+        "D": "always 'IMAGE'"
+      },
+      "answer": "Always 'A' for generated questions (Copilot may adjust later if distractor logic changes).",
+      "explanation": "Text explaining that the correct airplane matches bank, pitch, and heading.",
+      "steps": [
+        "Step-by-step solution using C1-style tutoring: read bank, read pitch, read heading, compare planes, pick the one matching all three."
+      ],
+      "fastStrategy": "Short heuristic: e.g., 'Match heading first to cut options, then match bank direction and pitch.'"
+    },
+    "constraints": [
+      "uiSpec.type must be 'instrument_panel'.",
+      "A’s choiceSprites entry must exactly match artificialHorizon.bankDegrees, artificialHorizon.pitchDegrees, and compass.headingDegrees.",
+      "B, C, and D must each be plausible but wrong by exactly one dimension (wrong heading, wrong bank, or wrong pitch).",
+      "Beginner attitudes should be simple: moderate banks (~10–30 degrees), moderate pitch (~5–15 degrees up/down), and standard headings (cardinal and diagonal headings like 0, 45, 90, 135, 180, 225, 270, 315)."
+    ]
+  },
+  "profileSchema": {
+    "description": "Copilot should drive generation from a small 'profiles' array, where each profile = one question.",
+    "fields": {
+      "id": "string; aligned with ic_b1_### sequence.",
+      "bankDegrees": "number; positive = right bank, negative = left bank, 0 = wings level.",
+      "pitchDegrees": "number; positive = climb, negative = descent, 0 = level.",
+      "headingDegrees": "number in degrees; 0–359 (e.g., 0, 45, 90, 180).",
+      "view": "string; e.g., 'side', 'front', 'oblique'; determines how to draw the jet.",
+      "correctSpriteId": "string; base sprite name for the correct airplane image.",
+      "description": "string; human-readable description used in the question text (e.g., 'climbing right turn toward the northeast')."
+    },
+    "example": {
+      "id": "ic_b1_006",
+      "bankDegrees": 20,
+      "pitchDegrees": 10,
+      "headingDegrees": 45,
+      "view": "oblique",
+      "correctSpriteId": "jet_oblique_climb_right_ne",
+      "description": "climbing right turn toward the northeast"
+    }
+  },
+  "generatorBehavior": {
+    "description": "Copilot should help maintain a Node.js generator script that converts the profiles array into full IC JSON files.",
+    "responsibilities": [
+      "Maintain a script named generate_ic_beginner.js that:",
+      "1) Imports or declares an array named profiles that defines IC beginner questions for a given part.",
+      "2) For each profile, builds:",
+      "   - uiSpec.instrument_panel (bankDegrees, pitchDegrees, headingDegrees, choiceSprites).",
+      "   - question text, copilotInstruction, choices, answer, explanation, steps, fastStrategy.",
+      "3) Wraps the list of questions in a top-level JSON object:",
+      "   { subjectId, subtopicId, difficulty, part, questions: [...] }",
+      "4) Prints the JSON to stdout with JSON.stringify(obj, null, 2)."
+    ],
+    "outputExamples": {
+      "topLevel": {
+        "subjectId": "instrument_comprehension",
+        "subtopicId": "basic_attitude_and_heading",
+        "difficulty": "beginner",
+        "part": 1,
+        "questions": [
+          {
+            "id": "ic_b1_001",
+            "uiSpec": "{...}",
+            "copilotInstruction": "Render an attitude indicator and heading indicator matching wings level, nose level, heading east...",
+            "question": "Which airplane best matches the instruments (wings level, nose level, heading east)?",
+            "choices": {
+              "A": "IMAGE",
+              "B": "IMAGE",
+              "C": "IMAGE",
+              "D": "IMAGE"
+            },
+            "answer": "A",
+            "explanation": "The correct airplane matches the bank, pitch, and heading shown on the instruments.",
+            "steps": [
+              "1. Read bank from the attitude indicator.",
+              "2. Read pitch (nose above/below the horizon line).",
+              "3. Read heading from the compass card.",
+              "4. Compare each airplane to these three readings.",
+              "5. Choose the airplane that matches all three."
+            ],
+            "fastStrategy": "Match heading first to remove options, then match bank and pitch."
+          }
+        ]
+      }
+    }
+  },
+  "generatorTemplate": {
+    "filename": "generate_ic_beginner.js",
+    "language": "javascript",
+    "runCommandExample": "node generate_ic_beginner.js > instrument_comprehension_beginner_part1.json",
+    "lines": [
+      "// generate_ic_beginner.js",
+      "// Usage:",
+      "//   node generate_ic_beginner.js > instrument_comprehension_beginner_part1.json",
+      "",
+      "const profiles = [",
+      "  {",
+      "    id: 'ic_b1_001',",
+      "    bankDegrees: 0,",
+      "    pitchDegrees: 0,",
+      "    headingDegrees: 90,",
+      "    view: 'side',",
+      "    correctSpriteId: 'jet_side_level_east',",
+      "    description: 'wings level, nose level, heading east'",
+      "  },",
+      "  {",
+      "    id: 'ic_b1_002',",
+      "    bankDegrees: 20,",
+      "    pitchDegrees: 0,",
+      "    headingDegrees: 0,",
+      "    view: 'front',",
+      "    correctSpriteId: 'jet_front_bank_right_north',",
+      "    description: 'right bank, nose level, heading north'",
+      "  }",
+      "  // Copilot: extend this array up to ic_b1_025 for part 1 and ic_b1_050 for part 2.",
+      "];",
+      "",
+      "function normHeading(h) {",
+      "  let x = h % 360;",
+      "  if (x < 0) x += 360;",
+      "  return x;",
+      "}",
+      "",
+      "function makeChoiceSprites(profile) {",
+      "  const { bankDegrees, pitchDegrees, headingDegrees, view, correctSpriteId } = profile;",
+      "",
+      "  const A = {",
+      "    spriteId: correctSpriteId,",
+      "    view,",
+      "    headingDegrees,",
+      "    bankDegrees,",
+      "    pitchDegrees",
+      "  };",
+      "",
+      "  const B = {",
+      "    spriteId: correctSpriteId + '_wrongHeading',",
+      "    view,",
+      "    headingDegrees: normHeading(headingDegrees + 90),",
+      "    bankDegrees,",
+      "    pitchDegrees",
+      "  };",
+      "",
+      "  const C = {",
+      "    spriteId: correctSpriteId + '_wrongBank',",
+      "    view,",
+      "    headingDegrees,",
+      "    bankDegrees: bankDegrees === 0 ? 20 : -bankDegrees,",
+      "    pitchDegrees",
+      "  };",
+      "",
+      "  const D = {",
+      "    spriteId: correctSpriteId + '_wrongPitch',",
+      "    view,",
+      "    headingDegrees,",
+      "    bankDegrees,",
+      "    pitchDegrees: pitchDegrees === 0 ? 10 : -pitchDegrees",
+      "  };",
+      "",
+      "  return { A, B, C, D };",
+      "}",
+      "",
+      "function makeQuestion(profile) {",
+      "  const { id, bankDegrees, pitchDegrees, headingDegrees, description } = profile;",
+      "  const choiceSprites = makeChoiceSprites(profile);",
+      "",
+      "  return {",
+      "    id,",
+      "    uiSpec: {",
+      "      type: 'instrument_panel',",
+      "      width: 420,",
+      "      height: 260,",
+      "      artificialHorizon: { bankDegrees, pitchDegrees },",
+      "      compass: { headingDegrees },",
+      "      choiceSprites",
+      "    },",
+      "    copilotInstruction: ",
+      "      'Render an attitude indicator and heading indicator matching ' + description + ",
+      "      '. Use choiceSprites A–D as jet silhouettes; only A should exactly match bank, pitch, and heading.',",
+      "    question: 'Which airplane best matches the instruments (' + description + ')?',",
+      "    choices: { A: 'IMAGE', B: 'IMAGE', C: 'IMAGE', D: 'IMAGE' },",
+      "    answer: 'A',",
+      "    explanation: 'The correct airplane must match all three instrument cues: bank, pitch, and heading.',",
+      "    steps: [",
+      "      '1. Read the bank from the attitude indicator (which wing is lower).',",
+      "      '2. Read the pitch from the aircraft symbol versus the horizon line.',",
+      "      '3. Read the heading from the compass card.',",
+      "      '4. Eliminate any airplane that disagrees with any of these readings.',",
+      "      '5. Choose the only airplane that matches all three.'",
+      "    ],",
+      "    fastStrategy: 'Match heading first to reduce the field, then match bank direction and pitch.'",
+      "  };",
+      "}",
+      "",
+      "function buildFile(subjectId, difficulty, part, profilesForPart) {",
+      "  return {",
+      "    subjectId,",
+      "    subtopicId: 'basic_attitude_and_heading',",
+      "    difficulty,",
+      "    part,",
+      "    questions: profilesForPart.map(makeQuestion)",
+      "  };",
+      "}",
+      "",
+      "const file = buildFile('instrument_comprehension', 'beginner', 1, profiles);",
+      "",
+      "console.log(JSON.stringify(file, null, 2));"
+    ]
+  },
+  "copilotTasks": [
+    "When working in files related to Instrument Comprehension, prefer modifying the generator script and profiles array instead of hand-editing large JSON blocks.",
+    "Ensure every generated question respects the questionSchema: exactly one correct airplane (A) and three plausible distractors (B, C, D) that differ by only one of heading, bank, or pitch.",
+    "Keep beginner attitudes simple and readable: avoid extreme angles; use clean increments (10, 20, 30 degrees; headings at 0/45/90/135/180/225/270/315).",
+    "When the user adds or edits a profile, update the corresponding JSON via the generator script rather than manual editing."
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "patchId": 21,
+  "patchName": "instrument_comprehension_beginner_generator_and_ui_alignment",
+  "area": "Spatial/InstrumentComprehension",
+  "status": "not_started",
+  "summary": "Standardize Instrument Comprehension (IC) beginner JSONs to use the generator pattern, instrument_panel uiSpec, and image-based answer choices consistent with AFOQT/Trivium style.",
+  "targetFiles": [
+    "Spatial/InstrumentComprehension/meta/instrument_comprehension_generator_meta.json",
+    "Spatial/InstrumentComprehension/tools/generate_ic_beginner_part1.js",
+    "Spatial/InstrumentComprehension/tools/generate_ic_beginner_part2.js",
+    "Spatial/InstrumentComprehension/questions/instrument_comprehension_beginner_part1.json",
+    "Spatial/InstrumentComprehension/questions/instrument_comprehension_beginner_part2.json",
+    "Spatial/InstrumentComprehension/ui/instrument_comprehension_ui_instructions.json"
+  ],
+  "context": {
+    "problem": "Earlier Instrument Comprehension prototypes had poorly defined instruments and non-standard UI specs. Some versions rendered text-only choices or used vague 'replace with jet image' placeholders without a consistent data structure for attitude/heading and choice images.",
+    "desiredOutcome": "All beginner IC questions are generated from a simple profile list (bank, pitch, heading, view, spriteId) through a Node generator, outputting standardized JSON. The uiSpec uses instrument_panel with artificialHorizon and compass data, and choices A–D are always image-based, with A constructed as the only correct combination."
+  },
+  "linkedPatches": [
+    {
+      "patchId": 20,
+      "relation": "pattern_reference",
+      "note": "Patch 20 established generator-style/meta-style thinking and shared UI contracts for Table Reading. Patch 21 mirrors that approach for Instrument Comprehension."
+    }
+  ],
+  "schemaRules": {
+    "topLevel": {
+      "subjectId": "instrument_comprehension",
+      "subtopicId": "basic_attitude_and_heading",
+      "difficulty": "beginner",
+      "parts": [
+        {
+          "part": 1,
+          "file": "instrument_comprehension_beginner_part1.json",
+          "questionIdRange": "ic_b1_001–ic_b1_025"
+        },
+        {
+          "part": 2,
+          "file": "instrument_comprehension_beginner_part2.json",
+          "questionIdRange": "ic_b1_026–ic_b1_050"
+        }
+      ]
+    },
+    "question": {
+      "requiredFields": [
+        "id",
+        "uiSpec",
+        "copilotInstruction",
+        "question",
+        "choices",
+        "answer",
+        "explanation",
+        "steps",
+        "fastStrategy"
+      ],
+      "uiSpecContract": {
+        "type": "instrument_panel",
+        "width": 420,
+        "height": 260,
+        "artificialHorizon": {
+          "bankDegrees": "number",
+          "pitchDegrees": "number"
+        },
+        "compass": {
+          "headingDegrees": "number"
+        },
+        "choiceSprites": {
+          "A": "object",
+          "B": "object",
+          "C": "object",
+          "D": "object"
+        }
+      },
+      "choiceSpritesContract": {
+        "spriteShape": {
+          "spriteId": "string",
+          "view": "string",
+          "headingDegrees": "number",
+          "bankDegrees": "number",
+          "pitchDegrees": "number"
+        },
+        "logic": [
+          "choiceSprites.A must EXACTLY match artificialHorizon.bankDegrees, artificialHorizon.pitchDegrees, and compass.headingDegrees.",
+          "choiceSprites.B must differ only in headingDegrees (wrong heading, same bank/pitch as A).",
+          "choiceSprites.C must differ only in bankDegrees (wrong bank side or magnitude, same heading/pitch as A).",
+          "choiceSprites.D must differ only in pitchDegrees (wrong climb/dive, same heading/bank as A)."
+        ]
+      },
+      "choicesContract": {
+        "A": "IMAGE",
+        "B": "IMAGE",
+        "C": "IMAGE",
+        "D": "IMAGE",
+        "note": "Renderer uses choiceSprites[A–D] to resolve specific images; JSON only stores logical data and spriteIds."
+      },
+      "answerRule": "For generator-based IC beginner questions, answer must be 'A' by construction.",
+      "contentStyle": {
+        "questionTemplate": "Which airplane best matches the instruments (DESCRIPTION)?",
+        "copilotInstructionTemplate": "Render an attitude indicator and heading indicator matching DESCRIPTION. Use choiceSprites A–D as jet silhouettes; only A should exactly match bank, pitch, and heading.",
+        "explanationFocus": "Explain that the correct choice is the only one matching all three: bank, pitch, and heading.",
+        "stepsC1": [
+          "1. Read the bank from the attitude indicator (which wing is lower).",
+          "2. Read the pitch from the horizon (nose above, level, or below).",
+          "3. Read the heading from the compass card.",
+          "4. Compare each airplane silhouette to these three instrument readings.",
+          "5. Eliminate any choice that disagrees on bank, pitch, or heading; select the one that matches all three."
+        ],
+        "fastStrategy": "Match heading first to eliminate obviously wrong jets, then check bank direction and pitch."
+      }
+    }
+  },
+  "generatorRequirements": {
+    "metaFile": "Spatial/InstrumentComprehension/meta/instrument_comprehension_generator_meta.json",
+    "scripts": [
+      {
+        "name": "generate_ic_beginner_part1.js",
+        "output": "instrument_comprehension_beginner_part1.json",
+        "ids": "ic_b1_001–ic_b1_025",
+        "part": 1
+      },
+      {
+        "name": "generate_ic_beginner_part2.js",
+        "output": "instrument_comprehension_beginner_part2.json",
+        "ids": "ic_b1_026–ic_b1_050",
+        "part": 2
+      }
+    ],
+    "profileSchema": {
+      "fields": {
+        "id": "string; 'ic_b1_###'",
+        "bankDegrees": "number; positive = right bank, negative = left bank, 0 = level",
+        "pitchDegrees": "number; positive = climb, negative = descent, 0 = level",
+        "headingDegrees": "number; 0–359",
+        "view": "string; e.g., 'front', 'side', 'oblique'",
+        "correctSpriteId": "string; base name of the correct jet sprite (e.g., 'jet_front_bank_right_north')",
+        "description": "string; human-readable description used in question text"
+      },
+      "example": {
+        "id": "ic_b1_006",
+        "bankDegrees": 20,
+        "pitchDegrees": 10,
+        "headingDegrees": 45,
+        "view": "oblique",
+        "correctSpriteId": "jet_oblique_climb_right_ne",
+        "description": "climbing right turn toward the northeast"
+      }
+    },
+    "scriptBehavior": [
+      "1. Read a profiles array describing each question’s correct attitude and heading.",
+      "2. For each profile, build uiSpec.instrument_panel with artificialHorizon, compass, and choiceSprites A–D using the distractor rules.",
+      "3. Inject question, copilotInstruction, choices, answer, explanation, steps, and fastStrategy following the schemaRules.question.contentStyle.",
+      "4. Wrap questions in a top-level object with subjectId, subtopicId, difficulty, part, and questions[].",
+      "5. Print JSON to stdout for redirection into the *_partX.json files."
+    ]
+  },
+  "uiInstructions": {
+    "file": "Spatial/InstrumentComprehension/ui/instrument_comprehension_ui_instructions.json",
+    "purpose": "Describe how to render instrument_panel uiSpec and image choices to match AFOQT/Trivium style.",
+    "requirements": [
+      "Attitude indicator must display bank (roll) and pitch using a horizon line and aircraft symbol.",
+      "Compass/heading indicator must display headingDegrees numerically and/or graphically.",
+      "Choices A–D must be rendered as four separate aircraft images sourced from spriteIds in choiceSprites.",
+      "The question stem and instruments appear on top/left; four jet images are presented as selectable answers beneath or beside, matching Trivium AFOQT and pamphlet layout patterns.",
+      "The renderer must treat choice text values ('IMAGE') as non-informational placeholders; actual information comes from choiceSprites."
+    ]
+  },
+  "migrationSteps": [
+    {
+      "stepId": 1,
+      "title": "Create or confirm generator meta",
+      "details": [
+        "Ensure instrument_comprehension_generator_meta.json exists and matches the generatorRules and schemaRules in this patch.",
+        "If older ad-hoc IC JSONs exist, mark them as deprecated or move them to a legacy/ folder."
+      ]
+    },
+    {
+      "stepId": 2,
+      "title": "Implement generator scripts",
+      "details": [
+        "Create generate_ic_beginner_part1.js using the profile-driven generator pattern.",
+        "Populate profiles with at least 25 entries covering a variety of simple beginner attitudes.",
+        "Run the script and produce instrument_comprehension_beginner_part1.json.",
+        "Repeat for generate_ic_beginner_part2.js and instrument_comprehension_beginner_part2.json with ids ic_b1_026–ic_b1_050."
+      ]
+    },
+    {
+      "stepId": 3,
+      "title": "Align existing JSONs",
+      "details": [
+        "If beginner IC JSONs already exist, regenerate them using the new generator instead of editing them manually.",
+        "Verify each question:",
+        "  - id matches the expected sequence and pattern.",
+        "  - uiSpec.type === 'instrument_panel'.",
+        "  - choiceSprites.A matches artificialHorizon + compass exactly.",
+        "  - B, C, D each violate exactly ONE of heading, bank, or pitch.",
+        "  - choices A–D are all 'IMAGE'.",
+        "  - answer === 'A'."
+      ]
+    },
+    {
+      "stepId": 4,
+      "title": "Wire UI instructions to frontend",
+      "details": [
+        "Confirm the frontend IC component reads uiSpec.instrument_panel and choiceSprites.",
+        "Ensure instrument_comprehension_ui_instructions.json is used as the contract for layout and styling.",
+        "Verify that four aircraft images render correctly, with the instruments above and the jets below, visually similar to Trivium-style AFOQT examples."
+      ]
+    }
+  ],
+  "acceptanceCriteria": [
+    "1. instrument_comprehension_beginner_part1.json and instrument_comprehension_beginner_part2.json are both generated by scripts, not hand-edited.",
+    "2. Each beginner IC question contains a valid instrument_panel uiSpec with artificialHorizon, compass, and choiceSprites A–D.",
+    "3. Choice A is always the only fully correct jet; B/C/D differ by exactly one parameter each (heading, bank, or pitch).",
+    "4. Choice text entries are all 'IMAGE'; actual visual differences are driven by choiceSprites and spriteIds.",
+    "5. The IC UI renders attitude + heading instruments and four image choices in a layout that matches AFOQT-style instrument comprehension questions.",
+    "6. All IC beginner questions conform to the generator meta spec and the C1 + fastStrategy explanation patterns used in the rest of the AFOQT project."
+  ]
+}
