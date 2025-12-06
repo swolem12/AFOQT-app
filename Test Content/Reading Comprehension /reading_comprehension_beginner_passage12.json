@@ -1,0 +1,74 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "beginner",
+  "passageId": "rc_b1_p012",
+
+  "passage": "In many regions, freshwater availability is becoming increasingly uncertain due to shifting weather patterns and growing demand. To help address these challenges, researchers are developing advanced water recycling systems that can treat wastewater to near-drinking quality. These systems use multiple filtration stages, including membranes, ultraviolet light, and activated carbon, to remove contaminants. One of the major advantages of modern recycling technology is its ability to operate efficiently in urban areas where traditional reservoirs cannot be expanded. However, public acceptance remains a significant barrier. Despite scientific evidence supporting safety, many residents are hesitant to adopt recycled water for household use. To overcome this, cities have begun public outreach campaigns that explain how the technology works, highlight successful examples, and emphasize the environmental benefits. As awareness grows, more communities are considering recycled water as a vital component of long-term resource planning.",
+
+  "questions": [
+    {
+      "id": "rc_b1_p012_q1",
+      "question": "What is the main purpose of the passage?",
+      "choices": {
+        "A": "To argue that traditional reservoirs should be eliminated",
+        "B": "To describe how advanced water recycling systems address freshwater shortages",
+        "C": "To explain why wastewater cannot be safely filtered",
+        "D": "To compare urban and rural water consumption habits"
+      },
+      "answer": "B",
+      "explanation": "The passage focuses on recycled water systems as a way to cope with uncertain freshwater supplies."
+    },
+
+    {
+      "id": "rc_b1_p012_q2",
+      "question": "Which advantage of modern water recycling systems is mentioned?",
+      "choices": {
+        "A": "They require no filtration to be effective",
+        "B": "They reduce the need for public communication campaigns",
+        "C": "They operate efficiently in dense urban environments",
+        "D": "They eliminate the need for natural freshwater sources"
+      },
+      "answer": "C",
+      "explanation": "The passage states that recycling systems work well in cities where reservoirs cannot expand."
+    },
+
+    {
+      "id": "rc_b1_p012_q3",
+      "question": "What challenge does the passage identify regarding recycled water?",
+      "choices": {
+        "A": "Low availability of wastewater",
+        "B": "Difficulty filtering contaminants",
+        "C": "Public reluctance to accept recycled water",
+        "D": "Lack of successful case studies"
+      },
+      "answer": "C",
+      "explanation": "Many residents are hesitant to adopt recycled water despite scientific evidence of its safety."
+    },
+
+    {
+      "id": "rc_b1_p012_q4",
+      "question": "According to the passage, cities encourage acceptance of recycled water by:",
+      "choices": {
+        "A": "Reducing water recycling technology costs",
+        "B": "Conducting outreach and sharing successful examples",
+        "C": "Requiring residents to install home filtration systems",
+        "D": "Increasing reliance on imported water"
+      },
+      "answer": "B",
+      "explanation": "Cities use education and real-world success stories to build public trust."
+    },
+
+    {
+      "id": "rc_b1_p012_q5",
+      "question": "In the passage, the word “component” most nearly means:",
+      "choices": {
+        "A": "Obstacle",
+        "B": "Opportunity",
+        "C": "Essential part",
+        "D": "Temporary fix"
+      },
+      "answer": "C",
+      "explanation": "The passage describes recycled water as an important part of long-term resource planning."
+    }
+  ]
+}

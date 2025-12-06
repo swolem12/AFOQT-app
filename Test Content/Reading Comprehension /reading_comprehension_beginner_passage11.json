@@ -1,0 +1,74 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "beginner",
+  "passageId": "rc_b1_p011",
+
+  "passage": "As coastal cities confront rising sea levels, engineers are exploring a range of adaptation strategies to protect infrastructure and communities. Traditional approaches such as seawalls and levees remain common, but modern planning emphasizes flexible, layered defenses rather than a single solution. One example is the use of ‘living shorelines,’ which incorporate natural features like wetlands and mangroves to absorb wave energy and reduce erosion. These solutions offer ecological benefits while also strengthening long-term resilience. However, implementing them can be complex, requiring coordination between environmental scientists, city planners, and local residents. In addition, living shorelines are not suitable for every coastline, particularly in areas with high wave intensity or limited space. Despite these challenges, many cities are beginning to combine engineered structures with natural defenses to create more adaptable coastal protection systems. This hybrid approach reflects a shift toward strategies that aim not just to resist changing conditions, but to work with them.",
+
+  "questions": [
+    {
+      "id": "rc_b1_p011_q1",
+      "question": "What is the main idea of the passage?",
+      "choices": {
+        "A": "Coastal cities should rely exclusively on seawalls for protection.",
+        "B": "Living shorelines eliminate the need for any engineered defenses.",
+        "C": "Modern coastal protection strategies combine natural and engineered solutions.",
+        "D": "Mangroves are the only reliable option for reducing erosion."
+      },
+      "answer": "C",
+      "explanation": "The passage emphasizes the shift toward hybrid coastal protection that uses both natural features and engineered structures."
+    },
+
+    {
+      "id": "rc_b1_p011_q2",
+      "question": "Which of the following describes an advantage of living shorelines?",
+      "choices": {
+        "A": "They require no maintenance after installation.",
+        "B": "They provide ecological benefits while reducing erosion.",
+        "C": "They can be built quickly in any coastal region.",
+        "D": "They eliminate the need for community involvement."
+      },
+      "answer": "B",
+      "explanation": "The passage states that living shorelines absorb wave energy, reduce erosion, and offer ecological benefits."
+    },
+
+    {
+      "id": "rc_b1_p011_q3",
+      "question": "What challenge is associated with implementing living shorelines?",
+      "choices": {
+        "A": "They are banned in most cities.",
+        "B": "They require significant artificial reinforcement.",
+        "C": "They demand coordination among various groups.",
+        "D": "They only work when combined with seawalls."
+      },
+      "answer": "C",
+      "explanation": "The passage notes that implementing living shorelines involves coordination among scientists, planners, and residents."
+    },
+
+    {
+      "id": "rc_b1_p011_q4",
+      "question": "According to the passage, why might living shorelines not work in some locations?",
+      "choices": {
+        "A": "They are incompatible with modern engineering tools.",
+        "B": "They cannot withstand high wave intensity or limited space.",
+        "C": "They are more expensive than traditional seawalls.",
+        "D": "They require complex underwater construction."
+      },
+      "answer": "B",
+      "explanation": "The passage states that high wave intensity and limited space can make them unsuitable for certain coasts."
+    },
+
+    {
+      "id": "rc_b1_p011_q5",
+      "question": "The author suggests that modern coastal strategies aim to:",
+      "choices": {
+        "A": "Stop all environmental changes entirely.",
+        "B": "Work with changing conditions rather than only resist them.",
+        "C": "Remove natural features from coastal areas.",
+        "D": "Prioritize appearance over functionality."
+      },
+      "answer": "B",
+      "explanation": "The final sentence explicitly states that the new approach aims to work with changing conditions instead of resisting them."
+    }
+  ]
+}

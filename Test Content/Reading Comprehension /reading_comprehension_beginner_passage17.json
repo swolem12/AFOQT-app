@@ -1,0 +1,70 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "beginner",
+  "passageId": "rc_b1_p017",
+
+  "passage": "Modern agriculture is increasingly adopting precision farming, a technique that uses data to optimize crop production. Farmers deploy sensors that monitor soil moisture, nutrient levels, and temperature, allowing them to tailor irrigation and fertilizer use to specific areas of a field. This targeted approach reduces waste and can significantly improve yields. Drones equipped with cameras also play a role by surveying large areas quickly and identifying early signs of plant stress. While precision farming offers many benefits, it requires reliable internet access, which is still limited in some rural regions. Additionally, the cost of equipment can be a barrier for small farming operations. Despite these obstacles, many agricultural experts believe precision farming will become more common as technology becomes cheaper and more accessible, ultimately helping farmers use resources more efficiently.",
+
+  "questions": [
+    {
+      "id": "rc_b1_p017_q1",
+      "question": "What is the main idea of the passage?",
+      "choices": {
+        "A": "Precision farming uses data to improve agricultural efficiency.",
+        "B": "Drone technology has replaced traditional farming methods.",
+        "C": "Soil moisture is the most important factor in crop production.",
+        "D": "Rural internet access is no longer an issue for farmers."
+      },
+      "answer": "A",
+      "explanation": "The passage centers on how data-driven tools enhance farming efficiency."
+    },
+    {
+      "id": "rc_b1_p017_q2",
+      "question": "What is one benefit of precision farming?",
+      "choices": {
+        "A": "It eliminates the need for fertilizers entirely.",
+        "B": "It reduces waste by targeting specific field areas.",
+        "C": "It guarantees perfect crop yields every season.",
+        "D": "It prevents all plant diseases."
+      },
+      "answer": "B",
+      "explanation": "Sensors allow farmers to apply inputs only where needed."
+    },
+    {
+      "id": "rc_b1_p017_q3",
+      "question": "What challenge may limit the use of precision farming?",
+      "choices": {
+        "A": "Poor access to reliable internet in rural areas",
+        "B": "High levels of pesticides in soil",
+        "C": "Rapid decline in global crop demand",
+        "D": "Lack of interest from agricultural scientists"
+      },
+      "answer": "A",
+      "explanation": "The passage states that rural connectivity issues restrict technology use."
+    },
+    {
+      "id": "rc_b1_p017_q4",
+      "question": "How do drones support precision farming?",
+      "choices": {
+        "A": "By planting seeds automatically",
+        "B": "By surveying land and detecting plant stress",
+        "C": "By analyzing soil chemistry underground",
+        "D": "By delivering fertilizer to fields"
+      },
+      "answer": "B",
+      "explanation": "Drones help identify problems over large areas quickly."
+    },
+    {
+      "id": "rc_b1_p017_q5",
+      "question": "What does the passage suggest about the future of precision farming?",
+      "choices": {
+        "A": "It will disappear as traditional methods return",
+        "B": "It will rely entirely on drone applications",
+        "C": "It will grow as technology becomes more affordable",
+        "D": "It will require no internet connectivity"
+      },
+      "answer": "C",
+      "explanation": "The passage states that lower costs will drive wider adoption."
+    }
+  ]
+}

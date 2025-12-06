@@ -1,0 +1,68 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "beginner",
+  "passageId": "rc_b1_p008",
+  "passage": "Medical researchers investigating long-term astronaut health have discovered that extended exposure to microgravity affects more than just muscle strength and bone density. Recent studies show that fluid in the body shifts upward toward the head in low-gravity environments, placing pressure on the eyes and altering their shape. Some astronauts experience temporary vision changes during missions, while others develop longer-lasting issues upon returning to Earth. Scientists are exploring countermeasures, including specialized compression garments and adjustable spacecraft environments that simulate partial gravity. Although these solutions show promise, researchers caution that space agencies must continue studying the problem as missions to the Moon and Mars become more common. Understanding how microgravity impacts human physiology is essential for keeping astronauts healthy during increasingly ambitious space exploration.",
+  "questions": [
+    {
+      "id": "rc_b1_p008_q1",
+      "question": "What is the main purpose of the passage?",
+      "choices": {
+        "A": "To argue that space exploration should be postponed indefinitely.",
+        "B": "To describe how microgravity affects astronauts' vision and the efforts to address it.",
+        "C": "To compare astronaut training programs across different space agencies.",
+        "D": "To explain why astronauts must undergo extensive eye surgeries before missions."
+      },
+      "answer": "B",
+      "explanation": "The passage focuses on how microgravity alters fluid distribution and impacts vision, and the research into countermeasures."
+    },
+    {
+      "id": "rc_b1_p008_q2",
+      "question": "Why does microgravity affect astronauts' vision?",
+      "choices": {
+        "A": "It causes rapid muscle contractions near the eyes.",
+        "B": "It forces the body to retain more water overall.",
+        "C": "It shifts bodily fluids upward, increasing pressure on the eyes.",
+        "D": "It exposes astronauts to harmful levels of solar radiation."
+      },
+      "answer": "C",
+      "explanation": "The passage clearly states that fluids move upward toward the head, creating pressure on the eyes."
+    },
+    {
+      "id": "rc_b1_p008_q3",
+      "question": "What does the passage suggest about current countermeasures?",
+      "choices": {
+        "A": "They have completely eliminated the problem.",
+        "B": "They are promising but require further study.",
+        "C": "They are too expensive to implement on missions.",
+        "D": "They are only useful for short missions in Earth's orbit."
+      },
+      "answer": "B",
+      "explanation": "The text notes that the countermeasures show promise but research must continue."
+    },
+    {
+      "id": "rc_b1_p008_q4",
+      "question": "Which of the following is implied by the passage?",
+      "choices": {
+        "A": "Vision problems may become more important as missions grow longer.",
+        "B": "Most astronauts permanently lose their vision after returning to Earth.",
+        "C": "Space agencies have stopped researching the effects of microgravity.",
+        "D": "The main health concern in space is bone density loss."
+      },
+      "answer": "A",
+      "explanation": "The passage mentions the importance of studying this issue as missions to the Moon and Mars increase."
+    },
+    {
+      "id": "rc_b1_p008_q5",
+      "question": "Why is continued research important, according to the passage?",
+      "choices": {
+        "A": "New missions will expose astronauts to even longer periods in microgravity.",
+        "B": "Medical technology on Earth is not advancing quickly enough.",
+        "C": "Spacecraft design regulations require new health studies every decade.",
+        "D": "Most astronauts refuse to wear compression garments."
+      },
+      "answer": "A",
+      "explanation": "The passage states that as more long-duration missions occur, understanding microgravity’s effects becomes more crucial."
+    }
+  ]
+}

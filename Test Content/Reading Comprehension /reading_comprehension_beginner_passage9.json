@@ -1,0 +1,68 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "beginner",
+  "passageId": "rc_b1_p009",
+  "passage": "Economists analyzing consumer behavior have observed a growing shift toward repairing items rather than replacing them. This trend contrasts sharply with the last few decades, during which inexpensive manufacturing and rapid product cycles encouraged disposable consumption. Several factors now contribute to the change. First, rising prices for raw materials have increased the cost of new goods, making repairs a more attractive option. Second, online tutorials and easily accessible replacement parts have empowered consumers to fix electronics, clothing, and household tools on their own. Third, environmental awareness has led many individuals to reconsider the impact of frequent purchases on landfill waste. While manufacturers acknowledge the trend, some companies remain hesitant to design products for longevity, fearing it may reduce sales. Nevertheless, economists predict that the shift toward repair-oriented consumption will continue as sustainability becomes a priority for both consumers and policymakers.",
+  "questions": [
+    {
+      "id": "rc_b1_p009_q1",
+      "question": "What is the main idea of the passage?",
+      "choices": {
+        "A": "Manufacturers are fully embracing long-lasting product designs.",
+        "B": "Consumers are increasingly repairing items due to economic and environmental factors.",
+        "C": "Online tutorials have eliminated the need for professional repair services.",
+        "D": "Disposable goods have become more popular in recent years."
+      },
+      "answer": "B",
+      "explanation": "The passage explains why consumers are shifting toward repairing items: higher costs, easy repair access, and environmental concerns."
+    },
+    {
+      "id": "rc_b1_p009_q2",
+      "question": "Which factor contributes to the rise in repair-oriented behavior?",
+      "choices": {
+        "A": "Declining costs of new products.",
+        "B": "Legal restrictions on purchasing replacement parts.",
+        "C": "Increased accessibility of instructions and parts for repairs.",
+        "D": "Reduced availability of online learning resources."
+      },
+      "answer": "C",
+      "explanation": "The passage emphasizes online tutorials and accessible parts as key contributors."
+    },
+    {
+      "id": "rc_b1_p009_q3",
+      "question": "What concern do some companies have about designing more durable products?",
+      "choices": {
+        "A": "It may lead to increased production costs.",
+        "B": "It could reduce long-term profit by lowering replacement sales.",
+        "C": "It may violate international trade agreements.",
+        "D": "It will require consumers to undergo training first."
+      },
+      "answer": "B",
+      "explanation": "The passage states companies fear durable products could reduce sales by limiting repeat purchases."
+    },
+    {
+      "id": "rc_b1_p009_q4",
+      "question": "Why has the cost of new goods increased?",
+      "choices": {
+        "A": "Raw materials have become more expensive.",
+        "B": "Consumers are buying fewer items overall.",
+        "C": "Governments have banned low-cost imports.",
+        "D": "Repair shops are charging higher service fees."
+      },
+      "answer": "A",
+      "explanation": "The passage cites rising raw material prices as a reason new goods cost more."
+    },
+    {
+      "id": "rc_b1_p009_q5",
+      "question": "What broader trend does the passage suggest?",
+      "choices": {
+        "A": "Disposable consumption will continue to dominate global markets.",
+        "B": "Repairing goods will become less common as technology advances.",
+        "C": "Sustainability concerns will increasingly influence consumer decisions.",
+        "D": "Policymakers will discourage consumers from repairing older products."
+      },
+      "answer": "C",
+      "explanation": "The passage concludes that sustainability will shape future consumption patterns."
+    }
+  ]
+}

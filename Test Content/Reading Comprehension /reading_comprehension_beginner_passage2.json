@@ -1,0 +1,68 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "beginner",
+  "passageId": "rc_b1_p002",
+  "passage": "Autonomous delivery drones were originally designed for commercial package transport, but their use has expanded into humanitarian operations. In regions struck by natural disasters, damaged roads and blocked infrastructure often delay ground-based relief efforts. Drones, however, can navigate over collapsed bridges, flooded terrain, and landslides to reach isolated communities. Their small payload capacity limits the amount of medicine, food, or equipment they can deliver at once, but their speed and ability to deploy in large numbers compensates for this. Emergency planners now integrate drones into early-response protocols, recognizing that rapid delivery of even small quantities of critical supplies can significantly improve survival outcomes. As technology advances, drones are expected to carry heavier loads and operate for longer durations, further increasing their impact during emergencies.",
+  "questions": [
+    {
+      "id": "rc_b1_p002_q1",
+      "question": "What is the primary focus of the passage?",
+      "choices": {
+        "A": "The advantages drones offer in disaster relief operations.",
+        "B": "How commercial companies use drones to expand profits.",
+        "C": "The dangers associated with drone deployment.",
+        "D": "Regulations restricting drone use in crowded areas."
+      },
+      "answer": "A",
+      "explanation": "The passage emphasizes how drones are useful in reaching isolated communities and accelerating relief efforts."
+    },
+    {
+      "id": "rc_b1_p002_q2",
+      "question": "Why are drones able to access regions traditional vehicles cannot?",
+      "choices": {
+        "A": "They operate at faster speeds than airplanes.",
+        "B": "They do not require satellite communication.",
+        "C": "They fly over damaged infrastructure.",
+        "D": "They are exempt from airspace rules during emergencies."
+      },
+      "answer": "C",
+      "explanation": "The passage notes drones can navigate over collapsed bridges, floods, and landslides, unlike ground vehicles."
+    },
+    {
+      "id": "rc_b1_p002_q3",
+      "question": "What limitation is mentioned regarding drone operations?",
+      "choices": {
+        "A": "Short battery life makes long-range travel impossible.",
+        "B": "They can only be flown by certified pilots.",
+        "C": "They carry limited amounts of supplies at once.",
+        "D": "Their navigation systems fail in high winds."
+      },
+      "answer": "C",
+      "explanation": "The passage states that drones have a small payload capacity."
+    },
+    {
+      "id": "rc_b1_p002_q4",
+      "question": "The passage suggests that drones make the greatest impact when:",
+      "choices": {
+        "A": "Multiple drones operate together for rapid deliveries.",
+        "B": "They replace all ground-based relief operations.",
+        "C": "Weather conditions remain stable for long periods.",
+        "D": "They are equipped with heavy-duty industrial tools."
+      },
+      "answer": "A",
+      "explanation": "The text states that although drones carry small loads, deploying many at once compensates for that limitation."
+    },
+    {
+      "id": "rc_b1_p002_q5",
+      "question": "How does the author view the future role of drones?",
+      "choices": {
+        "A": "They will be too expensive for emergency planners to use.",
+        "B": "Their importance will decrease as ground travel improves.",
+        "C": "They will become more capable and even more impactful.",
+        "D": "They will be replaced by larger aircraft that deliver more supplies."
+      },
+      "answer": "C",
+      "explanation": "The passage concludes that drones will carry heavier loads and operate longer, increasing their role in emergencies."
+    }
+  ]
+}

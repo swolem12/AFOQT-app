@@ -1,0 +1,39 @@
+{
+  "patchId": "reading_comprehension_index_01",
+  "title": "Reading Comprehension Content Index",
+  "description": "Defines the AFOQT Reading Comprehension structure, passage grouping, and difficulty segmentation.",
+  "subjects": [
+    {
+      "id": "reading_comprehension",
+      "displayName": "AFOQT Reading Comprehension",
+      "isAfoqtOfficialSubject": true,
+      "officialFormat": {
+        "passageLength": "120–180 words per passage",
+        "questionsPerPassage": "4–6 questions",
+        "responseType": "multiple choice",
+        "timePressure": "moderate"
+      },
+      "difficultyLevels": [
+        "beginner",
+        "advanced",
+        "expert"
+      ],
+      "mappedGameSubtopics": [
+        {
+          "subtopicId": "rc_passage_comprehension",
+          "description": "AFOQT-style reading passages followed by 4–6 comprehension questions.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        }
+      ]
+    }
+  ],
+  "contentRules": {
+    "filenamePattern": "reading_comprehension_<difficulty>_passage<index>.json",
+    "inferenceNotesForCopilot": [
+      "Infer difficulty level from the filename: 'reading_comprehension_beginner_passage1.json' → difficulty=beginner.",
+      "Each JSON file contains: passage text, 4–6 questions, answers, and explanations.",
+      "Group questions under the same passage for unified rendering."
+    ]
+  }
+}

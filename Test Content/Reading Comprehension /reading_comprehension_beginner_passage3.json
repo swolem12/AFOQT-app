@@ -1,0 +1,68 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "beginner",
+  "passageId": "rc_b1_p003",
+  "passage": "Researchers studying sleep patterns have found that short naps can significantly improve cognitive performance, even when taken during busy workdays. Unlike extended sleep, which involves multiple cycles of deep and rapid-eye-movement stages, a brief nap typically lasts between 10 and 20 minutes and focuses on restoring alertness. This duration is short enough to avoid sleep inertia, the grogginess people often feel after waking from deeper sleep. Companies in high-stress industries have begun adopting structured napping policies, recognizing that well-rested employees tend to make fewer mistakes and recover more quickly from fatigue. Although some critics argue that napping reduces productivity, most studies indicate that strategic rest periods increase efficiency over the course of a full work shift. As the science behind sleep becomes better understood, more workplaces may integrate short naps as a standard part of employee wellness programs.",
+  "questions": [
+    {
+      "id": "rc_b1_p003_q1",
+      "question": "What is the main purpose of the passage?",
+      "choices": {
+        "A": "To argue that traditional nighttime sleep is superior to naps.",
+        "B": "To explain why short naps are becoming more accepted in workplaces.",
+        "C": "To criticize companies that allow employees to nap at work.",
+        "D": "To describe the neurological stages of deep sleep in detail."
+      },
+      "answer": "B",
+      "explanation": "The passage discusses benefits of short naps and why workplaces are beginning to integrate them."
+    },
+    {
+      "id": "rc_b1_p003_q2",
+      "question": "According to the passage, what is a key advantage of a 10–20 minute nap?",
+      "choices": {
+        "A": "It allows the body to complete several full sleep cycles.",
+        "B": "It prevents the onset of sleep inertia.",
+        "C": "It replaces the need for nighttime rest.",
+        "D": "It provides enough time for deep REM sleep."
+      },
+      "answer": "B",
+      "explanation": "The passage states that short naps are brief enough to avoid sleep inertia."
+    },
+    {
+      "id": "rc_b1_p003_q3",
+      "question": "What does the passage imply about companies adopting nap policies?",
+      "choices": {
+        "A": "They primarily use naps to reduce employee break time.",
+        "B": "They are motivated by scientific findings on improved performance.",
+        "C": "They only allow naps in low-stress workplaces.",
+        "D": "They do so mainly to offer attractive employee benefits."
+      },
+      "answer": "B",
+      "explanation": "The passage says high-stress industries adopt naps because rested employees make fewer mistakes and perform better."
+    },
+    {
+      "id": "rc_b1_p003_q4",
+      "question": "What do critics claim about workplace napping?",
+      "choices": {
+        "A": "It decreases overall productivity.",
+        "B": "It increases long-term health risks.",
+        "C": "It encourages employees to oversleep.",
+        "D": "It worsens recovery from fatigue."
+      },
+      "answer": "A",
+      "explanation": "The passage states critics argue napping reduces productivity."
+    },
+    {
+      "id": "rc_b1_p003_q5",
+      "question": "Which statement is best supported by the passage?",
+      "choices": {
+        "A": "Short naps are universally required in all modern workplaces.",
+        "B": "Researchers still disagree on whether naps affect alertness.",
+        "C": "Most scientific evidence supports strategic napping during workdays.",
+        "D": "Deep sleep is necessary for any meaningful improvement in performance."
+      },
+      "answer": "C",
+      "explanation": "The passage concludes most studies show strategic rest improves efficiency."
+    }
+  ]
+}

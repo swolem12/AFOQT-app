@@ -31,6 +31,9 @@ async function loadPatch18Config() {
 // Patch 19 configuration (Arithmetic Reasoning)
 let patch19Config = null;
 
+// Patch 20 configuration (Reading Comprehension)
+let patch20Config = null;
+
 async function loadPatch19Config() {
     try {
         const response = await fetch('./Test Content/Arithmetic/Patch_19.json');
@@ -43,6 +46,22 @@ async function loadPatch19Config() {
         return patch19Config;
     } catch (error) {
         console.error('Failed to load Patch 19 config:', error);
+        return null;
+    }
+}
+
+async function loadPatch20Config() {
+    try {
+        const response = await fetch('./Test Content/Patch_20.json');
+        if (!response.ok) {
+            console.warn('Patch 20 config not found');
+            return null;
+        }
+        patch20Config = await response.json();
+        console.log('✓ Patch 20 config loaded');
+        return patch20Config;
+    } catch (error) {
+        console.error('Failed to load Patch 20 config:', error);
         return null;
     }
 }
@@ -162,6 +181,22 @@ async function loadArithmeticFile(filename) {
         return data;
     } catch (error) {
         console.error(`Error loading ${filename}:`, error);
+        return null;
+    }
+}
+
+// Patch 20: Reading Comprehension loader
+async function loadReadingComprehensionFile(filename) {
+    try {
+        // Folder name contains a space; encode it for fetch
+        const url = encodeURI(`./Test Content/Reading Comprehension /${filename}`);
+        const response = await fetch(url);
+        if (!response.ok) {
+            return null;
+        }
+        return await response.json();
+    } catch (error) {
+        console.warn('Failed to load reading comprehension file', filename, error);
         return null;
     }
 }
@@ -399,6 +434,70 @@ async function loadAllArithmeticContent() {
 }
 
 /**
+ * Load all Reading Comprehension files (Patch 20) and build question registry
+ */
+async function loadAllReadingComprehensionContent() {
+    if (!patch20Config) {
+        console.warn('Patch 20 config not loaded; skipping reading comprehension content');
+        return questionRegistry;
+    }
+    console.log('Loading reading comprehension content...');
+
+    const difficulties = ['beginner', 'advanced', 'expert'];
+    const maxPassages = 30; // reasonable upper bound to scan per difficulty
+    const files = [];
+    for (const d of difficulties) {
+        for (let idx = 1; idx <= maxPassages; idx++) {
+            files.push(`reading_comprehension_${d}_passage${idx}.json`);
+        }
+    }
+
+    let loadedCount = 0;
+    let errorCount = 0;
+    const loadPromises = files.map(async (filename) => {
+        const data = await loadReadingComprehensionFile(filename);
+        if (!data || !data.questions || !data.passage) {
+            return; // skip missing files silently
+        }
+
+        // Registry setup
+        if (!questionRegistry['reading_comprehension']) {
+            questionRegistry['reading_comprehension'] = {};
+        }
+        if (!questionRegistry['reading_comprehension']['rc_passage_comprehension']) {
+            questionRegistry['reading_comprehension']['rc_passage_comprehension'] = {
+                beginner: [],
+                advanced: [],
+                expert: []
+            };
+        }
+
+        const difficulty = data.difficulty || 'beginner';
+        if (!questionRegistry['reading_comprehension']['rc_passage_comprehension'][difficulty]) {
+            questionRegistry['reading_comprehension']['rc_passage_comprehension'][difficulty] = [];
+        }
+
+        // Attach passage UI spec to each question so it renders with the passage
+        const questionsWithPassage = data.questions.map(q => ({
+            ...q,
+            passageId: data.passageId,
+            uiSpec: {
+                type: 'rc_passage_block',
+                passage: data.passage
+            }
+        }));
+
+        questionRegistry['reading_comprehension']['rc_passage_comprehension'][difficulty].push(...questionsWithPassage);
+        loadedCount++;
+    });
+
+    await Promise.all(loadPromises);
+    console.log(`✓ Loaded ${loadedCount} reading comprehension passage files (${errorCount} errors)`);
+    console.log('Reading question registry:', questionRegistry.reading_comprehension);
+    return questionRegistry;
+}
+
+/**
  * Convert JSON question format to app question format
  */
 function convertJsonQuestionToAppFormat(jsonQuestion) {
@@ -578,29 +677,62 @@ function generateAfoqtPracticeTest(practiceTestConfig) {
  * Create AFOQT practice test topics from Patch 18 config
  */
 function createAfoqtPracticeTestTopics() {
-    if (!patch18Config || !patch18Config.afoqtPracticeTests) {
+    if (!patch18Config && !patch19Config && !patch20Config) {
         return [];
     }
     
     const practiceTests = [];
     
-    for (const testConfig of patch18Config.afoqtPracticeTests.subjectConfigs) {
-        practiceTests.push({
-            id: testConfig.practiceTestId,
-            name: testConfig.displayName,
-            description: `Official ${testConfig.displayName} practice test with ${testConfig.questionSelectionPolicy.defaultTestLength} questions`,
-            subjectId: testConfig.subjectId,
-            isPracticeTest: true,
-            testConfig: testConfig,
-            generateQuestion: (difficulty) => {
-                // For practice tests, generate all questions at once
-                // This will be called by startQuiz, but we'll handle it differently
-                return null; // Handled by custom logic
-            }
-        });
+    if (patch18Config && patch18Config.afoqtPracticeTests) {
+        for (const testConfig of patch18Config.afoqtPracticeTests.subjectConfigs) {
+            practiceTests.push(createPracticeTestTopic(testConfig));
+        }
+    }
+    
+    // Add Patch 19 (Arithmetic) practice tests if available
+    if (patch19Config && patch19Config.afoqtPracticeTests) {
+        for (const testConfig of patch19Config.afoqtPracticeTests.subjectConfigs) {
+            practiceTests.push(createPracticeTestTopic(testConfig));
+        }
+    }
+
+    // Add Patch 20 (Reading Comprehension) practice test using rules
+    if (patch20Config && patch20Config.subjectsIncluded && patch20Config.subjectsIncluded.includes('reading_comprehension')) {
+        const rules = patch20Config.rules || {};
+        const difficultyDistribution = rules.difficultyMix || { beginner: 0.4, advanced: 0.4, expert: 0.2 };
+        practiceTests.push(createPracticeTestTopic({
+            practiceTestId: 'afoqt_reading_comprehension_practice_test',
+            displayName: 'AFOQT Reading Comprehension Practice Test',
+            subjectId: 'reading_comprehension',
+            questionSelectionPolicy: {
+                subtopicsIncluded: ['rc_passage_comprehension'],
+                difficultyDistribution,
+                defaultTestLength: rules.defaultTestLength || 20
+            },
+            mode: 'practiceTestMode'
+        }));
     }
     
     return practiceTests;
+}
+
+/**
+ * Helper function to create a single practice test topic
+ */
+function createPracticeTestTopic(testConfig) {
+    return {
+        id: testConfig.practiceTestId,
+        name: testConfig.displayName,
+        description: `Official ${testConfig.displayName} practice test with ${testConfig.questionSelectionPolicy.defaultTestLength} questions`,
+        subjectId: testConfig.subjectId,
+        isPracticeTest: true,
+        testConfig: testConfig,
+        generateQuestion: (difficulty) => {
+            // For practice tests, generate all questions at once
+            // This will be called by startQuiz, but we'll handle it differently
+            return null; // Handled by custom logic
+        }
+    };
 }
 
 /**
@@ -627,6 +759,12 @@ async function initializePatch18() {
     if (patch19Config) {
         await loadAllArithmeticContent();
     }
+
+    // Load Patch 20 and reading comprehension content
+    await loadPatch20Config();
+    if (patch20Config) {
+        await loadAllReadingComprehensionContent();
+    }
     
     console.log('✓ Patch 18 initialized');
     return true;
@@ -639,6 +777,8 @@ if (typeof module !== 'undefined' && module.exports) {
         createAfoqtPracticeTestTopics,
         getQuestionsFromRegistry,
         generateAfoqtPracticeTest,
+        loadPatch20Config,
+        loadAllReadingComprehensionContent,
         questionRegistry
     };
 }

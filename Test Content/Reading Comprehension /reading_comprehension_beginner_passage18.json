@@ -1,0 +1,70 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "beginner",
+  "passageId": "rc_b1_p018",
+
+  "passage": "Oceanographers are studying deep-sea hydrothermal vents to better understand extreme marine ecosystems. These vents release mineral-rich water heated by volcanic activity beneath the ocean floor. Despite the harsh conditions—complete darkness, high pressure, and toxic chemicals—unique organisms thrive there, including tube worms, specialized crabs, and bacteria that produce energy through chemosynthesis. Because these ecosystems do not rely on sunlight, they challenge long-held assumptions about the requirements for life. Scientists believe studying them may offer clues about how life began on Earth and whether similar environments could exist on other planets or moons. However, reaching these vents requires advanced submersible vehicles, making research expensive and logistically difficult. Even so, each expedition reveals new species and expands our understanding of the adaptability of life.",
+
+  "questions": [
+    {
+      "id": "rc_b1_p018_q1",
+      "question": "What is the main idea of the passage?",
+      "choices": {
+        "A": "Hydrothermal vents are too dangerous to study",
+        "B": "Deep-sea vents support unusual life forms that help scientists learn about life’s origins",
+        "C": "Marine life cannot survive without sunlight",
+        "D": "Most ocean organisms rely on volcanic activity"
+      },
+      "answer": "B",
+      "explanation": "The passage highlights how extreme ecosystems provide insights into life’s adaptability and origins."
+    },
+    {
+      "id": "rc_b1_p018_q2",
+      "question": "How do organisms near hydrothermal vents obtain energy?",
+      "choices": {
+        "A": "By using sunlight to conduct photosynthesis",
+        "B": "By feeding on passing fish",
+        "C": "Through chemosynthesis using chemicals from the vents",
+        "D": "By absorbing heat from the water"
+      },
+      "answer": "C",
+      "explanation": "Chemosynthetic bacteria form the base of the vent ecosystem."
+    },
+    {
+      "id": "rc_b1_p018_q3",
+      "question": "What challenge is associated with studying hydrothermal vents?",
+      "choices": {
+        "A": "They are located too close to shorelines",
+        "B": "They move too quickly for research equipment to track",
+        "C": "They require advanced and costly submersible vehicles",
+        "D": "They have no scientific value for researchers"
+      },
+      "answer": "C",
+      "explanation": "The passage states that accessing vents is expensive and requires specialized equipment."
+    },
+    {
+      "id": "rc_b1_p018_q4",
+      "question": "What assumption about life is challenged by vent ecosystems?",
+      "choices": {
+        "A": "That life must rely on sunlight",
+        "B": "That marine animals require warm temperatures",
+        "C": "That Earth’s oceans are fully explored",
+        "D": "That volcanic activity harms all organisms"
+      },
+      "answer": "A",
+      "explanation": "Vent ecosystems show organisms can survive without sunlight."
+    },
+    {
+      "id": "rc_b1_p018_q5",
+      "question": "According to the passage, studying hydrothermal vents may help scientists:",
+      "choices": {
+        "A": "Predict volcanic eruptions on land",
+        "B": "Understand the conditions that allow life to form",
+        "C": "Develop cheaper underwater vehicles",
+        "D": "Increase fish populations near coastlines"
+      },
+      "answer": "B",
+      "explanation": "The passage notes vent life may offer clues about life’s origins."
+    }
+  ]
+}

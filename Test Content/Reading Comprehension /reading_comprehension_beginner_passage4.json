@@ -1,0 +1,68 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "beginner",
+  "passageId": "rc_b1_p004",
+  "passage": "Urban planners have begun re-evaluating the role of public green spaces as cities grow denser and populations rise. These areas, which include parks, community gardens, and tree-lined walkways, were once viewed primarily as recreational amenities. Recent research, however, shows that green spaces have measurable effects on public health. They reduce air pollution, lower temperatures during heat waves, and provide residents with opportunities for low-intensity physical activity. Additionally, exposure to natural environments has been linked to reduced stress and improved cognitive function. Despite these benefits, green spaces often face competition from commercial development, especially in fast-growing urban centers. Planners now face the challenge of balancing economic interests with long-term community well-being. Many cities are exploring innovative solutions, such as rooftop gardens and vertical forests, to integrate nature into limited urban land.",
+  "questions": [
+    {
+      "id": "rc_b1_p004_q1",
+      "question": "What is the main focus of the passage?",
+      "choices": {
+        "A": "How cities are reducing recreational funding to support commercial projects.",
+        "B": "Why urban planners are eliminating parks in densely populated areas.",
+        "C": "The growing recognition of health and environmental benefits from urban green spaces.",
+        "D": "The economic advantages of selling public land to developers."
+      },
+      "answer": "C",
+      "explanation": "The passage discusses how green spaces are increasingly valued for health and environmental reasons."
+    },
+    {
+      "id": "rc_b1_p004_q2",
+      "question": "According to the passage, what is one benefit of urban green spaces?",
+      "choices": {
+        "A": "They increase commercial property values.",
+        "B": "They help reduce air pollution and heat.",
+        "C": "They eliminate the need for indoor recreation centers.",
+        "D": "They decrease population density in cities."
+      },
+      "answer": "B",
+      "explanation": "The passage mentions reduced pollution and lower temperatures as direct benefits."
+    },
+    {
+      "id": "rc_b1_p004_q3",
+      "question": "What challenge do urban planners face regarding green spaces?",
+      "choices": {
+        "A": "Maintaining green spaces during extreme weather events.",
+        "B": "Balancing development pressures with community health needs.",
+        "C": "Finding enough volunteers to maintain public gardens.",
+        "D": "Persuading residents to use green spaces more frequently."
+      },
+      "answer": "B",
+      "explanation": "The passage states planners must balance economic development with long-term well-being."
+    },
+    {
+      "id": "rc_b1_p004_q4",
+      "question": "The passage implies that green spaces were once viewed primarily as:",
+      "choices": {
+        "A": "Valuable commercial assets.",
+        "B": "Key components of urban health policy.",
+        "C": "Optional recreational features.",
+        "D": "Environmental hazards in older cities."
+      },
+      "answer": "C",
+      "explanation": "It says they were “once viewed primarily as recreational amenities.”"
+    },
+    {
+      "id": "rc_b1_p004_q5",
+      "question": "What do the innovative solutions mentioned in the passage aim to address?",
+      "choices": {
+        "A": "Providing nature-like environments where land space is limited.",
+        "B": "Increasing funding for commercial buildings.",
+        "C": "Eliminating the need for traditional parks.",
+        "D": "Reducing the cost of urban construction projects."
+      },
+      "answer": "A",
+      "explanation": "Rooftop gardens and vertical forests help integrate greenery into cities with limited space."
+    }
+  ]
+}

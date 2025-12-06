@@ -1,0 +1,70 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "beginner",
+  "passageId": "rc_b1_p016",
+
+  "passage": "Archaeologists are using advanced imaging technologies to explore ancient structures without disturbing them. Ground-penetrating radar, for example, sends radio waves into the earth and measures their reflections, allowing researchers to identify buried walls or chambers. This method is especially valuable at historical sites where excavation could damage fragile artifacts. In recent years, archaeologists have combined radar with aerial lidar, which maps the surface by measuring how quickly laser pulses return to sensors. When the two techniques are used together, scientists can create detailed 3D models of entire settlements. These models reveal patterns in city planning, trade activity, and cultural practices. Although the technology is costly and requires specialized training, it allows researchers to uncover information that might otherwise remain hidden. As imaging tools become more accessible, they are likely to play an increasingly important role in preserving archaeological sites across the world.",
+
+  "questions": [
+    {
+      "id": "rc_b1_p016_q1",
+      "question": "What is the main purpose of the technologies described in the passage?",
+      "choices": {
+        "A": "To replace traditional archaeological methods entirely",
+        "B": "To explore ancient structures without causing physical damage",
+        "C": "To accelerate modern construction projects",
+        "D": "To allow tourists to view restricted sites"
+      },
+      "answer": "B",
+      "explanation": "The technologies enable noninvasive exploration of archaeological sites."
+    },
+    {
+      "id": "rc_b1_p016_q2",
+      "question": "Ground-penetrating radar works by:",
+      "choices": {
+        "A": "Using lasers to slice through rock",
+        "B": "Sending radio waves underground and measuring reflections",
+        "C": "Detecting heat signatures from buried artifacts",
+        "D": "Capturing images from satellite cameras"
+      },
+      "answer": "B",
+      "explanation": "The passage explains its use of radio waves to detect buried features."
+    },
+    {
+      "id": "rc_b1_p016_q3",
+      "question": "Why is this technology particularly valuable at fragile sites?",
+      "choices": {
+        "A": "It eliminates the need for historical research",
+        "B": "It allows excavation to be completed faster",
+        "C": "It prevents damage that digging might cause",
+        "D": "It guarantees immediate discovery of artifacts"
+      },
+      "answer": "C",
+      "explanation": "Noninvasive techniques avoid damaging sensitive structures."
+    },
+    {
+      "id": "rc_b1_p016_q4",
+      "question": "What advantage comes from combining radar with lidar?",
+      "choices": {
+        "A": "It creates more detailed 3D models of settlements",
+        "B": "It reduces the need for trained archaeologists",
+        "C": "It eliminates all errors in surface mapping",
+        "D": "It replaces ground-level surveys entirely"
+      },
+      "answer": "A",
+      "explanation": "The passage states that combining both yields detailed 3D settlement models."
+    },
+    {
+      "id": "rc_b1_p016_q5",
+      "question": "In the passage, the word “preserving” most nearly means:",
+      "choices": {
+        "A": "Repairing damaged structures",
+        "B": "Protecting sites from harm",
+        "C": "Translating ancient writings",
+        "D": "Moving artifacts to museums"
+      },
+      "answer": "B",
+      "explanation": "The focus is on safeguarding archaeological sites using noninvasive tools."
+    }
+  ]
+}

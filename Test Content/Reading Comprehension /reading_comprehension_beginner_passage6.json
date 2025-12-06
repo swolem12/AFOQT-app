@@ -1,0 +1,68 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "beginner",
+  "passageId": "rc_b1_p006",
+  "passage": "Transportation engineers are exploring ways to modernize traffic systems as urban congestion increases. One promising development is the implementation of adaptive traffic signals, which use sensors to monitor real-time conditions at intersections. Unlike traditional signals that operate on fixed timers, adaptive systems adjust the length of green and red lights based on vehicle flow. This approach reduces unnecessary idling, improves travel times, and helps decrease fuel consumption. Early trials have shown notable improvements, particularly during peak commuting hours. However, widespread adoption has been slow. Installing these systems requires upgraded infrastructure, and some cities face budget constraints that delay implementation. Engineers remain optimistic that continued advancements in sensor technology and data processing will eventually make adaptive traffic systems more accessible, leading to smoother and more efficient urban transportation networks.",
+  "questions": [
+    {
+      "id": "rc_b1_p006_q1",
+      "question": "What is the main purpose of the passage?",
+      "choices": {
+        "A": "To advocate for replacing all existing traffic lights with roundabouts.",
+        "B": "To describe how adaptive traffic signals can improve traffic efficiency.",
+        "C": "To explain why modern cities no longer use traffic signals.",
+        "D": "To compare bus and train systems in urban environments."
+      },
+      "answer": "B",
+      "explanation": "The passage describes adaptive traffic signals and how they improve congestion and efficiency."
+    },
+    {
+      "id": "rc_b1_p006_q2",
+      "question": "How do adaptive traffic signals differ from traditional signals?",
+      "choices": {
+        "A": "They eliminate red lights entirely.",
+        "B": "They change light timing based on real-time traffic conditions.",
+        "C": "They require drivers to manually trigger light changes.",
+        "D": "They only operate during rush hours."
+      },
+      "answer": "B",
+      "explanation": "Adaptive systems adjust timing according to vehicle flow using sensors."
+    },
+    {
+      "id": "rc_b1_p006_q3",
+      "question": "Which benefit of adaptive traffic systems is mentioned in the passage?",
+      "choices": {
+        "A": "They reduce the number of traffic accidents.",
+        "B": "They require no maintenance after installation.",
+        "C": "They decrease unnecessary idling and fuel consumption.",
+        "D": "They can be installed without modifying existing infrastructure."
+      },
+      "answer": "C",
+      "explanation": "The passage explicitly notes reduced idling and fuel savings."
+    },
+    {
+      "id": "rc_b1_p006_q4",
+      "question": "Why has adoption of adaptive traffic signals been slow?",
+      "choices": {
+        "A": "They are not compatible with sensor technology.",
+        "B": "Drivers find them confusing and unreliable.",
+        "C": "Cities face budget and infrastructure limitations.",
+        "D": "They require frequent replacement of city roads."
+      },
+      "answer": "C",
+      "explanation": "The passage states that upgrading infrastructure is costly and slows implementation."
+    },
+    {
+      "id": "rc_b1_p006_q5",
+      "question": "What is the author’s outlook on the future of adaptive traffic systems?",
+      "choices": {
+        "A": "Skeptical due to their high maintenance requirements.",
+        "B": "Uncertain because current trials show little improvement.",
+        "C": "Optimistic as technology is expected to become more accessible.",
+        "D": "Negative because cities are unlikely to invest in new systems."
+      },
+      "answer": "C",
+      "explanation": "The passage ends by stating engineers are optimistic as technology improves."
+    }
+  ]
+}

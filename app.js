@@ -882,9 +882,10 @@ const subjects = [
         mappedGameSubtopics: ['synonyms', 'antonyms', 'verbal_analogies', 'vocabulary_in_context', 'confusing_word_pairs', 'highfreq_vocab', 'sentence_completion', 'word_roots_affixes']
     },
     {
-        id: 'reading',
-        name: 'Reading',
-        description: 'Comprehension and analysis'
+        id: 'reading_comprehension',
+        name: 'Reading Comprehension',
+        description: 'AFOQT reading passages and comprehension',
+        isAfoqtOfficialSubject: true
     },
     {
         id: 'science',
@@ -1749,7 +1750,7 @@ const readingTopics = [
         id: 'reading-comprehension',
         name: 'Reading Comprehension',
         description: 'Analyze passages',
-        subjectId: 'reading',
+        subjectId: 'reading_comprehension',
         generateQuestion: () => {
             const passages = [
                 {
@@ -3045,6 +3046,27 @@ function createArithmeticTopicsFromRegistry() {
     }
     console.log(`Created ${topicsAR.length} arithmetic topics from content`);
     return topicsAR;
+}
+
+// Function to create Reading Comprehension topics from questionRegistry (Patch 20)
+function createReadingTopicsFromRegistry() {
+    if (!questionRegistry || !questionRegistry.reading_comprehension) {
+        console.warn('Reading comprehension content not loaded');
+        return [];
+    }
+    const rcContent = questionRegistry.reading_comprehension;
+    const topicsRC = [];
+    for (const subtopicId in rcContent) {
+        topicsRC.push({
+            id: subtopicId,
+            name: 'Reading Comprehension Passages',
+            description: 'AFOQT-style reading passages with clustered questions',
+            subjectId: 'reading_comprehension',
+            hasContent: true
+        });
+    }
+    console.log(`Created ${topicsRC.length} reading topics from content`);
+    return topicsRC;
 }
 
 // Combine all topics and add subject IDs
@@ -6786,10 +6808,39 @@ function renderMathUI(uiSpec) {
             return renderCoordinateSegmentCss(uiSpec);
         case 'function_graph_point_lookup':
             return renderCoordinateGraphCss(uiSpec);
+        case 'rc_passage_block':
+            return renderRCPassageBlock(uiSpec);
+        case 'rc_question_block':
+            return renderRCQuestionBlock(uiSpec);
         default:
             console.warn('Unknown uiSpec type:', uiSpec.type);
             return '';
     }
+}
+
+// Reading Comprehension renderers (Patch 20)
+function renderRCPassageBlock(uiSpec) {
+    if (!uiSpec || !uiSpec.passage) return '';
+    return `
+        <div class="rc-passage-block" style="background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(0,255,255,0.2); padding: 16px; margin: 10px 0 18px; border-radius: 6px; max-height: 240px; overflow: auto; line-height: 1.6; color: #e8f6ff;">
+            <div style="font-weight: 700; letter-spacing: 0.5px; color: #00ffff; margin-bottom: 8px;">Reading Passage</div>
+            <div style="color: #e8f6ff;">${uiSpec.passage}</div>
+        </div>
+    `;
+}
+
+function renderRCQuestionBlock(uiSpec) {
+    if (!uiSpec || !uiSpec.question || !uiSpec.choices) return '';
+    const { choices } = uiSpec;
+    const optionOrder = ['A','B','C','D'];
+    return `
+        <div class="rc-question-block" style="margin: 12px 0; padding: 12px; border: 1px dashed rgba(0,255,255,0.2); border-radius: 6px;">
+            <div style="margin-bottom: 10px;">${uiSpec.question}</div>
+            <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 8px;">
+                ${optionOrder.map(k => choices[k] ? `<li style="padding: 10px; background: rgba(0,255,255,0.05); border-radius: 4px;">${k}. ${choices[k]}</li>` : '').join('')}
+            </ul>
+        </div>
+    `;
 }
 
 /**
@@ -9828,6 +9879,14 @@ async function init() {
                     topics = topics.filter(t => t.subjectId !== 'arithmetic_reasoning');
                     topics.push(...arTopics);
                     console.log(`✓ Loaded ${arTopics.length} arithmetic topics from content`);
+                }
+
+                // Add Reading Comprehension topics from Patch 20 content
+                const rcTopics = createReadingTopicsFromRegistry();
+                if (rcTopics.length > 0) {
+                    topics = topics.filter(t => t.subjectId !== 'reading_comprehension');
+                    topics.push(...rcTopics);
+                    console.log(`✓ Loaded ${rcTopics.length} reading comprehension topics from content`);
                 }
                 
                 // Add AFOQT practice test topics if available

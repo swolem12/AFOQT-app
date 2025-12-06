@@ -1,0 +1,32 @@
+{
+  "patchId": "patch_20",
+  "title": "Patch 20 - Reading Comprehension Integration",
+  "description": "Adds Reading Comprehension as a full AFOQT subject with passage-based question clusters.",
+  "subjectsIncluded": ["reading_comprehension"],
+  "rules": {
+    "practiceTestModeDefault": true,
+    "questionsPerPassage": "4–6",
+    "defaultTestLength": 20,
+    "difficultyMix": {
+      "beginner": 0.40,
+      "advanced": 0.40,
+      "expert": 0.20
+    }
+  },
+  "questionRoutingRules": [
+    "1. Load all reading_comprehension_<difficulty>_passageX.json files.",
+    "2. Each JSON contains a single passage and its question cluster.",
+    "3. Concatenate passage-clusters into a global pool by difficulty.",
+    "4. Randomly select passages according to difficultyMix.",
+    "5. Deliver questions in passage-cluster groups."
+  ],
+  "uiIntegration": [
+    "Use rc_passage_block to render the passage.",
+    "Use rc_question_block for each question under the passage."
+  ],
+  "implementationNotes": [
+    "Ensure grouped questions remain attached to their parent passage.",
+    "In practice test mode, hide explanations until all passages are complete.",
+    "Follow the AFOQT reading style: informational, neutral, concise."
+  ]
+}

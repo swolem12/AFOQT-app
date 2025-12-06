@@ -1,0 +1,68 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "beginner",
+  "passageId": "rc_b1_p005",
+  "passage": "Oceanographers studying coastal ecosystems have observed a steady rise in the number of harmful algal blooms over the last several decades. These blooms occur when certain algae species reproduce rapidly, often turning the water red or brown and releasing toxins that can harm marine life. Although some growth occurs naturally, scientists attribute the recent increase to nutrient runoff from agriculture and urban development. Fertilizers rich in nitrogen and phosphorus enter waterways during heavy rains, providing algae with an abundant food source. Warmer ocean temperatures also accelerate growth by creating favorable conditions for these species. The consequences can be severe: fish die-offs, shellfish contamination, and temporary closures of coastal industries such as tourism and fishing. In response, researchers are developing early-warning models that combine satellite imagery with water-quality sensors to predict bloom formation before it spreads widely.",
+  "questions": [
+    {
+      "id": "rc_b1_p005_q1",
+      "question": "What is the primary purpose of the passage?",
+      "choices": {
+        "A": "To describe natural fish migration patterns along coastlines.",
+        "B": "To explain the causes and consequences of harmful algal blooms.",
+        "C": "To argue that coastal tourism should be restricted permanently.",
+        "D": "To compare freshwater algae to deep-ocean species."
+      },
+      "answer": "B",
+      "explanation": "The passage focuses on why harmful algal blooms are increasing and the problems they create."
+    },
+    {
+      "id": "rc_b1_p005_q2",
+      "question": "According to the passage, what human activity contributes to algal bloom growth?",
+      "choices": {
+        "A": "Increased offshore drilling.",
+        "B": "Runoff from fertilizers used in agriculture.",
+        "C": "Overfishing in coastal environments.",
+        "D": "Construction of new marinas and docks."
+      },
+      "answer": "B",
+      "explanation": "The passage states that fertilizers containing nitrogen and phosphorus wash into waterways during rain."
+    },
+    {
+      "id": "rc_b1_p005_q3",
+      "question": "What environmental factor also accelerates algal blooms?",
+      "choices": {
+        "A": "Cooler nighttime air temperatures.",
+        "B": "Reduced sunlight during storm seasons.",
+        "C": "Warmer ocean temperatures.",
+        "D": "Increased movement of ocean currents."
+      },
+      "answer": "C",
+      "explanation": "Warmer temperatures create favorable conditions for algae growth."
+    },
+    {
+      "id": "rc_b1_p005_q4",
+      "question": "Which consequence of harmful algal blooms is mentioned in the passage?",
+      "choices": {
+        "A": "Rapid coral reef recovery.",
+        "B": "Creation of new marine habitats.",
+        "C": "Shellfish contamination and industry closures.",
+        "D": "Increased freshwater availability."
+      },
+      "answer": "C",
+      "explanation": "The passage lists shellfish contamination and temporary closures of coastal industries."
+    },
+    {
+      "id": "rc_b1_p005_q5",
+      "question": "What does the passage suggest researchers are working on?",
+      "choices": {
+        "A": "A way to remove algae without affecting other marine organisms.",
+        "B": "New fertilizers that dissolve before reaching waterways.",
+        "C": "Models that predict bloom formation using environmental data.",
+        "D": "A method to permanently cool coastal waters."
+      },
+      "answer": "C",
+      "explanation": "The passage notes researchers are combining satellite and sensor data to build early-warning models."
+    }
+  ]
+}

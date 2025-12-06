@@ -1,0 +1,74 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "beginner",
+  "passageId": "rc_b1_p010",
+
+  "passage": "Urban planners are increasingly turning to predictive analytics to improve city transportation systems. Instead of relying solely on historical data or manual traffic counts, modern models continuously incorporate live information from sensors, navigation apps, and public transit networks. These tools allow planners to forecast congestion hours in advance and evaluate the potential impact of proposed changes, such as adjusting bus routes or modifying traffic light timing. One of the major advantages of predictive analytics is its ability to test multiple scenarios before any physical changes occur, reducing both cost and risk. However, the effectiveness of these models depends heavily on the quality of the data they receive. Inaccurate or incomplete inputs can lead to flawed predictions, potentially worsening traffic patterns rather than improving them. Despite these challenges, cities adopting data-driven planning have seen notable improvements in commute times, public transit reliability, and overall urban mobility.",
+
+  "questions": [
+    {
+      "id": "rc_b1_p010_q1",
+      "question": "What is the primary purpose of predictive analytics in city planning, according to the passage?",
+      "choices": {
+        "A": "To eliminate the need for public transit systems",
+        "B": "To automatically control all traffic signals without human oversight",
+        "C": "To forecast traffic conditions and evaluate potential system changes",
+        "D": "To replace traditional engineering methods entirely"
+      },
+      "answer": "C",
+      "explanation": "The passage states that predictive analytics helps planners forecast congestion and test the impact of proposed changes."
+    },
+
+    {
+      "id": "rc_b1_p010_q2",
+      "question": "Which of the following is described as a benefit of predictive analytics?",
+      "choices": {
+        "A": "It completely removes the need for maintenance crews",
+        "B": "It allows planners to test multiple scenarios before making changes",
+        "C": "It guarantees perfect accuracy in all traffic forecasts",
+        "D": "It eliminates the need for live traffic data"
+      },
+      "answer": "B",
+      "explanation": "The passage explicitly states that predictive analytics can test scenarios before implementing physical changes."
+    },
+
+    {
+      "id": "rc_b1_p010_q3",
+      "question": "What potential problem does the passage mention regarding predictive analytics?",
+      "choices": {
+        "A": "It makes public transit unreliable",
+        "B": "It requires cities to remove existing infrastructure",
+        "C": "Poor data quality can produce inaccurate predictions",
+        "D": "It increases the cost of transportation projects"
+      },
+      "answer": "C",
+      "explanation": "It notes that inaccurate or incomplete data can lead to flawed predictions."
+    },
+
+    {
+      "id": "rc_b1_p010_q4",
+      "question": "The passage suggests that predictive analytics improves city mobility primarily by:",
+      "choices": {
+        "A": "Forcing commuters to use alternate transportation",
+        "B": "Expanding roadways throughout the city",
+        "C": "Enhancing planners’ ability to anticipate and prevent congestion",
+        "D": "Replacing human planners with automated systems"
+      },
+      "answer": "C",
+      "explanation": "It highlights that predictive tools help foresee congestion and plan accordingly."
+    },
+
+    {
+      "id": "rc_b1_p010_q5",
+      "question": "In the context of the passage, the phrase “data-driven planning” most closely means:",
+      "choices": {
+        "A": "Decision-making based on continually updated information",
+        "B": "Planning conducted by private companies rather than government agencies",
+        "C": "Transportation systems built without traffic signals",
+        "D": "A method that restricts the use of real-time data"
+      },
+      "answer": "A",
+      "explanation": "The passage describes planners using live, continual data as part of predictive analytics."
+    }
+  ]
+}

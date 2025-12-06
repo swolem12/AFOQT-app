@@ -1,0 +1,46 @@
+{
+  "patchId": "reading_comprehension_ui_01",
+  "title": "Reading Comprehension UI Rendering Instructions",
+  "description": "Guidance for Copilot to render AFOQT-style reading passages and grouped questions.",
+  "uiTypes": [
+    {
+      "type": "rc_passage_block",
+      "description": "A scrollable or fixed-height text container showing the passage in plain text.",
+      "expectedJsonShape": {
+        "passage": "A 120–180 word reading passage."
+      },
+      "renderingStrategy": [
+        "1. Render the passage inside a div with class 'rcPassage'.",
+        "2. Use a clean serif or sans-serif font for readability.",
+        "3. Maintain consistent line spacing and margins.",
+        "4. Keep the background plain white or theme-default.",
+        "5. No graphics, charts, or UI embellishment; adhere to exam-like simplicity."
+      ]
+    },
+    {
+      "type": "rc_question_block",
+      "description": "Question text and multiple-choice format under the passage.",
+      "expectedJsonShape": {
+        "question": "string",
+        "choices": {
+          "A": "string",
+          "B": "string",
+          "C": "string",
+          "D": "string"
+        }
+      },
+      "renderingStrategy": [
+        "1. Render questions sequentially under the passage.",
+        "2. Use radio buttons or clickable divs for choices.",
+        "3. Preserve consistent spacing to visually link questions to the passage.",
+        "4. In non-test mode, show explanation after user selection."
+      ]
+    }
+  ],
+  "implementationNotesForCopilot": [
+    "Reading Comprehension UI must remain minimal — no specialized graphics.",
+    "Maintain a consistent exam-feel: black text on white background.",
+    "Keep passage and questions vertically aligned for user comfort.",
+    "In practiceTestMode, do not show explanations until after completion."
+  ]
+}

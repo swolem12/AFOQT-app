@@ -1,0 +1,68 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "beginner",
+  "passageId": "rc_b1_p007",
+  "passage": "Archaeologists studying early human settlements have recently uncovered evidence suggesting that trade networks developed far earlier than previously believed. Excavations at inland sites revealed shells, minerals, and crafted objects originating from coastal regions hundreds of miles away. These findings challenge the idea that prehistoric communities were isolated and self-sufficient. Instead, they indicate that groups exchanged goods over considerable distances, likely through a chain of intermediary communities. Although the exact motivations behind these exchanges are not fully understood, researchers believe that early trade served both practical and social functions. Items such as pigments and decorative shells may have held symbolic value used in rituals or social ceremonies. The discovery reshapes our understanding of prehistoric society, revealing a level of cooperation and connection that predates the rise of formal civilizations.",
+  "questions": [
+    {
+      "id": "rc_b1_p007_q1",
+      "question": "What is the main idea of the passage?",
+      "choices": {
+        "A": "Early humans avoided long-distance interaction due to environmental barriers.",
+        "B": "New evidence suggests prehistoric groups engaged in extensive trade networks.",
+        "C": "Archaeologists have proven that all prehistoric trade was strictly ceremonial.",
+        "D": "Coastal communities were more advanced than inland settlements."
+      },
+      "answer": "B",
+      "explanation": "The passage centers on evidence showing early trade occurred across long distances."
+    },
+    {
+      "id": "rc_b1_p007_q2",
+      "question": "What discovery led researchers to believe trade occurred earlier than once thought?",
+      "choices": {
+        "A": "Tools made from metals not found in coastal environments.",
+        "B": "Inland artifacts that originated from distant coastal regions.",
+        "C": "Newly translated writings describing prehistoric trade.",
+        "D": "Maps detailing early travel routes between settlements."
+      },
+      "answer": "B",
+      "explanation": "The passage states inland sites contained shells and minerals from faraway coastal areas."
+    },
+    {
+      "id": "rc_b1_p007_q3",
+      "question": "What does the passage imply about the nature of early human communities?",
+      "choices": {
+        "A": "They were more interconnected than traditionally assumed.",
+        "B": "They relied solely on their own resources for survival.",
+        "C": "They avoided interacting with neighboring groups.",
+        "D": "They moved frequently and did not maintain settlements."
+      },
+      "answer": "A",
+      "explanation": "Evidence of long-distance goods exchange implies interconnection and cooperation."
+    },
+    {
+      "id": "rc_b1_p007_q4",
+      "question": "According to the passage, what might have motivated early trade?",
+      "choices": {
+        "A": "Competition among clans for scarce resources.",
+        "B": "Frequent natural disasters pushing groups to relocate.",
+        "C": "Symbolic or ceremonial uses for traded items.",
+        "D": "Strict economic rules enforced by tribal leaders."
+      },
+      "answer": "C",
+      "explanation": "The passage notes pigments and shells may have held symbolic or ritual value."
+    },
+    {
+      "id": "rc_b1_p007_q5",
+      "question": "What broader conclusion do researchers draw from these findings?",
+      "choices": {
+        "A": "Prehistoric societies were disorganized and lacked cooperation.",
+        "B": "Trade played a minor role in shaping early human interaction.",
+        "C": "Social development advanced only after formal civilizations emerged.",
+        "D": "Human cooperation and connection existed long before structured civilizations."
+      },
+      "answer": "D",
+      "explanation": "The final sentence states that cooperation and connection predated formal civilizations."
+    }
+  ]
+}

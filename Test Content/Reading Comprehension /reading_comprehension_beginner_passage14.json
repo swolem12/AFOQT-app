@@ -1,0 +1,74 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "beginner",
+  "passageId": "rc_b1_p014",
+
+  "passage": "Wildlife biologists are increasingly using acoustic monitoring systems to study animal populations in remote environments. These devices record natural soundscapes, capturing everything from bird calls to the movement of large mammals. Unlike traditional field surveys, which require researchers to physically visit each location, acoustic monitoring allows continuous observation with minimal disturbance to wildlife. The recordings can reveal patterns in migration, breeding, and habitat use that might otherwise be missed. However, analyzing large amounts of audio data can be challenging. Background noise, such as wind or river flow, often interferes with the clarity of recordings. To address this, researchers are developing software that automatically identifies species-specific sounds using machine learning. While these tools are not yet perfect, they significantly reduce the time required to review data and help scientists better understand how ecosystems are changing over time.",
+
+  "questions": [
+    {
+      "id": "rc_b1_p014_q1",
+      "question": "What is the main advantage of acoustic monitoring mentioned in the passage?",
+      "choices": {
+        "A": "It eliminates the need for biological expertise.",
+        "B": "It allows continuous observation with minimal disturbance to wildlife.",
+        "C": "It guarantees perfect accuracy in recording animal sounds.",
+        "D": "It is cheaper than all other monitoring methods."
+      },
+      "answer": "B",
+      "explanation": "The passage emphasizes continuous, low-disturbance observation as a key benefit."
+    },
+
+    {
+      "id": "rc_b1_p014_q2",
+      "question": "What challenge do researchers face when analyzing acoustic data?",
+      "choices": {
+        "A": "Recordings are often too short to be useful.",
+        "B": "Background noise can interfere with sound quality.",
+        "C": "Animals frequently destroy the monitoring equipment.",
+        "D": "Machine learning algorithms cannot process audio files."
+      },
+      "answer": "B",
+      "explanation": "Natural noise like wind and flowing water can make recordings difficult to interpret."
+    },
+
+    {
+      "id": "rc_b1_p014_q3",
+      "question": "How are researchers addressing the difficulties of audio analysis?",
+      "choices": {
+        "A": "By reducing the number of locations they monitor",
+        "B": "By hiring additional personnel to review audio manually",
+        "C": "By creating software that identifies species sounds automatically",
+        "D": "By switching from sound recordings to visual surveys"
+      },
+      "answer": "C",
+      "explanation": "Machine learning tools help identify species-specific sounds and reduce manual review time."
+    },
+
+    {
+      "id": "rc_b1_p014_q4",
+      "question": "In the context of the passage, the word “disturbance” most nearly means:",
+      "choices": {
+        "A": "Equipment failure",
+        "B": "Human interference with animal behavior",
+        "C": "Inaccurate scientific predictions",
+        "D": "Environmental destruction caused by storms"
+      },
+      "answer": "B",
+      "explanation": "The passage highlights reduced human interference as an advantage of acoustic monitoring."
+    },
+
+    {
+      "id": "rc_b1_p014_q5",
+      "question": "What purpose do the recordings primarily serve?",
+      "choices": {
+        "A": "Determining which species to remove from an ecosystem",
+        "B": "Providing entertainment to local communities",
+        "C": "Revealing patterns in wildlife behavior and ecosystem changes",
+        "D": "Replacing all traditional research methods"
+      },
+      "answer": "C",
+      "explanation": "Recordings help identify patterns in migration, breeding, and habitat use."
+    }
+  ]
+}

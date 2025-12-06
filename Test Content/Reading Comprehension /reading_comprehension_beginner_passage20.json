@@ -1,0 +1,70 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "beginner",
+  "passageId": "rc_b1_p020",
+
+  "passage": "Environmental engineers are researching new materials to filter pollutants from industrial wastewater. Traditional filters often clog quickly or break down when exposed to harsh chemicals, reducing efficiency. To improve durability, scientists are developing membranes made from advanced polymers that can withstand extreme conditions. These membranes contain microscopic pores that trap contaminants while allowing clean water to pass through. Some versions even use electrical charges to repel certain particles, enhancing filtration performance. Although promising, the technology is still expensive and requires further testing before it can be deployed widely. Early trials, however, show that these membranes remove significantly more pollutants than conventional filters. As research progresses, these advanced materials may play a key role in helping industries reduce their environmental impact and meet stricter water quality regulations.",
+
+  "questions": [
+    {
+      "id": "rc_b1_p020_q1",
+      "question": "What is the main focus of the passage?",
+      "choices": {
+        "A": "The decline of traditional wastewater treatment plants",
+        "B": "The development of new materials to improve industrial water filtration",
+        "C": "The economic advantages of untreated wastewater",
+        "D": "The role of agriculture in water pollution"
+      },
+      "answer": "B",
+      "explanation": "The passage describes advanced filtration membranes being developed for wastewater treatment."
+    },
+    {
+      "id": "rc_b1_p020_q2",
+      "question": "What problem do traditional filters often face?",
+      "choices": {
+        "A": "They produce too much clean water",
+        "B": "They fail to trap any contaminants",
+        "C": "They clog or degrade when exposed to harsh chemicals",
+        "D": "They require electrical charges to operate"
+      },
+      "answer": "C",
+      "explanation": "The passage states that traditional filters clog and break down."
+    },
+    {
+      "id": "rc_b1_p020_q3",
+      "question": "What is one advantage of the new polymer membranes?",
+      "choices": {
+        "A": "They repel certain particles using electrical charges",
+        "B": "They work without any filtration mechanism",
+        "C": "They are cheaper than all existing filters",
+        "D": "They dissolve contaminants automatically"
+      },
+      "answer": "A",
+      "explanation": "Some advanced membranes use charges to enhance filtration."
+    },
+    {
+      "id": "rc_b1_p020_q4",
+      "question": "What limitation of the new technology does the passage mention?",
+      "choices": {
+        "A": "It removes fewer pollutants than standard filters",
+        "B": "It is still expensive and requires more testing",
+        "C": "It cannot function in industrial settings",
+        "D": "It is banned by environmental regulators"
+      },
+      "answer": "B",
+      "explanation": "The passage states that cost and additional testing remain obstacles."
+    },
+    {
+      "id": "rc_b1_p020_q5",
+      "question": "The passage suggests that advanced filtration membranes:",
+      "choices": {
+        "A": "May significantly help industries meet water quality regulations",
+        "B": "Will replace all existing methods immediately",
+        "C": "Are only useful for household water systems",
+        "D": "Have no environmental benefits"
+      },
+      "answer": "A",
+      "explanation": "The passage concludes that these materials may help industries reduce pollution and meet regulatory standards."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "beginner",
+  "passageId": "rc_b1_p001",
+  "passage": "Wildland firefighting crews operate in conditions that change from minute to minute. Unlike structural firefighting, where buildings remain fixed, a wildfire moves with the wind, dries new fuel as it advances, and creates its own weather patterns. Small changes in humidity, temperature, or wind direction can rapidly turn a manageable situation into a dangerous one. For this reason, crews rely heavily on real-time environmental monitoring. Portable sensors track wind shifts, while satellite data helps crews anticipate the fire’s projected path. Although advanced technology has improved response times, human judgment remains essential. Crews must evaluate terrain, vegetation, and escape routes before committing to a position. The combination of technology and experience allows teams to make informed decisions under extreme pressure.",
+  "questions": [
+    {
+      "id": "rc_b1_p001_q1",
+      "question": "What is the main idea of the passage?",
+      "choices": {
+        "A": "Wildland firefighters depend mostly on satellite data.",
+        "B": "Wildfires are less predictable than structural fires and require constant monitoring.",
+        "C": "Humidity is the most important factor in wildfire behavior.",
+        "D": "Only human judgment can effectively predict wildfire movement."
+      },
+      "answer": "B",
+      "explanation": "The passage contrasts wildfires with structural fires and emphasizes the rapidly changing environment that requires constant monitoring and adaptive decisions."
+    },
+    {
+      "id": "rc_b1_p001_q2",
+      "question": "According to the passage, why are wildfires difficult to manage?",
+      "choices": {
+        "A": "They burn slowly and consistently.",
+        "B": "They are usually caused by strong wind currents.",
+        "C": "Their behavior can shift quickly with environmental changes.",
+        "D": "They only occur in isolated, mountainous regions."
+      },
+      "answer": "C",
+      "explanation": "The passage states that small shifts in humidity, temperature, or wind can rapidly change the situation."
+    },
+    {
+      "id": "rc_b1_p001_q3",
+      "question": "The passage suggests that technology is:",
+      "choices": {
+        "A": "Completely replacing human decision-making.",
+        "B": "Helpful, but not sufficient on its own.",
+        "C": "The primary cause of faster wildfire spread.",
+        "D": "Less reliable than traditional tools."
+      },
+      "answer": "B",
+      "explanation": "It says technology improves response times, but human judgment remains essential."
+    },
+    {
+      "id": "rc_b1_p001_q4",
+      "question": "Which factor is mentioned as influencing wildfire behavior?",
+      "choices": {
+        "A": "Soil density",
+        "B": "Cloud cover",
+        "C": "Temperature",
+        "D": "Population density"
+      },
+      "answer": "C",
+      "explanation": "Temperature is listed among humidity and wind direction as variables that alter conditions."
+    },
+    {
+      "id": "rc_b1_p001_q5",
+      "question": "What does the passage imply about satellite data?",
+      "choices": {
+        "A": "It provides crews with long-term climate forecasts.",
+        "B": "It is too slow to be useful in real-time operations.",
+        "C": "It assists in predicting the fire’s projected path.",
+        "D": "It eliminates the need for field-based monitoring."
+      },
+      "answer": "C",
+      "explanation": "The text states that satellite data helps crews anticipate the fire’s projected path."
+    }
+  ]
+}
