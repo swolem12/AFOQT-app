@@ -1,0 +1,647 @@
+{
+  "subjectId": "table_reading",
+  "subtopicId": "basic_lookup",
+  "difficulty": "beginner",
+  "part": 2,
+  "tableSpec": {
+    "type": "data_table",
+    "width": 400,
+    "height": 220,
+    "xHeader": [1, 2, 3, 4, 5],
+    "yHeader": [10, 20, 30, 40, 50],
+    "cellValues": [
+      [12, 15, 18, 21, 24],
+      [14, 18, 22, 26, 30],
+      [16, 21, 26, 31, 36],
+      [18, 24, 30, 36, 42],
+      [20, 27, 34, 41, 48]
+    ]
+  },
+  "questions": [
+    {
+      "id": "trb_b1_026",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Render the same 5×5 table as in part 1: legend describing Columns (X) across the top and Rows (Y) down the left, corner header 'Y (rows ↓) / X (columns →)', column headers 'X = 1'...'X = 5', row headers 'Y = 10'...'Y = 50'.",
+      "question": "In the table, what number appears at X = 1 and Y = 10?",
+      "choices": {
+        "A": "10",
+        "B": "12",
+        "C": "14",
+        "D": "18"
+      },
+      "answer": "B",
+      "explanation": "Row Y = 10 and column X = 1 intersect at 12.",
+      "steps": [
+        "1. Go to the row labeled Y = 10.",
+        "2. Move to the column labeled X = 1.",
+        "3. Read the value 12.",
+        "4. Compare 12 with the options.",
+        "5. Select 12."
+      ],
+      "fastStrategy": "Always pick the row first with Y, then the column with X."
+    },
+    {
+      "id": "trb_b1_027",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Use the same labeled X and Y table style.",
+      "question": "What number appears where X = 3 and Y = 10?",
+      "choices": {
+        "A": "18",
+        "B": "20",
+        "C": "22",
+        "D": "24"
+      },
+      "answer": "A",
+      "explanation": "Row Y = 10 has values 12, 15, 18, 21, 24; at X = 3 the value is 18.",
+      "steps": [
+        "1. Find row Y = 10.",
+        "2. Count to the column for X = 3.",
+        "3. Read the cell value 18.",
+        "4. Confirm 18 matches an answer choice.",
+        "5. Choose 18."
+      ],
+      "fastStrategy": "Mentally rehearse the row once so repeated lookups become faster."
+    },
+    {
+      "id": "trb_b1_028",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same table.",
+      "question": "What number appears where X = 5 and Y = 10?",
+      "choices": {
+        "A": "21",
+        "B": "22",
+        "C": "24",
+        "D": "26"
+      },
+      "answer": "C",
+      "explanation": "At row Y = 10 and column X = 5, the entry is 24.",
+      "steps": [
+        "1. Go to Y = 10.",
+        "2. Move to X = 5 along that row.",
+        "3. Read the value 24.",
+        "4. Match 24 to the options.",
+        "5. Select 24."
+      ],
+      "fastStrategy": "When X is 5, you can jump directly to the right end of the row."
+    },
+    {
+      "id": "trb_b1_029",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same legend and labels.",
+      "question": "Which value is at X = 2 and Y = 20?",
+      "choices": {
+        "A": "14",
+        "B": "18",
+        "C": "20",
+        "D": "22"
+      },
+      "answer": "B",
+      "explanation": "Row Y = 20 is 14, 18, 22, 26, 30; at X = 2 we see 18.",
+      "steps": [
+        "1. Find the row labeled Y = 20.",
+        "2. Move to the column X = 2.",
+        "3. Read the number 18.",
+        "4. Compare with the answers.",
+        "5. Select 18."
+      ],
+      "fastStrategy": "Use the Y row label to anchor yourself before scanning across."
+    },
+    {
+      "id": "trb_b1_030",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same table layout.",
+      "question": "Which value is at X = 4 and Y = 20?",
+      "choices": {
+        "A": "22",
+        "B": "24",
+        "C": "26",
+        "D": "30"
+      },
+      "answer": "C",
+      "explanation": "At Y = 20 and X = 4, the table shows 26.",
+      "steps": [
+        "1. Go to the row Y = 20.",
+        "2. Move horizontally to column X = 4.",
+        "3. Read the value 26.",
+        "4. Confirm 26 is one of the choices.",
+        "5. Choose 26."
+      ],
+      "fastStrategy": "When reading within a row, keep your eyes on the same horizontal line to avoid sliding to the wrong row."
+    },
+    {
+      "id": "trb_b1_031",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same labeled X/Y data table.",
+      "question": "For Y = 30, which X value gives the largest number in that row?",
+      "choices": {
+        "A": "X = 1",
+        "B": "X = 3",
+        "C": "X = 4",
+        "D": "X = 5"
+      },
+      "answer": "D",
+      "explanation": "Row Y = 30 is 16, 21, 26, 31, 36; the largest value 36 occurs at X = 5.",
+      "steps": [
+        "1. Go to row Y = 30.",
+        "2. Read across the numbers: 16, 21, 26, 31, 36.",
+        "3. Identify the largest value (36).",
+        "4. Check the column header above 36 (X = 5).",
+        "5. Choose X = 5."
+      ],
+      "fastStrategy": "Scan left to right and update the 'current maximum' as you go."
+    },
+    {
+      "id": "trb_b1_032",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same table.",
+      "question": "For X = 3, which Y value gives the smallest number in that column?",
+      "choices": {
+        "A": "Y = 10",
+        "B": "Y = 20",
+        "C": "Y = 30",
+        "D": "Y = 40"
+      },
+      "answer": "A",
+      "explanation": "Column X = 3 contains 18, 22, 26, 30, 34; the smallest is 18 at Y = 10.",
+      "steps": [
+        "1. Look at column X = 3.",
+        "2. Read down the values: 18, 22, 26, 30, 34.",
+        "3. Identify 18 as the smallest.",
+        "4. Check the Y label at that row (Y = 10).",
+        "5. Select Y = 10."
+      ],
+      "fastStrategy": "Scan top to bottom for the minimum when Y is the unknown."
+    },
+    {
+      "id": "trb_b1_033",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same legend and axis style.",
+      "question": "For Y = 40, what is the difference between the values at X = 5 and X = 2?",
+      "choices": {
+        "A": "12",
+        "B": "16",
+        "C": "18",
+        "D": "20"
+      },
+      "answer": "C",
+      "explanation": "At Y = 40, X = 2 is 24 and X = 5 is 42; 42 − 24 = 18.",
+      "steps": [
+        "1. Go to the row Y = 40.",
+        "2. Read the value at X = 2 (24) and at X = 5 (42).",
+        "3. Subtract 24 from 42.",
+        "4. Compute 42 − 24 = 18.",
+        "5. Choose 18."
+      ],
+      "fastStrategy": "Always subtract smaller from larger to stay positive and avoid sign mistakes."
+    },
+    {
+      "id": "trb_b1_034",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same clearly labeled table.",
+      "question": "For X = 4, what is the difference between the values at Y = 50 and Y = 20?",
+      "choices": {
+        "A": "11",
+        "B": "13",
+        "C": "15",
+        "D": "17"
+      },
+      "answer": "C",
+      "explanation": "At X = 4, Y = 20 is 26 and Y = 50 is 41; 41 − 26 = 15.",
+      "steps": [
+        "1. Go to column X = 4.",
+        "2. Read values at Y = 20 (26) and Y = 50 (41).",
+        "3. Subtract 26 from 41.",
+        "4. Compute 41 − 26 = 15.",
+        "5. Select 15."
+      ],
+      "fastStrategy": "When both cells are in one column, focus on that column only and ignore the rest of the table."
+    },
+    {
+      "id": "trb_b1_035",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same X/Y legend style.",
+      "question": "Which X–Y combination gives the largest number in the entire table?",
+      "choices": {
+        "A": "X = 5, Y = 50",
+        "B": "X = 1, Y = 50",
+        "C": "X = 5, Y = 10",
+        "D": "X = 3, Y = 40"
+      },
+      "answer": "A",
+      "explanation": "Values increase as both X and Y increase. The largest entry is at X = 5, Y = 50, which is 48.",
+      "steps": [
+        "1. Notice that values grow to the right and downward.",
+        "2. Reason that the bottom-right corner likely has the maximum.",
+        "3. Confirm the value at X = 5, Y = 50 is 48.",
+        "4. Check that no other cell is larger.",
+        "5. Choose X = 5, Y = 50."
+      ],
+      "fastStrategy": "In a steadily increasing grid, check the bottom-right cell first for the maximum."
+    },
+    {
+      "id": "trb_b1_036",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same table.",
+      "question": "Which X–Y combination gives the smallest number in the entire table?",
+      "choices": {
+        "A": "X = 1, Y = 10",
+        "B": "X = 1, Y = 50",
+        "C": "X = 5, Y = 10",
+        "D": "X = 3, Y = 20"
+      },
+      "answer": "A",
+      "explanation": "The values decrease as you move up and left; the smallest is at X = 1, Y = 10 with value 12.",
+      "steps": [
+        "1. Recognize that values are smallest at low X and low Y.",
+        "2. Check the top-left numeric cell at X = 1, Y = 10.",
+        "3. Read 12 as the value.",
+        "4. Confirm that all other cells you glance at are larger.",
+        "5. Select X = 1, Y = 10."
+      ],
+      "fastStrategy": "In an increasing table, check the top-left cell first for the minimum."
+    },
+    {
+      "id": "trb_b1_037",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same labeled layout.",
+      "question": "In which row (Y value) does the number 30 appear?",
+      "choices": {
+        "A": "Y = 20",
+        "B": "Y = 30",
+        "C": "Y = 40",
+        "D": "Y = 50"
+      },
+      "answer": "C",
+      "explanation": "The number 30 appears in row Y = 40 at X = 3, so Y = 40 is correct.",
+      "steps": [
+        "1. Scan each row for the value 30.",
+        "2. Notice 30 appears in row Y = 40.",
+        "3. Confirm it does not occur in Y = 20, 30, or 50.",
+        "4. Record the row label as Y = 40.",
+        "5. Choose Y = 40."
+      ],
+      "fastStrategy": "Scan row by row and stop as soon as you find the target number."
+    },
+    {
+      "id": "trb_b1_038",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same table style.",
+      "question": "In which column (X value) does the number 21 appear?",
+      "choices": {
+        "A": "X = 1",
+        "B": "X = 2",
+        "C": "X = 3",
+        "D": "X = 4"
+      },
+      "answer": "B",
+      "explanation": "Scanning columns, 21 appears in the X = 2 column at Y = 30.",
+      "steps": [
+        "1. Check each column for the number 21.",
+        "2. In column X = 2, read values 15, 18, 21, 24, 27.",
+        "3. See that 21 is present there.",
+        "4. Confirm it is not needed to search further once found.",
+        "5. Select X = 2."
+      ],
+      "fastStrategy": "When the question asks for X, scan by column, not by row."
+    },
+    {
+      "id": "trb_b1_039",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same legend and labels.",
+      "question": "For Y = 20, what is the sum of the values at X = 1 and X = 5?",
+      "choices": {
+        "A": "40",
+        "B": "42",
+        "C": "44",
+        "D": "46"
+      },
+      "answer": "C",
+      "explanation": "At Y = 20, X = 1 is 14 and X = 5 is 30; 14 + 30 = 44.",
+      "steps": [
+        "1. Go to row Y = 20.",
+        "2. Read the values at X = 1 (14) and X = 5 (30).",
+        "3. Add them: 14 + 30.",
+        "4. Compute 44.",
+        "5. Choose 44."
+      ],
+      "fastStrategy": "Grab both numbers first, then perform a single addition."
+    },
+    {
+      "id": "trb_b1_040",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same table style.",
+      "question": "For Y = 30, what is the average of the values at X = 2 and X = 4?",
+      "choices": {
+        "A": "24",
+        "B": "25",
+        "C": "26",
+        "D": "27"
+      },
+      "answer": "C",
+      "explanation": "At Y = 30, X = 2 is 21 and X = 4 is 31; (21 + 31) ÷ 2 = 52 ÷ 2 = 26.",
+      "steps": [
+        "1. Go to row Y = 30.",
+        "2. Read values at X = 2 (21) and X = 4 (31).",
+        "3. Add 21 + 31 to get 52.",
+        "4. Divide 52 by 2 to get 26.",
+        "5. Select 26."
+      ],
+      "fastStrategy": "For a two-number average, add and divide by 2—quick and exact."
+    },
+    {
+      "id": "trb_b1_041",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same explicit X/Y style.",
+      "question": "Along the row Y = 10, how much does the value increase each time X increases by 1?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "B",
+      "explanation": "Row Y = 10 is 12, 15, 18, 21, 24; the difference between successive entries is 3.",
+      "steps": [
+        "1. Write the Y = 10 row values: 12, 15, 18, 21, 24.",
+        "2. Subtract 15 − 12 = 3 and 18 − 15 = 3.",
+        "3. See the pattern that each step adds 3.",
+        "4. Confirm this holds across the row.",
+        "5. Choose 3."
+      ],
+      "fastStrategy": "Check a couple of consecutive differences to spot the pattern."
+    },
+    {
+      "id": "trb_b1_042",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same table layout.",
+      "question": "Down the column X = 1, how much does the value increase each time Y increases by 10?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "B",
+      "explanation": "Column X = 1 is 12, 14, 16, 18, 20; each step downward increases by 2.",
+      "steps": [
+        "1. List values in column X = 1: 12, 14, 16, 18, 20.",
+        "2. Subtract 14 − 12 = 2 and 16 − 14 = 2.",
+        "3. See that each change is +2.",
+        "4. Recognize this continues down the column.",
+        "5. Choose 2."
+      ],
+      "fastStrategy": "Vertical patterns are found by subtracting one row from the next."
+    },
+    {
+      "id": "trb_b1_043",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same labeled table.",
+      "question": "Which cell has the larger value: X = 2, Y = 40 or X = 4, Y = 30?",
+      "choices": {
+        "A": "X = 2, Y = 40",
+        "B": "X = 4, Y = 30",
+        "C": "They are equal",
+        "D": "Not enough information"
+      },
+      "answer": "B",
+      "explanation": "At X = 2, Y = 40 the value is 24; at X = 4, Y = 30 the value is 31. Since 31 > 24, X = 4, Y = 30 is larger.",
+      "steps": [
+        "1. Look up the value at X = 2, Y = 40 (24).",
+        "2. Look up the value at X = 4, Y = 30 (31).",
+        "3. Compare 24 and 31.",
+        "4. Decide that 31 is greater.",
+        "5. Choose the coordinate with 31."
+      ],
+      "fastStrategy": "Find both numbers first, then compare them directly."
+    },
+    {
+      "id": "trb_b1_044",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same table.",
+      "question": "At X = 5, which Y value gives the greater number: Y = 30 or Y = 50?",
+      "choices": {
+        "A": "Y = 30",
+        "B": "Y = 40",
+        "C": "Y = 50",
+        "D": "They are equal"
+      },
+      "answer": "C",
+      "explanation": "At X = 5, Y = 30 is 36 and Y = 50 is 48; 48 is greater, so Y = 50 is correct.",
+      "steps": [
+        "1. Go to column X = 5.",
+        "2. Read the value at Y = 30 (36).",
+        "3. Read the value at Y = 50 (48).",
+        "4. Compare 36 and 48.",
+        "5. Choose Y = 50."
+      ],
+      "fastStrategy": "When values rise down the column, the lower Y usually has the larger value."
+    },
+    {
+      "id": "trb_b1_045",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same legend and labels.",
+      "question": "The value 22 appears in the table. Which coordinates (X, Y) correspond to this value?",
+      "choices": {
+        "A": "X = 3, Y = 20",
+        "B": "X = 2, Y = 20",
+        "C": "X = 3, Y = 30",
+        "D": "X = 4, Y = 10"
+      },
+      "answer": "A",
+      "explanation": "Scanning the grid, 22 appears at row Y = 20 and column X = 3.",
+      "steps": [
+        "1. Scan rows or columns to locate 22.",
+        "2. Identify that 22 is on the row Y = 20.",
+        "3. Note that it lies in column X = 3.",
+        "4. Combine labels to form (X = 3, Y = 20).",
+        "5. Select that coordinate pair."
+      ],
+      "fastStrategy": "Once you find the number, immediately check both the X and Y labels before moving on."
+    },
+    {
+      "id": "trb_b1_046",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same table style.",
+      "question": "The value 27 appears in the table. Which coordinates (X, Y) correspond to this value?",
+      "choices": {
+        "A": "X = 2, Y = 50",
+        "B": "X = 3, Y = 40",
+        "C": "X = 5, Y = 30",
+        "D": "X = 2, Y = 30"
+      },
+      "answer": "A",
+      "explanation": "The number 27 appears at Y = 50 in column X = 2.",
+      "steps": [
+        "1. Search the grid for the value 27.",
+        "2. Find 27 in the row labeled Y = 50.",
+        "3. See that it is in column X = 2.",
+        "4. Record the coordinates (X = 2, Y = 50).",
+        "5. Select that option."
+      ],
+      "fastStrategy": "Scan systematically—row by row—to avoid skipping the target."
+    },
+    {
+      "id": "trb_b1_047",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same table.",
+      "question": "Which row has the greater total when you add all five values: Y = 20 or Y = 40?",
+      "choices": {
+        "A": "Y = 20",
+        "B": "Y = 40",
+        "C": "They are equal",
+        "D": "Cannot be determined"
+      },
+      "answer": "B",
+      "explanation": "Row Y = 20 totals 14 + 18 + 22 + 26 + 30 = 110; row Y = 40 totals 18 + 24 + 30 + 36 + 42 = 150. So Y = 40 is greater.",
+      "steps": [
+        "1. Write down the row values for Y = 20 and Y = 40.",
+        "2. Add the five values in Y = 20 to get 110.",
+        "3. Add the five values in Y = 40 to get 150.",
+        "4. Compare 110 and 150.",
+        "5. Choose Y = 40."
+      ],
+      "fastStrategy": "If every entry in one row is larger than the matching entry in another, its total must be larger."
+    },
+    {
+      "id": "trb_b1_048",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same legend and axis labels.",
+      "question": "Without adding every number exactly, which row clearly has larger values overall: Y = 10 or Y = 50?",
+      "choices": {
+        "A": "Y = 10",
+        "B": "Y = 50",
+        "C": "They look equal",
+        "D": "Cannot be determined"
+      },
+      "answer": "B",
+      "explanation": "For each column, the Y = 50 row has a larger number than Y = 10, so its total is clearly larger.",
+      "steps": [
+        "1. Compare matching positions in the Y = 10 and Y = 50 rows.",
+        "2. Notice that each value in Y = 50 is bigger than the corresponding value in Y = 10.",
+        "3. Realize this means the total of Y = 50 is larger.",
+        "4. No exact sums are required.",
+        "5. Pick Y = 50."
+      ],
+      "fastStrategy": "Use quick comparisons of pairs instead of full addition when one row dominates the other."
+    },
+    {
+      "id": "trb_b1_049",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same table.",
+      "question": "From X = 1, Y = 20 to X = 3, Y = 20, by how much does the table value increase?",
+      "choices": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "10"
+      },
+      "answer": "C",
+      "explanation": "Along Y = 20, X = 1 is 14 and X = 3 is 22; 22 − 14 = 8.",
+      "steps": [
+        "1. Go to row Y = 20.",
+        "2. Read the values at X = 1 (14) and X = 3 (22).",
+        "3. Subtract 14 from 22.",
+        "4. Compute 22 − 14 = 8.",
+        "5. Select 8."
+      ],
+      "fastStrategy": "For increases along a row, subtract the starting cell from the ending cell."
+    },
+    {
+      "id": "trb_b1_050",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Use the same legend and explicit X/Y labels.",
+      "question": "Which of the following cells has the smallest value?",
+      "choices": {
+        "A": "X = 2, Y = 10",
+        "B": "X = 4, Y = 20",
+        "C": "X = 3, Y = 30",
+        "D": "X = 1, Y = 40"
+      },
+      "answer": "A",
+      "explanation": "Values: X = 2, Y = 10 → 15; X = 4, Y = 20 → 26; X = 3, Y = 30 → 26; X = 1, Y = 40 → 18. The smallest is 15 at X = 2, Y = 10.",
+      "steps": [
+        "1. Look up each listed coordinate and note its value.",
+        "2. Record the four values: 15, 26, 26, 18.",
+        "3. Compare them to find the smallest.",
+        "4. Recognize 15 is the smallest.",
+        "5. Choose X = 2, Y = 10."
+      ],
+      "fastStrategy": "When comparing a small set of coordinates, list each value briefly, then pick the smallest or largest."
+    }
+  ]
+}

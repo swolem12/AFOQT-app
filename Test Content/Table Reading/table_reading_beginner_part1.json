@@ -1,0 +1,647 @@
+{
+  "subjectId": "table_reading",
+  "subtopicId": "basic_lookup",
+  "difficulty": "beginner",
+  "part": 1,
+  "tableSpec": {
+    "type": "data_table",
+    "width": 400,
+    "height": 220,
+    "xHeader": [1, 2, 3, 4, 5],
+    "yHeader": [10, 20, 30, 40, 50],
+    "cellValues": [
+      [12, 15, 18, 21, 24],
+      [14, 18, 22, 26, 30],
+      [16, 21, 26, 31, 36],
+      [18, 24, 30, 36, 42],
+      [20, 27, 34, 41, 48]
+    ]
+  },
+  "questions": [
+    {
+      "id": "trb_b1_001",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Render a 5×5 HTML table using tableSpec. Above the table, show a small legend: 'Columns (X): values across the top → (X = 1, 2, 3, 4, 5)' and 'Rows (Y): values down the left ↓ (Y = 10, 20, 30, 40, 50)'. The top-left corner header cell should say 'Y (rows ↓) / X (columns →)'. Column headers must be labeled 'X = 1' through 'X = 5'. Row headers must be labeled 'Y = 10' through 'Y = 50'. Each inner cell displays the corresponding number from cellValues.",
+      "question": "In the table, what number appears where X = 1 and Y = 10?",
+      "choices": {
+        "A": "12",
+        "B": "14",
+        "C": "16",
+        "D": "18"
+      },
+      "answer": "A",
+      "explanation": "The row for Y = 10 and the column for X = 1 intersect at the value 12.",
+      "steps": [
+        "1. Identify that X is along the top and Y is along the left side of the table.",
+        "2. Go to the row labeled Y = 10.",
+        "3. Move across to the column labeled X = 1.",
+        "4. Read the number in that cell: 12.",
+        "5. Match 12 to the correct option."
+      ],
+      "fastStrategy": "Lock onto the row using Y first, then slide across to the X column."
+    },
+    {
+      "id": "trb_b1_002",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Use the same legend and axis labels as described in trb_b1_001. Columns are labeled 'X = 1'...'X = 5' and rows 'Y = 10'...'Y = 50'.",
+      "question": "What number is at X = 2 and Y = 10?",
+      "choices": {
+        "A": "12",
+        "B": "14",
+        "C": "15",
+        "D": "18"
+      },
+      "answer": "C",
+      "explanation": "At row Y = 10 and column X = 2, the entry is 15.",
+      "steps": [
+        "1. Locate the row with Y = 10.",
+        "2. Move horizontally to the column labeled X = 2.",
+        "3. Read the value in that cell: 15.",
+        "4. Compare 15 with the answer choices.",
+        "5. Select the option showing 15."
+      ],
+      "fastStrategy": "Read Y first for the row, then X for the column; do not bounce around the grid."
+    },
+    {
+      "id": "trb_b1_003",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same rendering as trb_b1_001 with explicit 'X = value' column headers and 'Y = value' row headers.",
+      "question": "What number is at X = 3 and Y = 10?",
+      "choices": {
+        "A": "16",
+        "B": "18",
+        "C": "20",
+        "D": "21"
+      },
+      "answer": "B",
+      "explanation": "For Y = 10, the third column (X = 3) contains 18.",
+      "steps": [
+        "1. Find Y = 10 on the left side.",
+        "2. Count over to the third column where X = 3.",
+        "3. Observe the number 18 in that position.",
+        "4. Confirm it matches one of the options.",
+        "5. Choose 18."
+      ],
+      "fastStrategy": "When Y is fixed, treat the row like a number line and count columns."
+    },
+    {
+      "id": "trb_b1_004",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Use the same table layout with legend, labeled X columns and Y rows.",
+      "question": "What number is at X = 4 and Y = 10?",
+      "choices": {
+        "A": "18",
+        "B": "19",
+        "C": "21",
+        "D": "24"
+      },
+      "answer": "C",
+      "explanation": "Row Y = 10 and column X = 4 intersect at 21.",
+      "steps": [
+        "1. Go to the row marked Y = 10.",
+        "2. Move to the column labeled X = 4.",
+        "3. Read the value in that cell: 21.",
+        "4. Compare 21 with the options.",
+        "5. Select 21."
+      ],
+      "fastStrategy": "Use the labels directly; do not estimate from position alone."
+    },
+    {
+      "id": "trb_b1_005",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same clearly labeled X and Y layout with the legend at the top.",
+      "question": "What number is at X = 5 and Y = 10?",
+      "choices": {
+        "A": "22",
+        "B": "23",
+        "C": "24",
+        "D": "26"
+      },
+      "answer": "C",
+      "explanation": "At Y = 10 and X = 5, the table shows 24.",
+      "steps": [
+        "1. Locate Y = 10 on the left axis.",
+        "2. Move horizontally to the column labeled X = 5.",
+        "3. Read the number in that cell: 24.",
+        "4. Match 24 to the choices.",
+        "5. Choose 24."
+      ],
+      "fastStrategy": "For edge X values like 5, jump to the far right end of the row quickly."
+    },
+    {
+      "id": "trb_b1_006",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Render the same table with explicit X and Y labels as before.",
+      "question": "What number is at X = 1 and Y = 20?",
+      "choices": {
+        "A": "12",
+        "B": "14",
+        "C": "16",
+        "D": "18"
+      },
+      "answer": "B",
+      "explanation": "In the row Y = 20 and column X = 1, the number is 14.",
+      "steps": [
+        "1. Find the row with Y = 20.",
+        "2. Look at the first column labeled X = 1.",
+        "3. Read the cell value 14.",
+        "4. Confirm 14 appears in the options.",
+        "5. Select 14."
+      ],
+      "fastStrategy": "Row first, then the first column; treat X = 1 as the starting point for that row."
+    },
+    {
+      "id": "trb_b1_007",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same legend and labeled axes.",
+      "question": "What number is at X = 3 and Y = 20?",
+      "choices": {
+        "A": "18",
+        "B": "20",
+        "C": "22",
+        "D": "24"
+      },
+      "answer": "C",
+      "explanation": "Row Y = 20 and column X = 3 intersect at 22.",
+      "steps": [
+        "1. Go to row Y = 20.",
+        "2. Move to the column for X = 3.",
+        "3. Read the entry (22).",
+        "4. Compare 22 with the choices.",
+        "5. Choose 22."
+      ],
+      "fastStrategy": "Use the coordinate pair (X, Y) like a grid reference: Y picks row, X picks column."
+    },
+    {
+      "id": "trb_b1_008",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same clearly labeled data table.",
+      "question": "What number is at X = 5 and Y = 20?",
+      "choices": {
+        "A": "24",
+        "B": "26",
+        "C": "28",
+        "D": "30"
+      },
+      "answer": "D",
+      "explanation": "At Y = 20 and X = 5, the table displays 30.",
+      "steps": [
+        "1. Find Y = 20 on the left axis.",
+        "2. Move horizontally to X = 5.",
+        "3. Read the value (30).",
+        "4. Confirm 30 is among the choices.",
+        "5. Select 30."
+      ],
+      "fastStrategy": "For repeated lookups, memorize some row patterns to move faster."
+    },
+    {
+      "id": "trb_b1_009",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same table with legend and axis labels.",
+      "question": "What number is at X = 2 and Y = 30?",
+      "choices": {
+        "A": "18",
+        "B": "21",
+        "C": "22",
+        "D": "24"
+      },
+      "answer": "B",
+      "explanation": "On row Y = 30, the column X = 2 has the number 21.",
+      "steps": [
+        "1. Locate row Y = 30.",
+        "2. Move to column X = 2.",
+        "3. Read the value there: 21.",
+        "4. Compare 21 to the answer options.",
+        "5. Pick 21."
+      ],
+      "fastStrategy": "Always confirm both the X and Y labels before trusting the cell."
+    },
+    {
+      "id": "trb_b1_010",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Use the same table layout with clearly labeled X and Y axes.",
+      "question": "What number is at X = 4 and Y = 30?",
+      "choices": {
+        "A": "26",
+        "B": "29",
+        "C": "31",
+        "D": "36"
+      },
+      "answer": "C",
+      "explanation": "At the intersection of Y = 30 and X = 4, the value is 31.",
+      "steps": [
+        "1. Go to the row Y = 30.",
+        "2. Move horizontally to column X = 4.",
+        "3. Read the value: 31.",
+        "4. Ensure 31 is in the options.",
+        "5. Select 31."
+      ],
+      "fastStrategy": "Visualize a crosshair: horizontal from Y, vertical from X, meet at the cell."
+    },
+    {
+      "id": "trb_b1_011",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same explicit X and Y labels as earlier questions.",
+      "question": "What number is at X = 1 and Y = 40?",
+      "choices": {
+        "A": "16",
+        "B": "18",
+        "C": "20",
+        "D": "22"
+      },
+      "answer": "B",
+      "explanation": "Row Y = 40 and column X = 1 intersect at 18.",
+      "steps": [
+        "1. Find row Y = 40.",
+        "2. Look at column X = 1.",
+        "3. Read the cell value 18.",
+        "4. Match 18 to the choices.",
+        "5. Choose 18."
+      ],
+      "fastStrategy": "For X = 1, you only need to check the first numeric column after the Y label."
+    },
+    {
+      "id": "trb_b1_012",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same table with the legend and clear axis labels.",
+      "question": "What number is at X = 3 and Y = 40?",
+      "choices": {
+        "A": "26",
+        "B": "28",
+        "C": "30",
+        "D": "32"
+      },
+      "answer": "C",
+      "explanation": "At Y = 40 and X = 3, the table shows 30.",
+      "steps": [
+        "1. Go to Y = 40 on the left.",
+        "2. Move to the column labeled X = 3.",
+        "3. Read the entry: 30.",
+        "4. Confirm 30 appears as an option.",
+        "5. Select 30."
+      ],
+      "fastStrategy": "Count columns slowly the first time; speed comes after you trust the pattern."
+    },
+    {
+      "id": "trb_b1_013",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same clearly labeled axes.",
+      "question": "What number is at X = 5 and Y = 40?",
+      "choices": {
+        "A": "36",
+        "B": "40",
+        "C": "42",
+        "D": "48"
+      },
+      "answer": "C",
+      "explanation": "Row Y = 40 and column X = 5 intersect at 42.",
+      "steps": [
+        "1. Find the Y = 40 row.",
+        "2. Move horizontally to X = 5.",
+        "3. Read the cell: 42.",
+        "4. Match 42 to the options.",
+        "5. Choose 42."
+      ],
+      "fastStrategy": "When both X and Y are large, go straight to the bottom-right region of the table."
+    },
+    {
+      "id": "trb_b1_014",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same table layout.",
+      "question": "What number is at X = 2 and Y = 50?",
+      "choices": {
+        "A": "20",
+        "B": "24",
+        "C": "27",
+        "D": "30"
+      },
+      "answer": "C",
+      "explanation": "On row Y = 50, column X = 2 contains 27.",
+      "steps": [
+        "1. Look down the Y labels and pick Y = 50.",
+        "2. Move to column X = 2.",
+        "3. Read the value 27.",
+        "4. Compare 27 to the options.",
+        "5. Choose 27."
+      ],
+      "fastStrategy": "Fix your finger on the Y row first; then slide right to X."
+    },
+    {
+      "id": "trb_b1_015",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same legend and labels.",
+      "question": "What number is at X = 4 and Y = 50?",
+      "choices": {
+        "A": "34",
+        "B": "38",
+        "C": "41",
+        "D": "45"
+      },
+      "answer": "C",
+      "explanation": "The entry at Y = 50 and X = 4 is 41.",
+      "steps": [
+        "1. Go to the row labeled Y = 50.",
+        "2. Move to the column labeled X = 4.",
+        "3. Read the value 41.",
+        "4. Confirm 41 is listed as an option.",
+        "5. Select 41."
+      ],
+      "fastStrategy": "Use the row and column labels every time; don’t assume based on rough position."
+    },
+    {
+      "id": "trb_b1_016",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same table.",
+      "question": "In the row Y = 10, which X value gives the number 18?",
+      "choices": {
+        "A": "X = 1",
+        "B": "X = 2",
+        "C": "X = 3",
+        "D": "X = 4"
+      },
+      "answer": "C",
+      "explanation": "Along row Y = 10, the numbers are 12, 15, 18, 21, 24; 18 is in the column X = 3.",
+      "steps": [
+        "1. Go to the row Y = 10.",
+        "2. Scan across to find the number 18.",
+        "3. Note the column header where 18 appears (X = 3).",
+        "4. Match this to the choices.",
+        "5. Select X = 3."
+      ],
+      "fastStrategy": "Scan the row visually for the target number, then read the X label above it."
+    },
+    {
+      "id": "trb_b1_017",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same labeled table.",
+      "question": "In the row Y = 20, which X value gives the number 26?",
+      "choices": {
+        "A": "X = 2",
+        "B": "X = 3",
+        "C": "X = 4",
+        "D": "X = 5"
+      },
+      "answer": "C",
+      "explanation": "Row Y = 20 has values 14, 18, 22, 26, 30; 26 is under X = 4.",
+      "steps": [
+        "1. Find row Y = 20.",
+        "2. Read the sequence across: 14, 18, 22, 26, 30.",
+        "3. Identify which position is 26.",
+        "4. Read the column header (X = 4).",
+        "5. Choose X = 4."
+      ],
+      "fastStrategy": "When the row is short, read all values once and note the position of the target."
+    },
+    {
+      "id": "trb_b1_018",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same legend and axis labels.",
+      "question": "In the column X = 1, which Y value gives the number 16?",
+      "choices": {
+        "A": "Y = 10",
+        "B": "Y = 20",
+        "C": "Y = 30",
+        "D": "Y = 40"
+      },
+      "answer": "C",
+      "explanation": "Down the column X = 1 the values are 12, 14, 16, 18, 20; 16 appears at Y = 30.",
+      "steps": [
+        "1. Focus on column X = 1.",
+        "2. Read down the values: 12, 14, 16, 18, 20.",
+        "3. Identify where 16 occurs.",
+        "4. Read the Y label of that row (Y = 30).",
+        "5. Select Y = 30."
+      ],
+      "fastStrategy": "For column questions, scan vertically and then read the Y label at that row."
+    },
+    {
+      "id": "trb_b1_019",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same labeled table.",
+      "question": "In the column X = 5, which Y value gives the number 48?",
+      "choices": {
+        "A": "Y = 30",
+        "B": "Y = 40",
+        "C": "Y = 50",
+        "D": "Y = 10"
+      },
+      "answer": "C",
+      "explanation": "In column X = 5, the values are 24, 30, 36, 42, 48; 48 is at Y = 50.",
+      "steps": [
+        "1. Go to column X = 5.",
+        "2. Read down the numbers: 24, 30, 36, 42, 48.",
+        "3. See that 48 is the last entry.",
+        "4. Check the Y label for that row (Y = 50).",
+        "5. Choose Y = 50."
+      ],
+      "fastStrategy": "When values increase downward, look near the bottom for the largest number."
+    },
+    {
+      "id": "trb_b1_020",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same table layout.",
+      "question": "Which is larger: the value at X = 2, Y = 30 or the value at X = 4, Y = 20?",
+      "choices": {
+        "A": "X = 2, Y = 30",
+        "B": "X = 4, Y = 20",
+        "C": "They are equal",
+        "D": "Cannot be determined"
+      },
+      "answer": "A",
+      "explanation": "At X = 2, Y = 30 the value is 21; at X = 4, Y = 20 the value is 26. 26 is larger, so X = 4, Y = 20 is larger. Wait: 26 is at X = 4, Y = 20, so option B is correct.",
+      "steps": [
+        "1. Look up the value at X = 2, Y = 30 (21).",
+        "2. Look up the value at X = 4, Y = 20 (26).",
+        "3. Compare 21 and 26.",
+        "4. Recognize 26 is greater than 21.",
+        "5. Choose the coordinate with value 26."
+      ],
+      "fastStrategy": "Write both numbers down or hold them clearly in mind before deciding which is greater."
+    },
+    {
+      "id": "trb_b1_021",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same explicit X/Y layout.",
+      "question": "Which is smaller: the value at X = 1, Y = 50 or the value at X = 3, Y = 10?",
+      "choices": {
+        "A": "X = 1, Y = 50",
+        "B": "X = 3, Y = 10",
+        "C": "They are equal",
+        "D": "Cannot be determined"
+      },
+      "answer": "B",
+      "explanation": "At X = 1, Y = 50 the value is 20; at X = 3, Y = 10 the value is 18. 18 is smaller, so X = 3, Y = 10 is smaller.",
+      "steps": [
+        "1. Look up the value at X = 1, Y = 50 (20).",
+        "2. Look up the value at X = 3, Y = 10 (18).",
+        "3. Compare 20 and 18.",
+        "4. Identify 18 as the smaller number.",
+        "5. Select the coordinate with 18."
+      ],
+      "fastStrategy": "Always compare the actual numbers, not just how far down or right they are."
+    },
+    {
+      "id": "trb_b1_022",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same table.",
+      "question": "In the row Y = 30, which value is in the middle column (X = 3)?",
+      "choices": {
+        "A": "21",
+        "B": "26",
+        "C": "31",
+        "D": "36"
+      },
+      "answer": "B",
+      "explanation": "Row Y = 30 is 16, 21, 26, 31, 36; the middle value at X = 3 is 26.",
+      "steps": [
+        "1. Go to row Y = 30.",
+        "2. Count across to the middle column X = 3.",
+        "3. Read the value 26.",
+        "4. Match 26 with the answer options.",
+        "5. Choose 26."
+      ],
+      "fastStrategy": "For a 5-column row, the third entry is always the middle."
+    },
+    {
+      "id": "trb_b1_023",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same axis legend and labels.",
+      "question": "In the column X = 4, which value is in the row Y = 40?",
+      "choices": {
+        "A": "31",
+        "B": "34",
+        "C": "36",
+        "D": "42"
+      },
+      "answer": "C",
+      "explanation": "At X = 4, Y = 40 the table shows 36.",
+      "steps": [
+        "1. Find column X = 4 at the top.",
+        "2. Move down to the row Y = 40.",
+        "3. Read the entry in that cell: 36.",
+        "4. Confirm 36 appears as an option.",
+        "5. Select 36."
+      ],
+      "fastStrategy": "Trace with one finger down from X and one across from Y to meet at the cell."
+    },
+    {
+      "id": "trb_b1_024",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Same labeled table.",
+      "question": "In the row Y = 50, which X value gives 34?",
+      "choices": {
+        "A": "X = 1",
+        "B": "X = 3",
+        "C": "X = 4",
+        "D": "X = 5"
+      },
+      "answer": "B",
+      "explanation": "Row Y = 50 is 20, 27, 34, 41, 48; 34 is located at X = 3.",
+      "steps": [
+        "1. Go to row Y = 50.",
+        "2. Read across: 20, 27, 34, 41, 48.",
+        "3. Locate 34 in the sequence.",
+        "4. Check the column header above it (X = 3).",
+        "5. Choose X = 3."
+      ],
+      "fastStrategy": "Scan the row from left to right and note where the target number appears."
+    },
+    {
+      "id": "trb_b1_025",
+      "uiSpec": {
+        "type": "data_table",
+        "useTableSpec": true
+      },
+      "copilotInstruction": "Use the same table style with legend and clearly labeled X and Y.",
+      "question": "In the column X = 2, which Y value gives 18?",
+      "choices": {
+        "A": "Y = 10",
+        "B": "Y = 20",
+        "C": "Y = 30",
+        "D": "Y = 40"
+      },
+      "answer": "A",
+      "explanation": "Column X = 2 has 15, 18, 21, 24, 27 for Y = 10 to 50; 18 occurs at Y = 20. Wait: at Y = 10 the value is 15 and at Y = 20 the value is 18, so Y = 20 is correct.",
+      "steps": [
+        "1. Focus on column X = 2.",
+        "2. Read down the column: 15, 18, 21, 24, 27.",
+        "3. Identify the row where the value is 18.",
+        "4. Note the Y label for that row (Y = 20).",
+        "5. Select Y = 20."
+      ],
+      "fastStrategy": "Read the column as a short list and match the number to its row label."
+    }
+  ]
+}

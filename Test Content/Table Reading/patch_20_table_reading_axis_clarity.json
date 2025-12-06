@@ -1,0 +1,93 @@
+{
+  "patchId": 20,
+  "patchName": "table_reading_beginner_axis_clarity_and_shared_table_spec",
+  "area": "Spatial/TableReading",
+  "status": "not_started",
+  "summary": "Refactor table reading beginner JSONs to use a shared tableSpec and an axis-clarified data_table UI layout. Improve X/Y labeling so rows and columns are immediately understandable during gameplay.",
+  "targetFiles": [
+    "Spatial/TableReading/questions/table_reading_beginner_part1.json",
+    "Spatial/TableReading/questions/table_reading_beginner_part2.json",
+    "Spatial/TableReading/ui/table_reading_ui_instructions.json"
+  ],
+  "context": {
+    "problem": "Earlier table reading grids made it hard to see which dimension was X vs Y. Players struggled to map coordinates (X, Y) onto the table quickly. We want a consistent visual language: X = columns across the top, Y = rows down the left, with clear labels and legends.",
+    "desiredOutcome": "All table reading beginner questions use a shared tableSpec and render in a standardized data_table layout that explicitly calls out rows as Y and columns as X, with a small legend above the table."
+  },
+  "instructions": [
+    {
+      "stepId": 1,
+      "title": "Introduce shared tableSpec for beginner table reading",
+      "details": [
+        "In both table_reading_beginner_part1.json and table_reading_beginner_part2.json, move the static table definition into a top-level tableSpec object.",
+        "Example shape (values can match the existing dataset):",
+        {
+          "tableSpec": {
+            "type": "data_table",
+            "width": 400,
+            "height": 220,
+            "xHeader": [1, 2, 3, 4, 5],
+            "yHeader": [10, 20, 30, 40, 50],
+            "cellValues": [
+              [12, 15, 18, 21, 24],
+              [14, 18, 22, 26, 30],
+              [16, 21, 26, 31, 36],
+              [18, 24, 30, 36, 42],
+              [20, 27, 34, 41, 48]
+            ]
+          }
+        },
+        "Every question in these files must reference this shared tableSpec via uiSpec.useTableSpec = true."
+      ]
+    },
+    {
+      "stepId": 2,
+      "title": "Standardize uiSpec for table reading questions",
+      "details": [
+        "For every table reading question in beginner part 1 and part 2, enforce the following uiSpec pattern:",
+        {
+          "uiSpec": {
+            "type": "data_table",
+            "useTableSpec": true,
+            "highlight": null
+          }
+        },
+        "The highlight field (optional) will later be used by the renderer to emphasize specific rows/columns/cells, but can remain null for now.",
+        "Remove any older or inconsistent uiSpec fields used in early prototypes."
+      ]
+    },
+    {
+      "stepId": 3,
+      "title": "Align all questions to the (X = columns, Y = rows) mental model",
+      "details": [
+        "Ensure every question stem in table_reading_beginner_part1.json and table_reading_beginner_part2.json refers to coordinates as `X = ?` and `Y = ?` using the convention:",
+        "  - X = column header (top axis)",
+        "  - Y = row header (left axis)",
+        "Examples of valid wording:",
+        "  - 'In the table, what number appears in the box where X = 3 and Y = 30?'",
+        "  - 'For Y = 40, what is the difference between the value at X = 5 and the value at X = 2?'",
+        "Do not use inverted wording like 'row X, column Y'. X must always be columns; Y must always be rows."
+      ]
+    },
+    {
+      "stepId": 4,
+      "title": "Hook table reading UI into shared UI instructions",
+      "details": [
+        "Create or update Spatial/TableReading/ui/table_reading_ui_instructions.json to define exactly how data_table layouts should be rendered (see separate UI instructions JSON).",
+        "Ensure any React or frontend components that render table reading questions use:",
+        "  - tableSpec from the JSON file",
+        "  - a consistent <table> layout with:",
+        "    - a top legend explaining X (columns) and Y (rows)",
+        "    - column headers labeled 'X = value'",
+        "    - row headers labeled 'Y = value'",
+        "    - cell values from tableSpec.cellValues[rowIndex][colIndex]"
+      ]
+    }
+  ],
+  "acceptanceCriteria": [
+    "1. table_reading_beginner_part1.json and table_reading_beginner_part2.json each contain a single top-level tableSpec shared by all questions in that file.",
+    "2. Every question in both files has uiSpec.type = 'data_table' and uiSpec.useTableSpec = true.",
+    "3. No question refers to rows as X or columns as Y; all coordinate language is consistent with X = columns, Y = rows.",
+    "4. table_reading_ui_instructions.json exists and describes the data_table rendering rules (axis legend, header labels, grid styling).",
+    "5. The existing React preview (or equivalent UI) can consume the new JSON structure without additional structural changes beyond hooking into tableSpec and uiSpec.useTableSpec."
+  ]
+}

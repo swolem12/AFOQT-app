@@ -909,9 +909,10 @@ const subjects = [
         isAfoqtOfficialSubject: true
     },
     {
-        id: 'table',
+        id: 'table_reading',
         name: 'Table Reading',
-        description: 'Data extraction and speed'
+        description: 'AFOQT data extraction and speed reading from tables',
+        isAfoqtOfficialSubject: true
     },
     {
         id: 'blocks',
@@ -3089,6 +3090,27 @@ function createInstrumentTopicsFromRegistry() {
     }
     console.log(`Created ${topicsIC.length} instrument topics from content`);
     return topicsIC;
+}
+
+// Function to create Table Reading topics from questionRegistry (Patch 22)
+function createTableReadingTopicsFromRegistry() {
+    if (!questionRegistry || !questionRegistry.table_reading) {
+        console.warn('Table reading content not loaded');
+        return [];
+    }
+    const trContent = questionRegistry.table_reading;
+    const topicsTR = [];
+    for (const subtopicId in trContent) {
+        topicsTR.push({
+            id: subtopicId,
+            name: 'Basic Lookup',
+            description: 'Locate values quickly in data tables using X and Y coordinates',
+            subjectId: 'table_reading',
+            hasContent: true
+        });
+    }
+    console.log(`Created ${topicsTR.length} table reading topics from content`);
+    return topicsTR;
 }
 
 // Combine all topics and add subject IDs
@@ -6836,6 +6858,8 @@ function renderMathUI(uiSpec) {
             return renderRCQuestionBlock(uiSpec);
         case 'instrument_panel':
             return renderInstrumentPanel(uiSpec);
+        case 'data_table':
+            return renderDataTable(uiSpec);
         default:
             console.warn('Unknown uiSpec type:', uiSpec.type);
             return '';
@@ -6979,6 +7003,51 @@ function renderInstrumentChoiceSprite(spriteData) {
             </svg>
         `;
     }
+}
+
+// Render data table (Patch 22)
+function renderDataTable(uiSpec) {
+    if (!uiSpec) return '';
+    
+    // Get table data from uiSpec or from question's tableSpec
+    const tableSpec = uiSpec.tableSpec || state.quiz.questions[state.quiz.currentIndex].tableSpec;
+    if (!tableSpec) {
+        console.warn('No tableSpec found for data_table');
+        return '';
+    }
+    
+    const { xHeader = [], yHeader = [], cellValues = [] } = tableSpec;
+    
+    // Build table HTML
+    let tableHtml = `
+        <div class="data-table-container" style="background: rgba(0,0,0,0.4); border: 1px solid rgba(0,255,255,0.2); padding: 20px; margin: 10px 0; border-radius: 6px; overflow-x: auto;">
+            <div style="text-align: center; margin-bottom: 12px; font-size: 13px; color: #00ffff; opacity: 0.9;">
+                <div style="margin-bottom: 4px;"><strong>Columns (X):</strong> values across the top → (X = ${xHeader.join(', ')})</div>
+                <div><strong>Rows (Y):</strong> values down the left ↓ (Y = ${yHeader.join(', ')})</div>
+            </div>
+            <table style="margin: 0 auto; border-collapse: collapse; background: rgba(0,20,40,0.6);">
+                <thead>
+                    <tr>
+                        <th style="padding: 10px; border: 1px solid rgba(0,255,255,0.3); background: rgba(0,255,255,0.1); color: #00ffff; font-weight: 700;">Y (rows ↓) / X (columns →)</th>
+                        ${xHeader.map(x => `<th style="padding: 10px; border: 1px solid rgba(0,255,255,0.3); background: rgba(0,255,255,0.1); color: #00ffff; font-weight: 700;">X = ${x}</th>`).join('')}
+                    </tr>
+                </thead>
+                <tbody>
+                    ${yHeader.map((y, rowIdx) => `
+                        <tr>
+                            <th style="padding: 10px; border: 1px solid rgba(0,255,255,0.3); background: rgba(0,255,255,0.1); color: #00ffff; font-weight: 700;">Y = ${y}</th>
+                            ${xHeader.map((x, colIdx) => {
+                                const value = cellValues[rowIdx] && cellValues[rowIdx][colIdx] !== undefined ? cellValues[rowIdx][colIdx] : '—';
+                                return `<td style="padding: 10px; border: 1px solid rgba(0,255,255,0.3); background: rgba(0,40,60,0.3); color: #e8f6ff; text-align: center; font-size: 16px;">${value}</td>`;
+                            }).join('')}
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        </div>
+    `;
+    
+    return tableHtml;
 }
 
 /**
@@ -10043,6 +10112,14 @@ async function init() {
                     topics = topics.filter(t => t.subjectId !== 'instrument_comprehension');
                     topics.push(...icTopics);
                     console.log(`✓ Loaded ${icTopics.length} instrument comprehension topics from content`);
+                }
+
+                // Add Table Reading topics from Patch 22 content
+                const trTopics = createTableReadingTopicsFromRegistry();
+                if (trTopics.length > 0) {
+                    topics = topics.filter(t => t.subjectId !== 'table_reading');
+                    topics.push(...trTopics);
+                    console.log(`✓ Loaded ${trTopics.length} table reading topics from content`);
                 }
                 
                 // Add AFOQT practice test topics if available

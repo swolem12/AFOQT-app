@@ -37,6 +37,9 @@ let patch20Config = null;
 // Patch 21 configuration (Instrument Comprehension)
 let patch21Config = null;
 
+// Patch 22 configuration (Table Reading)
+let patch22Config = null;
+
 async function loadPatch19Config() {
     try {
         const response = await fetch('./Test Content/Arithmetic/Patch_19.json');
@@ -81,6 +84,22 @@ async function loadPatch21Config() {
         return patch21Config;
     } catch (error) {
         console.error('Failed to load Patch 21 config:', error);
+        return null;
+    }
+}
+
+async function loadPatch22Config() {
+    try {
+        const response = await fetch('./Test Content/Table Reading/patch_20_table_reading_axis_clarity.json');
+        if (!response.ok) {
+            console.warn('Patch 22 config not found');
+            return null;
+        }
+        patch22Config = await response.json();
+        console.log('✓ Patch 22 config loaded');
+        return patch22Config;
+    } catch (error) {
+        console.error('Failed to load Patch 22 config:', error);
         return null;
     }
 }
@@ -231,6 +250,20 @@ async function loadInstrumentComprehensionFile(filename) {
         return await response.json();
     } catch (error) {
         console.warn('Failed to load instrument comprehension file', filename, error);
+        return null;
+    }
+}
+
+async function loadTableReadingFile(filename) {
+    try {
+        const url = `./Test Content/Table Reading/${filename}`;
+        const response = await fetch(url);
+        if (!response.ok) {
+            return null;
+        }
+        return await response.json();
+    } catch (error) {
+        console.warn('Failed to load table reading file', filename, error);
         return null;
     }
 }
@@ -584,6 +617,55 @@ async function loadAllInstrumentComprehensionContent() {
     return questionRegistry;
 }
 
+async function loadAllTableReadingContent() {
+    if (!patch22Config) {
+        console.warn('Patch 22 config not loaded; skipping table reading content');
+        return questionRegistry;
+    }
+    console.log('Loading table reading content...');
+
+    const difficulties = ['beginner', 'advanced', 'expert'];
+    const maxParts = 5;
+    const files = [];
+    for (const d of difficulties) {
+        for (let part = 1; part <= maxParts; part++) {
+            files.push(`table_reading_${d}_part${part}.json`);
+        }
+    }
+
+    let loadedCount = 0;
+    const loadPromises = files.map(async (filename) => {
+        const data = await loadTableReadingFile(filename);
+        if (!data || !data.questions) {
+            return;
+        }
+
+        if (!questionRegistry['table_reading']) {
+            questionRegistry['table_reading'] = {};
+        }
+        if (!questionRegistry['table_reading']['basic_lookup']) {
+            questionRegistry['table_reading']['basic_lookup'] = {
+                beginner: [],
+                advanced: [],
+                expert: []
+            };
+        }
+
+        const difficulty = data.difficulty || 'beginner';
+        if (!questionRegistry['table_reading']['basic_lookup'][difficulty]) {
+            questionRegistry['table_reading']['basic_lookup'][difficulty] = [];
+        }
+
+        questionRegistry['table_reading']['basic_lookup'][difficulty].push(...data.questions);
+        loadedCount++;
+    });
+
+    await Promise.all(loadPromises);
+    console.log(`✓ Loaded ${loadedCount} table reading files`);
+    console.log('Table Reading question registry:', questionRegistry.table_reading);
+    return questionRegistry;
+}
+
 /**
  * Convert JSON question format to app question format
  */
@@ -816,6 +898,22 @@ function createAfoqtPracticeTestTopics() {
             mode: 'practiceTestMode'
         }));
     }
+
+    // Add Patch 22 (Table Reading) practice test using rules
+    if (patch22Config && patch22Config.area && patch22Config.area.includes('TableReading')) {
+        const difficultyDistribution = { beginner: 0.4, advanced: 0.4, expert: 0.2 };
+        practiceTests.push(createPracticeTestTopic({
+            practiceTestId: 'afoqt_table_reading_practice_test',
+            displayName: 'AFOQT Table Reading Practice Test',
+            subjectId: 'table_reading',
+            questionSelectionPolicy: {
+                subtopicsIncluded: ['basic_lookup'],
+                difficultyDistribution,
+                defaultTestLength: 40
+            },
+            mode: 'practiceTestMode'
+        }));
+    }
     
     return practiceTests;
 }
@@ -875,6 +973,12 @@ async function initializePatch18() {
     if (patch21Config) {
         await loadAllInstrumentComprehensionContent();
     }
+
+    // Load Patch 22 and table reading content
+    await loadPatch22Config();
+    if (patch22Config) {
+        await loadAllTableReadingContent();
+    }
     
     console.log('✓ Patch 18 initialized');
     return true;
@@ -891,6 +995,8 @@ if (typeof module !== 'undefined' && module.exports) {
         loadAllReadingComprehensionContent,
         loadPatch21Config,
         loadAllInstrumentComprehensionContent,
+        loadPatch22Config,
+        loadAllTableReadingContent,
         questionRegistry
     };
 }
