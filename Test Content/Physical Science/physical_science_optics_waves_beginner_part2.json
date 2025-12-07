@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "optics_waves",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+    {
+      "id": "ps_ow_b1_026",
+      "question": "What happens to light speed when it enters glass from air?",
+      "choices": {"A": "It increases", "B": "It decreases", "C": "It stays the same", "D": "It stops"},
+      "answer": "B",
+      "explanation": "Light slows down in glass compared to air because glass has a higher refractive index.",
+      "steps": ["Compare refractive index: glass > air", "Higher index → lower speed", "Light does not stop", "Choose decreases"],
+      "fastStrategy": "Higher refractive index → slower light."
+    },
+    {
+      "id": "ps_ow_b1_027",
+      "question": "Which surface scatters light in many directions?",
+      "choices": {"A": "Smooth mirror", "B": "Rough wall", "C": "Calm water", "D": "Polished metal"},
+      "answer": "B",
+      "explanation": "A rough surface causes diffuse reflection, scattering light in many directions. Smooth surfaces reflect light in a single direction.",
+      "steps": ["Identify diffuse vs specular", "Rough wall → diffuse reflection", "Smooth mirror/water → specular", "Choose rough wall"],
+      "fastStrategy": "Rough surface → diffuse scattering."
+    },
+    {
+      "id": "ps_ow_b1_028",
+      "question": "Total internal reflection occurs when light:",
+      "choices": {"A": "Goes from slower to faster medium at small angle", "B": "Goes from faster to slower medium above critical angle", "C": "Hits a mirror head-on", "D": "Is absorbed completely"},
+      "answer": "B",
+      "explanation": "Total internal reflection happens when light in a higher-speed medium (like water to air) hits the boundary above the critical angle and reflects entirely.",
+      "steps": ["Condition: higher n → lower n", "Angle above critical → all reflected", "Not absorption or mirror-specific", "Choose faster to slower above critical"],
+      "fastStrategy": "Inside-to-air, big angle → total internal reflection."
+    },
+    {
+      "id": "ps_ow_b1_029",
+      "question": "Which wave behavior explains hearing sound around a corner?",
+      "choices": {"A": "Reflection", "B": "Refraction", "C": "Diffraction", "D": "Polarization"},
+      "answer": "C",
+      "explanation": "Sound bends and spreads around obstacles through diffraction, allowing you to hear around corners.",
+      "steps": ["Identify wave bending around obstacle", "This is diffraction", "Reflection needs a surface, refraction a medium change", "Select diffraction"],
+      "fastStrategy": "Waves bending around edges → diffraction."
+    },
+    {
+      "id": "ps_ow_b1_030",
+      "question": "Which statement about light in vacuum is correct?",
+      "choices": {"A": "Speed depends on color", "B": "Speed is the same for all colors", "C": "Red travels faster than blue", "D": "Blue travels faster than red"},
+      "answer": "B",
+      "explanation": "In vacuum, all electromagnetic waves travel at the same speed c. Speed differences by color occur only in media.",
+      "steps": ["Recall c constant in vacuum", "Color affects speed only in materials", "All colors share c", "Choose same speed"],
+      "fastStrategy": "In vacuum, all light shares speed c."
+    },
+    {
+      "id": "ps_ow_b1_031",
+      "question": "What does a prism do to white light?",
+      "choices": {"A": "Reflects it unchanged", "B": "Absorbs all colors", "C": "Separates it into a spectrum", "D": "Stops it"},
+      "answer": "C",
+      "explanation": "A prism refracts different wavelengths by different amounts, dispersing white light into a spectrum of colors.",
+      "steps": ["Identify dispersion in prism", "Different λ bend differently", "Spectrum forms", "Choose separates into spectrum"],
+      "fastStrategy": "Prism spreads white light into colors (dispersion)."
+    },
+    {
+      "id": "ps_ow_b1_032",
+      "question": "What happens to wave frequency when it enters a new medium?",
+      "choices": {"A": "It increases", "B": "It decreases", "C": "It stays the same", "D": "It becomes zero"},
+      "answer": "C",
+      "explanation": "Frequency of a wave stays the same across media; wavelength and speed change instead.",
+      "steps": ["Frequency is set by source", "At boundary, speed and λ can change", "f remains constant", "Select stays the same"],
+      "fastStrategy": "Wave crosses boundary: f fixed, λ and v adjust."
+    },
+    {
+      "id": "ps_ow_b1_033",
+      "question": "Which term describes the bending of waves around obstacles?",
+      "choices": {"A": "Refraction", "B": "Diffraction", "C": "Reflection", "D": "Polarization"},
+      "answer": "B",
+      "explanation": "Diffraction is bending/spreading of waves around edges or openings.",
+      "steps": ["Define diffraction", "Differentiate from refraction (new medium)", "Reflection is bounce", "Choose diffraction"],
+      "fastStrategy": "Edges/holes causing spreading → diffraction."
+    },
+    {
+      "id": "ps_ow_b1_034",
+      "question": "If frequency of a sound wave increases, its pitch is perceived as:",
+      "choices": {"A": "Lower", "B": "Higher", "C": "Unchanged", "D": "Silent"},
+      "answer": "B",
+      "explanation": "Higher frequency sound corresponds to higher pitch.",
+      "steps": ["Match pitch to frequency", "Increase f → higher pitch", "Not lower", "Choose higher"],
+      "fastStrategy": "Pitch rises with frequency."
+    },
+    {
+      "id": "ps_ow_b1_035",
+      "question": "Which EM waves have the longest wavelengths?",
+      "choices": {"A": "Gamma rays", "B": "X-rays", "C": "Microwaves", "D": "Radio waves"},
+      "answer": "D",
+      "explanation": "Radio waves occupy the long-wavelength, low-frequency end of the electromagnetic spectrum.",
+      "steps": ["Recall EM spectrum order", "Radio → longest λ", "Gamma → shortest λ", "Choose radio"],
+      "fastStrategy": "EM spectrum: radio longest λ; gamma shortest λ."
+    },
+    {
+      "id": "ps_ow_b1_036",
+      "question": "Which EM waves have the shortest wavelengths?",
+      "choices": {"A": "Gamma rays", "B": "Infrared", "C": "Microwaves", "D": "Radio waves"},
+      "answer": "A",
+      "explanation": "Gamma rays are at the high-frequency, short-wavelength end of the spectrum.",
+      "steps": ["Spectrum order places gamma at shortest λ", "Radio at longest", "Infrared/microwave between", "Select gamma"],
+      "fastStrategy": "Shortest λ, highest f → gamma rays."
+    },
+    {
+      "id": "ps_ow_b1_037",
+      "question": "Ultraviolet light has a frequency that is:",
+      "choices": {"A": "Lower than infrared", "B": "Higher than visible light", "C": "Equal to radio waves", "D": "Lower than microwaves"},
+      "answer": "B",
+      "explanation": "Ultraviolet lies just above visible light in frequency (shorter wavelength).", 
+      "steps": ["Locate UV in spectrum", "UV > visible frequency", "IR and microwaves are lower", "Choose higher than visible"],
+      "fastStrategy": "UV is above visible; IR/microwave below."
+    },
+    {
+      "id": "ps_ow_b1_038",
+      "question": "Infrared radiation is mainly associated with:",
+      "choices": {"A": "Heat emission", "B": "X-ray imaging", "C": "Gamma decay", "D": "Nuclear fusion"},
+      "answer": "A",
+      "explanation": "Warm objects emit infrared radiation, often associated with heat transfer.",
+      "steps": ["Identify IR as thermal radiation", "X-ray/gamma are higher energy", "Fusion is unrelated here", "Select heat emission"],
+      "fastStrategy": "Infrared = heat radiation region."
+    },
+    {
+      "id": "ps_ow_b1_039",
+      "question": "Which property stays constant for light when passing from air to water?",
+      "choices": {"A": "Speed", "B": "Wavelength", "C": "Frequency", "D": "Direction"},
+      "answer": "C",
+      "explanation": "Frequency stays the same across boundaries; speed and wavelength change, direction may bend.",
+      "steps": ["Frequency set by source", "New medium changes speed and λ", "Direction may refract", "Choose frequency"],
+      "fastStrategy": "At boundaries: frequency fixed, v and λ shift."
+    },
+    {
+      "id": "ps_ow_b1_040",
+      "question": "Light that bounces off a surface is undergoing:",
+      "choices": {"A": "Refraction", "B": "Reflection", "C": "Diffraction", "D": "Polarization"},
+      "answer": "B",
+      "explanation": "Bouncing off a surface is reflection. Refraction is bending through; diffraction is spreading; polarization filters vibrations.",
+      "steps": ["Identify bounce", "Bounce = reflection", "Other terms involve passing or filtering", "Select reflection"],
+      "fastStrategy": "Bounce = reflection."
+    },
+    {
+      "id": "ps_ow_b1_041",
+      "question": "Light passing through a narrow slit and spreading is:",
+      "choices": {"A": "Interference", "B": "Diffraction", "C": "Reflection", "D": "Absorption"},
+      "answer": "B",
+      "explanation": "Spreading after a narrow opening is diffraction. Interference is combining waves, though diffraction often leads to interference patterns.",
+      "steps": ["Identify spreading after slit", "That is diffraction", "Interference is pattern from overlap", "Choose diffraction"],
+      "fastStrategy": "Slit → spreading = diffraction."
+    },
+    {
+      "id": "ps_ow_b1_042",
+      "question": "In the visible spectrum, blue light has a ______ wavelength than red light.",
+      "choices": {"A": "Longer", "B": "Shorter", "C": "Equal", "D": "Variable"},
+      "answer": "B",
+      "explanation": "Blue has shorter wavelength and higher frequency than red within the visible range.",
+      "steps": ["Recall color order", "Blue/violet shorter λ", "Red longer λ", "Choose shorter"],
+      "fastStrategy": "Blue/Violet shorter λ; Red longer λ."
+    },
+    {
+      "id": "ps_ow_b1_043",
+      "question": "When two waves overlap and form a pattern of bright and dark regions, this is:",
+      "choices": {"A": "Reflection", "B": "Refraction", "C": "Interference", "D": "Polarization"},
+      "answer": "C",
+      "explanation": "Interference results from overlapping waves, creating constructive (bright) and destructive (dark) regions.",
+      "steps": ["Overlap leads to adding/canceling", "Pattern of bright/dark indicates interference", "Not reflection/refraction", "Select interference"],
+      "fastStrategy": "Overlap pattern of bright/dark = interference."
+    },
+    {
+      "id": "ps_ow_b1_044",
+      "question": "A longitudinal wave vibrates:",
+      "choices": {"A": "Perpendicular to travel", "B": "Parallel to travel", "C": "Randomly", "D": "Not at all"},
+      "answer": "B",
+      "explanation": "In longitudinal waves, particle motion is parallel to the direction of wave travel (compressions and rarefactions).",
+      "steps": ["Define longitudinal", "Motion parallel to propagation", "Transverse would be perpendicular", "Choose parallel"],
+      "fastStrategy": "Longitudinal = parallel vibrations."
+    },
+    {
+      "id": "ps_ow_b1_045",
+      "question": "What determines the pitch of a sound?",
+      "choices": {"A": "Amplitude", "B": "Frequency", "C": "Wavelength of light", "D": "Speed of sound"},
+      "answer": "B",
+      "explanation": "Pitch corresponds to the frequency of the sound wave. Amplitude affects loudness.",
+      "steps": ["Pitch ↔ frequency", "Amplitude ↔ loudness", "Light wavelength irrelevant", "Choose frequency"],
+      "fastStrategy": "Pitch = frequency; loudness = amplitude."
+    },
+    {
+      "id": "ps_ow_b1_046",
+      "question": "If a wave's period is 0.5 seconds, its frequency is:",
+      "choices": {"A": "0.5 Hz", "B": "1 Hz", "C": "2 Hz", "D": "4 Hz"},
+      "answer": "C",
+      "explanation": "Frequency f = 1/T. With T = 0.5 s, f = 1 / 0.5 = 2 Hz.",
+      "steps": ["Use f = 1/T", "Compute 1 / 0.5", "Result is 2 Hz", "Choose 2 Hz"],
+      "fastStrategy": "f = 1/T; 1/0.5 = 2 Hz."
+    },
+    {
+      "id": "ps_ow_b1_047",
+      "question": "If the period of a wave doubles, the frequency:",
+      "choices": {"A": "Doubles", "B": "Halves", "C": "Stays the same", "D": "Becomes zero"},
+      "answer": "B",
+      "explanation": "Since f = 1/T, doubling period halves frequency.",
+      "steps": ["Recall inverse relationship", "T × 2 → f / 2", "Not same or zero", "Select halves"],
+      "fastStrategy": "Period ↑ → frequency ↓ (inverse)."
+    },
+    {
+      "id": "ps_ow_b1_048",
+      "question": "Which wave property is most closely related to energy carried by a wave?",
+      "choices": {"A": "Amplitude", "B": "Period", "C": "Phase", "D": "Speed"},
+      "answer": "A",
+      "explanation": "For many waves (like light intensity and sound loudness), greater amplitude corresponds to more energy.",
+      "steps": ["Energy often scales with amplitude^2", "Period/frequency relate to timing", "Speed depends on medium", "Choose amplitude"],
+      "fastStrategy": "Higher amplitude → more wave energy."
+    },
+    {
+      "id": "ps_ow_b1_049",
+      "question": "What property of light changes when it enters a denser medium?",
+      "choices": {"A": "Frequency", "B": "Speed", "C": "Charge", "D": "Spin"},
+      "answer": "B",
+      "explanation": "Frequency stays the same; speed decreases in a denser medium. Wavelength changes accordingly.",
+      "steps": ["At boundary, f fixed", "Speed reduces in denser medium", "Charge/spin are irrelevant here", "Select speed"],
+      "fastStrategy": "Light slows in denser media; f constant."
+    },
+    {
+      "id": "ps_ow_b1_050",
+      "question": "The part of the EM spectrum used for cell phones is mainly:",
+      "choices": {"A": "Gamma rays", "B": "Microwaves", "C": "Visible light", "D": "X-rays"},
+      "answer": "B",
+      "explanation": "Cell phones primarily use microwave frequencies (a subset of radio waves).",
+      "steps": ["Identify telecom band", "Mobile signals are microwaves/radio", "Gamma/X-ray are too energetic", "Choose microwaves"],
+      "fastStrategy": "Cell signals ride in the microwave/radio band."
+    }
+  ]
+}

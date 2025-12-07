@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "motion_mechanics",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ps_mm_a1_001",
+      "question": "A car accelerates uniformly from 10 m/s to 22 m/s over 6 s. Its average acceleration is closest to:",
+      "choices": {"A": "1 m/s^2", "B": "2 m/s^2", "C": "6 m/s^2", "D": "12 m/s^2"},
+      "answer": "B",
+      "explanation": "Average acceleration a = (vf - vi)/t = (22 - 10)/6 = 12/6 = 2 m/s^2.",
+      "steps": ["Write a = (vf - vi)/t", "Compute 22 - 10 = 12", "Divide 12 by 6", "Choose 2 m/s^2"],
+      "fastStrategy": "Change in speed over time: 12/6 = 2." 
+    },
+    {
+      "id": "ps_mm_a1_002",
+      "question": "A 5 kg box is pushed with 30 N across a floor. If friction is 10 N opposite motion, the net force is:",
+      "choices": {"A": "20 N forward", "B": "30 N forward", "C": "10 N forward", "D": "40 N forward"},
+      "answer": "A",
+      "explanation": "Net force equals applied minus friction: 30 N - 10 N = 20 N forward.",
+      "steps": ["Identify opposing 10 N friction", "Subtract from 30 N", "Net = 20 N forward", "Pick 20 N"],
+      "fastStrategy": "Net = applied - friction." 
+    },
+    {
+      "id": "ps_mm_a1_003",
+      "question": "A runner covers 400 m in 50 s at nearly constant speed. Average speed is:",
+      "choices": {"A": "6 m/s", "B": "7 m/s", "C": "8 m/s", "D": "9 m/s"},
+      "answer": "C",
+      "explanation": "Speed v = d/t = 400/50 = 8 m/s.",
+      "steps": ["Use v = d/t", "Compute 400/50", "Result 8 m/s", "Select 8"],
+      "fastStrategy": "Cancel zeros: 40/5 = 8." 
+    },
+    {
+      "id": "ps_mm_a1_004",
+      "question": "An object in uniform circular motion at speed v around radius r has centripetal acceleration:",
+      "choices": {"A": "v/r", "B": "v^2/r", "C": "r/v", "D": "g"},
+      "answer": "B",
+      "explanation": "Centripetal acceleration is a_c = v^2 / r toward the center.",
+      "steps": ["Recall circular motion formula", "Square speed and divide by radius", "Direction is inward", "Choose v^2/r"],
+      "fastStrategy": "Circle accel rule: v-squared over r." 
+    },
+    {
+      "id": "ps_mm_a1_005",
+      "question": "A 2 kg cart moving at 3 m/s sticks to a 4 kg cart at rest. Combined speed right after collision is:",
+      "choices": {"A": "1 m/s", "B": "2 m/s", "C": "3 m/s", "D": "6 m/s"},
+      "answer": "A",
+      "explanation": "Momentum conservation: initial p = 2×3 = 6 kg·m/s. Total mass = 6 kg, so v = 6/6 = 1 m/s.",
+      "steps": ["Compute initial momentum 6", "Add masses to 6 kg", "Divide momentum by total mass", "Get 1 m/s"],
+      "fastStrategy": "Stick collision: p/total m." 
+    },
+    {
+      "id": "ps_mm_a1_006",
+      "question": "Work done by a 50 N force moving an object 3 m in the force direction is:",
+      "choices": {"A": "17 J", "B": "50 J", "C": "150 J", "D": "53 J"},
+      "answer": "C",
+      "explanation": "Aligned work W = F d = 50×3 = 150 J.",
+      "steps": ["Confirm same direction", "Multiply 50 by 3", "Result 150 J", "Pick 150"],
+      "fastStrategy": "Work = F×d when aligned." 
+    },
+    {
+      "id": "ps_mm_a1_007",
+      "question": "A 1,000 kg car brakes from 20 m/s to rest. The change in kinetic energy is:",
+      "choices": {"A": "-200,000 J", "B": "-100,000 J", "C": "-20,000 J", "D": "-10,000 J"},
+      "answer": "A",
+      "explanation": "Initial KE = 0.5(1000)(20^2) = 500×400 = 200,000 J. Final KE = 0, so ΔKE = -200,000 J.",
+      "steps": ["Use KE = 0.5 m v^2", "Compute 0.5×1000×400 = 200,000", "Subtract final 0", "Result is -200,000 J"],
+      "fastStrategy": "Half m v^2 → 500×400 = 200k; braking makes it negative." 
+    },
+    {
+      "id": "ps_mm_a1_008",
+      "question": "A 10 kg crate on a horizontal floor has μ_k = 0.3. The friction force while sliding is closest to:",
+      "choices": {"A": "3 N", "B": "9.8 N", "C": "29 N", "D": "98 N"},
+      "answer": "C",
+      "explanation": "F_k = μ_k N. Here N = mg ≈ 10×9.8 = 98 N, so F_k ≈ 0.3×98 ≈ 29 N.",
+      "steps": ["Find N = mg", "Multiply by μ_k = 0.3", "0.3×98 ≈ 29", "Select ~29 N"],
+      "fastStrategy": "Approximate 0.3×(10×10) ≈ 30 N." 
+    },
+    {
+      "id": "ps_mm_a1_009",
+      "question": "A ball is thrown straight up at 14 m/s. Ignoring air, time to reach the top is about:",
+      "choices": {"A": "0.7 s", "B": "1.0 s", "C": "1.4 s", "D": "2.8 s"},
+      "answer": "C",
+      "explanation": "Use v = v0 - g t. Set v = 0: t = v0/g ≈ 14/9.8 ≈ 1.4 s.",
+      "steps": ["Set final velocity 0 at top", "Solve t = v0/g", "Plug 14/9.8 ≈ 1.4", "Pick ~1.4 s"],
+      "fastStrategy": "Time up ≈ v0/10 → 1.4 s." 
+    },
+    {
+      "id": "ps_mm_a1_010",
+      "question": "A jogger runs 3 km east then 4 km west. The displacement magnitude is:",
+      "choices": {"A": "1 km", "B": "3.5 km", "C": "5 km", "D": "7 km"},
+      "answer": "A",
+      "explanation": "Net displacement = 4 west - 3 east = 1 km west; magnitude 1 km.",
+      "steps": ["Take east positive", "Net = -1 km", "Magnitude = 1 km", "Choose 1 km"],
+      "fastStrategy": "Opposite legs subtract: 4 - 3 = 1." 
+    },
+    {
+      "id": "ps_mm_a1_011",
+      "question": "According to Newton's third law, when you push a wall with 100 N, the wall:",
+      "choices": {"A": "Pushes you with less", "B": "Pushes you with 100 N", "C": "Pushes nothing", "D": "Pushes you only if it moves"},
+      "answer": "B",
+      "explanation": "For every action there is an equal and opposite reaction; the wall pushes back with 100 N.",
+      "steps": ["Identify action-reaction pair", "Magnitudes equal, directions opposite", "So 100 N back on you", "Select 100 N"],
+      "fastStrategy": "Third law = equal magnitude, opposite direction." 
+    },
+    {
+      "id": "ps_mm_a1_012",
+      "question": "A worker lifts a 20 kg box straight up 1.5 m in 2 s. Average power output is about:",
+      "choices": {"A": "75 W", "B": "150 W", "C": "300 W", "D": "600 W"},
+      "answer": "B",
+      "explanation": "Work = m g h ≈ 20×9.8×1.5 ≈ 294 J. Power = 294/2 ≈ 147 W, closest to 150 W.",
+      "steps": ["Compute work m g h", "20×9.8×1.5 ≈ 294 J", "Divide by 2 s", "Result ≈ 147 W ~ 150 W"],
+      "fastStrategy": "Work ~300 J over 2 s → ~150 W." 
+    },
+    {
+      "id": "ps_mm_a1_013",
+      "question": "A 0.5 kg ball experiences an impulse of 3 N·s. The change in velocity magnitude is:",
+      "choices": {"A": "1 m/s", "B": "3 m/s", "C": "6 m/s", "D": "9 m/s"},
+      "answer": "C",
+      "explanation": "Impulse J = m Δv ⇒ Δv = J/m = 3 / 0.5 = 6 m/s.",
+      "steps": ["Use J = m Δv", "Divide 3 by 0.5", "Result 6 m/s", "Pick 6"],
+      "fastStrategy": "3 ÷ 0.5 = 6." 
+    },
+    {
+      "id": "ps_mm_a1_014",
+      "question": "A crate slides down a 30° frictionless incline from rest. Its acceleration along the plane is:",
+      "choices": {"A": "9.8 m/s^2", "B": "8.5 m/s^2", "C": "4.9 m/s^2", "D": "3.3 m/s^2"},
+      "answer": "C",
+      "explanation": "For a frictionless incline, a = g sinθ. With θ = 30°, sin 30° = 0.5 → a ≈ 9.8×0.5 = 4.9 m/s^2.",
+      "steps": ["Use a = g sinθ", "Plug θ = 30°", "Compute 9.8×0.5 = 4.9", "Select 4.9 m/s^2"],
+      "fastStrategy": "At 30°, acceleration is half of g." 
+    },
+    {
+      "id": "ps_mm_a1_015",
+      "question": "Two forces act on a mass: 12 N right and 5 N left. The net acceleration of a 3 kg mass is:",
+      "choices": {"A": "1 m/s^2 right", "B": "2.3 m/s^2 right", "C": "7/3 m/s^2 right", "D": "3.5 m/s^2 right"},
+      "answer": "B",
+      "explanation": "Net force = 12 - 5 = 7 N right. a = F/m = 7/3 ≈ 2.3 m/s^2 right.",
+      "steps": ["Subtract forces for net", "Net 7 N to the right", "Divide by 3 kg", "Get about 2.3 m/s^2"],
+      "fastStrategy": "7 divided by 3 ≈ 2.3." 
+    },
+    {
+      "id": "ps_mm_a1_016",
+      "question": "A 15 N horizontal pull moves a sled 6 m in 4 s at constant speed. The opposing friction force is:",
+      "choices": {"A": "0 N", "B": "7.5 N", "C": "15 N", "D": "22.5 N"},
+      "answer": "C",
+      "explanation": "Constant speed → net force zero, so friction balances the 15 N pull.",
+      "steps": ["Constant speed means no acceleration", "Net force must be zero", "Therefore friction = applied = 15 N", "Choose 15 N"],
+      "fastStrategy": "No acceleration → forces balance." 
+    },
+    {
+      "id": "ps_mm_a1_017",
+      "question": "A 0.2 kg stone is whirled horizontally on a string at 10 m/s in a 0.5 m radius circle. The required tension is:",
+      "choices": {"A": "4 N", "B": "20 N", "C": "40 N", "D": "100 N"},
+      "answer": "C",
+      "explanation": "Centripetal force F = m v^2 / r = 0.2×100/0.5 = 20/0.5 = 40 N.",
+      "steps": ["Compute v^2 = 100", "Multiply by mass 0.2 → 20", "Divide by r 0.5 → 40", "Select 40 N"],
+      "fastStrategy": "(0.2×100)/0.5 = 40." 
+    },
+    {
+      "id": "ps_mm_a1_018",
+      "question": "A block lifted slowly at constant speed with 120 N of force through 0.8 m gains gravitational potential energy of:",
+      "choices": {"A": "60 J", "B": "96 J", "C": "120 J", "D": "150 J"},
+      "answer": "B",
+      "explanation": "At constant speed, lift force equals weight (120 N). Work = F d = 120×0.8 = 96 J, which equals the PE gained.",
+      "steps": ["Recognize constant speed", "Work = 120×0.8", "Compute 96 J", "Pick 96 J"],
+      "fastStrategy": "PE gain = lift work: 120×0.8 ≈ 96." 
+    },
+    {
+      "id": "ps_mm_a1_019",
+      "question": "A 50 kg passenger experiences an upward elevator acceleration of 1.5 m/s^2. The normal force from the floor is closest to:",
+      "choices": {"A": "50 N", "B": "75 N", "C": "490 N", "D": "565 N"},
+      "answer": "D",
+      "explanation": "N = m(g + a) = 50(9.8 + 1.5) ≈ 50×11.3 ≈ 565 N.",
+      "steps": ["Use N = m(g+a)", "Add 9.8 + 1.5 = 11.3", "Multiply by 50", "Result ≈ 565 N"],
+      "fastStrategy": "Upward a adds to weight: 50×11.3 ≈ 565." 
+    },
+    {
+      "id": "ps_mm_a1_020",
+      "question": "A 0.25 kg puck moving at 8 m/s rebounds straight back at 6 m/s after hitting a wall. The momentum change magnitude is:",
+      "choices": {"A": "0.5 kg·m/s", "B": "1.5 kg·m/s", "C": "3.5 kg·m/s", "D": "14 kg·m/s"},
+      "answer": "C",
+      "explanation": "Initial p = +0.25×8 = 2. Final p = -0.25×6 = -1.5. Δp = -1.5 - 2 = -3.5; magnitude 3.5 kg·m/s.",
+      "steps": ["Assign forward positive", "Find initial and final momentum", "Subtract to get -3.5", "Take magnitude 3.5"],
+      "fastStrategy": "Direction flips → add speeds: 0.25×(8+6) = 3.5." 
+    },
+    {
+      "id": "ps_mm_a1_021",
+      "question": "A 600 W motor lifts a 120 N load straight up at constant speed. The maximum speed it can sustain is about:",
+      "choices": {"A": "0.2 m/s", "B": "2 m/s", "C": "5 m/s", "D": "10 m/s"},
+      "answer": "C",
+      "explanation": "For constant speed, P = F v → v = P/F = 600/120 = 5 m/s.",
+      "steps": ["Use P = F v", "Divide 600 W by 120 N", "Result 5 m/s", "Select 5 m/s"],
+      "fastStrategy": "Speed = power / force: 600/120 = 5." 
+    },
+    {
+      "id": "ps_mm_a1_022",
+      "question": "A 3 kg object moving at 4 m/s has the same kinetic energy as a 6 kg object moving at approximately:",
+      "choices": {"A": "2.8 m/s", "B": "4 m/s", "C": "5.6 m/s", "D": "8 m/s"},
+      "answer": "A",
+      "explanation": "KE1 = 0.5(3)(4^2) = 24 J. Set 24 = 0.5(6)v^2 → 24 = 3 v^2 → v^2 = 8 → v ≈ 2.8 m/s.",
+      "steps": ["Compute KE of first object (24 J)", "Set equal to 0.5·6·v^2", "Solve v^2 = 8", "v ≈ 2.8 m/s"],
+      "fastStrategy": "Equate 24 J = 3 v^2 → v^2 = 8 → v ≈ 2.8." 
+    },
+    {
+      "id": "ps_mm_a1_023",
+      "question": "A force does negative work on an object. Its kinetic energy will:",
+      "choices": {"A": "Increase", "B": "Decrease", "C": "Stay the same", "D": "Become infinite"},
+      "answer": "B",
+      "explanation": "By the work-energy theorem, negative work removes energy, reducing kinetic energy.",
+      "steps": ["Recall work-energy link", "Negative work subtracts energy", "Kinetic energy decreases", "Choose decrease"],
+      "fastStrategy": "Negative work = energy taken out." 
+    },
+    {
+      "id": "ps_mm_a1_024",
+      "question": "A 10 kg cart moves at 6 m/s. A constant 5 N opposite force acts for 4 s. The change in speed is:",
+      "choices": {"A": "-2 m/s", "B": "-1 m/s", "C": "-0.5 m/s", "D": "-0.2 m/s"},
+      "answer": "A",
+      "explanation": "Acceleration a = F/m = -5/10 = -0.5 m/s^2. Over 4 s, Δv = -0.5×4 = -2 m/s.",
+      "steps": ["Compute a = F/m = -0.5", "Multiply by time 4 s", "Δv = -2 m/s", "Pick -2 m/s"],
+      "fastStrategy": "Half m/s^2 for 4 s → subtract 2 m/s." 
+    },
+    {
+      "id": "ps_mm_a1_025",
+      "question": "Two equal masses move toward each other at equal speeds and stick together. Their final velocity is:",
+      "choices": {"A": "Same speed as before", "B": "Zero", "C": "Half the original speed", "D": "Double the original speed"},
+      "answer": "B",
+      "explanation": "Momenta are equal and opposite, so total momentum is zero. After sticking, the combined mass must have zero velocity.",
+      "steps": ["Note equal masses and opposite velocities", "Total momentum cancels", "Stuck mass keeps zero momentum", "Final velocity 0"],
+      "fastStrategy": "Equal and opposite momenta → stop." 
+    }
+  ]
+}

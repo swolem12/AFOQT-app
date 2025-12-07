@@ -1,0 +1,483 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "motion_mechanics",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+    {
+      "id": "ps_mm_b1_026",
+      "question": "When forces on an object are balanced, the object will:",
+      "choices": {
+        "A": "Speed up",
+        "B": "Slow down",
+        "C": "Move at constant velocity or stay at rest",
+        "D": "Change direction quickly"
+      },
+      "answer": "C",
+      "explanation": "Balanced forces mean the net force is zero. With no net force, there is no acceleration, so the object either stays at rest or continues at constant velocity (Newton's First Law).",
+      "steps": [
+        "Balanced forces ⇒ net force = 0",
+        "No net force ⇒ no acceleration",
+        "Without acceleration, velocity does not change",
+        "Therefore motion stays constant or remains at rest"
+      ],
+      "fastStrategy": "Net force zero? Expect no acceleration—motion stays the same."
+    },
+    {
+      "id": "ps_mm_b1_027",
+      "question": "A runner moves at 15 m/s for 4 seconds. How far does the runner travel?",
+      "choices": {
+        "A": "19 m",
+        "B": "30 m",
+        "C": "45 m",
+        "D": "60 m"
+      },
+      "answer": "D",
+      "explanation": "Distance = speed × time. Multiply 15 m/s by 4 s to get 60 meters.",
+      "steps": [
+        "Identify formula: d = v × t",
+        "Plug in v = 15 m/s and t = 4 s",
+        "Compute: 15 × 4 = 60",
+        "Select 60 meters"
+      ],
+      "fastStrategy": "Constant speed problems: distance = speed × time."
+    },
+    {
+      "id": "ps_mm_b1_028",
+      "question": "The SI unit of work is the:",
+      "choices": {
+        "A": "Newton",
+        "B": "Joule",
+        "C": "Watt",
+        "D": "Pascal"
+      },
+      "answer": "B",
+      "explanation": "Work is measured in Joules (J). One Joule equals one Newton-meter (force × distance). Newton is force, Watt is power, Pascal is pressure.",
+      "steps": [
+        "Recall work formula: W = F × d",
+        "SI unit for work is Joule",
+        "Newton = force, Watt = power, Pascal = pressure",
+        "Choose Joule"
+      ],
+      "fastStrategy": "Work uses Joules; think Newton-meter."
+    },
+    {
+      "id": "ps_mm_b1_029",
+      "question": "Which object has greater inertia?",
+      "choices": {
+        "A": "A 1 kg book",
+        "B": "A 10 kg toolbox",
+        "C": "Both have the same",
+        "D": "Inertia is unrelated to mass"
+      },
+      "answer": "B",
+      "explanation": "Inertia is resistance to changes in motion and is directly related to mass. A 10 kg toolbox has more mass and therefore more inertia than a 1 kg book.",
+      "steps": [
+        "Inertia increases with mass",
+        "Compare 1 kg vs 10 kg",
+        "10 kg has larger mass",
+        "Greater mass ⇒ greater inertia"
+      ],
+      "fastStrategy": "More mass = more inertia."
+    },
+    {
+      "id": "ps_mm_b1_030",
+      "question": "If the net force on an object doubles while its mass stays the same, its acceleration:",
+      "choices": {
+        "A": "Halves",
+        "B": "Stays the same",
+        "C": "Doubles",
+        "D": "Drops to zero"
+      },
+      "answer": "C",
+      "explanation": "From F = ma, acceleration is proportional to net force when mass is constant. Doubling net force doubles acceleration.",
+      "steps": [
+        "Write F = ma",
+        "Mass is constant",
+        "If F doubles, a must double to keep equality",
+        "Select doubles"
+      ],
+      "fastStrategy": "With constant mass, acceleration scales directly with net force."
+    },
+    {
+      "id": "ps_mm_b1_031",
+      "question": "A rocket moves forward because the exhaust gases push backward. This is an example of:",
+      "choices": {
+        "A": "Newton's First Law",
+        "B": "Newton's Second Law",
+        "C": "Newton's Third Law",
+        "D": "Conservation of energy"
+      },
+      "answer": "C",
+      "explanation": "Newton's Third Law states every action has an equal and opposite reaction. Exhaust gases pushed backward provide an opposite push that propels the rocket forward.",
+      "steps": [
+        "Identify paired forces: gas backward, rocket forward",
+        "Action-reaction is Newton's Third Law",
+        "First Law is inertia; Second is F = ma",
+        "Choose Third Law"
+      ],
+      "fastStrategy": "Action-reaction pairs signal Newton's Third Law."
+    },
+    {
+      "id": "ps_mm_b1_032",
+      "question": "On Earth, the acceleration due to gravity is approximately:",
+      "choices": {
+        "A": "1 m/s²",
+        "B": "4.9 m/s²",
+        "C": "9.8 m/s²",
+        "D": "20 m/s²"
+      },
+      "answer": "C",
+      "explanation": "Standard gravitational acceleration near Earth's surface is about 9.8 m/s² (often rounded to 10 m/s² for quick calculations).",
+      "steps": [
+        "Recall Earth gravity constant ≈ 9.8 m/s²",
+        "4.9 is roughly half, often used in equations for distance",
+        "20 is too high, 1 is too low",
+        "Choose 9.8 m/s²"
+      ],
+      "fastStrategy": "Use g ≈ 10 m/s² for quick math; exact is 9.8."
+    },
+    {
+      "id": "ps_mm_b1_033",
+      "question": "At the top of its path, a ball thrown straight up has:",
+      "choices": {
+        "A": "Zero velocity and zero acceleration",
+        "B": "Zero velocity but acceleration downward",
+        "C": "Maximum velocity upward",
+        "D": "Acceleration upward"
+      },
+      "answer": "B",
+      "explanation": "At the highest point, the ball's velocity is momentarily zero, but gravity still acts downward at about 9.8 m/s², so acceleration is downward.",
+      "steps": [
+        "Recognize velocity is momentarily zero at the top",
+        "Gravity still provides downward acceleration",
+        "Acceleration is not zero or upward",
+        "Choose zero velocity with downward acceleration"
+      ],
+      "fastStrategy": "Peak of a throw: v = 0, a = g downward."
+    },
+    {
+      "id": "ps_mm_b1_034",
+      "question": "Which frictional force is typically greatest when starting to move a heavy box?",
+      "choices": {
+        "A": "Static friction",
+        "B": "Kinetic friction",
+        "C": "Rolling friction",
+        "D": "Air resistance"
+      },
+      "answer": "A",
+      "explanation": "Static friction (before motion) is usually greater than kinetic friction (during motion). More force is needed to start moving an object than to keep it sliding.",
+      "steps": [
+        "Recall static friction resists start of motion",
+        "Static friction coefficient is usually higher than kinetic",
+        "Rolling friction is even smaller",
+        "Choose static friction"
+      ],
+      "fastStrategy": "It’s hardest to start moving—static friction is highest."
+    },
+    {
+      "id": "ps_mm_b1_035",
+      "question": "If you push a box with 20 N while friction also equals 20 N in the opposite direction, the box will:",
+      "choices": {
+        "A": "Speed up",
+        "B": "Slow down",
+        "C": "Move at constant speed or stay still",
+        "D": "Accelerate backward"
+      },
+      "answer": "C",
+      "explanation": "Net force is zero (20 N forward and 20 N backward). With no net force, there is no acceleration; motion stays the same (rest or constant speed).",
+      "steps": [
+        "Add forces: 20 forward + (-20) backward = 0",
+        "Net force zero ⇒ no acceleration",
+        "Velocity stays unchanged",
+        "Object remains at rest or continues constant speed"
+      ],
+      "fastStrategy": "Equal opposite forces cancel; expect no acceleration."
+    },
+    {
+      "id": "ps_mm_b1_036",
+      "question": "Using a longer ramp to load a crate reduces the effort because:",
+      "choices": {
+        "A": "Gravity is weaker on a ramp",
+        "B": "The mass of the crate decreases",
+        "C": "The force is applied over a longer distance",
+        "D": "Friction disappears"
+      },
+      "answer": "C",
+      "explanation": "An inclined plane trades distance for force. Pushing over a longer distance requires less force to raise the same height (work stays the same).",
+      "steps": [
+        "Recall work = force × distance",
+        "Longer ramp increases distance",
+        "For the same work, required force decreases",
+        "Gravity and mass stay the same"
+      ],
+      "fastStrategy": "Long ramp: less force, more distance."
+    },
+    {
+      "id": "ps_mm_b1_037",
+      "question": "A bike speeds up from 0 to 20 m/s in 5 seconds. What is its average acceleration?",
+      "choices": {
+        "A": "2 m/s²",
+        "B": "3 m/s²",
+        "C": "4 m/s²",
+        "D": "5 m/s²"
+      },
+      "answer": "C",
+      "explanation": "Acceleration = change in velocity ÷ time. (20 m/s - 0) ÷ 5 s = 4 m/s².",
+      "steps": [
+        "Use a = Δv / t",
+        "Δv = 20 - 0 = 20 m/s",
+        "Divide by time: 20 / 5 = 4",
+        "Units: m/s²"
+      ],
+      "fastStrategy": "Acceleration = change in speed divided by time."
+    },
+    {
+      "id": "ps_mm_b1_038",
+      "question": "Applying a 12 N net force to a 3 kg cart produces what acceleration?",
+      "choices": {
+        "A": "1 m/s²",
+        "B": "2 m/s²",
+        "C": "3 m/s²",
+        "D": "4 m/s²"
+      },
+      "answer": "D",
+      "explanation": "From F = ma, a = F/m. Here a = 12 N ÷ 3 kg = 4 m/s².",
+      "steps": [
+        "Write F = ma",
+        "Solve for a: a = F/m",
+        "Compute: 12 / 3 = 4",
+        "State acceleration = 4 m/s²"
+      ],
+      "fastStrategy": "Divide net force by mass to get acceleration."
+    },
+    {
+      "id": "ps_mm_b1_039",
+      "question": "The same force is applied to a 1 kg object and a 10 kg object. Which accelerates more?",
+      "choices": {
+        "A": "The 1 kg object",
+        "B": "The 10 kg object",
+        "C": "Both accelerate the same",
+        "D": "Neither accelerates"
+      },
+      "answer": "A",
+      "explanation": "With F = ma, for the same force, smaller mass results in larger acceleration. The 1 kg object accelerates more than the 10 kg object.",
+      "steps": [
+        "F is constant for both",
+        "a = F/m ⇒ larger m gives smaller a",
+        "1 kg has smaller mass than 10 kg",
+        "Therefore 1 kg accelerates more"
+      ],
+      "fastStrategy": "Same force: lighter object accelerates more."
+    },
+    {
+      "id": "ps_mm_b1_040",
+      "question": "At the top of a roller coaster hill (ignoring friction), most of the coaster's mechanical energy is:",
+      "choices": {
+        "A": "Kinetic energy",
+        "B": "Thermal energy",
+        "C": "Potential energy",
+        "D": "Sound energy"
+      },
+      "answer": "C",
+      "explanation": "At the highest point, speed is lowest and height is greatest, so most mechanical energy is gravitational potential energy. As it descends, that potential converts to kinetic.",
+      "steps": [
+        "Identify energy forms: potential depends on height",
+        "Top of hill = maximum height, minimal speed",
+        "Thus energy stored as gravitational potential",
+        "Kinetic increases as the coaster goes down"
+      ],
+      "fastStrategy": "High position = high potential energy; speed grows as it falls."
+    },
+    {
+      "id": "ps_mm_b1_041",
+      "question": "If an object's speed increases by the same amount each second, the object has:",
+      "choices": {
+        "A": "No acceleration",
+        "B": "Constant acceleration",
+        "C": "Decreasing acceleration",
+        "D": "Random acceleration"
+      },
+      "answer": "B",
+      "explanation": "A steady change in speed per unit time means acceleration is constant (uniform acceleration).",
+      "steps": [
+        "Acceleration is rate of change of velocity",
+        "Same change every second ⇒ rate is constant",
+        "Therefore acceleration is constant",
+        "Choose constant acceleration"
+      ],
+      "fastStrategy": "Equal speed change each second = constant acceleration."
+    },
+    {
+      "id": "ps_mm_b1_042",
+      "question": "How much work is done if a force is applied but the object does not move?",
+      "choices": {
+        "A": "Zero work",
+        "B": "Small work",
+        "C": "Moderate work",
+        "D": "Maximum work"
+      },
+      "answer": "A",
+      "explanation": "Work requires displacement. If there is no movement (distance = 0), work done is zero regardless of the applied force.",
+      "steps": [
+        "Recall W = F × d",
+        "If displacement d = 0, then W = 0",
+        "Force alone without motion does no work",
+        "Select zero work"
+      ],
+      "fastStrategy": "No motion means no work done."
+    },
+    {
+      "id": "ps_mm_b1_043",
+      "question": "A fixed pulley mainly helps by:",
+      "choices": {
+        "A": "Multiplying energy",
+        "B": "Eliminating friction",
+        "C": "Changing the direction of force",
+        "D": "Reducing mass"
+      },
+      "answer": "C",
+      "explanation": "A fixed pulley lets you pull down to lift up, changing the direction of the applied force. It does not reduce mass or create energy.",
+      "steps": [
+        "Identify fixed pulley behavior",
+        "It redirects force but provides no mechanical advantage in ideal case",
+        "Energy and mass remain unchanged",
+        "Choose direction change"
+      ],
+      "fastStrategy": "Fixed pulley = direction change, not force multiplication."
+    },
+    {
+      "id": "ps_mm_b1_044",
+      "question": "Momentum always points in the same direction as an object's:",
+      "choices": {
+        "A": "Mass",
+        "B": "Velocity",
+        "C": "Weight",
+        "D": "Acceleration"
+      },
+      "answer": "B",
+      "explanation": "Momentum is mass times velocity (p = mv). It is a vector with the same direction as velocity.",
+      "steps": [
+        "Recall p = mv",
+        "Momentum direction comes from velocity",
+        "Mass and weight have no direction component",
+        "Choose velocity"
+      ],
+      "fastStrategy": "Momentum vector aligns with velocity."
+    },
+    {
+      "id": "ps_mm_b1_045",
+      "question": "A car turns left at a constant speed. Is it accelerating?",
+      "choices": {
+        "A": "No, because speed is constant",
+        "B": "Yes, because direction is changing",
+        "C": "No, because forces cancel",
+        "D": "Only if it also speeds up"
+      },
+      "answer": "B",
+      "explanation": "Acceleration is any change in velocity, including direction. Turning left changes velocity direction, so the car is accelerating (centripetal acceleration).",
+      "steps": [
+        "Velocity includes speed and direction",
+        "Direction change means velocity change",
+        "Any velocity change = acceleration",
+        "Choose yes, because direction changes"
+      ],
+      "fastStrategy": "Direction change alone counts as acceleration."
+    },
+    {
+      "id": "ps_mm_b1_046",
+      "question": "If 100 J of work is done in 10 seconds, the power output is:",
+      "choices": {
+        "A": "5 W",
+        "B": "10 W",
+        "C": "50 W",
+        "D": "100 W"
+      },
+      "answer": "B",
+      "explanation": "Power equals work divided by time. 100 joules over 10 seconds is 10 watts (100 ÷ 10).",
+      "steps": [
+        "Use P = W/t",
+        "Plug in 100 J and 10 s",
+        "Compute 100 ÷ 10 = 10",
+        "State power in Watts"
+      ],
+      "fastStrategy": "Divide work by time to get Watts."
+    },
+    {
+      "id": "ps_mm_b1_047",
+      "question": "If a force acts opposite an object's motion, the object will:",
+      "choices": {
+        "A": "Speed up",
+        "B": "Slow down",
+        "C": "Move in a circle",
+        "D": "Gain mass"
+      },
+      "answer": "B",
+      "explanation": "A force opposite the direction of motion provides negative acceleration, reducing the object's speed.",
+      "steps": [
+        "Identify force direction is opposite motion",
+        "Opposite force ⇒ acceleration opposite velocity",
+        "Opposite acceleration reduces speed",
+        "Therefore object slows down"
+      ],
+      "fastStrategy": "Force opposite velocity = deceleration."
+    },
+    {
+      "id": "ps_mm_b1_048",
+      "question": "What does the slope of a velocity-time graph represent?",
+      "choices": {
+        "A": "Displacement",
+        "B": "Acceleration",
+        "C": "Force",
+        "D": "Momentum"
+      },
+      "answer": "B",
+      "explanation": "The slope (change in velocity over time) on a velocity-time graph equals acceleration.",
+      "steps": [
+        "Slope = change in vertical / change in horizontal",
+        "Vertical axis is velocity, horizontal is time",
+        "Δv/Δt defines acceleration",
+        "Select acceleration"
+      ],
+      "fastStrategy": "On v–t graphs, slope is acceleration."
+    },
+    {
+      "id": "ps_mm_b1_049",
+      "question": "If both mass and acceleration double, the net force required becomes:",
+      "choices": {
+        "A": "The same",
+        "B": "Twice as large",
+        "C": "Four times as large",
+        "D": "Half as large"
+      },
+      "answer": "C",
+      "explanation": "From F = ma, doubling mass (2m) and acceleration (2a) gives F = (2m)(2a) = 4ma, four times the original force.",
+      "steps": [
+        "Start with F = ma",
+        "New mass = 2m, new acceleration = 2a",
+        "Multiply: F_new = 2m × 2a = 4ma",
+        "Therefore force is four times larger"
+      ],
+      "fastStrategy": "F = ma scales with both factors; doubling both ⇒ 4× force."
+    },
+    {
+      "id": "ps_mm_b1_050",
+      "question": "According to the work-energy idea, net work done on an object equals its change in:",
+      "choices": {
+        "A": "Momentum",
+        "B": "Potential energy only",
+        "C": "Kinetic energy",
+        "D": "Mass"
+      },
+      "answer": "C",
+      "explanation": "The work-energy theorem states that net work on an object equals the change in its kinetic energy. Potential energy changes involve height but net work relates directly to kinetic energy change.",
+      "steps": [
+        "Recall work-energy theorem",
+        "Net work = ΔKE",
+        "Momentum and mass are not equal to work directly",
+        "Select kinetic energy"
+      ],
+      "fastStrategy": "Net work changes kinetic energy (ΔKE)."
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "energy_heat",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ps_eh_b1_001",
+      "question": "Energy that an object has because of its motion is called:",
+      "choices": {"A": "Potential energy", "B": "Thermal energy", "C": "Kinetic energy", "D": "Chemical energy"},
+      "answer": "C",
+      "explanation": "Kinetic energy is the energy of motion. Potential energy depends on position, thermal on particle motion inside a substance, and chemical is stored in bonds.",
+      "steps": ["Identify the keyword: motion", "Recall energy of motion = kinetic", "Distinguish from potential (position) and chemical (bonds)", "Select kinetic energy"],
+      "fastStrategy": "If it moves, think kinetic energy."
+    },
+    {
+      "id": "ps_eh_b1_002",
+      "question": "Energy stored due to an object's position or height is:",
+      "choices": {"A": "Thermal energy", "B": "Potential energy", "C": "Sound energy", "D": "Electrical energy"},
+      "answer": "B",
+      "explanation": "Gravitational potential energy depends on height above a reference level. Thermal, sound, and electrical do not depend on position in a gravitational field.",
+      "steps": ["Recognize height/position cues potential energy", "Thermal relates to temperature, not height", "Sound and electrical are different forms", "Choose potential energy"],
+      "fastStrategy": "Height or stored position = potential energy."
+    },
+    {
+      "id": "ps_eh_b1_003",
+      "question": "Which form of heat transfer requires direct contact between materials?",
+      "choices": {"A": "Conduction", "B": "Convection", "C": "Radiation", "D": "Reflection"},
+      "answer": "A",
+      "explanation": "Conduction transfers heat through direct contact. Convection moves heat via fluid motion, and radiation uses electromagnetic waves.",
+      "steps": ["Recall conduction = contact", "Convection = fluid movement", "Radiation = waves/no contact", "Select conduction"],
+      "fastStrategy": "Contact heat transfer? Conduction."
+    },
+    {
+      "id": "ps_eh_b1_004",
+      "question": "Convection happens mainly in:",
+      "choices": {"A": "Solids", "B": "Liquids and gases", "C": "Vacuum", "D": "Metal wires"},
+      "answer": "B",
+      "explanation": "Convection requires fluid motion, so it occurs in liquids and gases. Solids do not flow; vacuum has no particles to move.",
+      "steps": ["Convection = bulk fluid movement", "Liquids and gases flow", "Solids lack flow; vacuum lacks particles", "Choose liquids and gases"],
+      "fastStrategy": "Fluids that can flow enable convection."
+    },
+    {
+      "id": "ps_eh_b1_005",
+      "question": "Heat from the Sun reaches Earth mainly by:",
+      "choices": {"A": "Conduction", "B": "Convection", "C": "Radiation", "D": "Conduction through air"},
+      "answer": "C",
+      "explanation": "Space is mostly vacuum, so heat must travel by electromagnetic radiation. Conduction and convection require matter in between.",
+      "steps": ["Identify space as vacuum", "Conduction/convection need matter", "Radiation travels without matter", "Select radiation"],
+      "fastStrategy": "Through space? Only radiation works."
+    },
+    {
+      "id": "ps_eh_b1_006",
+      "question": "Temperature measures:",
+      "choices": {"A": "Total thermal energy", "B": "Average kinetic energy of particles", "C": "Potential energy", "D": "Chemical energy"},
+      "answer": "B",
+      "explanation": "Temperature reflects the average kinetic energy of particles. Total thermal energy depends on temperature, mass, and type of substance.",
+      "steps": ["Recall temperature relates to particle motion", "Average kinetic energy matches temperature", "Total energy also depends on amount of matter", "Choose average kinetic energy"],
+      "fastStrategy": "Temperature tracks average particle speed, not total heat."
+    },
+    {
+      "id": "ps_eh_b1_007",
+      "question": "A material that resists heat flow is called a:",
+      "choices": {"A": "Conductor", "B": "Radiator", "C": "Coolant", "D": "Insulator"},
+      "answer": "D",
+      "explanation": "Insulators resist heat transfer. Conductors allow heat to flow easily. Radiator emits heat; coolant absorbs but does not resist inherently.",
+      "steps": ["Identify role: resist heat flow", "Conductor is opposite", "Radiator emits, coolant transports", "Select insulator"],
+      "fastStrategy": "Resist heat transfer? Think insulator."
+    },
+    {
+      "id": "ps_eh_b1_008",
+      "question": "Metals feel cold to the touch because they:",
+      "choices": {"A": "Contain less heat", "B": "Are good conductors", "C": "Create cold", "D": "Block convection"},
+      "answer": "B",
+      "explanation": "Metals conduct heat rapidly, pulling heat from your skin quickly so they feel cold even at room temperature.",
+      "steps": ["Metals transfer heat quickly", "Fast heat loss from skin feels cold", "They don't create cold", "Choose good conductor"],
+      "fastStrategy": "If it feels cold fast, it's conducting your heat away."
+    },
+    {
+      "id": "ps_eh_b1_009",
+      "question": "The unit for measuring heat energy in food labels is the kilocalorie (Cal). One Cal equals:",
+      "choices": {"A": "1 calorie", "B": "100 calories", "C": "1000 calories", "D": "10 calories"},
+      "answer": "C",
+      "explanation": "Food Calories (uppercase C) are kilocalories. One Calorie equals 1000 small calories used in chemistry.",
+      "steps": ["Recall nutrition labels use kilocalories", "1 kilocalorie = 1000 calories", "Eliminate smaller numbers", "Select 1000"],
+      "fastStrategy": "Big-C Calorie on labels = 1000 chem calories."
+    },
+    {
+      "id": "ps_eh_b1_010",
+      "question": "When water boils at sea level, its temperature is about:",
+      "choices": {"A": "50°C", "B": "75°C", "C": "100°C", "D": "125°C"},
+      "answer": "C",
+      "explanation": "At standard atmospheric pressure, water boils at 100°C. Lower pressure lowers the boiling point; higher pressure raises it.",
+      "steps": ["Recall normal boiling point of water", "Sea level pressure ~1 atm", "Boiling point at 1 atm is 100°C", "Choose 100°C"],
+      "fastStrategy": "Default boiling point to 100°C at sea level."
+    },
+    {
+      "id": "ps_eh_b1_011",
+      "question": "Which phase change absorbs heat?",
+      "choices": {"A": "Freezing", "B": "Condensation", "C": "Evaporation", "D": "Deposition"},
+      "answer": "C",
+      "explanation": "Evaporation requires energy to break liquid bonds, absorbing heat. Freezing and condensation release heat; deposition also releases.",
+      "steps": ["Identify direction: liquid to gas needs energy", "Evaporation absorbs heat", "Freezing/condensation release heat", "Select evaporation"],
+      "fastStrategy": "Going to gas (evaporation) takes in energy."
+    },
+    {
+      "id": "ps_eh_b1_012",
+      "question": "Which color surface absorbs the most radiant heat?",
+      "choices": {"A": "White", "B": "Silver", "C": "Black", "D": "Yellow"},
+      "answer": "C",
+      "explanation": "Dark, matte surfaces like black absorb more radiation; light or shiny surfaces reflect more.",
+      "steps": ["Recall blackbody idea: dark surfaces absorb", "Shiny surfaces reflect", "Black absorbs more than white or metallic", "Choose black"],
+      "fastStrategy": "Dark matte absorbs; shiny/light reflects."
+    },
+    {
+      "id": "ps_eh_b1_013",
+      "question": "Specific heat is:",
+      "choices": {"A": "Heat needed to raise 1 g of a substance by 1°C", "B": "Heat of fusion", "C": "Heat released when freezing", "D": "Thermal conductivity"},
+      "answer": "A",
+      "explanation": "Specific heat is the heat required to raise 1 gram of a substance by 1°C. Heat of fusion relates to melting/freezing; conductivity is different.",
+      "steps": ["Define specific heat as energy per mass per degree", "Identify 1 g and 1°C clue", "Differentiate from phase change heats", "Select definition"],
+      "fastStrategy": "Specific heat = energy to warm 1 g by 1°C."
+    },
+    {
+      "id": "ps_eh_b1_014",
+      "question": "Air near a warm surface rises because it becomes:",
+      "choices": {"A": "Denser", "B": "Heavier", "C": "Less dense", "D": "Solid"},
+      "answer": "C",
+      "explanation": "Heating air makes it expand, decreasing density so it rises above cooler, denser air (convection).",
+      "steps": ["Heat causes expansion", "Expansion lowers density", "Lower density air rises", "Choose less dense"],
+      "fastStrategy": "Warm air expands, density drops, it rises."
+    },
+    {
+      "id": "ps_eh_b1_015",
+      "question": "Which transfer method does not need matter to carry energy?",
+      "choices": {"A": "Conduction", "B": "Convection", "C": "Radiation", "D": "Evaporation"},
+      "answer": "C",
+      "explanation": "Radiation moves energy via electromagnetic waves, so it can travel through vacuum. Conduction and convection need particles; evaporation is a phase change.",
+      "steps": ["Check which works in vacuum", "Radiation uses EM waves", "Conduction/convection need matter", "Select radiation"],
+      "fastStrategy": "No medium? Radiation still works."
+    },
+    {
+      "id": "ps_eh_b1_016",
+      "question": "Thermal equilibrium means:",
+      "choices": {"A": "Objects share the same temperature", "B": "Heat only flows one way", "C": "Heat flow increases", "D": "Objects are different temperatures"},
+      "answer": "A",
+      "explanation": "At thermal equilibrium, objects are at the same temperature and no net heat flows between them.",
+      "steps": ["Equilibrium implies balance", "Same temperature stops net heat flow", "Opposite temperatures would keep flow", "Choose same temperature"],
+      "fastStrategy": "Equal temperatures stop net heat flow."
+    },
+    {
+      "id": "ps_eh_b1_017",
+      "question": "Which statement about heat and temperature is correct?",
+      "choices": {"A": "Heat and temperature are the same", "B": "Heat is energy transfer; temperature measures average kinetic energy", "C": "Temperature is energy transfer", "D": "Heat cannot move between solids"},
+      "answer": "B",
+      "explanation": "Heat is energy in transit due to temperature difference; temperature measures average kinetic energy of particles. They are related but not identical.",
+      "steps": ["Define heat as transfer of thermal energy", "Define temperature as average kinetic energy", "Distinguish processes from measures", "Select correct pairing"],
+      "fastStrategy": "Temperature is a measure; heat is energy in motion."
+    },
+    {
+      "id": "ps_eh_b1_018",
+      "question": "Insulating a home helps by:",
+      "choices": {"A": "Creating more heat", "B": "Stopping all conduction", "C": "Reducing unwanted heat transfer", "D": "Cooling the air chemically"},
+      "answer": "C",
+      "explanation": "Insulation lowers the rate of heat transfer, keeping heat inside in winter and outside in summer. It does not create heat or fully stop conduction.",
+      "steps": ["Recognize insulation reduces transfer", "Cannot create heat", "Conduction is reduced, not eliminated", "Choose reduce unwanted transfer"],
+      "fastStrategy": "Insulation slows heat flow; it doesn't add heat."
+    },
+    {
+      "id": "ps_eh_b1_019",
+      "question": "When ice melts, it:",
+      "choices": {"A": "Releases heat", "B": "Absorbs heat", "C": "Keeps temperature rising", "D": "Creates cold"},
+      "answer": "B",
+      "explanation": "Melting requires energy to break the solid structure, so ice absorbs heat from its surroundings while staying at 0°C until fully melted.",
+      "steps": ["Melting is solid to liquid", "Breaking bonds needs energy", "Energy comes from surroundings", "Select absorbs heat"],
+      "fastStrategy": "Phase changes to liquid/gas absorb energy."
+    },
+    {
+      "id": "ps_eh_b1_020",
+      "question": "The primary heat transfer inside a pot of boiling water is:",
+      "choices": {"A": "Conduction only", "B": "Convection currents", "C": "Radiation only", "D": "No heat transfer"},
+      "answer": "B",
+      "explanation": "Boiling water circulates due to convection: hot water rises, cool water sinks, creating currents that move heat.",
+      "steps": ["Identify fluid motion in boiling water", "Hot water rises, cool sinks", "This is convection", "Choose convection currents"],
+      "fastStrategy": "Rising/sinking fluid = convection."
+    },
+    {
+      "id": "ps_eh_b1_021",
+      "question": "Which surface would emit heat most effectively?",
+      "choices": {"A": "Shiny metal", "B": "Black matte surface", "C": "White glossy surface", "D": "Clear glass"},
+      "answer": "B",
+      "explanation": "Black, matte surfaces are good emitters and absorbers of radiation. Shiny or glossy surfaces reflect more and emit less.",
+      "steps": ["Good emitters are also good absorbers", "Black matte emits well", "Shiny or glossy reflect instead", "Select black matte"],
+      "fastStrategy": "Black matte = strong emitter; shiny = weak emitter."
+    },
+    {
+      "id": "ps_eh_b1_022",
+      "question": "A metal spoon in hot soup becomes hot mainly due to:",
+      "choices": {"A": "Convection within the spoon", "B": "Conduction along the metal", "C": "Radiation only", "D": "Chemical change"},
+      "answer": "B",
+      "explanation": "Heat moves from the soup into the spoon and up the handle by conduction because metal conducts heat efficiently.",
+      "steps": ["Spoon is solid metal", "Heat moves through solid by conduction", "Convection requires fluid flow, radiation minor here", "Choose conduction"],
+      "fastStrategy": "Metal handles heat by conduction end-to-end."
+    },
+    {
+      "id": "ps_eh_b1_023",
+      "question": "Solar panels heating water work mainly because of:",
+      "choices": {"A": "Conduction from space", "B": "Radiation absorption", "C": "Convection from the Sun", "D": "Evaporation of sunlight"},
+      "answer": "B",
+      "explanation": "Panels absorb radiant energy from sunlight and convert it to heat. Conduction and convection cannot operate through space; evaporation is unrelated.",
+      "steps": ["Sunlight arrives as radiation", "Panels absorb light and convert to heat", "Conduction/convection not possible through vacuum", "Select radiation absorption"],
+      "fastStrategy": "Sun to Earth = radiation; panels absorb it."
+    },
+    {
+      "id": "ps_eh_b1_024",
+      "question": "Why does sweating cool the body?",
+      "choices": {"A": "Sweat blocks radiation", "B": "Sweat absorbs heat when evaporating", "C": "Sweat creates cold air", "D": "Sweat increases body temperature"},
+      "answer": "B",
+      "explanation": "Evaporation of sweat requires energy, which is taken from your skin as heat, cooling the body.",
+      "steps": ["Evaporation needs latent heat", "Sweat takes heat from skin to evaporate", "Heat loss cools body", "Choose evaporation absorbs heat"],
+      "fastStrategy": "Evaporation pulls heat from your skin."
+    },
+    {
+      "id": "ps_eh_b1_025",
+      "question": "Which statement best describes the direction of heat flow?",
+      "choices": {"A": "From colder to hotter", "B": "From hotter to colder", "C": "Only upward", "D": "Only in solids"},
+      "answer": "B",
+      "explanation": "Heat naturally flows from hotter objects to colder ones until temperatures equalize. Direction is driven by temperature difference, not orientation or state.",
+      "steps": ["Heat moves down a temperature gradient", "Hot to cold until equilibrium", "Not limited to direction or state", "Select hotter to colder"],
+      "fastStrategy": "Heat flows from hot to cold until temperatures match."
+    }
+  ]
+}

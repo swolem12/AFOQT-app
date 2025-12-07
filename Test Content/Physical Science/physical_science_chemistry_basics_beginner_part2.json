@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "chemistry_basics",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+    {
+      "id": "ps_cb_b1_026",
+      "question": "What is the smallest particle of a compound that still has that compound's properties?",
+      "choices": {"A": "Atom", "B": "Molecule", "C": "Ion", "D": "Element"},
+      "answer": "B",
+      "explanation": "A molecule is the smallest particle of a compound that retains its chemical properties. Atoms are single elements; ions are charged particles.",
+      "steps": ["Identify compound unit", "Smallest unit with full properties is molecule", "Atoms refer to elements, ions are charged", "Select molecule"],
+      "fastStrategy": "Compound's smallest unit = molecule."
+    },
+    {
+      "id": "ps_cb_b1_027",
+      "question": "Which subatomic particles account for most of an atom's mass?",
+      "choices": {"A": "Electrons", "B": "Protons and neutrons", "C": "Electrons and protons", "D": "Neutrons and electrons"},
+      "answer": "B",
+      "explanation": "Protons and neutrons are massive compared to electrons, so they account for almost all atomic mass.",
+      "steps": ["Compare masses: p and n ~1 amu, electrons tiny", "Thus mass mainly from p and n", "Select protons and neutrons"],
+      "fastStrategy": "Atomic mass lives in protons + neutrons."
+    },
+    {
+      "id": "ps_cb_b1_028",
+      "question": "A solution is best described as a:",
+      "choices": {"A": "Chemical compound", "B": "Homogeneous mixture", "C": "Heterogeneous mixture", "D": "Colloid only"},
+      "answer": "B",
+      "explanation": "Solutions are homogeneous mixtures with uniform composition (solute dissolved in solvent).",
+      "steps": ["Define solution: uniform mixture", "Homogeneous fits", "Not a pure compound", "Choose homogeneous mixture"],
+      "fastStrategy": "Solution = uniform (homogeneous) mixture."
+    },
+    {
+      "id": "ps_cb_b1_029",
+      "question": "Which state of matter has a definite volume but no definite shape?",
+      "choices": {"A": "Solid", "B": "Liquid", "C": "Gas", "D": "Plasma"},
+      "answer": "B",
+      "explanation": "Liquids have fixed volume but take the shape of their container.",
+      "steps": ["Review states", "Liquid = definite volume, variable shape", "Solid has both fixed, gas has neither", "Choose liquid"],
+      "fastStrategy": "Liquid: fixed volume, shape conforms to container."
+    },
+    {
+      "id": "ps_cb_b1_030",
+      "question": "Which process is a physical change?",
+      "choices": {"A": "Burning wood", "B": "Rusting iron", "C": "Evaporating alcohol", "D": "Digesting food"},
+      "answer": "C",
+      "explanation": "Evaporation is a state change without altering chemical composition. Burning, rusting, and digesting are chemical.",
+      "steps": ["Physical change = no new substance", "Evaporation fits", "Others produce new substances", "Select evaporation"],
+      "fastStrategy": "State change (evaporation) is physical."
+    },
+    {
+      "id": "ps_cb_b1_031",
+      "question": "Which term describes a positively charged ion?",
+      "choices": {"A": "Anion", "B": "Cation", "C": "Neutral atom", "D": "Isotope"},
+      "answer": "B",
+      "explanation": "Cations are positively charged ions. Anions are negative; isotopes vary neutrons.",
+      "steps": ["Recall ion naming", "Cation = positive", "Anion = negative", "Choose cation"],
+      "fastStrategy": "Cat-ion = positive."
+    },
+    {
+      "id": "ps_cb_b1_032",
+      "question": "The chemical formula H2O tells you that water has:",
+      "choices": {"A": "One hydrogen and two oxygens", "B": "Two hydrogens and one oxygen", "C": "Two hydrogens and two oxygens", "D": "One hydrogen and one oxygen"},
+      "answer": "B",
+      "explanation": "H2O has two hydrogen atoms and one oxygen atom per molecule.",
+      "steps": ["Read subscripts: H2 → two hydrogens", "O has no subscript → one", "Combine to two H, one O", "Select two hydrogens, one oxygen"],
+      "fastStrategy": "H2O = 2 H + 1 O."
+    },
+    {
+      "id": "ps_cb_b1_033",
+      "question": "Which is an example of a compound?",
+      "choices": {"A": "Oxygen gas (O2)", "B": "Carbon dioxide (CO2)", "C": "Nitrogen gas (N2)", "D": "Helium (He)"},
+      "answer": "B",
+      "explanation": "CO2 has different elements (C and O) chemically combined. O2 and N2 are elements; He is an element.",
+      "steps": ["Compound = different elements bonded", "CO2 has C + O", "O2/N2 are elemental molecules", "Choose CO2"],
+      "fastStrategy": "Mixed elements (C+O) → compound; same element → element."
+    },
+    {
+      "id": "ps_cb_b1_034",
+      "question": "Which is a diatomic molecule?",
+      "choices": {"A": "O2", "B": "He", "C": "NaCl", "D": "CO2"},
+      "answer": "A",
+      "explanation": "O2 consists of two atoms of oxygen bonded together (diatomic). He is single atom; NaCl is ionic; CO2 has three atoms.",
+      "steps": ["Diatomic = two atoms", "O2 fits", "Others are single or more than two", "Select O2"],
+      "fastStrategy": "Diatomic examples: O2, N2, H2, etc."
+    },
+    {
+      "id": "ps_cb_b1_035",
+      "question": "In a chemical equation, the substances formed are called:",
+      "choices": {"A": "Reactants", "B": "Catalysts", "C": "Products", "D": "Solvents"},
+      "answer": "C",
+      "explanation": "Products are the substances made; reactants are starting materials.",
+      "steps": ["Reactants → products", "Products on right side", "Catalysts facilitate, solvents dissolve", "Choose products"],
+      "fastStrategy": "Reactants go in, products come out."
+    },
+    {
+      "id": "ps_cb_b1_036",
+      "question": "Which is a noble gas?",
+      "choices": {"A": "Oxygen", "B": "Neon", "C": "Nitrogen", "D": "Chlorine"},
+      "answer": "B",
+      "explanation": "Neon is a noble gas (Group 18). Oxygen, nitrogen, chlorine are reactive gases.",
+      "steps": ["Recall noble gases: He, Ne, Ar, Kr, Xe, Rn", "Neon is one", "Others are not noble", "Select neon"],
+      "fastStrategy": "Group 18 noble gas here = neon."
+    },
+    {
+      "id": "ps_cb_b1_037",
+      "question": "Metals on the periodic table are generally located on the:",
+      "choices": {"A": "Left side and center", "B": "Right side", "C": "Far top right", "D": "Only bottom row"},
+      "answer": "A",
+      "explanation": "Metals occupy the left and center (s, d, f blocks). Nonmetals are on the upper right.",
+      "steps": ["Remember table layout", "Metals mostly left/center", "Nonmetals upper right", "Choose left/center"],
+      "fastStrategy": "Metals left/center; nonmetals upper right."
+    },
+    {
+      "id": "ps_cb_b1_038",
+      "question": "Which subatomic particle determines the element's identity?",
+      "choices": {"A": "Neutron", "B": "Electron", "C": "Proton", "D": "Nucleus as a whole"},
+      "answer": "C",
+      "explanation": "The number of protons (atomic number) defines the element. Changing proton count changes the element.",
+      "steps": ["Element identity tied to atomic number", "Atomic number = protons", "Electrons/neutrons can vary (ions/isotopes)", "Select proton"],
+      "fastStrategy": "Proton count sets the element."
+    },
+    {
+      "id": "ps_cb_b1_039",
+      "question": "What is formed when an acid and base react in a neutralization?",
+      "choices": {"A": "Only water", "B": "Salt and water", "C": "Only salt", "D": "Hydrogen gas"},
+      "answer": "B",
+      "explanation": "Neutralization typically produces a salt and water (acid + base → salt + water).",
+      "steps": ["Recall neutralization reaction", "Acid + base yields salt + water", "Select salt and water"],
+      "fastStrategy": "Acid + base → salt + water."
+    },
+    {
+      "id": "ps_cb_b1_040",
+      "question": "Which is a sign of a chemical reaction?",
+      "choices": {"A": "Color change", "B": "Phase change at melting point", "C": "Dissolving sugar", "D": "Breaking glass"},
+      "answer": "A",
+      "explanation": "Color change (not due to dilution) can indicate new substances forming. Phase changes and dissolving are physical; breaking glass is physical.",
+      "steps": ["Chemical signs: color change, gas, precipitate, energy change", "Melting/dissolving are physical", "Choose color change"],
+      "fastStrategy": "Unexpected color change often signals a chemical reaction."
+    },
+    {
+      "id": "ps_cb_b1_041",
+      "question": "Which side of a chemical equation lists the reactants?",
+      "choices": {"A": "Left side", "B": "Right side", "C": "Top", "D": "Bottom"},
+      "answer": "A",
+      "explanation": "By convention, reactants are written on the left, products on the right.",
+      "steps": ["Remember equation layout", "Left = reactants", "Right = products", "Select left side"],
+      "fastStrategy": "Reactants left, products right."
+    },
+    {
+      "id": "ps_cb_b1_042",
+      "question": "Which particle is shared in a covalent bond?",
+      "choices": {"A": "Proton", "B": "Neutron", "C": "Electron", "D": "Nucleus"},
+      "answer": "C",
+      "explanation": "Covalent bonds share electrons between atoms.",
+      "steps": ["Identify covalent bonding mechanism", "Electrons are shared", "Protons/neutrons not shared in bonding", "Choose electron"],
+      "fastStrategy": "Covalent = electron sharing."
+    },
+    {
+      "id": "ps_cb_b1_043",
+      "question": "Which particle is transferred in an ionic bond?",
+      "choices": {"A": "Proton", "B": "Electron", "C": "Neutron", "D": "Photon"},
+      "answer": "B",
+      "explanation": "Ionic bonds form when electrons are transferred, creating ions that attract.",
+      "steps": ["Ionic bonding involves electron transfer", "Protons/neutrons remain in nuclei", "Choose electron"],
+      "fastStrategy": "Ionic = electron transfer → ions attract."
+    },
+    {
+      "id": "ps_cb_b1_044",
+      "question": "Na+ has how many electrons compared to neutral Na?",
+      "choices": {"A": "One more", "B": "Same number", "C": "One fewer", "D": "Two more"},
+      "answer": "C",
+      "explanation": "Na+ has lost one electron relative to neutral sodium, giving it a +1 charge.",
+      "steps": ["Na neutral has 11 e-", "Na+ loses one → 10 e-", "So it has one fewer", "Select one fewer"],
+      "fastStrategy": "+ charge means electrons lost; Na+ lost one."
+    },
+    {
+      "id": "ps_cb_b1_045",
+      "question": "Which statement about acids is true?",
+      "choices": {"A": "They taste bitter", "B": "They turn blue litmus red", "C": "They feel slippery", "D": "They have pH above 7"},
+      "answer": "B",
+      "explanation": "Acids turn blue litmus paper red and have pH below 7. Bases taste bitter and feel slippery.",
+      "steps": ["Recall acid properties", "Litmus: acid → blue to red", "Bases are bitter/slippery", "Choose litmus change"],
+      "fastStrategy": "Acid test: blue litmus turns red."
+    },
+    {
+      "id": "ps_cb_b1_046",
+      "question": "Which statement about bases is true?",
+      "choices": {"A": "They taste sour", "B": "They turn red litmus blue", "C": "They have pH below 7", "D": "They produce H+ in water"},
+      "answer": "B",
+      "explanation": "Bases turn red litmus paper blue, feel slippery, and have pH above 7. They produce OH− in water (Arrhenius bases).",
+      "steps": ["Base properties: pH > 7, red litmus → blue", "Acids are sour and produce H+", "Choose red to blue"],
+      "fastStrategy": "Base turns red litmus blue; pH > 7."
+    },
+    {
+      "id": "ps_cb_b1_047",
+      "question": "What does the law of conservation of energy state?",
+      "choices": {"A": "Energy is created", "B": "Energy is destroyed", "C": "Energy changes form but total stays constant", "D": "Energy only exists as heat"},
+      "answer": "C",
+      "explanation": "Energy cannot be created or destroyed, only transformed from one form to another.",
+      "steps": ["Recall conservation principle", "Total energy remains constant", "Forms can convert", "Select constant total"],
+      "fastStrategy": "Energy can change form, total stays the same."
+    },
+    {
+      "id": "ps_cb_b1_048",
+      "question": "Which is an alkaline earth metal?",
+      "choices": {"A": "Calcium", "B": "Sodium", "C": "Iron", "D": "Chlorine"},
+      "answer": "A",
+      "explanation": "Calcium is in Group 2 (alkaline earth). Sodium is alkali metal; iron is transition; chlorine is halogen.",
+      "steps": ["Group 2 metals: Mg, Ca, Sr, Ba", "Calcium fits", "Sodium group 1, chlorine halogen", "Choose calcium"],
+      "fastStrategy": "Group 2? Calcium is one."
+    },
+    {
+      "id": "ps_cb_b1_049",
+      "question": "Which element symbol is Fe?",
+      "choices": {"A": "Fluorine", "B": "Iron", "C": "Helium", "D": "Francium"},
+      "answer": "B",
+      "explanation": "Fe is the symbol for iron. Fluorine is F; helium He; francium Fr.",
+      "steps": ["Match symbols", "Fe → iron", "Other symbols differ", "Select iron"],
+      "fastStrategy": "Fe stands for iron."
+    },
+    {
+      "id": "ps_cb_b1_050",
+      "question": "Which part of an atom occupies most of its volume?",
+      "choices": {"A": "Nucleus", "B": "Protons", "C": "Neutrons", "D": "Electron cloud"},
+      "answer": "D",
+      "explanation": "The electron cloud takes up most atomic volume; the nucleus is tiny but holds most mass.",
+      "steps": ["Volume relates to space occupied", "Electron cloud is vast compared to nucleus", "Mass is in nucleus", "Choose electron cloud"],
+      "fastStrategy": "Atom's volume is mostly electron cloud."
+    }
+  ]
+}

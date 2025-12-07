@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "energy_heat",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ps_eh_a1_001",
+      "question": "A 2.0 kg block at 12 m/s has its kinetic energy increased to 480 J. What is its new speed?",
+      "choices": {"A": "12 m/s", "B": "16 m/s", "C": "22 m/s", "D": "28 m/s"},
+      "answer": "C",
+      "explanation": "Final KE = 480 J = 0.5·2·v^2 ⇒ v^2 = 480 ⇒ v ≈ 21.9 m/s ≈ 22 m/s.",
+      "steps": ["Write KE = 0.5 m v^2", "Set 480 = 1·v^2", "Solve v ≈ sqrt(480)", "Pick ≈22 m/s"],
+      "fastStrategy": "With m=2, KE equals v^2; take sqrt(480) ≈ 22." 
+    },
+    {
+      "id": "ps_eh_a1_002",
+      "question": "How much heat raises 0.50 kg of water by 5°C? (c ≈ 4200 J/kg·°C)",
+      "choices": {"A": "4.2 kJ", "B": "8.4 kJ", "C": "10.5 kJ", "D": "21 kJ"},
+      "answer": "C",
+      "explanation": "Q = m c ΔT = 0.50·4200·5 = 10,500 J = 10.5 kJ.",
+      "steps": ["Multiply 0.50×4200", "Result 2100", "Multiply by 5", "Get 10,500 J = 10.5 kJ"],
+      "fastStrategy": "Half of 4200 is 2100; times 5 ≈ 10.5 kJ." 
+    },
+    {
+      "id": "ps_eh_a1_003",
+      "question": "An 800 W heater runs for 5 minutes. How much energy does it deliver?",
+      "choices": {"A": "24 kJ", "B": "120 kJ", "C": "240 kJ", "D": "480 kJ"},
+      "answer": "C",
+      "explanation": "Energy E = P t = 800 W × 300 s = 240,000 J = 240 kJ.",
+      "steps": ["Convert 5 min to 300 s", "Multiply 800×300", "Get 240,000 J", "Convert to 240 kJ"],
+      "fastStrategy": "8×3 = 24; add two zeros → 240 kJ." 
+    },
+    {
+      "id": "ps_eh_a1_004",
+      "question": "A device outputs 150 J of useful work from 200 J of input. Its efficiency is:",
+      "choices": {"A": "50%", "B": "65%", "C": "75%", "D": "90%"},
+      "answer": "C",
+      "explanation": "Efficiency = useful/output ÷ input = 150/200 = 0.75 = 75%.",
+      "steps": ["Divide 150 by 200", "Get 0.75", "Convert to percent", "Select 75%"],
+      "fastStrategy": "150/200 = 3/4 = 75%." 
+    },
+    {
+      "id": "ps_eh_a1_005",
+      "question": "A 3.0 kg rock drops 8.0 m (ignore air). Its impact speed is closest to:",
+      "choices": {"A": "8.9 m/s", "B": "10 m/s", "C": "12.5 m/s", "D": "16 m/s"},
+      "answer": "C",
+      "explanation": "v = sqrt(2 g h) = sqrt(2·9.8·8) = sqrt(156.8) ≈ 12.5 m/s.",
+      "steps": ["Use v^2 = 2gh", "Compute 2·9.8·8 = 156.8", "Take sqrt ≈ 12.5", "Pick 12.5 m/s"],
+      "fastStrategy": "2×10×8 ≈160; sqrt ≈ 12.6." 
+    },
+    {
+      "id": "ps_eh_a1_006",
+      "question": "Which material will conduct heat fastest for the same size bar?",
+      "choices": {"A": "Wood", "B": "Glass", "C": "Aluminum", "D": "Plastic"},
+      "answer": "C",
+      "explanation": "Metals like aluminum have high thermal conductivity compared to wood, glass, or plastic.",
+      "steps": ["Recall metals conduct heat well", "Aluminum is a good conductor", "Others are insulators", "Choose aluminum"],
+      "fastStrategy": "Metal moves heat quickest; aluminum beats wood/glass/plastic." 
+    },
+    {
+      "id": "ps_eh_a1_007",
+      "question": "A 2.0 m metal rod (α = 1.2×10^-5/°C) warms by 50°C. Approximate increase in length is:",
+      "choices": {"A": "0.12 mm", "B": "0.6 mm", "C": "1.2 mm", "D": "6.0 mm"},
+      "answer": "C",
+      "explanation": "ΔL = α L ΔT = 1.2e-5×2.0×50 = 1.2e-3 m = 1.2 mm.",
+      "steps": ["Multiply α by L (2.0)", "Result 2.4e-5", "Multiply by ΔT 50 → 1.2e-3 m", "Convert to mm = 1.2"],
+      "fastStrategy": "1.2×10^-5×100 ≈1.2×10^-3 m =1.2 mm (approx)." 
+    },
+    {
+      "id": "ps_eh_a1_008",
+      "question": "Work required to compress a 200 N/m spring by 0.10 m is:",
+      "choices": {"A": "0.5 J", "B": "1.0 J", "C": "2.0 J", "D": "10 J"},
+      "answer": "B",
+      "explanation": "Spring energy = 0.5 k x^2 = 0.5·200·0.01 = 1.0 J.",
+      "steps": ["Square 0.10 → 0.01", "Multiply by k 200 → 2", "Halve to get 1.0 J", "Choose 1.0 J"],
+      "fastStrategy": "0.5×200×0.01 = 1." 
+    },
+    {
+      "id": "ps_eh_a1_009",
+      "question": "A 900 N crate is pushed up a 5.0 m ramp rising 1.2 m (no friction). Minimum ideal push force along the ramp is:",
+      "choices": {"A": "180 N", "B": "216 N", "C": "300 N", "D": "450 N"},
+      "answer": "B",
+      "explanation": "Mechanical advantage = L/H = 5.0/1.2 ≈ 4.17. Effort = 900 / 4.17 ≈ 216 N.",
+      "steps": ["Compute MA = 5/1.2", "Divide 900 by MA", "Result ≈ 216 N", "Pick 216 N"],
+      "fastStrategy": "Effort ≈ weight×(height/length) = 900×0.24 ≈ 216 N." 
+    },
+    {
+      "id": "ps_eh_a1_010",
+      "question": "Heat needed to melt 0.10 kg of ice at 0°C (Lf ≈ 334 kJ/kg) is:",
+      "choices": {"A": "3.3 kJ", "B": "12 kJ", "C": "33 kJ", "D": "334 kJ"},
+      "answer": "C",
+      "explanation": "Q = m Lf = 0.10×334 kJ = 33.4 kJ ≈ 33 kJ.",
+      "steps": ["Multiply 0.10 by 334", "Get 33.4 kJ", "Round to ~33 kJ", "Select 33 kJ"],
+      "fastStrategy": "Tenth of 334 kJ → about 33 kJ." 
+    },
+    {
+      "id": "ps_eh_a1_011",
+      "question": "A sealed container has 2.0 L of gas at 300 K. If heated at constant pressure to 450 K, its volume becomes:",
+      "choices": {"A": "1.3 L", "B": "2.0 L", "C": "3.0 L", "D": "4.5 L"},
+      "answer": "C",
+      "explanation": "At constant pressure, V ∝ T. V2 = V1 (T2/T1) = 2.0×(450/300) = 3.0 L.",
+      "steps": ["Use V/T = constant", "450/300 = 1.5", "Multiply 2.0×1.5", "Get 3.0 L"],
+      "fastStrategy": "Temp ×1.5 → volume ×1.5: 2→3 L." 
+    },
+    {
+      "id": "ps_eh_a1_012",
+      "question": "A 50 kg cart starts from rest. A constant 500 N push over 4.0 m (no friction) gives a speed closest to:",
+      "choices": {"A": "6 m/s", "B": "9 m/s", "C": "14 m/s", "D": "20 m/s"},
+      "answer": "B",
+      "explanation": "Work = 500×4 = 2000 J. Set 0.5·50·v^2 = 2000 → 25 v^2 = 2000 → v^2 = 80 → v ≈ 8.9 m/s.",
+      "steps": ["Compute work 2000 J", "Set equal to 0.5 m v^2", "25 v^2 = 2000 ⇒ v^2 = 80", "v ≈ 8.9 m/s"],
+      "fastStrategy": "Divide 2000 by 25 → 80; sqrt 80 ≈ 9." 
+    },
+    {
+      "id": "ps_eh_a1_013",
+      "question": "The primary way Earth receives energy from the Sun is by:",
+      "choices": {"A": "Conduction", "B": "Convection", "C": "Radiation", "D": "Evaporation"},
+      "answer": "C",
+      "explanation": "Space has no medium for conduction/convection; solar energy arrives as electromagnetic radiation.",
+      "steps": ["Recall modes: conduction/convection need matter", "Space is mostly vacuum", "Radiation travels through vacuum", "Choose radiation"],
+      "fastStrategy": "Through space → radiation only." 
+    },
+    {
+      "id": "ps_eh_a1_014",
+      "question": "Condensing 0.050 kg of steam at 100°C to liquid releases approximately how much heat? (Lv ≈ 2260 kJ/kg)",
+      "choices": {"A": "11 kJ", "B": "113 kJ", "C": "226 kJ", "D": "452 kJ"},
+      "answer": "B",
+      "explanation": "Q = m Lv = 0.050×2260 kJ/kg ≈ 113 kJ.",
+      "steps": ["Multiply 0.05 by 2260", "Result ≈ 113", "Units kJ", "Select 113 kJ"],
+      "fastStrategy": "5% of 2260 ≈ 113 kJ." 
+    },
+    {
+      "id": "ps_eh_a1_015",
+      "question": "A plant takes in 1.2 MJ of chemical energy and produces 300 kJ of electricity. Efficiency is:",
+      "choices": {"A": "15%", "B": "20%", "C": "25%", "D": "40%"},
+      "answer": "C",
+      "explanation": "Convert input to kJ: 1.2 MJ = 1200 kJ. Efficiency = 300/1200 = 0.25 = 25%.",
+      "steps": ["Convert MJ to kJ", "1200 kJ input", "Divide 300 by 1200", "Result 0.25 → 25%"],
+      "fastStrategy": "300 is one-quarter of 1200 → 25%." 
+    },
+    {
+      "id": "ps_eh_a1_016",
+      "question": "68°F corresponds to roughly what Celsius temperature?",
+      "choices": {"A": "10°C", "B": "20°C", "C": "25°C", "D": "30°C"},
+      "answer": "B",
+      "explanation": "Convert: (°F - 32)×5/9 = (68-32)×5/9 = 36×5/9 = 20°C.",
+      "steps": ["Subtract 32 → 36", "Multiply by 5/9", "36×5/9 = 20", "Pick 20°C"],
+      "fastStrategy": "68°F is a common room temp ≈ 20°C." 
+    },
+    {
+      "id": "ps_eh_a1_017",
+      "question": "A 4.0 kg object is 10 m high and moving 6 m/s. Its total mechanical energy (PE + KE) is closest to:",
+      "choices": {"A": "320 J", "B": "392 J", "C": "464 J", "D": "560 J"},
+      "answer": "C",
+      "explanation": "PE = mgh ≈ 4×9.8×10 = 392 J. KE = 0.5·4·6^2 = 72 J. Total ≈ 392 + 72 = 464 J.",
+      "steps": ["Compute PE 392 J", "Compute KE 72 J", "Add to 464 J", "Pick 464 J"],
+      "fastStrategy": "PE ~400 plus KE ~70 → ~470 J (closest 464)." 
+    },
+    {
+      "id": "ps_eh_a1_018",
+      "question": "Adding 18 kJ to 1.0 kg of aluminum (c ≈ 900 J/kg·°C) raises its temperature by about:",
+      "choices": {"A": "10°C", "B": "15°C", "C": "20°C", "D": "30°C"},
+      "answer": "C",
+      "explanation": "ΔT = Q/(m c) = 18,000 / (1×900) = 20°C.",
+      "steps": ["Divide 18,000 by 900", "Result 20", "Units °C", "Select 20°C"],
+      "fastStrategy": "18k/0.9k ≈ 20." 
+    },
+    {
+      "id": "ps_eh_a1_019",
+      "question": "A 0.75 kW kettle runs 2.0 minutes. Temperature rise of 1.0 kg of water is closest to: (c ≈ 4200 J/kg·°C)",
+      "choices": {"A": "5°C", "B": "12°C", "C": "18°C", "D": "21°C"},
+      "answer": "D",
+      "explanation": "Energy = 750 W × 120 s = 90,000 J. ΔT = Q/(mc) = 90,000/(1×4200) ≈ 21.4°C.",
+      "steps": ["Compute energy 90,000 J", "Divide by 4200", "Get ≈21.4", "Pick ~21°C"],
+      "fastStrategy": "90k/4.2k ≈ 21°C." 
+    },
+    {
+      "id": "ps_eh_a1_020",
+      "question": "At constant pressure of 150 kPa, a gas expands 0.010 m³. Work done by the gas is:",
+      "choices": {"A": "150 J", "B": "300 J", "C": "1500 J", "D": "15,000 J"},
+      "answer": "C",
+      "explanation": "W = P ΔV = 150,000 Pa × 0.010 m³ = 1500 J.",
+      "steps": ["Convert kPa to Pa (×1000)", "Multiply 150,000 by 0.010", "Get 1500 J", "Select 1500 J"],
+      "fastStrategy": "150 kPa × 0.01 m³ → 1500 J." 
+    },
+    {
+      "id": "ps_eh_a1_021",
+      "question": "Energy used by a 60 W lamp in one hour is closest to:",
+      "choices": {"A": "21.6 kJ", "B": "216 kJ", "C": "600 kJ", "D": "2160 kJ"},
+      "answer": "B",
+      "explanation": "E = P t = 60 W × 3600 s = 216,000 J = 216 kJ.",
+      "steps": ["Multiply 60 by 3600", "Get 216,000 J", "Convert to kJ", "Pick 216 kJ"],
+      "fastStrategy": "6×36 = 216; add three zeros → 216 kJ." 
+    },
+    {
+      "id": "ps_eh_a1_022",
+      "question": "If an ideal gas doubles its absolute temperature at constant volume, its pressure will:",
+      "choices": {"A": "Halve", "B": "Stay the same", "C": "Double", "D": "Quadruple"},
+      "answer": "C",
+      "explanation": "At constant volume, P ∝ T. Doubling T doubles P.",
+      "steps": ["Use P/T = constant (isochoric)", "T doubles", "Therefore P doubles", "Select double"],
+      "fastStrategy": "Lock volume → pressure tracks temperature." 
+    },
+    {
+      "id": "ps_eh_a1_023",
+      "question": "A 2.0 Ω resistor carries 3.0 A for 5.0 s. Thermal energy produced is:",
+      "choices": {"A": "15 J", "B": "30 J", "C": "45 J", "D": "90 J"},
+      "answer": "D",
+      "explanation": "Joule heating: E = I^2 R t = 3^2·2·5 = 9·2·5 = 90 J.",
+      "steps": ["Square current 3 A → 9", "Multiply by R 2 → 18", "Multiply by 5 s → 90 J", "Choose 90 J"],
+      "fastStrategy": "I^2R = 18 W; times 5 s → 90 J." 
+    },
+    {
+      "id": "ps_eh_a1_024",
+      "question": "Which surface is the most effective absorber and emitter of thermal radiation?",
+      "choices": {"A": "Shiny silver", "B": "Polished white", "C": "Dull black", "D": "Clear glass"},
+      "answer": "C",
+      "explanation": "Dull black surfaces absorb and emit radiation efficiently; shiny surfaces reflect.",
+      "steps": ["Recall emissivity high for dark, matte", "Black matte best", "Shiny or white reflect more", "Select dull black"],
+      "fastStrategy": "Black matte = best absorber/emitter." 
+    },
+    {
+      "id": "ps_eh_a1_025",
+      "question": "An ideal Carnot engine operates between 600 K and 300 K. Its maximum theoretical efficiency is:",
+      "choices": {"A": "25%", "B": "33%", "C": "50%", "D": "75%"},
+      "answer": "C",
+      "explanation": "Carnot efficiency η = 1 - Tc/Th = 1 - 300/600 = 1 - 0.5 = 0.5 = 50%.",
+      "steps": ["Write η = 1 - Tc/Th", "Plug 300 and 600", "Compute 1 - 0.5", "Get 0.5 = 50%"],
+      "fastStrategy": "Cold is half of hot → efficiency 50%." 
+    }
+  ]
+}

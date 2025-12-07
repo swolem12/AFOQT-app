@@ -1,0 +1,487 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "motion_mechanics",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ps_mm_b1_001",
+      "question": "An object at rest will remain at rest unless acted upon by:",
+      "choices": {
+        "A": "Gravity",
+        "B": "An unbalanced force",
+        "C": "Friction",
+        "D": "Velocity"
+      },
+      "answer": "B",
+      "explanation": "This is Newton's First Law of Motion (Law of Inertia). An object at rest stays at rest unless an unbalanced (net) force acts on it. Gravity and friction are types of forces, but the fundamental principle requires an unbalanced force to change motion.",
+      "steps": [
+        "Recall Newton's First Law: objects resist changes in motion",
+        "Identify that 'unbalanced force' is the general term",
+        "Eliminate specific force types (gravity, friction) as they're too narrow",
+        "Velocity is motion itself, not a cause"
+      ],
+      "fastStrategy": "Newton's First Law always involves 'unbalanced force' or 'net force'."
+    },
+    {
+      "id": "ps_mm_b1_002",
+      "question": "If a car travels 60 miles in 2 hours, what is its average speed?",
+      "choices": {
+        "A": "20 mph",
+        "B": "30 mph",
+        "C": "60 mph",
+        "D": "120 mph"
+      },
+      "answer": "B",
+      "explanation": "Average speed = distance ÷ time. Here: 60 miles ÷ 2 hours = 30 miles per hour.",
+      "steps": [
+        "Identify the formula: speed = distance/time",
+        "Plug in values: 60 miles / 2 hours",
+        "Calculate: 60 ÷ 2 = 30",
+        "Units are mph (miles per hour)"
+      ],
+      "fastStrategy": "Speed = distance/time. Divide total distance by total time."
+    },
+    {
+      "id": "ps_mm_b1_003",
+      "question": "Which of Newton's laws explains why passengers lurch forward when a car suddenly stops?",
+      "choices": {
+        "A": "Newton's First Law (Inertia)",
+        "B": "Newton's Second Law (F = ma)",
+        "C": "Newton's Third Law (Action-Reaction)",
+        "D": "Law of Universal Gravitation"
+      },
+      "answer": "A",
+      "explanation": "Newton's First Law (Inertia) states that objects in motion tend to stay in motion. When the car stops, passengers continue moving forward due to inertia until restrained by seatbelts or contact with the dashboard.",
+      "steps": [
+        "Identify the phenomenon: bodies continue motion when vehicle stops",
+        "Recall that inertia is resistance to change in motion",
+        "Match to Newton's First Law",
+        "Eliminate F=ma (that's about force and acceleration) and action-reaction"
+      ],
+      "fastStrategy": "Inertia questions involve resistance to changes in motion—always First Law."
+    },
+    {
+      "id": "ps_mm_b1_004",
+      "question": "What is the SI unit of force?",
+      "choices": {
+        "A": "Joule",
+        "B": "Watt",
+        "C": "Newton",
+        "D": "Pascal"
+      },
+      "answer": "C",
+      "explanation": "The SI unit of force is the Newton (N). One Newton is the force required to accelerate 1 kilogram of mass at 1 meter per second squared (from F = ma).",
+      "steps": [
+        "Recall common SI units",
+        "Joule = energy, Watt = power, Pascal = pressure",
+        "Newton = force (from F = ma)",
+        "Select Newton"
+      ],
+      "fastStrategy": "Force is measured in Newtons. Remember F = ma."
+    },
+    {
+      "id": "ps_mm_b1_005",
+      "question": "If you push a box with 10 N of force and it accelerates at 2 m/s², what is the mass of the box?",
+      "choices": {
+        "A": "5 kg",
+        "B": "8 kg",
+        "C": "12 kg",
+        "D": "20 kg"
+      },
+      "answer": "A",
+      "explanation": "Using Newton's Second Law: F = ma. Rearranging: m = F/a. Substitute: m = 10 N / 2 m/s² = 5 kg.",
+      "steps": [
+        "Write F = ma",
+        "Rearrange to solve for mass: m = F/a",
+        "Substitute values: m = 10/2",
+        "Calculate: m = 5 kg"
+      ],
+      "fastStrategy": "F = ma. To find mass, divide force by acceleration."
+    },
+    {
+      "id": "ps_mm_b1_006",
+      "question": "Acceleration is defined as the rate of change of:",
+      "choices": {
+        "A": "Position",
+        "B": "Velocity",
+        "C": "Force",
+        "D": "Mass"
+      },
+      "answer": "B",
+      "explanation": "Acceleration is the rate of change of velocity over time. It measures how quickly an object's velocity is changing.",
+      "steps": [
+        "Recall definition: acceleration = change in velocity / time",
+        "Position change relates to velocity, not acceleration",
+        "Force and mass don't define acceleration directly",
+        "Choose velocity"
+      ],
+      "fastStrategy": "Acceleration = change in velocity per unit time."
+    },
+    {
+      "id": "ps_mm_b1_007",
+      "question": "A 50 kg person experiences a gravitational force of approximately how many Newtons on Earth? (g ≈ 10 m/s²)",
+      "choices": {
+        "A": "50 N",
+        "B": "100 N",
+        "C": "500 N",
+        "D": "5000 N"
+      },
+      "answer": "C",
+      "explanation": "Weight (force due to gravity) = mass × gravitational acceleration. W = mg = 50 kg × 10 m/s² = 500 N.",
+      "steps": [
+        "Use formula: Weight = mass × g",
+        "Substitute: W = 50 × 10",
+        "Calculate: W = 500 N",
+        "Check units: kg × m/s² = N"
+      ],
+      "fastStrategy": "Weight in Newtons ≈ mass in kg × 10 (on Earth)."
+    },
+    {
+      "id": "ps_mm_b1_008",
+      "question": "Friction is a force that:",
+      "choices": {
+        "A": "Increases the speed of objects",
+        "B": "Opposes motion between surfaces",
+        "C": "Acts only on stationary objects",
+        "D": "Is independent of surface type"
+      },
+      "answer": "B",
+      "explanation": "Friction opposes relative motion between two surfaces in contact. It acts to resist sliding or movement, converting kinetic energy to heat.",
+      "steps": [
+        "Recall that friction opposes motion",
+        "Friction slows objects, doesn't speed them up",
+        "Friction acts on both moving and stationary objects (static vs kinetic)",
+        "Friction depends on surface properties"
+      ],
+      "fastStrategy": "Friction always opposes motion between surfaces."
+    },
+    {
+      "id": "ps_mm_b1_009",
+      "question": "When you push on a wall, the wall pushes back on you with equal force. This demonstrates:",
+      "choices": {
+        "A": "Newton's First Law",
+        "B": "Newton's Second Law",
+        "C": "Newton's Third Law",
+        "D": "Conservation of Energy"
+      },
+      "answer": "C",
+      "explanation": "Newton's Third Law states that for every action there is an equal and opposite reaction. When you push on the wall (action), the wall pushes back with equal force (reaction).",
+      "steps": [
+        "Identify paired forces: you push wall, wall pushes you",
+        "Recall Third Law: action-reaction pairs",
+        "Eliminate First Law (inertia) and Second Law (F=ma)",
+        "Choose Third Law"
+      ],
+      "fastStrategy": "Equal and opposite forces = Newton's Third Law (action-reaction)."
+    },
+    {
+      "id": "ps_mm_b1_010",
+      "question": "What happens to an object's velocity if a constant net force is applied in the direction of motion?",
+      "choices": {
+        "A": "Velocity decreases",
+        "B": "Velocity remains constant",
+        "C": "Velocity increases",
+        "D": "Velocity becomes zero"
+      },
+      "answer": "C",
+      "explanation": "A constant net force causes constant acceleration (F = ma). Acceleration in the direction of motion increases velocity over time.",
+      "steps": [
+        "Recall F = ma: force causes acceleration",
+        "Acceleration = change in velocity",
+        "Force in direction of motion → positive acceleration",
+        "Positive acceleration → increasing velocity"
+      ],
+      "fastStrategy": "Force in direction of motion always increases velocity."
+    },
+    {
+      "id": "ps_mm_b1_011",
+      "question": "A lever is an example of a:",
+      "choices": {
+        "A": "Complex machine",
+        "B": "Simple machine",
+        "C": "Electrical device",
+        "D": "Chemical process"
+      },
+      "answer": "B",
+      "explanation": "A lever is one of the six classical simple machines. Simple machines multiply force or change its direction using basic mechanical principles.",
+      "steps": [
+        "Recall the six simple machines: lever, pulley, wheel/axle, inclined plane, wedge, screw",
+        "Lever is on this fundamental list",
+        "Simple machines have no power source",
+        "Choose simple machine"
+      ],
+      "fastStrategy": "Lever, pulley, inclined plane = simple machines."
+    },
+    {
+      "id": "ps_mm_b1_012",
+      "question": "Work is defined as:",
+      "choices": {
+        "A": "Force times time",
+        "B": "Force times distance",
+        "C": "Mass times acceleration",
+        "D": "Energy per unit time"
+      },
+      "answer": "B",
+      "explanation": "Work = Force × Distance (when force and distance are in the same direction). Work is measured in Joules.",
+      "steps": [
+        "Recall W = F × d",
+        "Force × time is impulse, not work",
+        "Mass × acceleration is force (F = ma)",
+        "Energy per time is power",
+        "Choose force × distance"
+      ],
+      "fastStrategy": "Work = Force × Distance. Both in same direction."
+    },
+    {
+      "id": "ps_mm_b1_013",
+      "question": "If a 20 N force moves an object 5 meters, how much work is done?",
+      "choices": {
+        "A": "4 J",
+        "B": "25 J",
+        "C": "100 J",
+        "D": "400 J"
+      },
+      "answer": "C",
+      "explanation": "Work = Force × Distance. W = 20 N × 5 m = 100 Joules.",
+      "steps": [
+        "Use formula: W = F × d",
+        "Substitute: W = 20 × 5",
+        "Calculate: W = 100",
+        "Units: N·m = Joules"
+      ],
+      "fastStrategy": "Multiply force by distance to get work in Joules."
+    },
+    {
+      "id": "ps_mm_b1_014",
+      "question": "Power is defined as:",
+      "choices": {
+        "A": "Work done per unit time",
+        "B": "Force times velocity",
+        "C": "Energy stored in an object",
+        "D": "Mass times distance"
+      },
+      "answer": "A",
+      "explanation": "Power = Work/Time, or the rate at which work is done. It's measured in Watts (1 Watt = 1 Joule/second).",
+      "steps": [
+        "Recall P = W/t (power = work/time)",
+        "Power is rate of doing work",
+        "Force × velocity also equals power (alternative formula)",
+        "Energy stored is potential/kinetic energy, not power",
+        "Choose work per unit time"
+      ],
+      "fastStrategy": "Power = Work/Time. Measured in Watts."
+    },
+    {
+      "id": "ps_mm_b1_015",
+      "question": "An object moving at constant velocity has:",
+      "choices": {
+        "A": "Zero acceleration",
+        "B": "Increasing acceleration",
+        "C": "Decreasing acceleration",
+        "D": "Maximum acceleration"
+      },
+      "answer": "A",
+      "explanation": "Constant velocity means no change in speed or direction. Acceleration is the rate of change of velocity, so if velocity is constant, acceleration is zero.",
+      "steps": [
+        "Constant velocity = no change in velocity",
+        "Acceleration = change in velocity / time",
+        "If no change in velocity, then change = 0",
+        "Therefore acceleration = 0"
+      ],
+      "fastStrategy": "Constant velocity always means zero acceleration."
+    },
+    {
+      "id": "ps_mm_b1_016",
+      "question": "Which quantity is a vector?",
+      "choices": {
+        "A": "Speed",
+        "B": "Mass",
+        "C": "Velocity",
+        "D": "Energy"
+      },
+      "answer": "C",
+      "explanation": "A vector has both magnitude and direction. Velocity is a vector (speed with direction). Speed, mass, and energy are scalars (magnitude only).",
+      "steps": [
+        "Recall: vectors have magnitude AND direction",
+        "Velocity = speed + direction (vector)",
+        "Speed = magnitude only (scalar)",
+        "Mass and energy have no direction",
+        "Choose velocity"
+      ],
+      "fastStrategy": "Velocity, force, acceleration = vectors. Speed, mass, energy = scalars."
+    },
+    {
+      "id": "ps_mm_b1_017",
+      "question": "A pulley system is used to:",
+      "choices": {
+        "A": "Increase the work done",
+        "B": "Change the direction of force or reduce effort force",
+        "C": "Eliminate friction completely",
+        "D": "Create energy from nothing"
+      },
+      "answer": "B",
+      "explanation": "Pulleys are simple machines that change the direction of applied force or provide mechanical advantage (reducing effort force needed). They don't increase work or eliminate friction.",
+      "steps": [
+        "Recall purpose of simple machines: make work easier",
+        "Pulleys redirect force or multiply force",
+        "Work input = work output (energy conserved)",
+        "Friction exists but is minimized, not eliminated"
+      ],
+      "fastStrategy": "Pulleys change force direction or reduce effort—don't create energy."
+    },
+    {
+      "id": "ps_mm_b1_018",
+      "question": "If an object's speed doubles, its kinetic energy:",
+      "choices": {
+        "A": "Doubles",
+        "B": "Quadruples",
+        "C": "Halves",
+        "D": "Remains the same"
+      },
+      "answer": "B",
+      "explanation": "Kinetic energy = ½mv². Since velocity is squared, doubling speed (v → 2v) makes KE become ½m(2v)² = ½m(4v²) = 4 times the original KE.",
+      "steps": [
+        "Write KE = ½mv²",
+        "If v doubles: new KE = ½m(2v)²",
+        "Expand: ½m × 4v² = 4 × (½mv²)",
+        "KE quadruples"
+      ],
+      "fastStrategy": "KE depends on v². Double speed → 4× the energy."
+    },
+    {
+      "id": "ps_mm_b1_019",
+      "question": "Potential energy depends on:",
+      "choices": {
+        "A": "An object's speed",
+        "B": "An object's position or configuration",
+        "C": "An object's color",
+        "D": "An object's temperature"
+      },
+      "answer": "B",
+      "explanation": "Gravitational potential energy depends on height (position). Elastic potential energy depends on compression/stretch (configuration). Both relate to position or state, not motion.",
+      "steps": [
+        "Recall gravitational PE = mgh (height = position)",
+        "Elastic PE relates to spring compression (configuration)",
+        "Speed relates to kinetic energy, not potential",
+        "Color and temperature aren't mechanical energy factors"
+      ],
+      "fastStrategy": "Potential energy = position (height) or configuration (springs)."
+    },
+    {
+      "id": "ps_mm_b1_020",
+      "question": "Conservation of energy states that energy:",
+      "choices": {
+        "A": "Always increases",
+        "B": "Cannot be transferred",
+        "C": "Cannot be created or destroyed",
+        "D": "Only exists as kinetic energy"
+      },
+      "answer": "C",
+      "explanation": "The Law of Conservation of Energy states that energy cannot be created or destroyed, only converted from one form to another. Total energy in a closed system remains constant.",
+      "steps": [
+        "Recall conservation principle: total energy constant",
+        "Energy transforms (PE ↔ KE) but total stays same",
+        "Energy can be transferred between objects",
+        "Energy exists in many forms (kinetic, potential, thermal, etc.)"
+      ],
+      "fastStrategy": "Energy is conserved—never created or destroyed, only transformed."
+    },
+    {
+      "id": "ps_mm_b1_021",
+      "question": "An inclined plane reduces the effort force needed to lift an object by:",
+      "choices": {
+        "A": "Eliminating gravity",
+        "B": "Increasing the distance over which force is applied",
+        "C": "Decreasing the mass of the object",
+        "D": "Converting energy to heat"
+      },
+      "answer": "B",
+      "explanation": "An inclined plane trades distance for force. You push over a longer distance (along the ramp) but with less force than lifting straight up. Work = Force × Distance remains constant.",
+      "steps": [
+        "Recall simple machine principle: trade force for distance",
+        "Ramp length > vertical height",
+        "Smaller force over longer distance does same work",
+        "Gravity and mass unchanged"
+      ],
+      "fastStrategy": "Inclined plane: longer distance, less force. Work stays same."
+    },
+    {
+      "id": "ps_mm_b1_022",
+      "question": "Momentum is calculated as:",
+      "choices": {
+        "A": "Mass times velocity",
+        "B": "Mass times acceleration",
+        "C": "Force times time",
+        "D": "Force times distance"
+      },
+      "answer": "A",
+      "explanation": "Momentum (p) = mass × velocity. It's a vector quantity measured in kg·m/s.",
+      "steps": [
+        "Recall p = mv",
+        "Mass (kg) × velocity (m/s) = momentum",
+        "Mass × acceleration = force (F = ma)",
+        "Force × time = impulse, Force × distance = work"
+      ],
+      "fastStrategy": "Momentum = mass × velocity. Symbol: p = mv."
+    },
+    {
+      "id": "ps_mm_b1_023",
+      "question": "If no external forces act on a system, momentum is:",
+      "choices": {
+        "A": "Always zero",
+        "B": "Conserved",
+        "C": "Continuously increasing",
+        "D": "Converted to energy"
+      },
+      "answer": "B",
+      "explanation": "The Law of Conservation of Momentum states that in a closed system with no external forces, total momentum remains constant. Momentum can be transferred between objects but the total doesn't change.",
+      "steps": [
+        "Recall conservation of momentum principle",
+        "No external force → total momentum constant",
+        "Momentum can redistribute but total conserved",
+        "This applies to collisions and explosions"
+      ],
+      "fastStrategy": "No external forces → momentum is conserved (constant total)."
+    },
+    {
+      "id": "ps_mm_b1_024",
+      "question": "Centripetal force:",
+      "choices": {
+        "A": "Pushes objects outward in circular motion",
+        "B": "Pulls objects toward the center of circular motion",
+        "C": "Only exists in straight-line motion",
+        "D": "Eliminates the need for friction"
+      },
+      "answer": "B",
+      "explanation": "Centripetal force is the inward force that keeps an object moving in a circular path. It always points toward the center of the circle (like tension in a string or friction on a road).",
+      "steps": [
+        "Recall 'centripetal' means 'center-seeking'",
+        "Force must point inward to maintain circular path",
+        "Outward feeling is centrifugal (apparent force, not real)",
+        "Circular motion requires continuous inward force"
+      ],
+      "fastStrategy": "Centripetal force always points toward center of circular motion."
+    },
+    {
+      "id": "ps_mm_b1_025",
+      "question": "The mechanical advantage of a machine is the ratio of:",
+      "choices": {
+        "A": "Output force to input force",
+        "B": "Input force to output force",
+        "C": "Work output to work input",
+        "D": "Speed to distance"
+      },
+      "answer": "A",
+      "explanation": "Mechanical Advantage (MA) = Output Force / Input Force. It tells you how much a machine multiplies the applied force. MA > 1 means force is multiplied.",
+      "steps": [
+        "Recall MA measures force multiplication",
+        "MA = Force out / Force in",
+        "MA > 1: machine multiplies force",
+        "MA < 1: machine multiplies distance/speed",
+        "Work ratio is efficiency, not MA"
+      ],
+      "fastStrategy": "MA = Output force ÷ Input force. Measures force multiplication."
+    }
+  ]
+}

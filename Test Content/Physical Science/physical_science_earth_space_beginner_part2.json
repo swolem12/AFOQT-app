@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "earth_space",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+    {
+      "id": "ps_es_b1_026",
+      "question": "Rock changed by heat and pressure without melting becomes:",
+      "choices": {"A": "Igneous", "B": "Sedimentary", "C": "Metamorphic", "D": "Volcanic glass"},
+      "answer": "C",
+      "explanation": "Metamorphic rocks form when existing rock is altered by heat and pressure but does not melt into magma.",
+      "steps": ["Identify the process described", "Heat/pressure without melting = metamorphism", "Igneous needs melting; sedimentary needs deposition", "Select metamorphic"],
+      "fastStrategy": "Heat + pressure, no melt → metamorphic."
+    },
+    {
+      "id": "ps_es_b1_027",
+      "question": "Oceanic crust is usually:",
+      "choices": {"A": "Thick granite, low density", "B": "Thin basalt, higher density", "C": "All sand", "D": "Pure ice"},
+      "answer": "B",
+      "explanation": "Oceanic crust is thin and basaltic, making it denser than the thicker, granitic continental crust.",
+      "steps": ["Recall crust types", "Oceanic is basaltic and dense", "Continental is granitic and thicker", "Choose thin basalt"] ,
+      "fastStrategy": "Ocean crust: thin, basaltic, denser."
+    },
+    {
+      "id": "ps_es_b1_028",
+      "question": "Earth completes one orbit around the Sun in about:",
+      "choices": {"A": "24 hours", "B": "29.5 days", "C": "365 days", "D": "12 years"},
+      "answer": "C",
+      "explanation": "One revolution around the Sun takes roughly 365 days, defining a year.",
+      "steps": ["Match revolution period", "Earth's year ≈ 365 days", "24 hours is rotation", "Pick 365 days"],
+      "fastStrategy": "Yearly revolution ≈ 365 days."
+    },
+    {
+      "id": "ps_es_b1_029",
+      "question": "Spring tides with the greatest tidal range happen when:",
+      "choices": {"A": "Sun, Earth, and Moon align", "B": "Moon is at first quarter", "C": "Earth is farthest from Sun", "D": "Moon is over the equator only"},
+      "answer": "A",
+      "explanation": "When the Sun, Earth, and Moon line up at new or full moon, their pulls combine to create spring tides.",
+      "steps": ["Look for gravity alignment", "Alignment stacks Moon and Sun gravity", "Quarter phases give weaker neap tides", "Choose alignment"],
+      "fastStrategy": "Aligned Sun–Earth–Moon → spring tides."
+    },
+    {
+      "id": "ps_es_b1_030",
+      "question": "A half-lit Moon that is waxing toward full is called the:",
+      "choices": {"A": "Third quarter", "B": "First quarter", "C": "New moon", "D": "Waning crescent"},
+      "answer": "B",
+      "explanation": "In the first quarter, the Moon is half illuminated and increasing toward full (waxing).",
+      "steps": ["Determine if waxing or waning", "Waxing half = first quarter", "Third quarter is waning", "Select first quarter"],
+      "fastStrategy": "Half and growing → first quarter."
+    },
+    {
+      "id": "ps_es_b1_031",
+      "question": "A geostationary satellite orbits Earth once every:",
+      "choices": {"A": "90 minutes", "B": "12 hours", "C": "24 hours", "D": "7 days"},
+      "answer": "C",
+      "explanation": "Geostationary satellites match Earth's rotation, completing one orbit in about 24 hours over the equator.",
+      "steps": ["Define geostationary behavior", "Must match Earth's daily rotation", "Lower orbits are faster", "Choose 24 hours"],
+      "fastStrategy": "Stay over one spot → 24-hour orbit."
+    },
+    {
+      "id": "ps_es_b1_032",
+      "question": "Prevailing westerlies in mid-latitudes generally blow from:",
+      "choices": {"A": "East to west", "B": "West to east", "C": "North to south", "D": "South to north"},
+      "answer": "B",
+      "explanation": "The prevailing westerlies flow from the west toward the east across mid-latitudes.",
+      "steps": ["Use name clue", "Westerlies originate in the west", "Trade winds blow opposite in tropics", "Select west to east"],
+      "fastStrategy": "Westerlies → west to east."
+    },
+    {
+      "id": "ps_es_b1_033",
+      "question": "A cold, moist air mass forming over cold oceans is called:",
+      "choices": {"A": "Continental tropical", "B": "Maritime polar", "C": "Maritime tropical", "D": "Continental polar"},
+      "answer": "B",
+      "explanation": "Forming over oceans makes it maritime (moist); cold source regions make it polar, so maritime polar.",
+      "steps": ["Identify surface type", "Ocean = maritime (moist)", "Cold source = polar", "Choose maritime polar"],
+      "fastStrategy": "Cold ocean origin → maritime polar."
+    },
+    {
+      "id": "ps_es_b1_034",
+      "question": "El Niño refers to a periodic:",
+      "choices": {"A": "Cooling of the Atlantic", "B": "Warming of central/eastern Pacific waters", "C": "Permanent hurricane", "D": "Shift of Earth's axis"},
+      "answer": "B",
+      "explanation": "El Niño is the warm phase of ENSO, marked by warming of central and eastern equatorial Pacific waters that alters weather patterns.",
+      "steps": ["Recall ENSO warm phase location", "Occurs in Pacific, not Atlantic", "Not a storm", "Select warming of Pacific"],
+      "fastStrategy": "El Niño = warm eastern Pacific event."
+    },
+    {
+      "id": "ps_es_b1_035",
+      "question": "Dry conditions on the leeward side of mountains caused by upwind rain loss are called a:",
+      "choices": {"A": "Lake effect", "B": "Rain shadow", "C": "Monsoon", "D": "Sea breeze"},
+      "answer": "B",
+      "explanation": "As air rises on the windward side it drops moisture; descending on the leeward side it warms and dries, creating a rain shadow.",
+      "steps": ["Think mountain moisture pattern", "Windward rains, leeward dries", "That dryness is the rain shadow", "Choose rain shadow"],
+      "fastStrategy": "Windward wet, leeward dry → rain shadow."
+    },
+    {
+      "id": "ps_es_b1_036",
+      "question": "Compacting and cementing sediment into rock is called:",
+      "choices": {"A": "Crystallization", "B": "Lithification", "C": "Sublimation", "D": "Metamorphism"},
+      "answer": "B",
+      "explanation": "Lithification turns loose sediment into sedimentary rock through compaction and cementation.",
+      "steps": ["Identify sediment → rock process", "Compaction + cementation = lithification", "Crystallization is igneous/mineral growth", "Select lithification"],
+      "fastStrategy": "Sediment hardened? Call it lithification."
+    },
+    {
+      "id": "ps_es_b1_037",
+      "question": "New crust at mid-ocean ridges forms where plates:",
+      "choices": {"A": "Collide", "B": "Slide past", "C": "Move apart", "D": "Stop moving"},
+      "answer": "C",
+      "explanation": "Mid-ocean ridges sit at divergent boundaries where plates pull apart and magma solidifies into new crust.",
+      "steps": ["Identify boundary type at ridges", "Plates diverge, magma rises", "Collision/subduction not here", "Pick move apart"],
+      "fastStrategy": "Ridges = plates diverging, magma fills gap."
+    },
+    {
+      "id": "ps_es_b1_038",
+      "question": "We see lightning before hearing thunder because:",
+      "choices": {"A": "Sound travels faster than light", "B": "Light travels faster than sound", "C": "Thunder forms later", "D": "Sound stops in rain"},
+      "answer": "B",
+      "explanation": "Light travels far faster than sound, so the flash reaches us almost instantly while the sound wave arrives later.",
+      "steps": ["Compare light vs sound speeds", "Light speed is enormous", "Sound is much slower in air", "Select light travels faster"],
+      "fastStrategy": "Flash outruns boom: light ≫ sound."
+    },
+    {
+      "id": "ps_es_b1_039",
+      "question": "The Sun's primary energy source is:",
+      "choices": {"A": "Burning oxygen", "B": "Fusing hydrogen into helium", "C": "Rusting iron", "D": "Burning coal"},
+      "answer": "B",
+      "explanation": "The Sun generates energy by nuclear fusion, combining hydrogen nuclei into helium in its core.",
+      "steps": ["Identify process in stars", "Stars fuse hydrogen at main-sequence stage", "Chemical burning cannot power the Sun", "Choose fusion"],
+      "fastStrategy": "Sun shines by hydrogen fusion."
+    },
+    {
+      "id": "ps_es_b1_040",
+      "question": "The tropopause marks the boundary between the troposphere and the:",
+      "choices": {"A": "Stratosphere", "B": "Mesosphere", "C": "Thermosphere", "D": "Exosphere"},
+      "answer": "A",
+      "explanation": "The tropopause is the top of the troposphere and the start of the stratosphere.",
+      "steps": ["Locate layer above troposphere", "Stratosphere sits above it", "Boundary name is tropopause", "Select stratosphere"],
+      "fastStrategy": "Tropopause sits between troposphere and stratosphere."
+    },
+    {
+      "id": "ps_es_b1_041",
+      "question": "Auroras occur because charged solar particles interact with Earth's:",
+      "choices": {"A": "Ocean tides", "B": "Magnetic field and upper atmosphere", "C": "Mountains", "D": "Seafloor"},
+      "answer": "B",
+      "explanation": "Solar particles follow Earth's magnetic field into the upper atmosphere, exciting gases and producing auroras.",
+      "steps": ["Recall what guides charged particles", "Magnetic field funnels them to poles", "Collisions with upper air make light", "Select magnetic field and atmosphere"],
+      "fastStrategy": "Aurora recipe: solar particles + magnetosphere + upper air."
+    },
+    {
+      "id": "ps_es_b1_042",
+      "question": "On a weather map, a blue 'H' usually indicates:",
+      "choices": {"A": "High pressure and fair weather", "B": "Hurricane warning", "C": "High humidity and storms", "D": "Heat wave"},
+      "answer": "A",
+      "explanation": "A blue 'H' marks a high-pressure center, often linked to sinking, clearing air and fair conditions.",
+      "steps": ["Interpret map symbol", "H stands for high pressure", "Highs tend to bring clear skies", "Choose high pressure and fair weather"],
+      "fastStrategy": "Blue H = high pressure, usually clear."
+    },
+    {
+      "id": "ps_es_b1_043",
+      "question": "Relative humidity of 100% means the air is:",
+      "choices": {"A": "Completely dry", "B": "Saturated at that temperature", "C": "Below freezing", "D": "Guaranteed to rain"},
+      "answer": "B",
+      "explanation": "At 100% relative humidity, the air holds as much water vapor as it can at that temperature, so condensation can easily occur.",
+      "steps": ["Define relative humidity", "100% = saturated vapor content", "It doesn't ensure rain", "Select saturated"],
+      "fastStrategy": "100% RH → air is saturated."
+    },
+    {
+      "id": "ps_es_b1_044",
+      "question": "Cold ocean currents near coasts generally make nearby land climates:",
+      "choices": {"A": "Hotter and wetter", "B": "Cooler and often drier", "C": "Windless", "D": "Unchanged"},
+      "answer": "B",
+      "explanation": "Cold currents cool the air above and can reduce moisture, leading to cooler, often drier coastal climates.",
+      "steps": ["Consider cooling effect", "Cold water chills coastal air", "Cooler air holds less vapor", "Choose cooler and drier"],
+      "fastStrategy": "Cold currents chill coasts → cooler/drier."
+    },
+    {
+      "id": "ps_es_b1_045",
+      "question": "The planet with the most prominent ring system is:",
+      "choices": {"A": "Mars", "B": "Earth", "C": "Saturn", "D": "Mercury"},
+      "answer": "C",
+      "explanation": "Saturn's bright, extensive rings of ice and rock make it the standout ringed planet.",
+      "steps": ["Recall gas giants all have rings", "Saturn's rings are the largest and brightest", "Other planets' rings are faint", "Pick Saturn"],
+      "fastStrategy": "Bright rings? Think Saturn."
+    },
+    {
+      "id": "ps_es_b1_046",
+      "question": "A meteor is:",
+      "choices": {"A": "A rock still in space", "B": "A streak of light from a meteoroid burning in the atmosphere", "C": "A rock that hit the ground", "D": "A comet"},
+      "answer": "B",
+      "explanation": "A meteor is the visible streak when a meteoroid burns in the atmosphere; if it reaches the ground, it's a meteorite.",
+      "steps": ["Distinguish meteoroid/meteor/meteorite", "Meteor = burning streak in air", "Meteorite = survives to ground", "Select streak of light"],
+      "fastStrategy": "Meteor = glowing streak from burning meteoroid."
+    },
+    {
+      "id": "ps_es_b1_047",
+      "question": "The largest planet in our solar system is:",
+      "choices": {"A": "Earth", "B": "Jupiter", "C": "Saturn", "D": "Neptune"},
+      "answer": "B",
+      "explanation": "Jupiter is the biggest planet by diameter and mass, dwarfing the others.",
+      "steps": ["Recall gas giant sizes", "Jupiter outranks all", "Saturn is second", "Choose Jupiter"],
+      "fastStrategy": "Biggest planet → Jupiter."
+    },
+    {
+      "id": "ps_es_b1_048",
+      "question": "The instrument that records seismic waves is a:",
+      "choices": {"A": "Barograph", "B": "Hygrometer", "C": "Seismograph", "D": "Altimeter"},
+      "answer": "C",
+      "explanation": "A seismograph detects and records ground vibrations produced by earthquakes.",
+      "steps": ["Match tool to earthquakes", "Seismo relates to shaking", "Graph records the wave", "Pick seismograph"],
+      "fastStrategy": "Quake recorder = seismograph."
+    },
+    {
+      "id": "ps_es_b1_049",
+      "question": "The Sun is directly overhead at the Tropic of Cancer around the:",
+      "choices": {"A": "December solstice", "B": "March equinox", "C": "June solstice", "D": "September equinox"},
+      "answer": "C",
+      "explanation": "At the June solstice, the noon Sun stands overhead at about 23.5°N, the Tropic of Cancer.",
+      "steps": ["Match date with Tropic of Cancer", "Northern solstice in June", "December solstice favors Tropic of Capricorn", "Select June solstice"],
+      "fastStrategy": "Overhead Sun at 23.5°N → June solstice."
+    },
+    {
+      "id": "ps_es_b1_050",
+      "question": "A major greenhouse gas that traps heat in Earth's atmosphere is:",
+      "choices": {"A": "Carbon dioxide", "B": "Helium", "C": "Neon", "D": "Hydrogen"},
+      "answer": "A",
+      "explanation": "Carbon dioxide absorbs infrared radiation, contributing significantly to Earth's greenhouse effect.",
+      "steps": ["Identify heat-trapping gas", "CO2 is key greenhouse gas", "Helium/neon are inert", "Choose carbon dioxide"],
+      "fastStrategy": "CO2 is a primary heat-trapping gas."
+    }
+  ]
+}

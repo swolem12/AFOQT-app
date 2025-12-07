@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "fluids_pressure",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ps_fp_b1_001",
+      "question": "Buoyant force on an object submerged in a fluid depends on the:",
+      "choices": {"A": "Object's color", "B": "Volume of fluid displaced", "C": "Object's temperature", "D": "Object's speed"},
+      "answer": "B",
+      "explanation": "Archimedes' principle: buoyant force equals the weight of the displaced fluid, which depends on the volume displaced and fluid density.",
+      "steps": ["Recall Archimedes' principle", "Buoyant force = weight of displaced fluid", "Depends on displaced volume and fluid density", "Select volume displaced"],
+      "fastStrategy": "Buoyant force tracks displaced fluid weight."
+    },
+    {
+      "id": "ps_fp_b1_002",
+      "question": "Pressure at a given depth in a fluid increases with:",
+      "choices": {"A": "Lower fluid density", "B": "Greater fluid density", "C": "Decreasing depth", "D": "Smaller container"},
+      "answer": "B",
+      "explanation": "Pressure due to a fluid column is P = ρgh. Higher density increases pressure at the same depth.",
+      "steps": ["Use P = ρgh", "ρ higher → P higher at same h", "Container size doesn't matter", "Choose greater density"],
+      "fastStrategy": "Fluid pressure ∝ density × depth."
+    },
+    {
+      "id": "ps_fp_b1_003",
+      "question": "Pressure in a fluid at rest depends on depth and:",
+      "choices": {"A": "Fluid density", "B": "Object shape", "C": "Surface area", "D": "Fluid color"},
+      "answer": "A",
+      "explanation": "Fluid pressure at a depth is ρgh. It depends on fluid density and depth, not object shape or surface area.",
+      "steps": ["Recall P = ρgh", "Identify variables: density ρ, depth h", "Shape/area don't change static pressure", "Select fluid density"],
+      "fastStrategy": "Static fluid pressure set by density and depth."
+    },
+    {
+      "id": "ps_fp_b1_004",
+      "question": "Compared to air, water exerts more pressure at the same depth because water has:",
+      "choices": {"A": "Lower density", "B": "Higher density", "C": "Less mass", "D": "More compressibility"},
+      "answer": "B",
+      "explanation": "Water's density is much higher than air's, so ρgh gives greater pressure at the same depth.",
+      "steps": ["Pressure scales with density", "Water ρ ≫ air ρ", "So pressure in water is higher", "Choose higher density"],
+      "fastStrategy": "Higher density fluid → higher pressure at depth."
+    },
+    {
+      "id": "ps_fp_b1_005",
+      "question": "If an object floats, its weight equals:",
+      "choices": {"A": "Zero", "B": "Twice the buoyant force", "C": "The buoyant force", "D": "The fluid's weight"},
+      "answer": "C",
+      "explanation": "For floating, net force is zero, so buoyant force balances the object's weight.",
+      "steps": ["Floating ⇒ net force zero", "Buoyant force upward = weight downward", "Therefore weight equals buoyant force", "Select buoyant force"],
+      "fastStrategy": "Floating: buoyant force = weight."
+    },
+    {
+      "id": "ps_fp_b1_006",
+      "question": "Density is defined as:",
+      "choices": {"A": "Mass divided by volume", "B": "Volume divided by mass", "C": "Mass times volume", "D": "Weight minus volume"},
+      "answer": "A",
+      "explanation": "Density ρ = mass / volume. It indicates how much mass is packed into a given volume.",
+      "steps": ["Recall formula ρ = m/V", "Other options invert or multiply incorrectly", "Choose mass divided by volume"],
+      "fastStrategy": "Density = mass per volume (m/V)."
+    },
+    {
+      "id": "ps_fp_b1_007",
+      "question": "A hydrometer floats higher in a liquid with:",
+      "choices": {"A": "Lower density", "B": "Higher density", "C": "Higher temperature", "D": "Lower viscosity"},
+      "answer": "B",
+      "explanation": "In denser liquids, less volume is displaced to balance the hydrometer's weight, so it floats higher.",
+      "steps": ["Floating height depends on displaced volume", "Denser fluid needs less displacement", "Hydrometer rises higher", "Select higher density"],
+      "fastStrategy": "Denser fluid → hydrometer floats higher."
+    },
+    {
+      "id": "ps_fp_b1_008",
+      "question": "Pascal's principle states that pressure applied to an enclosed fluid is transmitted:",
+      "choices": {"A": "Only upward", "B": "Equally in all directions", "C": "Only downward", "D": "Not at all"},
+      "answer": "B",
+      "explanation": "Pascal's principle: pressure change in an enclosed fluid is transmitted undiminished in all directions.",
+      "steps": ["Recall Pascal's principle", "Pressure added spreads equally", "Not directional", "Choose equally in all directions"],
+      "fastStrategy": "Add pressure to a closed fluid → it spreads equally everywhere."
+    },
+    {
+      "id": "ps_fp_b1_009",
+      "question": "Which device uses Pascal's principle to multiply force?",
+      "choices": {"A": "Lever", "B": "Hydraulic lift", "C": "Pulley", "D": "Spring scale"},
+      "answer": "B",
+      "explanation": "Hydraulic systems use Pascal's principle; pressure applied to a small piston creates a larger force on a larger piston.",
+      "steps": ["Identify pressure transmission device", "Hydraulic lift uses fluid pressure amplification", "Lever/pulley are mechanical advantages", "Choose hydraulic lift"],
+      "fastStrategy": "Force multiplication with fluid → hydraulic lift."
+    },
+    {
+      "id": "ps_fp_b1_010",
+      "question": "Standard atmospheric pressure at sea level is about:",
+      "choices": {"A": "1 Pa", "B": "101,000 Pa", "C": "1,000,000 Pa", "D": "10 Pa"},
+      "answer": "B",
+      "explanation": "Sea level atmospheric pressure is roughly 101,000 Pa (101 kPa).",
+      "steps": ["Recall 1 atm ≈ 101 kPa", "Convert to Pa: ~101,000", "Other choices off by orders of magnitude", "Select 101,000 Pa"],
+      "fastStrategy": "Use 1 atm ≈ 101 kPa ≈ 101,000 Pa."
+    },
+    {
+      "id": "ps_fp_b1_011",
+      "question": "Pressure at depth in a fluid is calculated using:",
+      "choices": {"A": "P = mv", "B": "P = ρgh", "C": "P = Fd", "D": "P = VI"},
+      "answer": "B",
+      "explanation": "For static fluids, pressure from a column is P = ρgh (density × gravity × depth).",
+      "steps": ["Identify hydrostatic pressure formula", "P = ρgh", "Other formulas are for momentum, work, power", "Choose P = ρgh"],
+      "fastStrategy": "Fluid pressure at depth: density × g × depth."
+    },
+    {
+      "id": "ps_fp_b1_012",
+      "question": "If depth doubles in a fluid, pressure due to the fluid column:",
+      "choices": {"A": "Halves", "B": "Stays the same", "C": "Doubles", "D": "Is zero"},
+      "answer": "C",
+      "explanation": "From P = ρgh, pressure is proportional to depth. Doubling depth doubles pressure (same fluid).",
+      "steps": ["Use P = ρgh", "Depth h → 2h doubles P", "Not zero unless no fluid", "Select doubles"],
+      "fastStrategy": "In same fluid, P ∝ depth."
+    },
+    {
+      "id": "ps_fp_b1_013",
+      "question": "An object sinks if its density is:",
+      "choices": {"A": "Less than fluid density", "B": "Equal to fluid density", "C": "Greater than fluid density", "D": "Zero"},
+      "answer": "C",
+      "explanation": "Objects denser than the fluid sink; less dense float; equal density hover/neutrally buoyant.",
+      "steps": ["Compare object density to fluid", "ρ object > ρ fluid → sink", "ρ object < ρ fluid → float", "Select greater density"],
+      "fastStrategy": "More dense than fluid → sink."
+    },
+    {
+      "id": "ps_fp_b1_014",
+      "question": "Which factor does NOT affect fluid pressure at a given depth?",
+      "choices": {"A": "Fluid density", "B": "Depth", "C": "Gravitational acceleration", "D": "Container shape"},
+      "answer": "D",
+      "explanation": "Hydrostatic pressure depends on density, gravity, and depth, not the container's shape (Pascal's paradox).",
+      "steps": ["Use P = ρgh", "Variables: ρ, g, h", "Container shape irrelevant", "Choose container shape"],
+      "fastStrategy": "Shape doesn't change static pressure at same depth."
+    },
+    {
+      "id": "ps_fp_b1_015",
+      "question": "Gauges in cars measuring oil pressure rely on:",
+      "choices": {"A": "Electric charge", "B": "Fluid pressure in a line", "C": "Magnetic fields", "D": "Sound waves"},
+      "answer": "B",
+      "explanation": "Oil pressure gauges sense fluid pressure transmitted through a line, often using a pressure sensor.",
+      "steps": ["Identify oil system as fluid", "Pressure transmitted through line", "Sensor converts to reading", "Select fluid pressure"],
+      "fastStrategy": "Oil pressure gauges read fluid pressure, not electricity."
+    },
+    {
+      "id": "ps_fp_b1_016",
+      "question": "When a fluid flows faster, its pressure tends to:",
+      "choices": {"A": "Increase", "B": "Stay the same", "C": "Decrease", "D": "Become zero"},
+      "answer": "C",
+      "explanation": "Bernoulli's principle: in steady flow, higher speed often corresponds to lower static pressure.",
+      "steps": ["Recall Bernoulli relation", "Speed ↑ → static pressure ↓ (for streamlined flow)", "Not zero", "Choose decrease"],
+      "fastStrategy": "Faster flow → lower static pressure (Bernoulli)."
+    },
+    {
+      "id": "ps_fp_b1_017",
+      "question": "Why does a boat float?",
+      "choices": {"A": "It has no weight", "B": "Buoyant force equals weight", "C": "Water has no pressure", "D": "Air keeps it up"},
+      "answer": "B",
+      "explanation": "A floating boat displaces water whose weight equals the boat's weight, so buoyant force balances weight.",
+      "steps": ["Floating condition: buoyant = weight", "Boat displaces its weight in water", "Thus net force zero", "Select buoyant force equals weight"],
+      "fastStrategy": "Float = displaced water weight matches boat weight."
+    },
+    {
+      "id": "ps_fp_b1_018",
+      "question": "Fluid pressure on a surface is defined as:",
+      "choices": {"A": "Force times distance", "B": "Force per unit area", "C": "Mass per volume", "D": "Volume per mass"},
+      "answer": "B",
+      "explanation": "Pressure = Force / Area. In fluids, it's the force the fluid exerts on each unit area of a surface.",
+      "steps": ["Recall pressure formula P = F/A", "Force times distance is work", "Mass/volume is density", "Choose force per unit area"],
+      "fastStrategy": "Pressure = force divided by area."
+    },
+    {
+      "id": "ps_fp_b1_019",
+      "question": "At the same depth, pressure in a fluid acts:",
+      "choices": {"A": "Only downward", "B": "Only upward", "C": "Equally in all directions", "D": "Only sideways"},
+      "answer": "C",
+      "explanation": "In a static fluid, pressure at a point is isotropic—acts equally in all directions.",
+      "steps": ["Static fluids push equally in all directions", "No preferred direction", "This is isotropic pressure", "Choose equally in all directions"],
+      "fastStrategy": "Fluid at rest presses equally in all directions."
+    },
+    {
+      "id": "ps_fp_b1_020",
+      "question": "Atmospheric pressure decreases with altitude because:",
+      "choices": {"A": "Gravity is zero", "B": "There is less air above you", "C": "Temperature always drops", "D": "Air becomes heavier"},
+      "answer": "B",
+      "explanation": "Higher altitude means a shorter column of air above, so weight of overlying air (pressure) is less.",
+      "steps": ["Pressure comes from weight of air column", "Less air overhead at altitude", "So pressure decreases", "Select less air above"],
+      "fastStrategy": "Higher = thinner air column → lower pressure."
+    },
+    {
+      "id": "ps_fp_b1_021",
+      "question": "Which has greater pressure: 10 m of water or 10 m of air?",
+      "choices": {"A": "Same pressure", "B": "Water", "C": "Air", "D": "Neither exerts pressure"},
+      "answer": "B",
+      "explanation": "Water's density is far greater than air's, so ρgh gives much higher pressure for the same height.",
+      "steps": ["Compare densities water vs air", "Water density ~1000 kg/m³ vs air ~1.2 kg/m³", "Same height → water pressure much larger", "Choose water"],
+      "fastStrategy": "Same height: denser fluid (water) exerts far more pressure."
+    },
+    {
+      "id": "ps_fp_b1_022",
+      "question": "Hydraulic brakes work because:",
+      "choices": {"A": "Air compresses easily", "B": "Brake fluid transmits pressure evenly", "C": "Brake fluid is weightless", "D": "Pistons create electricity"},
+      "answer": "B",
+      "explanation": "Brake fluid transmits pressure equally to all calipers via Pascal's principle, converting pedal force to clamping force.",
+      "steps": ["Identify brake fluid role", "Incompressible fluid transmits pressure", "Pascal's principle applies", "Choose pressure transmission"],
+      "fastStrategy": "Brake fluid carries pressure everywhere equally."
+    },
+    {
+      "id": "ps_fp_b1_023",
+      "question": "Which property makes a fluid easier to pump?",
+      "choices": {"A": "High viscosity", "B": "Low viscosity", "C": "High density", "D": "High pressure"},
+      "answer": "B",
+      "explanation": "Low-viscosity fluids flow easily, requiring less force to pump. High viscosity resists flow.",
+      "steps": ["Viscosity measures flow resistance", "Lower viscosity → easier flow", "Density/pressure are separate", "Select low viscosity"],
+      "fastStrategy": "Thinner (low viscosity) fluids pump easier."
+    },
+    {
+      "id": "ps_fp_b1_024",
+      "question": "If fluid density doubles, buoyant force on the same displaced volume will:",
+      "choices": {"A": "Halve", "B": "Stay the same", "C": "Double", "D": "Be zero"},
+      "answer": "C",
+      "explanation": "Buoyant force equals weight of displaced fluid. Doubling density doubles the weight of the same volume of fluid, doubling buoyant force.",
+      "steps": ["Buoyant force = ρfluid × g × V", "ρ doubles → force doubles", "Volume and g constant", "Select double"],
+      "fastStrategy": "Buoyant ∝ fluid density; ρ↑ → buoyant↑."
+    },
+    {
+      "id": "ps_fp_b1_025",
+      "question": "Pascal's principle is key to which everyday tool?",
+      "choices": {"A": "Jackhammer", "B": "Hydraulic car jack", "C": "Vacuum cleaner", "D": "Electric drill"},
+      "answer": "B",
+      "explanation": "A hydraulic car jack uses pressure applied to a small piston to lift heavy loads via a larger piston—an application of Pascal's principle.",
+      "steps": ["Identify Pascal's equal-pressure transmission", "Hydraulic jack multiplies force via fluid", "Other tools use different mechanisms", "Choose hydraulic car jack"],
+      "fastStrategy": "Hydraulic jack = Pascal's principle in action."
+    }
+  ]
+}

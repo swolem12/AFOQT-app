@@ -1,0 +1,203 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "ratio_proportion",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ar_ratprop_a1_001",
+      "question": "A paint mixture uses blue and yellow in a 3:5 ratio. If you want to make a batch with 24 liters of blue paint, how many liters of yellow paint are needed?",
+      "choices": {
+        "A": "30",
+        "B": "35",
+        "C": "40",
+        "D": "45",
+        "E": "50"
+      },
+      "answer": "C",
+      "explanation": "Ratio 3:5 means 3 parts blue to 5 parts yellow. If blue = 24, then 24/3 = 8 (scale factor). Yellow = 5 × 8 = 40.",
+      "steps": [
+        "1. Write the ratio: Blue:Yellow = 3:5.",
+        "2. Find the scale factor: 24 liters ÷ 3 = 8.",
+        "3. Apply to yellow: 5 × 8 = 40 liters.",
+        "4. Trap: Make sure you're scaling the correct part of the ratio."
+      ],
+      "fastStrategy": "If ratio is A:B and one part is X, scale factor = X / A part. Then multiply B part by scale factor."
+    },
+    {
+      "id": "ar_ratprop_a1_002",
+      "question": "A map scale is 1 inch = 50 miles. If two cities are 3.5 inches apart on the map, how many actual miles apart are they?",
+      "choices": {
+        "A": "140",
+        "B": "150",
+        "C": "160",
+        "D": "175",
+        "E": "200"
+      },
+      "answer": "D",
+      "explanation": "Scale: 1 in = 50 mi. Distance: 3.5 in × 50 mi/in = 175 miles.",
+      "steps": [
+        "1. Identify the scale: 1 inch represents 50 miles.",
+        "2. Multiply map distance by scale factor: 3.5 × 50 = 175 miles.",
+        "3. Trap: Scale factor applies uniformly; 3.5 inches = 3.5 × 50 miles."
+      ],
+      "fastStrategy": "Distance on ground = Map distance × Scale factor."
+    },
+    {
+      "id": "ar_ratprop_a1_003",
+      "question": "A recipe for 4 servings calls for 2 cups of flour. How much flour is needed for 10 servings?",
+      "choices": {
+        "A": "3 cups",
+        "B": "4 cups",
+        "C": "5 cups",
+        "D": "6 cups",
+        "E": "8 cups"
+      },
+      "answer": "C",
+      "explanation": "Proportional: 2 cups / 4 servings = x / 10 servings. Cross-multiply: 4x = 20, so x = 5 cups.",
+      "steps": [
+        "1. Set up proportion: 2 cups / 4 servings = x / 10 servings.",
+        "2. Cross-multiply: 2 × 10 = 4 × x → 20 = 4x.",
+        "3. Solve: x = 5 cups.",
+        "4. Trap: Make sure numerators and denominators correspond (cups/servings on both sides)."
+      ],
+      "fastStrategy": "Proportions: a/b = c/d → ad = bc. Solve for the unknown."
+    },
+    {
+      "id": "ar_ratprop_a1_004",
+      "question": "A contractor bids $8 per square foot. How much does a 2,000 square-foot job cost?",
+      "choices": {
+        "A": "$8,000",
+        "B": "$12,000",
+        "C": "$14,000",
+        "D": "$16,000",
+        "E": "$20,000"
+      },
+      "answer": "D",
+      "explanation": "Cost = Rate × Area = $8/sq ft × 2,000 sq ft = $16,000.",
+      "steps": [
+        "1. Identify the rate: $8 per square foot.",
+        "2. Multiply by area: 2,000 sq ft × $8/sq ft = $16,000.",
+        "3. Trap: Make sure to multiply the quantity by the unit rate, not add or use it separately."
+      ],
+      "fastStrategy": "Total Cost = Unit Rate × Quantity."
+    },
+    {
+      "id": "ar_ratprop_a1_005",
+      "question": "A survey shows that 3 out of every 8 employees prefer remote work. In a company of 240 employees, how many prefer remote work?",
+      "choices": {
+        "A": "45",
+        "B": "60",
+        "C": "75",
+        "D": "90",
+        "E": "120"
+      },
+      "answer": "D",
+      "explanation": "Ratio: 3/8 prefer remote. Count: 3/8 × 240 = 3 × 30 = 90 employees.",
+      "steps": [
+        "1. Set up ratio: 3 out of 8 means 3/8.",
+        "2. Multiply by total: (3/8) × 240 = (3 × 240) / 8 = 720 / 8 = 90.",
+        "3. Trap: Apply the ratio as a fraction of the total, not as the total itself."
+      ],
+      "fastStrategy": "If ratio is a:b out of a population P, count = (a/(a+b)) × P or directly use the proportion."
+    },
+    {
+      "id": "ar_ratprop_a1_006",
+      "question": "A car travels 240 miles on 8 gallons of fuel. How many gallons are needed for a 450-mile trip?",
+      "choices": {
+        "A": "12",
+        "B": "15",
+        "C": "18",
+        "D": "20",
+        "E": "24"
+      },
+      "answer": "B",
+      "explanation": "MPG: 240 mi / 8 gal = 30 mi/gal. For 450 miles: 450 / 30 = 15 gallons.",
+      "steps": [
+        "1. Calculate miles per gallon: 240 ÷ 8 = 30 mpg.",
+        "2. Divide trip distance by mpg: 450 ÷ 30 = 15 gallons.",
+        "3. Trap: Convert to unit rate first (miles per gallon), then divide total miles by that rate."
+      ],
+      "fastStrategy": "Unit Rate = Distance / Fuel. Then Fuel Needed = Distance / Unit Rate."
+    },
+    {
+      "id": "ar_ratprop_a1_007",
+      "question": "A 2:3 ratio of boys to girls in a club yields a total of 50 members. How many are girls?",
+      "choices": {
+        "A": "20",
+        "B": "25",
+        "C": "30",
+        "D": "35",
+        "E": "40"
+      },
+      "answer": "C",
+      "explanation": "Boys:Girls = 2:3, so total parts = 2 + 3 = 5. Girls = (3/5) × 50 = 30.",
+      "steps": [
+        "1. Identify ratio parts: 2 parts boys, 3 parts girls, total 5 parts.",
+        "2. Find value per part: 50 ÷ 5 = 10 members per part.",
+        "3. Calculate girls: 3 parts × 10 = 30 girls.",
+        "4. Trap: Add the ratio numbers to get total parts; divide the total population by total parts."
+      ],
+      "fastStrategy": "If ratio is A:B and total is T, then Part A = (A/(A+B)) × T and Part B = (B/(A+B)) × T."
+    },
+    {
+      "id": "ar_ratprop_a1_008",
+      "question": "A recipe uses 3 cups of flour for every 2 eggs. If you have 8 eggs, how much flour do you need?",
+      "choices": {
+        "A": "10 cups",
+        "B": "12 cups",
+        "C": "14 cups",
+        "D": "16 cups",
+        "E": "18 cups"
+      },
+      "answer": "B",
+      "explanation": "Proportion: 3 cups / 2 eggs = x / 8 eggs. Cross-multiply: 2x = 24, so x = 12 cups.",
+      "steps": [
+        "1. Set up proportion: 3/2 = x/8.",
+        "2. Cross-multiply: 3 × 8 = 2 × x → 24 = 2x.",
+        "3. Solve: x = 12 cups.",
+        "4. Trap: Align units correctly: cups with cups, eggs with eggs."
+      ],
+      "fastStrategy": "For every A units of one ingredient, you need B units of another. Scale proportionally."
+    },
+    {
+      "id": "ar_ratprop_a1_009",
+      "question": "An image is enlarged such that its original width of 8 cm becomes 20 cm. If the original height is 12 cm, what is the new height?",
+      "choices": {
+        "A": "25 cm",
+        "B": "28 cm",
+        "C": "30 cm",
+        "D": "32 cm",
+        "E": "35 cm"
+      },
+      "answer": "C",
+      "explanation": "Scale factor: 20 / 8 = 2.5. New height: 12 × 2.5 = 30 cm.",
+      "steps": [
+        "1. Calculate scale factor: New width / Old width = 20 / 8 = 2.5.",
+        "2. Apply to height: 12 × 2.5 = 30 cm.",
+        "3. Trap: Both dimensions scale by the same factor; aspect ratio is preserved."
+      ],
+      "fastStrategy": "Scale Factor = New Dimension / Old Dimension. Apply to all dimensions."
+    },
+    {
+      "id": "ar_ratprop_a1_010",
+      "question": "A batch of concrete is mixed at a 4:2:1 ratio of cement, sand, and gravel (total 280 kg). How much gravel is in the batch?",
+      "choices": {
+        "A": "20 kg",
+        "B": "40 kg",
+        "C": "60 kg",
+        "D": "70 kg",
+        "E": "80 kg"
+      },
+      "answer": "B",
+      "explanation": "Total ratio parts: 4 + 2 + 1 = 7. Gravel is 1 part: (1/7) × 280 = 40 kg.",
+      "steps": [
+        "1. Add ratio parts: 4 + 2 + 1 = 7 total parts.",
+        "2. Gravel is 1 part out of 7.",
+        "3. Calculate: (1/7) × 280 = 40 kg.",
+        "4. Trap: Identify which part of the ratio corresponds to gravel; don't confuse the order."
+      ],
+      "fastStrategy": "For multi-part ratios, add all parts, then calculate each component as (Part / Total Parts) × Total Amount."
+    }
+  ]
+}

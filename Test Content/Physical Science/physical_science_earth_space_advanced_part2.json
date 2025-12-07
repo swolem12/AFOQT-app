@@ -1,0 +1,232 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "earth_space",
+  "difficulty": "advanced",
+  "part": 2,
+  "questions": [
+    {
+      "id": "ps_es_a1_026",
+      "question": "The approximate age of Earth is:",
+      "choices": {"A": "1.4 billion years", "B": "4.6 billion years", "C": "13.8 billion years", "D": "20 billion years"},
+      "answer": "B",
+      "explanation": "Earth formed about 4.54 billion years ago, rounded to 4.6 billion.",
+      "steps": ["Earth age ~4.6 billion years", "Other options are too low/high", "Select 4.6 billion"],
+      "fastStrategy": "Earth age ~4.6 billion years." 
+    },
+    {
+      "id": "ps_es_a1_027",
+      "question": "The process that forms igneous rocks is:",
+      "choices": {"A": "Melting and solidification", "B": "Compaction and cementation", "C": "Metamorphism", "D": "Weathering"},
+      "answer": "A",
+      "explanation": "Igneous rocks form from cooling and solidification of molten rock.",
+      "steps": ["Molten rock cools/solidifies", "Compaction/cementation for sedimentary", "Metamorphism for metamorphic", "Choose melting/solidification"],
+      "fastStrategy": "Igneous: melt, cool, solidify." 
+    },
+    {
+      "id": "ps_es_a1_028",
+      "question": "The most common element in the universe is:",
+      "choices": {"A": "Hydrogen", "B": "Helium", "C": "Oxygen", "D": "Carbon"},
+      "answer": "A",
+      "explanation": "Hydrogen is the most abundant element in the universe (~75%).",
+      "steps": ["Universe: hydrogen dominates", "Helium second", "Oxygen/carbon trace", "Choose hydrogen"],
+      "fastStrategy": "Universe: hydrogen most common." 
+    },
+    {
+      "id": "ps_es_a1_029",
+      "question": "The process by which solid rock is broken down by wind, water, or ice is:",
+      "choices": {"A": "Metamorphism", "B": "Weathering", "C": "Compaction", "D": "Sublimation"},
+      "answer": "B",
+      "explanation": "Weathering breaks down rocks physically/chemically.",
+      "steps": ["Weathering = breakdown by wind/water/ice", "Metamorphism changes by heat/pressure", "Compaction is sedimentary", "Choose weathering"],
+      "fastStrategy": "Weathering = breakdown of rocks." 
+    },
+    {
+      "id": "ps_es_a1_030",
+      "question": "The largest volcano in the solar system is:",
+      "choices": {"A": "Mauna Loa", "B": "Mount Everest", "C": "Olympus Mons", "D": "Vesuvius"},
+      "answer": "C",
+      "explanation": "Olympus Mons (Mars) is the largest known volcano.",
+      "steps": ["Olympus Mons is on Mars", "Mauna Loa is largest on Earth", "Everest is a mountain", "Choose Olympus Mons"],
+      "fastStrategy": "Olympus Mons = largest volcano." 
+    },
+    {
+      "id": "ps_es_a1_031",
+      "question": "The process by which plants convert sunlight into chemical energy is:",
+      "choices": {"A": "Respiration", "B": "Photosynthesis", "C": "Fermentation", "D": "Transpiration"},
+      "answer": "B",
+      "explanation": "Photosynthesis converts sunlight, CO2, and water into glucose and oxygen.",
+      "steps": ["Photosynthesis: sunlight → glucose", "Respiration is energy release", "Fermentation is anaerobic", "Choose photosynthesis"],
+      "fastStrategy": "Photosynthesis: sunlight → chemical energy." 
+    },
+    {
+      "id": "ps_es_a1_032",
+      "question": "The most common type of meteorite is:",
+      "choices": {"A": "Stony", "B": "Iron", "C": "Stony-iron", "D": "Icy"},
+      "answer": "A",
+      "explanation": "Stony meteorites (chondrites) are most common.",
+      "steps": ["Meteorite types: stony, iron, stony-iron", "Stony most common", "Choose stony"],
+      "fastStrategy": "Stony meteorites dominate finds." 
+    },
+    {
+      "id": "ps_es_a1_033",
+      "question": "The process that forms metamorphic rocks is:",
+      "choices": {"A": "Melting", "B": "Cooling", "C": "Heat and pressure", "D": "Compaction"},
+      "answer": "C",
+      "explanation": "Metamorphic rocks form by heat and pressure altering existing rocks.",
+      "steps": ["Heat/pressure change rocks", "Melting/cooling for igneous", "Compaction for sedimentary", "Choose heat/pressure"],
+      "fastStrategy": "Metamorphic: heat/pressure transformation." 
+    },
+    {
+      "id": "ps_es_a1_034",
+      "question": "The most common mineral in Earth's mantle is:",
+      "choices": {"A": "Quartz", "B": "Olivine", "C": "Calcite", "D": "Feldspar"},
+      "answer": "B",
+      "explanation": "Olivine is the dominant mineral in the upper mantle.",
+      "steps": ["Mantle: olivine dominates", "Quartz/calcite/feldspar are crustal", "Choose olivine"],
+      "fastStrategy": "Mantle: olivine main mineral." 
+    },
+    {
+      "id": "ps_es_a1_035",
+      "question": "The process by which water moves from plants to atmosphere is:",
+      "choices": {"A": "Evaporation", "B": "Condensation", "C": "Transpiration", "D": "Precipitation"},
+      "answer": "C",
+      "explanation": "Transpiration is water loss from plants to air.",
+      "steps": ["Transpiration = plant water loss", "Evaporation is from surfaces", "Condensation/precipitation are atmospheric", "Choose transpiration"],
+      "fastStrategy": "Transpiration: plant water to air." 
+    },
+    {
+      "id": "ps_es_a1_036",
+      "question": "The process by which sediment is transported by wind, water, or ice is:",
+      "choices": {"A": "Deposition", "B": "Erosion", "C": "Compaction", "D": "Metamorphism"},
+      "answer": "B",
+      "explanation": "Erosion moves sediment; deposition is settling.",
+      "steps": ["Erosion = movement", "Deposition = settling", "Compaction/metamorphism are rock changes", "Choose erosion"],
+      "fastStrategy": "Erosion = sediment transport." 
+    },
+    {
+      "id": "ps_es_a1_037",
+      "question": "The most common gas in Mars' atmosphere is:",
+      "choices": {"A": "Oxygen", "B": "Carbon dioxide", "C": "Nitrogen", "D": "Argon"},
+      "answer": "B",
+      "explanation": "Mars' atmosphere is ~95% CO2.",
+      "steps": ["Mars: CO2 dominates atmosphere", "O2/N2/Ar are minor", "Choose CO2"],
+      "fastStrategy": "Mars: mostly CO2 atmosphere." 
+    },
+    {
+      "id": "ps_es_a1_038",
+      "question": "The process by which energy from the Sun reaches Earth is:",
+      "choices": {"A": "Conduction", "B": "Convection", "C": "Radiation", "D": "Reflection"},
+      "answer": "C",
+      "explanation": "Solar energy reaches Earth by radiation (electromagnetic waves).",
+      "steps": ["Radiation = EM waves", "Conduction/convection need medium", "Reflection is bouncing", "Choose radiation"],
+      "fastStrategy": "Sun to Earth: radiation." 
+    },
+    {
+      "id": "ps_es_a1_039",
+      "question": "The process by which liquid water turns to ice is:",
+      "choices": {"A": "Evaporation", "B": "Condensation", "C": "Freezing", "D": "Sublimation"},
+      "answer": "C",
+      "explanation": "Freezing is liquid to solid.",
+      "steps": ["Freezing = liquid to solid", "Evaporation = liquid to vapor", "Condensation = vapor to liquid", "Choose freezing"],
+      "fastStrategy": "Freezing = liquid to solid." 
+    },
+    {
+      "id": "ps_es_a1_040",
+      "question": "The most common rock type in Earth's crust by volume is:",
+      "choices": {"A": "Igneous", "B": "Sedimentary", "C": "Metamorphic", "D": "Basalt"},
+      "answer": "A",
+      "explanation": "Igneous rocks (granite, basalt) make up most crust volume.",
+      "steps": ["Crust volume: igneous rocks", "Sedimentary cover surface", "Metamorphic less common", "Choose igneous"],
+      "fastStrategy": "Crust: igneous rocks most by volume." 
+    },
+    {
+      "id": "ps_es_a1_041",
+      "question": "The process by which solid turns directly to gas is:",
+      "choices": {"A": "Evaporation", "B": "Condensation", "C": "Sublimation", "D": "Freezing"},
+      "answer": "C",
+      "explanation": "Sublimation is solid to gas (e.g., dry ice).",
+      "steps": ["Sublimation = solid to gas", "Evaporation = liquid to gas", "Condensation = gas to liquid", "Choose sublimation"],
+      "fastStrategy": "Sublimation = solid to gas." 
+    },
+    {
+      "id": "ps_es_a1_042",
+      "question": "The most common element in Earth's core is:",
+      "choices": {"A": "Oxygen", "B": "Iron", "C": "Nickel", "D": "Silicon"},
+      "answer": "B",
+      "explanation": "Earth's core is mostly iron, with some nickel.",
+      "steps": ["Core: iron dominates", "Nickel is second", "Oxygen/silicon are crustal", "Choose iron"],
+      "fastStrategy": "Core: mostly iron." 
+    },
+    {
+      "id": "ps_es_a1_043",
+      "question": "The process by which water vapor turns directly to ice is:",
+      "choices": {"A": "Condensation", "B": "Freezing", "C": "Deposition", "D": "Sublimation"},
+      "answer": "C",
+      "explanation": "Deposition is gas to solid (e.g., frost).",
+      "steps": ["Deposition = gas to solid", "Sublimation is solid to gas", "Condensation is gas to liquid", "Choose deposition"],
+      "fastStrategy": "Deposition = vapor to solid." 
+    },
+    {
+      "id": "ps_es_a1_044",
+      "question": "The process by which sediment settles out of water is:",
+      "choices": {"A": "Erosion", "B": "Deposition", "C": "Compaction", "D": "Metamorphism"},
+      "answer": "B",
+      "explanation": "Deposition is settling of sediment from water/wind/ice.",
+      "steps": ["Deposition = settling", "Erosion = movement", "Compaction/metamorphism are rock changes", "Choose deposition"],
+      "fastStrategy": "Deposition = sediment settling." 
+    },
+    {
+      "id": "ps_es_a1_045",
+      "question": "The most common element in Earth's atmosphere after nitrogen is:",
+      "choices": {"A": "Oxygen", "B": "Carbon dioxide", "C": "Argon", "D": "Hydrogen"},
+      "answer": "A",
+      "explanation": "Oxygen is ~21% of atmosphere, second to nitrogen.",
+      "steps": ["Atmosphere: N2 78%, O2 21%", "CO2/argon/hydrogen minor", "Choose oxygen"],
+      "fastStrategy": "Atmosphere: oxygen second most common." 
+    },
+    {
+      "id": "ps_es_a1_046",
+      "question": "The process by which liquid water falls from clouds is:",
+      "choices": {"A": "Evaporation", "B": "Condensation", "C": "Precipitation", "D": "Transpiration"},
+      "answer": "C",
+      "explanation": "Precipitation is rain/snow/hail falling from clouds.",
+      "steps": ["Precipitation = falling water", "Evaporation = liquid to vapor", "Condensation = vapor to liquid", "Choose precipitation"],
+      "fastStrategy": "Precipitation = water falling from clouds." 
+    },
+    {
+      "id": "ps_es_a1_047",
+      "question": "The process by which energy is transferred by movement of a fluid is:",
+      "choices": {"A": "Conduction", "B": "Convection", "C": "Radiation", "D": "Reflection"},
+      "answer": "B",
+      "explanation": "Convection is energy transfer by fluid movement.",
+      "steps": ["Convection = fluid movement", "Conduction = direct contact", "Radiation = EM waves", "Choose convection"],
+      "fastStrategy": "Convection = energy by fluid movement." 
+    },
+    {
+      "id": "ps_es_a1_048",
+      "question": "The most common element in the Sun after hydrogen is:",
+      "choices": {"A": "Helium", "B": "Oxygen", "C": "Carbon", "D": "Nitrogen"},
+      "answer": "A",
+      "explanation": "Sun is ~24% helium, second to hydrogen.",
+      "steps": ["Sun: hydrogen first, helium second", "Oxygen/carbon/nitrogen trace", "Choose helium"],
+      "fastStrategy": "Sun: helium second most common." 
+    },
+    {
+      "id": "ps_es_a1_049",
+      "question": "The process by which water moves from Earth's surface to atmosphere is:",
+      "choices": {"A": "Evaporation", "B": "Condensation", "C": "Transpiration", "D": "Precipitation"},
+      "answer": "A",
+      "explanation": "Evaporation is water moving from surface to air.",
+      "steps": ["Evaporation = surface to air", "Transpiration is plant water loss", "Condensation/precipitation are atmospheric", "Choose evaporation"],
+      "fastStrategy": "Evaporation = water to air from surface." 
+    },
+    {
+      "id": "ps_es_a1_050",
+      "question": "The process by which energy is transferred by direct contact is:",
+      "choices": {"A": "Conduction", "B": "Convection", "C": "Radiation", "D": "Reflection"},
+      "answer": "A",
+      "explanation": "Conduction is energy transfer by direct contact.",
+      "steps": ["Conduction = direct contact", "Convection = fluid movement", "Radiation = EM waves", "Choose conduction"],
+      "fastStrategy": "Conduction = energy by contact."}
+  ]
+}

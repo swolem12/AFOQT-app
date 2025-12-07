@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "electricity_magnetism",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+    {
+      "id": "ps_em_b1_026",
+      "question": "What is the SI unit of electric potential (voltage)?",
+      "choices": {"A": "Ampere", "B": "Volt", "C": "Ohm", "D": "Watt"},
+      "answer": "B",
+      "explanation": "Voltage is measured in volts (V). Ampere measures current, ohm measures resistance, watt measures power.",
+      "steps": ["Identify quantity: potential difference", "Unit for potential is volt", "Ampere=current, ohm=resistance, watt=power", "Select volt"],
+      "fastStrategy": "Potential difference → volts (V)."
+    },
+    {
+      "id": "ps_em_b1_027",
+      "question": "What is the SI unit of power in electrical circuits?",
+      "choices": {"A": "Joule", "B": "Watt", "C": "Volt", "D": "Ampere"},
+      "answer": "B",
+      "explanation": "Power is measured in watts (W). Joule is energy, volt is potential, ampere is current.",
+      "steps": ["Match power with watts", "Joule=energy, volt=potential, ampere=current", "Choose watt"],
+      "fastStrategy": "Electrical power → watts (P = IV)."
+    },
+    {
+      "id": "ps_em_b1_028",
+      "question": "What is the unit of electrical energy on utility bills?",
+      "choices": {"A": "Kilowatt-hour", "B": "Volt", "C": "Ampere", "D": "Ohm"},
+      "answer": "A",
+      "explanation": "Utilities charge in kilowatt-hours (kWh), which is power (kW) multiplied by time (hours).",
+      "steps": ["Recall common billing unit", "kWh = kilowatts × hours", "Other units are circuit quantities, not billing", "Select kWh"],
+      "fastStrategy": "Bills use kWh = power × time."
+    },
+    {
+      "id": "ps_em_b1_029",
+      "question": "If a 10 ohm resistor is connected across a 20 V battery, the current is:",
+      "choices": {"A": "0.5 A", "B": "1 A", "C": "2 A", "D": "4 A"},
+      "answer": "C",
+      "explanation": "Using Ohm's law: I = V/R = 20 V / 10 Ω = 2 A.",
+      "steps": ["Write I = V/R", "Substitute 20/10", "Compute 2 A", "Select 2 A"],
+      "fastStrategy": "I = V/R; 20/10 = 2 A."
+    },
+    {
+      "id": "ps_em_b1_030",
+      "question": "A device that opens a circuit when current is too high is a:",
+      "choices": {"A": "Resistor", "B": "Switch", "C": "Fuse", "D": "Transformer"},
+      "answer": "C",
+      "explanation": "A fuse melts or a breaker trips when current exceeds a safe limit, opening the circuit.",
+      "steps": ["Identify overcurrent protection", "Fuse/breaker open the circuit", "Resistor just limits, switch is manual", "Choose fuse"],
+      "fastStrategy": "Overcurrent? Fuse or breaker opens the path."
+    },
+    {
+      "id": "ps_em_b1_031",
+      "question": "The symbol Ω stands for:",
+      "choices": {"A": "Ohm", "B": "Watt", "C": "Volt", "D": "Ampere"},
+      "answer": "A",
+      "explanation": "Ω is the symbol for ohms, the unit of resistance.",
+      "steps": ["Recall Greek omega represents ohm", "Other symbols: V for volts, A for amps, W for watts", "Select ohm"],
+      "fastStrategy": "Omega (Ω) = ohms (resistance)."
+    },
+    {
+      "id": "ps_em_b1_032",
+      "question": "Which material is typically a good electrical conductor?",
+      "choices": {"A": "Rubber", "B": "Glass", "C": "Copper", "D": "Wood"},
+      "answer": "C",
+      "explanation": "Metals like copper conduct electricity well. Rubber, glass, and dry wood are insulators.",
+      "steps": ["Identify metals vs nonmetals", "Copper is a common conductor", "Rubber/glass/wood resist current", "Choose copper"],
+      "fastStrategy": "Metals (copper/aluminum) conduct; rubber/glass insulate."
+    },
+    {
+      "id": "ps_em_b1_033",
+      "question": "Which material is commonly used as an electrical insulator on wires?",
+      "choices": {"A": "Plastic", "B": "Aluminum", "C": "Copper", "D": "Iron"},
+      "answer": "A",
+      "explanation": "Plastic is an insulator and is used to coat wires. Aluminum, copper, and iron are conductors.",
+      "steps": ["Insulators coat conductors", "Plastic jackets prevent contact", "Metals listed are conductors", "Select plastic"],
+      "fastStrategy": "Wire jackets use plastic to insulate."
+    },
+    {
+      "id": "ps_em_b1_034",
+      "question": "If resistance in a circuit increases while voltage stays the same, current will:",
+      "choices": {"A": "Increase", "B": "Stay the same", "C": "Decrease", "D": "Reverse"},
+      "answer": "C",
+      "explanation": "From I = V/R, if R increases and V is constant, current decreases.",
+      "steps": ["Use I = V/R", "Higher R lowers I", "No reversal with DC", "Select decrease"],
+      "fastStrategy": "Increase R → lower current (with fixed V)."
+    },
+    {
+      "id": "ps_em_b1_035",
+      "question": "In a parallel circuit, the voltage across each branch is:",
+      "choices": {"A": "Zero", "B": "Different for each branch", "C": "The same as the source", "D": "Twice the source"},
+      "answer": "C",
+      "explanation": "Parallel branches all share the same voltage as the source. Currents may differ, but voltage is equal across branches.",
+      "steps": ["Parallel rule: same voltage across branches", "Source voltage appears on each branch", "Currents split but voltage equal", "Select same as source"],
+      "fastStrategy": "Parallel → equal voltage on every branch."
+    },
+    {
+      "id": "ps_em_b1_036",
+      "question": "In a series circuit, the total voltage is:",
+      "choices": {"A": "The same across each component", "B": "Split (sum of drops equals source)", "C": "Zero", "D": "Twice the source"},
+      "answer": "B",
+      "explanation": "In series, voltage divides among components; the sum of all voltage drops equals the source voltage.",
+      "steps": ["Series rule: voltages add", "Drops across each element sum to source", "Not equal across each unless identical and specific", "Choose split/sum equals source"],
+      "fastStrategy": "Series: voltage splits; drops add to source."
+    },
+    {
+      "id": "ps_em_b1_037",
+      "question": "The magnetic force between two magnets is strongest when they are:",
+      "choices": {"A": "Far apart", "B": "Close together", "C": "At right angles", "D": "Wrapped in plastic"},
+      "answer": "B",
+      "explanation": "Magnetic force increases as magnets get closer. Distance weakens the field interaction.",
+      "steps": ["Recall inverse relation with distance", "Closer → stronger field interaction", "Angles/wrapping do not strengthen force", "Choose close together"],
+      "fastStrategy": "Magnets closer = stronger force."
+    },
+    {
+      "id": "ps_em_b1_038",
+      "question": "Static electricity often builds up when:",
+      "choices": {"A": "Charges flow freely", "B": "Materials are rubbed together", "C": "Circuits are closed", "D": "Batteries are connected"},
+      "answer": "B",
+      "explanation": "Rubbing transfers electrons between materials, creating a charge buildup (static electricity).",
+      "steps": ["Identify cause of charge buildup", "Friction moves electrons", "Closed circuits relate to current, not static", "Select rubbing materials"],
+      "fastStrategy": "Friction (rubbing) → electron transfer → static charge."
+    },
+    {
+      "id": "ps_em_b1_039",
+      "question": "The device that stores electric charge in a circuit is a:",
+      "choices": {"A": "Resistor", "B": "Capacitor", "C": "Inductor", "D": "Transformer"},
+      "answer": "B",
+      "explanation": "A capacitor stores charge on two plates separated by an insulator. Resistors oppose current; inductors store energy in magnetic fields; transformers change voltage.",
+      "steps": ["Identify storage of charge", "Capacitor holds charge across plates", "Other components have different roles", "Choose capacitor"],
+      "fastStrategy": "Need to store charge briefly? Use a capacitor."
+    },
+    {
+      "id": "ps_em_b1_040",
+      "question": "What happens to the brightness of identical bulbs in series if you add another identical bulb?",
+      "choices": {"A": "They all get brighter", "B": "They all get dimmer", "C": "No change", "D": "Only the new bulb lights"},
+      "answer": "B",
+      "explanation": "Adding a bulb in series increases total resistance and reduces current, making all bulbs dimmer.",
+      "steps": ["Series adds resistance", "Higher resistance lowers current", "Less current → dimmer bulbs", "Select all get dimmer"],
+      "fastStrategy": "More series bulbs → higher R → dimmer."
+    },
+    {
+      "id": "ps_em_b1_041",
+      "question": "What happens to identical bulbs in parallel if you add another identical branch?",
+      "choices": {"A": "Existing bulbs go out", "B": "Existing bulbs get dimmer", "C": "Existing bulbs stay the same brightness", "D": "Voltage drops to zero"},
+      "answer": "C",
+      "explanation": "Parallel branches each see the source voltage; adding a branch does not reduce voltage across existing bulbs, so their brightness stays about the same (assuming source can supply).",
+      "steps": ["Parallel keeps same voltage per branch", "Adding branch lowers total R but not branch voltage", "Existing brightness unchanged", "Choose stay the same"],
+      "fastStrategy": "Parallel branches don't steal voltage; existing bulbs stay lit the same."
+    },
+    {
+      "id": "ps_em_b1_042",
+      "question": "The magnetic field around a bar magnet exits from the:",
+      "choices": {"A": "South pole and returns to south", "B": "North pole and returns to north", "C": "North pole and returns to south", "D": "Center only"},
+      "answer": "C",
+      "explanation": "Outside the magnet, field lines emerge from the north pole and enter the south pole, completing the loop inside the magnet.",
+      "steps": ["Recall field line convention", "Outside: north → south", "Inside: south → north", "Choose north to south"],
+      "fastStrategy": "Magnet field lines go N to S outside, loop back inside."
+    },
+    {
+      "id": "ps_em_b1_043",
+      "question": "A transformer primarily changes:",
+      "choices": {"A": "Current into heat", "B": "Voltage levels", "C": "Magnetic poles", "D": "Mechanical energy"},
+      "answer": "B",
+      "explanation": "Transformers use coils and magnetic coupling to step voltage up or down in AC circuits.",
+      "steps": ["Identify transformer function", "It steps voltage up or down", "Not heat or mechanical conversion", "Select voltage levels"],
+      "fastStrategy": "Transformer = voltage changer (AC)."
+    },
+    {
+      "id": "ps_em_b1_044",
+      "question": "The relationship P = IV gives electrical:",
+      "choices": {"A": "Energy", "B": "Power", "C": "Resistance", "D": "Charge"},
+      "answer": "B",
+      "explanation": "P = IV defines electrical power: power equals current times voltage.",
+      "steps": ["Recall formula P = IV", "Power is rate of energy use", "Other quantities use different formulas", "Choose power"],
+      "fastStrategy": "Power in circuits = current × voltage."
+    },
+    {
+      "id": "ps_em_b1_045",
+      "question": "If a resistor has 5 A through it and 10 V across it, its resistance is:",
+      "choices": {"A": "0.5 Ω", "B": "2 Ω", "C": "5 Ω", "D": "10 Ω"},
+      "answer": "B",
+      "explanation": "From Ohm's law R = V/I = 10/5 = 2 ohms.",
+      "steps": ["Use R = V/I", "Plug 10 V and 5 A", "Compute 2 Ω", "Choose 2 Ω"],
+      "fastStrategy": "R = V/I; 10/5 = 2 Ω."
+    },
+    {
+      "id": "ps_em_b1_046",
+      "question": "Electric field lines point in the direction a positive test charge would be:",
+      "choices": {"A": "Pushed", "B": "Pulled", "C": "Unaffected", "D": "Stopped"},
+      "answer": "B",
+      "explanation": "Field lines indicate the force direction on a positive test charge. Positive charges would be pulled (pushed) along the arrows away from positive and toward negative charges.",
+      "steps": ["Field lines show force on + test charge", "Positive charges move along arrows", "Direction is away from +, toward -", "Select pulled along lines"],
+      "fastStrategy": "Field arrows show force on a + test charge."
+    },
+    {
+      "id": "ps_em_b1_047",
+      "question": "An electromagnet becomes stronger when you:",
+      "choices": {"A": "Use fewer coil turns", "B": "Increase current through the coil", "C": "Remove the iron core", "D": "Lower the voltage to zero"},
+      "answer": "B",
+      "explanation": "Increasing current or adding more turns strengthens the magnetic field. Removing the core weakens it; zero voltage stops current.",
+      "steps": ["Electromagnet strength ∝ current and turns", "Higher current = stronger field", "Core removal weakens", "Choose increase current"],
+      "fastStrategy": "More current/turns → stronger electromagnet."
+    },
+    {
+      "id": "ps_em_b1_048",
+      "question": "Which circuit quantity is measured in amperes?",
+      "choices": {"A": "Voltage", "B": "Current", "C": "Resistance", "D": "Energy"},
+      "answer": "B",
+      "explanation": "Amperes measure electric current. Voltage in volts, resistance in ohms, energy in joules.",
+      "steps": ["Match ampere to current", "Other units: V, Ω, J", "Choose current"],
+      "fastStrategy": "Amps = current."
+    },
+    {
+      "id": "ps_em_b1_049",
+      "question": "Electric charge can be:",
+      "choices": {"A": "Only positive", "B": "Only negative", "C": "Positive or negative", "D": "Only neutral"},
+      "answer": "C",
+      "explanation": "Charge exists in two types: positive and negative. Neutral means balanced charges, not a type of charge.",
+      "steps": ["Recall two charge types", "Neutral means no net charge", "Select positive or negative"],
+      "fastStrategy": "Charge comes in + and −; neutral = balanced."
+    },
+    {
+      "id": "ps_em_b1_050",
+      "question": "Opposite electric charges will:",
+      "choices": {"A": "Repel", "B": "Attract", "C": "Ignore each other", "D": "Always neutralize"},
+      "answer": "B",
+      "explanation": "Opposite charges attract each other. They do not automatically neutralize unless they come into contact and transfer charge.",
+      "steps": ["Recall charge rule: opposite attract", "Same charges repel", "Neutralization requires contact", "Choose attract"],
+      "fastStrategy": "Opposites attract; likes repel."
+    }
+  ]
+}

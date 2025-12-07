@@ -1,0 +1,194 @@
+{
+  "instructionId": "block_counting_ui_v1",
+  "subjectId": "block_counting",
+  "scope": {
+    "appliesTo": [
+      "Spatial/BlockCounting/questions/block_counting_beginner_part1.json",
+      "Spatial/BlockCounting/questions/block_counting_beginner_part2.json"
+    ],
+    "uiSpecType": "block_stack_iso",
+    "purpose": "Define how to render AFOQT-style 3D block-counting figures using a CSS-based isometric cube grid so players can quickly understand and count stacked blocks."
+  },
+  "uiSpecContract": {
+    "description": "All block-counting questions will define their figure using a grid of stacked cubes, rendered in an isometric style.",
+    "schema": {
+      "type": "object",
+      "required": ["type", "width", "height", "grid", "stacks"],
+      "properties": {
+        "type": {
+          "const": "block_stack_iso"
+        },
+        "width": {
+          "type": "number",
+          "description": "Suggested pixel width for the rendering container (e.g., 320–420)."
+        },
+        "height": {
+          "type": "number",
+          "description": "Suggested pixel height for the rendering container."
+        },
+        "grid": {
+          "type": "object",
+          "required": ["cols", "rows"],
+          "properties": {
+            "cols": {
+              "type": "number",
+              "description": "Number of columns (X direction, left → right)."
+            },
+            "rows": {
+              "type": "number",
+              "description": "Number of rows (Y/depth direction, front → back)."
+            }
+          }
+        },
+        "stacks": {
+          "type": "array",
+          "description": "Each entry describes a single vertical stack of cubes.",
+          "items": {
+            "type": "object",
+            "required": ["col", "row", "height"],
+            "properties": {
+              "col": {
+                "type": "number",
+                "description": "Column index (0-based), increasing left to right."
+              },
+              "row": {
+                "type": "number",
+                "description": "Row index (0-based), increasing front to back."
+              },
+              "height": {
+                "type": "number",
+                "description": "Number of cubes stacked in this position. 0 = empty column."
+              }
+            }
+          }
+        }
+      }
+    },
+    "logicMapping": {
+      "coordinateSystem": [
+        "col = X-axis on the floor, left to right.",
+        "row = Y/depth axis on the floor, front (0) to back (rows - 1).",
+        "height = Z-axis, number of cubes stacked upward at that floor position."
+      ],
+      "visualAssumption": "Every cube in a stack physically rests on top of the previous one. There are no unsupported floating cubes. Hidden cubes under visible ones still count toward height."
+    },
+    "example": {
+      "type": "block_stack_iso",
+      "width": 340,
+      "height": 340,
+      "grid": {
+        "cols": 3,
+        "rows": 2
+      },
+      "stacks": [
+        { "col": 0, "row": 0, "height": 1 },
+        { "col": 1, "row": 0, "height": 2 },
+        { "col": 2, "row": 0, "height": 1 },
+        { "col": 0, "row": 1, "height": 1 },
+        { "col": 1, "row": 1, "height": 1 },
+        { "col": 2, "row": 1, "height": 2 }
+      ]
+    }
+  },
+  "renderingStructure": {
+    "description": "Recommended HTML structure and class layout for rendering the block stacks.",
+    "domStructure": [
+      "<div class=\"bc-scene\">",
+      "  <div class=\"bc-legend\">",
+      "    <div class=\"bc-legend-line\">Each column is a stack of cubes.</div>",
+      "    <div class=\"bc-legend-line\">Front rows are at the bottom, back rows are drawn higher.</div>",
+      "  </div>",
+      "  <div class=\"bc-grid\">",
+      "    <!-- For each stack in uiSpec.stacks -->",
+      "    <div class=\"bc-column bc-column-col{col}-row{row}\">",
+      "      <!-- For h in 0..height-1 -->",
+      "      <div class=\"bc-cube bc-cube-level{h}\"></div>",
+      "    </div>",
+      "  </div>",
+      "</div>"
+    ],
+    "layoutLogic": {
+      "scene": "bc-scene is the main container, sized by uiSpec.width/height.",
+      "grid": "bc-grid uses position: relative; each bc-column is absolutely positioned based on col and row.",
+      "columnOffset": [
+        "X offset per column: col * cubeWidth * 0.7 (approx).",
+        "Y offset per row: row * cubeHeight * -0.5 (move rows ‘up’ visually to simulate depth)."
+      ],
+      "stackOffset": "Inside each bc-column, cubes are stacked upward by negative translateY per level."
+    }
+  },
+  "cssContract": {
+    "description": "Core CSS styles required to render isometric cubes for block counting.",
+    "notes": [
+      "This is a baseline visual; Copilot can theme colors but must preserve geometry.",
+      "Cubes are built from one main element (top) plus ::before and ::after for left and right faces."
+    ],
+    "css": "/* Block Counting – Isometric Scene Container */\n.bc-scene {\n  position: relative;\n  display: inline-flex;\n  flex-direction: column;\n  gap: 0.5rem;\n  padding: 0.75rem;\n  border-radius: 0.75rem;\n  background: radial-gradient(circle at top, #1f2933 0%, #020617 60%);\n  border: 1px solid #334155;\n  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.8);\n}\n\n.bc-legend {\n  font-size: 11px;\n  line-height: 1.3;\n  color: #cbd5f5;\n}\n\n.bc-legend-line {\n  opacity: 0.85;\n}\n\n/* Grid for cube columns */\n.bc-grid {\n  position: relative;\n  width: 100%;\n  height: 220px;\n  overflow: visible;\n}\n\n/* One floor column of cubes */\n.bc-column {\n  position: absolute;\n  transform-origin: bottom center;\n}\n\n/* Single cube (top face is the element itself) */\n.bc-cube {\n  position: absolute;\n  width: 40px;\n  height: 23px; /* top face height in isometric view */\n  background: linear-gradient(135deg, #22c55e, #4ade80);\n  transform: skewY(-30deg) skewX(-45deg);\n  box-shadow: 0 6px 10px rgba(15, 23, 42, 0.9);\n}\n\n/* Left face */\n.bc-cube::before {\n  content: \"\";\n  position: absolute;\n  top: 100%;\n  left: 0;\n  width: 40px;\n  height: 30px;\n  background: linear-gradient(180deg, #15803d, #052e16);\n  transform-origin: top left;\n  transform: skewY(30deg);\n}\n\n/* Right face */\n.bc-cube::after {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 100%;\n  width: 40px;\n  height: 30px;\n  background: linear-gradient(180deg, #16a34a, #052e16);\n  transform-origin: top left;\n  transform: skewX(45deg);\n}\n\n/* Level offset – higher levels stack upward */\n.bc-cube[class*=\"bc-cube-level\"] {\n  /* baseline Y (bottom level) will be set from the column itself */\n}\n\n/* Example vertical offsets (Copilot can compute exact translateY per level) */\n.bc-cube-level0 { transform: translateY(0) skewY(-30deg) skewX(-45deg); }\n.bc-cube-level1 { transform: translateY(-22px) skewY(-30deg) skewX(-45deg); }\n.bc-cube-level2 { transform: translateY(-44px) skewY(-30deg) skewX(-45deg); }\n.bc-cube-level3 { transform: translateY(-66px) skewY(-30deg) skewX(-45deg); }\n\n/* Column position helpers (Copilot should generate inline styles or extra classes) */\n/* Horizontal spacing by col index, vertical depth by row index */\n/* Example for a 3x2 grid: */\n.bc-column-col0-row0 { left: 80px; bottom: 40px; }\n.bc-column-col1-row0 { left: 110px; bottom: 52px; }\n.bc-column-col2-row0 { left: 140px; bottom: 64px; }\n.bc-column-col0-row1 { left: 70px; bottom: 70px; }\n.bc-column-col1-row1 { left: 100px; bottom: 82px; }\n.bc-column-col2-row1 { left: 130px; bottom: 94px; }\n\n/* In production, compute left/bottom from col/row instead of hardcoding. */\n"
+  },
+  "frontendMapping": {
+    "description": "How a React (or similar) renderer should consume uiSpec and apply CSS.",
+    "pseudoCode": [
+      "function BlockStackIso({ uiSpec }) {",
+      "  const { grid, stacks } = uiSpec;",
+      "  return (",
+      "    <div className=\"bc-scene\" style={{ width: uiSpec.width, height: uiSpec.height }}>",
+      "      <div className=\"bc-legend\">",
+      "        <div className=\"bc-legend-line\">Each column is a stack of cubes.</div>",
+      "        <div className=\"bc-legend-line\">Front rows are at the bottom, back rows are higher.</div>",
+      "      </div>",
+      "      <div className=\"bc-grid\">",
+      "        {stacks.map((stack, index) => {",
+      "          const { col, row, height } = stack;",
+      "          const columnStyle = computeColumnPosition(col, row); // left/bottom offsets",
+      "          return (",
+      "            <div",
+      "              key={index}",
+      "              className={`bc-column bc-column-col${col}-row${row}`}",
+      "              style={columnStyle}",
+      "            >",
+      "              {Array.from({ length: height }).map((_, level) => (",
+      "                <div",
+      "                  key={level}",
+      "                  className={`bc-cube bc-cube-level${level}`}",
+      "                />",
+      "              ))}",
+      "            </div>",
+      "          );",
+      "        })}",
+      "      </div>",
+      "    </div>",
+      "  );",
+      "}"
+    ],
+    "positioningFunction": {
+      "name": "computeColumnPosition",
+      "description": "Given (col, row), compute left/bottom offsets so deeper rows sit visually higher and slightly to the right.",
+      "pseudoCode": [
+        "function computeColumnPosition(col, row) {",
+        "  const baseLeft = 80; // tune per layout",
+        "  const baseBottom = 40;",
+        "  const colStepX = 30;  // horizontal shift per col",
+        "  const rowStepX = -10; // slight backward slant",
+        "  const rowStepY = 22;  // move back rows up",
+        "  return {",
+        "    left: baseLeft + col * colStepX + row * rowStepX,",
+        "    bottom: baseBottom + row * rowStepY",
+        "  };",
+        "}"
+      ]
+    }
+  },
+  "afoqtAlignmentNotes": [
+    "1. Figures must be simple, clean isometric stacks that can be mentally converted into column heights.",
+    "2. Avoid visual noise: no textures, no perspective distortion beyond simple isometric tilt.",
+    "3. Maintain enough contrast so individual cubes and levels are easily distinguishable under time pressure.",
+    "4. All hidden supporting cubes must be counted in the height field, matching how AFOQT expects candidates to infer hidden blocks.",
+    "5. Use consistent lighting and orientation across all block-counting questions to reduce irrelevant difficulty."
+  ],
+  "acceptanceCriteria": [
+    "All block_counting uiSpec entries use type = 'block_stack_iso' and define grid + stacks.",
+    "The rendering layer uses the CSS contract here (or a direct derivative) to draw isometric cubes.",
+    "Players can clearly see how many cubes are in each stack and can mentally map the 3D figure to a table of column heights.",
+    "No question relies on ambiguous shapes; every cube is visually distinct and countable."
+  ]
+}

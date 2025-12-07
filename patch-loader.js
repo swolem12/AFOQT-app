@@ -40,6 +40,9 @@ let patch21Config = null;
 // Patch 22 configuration (Table Reading)
 let patch22Config = null;
 
+// Patch: Block Counting (uiSpec-based stacks)
+let patchBlockCountingConfig = null;
+
 async function loadPatch19Config() {
     try {
         const response = await fetch('./Test Content/Arithmetic/Patch_19.json');
@@ -100,6 +103,23 @@ async function loadPatch22Config() {
         return patch22Config;
     } catch (error) {
         console.error('Failed to load Patch 22 config:', error);
+        return null;
+    }
+}
+
+// Block Counting loader (no external config yet)
+async function loadBlockCountingConfig() {
+    try {
+        const response = await fetch('./Test Content/Block Counting/patch_22_block_counting_ui_integration.json');
+        if (!response.ok) {
+            console.warn('Block Counting config not found');
+            return null;
+        }
+        patchBlockCountingConfig = await response.json();
+        console.log('✓ Block Counting config loaded');
+        return patchBlockCountingConfig;
+    } catch (error) {
+        console.error('Failed to load Block Counting config:', error);
         return null;
     }
 }
@@ -264,6 +284,20 @@ async function loadTableReadingFile(filename) {
         return await response.json();
     } catch (error) {
         console.warn('Failed to load table reading file', filename, error);
+        return null;
+    }
+}
+
+async function loadBlockCountingFile(filename) {
+    try {
+        const url = `./Test Content/Block Counting/${filename}`;
+        const response = await fetch(url);
+        if (!response.ok) {
+            return null;
+        }
+        return await response.json();
+    } catch (error) {
+        console.warn('Failed to load block counting file', filename, error);
         return null;
     }
 }
@@ -460,17 +494,25 @@ async function loadAllArithmeticContent() {
     }
     console.log('Loading arithmetic reasoning content...');
 
-    // Derive file list by scanning known subtopics/difficulties; allow parts 1..5
-    const subtopics = patch19Config.arithmeticContent.fileNamingConvention.subtopicIdExamples;
-    const difficulties = patch19Config.arithmeticContent.fileNamingConvention.difficultyLevels;
-    const files = [];
-    for (const s of subtopics) {
-        for (const d of difficulties) {
-            for (let part = 1; part <= 5; part++) {
-                files.push(`${s}_${d}_part${part}.json`);
-            }
-        }
-    }
+    // Use explicit file list based on current repo contents (beginner parts 1-2)
+    const files = [
+        'arithmetic_basic_arithmetic_beginner_part1.json',
+        'arithmetic_basic_arithmetic_beginner_part2.json',
+        'arithmetic_basic_word_problems_beginner_part1.json',
+        'arithmetic_basic_word_problems_beginner_part2.json',
+        'arithmetic_fractions_decimals_beginner_part1.json',
+        'arithmetic_fractions_decimals_beginner_part2.json',
+        'arithmetic_percent_problems_beginner_part1.json',
+        'arithmetic_percent_problems_beginner_part2.json',
+        'arithmetic_ratio_proportion_beginner_part1.json',
+        'arithmetic_ratio_proportion_beginner_part2.json',
+        'arithmetic_time_rates_work_beginner_part1.json',
+        'arithmetic_time_rates_work_beginner_part2.json',
+        'arithmetic_average_word_problems_beginner_part1.json',
+        'arithmetic_average_word_problems_beginner_part2.json',
+        'arithmetic_algebra_word_problems_beginner_part1.json',
+        'arithmetic_algebra_word_problems_beginner_part2.json'
+    ];
 
     let loadedCount = 0;
     let errorCount = 0;
@@ -481,16 +523,20 @@ async function loadAllArithmeticContent() {
         }
         const parsed = parseFilename(filename);
         if (!parsed) return;
-        const subjectInfo = findSubjectForSubtopicPatch19(parsed.subtopicId);
-        if (!subjectInfo) {
-            console.warn(`No subject mapping (Patch 19) for subtopic: ${parsed.subtopicId}`);
-            return;
+
+        const subjectId = 'arithmetic_reasoning';
+        const subtopicId = parsed.subtopicId.replace(/^arithmetic_/, ''); // normalize
+        const difficulty = parsed.difficulty || 'beginner';
+
+        if (!questionRegistry[subjectId]) questionRegistry[subjectId] = {};
+        if (!questionRegistry[subjectId][subtopicId]) {
+            questionRegistry[subjectId][subtopicId] = { beginner: [], advanced: [], expert: [] };
         }
-        if (!questionRegistry[subjectInfo.subjectId]) questionRegistry[subjectInfo.subjectId] = {};
-        if (!questionRegistry[subjectInfo.subjectId][parsed.subtopicId]) {
-            questionRegistry[subjectInfo.subjectId][parsed.subtopicId] = { beginner: [], advanced: [], expert: [] };
+        if (!questionRegistry[subjectId][subtopicId][difficulty]) {
+            questionRegistry[subjectId][subtopicId][difficulty] = [];
         }
-        questionRegistry[subjectInfo.subjectId][parsed.subtopicId][parsed.difficulty].push(...data.questions);
+
+        questionRegistry[subjectId][subtopicId][difficulty].push(...data.questions);
         loadedCount++;
     });
 
@@ -663,6 +709,50 @@ async function loadAllTableReadingContent() {
     await Promise.all(loadPromises);
     console.log(`✓ Loaded ${loadedCount} table reading files`);
     console.log('Table Reading question registry:', questionRegistry.table_reading);
+    return questionRegistry;
+}
+
+async function loadAllBlockCountingContent() {
+    // Block Counting content does not yet rely on a config file; load whatever exists
+    console.log('Loading block counting content...');
+
+    const difficulties = ['beginner', 'advanced', 'expert'];
+    const maxParts = 5;
+    const files = [];
+    for (const d of difficulties) {
+        for (let part = 1; part <= maxParts; part++) {
+            files.push(`block_counting_${d}_part${part}.json`);
+        }
+    }
+
+    let loadedCount = 0;
+    const loadPromises = files.map(async (filename) => {
+        const data = await loadBlockCountingFile(filename);
+        if (!data || !data.questions) {
+            return; // skip missing files silently
+        }
+
+        const subjectId = data.subjectId || 'block_counting';
+        const subtopicId = data.subtopicId || 'stacked_cubes';
+        const difficulty = data.difficulty || 'beginner';
+
+        if (!questionRegistry[subjectId]) {
+            questionRegistry[subjectId] = {};
+        }
+        if (!questionRegistry[subjectId][subtopicId]) {
+            questionRegistry[subjectId][subtopicId] = { beginner: [], advanced: [], expert: [] };
+        }
+        if (!questionRegistry[subjectId][subtopicId][difficulty]) {
+            questionRegistry[subjectId][subtopicId][difficulty] = [];
+        }
+
+        questionRegistry[subjectId][subtopicId][difficulty].push(...data.questions);
+        loadedCount++;
+    });
+
+    await Promise.all(loadPromises);
+    console.log(`✓ Loaded ${loadedCount} block counting files`);
+    console.log('Block Counting question registry:', questionRegistry.block_counting);
     return questionRegistry;
 }
 
@@ -861,7 +951,17 @@ function createAfoqtPracticeTestTopics() {
     // Add Patch 19 (Arithmetic) practice tests if available
     if (patch19Config && patch19Config.afoqtPracticeTests) {
         for (const testConfig of patch19Config.afoqtPracticeTests.subjectConfigs) {
-            practiceTests.push(createPracticeTestTopic(testConfig));
+            // Normalize arithmetic subtopic IDs to match loaded registry keys (strip suffixes and prefixes)
+            const normalizedSubtopics = (testConfig.questionSelectionPolicy.subtopicsIncluded || []).map(id =>
+                id.replace(/_word_problems$/, '').replace(/^arithmetic_/, '')
+            );
+            practiceTests.push(createPracticeTestTopic({
+                ...testConfig,
+                questionSelectionPolicy: {
+                    ...testConfig.questionSelectionPolicy,
+                    subtopicsIncluded: normalizedSubtopics
+                }
+            }));
         }
     }
 
@@ -979,6 +1079,10 @@ async function initializePatch18() {
     if (patch22Config) {
         await loadAllTableReadingContent();
     }
+
+    // Load Block Counting config (optional) and content
+    await loadBlockCountingConfig();
+    await loadAllBlockCountingContent();
     
     console.log('✓ Patch 18 initialized');
     return true;
@@ -997,6 +1101,8 @@ if (typeof module !== 'undefined' && module.exports) {
         loadAllInstrumentComprehensionContent,
         loadPatch22Config,
         loadAllTableReadingContent,
+        loadBlockCountingConfig,
+        loadAllBlockCountingContent,
         questionRegistry
     };
 }

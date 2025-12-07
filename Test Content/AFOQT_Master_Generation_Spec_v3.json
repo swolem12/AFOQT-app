@@ -1,0 +1,508 @@
+{
+  "fileId": "AFOQT_Master_Generation_Spec_v3",
+  "purpose": "Single-source specification that teaches GitHub Copilot how to generate new AFOQT-style questions, explanations, UI, and Learn content for all subtests: Arithmetic Reasoning, Math Knowledge, Reading Comprehension, Block Counting, Instrument Comprehension, Table Reading, Aviation Information, Physical Science, Situational Judgment, Vocabulary, and Spatial/Orientation-style items. This file is self-contained and assumes no prior data.",
+  
+  "globalExamStructure": {
+    "subtests": [
+      "arithmetic_reasoning",
+      "math_knowledge",
+      "reading_comprehension",
+      "table_reading",
+      "instrument_comprehension",
+      "block_counting",
+      "aviation_information",
+      "physical_science",
+      "vocabulary",
+      "situational_judgment",
+      "spatial_orientation"
+    ],
+    "difficultyLevels": ["beginner", "advanced", "expert"],
+    "questionsPerDifficultyDefault": 50,
+    "passageQuestionsDefault": 5,
+    "partsRule": {
+      "description": "For any topic that has 50 items per difficulty:",
+      "part1": "questions 1–25",
+      "part2": "questions 26–50"
+    },
+    "styleRequirement": "All content must resemble professional, neutral, military-standard test questions, similar in tone and structure to AFOQT-style prep, with plausible distractors and no slang."
+  },
+
+  "namingConventions": {
+    "mathKnowledgeQuestionId": "mkAbbrev_d(p)p(q) e.g. fe_b1_001",
+    "arithmeticReasoningQuestionId": "arAbbrev_d(p)p(q) e.g. arpp_b1_015",
+    "readingComprehensionQuestionId": "rc_d_p###_q# e.g. rc_b1_p014_q3",
+    "tableReadingQuestionId": "tr_d_set##_q#",
+    "instrumentComprehensionQuestionId": "ic_d_set##_q#",
+    "blockCountingQuestionId": "bc_d_set##_q#",
+    "aviationInformationQuestionId": "ai_d_###",
+    "physicalScienceQuestionId": "ps_d_###",
+    "vocabularyQuestionId": "vk_d_###",
+    "situationalJudgmentQuestionId": "sj_d_s##_q#",
+    "spatialOrientationQuestionId": "so_d_set##_q#",
+    "fileNames": {
+      "mathKnowledge": "math_knowledge_{topic}_{difficulty}_part{n}.json",
+      "arithmeticReasoning": "arithmetic_reasoning_{topic}_{difficulty}_part{n}.json",
+      "readingComprehension": "reading_comprehension_{difficulty}_passage{n}.json",
+      "tableReading": "table_reading_{difficulty}_set{n}.json",
+      "instrumentComprehension": "instrument_comprehension_{difficulty}_set{n}.json",
+      "blockCounting": "block_counting_{difficulty}_set{n}.json",
+      "aviationInformation": "aviation_information_{difficulty}.json",
+      "physicalScience": "physical_science_{difficulty}.json",
+      "vocabulary": "vocabulary_{difficulty}.json",
+      "situationalJudgment": "situational_judgment_{difficulty}.json",
+      "spatialOrientation": "spatial_orientation_{difficulty}_set{n}.json"
+    }
+  },
+
+  "schemas": {
+    "mathKnowledge": {
+      "subjectId": "math_knowledge",
+      "subtopicId": "string (e.g. slope, fractions)",
+      "difficulty": "beginner | advanced | expert",
+      "part": "1 | 2",
+      "questions": [{
+        "id": "string",
+        "uiSpec": "optional object for visual questions (graphs, polygons, etc.)",
+        "copilotInstruction": "how to render any visuals in HTML/CSS",
+        "question": "question stem text",
+        "choices": {"A": "", "B": "", "C": "", "D": "", "E": "optional"},
+        "answer": "single letter matching choices key",
+        "explanation": "C1-style conceptual explanation of solution",
+        "steps": ["C1 micro-steps for solving"],
+        "fastStrategy": "short, test-speed heuristic"
+      }]
+    },
+
+    "arithmeticReasoning": {
+      "subjectId": "arithmetic_reasoning",
+      "subtopicId": "string (e.g. time_rates_work)",
+      "difficulty": "beginner | advanced | expert",
+      "part": "1 | 2",
+      "questions": [{
+        "id": "string",
+        "uiSpec": "optional (rare)",
+        "copilotInstruction": "render instructions if any table/diagram is needed",
+        "question": "short word problem in clear prose",
+        "choices": {"A": "", "B": "", "C": "", "D": ""},
+        "answer": "A|B|C|D",
+        "explanation": "C1-style reasoning explanation",
+        "steps": ["C1 micro-steps"],
+        "fastStrategy": "shortcut for solving similar AR items quickly"
+      }]
+    },
+
+    "readingComprehension": {
+      "subjectId": "reading_comprehension",
+      "difficulty": "beginner | advanced | expert",
+      "passageId": "rc_d_p###",
+      "passage": "120–180 word informational, neutral passage",
+      "questions": [{
+        "id": "rc_d_p###_q#",
+        "question": "question about the passage",
+        "choices": {"A": "", "B": "", "C": "", "D": ""},
+        "answer": "A|B|C|D",
+        "explanation": "brief C1-style explanation grounded in text",
+        "keywordFocus": "main_idea | detail | inference | vocabulary | purpose | structure",
+        "reasoningSteps": ["C1-style logical reasoning steps referencing passage content"],
+        "fastStrategy": "shortcut reading strategy for this question type"
+      }]
+    },
+
+    "tableReading": {
+      "subjectId": "table_reading",
+      "difficulty": "beginner | advanced | expert",
+      "setId": "tr_d_set##",
+      "tableSpec": {
+        "rows": "number of rows",
+        "columns": "number of columns",
+        "rowLabels": "array of strings or numbers",
+        "columnLabels": "array of strings or numbers",
+        "dataPattern": "description of numeric data pattern in table"
+      },
+      "questions": [{
+        "id": "tr_d_set##_q#",
+        "question": "Which value corresponds to X row and Y column? / Interpret table relations.",
+        "choices": {"A": "", "B": "", "C": "", "D": ""},
+        "answer": "A|B|C|D",
+        "explanation": "C1 explanation of how to find location in table and interpret",
+        "steps": ["Locate row label", "Locate column label", "Read intersection"],
+        "fastStrategy": "row first, then column; finger-trace to intersection."
+      }]
+    },
+
+    "instrumentComprehension": {
+      "subjectId": "instrument_comprehension",
+      "difficulty": "beginner | advanced | expert",
+      "setId": "ic_d_set##",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          "attitude_indicator",
+          "heading_indicator",
+          "climb_descent_indicator"
+        ],
+        "renderHints": "draw simple round dials with indicators and labels; no need for photorealism"
+      },
+      "questions": [{
+        "id": "ic_d_set##_q#",
+        "question": "Based on these instruments, the aircraft is… (e.g., climbing left bank heading north)",
+        "choices": {"A": "", "B": "", "C": "", "D": ""},
+        "answer": "A|B|C|D",
+        "explanation": "C1 explanation describing how to read pitch, bank, and heading from simplified dials.",
+        "steps": ["Read attitude indicator", "Read heading indicator", "Combine for description"],
+        "fastStrategy": "attitude first, heading second, rate-of-climb third."
+      }]
+    },
+
+    "blockCounting": {
+      "subjectId": "block_counting",
+      "difficulty": "beginner | advanced | expert",
+      "setId": "bc_d_set##",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": ["front", "side", "top"],
+        "blockLayoutDescription": "textual description of visible stacks, hidden blocks, and layers"
+      },
+      "questions": [{
+        "id": "bc_d_set##_q#",
+        "question": "How many blocks are in the figure?",
+        "choices": {"A": "", "B": "", "C": "", "D": ""},
+        "answer": "A|B|C|D",
+        "explanation": "C1 explanation describing visible stacks, counting layers, and inferring hidden blocks.",
+        "steps": ["Identify visible columns", "Count heights", "Account for blocks hidden behind others"],
+        "fastStrategy": "Group columns by equal height; multiply instead of counting one-by-one."
+      }]
+    },
+
+    "aviationInformation": {
+      "subjectId": "aviation_information",
+      "difficulty": "beginner | advanced | expert",
+      "questions": [{
+        "id": "ai_d_###",
+        "question": "Multiple-choice conceptual aviation question (principles, aerodynamics, aircraft systems, basic nav).",
+        "choices": {"A": "", "B": "", "C": "", "D": ""},
+        "answer": "A|B|C|D",
+        "explanation": "C1 explanation relating to real aeronautical principle or fact.",
+        "steps": ["Identify concept tested", "Recall correct principle", "Apply it to eliminate distractors"],
+        "fastStrategy": "Align answer with basic physics or standard aviation practice."
+      }]
+    },
+
+    "physicalScience": {
+      "subjectId": "physical_science",
+      "difficulty": "beginner | advanced | expert",
+      "questions": [{
+        "id": "ps_d_###",
+        "question": "Multiple-choice conceptual or numeric physics/chemistry-style question within non-calculus high-school level.",
+        "choices": {"A": "", "B": "", "C": "", "D": ""},
+        "answer": "A|B|C|D",
+        "explanation": "C1 explanation grounded in Newtonian mechanics, basic thermodynamics, electricity, etc.",
+        "steps": ["Identify principle (e.g. F=ma)", "Plug in or reason qualitatively", "Eliminate conflicts"],
+        "fastStrategy": "Identify which law applies first (e.g., Newton’s 2nd, conservation)."
+      }]
+    },
+
+    "vocabulary": {
+      "subjectId": "vocabulary",
+      "difficulty": "beginner | advanced | expert",
+      "questions": [{
+        "id": "vk_d_###",
+        "question": "Select the best synonym (or antonym) for the target word in context.",
+        "stemWord": "target vocabulary word",
+        "contextSentence": "optional sentence for context",
+        "choices": {"A": "", "B": "", "C": "", "D": ""},
+        "answer": "A|B|C|D",
+        "explanation": "C1 explanation of word meaning and why chosen synonym/antonym fits.",
+        "steps": ["Identify word root/meaning", "Check each choice’s meaning", "Match nuance with context"],
+        "fastStrategy": "Ignore unfamiliar flair; match tone and general meaning."
+      }]
+    },
+
+    "situationalJudgment": {
+      "subjectId": "situational_judgment",
+      "difficulty": "beginner | advanced | expert",
+      "scenarioId": "sj_d_s##",
+      "scenarios": [{
+        "id": "sj_d_s##_q#",
+        "scenario": "Short workplace/military scenario involving conflict, ethics, chain of command, teamwork.",
+        "questionType": "single_best | rank_order",
+        "choices": {"A": "", "B": "", "C": "", "D": ""},
+        "answer": "For single_best: one letter. For rank_order: array ranking or best/worst classification.",
+        "explanation": "C1 explanation referencing professionalism, chain of command, integrity, and effective behavior.",
+        "steps": ["Identify core issue (e.g., safety, respect, integrity)", "Apply military/professional norms", "Eliminate overreactive or passive options"],
+        "fastStrategy": "Prefer calm, professional, chain-of-command-respecting, safety-first actions."
+      }]
+    },
+
+    "spatialOrientation": {
+      "subjectId": "spatial_orientation",
+      "difficulty": "beginner | advanced | expert",
+      "setId": "so_d_set##",
+      "uiSpec": {
+        "type": "aircraft_map_orientation",
+        "elements": [
+          "aircraft_icon",
+          "compass_rose",
+          "heading_arrow",
+          "reference_landmarks"
+        ],
+        "renderHints": "Top-down 2D representation; aircraft icon; simple compass; landmarks labeled."
+      },
+      "questions": [{
+        "id": "so_d_set##_q#",
+        "question": "Relative position or heading question (e.g., Where is the aircraft relative to the town?).",
+        "choices": {"A": "", "B": "", "C": "", "D": ""},
+        "answer": "A|B|C|D",
+        "explanation": "C1 explanation using heading, map orientation, and relative direction (N/E/S/W).",
+        "steps": ["Determine orientation of map", "Identify aircraft heading", "Infer relative positions"],
+        "fastStrategy": "Lock north first; then visualize rotation before answering."
+      }]
+    }
+  },
+
+  "difficultyModel": {
+    "beginner": {
+      "description": "Introduce core concepts with small numbers, simpler structures, and obvious patterns.",
+      "logicDepth": "1–2 clean steps.",
+      "readingComplexity": "RC passages 120–150 words; simple vocabulary; direct main idea.",
+      "distractorAggressiveness": "Low; mostly simple arithmetic or conceptual mistakes."
+    },
+    "advanced": {
+      "description": "Use multi-step reasoning, mixed concepts, and more subtle traps.",
+      "logicDepth": "2–4 steps.",
+      "readingComplexity": "RC passages 150–180 words; more inference and subtlety.",
+      "distractorAggressiveness": "Medium; plausible but misapplied concepts."
+    },
+    "expert": {
+      "description": "Simulate hardest AFOQT items with abstraction, layered constraints, and strong trap answers.",
+      "logicDepth": "4+ steps.",
+      "readingComplexity": "RC up to ~180 words; inference, tone, purpose, multi-sentence reasoning.",
+      "distractorAggressiveness": "High; distractors built from real misconception patterns."
+    }
+  },
+
+  "c1TutoringMethod": {
+    "definition": "C1 is the explanation framework for all subtests. It teaches the reasoning process, not just the final answer.",
+    "steps": [
+      "Step 1: Restate what the question is asking in plain language.",
+      "Step 2: Identify the core rule, formula, principle, or professional standard.",
+      "Step 3: Walk through micro-steps with no logical gaps.",
+      "Step 4: Link the final answer directly back to the question requirement.",
+      "Step 5: Briefly highlight why the other options fail or are less appropriate."
+    ],
+    "appliesTo": [
+      "math_knowledge",
+      "arithmetic_reasoning",
+      "reading_comprehension",
+      "table_reading",
+      "instrument_comprehension",
+      "block_counting",
+      "aviation_information",
+      "physical_science",
+      "vocabulary",
+      "situational_judgment",
+      "spatial_orientation"
+    ]
+  },
+
+  "fastStrategyGuidance": {
+    "purpose": "Every question should have a fastStrategy string that gives a realistic, quick test-day heuristic.",
+    "examples": [
+      "Convert percent to decimal before multiplying.",
+      "Check sign and direction before computing slope.",
+      "For RC main idea, ignore details and summarize the whole passage.",
+      "In table reading, find row label first, then column.",
+      "In instrument comprehension, read attitude (pitch/bank) first, then heading.",
+      "In SJ, prioritize safety, integrity, and chain of command."
+    ]
+  },
+
+  "topicMap": {
+    "math_knowledge": {
+      "foundations": [
+        "number_sets",
+        "absolute_value",
+        "factors_and_multiples",
+        "divisibility_rules"
+      ],
+      "operations": [
+        "order_of_operations",
+        "fractions",
+        "decimals",
+        "ratio_and_proportion",
+        "percent_problems",
+        "exponents_and_roots"
+      ],
+      "algebra_and_functions": [
+        "algebra_basics",
+        "evaluating_expressions",
+        "solving_linear_equations",
+        "functions",
+        "function_evaluation"
+      ],
+      "graphs_and_geometry": [
+        "slope",
+        "graphing_linear_functions",
+        "coordinate_geometry",
+        "polygons_and_angles",
+        "circles",
+        "transformations"
+      ],
+      "patterns_and_data": [
+        "sequences",
+        "probability",
+        "statistics"
+      ]
+    },
+
+    "arithmetic_reasoning": {
+      "ratio_and_proportion": [
+        "mixtures",
+        "scale_factor",
+        "recipes",
+        "map_scale"
+      ],
+      "percent_problems": [
+        "discounts",
+        "markups",
+        "sales_tax",
+        "percent_change",
+        "find_part_whole_percent"
+      ],
+      "fractions_and_decimals": [
+        "fraction_of_quantity",
+        "decimal_operations_in_context"
+      ],
+      "time_rates_work": [
+        "speed_distance_time",
+        "combined_work",
+        "catch_up_problems"
+      ],
+      "probability": [
+        "simple_probability_word_problems",
+        "counting_outcomes"
+      ],
+      "algebra": [
+        "translate_words_to_equations",
+        "solve_for_unknown_in_context"
+      ],
+      "averages": [
+        "simple_averages",
+        "weighted_averages",
+        "missing_value_in_average"
+      ],
+      "mixed_word_problems": [
+        "multi_step_multi_topic_AR"
+      ]
+    },
+
+    "reading_comprehension": {
+      "passageDomains": [
+        "science",
+        "technology",
+        "history",
+        "social_science",
+        "policy_neutral_commentary",
+        "environment"
+      ],
+      "difficultyToPassages": {
+        "beginner": "1–20",
+        "advanced": "21–40",
+        "expert": "41–60"
+      }
+    },
+
+    "table_reading": {
+      "subskills": [
+        "locating_values",
+        "comparing_rows",
+        "comparing_columns",
+        "interpreting_trends"
+      ]
+    },
+
+    "instrument_comprehension": {
+      "subskills": [
+        "reading_pitch",
+        "reading_bank",
+        "reading_heading",
+        "combining_instruments_into_aircraft_attitude"
+      ]
+    },
+
+    "block_counting": {
+      "subskills": [
+        "count_visible_stacks",
+        "infer_hidden_blocks",
+        "use_grouping_instead_of_individual_counting"
+      ]
+    },
+
+    "aviation_information": {
+      "subtopics": [
+        "basic_aerodynamics",
+        "aircraft_controls_and_axes",
+        "aircraft_components_and_systems",
+        "basic_navigation_concepts",
+        "helicopter_basics",
+        "flight_instruments_concepts",
+        "flight_operations_and_procedures"
+      ]
+    },
+
+    "physical_science": {
+      "subtopics": [
+        "newtons_laws",
+        "forces_and_motion",
+        "energy_and_work",
+        "simple_machines",
+        "electricity_basics",
+        "magnetism_basics",
+        "waves_and_sound",
+        "basic_thermodynamics"
+      ]
+    },
+
+    "vocabulary": {
+      "subtopics": [
+        "general_service_words",
+        "academic_words",
+        "military_context_words",
+        "prefix_suffix_root_patterns"
+      ]
+    },
+
+    "situational_judgment": {
+      "scenarioThemes": [
+        "chain_of_command",
+        "teamwork_and_collaboration",
+        "ethics_and_integrity",
+        "conflict_resolution",
+        "work_ethic_and_reliability",
+        "respect_and_professionalism"
+      ]
+    },
+
+    "spatial_orientation": {
+      "subskills": [
+        "map_north_lock_in",
+        "relative_positioning",
+        "heading_interpretation",
+        "left_right_relative_to_heading"
+      ]
+    }
+  },
+
+  "learnModeEngine": {
+    "description": "For any subtopic, a Learn mode entry should exist that explains the concept in adult-learner-friendly language before practice questions.",
+    "requiredSections": [
+      "Definition of the concept in plain English.",
+      "Why this concept matters for problem solving or operational reasoning.",
+      "All key formulas, rules, or behavioral norms.",
+      "One or more fully worked examples with C1-style steps.",
+      "Common mistakes or misconceptions.",
+      "A mini fastStrategy that helps recall and apply quickly."
+    ],
+    "teachingStyle": "Use short sentences, real-world analogies, military or everyday examples, and step-by-step build-up. Assume the user may be rusty and anxious, but intelligent."
+  }
+}

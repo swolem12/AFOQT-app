@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "chemistry_basics",
+  "difficulty": "advanced",
+  "part": 2,
+  "questions": [
+    {
+      "id": "ps_cb_a1_026",
+      "question": "Combusting 2.0 mol CH4 produces how many liters of CO2 at STP? (CH4 + 2O2 → CO2 + 2H2O)",
+      "choices": {"A": "22.4 L", "B": "33.6 L", "C": "44.8 L", "D": "67.2 L"},
+      "answer": "C",
+      "explanation": "1 mol CH4 → 1 mol CO2. 2.0 mol gives 2.0 mol CO2. At STP 1 mol gas ≈22.4 L → 2×22.4 ≈ 44.8 L.",
+      "steps": ["Mole ratio 1:1", "CO2 moles = 2.0", "Multiply by 22.4 L/mol", "Get 44.8 L"],
+      "fastStrategy": "Moles ×22.4 L at STP; here 2×22.4." 
+    },
+    {
+      "id": "ps_cb_a1_027",
+      "question": "Heating 100 g of water from 25°C to 55°C (c=4.18 J/g·°C) absorbs what heat?",
+      "choices": {"A": "4.2 kJ", "B": "8.4 kJ", "C": "12.5 kJ", "D": "21.0 kJ"},
+      "answer": "C",
+      "explanation": "q = m c ΔT = 100×4.18×30 ≈ 12,540 J ≈ 12.5 kJ.",
+      "steps": ["Find ΔT = 30", "Multiply 100×4.18×30", "Convert J to kJ", "Get ~12.5 kJ"],
+      "fastStrategy": "4.18 kJ per 100 g per 10°C; triple for 30°C → ~12.5 kJ." 
+    },
+    {
+      "id": "ps_cb_a1_028",
+      "question": "ΔH = −50 kJ, ΔS = −100 J/(mol·K). At 298 K, ΔG is closest to:",
+      "choices": {"A": "−80 kJ", "B": "−20 kJ", "C": "+20 kJ", "D": "+80 kJ"},
+      "answer": "B",
+      "explanation": "Convert ΔS to kJ: −0.100 kJ/K. ΔG = ΔH − TΔS = −50 − 298(−0.1) ≈ −50 + 29.8 ≈ −20.2 kJ.",
+      "steps": ["Convert ΔS to kJ/K", "Multiply by T", "Subtract from ΔH", "Round to −20 kJ"],
+      "fastStrategy": "Negative ΔH plus smaller TΔS term → modest negative ΔG (~−20 kJ)." 
+    },
+    {
+      "id": "ps_cb_a1_029",
+      "question": "For 0.10 M weak acid (Ka = 1.8×10^-5), pH is about:",
+      "choices": {"A": "1.3", "B": "2.9", "C": "4.7", "D": "6.5"},
+      "answer": "B",
+      "explanation": "Approx [H+] ≈ √(Ka·C) = √(1.8×10^-6) ≈ 1.3×10^-3 → pH ≈ 2.9.",
+      "steps": ["Multiply Ka by concentration", "Take square root", "Convert to pH via −log", "Get ~2.9"],
+      "fastStrategy": "Use √(Ka·C); 1.8e-6 → 1.3e-3 → pH ~2.9." 
+    },
+    {
+      "id": "ps_cb_a1_030",
+      "question": "Buffer with pKa 4.76 has pH 4.96. Ratio [base]/[acid] is closest to:",
+      "choices": {"A": "0.40", "B": "1.0", "C": "1.6", "D": "2.5"},
+      "answer": "C",
+      "explanation": "Henderson: pH = pKa + log(base/acid). 4.96 − 4.76 = 0.20 → ratio = antilog(0.20) ≈ 1.58 ≈ 1.6.",
+      "steps": ["Subtract pKa from pH", "Take 10^(0.20)", "Get ~1.58", "Match to 1.6"],
+      "fastStrategy": "0.2 pH unit above pKa → base ~1.6× acid." 
+    },
+    {
+      "id": "ps_cb_a1_031",
+      "question": "Ksp of AgCl is 1.8×10^-10. Its molar solubility in pure water is closest to:",
+      "choices": {"A": "1.3×10^-5 M", "B": "4.2×10^-6 M", "C": "1.3×10^-7 M", "D": "1.8×10^-10 M"},
+      "answer": "A",
+      "explanation": "AgCl ⇌ Ag+ + Cl− with Ksp = s^2. s = √(1.8×10^-10) ≈ 1.34×10^-5 M.",
+      "steps": ["Set s^2 = Ksp", "Take square root", "Compute ~1.3×10^-5", "Choose matching option"],
+      "fastStrategy": "Square root of ~2e-10 ≈ 1.4e-5 M." 
+    },
+    {
+      "id": "ps_cb_a1_032",
+      "question": "For CaF2 (Ksp = 3.9×10^-11), the molar solubility s is closest to:",
+      "choices": {"A": "1.0×10^-3 M", "B": "2.0×10^-4 M", "C": "2.0×10^-5 M", "D": "4.0×10^-6 M"},
+      "answer": "B",
+      "explanation": "CaF2 ⇌ Ca2+ + 2F−. Ksp = 4s^3. s = (Ksp/4)^(1/3) ≈ (9.8×10^-12)^(1/3) ≈ 2.1×10^-4 M.",
+      "steps": ["Divide Ksp by 4", "Take cube root", "Get ~2×10^-4", "Select matching option"],
+      "fastStrategy": "Halve exponent: cube root of ~1e-11 ≈ 2e-4." 
+    },
+    {
+      "id": "ps_cb_a1_033",
+      "question": "A 25.0 mL sample of 0.120 M monoprotic acid needs what volume of 0.100 M NaOH to reach equivalence?",
+      "choices": {"A": "20 mL", "B": "25 mL", "C": "30 mL", "D": "40 mL"},
+      "answer": "C",
+      "explanation": "Moles acid = 0.0250×0.120 = 0.00300 mol. Volume base = 0.00300/0.100 = 0.0300 L = 30.0 mL.",
+      "steps": ["Find acid moles", "Divide by base molarity", "Convert to mL", "Pick 30 mL"],
+      "fastStrategy": "3.0 mmol acid /0.1 M → 30 mL." 
+    },
+    {
+      "id": "ps_cb_a1_034",
+      "question": "Graham's law: If He effuses 3.0 times faster than gas X, molar mass of X is closest to:",
+      "choices": {"A": "4 g/mol", "B": "12 g/mol", "C": "36 g/mol", "D": "72 g/mol"},
+      "answer": "C",
+      "explanation": "Rate ∝ 1/√M. 3 = √(M_X/4) → 9 = M_X/4 → M_X ≈ 36 g/mol.",
+      "steps": ["Set 3 = sqrt(Mx/4)", "Square both sides", "Solve Mx = 36", "Choose 36 g/mol"],
+      "fastStrategy": "Rate ratio squared times He mass: 9×4 = 36 g/mol." 
+    },
+    {
+      "id": "ps_cb_a1_035",
+      "question": "Zn/Cu galvanic cell (Zn|Zn2+ 1M || Cu2+ 1M|Cu). E°cell is:",
+      "choices": {"A": "0.34 V", "B": "0.76 V", "C": "1.10 V", "D": "1.50 V"},
+      "answer": "C",
+      "explanation": "E° = E°cathode − E°anode = +0.34 − (−0.76) = 1.10 V.",
+      "steps": ["Identify anode Zn, cathode Cu", "Subtract potentials", "0.34 − (−0.76)", "Get 1.10 V"],
+      "fastStrategy": "Classic Daniell cell gives 1.10 V." 
+    },
+    {
+      "id": "ps_cb_a1_036",
+      "question": "Passing 0.50 A for 30 min plates how many grams of Cu (n=2, M=63.5 g/mol)?",
+      "choices": {"A": "0.074 g", "B": "0.15 g", "C": "0.30 g", "D": "0.60 g"},
+      "answer": "C",
+      "explanation": "Charge Q = I t = 0.5×1800 = 900 C. Moles e− = 900/96485 ≈ 0.00933. Moles Cu = moles e−/2 ≈ 0.00467. Mass = 0.00467×63.5 ≈ 0.30 g.",
+      "steps": ["Compute charge", "Divide by F for moles e−", "Divide by 2 for Cu moles", "Multiply by molar mass"],
+      "fastStrategy": "Rough: 1000 C ~0.0104 mol e− → half for Cu → 0.0052 mol → ~0.33 g; close to 0.30 g." 
+    },
+    {
+      "id": "ps_cb_a1_037",
+      "question": "A radioisotope has half-life 10 days. What percent remains after 30 days?",
+      "choices": {"A": "6.25%", "B": "12.5%", "C": "25%", "D": "50%"},
+      "answer": "B",
+      "explanation": "30 days is three half-lives. Remaining fraction = (1/2)^3 = 1/8 = 12.5%.",
+      "steps": ["Determine number of half-lives (30/10=3)", "Compute (1/2)^3", "Get 12.5%", "Select 12.5%"],
+      "fastStrategy": "Each half-life halves amount: 100→50→25→12.5." 
+    },
+    {
+      "id": "ps_cb_a1_038",
+      "question": "Freezing point of 1.5 m NaCl in water (i≈2, Kf=1.86°C·kg/mol) is depressed by about:",
+      "choices": {"A": "1.4°C", "B": "2.8°C", "C": "5.6°C", "D": "8.4°C"},
+      "answer": "C",
+      "explanation": "ΔTf = i Kf m ≈ 2×1.86×1.5 ≈ 5.58°C.",
+      "steps": ["Multiply i×Kf×m", "2×1.86×1.5", "Get ≈5.6", "Choose 5.6°C"],
+      "fastStrategy": "Rough: 2×1.9×1.5 ≈ 5.7°C drop." 
+    },
+    {
+      "id": "ps_cb_a1_039",
+      "question": "At 1.0 atm external pressure, a gas expands by 2.5 L. Work (in kJ) done by the gas is:",
+      "choices": {"A": "−0.25 kJ", "B": "0 kJ", "C": "+0.25 kJ", "D": "+2.5 kJ"},
+      "answer": "A",
+      "explanation": "w = −PΔV = −(1.0 atm)(2.5 L) = −2.5 L·atm ≈ −0.253 kJ (1 L·atm ≈ 0.101 kJ).",
+      "steps": ["Apply w = −PΔV", "Compute −2.5 L·atm", "Convert using 0.101 kJ/L·atm", "Get ≈ −0.25 kJ"],
+      "fastStrategy": "2.5 L·atm ≈ 0.25 kJ; sign negative for expansion." 
+    },
+    {
+      "id": "ps_cb_a1_040",
+      "question": "Bond energies (kJ/mol): C–H 413, O=O 498, C=O 799, O–H 463. ΔH for CH4 + 2O2 → CO2 + 2H2O is closest to:",
+      "choices": {"A": "−200 kJ", "B": "−400 kJ", "C": "−800 kJ", "D": "−1200 kJ"},
+      "answer": "C",
+      "explanation": "Break: 4 C–H (4×413=1652) + 2 O=O (996) = 2648 kJ. Form: 2 C=O (1598) + 4 O–H (1852) = 3450 kJ. ΔH ≈ 2648 − 3450 = −802 kJ.",
+      "steps": ["Sum bonds broken", "Sum bonds formed", "Subtract formed from broken", "Get ~−800 kJ"],
+      "fastStrategy": "Forming CO2/H2O releases ~800 kJ per mole CH4 (familiar combustion value)." 
+    },
+    {
+      "id": "ps_cb_a1_041",
+      "question": "For N2O4(g) ⇌ 2NO2(g), Kp = 0.36 at 298 K. If initially P(NO2)=0.60 atm and P(N2O4)=0.10 atm, the system will:",
+      "choices": {"A": "Shift right", "B": "Shift left", "C": "Be at equilibrium", "D": "Have no reaction"},
+      "answer": "B",
+      "explanation": "Q = (0.60^2)/(0.10) = 3.6 > Kp (0.36). Q>K → too much product → shifts left to N2O4.",
+      "steps": ["Compute Q = P_NO2^2 / P_N2O4", "Compare Q (3.6) to K (0.36)", "Q>K → shift left", "Choose left"],
+      "fastStrategy": "Q ten times larger than K → drive back to reactant." 
+    },
+    {
+      "id": "ps_cb_a1_042",
+      "question": "Empirical formula for a compound 40.0% C, 6.7% H, 53.3% O is:",
+      "choices": {"A": "CH2O", "B": "C2H4O2", "C": "C3H6O3", "D": "CHO"},
+      "answer": "A",
+      "explanation": "Assume 100 g: C 40 g (3.33 mol), H 6.7 g (6.7 mol), O 53.3 g (3.33 mol). Divide by smallest (3.33): C 1, H 2, O 1 → CH2O.",
+      "steps": ["Convert % to grams", "Divide by atomic masses", "Normalize by smallest", "Get 1:2:1"],
+      "fastStrategy": "3.33:6.7:3.33 → 1:2:1 → CH2O." 
+    },
+    {
+      "id": "ps_cb_a1_043",
+      "question": "Decomposing 25.0 g CaCO3(s) → CaO(s) + CO2(g). Volume of CO2 at STP is closest to:",
+      "choices": {"A": "2.8 L", "B": "5.6 L", "C": "11.2 L", "D": "22.4 L"},
+      "answer": "B",
+      "explanation": "Moles CaCO3 = 25/100 ≈ 0.25 mol. 1:1 gives 0.25 mol CO2. Volume = 0.25×22.4 ≈ 5.6 L.",
+      "steps": ["Calculate moles CaCO3", "Mole ratio 1:1 to CO2", "Multiply by 22.4 L/mol", "Get 5.6 L"],
+      "fastStrategy": "Quarter mole → quarter of 22.4 = 5.6 L." 
+    },
+    {
+      "id": "ps_cb_a1_044",
+      "question": "A 0.10 M weak base (Kb = 1.8×10^-5). Approximate pH is:",
+      "choices": {"A": "2.9", "B": "5.1", "C": "8.0", "D": "11.1"},
+      "answer": "D",
+      "explanation": "[OH−] ≈ √(Kb·C) = √(1.8×10^-6) ≈ 1.3×10^-3 M. pOH ≈ 2.87 → pH ≈ 11.13.",
+      "steps": ["Multiply Kb by concentration", "Square root", "Find pOH from −log", "Subtract from 14 to get pH"],
+      "fastStrategy": "Same math as weak acid but gives pH ~11 for base." 
+    },
+    {
+      "id": "ps_cb_a1_045",
+      "question": "Hybridization of carbon in CO2 is:",
+      "choices": {"A": "sp", "B": "sp2", "C": "sp3", "D": "sp3d"},
+      "answer": "A",
+      "explanation": "CO2 is linear with two regions around C, so carbon is sp hybridized.",
+      "steps": ["Count electron regions around C (2)", "2 regions → sp", "Linear geometry", "Choose sp"],
+      "fastStrategy": "Linear O=C=O → sp carbon." 
+    },
+    {
+      "id": "ps_cb_a1_046",
+      "question": "Which acid is strongest?",
+      "choices": {"A": "HF", "B": "HCl", "C": "H2CO3", "D": "CH3COOH"},
+      "answer": "B",
+      "explanation": "Among listed, HCl is a strong acid (complete dissociation). HF and acetic/carbonic are weak.",
+      "steps": ["Identify strong acids", "HCl is strong", "Others are weak", "Select HCl"],
+      "fastStrategy": "Mineral acid HCl >> HF/acetic/carbonic." 
+    },
+    {
+      "id": "ps_cb_a1_047",
+      "question": "A gas mixture at 760 mmHg contains 25% O2 by moles. Partial pressure of O2 is:",
+      "choices": {"A": "95 mmHg", "B": "150 mmHg", "C": "190 mmHg", "D": "380 mmHg"},
+      "answer": "C",
+      "explanation": "Partial pressure = mole fraction × total = 0.25×760 ≈ 190 mmHg.",
+      "steps": ["Multiply 760 by 0.25", "Get 190", "Select 190 mmHg"],
+      "fastStrategy": "Quarter of 760 ≈ 190 mmHg." 
+    },
+    {
+      "id": "ps_cb_a1_048",
+      "question": "Heat to vaporize 10.0 g water at 100°C (ΔHvap = 2256 J/g) is closest to:",
+      "choices": {"A": "2.3 kJ", "B": "9.0 kJ", "C": "16.0 kJ", "D": "22.6 kJ"},
+      "answer": "D",
+      "explanation": "q = m ΔHvap = 10×2256 = 22,560 J ≈ 22.6 kJ.",
+      "steps": ["Multiply mass by 2256", "Convert to kJ", "Get 22.6", "Choose 22.6 kJ"],
+      "fastStrategy": "2256 J/g ×10 g = 22.6 kJ." 
+    },
+    {
+      "id": "ps_cb_a1_049",
+      "question": "Which species is a strong electrolyte in water?",
+      "choices": {"A": "C6H12O6", "B": "NH3", "C": "Na2SO4", "D": "CH3COOH"},
+      "answer": "C",
+      "explanation": "Na2SO4 is a soluble salt that dissociates completely. Glucose is nonelectrolyte; NH3 and acetic acid are weak electrolytes.",
+      "steps": ["Identify soluble ionic compound", "Na2SO4 fully dissociates", "Others are non/weak", "Pick Na2SO4"],
+      "fastStrategy": "Soluble salts are strong electrolytes; Na2SO4 qualifies." 
+    },
+    {
+      "id": "ps_cb_a1_050",
+      "question": "If gas pressure doubles at constant temperature, its solubility in a liquid (Henry's law) will:",
+      "choices": {"A": "Halve", "B": "Stay the same", "C": "Double", "D": "Quadruple"},
+      "answer": "C",
+      "explanation": "Henry's law: solubility ∝ partial pressure. Doubling pressure doubles solubility (for dilute solutions).",
+      "steps": ["Recognize direct proportionality", "Pressure ×2 → solubility ×2", "Choose double"],
+      "fastStrategy": "Henry: solubility tracks gas pressure linearly." 
+    }
+  ]
+}

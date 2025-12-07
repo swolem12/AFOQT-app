@@ -1,0 +1,144 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "ratio_proportion",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ar_ratprop_e1_001",
+      "question": "A map scale is 1:200,000. Two towns are 7.5 cm apart on the map. What is the actual distance in kilometers?",
+      "choices": {"A": "10 km", "B": "12 km", "C": "13 km", "D": "15 km", "E": "18 km"},
+      "answer": "D",
+      "explanation": "7.5 cm × 200,000 = 1,500,000 cm. Convert to km: 100,000 cm = 1 km → 1,500,000/100,000 = 15 km.",
+      "steps": [
+        "1. Multiply map distance by scale: 7.5 × 200,000 = 1,500,000 cm.",
+        "2. Convert cm to km: divide by 100,000 → 15 km.",
+        "3. Trap: Be careful converting cm to km (100 cm = 1 m; 1000 m = 1 km)."
+      ],
+      "fastStrategy": "7.5 × 2 = 15; append scale exponent (×10^5 cm → /10^5 km)."
+    },
+    {
+      "id": "ar_ratprop_e1_002",
+      "question": "An alloy is mixed in the ratio 3:4:5 (metals A:B:C) totaling 240 kg. How many kg of metal C are used?",
+      "choices": {"A": "60", "B": "72", "C": "80", "D": "96", "E": "100"},
+      "answer": "E",
+      "explanation": "Total parts = 3 + 4 + 5 = 12. Metal C is 5 parts: (5/12) × 240 = 100 kg.",
+      "steps": [
+        "1. Add ratio parts: 12.",
+        "2. Portion for C: 5/12 of 240.",
+        "3. Compute: 240 ÷ 12 = 20; 20 × 5 = 100 kg.",
+        "4. Trap: Divide total by total parts before multiplying."
+      ],
+      "fastStrategy": "Divide total by 12 → 20 per part; C has 5 parts → 100."
+    },
+    {
+      "id": "ar_ratprop_e1_003",
+      "question": "A recipe uses flour and sugar in 2:3 ratio. If sugar is 540 g, how much flour is needed?",
+      "choices": {"A": "320 g", "B": "340 g", "C": "360 g", "D": "380 g", "E": "400 g"},
+      "answer": "C",
+      "explanation": "If sugar (3 parts) is 540 g, one part = 540/3 = 180 g. Flour (2 parts) = 2 × 180 = 360 g.",
+      "steps": [
+        "1. Identify parts: sugar is 3 parts = 540 g.",
+        "2. One part = 540 / 3 = 180 g.",
+        "3. Flour = 2 parts = 360 g.",
+        "4. Trap: Keep part correspondence (flour is the 2-part side)."
+      ],
+      "fastStrategy": "Scale by ratio: Flour = (2/3) × 540."
+    },
+    {
+      "id": "ar_ratprop_e1_004",
+      "question": "Car A drives a route at 60 mph; Car B at 45 mph. How much longer does B take for the same distance if the distance is 180 miles?",
+      "choices": {"A": "0.5 hour", "B": "1.0 hour", "C": "1.5 hours", "D": "2.0 hours", "E": "2.5 hours"},
+      "answer": "B",
+      "explanation": "Time A: 180/60 = 3 h. Time B: 180/45 = 4 h. Difference = 1 hour.",
+      "steps": [
+        "1. Compute time for A: D/V = 180/60 = 3 h.",
+        "2. Compute time for B: 180/45 = 4 h.",
+        "3. Subtract: 4 − 3 = 1 hour more for B.",
+        "4. Trap: Use same distance; avoid averaging speeds."
+      ],
+      "fastStrategy": "Choose an LCM distance (180) to make division clean."
+    },
+    {
+      "id": "ar_ratprop_e1_005",
+      "question": "Mix 20% solution with 50% solution to make 120 L of 30% solution. How many liters of 50% solution are needed?",
+      "choices": {"A": "24", "B": "32", "C": "36", "D": "40", "E": "48"},
+      "answer": "D",
+      "explanation": "Let x = liters of 50%. Then 120 − x of 20%. Equation: 0.2(120 − x) + 0.5x = 0.3 × 120 = 36. Solve: 24 − 0.2x + 0.5x = 36 → 0.3x = 12 → x = 40 L.",
+      "steps": [
+        "1. Set equation for concentrate: 0.2(120 − x) + 0.5x = 36.",
+        "2. Simplify: 24 − 0.2x + 0.5x = 36.",
+        "3. Combine like terms: 0.3x = 12 → x = 40.",
+        "4. Trap: Concentrations add by amount of solute, not by averaging percentages."
+      ],
+      "fastStrategy": "Alligation: (50−30):(30−20) = 20:10 = 2:1 → 1/3 of mix is 50% → 120/3 × 1 = 40 L."
+    },
+    {
+      "id": "ar_ratprop_e1_006",
+      "question": "Gear A (24 teeth) drives Gear B (36 teeth), which drives Gear C (18 teeth). If Gear A spins at 90 rpm, what is Gear C's rpm?",
+      "choices": {"A": "60", "B": "90", "C": "100", "D": "110", "E": "120"},
+      "answer": "E",
+      "explanation": "RPM scales inversely with teeth. B rpm = 90 × (24/36) = 60. C rpm = 60 × (36/18) = 120.",
+      "steps": [
+        "1. Compute B rpm: 90 × (24/36) = 60.",
+        "2. Compute C rpm: 60 × (36/18) = 120.",
+        "3. Trap: Use inverse proportion teeth↔rpm; apply sequentially for multi-gear trains."
+      ],
+      "fastStrategy": "Combine ratios: 90 × (24/36) × (36/18) = 90 × (24/18) = 90 × 4/3 = 120."
+    },
+    {
+      "id": "ar_ratprop_e1_007",
+      "question": "Nine workers finish a job in 15 days. At the same rate, how many days for 12 workers?",
+      "choices": {"A": "10", "B": "11", "C": "11.25", "D": "12", "E": "12.5"},
+      "answer": "C",
+      "explanation": "Work in worker-days: 9 × 15 = 135. With 12 workers: 135 / 12 = 11.25 days.",
+      "steps": [
+        "1. Compute total work: 135 worker-days.",
+        "2. Divide by 12 workers: 135 / 12 = 11.25 days.",
+        "3. Trap: Inverse proportion; more workers → fewer days."
+      ],
+      "fastStrategy": "Scale time by inverse worker ratio: 15 × (9/12) = 11.25."
+    },
+    {
+      "id": "ar_ratprop_e1_008",
+      "question": "A car uses 18 gallons for 270 miles. At the same rate, how many gallons for 420 miles?",
+      "choices": {"A": "24", "B": "26", "C": "28", "D": "30", "E": "32"},
+      "answer": "C",
+      "explanation": "Rate: 18/270 = 0.0667 gal/mile. Fuel = 0.0667 × 420 ≈ 28 gallons.",
+      "steps": [
+        "1. Compute unit rate: 18 ÷ 270 = 1/15 gallon per mile.",
+        "2. Multiply by 420: (1/15) × 420 = 28 gallons.",
+        "3. Trap: Keep the same units (gallons per mile), then scale distance."
+      ],
+      "fastStrategy": "Use proportion: 18/270 = x/420 → x = 18 × 420 / 270 = 28."
+    },
+    {
+      "id": "ar_ratprop_e1_009",
+      "question": "Profits are split A:B = 7:9. If total profit is $3,200, what is A's share?",
+      "choices": {"A": "$1,200", "B": "$1,300", "C": "$1,400", "D": "$1,500", "E": "$1,800"},
+      "answer": "C",
+      "explanation": "Total parts: 16. A gets 7/16 of 3200 = 3200 ÷ 16 × 7 = 200 × 7 = 1400.",
+      "steps": [
+        "1. Add parts: 7 + 9 = 16.",
+        "2. Compute share per part: 3200 / 16 = 200.",
+        "3. A's share: 200 × 7 = 1400.",
+        "4. Trap: Divide before multiplying to avoid large numbers."
+      ],
+      "fastStrategy": "Break 3200 by 8 → 400; by 2 → 200; ×7 = 1400."
+    },
+    {
+      "id": "ar_ratprop_e1_010",
+      "question": "A map shows a field area of 2.5 cm² at 1:500 scale. What is the actual area in square meters?",
+      "choices": {"A": "25 m²", "B": "40 m²", "C": "50 m²", "D": "62.5 m²", "E": "75 m²"},
+      "answer": "D",
+      "explanation": "Area scales by the square of linear scale: factor 500² = 250,000. Actual area: 2.5 × 250,000 = 625,000 cm². Convert: 1 m² = 10,000 cm² → 625,000 / 10,000 = 62.5 m².",
+      "steps": [
+        "1. Square the scale: 500² = 250,000.",
+        "2. Multiply map area: 2.5 × 250,000 = 625,000 cm².",
+        "3. Convert to m²: divide by 10,000 → 62.5 m².",
+        "4. Trap: Area uses squared scale, not linear."
+      ],
+      "fastStrategy": "Compute area factor first, then convert cm² to m² by /10,000."
+    }
+  ]
+}

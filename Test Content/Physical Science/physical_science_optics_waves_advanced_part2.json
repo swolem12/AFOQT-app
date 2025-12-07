@@ -1,0 +1,235 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "optics_waves",
+  "difficulty": "advanced",
+  "part": 2,
+  "questions": [
+    {
+      "id": "ps_ow_a2_026",
+      "question": "A 2.0 cm object is 10 cm from a diverging lens (f = -15 cm). Image distance is closest to:",
+      "choices": {"A": "-6.0 cm", "B": "-9.0 cm", "C": "-18 cm", "D": "+30 cm"},
+      "answer": "A",
+      "explanation": "1/f = 1/do + 1/di → -1/15 = 1/10 + 1/di → 1/di = -1/15 - 1/10 = -5/30 = -1/6 → di = -6 cm (virtual, upright).",
+      "steps": ["Compute -1/15 - 1/10 = -5/30", "Simplify to -1/6", "Invert to get di = -6 cm", "Pick -6.0 cm"],
+      "fastStrategy": "For diverging, expect negative image inside f; here ~-6 cm." 
+    },
+    {
+      "id": "ps_ow_a2_027",
+      "question": "Speed of sound in a string with tension 200 N and linear density 0.020 kg/m is:",
+      "choices": {"A": "70 m/s", "B": "100 m/s", "C": "140 m/s", "D": "316 m/s"},
+      "answer": "B",
+      "explanation": "v = sqrt(T/μ) = sqrt(200 / 0.020) = sqrt(10,000) = 100 m/s.",
+      "steps": ["Divide 200 by 0.020", "Get 10,000", "Take square root", "Result 100 m/s"],
+      "fastStrategy": "T/μ = 10k; sqrt → 100 m/s." 
+    },
+    {
+      "id": "ps_ow_a2_028",
+      "question": "A 600 nm light passes through a 0.40 mm double slit onto a screen 2.0 m away. Fringe spacing is:",
+      "choices": {"A": "1.5 mm", "B": "2.5 mm", "C": "3.0 mm", "D": "5.0 mm"},
+      "answer": "C",
+      "explanation": "Δy = λL/d = 600e-9×2 / 4e-4 = 1.2e-6 /4e-4 = 3.0e-3 m = 3.0 mm.",
+      "steps": ["Compute 1.2e-6 /4e-4", "Result 3.0e-3 m", "Convert to 3.0 mm", "Select 3.0 mm"],
+      "fastStrategy": "600 nm, 2 m, 0.4 mm → ~3 mm fringes." 
+    },
+    {
+      "id": "ps_ow_a2_029",
+      "question": "A wave on a string reflects from a free end. The reflected pulse is:",
+      "choices": {"A": "Inverted", "B": "Upright", "C": "Doubled in amplitude", "D": "Zero amplitude"},
+      "answer": "B",
+      "explanation": "Free end imposes an antinode; reflection is upright (no inversion).",
+      "steps": ["Identify free boundary", "Pulse returns upright", "Amplitude similar (no node)", "Choose upright"],
+      "fastStrategy": "Free end → no flip." 
+    },
+    {
+      "id": "ps_ow_a2_030",
+      "question": "Light in glass (n=1.50) enters water (n=1.33) at 50° to the normal. Refraction angle is closest to:",
+      "choices": {"A": "38°", "B": "44°", "C": "52°", "D": "62°"},
+      "answer": "D",
+      "explanation": "sinθ2 = (n1/n2) sinθ1 = (1.50/1.33)×sin50 ≈ 0.866 → θ2 ≈ 60°. Closest option is 62°.",
+      "steps": ["Compute ratio 1.50/1.33 ≈1.13", "Multiply by sin50 ≈0.766 to get ~0.866", "Arcsin ≈ 60°", "Pick nearest listed 62°"],
+      "fastStrategy": "Going to lower n bends away; expect >50°, about 60°." 
+    },
+    {
+      "id": "ps_ow_a2_031",
+      "question": "A 40 W source emits uniformly. Intensity at 5.0 m is:",
+      "choices": {"A": "0.13 W/m²", "B": "0.32 W/m²", "C": "0.64 W/m²", "D": "1.3 W/m²"},
+      "answer": "A",
+      "explanation": "I = P/(4πr^2) = 40 / (4π·25) = 40 / (100π) ≈ 0.127 W/m².",
+      "steps": ["Compute area 4πr^2 = 100π", "Divide 40 by 100π", "Approx 0.127", "Pick ~0.13 W/m²"],
+      "fastStrategy": "40/(100π) ≈ 0.13." 
+    },
+    {
+      "id": "ps_ow_a2_032",
+      "question": "In an organ pipe open at both ends of length 0.85 m, fundamental frequency (v=340 m/s) is:",
+      "choices": {"A": "100 Hz", "B": "150 Hz", "C": "200 Hz", "D": "400 Hz"},
+      "answer": "C",
+      "explanation": "For open-open, f1 = v/(2L) = 340 / 1.70 ≈ 200 Hz.",
+      "steps": ["Compute 2L = 1.70 m", "Divide 340 by 1.70", "Get 200 Hz", "Pick 200 Hz"],
+      "fastStrategy": "340/1.7 ≈ 200." 
+    },
+    {
+      "id": "ps_ow_a2_033",
+      "question": "Phase difference corresponding to a path difference of one wavelength is:",
+      "choices": {"A": "π/2", "B": "π", "C": "3π/2", "D": "2π"},
+      "answer": "D",
+      "explanation": "One full wavelength corresponds to 2π radians of phase.",
+      "steps": ["Recall 2π radians per λ", "One λ → 2π phase", "Select 2π", "Pick option 2π"],
+      "fastStrategy": "Full cycle = 2π phase." 
+    },
+    {
+      "id": "ps_ow_a2_034",
+      "question": "A 150 Hz sound reflects from a moving wall and returns at 156 Hz. Wall speed toward source is closest to: (v=340 m/s)",
+      "choices": {"A": "3.3 m/s", "B": "6.6 m/s", "C": "10 m/s", "D": "20 m/s"},
+      "answer": "B",
+      "explanation": "Two Doppler shifts: f' = f (v+vw)/(v-vw). Let r = 156/150 = 1.04 = (v+vw)/(v-vw). Solve: r(v - vw) = v + vw → rv - r vw = v + vw → (r+1)vw = (r-1)v → vw = (0.04/2.04)·340 ≈ 6.7 m/s.",
+      "steps": ["Compute ratio r = 1.04", "Use (r-1)/(r+1) × v", "(0.04/2.04)×340 ≈ 6.7", "Pick ~6.6 m/s"],
+      "fastStrategy": "Reflected tone double-shifts; use (Δf/(f+f'))v ≈6-7 m/s." 
+    },
+    {
+      "id": "ps_ow_a2_035",
+      "question": "A 450 nm light enters sapphire (n=1.77). Its wavelength inside is:",
+      "choices": {"A": "170 nm", "B": "254 nm", "C": "345 nm", "D": "450 nm"},
+      "answer": "B",
+      "explanation": "Wavelength in medium λ' = λ/n = 450/1.77 ≈ 254 nm.",
+      "steps": ["Divide 450 by 1.77", "Get ≈254", "Units nm", "Pick 254 nm"],
+      "fastStrategy": "λ shrinks by n; 450/1.8 ≈ 250 nm." 
+    },
+    {
+      "id": "ps_ow_a2_036",
+      "question": "A laser (λ=650 nm) passes through a 0.20 mm single slit. Central maximum angular width (min-to-min) is approximately:",
+      "choices": {"A": "0.19°", "B": "0.37°", "C": "0.75°", "D": "1.5°"},
+      "answer": "B",
+      "explanation": "Single-slit minima at sinθ = mλ/a. For first minima ±1: sinθ = λ/a = 650e-9/2e-4 = 3.25e-3 → θ ≈ 0.186°. Full width ≈ 2θ ≈ 0.37°.",
+      "steps": ["Compute λ/a = 3.25e-3", "θ ≈ 0.186°", "Width = 2θ ≈ 0.37°", "Pick 0.37°"],
+      "fastStrategy": "2×(λ/a) in radians → ~0.0065 rad ≈ 0.37°." 
+    },
+    {
+      "id": "ps_ow_a2_037",
+      "question": "For a 1.0 m organ pipe closed at one end, first overtone frequency (v=340 m/s) is:",
+      "choices": {"A": "85 Hz", "B": "170 Hz", "C": "255 Hz", "D": "340 Hz"},
+      "answer": "C",
+      "explanation": "Closed pipe supports odd harmonics. Fundamental f1 = v/(4L) = 340/4 = 85 Hz. First overtone is 3f1 = 255 Hz.",
+      "steps": ["Compute f1 = 85 Hz", "Overtones odd only", "First overtone = 3×85", "Result 255 Hz"],
+      "fastStrategy": "Closed pipe: 1st overtone = 3×fundamental." 
+    },
+    {
+      "id": "ps_ow_a2_038",
+      "question": "A wave has amplitude doubled while frequency unchanged. Its power transmission becomes:",
+      "choices": {"A": "Same", "B": "Double", "C": "Quadruple", "D": "Eightfold"},
+      "answer": "C",
+      "explanation": "Power/intensity ∝ amplitude^2. Doubling amplitude quadruples power.",
+      "steps": ["Note power ∝ A^2", "A doubles", "Power ×4", "Pick quadruple"],
+      "fastStrategy": "2× amplitude → 4× power." 
+    },
+    {
+      "id": "ps_ow_a2_039",
+      "question": "An EM wave has electric field amplitude 6.0 V/m in vacuum. Magnetic field amplitude is:",
+      "choices": {"A": "1.3×10^-8 T", "B": "2.0×10^-8 T", "C": "1.6×10^-7 T", "D": "2.0×10^-7 T"},
+      "answer": "B",
+      "explanation": "In vacuum, E = cB ⇒ B = E/c = 6 / (3e8) = 2.0×10^-8 T.",
+      "steps": ["Use B = E/c", "6 ÷ 3e8 = 2e-8", "Units tesla", "Select 2.0×10^-8 T"],
+      "fastStrategy": "E/c → 6/3e8 = 2e-8 T." 
+    },
+    {
+      "id": "ps_ow_a2_040",
+      "question": "A 0.60 m string has mass 12 g. If tension is 48 N, the fundamental frequency is:",
+      "choices": {"A": "50 Hz", "B": "100 Hz", "C": "150 Hz", "D": "200 Hz"},
+      "answer": "A",
+      "explanation": "Linear density μ = 0.012/0.60 = 0.020 kg/m. Wave speed v = sqrt(T/μ) = sqrt(48/0.02) = sqrt(2400) ≈ 49 m/s. f1 = v/(2L) ≈ 49/1.2 ≈ 41 Hz → closest 50 Hz.",
+      "steps": ["Compute μ = 0.02", "v ≈ sqrt(2400) ≈ 49", "f1 = 49/1.2 ≈ 41 Hz", "Pick nearest 50 Hz"],
+      "fastStrategy": "Speed ~50 m/s; divide by 1.2 → ~41 Hz." 
+    },
+    {
+      "id": "ps_ow_a2_041",
+      "question": "A radar uses 3.0 cm wavelength. Its frequency is:",
+      "choices": {"A": "1.0 GHz", "B": "3.0 GHz", "C": "6.0 GHz", "D": "10 GHz"},
+      "answer": "D",
+      "explanation": "f = c/λ = 3e8 / 0.03 = 1.0×10^10 Hz = 10 GHz.",
+      "steps": ["Convert λ to 0.03 m", "Divide 3e8 by 0.03", "Get 1e10 Hz", "Pick 10 GHz"],
+      "fastStrategy": "3 cm → 10 GHz." 
+    },
+    {
+      "id": "ps_ow_a2_042",
+      "question": "A 100 Hz sound in air (v=340 m/s) enters water (v=1500 m/s). Its frequency in water is:",
+      "choices": {"A": "23 Hz", "B": "100 Hz", "C": "440 Hz", "D": "1500 Hz"},
+      "answer": "B",
+      "explanation": "Frequency stays the same across media; wavelength changes.",
+      "steps": ["Crossing boundary keeps f constant", "Only speed and λ change", "So f = 100 Hz", "Pick 100 Hz"],
+      "fastStrategy": "Frequency is source-set; medium changes speed/λ only." 
+    },
+    {
+      "id": "ps_ow_a2_043",
+      "question": "A 250 W lamp radiates 5% of its power as visible light. Visible output in watts is:",
+      "choices": {"A": "5 W", "B": "7.5 W", "C": "12.5 W", "D": "25 W"},
+      "answer": "B",
+      "explanation": "Two Doppler shifts: f' = f (v+vw)/(v-vw). With r = 156/150 = 1.04, vw = (r-1)/(r+1) · v ≈ (0.04/2.04)·340 ≈ 6.7 m/s.",
+      "steps": ["Take 5% of 250", "Compute 0.05×250", "Get 12.5", "Select 12.5 W"],
+      "fastStrategy": "Ten percent is 25; half that is 12.5." 
+    },
+    {
+      "id": "ps_ow_a2_044",
+      "question": "A 400 Hz source approaches a stationary observer at 30 m/s (v=340 m/s). Observed frequency is closest to:",
+      "choices": {"A": "360 Hz", "B": "400 Hz", "C": "436 Hz", "D": "470 Hz"},
+      "answer": "C",
+      "explanation": "Moving source: f' = f v/(v - vs) = 400×(340/310) ≈ 400×1.097 ≈ 439 Hz (closest 436 Hz).",
+      "steps": ["Compute denominator 340-30=310", "Ratio 340/310 ≈1.097", "Multiply by 400", "Get ≈439 Hz"],
+      "fastStrategy": "~10% increase for 30 m/s toward → ~440 Hz." 
+    },
+    {
+      "id": "ps_ow_a2_045",
+      "question": "Two polarizers at 90° stop all light. If a third is placed between them at 45° to each, transmitted fraction of initial unpolarized light is:",
+      "choices": {"A": "0%", "B": "6.25%", "C": "12.5%", "D": "25%"},
+      "answer": "C",
+      "explanation": "First polarizer passes 50%. Second at 45° passes cos^2 45 = 0.5 of that → 25%. Third (90° to first, 45° to second) passes another 0.5 → 12.5% overall.",
+      "steps": ["Unpolarized → first: 50%", "Second at 45°: ×0.5 → 25%", "Third at 90° from first (45° from second): ×0.5", "Final 12.5%"],
+      "fastStrategy": "0.5 ×0.5 ×0.5 = 0.125." 
+    },
+    {
+      "id": "ps_ow_a2_046",
+      "question": "A sonar ping at 20 kHz reflects from a submarine returning in 0.80 s in seawater (v=1500 m/s). Range to submarine is:",
+      "choices": {"A": "300 m", "B": "600 m", "C": "1200 m", "D": "2400 m"},
+      "answer": "B",
+      "explanation": "Round-trip time 0.80 s → one-way 0.40 s. Distance = v t = 1500×0.40 = 600 m.",
+      "steps": ["Halve the round-trip time", "Multiply 1500 by 0.40", "Get 600 m", "Pick 600 m"],
+      "fastStrategy": "t/2 × speed: 0.4×1500 = 600 m." 
+    },
+    {
+      "id": "ps_ow_a2_047",
+      "question": "If a pipe length is doubled (open-open), the fundamental frequency becomes:",
+      "choices": {"A": "Half", "B": "Same", "C": "Double", "D": "Quadruple"},
+      "answer": "A",
+      "explanation": "For open-open, f1 ∝ 1/L. Doubling length halves the fundamental frequency.",
+      "steps": ["Recall f ∝ 1/L", "L doubles", "f halves", "Pick half"],
+      "fastStrategy": "Longer pipe → lower pitch; doubling length halves f." 
+    },
+    {
+      "id": "ps_ow_a2_048",
+      "question": "Ultraviolet has higher frequency than visible mainly because it has:",
+      "choices": {"A": "Higher speed in vacuum", "B": "Shorter wavelength", "C": "Greater amplitude", "D": "Lower energy photons"},
+      "answer": "B",
+      "explanation": "In vacuum all EM waves have same speed; higher frequency means shorter wavelength (thus higher photon energy).",
+      "steps": ["Frequency inversely with wavelength", "UV has shorter λ", "Speed in vacuum same", "Select shorter wavelength"],
+      "fastStrategy": "Higher f ↔ shorter λ; c constant." 
+    },
+    {
+      "id": "ps_ow_a2_049",
+      "question": "Two sine waves of equal amplitude and 180° phase difference combine. Resulting amplitude is:",
+      "choices": {"A": "Zero", "B": "Half", "C": "Same", "D": "Double"},
+      "answer": "A",
+      "explanation": "Equal amplitudes opposite phase cancel completely, yielding zero resultant.",
+      "steps": ["Note phase shift 180°", "Equal amplitudes", "Destructive interference cancels", "Amplitude goes to zero"],
+      "fastStrategy": "Opposite-phase equals cancel to zero." 
+    },
+    {
+      "id": "ps_ow_a2_050",
+      "question": "A 0.10 m diameter circular opening produces a diffraction pattern with first minimum at 3.6 mrad using 550 nm light. Aperture diameter by small-angle formula d ≈ 1.22 λ/θ is closest to:",
+      "choices": {"A": "0.019 m", "B": "0.037 m", "C": "0.055 m", "D": "0.19 m"},
+      "question": "A circular aperture has first dark ring at angle 6.7 μrad using 550 nm light. Using d ≈ 1.22 λ/θ, the aperture diameter is closest to:",
+      "choices": {"A": "0.010 m", "B": "0.055 m", "C": "0.10 m", "D": "0.19 m"},
+      "answer": "C",
+      "explanation": "d ≈ 1.22 λ/θ = 1.22×550e-9 / 6.7e-6 ≈ 6.71e-7 /6.7e-6 ≈ 0.10 m.",
+      "steps": ["Compute numerator 6.71e-7", "Divide by 6.7e-6", "Get ≈0.10 m", "Pick 0.10 m"],
+      "fastStrategy": "1.22λ/θ with μrad-scale θ → decimeter aperture." 
+    }
+  ]
+}

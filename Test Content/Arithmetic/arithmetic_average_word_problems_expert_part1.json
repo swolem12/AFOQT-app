@@ -1,0 +1,152 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "average_word_problems",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ar_avg_e1_001",
+      "question": "Five tests average 84. After a sixth score of 96, what is the new average?",
+      "choices": {"A": "85", "B": "86", "C": "87", "D": "88", "E": "89"},
+      "answer": "B",
+      "explanation": "Total of five tests: 5 × 84 = 420. Add 96 → 516. New average: 516/6 = 86.",
+      "steps": [
+        "1. Compute current total: 420.",
+        "2. Add new score: 420 + 96 = 516.",
+        "3. Divide by 6: 516 / 6 = 86.",
+        "4. Trap: Divide by new count (6), not 5."
+      ],
+      "fastStrategy": "Average shift: +12 over 6 scores raises average by 2."
+    },
+    {
+      "id": "ar_avg_e1_002",
+      "question": "A data set of 10 numbers has mean 50. If one value 70 is removed, what is the new mean?",
+      "choices": {"A": "46.5", "B": "47.8", "C": "48.5", "D": "49.0", "E": "49.5"},
+      "answer": "B",
+      "explanation": "Original total: 10 × 50 = 500. Removing 70 leaves 430 over 9 numbers → 430/9 ≈ 47.78.",
+      "steps": [
+        "1. Original sum: 500.",
+        "2. New sum: 500 − 70 = 430.",
+        "3. New count: 9.",
+        "4. New mean: 430/9 ≈ 47.78.",
+        "5. Trap: Divide by 9, not 10."
+      ],
+      "fastStrategy": "Check: mean drops because a value above mean is removed."
+    },
+    {
+      "id": "ar_avg_e1_003",
+      "question": "A class of 24 students averages 64 inches in height. Six more students join, raising the average to 64.5 inches. What is the average height of the six new students?",
+      "choices": {"A": "65.5", "B": "66.0", "C": "66.5", "D": "67.0", "E": "67.5"},
+      "answer": "C",
+      "explanation": "Old total: 24 × 64 = 1536. New total: 30 × 64.5 = 1935. Sum of new students: 1935 − 1536 = 399. Average of six: 399/6 = 66.5.",
+      "steps": [
+        "1. Compute old total: 1536 inches.",
+        "2. Compute new total: 1935 inches.",
+        "3. Contribution of new students: 399 inches.",
+        "4. Average: 399 / 6 = 66.5 inches.",
+        "5. Trap: Multiply new average by new total count (30)."
+      ],
+      "fastStrategy": "Change in average × class size change: 0.5 × 30 = 15; add to old total → 1536+399 = 1935."
+    },
+    {
+      "id": "ar_avg_e1_004",
+      "question": "Investments: $40k at 5%, $25k at 7%, $35k at 9%. What is the overall weighted average return?",
+      "choices": {"A": "6.5%", "B": "6.7%", "C": "6.9%", "D": "7.1%", "E": "7.3%"},
+      "answer": "C",
+      "explanation": "Total invested = 100k. Weighted return = (2000 + 1750 + 3150) / 100,000 = 6900/100,000 = 6.9%.",
+      "steps": [
+        "1. Compute each return: 2000, 1750, 3150.",
+        "2. Sum returns: 6900.",
+        "3. Divide by total 100,000 → 0.069 = 6.9%.",
+        "4. Trap: Weight by amount, not simple average of percents."
+      ],
+      "fastStrategy": "Notice $100k total simplifies percent calculation directly."
+    },
+    {
+      "id": "ar_avg_e1_005",
+      "question": "Drive 60 miles out at 40 mph and return 60 miles at 60 mph. What is the overall average speed?",
+      "choices": {"A": "45 mph", "B": "48 mph", "C": "50 mph", "D": "52 mph", "E": "54 mph"},
+      "answer": "B",
+      "explanation": "Times: 60/40 = 1.5 h, 60/60 = 1 h. Total distance 120 miles, total time 2.5 h. Average = 120/2.5 = 48 mph.",
+      "steps": [
+        "1. Compute leg times: 1.5 h and 1 h.",
+        "2. Total time: 2.5 h; distance: 120 miles.",
+        "3. Average speed: 120 / 2.5 = 48 mph.",
+        "4. Trap: Harmonic mean applies when distances equal; simple average of speeds is wrong."
+      ],
+      "fastStrategy": "Use harmonic mean shortcut for equal distances: (2ab)/(a+b) = (2×40×60)/100 = 48."
+    },
+    {
+      "id": "ar_avg_e1_006",
+      "question": "A team averages 82 points over 4 games. To average 85 over 5 games, what must they score in game 5?",
+      "choices": {"A": "90", "B": "94", "C": "97", "D": "100", "E": "104"},
+      "answer": "C",
+      "explanation": "Target total: 5 × 85 = 425. Current total: 4 × 82 = 328. Needed: 425 − 328 = 97.",
+      "steps": [
+        "1. Target total: 425.",
+        "2. Current total: 328.",
+        "3. Required: 97.",
+        "4. Trap: Multiply target average by total games (5), not 4."
+      ],
+      "fastStrategy": "Each point of average over 5 games changes total by 5."
+    },
+    {
+      "id": "ar_avg_e1_007",
+      "question": "First 5 months average sales $120k. After month 6, overall average is $125k. What were month 6 sales?",
+      "choices": {"A": "$130k", "B": "$140k", "C": "$145k", "D": "$150k", "E": "$155k"},
+      "answer": "D",
+      "explanation": "Total for 5 months: 5 × 120 = 600. Target for 6 months: 6 × 125 = 750. Month 6 = 750 − 600 = 150 (thousand).",
+      "steps": [
+        "1. Compute initial total: 600k.",
+        "2. Compute target total: 750k.",
+        "3. Month 6 = 150k.",
+        "4. Trap: Use thousands consistently."
+      ],
+      "fastStrategy": "Use totals: target total 6×125 minus current total 5×120 gives the needed month 6 value."
+    },
+    {
+      "id": "ar_avg_e1_008",
+      "question": "A data set has average 32. Adding one extra value 80 makes the average 35. How many values were in the original set?",
+      "choices": {"A": "10", "B": "12", "C": "15", "D": "16", "E": "18"},
+      "answer": "C",
+      "explanation": "Let n = original count. Original sum = 32n. New sum = 32n + 80. New count = n + 1. Equation: (32n + 80)/(n + 1) = 35 → 32n + 80 = 35n + 35 → 45 = 3n → n = 15.",
+      "steps": [
+        "1. Set equation for new average: (32n + 80)/(n + 1) = 35.",
+        "2. Cross-multiply: 32n + 80 = 35n + 35.",
+        "3. Solve: 45 = 3n → n = 15.",
+        "4. Trap: Include the added data point in both sum and count."
+      ],
+      "fastStrategy": "Average shift: +3 when adding one value 80; solve 80 − 35 = 45 = 3n → n=15."
+    },
+    {
+      "id": "ar_avg_e1_009",
+      "question": "Average of 8 numbers is 14. Replacing 10 and 18 with 22 and 26, what is the new average?",
+      "choices": {"A": "15.5", "B": "16.0", "C": "16.5", "D": "17.0", "E": "17.5"},
+      "answer": "C",
+      "explanation": "Original total: 8 × 14 = 112. Remove 10 and 18 (−28), add 22 and 26 (+48). New total = 112 − 28 + 48 = 132. New average = 132 / 8 = 16.5.",
+      "steps": [
+        "1. Start total: 112.",
+        "2. Adjust: −28 + 48 = +20.",
+        "3. New total: 132.",
+        "4. Divide by 8 → 16.5.",
+        "5. Trap: Same count (8) since two values swapped."
+      ],
+      "fastStrategy": "Net increase per number = 20/8 = 2.5; add to old average 14 → 16.5."
+    },
+    {
+      "id": "ar_avg_e1_010",
+      "question": "Courses: 4 credits at 3.0, 3 credits at 3.3, 3 credits at 3.7, 2 credits at 4.0. What is the GPA?",
+      "choices": {"A": "3.25", "B": "3.33", "C": "3.42", "D": "3.50", "E": "3.58"},
+      "answer": "C",
+      "explanation": "Quality points: 4×3.0=12; 3×3.3=9.9; 3×3.7=11.1; 2×4.0=8. Total = 41. Credits = 12. GPA = 41/12 ≈ 3.42.",
+      "steps": [
+        "1. Multiply each grade by credits.",
+        "2. Sum quality points = 41.",
+        "3. Sum credits = 12.",
+        "4. GPA = 41/12 ≈ 3.42.",
+        "5. Trap: Weight by credits; don't average raw grades."
+      ],
+      "fastStrategy": "Check: 3.5 would yield 42; we have slightly less → ~3.42."
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "percent_problems",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ar_pct_a1_001",
+      "question": "A store's original price for a coat is $120. During a 25% off sale, customers also get an additional 10% off the sale price. What is the final price?",
+      "choices": {
+        "A": "$72",
+        "B": "$81",
+        "C": "$90",
+        "D": "$96",
+        "E": "$108"
+      },
+      "answer": "B",
+      "explanation": "First discount: 25% of $120 = $30. Price after first: $120 − $30 = $90. Second discount: 10% of $90 = $9. Final price: $90 − $9 = $81.",
+      "steps": [
+        "1. Apply first discount (25%): $120 × 0.75 = $90.",
+        "2. Apply second discount (10%) to the new price: $90 × 0.90 = $81.",
+        "3. Trap: The second discount is on the already-reduced price, not the original. Don't add the percentages (25% + 10% ≠ 35% off)."
+      ],
+      "fastStrategy": "For stacked discounts, apply each sequentially: Final = Original × (1 − Discount1) × (1 − Discount2)."
+    },
+    {
+      "id": "ar_pct_a1_002",
+      "question": "A restaurant bill is $85. With a 18% tip, what is the total amount paid?",
+      "choices": {
+        "A": "$95.30",
+        "B": "$98.50",
+        "C": "$100.30",
+        "D": "$103.50",
+        "E": "$104.30"
+      },
+      "answer": "C",
+      "explanation": "Tip: 18% of $85 = 0.18 × $85 = $15.30. Total: $85 + $15.30 = $100.30.",
+      "steps": [
+        "1. Calculate tip amount: 18% of $85 = 0.18 × $85 = $15.30.",
+        "2. Add tip to bill: $85 + $15.30 = $100.30.",
+        "3. Trap: Don't confuse tip percentage with the total; add to the original bill."
+      ],
+      "fastStrategy": "Total = Original × (1 + Tip %) = $85 × 1.18 = $100.30."
+    },
+    {
+      "id": "ar_pct_a1_003",
+      "question": "A stock price increases from $50 to $65. What is the percent increase?",
+      "choices": {
+        "A": "15%",
+        "B": "23%",
+        "C": "25%",
+        "D": "30%",
+        "E": "35%"
+      },
+      "answer": "D",
+      "explanation": "Increase: $65 − $50 = $15. Percent increase: ($15 / $50) × 100 = 0.30 × 100 = 30%.",
+      "steps": [
+        "1. Find the change: New − Old = $65 − $50 = $15.",
+        "2. Divide by original: $15 / $50 = 0.30.",
+        "3. Convert to percent: 0.30 × 100 = 30%.",
+        "4. Trap: Divide by the original amount, not the new amount."
+      ],
+      "fastStrategy": "Percent Change = (Change / Original) × 100."
+    },
+    {
+      "id": "ar_pct_a1_004",
+      "question": "A car purchased for $24,000 depreciates by 12% per year. What is its value after 1 year?",
+      "choices": {
+        "A": "$19,200",
+        "B": "$20,880",
+        "C": "$21,120",
+        "D": "$22,080",
+        "E": "$23,000"
+      },
+      "answer": "C",
+      "explanation": "Depreciation: 12% of $24,000 = 0.12 × $24,000 = $2,880. Value after 1 year: $24,000 − $2,880 = $21,120.",
+      "steps": [
+        "1. Calculate depreciation amount: 12% of $24,000 = $2,880.",
+        "2. Subtract from original: $24,000 − $2,880 = $21,120.",
+        "3. Trap: Depreciation is a loss of value; subtract from the original price."
+      ],
+      "fastStrategy": "Depreciated Value = Original × (1 − Depreciation %) = $24,000 × 0.88 = $21,120."
+    },
+    {
+      "id": "ar_pct_a1_005",
+      "question": "A bag contains 120 marbles. If 35% are red and 45% are blue, how many are other colors?",
+      "choices": {
+        "A": "12",
+        "B": "18",
+        "C": "24",
+        "D": "30",
+        "E": "36"
+      },
+      "answer": "C",
+      "explanation": "Red and blue: 35% + 45% = 80%. Other colors: 100% − 80% = 20%. Count: 20% of 120 = 0.20 × 120 = 24.",
+      "steps": [
+        "1. Add red and blue percentages: 35% + 45% = 80%.",
+        "2. Find remaining percentage: 100% − 80% = 20%.",
+        "3. Calculate count: 20% of 120 = 24 marbles.",
+        "4. Trap: The remaining percentage is 100% minus all known portions, not the difference between two."
+      ],
+      "fastStrategy": "Other % = 100% − (Red % + Blue %). Then multiply by total count."
+    },
+    {
+      "id": "ar_pct_a1_006",
+      "question": "Sales tax is 8% on a purchase of $250. What is the total cost including tax?",
+      "choices": {
+        "A": "$250",
+        "B": "$258",
+        "C": "$262",
+        "D": "$270",
+        "E": "$288"
+      },
+      "answer": "D",
+      "explanation": "Tax: 8% of $250 = 0.08 × $250 = $20. Total: $250 + $20 = $270.",
+      "steps": [
+        "1. Calculate tax amount: 8% of $250 = $20.",
+        "2. Add to purchase: $250 + $20 = $270.",
+        "3. Trap: Tax is added to the price, not subtracted."
+      ],
+      "fastStrategy": "Total = Purchase × (1 + Tax %) = $250 × 1.08 = $270."
+    },
+    {
+      "id": "ar_pct_a1_007",
+      "question": "An investment of $5,000 grows to $6,050 in one year. What is the percent return?",
+      "choices": {
+        "A": "17%",
+        "B": "19%",
+        "C": "21%",
+        "D": "23%",
+        "E": "25%"
+      },
+      "answer": "C",
+      "explanation": "Gain: $6,050 − $5,000 = $1,050. Percent return: ($1,050 / $5,000) × 100 = 0.21 × 100 = 21%.",
+      "steps": [
+        "1. Calculate gain: $6,050 − $5,000 = $1,050.",
+        "2. Divide by initial investment: $1,050 / $5,000 = 0.21.",
+        "3. Convert to percent: 21%.",
+        "4. Trap: Divide by the initial investment, not the final value."
+      ],
+      "fastStrategy": "Return % = (Gain / Initial Investment) × 100."
+    },
+    {
+      "id": "ar_pct_a1_008",
+      "question": "A test has 80 questions. If you answer 70 correctly, what is your percent score?",
+      "choices": {
+        "A": "82.5%",
+        "B": "85%",
+        "C": "87.5%",
+        "D": "90%",
+        "E": "92.5%"
+      },
+      "answer": "C",
+      "explanation": "Percent: (70 / 80) × 100 = 0.875 × 100 = 87.5%.",
+      "steps": [
+        "1. Divide correct answers by total: 70 / 80 = 0.875.",
+        "2. Convert to percent: 0.875 × 100 = 87.5%.",
+        "3. Trap: Use correct answers divided by total, not the reverse."
+      ],
+      "fastStrategy": "Percent Score = (Correct / Total) × 100."
+    },
+    {
+      "id": "ar_pct_a1_009",
+      "question": "A company's profit increased by 15% year-over-year. If last year's profit was $500,000, what is this year's profit?",
+      "choices": {
+        "A": "$425,000",
+        "B": "$500,000",
+        "C": "$575,000",
+        "D": "$575,500",
+        "E": "$625,000"
+      },
+      "answer": "C",
+      "explanation": "Increase: 15% of $500,000 = 0.15 × $500,000 = $75,000. This year: $500,000 + $75,000 = $575,000.",
+      "steps": [
+        "1. Calculate increase amount: 15% of $500,000 = $75,000.",
+        "2. Add to last year's profit: $500,000 + $75,000 = $575,000.",
+        "3. Trap: A 15% increase means you add 15% to the original, not subtract."
+      ],
+      "fastStrategy": "New Value = Original × (1 + Growth %) = $500,000 × 1.15 = $575,000."
+    },
+    {
+      "id": "ar_pct_a1_010",
+      "question": "A restaurant offered a 30% discount on meals. If a meal normally costs $40 and you buy 3 meals, how much do you spend?",
+      "choices": {
+        "A": "$56",
+        "B": "$70",
+        "C": "$84",
+        "D": "$98",
+        "E": "$120"
+      },
+      "answer": "C",
+      "explanation": "Discounted price per meal: $40 × (1 − 0.30) = $40 × 0.70 = $28. Total for 3: $28 × 3 = $84.",
+      "steps": [
+        "1. Calculate discounted price: $40 × 0.70 = $28 per meal.",
+        "2. Multiply by quantity: $28 × 3 = $84.",
+        "3. Trap: Apply the discount to each meal price, then multiply by quantity (or multiply total by discount factor)."
+      ],
+      "fastStrategy": "Total Cost = Number of Items × (Original Price × (1 − Discount %))."
+    }
+  ]
+}

@@ -30,19 +30,43 @@ self.addEventListener('install', (event) => {
   self.skipWaiting();
 });
 
-// Activate event - clean up old caches
+// Activate event - check version and clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            console.log('Deleting old cache:', cacheName);
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
+    // First, check if new version is available
+    fetch('./version-manifest.json', { cache: 'no-store' })
+      .then((res) => {
+        if (res.ok) return res.json();
+        throw new Error('Version manifest fetch failed');
+      })
+      .then((manifest) => {
+        console.log('✓ Version manifest loaded:', manifest.cacheVersion);
+        // Store the new version for comparison in app.js
+        return self.clients.matchAll().then((clients) => {
+          clients.forEach((client) => {
+            client.postMessage({
+              type: 'VERSION_CHECK',
+              manifest: manifest
+            });
+          });
+        });
+      })
+      .catch((err) => {
+        console.log('Version check failed (offline ok):', err);
+      })
+      .then(() => {
+        // Clean up old caches
+        return caches.keys().then((cacheNames) => {
+          return Promise.all(
+            cacheNames.map((cacheName) => {
+              if (cacheName !== CACHE_NAME) {
+                console.log('Deleting old cache:', cacheName);
+                return caches.delete(cacheName);
+              }
+            })
+          );
+        });
+      })
   );
   // Claim clients immediately
   return self.clients.claim();

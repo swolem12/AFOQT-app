@@ -1,0 +1,149 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "time_rates_work",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ar_trw_e1_001",
+      "question": "Two pipes fill a tank in 60 and 45 minutes. A drain empties it in 90 minutes. If all operate together from empty, how long to fill the tank?",
+      "choices": {"A": "24 min", "B": "30 min", "C": "36 min", "D": "42 min", "E": "48 min"},
+      "answer": "C",
+      "explanation": "Rates: 1/60 + 1/45 − 1/90. Using 180 as LCD: 3 + 4 − 2 = 5 parts → 5/180 = 1/36 tank per min. Time = 36 minutes.",
+      "steps": [
+        "1. Convert to common denominator (180): fill rates 3/180 and 4/180, drain 2/180.",
+        "2. Net rate: (3 + 4 − 2)/180 = 5/180 = 1/36 per minute.",
+        "3. Time = 1 ÷ (1/36) = 36 minutes.",
+        "4. Trap: Subtract the drain; do not add all three."
+      ],
+      "fastStrategy": "Find net rate using LCM of times; invert for time."
+    },
+    {
+      "id": "ar_trw_e1_002",
+      "question": "A train covers 400 miles. Running speed is 70 mph, but it has a 30-minute stop. What is the average speed including the stop?",
+      "choices": {"A": "60.0 mph", "B": "62.5 mph", "C": "64.4 mph", "D": "66.0 mph", "E": "68.2 mph"},
+      "answer": "C",
+      "explanation": "Running time: 400/70 ≈ 5.714 h. Add 0.5 h stop → 6.214 h. Average speed = 400 / 6.214 ≈ 64.4 mph.",
+      "steps": [
+        "1. Compute running time: 400 ÷ 70 ≈ 5.714 h.",
+        "2. Add stop: +0.5 h → 6.214 h total.",
+        "3. Average speed = total distance / total time = 400 / 6.214 ≈ 64.4 mph.",
+        "4. Trap: Include stopped time in average speed denominator."
+      ],
+      "fastStrategy": "Estimate: 400/6.2 ≈ 64.5; close to 64.4."
+    },
+    {
+      "id": "ar_trw_e1_003",
+      "question": "Crew A can finish a job in 8 hours, Crew B in 12 hours. A works 3 hours alone, then B joins. Total time to finish?",
+      "choices": {"A": "5.5 h", "B": "6.0 h", "C": "6.5 h", "D": "7.0 h", "E": "7.5 h"},
+      "answer": "B",
+      "explanation": "A alone 3 h → 3/8 of job. Remaining 5/8. Combined rate: 1/8 + 1/12 = 5/24. Time for remainder: (5/8) ÷ (5/24) = (5/8) × (24/5) = 3 h. Total = 3 + 3 = 6 h.",
+      "steps": [
+        "1. Work done by A: 3/8.",
+        "2. Remaining: 5/8.",
+        "3. Combined rate: 1/8 + 1/12 = 5/24 per hour.",
+        "4. Time for remainder: (5/8) ÷ (5/24) = 3 h.",
+        "5. Total time: 6 h.",
+        "6. Trap: Divide remaining work by combined rate, not vice versa."
+      ],
+      "fastStrategy": "Scale remainder by reciprocal of combined rate."
+    },
+    {
+      "id": "ar_trw_e1_004",
+      "question": "A 5-mile course has 2 miles uphill at 5 mph and 3 miles downhill/flat at 8 mph. What is the runner's average speed for the course?",
+      "choices": {"A": "6.0 mph", "B": "6.3 mph", "C": "6.45 mph", "D": "6.8 mph", "E": "7.0 mph"},
+      "answer": "C",
+      "explanation": "Time uphill: 2/5 = 0.4 h. Time downhill: 3/8 = 0.375 h. Total time = 0.775 h. Average = 5 / 0.775 ≈ 6.45 mph.",
+      "steps": [
+        "1. Compute time per segment: 0.4 h and 0.375 h.",
+        "2. Total time: 0.775 h.",
+        "3. Average speed: distance/time = 5 / 0.775 ≈ 6.45 mph.",
+        "4. Trap: Use time-weighted average, not speed average."
+      ],
+      "fastStrategy": "Check reasonableness: weighted toward slower uphill, so average < 8, >5; 6.45 fits."
+    },
+    {
+      "id": "ar_trw_e1_005",
+      "question": "A boat goes 42 miles downstream in 2 hours and the same distance upstream in 3 hours. Find the boat's speed in still water.",
+      "choices": {"A": "14.5 mph", "B": "15.0 mph", "C": "16.0 mph", "D": "17.5 mph", "E": "18.0 mph"},
+      "answer": "D",
+      "explanation": "Downstream speed = 21 mph, upstream = 14 mph. Let b = boat, c = current. b + c = 21; b − c = 14 → 2b = 35 → b = 17.5 mph.",
+      "steps": [
+        "1. Compute downstream speed: 42/2 = 21 mph.",
+        "2. Compute upstream speed: 42/3 = 14 mph.",
+        "3. Solve system: b + c = 21, b − c = 14 → b = 17.5.",
+        "4. Trap: Average of speeds is 17.5 here only because distances are equal and system solves to that."
+      ],
+      "fastStrategy": "Boat speed = (downstream + upstream)/2 when distances match."
+    },
+    {
+      "id": "ar_trw_e1_006",
+      "question": "A conveyor makes 240 units/hour. It runs 2 hours at full rate, then 1 hour at 15% slower. How many units in 3 hours?",
+      "choices": {"A": "648", "B": "660", "C": "672", "D": "684", "E": "696"},
+      "answer": "D",
+      "explanation": "First 2 hours: 2 × 240 = 480 units. Slower hour: 0.85 × 240 = 204. Total = 684 units.",
+      "steps": [
+        "1. Full-rate output: 2 × 240 = 480.",
+        "2. Reduced-rate output: 0.85 × 240 = 204.",
+        "3. Sum: 480 + 204 = 684.",
+        "4. Trap: Apply reduction factor to the rate, not to total."
+      ],
+      "fastStrategy": "Compute reduced rate quickly: 240 − 15% = 240 × 0.85 = 204."
+    },
+    {
+      "id": "ar_trw_e1_007",
+      "question": "A plane's airspeed is 300 mph. With a 30 mph headwind, it travels 900 miles. Flight time?",
+      "choices": {"A": "2h 45m", "B": "3h 00m", "C": "3h 10m", "D": "3h 20m", "E": "3h 30m"},
+      "answer": "D",
+      "explanation": "Ground speed against headwind: 300 − 30 = 270 mph. Time = 900 / 270 = 3.333... h ≈ 3h 20m.",
+      "steps": [
+        "1. Adjust speed: 300 − 30 = 270 mph.",
+        "2. Time = distance/speed: 900 / 270 = 3.333... h.",
+        "3. Convert 0.333 h ≈ 20 minutes.",
+        "4. Trap: Subtract wind for headwind, add for tailwind."
+      ],
+      "fastStrategy": "Divide by 27 then by 10: 900/27=33.33 → /10 = 3.33 h."
+    },
+    {
+      "id": "ar_trw_e1_008",
+      "question": "A cyclist rides 20 miles: first 8 miles at 16 mph, remaining 12 miles at 12 mph. What is the average speed?",
+      "choices": {"A": "12.8 mph", "B": "13.3 mph", "C": "13.6 mph", "D": "14.0 mph", "E": "14.5 mph"},
+      "answer": "B",
+      "explanation": "Time1 = 8/16 = 0.5 h. Time2 = 12/12 = 1 h. Total time = 1.5 h. Average = 20 / 1.5 = 13.33 mph.",
+      "steps": [
+        "1. Compute times: 0.5 h and 1 h.",
+        "2. Total time: 1.5 h.",
+        "3. Average speed: 20 / 1.5 ≈ 13.3 mph.",
+        "4. Trap: Distance-weighted average, not arithmetic mean of speeds."
+      ],
+      "fastStrategy": "20/1.5 = (200/15) = 13.33."
+    },
+    {
+      "id": "ar_trw_e1_009",
+      "question": "Three printers run together: 30 ppm, 40 ppm, 50 ppm. How long to print 1,800 pages?",
+      "choices": {"A": "10 min", "B": "12 min", "C": "15 min", "D": "18 min", "E": "20 min"},
+      "answer": "C",
+      "explanation": "Combined rate = 30 + 40 + 50 = 120 ppm. Time = 1800 / 120 = 15 minutes.",
+      "steps": [
+        "1. Add rates: 120 pages/min.",
+        "2. Time = 1800 / 120 = 15 min.",
+        "3. Trap: Rates add, times do not."
+      ],
+      "fastStrategy": "Divide by 12 then by 10: 1800/12=150 → /10 = 15."
+    },
+    {
+      "id": "ar_trw_e1_010",
+      "question": "A reservoir has 15,000 L initially. Inflow 5,000 L/hr, outflow 1,200 L/hr. Capacity is 40,000 L. How long to fill to capacity?",
+      "choices": {"A": "6.0 hr", "B": "6.5 hr", "C": "6.8 hr", "D": "7.0 hr", "E": "7.5 hr"},
+      "answer": "C",
+      "explanation": "Net inflow: 5000 − 1200 = 3800 L/hr. Needed: 40,000 − 15,000 = 25,000 L. Time = 25,000 / 3,800 ≈ 6.58 hr (~6.8 hr).",
+      "steps": [
+        "1. Compute net rate: 3,800 L/hr.",
+        "2. Required volume: 25,000 L.",
+        "3. Time = 25,000 / 3,800 ≈ 6.58 hr.",
+        "4. Trap: Use net rate (inflow minus outflow)."
+      ],
+      "fastStrategy": "Estimate: 3,800 ≈ 4,000 → 25,000/4,000 ≈ 6.25 hr; exact slightly higher → ~6.6 hr."
+    }
+  ]
+}

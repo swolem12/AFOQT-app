@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "earth_space",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ps_es_b1_001",
+      "question": "Gravity is best described as a force that:",
+      "choices": {"A": "Pushes objects apart", "B": "Pulls masses toward each other", "C": "Only affects planets", "D": "Stops objects from moving"},
+      "answer": "B",
+      "explanation": "Gravity is the attractive force between masses. It pulls objects toward each other, giving weight and keeping planets in orbit.",
+      "steps": ["Identify the force acting between masses", "Recall gravity is attractive, not repulsive", "Note it acts on all masses, not just planets", "Select the option that describes attraction"],
+      "fastStrategy": "Gravity pulls masses together, not apart."
+    },
+    {
+      "id": "ps_es_b1_002",
+      "question": "Weight changes if you go to the Moon because weight depends on:",
+      "choices": {"A": "Mass only", "B": "Gravity at that location", "C": "Air pressure", "D": "Temperature"},
+      "answer": "B",
+      "explanation": "Weight = mass × local gravitational acceleration. Mass stays the same, but lunar gravity is weaker, so weight decreases.",
+      "steps": ["Recall weight formula W = m·g", "Mass is constant for the person", "g is smaller on the Moon", "Choose gravity dependence"],
+      "fastStrategy": "Weight changes with local g; mass stays constant."
+    },
+    {
+      "id": "ps_es_b1_003",
+      "question": "Earth's day-night cycle is caused by its:",
+      "choices": {"A": "Revolution around the Sun", "B": "Rotation on its axis", "C": "Tilt of the axis", "D": "Elliptical orbit"},
+      "answer": "B",
+      "explanation": "Earth rotates once every ~24 hours, bringing different areas into sunlight and darkness, creating day and night.",
+      "steps": ["Identify motion that turns Earth relative to Sun", "Rotation spins the planet daily", "Revolution causes yearly cycle, not daily", "Select rotation"],
+      "fastStrategy": "Daily change = rotation; yearly change = revolution."
+    },
+    {
+      "id": "ps_es_b1_004",
+      "question": "Seasons occur mainly because Earth is:",
+      "choices": {"A": "Closer to the Sun in summer", "B": "Tilted about 23.5°", "C": "Changing mass each year", "D": "Spinning faster in winter"},
+      "answer": "B",
+      "explanation": "Earth's 23.5° axial tilt causes sunlight to strike hemispheres at different angles through the year, creating seasons.",
+      "steps": ["Recall primary cause of seasons", "Axial tilt changes sunlight angle and day length", "Orbit distance changes are minor", "Choose tilt"],
+      "fastStrategy": "Think tilt, not distance, for seasons."
+    },
+    {
+      "id": "ps_es_b1_005",
+      "question": "The path Earth follows around the Sun is called its:",
+      "choices": {"A": "Axis", "B": "Orbit", "C": "Rotation", "D": "Latitude"},
+      "answer": "B",
+      "explanation": "Earth travels around the Sun in an orbit. The axis is the line it spins about; rotation is the spin itself; latitude is a coordinate.",
+      "steps": ["Identify term for yearly path", "Orbit describes path around another body", "Axis/rotation are about spinning", "Select orbit"],
+      "fastStrategy": "Yearly path around Sun = orbit."
+    },
+    {
+      "id": "ps_es_b1_006",
+      "question": "The main gas in Earth's atmosphere is:",
+      "choices": {"A": "Oxygen", "B": "Nitrogen", "C": "Carbon dioxide", "D": "Argon"},
+      "answer": "B",
+      "explanation": "Earth's air is about 78% nitrogen, 21% oxygen, with small amounts of argon and carbon dioxide.",
+      "steps": ["Recall atmospheric composition", "Nitrogen is roughly three-fourths", "Oxygen is about one-fifth", "Choose nitrogen"],
+      "fastStrategy": "Atmosphere majority = nitrogen (~78%)."
+    },
+    {
+      "id": "ps_es_b1_007",
+      "question": "The layer of the atmosphere where weather occurs is the:",
+      "choices": {"A": "Stratosphere", "B": "Troposphere", "C": "Mesosphere", "D": "Thermosphere"},
+      "answer": "B",
+      "explanation": "Weather processes like clouds and storms happen in the troposphere, the lowest atmospheric layer.",
+      "steps": ["Identify layer with clouds and storms", "Troposphere is lowest and holds most water vapor", "Stratosphere has ozone layer", "Select troposphere"],
+      "fastStrategy": "Weather lives low: troposphere."
+    },
+    {
+      "id": "ps_es_b1_008",
+      "question": "Which motion describes Earth's yearly journey around the Sun?",
+      "choices": {"A": "Rotation", "B": "Revolution", "C": "Precession", "D": "Vibration"},
+      "answer": "B",
+      "explanation": "Earth's revolution is its orbit around the Sun taking about 365 days. Rotation is the daily spin.",
+      "steps": ["Match term to yearly motion", "Revolution = orbiting the Sun", "Rotation = spinning on axis", "Choose revolution"],
+      "fastStrategy": "Yearly orbit = revolution; daily spin = rotation."
+    },
+    {
+      "id": "ps_es_b1_009",
+      "question": "The Moon's phases are caused by:",
+      "choices": {"A": "Earth's shadow covering the Moon daily", "B": "Changes in the Moon's shape", "C": "Different angles of sunlight on the Moon", "D": "Cloud cover on Earth"},
+      "answer": "C",
+      "explanation": "As the Moon orbits Earth, we see varying portions lit by the Sun, creating phases. The Moon's shape doesn't change.",
+      "steps": ["Recall cause of phases", "Sunlight angle changes with Moon's position", "Not Earth's shadow except during eclipses", "Select sunlight angles"],
+      "fastStrategy": "Phases = changing view of lit half, not shadow."
+    },
+    {
+      "id": "ps_es_b1_010",
+      "question": "Tides on Earth are mainly caused by:",
+      "choices": {"A": "Wind patterns", "B": "Moon's gravity", "C": "Earth's tilt", "D": "Sun's heat"},
+      "answer": "B",
+      "explanation": "The Moon's gravitational pull creates bulges in ocean water, producing high and low tides. The Sun also contributes but less.",
+      "steps": ["Identify primary tidal force", "Moon's gravity dominates tides", "Wind affects waves, not global tides", "Choose Moon's gravity"],
+      "fastStrategy": "Think Moon for tides; Sun is secondary."
+    },
+    {
+      "id": "ps_es_b1_011",
+      "question": "A solar eclipse occurs when:",
+      "choices": {"A": "Earth passes between Sun and Moon", "B": "Moon passes between Sun and Earth", "C": "Moon passes into Earth's shadow", "D": "Sun is farthest from Earth"},
+      "answer": "B",
+      "explanation": "In a solar eclipse, the Moon moves between Earth and the Sun, blocking sunlight to part of Earth.",
+      "steps": ["Recall which body blocks the Sun", "Moon must be between Earth and Sun", "Lunar eclipse is Moon entering Earth's shadow", "Select Moon between Sun and Earth"],
+      "fastStrategy": "Solar eclipse = Moon blocks Sun."
+    },
+    {
+      "id": "ps_es_b1_012",
+      "question": "Inner planets like Mercury and Venus are called:",
+      "choices": {"A": "Gas giants", "B": "Terrestrial planets", "C": "Dwarf planets", "D": "Ice giants"},
+      "answer": "B",
+      "explanation": "The four inner planets are rocky and are termed terrestrial planets. Gas and ice giants are outer planets.",
+      "steps": ["Classify inner planets by composition", "Rocky = terrestrial", "Gas/ice giants apply to outer planets", "Choose terrestrial"],
+      "fastStrategy": "Rocky inner worlds = terrestrial."
+    },
+    {
+      "id": "ps_es_b1_013",
+      "question": "A comet is mostly a mixture of:",
+      "choices": {"A": "Ice and dust", "B": "Solid iron", "C": "Molten rock", "D": "Liquid water"},
+      "answer": "A",
+      "explanation": "Comets are often described as dirty snowballs made of ice, dust, and rock. When near the Sun they develop tails.",
+      "steps": ["Recall comet composition", "Known as dirty snowballs", "Ice and dust fits; metals/rock alone don't", "Select ice and dust"],
+      "fastStrategy": "Comet = icy dusty snowball."
+    },
+    {
+      "id": "ps_es_b1_014",
+      "question": "Meteorites are:",
+      "choices": {"A": "Rocks still in space", "B": "Streaks of light in the atmosphere", "C": "Space rocks that reach Earth's surface", "D": "Artificial satellites"},
+      "answer": "C",
+      "explanation": "Meteoroids become meteors when burning in the atmosphere; if they survive to land, they are meteorites.",
+      "steps": ["Track term progression: meteoroid → meteor → meteorite", "Meteorite is after reaching ground", "Meteor is the light streak", "Choose reaching Earth's surface"],
+      "fastStrategy": "Meteorite = rock that hits the ground."
+    },
+    {
+      "id": "ps_es_b1_015",
+      "question": "Which layer contains the ozone layer that absorbs UV light?",
+      "choices": {"A": "Troposphere", "B": "Stratosphere", "C": "Mesosphere", "D": "Exosphere"},
+      "answer": "B",
+      "explanation": "The ozone layer sits in the stratosphere, filtering harmful ultraviolet radiation from the Sun.",
+      "steps": ["Locate ozone layer", "It resides in stratosphere", "Troposphere holds weather; mesosphere above stratosphere", "Select stratosphere"],
+      "fastStrategy": "Ozone shield = stratosphere."
+    },
+    {
+      "id": "ps_es_b1_016",
+      "question": "The angle of Earth's tilt is closest to:",
+      "choices": {"A": "0°", "B": "10°", "C": "23.5°", "D": "45°"},
+      "answer": "C",
+      "explanation": "Earth's axis is tilted about 23.5° from vertical, driving seasonal sunlight changes.",
+      "steps": ["Remember standard tilt value", "Commonly taught as 23.5°", "Other options are clearly off", "Select 23.5°"],
+      "fastStrategy": "Tilt number to memorize: 23.5°."
+    },
+    {
+      "id": "ps_es_b1_017",
+      "question": "An equinox is the day when:",
+      "choices": {"A": "Day and night are roughly equal", "B": "Sun is farthest from Earth", "C": "North Pole has 24 hours daylight", "D": "Hottest day of the year"},
+      "answer": "A",
+      "explanation": "During an equinox, sunlight hits the equator directly and day and night are about equal length worldwide.",
+      "steps": ["Define equinox", "Equal day/night lengths", "Not about distance or hottest day", "Choose equal day and night"],
+      "fastStrategy": "Equinox ≈ equal day/night."
+    },
+    {
+      "id": "ps_es_b1_018",
+      "question": "High-pressure systems usually bring:",
+      "choices": {"A": "Stormy, rising air", "B": "Clear, sinking air", "C": "Hurricanes", "D": "Lightning"},
+      "answer": "B",
+      "explanation": "High pressure features sinking, drying air that leads to clearer skies. Rising air and storms pair with low pressure.",
+      "steps": ["Recall pressure vs weather", "High pressure → sinking air → clear", "Low pressure → rising → clouds/storms", "Select clear, sinking air"],
+      "fastStrategy": "High = dry and clear; low = lift and storm."
+    },
+    {
+      "id": "ps_es_b1_019",
+      "question": "Cumulus clouds are typically:",
+      "choices": {"A": "Thin, high, feathery clouds", "B": "Tall, puffy fair-weather clouds", "C": "Layered gray rain clouds", "D": "Clouds made only of ice"},
+      "answer": "B",
+      "explanation": "Cumulus clouds are puffy and often signal fair weather. Cirrus are thin and high; stratus are layered and can bring drizzle.",
+      "steps": ["Identify common cloud shapes", "Cumulus = puffy heaps", "Cirrus = wispy; stratus = layers", "Choose puffy fair-weather"],
+      "fastStrategy": "Cumulus = cotton-ball puffs."
+    },
+    {
+      "id": "ps_es_b1_020",
+      "question": "Warm air meeting cold air often forms a weather:",
+      "choices": {"A": "Front", "B": "Jet stream", "C": "Trade wind", "D": "Monsoon"},
+      "answer": "A",
+      "explanation": "A front is the boundary between air masses of different temperatures, often producing clouds and precipitation.",
+      "steps": ["Define boundary between air masses", "Different temperatures = front", "Jet stream/trade winds are upper-level wind patterns", "Select front"],
+      "fastStrategy": "Temperature boundary = front."
+    },
+    {
+      "id": "ps_es_b1_021",
+      "question": "The water cycle process where liquid changes to vapor is:",
+      "choices": {"A": "Condensation", "B": "Evaporation", "C": "Precipitation", "D": "Infiltration"},
+      "answer": "B",
+      "explanation": "Evaporation turns liquid water into vapor. Condensation is vapor to liquid; precipitation is rain/snow; infiltration soaks into ground.",
+      "steps": ["Match phase change to term", "Liquid to vapor = evaporation", "Condensation is opposite", "Choose evaporation"],
+      "fastStrategy": "Liquid to gas in water cycle = evaporation."
+    },
+    {
+      "id": "ps_es_b1_022",
+      "question": "Lightning is a sudden:",
+      "choices": {"A": "Drop in air pressure", "B": "Discharge of electrical energy", "C": "Change in Earth's magnetic field", "D": "Shift in jet stream"},
+      "answer": "B",
+      "explanation": "Lightning is a rapid electric discharge between clouds, within a cloud, or between cloud and ground.",
+      "steps": ["Identify what lightning is physically", "It's electrical discharge", "Not pressure or jet stream", "Select discharge"],
+      "fastStrategy": "Lightning = giant spark discharge."
+    },
+    {
+      "id": "ps_es_b1_023",
+      "question": "Thunder is caused by:",
+      "choices": {"A": "Clouds rubbing together", "B": "Air rapidly expanding from lightning heat", "C": "Raindrops hitting the ground", "D": "Winds at high altitude"},
+      "answer": "B",
+      "explanation": "Lightning superheats air, making it expand rapidly and create a shock wave we hear as thunder.",
+      "steps": ["Relate thunder to lightning", "Lightning heats air → rapid expansion", "Sound is the shock wave", "Choose expanding air"],
+      "fastStrategy": "Lightning heats air → boom."
+    },
+    {
+      "id": "ps_es_b1_024",
+      "question": "Most earthquakes occur at:",
+      "choices": {"A": "Mid-ocean ridges only", "B": "Plate boundaries", "C": "Centers of plates only", "D": "Volcanic hotspots only"},
+      "answer": "B",
+      "explanation": "Tectonic plate boundaries are where plates interact, causing most earthquakes. Some also occur at hotspots or within plates, but less often.",
+      "steps": ["Identify main location of seismic activity", "Plate boundaries concentrate stress", "Intraplate quakes exist but are fewer", "Select plate boundaries"],
+      "fastStrategy": "Think plate edges for quakes."
+    },
+    {
+      "id": "ps_es_b1_025",
+      "question": "The Sun is classified as a:",
+      "choices": {"A": "Red giant", "B": "Main-sequence star", "C": "White dwarf", "D": "Neutron star"},
+      "answer": "B",
+      "explanation": "The Sun is a typical main-sequence (G-type) star currently fusing hydrogen in its core.",
+      "steps": ["Recall Sun's life stage", "Currently burning hydrogen steadily", "Main-sequence fits; not yet red giant", "Choose main-sequence"],
+      "fastStrategy": "Sun now = main-sequence star."
+    }
+  ]
+}

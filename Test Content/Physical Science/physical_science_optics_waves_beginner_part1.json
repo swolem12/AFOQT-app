@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "optics_waves",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ps_ow_b1_001",
+      "question": "The distance between two consecutive crests of a wave is its:",
+      "choices": {"A": "Frequency", "B": "Amplitude", "C": "Wavelength", "D": "Period"},
+      "answer": "C",
+      "explanation": "Wavelength is the distance between matching points on a wave, such as crest to crest. Frequency and period relate to time; amplitude is height.",
+      "steps": ["Identify spatial measure along the wave", "Crest-to-crest distance is wavelength", "Frequency/period are time measures", "Amplitude is height"],
+      "fastStrategy": "Distance along wave? Think wavelength."
+    },
+    {
+      "id": "ps_ow_b1_002",
+      "question": "The height of a wave from the midline to a crest is its:",
+      "choices": {"A": "Period", "B": "Amplitude", "C": "Frequency", "D": "Wavelength"},
+      "answer": "B",
+      "explanation": "Amplitude measures wave height from the middle to a crest or trough. Wavelength is horizontal distance; period and frequency are time-related.",
+      "steps": ["Look for vertical size measure", "Amplitude = midline to crest/trough", "Wavelength is horizontal distance", "Period/frequency are time"],
+      "fastStrategy": "Wave height → amplitude."
+    },
+    {
+      "id": "ps_ow_b1_003",
+      "question": "Frequency is measured in:",
+      "choices": {"A": "Hertz", "B": "Joules", "C": "Meters", "D": "Newtons"},
+      "answer": "A",
+      "explanation": "Frequency is cycles per second, measured in hertz (Hz). Joules measure energy, meters length, newtons force.",
+      "steps": ["Recall unit cycles/second", "Hertz = 1/s", "Other units belong to different quantities", "Choose hertz"],
+      "fastStrategy": "Frequency → hertz (Hz)."
+    },
+    {
+      "id": "ps_ow_b1_004",
+      "question": "Light bending when it enters water from air is called:",
+      "choices": {"A": "Reflection", "B": "Diffraction", "C": "Refraction", "D": "Absorption"},
+      "answer": "C",
+      "explanation": "Refraction is the change in direction of a wave when it enters a new medium. Reflection bounces back; diffraction spreads around edges; absorption takes in energy.",
+      "steps": ["Identify change of medium", "Direction change in new medium = refraction", "Reflection is bounce, diffraction is spreading", "Select refraction"],
+      "fastStrategy": "Medium change with bending → refraction."
+    },
+    {
+      "id": "ps_ow_b1_005",
+      "question": "A mirror produces which wave behavior?",
+      "choices": {"A": "Diffraction", "B": "Refraction", "C": "Reflection", "D": "Absorption"},
+      "answer": "C",
+      "explanation": "Mirrors bounce light back, which is reflection. Refraction bends through materials; diffraction is spreading; absorption takes in light.",
+      "steps": ["Identify bounce off surface", "Mirror causes reflection", "Other behaviors involve passing or absorbing", "Choose reflection"],
+      "fastStrategy": "Mirror → reflection (bounce)."
+    },
+    {
+      "id": "ps_ow_b1_006",
+      "question": "Sound travels fastest in:",
+      "choices": {"A": "Air", "B": "Water", "C": "Steel", "D": "Vacuum"},
+      "answer": "C",
+      "explanation": "Sound needs a medium and travels fastest in solids like steel because particles are closely packed. It cannot travel in vacuum.",
+      "steps": ["Sound speed highest with strong particle coupling", "Solids > liquids > gases", "Steel is solid, fastest here", "Vacuum allows no sound"],
+      "fastStrategy": "Sound: solids fastest, gases slowest, none in vacuum."
+    },
+    {
+      "id": "ps_ow_b1_007",
+      "question": "The color of visible light depends mainly on its:",
+      "choices": {"A": "Amplitude", "B": "Frequency", "C": "Speed in vacuum", "D": "Polarization"},
+      "answer": "B",
+      "explanation": "Color corresponds to light's frequency (or wavelength). Amplitude affects brightness; speed in vacuum is constant for light.",
+      "steps": ["Match color to wavelength/frequency", "Amplitude relates to intensity", "Speed of light in vacuum constant", "Select frequency"],
+      "fastStrategy": "Color = frequency/wavelength; brightness = amplitude."
+    },
+    {
+      "id": "ps_ow_b1_008",
+      "question": "Which wave is mechanical and needs a medium?",
+      "choices": {"A": "Light", "B": "Radio", "C": "Sound", "D": "X-rays"},
+      "answer": "C",
+      "explanation": "Sound is a mechanical wave and requires a medium. Light, radio, and X-rays are electromagnetic and can travel through vacuum.",
+      "steps": ["Mechanical waves need matter", "Sound cannot travel in vacuum", "EM waves travel in vacuum", "Choose sound"],
+      "fastStrategy": "If it fails in vacuum, it's mechanical (sound)."
+    },
+    {
+      "id": "ps_ow_b1_009",
+      "question": "Electromagnetic waves differ from sound waves because EM waves:",
+      "choices": {"A": "Require a medium", "B": "Travel in vacuum", "C": "Are longitudinal only", "D": "Cannot be polarized"},
+      "answer": "B",
+      "explanation": "EM waves can travel through vacuum; sound cannot. EM waves are transverse and can be polarized.",
+      "steps": ["Recall EM waves move in vacuum", "Sound needs medium", "EM are transverse and polarizable", "Select travel in vacuum"],
+      "fastStrategy": "EM works in space; sound doesn't."
+    },
+    {
+      "id": "ps_ow_b1_010",
+      "question": "When light reflects, the angle of incidence equals the angle of:",
+      "choices": {"A": "Refraction", "B": "Reflection", "C": "Diffraction", "D": "Absorption"},
+      "answer": "B",
+      "explanation": "Law of reflection: angle of incidence equals angle of reflection, measured from the normal.",
+      "steps": ["Recall reflection law", "Match incidence to reflection angle", "Refraction angle differs in new medium", "Choose reflection"],
+      "fastStrategy": "Reflection: incoming angle = outgoing angle."
+    },
+    {
+      "id": "ps_ow_b1_011",
+      "question": "A lens that is thicker at the center than edges is a:",
+      "choices": {"A": "Concave lens", "B": "Convex lens", "C": "Flat mirror", "D": "Plane glass"},
+      "answer": "B",
+      "explanation": "A convex lens bulges outward, thicker in the middle. Concave is thinner in the middle.",
+      "steps": ["Compare lens shapes", "Convex = bulging middle", "Concave = thin middle", "Select convex"],
+      "fastStrategy": "Bulges out = convex lens."
+    },
+    {
+      "id": "ps_ow_b1_012",
+      "question": "Which wave property relates to how loud a sound is perceived?",
+      "choices": {"A": "Wavelength", "B": "Frequency", "C": "Amplitude", "D": "Period"},
+      "answer": "C",
+      "explanation": "Loudness correlates with amplitude of the sound wave. Frequency relates to pitch.",
+      "steps": ["Identify loudness with energy", "Higher amplitude → louder sound", "Frequency changes pitch", "Choose amplitude"],
+      "fastStrategy": "Loudness ↔ amplitude; pitch ↔ frequency."
+    },
+    {
+      "id": "ps_ow_b1_013",
+      "question": "The speed of light in vacuum is approximately:",
+      "choices": {"A": "3.0 × 10^8 m/s", "B": "3.0 × 10^6 m/s", "C": "3.0 × 10^4 m/s", "D": "3.0 × 10^2 m/s"},
+      "answer": "A",
+      "explanation": "Light travels about 3.0 × 10^8 meters per second in vacuum.",
+      "steps": ["Recall standard c value", "3×10^8 m/s is correct", "Other options are too small", "Choose 3×10^8"],
+      "fastStrategy": "Use c ≈ 3 × 10^8 m/s."
+    },
+    {
+      "id": "ps_ow_b1_014",
+      "question": "When a wave passes through a narrow opening and spreads out, this is:",
+      "choices": {"A": "Reflection", "B": "Refraction", "C": "Diffraction", "D": "Interference"},
+      "answer": "C",
+      "explanation": "Diffraction is the spreading of waves when they encounter an opening or obstacle.",
+      "steps": ["Identify spreading after a gap", "That behavior is diffraction", "Refraction is bending in a new medium", "Select diffraction"],
+      "fastStrategy": "Spreads after a slit → diffraction."
+    },
+    {
+      "id": "ps_ow_b1_015",
+      "question": "Constructive interference occurs when two waves:",
+      "choices": {"A": "Cancel each other", "B": "Add to make a larger amplitude", "C": "Reflect off a surface", "D": "Change medium"},
+      "answer": "B",
+      "explanation": "Constructive interference is when waves align crest-to-crest, producing a larger amplitude. Destructive interference cancels.",
+      "steps": ["Interference can add or cancel", "Crest aligns with crest → bigger amplitude", "Destructive would cancel", "Choose add amplitude"],
+      "fastStrategy": "Same-phase waves add (constructive); opposite cancel."
+    },
+    {
+      "id": "ps_ow_b1_016",
+      "question": "Destructive interference makes the resulting wave:",
+      "choices": {"A": "Larger", "B": "Smaller or zero", "C": "Change color", "D": "Speed up"},
+      "answer": "B",
+      "explanation": "Destructive interference occurs when crest meets trough, reducing amplitude or canceling the wave.",
+      "steps": ["Crest + trough = reduction", "Amplitude decreases or cancels", "No color or speed change directly", "Select smaller/zero"],
+      "fastStrategy": "Opposite-phase waves cancel."
+    },
+    {
+      "id": "ps_ow_b1_017",
+      "question": "Polarization filters out waves based on:",
+      "choices": {"A": "Wavelength", "B": "Direction of vibration", "C": "Speed", "D": "Frequency"},
+      "answer": "B",
+      "explanation": "Polarization selects waves oscillating in a particular plane (direction of vibration). It doesn't change wavelength or frequency.",
+      "steps": ["Polarization relates to oscillation plane", "Filter passes one vibration direction", "Not a speed or wavelength filter", "Choose direction of vibration"],
+      "fastStrategy": "Polarizers pass one vibration plane only."
+    },
+    {
+      "id": "ps_ow_b1_018",
+      "question": "Which color of visible light has the longest wavelength?",
+      "choices": {"A": "Blue", "B": "Green", "C": "Yellow", "D": "Red"},
+      "answer": "D",
+      "explanation": "Within visible light, red has the longest wavelength (lowest frequency), and violet has the shortest.",
+      "steps": ["Recall ROYGBIV order", "Red end = longer wavelength", "Violet end = shorter", "Choose red"],
+      "fastStrategy": "Visible spectrum: Red = longest λ, Violet = shortest λ."
+    },
+    {
+      "id": "ps_ow_b1_019",
+      "question": "Which color of visible light has the shortest wavelength?",
+      "choices": {"A": "Red", "B": "Orange", "C": "Green", "D": "Violet"},
+      "answer": "D",
+      "explanation": "Violet is at the short-wavelength, high-frequency end of visible light.",
+      "steps": ["Recall spectrum order", "Violet is shortest λ, highest f", "Red is longest λ", "Select violet"],
+      "fastStrategy": "Red long, violet short."
+    },
+    {
+      "id": "ps_ow_b1_020",
+      "question": "When white light passes through a prism, it spreads into colors because of:",
+      "choices": {"A": "Diffraction", "B": "Dispersion", "C": "Polarization", "D": "Interference"},
+      "answer": "B",
+      "explanation": "Dispersion occurs when different wavelengths refract by different amounts, separating colors.",
+      "steps": ["Identify color separation by refraction", "Different λ bend differently = dispersion", "Diffraction is spreading at edges", "Choose dispersion"],
+      "fastStrategy": "Prism color spread = dispersion (λ-dependent refraction)."
+    },
+    {
+      "id": "ps_ow_b1_021",
+      "question": "A transverse wave vibrates:",
+      "choices": {"A": "Parallel to its direction of travel", "B": "Perpendicular to its direction of travel", "C": "In circles", "D": "Not at all"},
+      "answer": "B",
+      "explanation": "In transverse waves, the disturbance is perpendicular to the direction of propagation. Longitudinal waves vibrate parallel.",
+      "steps": ["Define transverse vs longitudinal", "Transverse = perpendicular", "Longitudinal = parallel", "Choose perpendicular"],
+      "fastStrategy": "Transverse = perpendicular vibrations."
+    },
+    {
+      "id": "ps_ow_b1_022",
+      "question": "Sound waves in air are:",
+      "choices": {"A": "Transverse", "B": "Longitudinal", "C": "Electromagnetic", "D": "Polarized"},
+      "answer": "B",
+      "explanation": "Sound in air is a longitudinal wave: compressions and rarefactions move parallel to propagation.",
+      "steps": ["Identify sound as pressure wave", "Pressure varies along direction of travel", "That is longitudinal", "Select longitudinal"],
+      "fastStrategy": "Sound in fluids = longitudinal pressure wave."
+    },
+    {
+      "id": "ps_ow_b1_023",
+      "question": "The time for one full wave cycle is the:",
+      "choices": {"A": "Wavelength", "B": "Amplitude", "C": "Period", "D": "Frequency"},
+      "answer": "C",
+      "explanation": "Period is the time for one complete cycle. Frequency is cycles per second, its inverse.",
+      "steps": ["Define period as time per cycle", "Frequency = cycles per time", "Wavelength is distance", "Choose period"],
+      "fastStrategy": "Period = time per cycle; f = 1/period."
+    },
+    {
+      "id": "ps_ow_b1_024",
+      "question": "If a wave's frequency increases, its period:",
+      "choices": {"A": "Increases", "B": "Decreases", "C": "Stays the same", "D": "Becomes infinite"},
+      "answer": "B",
+      "explanation": "Frequency and period are inverses. Higher frequency means shorter period.",
+      "steps": ["Use relationship T = 1/f", "Increase f → decrease T", "Cannot stay same or increase", "Choose decreases"],
+      "fastStrategy": "Higher f → shorter T (inverse relation)."
+    },
+    {
+      "id": "ps_ow_b1_025",
+      "question": "In the wave equation v = fλ, doubling the wavelength while keeping speed constant will:",
+      "choices": {"A": "Double the frequency", "B": "Halve the frequency", "C": "Not change frequency", "D": "Make speed zero"},
+      "answer": "B",
+      "explanation": "With v constant, v = fλ. If λ doubles, f must halve to keep v the same.",
+      "steps": ["Start from v = fλ", "Hold v constant", "λ → 2λ requires f → f/2", "Choose halve frequency"],
+      "fastStrategy": "v fixed: λ↑ → f↓ proportionally."
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "chemistry_basics",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ps_cb_b1_001",
+      "question": "The smallest unit of an element that retains its properties is a(n):",
+      "choices": {"A": "Molecule", "B": "Atom", "C": "Compound", "D": "Mixture"},
+      "answer": "B",
+      "explanation": "An atom is the smallest unit of an element that retains its chemical properties. Molecules are combinations of atoms; compounds are molecules of different elements; mixtures are physical blends.",
+      "steps": ["Identify single unit of an element", "Atom fits; molecules can mix elements", "Compounds/mixtures involve multiple atoms", "Choose atom"],
+      "fastStrategy": "Element's basic unit = atom."
+    },
+    {
+      "id": "ps_cb_b1_002",
+      "question": "Which particles are found in the nucleus of an atom?",
+      "choices": {"A": "Protons and neutrons", "B": "Electrons only", "C": "Protons and electrons", "D": "Neutrons and electrons"},
+      "answer": "A",
+      "explanation": "The nucleus contains protons and neutrons. Electrons orbit outside the nucleus.",
+      "steps": ["Recall atomic structure", "Nucleus has protons (+) and neutrons (0)", "Electrons are outside", "Select protons and neutrons"],
+      "fastStrategy": "Nucleus = protons + neutrons; electrons orbit."
+    },
+    {
+      "id": "ps_cb_b1_003",
+      "question": "The atomic number equals the number of:",
+      "choices": {"A": "Neutrons", "B": "Protons", "C": "Electrons only", "D": "Neutrons + electrons"},
+      "answer": "B",
+      "explanation": "Atomic number is the number of protons in the nucleus. In neutral atoms, it also equals the number of electrons.",
+      "steps": ["Define atomic number = protons", "Neutral atoms have equal electrons", "Neutrons vary by isotope", "Choose protons"],
+      "fastStrategy": "Atomic number = proton count."
+    },
+    {
+      "id": "ps_cb_b1_004",
+      "question": "An element's chemical symbol 'O' stands for:",
+      "choices": {"A": "Osmium", "B": "Oxygen", "C": "Gold", "D": "Oganesson"},
+      "answer": "B",
+      "explanation": "In the periodic table, 'O' is oxygen. Osmium is Os; gold is Au; oganesson is Og.",
+      "steps": ["Match symbol to element", "'O' = oxygen", "Check others: Os osmium, Au gold, Og oganesson", "Choose oxygen"],
+      "fastStrategy": "Symbol O → oxygen."
+    },
+    {
+      "id": "ps_cb_b1_005",
+      "question": "Electrons occupy regions around the nucleus called:",
+      "choices": {"A": "Isotopes", "B": "Orbitals/energy levels", "C": "Nuclei", "D": "Compounds"},
+      "answer": "B",
+      "explanation": "Electrons reside in orbitals or energy levels around the nucleus. Isotopes refer to neutron variation.",
+      "steps": ["Identify electron locations", "Orbitals/energy levels house electrons", "Isotopes are about neutrons", "Select orbitals"],
+      "fastStrategy": "Electrons live in orbitals/energy levels."
+    },
+    {
+      "id": "ps_cb_b1_006",
+      "question": "A neutral atom has equal numbers of:",
+      "choices": {"A": "Protons and electrons", "B": "Neutrons and electrons", "C": "Protons and neutrons", "D": "Isotopes and ions"},
+      "answer": "A",
+      "explanation": "Neutral atoms have balanced positive and negative charges, so protons = electrons.",
+      "steps": ["Neutral means no net charge", "Protons are +, electrons are -", "Equal counts give zero net charge", "Choose protons and electrons"],
+      "fastStrategy": "Neutral atom: protons = electrons."
+    },
+    {
+      "id": "ps_cb_b1_007",
+      "question": "Isotopes of an element differ in number of:",
+      "choices": {"A": "Protons", "B": "Electrons", "C": "Neutrons", "D": "Protons and electrons"},
+      "answer": "C",
+      "explanation": "Isotopes have the same protons (same element) but different neutrons, changing mass number.",
+      "steps": ["Isotopes = same Z, different neutron count", "Protons define element, so unchanged", "Electrons can vary in ions but not isotopes definition", "Choose neutrons"],
+      "fastStrategy": "Isotopes vary neutrons; protons stay fixed."
+    },
+    {
+      "id": "ps_cb_b1_008",
+      "question": "A substance made of two or more elements chemically combined is a:",
+      "choices": {"A": "Mixture", "B": "Compound", "C": "Solution", "D": "Element"},
+      "answer": "B",
+      "explanation": "Compounds have elements chemically bonded in fixed ratios. Mixtures/solutions are physical blends; elements are single types of atoms.",
+      "steps": ["Identify chemical bond requirement", "Compound fits; mixture/solution are physical", "Element is single type", "Choose compound"],
+      "fastStrategy": "Chemical combination of elements = compound."
+    },
+    {
+      "id": "ps_cb_b1_009",
+      "question": "Table salt (NaCl) is an example of a(n):",
+      "choices": {"A": "Element", "B": "Compound", "C": "Mixture", "D": "Isotope"},
+      "answer": "B",
+      "explanation": "NaCl is a compound formed by sodium and chlorine ions in a fixed ratio.",
+      "steps": ["NaCl has two elements bonded", "Fixed ratio means compound", "Not a mixture or element", "Choose compound"],
+      "fastStrategy": "NaCl → compound of Na + Cl."
+    },
+    {
+      "id": "ps_cb_b1_010",
+      "question": "Which particle has a negative charge?",
+      "choices": {"A": "Proton", "B": "Neutron", "C": "Electron", "D": "Alpha particle"},
+      "answer": "C",
+      "explanation": "Electrons carry negative charge. Protons are positive, neutrons neutral; alpha particles are He nuclei with +2 charge.",
+      "steps": ["Recall charges", "Electron = -1, proton = +1, neutron = 0", "Alpha = +2", "Choose electron"],
+      "fastStrategy": "Negative particle in atoms = electron."
+    },
+    {
+      "id": "ps_cb_b1_011",
+      "question": "The number of protons plus neutrons in an atom is the:",
+      "choices": {"A": "Atomic number", "B": "Mass number", "C": "Charge number", "D": "Ion number"},
+      "answer": "B",
+      "explanation": "Mass number A = protons + neutrons in the nucleus.",
+      "steps": ["Mass number counts nucleons", "Protons + neutrons", "Atomic number is protons only", "Choose mass number"],
+      "fastStrategy": "Mass number = protons + neutrons."
+    },
+    {
+      "id": "ps_cb_b1_012",
+      "question": "A mixture with uniform composition throughout is called:",
+      "choices": {"A": "Heterogeneous", "B": "Homogeneous", "C": "Colloid", "D": "Suspension"},
+      "answer": "B",
+      "explanation": "A homogeneous mixture has uniform composition (e.g., saltwater). Heterogeneous mixtures have visible differences.",
+      "steps": ["Uniform composition → homogeneous", "Heterogeneous not uniform", "Colloid/suspension are specific types", "Select homogeneous"],
+      "fastStrategy": "Uniform mixture = homogeneous."
+    },
+    {
+      "id": "ps_cb_b1_013",
+      "question": "Which is a physical change?",
+      "choices": {"A": "Iron rusting", "B": "Water freezing", "C": "Wood burning", "D": "Vinegar reacting with baking soda"},
+      "answer": "B",
+      "explanation": "Freezing changes state but not composition. Rusting, burning, and acid-base reactions are chemical changes.",
+      "steps": ["Physical change: state/appearance, no new substance", "Freezing is state change", "Others form new substances", "Choose water freezing"],
+      "fastStrategy": "State changes without new substance = physical change."
+    },
+    {
+      "id": "ps_cb_b1_014",
+      "question": "Which is a chemical change?",
+      "choices": {"A": "Melting ice", "B": "Boiling water", "C": "Burning paper", "D": "Crushing salt"},
+      "answer": "C",
+      "explanation": "Burning forms new substances (ash, gases), a chemical change. Melting/boiling/crushing are physical changes.",
+      "steps": ["Chemical change forms new substance", "Burning creates new products", "Others are physical", "Select burning paper"],
+      "fastStrategy": "New substance formed? Chemical change."
+    },
+    {
+      "id": "ps_cb_b1_015",
+      "question": "The law of conservation of mass states that in a chemical reaction, mass is:",
+      "choices": {"A": "Created", "B": "Destroyed", "C": "Conserved", "D": "Doubled"},
+      "answer": "C",
+      "explanation": "Mass is conserved in ordinary chemical reactions; total mass of reactants equals total mass of products.",
+      "steps": ["Recall conservation principle", "Reactant mass = product mass", "Not created/destroyed", "Choose conserved"],
+      "fastStrategy": "Chemical reactions conserve mass."
+    },
+    {
+      "id": "ps_cb_b1_016",
+      "question": "Table sugar dissolving in water is a:",
+      "choices": {"A": "Chemical change", "B": "Physical change", "C": "Nuclear change", "D": "Impossible"},
+      "answer": "B",
+      "explanation": "Dissolving is physical; sugar molecules remain sugar, just dispersed in water.",
+      "steps": ["Identify no new substance", "Sugar remains chemically same", "Solution forms physically", "Select physical change"],
+      "fastStrategy": "Dissolving typically physical (no new substance)."
+    },
+    {
+      "id": "ps_cb_b1_017",
+      "question": "The pH scale measures how acidic or basic a solution is. Neutral pH is:",
+      "choices": {"A": "0", "B": "7", "C": "14", "D": "1"},
+      "answer": "B",
+      "explanation": "On the 0–14 pH scale, 7 is neutral (pure water at 25°C). Lower is acidic; higher is basic.",
+      "steps": ["Recall pH reference points", "Neutral water pH ~7", "Acid < 7, base > 7", "Choose 7"],
+      "fastStrategy": "pH 7 is neutral; below acidic, above basic."
+    },
+    {
+      "id": "ps_cb_b1_018",
+      "question": "Which is an example of a mixture?",
+      "choices": {"A": "Carbon dioxide", "B": "Water", "C": "Air", "D": "Sodium chloride"},
+      "answer": "C",
+      "explanation": "Air is a mixture of gases. CO2, H2O, and NaCl are compounds with fixed compositions.",
+      "steps": ["Mixture = variable composition", "Air is gases combined physically", "Others are fixed-compound formulas", "Select air"],
+      "fastStrategy": "Air is a classic mixture; formulas are compounds."
+    },
+    {
+      "id": "ps_cb_b1_019",
+      "question": "Which element is needed for combustion?",
+      "choices": {"A": "Oxygen", "B": "Helium", "C": "Neon", "D": "Argon"},
+      "answer": "A",
+      "explanation": "Combustion requires oxygen as the typical oxidizer. Helium, neon, argon are noble gases and do not support burning.",
+      "steps": ["Recall oxidizer in basic burning", "Oxygen supports combustion", "Noble gases are inert", "Choose oxygen"],
+      "fastStrategy": "Combustion needs oxygen."
+    },
+    {
+      "id": "ps_cb_b1_020",
+      "question": "Which subatomic particle has no charge?",
+      "choices": {"A": "Proton", "B": "Electron", "C": "Neutron", "D": "Positron"},
+      "answer": "C",
+      "explanation": "Neutrons are neutral. Protons are positive; electrons negative; positrons positive.",
+      "steps": ["List charges: p +, e -, n 0", "Positron is +", "Neutral one is neutron", "Select neutron"],
+      "fastStrategy": "Neutral particle = neutron."
+    },
+    {
+      "id": "ps_cb_b1_021",
+      "question": "An ion with more electrons than protons is:",
+      "choices": {"A": "Positive", "B": "Negative", "C": "Neutral", "D": "A proton"},
+      "answer": "B",
+      "explanation": "Extra electrons give a net negative charge, forming an anion.",
+      "steps": ["Net charge = protons - electrons", "More electrons → negative", "Positive would be fewer electrons", "Choose negative"],
+      "fastStrategy": "More electrons than protons → negative ion."
+    },
+    {
+      "id": "ps_cb_b1_022",
+      "question": "A horizontal row on the periodic table is called a:",
+      "choices": {"A": "Group", "B": "Family", "C": "Period", "D": "Block"},
+      "answer": "C",
+      "explanation": "Periods are horizontal rows. Groups/families are vertical columns.",
+      "steps": ["Recall table layout", "Horizontal = period", "Vertical = group/family", "Select period"],
+      "fastStrategy": "Rows = periods; columns = groups."
+    },
+    {
+      "id": "ps_cb_b1_023",
+      "question": "A vertical column on the periodic table is called a:",
+      "choices": {"A": "Period", "B": "Group", "C": "Row", "D": "Series"},
+      "answer": "B",
+      "explanation": "Groups are vertical columns; elements in a group often share valence patterns.",
+      "steps": ["Identify vertical columns", "These are groups (families)", "Rows are periods", "Choose group"],
+      "fastStrategy": "Columns = groups; rows = periods."
+    },
+    {
+      "id": "ps_cb_b1_024",
+      "question": "Which state of matter has a definite shape and volume?",
+      "choices": {"A": "Solid", "B": "Liquid", "C": "Gas", "D": "Plasma"},
+      "answer": "A",
+      "explanation": "Solids have fixed shape and volume. Liquids have fixed volume but not shape; gases have neither; plasma is ionized gas.",
+      "steps": ["Review states: solid fixed shape/volume", "Liquids fixed volume only", "Gases/plasmas variable", "Choose solid"],
+      "fastStrategy": "Only solids keep shape and volume."
+    },
+    {
+      "id": "ps_cb_b1_025",
+      "question": "Which state of matter takes the shape and volume of its container?",
+      "choices": {"A": "Solid", "B": "Liquid", "C": "Gas", "D": "Plasma"},
+      "answer": "C",
+      "explanation": "Gases expand to fill both shape and volume of their container. Liquids fill shape but fixed volume; solids fill neither.",
+      "steps": ["Compare states: gases fill shape and volume", "Liquids fill shape only, solids fill neither", "Plasma behaves like gas", "Select gas"],
+      "fastStrategy": "Gas fills container's shape and volume."}
+  ]
+}

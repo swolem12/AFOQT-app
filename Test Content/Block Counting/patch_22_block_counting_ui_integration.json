@@ -1,0 +1,268 @@
+{
+  "patchId": 22,
+  "name": "block_counting_ui_integration",
+  "subjectId": "block_counting",
+  "description": "Master instructions for GitHub Copilot to integrate block counting question JSON files into the AFOQT study app with a reusable isometric block renderer and CSS.",
+  "status": "design_ready",
+  "targetFiles": {
+    "questionFiles": [
+      "block_counting_beginner_part1.json",
+      "block_counting_beginner_part2.json",
+      "block_counting_advanced_part1.json",
+      "block_counting_advanced_part2.json",
+      "block_counting_expert_part1.json",
+      "block_counting_expert_part2.json"
+    ],
+    "sharedComponents": [
+      "src/components/BlockCounting/BlockStackIso.tsx",
+      "src/components/BlockCounting/BlockCountingQuestion.tsx",
+      "src/components/BlockCounting/BlockCountingPreview.tsx",
+      "src/styles/blockCounting.css"
+    ]
+  },
+  "jsonContract": {
+    "subjectId": "block_counting",
+    "subtopicId": "stacked_cubes",
+    "difficultyValues": [
+      "beginner",
+      "advanced",
+      "expert"
+    ],
+    "partValues": [
+      1,
+      2
+    ],
+    "questionFileShape": {
+      "subjectId": "string",
+      "subtopicId": "string",
+      "difficulty": "string",
+      "part": "number",
+      "questions": [
+        {
+          "id": "string",
+          "uiSpec": {
+            "type": "block_stack_iso",
+            "width": "number",
+            "height": "number",
+            "grid": {
+              "cols": "number",
+              "rows": "number"
+            },
+            "stacks": [
+              {
+                "col": "number",
+                "row": "number",
+                "height": "number"
+              }
+            ]
+          },
+          "copilotInstruction": "string",
+          "question": "string",
+          "choices": {
+            "A": "string",
+            "B": "string",
+            "C": "string",
+            "D": "string"
+          },
+          "answer": "string",
+          "explanation": "string",
+          "steps": [
+            "string"
+          ],
+          "fastStrategy": "string"
+        }
+      ]
+    },
+    "idConvention": {
+      "format": "bc_<difficultyCode>_<partNumber>_<threeDigitIndex>",
+      "examples": [
+        "bc_b1_001",
+        "bc_b1_026",
+        "bc_a1_001",
+        "bc_e2_050"
+      ],
+      "difficultyCodes": {
+        "beginner": "b1",
+        "advanced": "a1",
+        "expert": "e1"
+      }
+    }
+  },
+  "uiSpecContract": {
+    "type": "block_stack_iso",
+    "requiredFields": [
+      "type",
+      "width",
+      "height",
+      "grid",
+      "stacks"
+    ],
+    "grid": {
+      "description": "Logical layout of stack positions on the floor.",
+      "fields": {
+        "cols": "number of columns, from left (0) to right (cols-1)",
+        "rows": "number of rows, from front (0) to back (rows-1)"
+      }
+    },
+    "stacks": {
+      "description": "Per floor cell stack definition.",
+      "fields": {
+        "col": "horizontal index, 0 based from left",
+        "row": "depth index, 0 based from front",
+        "height": "integer count of cubes in this stack, 0 means empty cell"
+      },
+      "rules": [
+        "All stacks must have 0 <= col < grid.cols and 0 <= row < grid.rows.",
+        "height must be a non negative integer.",
+        "Each (row,col) pair should appear at most once."
+      ]
+    },
+    "renderingNotes": [
+      "Use CSS generated isometric tiles to draw each cube layer.",
+      "Sort cubes by row, then height, then column to keep overlap drawing order correct.",
+      "Use a fixed logical cube size (for example 32px) and scale to fit uiSpec.width and uiSpec.height.",
+      "Use three visible faces per cube (top, left, right) with simple shading to suggest depth.",
+      "Empty stacks (height 0) show only floor tile or nothing based on design choice."
+    ]
+  },
+  "cssGuidelines": {
+    "file": "src/styles/blockCounting.css",
+    "baseClasses": [
+      ".bc-scene",
+      ".bc-stack-layer",
+      ".bc-cube",
+      ".bc-cube-face-top",
+      ".bc-cube-face-left",
+      ".bc-cube-face-right"
+    ],
+    "layout": [
+      "Use position: relative on the scene container.",
+      "Place each cube with position: absolute and transform translate to pseudo isometric coordinates.",
+      "Use a consistent z-index scheme so back rows and higher layers render behind front lower layers.",
+      "Keep colors neutral but distinct between faces so the student can easily separate stacks."
+    ],
+    "accessibility": [
+      "Ensure the contrast between cubes and background is high enough to read heights.",
+      "Allow a high contrast theme by using CSS variables for cube colors."
+    ]
+  },
+  "reactIntegration": {
+    "components": {
+      "BlockStackIso": {
+        "props": {
+          "uiSpec": "BlockStackIsoSpec from block_counting JSON uiSpec",
+          "className": "optional extra class name"
+        },
+        "responsibilities": [
+          "Read uiSpec.grid and uiSpec.stacks.",
+          "Convert each stack into per layer cube positions.",
+          "Render an isometric projection as a purely visual component.",
+          "Do not handle question text or answer logic."
+        ]
+      },
+      "BlockCountingQuestion": {
+        "props": {
+          "question": "single question object from block_counting JSON",
+          "index": "number index for display",
+          "onAnswer": "callback(answerLetter: string)"
+        },
+        "responsibilities": [
+          "Render BlockStackIso with question.uiSpec.",
+          "Render question.question as text.",
+          "Render multiple choice answers A through D as buttons or selectable options.",
+          "Optionally highlight the correct answer when in review mode."
+        ]
+      },
+      "BlockCountingPreview": {
+        "purpose": "Dev preview screen for manual QA of all block_counting questions.",
+        "dataFlow": [
+          "Load block_counting_beginner_part1.json and block_counting_beginner_part2.json.",
+          "Allow the developer to step through questions sequentially.",
+          "Render BlockCountingQuestion for the current question."
+        ]
+      }
+    },
+    "dataLoading": {
+      "approach": "Use the same loader utilities used by table reading and instrument comprehension.",
+      "contract": [
+        "Each JSON file exports a top level object that matches jsonContract.questionFileShape.",
+        "The app maps over questions array to generate screens.",
+        "subjectId and difficulty are used for navigation and filtering."
+      ]
+    }
+  },
+  "generatorRules": {
+    "style": "Match AFOQT and Trivium style block counting logic.",
+    "difficultyScaling": {
+      "beginner": [
+        "Grids up to 3x3.",
+        "Heights 0 through 3.",
+        "Simple totals, row or column sums, above ground counts, stacks with exact heights."
+      ],
+      "advanced": [
+        "Grids up to 3x4 or 4x3.",
+        "Heights up to 4 or 5.",
+        "Include transformations such as add one cube to each stack, remove whole rows or columns, compare totals across rows and columns."
+      ],
+      "expert": [
+        "Larger grids and mixed patterns.",
+        "Multi step reasoning such as before and after figures, counts by condition, and combined constraints.",
+        "More trap distractors that match partial reasoning."
+      ]
+    },
+    "c1Tutoring": {
+      "requirement": "Every question must include explanation, steps, and fastStrategy fields that follow the C1 method.",
+      "stepsPattern": [
+        "Step 1 identify what the question is really asking (total blocks, above ground blocks, ground contact, specific height stacks, etc).",
+        "Step 2 identify the main rule or pattern (sum of heights, height minus one, row or column focus, before minus after).",
+        "Step 3 break the solution into micro additions and subtractions, usually row by row or column by column.",
+        "Step 4 reinforce why the correct count matches the figure and why it fits the requested condition.",
+        "Step 5 describe at least one common error such as double counting a stack, ignoring empty stacks, or forgetting the ground contact rule."
+      ]
+    },
+    "fastStrategyRules": [
+      "Use row sums or column sums instead of counting cubes visually.",
+      "For blocks not touching the ground, convert each height h into h minus 1 and sum those.",
+      "For ground touching blocks, count non empty stacks.",
+      "For uniform rows or columns, multiply height by stack count instead of repeated addition.",
+      "When a whole row or column is removed or added, adjust the total by that row or column total instead of recomputing everything."
+    ]
+  },
+  "fileConventions": {
+    "naming": {
+      "questionFiles": "block_counting_<difficulty>_part<partNumber>.json",
+      "examples": [
+        "block_counting_beginner_part1.json",
+        "block_counting_beginner_part2.json",
+        "block_counting_advanced_part1.json"
+      ]
+    },
+    "folderLayout": {
+      "root": "BlockCounting/",
+      "subfolders": [
+        "BlockCounting/questions/",
+        "BlockCounting/ui/",
+        "BlockCounting/meta/"
+      ],
+      "metaFiles": [
+        "BlockCounting/meta/block_counting_index.json",
+        "BlockCounting/meta/block_counting_ui_contract.json",
+        "BlockCounting/meta/block_counting_generator_rules.json"
+      ]
+    }
+  },
+  "copilotTasks": [
+    "Create the BlockStackIso React component that renders uiSpec.type === 'block_stack_iso' using the CSS contract defined here.",
+    "Create BlockCountingQuestion and BlockCountingPreview components that read block_counting JSON files and render interactive questions.",
+    "Wire block counting into the main subject selection and navigation system using subjectId === 'block_counting'.",
+    "Add unit tests that validate correct total block counts based on uiSpec.stacks for a small sample of questions.",
+    "Ensure the renderer can handle all beginner uiSpec layouts used in block_counting_beginner_part1.json and block_counting_beginner_part2.json."
+  ],
+  "testingChecklist": [
+    "Visually confirm that each stack height in the renderer matches the JSON uiSpec for a random sample of questions.",
+    "Verify that total block counts from automated helpers match the answer field for sample questions.",
+    "Check that empty stacks (height 0) do not render cubes.",
+    "Confirm that performance remains acceptable with the largest beginner grid size and maximum heights.",
+    "Confirm that the same BlockStackIso component can be reused unchanged for advanced and expert JSON files as they are added."
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "motion_mechanics",
+  "difficulty": "advanced",
+  "part": 2,
+  "questions": [
+    {
+      "id": "ps_mm_a1_026",
+      "question": "A 2 kg block starts from rest and is pulled by a constant 8 N force on a frictionless surface for 5 s. Its final speed is:",
+      "choices": {"A": "5 m/s", "B": "10 m/s", "C": "15 m/s", "D": "20 m/s"},
+      "answer": "D",
+      "explanation": "Acceleration a = F/m = 8/2 = 4 m/s^2. Starting from rest, v = a t = 4×5 = 20 m/s.",
+      "steps": ["Compute a = F/m = 4", "Start from rest so v = a t", "4×5 = 20", "Select 20 m/s"],
+      "fastStrategy": "F = ma → 8/2 = 4; multiply by time 5 → 20 m/s." 
+    },
+    {
+      "id": "ps_mm_a1_027",
+      "question": "A ball rolls off a 45 m high cliff horizontally at 10 m/s. Ignoring air, it lands about how far from the base?",
+      "choices": {"A": "10 m", "B": "20 m", "C": "30 m", "D": "45 m"},
+      "answer": "C",
+      "explanation": "Time to fall: t = sqrt(2h/g) ≈ sqrt(90/9.8) ≈ 3 s. Horizontal range = v_x t ≈ 10×3 ≈ 30 m.",
+      "steps": ["Use h = 0.5 g t^2 to find t", "t ≈ sqrt(90/9.8) ≈ 3 s", "Range = v_x t ≈ 30 m", "Select ~30 m"],
+      "fastStrategy": "45 m drop → ~3 s; 10 m/s × 3 ≈ 30 m." 
+    },
+    {
+      "id": "ps_mm_a1_028",
+      "question": "A 10 kg block is pulled with 40 N across level ground with 15 N kinetic friction over 6 m. Net work done on the block is:",
+      "choices": {"A": "90 J", "B": "150 J", "C": "240 J", "D": "330 J"},
+      "answer": "B",
+      "explanation": "Net force = 40 - 15 = 25 N. Net work = F_net·d = 25×6 = 150 J.",
+      "steps": ["Compute net force 25 N", "Multiply by 6 m", "Net work = 150 J", "Pick 150 J"],
+      "fastStrategy": "(40-15)×6 = 25×6 = 150." 
+    },
+    {
+      "id": "ps_mm_a1_029",
+      "question": "Velocity changes from -4 m/s to +8 m/s in 3 s. The average acceleration is:",
+      "choices": {"A": "-4 m/s^2", "B": "0 m/s^2", "C": "2 m/s^2", "D": "4 m/s^2"},
+      "answer": "D",
+      "explanation": "a = Δv / t = (8 - (-4)) / 3 = 12/3 = 4 m/s^2.",
+      "steps": ["Compute change in velocity 12", "Divide by 3 s", "Get 4 m/s^2", "Select 4"],
+      "fastStrategy": "Sign flip adds speeds: 8 + 4 = 12; 12/3 = 4." 
+    },
+    {
+      "id": "ps_mm_a1_030",
+      "question": "To lift a 600 N load with a lever, the load is 0.25 m from the fulcrum. Where should a force be applied 0.50 m on the other side to balance it? The needed force is:",
+      "choices": {"A": "150 N", "B": "225 N", "C": "300 N", "D": "600 N"},
+      "answer": "C",
+      "explanation": "Torque balance: F × 0.50 = 600 × 0.25 → F = (600×0.25)/0.5 = 150/0.5 = 300 N.",
+      "steps": ["Write clockwise torque = counterclockwise", "F·0.50 = 600·0.25", "Solve F = (150)/0.5 = 300", "Choose 300 N"],
+      "fastStrategy": "Half the arm needs double the force: 600×(0.25/0.5) = 300." 
+    },
+    {
+      "id": "ps_mm_a1_031",
+      "question": "A 1.0 kg shell at rest explodes into a 0.6 kg piece moving 5 m/s right and a second piece. The second piece's velocity is:",
+      "choices": {"A": "3.0 m/s right", "B": "5.0 m/s left", "C": "7.5 m/s left", "D": "12.5 m/s left"},
+      "answer": "C",
+      "explanation": "Initial momentum is zero. Final momentum: 0.6(5) + 0.4 v = 0 → 3 + 0.4v = 0 → v = -7.5 m/s (left).",
+      "steps": ["Set total momentum 0", "0.6×5 + 0.4v = 0", "Solve 3 + 0.4v = 0", "v = -7.5 m/s"],
+      "fastStrategy": "Opposite piece speed = (0.6/0.4)×5 = 1.5×5 = 7.5, opposite direction." 
+    },
+    {
+      "id": "ps_mm_a1_032",
+      "question": "Minimum static friction coefficient to keep a block from sliding down a 30° incline is about:",
+      "choices": {"A": "0.2", "B": "0.4", "C": "0.6", "D": "0.9"},
+      "answer": "C",
+      "explanation": "For impending slip: μ_s ≥ tanθ. tan 30° ≈ 0.577, so about 0.6.",
+      "steps": ["Use μ_s ≥ tanθ", "tan 30° ≈ 0.577", "Round to ~0.6", "Select 0.6"],
+      "fastStrategy": "tan 30° ≈ 0.58 → choose ~0.6." 
+    },
+    {
+      "id": "ps_mm_a1_033",
+      "question": "A 600 N crate is pushed up a 6 m ramp to a 3 m high platform, ignoring friction. The minimum constant push force along the ramp is:",
+      "choices": {"A": "150 N", "B": "200 N", "C": "300 N", "D": "600 N"},
+      "answer": "C",
+      "explanation": "Mechanical advantage = ramp length/height = 6/3 = 2. Ideal force = weight/MA = 600/2 = 300 N.",
+      "steps": ["Compute MA = L/H = 2", "Divide weight by MA", "600/2 = 300 N", "Pick 300 N"],
+      "fastStrategy": "Ramp halves the needed force: 600/2 = 300." 
+    },
+    {
+      "id": "ps_mm_a1_034",
+      "question": "A 300 W motor lifts a 120 N load straight up at constant speed. Its lifting speed is:",
+      "choices": {"A": "0.5 m/s", "B": "2.0 m/s", "C": "2.5 m/s", "D": "4.0 m/s"},
+      "answer": "C",
+      "explanation": "Power P = F v. Solve v = P/F = 300/120 = 2.5 m/s.",
+      "steps": ["Use P = Fv", "Divide 300 W by 120 N", "v = 2.5 m/s", "Select 2.5 m/s"],
+      "fastStrategy": "Speed = power/force → 300/120 ≈ 2.5." 
+    },
+    {
+      "id": "ps_mm_a1_035",
+      "question": "A 0.2 kg ball bounces from -5 m/s to +7 m/s in 0.03 s. The average net force is approximately:",
+      "choices": {"A": "20 N", "B": "40 N", "C": "80 N", "D": "160 N"},
+      "answer": "C",
+      "explanation": "Δv = 12 m/s. Δp = m Δv = 0.2×12 = 2.4 N·s. Average force = Δp/Δt = 2.4/0.03 = 80 N.",
+      "steps": ["Compute Δv = 7 - (-5) = 12", "Find Δp = 0.2×12 = 2.4", "Divide by 0.03 s", "Result ≈ 80 N"],
+      "fastStrategy": "Change in speed 12; 0.2×12 = 2.4; divide by 0.03 → 80." 
+    },
+    {
+      "id": "ps_mm_a1_036",
+      "question": "Dropping from 5 m (ignoring air), the impact speed is closest to:",
+      "choices": {"A": "5 m/s", "B": "7 m/s", "C": "10 m/s", "D": "14 m/s"},
+      "answer": "C",
+      "explanation": "Use v = sqrt(2 g h) = sqrt(2×9.8×5) = sqrt(98) ≈ 9.9 m/s, about 10 m/s.",
+      "steps": ["Apply v^2 = 2 g h", "Plug g=9.8, h=5", "v ≈ 9.9 m/s", "Pick ~10 m/s"],
+      "fastStrategy": "2×10×5 = 100 → sqrt ≈ 10." 
+    },
+    {
+      "id": "ps_mm_a1_037",
+      "question": "A 0.5 kg mass moves in a 0.8 m radius circle. If string tension is 20 N, its speed is:",
+      "choices": {"A": "3.2 m/s", "B": "4.5 m/s", "C": "5.7 m/s", "D": "8.0 m/s"},
+      "answer": "C",
+      "explanation": "Tension supplies centripetal force: T = m v^2 / r → v = sqrt(T r / m) = sqrt(20×0.8 / 0.5) = sqrt(32) ≈ 5.7 m/s.",
+      "steps": ["Use T = m v^2/r", "Solve v = sqrt(T r / m)", "Compute 20×0.8/0.5 = 32", "v ≈ 5.7"],
+      "fastStrategy": "Multiply 20 by 0.8 =16; divide by 0.5 =32; sqrt ≈ 5.7." 
+    },
+    {
+      "id": "ps_mm_a1_038",
+      "question": "A boat moves 4 m/s north while a current carries it 3 m/s east. Its resulting speed is:",
+      "choices": {"A": "3 m/s", "B": "4 m/s", "C": "5 m/s", "D": "7 m/s"},
+      "answer": "C",
+      "explanation": "Perpendicular components combine via Pythagorean theorem: v = sqrt(4^2 + 3^2) = 5 m/s.",
+      "steps": ["Treat components as right triangle", "Compute sqrt(4^2 + 3^2)", "sqrt(16+9)=sqrt(25)=5", "Pick 5 m/s"],
+      "fastStrategy": "Classic 3-4-5 triangle → 5 m/s." 
+    },
+    {
+      "id": "ps_mm_a1_039",
+      "question": "Velocity increases from 6 m/s to 18 m/s uniformly in 4 s. The acceleration is:",
+      "choices": {"A": "2 m/s^2", "B": "3 m/s^2", "C": "4 m/s^2", "D": "6 m/s^2"},
+      "answer": "B",
+      "explanation": "a = Δv / t = (18 - 6)/4 = 12/4 = 3 m/s^2.",
+      "steps": ["Find Δv = 12", "Divide by 4 s", "Get 3 m/s^2", "Select 3"],
+      "fastStrategy": "12 over 4 → 3." 
+    },
+    {
+      "id": "ps_mm_a1_040",
+      "question": "A car at 15 m/s has a 0.8 s reaction delay before braking at 5 m/s^2 to a stop. Approximate total stopping distance is:",
+      "choices": {"A": "12 m", "B": "22 m", "C": "35 m", "D": "60 m"},
+      "answer": "C",
+      "explanation": "Reaction distance = v t = 15×0.8 = 12 m. Braking distance = v^2/(2a) = 15^2/(2×5) = 225/10 = 22.5 m. Total ≈ 34.5 m ≈ 35 m.",
+      "steps": ["Compute reaction distance 12 m", "Compute braking distance 22.5 m", "Add to ~34.5 m", "Closest to 35 m"],
+      "fastStrategy": "12 + 22.5 ≈ 34.5 → pick 35." 
+    },
+    {
+      "id": "ps_mm_a1_041",
+      "question": "A 50 N force pulls a sled 10 m on level ground at 60° above horizontal. Ignoring friction, the work by this force is:",
+      "choices": {"A": "250 J", "B": "430 J", "C": "500 J", "D": "860 J"},
+      "answer": "A",
+      "explanation": "Only the horizontal component does work: F cosθ = 50×0.5 = 25 N. Work = 25×10 = 250 J.",
+      "steps": ["Resolve force: cos60° = 0.5", "Horizontal component 25 N", "Multiply by 10 m", "Work = 250 J"],
+      "fastStrategy": "Half of 50 is 25; 25×10 = 250." 
+    },
+    {
+      "id": "ps_mm_a1_042",
+      "question": "At terminal velocity a falling object:",
+      "choices": {"A": "Accelerates at g", "B": "Has zero net force", "C": "Stops moving", "D": "Weight becomes zero"},
+      "answer": "B",
+      "explanation": "Drag balances weight so net force is zero; speed becomes constant.",
+      "steps": ["Terminal means constant speed", "Constant speed → zero acceleration", "Net force must be zero", "Drag equals weight"],
+      "fastStrategy": "Terminal = forces balance, no further acceleration." 
+    },
+    {
+      "id": "ps_mm_a1_043",
+      "question": "A wheel of radius 0.30 m rolls without slipping at angular speed 10 rad/s. Its forward speed is:",
+      "choices": {"A": "1.0 m/s", "B": "2.0 m/s", "C": "3.0 m/s", "D": "6.0 m/s"},
+      "answer": "C",
+      "explanation": "For rolling without slipping, v = r ω = 0.30×10 = 3.0 m/s.",
+      "steps": ["Use v = r ω", "Multiply 0.30 by 10", "Get 3.0 m/s", "Choose 3.0"],
+      "fastStrategy": "0.3×10 = 3." 
+    },
+    {
+      "id": "ps_mm_a1_044",
+      "question": "An object moves in a circle of radius 2.0 m at 4.0 m/s. Its period of revolution is about:",
+      "choices": {"A": "1.0 s", "B": "1.6 s", "C": "3.1 s", "D": "6.3 s"},
+      "answer": "C",
+      "explanation": "Period T = 2πr / v = 2π(2)/4 = (4π)/4 = π ≈ 3.1 s.",
+      "steps": ["Apply T = 2πr/v", "Plug r=2, v=4", "T = 4π/4 = π", "π ≈ 3.1 s"],
+      "fastStrategy": "Circumference 4π divided by speed 4 → π ≈ 3.1 s." 
+    },
+    {
+      "id": "ps_mm_a1_045",
+      "question": "An ideal pulley with two supporting rope segments lifts a 400 N load at constant speed. The required input force is:",
+      "choices": {"A": "100 N", "B": "200 N", "C": "400 N", "D": "800 N"},
+      "answer": "B",
+      "explanation": "With two supporting strands, ideal mechanical advantage is 2, so force = weight/2 = 400/2 = 200 N.",
+      "steps": ["Count supporting strands = 2", "MA = 2", "Input force = 400/2", "Result 200 N"],
+      "fastStrategy": "Two-support pulley halves the force: 400 → 200." 
+    },
+    {
+      "id": "ps_mm_a1_046",
+      "question": "A 1200 kg car moving 10 m/s rear-ends and sticks to an 800 kg car at rest. Their shared speed right after impact is:",
+      "choices": {"A": "4 m/s", "B": "6 m/s", "C": "8 m/s", "D": "10 m/s"},
+      "answer": "B",
+      "explanation": "Momentum conserved: (1200×10) = 12,000 kg·m/s. Total mass after sticking = 2000 kg. v = 12,000 / 2000 = 6 m/s.",
+      "steps": ["Compute initial momentum 12,000", "Total mass 2000", "Divide: 12,000/2000", "v = 6 m/s"],
+      "fastStrategy": "12,000 ÷ 2000 = 6." 
+    },
+    {
+      "id": "ps_mm_a1_047",
+      "question": "A 25 N friction force acts over 12 m opposite motion. The work done by friction is:",
+      "choices": {"A": "+300 J", "B": "-300 J", "C": "-120 J", "D": "+120 J"},
+      "answer": "B",
+      "explanation": "Work = F d cos180° = -F d = -25×12 = -300 J.",
+      "steps": ["Note force opposite displacement", "Include cos180° = -1", "Compute -25×12 = -300", "Choose -300 J"],
+      "fastStrategy": "Opposite direction → negative sign: -(25×12)." 
+    },
+    {
+      "id": "ps_mm_a1_048",
+      "question": "If you double an object's speed, its kinetic energy becomes:",
+      "choices": {"A": "Half as big", "B": "The same", "C": "Twice as big", "D": "Four times as big"},
+      "answer": "D",
+      "explanation": "KE = 0.5 m v^2 depends on speed squared, so doubling v multiplies KE by 4.",
+      "steps": ["Recall KE ∝ v^2", "(2v)^2 = 4v^2", "Energy scales by 4", "Pick four times"],
+      "fastStrategy": "Speed squared law: double v → KE ×4." 
+    },
+    {
+      "id": "ps_mm_a1_049",
+      "question": "A ball is thrown upward with 12 m/s. Ignoring air, its maximum height above release is about:",
+      "choices": {"A": "3.6 m", "B": "5.9 m", "C": "7.4 m", "D": "12 m"},
+      "answer": "C",
+      "explanation": "Use v^2 = 2 g h at the top (v=0). h = v0^2/(2g) = 144/(19.6) ≈ 7.35 m.",
+      "steps": ["Set final velocity 0 at top", "h = v0^2 / (2g)", "Compute 144/19.6 ≈ 7.35", "Select ~7.4 m"],
+      "fastStrategy": "Square 12 =144; divide by ~20 → ~7.2 m (close to 7.4)." 
+    },
+    {
+      "id": "ps_mm_a1_050",
+      "question": "A 70 kg person climbs a 3.0 m staircase in 4.0 s. Average power output is closest to:",
+      "choices": {"A": "210 W", "B": "350 W", "C": "510 W", "D": "980 W"},
+      "answer": "C",
+      "explanation": "Work against gravity = m g h ≈ 70×9.8×3 ≈ 2058 J. Power = 2058/4 ≈ 515 W, about 510 W.",
+      "steps": ["Compute mgh: 70×9.8×3 ≈ 2058", "Divide by 4 s", "Power ≈ 515 W", "Pick closest 510 W"],
+      "fastStrategy": "~2000 J over 4 s → ~500 W." 
+    }
+  ]
+}

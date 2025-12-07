@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "energy_heat",
+  "difficulty": "advanced",
+  "part": 2,
+  "questions": [
+    {
+      "id": "ps_eh_a2_026",
+      "question": "How much heat raises 0.30 kg of copper by 50°C? (c ≈ 385 J/kg·°C)",
+      "choices": {"A": "2.9 kJ", "B": "5.8 kJ", "C": "9.6 kJ", "D": "19 kJ"},
+      "answer": "B",
+      "explanation": "Q = m c ΔT = 0.30·385·50 ≈ 5775 J ≈ 5.8 kJ.",
+      "steps": ["Multiply 0.30 by 385", "Result ≈ 116", "Multiply by 50", "Get ≈ 5.8 kJ"],
+      "fastStrategy": "0.3×400≈120; ×50 ≈ 6000 J ≈ 5.8 kJ." 
+    },
+    {
+      "id": "ps_eh_a2_027",
+      "question": "A heat engine takes in 900 J and expels 540 J. Its efficiency is:",
+      "choices": {"A": "28%", "B": "40%", "C": "60%", "D": "85%"},
+      "answer": "B",
+      "explanation": "Work = 900 - 540 = 360 J. Efficiency = 360/900 = 0.40 = 40%.",
+      "steps": ["Subtract 540 from 900", "Get 360 J work", "Divide by 900", "Convert to 40%"],
+      "fastStrategy": "Net is 360 of 900 → 4/10 = 40%." 
+    },
+    {
+      "id": "ps_eh_a2_028",
+      "question": "0.50 mol of ideal gas at 300 K doubles its volume isothermally. Work done is closest to:",
+      "choices": {"A": "0.43 kJ", "B": "0.63 kJ", "C": "0.86 kJ", "D": "1.7 kJ"},
+      "answer": "C",
+      "explanation": "W = n R T ln(V2/V1) = 0.5·8.314·300·ln2 ≈ 1247·0.693 ≈ 864 J ≈ 0.86 kJ.",
+      "steps": ["Compute nRT ≈ 1247 J", "ln2 ≈ 0.693", "Multiply to ≈ 864 J", "Convert to ≈0.86 kJ"],
+      "fastStrategy": "nRT ~1.25 kJ; times 0.69 ≈ 0.86 kJ." 
+    },
+    {
+      "id": "ps_eh_a2_029",
+      "question": "Heat required to melt 0.50 kg of ice at 0°C (Lf ≈ 334 kJ/kg) is:",
+      "choices": {"A": "33 kJ", "B": "84 kJ", "C": "167 kJ", "D": "334 kJ"},
+      "answer": "C",
+      "explanation": "Q = m Lf = 0.50×334 kJ = 167 kJ.",
+      "steps": ["Take half of 334", "Get 167", "Units kJ", "Select 167 kJ"],
+      "fastStrategy": "Half of 334 kJ → 167 kJ." 
+    },
+    {
+      "id": "ps_eh_a2_030",
+      "question": "Condensing 0.20 kg of steam at 100°C and cooling it to 50°C releases roughly:",
+      "choices": {"A": "210 kJ", "B": "310 kJ", "C": "420 kJ", "D": "494 kJ"},
+      "answer": "D",
+      "explanation": "Condense: 0.20×2260 ≈ 452 kJ. Cool: 0.20×4200×50 ≈ 42 kJ. Total ≈ 494 kJ.",
+      "steps": ["Compute latent 452 kJ", "Compute cooling 42 kJ", "Add to ~494 kJ", "Pick 494 kJ"],
+      "fastStrategy": "452 + 42 ≈ 494 kJ." 
+    },
+    {
+      "id": "ps_eh_a2_031",
+      "question": "Heat conduction rate through a 0.50 m aluminum rod (k≈205 W/m·°C, A=1.5×10^-4 m², ΔT=40°C) is closest to:",
+      "choices": {"A": "0.25 W", "B": "1.2 W", "C": "2.5 W", "D": "4.8 W"},
+      "answer": "C",
+      "explanation": "Rate = kAΔT/L = 205·1.5e-4·40 / 0.50 ≈ 2.46 W ≈ 2.5 W.",
+      "steps": ["Multiply kA ≈ 0.03075", "Multiply by 40 ≈ 1.23", "Divide by 0.50 ≈ 2.46", "Pick ~2.5 W"],
+      "fastStrategy": "kA ~0.03; ×40 ~1.2; ÷0.5 ~2.4 W." 
+    },
+    {
+      "id": "ps_eh_a2_032",
+      "question": "If an ideal gas halves its pressure at constant temperature, its volume will:",
+      "choices": {"A": "Halve", "B": "Stay the same", "C": "Double", "D": "Triple"},
+      "answer": "C",
+      "explanation": "Boyle's law: P1V1 = P2V2. Halving P doubles V at constant T.",
+      "steps": ["Use P ∝ 1/V", "P halves", "V doubles", "Select double"],
+      "fastStrategy": "Half the pressure → twice the volume." 
+    },
+    {
+      "id": "ps_eh_a2_033",
+      "question": "Power needed to lift a 60 kg load up 6.0 m in 4.0 s is closest to:",
+      "choices": {"A": "440 W", "B": "660 W", "C": "880 W", "D": "1200 W"},
+      "answer": "C",
+      "explanation": "Work = mgh = 60·9.8·6 ≈ 3528 J. Power = 3528/4 ≈ 882 W ≈ 880 W.",
+      "steps": ["Compute work ≈ 3528 J", "Divide by 4 s", "Get ≈ 882 W", "Pick ≈ 880 W"],
+      "fastStrategy": "(60×10×6)/4 ≈ 900 W; slight drop for g=9.8 → ~880." 
+    },
+    {
+      "id": "ps_eh_a2_034",
+      "question": "A refrigerator removes 600 J of heat while using 200 J of work. COP (cooling) is:",
+      "choices": {"A": "2", "B": "3", "C": "4", "D": "6"},
+      "answer": "B",
+      "explanation": "COP_R = Q_L/W = 600/200 = 3.",
+      "steps": ["Divide 600 by 200", "Get 3", "Interpret as COP", "Select 3"],
+      "fastStrategy": "600/200 = 3." 
+    },
+    {
+      "id": "ps_eh_a2_035",
+      "question": "If the absolute temperature of a gas doubles, its rms speed changes by:",
+      "choices": {"A": "×√2", "B": "×2", "C": "×0.5", "D": "×4"},
+      "answer": "A",
+      "explanation": "v_rms ∝ √T. Doubling T multiplies v_rms by √2 ≈ 1.41.",
+      "steps": ["Recall v_rms ∝ √T", "T doubles", "v_rms multiplies by √2", "Choose √2"],
+      "fastStrategy": "Speed scales with sqrt temperature." 
+    },
+    {
+      "id": "ps_eh_a2_036",
+      "question": "Work done by a gas expanding 0.020 m³ at constant 150 kPa is:",
+      "choices": {"A": "0.3 kJ", "B": "1.5 kJ", "C": "3.0 kJ", "D": "6.0 kJ"},
+      "answer": "C",
+      "explanation": "W = P ΔV = 150,000 Pa × 0.020 m³ = 3000 J = 3.0 kJ.",
+      "steps": ["Convert 150 kPa to 150,000 Pa", "Multiply by 0.020", "Get 3000 J", "Convert to 3.0 kJ"],
+      "fastStrategy": "150kPa×0.02 m³ → 3 kJ." 
+    },
+    {
+      "id": "ps_eh_a2_037",
+      "question": "A Carnot engine runs between 800 K and 320 K. Maximum efficiency is:",
+      "choices": {"A": "40%", "B": "50%", "C": "60%", "D": "80%"},
+      "answer": "C",
+      "explanation": "η = 1 - Tc/Th = 1 - 320/800 = 1 - 0.4 = 0.6 = 60%.",
+      "steps": ["Divide 320 by 800", "Get 0.4", "Subtract from 1", "Arrive at 0.6 = 60%"],
+      "fastStrategy": "Cold is 40% of hot → efficiency 60%." 
+    },
+    {
+      "id": "ps_eh_a2_038",
+      "question": "Energy to heat 1.0 kg of water from 25°C to steam at 100°C is closest to:",
+      "choices": {"A": "315 kJ", "B": "2260 kJ", "C": "2575 kJ", "D": "3000 kJ"},
+      "answer": "C",
+      "explanation": "Heat to 100°C: 1·4200·75 ≈ 315 kJ. Vaporize: 2260 kJ. Total ≈ 2575 kJ.",
+      "steps": ["Compute heating 315 kJ", "Add vaporization 2260 kJ", "Total ≈ 2575 kJ", "Pick 2575 kJ"],
+      "fastStrategy": "~0.3 MJ to warm + 2.26 MJ to vaporize ≈ 2.6 MJ." 
+    },
+    {
+      "id": "ps_eh_a2_039",
+      "question": "A 2.0 m² steel plate (α ≈ 1.1×10^-5/°C) warms by 80°C. Area increase is about:",
+      "choices": {"A": "0.00035 m²", "B": "0.0014 m²", "C": "0.0035 m²", "D": "0.014 m²"},
+      "answer": "C",
+      "explanation": "Area expansion ΔA ≈ 2αAΔT = 2.2e-5·2.0·80 ≈ 0.00352 m².",
+      "steps": ["Double α to 2.2e-5", "Multiply by area 2.0", "Multiply by 80", "Get ≈0.0035 m²"],
+      "fastStrategy": "2α≈2.2e-5; ×160 ≈3.5e-3 m²." 
+    },
+    {
+      "id": "ps_eh_a2_040",
+      "question": "A heat pump with COP_heating = 3.5 draws 1.5 kW of power. Heat delivered indoors is:",
+      "choices": {"A": "1.5 kW", "B": "3.5 kW", "C": "5.25 kW", "D": "6.5 kW"},
+      "answer": "C",
+      "explanation": "Q_H = COP × W_in = 3.5 × 1.5 kW = 5.25 kW.",
+      "steps": ["Multiply 3.5 by 1.5", "Get 5.25", "Units kW", "Select 5.25 kW"],
+      "fastStrategy": "3.5×1.5 = 5.25." 
+    },
+    {
+      "id": "ps_eh_a2_041",
+      "question": "A gas at 1.0 atm and 27°C in 1.5 L is heated at constant pressure to 127°C. Final volume is:",
+      "choices": {"A": "1.0 L", "B": "1.5 L", "C": "2.0 L", "D": "2.5 L"},
+      "answer": "C",
+      "explanation": "At constant P, V ∝ T(K). T rises from 300 K to 400 K (×4/3). V = 1.5×4/3 ≈ 2.0 L.",
+      "steps": ["Convert temps to K", "Compute 400/300 = 1.33", "Multiply 1.5 L by 1.33", "Get ~2.0 L"],
+      "fastStrategy": "Volume scales with absolute T: 1.5 × 4/3 ≈ 2." 
+    },
+    {
+      "id": "ps_eh_a2_042",
+      "question": "0.20 kg of aluminum at 150°C is dropped into 0.50 kg of water at 20°C (no loss). Final temperature is closest to:",
+      "choices": {"A": "23°C", "B": "27°C", "C": "30°C", "D": "35°C"},
+      "answer": "C",
+      "explanation": "Set heat lost = heat gained: (0.2·900)(150 - T) = (0.5·4200)(T - 20). Solving gives T ≈ 30°C.",
+      "steps": ["Compute capacities: Al 180 J/°C, water 2100 J/°C", "Write energy balance", "Solve for T ≈ 30", "Choose 30°C"],
+      "fastStrategy": "Water capacity dwarfs Al; expect T near water side (~30°C)." 
+    },
+    {
+      "id": "ps_eh_a2_043",
+      "question": "Internal energy of 2.0 mol of monatomic ideal gas at 400 K is:",
+      "choices": {"A": "4.0 kJ", "B": "8.3 kJ", "C": "10 kJ", "D": "12 kJ"},
+      "answer": "C",
+      "explanation": "U = (3/2) n R T = 1.5·2·8.314·400 ≈ 10,000 J ≈ 10 kJ.",
+      "steps": ["Multiply 1.5 by 2 = 3", "3×8.314 ≈ 24.9", "24.9×400 ≈ 9960 J", "Convert to ≈10 kJ"],
+      "fastStrategy": "(3)(8.3)(400) ≈ 10,000 J." 
+    },
+    {
+      "id": "ps_eh_a2_044",
+      "question": "A dull black plate (e=0.8, A=0.10 m²) at 500 K radiates power of about:",
+      "choices": {"A": "12 W", "B": "28 W", "C": "65 W", "D": "120 W"},
+      "answer": "B",
+      "explanation": "P = eσAT^4 ≈ 0.8·5.67e-8·0.10·(500)^4 ≈ 28 W.",
+      "steps": ["Compute T^4 ≈ 6.25e9", "Multiply σA ≈ 5.67e-9", "Include e=0.8", "Get ≈ 28 W"],
+      "fastStrategy": "Order check: ~30 W scale for 0.1 m² at 500 K." 
+    },
+    {
+      "id": "ps_eh_a2_045",
+      "question": "On a heating curve, a horizontal plateau means:",
+      "choices": {"A": "Temperature rising faster", "B": "No heat added", "C": "Phase change at constant temperature", "D": "Specific heat dropping to zero"},
+      "answer": "C",
+      "explanation": "During phase change, heat goes into latent energy so temperature stays constant until the change completes.",
+      "steps": ["Recognize flat region", "Heat input continues", "Used to change phase", "Temperature constant"],
+      "fastStrategy": "Flat line = latent heat phase change." 
+    },
+    {
+      "id": "ps_eh_a2_046",
+      "question": "Removing heat to cool 0.30 kg of water from 80°C to 20°C requires approximately:",
+      "choices": {"A": "18.9 kJ", "B": "45 kJ", "C": "75.6 kJ", "D": "126 kJ"},
+      "answer": "C",
+      "explanation": "Q = m c ΔT = 0.30·4200·60 ≈ 75,600 J ≈ 75.6 kJ.",
+      "steps": ["Compute ΔT = 60", "0.30×4200 = 1260", "1260×60 ≈ 75,600 J", "Convert to 75.6 kJ"],
+      "fastStrategy": "1.26 kJ/°C × 60°C ≈ 75 kJ." 
+    },
+    {
+      "id": "ps_eh_a2_047",
+      "question": "Mixing 0.20 kg of water at 90°C with 0.40 kg at 20°C (no loss) gives a final temperature near:",
+      "choices": {"A": "32°C", "B": "38°C", "C": "43°C", "D": "58°C"},
+      "answer": "C",
+      "explanation": "Energy balance with equal specific heats: Tf = (0.20·90 + 0.40·20)/(0.60) ≈ 43°C.",
+      "steps": ["Compute hot contribution 18", "Compute cool contribution 8", "Sum 26", "Divide by 0.6 → ≈ 43°C"],
+      "fastStrategy": "Weighted average: more cool mass pulls temp to low 40s." 
+    },
+    {
+      "id": "ps_eh_a2_048",
+      "question": "A sealed gas at 3.0 atm and 300 K is heated at constant volume to 450 K. Final pressure is:",
+      "choices": {"A": "2.0 atm", "B": "3.0 atm", "C": "4.5 atm", "D": "6.0 atm"},
+      "answer": "C",
+      "explanation": "At constant volume, P ∝ T. Factor 450/300 = 1.5. Final P = 3.0×1.5 = 4.5 atm.",
+      "steps": ["Compute temperature ratio 1.5", "Multiply initial P by 1.5", "Get 4.5 atm", "Select 4.5 atm"],
+      "fastStrategy": "Temperature up 50% → pressure up 50%." 
+    },
+    {
+      "id": "ps_eh_a2_049",
+      "question": "Energy delivered by a 2.0 kW heater running for 3.0 minutes is:",
+      "choices": {"A": "36 kJ", "B": "120 kJ", "C": "240 kJ", "D": "360 kJ"},
+      "answer": "D",
+      "explanation": "E = P t = 2000 W × 180 s = 360,000 J = 360 kJ.",
+      "steps": ["Convert time to 180 s", "Multiply 2000×180", "Get 360,000 J", "Convert to 360 kJ"],
+      "fastStrategy": "2 kJ/s for 180 s → 360 kJ." 
+    },
+    {
+      "id": "ps_eh_a2_050",
+      "question": "If insulation thickness doubles (same material and area), the conductive heat rate will:",
+      "choices": {"A": "Double", "B": "Stay the same", "C": "Halve", "D": "Quarter"},
+      "answer": "C",
+      "explanation": "Conduction rate Q̇ = kAΔT/L. Doubling L halves the rate for the same ΔT.",
+      "steps": ["Recall Q̇ ∝ 1/L", "Increase L by 2×", "Rate drops by 2×", "Choose halve"],
+      "fastStrategy": "Thicker insulation → half the heat leak (other factors fixed)." 
+    }
+  ]
+}

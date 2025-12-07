@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "electricity_magnetism",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ps_em_b1_001",
+      "question": "Electric current is best described as:",
+      "choices": {"A": "Stored charge", "B": "Flow of electric charge", "C": "Magnetic field strength", "D": "Voltage in a wire"},
+      "answer": "B",
+      "explanation": "Current is the rate of flow of electric charge through a conductor. Voltage is the potential difference that pushes the charge.",
+      "steps": ["Recall current = charge flow", "Voltage is the push, not the flow", "Magnetic field is different", "Choose flow of charge"],
+      "fastStrategy": "Current = movement of charge; voltage = the push."
+    },
+    {
+      "id": "ps_em_b1_002",
+      "question": "The unit of electric current is the:",
+      "choices": {"A": "Volt", "B": "Ohm", "C": "Ampere", "D": "Watt"},
+      "answer": "C",
+      "explanation": "Current is measured in amperes (amps). Volt measures potential difference; ohm measures resistance; watt measures power.",
+      "steps": ["Match unit to quantity: current → ampere", "Volt = potential", "Ohm = resistance", "Watt = power"],
+      "fastStrategy": "Amps measure current; volts push it."
+    },
+    {
+      "id": "ps_em_b1_003",
+      "question": "Voltage is:",
+      "choices": {"A": "Current per unit time", "B": "Potential difference between two points", "C": "Resistance to charge flow", "D": "Magnetic force"},
+      "answer": "B",
+      "explanation": "Voltage (electric potential difference) is the energy per unit charge between two points that drives current through a circuit.",
+      "steps": ["Define voltage as potential difference", "It provides energy per charge", "Current is flow; resistance opposes flow", "Select potential difference"],
+      "fastStrategy": "Voltage = energy per charge difference (the push)."
+    },
+    {
+      "id": "ps_em_b1_004",
+      "question": "Ohm's law relates voltage (V), current (I), and resistance (R) as:",
+      "choices": {"A": "V = IR", "B": "I = VR", "C": "R = V/I", "D": "P = IV"},
+      "answer": "A",
+      "explanation": "Ohm's law is V = I × R. Rearranging gives I = V/R and R = V/I. P = IV is power, not Ohm's law.",
+      "steps": ["Recall base form V = IR", "Note rearrangements but base is V = I×R", "Power uses P = IV", "Choose V = IR"],
+      "fastStrategy": "Triangle memory: V on top, I and R below."
+    },
+    {
+      "id": "ps_em_b1_005",
+      "question": "The unit of electrical resistance is the:",
+      "choices": {"A": "Volt", "B": "Watt", "C": "Ohm", "D": "Coulomb"},
+      "answer": "C",
+      "explanation": "Resistance is measured in ohms (Ω). Volt is potential, watt is power, coulomb is charge.",
+      "steps": ["Match resistance unit: ohm", "Volt = V, watt = power, coulomb = charge", "Choose ohm"],
+      "fastStrategy": "Resistance → ohms; symbol Ω."
+    },
+    {
+      "id": "ps_em_b1_006",
+      "question": "A material that allows current to flow easily is a:",
+      "choices": {"A": "Resistor", "B": "Conductor", "C": "Capacitor", "D": "Transformer"},
+      "answer": "B",
+      "explanation": "Conductors (like metals) allow charge to move easily. Resistors impede flow; capacitors store charge; transformers change voltage.",
+      "steps": ["Identify role: easy flow", "Conductor enables current", "Resistor opposes", "Select conductor"],
+      "fastStrategy": "Easy current flow → conductor (metals)."
+    },
+    {
+      "id": "ps_em_b1_007",
+      "question": "A closed conducting path for current is called a:",
+      "choices": {"A": "Circuit", "B": "Magnet", "C": "Battery", "D": "Resistor"},
+      "answer": "A",
+      "explanation": "A circuit is a complete path that allows current to flow. A battery provides voltage; a resistor limits current; a magnet creates magnetic fields.",
+      "steps": ["Closed path definition", "Circuit completes the loop", "Other components serve different roles", "Choose circuit"],
+      "fastStrategy": "No closed loop, no current—complete the circuit."
+    },
+    {
+      "id": "ps_em_b1_008",
+      "question": "In a series circuit, adding more identical resistors will:",
+      "choices": {"A": "Decrease total resistance", "B": "Increase total resistance", "C": "Leave resistance unchanged", "D": "Make voltage zero"},
+      "answer": "B",
+      "explanation": "Series resistances add. More resistors in series increase total resistance, reducing current for the same voltage.",
+      "steps": ["Series: R_total = R1 + R2 + ...", "Adding more raises R_total", "Higher resistance lowers current for same V", "Choose increase"],
+      "fastStrategy": "Series adds resistance; current drops."
+    },
+    {
+      "id": "ps_em_b1_009",
+      "question": "In a parallel circuit, adding another branch with a resistor will:",
+      "choices": {"A": "Increase total resistance", "B": "Decrease total resistance", "C": "Make current zero", "D": "Stop voltage"},
+      "answer": "B",
+      "explanation": "Parallel branches give more paths for current, reducing total resistance seen by the source.",
+      "steps": ["Parallel adds pathways", "R_total decreases when branches added", "More branches → lower equivalent resistance", "Choose decrease"],
+      "fastStrategy": "Parallel = more paths → lower total resistance."
+    },
+    {
+      "id": "ps_em_b1_010",
+      "question": "The device that provides voltage in a simple circuit is often a:",
+      "choices": {"A": "Resistor", "B": "Switch", "C": "Battery", "D": "Fuse"},
+      "answer": "C",
+      "explanation": "A battery supplies potential difference (voltage) to drive current. Resistors limit current; switches open/close; fuses protect.",
+      "steps": ["Identify voltage source", "Battery gives potential", "Others are control/protection", "Choose battery"],
+      "fastStrategy": "Battery = voltage source in basic circuits."
+    },
+    {
+      "id": "ps_em_b1_011",
+      "question": "The magnetic field around a straight current-carrying wire is shaped like:",
+      "choices": {"A": "Straight lines along the wire", "B": "Circles around the wire", "C": "A single north-south line", "D": "Random dots"},
+      "answer": "B",
+      "explanation": "A current in a straight wire creates circular magnetic field lines centered on the wire (right-hand rule).",
+      "steps": ["Recall right-hand rule: thumb in current direction", "Fingers curl in circles = field lines", "Not straight or random", "Choose circles"],
+      "fastStrategy": "Current in wire → circular field lines around it."
+    },
+    {
+      "id": "ps_em_b1_012",
+      "question": "Like magnetic poles:",
+      "choices": {"A": "Attract", "B": "Repel", "C": "Have no force", "D": "Turn into unlike poles"},
+      "answer": "B",
+      "explanation": "Like poles repel and unlike poles attract. This is a basic property of magnets.",
+      "steps": ["Recall magnet rule: like repel, unlike attract", "No conversion of poles", "Force not zero", "Choose repel"],
+      "fastStrategy": "Like poles repel; opposites attract."
+    },
+    {
+      "id": "ps_em_b1_013",
+      "question": "A compass needle aligns with Earth's magnetic field because the needle is:",
+      "choices": {"A": "An insulator", "B": "A small magnet", "C": "Charged electrically", "D": "Unaffected by magnets"},
+      "answer": "B",
+      "explanation": "A compass needle is a small magnet. It aligns with Earth's magnetic field, pointing roughly toward magnetic north.",
+      "steps": ["Compass contains a magnetized needle", "Magnets align with external fields", "Earth provides the field", "Choose small magnet"],
+      "fastStrategy": "Compass works because the needle itself is a tiny magnet."
+    },
+    {
+      "id": "ps_em_b1_014",
+      "question": "The unit of electric charge is the:",
+      "choices": {"A": "Volt", "B": "Coulomb", "C": "Ohm", "D": "Tesla"},
+      "answer": "B",
+      "explanation": "Charge is measured in coulombs (C). Volt is potential, ohm is resistance, tesla is magnetic field strength.",
+      "steps": ["Match charge unit: coulomb", "Volt = potential, ohm = resistance, tesla = field", "Choose coulomb"],
+      "fastStrategy": "Charge unit = coulomb (C)."
+    },
+    {
+      "id": "ps_em_b1_015",
+      "question": "What happens to current through a resistor if voltage doubles and resistance stays the same?",
+      "choices": {"A": "It halves", "B": "It stays the same", "C": "It doubles", "D": "It becomes zero"},
+      "answer": "C",
+      "explanation": "From Ohm's law I = V/R. Doubling voltage with constant resistance doubles current.",
+      "steps": ["Start with I = V/R", "V → 2V, R constant", "I_new = 2V/R = 2I", "Choose doubles"],
+      "fastStrategy": "With fixed R, current scales directly with voltage."
+    },
+    {
+      "id": "ps_em_b1_016",
+      "question": "In a household circuit, the component that opens or closes the path is the:",
+      "choices": {"A": "Fuse", "B": "Switch", "C": "Outlet", "D": "Light bulb"},
+      "answer": "B",
+      "explanation": "A switch opens or closes the circuit path, controlling current flow. Fuses protect, outlets provide access, bulbs use current.",
+      "steps": ["Identify control element", "Switch changes open/closed state", "Other parts have different roles", "Choose switch"],
+      "fastStrategy": "Switch = circuit gate; on/off."
+    },
+    {
+      "id": "ps_em_b1_017",
+      "question": "If a bulb burns out in a series circuit of two bulbs, the other bulb will:",
+      "choices": {"A": "Stay lit", "B": "Get brighter", "C": "Go out", "D": "Explode"},
+      "answer": "C",
+      "explanation": "In series, one open component breaks the circuit, stopping current. Both bulbs go out.",
+      "steps": ["Series requires single path", "Burned bulb opens circuit", "No current flows", "Other bulb goes out"],
+      "fastStrategy": "Series chain break = whole chain off."
+    },
+    {
+      "id": "ps_em_b1_018",
+      "question": "If one bulb burns out in a parallel circuit with two bulbs, the other bulb will:",
+      "choices": {"A": "Go out too", "B": "Stay lit", "C": "Flicker forever", "D": "Explode"},
+      "answer": "B",
+      "explanation": "Parallel branches are independent. One open branch doesn't stop current in the other, so the other bulb stays lit.",
+      "steps": ["Parallel provides separate paths", "One branch open, others still complete", "Current still flows in intact branch", "Choose stay lit"],
+      "fastStrategy": "Parallel branches act independently—one out, others stay on."
+    },
+    {
+      "id": "ps_em_b1_019",
+      "question": "Which pair is an example of opposite electric charges?",
+      "choices": {"A": "Two protons", "B": "Two electrons", "C": "A proton and an electron", "D": "Two neutrons"},
+      "answer": "C",
+      "explanation": "Protons are positive; electrons are negative. Opposite charges attract. Neutrons are neutral.",
+      "steps": ["Recall charges: proton +, electron -", "Opposite charges attract", "Same charges repel", "Choose proton and electron"],
+      "fastStrategy": "Proton (+) with electron (-) = opposites attract."
+    },
+    {
+      "id": "ps_em_b1_020",
+      "question": "The strength of a magnetic field is measured in:",
+      "choices": {"A": "Ohms", "B": "Teslas", "C": "Joules", "D": "Newtons"},
+      "answer": "B",
+      "explanation": "Magnetic field strength (flux density) uses teslas (T). Ohms measure resistance, joules energy, newtons force.",
+      "steps": ["Match field unit: tesla", "Ohm = resistance, joule = energy, newton = force", "Choose tesla"],
+      "fastStrategy": "Magnetic field unit = tesla (T)."
+    },
+    {
+      "id": "ps_em_b1_021",
+      "question": "A fuse or circuit breaker mainly protects against:",
+      "choices": {"A": "Low voltage", "B": "Excess current", "C": "Magnetic fields", "D": "Low resistance"},
+      "answer": "B",
+      "explanation": "Fuses/breakers open the circuit when current is too high, preventing overheating and damage.",
+      "steps": ["Identify protection purpose", "Trigger is overcurrent", "It opens circuit to stop flow", "Choose excess current"],
+      "fastStrategy": "Fuse trips on too much current."
+    },
+    {
+      "id": "ps_em_b1_022",
+      "question": "The north pole of one magnet attracts the:",
+      "choices": {"A": "North pole of another", "B": "South pole of another", "C": "Any pole equally", "D": "Only nonmagnetic materials"},
+      "answer": "B",
+      "explanation": "Unlike poles attract: north attracts south. Like poles repel.",
+      "steps": ["Recall magnet rule", "North-south attract", "North-north repel", "Choose south"],
+      "fastStrategy": "North seeks south; like poles push apart."
+    },
+    {
+      "id": "ps_em_b1_023",
+      "question": "Which component is designed to oppose current in a circuit?",
+      "choices": {"A": "Resistor", "B": "Switch", "C": "Battery", "D": "Capacitor"},
+      "answer": "A",
+      "explanation": "Resistors provide a specific resistance to control current. Switches open/close; batteries supply voltage; capacitors store charge.",
+      "steps": ["Identify component whose purpose is resistance", "Resistor fits", "Others serve different roles", "Choose resistor"],
+      "fastStrategy": "Need to limit current? Insert a resistor."
+    },
+    {
+      "id": "ps_em_b1_024",
+      "question": "Current in a simple DC circuit flows from the battery's:",
+      "choices": {"A": "Negative terminal to positive through the external circuit", "B": "Positive terminal to negative through the external circuit", "C": "Both directions equally", "D": "Only inside the battery"},
+      "answer": "B",
+      "explanation": "Conventional current flows from positive to negative through the external circuit. Electron flow is opposite, but current direction is defined this way.",
+      "steps": ["Recall conventional current direction", "Positive → negative externally", "Electron flow opposite but not the convention", "Choose positive to negative"],
+      "fastStrategy": "Use conventional direction: + to − around the circuit."
+    },
+    {
+      "id": "ps_em_b1_025",
+      "question": "When you rub a balloon on your hair and it sticks to a wall, it is mainly due to:",
+      "choices": {"A": "Magnetic attraction", "B": "Static electric charge", "C": "Gravity", "D": "Nuclear forces"},
+      "answer": "B",
+      "explanation": "Rubbing transfers electrons, giving the balloon a net charge. The charged balloon electrostatically attracts the wall surface.",
+      "steps": ["Identify static electricity from rubbing", "Charges transfer and build on balloon", "Charged balloon attracts neutral wall", "Select static electric charge"],
+      "fastStrategy": "Rubbing objects → static charge → electrostatic stick."
+    }
+  ]
+}

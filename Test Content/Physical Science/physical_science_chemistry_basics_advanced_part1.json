@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "chemistry_basics",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ps_cb_a1_001",
+      "question": "Chlorine has two stable isotopes: 75.8% Cl-35 (34.97 amu) and 24.2% Cl-37 (36.97 amu). The average atomic mass is closest to:",
+      "choices": {"A": "35.0 amu", "B": "35.5 amu", "C": "36.0 amu", "D": "37.0 amu"},
+      "answer": "B",
+      "explanation": "Mass ≈ 0.758(34.97)+0.242(36.97) ≈ 26.5+8.9 ≈ 35.4–35.5 amu.",
+      "steps": ["Multiply each isotope mass by abundance", "Add weighted masses", "Round to 35.5 amu"],
+      "fastStrategy": "Dominant 35 amu isotope → average near 35.5." 
+    },
+    {
+      "id": "ps_cb_a1_002",
+      "question": "How many protons, neutrons, and electrons are in Ca2+ with mass number 40?",
+      "choices": {"A": "20 p, 20 n, 18 e", "B": "20 p, 18 n, 20 e", "C": "18 p, 20 n, 20 e", "D": "20 p, 22 n, 18 e"},
+      "answer": "A",
+      "explanation": "Calcium atomic number 20 → 20 protons. Mass number 40 → neutrons = 40−20 = 20. Ca2+ lost 2 e− → 18 electrons.",
+      "steps": ["Use atomic number for protons", "Subtract to get neutrons", "Subtract 2 electrons for 2+ charge"],
+      "fastStrategy": "Ca2+: keep 20 p, lose 2 e → 18 e; neutrons = 20." 
+    },
+    {
+      "id": "ps_cb_a1_003",
+      "question": "Molar mass of Al2(SO4)3 is closest to:",
+      "choices": {"A": "150 g/mol", "B": "234 g/mol", "C": "278 g/mol", "D": "342 g/mol"},
+      "answer": "D",
+      "explanation": "Al: 27×2=54; S: 32×3=96; O: 16×12=192; total ≈ 54+96+192 = 342 g/mol.", 
+      "steps": ["Compute Al mass 54", "Add sulfur mass 96", "Add oxygen mass 192", "Sum to ~342 g/mol"],
+      "fastStrategy": "Use 27,32,16; Al2(SO4)3 sums to ~342 g/mol." 
+    },
+    {
+      "id": "ps_cb_a1_004",
+      "question": "How many grams of CO2 are in 0.25 mol?",
+      "choices": {"A": "5.5 g", "B": "11 g", "C": "22 g", "D": "44 g"},
+      "answer": "B",
+      "explanation": "CO2 molar mass ~44 g/mol. 0.25 mol × 44 ≈ 11 g.",
+      "steps": ["Use 44 g/mol", "Multiply by 0.25", "Get 11 g", "Match option"],
+      "fastStrategy": "Quarter of 44 ≈ 11 g." 
+    },
+    {
+      "id": "ps_cb_a1_005",
+      "question": "Balanced: 2H2 + O2 → 2H2O. If 5.0 mol H2 reacts with 2.0 mol O2, limiting reagent is:",
+      "choices": {"A": "H2", "B": "O2", "C": "Both", "D": "Neither"},
+      "answer": "B",
+      "explanation": "Stoich needs 2 mol H2 per 1 mol O2. For 2.0 mol O2, need 4.0 mol H2. We have 5.0 mol H2, so O2 limits.",
+      "steps": ["Check mole ratio 2:1", "Needed H2 for 2.0 O2 is 4.0", "H2 excess (5>4)", "O2 limiting"],
+      "fastStrategy": "Compare required H2 = 2×O2; H2 available > needed → O2 limits." 
+    },
+    {
+      "id": "ps_cb_a1_006",
+      "question": "Percent composition of oxygen by mass in glucose C6H12O6 is closest to:",
+      "choices": {"A": "27%", "B": "44%", "C": "53%", "D": "67%"},
+      "answer": "C",
+      "explanation": "Molar mass ~180 g/mol; oxygen mass = 16×6 = 96. 96/180 ≈ 0.533 → 53%.",
+      "steps": ["Find molar mass ~180", "O mass 96", "Divide 96/180", "Convert to percent ~53%"],
+      "fastStrategy": "O part ~96/180 ≈ 0.53 → 53%." 
+    },
+    {
+      "id": "ps_cb_a1_007",
+      "question": "Ideal gas: n=0.80 mol, T=300 K, P=1.2 atm. Volume is closest to:",
+      "choices": {"A": "12 L", "B": "16 L", "C": "20 L", "D": "24 L"},
+      "answer": "B",
+      "explanation": "Use PV = nRT with R=0.0821. V = nRT/P ≈ 0.8×0.0821×300 /1.2 ≈ 19.7/1.2 ≈ 16.4 L.",
+      "steps": ["Compute nRT ≈ 19.7", "Divide by 1.2", "Get ~16.4 L", "Select 16 L"],
+      "fastStrategy": "Rough: (0.08×300=24); 24×0.8=19.2; /1.2 ≈16." 
+    },
+    {
+      "id": "ps_cb_a1_008",
+      "question": "Charles' law: A gas at 20°C and 2.0 L is heated to 80°C at constant pressure. New volume is about:",
+      "choices": {"A": "1.5 L", "B": "2.3 L", "C": "2.7 L", "D": "3.3 L"},
+      "answer": "B",
+      "explanation": "Use Kelvin: 293 K → 353 K. V2 = V1 T2/T1 ≈ 2.0×353/293 ≈ 2.41 L, nearest 2.3–2.4 L option B.", 
+      "steps": ["Convert to K", "Multiply 2.0 by 353/293", "Get ≈2.41 L", "Choose nearest 2.3 L"],
+      "fastStrategy": "Temperature rises ~20%; volume rises ~20% → ~2.4 L." 
+    },
+    {
+      "id": "ps_cb_a1_009",
+      "question": "A gas sample: P1=1.5 atm, V1=3.0 L at 300 K. Find V2 at 1.0 atm and 350 K.",
+      "choices": {"A": "2.6 L", "B": "3.6 L", "C": "4.2 L", "D": "5.3 L"},
+      "answer": "D",
+      "explanation": "Use combined law: V2 = V1 (P1/P2)(T2/T1) ≈ 3.0×(1.5/1.0)×(350/300) ≈ 5.3 L.", 
+      "steps": ["Compute pressure ratio 1.5", "Compute temp ratio ~1.17", "Multiply with 3.0", "Get ~5.3 L"],
+      "fastStrategy": "Lower P + higher T → volume ~5.3 L." 
+    },
+    {
+      "id": "ps_cb_a1_010",
+      "question": "At STP, density of CO2 gas is closest to:",
+      "choices": {"A": "0.5 g/L", "B": "1.3 g/L", "C": "2.0 g/L", "D": "3.9 g/L"},
+      "answer": "C",
+      "explanation": "At STP, 1 mol gas ≈22.4 L. CO2 molar mass 44 g → density 44/22.4 ≈ 1.96 g/L ≈ 2.0 g/L.",
+      "steps": ["Use 22.4 L/mol", "Divide 44 by 22.4", "Get ~1.96", "Pick ~2.0 g/L"],
+      "fastStrategy": "Molar mass/22.4 gives density; 44/22 ≈ 2." 
+    },
+    {
+      "id": "ps_cb_a1_011",
+      "question": "What volume of 0.200 M NaOH contains 0.0500 mol NaOH?",
+      "choices": {"A": "50.0 mL", "B": "100 mL", "C": "150 mL", "D": "250 mL"},
+      "answer": "D",
+      "explanation": "M = n/V → V = n/M = 0.0500 / 0.200 = 0.250 L = 250 mL.",
+      "steps": ["Divide moles by molarity", "Get 0.25 L", "Convert to mL", "Choose 250 mL"],
+      "fastStrategy": "At 0.2 M, 0.05 mol needs 0.25 L." 
+    },
+    {
+      "id": "ps_cb_a1_012",
+      "question": "To dilute 75.0 mL of 2.0 M HCl to 0.50 M, final volume should be:",
+      "choices": {"A": "75 mL", "B": "150 mL", "C": "225 mL", "D": "300 mL"},
+      "answer": "D",
+      "explanation": "Use M1V1 = M2V2. V2 = (2.0×75)/0.50 = 150/0.50 = 300 mL.",
+      "steps": ["Multiply M1V1", "Divide by M2", "Get 300 mL", "Select 300 mL"],
+      "fastStrategy": "Quarter the molarity → quadruple the volume (75→300)." 
+    },
+    {
+      "id": "ps_cb_a1_013",
+      "question": "[H+] = 2.0×10^-4 M. The pH is closest to:",
+      "choices": {"A": "2.7", "B": "3.7", "C": "4.7", "D": "5.7"},
+      "answer": "B",
+      "explanation": "pH = −log(2.0×10^-4) ≈ 3.70 (since log2≈0.30; 4−0.30 = 3.70).",
+      "steps": ["Take negative log", "Use 4 − log2", "log2≈0.30", "Get ~3.70"],
+      "fastStrategy": "-log(2e-4) = 4−0.30 ≈ 3.7." 
+    },
+    {
+      "id": "ps_cb_a1_014",
+      "question": "A solution has pOH = 5.2 at 25°C. Its pH is closest to:",
+      "choices": {"A": "5.2", "B": "7.0", "C": "8.8", "D": "9.8"},
+      "answer": "C",
+      "explanation": "At 25°C, pH + pOH = 14. pH ≈ 14 − 5.2 = 8.8.",
+      "steps": ["Use pH+pOH=14", "Subtract 5.2", "Get 8.8", "Choose 8.8"],
+      "fastStrategy": "pH = 14 − pOH." 
+    },
+    {
+      "id": "ps_cb_a1_015",
+      "question": "Strong acid-base: 25.0 mL of 0.100 M HCl needs what volume of 0.125 M NaOH to neutralize?",
+      "choices": {"A": "15.0 mL", "B": "20.0 mL", "C": "25.0 mL", "D": "31.3 mL"},
+      "answer": "B",
+      "explanation": "Moles HCl = 0.0250 L×0.100 = 0.00250 mol. Need same moles NaOH. Volume = 0.00250 / 0.125 = 0.0200 L = 20.0 mL.",
+      "steps": ["Find acid moles", "Set equal to base moles", "Divide by base molarity", "Convert to mL"],
+      "fastStrategy": "0.1×25 = 2.5 mmol; divide by 0.125 → 20 mL." 
+    },
+    {
+      "id": "ps_cb_a1_016",
+      "question": "Theoretical yield is 5.0 g, actual yield is 4.0 g. Percent yield is:",
+      "choices": {"A": "60%", "B": "70%", "C": "80%", "D": "90%"},
+      "answer": "C",
+      "explanation": "Percent yield = (actual/theoretical)×100 = 4.0/5.0×100 = 80%.",
+      "steps": ["Divide 4.0 by 5.0", "Multiply by 100", "Get 80%", "Select 80%"],
+      "fastStrategy": "4/5 = 0.8 → 80%." 
+    },
+    {
+      "id": "ps_cb_a1_017",
+      "question": "Oxidation number of sulfur in sulfate (SO4^2-) is:",
+      "choices": {"A": "-2", "B": "0", "C": "+4", "D": "+6"},
+      "answer": "D",
+      "explanation": "Let S = x. x + 4(−2) = −2 → x −8 = −2 → x = +6.",
+      "steps": ["Assign O = −2", "Sum to charge −2", "Solve x − 8 = −2", "x = +6"],
+      "fastStrategy": "Sulfate usually has S at +6." 
+    },
+    {
+      "id": "ps_cb_a1_018",
+      "question": "In the redox reaction Zn + Cu2+ → Zn2+ + Cu, the oxidizing agent is:",
+      "choices": {"A": "Zn", "B": "Cu2+", "C": "Zn2+", "D": "Cu"},
+      "answer": "B",
+      "explanation": "Oxidizing agent gets reduced. Cu2+ gains electrons to become Cu, so Cu2+ is the oxidizing agent.",
+      "steps": ["Identify species reduced", "Cu2+ gains e−", "Thus Cu2+ oxidizes Zn", "Choose Cu2+"],
+      "fastStrategy": "Species reduced is the oxidizing agent → Cu2+." 
+    },
+    {
+      "id": "ps_cb_a1_019",
+      "question": "A reaction with ΔH = −120 kJ is:",
+      "choices": {"A": "Endothermic; releases heat", "B": "Endothermic; absorbs heat", "C": "Exothermic; releases heat", "D": "Exothermic; absorbs heat"},
+      "answer": "C",
+      "explanation": "Negative enthalpy means heat is released: exothermic.",
+      "steps": ["Check sign of ΔH", "Negative → exothermic", "Exothermic → releases heat", "Pick matching option"],
+      "fastStrategy": "ΔH < 0 → exothermic → releases heat." 
+    },
+    {
+      "id": "ps_cb_a1_020",
+      "question": "For N2(g) + 3H2(g) ⇌ 2NH3(g), increasing pressure (constant T) shifts equilibrium toward:",
+      "choices": {"A": "N2 and H2", "B": "NH3", "C": "No change", "D": "Reactants then products"},
+      "answer": "B",
+      "explanation": "Higher pressure favors fewer moles of gas. Left has 4 mol, right has 2 mol → shifts to NH3.",
+      "steps": ["Count gas moles", "Left 4, right 2", "Higher P favors fewer moles", "Shift to products"],
+      "fastStrategy": "Compression favors side with fewer gas moles → NH3." 
+    },
+    {
+      "id": "ps_cb_a1_021",
+      "question": "Equilibrium: 2A ⇌ B. Kc = [B]/[A]^2. If Kc = 4.0 at 25°C, which is true?",
+      "choices": {"A": "Products favored", "B": "Reactants strongly favored", "C": "No products form", "D": "All solids"},
+      "answer": "A",
+      "explanation": "K>1 indicates products favored at equilibrium.",
+      "steps": ["Interpret K>1", "Value 4 >1", "Products favored", "Choose products favored"],
+      "fastStrategy": "K greater than 1 → products dominate." 
+    },
+    {
+      "id": "ps_cb_a1_022",
+      "question": "Rate law: rate = k[A]^2[B]. Overall reaction order is:",
+      "choices": {"A": "1", "B": "2", "C": "3", "D": "4"},
+      "answer": "C",
+      "explanation": "Sum exponents: 2 + 1 = 3rd order overall.",
+      "steps": ["Identify exponents", "Add 2 + 1", "Get 3", "Select 3"],
+      "fastStrategy": "Overall order = sum of exponents → 3." 
+    },
+    {
+      "id": "ps_cb_a1_023",
+      "question": "Which trend correctly compares atomic size and ionization energy between Mg and Al?",
+      "choices": {"A": "Al smaller, higher IE", "B": "Mg smaller, higher IE", "C": "Al larger, lower IE", "D": "Mg larger, lower IE"},
+      "answer": "A",
+      "explanation": "Across a period, atoms get smaller and IE increases. Al is to the right of Mg, so Al is slightly smaller with higher ionization energy.", 
+      "steps": ["Across period left→right: radius ↓, IE ↑", "Al is right of Mg", "Thus Al smaller, higher IE", "Select that option"],
+      "fastStrategy": "Moving right makes atoms smaller and IE larger → Al smaller/higher IE." 
+    },
+    {
+      "id": "ps_cb_a1_024",
+      "question": "Electron configuration for ground-state chlorine is:",
+      "choices": {"A": "1s2 2s2 2p6 3s2 3p5", "B": "1s2 2s2 2p6 3s2 3p6", "C": "[Ne]3s2 3p6", "D": "[Ar]4s2"},
+      "answer": "A",
+      "explanation": "Chlorine (Z=17): fill to 3p5. 3p6 would be argon.",
+      "steps": ["Count electrons to 17", "Stop at 3p5", "Verify total 17", "Select matching config"],
+      "fastStrategy": "Cl is one short of Ar: [Ne]3s2 3p5." 
+    },
+    {
+      "id": "ps_cb_a1_025",
+      "question": "Which intermolecular force is strongest among these?",
+      "choices": {"A": "London dispersion in Ne", "B": "Dipole-dipole in HCl", "C": "Hydrogen bonding in H2O", "D": "Ion-dipole in NaCl(aq)"},
+      "answer": "D",
+      "explanation": "Ion-dipole interactions between ions and polar water are typically strongest among listed. Hydrogen bonding is strong but usually weaker than ion-dipole.",
+      "steps": ["Compare IMF types", "Ion-dipole > H-bond > dipole > dispersion", "NaCl(aq) has ion-dipole", "Pick ion-dipole"],
+      "fastStrategy": "Ion with polar solvent gives strongest IMF here." 
+    }
+  ]
+}

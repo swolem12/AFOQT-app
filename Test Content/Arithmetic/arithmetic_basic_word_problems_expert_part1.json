@@ -1,0 +1,147 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "basic_word_problems",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ar_bwp_e1_001",
+      "question": "A three-phase project is 25% complete after 6 days at constant pace. How many more days to finish the remaining work at the same pace?",
+      "choices": {"A": "14", "B": "16", "C": "18", "D": "20", "E": "22"},
+      "answer": "C",
+      "explanation": "If 25% takes 6 days, full job takes 6 / 0.25 = 24 days. Remaining 75% needs 18 more days.",
+      "steps": [
+        "1. Determine full duration: 6 days / 0.25 = 24 days.",
+        "2. Remaining fraction: 75% of work.",
+        "3. Remaining time: 24 × 0.75 = 18 days.",
+        "4. Trap: Don't subtract percentages; scale time by remaining fraction."
+      ],
+      "fastStrategy": "Use proportion: 6 days : 25% = x days : 75% → x = 18."
+    },
+    {
+      "id": "ar_bwp_e1_002",
+      "question": "A 500-liter tank is filled by a pump at 60 L/hr while a leak drains 8 L/hr. Starting empty, how long to fill the tank?",
+      "choices": {"A": "8.5 hr", "B": "9.0 hr", "C": "9.6 hr", "D": "10.0 hr", "E": "10.5 hr"},
+      "answer": "C",
+      "explanation": "Net fill rate = 60 − 8 = 52 L/hr. Time = 500 / 52 ≈ 9.62 hr (~9.6 hr).",
+      "steps": [
+        "1. Compute net rate: 60 − 8 = 52 L/hr.",
+        "2. Divide volume by net rate: 500 / 52 ≈ 9.62 hr.",
+        "3. Trap: Subtract the leak before dividing; don't average rates."
+      ],
+      "fastStrategy": "Approximate: 52 ≈ 50, so 500/50 ≈ 10 hr; refine to 9.6 hr."
+    },
+    {
+      "id": "ar_bwp_e1_003",
+      "question": "An item costs $P. It is discounted 20% and taxed at 7.5%, resulting in a final price of $240. What is P (nearest dollar)?",
+      "choices": {"A": "$270", "B": "$276", "C": "$279", "D": "$285", "E": "$300"},
+      "answer": "C",
+      "explanation": "Price after discount: 0.8P. After tax: 0.8P × 1.075 = 0.86P = 240 → P = 240 / 0.86 ≈ $279.",
+      "steps": [
+        "1. Apply discount: price becomes 0.8P.",
+        "2. Apply tax: 0.8P × 1.075 = 0.86P.",
+        "3. Solve: 0.86P = 240 → P ≈ 279.07.",
+        "4. Trap: Multiply sequentially; discounts and taxes compound, not add."
+      ],
+      "fastStrategy": "Use effective multiplier 0.86; divide final by 0.86."
+    },
+    {
+      "id": "ar_bwp_e1_004",
+      "question": "You have 45 L of a 30% acid solution. How many liters of pure acid must be added to reach 50% concentration?",
+      "choices": {"A": "12", "B": "15", "C": "18", "D": "20", "E": "22.5"},
+      "answer": "C",
+      "explanation": "Current acid: 0.30 × 45 = 13.5 L. Let x = pure acid. (13.5 + x)/(45 + x) = 0.5 → 13.5 + x = 22.5 + 0.5x → 0.5x = 9 → x = 18.",
+      "steps": [
+        "1. Compute current acid amount: 13.5 L.",
+        "2. Set equation: (13.5 + x)/(45 + x) = 0.5.",
+        "3. Solve for x: cross-multiply → 13.5 + x = 22.5 + 0.5x → 0.5x = 9 → x = 18.",
+        "4. Trap: Add acid to both numerator and denominator; don't just average percentages."
+      ],
+      "fastStrategy": "Use alligation: Need to raise from 30% to 50% by adding 100%; ratio (50−30):(100−50)=20:50=2:5 → add 2 parts acid to 5 parts solution → (2/5)×45=18 L."
+    },
+    {
+      "id": "ar_bwp_e1_005",
+      "question": "A 420-mile trip at 70 mph arrives 30 minutes late. What steady speed would have met the schedule?",
+      "choices": {"A": "72 mph", "B": "74 mph", "C": "76 mph", "D": "78 mph", "E": "80 mph"},
+      "answer": "C",
+      "explanation": "Actual time: 420/70 = 6 h. Planned time: 5.5 h. Needed speed: 420 / 5.5 ≈ 76.36 mph → about 76 mph.",
+      "steps": [
+        "1. Compute actual duration: 420 ÷ 70 = 6 h.",
+        "2. Scheduled duration: 6 h − 0.5 h = 5.5 h.",
+        "3. Required speed: distance / scheduled time = 420 / 5.5 ≈ 76.36 mph.",
+        "4. Trap: Convert 30 minutes to 0.5 hours before subtracting."
+      ],
+      "fastStrategy": "Use ratio: Needed speed = 70 × (6 / 5.5) ≈ 70 × 1.0909 ≈ 76.4 mph."
+    },
+    {
+      "id": "ar_bwp_e1_006",
+      "question": "Warehouse starts with 1,200 units, ships 450, then restocks 40% of what remains. How many units after restock?",
+      "choices": {"A": "900", "B": "960", "C": "1,020", "D": "1,050", "E": "1,080"},
+      "answer": "D",
+      "explanation": "After shipping: 1200 − 450 = 750. Restock 40% of 750 = 300. Final: 750 + 300 = 1,050.",
+      "steps": [
+        "1. Subtract shipment: 1200 − 450 = 750.",
+        "2. Compute restock: 0.40 × 750 = 300.",
+        "3. Add back: 750 + 300 = 1,050 units.",
+        "4. Trap: Restock is based on the remaining amount, not the original."
+      ],
+      "fastStrategy": "Restock multiplier = 1 + 0.40 = 1.4 on the remainder 750 → 1050."
+    },
+    {
+      "id": "ar_bwp_e1_007",
+      "question": "A fundraiser sells 160 tickets: adult $25, student $15, total revenue $3,200. How many adult tickets were sold?",
+      "choices": {"A": "60", "B": "70", "C": "80", "D": "90", "E": "100"},
+      "answer": "C",
+      "explanation": "Let adult = a, student = s. a + s = 160. 25a + 15s = 3200. Substitute s = 160 − a: 25a + 15(160 − a) = 3200 → 25a + 2400 − 15a = 3200 → 10a = 800 → a = 80.",
+      "steps": [
+        "1. Set equations: a + s = 160; 25a + 15s = 3200.",
+        "2. Substitute s = 160 − a into revenue equation.",
+        "3. Solve: 25a + 2400 − 15a = 3200 → 10a = 800 → a = 80.",
+        "4. Trap: Use simultaneous equations; don't divide total revenue by one price."
+      ],
+      "fastStrategy": "Average price approach: Total $3200/160 = $20 avg. Adults are $5 above avg, students $5 below. Deviations must balance: 5a = 5s → a = s = 80."
+    },
+    {
+      "id": "ar_bwp_e1_008",
+      "question": "Crew A alone finishes in 12 days, Crew B alone in 16 days. After working together 4 days, what fraction of the job remains?",
+      "choices": {"A": "1/3", "B": "5/12", "C": "7/12", "D": "1/2", "E": "3/8"},
+      "answer": "B",
+      "explanation": "Rates: A=1/12, B=1/16. Combined = 1/12 + 1/16 = 7/48 per day. In 4 days: 4 × 7/48 = 28/48 = 7/12 done. Remaining = 5/12.",
+      "steps": [
+        "1. Add rates: 1/12 + 1/16 = 7/48.",
+        "2. Work in 4 days: 4 × 7/48 = 7/12.",
+        "3. Remaining: 1 − 7/12 = 5/12.",
+        "4. Trap: Add rates, not times."
+      ],
+      "fastStrategy": "Compute remainder directly: Remaining fraction = 1 − (days × combined rate)."
+    },
+    {
+      "id": "ar_bwp_e1_009",
+      "question": "$15,000 is split between stocks (9%) and bonds (4%). Annual interest totals $1,050. How much is in stocks?",
+      "choices": {"A": "$6,000", "B": "$7,500", "C": "$8,500", "D": "$9,000", "E": "$10,500"},
+      "answer": "D",
+      "explanation": "Let stocks = S, bonds = 15000 − S. Interest: 0.09S + 0.04(15000 − S) = 1050 → 0.09S + 600 − 0.04S = 1050 → 0.05S = 450 → S = 9000.",
+      "steps": [
+        "1. Set S + B = 15000; interest equation 0.09S + 0.04B = 1050.",
+        "2. Substitute B = 15000 − S.",
+        "3. Solve: 0.09S + 600 − 0.04S = 1050 → 0.05S = 450 → S = 9000.",
+        "4. Trap: Keep rates in decimals; don't mix percent and decimal."
+      ],
+      "fastStrategy": "Interest gap method: 5% differential on stocks over bonds. Extra interest needed: 1050 − (4% of 15000=600) = 450. Divide by 5% → 9000 in stocks."
+    },
+    {
+      "id": "ar_bwp_e1_010",
+      "question": "A truck runs 3 legs: 120 mi @ 60 mph, 180 mi @ 45 mph, 150 mi @ 75 mph. What is the overall average speed?",
+      "choices": {"A": "52.5 mph", "B": "54.0 mph", "C": "55.0 mph", "D": "56.3 mph", "E": "57.5 mph"},
+      "answer": "D",
+      "explanation": "Times: 120/60=2 h; 180/45=4 h; 150/75=2 h. Total distance 450 mi, total time 8 h. Average = 450/8 = 56.25 mph (~56.3).",
+      "steps": [
+        "1. Compute each leg time: 2 h, 4 h, 2 h.",
+        "2. Total time = 8 h; total distance = 450 mi.",
+        "3. Average speed = 450 ÷ 8 = 56.25 mph.",
+        "4. Trap: Average speed is total distance / total time, not mean of segment speeds."
+      ],
+      "fastStrategy": "Use weighted speeds by time; heavy 45 mph leg dominates."
+    }
+  ]
+}

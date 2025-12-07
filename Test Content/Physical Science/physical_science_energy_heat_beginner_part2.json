@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "energy_heat",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+    {
+      "id": "ps_eh_b1_026",
+      "question": "What is the SI unit of energy?",
+      "choices": {"A": "Joule", "B": "Watt", "C": "Newton", "D": "Pascal"},
+      "answer": "A",
+      "explanation": "Energy is measured in joules (J). Watt measures power, Newton measures force, and Pascal measures pressure.",
+      "steps": ["Recall base units: J for energy", "Watt = J/s (power)", "Newton = force", "Pascal = pressure"],
+      "fastStrategy": "Energy → joules; power → watts."
+    },
+    {
+      "id": "ps_eh_b1_027",
+      "question": "Energy an object stores due to its temperature is called:",
+      "choices": {"A": "Thermal energy", "B": "Elastic energy", "C": "Chemical energy", "D": "Nuclear energy"},
+      "answer": "A",
+      "explanation": "Thermal energy is the internal energy from particle motion related to temperature. Elastic is from deformation, chemical from bonds, nuclear from the nucleus.",
+      "steps": ["Match temperature with internal kinetic energy", "Thermal energy aligns with particle motion", "Other forms relate to different sources", "Choose thermal energy"],
+      "fastStrategy": "Temperature-linked internal energy = thermal."
+    },
+    {
+      "id": "ps_eh_b1_028",
+      "question": "Which process releases heat to the surroundings?",
+      "choices": {"A": "Melting", "B": "Evaporation", "C": "Condensation", "D": "Sublimation"},
+      "answer": "C",
+      "explanation": "Condensation (gas to liquid) releases latent heat to the surroundings. Melting, evaporation, and sublimation absorb heat.",
+      "steps": ["Identify direction of phase change", "Gas to liquid frees stored energy", "Melting/evaporation/sublimation need energy", "Select condensation"],
+      "fastStrategy": "Gas to liquid gives off heat; liquid to gas absorbs."
+    },
+    {
+      "id": "ps_eh_b1_029",
+      "question": "Which everyday example best shows conduction?",
+      "choices": {"A": "Warm air rising", "B": "Hand getting hot from a metal pan handle", "C": "Sun warming your face", "D": "Steam carrying heat"},
+      "answer": "B",
+      "explanation": "Conduction is heat transfer by direct contact. A hand touching a hot metal handle is conduction. Warm air rising and steam are convection; Sun warming is radiation.",
+      "steps": ["Look for direct contact", "Hand and metal handle touch", "Others involve fluids or radiation", "Choose conduction example"],
+      "fastStrategy": "Touch-to-touch heat = conduction."
+    },
+    {
+      "id": "ps_eh_b1_030",
+      "question": "Convection currents in a room are caused when warm air:",
+      "choices": {"A": "Sinks because it's denser", "B": "Rises because it's less dense", "C": "Stops moving", "D": "Turns into liquid"},
+      "answer": "B",
+      "explanation": "Heating air lowers its density; it rises while cooler, denser air sinks, creating a convection cycle.",
+      "steps": ["Warm air expands", "Expansion lowers density", "Less dense air rises", "Convection cycle forms"],
+      "fastStrategy": "Warm air rises; cool air sinks → convection loop."
+    },
+    {
+      "id": "ps_eh_b1_031",
+      "question": "Radiation differs from conduction and convection because it:",
+      "choices": {"A": "Requires solids", "B": "Needs a fluid", "C": "Does not require a medium", "D": "Only works in liquids"},
+      "answer": "C",
+      "explanation": "Radiation travels as electromagnetic waves and does not need matter. Conduction needs contact; convection needs a moving fluid.",
+      "steps": ["Identify radiation as EM waves", "EM waves travel through vacuum", "Conduction/convection need matter", "Select no medium required"],
+      "fastStrategy": "If it works in space, it's radiation."
+    },
+    {
+      "id": "ps_eh_b1_032",
+      "question": "A good conductor of heat has:",
+      "choices": {"A": "Low thermal conductivity", "B": "High thermal conductivity", "C": "No electrons", "D": "Very low density"},
+      "answer": "B",
+      "explanation": "Conductors transfer heat easily due to high thermal conductivity. Low conductivity materials are insulators.",
+      "steps": ["Conductivity measures heat transfer rate", "High value means easy transfer", "Low value means insulating", "Choose high thermal conductivity"],
+      "fastStrategy": "High thermal conductivity → good conductor."
+    },
+    {
+      "id": "ps_eh_b1_033",
+      "question": "Which material is typically an insulator?",
+      "choices": {"A": "Copper", "B": "Aluminum", "C": "Glass", "D": "Steel"},
+      "answer": "C",
+      "explanation": "Glass has low thermal conductivity and acts as an insulator. Copper, aluminum, and steel are metals that conduct heat well.",
+      "steps": ["Identify metals as conductors", "Glass is non-metal and resists heat flow", "Compare conductivity", "Select glass"],
+      "fastStrategy": "Metals conduct; glass and plastics insulate."
+    },
+    {
+      "id": "ps_eh_b1_034",
+      "question": "Which change increases the thermal energy of water the most?",
+      "choices": {"A": "Cooling it by 5°C", "B": "Heating it by 10°C", "C": "Keeping it at the same temperature", "D": "Putting it in a vacuum"},
+      "answer": "B",
+      "explanation": "Heating raises temperature and increases thermal energy. Cooling lowers it; no change keeps it constant; vacuum does not add energy.",
+      "steps": ["Thermal energy rises with temperature", "Heating by 10°C adds energy", "Other options do not add energy", "Choose heating"],
+      "fastStrategy": "More temperature increase → more thermal energy."
+    },
+    {
+      "id": "ps_eh_b1_035",
+      "question": "What happens to particle speed as a substance is heated (before a phase change)?",
+      "choices": {"A": "Speed decreases", "B": "Speed stays the same", "C": "Speed increases", "D": "Particles stop moving"},
+      "answer": "C",
+      "explanation": "Heating increases average kinetic energy, so particles move faster until reaching a phase change temperature.",
+      "steps": ["Temperature relates to average particle speed", "Adding heat raises temperature", "Higher temperature → faster particles", "Select speed increases"],
+      "fastStrategy": "Add heat → particles move faster (until phase change)."
+    },
+    {
+      "id": "ps_eh_b1_036",
+      "question": "During melting at 0°C, ice temperature stays constant because energy is used to:",
+      "choices": {"A": "Increase particle speed", "B": "Break intermolecular bonds", "C": "Create new atoms", "D": "Raise pressure"},
+      "answer": "B",
+      "explanation": "During a phase change, added heat (latent heat) breaks the solid structure instead of raising temperature.",
+      "steps": ["Phase change uses latent heat", "Energy breaks bonds rather than speeds particles", "Temperature stays constant during melt", "Choose break bonds"],
+      "fastStrategy": "At melting/boiling temps, added heat goes into phase change, not temperature rise."
+    },
+    {
+      "id": "ps_eh_b1_037",
+      "question": "Which direction does heat flow between a hot cup of tea and cooler room air?",
+      "choices": {"A": "From air to tea", "B": "From tea to air", "C": "Both equally", "D": "No heat flows"},
+      "answer": "B",
+      "explanation": "Heat flows from higher temperature to lower temperature, so from hot tea to cooler air until temperatures equalize.",
+      "steps": ["Identify higher temperature object (tea)", "Heat moves toward cooler air", "Flow continues until equilibrium", "Select tea to air"],
+      "fastStrategy": "Heat moves hot → cold until temps match."
+    },
+    {
+      "id": "ps_eh_b1_038",
+      "question": "Which term describes a substance that easily transfers thermal energy by particle collisions?",
+      "choices": {"A": "Insulator", "B": "Conductor", "C": "Coolant", "D": "Radiator"},
+      "answer": "B",
+      "explanation": "Conductors let thermal energy move quickly via particle collisions or free electrons. Insulators resist transfer.",
+      "steps": ["Conductor = easy transfer", "Insulator = resists transfer", "Coolant transports but may not conduct", "Choose conductor"],
+      "fastStrategy": "Quick heat transfer material = conductor."
+    },
+    {
+      "id": "ps_eh_b1_039",
+      "question": "Which statement about insulators is true?",
+      "choices": {"A": "They stop all heat flow", "B": "They reduce heat transfer", "C": "They make objects colder", "D": "They work only for electricity"},
+      "answer": "B",
+      "explanation": "Insulators slow heat transfer but do not stop it completely. They do not create cold and can be thermal or electrical insulators.",
+      "steps": ["Recognize purpose: slow transfer", "Perfect insulation is ideal only", "They don't produce cold", "Select reduce heat transfer"],
+      "fastStrategy": "Insulators slow heat; they don't make cold or stop heat fully."
+    },
+    {
+      "id": "ps_eh_b1_040",
+      "question": "The Sun warming a dark roof is an example of:",
+      "choices": {"A": "Conduction", "B": "Convection", "C": "Radiation", "D": "Evaporation"},
+      "answer": "C",
+      "explanation": "Sunlight transfers energy as radiation. The dark roof absorbs it efficiently, heating up.",
+      "steps": ["Energy travels through space", "No contact or fluid movement", "Radiation fits", "Choose radiation"],
+      "fastStrategy": "Sun-to-roof heat = radiation absorption."
+    },
+    {
+      "id": "ps_eh_b1_041",
+      "question": "Why does a black car get hotter in sunlight than a white car?",
+      "choices": {"A": "Black paint is heavier", "B": "Black surfaces absorb more radiation", "C": "White paint emits more heat", "D": "White blocks conduction"},
+      "answer": "B",
+      "explanation": "Dark surfaces absorb more radiant energy than light surfaces, so a black car heats faster in sunlight.",
+      "steps": ["Color affects absorption", "Black absorbs; white reflects", "Absorption raises temperature", "Select black absorbs more"],
+      "fastStrategy": "Darker = more absorption; lighter = more reflection."
+    },
+    {
+      "id": "ps_eh_b1_042",
+      "question": "At higher altitude, water boils at a lower temperature because:",
+      "choices": {"A": "Water has less heat", "B": "Atmospheric pressure is lower", "C": "Conduction stops", "D": "Water changes composition"},
+      "answer": "B",
+      "explanation": "Lower air pressure reduces the boiling point since bubbles form at lower temperatures when external pressure is less.",
+      "steps": ["Boiling point depends on pressure", "Higher altitude → lower pressure", "Lower pressure → lower boiling temperature", "Choose lower pressure"],
+      "fastStrategy": "Less pressure = lower boiling point."
+    },
+    {
+      "id": "ps_eh_b1_043",
+      "question": "Thermos bottles keep drinks warm mainly by reducing:",
+      "choices": {"A": "Radiation only", "B": "Conduction and convection", "C": "Electric current", "D": "Chemical reactions"},
+      "answer": "B",
+      "explanation": "A vacuum layer and insulating materials cut conduction and convection. Reflective surfaces also reduce radiation, but the main design is to block conduction/convection.",
+      "steps": ["Identify vacuum blocking conduction/convection", "Reflective walls lower radiation", "Electric/chemical not involved", "Choose conduction and convection reduced"],
+      "fastStrategy": "Vacuum flask stops conduction/convection; reflective walls help with radiation."
+    },
+    {
+      "id": "ps_eh_b1_044",
+      "question": "Which phase change goes directly from solid to gas?",
+      "choices": {"A": "Condensation", "B": "Sublimation", "C": "Freezing", "D": "Fusion"},
+      "answer": "B",
+      "explanation": "Sublimation is the direct change from solid to gas, as with dry ice. Condensation is gas to liquid; freezing is liquid to solid; fusion is melting.",
+      "steps": ["Recall phase change terms", "Solid → gas = sublimation", "Match alternatives: condensation gas→liquid, freezing liquid→solid, fusion = melting", "Choose sublimation"],
+      "fastStrategy": "Solid straight to gas = sublimation (think dry ice)."
+    },
+    {
+      "id": "ps_eh_b1_045",
+      "question": "What does a higher specific heat mean for a substance?",
+      "choices": {"A": "Heats up quickly", "B": "Requires more energy to change temperature", "C": "Cannot change temperature", "D": "Has no thermal energy"},
+      "answer": "B",
+      "explanation": "High specific heat means more energy is needed to raise the temperature of a given mass, so it warms and cools more slowly.",
+      "steps": ["Define specific heat as energy per mass per degree", "Higher value = more energy needed", "Thus slower temperature change", "Select requires more energy"],
+      "fastStrategy": "High specific heat → slow to heat/cool."
+    },
+    {
+      "id": "ps_eh_b1_046",
+      "question": "When you touch a metal doorknob on a cold day and it feels very cold, heat is actually:",
+      "choices": {"A": "Created by the knob", "B": "Flowing from your hand to the knob", "C": "Flowing from the knob to your hand", "D": "Not moving at all"},
+      "answer": "B",
+      "explanation": "Heat flows from the warmer hand to the colder metal. Metal conducts quickly, so your hand loses heat fast and feels cold.",
+      "steps": ["Identify temperature difference: hand warmer", "Heat flows hot → cold", "Metal conducts efficiently", "Choose hand to knob"],
+      "fastStrategy": "Feeling cold often means your heat is leaving you quickly."
+    },
+    {
+      "id": "ps_eh_b1_047",
+      "question": "Which appliance primarily uses convection to heat a room?",
+      "choices": {"A": "Electric baseboard heater", "B": "Microwave oven", "C": "Toaster", "D": "Flat iron"},
+      "answer": "A",
+      "explanation": "Baseboard heaters warm air near the floor; the warm air rises and circulates by convection to heat the room.",
+      "steps": ["Identify air-warming device", "Warm air rises and circulates", "Microwave uses radiation, toaster uses radiation/conduction", "Select baseboard heater"],
+      "fastStrategy": "Room heaters often rely on warm air rising → convection."
+    },
+    {
+      "id": "ps_eh_b1_048",
+      "question": "Why does wrapping food in foil keep it warmer?",
+      "choices": {"A": "Foil generates heat", "B": "Foil reflects radiation and reduces convection", "C": "Foil absorbs moisture", "D": "Foil cools by conduction"},
+      "answer": "B",
+      "explanation": "Foil reflects radiant heat back and reduces air movement around the food, cutting convection losses. It does not generate heat.",
+      "steps": ["Reflective surfaces reduce radiation loss", "Wrapping limits air movement", "Less radiation and convection = slower cooling", "Choose reflection plus reduced convection"],
+      "fastStrategy": "Foil reflects heat and blocks moving air—less heat loss."
+    },
+    {
+      "id": "ps_eh_b1_049",
+      "question": "If two objects are the same temperature, the net heat flow between them is:",
+      "choices": {"A": "From the first to the second", "B": "From the second to the first", "C": "Zero", "D": "Always from bigger to smaller"},
+      "answer": "C",
+      "explanation": "With equal temperatures, there is no temperature gradient, so no net heat flow occurs (thermal equilibrium).",
+      "steps": ["Check temperature difference: none", "No gradient means no net flow", "Microscopic exchanges balance", "Select zero"],
+      "fastStrategy": "Equal temps → no net heat flow."
+    },
+    {
+      "id": "ps_eh_b1_050",
+      "question": "Which statement about heat and work is true?",
+      "choices": {"A": "Both are forms of energy transfer", "B": "Heat is energy stored in an object", "C": "Work cannot change an object's energy", "D": "Heat and work are unrelated"},
+      "answer": "A",
+      "explanation": "Heat and work are two ways energy transfers: heat via temperature difference, work via forces causing displacement.",
+      "steps": ["Define heat as energy transfer from temperature difference", "Define work as force through distance", "Both change system energy", "Choose both are energy transfer"],
+      "fastStrategy": "Heat and work are how energy moves—temp difference vs force over distance."
+    }
+  ]
+}

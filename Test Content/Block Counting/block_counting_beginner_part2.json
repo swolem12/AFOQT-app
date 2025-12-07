@@ -1,0 +1,900 @@
+{
+  "subjectId": "block_counting",
+  "subtopicId": "stacked_cubes",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+    {
+      "id": "bc_b1_026",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 3 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 1 },
+          { "col": 1, "row": 0, "height": 0 },
+          { "col": 2, "row": 0, "height": 2 },
+          { "col": 0, "row": 1, "height": 2 },
+          { "col": 1, "row": 1, "height": 1 },
+          { "col": 2, "row": 1, "height": 1 },
+          { "col": 0, "row": 2, "height": 1 },
+          { "col": 1, "row": 2, "height": 2 },
+          { "col": 2, "row": 2, "height": 2 }
+        ]
+      },
+      "copilotInstruction": "Render a 3×3 isometric grid of stacks. Row 0 (front): heights 1, 0, 2. Row 1 (middle): 2, 1, 1. Row 2 (back): 1, 2, 2. Empty stacks (height 0) should appear as blank floor cells.",
+      "question": "How many blocks are there in the entire figure, counting every block in every stack?",
+      "choices": {
+        "A": "10",
+        "B": "11",
+        "C": "12",
+        "D": "13"
+      },
+      "answer": "C",
+      "explanation": "Add all stack heights: row 0 has 1 + 0 + 2 = 3, row 1 has 2 + 1 + 1 = 4, row 2 has 1 + 2 + 2 = 5. Total blocks = 3 + 4 + 5 = 12.",
+      "steps": [
+        "1. Identify the task: find the total number of blocks in all stacks combined.",
+        "2. Use the heights of each stack rather than trying to count cubes visually one by one.",
+        "3. Add the heights row by row: front row 1 + 0 + 2 = 3, middle row 2 + 1 + 1 = 4, back row 1 + 2 + 2 = 5.",
+        "4. Add the row totals: 3 + 4 + 5 = 12 blocks.",
+        "5. Avoid the trap of ignoring a non-zero stack or misreading the height of a stack that is partly hidden by others."
+      ],
+      "fastStrategy": "Turn the figure into a quick list of stack heights and sum them in small groups (rows or columns) to reduce mistakes."
+    },
+    {
+      "id": "bc_b1_027",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 380,
+        "height": 380,
+        "grid": { "cols": 2, "rows": 2 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 3 },
+          { "col": 1, "row": 0, "height": 1 },
+          { "col": 0, "row": 1, "height": 2 },
+          { "col": 1, "row": 1, "height": 0 }
+        ]
+      },
+      "copilotInstruction": "Render a 2×2 grid. Front row heights: 3 (left), 1 (right). Back row heights: 2 (left), 0 (right, empty).",
+      "question": "How many blocks in this figure are NOT touching the ground (that is, blocks that sit on top of another block)?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "B",
+      "explanation": "Each stack of height h has h − 1 blocks not touching the ground. Heights are 3, 1, 2, and 0. Non-ground blocks: (3 − 1) + (1 − 1) + (2 − 1) + 0 = 2 + 0 + 1 + 0 = 3.",
+      "steps": [
+        "1. Notice the question asks for blocks NOT on the ground, meaning blocks above the bottom layer.",
+        "2. Recall that in a stack of height h, 1 block is on the ground and the remaining h − 1 blocks are stacked above.",
+        "3. Apply this to each stack: height 3 gives 2 above-ground blocks, height 1 gives 0, height 2 gives 1, height 0 gives 0.",
+        "4. Add them: 2 + 0 + 1 + 0 = 3 blocks not touching the ground.",
+        "5. Avoid the trap of counting all blocks in tall stacks as non-ground; only the blocks above the bottom one count."
+      ],
+      "fastStrategy": "For above-ground blocks, convert each height h into (h − 1) and add those values."
+    },
+    {
+      "id": "bc_b1_028",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 2 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 2 },
+          { "col": 1, "row": 0, "height": 2 },
+          { "col": 2, "row": 0, "height": 1 },
+          { "col": 0, "row": 1, "height": 3 },
+          { "col": 1, "row": 1, "height": 1 },
+          { "col": 2, "row": 1, "height": 2 }
+        ]
+      },
+      "copilotInstruction": "Render a 3×2 grid. Front row (row 0): heights 2, 2, 1. Back row (row 1): heights 3, 1, 2.",
+      "question": "How many blocks are in the back row only (the row farthest from you)?",
+      "choices": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "answer": "B",
+      "explanation": "The back row has stacks of heights 3, 1, and 2. Add them: 3 + 1 + 2 = 6 blocks.",
+      "steps": [
+        "1. Identify that the question is limited to the back row only, not the entire figure.",
+        "2. Read the heights of the back row stacks: 3, 1, and 2.",
+        "3. Add them carefully: 3 + 1 = 4, then 4 + 2 = 6.",
+        "4. Ignore the front row stacks because they are not part of the requested total.",
+        "5. Avoid the trap of accidentally including stacks from both rows when the question specifies a single row."
+      ],
+      "fastStrategy": "When the question targets one row or column, temporarily block out the others and add only the relevant stack heights."
+    },
+    {
+      "id": "bc_b1_029",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 2 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 2 },
+          { "col": 1, "row": 0, "height": 2 },
+          { "col": 2, "row": 0, "height": 1 },
+          { "col": 0, "row": 1, "height": 3 },
+          { "col": 1, "row": 1, "height": 1 },
+          { "col": 2, "row": 1, "height": 2 }
+        ]
+      },
+      "copilotInstruction": "Use the same 3×2 layout as bc_b1_028.",
+      "question": "If one block is removed from the tallest stack in the figure, how many blocks will remain in the entire figure?",
+      "choices": {
+        "A": "10",
+        "B": "11",
+        "C": "12",
+        "D": "13"
+      },
+      "answer": "B",
+      "explanation": "First find the total blocks: 2 + 2 + 1 + 3 + 1 + 2 = 11. The tallest stack has height 3, so removing one block reduces the total by 1, giving 11 − 1 = 10.",
+      "steps": [
+        "1. Identify you need the new total after removing a block from the tallest stack.",
+        "2. Add all heights to get the original total: 2 + 2 + 1 + 3 + 1 + 2 = 11.",
+        "3. Find the tallest stack; its height is 3.",
+        "4. Removing one block from that stack decreases the figure’s total by exactly 1.",
+        "5. Compute 11 − 1 = 10 and avoid the mistake of subtracting from multiple stacks or recomputing all heights incorrectly."
+      ],
+      "fastStrategy": "When exactly one block is removed from exactly one stack, subtract 1 from the overall total instead of recalculating every stack."
+    },
+    {
+      "id": "bc_b1_030",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 3 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 1 },
+          { "col": 1, "row": 0, "height": 1 },
+          { "col": 2, "row": 0, "height": 1 },
+          { "col": 0, "row": 1, "height": 2 },
+          { "col": 1, "row": 1, "height": 2 },
+          { "col": 2, "row": 1, "height": 2 },
+          { "col": 0, "row": 2, "height": 3 },
+          { "col": 1, "row": 2, "height": 3 },
+          { "col": 2, "row": 2, "height": 3 }
+        ]
+      },
+      "copilotInstruction": "Render a 3×3 grid where each row has constant height: front row (1,1,1), middle row (2,2,2), back row (3,3,3).",
+      "question": "How many blocks are there in total in this stepped pyramid figure?",
+      "choices": {
+        "A": "18",
+        "B": "21",
+        "C": "24",
+        "D": "27"
+      },
+      "answer": "B",
+      "explanation": "Front row total: 1 + 1 + 1 = 3. Middle row: 2 + 2 + 2 = 6. Back row: 3 + 3 + 3 = 9. Total blocks = 3 + 6 + 9 = 18.",
+      "steps": [
+        "1. Recognize this as a layered shape where each row has equal stack heights.",
+        "2. Compute the front row: three stacks of height 1 give 3 blocks.",
+        "3. Compute the middle row: three stacks of height 2 give 6 blocks.",
+        "4. Compute the back row: three stacks of height 3 give 9 blocks.",
+        "5. Add row totals: 3 + 6 + 9 = 18, being careful not to double-count any row."
+      ],
+      "fastStrategy": "When each row repeats the same height, multiply that height by the number of stacks in the row, then add the row totals."
+    },
+    {
+      "id": "bc_b1_031",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 380,
+        "height": 380,
+        "grid": { "cols": 2, "rows": 2 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 2 },
+          { "col": 1, "row": 0, "height": 3 },
+          { "col": 0, "row": 1, "height": 1 },
+          { "col": 1, "row": 1, "height": 2 }
+        ]
+      },
+      "copilotInstruction": "Render a 2×2 grid: front row heights (2,3), back row heights (1,2).",
+      "question": "How many stacks in this figure have exactly 2 blocks?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "B",
+      "explanation": "The stacks have heights 2, 3, 1, and 2. Exactly two stacks have height 2.",
+      "steps": [
+        "1. Note that the question is about the number of stacks with a specific height, not total blocks.",
+        "2. List all stack heights: 2, 3, 1, and 2.",
+        "3. Count how many heights are exactly 2.",
+        "4. There are two stacks with height 2.",
+        "5. Avoid including stacks with heights 1 or 3; they do not match the exact condition."
+      ],
+      "fastStrategy": "Scan the height list and tick each stack that matches the exact value requested; ignore anything else."
+    },
+    {
+      "id": "bc_b1_032",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 400,
+        "grid": { "cols": 3, "rows": 2 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 0 },
+          { "col": 1, "row": 0, "height": 2 },
+          { "col": 2, "row": 0, "height": 2 },
+          { "col": 0, "row": 1, "height": 1 },
+          { "col": 1, "row": 1, "height": 1 },
+          { "col": 2, "row": 1, "height": 3 }
+        ]
+      },
+      "copilotInstruction": "Render a 3×2 grid where some positions are empty: front row (0,2,2), back row (1,1,3).",
+      "question": "How many blocks touch the ground (bottom surface) in this figure?",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "C",
+      "explanation": "Each non-empty stack has exactly one block touching the ground. There are 5 non-empty stacks, so there are 5 ground-touching blocks.",
+      "steps": [
+        "1. Focus on which stacks exist by identifying those with height greater than 0.",
+        "2. Count those non-empty stacks: heights 2, 2, 1, 1, and 3 give 5 stacks.",
+        "3. Each non-empty stack contributes exactly one block on the ground.",
+        "4. Therefore, there are 5 blocks touching the ground.",
+        "5. Avoid counting upper blocks in tall stacks; they are supported, not on the ground."
+      ],
+      "fastStrategy": "For ground-contact questions, just count non-empty stacks; one ground block per stack."
+    },
+    {
+      "id": "bc_b1_033",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 3 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 1 },
+          { "col": 1, "row": 0, "height": 2 },
+          { "col": 2, "row": 0, "height": 1 },
+          { "col": 0, "row": 1, "height": 2 },
+          { "col": 1, "row": 1, "height": 3 },
+          { "col": 2, "row": 1, "height": 2 },
+          { "col": 0, "row": 2, "height": 1 },
+          { "col": 1, "row": 2, "height": 2 },
+          { "col": 2, "row": 2, "height": 1 }
+        ]
+      },
+      "copilotInstruction": "Render a 3×3 grid that forms a plus-shaped taller center: center height 3, its four neighbors height 2, corners height 1.",
+      "question": "How many blocks are in the tallest stack of this figure?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "C",
+      "explanation": "The tallest stack is at the center with height 3 blocks.",
+      "steps": [
+        "1. Identify that the question is about the highest single stack, not total blocks.",
+        "2. Scan the grid for the largest height number among the stacks.",
+        "3. Observe that the center stack has height 3, and all others have height 1 or 2.",
+        "4. Conclude that the tallest stack contains 3 blocks.",
+        "5. Avoid confusing the number of stacks with the height of a single stack."
+      ],
+      "fastStrategy": "For tallest-stack questions, quickly scan for the maximum height value and ignore the rest."
+    },
+    {
+      "id": "bc_b1_034",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 380,
+        "height": 380,
+        "grid": { "cols": 2, "rows": 3 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 1 },
+          { "col": 1, "row": 0, "height": 2 },
+          { "col": 0, "row": 1, "height": 1 },
+          { "col": 1, "row": 1, "height": 2 },
+          { "col": 0, "row": 2, "height": 1 },
+          { "col": 1, "row": 2, "height": 2 }
+        ]
+      },
+      "copilotInstruction": "Render a 2×3 grid with repeating pattern: left column heights (1,1,1), right column heights (2,2,2).",
+      "question": "How many blocks are there in total in the right column only?",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "D",
+      "explanation": "The right column has three stacks, each of height 2. Total blocks = 2 + 2 + 2 = 6.",
+      "steps": [
+        "1. Focus on the right column only, as the question specifies.",
+        "2. Note that each of the three right-column stacks has height 2.",
+        "3. Multiply: 3 stacks × 2 blocks each = 6 blocks.",
+        "4. Confirm that no stack in the left column is included in this count.",
+        "5. Avoid the trap of summing all stacks; keep the focus on the single column requested."
+      ],
+      "fastStrategy": "When a column has equal heights, multiply the height by the number of stacks instead of adding each one."
+    },
+    {
+      "id": "bc_b1_035",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 2 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 2 },
+          { "col": 1, "row": 0, "height": 3 },
+          { "col": 2, "row": 0, "height": 1 },
+          { "col": 0, "row": 1, "height": 2 },
+          { "col": 1, "row": 1, "height": 1 },
+          { "col": 2, "row": 1, "height": 2 }
+        ]
+      },
+      "copilotInstruction": "Render a 3×2 grid: front row (2,3,1), back row (2,1,2).",
+      "question": "How many blocks in this figure are in stacks that are taller than 1 block? (Count all blocks in such stacks.)",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9"
+      },
+      "answer": "B",
+      "explanation": "Stacks taller than 1 have heights 2, 3, 2, and 2. Total blocks in these stacks: 2 + 3 + 2 + 2 = 9? No, 2 + 3 + 2 + 2 = 9, so the correct total is 9 blocks.",
+      "steps": [
+        "1. Identify stacks with height greater than 1: those with heights 2, 3, 2, and 2.",
+        "2. Add all blocks in these stacks: 2 + 3 = 5, 5 + 2 = 7, 7 + 2 = 9.",
+        "3. Ignore stacks of height 1, since the question asks for stacks taller than 1 block.",
+        "4. Confirm that you included each qualifying stack exactly once.",
+        "5. Select the answer choice that matches the total of 9 blocks in all stacks taller than 1."
+      ],
+      "fastStrategy": "Filter to stacks that meet the height condition first, then add just those heights."
+    },
+    {
+      "id": "bc_b1_036",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 2 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 2 },
+          { "col": 1, "row": 0, "height": 3 },
+          { "col": 2, "row": 0, "height": 1 },
+          { "col": 0, "row": 1, "height": 2 },
+          { "col": 1, "row": 1, "height": 1 },
+          { "col": 2, "row": 1, "height": 2 }
+        ]
+      },
+      "copilotInstruction": "Use the same 3×2 grid as bc_b1_035.",
+      "question": "How many blocks are there in the entire figure?",
+      "choices": {
+        "A": "9",
+        "B": "10",
+        "C": "11",
+        "D": "12"
+      },
+      "answer": "C",
+      "explanation": "Add all stack heights: 2 + 3 + 1 + 2 + 1 + 2 = 11 blocks.",
+      "steps": [
+        "1. Recognize that this question asks for the total number of blocks in all stacks.",
+        "2. List the heights: 2, 3, 1, 2, 1, and 2.",
+        "3. Add them carefully: 2 + 3 = 5, 5 + 1 = 6, 6 + 2 = 8, 8 + 1 = 9, 9 + 2 = 11.",
+        "4. Double-check your arithmetic to ensure no height was skipped.",
+        "5. Choose the answer choice that matches the total of 11 blocks."
+      ],
+      "fastStrategy": "Group numbers into easy pairs (like 2+3, 2+1, etc.) to make the addition faster and less error-prone."
+    },
+    {
+      "id": "bc_b1_037",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 3 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 0 },
+          { "col": 1, "row": 0, "height": 1 },
+          { "col": 2, "row": 0, "height": 0 },
+          { "col": 0, "row": 1, "height": 1 },
+          { "col": 1, "row": 1, "height": 2 },
+          { "col": 2, "row": 1, "height": 1 },
+          { "col": 0, "row": 2, "height": 0 },
+          { "col": 1, "row": 2, "height": 1 },
+          { "col": 2, "row": 2, "height": 0 }
+        ]
+      },
+      "copilotInstruction": "Render a 3×3 cross-shaped figure: center stack of height 2, its four neighbors of height 1, corners empty.",
+      "question": "How many stacks in this figure are empty (contain no blocks)?",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "A",
+      "explanation": "Stacks with height 0 are empty. There are 3 such positions (three corners).",
+      "steps": [
+        "1. Understand that an empty stack is one with height 0.",
+        "2. Scan the grid and identify all positions with height 0.",
+        "3. Count those positions: there are three empty stacks (three corners).",
+        "4. Ignore stacks with height 1 or 2; they contain blocks and are not empty.",
+        "5. Make sure not to misread a zero-height position as having a single block."
+      ],
+      "fastStrategy": "For empties, just count the positions marked with height 0; everything else can be ignored."
+    },
+    {
+      "id": "bc_b1_038",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 2 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 1 },
+          { "col": 1, "row": 0, "height": 2 },
+          { "col": 2, "row": 0, "height": 3 },
+          { "col": 0, "row": 1, "height": 1 },
+          { "col": 1, "row": 1, "height": 2 },
+          { "col": 2, "row": 1, "height": 3 }
+        ]
+      },
+      "copilotInstruction": "Render a 3×2 grid where column heights repeat by row: columns have heights (1,1), (2,2), (3,3).",
+      "question": "If you remove all blocks from the left column only, how many blocks will remain in the figure?",
+      "choices": {
+        "A": "8",
+        "B": "9",
+        "C": "10",
+        "D": "11"
+      },
+      "answer": "B",
+      "explanation": "Total blocks initially: (1 + 2 + 3) + (1 + 2 + 3) = 6 + 6 = 12. Left column blocks: 1 + 1 = 2. Remaining blocks: 12 − 2 = 10.",
+      "steps": [
+        "1. Find the total blocks first by adding all stack heights: top row 1 + 2 + 3 = 6, bottom row 1 + 2 + 3 = 6, giving 12 blocks total.",
+        "2. Find how many blocks are in the left column (heights 1 and 1): 1 + 1 = 2.",
+        "3. Subtract the removed column: 12 − 2 = 10.",
+        "4. Confirm that only the left column was removed and the other columns remain unchanged.",
+        "5. Avoid accidentally removing blocks from the middle or right columns in your subtraction."
+      ],
+      "fastStrategy": "When an entire column is removed, subtract that column’s total from the overall total instead of rebuilding the figure."
+    },
+    {
+      "id": "bc_b1_039",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 3 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 1 },
+          { "col": 1, "row": 0, "height": 2 },
+          { "col": 2, "row": 0, "height": 1 },
+          { "col": 0, "row": 1, "height": 2 },
+          { "col": 1, "row": 1, "height": 3 },
+          { "col": 2, "row": 1, "height": 2 },
+          { "col": 0, "row": 2, "height": 1 },
+          { "col": 1, "row": 2, "height": 2 },
+          { "col": 2, "row": 2, "height": 1 }
+        ]
+      },
+      "copilotInstruction": "Use the same plus-shaped 3×3 layout as bc_b1_033.",
+      "question": "How many blocks in this figure are NOT touching the ground (blocks above the bottom layer)?",
+      "choices": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "answer": "B",
+      "explanation": "Each stack contributes (height − 1) blocks above the ground. Heights: 1,2,1,2,3,2,1,2,1. Above-ground blocks: 0 + 1 + 0 + 1 + 2 + 1 + 0 + 1 + 0 = 6.",
+      "steps": [
+        "1. Recognize that only the blocks above the base layer count as non-ground blocks.",
+        "2. For each stack, compute height − 1 (using 0 if the stack height is 0 or 1).",
+        "3. Apply this: heights 1,2,1,2,3,2,1,2,1 become above-ground counts 0,1,0,1,2,1,0,1,0.",
+        "4. Add these: 0 + 1 + 0 + 1 + 2 + 1 + 0 + 1 + 0 = 6.",
+        "5. Avoid the trap of counting all blocks in tall stacks; only blocks above the bottom layer are counted."
+      ],
+      "fastStrategy": "Convert each height h into (h − 1), then add those values to get non-ground blocks quickly."
+    },
+    {
+      "id": "bc_b1_040",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 380,
+        "height": 400,
+        "grid": { "cols": 2, "rows": 3 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 2 },
+          { "col": 1, "row": 0, "height": 1 },
+          { "col": 0, "row": 1, "height": 3 },
+          { "col": 1, "row": 1, "height": 1 },
+          { "col": 0, "row": 2, "height": 2 },
+          { "col": 1, "row": 2, "height": 2 }
+        ]
+      },
+      "copilotInstruction": "Render a 2×3 grid: left column heights (2,3,2), right column heights (1,1,2).",
+      "question": "How many blocks are there in the left column only?",
+      "choices": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9"
+      },
+      "answer": "B",
+      "explanation": "Left column heights are 2, 3, and 2. Total blocks in the left column = 2 + 3 + 2 = 7.",
+      "steps": [
+        "1. Focus on the left column heights: 2 at the front, 3 in the middle, and 2 at the back.",
+        "2. Add them: 2 + 3 = 5, then 5 + 2 = 7.",
+        "3. Ignore the right column entirely; it is not part of this count.",
+        "4. Confirm your addition and that no height was missed.",
+        "5. Choose the answer that matches the total of 7."
+      ],
+      "fastStrategy": "When only one column is targeted, isolate that column’s heights and add them before looking at answer choices."
+    },
+    {
+      "id": "bc_b1_041",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 2 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 1 },
+          { "col": 1, "row": 0, "height": 2 },
+          { "col": 2, "row": 0, "height": 1 },
+          { "col": 0, "row": 1, "height": 2 },
+          { "col": 1, "row": 1, "height": 3 },
+          { "col": 2, "row": 1, "height": 2 }
+        ]
+      },
+      "copilotInstruction": "Render a 3×2 grid: front row (1,2,1), back row (2,3,2).",
+      "question": "What is the difference between the total number of blocks in the back row and the total number of blocks in the front row?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "B",
+      "explanation": "Front row total: 1 + 2 + 1 = 4. Back row total: 2 + 3 + 2 = 7. Difference: 7 − 4 = 3? No, 7 − 4 = 3, so the difference is 3 blocks.",
+      "steps": [
+        "1. Compute the total blocks in the front row: 1 + 2 + 1 = 4.",
+        "2. Compute the total in the back row: 2 + 3 + 2 = 7.",
+        "3. Subtract front from back: 7 − 4 = 3.",
+        "4. Recognize that this value represents how many more blocks the back row has than the front row.",
+        "5. Match this difference to the correct answer choice."
+      ],
+      "fastStrategy": "For row differences, sum each row separately, then subtract larger minus smaller to avoid negative numbers."
+    },
+    {
+      "id": "bc_b1_042",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 2 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 1 },
+          { "col": 1, "row": 0, "height": 2 },
+          { "col": 2, "row": 0, "height": 1 },
+          { "col": 0, "row": 1, "height": 1 },
+          { "col": 1, "row": 1, "height": 2 },
+          { "col": 2, "row": 1, "height": 1 }
+        ]
+      },
+      "copilotInstruction": "Render a 3×2 grid where both rows have heights (1,2,1).",
+      "question": "How many blocks are there in total in this figure?",
+      "choices": {
+        "A": "6",
+        "B": "8",
+        "C": "10",
+        "D": "12"
+      },
+      "answer": "B",
+      "explanation": "Each row has heights 1, 2, and 1, totaling 1 + 2 + 1 = 4. There are two identical rows, so total blocks = 4 + 4 = 8.",
+      "steps": [
+        "1. Add the front row: 1 + 2 + 1 = 4 blocks.",
+        "2. Recognize that the back row is identical with 1, 2, and 1 blocks, also totaling 4.",
+        "3. Add both row totals: 4 + 4 = 8.",
+        "4. Confirm that no stacks differ between the rows.",
+        "5. Choose the answer that matches 8 blocks."
+      ],
+      "fastStrategy": "When rows repeat, compute one row’s total once and multiply by the number of rows."
+    },
+    {
+      "id": "bc_b1_043",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 2 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 2 },
+          { "col": 1, "row": 0, "height": 2 },
+          { "col": 2, "row": 0, "height": 2 },
+          { "col": 0, "row": 1, "height": 1 },
+          { "col": 1, "row": 1, "height": 1 },
+          { "col": 2, "row": 1, "height": 1 }
+        ]
+      },
+      "copilotInstruction": "Render a 3×2 grid: front row (2,2,2), back row (1,1,1).",
+      "question": "How many more blocks are in the front row than in the back row?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "C",
+      "explanation": "Front row total: 2 + 2 + 2 = 6. Back row total: 1 + 1 + 1 = 3. Difference: 6 − 3 = 3.",
+      "steps": [
+        "1. Calculate the total blocks in the front row: 2 + 2 + 2 = 6.",
+        "2. Calculate the total in the back row: 1 + 1 + 1 = 3.",
+        "3. Subtract the back-row total from the front-row total: 6 − 3 = 3.",
+        "4. Interpret this as the front row having 3 more blocks than the back row.",
+        "5. Match the difference to the answer choices."
+      ],
+      "fastStrategy": "When comparing rows, compute each row’s total first, then subtract; don’t compare stack by stack in your head."
+    },
+    {
+      "id": "bc_b1_044",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 2 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 3 },
+          { "col": 1, "row": 0, "height": 1 },
+          { "col": 2, "row": 0, "height": 2 },
+          { "col": 0, "row": 1, "height": 1 },
+          { "col": 1, "row": 1, "height": 2 },
+          { "col": 2, "row": 1, "height": 1 }
+        ]
+      },
+      "copilotInstruction": "Render a 3×2 grid: front row (3,1,2), back row (1,2,1).",
+      "question": "If every stack in this figure is increased to height 3 by adding blocks on top, how many blocks must be added in total?",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "C",
+      "explanation": "Target height is 3 for all six stacks. Differences: (3−3)=0, (3−1)=2, (3−2)=1, (3−1)=2, (3−2)=1, (3−1)=2. Total blocks to add = 0 + 2 + 1 + 2 + 1 + 2 = 8? No, sum 2+1+2+1+2 = 8, plus 0 = 8. So 8 blocks must be added.",
+      "steps": [
+        "1. Note that each stack must reach height 3.",
+        "2. For each stack, compute how many blocks are needed: subtract its height from 3.",
+        "3. Apply this: heights 3,1,2,1,2,1 need 0,2,1,2,1,2 blocks respectively.",
+        "4. Add these increments: 0 + 2 + 1 + 2 + 1 + 2 = 8 blocks.",
+        "5. Choose the answer that matches the total number of added blocks."
+      ],
+      "fastStrategy": "Set a target height, subtract current heights from it, then sum the differences to get total extra blocks."
+    },
+    {
+      "id": "bc_b1_045",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 3 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 1 },
+          { "col": 1, "row": 0, "height": 1 },
+          { "col": 2, "row": 0, "height": 1 },
+          { "col": 0, "row": 1, "height": 1 },
+          { "col": 1, "row": 1, "height": 2 },
+          { "col": 2, "row": 1, "height": 1 },
+          { "col": 0, "row": 2, "height": 1 },
+          { "col": 1, "row": 2, "height": 1 },
+          { "col": 2, "row": 2, "height": 1 }
+        ]
+      },
+      "copilotInstruction": "Render a 3×3 grid forming a low bump: center height 2, all other stacks height 1.",
+      "question": "How many blocks in this figure are above the first layer (that is, in the second layer)?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "A",
+      "explanation": "Only the center stack has height 2, so it has 1 block above the bottom layer. All other stacks are height 1 and have no higher layers.",
+      "steps": [
+        "1. Understand that only stacks with height greater than 1 have blocks above the first layer.",
+        "2. Observe that the center stack has height 2 and every other stack has height 1.",
+        "3. A height-2 stack has exactly 1 block in the second layer.",
+        "4. Therefore there is exactly 1 block above the first layer in the entire figure.",
+        "5. Avoid the trap of counting blocks in height-1 stacks as higher-layer blocks."
+      ],
+      "fastStrategy": "Count how many stacks exceed height 1; the total of (height − 1) across those stacks gives upper-layer blocks."
+    },
+    {
+      "id": "bc_b1_046",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 2 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 2 },
+          { "col": 1, "row": 0, "height": 2 },
+          { "col": 2, "row": 0, "height": 2 },
+          { "col": 0, "row": 1, "height": 2 },
+          { "col": 1, "row": 1, "height": 2 },
+          { "col": 2, "row": 1, "height": 2 }
+        ]
+      },
+      "copilotInstruction": "Render a 3×2 grid where every stack has height 2.",
+      "question": "How many blocks are there in total in this figure?",
+      "choices": {
+        "A": "9",
+        "B": "10",
+        "C": "11",
+        "D": "12"
+      },
+      "answer": "D",
+      "explanation": "There are 6 stacks, each of height 2, so total blocks = 6 × 2 = 12.",
+      "steps": [
+        "1. Recognize that all stacks are identical with height 2.",
+        "2. Count how many stacks there are: 3 in the front row and 3 in the back row, for 6 stacks total.",
+        "3. Multiply the number of stacks by the height: 6 × 2 = 12.",
+        "4. Confirm that no stack differs in height.",
+        "5. Avoid adding each stack individually when multiplication makes it faster and less error-prone."
+      ],
+      "fastStrategy": "When all stacks are the same height, multiply that height by the number of stacks instead of summing repeatedly."
+    },
+    {
+      "id": "bc_b1_047",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 2 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 1 },
+          { "col": 1, "row": 0, "height": 2 },
+          { "col": 2, "row": 0, "height": 3 },
+          { "col": 0, "row": 1, "height": 3 },
+          { "col": 1, "row": 1, "height": 2 },
+          { "col": 2, "row": 1, "height": 1 }
+        ]
+      },
+      "copilotInstruction": "Render a 3×2 grid where front row heights are (1,2,3) and back row heights are (3,2,1).",
+      "question": "How many blocks are in stacks that are exactly 3 blocks high?",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "A",
+      "explanation": "There are two stacks of height 3. Each contains 3 blocks, so total blocks in 3-high stacks = 2 × 3 = 6.",
+      "steps": [
+        "1. Identify stacks with height exactly 3.",
+        "2. Observe two stacks with height 3: one in the front row and one in the back row.",
+        "3. Each 3-high stack has 3 blocks, so combined they contain 3 + 3 = 6 blocks.",
+        "4. Ignore stacks with heights 1 or 2; they do not meet the condition.",
+        "5. Choose the answer that matches a total of 6 blocks in the 3-high stacks."
+      ],
+      "fastStrategy": "Count how many stacks meet the height condition, then multiply that count by the stack height."
+    },
+    {
+      "id": "bc_b1_048",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 3 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 2 },
+          { "col": 1, "row": 0, "height": 1 },
+          { "col": 2, "row": 0, "height": 2 },
+          { "col": 0, "row": 1, "height": 1 },
+          { "col": 1, "row": 1, "height": 3 },
+          { "col": 2, "row": 1, "height": 1 },
+          { "col": 0, "row": 2, "height": 2 },
+          { "col": 1, "row": 2, "height": 1 },
+          { "col": 2, "row": 2, "height": 2 }
+        ]
+      },
+      "copilotInstruction": "Render a 3×3 grid with a tall center stack (height 3), middle of each edge height 1, and corners height 2.",
+      "question": "How many blocks are there in total in this figure?",
+      "choices": {
+        "A": "12",
+        "B": "13",
+        "C": "14",
+        "D": "15"
+      },
+      "answer": "D",
+      "explanation": "Heights are 2,1,2,1,3,1,2,1,2. Add: (2+1+2) = 5, (1+3+1) = 5, (2+1+2) = 5. Total = 5 + 5 + 5 = 15 blocks.",
+      "steps": [
+        "1. Group the stacks by row to keep track of the addition.",
+        "2. Front row: 2 + 1 + 2 = 5 blocks.",
+        "3. Middle row: 1 + 3 + 1 = 5 blocks.",
+        "4. Back row: 2 + 1 + 2 = 5 blocks.",
+        "5. Add the row totals: 5 + 5 + 5 = 15 blocks, ensuring that every stack is accounted for."
+      ],
+      "fastStrategy": "When rows share similar patterns, sum each row and then combine the row totals; it keeps the mental math organized."
+    },
+    {
+      "id": "bc_b1_049",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 2 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 0 },
+          { "col": 1, "row": 0, "height": 2 },
+          { "col": 2, "row": 0, "height": 0 },
+          { "col": 0, "row": 1, "height": 1 },
+          { "col": 1, "row": 1, "height": 2 },
+          { "col": 2, "row": 1, "height": 1 }
+        ]
+      },
+      "copilotInstruction": "Render a 3×2 grid with some empty positions: front row (0,2,0), back row (1,2,1).",
+      "question": "How many stacks in this figure contain at least 2 blocks?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "B",
+      "explanation": "Stacks with height at least 2 are those with height 2 or more. There are two such stacks, both with height 2.",
+      "steps": [
+        "1. Identify the stacks that have height 2 or greater.",
+        "2. Scan the heights: 0,2,0,1,2,1.",
+        "3. Only the two stacks with height 2 meet the condition.",
+        "4. Count those stacks: there are 2 stacks with at least 2 blocks.",
+        "5. Ignore heights 0 and 1 because they do not satisfy the “at least 2” requirement."
+      ],
+      "fastStrategy": "Use the inequality directly: count how many heights are ≥ the target value and ignore the rest."
+    },
+    {
+      "id": "bc_b1_050",
+      "uiSpec": {
+        "type": "block_stack_iso",
+        "width": 420,
+        "height": 420,
+        "grid": { "cols": 3, "rows": 2 },
+        "stacks": [
+          { "col": 0, "row": 0, "height": 1 },
+          { "col": 1, "row": 0, "height": 2 },
+          { "col": 2, "row": 0, "height": 1 },
+          { "col": 0, "row": 1, "height": 2 },
+          { "col": 1, "row": 1, "height": 2 },
+          { "col": 2, "row": 1, "height": 2 }
+        ]
+      },
+      "copilotInstruction": "Render a 3×2 grid: front row (1,2,1), back row (2,2,2).",
+      "question": "How many blocks in this figure are touching the ground (resting directly on the bottom surface)?",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "D",
+      "explanation": "There are 6 stacks total and none are empty. Each non-empty stack has exactly 1 block touching the ground, so there are 6 ground-touching blocks.",
+      "steps": [
+        "1. Recognize that every non-empty stack contributes exactly one ground block.",
+        "2. Count the stacks: there are 6 stack positions, all with height at least 1.",
+        "3. Since all are non-empty, each contributes 1 ground block.",
+        "4. Therefore, the number of ground-touching blocks equals the number of stacks: 6.",
+        "5. Avoid counting upper blocks in tall stacks; they do not touch the ground."
+      ],
+      "fastStrategy": "For ground-contact questions with no empty stacks, the answer is simply the number of stacks."
+    }
+  ]
+}

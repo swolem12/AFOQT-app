@@ -1,0 +1,232 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "fluids_pressure",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+    {
+      "id": "ps_fp_b1_026",
+      "question": "What is the SI unit of pressure?",
+      "choices": {"A": "Newton", "B": "Joule", "C": "Pascal", "D": "Watt"},
+      "answer": "C",
+      "explanation": "Pressure is measured in pascals (Pa), defined as one newton per square meter.",
+      "steps": ["Identify unit for pressure", "Pascal = N/m²", "Newton=force, Joule=energy, Watt=power", "Select pascal"],
+      "fastStrategy": "Pressure unit: Pa (N/m²)."
+    },
+    {
+      "id": "ps_fp_b1_027",
+      "question": "A barometer measures:",
+      "choices": {"A": "Temperature", "B": "Wind speed", "C": "Atmospheric pressure", "D": "Humidity"},
+      "answer": "C",
+      "explanation": "Barometers measure atmospheric pressure. Thermometers measure temperature; anemometers measure wind speed; hygrometers measure humidity.",
+      "steps": ["Match instrument to quantity", "Barometer → pressure", "Others measure different weather properties", "Choose atmospheric pressure"],
+      "fastStrategy": "Barometer = air pressure meter."
+    },
+    {
+      "id": "ps_fp_b1_028",
+      "question": "How does pressure change with depth in water?",
+      "choices": {"A": "It decreases", "B": "It stays constant", "C": "It increases", "D": "It becomes zero"},
+      "answer": "C",
+      "explanation": "Pressure increases with depth because of the weight of the water above (P = ρgh).",
+      "steps": ["Use P = ρgh", "Greater h → greater P", "Not zero or constant", "Select increases"],
+      "fastStrategy": "Deeper in water → higher pressure."
+    },
+    {
+      "id": "ps_fp_b1_029",
+      "question": "What happens to the buoyant force if an object displaces more fluid?",
+      "choices": {"A": "It decreases", "B": "It stays the same", "C": "It increases", "D": "It becomes zero"},
+      "answer": "C",
+      "explanation": "Buoyant force equals the weight of displaced fluid. More displaced volume → greater buoyant force.",
+      "steps": ["Recall Archimedes: buoyant = weight of displaced fluid", "More volume displaced → more fluid weight", "Therefore buoyant force increases", "Choose increases"],
+      "fastStrategy": "Displace more fluid → buoyant force grows."
+    },
+    {
+      "id": "ps_fp_b1_030",
+      "question": "Atmospheric pressure at high altitude is:",
+      "choices": {"A": "Higher than at sea level", "B": "About the same", "C": "Lower than at sea level", "D": "Zero"},
+      "answer": "C",
+      "explanation": "With less air above, the weight of the air column decreases, so atmospheric pressure is lower.",
+      "steps": ["Pressure comes from air column weight", "Higher altitude → less air above", "Thus lower pressure", "Select lower"],
+      "fastStrategy": "Higher up = lower air pressure."
+    },
+    {
+      "id": "ps_fp_b1_031",
+      "question": "Which statement about gauge pressure in a car tire is correct?",
+      "choices": {"A": "It equals absolute pressure", "B": "It excludes atmospheric pressure", "C": "It is measured in degrees", "D": "It equals altitude"},
+      "answer": "B",
+      "explanation": "Gauge pressure is the pressure above atmospheric pressure. Absolute pressure = gauge + atmospheric.",
+      "steps": ["Define gauge pressure", "Gauge = absolute − atmospheric", "Not measured in degrees", "Choose excludes atmospheric"],
+      "fastStrategy": "Gauge pressure omits atmosphere; add atm to get absolute."
+    },
+    {
+      "id": "ps_fp_b1_032",
+      "question": "If fluid density is halved, pressure at a given depth becomes:",
+      "choices": {"A": "Double", "B": "Half", "C": "Zero", "D": "Unchanged"},
+      "answer": "B",
+      "explanation": "Pressure P = ρgh. Halving density halves the pressure at the same depth.",
+      "steps": ["Use P = ρgh", "ρ → ρ/2 ⇒ P halves", "Depth and g unchanged", "Select half"],
+      "fastStrategy": "Lower density → lower pressure at same depth."
+    },
+    {
+      "id": "ps_fp_b1_033",
+      "question": "Which fluid property resists flow?",
+      "choices": {"A": "Density", "B": "Viscosity", "C": "Pressure", "D": "Surface tension"},
+      "answer": "B",
+      "explanation": "Viscosity measures resistance to flow. Density is mass/volume; surface tension relates to liquid surfaces.",
+      "steps": ["Define viscosity as flow resistance", "Density and pressure are different", "Surface tension is a surface effect", "Choose viscosity"],
+      "fastStrategy": "Flow resistance → viscosity."
+    },
+    {
+      "id": "ps_fp_b1_034",
+      "question": "Hydraulic systems multiply force because:",
+      "choices": {"A": "Energy is created", "B": "Pressure is transmitted equally", "C": "Fluids lose mass", "D": "Gravity is removed"},
+      "answer": "B",
+      "explanation": "Equal pressure transmission means a small force on a small piston can create a larger force on a larger piston (Pascal's principle).",
+      "steps": ["Recall Pascal's principle", "Pressure applied acts everywhere equally", "Larger area → larger force", "Select pressure transmitted equally"],
+      "fastStrategy": "Equal pressure × larger area = larger force."
+    },
+    {
+      "id": "ps_fp_b1_035",
+      "question": "The upward force on a wing (lift) is partly explained by:",
+      "choices": {"A": "Bernoulli's principle", "B": "Archimedes' principle", "C": "Hooke's law", "D": "Ohm's law"},
+      "answer": "A",
+      "explanation": "Bernoulli's principle relates faster airflow over the wing to lower pressure, contributing to lift.",
+      "steps": ["Identify aerodynamic lift explanation", "Bernoulli: speed ↑ → pressure ↓", "Archimedes is buoyancy in fluids", "Choose Bernoulli"],
+      "fastStrategy": "Faster airflow → lower pressure → lift (Bernoulli contribution)."
+    },
+    {
+      "id": "ps_fp_b1_036",
+      "question": "Surface tension causes water to form:",
+      "choices": {"A": "Squares", "B": "Cubes", "C": "Spherical droplets", "D": "Pyramids"},
+      "answer": "C",
+      "explanation": "Surface tension pulls the surface to minimize area, forming nearly spherical droplets.",
+      "steps": ["Surface tension minimizes surface area", "Sphere has minimal area for volume", "Water droplets become spherical", "Select spherical"],
+      "fastStrategy": "Surface tension → spherical droplets."
+    },
+    {
+      "id": "ps_fp_b1_037",
+      "question": "Which factor increases pressure at the bottom of a container?",
+      "choices": {"A": "Reducing fluid density", "B": "Increasing fluid depth", "C": "Lowering gravity", "D": "Making container narrower"},
+      "answer": "B",
+      "explanation": "Pressure from fluid weight depends on depth (P = ρgh). More depth increases pressure; container width doesn't matter.",
+      "steps": ["Use P = ρgh", "Increase h → increase P", "Density and g other variables", "Choose increase depth"],
+      "fastStrategy": "Deeper fluid → higher bottom pressure."
+    },
+    {
+      "id": "ps_fp_b1_038",
+      "question": "Which statement about fluid pressure is true?",
+      "choices": {"A": "It acts only downward", "B": "It acts equally in all directions", "C": "It is zero underwater", "D": "It only acts at the surface"},
+      "answer": "B",
+      "explanation": "In a static fluid, pressure at a point is isotropic—equal in all directions.",
+      "steps": ["Recall isotropic pressure", "Not just downward", "Underwater pressure is not zero", "Select equal in all directions"],
+      "fastStrategy": "Static fluid pressure is directionless (same all ways)."
+    },
+    {
+      "id": "ps_fp_b1_039",
+      "question": "If atmospheric pressure is 101 kPa and a tire gauge reads 220 kPa, the tire's absolute pressure is:",
+      "choices": {"A": "101 kPa", "B": "220 kPa", "C": "321 kPa", "D": "119 kPa"},
+      "answer": "C",
+      "explanation": "Gauge pressure is above atmospheric. Absolute pressure = 220 kPa (gauge) + 101 kPa (atmospheric) = 321 kPa.",
+      "steps": ["Identify gauge vs absolute", "Add atmospheric to gauge", "220 + 101 = 321", "Choose 321 kPa"],
+      "fastStrategy": "Absolute = gauge + atmospheric."
+    },
+    {
+      "id": "ps_fp_b1_040",
+      "question": "Why do your ears pop when ascending quickly?",
+      "choices": {"A": "Higher outside pressure", "B": "Lower outside pressure", "C": "No pressure change", "D": "Gravity increases"},
+      "answer": "B",
+      "explanation": "Outside pressure drops with altitude. Your middle ear adjusts to equalize pressure across the eardrum, causing a popping sensation.",
+      "steps": ["Climb → outside pressure decreases", "Eustachian tube equalizes pressure", "Pressure difference causes pop", "Select lower outside pressure"],
+      "fastStrategy": "Climbing lowers air pressure; ears equalize."
+    },
+    {
+      "id": "ps_fp_b1_041",
+      "question": "What happens to air pressure inside a sealed bottle taken up a mountain?",
+      "choices": {"A": "It increases", "B": "It decreases", "C": "It stays the same", "D": "It becomes zero"},
+      "answer": "C",
+      "explanation": "Inside a sealed bottle, the trapped air keeps the same pressure it had when sealed (neglecting temperature changes). Outside pressure drops, so the bottle may bulge.",
+      "steps": ["Sealed volume traps original pressure", "Without exchange, internal pressure stays near original", "Outside pressure drops", "Choose stays the same (approximately)"],
+      "fastStrategy": "Sealed air keeps its initial pressure as you ascend (temp aside)."
+    },
+    {
+      "id": "ps_fp_b1_042",
+      "question": "Where is pressure greatest on a dam wall?",
+      "choices": {"A": "Near the top", "B": "In the middle", "C": "Near the bottom", "D": "Same everywhere"},
+      "answer": "C",
+      "explanation": "Water pressure increases with depth, so the bottom experiences the highest pressure, requiring thicker walls there.",
+      "steps": ["Pressure grows with depth", "Bottom has maximum depth", "Thus greatest pressure at bottom", "Choose near the bottom"],
+      "fastStrategy": "Deeper water pushes harder—bottom of dam gets most pressure."
+    },
+    {
+      "id": "ps_fp_b1_043",
+      "question": "Which quantity is conserved in steady, incompressible flow (continuity equation)?",
+      "choices": {"A": "Pressure", "B": "Velocity", "C": "Volume flow rate", "D": "Density always increases"},
+      "answer": "C",
+      "explanation": "Continuity states A1v1 = A2v2 for incompressible flow, meaning volume flow rate is constant along the pipe.",
+      "steps": ["Recall continuity: A v constant", "That is volume flow rate", "Pressure can vary, velocity can change with area", "Choose volume flow rate"],
+      "fastStrategy": "Incompressible steady flow: A×v stays constant."
+    },
+    {
+      "id": "ps_fp_b1_044",
+      "question": "Surface tension is stronger in water due to:",
+      "choices": {"A": "Hydrogen bonding", "B": "Magnetic forces", "C": "Electric currents", "D": "Low density"},
+      "answer": "A",
+      "explanation": "Hydrogen bonds between water molecules create relatively strong surface tension compared to many liquids.",
+      "steps": ["Identify cause of high surface tension", "Water's hydrogen bonding strengthens cohesion", "Not magnetism/electric currents", "Select hydrogen bonding"],
+      "fastStrategy": "Water's surface tension comes from hydrogen bonds."
+    },
+    {
+      "id": "ps_fp_b1_045",
+      "question": "If a small air bubble rises in water, the pressure inside the bubble as it rises will:",
+      "choices": {"A": "Increase", "B": "Stay constant", "C": "Decrease", "D": "Become infinite"},
+      "answer": "C",
+      "explanation": "As the bubble rises, external water pressure decreases, so the internal pressure drops and the bubble expands.",
+      "steps": ["Rising reduces external pressure", "Internal pressure adjusts lower, bubble expands", "Not constant or increasing", "Select decrease"],
+      "fastStrategy": "Rise → external pressure drops → bubble expands, internal pressure drops."
+    },
+    {
+      "id": "ps_fp_b1_046",
+      "question": "What happens to the buoyant force on a fully submerged object if it is moved deeper (same fluid)?",
+      "choices": {"A": "It increases", "B": "It decreases", "C": "It stays the same", "D": "It becomes zero"},
+      "answer": "C",
+      "explanation": "Buoyant force depends on displaced volume and fluid density, not depth (for incompressible fluids). Fully submerged volume is unchanged, so buoyant force stays the same.",
+      "steps": ["Buoyant force = weight of displaced volume", "Volume and density unchanged with depth (incompressible)", "Thus buoyant force constant", "Choose stays the same"],
+      "fastStrategy": "Fully submerged: buoyant force doesn't change with depth (incompressible fluid)."
+    },
+    {
+      "id": "ps_fp_b1_047",
+      "question": "If oil (density < water) is poured on water, it floats because:",
+      "choices": {"A": "Oil has no mass", "B": "Oil is less dense than water", "C": "Water has no buoyant force", "D": "Oil repels water magnetically"},
+      "answer": "B",
+      "explanation": "Less dense fluids float atop denser ones. Oil's density is lower than water's, so it floats.",
+      "steps": ["Compare densities", "Lower density fluid sits above higher density fluid", "Oil ρ < water ρ", "Choose oil less dense"],
+      "fastStrategy": "Lower-density oil stays on top of water."
+    },
+    {
+      "id": "ps_fp_b1_048",
+      "question": "The SI unit of density is:",
+      "choices": {"A": "kg/m³", "B": "N/m", "C": "J/s", "D": "m/s"},
+      "answer": "A",
+      "explanation": "Density is mass per volume, measured in kilograms per cubic meter (kg/m³).",
+      "steps": ["Define density units", "Mass kg divided by volume m³", "Other units are unrelated", "Select kg/m³"],
+      "fastStrategy": "Density unit = kg/m³."
+    },
+    {
+      "id": "ps_fp_b1_049",
+      "question": "If area at a pipe's outlet is half the inlet area (steady incompressible flow), the outlet speed is:",
+      "choices": {"A": "Half the inlet speed", "B": "Same as inlet", "C": "Twice the inlet speed", "D": "Zero"},
+      "answer": "C",
+      "explanation": "Continuity: A1v1 = A2v2. If A2 = 0.5 A1, then v2 = v1 × (A1/A2) = v1 × 2.",
+      "steps": ["Use continuity A v constant", "A2 = 0.5 A1 → v2 = 2 v1", "Not half", "Choose twice"],
+      "fastStrategy": "Half the area → double the speed (steady incompressible)."
+    },
+    {
+      "id": "ps_fp_b1_050",
+      "question": "Absolute pressure equals atmospheric pressure plus:",
+      "choices": {"A": "Gauge pressure", "B": "Zero", "C": "Temperature", "D": "Density"},
+      "answer": "A",
+      "explanation": "Absolute pressure = gauge pressure + atmospheric pressure.",
+      "steps": ["Recall definitions", "Absolute = gauge + atm", "Others do not add directly", "Select gauge pressure"],
+      "fastStrategy": "Absolute = gauge + atmospheric."}
+  ]
+}

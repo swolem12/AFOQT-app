@@ -1,0 +1,193 @@
+{
+  "patchId": 23,
+  "name": "physical_science_topic_framework",
+  "subjectId": "physical_science",
+  "description": "Defines the topic taxonomy, JSON structure, naming conventions, difficulty rules, and question-generation standards for Physical Science questions following AFOQT and Trivium guidance.",
+  "topics": [
+    {
+      "topicId": "motion_mechanics",
+      "displayName": "Motion & Mechanics",
+      "exampleSubareas": [
+        "velocity and acceleration",
+        "Newton's laws",
+        "forces and free-body reasoning",
+        "friction",
+        "work, energy, power",
+        "simple machines (levers, pulleys)"
+      ]
+    },
+    {
+      "topicId": "energy_heat",
+      "displayName": "Energy & Heat",
+      "exampleSubareas": [
+        "kinetic vs potential energy",
+        "conservation of energy",
+        "heat transfer: conduction, convection, radiation",
+        "temperature vs heat"
+      ]
+    },
+    {
+      "topicId": "electricity_magnetism",
+      "displayName": "Electricity & Magnetism",
+      "exampleSubareas": [
+        "voltage, current, resistance",
+        "series & parallel circuits",
+        "magnetic fields",
+        "electromagnets",
+        "charge interactions"
+      ]
+    },
+    {
+      "topicId": "optics_waves",
+      "displayName": "Optics & Waves",
+      "exampleSubareas": [
+        "reflection & refraction",
+        "wave amplitude, wavelength, frequency",
+        "light vs sound",
+        "lens behavior"
+      ]
+    },
+    {
+      "topicId": "fluids_pressure",
+      "displayName": "Fluids & Pressure",
+      "exampleSubareas": [
+        "buoyancy",
+        "Archimedes principle",
+        "density",
+        "pressure at depth",
+        "gas behavior"
+      ]
+    },
+    {
+      "topicId": "chemistry_basics",
+      "displayName": "Chemistry Basics",
+      "exampleSubareas": [
+        "states of matter",
+        "atomic structure",
+        "periodic table trends",
+        "chemical reactions",
+        "mixtures vs compounds"
+      ]
+    },
+    {
+      "topicId": "earth_space",
+      "displayName": "Earth & Space Science",
+      "exampleSubareas": [
+        "gravity",
+        "orbits",
+        "weather patterns",
+        "atmosphere layers",
+        "planetary systems"
+      ]
+    }
+  ],
+  "difficultyModel": {
+    "beginner": {
+      "description": "Single-step conceptual questions based on recall and basic interpretation.",
+      "quantitativeLoad": "minimal",
+      "equationsUsed": [
+        "F = ma",
+        "v = d/t",
+        "density = mass/volume"
+      ],
+      "triviumAlignment": "chapter-level recall and simple application"
+    },
+    "advanced": {
+      "description": "Multi-step reasoning, simple calculations, diagram interpretation.",
+      "quantitativeLoad": "moderate",
+      "conceptMixing": true
+    },
+    "expert": {
+      "description": "Cross-topic reasoning, tricky distractors, conceptual traps similar to AFOQT difficulty ceiling.",
+      "quantitativeLoad": "light but fast",
+      "requires": [
+        "interpretation under time pressure",
+        "identifying best conceptual match among distractors"
+      ]
+    }
+  },
+  "jsonFileStructure": {
+    "requiredFields": [
+      "subjectId",
+      "subtopicId",
+      "difficulty",
+      "part",
+      "questions"
+    ],
+    "questionSchema": {
+      "id": "string, formatted as ps_<topicCode><difficultyCode><partNumber>_<###>",
+      "question": "string",
+      "choices": {
+        "A": "string",
+        "B": "string",
+        "C": "string",
+        "D": "string"
+      },
+      "answer": "string, one of A-D",
+      "explanation": "string following C1 method",
+      "steps": "array of strings (C1 breakdown)",
+      "fastStrategy": "string, test-taking heuristic"
+    }
+  },
+  "idConvention": {
+    "format": "ps_<topic>_<difficultyCode>_<partNumber>_<threeDigitIndex>",
+    "topicCodes": {
+      "motion_mechanics": "mm",
+      "energy_heat": "eh",
+      "electricity_magnetism": "em",
+      "optics_waves": "ow",
+      "fluids_pressure": "fp",
+      "chemistry_basics": "cb",
+      "earth_space": "es"
+    },
+    "difficultyCodes": {
+      "beginner": "b",
+      "advanced": "a",
+      "expert": "e"
+    }
+  },
+  "fileNamingRules": {
+    "format": "physical_science_<topicId>_<difficulty>_part<partNumber>.json",
+    "examples": [
+      "physical_science_motion_mechanics_beginner_part1.json",
+      "physical_science_optics_waves_advanced_part2.json",
+      "physical_science_electricity_magnetism_expert_part1.json"
+    ]
+  },
+  "c1TutoringRules": {
+    "step1": "Identify what scientific concept the question is testing.",
+    "step2": "State the rule or law required to solve it.",
+    "step3": "Apply step-by-step logic or arithmetic.",
+    "step4": "Explain why the correct answer fits the rule.",
+    "step5": "Identify the most common trap among the distractors."
+  },
+  "fastStrategyGuidance": [
+    "Eliminate answers that violate fundamental laws.",
+    "Check units first to eliminate impossible values.",
+    "Trend-check (increasing/decreasing) before computing.",
+    "Draw a micro-sketch mentally for motion or force questions.",
+    "For series/parallel circuits, know which property adds or splits."
+  ],
+  "uiSpecRules": {
+    "useUiSpec": "only if a diagram is needed",
+    "diagramTypes": [
+      "simple_vector_diagram",
+      "simple_circuit",
+      "simple_ray_diagram"
+    ],
+    "diagramContract": {
+      "type": "string",
+      "width": "number",
+      "height": "number",
+      "copilotInstruction": "string describing exactly how to render"
+    }
+  },
+  "acceptanceCriteria": [
+    "All topic JSONs follow the naming conventions and schema.",
+    "All questions use C1 explanation methodology.",
+    "All questions include fastStrategy.",
+    "Beginner difficulty remains conceptual and accessible.",
+    "Advanced/expert questions mix concepts similar to AFOQT depth.",
+    "Distractors remain plausible and aligned with real AFOQT test structure."
+  ]
+}

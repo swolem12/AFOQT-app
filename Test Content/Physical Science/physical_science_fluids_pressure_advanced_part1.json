@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "fluids_pressure",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ps_fp_a1_001",
+      "question": "Pressure increase from a 2.0 m depth in water (ρ≈1000 kg/m³) is closest to:",
+      "choices": {"A": "9.8 kPa", "B": "15 kPa", "C": "19.6 kPa", "D": "39 kPa"},
+      "answer": "C",
+      "explanation": "ΔP = ρ g h ≈ 1000·9.8·2 = 19,600 Pa ≈ 19.6 kPa.",
+      "steps": ["Use ΔP = ρgh", "Multiply 1000 by 9.8", "Multiply by 2", "Convert to kPa"],
+      "fastStrategy": "About 10 kPa per meter of water; 2 m → ~20 kPa." 
+    },
+    {
+      "id": "ps_fp_a1_002",
+      "question": "A 5 cm² piston supports a 12,000 N car using a 400 cm² output piston. Input force needed is:",
+      "choices": {"A": "150 N", "B": "600 N", "C": "1000 N", "D": "1500 N"},
+      "answer": "A",
+      "explanation": "Pascal: F1/A1 = F2/A2. F1 = F2·A1/A2 = 12,000·5/400 = 12,000·0.0125 = 150 N.",
+      "steps": ["Take area ratio 5/400 = 1/80", "Multiply 12,000 by 1/80", "Get 150 N", "Select 150 N"],
+      "fastStrategy": "Force scales with area ratio; 1/80 of 12,000 ≈ 150." 
+    },
+    {
+      "id": "ps_fp_a1_003",
+      "question": "Gauge pressure at 30 m depth in freshwater is about:",
+      "choices": {"A": "0.30 atm", "B": "1.0 atm", "C": "3.0 atm", "D": "4.0 atm"},
+      "answer": "C",
+      "explanation": "Roughly 1 atm per 10 m of water. 30 m → ~3 atm gauge.",
+      "steps": ["Use ~10 m per atm", "30 m → 3 atm", "Gauge excludes surface atm", "Pick 3.0 atm"],
+      "fastStrategy": "10 m water ≈ 1 atm; 3× deeper → 3 atm." 
+    },
+    {
+      "id": "ps_fp_a1_004",
+      "question": "Continuity: Water flows in a pipe from 6 cm diameter to 3 cm diameter. Speed increases by factor:",
+      "choices": {"A": "1", "B": "2", "C": "4", "D": "6"},
+      "answer": "C",
+      "explanation": "A ∝ d². Area ratio (6/3)² = 4. To conserve flow, speed quadruples.",
+      "steps": ["Compute area ratio (6/3)^2 = 4", "Flow Q = A v constant", "v2 = 4 v1", "Choose factor 4"],
+      "fastStrategy": "Diameter halves → area quarter → speed ×4." 
+    },
+    {
+      "id": "ps_fp_a1_005",
+      "question": "A 2.5 kg object displaces 2.0 L of water. It will:",
+      "choices": {"A": "Float", "B": "Sink", "C": "Hover neutrally", "D": "Oscillate"},
+      "answer": "B",
+      "explanation": "Displaced water weight = ρVg ≈ 1000×0.002×9.8 ≈ 19.6 N. Object weight ≈ 24.5 N. Weight exceeds buoyant → sinks.",
+      "steps": ["Convert 2.0 L to 0.002 m³", "Compute buoyant weight ~19.6 N", "Object weight 2.5×9.8 ≈ 24.5 N", "24.5 > 19.6 → sinks"],
+      "fastStrategy": "Object heavier than displaced water → sinks." 
+    },
+    {
+      "id": "ps_fp_a1_006",
+      "question": "A manometer shows a 18 cm mercury column difference (ρHg≈13,600 kg/m³). Gauge pressure is closest to:",
+      "choices": {"A": "1.2 kPa", "B": "2.4 kPa", "C": "12 kPa", "D": "24 kPa"},
+      "answer": "D",
+      "explanation": "ΔP = ρ g h = 13,600·9.8·0.18 ≈ 24,000 Pa ≈ 24 kPa.",
+      "steps": ["Multiply density by height", "13,600×0.18 ≈ 2448", "Multiply by 9.8 ≈ 24,000 Pa", "Convert to kPa ≈ 24"],
+      "fastStrategy": "Mercury column ~0.1 m gives ~13 kPa; 0.18 m → ~24 kPa." 
+    },
+    {
+      "id": "ps_fp_a1_007",
+      "question": "A 1.5 L container is filled with oil (ρ=800 kg/m³). Its mass is:",
+      "choices": {"A": "0.80 kg", "B": "1.2 kg", "C": "1.5 kg", "D": "2.0 kg"},
+      "answer": "B",
+      "explanation": "m = ρV = 800×0.0015 = 1.2 kg.",
+      "steps": ["Convert 1.5 L to 0.0015 m³", "Multiply by 800", "Get 1.2 kg", "Pick 1.2 kg"],
+      "fastStrategy": "1.5 L × 0.8 kg/L = 1.2 kg." 
+    },
+    {
+      "id": "ps_fp_a1_008",
+      "question": "A Venturi has pressures 120 kPa (wide) and 90 kPa (narrow). Flow speed in wide section is 4 m/s. Density 1000 kg/m³. Speed in narrow section is closest to:",
+      "choices": {"A": "4 m/s", "B": "6 m/s", "C": "8 m/s", "D": "10 m/s"},
+      "answer": "C",
+      "explanation": "Bernoulli: ΔP = 0.5 ρ (v2^2 - v1^2). 30,000 = 0.5·1000 (v2^2 - 16) → 30,000 = 500 v2^2 - 8000 → 38,000 = 500 v2^2 → v2^2 ≈ 76 → v2 ≈ 8.7 m/s (closest 8).",
+      "steps": ["Compute ΔP=30 kPa", "Set ΔP = 0.5ρ( v2^2 - v1^2 )", "Solve for v2^2 ≈76", "v2 ≈8.7 m/s"],
+      "fastStrategy": "30 kPa head ~3 m water → adds ~8 m/s to speed; result ~9 m/s." 
+    },
+    {
+      "id": "ps_fp_a1_009",
+      "question": "Flow rate through a 0.5 cm² nozzle at 12 m/s is:",
+      "choices": {"A": "6.0×10^-5 m³/s", "B": "6.0×10^-4 m³/s", "C": "6.0×10^-3 m³/s", "D": "6.0×10^-2 m³/s"},
+      "answer": "B",
+      "explanation": "Area 0.5 cm² = 0.5×1e-4 m² = 5e-5 m². Q = A v = 5e-5×12 = 6e-4 m³/s.",
+      "steps": ["Convert area to 5e-5 m²", "Multiply by 12", "Get 6e-4 m³/s", "Pick 6.0×10^-4"],
+      "fastStrategy": "5e-5×12 → 6e-4 m³/s." 
+    },
+    {
+      "id": "ps_fp_a1_010",
+      "question": "Absolute pressure at 10 m depth in freshwater is closest to:",
+      "choices": {"A": "1.0 atm", "B": "1.5 atm", "C": "2.0 atm", "D": "3.0 atm"},
+      "answer": "C",
+      "explanation": "Gauge ~1 atm at 10 m; add 1 atm atmospheric → about 2 atm absolute.",
+      "steps": ["Use ~1 atm per 10 m", "Gauge at 10 m ≈1 atm", "Add 1 atm surface", "Get ~2 atm"],
+      "fastStrategy": "At 10 m water: ~2 atm total." 
+    },
+    {
+      "id": "ps_fp_a1_011",
+      "question": "A 0.040 m² door faces a 20 kPa pressure difference. Net force is:",
+      "choices": {"A": "80 N", "B": "200 N", "C": "400 N", "D": "800 N"},
+      "answer": "D",
+      "explanation": "F = ΔP·A = 20,000×0.040 = 800 N.",
+      "steps": ["Multiply 20,000 by 0.040", "Get 800", "Units newtons", "Pick 800 N"],
+      "fastStrategy": "20 kPa on 0.04 m² → 800 N." 
+    },
+    {
+      "id": "ps_fp_a1_012",
+      "question": "For laminar flow, Reynolds number Re = ρ v D / μ. With ρ=1000 kg/m³, v=0.50 m/s, D=0.02 m, μ=1.0e-3 Pa·s, Re is:",
+      "choices": {"A": "100", "B": "500", "C": "10,000", "D": "25,000"},
+      "answer": "C",
+      "explanation": "Re = 1000·0.5·0.02 / 1e-3 = 10 /1e-3 = 10,000.",
+      "steps": ["Multiply ρ v D → 1000×0.5×0.02 = 10", "Divide by 1e-3", "Get 10,000", "Pick 10,000"],
+      "fastStrategy": "Numerator 10; divide by 0.001 → 10,000." 
+    },
+    {
+      "id": "ps_fp_a1_013",
+      "question": "A cube (0.20 m side) of density 500 kg/m³ floats in water. Fraction submerged is:",
+      "choices": {"A": "0.25", "B": "0.40", "C": "0.50", "D": "0.60"},
+      "answer": "C",
+      "explanation": "For floating, ρ_object/ρ_fluid = fraction submerged = 500/1000 = 0.50.",
+      "steps": ["Use fraction = ρ_obj / ρ_fluid", "Compute 500/1000 = 0.5", "So half submerged", "Pick 0.50"],
+      "fastStrategy": "Half the density → half submerged." 
+    },
+    {
+      "id": "ps_fp_a1_014",
+      "question": "Pressure at bottom of 0.50 m of oil (ρ=800 kg/m³) over 1.0 m of water is:",
+      "choices": {"A": "9.8 kPa", "B": "13.7 kPa", "C": "18.6 kPa", "D": "22.5 kPa"},
+      "answer": "B",
+      "explanation": "Oil column: 800·9.8·0.5 ≈ 3.9 kPa. Water column: 1000·9.8·1.0 ≈ 9.8 kPa. Total ≈ 13.7 kPa.",
+      "steps": ["Compute oil pressure ≈3.9 kPa", "Compute water pressure ≈9.8 kPa", "Sum ≈13.7 kPa", "Select 13.7 kPa"],
+      "fastStrategy": "Add 4 kPa (oil) + 10 kPa (water) ≈ 14 kPa." 
+    },
+    {
+      "id": "ps_fp_a1_015",
+      "question": "An airplane wing has 12 kPa lower pressure on top over 20 m². Lift from pressure difference is:",
+      "choices": {"A": "24 kN", "B": "120 kN", "C": "240 kN", "D": "400 kN"},
+      "answer": "C",
+      "explanation": "F = ΔP A = 12,000×20 = 240,000 N = 240 kN.",
+      "steps": ["Multiply 12,000 by 20", "Get 240,000 N", "Convert to kN = 240", "Choose 240 kN"],
+      "fastStrategy": "12 kPa × 20 m² → 240 kN." 
+    },
+    {
+      "id": "ps_fp_a1_016",
+      "question": "A pipe reduces from 8 cm diameter to 4 cm. If flow is 20 L/s in the wide section, speed in the narrow section is:",
+      "choices": {"A": "4 m/s", "B": "8 m/s", "C": "12 m/s", "D": "16 m/s"},
+      "answer": "D",
+      "explanation": "Area ratio (8/4)^2 = 4. Wide-area A1 ≈ 0.0050 m². v1 = Q/A1 ≈ 0.020/0.005 = 4 m/s. v2 = 4 v1 ≈ 16 m/s.",
+      "steps": ["Compute A1 ≈0.0050 m²", "v1 = 0.020/0.005 = 4 m/s", "Multiply by 4 for the narrow section", "Get v2 ≈16 m/s"],
+      "fastStrategy": "Diameter halves → speed ×4; v1 ~4 → v2 ~16." 
+    },
+    {
+      "id": "ps_fp_a1_017",
+      "question": "Water exits a 2.0 m tank bottom hole to the atmosphere. Ideal exit speed is:",
+      "choices": {"A": "2.0 m/s", "B": "4.4 m/s", "C": "6.3 m/s", "D": "9.9 m/s"},
+      "answer": "C",
+      "explanation": "Torricelli: v = sqrt(2 g h) = sqrt(2·9.8·2) = sqrt(39.2) ≈ 6.3 m/s.",
+      "steps": ["Compute 2gh = 39.2", "Take sqrt ≈ 6.3", "Select 6.3 m/s", "Pick option C"],
+      "fastStrategy": "Use sqrt(2gh); ~6.3 m/s from 2 m head." 
+    },
+    {
+      "id": "ps_fp_a1_018",
+      "question": "Capillary rise h ≈ 2γ cosθ/(ρ g r). For water (γ=0.072 N/m, θ≈0) in a 0.50 mm radius tube, rise is closest to:",
+      "choices": {"A": "0.3 cm", "B": "0.9 cm", "C": "1.8 cm", "D": "3.0 cm"},
+      "answer": "D",
+      "explanation": "h ≈ 2·0.072 /(1000·9.8·5e-4) ≈ 0.144 /4.9 ≈ 0.029 m ≈ 2.9 cm.",
+      "steps": ["Calculate numerator 0.144", "Denominator 4.9", "Divide to get ≈0.029 m", "Convert to ≈2.9 cm"],
+      "fastStrategy": "0.5 mm tube gives ~3 cm rise for water." 
+    },
+    {
+      "id": "ps_fp_a1_019",
+      "question": "A submerged balloon volume increases from 0.80 L at 3 atm to what at 1 atm (isothermal)?",
+      "choices": {"A": "0.27 L", "B": "0.80 L", "C": "1.6 L", "D": "2.4 L"},
+      "answer": "D",
+      "explanation": "Boyle: P1V1 = P2V2 → V2 = 3 atm/1 atm ×0.80 = 2.4 L.",
+      "steps": ["Apply P1V1=P2V2", "Compute 3×0.80", "Get 2.4 L", "Pick 2.4 L"],
+      "fastStrategy": "Inverse with pressure: 3× volume when pressure drops 3→1." 
+    },
+    {
+      "id": "ps_fp_a1_020",
+      "question": "Hydraulic press multiplies force by area ratio. With 10× larger output area, the ideal mechanical advantage is:",
+      "choices": {"A": "5", "B": "10", "C": "15", "D": "20"},
+      "answer": "B",
+      "explanation": "Pascal: force scales with area. 10× larger area → 10× force (ideal).",
+      "steps": ["Area ratio is 10", "Force multiplies by ratio", "Ideal MA = 10", "Choose 10"],
+      "fastStrategy": "Area ratio directly gives force ratio (lossless)." 
+    },
+    {
+      "id": "ps_fp_a1_021",
+      "question": "Absolute pressure of 250 kPa corresponds to gauge pressure of:",
+      "choices": {"A": "149 kPa", "B": "150 kPa", "C": "249 kPa", "D": "350 kPa"},
+      "answer": "A",
+      "explanation": "Gauge = absolute − atmospheric ≈ 250 − 101 ≈ 149 kPa.",
+      "steps": ["Subtract ~101 kPa from 250", "Get ~149 kPa", "Pick the closest option", "Choose 149 kPa"],
+      "fastStrategy": "Gauge = absolute minus ~100 kPa." 
+    },
+    {
+      "id": "ps_fp_a1_022",
+      "question": "Mass flow rate for water (ρ=1000) with volumetric flow 0.012 m³/s is:",
+      "choices": {"A": "0.12 kg/s", "B": "1.2 kg/s", "C": "12 kg/s", "D": "120 kg/s"},
+      "answer": "C",
+      "explanation": "ṁ = ρ Q = 1000 × 0.012 = 12 kg/s.",
+      "steps": ["Multiply density 1000 by flow 0.012", "Get 12", "Units kg/s", "Choose 12"],
+      "fastStrategy": "0.012 m³/s of water → 12 kg/s." 
+    },
+    {
+      "id": "ps_fp_a1_023",
+      "question": "A submerged block feels 250 N buoyant force. Displaced fluid volume is (ρ=1000):",
+      "choices": {"A": "0.010 m³", "B": "0.015 m³", "C": "0.020 m³", "D": "0.025 m³"},
+      "answer": "D",
+      "explanation": "Fb = ρ g V → V = 250 /(1000·9.8) ≈ 0.0255 m³, closest to 0.025 m³.", 
+      "steps": ["Divide 250 by 9800", "Get ≈0.0255", "Pick nearest 0.025 m³", "Select option D"],
+      "fastStrategy": "Approx divide by 10,000 to get ~0.025 m³." 
+    },
+    {
+      "id": "ps_fp_a1_024",
+      "question": "Bernoulli assumes which condition is NOT required?",
+      "choices": {"A": "Steady flow", "B": "Incompressible fluid", "C": "Non-viscous flow", "D": "Turbulent flow"},
+      "answer": "D",
+      "explanation": "Bernoulli requires steady, incompressible, non-viscous flow along a streamline; it does not assume turbulence (rather, laminar).",
+      "steps": ["List Bernoulli assumptions", "Steady, incompressible, inviscid", "Turbulent violates assumptions", "Choose turbulent as not required"],
+      "fastStrategy": "Bernoulli excludes turbulence; needs laminar/inviscid." 
+    },
+    {
+      "id": "ps_fp_a1_025",
+      "question": "A scuba diver breathes compressed air at 20 m depth (~3 atm). On rapid ascent with closed airway, lung volume could expand to:",
+      "choices": {"A": "0.33× initial", "B": "0.50× initial", "C": "2.0× initial", "D": "3.0× initial"},
+      "answer": "D",
+      "explanation": "Boyle: V2 = V1·(P1/P2). P1≈3 atm, P2≈1 atm at surface → V2 ≈ 3× V1, risk of overexpansion.",
+      "steps": ["Note P at depth ≈3 atm", "Surface P ≈1 atm", "Volume scales inversely", "Predict ~3× expansion"],
+      "fastStrategy": "Pressure drop 3→1 gives ~3× volume if trapped gas." 
+    }
+  ]
+}

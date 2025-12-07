@@ -1,0 +1,151 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "basic_arithmetic",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ar_basic_e1_001",
+      "question": "Compute (72^2 - 48 × 27) ÷ 12.",
+      "choices": {"A": "288", "B": "304", "C": "324", "D": "336", "E": "360"},
+      "answer": "C",
+      "explanation": "72^2 = 5184, 48 × 27 = 1296, difference = 3888, divide by 12 → 324.",
+      "steps": [
+        "1. Square 72: 72 × 72 = 5184.",
+        "2. Multiply 48 × 27 = 1296.",
+        "3. Subtract: 5184 − 1296 = 3888.",
+        "4. Divide by 12: 3888 ÷ 12 = 324.",
+        "5. Trap: Keep order of operations; divide only after subtracting."
+      ],
+      "fastStrategy": "Factor common 12: (12×432 − 12×108) ÷ 12 = 432 − 108 = 324."
+    },
+    {
+      "id": "ar_basic_e1_002",
+      "question": "(5/6 of 540) minus (15% of 800) equals?",
+      "choices": {"A": "300", "B": "320", "C": "330", "D": "360", "E": "380"},
+      "answer": "C",
+      "explanation": "(5/6)×540 = 450. 15% of 800 = 120. Difference 450 − 120 = 330.",
+      "steps": [
+        "1. Compute fraction: 5/6 × 540 = 450.",
+        "2. Compute percent: 0.15 × 800 = 120.",
+        "3. Subtract: 450 − 120 = 330.",
+        "4. Trap: Convert percent to decimal before multiplying."
+      ],
+      "fastStrategy": "Take 1/6 of 540 = 90, so 5 parts = 450; 10% of 800 = 80, 5% = 40 → 120; subtract."
+    },
+    {
+      "id": "ar_basic_e1_003",
+      "question": "Evaluate (3.5)^2 + (2.5)^2 − (4.5 × 1.5).",
+      "choices": {"A": "10.25", "B": "11.75", "C": "12.25", "D": "13.75", "E": "14.25"},
+      "answer": "B",
+      "explanation": "3.5^2 = 12.25, 2.5^2 = 6.25, sum = 18.5. Product 4.5 × 1.5 = 6.75. 18.5 − 6.75 = 11.75.",
+      "steps": [
+        "1. Square 3.5 and 2.5 separately.",
+        "2. Add: 12.25 + 6.25 = 18.5.",
+        "3. Multiply: 4.5 × 1.5 = 6.75.",
+        "4. Subtract: 18.5 − 6.75 = 11.75.",
+        "5. Trap: Keep decimals aligned when subtracting."
+      ],
+      "fastStrategy": "Use (a^2 + b^2) − ab form; plug numbers to reduce mistakes."
+    },
+    {
+      "id": "ar_basic_e1_004",
+      "question": "Least common multiple of 84 and 126 is?",
+      "choices": {"A": "168", "B": "210", "C": "224", "D": "252", "E": "336"},
+      "answer": "D",
+      "explanation": "84 = 2^2 × 3 × 7; 126 = 2 × 3^2 × 7. LCM = 2^2 × 3^2 × 7 = 4 × 9 × 7 = 252.",
+      "steps": [
+        "1. Prime factor 84 → 2^2 × 3 × 7.",
+        "2. Prime factor 126 → 2 × 3^2 × 7.",
+        "3. Take max powers: 2^2, 3^2, 7.",
+        "4. Multiply: 4 × 9 × 7 = 252.",
+        "5. Trap: Don't add exponents; choose the higher exponent per prime."
+      ],
+      "fastStrategy": "LCM = (Product) / GCD; 84×126 / 42 = 252."
+    },
+    {
+      "id": "ar_basic_e1_005",
+      "question": "Simplify 18! / (16! × 18).",
+      "choices": {"A": "15", "B": "16", "C": "17", "D": "18", "E": "19"},
+      "answer": "C",
+      "explanation": "18! = 18 × 17 × 16!. Divide by 16! × 18 → cancel 16! and 18, leaving 17.",
+      "steps": [
+        "1. Expand numerator: 18! = 18 × 17 × 16!.",
+        "2. Cancel 16! with denominator.",
+        "3. Remaining: (18 × 17) / 18 = 17.",
+        "4. Trap: Cancel before multiplying large numbers."
+      ],
+      "fastStrategy": "Write factorials to cancel common terms; avoid huge arithmetic."
+    },
+    {
+      "id": "ar_basic_e1_006",
+      "question": "If x = 12, compute (x^3 − x^2) ÷ (3x).",
+      "choices": {"A": "36", "B": "40", "C": "44", "D": "48", "E": "52"},
+      "answer": "C",
+      "explanation": "x^3 = 1728, x^2 = 144, difference = 1584. 3x = 36. 1584 ÷ 36 = 44.",
+      "steps": [
+        "1. Calculate x^3 and x^2.",
+        "2. Subtract: 1728 − 144 = 1584.",
+        "3. Divide by 3x = 36: 1584 ÷ 36 = 44.",
+        "4. Trap: Factor x^2: (x^2)(x−1)/(3x) = x(x−1)/3 to check quickly."
+      ],
+      "fastStrategy": "Simplify algebraically first: (x^3 − x^2)/(3x) = x(x−1)/3; plug x = 12 → 12×11/3 = 44."
+    },
+    {
+      "id": "ar_basic_e1_007",
+      "question": "Sum of the first 50 even positive integers is?",
+      "choices": {"A": "2400", "B": "2450", "C": "2500", "D": "2550", "E": "2600"},
+      "answer": "D",
+      "explanation": "Sum of first n evens = n(n+1). For n = 50: 50 × 51 = 2550.",
+      "steps": [
+        "1. Formula: Sum = n(n+1) for evens.",
+        "2. Plug n = 50: 50 × 51 = 2550.",
+        "3. Trap: Don't use n^2 (that's odds); evens use n(n+1)."
+      ],
+      "fastStrategy": "Pair evens: (2+100)=102, (4+98)=102 ... 25 pairs ×102 = 2550."
+    },
+    {
+      "id": "ar_basic_e1_008",
+      "question": "Evaluate √1296 − ∛216.",
+      "choices": {"A": "22", "B": "24", "C": "26", "D": "28", "E": "30"},
+      "answer": "E",
+      "explanation": "√1296 = 36. Cube root of 216 = 6. 36 − 6 = 30.",
+      "steps": [
+        "1. Find square root: 1296 → 36.",
+        "2. Find cube root: 216 → 6.",
+        "3. Subtract: 36 − 6 = 30.",
+        "4. Trap: Distinguish square root from cube root."
+      ],
+      "fastStrategy": "Recognize 36^2 = 1296 and 6^3 = 216 to speed roots."
+    },
+    {
+      "id": "ar_basic_e1_009",
+      "question": "(4/9)^(−1) + (3/5)^(−1) equals?",
+      "choices": {"A": "23/12", "B": "47/12", "C": "25/8", "D": "17/6", "E": "4"},
+      "answer": "B",
+      "explanation": "Reciprocal of 4/9 is 9/4. Reciprocal of 3/5 is 5/3. Sum = 9/4 + 5/3 = (27+20)/12 = 47/12.",
+      "steps": [
+        "1. Apply negative exponent → reciprocals: 9/4 and 5/3.",
+        "2. Find common denominator 12.",
+        "3. Add numerators: 27 + 20 = 47.",
+        "4. Result: 47/12.",
+        "5. Trap: (a/b)^(−1) = b/a; don't square or invert twice."
+      ],
+      "fastStrategy": "Convert to mixed: 47/12 = 3 11/12 for a quick reasonableness check (<5)."
+    },
+    {
+      "id": "ar_basic_e1_010",
+      "question": "Multiply 0.04 by 0.003.",
+      "choices": {"A": "0.00009", "B": "0.00012", "C": "0.00018", "D": "0.00024", "E": "0.0003"},
+      "answer": "B",
+      "explanation": "4×3=12 with five decimal places total → 0.00012.",
+      "steps": [
+        "1. Multiply 4 × 3 = 12.",
+        "2. Count decimal places: two in 0.04, three in 0.003 → five total.",
+        "3. Place decimal: 0.00012.",
+        "4. Trap: Avoid rounding; place the decimal correctly."
+      ],
+      "fastStrategy": "Scientific: 4×10^(−2) × 3×10^(−3) = 12×10^(−5) = 1.2×10^(−4) = 0.00012."
+    }
+  ]
+}

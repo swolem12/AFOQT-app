@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "electricity_magnetism",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ps_em_a1_001",
+      "question": "A 12 Ω resistor draws 3.0 A. What voltage is across it?",
+      "choices": {"A": "4.0 V", "B": "12 V", "C": "24 V", "D": "36 V"},
+      "answer": "D",
+      "explanation": "Ohm's law: V = I R = 3.0×12 = 36 V.",
+      "steps": ["Write V = IR", "Multiply 3.0×12", "Get 36 V", "Pick 36 V"],
+      "fastStrategy": "3×12 = 36; choose 36 V." 
+    },
+    {
+      "id": "ps_em_a1_002",
+      "question": "A 60 W, 120 V lightbulb draws current closest to:",
+      "choices": {"A": "0.25 A", "B": "0.50 A", "C": "1.0 A", "D": "2.0 A"},
+      "answer": "B",
+      "explanation": "I = P/V = 60/120 = 0.50 A.",
+      "steps": ["Divide 60 by 120", "Get 0.5", "Units amperes", "Select 0.50 A"],
+      "fastStrategy": "Half a watt per volt → 0.5 A." 
+    },
+    {
+      "id": "ps_em_a1_003",
+      "question": "Two 8 Ω resistors in parallel have an equivalent resistance of:",
+      "choices": {"A": "2 Ω", "B": "4 Ω", "C": "8 Ω", "D": "16 Ω"},
+      "answer": "B",
+      "explanation": "R_eq = (1/8 + 1/8)^-1 = (2/8)^-1 = 4 Ω.",
+      "steps": ["Add conductances 1/8 + 1/8", "Get 2/8", "Invert to 8/2", "Result 4 Ω"],
+      "fastStrategy": "Equal resistors parallel → half of one: 4 Ω." 
+    },
+    {
+      "id": "ps_em_a1_004",
+      "question": "A 9 V battery delivers 0.20 A for 30 minutes. Energy supplied is closest to:",
+      "choices": {"A": "32 J", "B": "162 J", "C": "324 J", "D": "3240 J"},
+      "answer": "D",
+      "explanation": "E = V I t = 9×0.20×1800 ≈ 3240 J.",
+      "steps": ["Convert 30 min to 1800 s", "Multiply 9×0.20 = 1.8", "Multiply by 1800", "Get ≈3240 J"],
+      "fastStrategy": "1.8×1800 ≈ 3240 J." 
+    },
+    {
+      "id": "ps_em_a1_005",
+      "question": "A wire carries 4.0 A. How much charge passes in 2.5 minutes?",
+      "choices": {"A": "150 C", "B": "300 C", "C": "600 C", "D": "1000 C"},
+      "answer": "C",
+      "explanation": "Q = I t = 4.0 × 150 s = 600 C.",
+      "steps": ["Convert 2.5 min to 150 s", "Multiply 4.0×150", "Get 600", "Units coulombs"],
+      "fastStrategy": "4 A is 4 C/s; 150 s → 600 C." 
+    },
+    {
+      "id": "ps_em_a1_006",
+      "question": "A 0.50 H inductor with 2.0 A current stores magnetic energy of:",
+      "choices": {"A": "1.0 J", "B": "2.0 J", "C": "4.0 J", "D": "8.0 J"},
+      "answer": "A",
+      "explanation": "E = 0.5 L I^2 = 0.5×0.50×(2)^2 = 0.25×4 = 1.0 J.",
+      "steps": ["Square current 2 → 4", "Multiply by L 0.50 → 2", "Halve → 1 J", "Pick 1.0 J"],
+      "fastStrategy": "Half of L times I²: 0.25×4 = 1." 
+    },
+    {
+      "id": "ps_em_a1_007",
+      "question": "A 3 μF capacitor charged to 200 V holds energy closest to:",
+      "choices": {"A": "0.06 J", "B": "0.60 J", "C": "6.0 J", "D": "60 J"},
+      "answer": "A",
+      "explanation": "E = 0.5 C V^2 = 0.5×3e-6×(200)^2 = 1.5e-6×40,000 = 0.06 J.",
+      "steps": ["Square 200 → 40,000", "Multiply by 3e-6 → 0.12", "Halve → 0.06", "Pick 0.06 J"],
+      "fastStrategy": "3 μF at 200 V → ~0.06 J." 
+    },
+    {
+      "id": "ps_em_a1_008",
+      "question": "In a DC circuit, 10 C of charge gains 45 J of energy through a battery. The battery's emf is:",
+      "choices": {"A": "0.22 V", "B": "2.2 V", "C": "4.5 V", "D": "22 V"},
+      "answer": "C",
+      "explanation": "Voltage = energy/charge = 45 J / 10 C = 4.5 V.",
+      "steps": ["Divide 45 by 10", "Get 4.5", "Units volts", "Select 4.5 V"],
+      "fastStrategy": "J/C = volts; 45/10 = 4.5." 
+    },
+    {
+      "id": "ps_em_a1_009",
+      "question": "Three 6 Ω resistors in series across 12 V draw total current of:",
+      "choices": {"A": "0.67 A", "B": "1.0 A", "C": "2.0 A", "D": "4.0 A"},
+      "answer": "A",
+      "explanation": "R_total = 18 Ω. I = V/R = 12/18 ≈ 0.67 A.",
+      "steps": ["Compute series resistance 18 Ω", "Use I = V/R", "Plug 12/18 ≈ 0.67", "Pick 0.67 A"],
+      "fastStrategy": "Total 18 Ω; 12 V/18 ≈ 0.67 A." 
+    },
+    {
+      "id": "ps_em_a1_010",
+      "question": "A 100 W device on 120 V has resistance approximately:",
+      "choices": {"A": "72 Ω", "B": "120 Ω", "C": "144 Ω", "D": "288 Ω"},
+      "answer": "C",
+      "explanation": "P = V^2/R → R = V^2/P = 120^2 / 100 = 14,400/100 = 144 Ω.",
+      "steps": ["Square 120 → 14,400", "Divide by 100", "Get 144 Ω", "Select 144 Ω"],
+      "fastStrategy": "V^2/P: 120^2=14.4k; ÷100 → 144." 
+    },
+    {
+      "id": "ps_em_a1_011",
+      "question": "A 0.20 T magnetic field exerts what force on a 0.10 m conductor carrying 5.0 A perpendicular to the field?",
+      "choices": {"A": "0.05 N", "B": "0.10 N", "C": "0.50 N", "D": "1.0 N"},
+      "answer": "B",
+      "explanation": "F = B I L sinθ; with θ=90°, F = 0.20×5.0×0.10 = 0.10 N.",
+      "steps": ["Multiply B and I: 0.20×5 = 1.0", "Multiply by L 0.10", "Get 0.10 N", "Pick 0.10 N"],
+      "fastStrategy": "BIL: 0.2×5×0.1 = 0.1 N." 
+    },
+    {
+      "id": "ps_em_a1_012",
+      "question": "A moving charge q=2.0 μC enters a 0.30 T field at 2.0×10^5 m/s perpendicular. Magnetic force magnitude is:",
+      "choices": {"A": "0.012 N", "B": "0.12 N", "C": "1.2 N", "D": "12 N"},
+      "answer": "B",
+      "explanation": "F = q v B = 2e-6×2e5×0.30 = 0.12 N.",
+      "steps": ["Multiply q and v: 2e-6×2e5 = 0.4", "Multiply by B 0.30", "Get 0.12 N", "Choose 0.12 N"],
+      "fastStrategy": "qv=0.4; ×0.3 → 0.12 N." 
+    },
+    {
+      "id": "ps_em_a1_013",
+      "question": "What is the period of a 60 Hz AC signal?",
+      "choices": {"A": "1.7 ms", "B": "8.3 ms", "C": "16.7 ms", "D": "60 ms"},
+      "answer": "C",
+      "explanation": "T = 1/f = 1/60 s ≈ 0.0167 s = 16.7 ms.",
+      "steps": ["Invert 60", "Get 0.0167 s", "Convert to ms", "Pick 16.7 ms"],
+      "fastStrategy": "1/60 ≈ 0.017 s." 
+    },
+    {
+      "id": "ps_em_a1_014",
+      "question": "A transformer steps 120 V down to 12 V with 1000 turns on primary. Ideal secondary turns are:",
+      "choices": {"A": "10", "B": "50", "C": "100", "D": "120"},
+      "answer": "C",
+      "explanation": "Vp/Vs = Np/Ns → 120/12 = 1000/Ns ⇒ 10 = 1000/Ns ⇒ Ns = 100.",
+      "steps": ["Take ratio 120/12 = 10", "Set 10 = 1000/Ns", "Solve Ns = 100", "Select 100"],
+      "fastStrategy": "Voltage drops 10×, turns drop 10×: 1000/10 = 100." 
+    },
+    {
+      "id": "ps_em_a1_015",
+      "question": "A 5.0 kΩ resistor has 15 V across it. Power dissipated is:",
+      "choices": {"A": "0.045 W", "B": "0.15 W", "C": "0.45 W", "D": "4.5 W"},
+      "answer": "A",
+      "explanation": "P = V^2/R = 225 / 5000 = 0.045 W.",
+      "steps": ["Square 15 → 225", "Divide by 5000", "Result 0.045 W", "Choose 0.045 W"],
+      "fastStrategy": "225/5k ≈ 0.045 W." 
+    },
+    {
+      "id": "ps_em_a1_016",
+      "question": "A circuit has R=4 Ω, L=0.20 H. Its time constant τ = L/R is:",
+      "choices": {"A": "0.02 s", "B": "0.05 s", "C": "0.2 s", "D": "0.8 s"},
+      "answer": "B",
+      "explanation": "τ = L/R = 0.20 / 4 = 0.05 s.",
+      "steps": ["Divide 0.20 by 4", "Get 0.05", "Units seconds", "Select 0.05 s"],
+      "fastStrategy": "0.2/4 = 0.05 s." 
+    },
+    {
+      "id": "ps_em_a1_017",
+      "question": "What current flows when 24 V is applied across a 6 Ω resistor for 10 s?",
+      "choices": {"A": "2 A", "B": "4 A", "C": "6 A", "D": "10 A"},
+      "answer": "B",
+      "explanation": "I = V/R = 24/6 = 4 A. Time does not affect steady current.",
+      "steps": ["Use I=V/R", "Compute 24/6", "Get 4 A", "Pick 4 A"],
+      "fastStrategy": "24/6 = 4 A; duration irrelevant." 
+    },
+    {
+      "id": "ps_em_a1_018",
+      "question": "A parallel-plate capacitor (2.0 μF) is charged to 100 V. If plates are separated further halving capacitance, new voltage (isolated) becomes:",
+      "choices": {"A": "50 V", "B": "100 V", "C": "200 V", "D": "400 V"},
+      "answer": "C",
+      "explanation": "Charge stays constant on isolated capacitor. V = Q/C. Halving C doubles V: 100 V → 200 V.",
+      "steps": ["Note Q fixed", "C halves", "V doubles", "Choose 200 V"],
+      "fastStrategy": "Isolated cap: V ∝ 1/C; half C → double V." 
+    },
+    {
+      "id": "ps_em_a1_019",
+      "question": "If electric field is 300 N/C, what force acts on a 4.0 μC charge?",
+      "choices": {"A": "0.0012 N", "B": "0.012 N", "C": "0.12 N", "D": "1.2 N"},
+      "answer": "A",
+      "explanation": "F = qE = 4e-6×300 = 1.2e-3 N = 0.0012 N.",
+      "steps": ["Multiply 4e-6 by 300", "Get 1.2e-3", "Convert to 0.0012 N", "Pick 0.0012 N"],
+      "fastStrategy": "qE: 4 μC times 300 → 1200 μN = 0.0012 N." 
+    },
+    {
+      "id": "ps_em_a1_020",
+      "question": "The resistance of a wire doubles when its length doubles and area stays the same because R is proportional to:",
+      "choices": {"A": "1/L", "B": "L", "C": "A", "D": "1/A"},
+      "answer": "B",
+      "explanation": "R = ρL/A; doubling L doubles R when A is unchanged.",
+      "steps": ["Recall R ∝ L", "Length doubles", "Resistance doubles", "Choose proportional to L"],
+      "fastStrategy": "R scales with length at fixed area." 
+    },
+    {
+      "id": "ps_em_a1_021",
+      "question": "A proton (q=1.6e-19 C) accelerated through 1.0 kV gains kinetic energy of:",
+      "choices": {"A": "1.6e-16 J", "B": "1.6e-19 J", "C": "1.6e-22 J", "D": "1.6e-13 J"},
+      "answer": "A",
+      "explanation": "Energy = qV = 1.6e-19 C × 1000 V = 1.6e-16 J.",
+      "steps": ["Multiply 1.6e-19 by 1000", "Get 1.6e-16", "Units joules", "Select 1.6e-16 J"],
+      "fastStrategy": "1 keV for proton ≈ 1.6×10^-16 J." 
+    },
+    {
+      "id": "ps_em_a1_022",
+      "question": "In a series RL circuit, current reaches 63% of final value after 10 ms. If R = 20 Ω, inductance L is approximately:",
+      "choices": {"A": "0.05 H", "B": "0.10 H", "C": "0.20 H", "D": "0.32 H"},
+      "answer": "C",
+      "explanation": "63% point corresponds to one time constant τ = L/R. Given τ = 0.010 s and R = 20 Ω: L = τR = 0.010×20 = 0.20 H.",
+      "steps": ["τ = 10 ms = 0.010 s", "L = τR = 0.010×20", "Compute 0.20 H", "Pick 0.20 H"],
+      "fastStrategy": "τR: 0.01×20 → 0.20 H." 
+    },
+    {
+      "id": "ps_em_a1_023",
+      "question": "An electron moves 3.0×10^6 m/s in a 0.010 T field perpendicular. Radius of circular path (m_e=9.11e-31 kg, q=1.6e-19 C) is closest to:",
+      "choices": {"A": "0.0017 m", "B": "0.017 m", "C": "0.17 m", "D": "1.7 m"},
+      "answer": "A",
+      "explanation": "r = mv/(qB) = 9.11e-31×3e6 / (1.6e-19×0.01) ≈ 1.7×10^-3 m.",
+      "steps": ["Compute numerator mv ≈ 2.73e-24", "Denominator qB ≈ 1.6e-21", "Divide → ~1.7e-3 m", "Choose 0.0017 m"],
+      "fastStrategy": "Tiny mass gives ~millimeter-scale radius here." 
+    },
+    {
+      "id": "ps_em_a1_024",
+      "question": "Total resistance of 2 Ω, 3 Ω, and 6 Ω in parallel is:",
+      "choices": {"A": "1.0 Ω", "B": "1.5 Ω", "C": "2.0 Ω", "D": "3.0 Ω"},
+      "answer": "A",
+      "explanation": "1/R = 1/2 + 1/3 + 1/6 = 0.5 + 0.333 + 0.167 = 1.0. So R = 1.0 Ω.",
+      "steps": ["Add reciprocals 0.5+0.333+0.167", "Sum ≈1.0", "Invert to 1.0 Ω", "Pick 1.0 Ω"],
+      "fastStrategy": "These form a neat 1 Ω combo." 
+    },
+    {
+      "id": "ps_em_a1_025",
+      "question": "A coil (N=200) encloses 0.040 m². Magnetic flux changes uniformly from 0.08 T to 0 in 0.10 s (field perpendicular). Average induced emf magnitude is:",
+      "choices": {"A": "0.064 V", "B": "0.32 V", "C": "0.64 V", "D": "6.4 V"},
+      "answer": "D",
+      "explanation": "Faraday: emf = N ΔΦ/Δt. Flux per turn = B A = 0.08×0.040 = 0.0032 Wb. emf = 200×0.0032/0.10 = 6.4 V.",
+      "steps": ["Compute initial flux 0.0032 Wb", "Divide by 0.10 s → 0.032 Wb/s", "Multiply by 200", "Get 6.4 V"],
+      "fastStrategy": "0.0032 Wb drop in 0.1 s → 0.032 V/turn; ×200 → 6.4 V." 
+    }
+  ]
+}

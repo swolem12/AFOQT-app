@@ -1,0 +1,143 @@
+{
+  "subjectId": "arithmetic_reasoning",
+  "subtopicId": "percent_problems",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ar_pct_e1_001",
+      "question": "An item's price rises 15% then drops 20%. What is the overall percent change from the original?",
+      "choices": {"A": "−5%", "B": "−8%", "C": "−10%", "D": "−12%", "E": "−15%"},
+      "answer": "B",
+      "explanation": "Multiplier: 1.15 then 0.80 → 0.92 of original, an 8% decrease.",
+      "steps": [
+        "1. Apply increase: ×1.15.",
+        "2. Apply decrease: ×0.80.",
+        "3. Net multiplier: 1.15 × 0.80 = 0.92.",
+        "4. Percent change: 0.92 − 1 = −0.08 → −8%.",
+        "5. Trap: Percent changes compound; they do not add."
+      ],
+      "fastStrategy": "Use net multiplier quickly: 1 ± p."
+    },
+    {
+      "id": "ar_pct_e1_002",
+      "question": "$12,000 grows 8% in year 1 and 6% in year 2. What is the value after 2 years?",
+      "choices": {"A": "$12,864", "B": "$12,960", "C": "$13,248", "D": "$13,514", "E": "$13,738"},
+      "answer": "E",
+      "explanation": "$12,000 × 1.08 × 1.06 = 12,000 × 1.1448 = $13,737.6 ≈ $13,738.",
+      "steps": [
+        "1. Year 1: 12,000 × 1.08 = 12,960.",
+        "2. Year 2: 12,960 × 1.06 = 13,737.6.",
+        "3. Trap: Apply sequential growth, not sum of percents."
+      ],
+      "fastStrategy": "Combine multipliers: 1.08 × 1.06 = 1.1448; multiply once."
+    },
+    {
+      "id": "ar_pct_e1_003",
+      "question": "A town of 50,000 loses 12% population then gains 10% the next year. What is the new population?",
+      "choices": {"A": "47,300", "B": "48,400", "C": "49,000", "D": "50,600", "E": "51,000"},
+      "answer": "B",
+      "explanation": "50,000 × 0.88 = 44,000. Then ×1.10 = 48,400.",
+      "steps": [
+        "1. Decrease: 50,000 × 0.88 = 44,000.",
+        "2. Increase: 44,000 × 1.10 = 48,400.",
+        "3. Trap: Multipliers compound; order matters."
+      ],
+      "fastStrategy": "Net multiplier: 0.88 × 1.10 = 0.968 → 50,000 × 0.968."
+    },
+    {
+      "id": "ar_pct_e1_004",
+      "question": "Original price $250. After 25% off and a $30 coupon, apply 7% sales tax. What is the final price?",
+      "choices": {"A": "$156.75", "B": "$157.50", "C": "$162.00", "D": "$168.53", "E": "$172.00"},
+      "answer": "D",
+      "explanation": "25% off: 250 × 0.75 = 187.50. Coupon → 157.50. Tax 7%: 157.50 × 1.07 = 168.525 ≈ $168.53.",
+      "steps": [
+        "1. Apply percent discount: 250 × 0.75 = 187.50.",
+        "2. Subtract coupon: 187.50 − 30 = 157.50.",
+        "3. Tax: 157.50 × 1.07 = 168.525.",
+        "4. Trap: Tax after discounts, not before."
+      ],
+      "fastStrategy": "Chain: 250 → 187.5 → 157.5 → ×1.07."
+    },
+    {
+      "id": "ar_pct_e1_005",
+      "question": "Salary $72,000 grows 4% annually for 3 years. What is the salary after 3 years?",
+      "choices": {"A": "$77,760", "B": "$79,488", "C": "$80,990", "D": "$82,080", "E": "$83,520"},
+      "answer": "C",
+      "explanation": "$72,000 × 1.04^3 = 72,000 × 1.124864 ≈ $80,990.",
+      "steps": [
+        "1. Compute multiplier: 1.04^3 ≈ 1.124864.",
+        "2. Multiply: 72,000 × 1.124864 ≈ 80,990.",
+        "3. Trap: Compounding each year, not 12% once."
+      ],
+      "fastStrategy": "Use (1.04^2 ≈ 1.0816); ×1.04 again ≈ 1.1249."
+    },
+    {
+      "id": "ar_pct_e1_006",
+      "question": "A student has 840/1000 points (84%). Final exam is 200 points. Minimum exam score to finish with 90% overall?",
+      "choices": {"A": "160", "B": "170", "C": "180", "D": "190", "E": "Not achievable"},
+      "answer": "E",
+      "explanation": "Total points after exam: 1200. Target: 0.90 × 1200 = 1080. Needs 1080 − 840 = 240 points, but exam max is 200. Not achievable.",
+      "steps": [
+        "1. Current points: 840; total possible after exam: 1200.",
+        "2. Target points: 0.90 × 1200 = 1080.",
+        "3. Required on exam: 1080 − 840 = 240 > 200.",
+        "4. Trap: Compare required points to maximum available."
+      ],
+      "fastStrategy": "Check feasibility first: need 240/200 = 120% → impossible."
+    },
+    {
+      "id": "ar_pct_e1_007",
+      "question": "An 18% energy cut saves $540/month. What was the original bill?",
+      "choices": {"A": "$2,500", "B": "$2,800", "C": "$3,000", "D": "$3,200", "E": "$3,500"},
+      "answer": "C",
+      "explanation": "0.18 × Original = 540 → Original = 540 / 0.18 = 3000.",
+      "steps": [
+        "1. Set 0.18 × B = 540.",
+        "2. Solve B = 540 / 0.18 = 3000.",
+        "3. Trap: Divide by percent in decimal form."
+      ],
+      "fastStrategy": "18% ≈ 9%×2; 540/9% = 6000 → half is 3000."
+    },
+    {
+      "id": "ar_pct_e1_008",
+      "question": "After dilution, 260 mg of active drug remains, which is 65% of original. What was the original amount?",
+      "choices": {"A": "360 mg", "B": "380 mg", "C": "400 mg", "D": "420 mg", "E": "440 mg"},
+      "answer": "C",
+      "explanation": "260 = 0.65 × Original → Original = 260 / 0.65 = 400 mg.",
+      "steps": [
+        "1. Write equation: 0.65 × O = 260.",
+        "2. Solve O = 260 / 0.65 = 400.",
+        "3. Trap: Ensure percent is decimal, not divided by 65."
+      ],
+      "fastStrategy": "65% is 13/20; 260 ÷ (13/20) = 260 × 20/13 = 400."
+    },
+    {
+      "id": "ar_pct_e1_009",
+      "question": "An item grows 12% per quarter for two quarters. If it starts at $160, what is it after two quarters?",
+      "choices": {"A": "$188.0", "B": "$192.5", "C": "$197.1", "D": "$200.7", "E": "$205.0"},
+      "answer": "D",
+      "explanation": "Multiplier: 1.12^2 = 1.2544. Value: 160 × 1.2544 = $200.70.",
+      "steps": [
+        "1. Compute 1.12^2 = 1.2544.",
+        "2. Multiply by 160 → 200.704.",
+        "3. Trap: Quarterly compounding, not 24% once."
+      ],
+      "fastStrategy": "Approx: 12% then another 12% of new base → ~24% + extra 1.44% ≈ 25.44%."
+    },
+    {
+      "id": "ar_pct_e1_010",
+      "question": "30 L of 25% solution; add pure concentrate to reach 40%. How many liters to add?",
+      "choices": {"A": "6", "B": "7.5", "C": "8", "D": "9", "E": "10"},
+      "answer": "B",
+      "explanation": "Current concentrate: 0.25 × 30 = 7.5 L. Add x of 100%: (7.5 + x)/(30 + x) = 0.4 → 7.5 + x = 12 + 0.4x → 0.6x = 4.5 → x = 7.5 L.",
+      "steps": [
+        "1. Compute current concentrate amount: 7.5 L.",
+        "2. Set equation for target percent: (7.5 + x)/(30 + x) = 0.4.",
+        "3. Solve: 7.5 + x = 12 + 0.4x → 0.6x = 4.5 → x = 7.5.",
+        "4. Trap: Add to both numerator and denominator."
+      ],
+      "fastStrategy": "Alligation: (40−25):(100−40)=15:60=1:4 → add 1 part concentrate to 4 parts mix → 30/4=7.5."
+    }
+  ]
+}

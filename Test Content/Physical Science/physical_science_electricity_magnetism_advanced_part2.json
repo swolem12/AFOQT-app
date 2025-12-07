@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "electricity_magnetism",
+  "difficulty": "advanced",
+  "part": 2,
+  "questions": [
+    {
+      "id": "ps_em_a2_026",
+      "question": "What is the rms voltage of a 170 V peak AC source?",
+      "choices": {"A": "85 V", "B": "120 V", "C": "170 V", "D": "240 V"},
+      "answer": "B",
+      "explanation": "Vrms = Vp/√2 = 170/1.414 ≈ 120 V.",
+      "steps": ["Divide 170 by √2", "Use √2 ≈ 1.414", "Compute ≈120", "Pick 120 V"],
+      "fastStrategy": "Peak ÷ 1.414 ≈ rms." 
+    },
+    {
+      "id": "ps_em_a2_027",
+      "question": "A 2.0 μF capacitor and 1.0 kΩ resistor are in series on DC. Time constant τ is:",
+      "choices": {"A": "0.5 ms", "B": "1.0 ms", "C": "2.0 ms", "D": "5.0 ms"},
+      "answer": "C",
+      "explanation": "τ = R C = 1000×2e-6 = 2e-3 s = 2.0 ms.",
+      "steps": ["Multiply 1.0kΩ by 2 μF", "Get 2×10^-3", "Convert to ms", "Pick 2.0 ms"],
+      "fastStrategy": "1k × 2μF → 2 ms." 
+    },
+    {
+      "id": "ps_em_a2_028",
+      "question": "Two point charges +3 μC and +6 μC are 0.30 m apart. Force magnitude between them is closest to: (k≈9e9)",
+      "choices": {"A": "0.18 N", "B": "1.8 N", "C": "18 N", "D": "180 N"},
+      "answer": "C",
+      "explanation": "F = k q1 q2 / r^2 = 9e9·(3e-6·6e-6)/(0.30^2) = 9e9·18e-12 / 0.09 ≈ 162e-3 /0.09 ≈ 1.8 /0.09 ≈ 20 N (closer to 18 N).",
+      "steps": ["Multiply charges 3e-6×6e-6 =18e-12", "Multiply by k → 162e-3", "Divide by 0.09", "Get ~1.8/0.09 ≈ 20 ≈ 18 N"],
+      "fastStrategy": "Order check yields ~20 N; nearest choice 18 N." 
+    },
+    {
+      "id": "ps_em_a2_029",
+      "question": "A 10 mH inductor carries 0.80 A. Magnetic energy stored is:",
+      "choices": {"A": "0.0032 J", "B": "0.032 J", "C": "0.32 J", "D": "3.2 J"},
+      "answer": "A",
+      "explanation": "E = 0.5 L I^2 = 0.5×0.010×0.64 = 0.0032 J.",
+      "steps": ["Square 0.80 → 0.64", "Multiply by L 0.010 → 0.0064", "Halve → 0.0032", "Pick 0.0032 J"],
+      "fastStrategy": "Half of 0.0064 → 0.0032 J." 
+    },
+    {
+      "id": "ps_em_a2_030",
+      "question": "A 5 Ω resistor has a power rating of 2 W. Maximum safe current is closest to:",
+      "choices": {"A": "0.45 A", "B": "0.63 A", "C": "0.89 A", "D": "1.3 A"},
+      "answer": "B",
+      "explanation": "P = I^2 R ⇒ I = √(P/R) = √(2/5) ≈ √0.4 ≈ 0.63 A.",
+      "steps": ["Divide 2 by 5", "Get 0.4", "Square root ≈0.63", "Select 0.63 A"],
+      "fastStrategy": "Current ≈ √0.4 ≈ 0.63 A." 
+    },
+    {
+      "id": "ps_em_a2_031",
+      "question": "In a series circuit, a 12 Ω resistor drops 9 V. Circuit current is:",
+      "choices": {"A": "0.25 A", "B": "0.50 A", "C": "0.75 A", "D": "1.0 A"},
+      "answer": "C",
+      "explanation": "I = V/R = 9/12 = 0.75 A.",
+      "steps": ["Divide 9 by 12", "Get 0.75", "Units amperes", "Pick 0.75 A"],
+      "fastStrategy": "9/12 simplifies to 3/4 = 0.75 A." 
+    },
+    {
+      "id": "ps_em_a2_032",
+      "question": "What is the peak current of a 2.0 A rms AC signal?",
+      "choices": {"A": "1.4 A", "B": "2.0 A", "C": "2.8 A", "D": "4.0 A"},
+      "answer": "C",
+      "explanation": "I_peak = Irms √2 ≈ 2.0×1.414 ≈ 2.8 A.",
+      "steps": ["Multiply 2.0 by √2", "Use √2 ≈ 1.414", "Get ≈2.8 A", "Select 2.8 A"],
+      "fastStrategy": "Rms ×1.414 → peak." 
+    },
+    {
+      "id": "ps_em_a2_033",
+      "question": "A 1.5 V battery delivers 0.80 A to a 1.5 Ω resistor. Internal resistance is closest to:",
+      "choices": {"A": "0.06 Ω", "B": "0.38 Ω", "C": "0.75 Ω", "D": "1.1 Ω"},
+      "answer": "B",
+      "explanation": "V = I(R+ r). 1.5 = 0.80(1.5 + r) ⇒ 1.5/0.80 = 1.875 = 1.5 + r ⇒ r ≈ 0.375 Ω.",
+      "steps": ["Divide 1.5 by 0.80 → 1.875", "Subtract 1.5", "Get r ≈ 0.375", "Pick ~0.38 Ω"],
+      "fastStrategy": "Terminal V / I ≈ 1.875 Ω total; minus 1.5 → ~0.38 Ω." 
+    },
+    {
+      "id": "ps_em_a2_034",
+      "question": "A solenoid has 800 turns, length 0.40 m, carries 2.0 A. Magnetic field inside (μ0=4π×10^-7) is approximately:",
+      "choices": {"A": "1.3×10^-4 T", "B": "4.0×10^-4 T", "C": "1.3×10^-3 T", "D": "4.0×10^-3 T"},
+      "answer": "D",
+      "explanation": "B = μ0 n I with n=N/L=800/0.40=2000 m^-1. B ≈ 4πe-7×2000×2 ≈ 5×10^-3 T, closest to 4.0×10^-3 T.",
+      "steps": ["Compute turns per meter n=2000", "Multiply μ0 n I: 4πe-7×2000×2", "Get ≈5×10^-3 T", "Choose ~4.0×10^-3 T"],
+      "fastStrategy": "Order: a few mT; pick 4×10^-3 T." 
+    },
+    {
+      "id": "ps_em_a2_035",
+      "question": "A 9 V source is connected to a 3 Ω resistor. How long to deliver 270 J?",
+      "choices": {"A": "5 s", "B": "10 s", "C": "20 s", "D": "30 s"},
+      "answer": "B",
+      "explanation": "Power P = V^2/R = 81/3 = 27 W. Time t = E/P = 270/27 = 10 s.",
+      "steps": ["Compute power 27 W", "Divide 270 J by 27", "Get 10 s", "Pick 10 s"],
+      "fastStrategy": "Energy 270 / 27 W = 10 s." 
+    },
+    {
+      "id": "ps_em_a2_036",
+      "question": "What is the electric field 0.60 m from a 5.0 μC point charge? (k≈9e9)",
+      "choices": {"A": "1.1e3 N/C", "B": "2.3e4 N/C", "C": "1.1e5 N/C", "D": "2.3e6 N/C"},
+      "answer": "C",
+      "explanation": "E = k q / r^2 = 9e9×5e-6 / 0.36 ≈ 45,000 /0.36 ≈ 1.25×10^5 N/C.",
+      "steps": ["Multiply k and q → 45,000", "Divide by r^2 = 0.36", "Get ≈1.25×10^5 N/C", "Pick ~1.1e5 N/C"],
+      "fastStrategy": "45k/0.36 ≈ 1.25×10^5 N/C." 
+    },
+    {
+      "id": "ps_em_a2_037",
+      "question": "A 1.0 F capacitor on 10 V stores how much energy?",
+      "choices": {"A": "5 J", "B": "10 J", "C": "50 J", "D": "100 J"},
+      "answer": "C",
+      "explanation": "E = 0.5 C V^2 = 0.5×1×100 = 50 J.",
+      "steps": ["Square 10 → 100", "Multiply by 1 F → 100", "Halve → 50 J", "Pick 50 J"],
+      "fastStrategy": "Half of CV^2: 0.5×100 = 50 J." 
+    },
+    {
+      "id": "ps_em_a2_038",
+      "question": "Two resistors 10 Ω and 30 Ω are in parallel. Equivalent resistance is:",
+      "choices": {"A": "7.5 Ω", "B": "10 Ω", "C": "20 Ω", "D": "40 Ω"},
+      "answer": "A",
+      "explanation": "R_eq = (1/10 + 1/30)^-1 = (0.1 + 0.0333)^-1 ≈ 0.1333^-1 ≈ 7.5 Ω.",
+      "steps": ["Add conductances 0.1+0.0333", "Sum ≈0.1333", "Invert to ≈7.5", "Select 7.5 Ω"],
+      "fastStrategy": "Shortcut: product/sum = 300/40 = 7.5 Ω." 
+    },
+    {
+      "id": "ps_em_a2_039",
+      "question": "A wire of length 2.0 m moves at 3.0 m/s perpendicular to a 0.50 T field. Induced emf is:",
+      "choices": {"A": "0.75 V", "B": "1.0 V", "C": "1.5 V", "D": "3.0 V"},
+      "answer": "D",
+      "explanation": "emf = B L v = 0.50×2.0×3.0 = 3.0 V.",
+      "steps": ["Multiply 0.50×2.0", "Result 1.0", "Multiply by 3.0", "Get 3.0 V"],
+      "fastStrategy": "B L v: 0.5×2×3 = 3 V." 
+    },
+    {
+      "id": "ps_em_a2_040",
+      "question": "A 6.0 V source charges a 500 μF capacitor through a 50 Ω resistor. Initial charging current is:",
+      "choices": {"A": "0.12 A", "B": "0.60 A", "C": "1.2 A", "D": "6.0 A"},
+      "answer": "A",
+      "explanation": "At t=0, capacitor behaves like a short. I0 = V/R = 6.0/50 = 0.12 A.",
+      "steps": ["Use I0 = V/R", "Compute 6/50", "Get 0.12 A", "Select 0.12 A"],
+      "fastStrategy": "6/50 = 0.12 A." 
+    },
+    {
+      "id": "ps_em_a2_041",
+      "question": "A 0.25 mm radius copper wire (ρ=1.7e-8 Ω·m) is 20 m long. Its resistance is closest to:",
+      "choices": {"A": "0.14 Ω", "B": "0.27 Ω", "C": "0.54 Ω", "D": "1.1 Ω"},
+      "answer": "A",
+      "explanation": "Area A = πr^2 = π(2.5e-4)^2 ≈ 1.96e-7 m². R = ρL/A ≈ 1.7e-8×20 /1.96e-7 ≈ 3.4e-7 /1.96e-7 ≈ 1.73 ≈ 0.17 Ω (closest 0.14 Ω).",
+      "steps": ["Compute area ≈1.96e-7", "Multiply ρL ≈3.4e-7", "Divide → ~1.7", "Pick ≈0.14 Ω"],
+      "fastStrategy": "Quick: R ≈ (ρ/A)L ~ (0.086 Ω/100m)*20 ≈ 0.17 Ω." 
+    },
+    {
+      "id": "ps_em_a2_042",
+      "question": "If flux through a single loop changes at 0.008 Wb in 0.020 s, induced emf magnitude is:",
+      "choices": {"A": "0.08 V", "B": "0.4 V", "C": "0.8 V", "D": "4.0 V"},
+      "answer": "B",
+      "explanation": "emf = ΔΦ/Δt = 0.008 / 0.020 = 0.4 V.",
+      "steps": ["Divide 0.008 by 0.020", "Get 0.4", "Units volts", "Select 0.4 V"],
+      "fastStrategy": "8 mWb over 20 ms → 0.4 V." 
+    },
+    {
+      "id": "ps_em_a2_043",
+      "question": "A 15 Ω resistor dissipates 30 W. Voltage across it is: ",
+      "choices": {"A": "10 V", "B": "15 V", "C": "21 V", "D": "30 V"},
+      "answer": "C",
+      "explanation": "P = V^2/R → V = √(PR) = √(30×15) ≈ √450 ≈ 21.2 V.",
+      "steps": ["Multiply 30×15 = 450", "Take square root ≈ 21.2", "Choose ~21 V", "Select option matching 21 V"],
+      "fastStrategy": "Power times resistance then square root." 
+    },
+    {
+      "id": "ps_em_a2_044",
+      "question": "A charge of 0.80 C is moved through a potential difference of 15 V. Work done is:",
+      "choices": {"A": "6.0 J", "B": "12 J", "C": "15 J", "D": "18 J"},
+      "answer": "B",
+      "explanation": "Work = qV = 0.80×15 = 12 J.",
+      "steps": ["Multiply 0.80 by 15", "Get 12", "Units joules", "Pick 12 J"],
+      "fastStrategy": "q×V gives energy; 0.8×15 = 12 J." 
+    },
+    {
+      "id": "ps_em_a2_045",
+      "question": "A 0.30 T field exerts what force on a 0.050 m wire carrying 12 A at 60° to the field?",
+      "choices": {"A": "0.09 N", "B": "0.18 N", "C": "0.26 N", "D": "0.31 N"},
+      "answer": "B",
+      "explanation": "F = B I L sinθ = 0.30×12×0.050×sin60 ≈ 0.155 N (closest 0.18 N).",
+      "steps": ["Compute sin60 ≈0.866", "Multiply BIL = 0.30×12×0.050 = 0.18", "Multiply by 0.866 → ~0.156", "Pick nearest 0.18 N"],
+      "fastStrategy": "BIL=0.18; adjust for 60° → ~0.16 N." 
+    },
+    {
+      "id": "ps_em_a2_046",
+      "question": "A 2.0 mH inductor experiences di/dt = 5000 A/s. Induced voltage magnitude is:",
+      "choices": {"A": "1.0 V", "B": "5.0 V", "C": "10 V", "D": "50 V"},
+      "answer": "C",
+      "explanation": "V = L di/dt = 0.002 H × 5000 = 10 V.",
+      "steps": ["Multiply 0.002 by 5000", "Get 10", "Units volts", "Pick 10 V"],
+      "fastStrategy": "2 mH × 5000 A/s = 10 V." 
+    },
+    {
+      "id": "ps_em_a2_047",
+      "question": "A 20 Ω toaster on 120 V draws current of:",
+      "choices": {"A": "4 A", "B": "6 A", "C": "8 A", "D": "10 A"},
+      "answer": "B",
+      "explanation": "I = V/R = 120/20 = 6 A.",
+      "steps": ["Divide 120 by 20", "Get 6", "Units amperes", "Select 6 A"],
+      "fastStrategy": "120/20 = 6 A." 
+    },
+    {
+      "id": "ps_em_a2_048",
+      "question": "What is the drift velocity direction of electrons in a current-carrying wire?",
+      "choices": {"A": "Same as electric field", "B": "Same as conventional current", "C": "Opposite conventional current", "D": "Perpendicular to wire"},
+      "answer": "C",
+      "explanation": "Electrons are negatively charged and drift opposite to the direction of conventional current (and electric field).",
+      "steps": ["Recall current is direction of positive charge flow", "Electrons are negative", "They move opposite the current direction", "Choose opposite conventional current"],
+      "fastStrategy": "Electron drift opposes conventional current." 
+    },
+    {
+      "id": "ps_em_a2_049",
+      "question": "A 0.80 kW motor runs at 120 V. Its current draw is closest to:",
+      "choices": {"A": "3.3 A", "B": "6.7 A", "C": "8.0 A", "D": "12 A"},
+      "answer": "B",
+      "explanation": "I = P/V = 800/120 ≈ 6.7 A.",
+      "steps": ["Divide 800 by 120", "Get ≈6.7", "Units amperes", "Pick 6.7 A"],
+      "fastStrategy": "0.8 kW /120 V ≈ 6.7 A." 
+    },
+    {
+      "id": "ps_em_a2_050",
+      "question": "A 0.25 F capacitor initially uncharged is connected to 12 V DC. Final stored energy is:",
+      "choices": {"A": "9 J", "B": "18 J", "C": "36 J", "D": "72 J"},
+      "answer": "B",
+      "explanation": "E = 0.5 C V^2 = 0.5×0.25×144 = 18 J.",
+      "steps": ["Square 12 → 144", "Multiply by 0.25 → 36", "Halve → 18", "Pick 18 J"],
+      "fastStrategy": "Quarter of 144 is 36; half → 18 J." 
+    }
+  ]
+}

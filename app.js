@@ -915,9 +915,10 @@ const subjects = [
         isAfoqtOfficialSubject: true
     },
     {
-        id: 'blocks',
+        id: 'block_counting',
         name: 'Block Counting',
-        description: 'Spatial reasoning'
+        description: 'AFOQT spatial block counting',
+        isAfoqtOfficialSubject: true
     }
 ];
 
@@ -2841,10 +2842,10 @@ const tableTopics = [
 // ============================================================================
 const blockTopics = [
     {
-        id: 'block-counting',
-        name: 'Block Counting',
+        id: 'stacked_cubes',
+        name: 'Block Counting (Procedural)',
         description: 'Spatial reasoning with block configurations',
-        subjectId: 'blocks',
+        subjectId: 'block_counting',
         generateQuestion: (difficulty = 'beginner') => {
             const scenarios = [
                 {
@@ -3111,6 +3112,27 @@ function createTableReadingTopicsFromRegistry() {
     }
     console.log(`Created ${topicsTR.length} table reading topics from content`);
     return topicsTR;
+}
+
+// Function to create Block Counting topics from questionRegistry
+function createBlockCountingTopicsFromRegistry() {
+    if (!questionRegistry || !questionRegistry.block_counting) {
+        console.warn('Block counting content not loaded');
+        return [];
+    }
+    const bcContent = questionRegistry.block_counting;
+    const topicsBC = [];
+    for (const subtopicId in bcContent) {
+        topicsBC.push({
+            id: subtopicId,
+            name: 'Isometric Block Counting',
+            description: 'Count cubes in isometric stacks including hidden support blocks',
+            subjectId: 'block_counting',
+            hasContent: true
+        });
+    }
+    console.log(`Created ${topicsBC.length} block counting topics from content`);
+    return topicsBC;
 }
 
 // Combine all topics and add subject IDs
@@ -5550,6 +5572,41 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
                 attempts++;
             }
         }
+    } else if (topic.hasContent && typeof getQuestionsFromRegistry === 'function') {
+        // Content-based subjects (instrument, table reading, block counting, etc.)
+        const questionCount = mode === 'sprint' ? 5 : 10;
+        if (mode === 'sprint') {
+            const difficulties = ['beginner', 'advanced', 'expert'];
+            const perDiff = Math.ceil(questionCount / difficulties.length);
+            const pooled = [];
+            difficulties.forEach(diff => {
+                pooled.push(...getQuestionsFromRegistry(topic.subjectId, topic.id, diff, perDiff));
+            });
+            state.quiz.questions = pooled.sort(() => Math.random() - 0.5).slice(0, questionCount);
+        } else {
+            state.quiz.questions = getQuestionsFromRegistry(topic.subjectId, topic.id, difficulty, questionCount);
+            // Fallback to beginner if chosen difficulty has no pool (common for arithmetic where only beginner exists)
+            if ((!state.quiz.questions || state.quiz.questions.length === 0) && difficulty !== 'beginner') {
+                state.quiz.questions = getQuestionsFromRegistry(topic.subjectId, topic.id, 'beginner', questionCount);
+            }
+        }
+
+        // Fallback to procedural generator when registry is empty
+        if ((!state.quiz.questions || state.quiz.questions.length === 0) && typeof topic.generateQuestion === 'function') {
+            const usedQuestions = new Set();
+            const maxAttempts = questionCount * 10;
+            let attempts = 0;
+            while (state.quiz.questions.length < questionCount && attempts < maxAttempts) {
+                const question = topic.generateQuestion(difficulty);
+                if (!question) break;
+                const questionKey = `${question.prompt}|${question.options[question.correctIndex]}`;
+                if (!usedQuestions.has(questionKey)) {
+                    usedQuestions.add(questionKey);
+                    state.quiz.questions.push(question);
+                }
+                attempts++;
+            }
+        }
     } else {
         // Use procedural generators for non-vocabulary topics
         const questionCount = mode === 'sprint' ? 5 : 10;
@@ -6716,6 +6773,18 @@ const topicLearningContent = {
         fastStrategy: 'If a block is floating, there must be blocks underneath. Count bottom-up, layer by layer.',
         examples: ['A block on top of the pile requires a block beneath it for support.']
     },
+    'stacked_cubes': {
+        concept: 'Isometric block stacks show each floor cell as a vertical column. Translate the figure into stack heights, then apply the question rule (total blocks, ground-contact blocks, above-ground blocks, or row/column totals).',
+        steps: [
+            '1. Write down each stack height by column/row to turn the picture into numbers.',
+            '2. For total blocks, sum all heights. For ground-contact blocks, count non-empty stacks. For above-ground blocks, sum (height − 1) for stacks with height ≥ 1.',
+            '3. Sum by row or column to reduce mistakes, especially on 3×3 grids.',
+            '4. Recheck tall stacks and empty cells so you do not over- or under-count.',
+            '5. If blocks are added/removed, adjust only that stack/row instead of recalculating everything.'
+        ],
+        fastStrategy: 'Convert the isometric view into a height table. Add heights by row; use (height − 1) for above-ground counts and “non-empty stacks” for ground-contact counts.',
+        examples: ['Stacks with heights 2,1,0,3 → total = 6 blocks.', 'Back row heights 3,1,2 → row total = 6; above-ground blocks = (2 + 0 + 1) = 3.']
+    },
     // Additional Arithmetic Reasoning Topics
     'arithmetic-word-problems': {
         concept: 'Arithmetic word problems require translating written scenarios into mathematical operations. Identify what\'s being asked, extract numbers, and choose the right operation.',
@@ -6860,6 +6929,8 @@ function renderMathUI(uiSpec) {
             return renderInstrumentPanel(uiSpec);
         case 'data_table':
             return renderDataTable(uiSpec);
+        case 'block_stack_iso':
+            return renderBlockStackIso(uiSpec);
         default:
             console.warn('Unknown uiSpec type:', uiSpec.type);
             return '';
@@ -7048,6 +7119,59 @@ function renderDataTable(uiSpec) {
     `;
     
     return tableHtml;
+}
+
+// Block Counting isometric renderer
+function renderBlockStackIso(uiSpec) {
+    if (!uiSpec || !Array.isArray(uiSpec.stacks)) return '';
+
+    const width = uiSpec.width || 360;
+    const height = uiSpec.height || 320;
+    const grid = uiSpec.grid || { cols: 3, rows: 3 };
+    const logicalCols = Math.max(1, grid.cols || 3);
+    const logicalRows = Math.max(1, grid.rows || 3);
+    const cubeBase = Math.max(22, Math.min(46, Math.min(width / (logicalCols + logicalRows + 1), height / (logicalRows + 4))));
+    const cubeW = cubeBase;
+    const cubeH = Math.round(cubeBase * 0.6);
+
+    const baseLeft = (width / 2) - (logicalCols * cubeW * 0.45);
+    const baseBottom = cubeH * 1.9;
+    const colStep = cubeW * 0.9;
+    const rowStepX = cubeW * -0.45;
+    const rowStepY = cubeH * 0.95;
+
+    const sortedStacks = [...uiSpec.stacks].sort((a, b) => {
+        if (a.row !== b.row) return a.row - b.row; // front to back
+        return a.col - b.col; // left to right
+    });
+
+    const columnsHtml = sortedStacks.map((stack) => {
+        const { col = 0, row = 0, height: stackHeight = 0 } = stack;
+        const left = baseLeft + (col * colStep) + (row * rowStepX);
+        const bottom = baseBottom + (row * rowStepY);
+        const safeHeight = Math.max(0, stackHeight);
+        const cubes = Array.from({ length: safeHeight }).map((_, level) => {
+            const yOffset = -level * (cubeH * 0.95);
+            const zIndex = (row * 100) + (col * 10) + level;
+            return `<div class="bc-cube" style=\"transform: translateY(${yOffset}px) skewY(-30deg) skewX(-45deg); z-index:${zIndex}; width:${cubeW}px; height:${cubeH}px;\"></div>`;
+        }).join('');
+        const columnZ = (row * 100) + (col * 10);
+        return `<div class="bc-column" style="left:${left}px; bottom:${bottom}px; z-index:${columnZ};">${cubes}</div>`;
+    }).join('');
+
+    const gridHeight = Math.max(height - 120, cubeH * (logicalRows + 3));
+
+    return `
+        <div class="bc-scene" style="width:${width}px; height:${height}px;">
+            <div class="bc-legend">
+                <div class="bc-legend-line">Each column is a stack of cubes.</div>
+                <div class="bc-legend-line">Rows farther back sit higher in view.</div>
+            </div>
+            <div class="bc-grid" style="height:${gridHeight}px;">
+                ${columnsHtml}
+            </div>
+        </div>
+    `;
 }
 
 /**
@@ -10046,6 +10170,52 @@ function handleScrollForFAB() {
 // Initialization
 // ============================================================================
 async function init() {
+    // ====================================================================
+    // VERSION CHECK - Automatic cache invalidation on app update
+    // ====================================================================
+    // This check ensures users get fresh content when the app is updated
+    // on GitHub, without requiring manual cache clearing
+    try {
+        const res = await fetch('./version-manifest.json', { cache: 'no-store' });
+        if (res.ok) {
+            const manifest = await res.json();
+            const storedVersion = localStorage.getItem('appCacheVersion');
+            const currentVersion = manifest.cacheVersion;
+            
+            console.log(`📡 Version Check: Current=${currentVersion}, Stored=${storedVersion}`);
+            
+            // If version changed, unregister all SWs and perform hard reload
+            if (currentVersion > (parseInt(storedVersion) || 0)) {
+                console.log('📡 New version detected! Refreshing app...');
+                localStorage.setItem('appCacheVersion', currentVersion.toString());
+                
+                // Unregister all service workers to clear cache
+                if ('serviceWorker' in navigator) {
+                    try {
+                        const registrations = await navigator.serviceWorker.getRegistrations();
+                        for (let reg of registrations) {
+                            await reg.unregister();
+                            console.log('🔄 Unregistered Service Worker');
+                        }
+                    } catch (e) {
+                        console.warn('Could not unregister SWs:', e);
+                    }
+                }
+                
+                // Force hard reload to get fresh content
+                window.location.reload(true);
+                return; // Stop initialization
+            } else {
+                // Version is current
+                localStorage.setItem('appCacheVersion', currentVersion.toString());
+            }
+        }
+    } catch (error) {
+        // Version check failed (offline is OK, use current version)
+        console.log('📡 Version check failed (offline OK):', error.message);
+        // Continue with init - offline operation is supported
+    }
+    
     // Initialize database
     await afoqtDB.init();
     
@@ -10120,6 +10290,14 @@ async function init() {
                     topics = topics.filter(t => t.subjectId !== 'table_reading');
                     topics.push(...trTopics);
                     console.log(`✓ Loaded ${trTopics.length} table reading topics from content`);
+                }
+
+                // Add Block Counting topics from content
+                const bcTopics = createBlockCountingTopicsFromRegistry();
+                if (bcTopics.length > 0) {
+                    topics = topics.filter(t => t.subjectId !== 'block_counting');
+                    topics.push(...bcTopics);
+                    console.log(`✓ Loaded ${bcTopics.length} block counting topics from content`);
                 }
                 
                 // Add AFOQT practice test topics if available

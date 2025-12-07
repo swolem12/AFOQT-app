@@ -1,0 +1,233 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "fluids_pressure",
+  "difficulty": "advanced",
+  "part": 2,
+  "questions": [
+    {
+      "id": "ps_fp_a1_026",
+      "question": "A vertical rectangular gate 3.0 m high and 2.0 m wide is flush with the water surface. The hydrostatic force on it is closest to:",
+      "choices": {"A": "44 kN", "B": "88 kN", "C": "132 kN", "D": "176 kN"},
+      "answer": "B",
+      "explanation": "For a surface starting at the free surface, F = ρ g b h^2 / 2 = 1000·9.8·2·3^2/2 ≈ 8.8×10^4 N = 88 kN.",
+      "steps": ["Use F = ρ g b h^2 / 2", "Compute h^2 = 9", "Multiply by width 2 and ρg", "Convert 8.8e4 N to 88 kN"],
+      "fastStrategy": "Surface to depth h: force ≈ 0.5·ρg·b·h^2." 
+    },
+    {
+      "id": "ps_fp_a1_027",
+      "question": "For the same 3.0 m gate, the center of pressure below the surface is at:",
+      "choices": {"A": "1.5 m", "B": "2.0 m", "C": "2.5 m", "D": "3.0 m"},
+      "answer": "B",
+      "explanation": "For a vertical plane from the surface, y_cp = 2h/3 = 2 m below the free surface.",
+      "steps": ["Use y_cp = 2h/3", "Plug h = 3 m", "Get 2 m", "Select 2.0 m"],
+      "fastStrategy": "Flat plate from surface: center of pressure at 2/3 depth." 
+    },
+    {
+      "id": "ps_fp_a1_028",
+      "question": "A U-tube manometer with water shows a 18 cm difference between legs. Gauge pressure in the connected line is about:",
+      "choices": {"A": "0.98 kPa", "B": "1.76 kPa", "C": "3.1 kPa", "D": "9.8 kPa"},
+      "answer": "B",
+      "explanation": "ΔP = ρ g h = 1000·9.8·0.18 ≈ 1760 Pa ≈ 1.76 kPa.",
+      "steps": ["Convert 18 cm to 0.18 m", "Compute ρgh", "Get ~1760 Pa", "Convert to kPa"],
+      "fastStrategy": "Roughly 10 kPa per meter of water; 0.18 m → ~1.8 kPa." 
+    },
+    {
+      "id": "ps_fp_a1_029",
+      "question": "A 5.0 cm³ air bubble at 30 m depth (fresh water) rises to the surface at constant temperature. Its surface volume is closest to:",
+      "choices": {"A": "10 cm³", "B": "15 cm³", "C": "20 cm³", "D": "30 cm³"},
+      "answer": "C",
+      "explanation": "Absolute pressure at 30 m ≈ 101 kPa + ρgh ≈ 101 + 294 ≈ 395 kPa (~3.9 atm). P1V1 = P2V2 → V2 ≈ 3.9×5 ≈ 20 cm³.",
+      "steps": ["Compute water head ρgh ≈ 294 kPa", "Add atmospheric ~101 kPa", "Take ratio ~3.9", "Multiply 5 cm³ by 3.9"],
+      "fastStrategy": "Each 10 m water ≈ 1 atm; ~4 atm at 30 m → ~4× volume at surface." 
+    },
+    {
+      "id": "ps_fp_a1_030",
+      "question": "A circular viewport of radius 0.50 m is 10 m below sea water (ρ≈1030). Hydrostatic force on the window is closest to:",
+      "choices": {"A": "40 kN", "B": "60 kN", "C": "79 kN", "D": "100 kN"},
+      "answer": "C",
+      "explanation": "Pressure = ρgh ≈ 1030·9.8·10 ≈ 1.01×10^5 Pa. Area = πr^2 ≈ 0.785 m². Force ≈ 1.01×10^5 × 0.785 ≈ 7.9×10^4 N ≈ 79 kN.",
+      "steps": ["Compute pressure at 10 m", "Find area π(0.5)^2", "Multiply P×A", "Convert to kN"],
+      "fastStrategy": "P ≈ 0.1 MPa at 10 m; multiply by ~0.8 m² → ~8×10^4 N." 
+    },
+    {
+      "id": "ps_fp_a1_031",
+      "question": "A Venturi meter has 0.30 m inlet and 0.15 m throat. If ΔP = 8 kPa for water, the flow rate is closest to:",
+      "choices": {"A": "0.020 m³/s", "B": "0.050 m³/s", "C": "0.073 m³/s", "D": "0.100 m³/s"},
+      "answer": "C",
+      "explanation": "A1 ≈ 0.0707 m², A2 ≈ 0.0177 m², β = A2/A1 = 0.25. v2 = sqrt(2ΔP/(ρ(1-β²))) ≈ sqrt(16000/(1000·0.9375)) ≈ 4.1 m/s. Q = A2 v2 ≈ 0.0177·4.1 ≈ 0.073 m³/s.",
+      "steps": ["Find areas from diameters", "Compute beta = A2/A1", "Use v2 = sqrt(2ΔP/(ρ(1-β²)))", "Multiply by A2 for Q"],
+      "fastStrategy": "Throat area ~0.018; ΔP 8 kPa water → throat speed ~4 m/s → Q ≈ 0.07." 
+    },
+    {
+      "id": "ps_fp_a1_032",
+      "question": "For water (ρ=1000, μ=1.0×10^-3 Pa·s) flowing at 2.0 m/s in a 5 cm pipe, the Reynolds number is closest to:",
+      "choices": {"A": "2.0×10^3", "B": "2.0×10^4", "C": "1.0×10^5", "D": "2.0×10^5"},
+      "answer": "C",
+      "explanation": "Re = ρ v D / μ = 1000·2·0.05 / 0.001 = 100,000.",
+      "steps": ["Multiply ρ v D", "Divide by μ", "Get 1.0×10^5", "Select 1.0×10^5"],
+      "fastStrategy": "Rule: water Re ≈ 1e6·D(m)·v; here 1e6·0.05·2 ≈ 1e5." 
+    },
+    {
+      "id": "ps_fp_a1_033",
+      "question": "Darcy-Weisbach head loss: water, f = 0.02, length 50 m, diameter 0.10 m, velocity 3.0 m/s. Head loss is closest to:",
+      "choices": {"A": "1.5 m", "B": "3.0 m", "C": "4.6 m", "D": "9.2 m"},
+      "answer": "C",
+      "explanation": "h_f = f (L/D) (v^2 / 2g) = 0.02·(50/0.1)·(9 / 19.6) = 0.02·500·0.459 ≈ 4.6 m.",
+      "steps": ["Compute L/D = 500", "v^2/2g ≈ 9/19.6", "Multiply by f", "Get ≈4.6 m"],
+      "fastStrategy": "Use hf ≈ f·(L/D)·(v²/20); here 0.02·500·0.45 ≈ 4.5." 
+    },
+    {
+      "id": "ps_fp_a1_034",
+      "question": "Pump power to lift 0.50 m³/s of water by 15 m (neglect losses) is closest to:",
+      "choices": {"A": "15 kW", "B": "37 kW", "C": "74 kW", "D": "110 kW"},
+      "answer": "C",
+      "explanation": "P = ρ g Q H = 1000·9.8·0.50·15 ≈ 7.35×10^4 W ≈ 74 kW.",
+      "steps": ["Multiply ρg ≈ 9800", "Multiply by Q 0.50", "Multiply by head 15", "Convert to kW"],
+      "fastStrategy": "Rule: 10 kN/m³ × 0.5 × 15 ≈ 75 kW." 
+    },
+    {
+      "id": "ps_fp_a1_035",
+      "question": "Water bulk modulus ≈ 2.2 GPa. A 5 MPa pressure rise causes a volume decrease of about:",
+      "choices": {"A": "0.02%", "B": "0.23%", "C": "2.3%", "D": "5.0%"},
+      "answer": "B",
+      "explanation": "ΔV/V ≈ ΔP/K = 5×10^6 / 2.2×10^9 ≈ 0.00227 = 0.227%.",
+      "steps": ["Use ΔV/V = ΔP/K", "Divide 5e6 by 2.2e9", "Convert to percent", "Pick 0.23%"],
+      "fastStrategy": "5 MPa is ~1/440 of 2.2 GPa → ~0.23%." 
+    },
+    {
+      "id": "ps_fp_a1_036",
+      "question": "Air in a syringe is 30 mL at 1 atm. Compressed isothermally to 10 mL, the absolute pressure is about:",
+      "choices": {"A": "1 atm", "B": "2 atm", "C": "3 atm", "D": "4 atm"},
+      "answer": "C",
+      "explanation": "Boyle: P1V1 = P2V2 → P2 = P1·(V1/V2) = 1 atm·(30/10) = 3 atm.",
+      "steps": ["Apply P1V1=P2V2", "Compute ratio 30/10 = 3", "Multiply 1 atm by 3", "Get 3 atm"],
+      "fastStrategy": "Volume shrinks to 1/3 → pressure triples (isothermal ideal gas)." 
+    },
+    {
+      "id": "ps_fp_a1_037",
+      "question": "A point is 4 m below water overlain by 3 m of oil (ρ=800). Gauge pressure at the point is closest to:",
+      "choices": {"A": "39 kPa", "B": "49 kPa", "C": "62 kPa", "D": "79 kPa"},
+      "answer": "C",
+      "explanation": "Oil column: 800·9.8·3 ≈ 23.5 kPa; water column: 1000·9.8·4 ≈ 39.2 kPa. Sum ≈ 62.7 kPa.",
+      "steps": ["Compute oil pressure", "Compute water pressure", "Add", "Round to ~62 kPa"],
+      "fastStrategy": "Add 8 kPa per m of oil + 9.8 kPa per m of water → ~24 + 39 = 63 kPa." 
+    },
+    {
+      "id": "ps_fp_a1_038",
+      "question": "Water discharges from a 0.010 m² orifice under 2.0 m head with Cd = 0.62. Flow rate is closest to:",
+      "choices": {"A": "0.020 m³/s", "B": "0.039 m³/s", "C": "0.062 m³/s", "D": "0.100 m³/s"},
+      "answer": "B",
+      "explanation": "Ideal v = sqrt(2 g h) ≈ 6.26 m/s. Q = C_d A v ≈ 0.62·0.010·6.26 ≈ 0.039 m³/s.",
+      "steps": ["Compute v = sqrt(2gh)", "Multiply by area", "Apply discharge coefficient 0.62", "Get ~0.039"],
+      "fastStrategy": "Orifice: Q ≈ 0.62 A sqrt(2gh); here ~0.04 m³/s." 
+    },
+    {
+      "id": "ps_fp_a1_039",
+      "question": "Air (ρ≈1.2) at 60 kPa static flows 30 m/s. Stagnation pressure is closest to:",
+      "choices": {"A": "60.2 kPa", "B": "60.5 kPa", "C": "61.5 kPa", "D": "66.0 kPa"},
+      "answer": "B",
+      "explanation": "Dynamic pressure q = 0.5 ρ v^2 = 0.5·1.2·900 ≈ 540 Pa = 0.54 kPa. Total ≈ 60 + 0.54 ≈ 60.5 kPa.",
+      "steps": ["Compute dynamic pressure", "Convert to kPa", "Add to static 60", "Select ~60.5 kPa"],
+      "fastStrategy": "q ≈ 0.6 kPa at 30 m/s air; add to static." 
+    },
+    {
+      "id": "ps_fp_a1_040",
+      "question": "Specific weight γ of mercury (ρ≈13,600 kg/m³) is closest to:",
+      "choices": {"A": "62 kN/m³", "B": "98 kN/m³", "C": "133 kN/m³", "D": "1000 kN/m³"},
+      "answer": "C",
+      "explanation": "γ = ρ g ≈ 13,600·9.8 ≈ 133,000 N/m³ = 133 kN/m³.",
+      "steps": ["Multiply density by g", "Convert to kN/m³", "Get ~133", "Select 133"],
+      "fastStrategy": "Water is ~9.8 kN/m³; mercury ~13.6× → ~133 kN/m³." 
+    },
+    {
+      "id": "ps_fp_a1_041",
+      "question": "A Pitot tube in water shows a 1.2 m head difference. Flow speed is closest to:",
+      "choices": {"A": "3.5 m/s", "B": "4.9 m/s", "C": "6.0 m/s", "D": "7.5 m/s"},
+      "answer": "B",
+      "explanation": "Pitot gives v ≈ sqrt(2 g h) = sqrt(2·9.8·1.2) ≈ sqrt(23.5) ≈ 4.85 m/s.",
+      "steps": ["Apply v = sqrt(2gh)", "Use h = 1.2 m", "Compute sqrt(23.5)", "Select ~4.9 m/s"],
+      "fastStrategy": "Each meter of water head gives ~4.4 m/s; 1.2 m → ~4.9 m/s." 
+    },
+    {
+      "id": "ps_fp_a1_042",
+      "question": "A differential manometer uses fluid SG 1.5. A 0.25 m height difference indicates a pressure difference of about:",
+      "choices": {"A": "0.6 kPa", "B": "1.2 kPa", "C": "2.5 kPa", "D": "4.9 kPa"},
+      "answer": "B",
+      "explanation": "ΔP = (ρ_m - ρ_w) g h = (1500-1000)·9.8·0.25 ≈ 500·9.8·0.25 ≈ 1.23 kPa.",
+      "steps": ["Subtract densities", "Multiply by g and height", "Convert to kPa", "Pick ~1.2 kPa"],
+      "fastStrategy": "Use excess density (500 kg/m³) × g × 0.25 m → ~1.2 kPa." 
+    },
+    {
+      "id": "ps_fp_a1_043",
+      "question": "A pump delivers 18 kg/s of water. The volumetric flow rate is:",
+      "choices": {"A": "0.006 m³/s", "B": "0.018 m³/s", "C": "0.060 m³/s", "D": "0.18 m³/s"},
+      "answer": "B",
+      "explanation": "Q = ṁ / ρ = 18 / 1000 = 0.018 m³/s.",
+      "steps": ["Divide mass flow by density", "18 / 1000 = 0.018", "Units m³/s", "Select 0.018"],
+      "fastStrategy": "Water: move decimal three left when converting kg/s to m³/s." 
+    },
+    {
+      "id": "ps_fp_a1_044",
+      "question": "Water pressure of 200 kPa corresponds to a head of approximately:",
+      "choices": {"A": "10 m", "B": "15 m", "C": "20.4 m", "D": "30 m"},
+      "answer": "C",
+      "explanation": "h = P / (ρ g) = 200,000 / 9,810 ≈ 20.4 m.",
+      "steps": ["Divide pressure by ρg", "200,000 / 9810", "Get ~20.4", "Pick 20.4 m"],
+      "fastStrategy": "Use 10 kPa ≈ 1.02 m of water; 200 kPa ≈ 20 m." 
+    },
+    {
+      "id": "ps_fp_a1_045",
+      "question": "For water in a 2.0 cm diameter tube, what speed gives Re ≈ 2000? (ρ=1000, μ=1.0×10^-3)",
+      "choices": {"A": "0.05 m/s", "B": "0.10 m/s", "C": "0.50 m/s", "D": "1.0 m/s"},
+      "answer": "B",
+      "explanation": "v = Re μ /(ρ D) = 2000·0.001 /(1000·0.02) = 0.1 m/s.",
+      "steps": ["Plug into v = Re μ /(ρD)", "Compute numerator 2", "Divide by 20", "Get 0.1 m/s"],
+      "fastStrategy": "For water, Re ≈ 1e6·D·v; set to 2000 → v ≈ 2000/(1e6·0.02) ≈ 0.1." 
+    },
+    {
+      "id": "ps_fp_a1_046",
+      "question": "A 1.0 mm diameter sphere (ρ=2500) falls in water (ρ=1000, μ=1.0×10^-3) at low Re. Stokes terminal speed is closest to:",
+      "choices": {"A": "0.08 m/s", "B": "0.20 m/s", "C": "0.82 m/s", "D": "1.6 m/s"},
+      "answer": "C",
+      "explanation": "Stokes: v = [(ρ_s−ρ_f) g d^2] / (18 μ) = (1500·9.8·(1e-3)^2) /(18·1e-3) ≈ 0.0147/0.018 ≈ 0.82 m/s.",
+      "steps": ["Compute density difference 1500", "Multiply by g and d^2", "Divide by 18μ", "Get ~0.82 m/s"],
+      "fastStrategy": "Plug into Stokes; tiny sphere squared drops speed heavily." 
+    },
+    {
+      "id": "ps_fp_a1_047",
+      "question": "A fluid has density 880 kg/m³. Its specific gravity (water=1) is:",
+      "choices": {"A": "0.78", "B": "0.88", "C": "1.08", "D": "1.28"},
+      "answer": "B",
+      "explanation": "SG = ρ / ρ_water ≈ 880 / 1000 = 0.88.",
+      "steps": ["Divide density by 1000", "Get 0.88", "Pick 0.88", "Record as dimensionless"],
+      "fastStrategy": "Move decimal three left vs water density." 
+    },
+    {
+      "id": "ps_fp_a1_048",
+      "question": "A tank shows a vacuum (negative gauge) of -20 kPa. Atmospheric pressure is 101 kPa. Absolute pressure in the tank is:",
+      "choices": {"A": "20 kPa", "B": "81 kPa", "C": "101 kPa", "D": "121 kPa"},
+      "answer": "B",
+      "explanation": "Absolute = atmospheric + gauge = 101 + (-20) = 81 kPa.",
+      "steps": ["Add gauge to atmospheric", "101 - 20", "Get 81 kPa", "Select 81 kPa"],
+      "fastStrategy": "Vacuum reading subtracts from atmospheric to get absolute." 
+    },
+    {
+      "id": "ps_fp_a1_049",
+      "question": "In a hydraulic lift, a 3 cm² input piston supports a 120 cm² output piston. Applying 400 N on the small piston ideally lifts:",
+      "choices": {"A": "400 N", "B": "4,000 N", "C": "8,000 N", "D": "16,000 N"},
+      "answer": "D",
+      "explanation": "Force multiplies by area ratio. 120/3 = 40. Output ≈ 400·40 = 16,000 N.",
+      "steps": ["Compute area ratio 120/3 = 40", "Multiply input force by 40", "Get 16,000 N", "Choose 16,000 N"],
+      "fastStrategy": "Area ratio 40× → force 40× (ideal)." 
+    },
+    {
+      "id": "ps_fp_a1_050",
+      "question": "A water jet of 0.80 kg/s strikes a flat plate and stops. Jet speed is 25 m/s. Ideal force on the plate is:",
+      "choices": {"A": "10 N", "B": "20 N", "C": "40 N", "D": "80 N"},
+      "answer": "B",
+      "explanation": "Momentum flux F = ṁ v = 0.80·25 = 20 N (assuming full stop, normal impact).",
+      "steps": ["Use F = ṁ v", "Multiply 0.80 by 25", "Get 20", "Select 20 N"],
+      "fastStrategy": "Force equals mass flow times velocity change; here 0.8×25." 
+    }
+  ]
+}

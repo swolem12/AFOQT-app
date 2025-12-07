@@ -68,7 +68,6 @@ html {
     color: #00ffff;
     text-shadow: 0 0 3px rgba(0,0,0,0.7);
 }
-
 .graphLine {
     position: absolute;
     height: 2px;
@@ -76,6 +75,71 @@ html {
     transform-origin: left center;
 }
 
+/* Block Counting – isometric cubes */
+.bc-scene {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 10px;
+    background: radial-gradient(circle at 25% 20%, rgba(0, 255, 255, 0.08), rgba(0, 20, 40, 0.9));
+    border: 1px solid rgba(0, 255, 255, 0.35);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+}
+
+.bc-legend {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #c8e8ff;
+}
+
+.bc-legend-line { opacity: 0.85; }
+
+.bc-grid {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    min-height: 160px;
+}
+
+.bc-column {
+    position: absolute;
+    transform-origin: bottom center;
+    will-change: transform;
+}
+
+.bc-cube {
+    position: absolute;
+    width: 40px;
+    height: 24px;
+    background: linear-gradient(135deg, #22c55e, #4ade80);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.45);
+}
+
+.bc-cube::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 40px;
+    height: 28px;
+    background: linear-gradient(180deg, #15803d, #052e16);
+    transform-origin: top left;
+    transform: skewY(30deg);
+}
+
+.bc-cube::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 40px;
+    height: 28px;
+    background: linear-gradient(180deg, #16a34a, #052e16);
+    transform-origin: top left;
+    transform: skewX(45deg);
+}
 .graphPoint {
     position: absolute;
     width: 8px;
