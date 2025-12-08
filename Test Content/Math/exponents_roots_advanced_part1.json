@@ -1,0 +1,105 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "exponents_roots",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_er_a_001",
+      "question": "Simplify: (x³)⁴",
+      "choices": {
+        "A": "x⁷",
+        "B": "x¹²",
+        "C": "x¹³",
+        "D": "x³⁴",
+        "E": "4x³"
+      },
+      "answer": "B",
+      "explanation": "Using power rule (aᵐ)ⁿ = aᵐⁿ: (x³)⁴ = x^(3·4) = x¹².",
+      "steps": [
+        "1. Apply power rule: (aᵐ)ⁿ = aᵐⁿ.",
+        "2. Multiply exponents: 3 × 4 = 12.",
+        "3. Result: x¹²."
+      ],
+      "fastStrategy": "Power rule: (aᵐ)ⁿ = aᵐⁿ; multiply exponents."
+    },
+    {
+      "id": "mk_er_a_002",
+      "question": "Simplify: x⁵ · x⁻³",
+      "choices": {
+        "A": "x²",
+        "B": "x⁻¹⁵",
+        "C": "x⁸",
+        "D": "1/x²",
+        "E": "x⁻²"
+      },
+      "answer": "A",
+      "explanation": "Product rule: aᵐ · aⁿ = aᵐ⁺ⁿ. So x⁵ · x⁻³ = x^(5-3) = x².",
+      "steps": [
+        "1. Apply product rule: aᵐ · aⁿ = aᵐ⁺ⁿ.",
+        "2. Add exponents: 5 + (-3) = 2.",
+        "3. Result: x²."
+      ],
+      "fastStrategy": "Product rule: aᵐ · aⁿ = aᵐ⁺ⁿ; add exponents."
+    },
+    {
+      "id": "mk_er_a_003",
+      "question": "Simplify: √(16x⁴)",
+      "choices": {
+        "A": "4x²",
+        "B": "4x⁴",
+        "C": "16x²",
+        "D": "±4x²",
+        "E": "4|x²|"
+      },
+      "answer": "A",
+      "explanation": "√(16x⁴) = √16 · √(x⁴) = 4 · x² = 4x². (For principal square root, we take positive.)",
+      "steps": [
+        "1. Factor under radical: √(16x⁴) = √16 · √(x⁴).",
+        "2. Simplify √16 = 4.",
+        "3. Simplify √(x⁴) = x².",
+        "4. Result: 4x²."
+      ],
+      "fastStrategy": "Separate square root of product; even powers become half their exponent."
+    },
+    {
+      "id": "mk_er_a_004",
+      "question": "Simplify: (2³)⁰",
+      "choices": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "8",
+        "E": "undefined"
+      },
+      "answer": "B",
+      "explanation": "Any nonzero number to the power 0 equals 1. (2³)⁰ = 1.",
+      "steps": [
+        "1. Recall rule: a⁰ = 1 for any a ≠ 0.",
+        "2. 2³ = 8 ≠ 0.",
+        "3. So (2³)⁰ = 8⁰ = 1."
+      ],
+      "fastStrategy": "Zero exponent rule: a⁰ = 1 for a ≠ 0."
+    },
+    {
+      "id": "mk_er_a_005",
+      "question": "Simplify: √(x⁶/y²)",
+      "choices": {
+        "A": "x³/y",
+        "B": "x⁶/y²",
+        "C": "x³y",
+        "D": "x²/y²",
+        "E": "±x³/y"
+      },
+      "answer": "A",
+      "explanation": "√(x⁶/y²) = √(x⁶)/√(y²) = x³/y.",
+      "steps": [
+        "1. Apply quotient rule for radicals: √(a/b) = √a/√b.",
+        "2. √(x⁶) = x³.",
+        "3. √(y²) = y.",
+        "4. Result: x³/y."
+      ],
+      "fastStrategy": "For even exponent under square root, divide exponent by 2."
+    }
+  ]
+}

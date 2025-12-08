@@ -1,0 +1,108 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "geometry_basics",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_gb_a_001",
+      "question": "A rectangle has length 8 and width 5. What is its perimeter?",
+      "choices": {
+        "A": "13",
+        "B": "26",
+        "C": "40",
+        "D": "45",
+        "E": "80"
+      },
+      "answer": "B",
+      "explanation": "Perimeter = 2(length + width) = 2(8 + 5) = 2(13) = 26.",
+      "steps": [
+        "1. Recall perimeter formula: P = 2(l + w).",
+        "2. Substitute: P = 2(8 + 5).",
+        "3. Add: P = 2(13).",
+        "4. Multiply: P = 26."
+      ],
+      "fastStrategy": "Rectangle perimeter: P = 2l + 2w or P = 2(l + w)."
+    },
+    {
+      "id": "mk_gb_a_002",
+      "question": "A right triangle has legs of length 6 and 8. What is the length of the hypotenuse?",
+      "choices": {
+        "A": "7",
+        "B": "10",
+        "C": "11",
+        "D": "12",
+        "E": "14"
+      },
+      "answer": "B",
+      "explanation": "Pythagorean theorem: c² = a² + b² = 6² + 8² = 36 + 64 = 100, so c = 10.",
+      "steps": [
+        "1. Apply Pythagorean theorem: c² = a² + b².",
+        "2. Substitute: c² = 6² + 8².",
+        "3. Calculate: c² = 36 + 64 = 100.",
+        "4. Take square root: c = 10."
+      ],
+      "fastStrategy": "Recognize (6, 8, 10) as a Pythagorean triple."
+    },
+    {
+      "id": "mk_gb_a_003",
+      "question": "What is the area of a circle with radius 5?",
+      "choices": {
+        "A": "5π",
+        "B": "10π",
+        "C": "25π",
+        "D": "50π",
+        "E": "100π"
+      },
+      "answer": "C",
+      "explanation": "Area = πr² = π(5)² = 25π.",
+      "steps": [
+        "1. Recall area formula: A = πr².",
+        "2. Substitute r = 5: A = π(5)².",
+        "3. Calculate: A = 25π."
+      ],
+      "fastStrategy": "Circle area: A = πr²; circumference: C = 2πr."
+    },
+    {
+      "id": "mk_gb_a_004",
+      "question": "What is the sum of interior angles in a pentagon?",
+      "choices": {
+        "A": "360°",
+        "B": "540°",
+        "C": "720°",
+        "D": "900°",
+        "E": "1080°"
+      },
+      "answer": "B",
+      "explanation": "Sum of interior angles = (n - 2) × 180° where n is number of sides. For pentagon, n = 5: (5 - 2) × 180° = 3 × 180° = 540°.",
+      "steps": [
+        "1. Use formula: Sum = (n - 2) × 180°.",
+        "2. For pentagon: n = 5.",
+        "3. Calculate: (5 - 2) × 180° = 3 × 180°.",
+        "4. Result: 540°."
+      ],
+      "fastStrategy": "Interior angle sum: (n - 2) × 180° for n-sided polygon."
+    },
+    {
+      "id": "mk_gb_a_005",
+      "question": "If two triangles are congruent, which of the following is NOT necessarily true?",
+      "choices": {
+        "A": "They have equal areas",
+        "B": "Their corresponding angles are equal",
+        "C": "They have the same perimeter",
+        "D": "They have the same orientation",
+        "E": "Their corresponding sides are equal"
+      },
+      "answer": "D",
+      "explanation": "Congruent triangles have equal areas, angles, and sides, and same perimeter, but they may be rotated or reflected so orientation can differ.",
+      "steps": [
+        "1. Recall congruent definition: identical in shape and size.",
+        "2. Equal areas: true.",
+        "3. Equal angles: true.",
+        "4. Same perimeter: true.",
+        "5. Same orientation: false (can be rotated/reflected)."
+      ],
+      "fastStrategy": "Congruence preserves size and shape, but not orientation."
+    }
+  ]
+}

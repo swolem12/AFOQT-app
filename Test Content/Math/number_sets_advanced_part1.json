@@ -1,0 +1,84 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "number_sets",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_ns_a_001",
+      "question": "Which of the following is a rational number?",
+      "choices": {
+        "A": "√2",
+        "B": "π",
+        "C": "3/4",
+        "D": "√3",
+        "E": "φ (golden ratio)"
+      },
+      "answer": "C",
+      "explanation": "A rational number can be expressed as p/q where p and q are integers and q ≠ 0. 3/4 is rational. √2, π, √3, and φ are irrational.",
+      "steps": [
+        "1. Recall rational definition: p/q form with integers p, q.",
+        "2. Check each: A (irrational), B (irrational), C (3/4, rational), D (irrational), E (irrational).",
+        "3. C is the only rational number."
+      ],
+      "fastStrategy": "Rational: can be written as fraction; irrational: non-repeating decimal."
+    },
+    {
+      "id": "mk_ns_a_002",
+      "question": "Which number is an integer but not a whole number?",
+      "choices": {
+        "A": "0",
+        "B": "3",
+        "C": "-5",
+        "D": "7.5",
+        "E": "1/2"
+      },
+      "answer": "C",
+      "explanation": "Whole numbers are {0, 1, 2, 3, ...}. Integers include negative numbers: {..., -2, -1, 0, 1, 2, ...}. -5 is an integer but not a whole number.",
+      "steps": [
+        "1. Whole numbers: {0, 1, 2, 3, ...}.",
+        "2. Integers: {..., -2, -1, 0, 1, 2, ...}.",
+        "3. -5 is integer but negative, so not whole."
+      ],
+      "fastStrategy": "Whole numbers start at 0; integers include negatives."
+    },
+    {
+      "id": "mk_ns_a_003",
+      "question": "Classify √16:",
+      "choices": {
+        "A": "Irrational",
+        "B": "Not a real number",
+        "C": "Rational",
+        "D": "Whole number",
+        "E": "Imaginary"
+      },
+      "answer": "D",
+      "explanation": "√16 = 4, which is a whole number (and also rational and integer).",
+      "steps": [
+        "1. Calculate √16 = 4.",
+        "2. 4 is a whole number (positive integer ≥ 0).",
+        "3. Most specific classification: whole number."
+      ],
+      "fastStrategy": "Perfect squares are rational; if result is positive integer, it's whole."
+    },
+    {
+      "id": "mk_ns_a_004",
+      "question": "What is the relationship between natural numbers and whole numbers?",
+      "choices": {
+        "A": "They are identical",
+        "B": "Natural numbers include 0; whole numbers don't",
+        "C": "Whole numbers include 0; natural numbers don't",
+        "D": "Whole numbers include negatives",
+        "E": "They are unrelated"
+      },
+      "answer": "C",
+      "explanation": "Natural numbers (depending on convention): {1, 2, 3, ...}. Whole numbers: {0, 1, 2, 3, ...}. Whole includes 0; natural doesn't.",
+      "steps": [
+        "1. Define natural: {1, 2, 3, ...}.",
+        "2. Define whole: {0, 1, 2, 3, ...}.",
+        "3. Whole includes 0; natural doesn't."
+      ],
+      "fastStrategy": "Whole = natural + zero."
+    }
+  ]
+}

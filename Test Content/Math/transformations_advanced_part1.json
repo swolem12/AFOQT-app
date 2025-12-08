@@ -1,0 +1,85 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "transformations",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_trans_a_001",
+      "question": "What is the image of point (2, 3) after a translation 4 units right and 2 units down?",
+      "choices": {
+        "A": "(-2, 1)",
+        "B": "(2, -1)",
+        "C": "(6, 1)",
+        "D": "(4, 2)",
+        "E": "(-4, -2)"
+      },
+      "answer": "C",
+      "explanation": "Translation: add to x-coordinate (+4), add to y-coordinate (-2). New point: (2 + 4, 3 - 2) = (6, 1).",
+      "steps": [
+        "1. Original point: (2, 3).",
+        "2. Translate right 4: x-coord becomes 2 + 4 = 6.",
+        "3. Translate down 2: y-coord becomes 3 - 2 = 1.",
+        "4. Image: (6, 1)."
+      ],
+      "fastStrategy": "Translation: (x, y) → (x + a, y + b)."
+    },
+    {
+      "id": "mk_trans_a_002",
+      "question": "What is the image of point (3, -2) after a reflection across the x-axis?",
+      "choices": {
+        "A": "(-3, -2)",
+        "B": "(-3, 2)",
+        "C": "(3, 2)",
+        "D": "(2, -3)",
+        "E": "(-2, 3)"
+      },
+      "answer": "C",
+      "explanation": "Reflection across x-axis: (x, y) → (x, -y). So (3, -2) → (3, 2).",
+      "steps": [
+        "1. Reflection across x-axis flips y-coordinate.",
+        "2. x stays same: 3.",
+        "3. y becomes opposite: -(-2) = 2.",
+        "4. Image: (3, 2)."
+      ],
+      "fastStrategy": "Reflection across x-axis: (x, y) → (x, -y). Across y-axis: (x, y) → (-x, y)."
+    },
+    {
+      "id": "mk_trans_a_003",
+      "question": "What is the image of point (1, 2) after a 90° counterclockwise rotation about the origin?",
+      "choices": {
+        "A": "(1, 2)",
+        "B": "(2, 1)",
+        "C": "(-2, 1)",
+        "D": "(-1, -2)",
+        "E": "(2, -1)"
+      },
+      "answer": "C",
+      "explanation": "90° counterclockwise: (x, y) → (-y, x). So (1, 2) → (-2, 1).",
+      "steps": [
+        "1. 90° counterclockwise rotation: (x, y) → (-y, x).",
+        "2. Apply: (1, 2) → (-2, 1)."
+      ],
+      "fastStrategy": "90° CCW: (x, y) → (-y, x). 180°: (x, y) → (-x, -y). 90° CW: (x, y) → (y, -x)."
+    },
+    {
+      "id": "mk_trans_a_004",
+      "question": "What transformation maps (2, 1) to (4, 2)?",
+      "choices": {
+        "A": "Translation 2 right, 1 up",
+        "B": "Dilation by factor 2 from origin",
+        "C": "Rotation 90° about origin",
+        "D": "Reflection across x-axis",
+        "E": "Translation 1 right, 2 up"
+      },
+      "answer": "B",
+      "explanation": "Dilation by factor k: (x, y) → (kx, ky). Check: (2, 1) × 2 = (4, 2). ✓",
+      "steps": [
+        "1. Compare coordinates: (2, 1) → (4, 2).",
+        "2. Check if dilation: 4 = 2 × 2 ✓, 2 = 1 × 2 ✓",
+        "3. Dilation factor = 2."
+      ],
+      "fastStrategy": "Dilation: all coordinates multiply by same factor."
+    }
+  ]
+}

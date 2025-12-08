@@ -1,0 +1,85 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "graph_interpretation",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_gi_a_001",
+      "question": "A line graph shows sales over 5 days. The graph increases from day 1 ($100) to day 3 ($300), then decreases to day 5 ($150). What is the average daily sales?",
+      "choices": {
+        "A": "$150",
+        "B": "$200",
+        "C": "$250",
+        "D": "$300",
+        "E": "$350"
+      },
+      "answer": "B",
+      "explanation": "To find average, sum all sales and divide by number of days. Sum = 100 + (increasing to 300) + (decreasing to 150). Assuming linear changes: day 1=$100, day 2=$200, day 3=$300, day 4=$225, day 5=$150. Sum = 100+200+300+225+150 = 975. Average = 975/5 = 195 ≈ $200.",
+      "steps": [
+        "1. Identify all data points from the graph.",
+        "2. Estimate intermediate values if needed.",
+        "3. Sum all values.",
+        "4. Divide by number of data points."
+      ],
+      "fastStrategy": "Average = sum of all values / number of values."
+    },
+    {
+      "id": "mk_gi_a_002",
+      "question": "A bar graph shows annual rainfall for 4 cities: City A (40 in), City B (60 in), City C (50 in), City D (30 in). Which city has 50% more rainfall than City D?",
+      "choices": {
+        "A": "City A",
+        "B": "City B",
+        "C": "City C",
+        "D": "All of the above",
+        "E": "None"
+      },
+      "answer": "C",
+      "explanation": "50% more than City D: 30 + (0.5 × 30) = 30 + 15 = 45 in. City C has 50 in, which is closest and exceeds 45.",
+      "steps": [
+        "1. Find 50% more than City D: 30 × 1.5 = 45 in.",
+        "2. Compare all cities: A=40, B=60, C=50, D=30.",
+        "3. Which equals or exceeds 45? C (50 in) is the best fit."
+      ],
+      "fastStrategy": "Percent increase: original × (1 + percentage as decimal)."
+    },
+    {
+      "id": "mk_gi_a_003",
+      "question": "A pie chart shows budget allocation: Housing 40%, Food 25%, Transportation 20%, Other 15%. If total budget is $1000, how much is allocated to Housing and Food combined?",
+      "choices": {
+        "A": "$400",
+        "B": "$650",
+        "C": "$750",
+        "D": "$850",
+        "E": "$950"
+      },
+      "answer": "B",
+      "explanation": "Housing + Food = 40% + 25% = 65% of $1000 = 0.65 × $1000 = $650.",
+      "steps": [
+        "1. Identify percentages: Housing 40%, Food 25%.",
+        "2. Add: 40% + 25% = 65%.",
+        "3. Calculate: 65% of $1000 = 0.65 × $1000 = $650."
+      ],
+      "fastStrategy": "Percent of total: multiply decimal form of percent by total."
+    },
+    {
+      "id": "mk_gi_a_004",
+      "question": "On a scatter plot, as x increases from 0 to 10, y increases from 5 to 25. What is the slope?",
+      "choices": {
+        "A": "0.5",
+        "B": "1",
+        "C": "2",
+        "D": "3",
+        "E": "5"
+      },
+      "answer": "C",
+      "explanation": "Slope = (y₂ - y₁)/(x₂ - x₁) = (25 - 5)/(10 - 0) = 20/10 = 2.",
+      "steps": [
+        "1. Identify points: (0, 5) and (10, 25).",
+        "2. Apply slope formula: m = (25 - 5)/(10 - 0).",
+        "3. Simplify: m = 20/10 = 2."
+      ],
+      "fastStrategy": "Slope from two points: rise over run."
+    }
+  ]
+}

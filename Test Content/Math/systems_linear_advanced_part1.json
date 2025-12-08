@@ -1,0 +1,87 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "systems_linear",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_sys_a_001",
+      "question": "Solve: x + y = 7 and x - y = 1",
+      "choices": {
+        "A": "x = 3, y = 4",
+        "B": "x = 4, y = 3",
+        "C": "x = 5, y = 2",
+        "D": "x = 2, y = 5",
+        "E": "No solution"
+      },
+      "answer": "B",
+      "explanation": "Add equations: (x + y) + (x - y) = 7 + 1 ⇒ 2x = 8 ⇒ x = 4. Substitute: 4 + y = 7 ⇒ y = 3.",
+      "steps": [
+        "1. Add equations to eliminate y: 2x = 8.",
+        "2. Solve: x = 4.",
+        "3. Substitute in first: 4 + y = 7.",
+        "4. Solve: y = 3."
+      ],
+      "fastStrategy": "Elimination method: add/subtract to eliminate a variable."
+    },
+    {
+      "id": "mk_sys_a_002",
+      "question": "Solve: y = 2x + 1 and y = 3x - 2",
+      "choices": {
+        "A": "x = 1, y = 3",
+        "B": "x = 2, y = 5",
+        "C": "x = 3, y = 7",
+        "D": "x = -1, y = -1",
+        "E": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Since both equal y: 2x + 1 = 3x - 2 ⇒ 1 + 2 = 3x - 2x ⇒ 3 = x. Then y = 2(3) + 1 = 7.",
+      "steps": [
+        "1. Set equations equal: 2x + 1 = 3x - 2.",
+        "2. Rearrange: 3 = x.",
+        "3. Substitute: y = 2(3) + 1 = 7.",
+        "4. Solution: (3, 7)."
+      ],
+      "fastStrategy": "Substitution method when y is isolated."
+    },
+    {
+      "id": "mk_sys_a_003",
+      "question": "How many solutions does the system have? x + y = 5 and 2x + 2y = 10",
+      "choices": {
+        "A": "0 (no solution)",
+        "B": "1 (unique solution)",
+        "C": "Infinite (dependent equations)",
+        "D": "2 (two solutions)",
+        "E": "Cannot be determined"
+      },
+      "answer": "C",
+      "explanation": "Second equation is 2 times the first. They represent the same line, so infinite solutions.",
+      "steps": [
+        "1. Compare: 2x + 2y = 10 is 2(x + y) = 2(5).",
+        "2. Simplify: 2x + 2y = 10 is same as x + y = 5.",
+        "3. Same equation = same line = infinite solutions."
+      ],
+      "fastStrategy": "Dependent equations: one is multiple of other → infinite solutions."
+    },
+    {
+      "id": "mk_sys_a_004",
+      "question": "Solve: x + 2y = 8 and 2x + 4y = 12",
+      "choices": {
+        "A": "x = 2, y = 3",
+        "B": "x = 4, y = 2",
+        "C": "No solution (parallel lines)",
+        "D": "Infinite solutions",
+        "E": "x = 0, y = 4"
+      },
+      "answer": "C",
+      "explanation": "From first: x = 8 - 2y. Substitute: 2(8 - 2y) + 4y = 12 ⇒ 16 - 4y + 4y = 12 ⇒ 16 = 12 (false). Inconsistent system.",
+      "steps": [
+        "1. Use substitution or elimination.",
+        "2. Multiply first by 2: 2x + 4y = 16.",
+        "3. Compare with second: 2x + 4y = 12.",
+        "4. 16 ≠ 12, contradiction = no solution."
+      ],
+      "fastStrategy": "Contradiction (false statement) → no solution (parallel lines)."
+    }
+  ]
+}

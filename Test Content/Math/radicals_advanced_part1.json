@@ -1,0 +1,85 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "radicals",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_rad_a_001",
+      "question": "Simplify: √(12)",
+      "choices": {
+        "A": "2√3",
+        "B": "3√4",
+        "C": "4√3",
+        "D": "2√6",
+        "E": "√12 (cannot simplify)"
+      },
+      "answer": "A",
+      "explanation": "12 = 4 × 3. √12 = √(4 × 3) = √4 × √3 = 2√3.",
+      "steps": [
+        "1. Factor: 12 = 4 × 3.",
+        "2. Separate: √12 = √4 × √3.",
+        "3. Simplify: 2√3."
+      ],
+      "fastStrategy": "Extract perfect squares from under the radical."
+    },
+    {
+      "id": "mk_rad_a_002",
+      "question": "Simplify: √(8) + √(18)",
+      "choices": {
+        "A": "5√2",
+        "B": "5√5",
+        "C": "√26",
+        "D": "2√10",
+        "E": "√8 + √18 (cannot simplify)"
+      },
+      "answer": "A",
+      "explanation": "√8 = 2√2 and √18 = 3√2. Sum: 2√2 + 3√2 = 5√2.",
+      "steps": [
+        "1. Simplify √8: 8 = 4 × 2, so √8 = 2√2.",
+        "2. Simplify √18: 18 = 9 × 2, so √18 = 3√2.",
+        "3. Add like terms: 2√2 + 3√2 = 5√2."
+      ],
+      "fastStrategy": "Simplify each radical first; combine like radicals."
+    },
+    {
+      "id": "mk_rad_a_003",
+      "question": "Simplify: √(x⁶)",
+      "choices": {
+        "A": "x³",
+        "B": "x²",
+        "C": "x⁶",
+        "D": "|x³|",
+        "E": "x^(1/2)"
+      },
+      "answer": "A",
+      "explanation": "√(x⁶) = x^(6/2) = x³.",
+      "steps": [
+        "1. Apply radical rule: √(a^n) = a^(n/2).",
+        "2. 6/2 = 3.",
+        "3. Result: x³."
+      ],
+      "fastStrategy": "For √(x^n), divide exponent by 2."
+    },
+    {
+      "id": "mk_rad_a_004",
+      "question": "Rationalize: 1/√2",
+      "choices": {
+        "A": "√2/2",
+        "B": "1/2",
+        "C": "√2",
+        "D": "2/√2",
+        "E": "√2/√2"
+      },
+      "answer": "A",
+      "explanation": "Multiply by √2/√2: (1/√2) × (√2/√2) = √2/2.",
+      "steps": [
+        "1. Multiply by √2/√2.",
+        "2. Numerator: 1 × √2 = √2.",
+        "3. Denominator: √2 × √2 = 2.",
+        "4. Result: √2/2."
+      ],
+      "fastStrategy": "Rationalize by multiplying by conjugate or same radical."
+    }
+  ]
+}

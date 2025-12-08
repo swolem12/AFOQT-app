@@ -1,0 +1,88 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "quadratic_equations",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_qe_a_001",
+      "question": "Solve: x² - 5x + 6 = 0",
+      "choices": {
+        "A": "x = 2 or x = 3",
+        "B": "x = 1 or x = 6",
+        "C": "x = -2 or x = -3",
+        "D": "x = 2 or x = -3",
+        "E": "No real solution"
+      },
+      "answer": "A",
+      "explanation": "Factor: (x - 2)(x - 3) = 0. So x = 2 or x = 3.",
+      "steps": [
+        "1. Identify a = 1, b = -5, c = 6.",
+        "2. Find factors of 6 that sum to -5: -2 and -3.",
+        "3. Factor: (x - 2)(x - 3) = 0.",
+        "4. Solutions: x = 2 or x = 3."
+      ],
+      "fastStrategy": "Try factoring first; if it works, set each factor to zero."
+    },
+    {
+      "id": "mk_qe_a_002",
+      "question": "Solve: 2x² + x - 1 = 0",
+      "choices": {
+        "A": "x = 1 or x = -2",
+        "B": "x = 1/2 or x = -1",
+        "C": "x = -1 or x = 2",
+        "D": "x = 2 or x = 1",
+        "E": "No real solution"
+      },
+      "answer": "B",
+      "explanation": "Factor: (2x - 1)(x + 1) = 0. So 2x - 1 = 0 (x = 1/2) or x + 1 = 0 (x = -1).",
+      "steps": [
+        "1. Use AC method: a = 2, c = -1, ac = -2.",
+        "2. Factors of -2 summing to 1: 2 and -1.",
+        "3. Rewrite: 2x² + 2x - x - 1 = 0.",
+        "4. Factor: 2x(x + 1) - 1(x + 1) = (2x - 1)(x + 1) = 0.",
+        "5. Solutions: x = 1/2 or x = -1."
+      ],
+      "fastStrategy": "AC method for harder quadratics."
+    },
+    {
+      "id": "mk_qe_a_003",
+      "question": "Solve using quadratic formula: x² + 2x - 3 = 0",
+      "choices": {
+        "A": "x = 1 or x = -3",
+        "B": "x = -1 or x = 3",
+        "C": "x = 2 or x = -2",
+        "D": "No real solution",
+        "E": "Infinite solutions"
+      },
+      "answer": "A",
+      "explanation": "Use quadratic formula: x = (-b ± √(b² - 4ac)) / 2a. With a = 1, b = 2, c = -3: x = (-2 ± √(4 + 12)) / 2 = (-2 ± 4) / 2. So x = 1 or x = -3.",
+      "steps": [
+        "1. Apply formula: x = (-b ± √(b² - 4ac)) / 2a.",
+        "2. Calculate discriminant: 2² - 4(1)(-3) = 4 + 12 = 16.",
+        "3. √16 = 4.",
+        "4. x = (-2 + 4)/2 = 1 or x = (-2 - 4)/2 = -3."
+      ],
+      "fastStrategy": "Quadratic formula works for any quadratic."
+    },
+    {
+      "id": "mk_qe_a_004",
+      "question": "How many real solutions does x² + 4 = 0 have?",
+      "choices": {
+        "A": "0 (no real solutions)",
+        "B": "1 (one repeated root)",
+        "C": "2 (two distinct roots)",
+        "D": "Infinite",
+        "E": "Cannot be determined"
+      },
+      "answer": "A",
+      "explanation": "x² + 4 = 0 ⇒ x² = -4. No real number squared equals -4, so no real solutions.",
+      "steps": [
+        "1. Rearrange: x² = -4.",
+        "2. Real numbers squared are always ≥ 0.",
+        "3. -4 < 0, so no real solution."
+      ],
+      "fastStrategy": "Discriminant: b² - 4ac determines number of real solutions."
+    }
+  ]
+}

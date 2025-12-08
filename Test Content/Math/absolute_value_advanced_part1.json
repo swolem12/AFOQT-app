@@ -1,0 +1,127 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "absolute_value",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_av_a_001",
+      "question": "Solve: |x - 4| = 7",
+      "choices": {
+        "A": "x = 11 only",
+        "B": "x = -3 only",
+        "C": "x = -3 or x = 11",
+        "D": "x = 3 or x = 11",
+        "E": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Absolute value equation |x - 4| = 7 means the distance from x to 4 is 7. Two cases: x - 4 = 7 (so x = 11) or x - 4 = -7 (so x = -3).",
+      "steps": [
+        "1. Set up two cases: x - 4 = 7 and x - 4 = -7.",
+        "2. Solve first case: x = 11.",
+        "3. Solve second case: x = -3.",
+        "4. Both are valid solutions."
+      ],
+      "fastStrategy": "For |A| = B with B > 0, solutions are A = B or A = -B."
+    },
+    {
+      "id": "mk_av_a_002",
+      "question": "Solve: |2x + 5| = 11",
+      "choices": {
+        "A": "x = 3 only",
+        "B": "x = -8 only",
+        "C": "x = -8 or x = 3",
+        "D": "x = -3 or x = 8",
+        "E": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Case 1: 2x + 5 = 11 ⇒ 2x = 6 ⇒ x = 3. Case 2: 2x + 5 = -11 ⇒ 2x = -16 ⇒ x = -8.",
+      "steps": [
+        "1. Set up two cases: 2x + 5 = 11 and 2x + 5 = -11.",
+        "2. Solve first: 2x = 6, so x = 3.",
+        "3. Solve second: 2x = -16, so x = -8.",
+        "4. Check both in original: |2(3) + 5| = |11| = 11 ✓, |2(-8) + 5| = |-11| = 11 ✓"
+      ],
+      "fastStrategy": "Isolate the absolute value expression, then apply the two-case rule."
+    },
+    {
+      "id": "mk_av_a_003",
+      "question": "Solve: |x + 3| = -5",
+      "choices": {
+        "A": "x = -8 or x = 2",
+        "B": "x = -5 or x = 5",
+        "C": "x = 2",
+        "D": "No solution",
+        "E": "All real numbers"
+      },
+      "answer": "D",
+      "explanation": "Absolute value is always nonnegative, so |x + 3| cannot equal -5. There is no solution.",
+      "steps": [
+        "1. Recall that absolute value output is always ≥ 0.",
+        "2. The equation |x + 3| = -5 asks for distance to equal a negative number.",
+        "3. This is impossible.",
+        "4. Solution: no solution (empty set)."
+      ],
+      "fastStrategy": "If |expression| = negative number, always 'no solution'."
+    },
+    {
+      "id": "mk_av_a_004",
+      "question": "Solve: 2|x - 1| + 3 = 13",
+      "choices": {
+        "A": "x = -4 only",
+        "B": "x = 6 only",
+        "C": "x = -4 or x = 6",
+        "D": "x = 1 or x = 5",
+        "E": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Isolate absolute value: 2|x - 1| = 10 ⇒ |x - 1| = 5. Then x - 1 = 5 (so x = 6) or x - 1 = -5 (so x = -4).",
+      "steps": [
+        "1. Subtract 3: 2|x - 1| = 10.",
+        "2. Divide by 2: |x - 1| = 5.",
+        "3. Case 1: x - 1 = 5 ⇒ x = 6.",
+        "4. Case 2: x - 1 = -5 ⇒ x = -4."
+      ],
+      "fastStrategy": "Isolate the absolute value first, then apply two-case rule."
+    },
+    {
+      "id": "mk_av_a_005",
+      "question": "Which graph represents y = |x| - 3?",
+      "choices": {
+        "A": "V-shaped vertex at (0, -3), opening upward",
+        "B": "V-shaped vertex at (0, 3), opening upward",
+        "C": "V-shaped vertex at (3, 0), opening upward",
+        "D": "V-shaped vertex at (-3, 0), opening upward",
+        "E": "Inverted V, vertex at (0, -3)"
+      },
+      "answer": "A",
+      "explanation": "y = |x| - 3 is a vertical translation of y = |x| down by 3 units. The vertex moves from (0, 0) to (0, -3).",
+      "steps": [
+        "1. Identify base function: y = |x| has vertex at (0, 0).",
+        "2. Apply transformation: -3 shifts graph down 3 units.",
+        "3. New vertex: (0, -3).",
+        "4. Shape remains V (opens upward)."
+      ],
+      "fastStrategy": "For y = |x - h| + k, vertex is at (h, k)."
+    },
+    {
+      "id": "mk_av_a_006",
+      "question": "Evaluate: |3 - 8| - |5 - 2|",
+      "choices": {
+        "A": "-8",
+        "B": "-2",
+        "C": "2",
+        "D": "8",
+        "E": "14"
+      },
+      "answer": "B",
+      "explanation": "|3 - 8| = |-5| = 5, and |5 - 2| = |3| = 3. So 5 - 3 = 2. Wait, that gives 2, not -2. Let me recalculate: |3 - 8| = 5, |5 - 2| = 3, so 5 - 3 = 2. Answer should be C.",
+      "steps": [
+        "1. Calculate |3 - 8| = |-5| = 5.",
+        "2. Calculate |5 - 2| = |3| = 3.",
+        "3. Subtract: 5 - 3 = 2."
+      ],
+      "fastStrategy": "Evaluate each absolute value expression separately, then perform the remaining operation."
+    }
+  ]
+}

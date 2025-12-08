@@ -1,0 +1,88 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "order_of_operations",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_oop_a_001",
+      "question": "Evaluate: 10 - 3 × 2 + 4",
+      "choices": {
+        "A": "8",
+        "B": "12",
+        "C": "14",
+        "D": "20",
+        "E": "28"
+      },
+      "answer": "A",
+      "explanation": "Follow order of operations (PEMDAS): 10 - 3 × 2 + 4 = 10 - 6 + 4 = 4 + 4 = 8.",
+      "steps": [
+        "1. Multiply first: 3 × 2 = 6.",
+        "2. Expression becomes: 10 - 6 + 4.",
+        "3. Subtract left to right: 10 - 6 = 4.",
+        "4. Add: 4 + 4 = 8."
+      ],
+      "fastStrategy": "PEMDAS: Parentheses, Exponents, Multiply/Divide (left to right), Add/Subtract (left to right)."
+    },
+    {
+      "id": "mk_oop_a_002",
+      "question": "Evaluate: 2³ - 3 + 5 × 2",
+      "choices": {
+        "A": "5",
+        "B": "12",
+        "C": "15",
+        "D": "19",
+        "E": "21"
+      },
+      "answer": "C",
+      "explanation": "2³ = 8. 5 × 2 = 10. Then 8 - 3 + 10 = 15.",
+      "steps": [
+        "1. Evaluate exponent: 2³ = 8.",
+        "2. Multiply: 5 × 2 = 10.",
+        "3. Expression: 8 - 3 + 10.",
+        "4. Left to right: 8 - 3 = 5.",
+        "5. Add: 5 + 10 = 15."
+      ],
+      "fastStrategy": "Exponents before multiplication/division."
+    },
+    {
+      "id": "mk_oop_a_003",
+      "question": "Evaluate: (6 + 2) × 3 - 4",
+      "choices": {
+        "A": "8",
+        "B": "14",
+        "C": "20",
+        "D": "24",
+        "E": "26"
+      },
+      "answer": "C",
+      "explanation": "Parentheses first: 6 + 2 = 8. Then 8 × 3 = 24. Finally 24 - 4 = 20.",
+      "steps": [
+        "1. Parentheses: 6 + 2 = 8.",
+        "2. Multiply: 8 × 3 = 24.",
+        "3. Subtract: 24 - 4 = 20."
+      ],
+      "fastStrategy": "Always do parentheses first."
+    },
+    {
+      "id": "mk_oop_a_004",
+      "question": "Evaluate: 20 ÷ 4 + 3 × 2 - 1",
+      "choices": {
+        "A": "5",
+        "B": "8",
+        "C": "10",
+        "D": "12",
+        "E": "15"
+      },
+      "answer": "C",
+      "explanation": "Divide: 20 ÷ 4 = 5. Multiply: 3 × 2 = 6. Then 5 + 6 - 1 = 10.",
+      "steps": [
+        "1. Divide: 20 ÷ 4 = 5.",
+        "2. Multiply: 3 × 2 = 6.",
+        "3. Add/subtract left to right: 5 + 6 = 11.",
+        "4. Subtract: 11 - 1 = 10."
+      ],
+      "fastStrategy": "Multiply and divide (left to right) before add and subtract."
+    }
+  ]
+}

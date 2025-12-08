@@ -1,0 +1,109 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "distributive_foil",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_df_a_001",
+      "question": "Expand: (2x + 3)(x + 4)",
+      "choices": {
+        "A": "2x² + 12",
+        "B": "2x² + 11x + 12",
+        "C": "2x² + 8x + 12",
+        "D": "x² + 11x + 12",
+        "E": "2x² + 14x + 12"
+      },
+      "answer": "B",
+      "explanation": "Using FOIL: First 2x·x = 2x², Outer 2x·4 = 8x, Inner 3·x = 3x, Last 3·4 = 12. Sum: 2x² + 8x + 3x + 12 = 2x² + 11x + 12.",
+      "steps": [
+        "1. First: 2x · x = 2x².",
+        "2. Outer: 2x · 4 = 8x.",
+        "3. Inner: 3 · x = 3x.",
+        "4. Last: 3 · 4 = 12.",
+        "5. Combine: 2x² + 8x + 3x + 12 = 2x² + 11x + 12."
+      ],
+      "fastStrategy": "FOIL: multiply First, Outer, Inner, Last terms, then combine like terms."
+    },
+    {
+      "id": "mk_df_a_002",
+      "question": "Expand: (x - 5)²",
+      "choices": {
+        "A": "x² - 25",
+        "B": "x² - 10x + 25",
+        "C": "x² - 10x - 25",
+        "D": "x² + 10x + 25",
+        "E": "x² - 5x + 25"
+      },
+      "answer": "B",
+      "explanation": "(x - 5)² = (x - 5)(x - 5) = x² - 5x - 5x + 25 = x² - 10x + 25. Or use pattern (a - b)² = a² - 2ab + b².",
+      "steps": [
+        "1. Rewrite as (x - 5)(x - 5).",
+        "2. Apply FOIL: x² - 5x - 5x + 25.",
+        "3. Combine: x² - 10x + 25.",
+        "4. Or use (a - b)² = a² - 2ab + b²: 1² - 2(1)(5) + 5² = x² - 10x + 25."
+      ],
+      "fastStrategy": "Perfect square pattern: (a - b)² = a² - 2ab + b²."
+    },
+    {
+      "id": "mk_df_a_003",
+      "question": "Expand: (2x - 3)(2x + 3)",
+      "choices": {
+        "A": "4x² - 9",
+        "B": "4x² + 9",
+        "C": "4x² - 6x - 9",
+        "D": "4x² - 12x + 9",
+        "E": "4x² - 6"
+      },
+      "answer": "A",
+      "explanation": "This is a difference of squares: (a - b)(a + b) = a² - b². Here, a = 2x, b = 3, so (2x)² - 3² = 4x² - 9.",
+      "steps": [
+        "1. Recognize pattern (a - b)(a + b) = a² - b².",
+        "2. Identify a = 2x, b = 3.",
+        "3. Calculate: (2x)² - 3² = 4x² - 9."
+      ],
+      "fastStrategy": "Difference of squares: (a - b)(a + b) = a² - b²; middle terms cancel."
+    },
+    {
+      "id": "mk_df_a_004",
+      "question": "Simplify: 3(x + 2) - 2(x - 1)",
+      "choices": {
+        "A": "x + 4",
+        "B": "x + 8",
+        "C": "2x + 4",
+        "D": "2x + 1",
+        "E": "5x + 4"
+      },
+      "answer": "B",
+      "explanation": "Distribute: 3x + 6 - 2x + 2. Combine: 3x - 2x + 6 + 2 = x + 8.",
+      "steps": [
+        "1. Distribute 3: 3x + 6.",
+        "2. Distribute -2: -2x + 2.",
+        "3. Combine x terms: 3x - 2x = x.",
+        "4. Combine constants: 6 + 2 = 8.",
+        "5. Result: x + 8."
+      ],
+      "fastStrategy": "Distribute each coefficient to all terms in parentheses; combine like terms."
+    },
+    {
+      "id": "mk_df_a_005",
+      "question": "Expand: (x + 2)³",
+      "choices": {
+        "A": "x³ + 6x² + 12x + 8",
+        "B": "x³ + 8",
+        "C": "x³ + 6x + 8",
+        "D": "x³ + 2x² + 4x + 8",
+        "E": "x³ + 3x² + 3x + 1"
+      },
+      "answer": "A",
+      "explanation": "(x + 2)³ = (x + 2)(x + 2)(x + 2). First, (x + 2)² = x² + 4x + 4. Then (x² + 4x + 4)(x + 2) = x³ + 2x² + 4x² + 8x + 4x + 8 = x³ + 6x² + 12x + 8.",
+      "steps": [
+        "1. Start with (x + 2)²= x² + 4x + 4.",
+        "2. Multiply by (x + 2): (x² + 4x + 4)(x + 2).",
+        "3. Distribute: x³ + 2x² + 4x² + 8x + 4x + 8.",
+        "4. Combine: x³ + 6x² + 12x + 8."
+      ],
+      "fastStrategy": "For (a + b)³: build from (a + b)², then multiply by (a + b) again."
+    }
+  ]
+}

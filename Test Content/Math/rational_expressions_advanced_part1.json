@@ -1,0 +1,86 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "rational_expressions",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_re_a_001",
+      "question": "Simplify: (x² - 4) / (x + 2)",
+      "choices": {
+        "A": "x - 2",
+        "B": "x + 2",
+        "C": "x - 4",
+        "D": "(x - 2)/(x + 2)",
+        "E": "Cannot simplify"
+      },
+      "answer": "A",
+      "explanation": "Factor numerator: x² - 4 = (x - 2)(x + 2). So (x² - 4)/(x + 2) = (x - 2)(x + 2)/(x + 2) = x - 2 (when x ≠ -2).",
+      "steps": [
+        "1. Factor numerator: x² - 4 = (x - 2)(x + 2).",
+        "2. Write: ((x - 2)(x + 2)) / (x + 2).",
+        "3. Cancel (x + 2): x - 2.",
+        "4. Note: x ≠ -2 (excluded value)."
+      ],
+      "fastStrategy": "Factor; cancel common terms."
+    },
+    {
+      "id": "mk_re_a_002",
+      "question": "Simplify: (3x / (x + 1)) + (2 / (x + 1))",
+      "choices": {
+        "A": "(3x + 2) / (x + 1)",
+        "B": "3x + 2",
+        "C": "5 / (x + 1)",
+        "D": "(3x + 2x) / (x + 1)",
+        "E": "3 / 2"
+      },
+      "answer": "A",
+      "explanation": "Same denominator: (3x + 2) / (x + 1).",
+      "steps": [
+        "1. Fractions with same denominator.",
+        "2. Add numerators: 3x + 2.",
+        "3. Result: (3x + 2) / (x + 1)."
+      ],
+      "fastStrategy": "Same denominator: add numerators."
+    },
+    {
+      "id": "mk_re_a_003",
+      "question": "Simplify: (2x² - 8) / (x - 2)",
+      "choices": {
+        "A": "2x + 4",
+        "B": "2(x - 2)",
+        "C": "2(x + 2)",
+        "D": "x + 4",
+        "E": "(2x² - 8)/(x - 2)"
+      },
+      "answer": "C",
+      "explanation": "Factor: 2x² - 8 = 2(x² - 4) = 2(x - 2)(x + 2). So (2x² - 8)/(x - 2) = 2(x - 2)(x + 2)/(x - 2) = 2(x + 2).",
+      "steps": [
+        "1. Factor numerator: 2x² - 8 = 2(x² - 4) = 2(x - 2)(x + 2).",
+        "2. Write: (2(x - 2)(x + 2)) / (x - 2).",
+        "3. Cancel (x - 2): 2(x + 2)."
+      ],
+      "fastStrategy": "Factor completely; cancel common factors."
+    },
+    {
+      "id": "mk_re_a_004",
+      "question": "What value is excluded from the domain of (x + 3) / (x² - 9)?",
+      "choices": {
+        "A": "x ≠ 0",
+        "B": "x ≠ 3",
+        "C": "x ≠ -3",
+        "D": "x ≠ 3 and x ≠ -3",
+        "E": "No restrictions"
+      },
+      "answer": "D",
+      "explanation": "Denominator cannot be zero: x² - 9 ≠ 0 ⇒ (x - 3)(x + 3) ≠ 0 ⇒ x ≠ 3 and x ≠ -3.",
+      "steps": [
+        "1. Set denominator to zero: x² - 9 = 0.",
+        "2. Factor: (x - 3)(x + 3) = 0.",
+        "3. Solve: x = 3 or x = -3.",
+        "4. Excluded values: x ≠ 3 and x ≠ -3."
+      ],
+      "fastStrategy": "Domain: denominator ≠ 0."
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "linear_equations",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_leq_a_001",
+      "question": "Solve for x: 3(x + 2) = 2x + 10",
+      "choices": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8",
+        "E": "10"
+      },
+      "answer": "B",
+      "explanation": "Expand: 3x + 6 = 2x + 10. Subtract 2x: x + 6 = 10. Subtract 6: x = 4.",
+      "steps": [
+        "1. Distribute: 3x + 6 = 2x + 10.",
+        "2. Subtract 2x: x + 6 = 10.",
+        "3. Subtract 6: x = 4."
+      ],
+      "fastStrategy": "Isolate variable using inverse operations."
+    },
+    {
+      "id": "mk_leq_a_002",
+      "question": "Solve for x: (x - 2)/3 = 4",
+      "choices": {
+        "A": "6",
+        "B": "10",
+        "C": "14",
+        "D": "18",
+        "E": "22"
+      },
+      "answer": "C",
+      "explanation": "Multiply both sides by 3: x - 2 = 12. Add 2: x = 14.",
+      "steps": [
+        "1. Multiply by 3: x - 2 = 12.",
+        "2. Add 2: x = 14."
+      ],
+      "fastStrategy": "Clear fractions first by multiplying by denominator."
+    },
+    {
+      "id": "mk_leq_a_003",
+      "question": "Solve for x: 2x + 5 = 3x - 7",
+      "choices": {
+        "A": "-12",
+        "B": "-2",
+        "C": "12",
+        "D": "24",
+        "E": "3"
+      },
+      "answer": "C",
+      "explanation": "Subtract 2x: 5 = x - 7. Add 7: 12 = x.",
+      "steps": [
+        "1. Subtract 2x: 5 = x - 7.",
+        "2. Add 7: 12 = x.",
+        "3. So x = 12."
+      ],
+      "fastStrategy": "Move all x terms to one side, constants to other."
+    },
+    {
+      "id": "mk_leq_a_004",
+      "question": "Solve for y: 4y - 3 = 2y + 9",
+      "choices": {
+        "A": "3",
+        "B": "6",
+        "C": "9",
+        "D": "12",
+        "E": "15"
+      },
+      "answer": "B",
+      "explanation": "Subtract 2y: 2y - 3 = 9. Add 3: 2y = 12. Divide by 2: y = 6.",
+      "steps": [
+        "1. Subtract 2y: 2y - 3 = 9.",
+        "2. Add 3: 2y = 12.",
+        "3. Divide by 2: y = 6."
+      ],
+      "fastStrategy": "Combine like terms, isolate variable."
+    }
+  ]
+}

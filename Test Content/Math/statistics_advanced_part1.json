@@ -1,0 +1,85 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "statistics",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_stat_a_001",
+      "question": "Find the median of: 3, 7, 2, 9, 5",
+      "choices": {
+        "A": "3",
+        "B": "5",
+        "C": "6",
+        "D": "7",
+        "E": "9"
+      },
+      "answer": "B",
+      "explanation": "Order: 2, 3, 5, 7, 9. Middle value: 5.",
+      "steps": [
+        "1. Sort in order: 2, 3, 5, 7, 9.",
+        "2. Find middle value.",
+        "3. Position: 5 is 3rd of 5 values.",
+        "4. Median = 5."
+      ],
+      "fastStrategy": "Median: middle value when sorted."
+    },
+    {
+      "id": "mk_stat_a_002",
+      "question": "Find the mean of: 10, 20, 30, 40",
+      "choices": {
+        "A": "20",
+        "B": "25",
+        "C": "30",
+        "D": "35",
+        "E": "40"
+      },
+      "answer": "B",
+      "explanation": "Sum = 10 + 20 + 30 + 40 = 100. Mean = 100 / 4 = 25.",
+      "steps": [
+        "1. Add all values: 10 + 20 + 30 + 40 = 100.",
+        "2. Count values: 4.",
+        "3. Mean = 100 / 4 = 25."
+      ],
+      "fastStrategy": "Mean = sum / count."
+    },
+    {
+      "id": "mk_stat_a_003",
+      "question": "Find the mode of: 5, 2, 8, 2, 3, 2, 7",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "5",
+        "D": "7",
+        "E": "8"
+      },
+      "answer": "A",
+      "explanation": "Mode is the most frequent value. 2 appears 3 times, others appear once.",
+      "steps": [
+        "1. Count frequencies: 2 (appears 3 times), 3 (1), 5 (1), 7 (1), 8 (1).",
+        "2. Most frequent: 2.",
+        "3. Mode = 2."
+      ],
+      "fastStrategy": "Mode: most frequent value."
+    },
+    {
+      "id": "mk_stat_a_004",
+      "question": "Find the range of: 5, 12, 8, 3, 20, 15",
+      "choices": {
+        "A": "9",
+        "B": "12",
+        "C": "15",
+        "D": "17",
+        "E": "20"
+      },
+      "answer": "D",
+      "explanation": "Range = max - min = 20 - 3 = 17.",
+      "steps": [
+        "1. Identify maximum: 20.",
+        "2. Identify minimum: 3.",
+        "3. Range = 20 - 3 = 17."
+      ],
+      "fastStrategy": "Range = maximum - minimum."
+    }
+  ]
+}
