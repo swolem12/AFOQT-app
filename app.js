@@ -888,9 +888,9 @@ const subjects = [
         isAfoqtOfficialSubject: true
     },
     {
-        id: 'science',
+        id: 'physical_science',
         name: 'Physical Science',
-        description: 'Physics and chemistry basics'
+        description: 'Physics, chemistry, earth & space science'
     },
     {
         id: 'situational',
@@ -1802,57 +1802,67 @@ const readingTopics = [
 // ============================================================================
 const scienceTopics = [
     {
-        id: 'physics-basics',
-        name: 'Physics Basics',
-        description: 'Forces, motion, and energy',
-        subjectId: 'science',
-        generateQuestion: () => {
-            const questions = [
-                { q: "What is the formula for speed?", a: "Distance ÷ Time", opts: ["Time ÷ Distance", "Distance × Time", "Force × Mass"], exp: "Speed = Distance / Time" },
-                { q: "What is Newton's First Law?", a: "Object at rest stays at rest", opts: ["Force equals mass times acceleration", "Every action has a reaction", "Energy cannot be created"], exp: "Law of Inertia" },
-                { q: "What type of energy does a moving object have?", a: "Kinetic", opts: ["Potential", "Thermal", "Chemical"], exp: "Kinetic energy is energy of motion" },
-                { q: "What force pulls objects toward Earth?", a: "Gravity", opts: ["Friction", "Magnetism", "Tension"], exp: "Gravity is the attractive force between masses" },
-                { q: "What is the SI unit of force?", a: "Newton", opts: ["Joule", "Watt", "Pascal"], exp: "Force is measured in Newtons (N)" },
-                { q: "Light travels fastest through:", a: "Vacuum", opts: ["Water", "Glass", "Air"], exp: "Light speed is maximum in a vacuum" }
-            ];
-            
-            const item = questions[Math.floor(Math.random() * questions.length)];
-            const allOptions = [item.a, ...item.opts];
-            const shuffled = shuffleArray(allOptions);
-            
-            return {
-                prompt: item.q,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(item.a),
-                explanation: item.exp
-            };
+        id: 'chemistry_basics',
+        name: 'Chemistry Basics',
+        description: 'Atomic structure, periodic table, reactions',
+        subjectId: 'physical_science',
+        generateQuestion: (difficulty = 'beginner') => {
+            // Loaded from patch-loader.js physical_science question registry
+            return null;
         }
     },
     {
-        id: 'chemistry-basics',
-        name: 'Chemistry Basics',
-        description: 'Matter and reactions',
-        subjectId: 'science',
-        generateQuestion: () => {
-            const questions = [
-                { q: "What is the chemical symbol for water?", a: "H₂O", opts: ["HO", "H₂O₂", "OH"], exp: "Water is two hydrogen atoms and one oxygen" },
-                { q: "What is the smallest unit of an element?", a: "Atom", opts: ["Molecule", "Cell", "Electron"], exp: "Atoms are the basic building blocks" },
-                { q: "What type of bond involves sharing electrons?", a: "Covalent", opts: ["Ionic", "Metallic", "Hydrogen"], exp: "Covalent bonds share electron pairs" },
-                { q: "What is the pH of a neutral solution?", a: "7", opts: ["0", "14", "10"], exp: "pH 7 is neutral; <7 is acid, >7 is base" },
-                { q: "What are the three states of matter?", a: "Solid, Liquid, Gas", opts: ["Hot, Cold, Warm", "Big, Medium, Small", "Fast, Slow, Still"], exp: "The three common states of matter" },
-                { q: "What is the process of a solid turning to gas?", a: "Sublimation", opts: ["Evaporation", "Condensation", "Melting"], exp: "Sublimation skips the liquid phase" }
-            ];
-            
-            const item = questions[Math.floor(Math.random() * questions.length)];
-            const allOptions = [item.a, ...item.opts];
-            const shuffled = shuffleArray(allOptions);
-            
-            return {
-                prompt: item.q,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(item.a),
-                explanation: item.exp
-            };
+        id: 'earth_space',
+        name: 'Earth & Space Science',
+        description: 'Geology, atmosphere, solar system',
+        subjectId: 'physical_science',
+        generateQuestion: (difficulty = 'beginner') => {
+            return null;
+        }
+    },
+    {
+        id: 'electricity_magnetism',
+        name: 'Electricity & Magnetism',
+        description: 'Circuits, current, magnetic fields',
+        subjectId: 'physical_science',
+        generateQuestion: (difficulty = 'beginner') => {
+            return null;
+        }
+    },
+    {
+        id: 'energy_heat',
+        name: 'Energy & Heat',
+        description: 'Energy transfer, temperature, thermodynamics',
+        subjectId: 'physical_science',
+        generateQuestion: (difficulty = 'beginner') => {
+            return null;
+        }
+    },
+    {
+        id: 'fluids_pressure',
+        name: 'Fluids & Pressure',
+        description: 'Density, buoyancy, fluid dynamics',
+        subjectId: 'physical_science',
+        generateQuestion: (difficulty = 'beginner') => {
+            return null;
+        }
+    },
+    {
+        id: 'motion_mechanics',
+        name: 'Motion & Mechanics',
+        description: 'Forces, Newton\'s laws, kinematics',
+        subjectId: 'physical_science',
+        generateQuestion: (difficulty = 'beginner') => {
+            return null;
+        }
+    },
+    {
+        id: 'optics_waves',
+        name: 'Optics & Waves',
+        description: 'Light, sound, electromagnetic spectrum',
+        subjectId: 'physical_science',
+        generateQuestion: (difficulty = 'beginner') => {
+            return null;
         }
     }
 ];
@@ -4010,7 +4020,7 @@ function getSubjectForTopic(topicId) {
     if (mathTopics.find(t => t.id === topicId)) return 'math';
     if (vocabularyTopics.find(t => t.id === topicId)) return 'verbal';
     if (readingTopics.find(t => t.id === topicId)) return 'reading';
-    if (scienceTopics.find(t => t.id === topicId)) return 'science';
+    if (scienceTopics.find(t => t.id === topicId)) return 'physical_science';
     return null;
 }
 
