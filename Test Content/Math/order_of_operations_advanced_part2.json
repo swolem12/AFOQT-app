@@ -1,0 +1,84 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "order_of_operations",
+  "difficulty": "advanced",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_oo_a_005",
+      "question": "Calculate: 20 ÷ 4 + 3 × 2",
+      "choices": {
+        "A": "11",
+        "B": "13",
+        "C": "16",
+        "D": "26",
+        "E": "40"
+      },
+      "answer": "A",
+      "explanation": "Order: Division and multiplication (left to right) first, then addition. 20 ÷ 4 = 5, 3 × 2 = 6. Then 5 + 6 = 11.",
+      "steps": [
+        "1. Divide: 20 ÷ 4 = 5.",
+        "2. Multiply: 3 × 2 = 6.",
+        "3. Add: 5 + 6 = 11."
+      ],
+      "fastStrategy": "PEMDAS: Multiply/Divide left-to-right, then Add/Subtract left-to-right."
+    },
+    {
+      "id": "mk_oo_a_006",
+      "question": "Calculate: 3² + 4 × 2 - 5",
+      "choices": {
+        "A": "12",
+        "B": "14",
+        "C": "16",
+        "D": "18",
+        "E": "20"
+      },
+      "answer": "A",
+      "explanation": "Exponents first: 3² = 9. Multiply: 4 × 2 = 8. Then: 9 + 8 - 5 = 12.",
+      "steps": [
+        "1. Exponent: 3² = 9.",
+        "2. Multiply: 4 × 2 = 8.",
+        "3. Add/subtract left-to-right: 9 + 8 - 5 = 12."
+      ],
+      "fastStrategy": "Exponents before multiplication/division."
+    },
+    {
+      "id": "mk_oo_a_007",
+      "question": "Calculate: (8 + 2) × 3 - 4",
+      "choices": {
+        "A": "22",
+        "B": "24",
+        "C": "26",
+        "D": "28",
+        "E": "30"
+      },
+      "answer": "C",
+      "explanation": "Parentheses first: (8 + 2) = 10. Multiply: 10 × 3 = 30. Subtract: 30 - 4 = 26.",
+      "steps": [
+        "1. Parentheses: 8 + 2 = 10.",
+        "2. Multiply: 10 × 3 = 30.",
+        "3. Subtract: 30 - 4 = 26."
+      ],
+      "fastStrategy": "Parentheses first in PEMDAS."
+    },
+    {
+      "id": "mk_oo_a_008",
+      "question": "Calculate: 15 - 8 ÷ 2 + 3",
+      "choices": {
+        "A": "6.5",
+        "B": "10",
+        "C": "14",
+        "D": "18",
+        "E": "20"
+      },
+      "answer": "C",
+      "explanation": "Divide first: 8 ÷ 2 = 4. Then left-to-right: 15 - 4 + 3 = 11 + 3 = 14.",
+      "steps": [
+        "1. Divide: 8 ÷ 2 = 4.",
+        "2. Subtract: 15 - 4 = 11.",
+        "3. Add: 11 + 3 = 14."
+      ],
+      "fastStrategy": "Division before addition/subtraction."
+    }
+  ]
+}

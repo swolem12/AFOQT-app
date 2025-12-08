@@ -1,0 +1,89 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "polynomials",
+  "difficulty": "advanced",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_poly_a_005",
+      "question": "Add: (3x² + 2x - 5) + (x² - 4x + 3)",
+      "choices": {
+        "A": "4x² - 2x - 2",
+        "B": "4x² + 6x - 2",
+        "C": "4x² - 6x + 8",
+        "D": "2x² - 2x - 2",
+        "E": "3x² - 2x - 2"
+      },
+      "answer": "A",
+      "explanation": "Combine like terms: (3 + 1)x² + (2 - 4)x + (-5 + 3) = 4x² - 2x - 2.",
+      "steps": [
+        "1. Combine x² terms: 3x² + x² = 4x².",
+        "2. Combine x terms: 2x - 4x = -2x.",
+        "3. Combine constants: -5 + 3 = -2.",
+        "4. Result: 4x² - 2x - 2."
+      ],
+      "fastStrategy": "Add polynomials: combine like terms (same degree)."
+    },
+    {
+      "id": "mk_poly_a_006",
+      "question": "Subtract: (5x² + 3x - 2) - (2x² - x + 4)",
+      "choices": {
+        "A": "3x² + 4x - 6",
+        "B": "3x² + 2x - 6",
+        "C": "3x² + 4x + 2",
+        "D": "7x² + 2x + 2",
+        "E": "3x² - 4x - 6"
+      },
+      "answer": "A",
+      "explanation": "Distribute negative: 5x² + 3x - 2 - 2x² + x - 4. Combine: 3x² + 4x - 6.",
+      "steps": [
+        "1. Distribute -: 5x² + 3x - 2 - 2x² + x - 4.",
+        "2. Combine x²: (5 - 2)x² = 3x².",
+        "3. Combine x: (3 + 1)x = 4x.",
+        "4. Combine constants: -2 - 4 = -6.",
+        "5. Result: 3x² + 4x - 6."
+      ],
+      "fastStrategy": "Subtract polynomials: distribute negative, then combine like terms."
+    },
+    {
+      "id": "mk_poly_a_007",
+      "question": "What is the degree of 4x⁵ - 2x³ + 7x - 1?",
+      "choices": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "7",
+        "E": "1"
+      },
+      "answer": "C",
+      "explanation": "Degree is highest exponent. Here it's 5.",
+      "steps": [
+        "1. Identify exponents: 5, 3, 1, 0.",
+        "2. Highest exponent is 5.",
+        "3. Degree = 5."
+      ],
+      "fastStrategy": "Degree: highest exponent in polynomial."
+    },
+    {
+      "id": "mk_poly_a_008",
+      "question": "Multiply: x(3x² - 2x + 5)",
+      "choices": {
+        "A": "3x³ - 2x² + 5x",
+        "B": "3x² - 2x + 5x",
+        "C": "3x³ - 2x + 5",
+        "D": "x³ - 2x² + 5x",
+        "E": "3x³ + 2x² + 5x"
+      },
+      "answer": "A",
+      "explanation": "Distribute x: x(3x²) + x(-2x) + x(5) = 3x³ - 2x² + 5x.",
+      "steps": [
+        "1. Distribute x to each term.",
+        "2. x × 3x² = 3x³.",
+        "3. x × (-2x) = -2x².",
+        "4. x × 5 = 5x.",
+        "5. Result: 3x³ - 2x² + 5x."
+      ],
+      "fastStrategy": "Distributive property: multiply each term by monomial."
+    }
+  ]
+}

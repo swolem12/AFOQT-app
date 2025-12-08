@@ -1,0 +1,101 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "fractions",
+  "difficulty": "advanced",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_frac_a_006",
+      "question": "Simplify: (3/4) + (5/6)",
+      "choices": {
+        "A": "8/10",
+        "B": "19/12",
+        "C": "9/12",
+        "D": "15/24",
+        "E": "1/2"
+      },
+      "answer": "B",
+      "explanation": "LCD is 12. Convert: 9/12 + 10/12 = 19/12.",
+      "steps": [
+        "1. Find LCD of 4 and 6: 12.",
+        "2. Convert: 3/4 = 9/12, 5/6 = 10/12.",
+        "3. Add: 9/12 + 10/12 = 19/12."
+      ],
+      "fastStrategy": "Find LCD; convert fractions; add numerators."
+    },
+    {
+      "id": "mk_frac_a_007",
+      "question": "Multiply: (2/5) × (3/7)",
+      "choices": {
+        "A": "5/12",
+        "B": "6/35",
+        "C": "6/12",
+        "D": "5/35",
+        "E": "1/2"
+      },
+      "answer": "B",
+      "explanation": "Multiply numerators and denominators: (2 × 3) / (5 × 7) = 6/35.",
+      "steps": [
+        "1. Multiply numerators: 2 × 3 = 6.",
+        "2. Multiply denominators: 5 × 7 = 35.",
+        "3. Result: 6/35."
+      ],
+      "fastStrategy": "Fraction multiplication: (a/b) × (c/d) = (ac)/(bd)."
+    },
+    {
+      "id": "mk_frac_a_008",
+      "question": "Divide: (3/8) ÷ (2/3)",
+      "choices": {
+        "A": "9/16",
+        "B": "6/24",
+        "C": "1/4",
+        "D": "9/8",
+        "E": "1/2"
+      },
+      "answer": "A",
+      "explanation": "Multiply by reciprocal: (3/8) × (3/2) = 9/16.",
+      "steps": [
+        "1. Reciprocal of 2/3 is 3/2.",
+        "2. Multiply: (3/8) × (3/2) = 9/16."
+      ],
+      "fastStrategy": "Division: multiply by reciprocal of divisor."
+    },
+    {
+      "id": "mk_frac_a_009",
+      "question": "Simplify: 1/(1/2)",
+      "choices": {
+        "A": "1/2",
+        "B": "2",
+        "C": "1",
+        "D": "4",
+        "E": "1/4"
+      },
+      "answer": "B",
+      "explanation": "1 ÷ (1/2) = 1 × 2 = 2.",
+      "steps": [
+        "1. Rewrite: 1 ÷ (1/2).",
+        "2. Multiply by reciprocal: 1 × 2 = 2."
+      ],
+      "fastStrategy": "Division by fraction: multiply by reciprocal."
+    },
+    {
+      "id": "mk_frac_a_010",
+      "question": "Convert to improper fraction: 3¾",
+      "choices": {
+        "A": "12/4",
+        "B": "13/4",
+        "C": "15/4",
+        "D": "7/4",
+        "E": "11/4"
+      },
+      "answer": "C",
+      "explanation": "3¾ = (3 × 4 + 3)/4 = (12 + 3)/4 = 15/4.",
+      "steps": [
+        "1. Multiply whole number by denominator: 3 × 4 = 12.",
+        "2. Add numerator: 12 + 3 = 15.",
+        "3. Write over denominator: 15/4."
+      ],
+      "fastStrategy": "Mixed to improper: (whole × denom + numer) / denom."
+    }
+  ]
+}

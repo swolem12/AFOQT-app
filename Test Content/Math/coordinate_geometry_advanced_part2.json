@@ -1,0 +1,84 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "coordinate_geometry",
+  "difficulty": "advanced",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_cg_a_006",
+      "question": "Find the midpoint of the segment connecting (4, 6) and (8, 10).",
+      "choices": {
+        "A": "(6, 8)",
+        "B": "(12, 16)",
+        "C": "(2, 4)",
+        "D": "(4, 8)",
+        "E": "(6, 6)"
+      },
+      "answer": "A",
+      "explanation": "Midpoint = ((x₁+x₂)/2, (y₁+y₂)/2) = ((4+8)/2, (6+10)/2) = (6, 8).",
+      "steps": [
+        "1. Use midpoint formula: ((x₁+x₂)/2, (y₁+y₂)/2).",
+        "2. Substitute: ((4+8)/2, (6+10)/2).",
+        "3. Calculate: (12/2, 16/2) = (6, 8)."
+      ],
+      "fastStrategy": "Midpoint: average x-coordinates and y-coordinates."
+    },
+    {
+      "id": "mk_cg_a_007",
+      "question": "Find the slope of the line passing through (-2, 3) and (4, 9).",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "-1",
+        "E": "1/2"
+      },
+      "answer": "A",
+      "explanation": "Slope = (y₂ - y₁)/(x₂ - x₁) = (9 - 3)/(4 - (-2)) = 6/6 = 1.",
+      "steps": [
+        "1. Use slope formula: m = (y₂ - y₁)/(x₂ - x₁).",
+        "2. Substitute: (9 - 3)/(4 - (-2)).",
+        "3. Calculate: 6/6 = 1."
+      ],
+      "fastStrategy": "Slope: rise over run between two points."
+    },
+    {
+      "id": "mk_cg_a_008",
+      "question": "Which quadrant contains the point (-3, 5)?",
+      "choices": {
+        "A": "I",
+        "B": "II",
+        "C": "III",
+        "D": "IV",
+        "E": "On an axis"
+      },
+      "answer": "B",
+      "explanation": "Quadrant II has negative x and positive y. Point (-3, 5) fits this pattern.",
+      "steps": [
+        "1. x = -3 (negative), y = 5 (positive).",
+        "2. Quadrant II: x < 0, y > 0.",
+        "3. Answer: II."
+      ],
+      "fastStrategy": "Quadrants: I(+,+), II(-,+), III(-,-), IV(+,-)."
+    },
+    {
+      "id": "mk_cg_a_009",
+      "question": "Find the distance between (0, 0) and (6, 8).",
+      "choices": {
+        "A": "8",
+        "B": "10",
+        "C": "12",
+        "D": "14",
+        "E": "100"
+      },
+      "answer": "B",
+      "explanation": "Distance = √((x₂-x₁)² + (y₂-y₁)²) = √(6² + 8²) = √(36 + 64) = √100 = 10.",
+      "steps": [
+        "1. Use distance formula: √((x₂-x₁)² + (y₂-y₁)²).",
+        "2. Substitute: √(6² + 8²).",
+        "3. Calculate: √(36 + 64) = √100 = 10."
+      ],
+      "fastStrategy": "Distance formula; recognize 6-8-10 Pythagorean triple."
+    }
+  ]
+}

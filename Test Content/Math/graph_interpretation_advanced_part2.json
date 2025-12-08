@@ -1,0 +1,84 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "graph_interpretation",
+  "difficulty": "advanced",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_gi_a_005",
+      "question": "A line graph shows sales of 100 in January, 150 in February, and 200 in March. What is the average monthly sales?",
+      "choices": {
+        "A": "125",
+        "B": "150",
+        "C": "175",
+        "D": "200",
+        "E": "450"
+      },
+      "answer": "B",
+      "explanation": "Average = (100 + 150 + 200) / 3 = 450 / 3 = 150.",
+      "steps": [
+        "1. Sum sales: 100 + 150 + 200 = 450.",
+        "2. Divide by number of months: 450 / 3.",
+        "3. Average = 150."
+      ],
+      "fastStrategy": "Average: sum divided by count."
+    },
+    {
+      "id": "mk_gi_a_006",
+      "question": "A bar graph shows City A with 500 units and City B with 750 units. City B has how much more (as percentage) than City A?",
+      "choices": {
+        "A": "25%",
+        "B": "33%",
+        "C": "50%",
+        "D": "66%",
+        "E": "75%"
+      },
+      "answer": "C",
+      "explanation": "Difference: 750 - 500 = 250. Percentage increase: (250 / 500) × 100 = 50%.",
+      "steps": [
+        "1. Find difference: 750 - 500 = 250.",
+        "2. Divide by original: 250 / 500 = 0.5.",
+        "3. Convert to percent: 0.5 × 100 = 50%."
+      ],
+      "fastStrategy": "Percent increase: (difference / original) × 100."
+    },
+    {
+      "id": "mk_gi_a_007",
+      "question": "A pie chart shows 40% for Category A, 35% for B, and the rest for C. What percent is Category C?",
+      "choices": {
+        "A": "20%",
+        "B": "25%",
+        "C": "30%",
+        "D": "35%",
+        "E": "40%"
+      },
+      "answer": "B",
+      "explanation": "Total = 100%. C = 100% - 40% - 35% = 25%.",
+      "steps": [
+        "1. Total in pie chart: 100%.",
+        "2. Subtract known categories: 100% - 40% - 35%.",
+        "3. Category C = 25%."
+      ],
+      "fastStrategy": "Pie chart totals 100%; subtract known parts."
+    },
+    {
+      "id": "mk_gi_a_008",
+      "question": "A scatter plot shows points (1,2), (2,4), (3,6), (4,8). What is the slope of the line of best fit?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "0.5"
+      },
+      "answer": "B",
+      "explanation": "Pattern shows y = 2x. Slope = 2. Or use any two points: (4-2)/(2-1) = 2.",
+      "steps": [
+        "1. Notice pattern: y doubles each time x increases by 1.",
+        "2. Slope = rise/run = 2/1 = 2.",
+        "3. Verify with two points: (4-2)/(2-1) = 2."
+      ],
+      "fastStrategy": "Linear pattern: identify constant rate of change."
+    }
+  ]
+}

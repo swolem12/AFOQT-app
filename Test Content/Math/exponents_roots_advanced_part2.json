@@ -1,0 +1,98 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "exponents_roots",
+  "difficulty": "advanced",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_er_a_006",
+      "question": "Simplify: x⁵ ÷ x²",
+      "choices": {
+        "A": "x³",
+        "B": "x⁷",
+        "C": "x¹⁰",
+        "D": "x",
+        "E": "x²·⁵"
+      },
+      "answer": "A",
+      "explanation": "Quotient rule: x⁵ / x² = x^(5-2) = x³.",
+      "steps": [
+        "1. Apply quotient rule: x^a / x^b = x^(a-b).",
+        "2. Calculate: x^(5-2) = x³."
+      ],
+      "fastStrategy": "Quotient rule: subtract exponents when dividing same base."
+    },
+    {
+      "id": "mk_er_a_007",
+      "question": "Simplify: √(25x²)",
+      "choices": {
+        "A": "5x",
+        "B": "25x",
+        "C": "5x²",
+        "D": "√25 · x",
+        "E": "x√25"
+      },
+      "answer": "A",
+      "explanation": "√(25x²) = √25 · √(x²) = 5 · x = 5x (assuming x ≥ 0).",
+      "steps": [
+        "1. Separate: √(25x²) = √25 · √(x²).",
+        "2. Evaluate: 5 · x = 5x."
+      ],
+      "fastStrategy": "√(ab) = √a · √b; √(x²) = |x|."
+    },
+    {
+      "id": "mk_er_a_008",
+      "question": "What is x⁰ when x ≠ 0?",
+      "choices": {
+        "A": "0",
+        "B": "1",
+        "C": "x",
+        "D": "Undefined",
+        "E": "∞"
+      },
+      "answer": "B",
+      "explanation": "Any non-zero number raised to the power of 0 equals 1. x⁰ = 1.",
+      "steps": [
+        "1. Recall zero exponent rule: a⁰ = 1 for a ≠ 0.",
+        "2. Apply: x⁰ = 1."
+      ],
+      "fastStrategy": "Zero exponent: a⁰ = 1 (for a ≠ 0)."
+    },
+    {
+      "id": "mk_er_a_009",
+      "question": "Simplify: (2x³)²",
+      "choices": {
+        "A": "2x⁶",
+        "B": "4x⁶",
+        "C": "4x⁵",
+        "D": "2x⁵",
+        "E": "4x⁹"
+      },
+      "answer": "B",
+      "explanation": "(2x³)² = 2² · (x³)² = 4 · x⁶ = 4x⁶.",
+      "steps": [
+        "1. Apply power to both parts: 2² and (x³)².",
+        "2. Calculate: 4 · x⁶ = 4x⁶."
+      ],
+      "fastStrategy": "Power of product: (ab)^n = a^n · b^n."
+    },
+    {
+      "id": "mk_er_a_010",
+      "question": "Simplify: √(x⁴/y²)",
+      "choices": {
+        "A": "x²/y",
+        "B": "x²/y²",
+        "C": "x⁴/y",
+        "D": "x/y",
+        "E": "x²y"
+      },
+      "answer": "A",
+      "explanation": "√(x⁴/y²) = √(x⁴) / √(y²) = x² / y (assuming x, y ≥ 0).",
+      "steps": [
+        "1. Separate: √(x⁴/y²) = √(x⁴) / √(y²).",
+        "2. Evaluate: x² / y."
+      ],
+      "fastStrategy": "√(a/b) = √a / √b; simplify each radical."
+    }
+  ]
+}

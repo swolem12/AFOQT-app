@@ -1,0 +1,123 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "algebra",
+  "difficulty": "beginner",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_alg_b_007",
+      "question": "Solve: x - 7 = 15",
+      "choices": {
+        "A": "x = 8",
+        "B": "x = 15",
+        "C": "x = 22",
+        "D": "x = 7",
+        "E": "x = -8"
+      },
+      "answer": "C",
+      "explanation": "Add 7 to both sides: x - 7 + 7 = 15 + 7. Simplify: x = 22.",
+      "steps": [
+        "1. Start: x - 7 = 15.",
+        "2. Add 7 to both sides: x = 15 + 7.",
+        "3. Simplify: x = 22."
+      ],
+      "fastStrategy": "To isolate variable, perform opposite operation on both sides."
+    },
+    {
+      "id": "mk_alg_b_008",
+      "question": "Solve: 5x = 25",
+      "choices": {
+        "A": "x = 5",
+        "B": "x = 20",
+        "C": "x = 25",
+        "D": "x = 30",
+        "E": "x = 125"
+      },
+      "answer": "A",
+      "explanation": "Divide both sides by 5: 5x / 5 = 25 / 5. Simplify: x = 5.",
+      "steps": [
+        "1. Start: 5x = 25.",
+        "2. Divide both sides by 5: x = 25 / 5.",
+        "3. Simplify: x = 5."
+      ],
+      "fastStrategy": "To isolate variable, perform opposite operation on both sides."
+    },
+    {
+      "id": "mk_alg_b_009",
+      "question": "Solve: 4x + 3 = 19",
+      "choices": {
+        "A": "x = 2",
+        "B": "x = 3",
+        "C": "x = 4",
+        "D": "x = 5",
+        "E": "x = 6"
+      },
+      "answer": "C",
+      "explanation": "Subtract 3: 4x = 16. Divide by 4: x = 4.",
+      "steps": [
+        "1. Start: 4x + 3 = 19.",
+        "2. Subtract 3 from both sides: 4x = 16.",
+        "3. Divide both sides by 4: x = 4."
+      ],
+      "fastStrategy": "Multi-step: add/subtract first, then multiply/divide."
+    },
+    {
+      "id": "mk_alg_b_010",
+      "question": "Solve: x/2 = 8",
+      "choices": {
+        "A": "x = 4",
+        "B": "x = 10",
+        "C": "x = 16",
+        "D": "x = 6",
+        "E": "x = 2"
+      },
+      "answer": "C",
+      "explanation": "Multiply both sides by 2: x = 8 × 2 = 16.",
+      "steps": [
+        "1. Start: x/2 = 8.",
+        "2. Multiply both sides by 2: x = 8 × 2.",
+        "3. Simplify: x = 16."
+      ],
+      "fastStrategy": "To isolate variable, perform opposite operation on both sides."
+    },
+    {
+      "id": "mk_alg_b_011",
+      "question": "Simplify: 5x - 2x + 4x",
+      "choices": {
+        "A": "x",
+        "B": "3x",
+        "C": "7x",
+        "D": "9x",
+        "E": "11x"
+      },
+      "answer": "C",
+      "explanation": "Combine like terms: 5x - 2x + 4x = (5 - 2 + 4)x = 7x.",
+      "steps": [
+        "1. Identify like terms: 5x, -2x, 4x.",
+        "2. Add coefficients: 5 - 2 + 4 = 7.",
+        "3. Result: 7x."
+      ],
+      "fastStrategy": "Combine like terms by adding/subtracting coefficients."
+    },
+    {
+      "id": "mk_alg_b_012",
+      "question": "If x = 4, what is 3x - 7?",
+      "choices": {
+        "A": "5",
+        "B": "7",
+        "C": "9",
+        "D": "12",
+        "E": "19"
+      },
+      "answer": "A",
+      "explanation": "Substitute x = 4: 3(4) - 7 = 12 - 7 = 5.",
+      "steps": [
+        "1. Start: 3x - 7, where x = 4.",
+        "2. Substitute: 3(4) - 7.",
+        "3. Multiply: 12 - 7.",
+        "4. Subtract: 5."
+      ],
+      "fastStrategy": "Substitute value for variable; follow order of operations."
+    }
+  ]
+}

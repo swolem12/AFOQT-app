@@ -1,0 +1,83 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "linear_equations",
+  "difficulty": "advanced",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_le_a_005",
+      "question": "Solve: 5(x - 2) = 3x + 6",
+      "choices": {
+        "A": "x = 6",
+        "B": "x = 7",
+        "C": "x = 8",
+        "D": "x = 9",
+        "E": "x = 10"
+      },
+      "answer": "C",
+      "explanation": "Distribute: 5x - 10 = 3x + 6. Subtract 3x: 2x - 10 = 6. Add 10: 2x = 16. Divide: x = 8.",
+      "steps": [
+        "1. Distribute 5: 5x - 10 = 3x + 6.",
+        "2. Subtract 3x: 2x - 10 = 6.",
+        "3. Add 10: 2x = 16.",
+        "4. Divide by 2: x = 8."
+      ],
+      "fastStrategy": "Distribute first; then isolate variable."
+    },
+    {
+      "id": "mk_le_a_006",
+      "question": "Solve: (x + 3)/2 = 5",
+      "choices": {
+        "A": "x = 5",
+        "B": "x = 7",
+        "C": "x = 9",
+        "D": "x = 10",
+        "E": "x = 13"
+      },
+      "answer": "B",
+      "explanation": "Multiply by 2: x + 3 = 10. Subtract 3: x = 7.",
+      "steps": [
+        "1. Multiply both sides by 2: x + 3 = 10.",
+        "2. Subtract 3: x = 7."
+      ],
+      "fastStrategy": "Clear fractions; solve."
+    },
+    {
+      "id": "mk_le_a_007",
+      "question": "Solve: 2x + 7 = 4x - 3",
+      "choices": {
+        "A": "x = 3",
+        "B": "x = 4",
+        "C": "x = 5",
+        "D": "x = 6",
+        "E": "x = 7"
+      },
+      "answer": "C",
+      "explanation": "Subtract 2x: 7 = 2x - 3. Add 3: 10 = 2x. Divide: x = 5.",
+      "steps": [
+        "1. Subtract 2x from both sides: 7 = 2x - 3.",
+        "2. Add 3 to both sides: 10 = 2x.",
+        "3. Divide by 2: x = 5."
+      ],
+      "fastStrategy": "Move variables to one side; constants to other."
+    },
+    {
+      "id": "mk_le_a_008",
+      "question": "Solve: 3y - 5 = 2y + 8",
+      "choices": {
+        "A": "y = 10",
+        "B": "y = 11",
+        "C": "y = 12",
+        "D": "y = 13",
+        "E": "y = 14"
+      },
+      "answer": "D",
+      "explanation": "Subtract 2y: y - 5 = 8. Add 5: y = 13.",
+      "steps": [
+        "1. Subtract 2y from both sides: y - 5 = 8.",
+        "2. Add 5 to both sides: y = 13."
+      ],
+      "fastStrategy": "Isolate variable terms; solve."
+    }
+  ]
+}

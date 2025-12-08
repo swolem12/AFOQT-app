@@ -1,0 +1,102 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "geometry_basics",
+  "difficulty": "advanced",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_gb_a_006",
+      "question": "A triangle has sides 7, 24, and 25. What is its perimeter?",
+      "choices": {
+        "A": "48",
+        "B": "50",
+        "C": "52",
+        "D": "56",
+        "E": "60"
+      },
+      "answer": "D",
+      "explanation": "Perimeter = sum of sides = 7 + 24 + 25 = 56.",
+      "steps": [
+        "1. Add all three sides: 7 + 24 + 25.",
+        "2. Calculate: 56."
+      ],
+      "fastStrategy": "Perimeter: sum of all sides."
+    },
+    {
+      "id": "mk_gb_a_007",
+      "question": "A right triangle has legs 5 and 12. What is the hypotenuse?",
+      "choices": {
+        "A": "10",
+        "B": "13",
+        "C": "15",
+        "D": "17",
+        "E": "20"
+      },
+      "answer": "B",
+      "explanation": "Pythagorean theorem: c² = a² + b² = 5² + 12² = 25 + 144 = 169. c = √169 = 13.",
+      "steps": [
+        "1. Apply Pythagorean theorem: c² = 5² + 12².",
+        "2. Calculate: c² = 25 + 144 = 169.",
+        "3. Take square root: c = 13."
+      ],
+      "fastStrategy": "Pythagorean theorem; recognize 5-12-13 triple."
+    },
+    {
+      "id": "mk_gb_a_008",
+      "question": "What is the area of a circle with radius 4?",
+      "choices": {
+        "A": "4π",
+        "B": "8π",
+        "C": "12π",
+        "D": "16π",
+        "E": "20π"
+      },
+      "answer": "D",
+      "explanation": "Area = πr² = π(4)² = 16π.",
+      "steps": [
+        "1. Use formula: A = πr².",
+        "2. Substitute r = 4: A = π(4)².",
+        "3. Calculate: A = 16π."
+      ],
+      "fastStrategy": "Circle area: πr²."
+    },
+    {
+      "id": "mk_gb_a_009",
+      "question": "What is the sum of interior angles in a hexagon?",
+      "choices": {
+        "A": "540°",
+        "B": "720°",
+        "C": "900°",
+        "D": "1080°",
+        "E": "1260°"
+      },
+      "answer": "B",
+      "explanation": "Sum = (n - 2) × 180° where n = 6. Sum = (6 - 2) × 180° = 4 × 180° = 720°.",
+      "steps": [
+        "1. Formula: (n - 2) × 180°.",
+        "2. Hexagon: n = 6.",
+        "3. Calculate: (6 - 2) × 180° = 720°."
+      ],
+      "fastStrategy": "Interior angle sum: (n - 2) × 180°."
+    },
+    {
+      "id": "mk_gb_a_010",
+      "question": "Two triangles have all corresponding sides equal. What can we conclude?",
+      "choices": {
+        "A": "They are similar",
+        "B": "They are congruent",
+        "C": "They are isosceles",
+        "D": "They have equal areas only",
+        "E": "Nothing can be concluded"
+      },
+      "answer": "B",
+      "explanation": "SSS (Side-Side-Side) congruence: if all three sides are equal, triangles are congruent.",
+      "steps": [
+        "1. All corresponding sides equal.",
+        "2. Apply SSS congruence theorem.",
+        "3. Triangles are congruent."
+      ],
+      "fastStrategy": "SSS: three sides equal ⇒ congruent triangles."
+    }
+  ]
+}

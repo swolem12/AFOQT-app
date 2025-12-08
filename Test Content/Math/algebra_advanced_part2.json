@@ -1,0 +1,103 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "algebra",
+  "difficulty": "advanced",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_alg_a_006",
+      "question": "Solve: 3(x - 4) = 2x + 5",
+      "choices": {
+        "A": "x = 13",
+        "B": "x = 15",
+        "C": "x = 17",
+        "D": "x = 19",
+        "E": "x = 21"
+      },
+      "answer": "C",
+      "explanation": "Distribute: 3x - 12 = 2x + 5. Subtract 2x: x - 12 = 5. Add 12: x = 17.",
+      "steps": [
+        "1. Distribute 3: 3x - 12 = 2x + 5.",
+        "2. Subtract 2x from both sides: x - 12 = 5.",
+        "3. Add 12 to both sides: x = 17."
+      ],
+      "fastStrategy": "Distribute first, then isolate variable."
+    },
+    {
+      "id": "mk_alg_a_007",
+      "question": "Solve: 2(x + 3) - 4(x - 1) = 10",
+      "choices": {
+        "A": "x = 0",
+        "B": "x = -2",
+        "C": "x = 2",
+        "D": "x = 4",
+        "E": "x = -4"
+      },
+      "answer": "A",
+      "explanation": "Expand: 2x + 6 - 4x + 4 = 10. Combine: -2x + 10 = 10. Subtract 10: -2x = 0. x = 0.",
+      "steps": [
+        "1. Distribute: 2x + 6 - 4x + 4 = 10.",
+        "2. Combine like terms: -2x + 10 = 10.",
+        "3. Subtract 10: -2x = 0.",
+        "4. Divide by -2: x = 0."
+      ],
+      "fastStrategy": "Distribute, combine like terms, then solve."
+    },
+    {
+      "id": "mk_alg_a_008",
+      "question": "Solve for y: 3y - 2 = 5y + 8",
+      "choices": {
+        "A": "y = -5",
+        "B": "y = -3",
+        "C": "y = 3",
+        "D": "y = 5",
+        "E": "y = 10"
+      },
+      "answer": "A",
+      "explanation": "Subtract 3y: -2 = 2y + 8. Subtract 8: -10 = 2y. Divide by 2: y = -5.",
+      "steps": [
+        "1. Subtract 3y from both sides: -2 = 2y + 8.",
+        "2. Subtract 8 from both sides: -10 = 2y.",
+        "3. Divide by 2: y = -5."
+      ],
+      "fastStrategy": "Move variables to one side, constants to other."
+    },
+    {
+      "id": "mk_alg_a_009",
+      "question": "Solve: (x + 5)/3 = 4",
+      "choices": {
+        "A": "x = 2",
+        "B": "x = 7",
+        "C": "x = 9",
+        "D": "x = 12",
+        "E": "x = 17"
+      },
+      "answer": "B",
+      "explanation": "Multiply by 3: x + 5 = 12. Subtract 5: x = 7.",
+      "steps": [
+        "1. Multiply both sides by 3: x + 5 = 12.",
+        "2. Subtract 5 from both sides: x = 7."
+      ],
+      "fastStrategy": "Clear fractions by multiplying by denominator."
+    },
+    {
+      "id": "mk_alg_a_010",
+      "question": "If 2x + 3 = 15, what is the value of 4x?",
+      "choices": {
+        "A": "12",
+        "B": "18",
+        "C": "24",
+        "D": "30",
+        "E": "36"
+      },
+      "answer": "C",
+      "explanation": "Solve for x: 2x = 12, so x = 6. Then 4x = 4(6) = 24.",
+      "steps": [
+        "1. Subtract 3: 2x = 12.",
+        "2. Divide by 2: x = 6.",
+        "3. Calculate 4x: 4(6) = 24."
+      ],
+      "fastStrategy": "Solve for variable first, then substitute into target expression."
+    }
+  ]
+}

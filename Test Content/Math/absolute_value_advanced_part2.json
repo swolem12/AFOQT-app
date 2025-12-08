@@ -1,0 +1,83 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "absolute_value",
+  "difficulty": "advanced",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_av_a_007",
+      "question": "Solve: |x + 3| = 8",
+      "choices": {
+        "A": "x = 5 or x = -11",
+        "B": "x = 5 or x = 11",
+        "C": "x = -5 or x = 11",
+        "D": "x = -5 or x = -11",
+        "E": "x = 8 or x = -8"
+      },
+      "answer": "A",
+      "explanation": "Case 1: x + 3 = 8 ⇒ x = 5. Case 2: x + 3 = -8 ⇒ x = -11.",
+      "steps": [
+        "1. Case 1: x + 3 = 8 ⇒ x = 5.",
+        "2. Case 2: x + 3 = -8 ⇒ x = -11.",
+        "3. Check both: |5+3| = 8 ✓, |-11+3| = |-8| = 8 ✓"
+      ],
+      "fastStrategy": "Absolute value equation: split into two cases, positive and negative."
+    },
+    {
+      "id": "mk_av_a_008",
+      "question": "Solve: |3x| = 15",
+      "choices": {
+        "A": "x = 5",
+        "B": "x = -5",
+        "C": "x = 5 or x = -5",
+        "D": "x = 15 or x = -15",
+        "E": "x = 3 or x = -3"
+      },
+      "answer": "C",
+      "explanation": "Case 1: 3x = 15 ⇒ x = 5. Case 2: 3x = -15 ⇒ x = -5.",
+      "steps": [
+        "1. Case 1: 3x = 15 ⇒ x = 5.",
+        "2. Case 2: 3x = -15 ⇒ x = -5."
+      ],
+      "fastStrategy": "Absolute value equation: split into two cases."
+    },
+    {
+      "id": "mk_av_a_009",
+      "question": "What is |-12| + |8| - |-5|?",
+      "choices": {
+        "A": "15",
+        "B": "25",
+        "C": "5",
+        "D": "9",
+        "E": "11"
+      },
+      "answer": "A",
+      "explanation": "|-12| = 12, |8| = 8, |-5| = 5. So 12 + 8 - 5 = 15.",
+      "steps": [
+        "1. Calculate |-12| = 12.",
+        "2. Calculate |8| = 8.",
+        "3. Calculate |-5| = 5.",
+        "4. Combine: 12 + 8 - 5 = 15."
+      ],
+      "fastStrategy": "Evaluate each absolute value separately; then perform operations."
+    },
+    {
+      "id": "mk_av_a_010",
+      "question": "Solve: |x - 1| = 0",
+      "choices": {
+        "A": "x = 0",
+        "B": "x = 1",
+        "C": "x = -1",
+        "D": "x = 1 or x = -1",
+        "E": "No solution"
+      },
+      "answer": "B",
+      "explanation": "|x - 1| = 0 means x - 1 = 0, so x = 1. Absolute value equals zero only when expression inside is zero.",
+      "steps": [
+        "1. |x - 1| = 0 means x - 1 = 0.",
+        "2. Solve: x = 1."
+      ],
+      "fastStrategy": "|A| = 0 only when A = 0."
+    }
+  ]
+}
