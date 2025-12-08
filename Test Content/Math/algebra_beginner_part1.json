@@ -1,0 +1,123 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "algebra",
+  "difficulty": "beginner",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_alg_b_001",
+      "question": "Solve: x + 5 = 12",
+      "choices": {
+        "A": "x = 5",
+        "B": "x = 7",
+        "C": "x = 12",
+        "D": "x = 17",
+        "E": "x = 2"
+      },
+      "answer": "B",
+      "explanation": "Subtract 5 from both sides: x + 5 - 5 = 12 - 5. Simplify: x = 7.",
+      "steps": [
+        "1. Start: x + 5 = 12.",
+        "2. Subtract 5 from both sides: x = 12 - 5.",
+        "3. Simplify: x = 7."
+      ],
+      "fastStrategy": "To isolate variable, perform opposite operation on both sides."
+    },
+    {
+      "id": "mk_alg_b_002",
+      "question": "Solve: 2x = 10",
+      "choices": {
+        "A": "x = 2",
+        "B": "x = 5",
+        "C": "x = 8",
+        "D": "x = 10",
+        "E": "x = 12"
+      },
+      "answer": "B",
+      "explanation": "Divide both sides by 2: 2x / 2 = 10 / 2. Simplify: x = 5.",
+      "steps": [
+        "1. Start: 2x = 10.",
+        "2. Divide both sides by 2: x = 10 / 2.",
+        "3. Simplify: x = 5."
+      ],
+      "fastStrategy": "To isolate variable, perform opposite operation on both sides."
+    },
+    {
+      "id": "mk_alg_b_003",
+      "question": "Solve: 3x - 2 = 10",
+      "choices": {
+        "A": "x = 2",
+        "B": "x = 3",
+        "C": "x = 4",
+        "D": "x = 5",
+        "E": "x = 6"
+      },
+      "answer": "C",
+      "explanation": "Add 2: 3x = 12. Divide by 3: x = 4.",
+      "steps": [
+        "1. Start: 3x - 2 = 10.",
+        "2. Add 2 to both sides: 3x = 12.",
+        "3. Divide both sides by 3: x = 4."
+      ],
+      "fastStrategy": "Multi-step: add/subtract first, then multiply/divide."
+    },
+    {
+      "id": "mk_alg_b_004",
+      "question": "Solve: x/4 = 3",
+      "choices": {
+        "A": "x = 3/4",
+        "B": "x = 7",
+        "C": "x = 12",
+        "D": "x = 4/3",
+        "E": "x = 3"
+      },
+      "answer": "C",
+      "explanation": "Multiply both sides by 4: x = 3 × 4 = 12.",
+      "steps": [
+        "1. Start: x/4 = 3.",
+        "2. Multiply both sides by 4: x = 3 × 4.",
+        "3. Simplify: x = 12."
+      ],
+      "fastStrategy": "To isolate variable, perform opposite operation on both sides."
+    },
+    {
+      "id": "mk_alg_b_005",
+      "question": "Simplify: 2x + 3x - x",
+      "choices": {
+        "A": "3x",
+        "B": "4x",
+        "C": "5x",
+        "D": "6x",
+        "E": "x"
+      },
+      "answer": "B",
+      "explanation": "Combine like terms: 2x + 3x - x = (2 + 3 - 1)x = 4x.",
+      "steps": [
+        "1. Identify like terms: 2x, 3x, -x.",
+        "2. Add coefficients: 2 + 3 - 1 = 4.",
+        "3. Result: 4x."
+      ],
+      "fastStrategy": "Combine like terms by adding/subtracting coefficients."
+    },
+    {
+      "id": "mk_alg_b_006",
+      "question": "If x = 3, what is 2x + 5?",
+      "choices": {
+        "A": "10",
+        "B": "11",
+        "C": "12",
+        "D": "13",
+        "E": "14"
+      },
+      "answer": "B",
+      "explanation": "Substitute x = 3: 2(3) + 5 = 6 + 5 = 11.",
+      "steps": [
+        "1. Start: 2x + 5, where x = 3.",
+        "2. Substitute: 2(3) + 5.",
+        "3. Multiply: 6 + 5.",
+        "4. Add: 11."
+      ],
+      "fastStrategy": "Substitute value for variable; follow order of operations."
+    }
+  ]
+}

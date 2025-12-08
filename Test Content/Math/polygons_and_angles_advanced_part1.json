@@ -1,0 +1,111 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "polygons_and_angles",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_pa_a_001",
+      "question": "What is the sum of interior angles of a pentagon?",
+      "choices": {
+        "A": "540°",
+        "B": "600°",
+        "C": "720°",
+        "D": "900°",
+        "E": "1080°"
+      },
+      "answer": "A",
+      "explanation": "Sum of interior angles = (n - 2) × 180°, where n = number of sides. For pentagon (n = 5): (5 - 2) × 180° = 3 × 180° = 540°.",
+      "steps": [
+        "1. Formula: Sum = (n - 2) × 180°.",
+        "2. Pentagon has 5 sides: n = 5.",
+        "3. Sum = (5 - 2) × 180°.",
+        "4. Sum = 3 × 180° = 540°."
+      ],
+      "fastStrategy": "Interior angle sum formula: (n - 2) × 180°."
+    },
+    {
+      "id": "mk_pa_a_002",
+      "question": "If a polygon has 8 sides, what is the sum of its interior angles?",
+      "choices": {
+        "A": "720°",
+        "B": "900°",
+        "C": "1080°",
+        "D": "1260°",
+        "E": "1440°"
+      },
+      "answer": "C",
+      "explanation": "Sum = (n - 2) × 180°, where n = 8. Sum = (8 - 2) × 180° = 6 × 180° = 1080°.",
+      "steps": [
+        "1. Formula: Sum = (n - 2) × 180°.",
+        "2. Octagon has 8 sides: n = 8.",
+        "3. Sum = (8 - 2) × 180°.",
+        "4. Sum = 6 × 180° = 1080°."
+      ],
+      "fastStrategy": "Interior angle sum formula: (n - 2) × 180°."
+    },
+    {
+      "id": "mk_pa_a_003",
+      "question": "A regular polygon has each interior angle measuring 135°. How many sides does it have?",
+      "choices": {
+        "A": "6",
+        "B": "8",
+        "C": "9",
+        "D": "10",
+        "E": "12"
+      },
+      "answer": "B",
+      "explanation": "For regular n-gon: each interior angle = (n - 2) × 180° / n. So 135 = (n - 2) × 180 / n. Solve: 135n = 180n - 360. -45n = -360. n = 8.",
+      "steps": [
+        "1. Formula: Each angle = (n - 2) × 180° / n.",
+        "2. Set equal: 135 = (n - 2) × 180 / n.",
+        "3. Multiply by n: 135n = (n - 2) × 180.",
+        "4. 135n = 180n - 360.",
+        "5. -45n = -360.",
+        "6. n = 8."
+      ],
+      "fastStrategy": "Interior angle of regular polygon = (n - 2) × 180° / n."
+    },
+    {
+      "id": "mk_pa_a_004",
+      "question": "Two supplementary angles have measures in the ratio 2:3. What are their measures?",
+      "choices": {
+        "A": "60° and 120°",
+        "B": "70° and 110°",
+        "C": "72° and 108°",
+        "D": "80° and 100°",
+        "E": "50° and 130°"
+      },
+      "answer": "C",
+      "explanation": "Supplementary angles sum to 180°. Ratio 2:3 means 2x + 3x = 180. 5x = 180. x = 36. Angles: 2(36) = 72°, 3(36) = 108°.",
+      "steps": [
+        "1. Supplementary means sum = 180°.",
+        "2. Ratio 2:3 → angles are 2x and 3x.",
+        "3. Equation: 2x + 3x = 180.",
+        "4. 5x = 180.",
+        "5. x = 36.",
+        "6. Angles: 72° and 108°."
+      ],
+      "fastStrategy": "Supplementary angles sum to 180°; use ratio to set up proportion."
+    },
+    {
+      "id": "mk_pa_a_005",
+      "question": "A line intersects two parallel lines. If one alternate interior angle measures 65°, what is the other alternate interior angle?",
+      "choices": {
+        "A": "65°",
+        "B": "115°",
+        "C": "125°",
+        "D": "155°",
+        "E": "180°"
+      },
+      "answer": "A",
+      "explanation": "When a transversal intersects parallel lines, alternate interior angles are equal. Both measure 65°.",
+      "steps": [
+        "1. Transversal crosses two parallel lines.",
+        "2. Alternate interior angles are equal.",
+        "3. If one angle = 65°, the other = 65°."
+      ],
+      "fastStrategy": "Parallel lines + transversal: alternate interior angles are equal."
+    }
+  ]
+}
