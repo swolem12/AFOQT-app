@@ -7150,19 +7150,26 @@ function renderInstrumentChoiceSprite(spriteData) {
     
     if (view === 'side') {
         // Side view: realistic aircraft silhouette showing pitch and heading
-        const pitchOffset = pitchDegrees * 0.8; // Nose up/down
+        // In side view, bank is shown by tilting the wings perspective (top wing visible/hidden)
+        const pitchRotation = pitchDegrees * 0.6; // Nose up/down rotation
         const flipHorizontal = (headingDegrees > 90 && headingDegrees < 270); // Flip if heading west
+        
+        // Bank affects wing visibility in side view - when banking, one wing appears more visible
+        const wingSkew = bankDegrees * 0.3; // Positive bank = right wing more visible (ellipse ry increases)
+        const topWingRy = 32 + wingSkew;
+        const bottomWingRy = 32 - wingSkew;
         
         return `
             <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" style="display: block; margin: 0 auto; transform: scaleX(${flipHorizontal ? -1 : 1});">
-                <g transform="translate(${width/2}, ${height/2}) rotate(${pitchDegrees * 0.6})">
+                <g transform="translate(${width/2}, ${height/2}) rotate(${pitchRotation})">
                     <!-- Fuselage -->
                     <ellipse cx="0" cy="0" rx="55" ry="8" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1.5"/>
                     <!-- Cockpit -->
                     <ellipse cx="35" cy="-2" rx="12" ry="6" fill="#3a3a3a" stroke="#1a1a1a" stroke-width="1"/>
                     <path d="M 35,-6 L 45,-6 L 48,-2 L 45,2 L 35,2 Z" fill="#4a4a4a" stroke="#1a1a1a" stroke-width="0.8"/>
-                    <!-- Main wings -->
-                    <ellipse cx="-5" cy="0" rx="12" ry="32" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1.5"/>
+                    <!-- Main wings - size varies with bank angle -->
+                    <ellipse cx="-5" cy="${-Math.abs(wingSkew) * 0.2}" rx="12" ry="${topWingRy}" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1.5" opacity="${bankDegrees > 0 ? 1 : 0.7}"/>
+                    ${bankDegrees !== 0 ? `<ellipse cx="-5" cy="${Math.abs(wingSkew) * 0.2}" rx="12" ry="${bottomWingRy}" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1.5" opacity="${bankDegrees < 0 ? 1 : 0.7}"/>` : ''}
                     <!-- Tail -->
                     <path d="M -50,-2 L -60,-2 L -60,-12 L -52,-8 Z" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1.2"/>
                     <path d="M -50,2 L -60,2 L -60,6 L -52,4 Z" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1.2"/>
