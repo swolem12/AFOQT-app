@@ -1,0 +1,34 @@
+{
+  "subjectId": "vocabulary",
+  "subtopicId": "word_knowledge",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "vocab_wk_a1_001",
+      "question": "ENIGMATIC most closely means:",
+      "choices": {"A": "Clear and obvious", "B": "Mysterious and puzzling", "C": "Loud and annoying", "D": "Simple and easy"},
+      "answer": "B",
+      "explanation": "Enigmatic means mysterious or difficult to understand; it refers to something that is puzzling or hard to interpret.",
+      "steps": [
+        "1. Recall the definition: enigmatic = mysterious, puzzling.",
+        "2. Evaluate options: Clear (opposite), Mysterious (matches), Annoying (unrelated), Simple (opposite).",
+        "3. Mysterious is the best match."
+      ],
+      "fastStrategy": "Enigmatic relates to puzzles and mystery, not clarity."
+    },
+    {
+      "id": "vocab_wk_a1_002",
+      "question": "RESILIENT most closely means:",
+      "choices": {"A": "Fragile", "B": "Strong and able to recover", "C": "Slow moving", "D": "Bitter tasting"},
+      "answer": "B",
+      "explanation": "Resilient means able to recover quickly from difficulties, or able to withstand stress without permanent damage.",
+      "steps": [
+        "1. Define resilient: able to bounce back, tough, flexible.",
+        "2. Evaluate: Fragile (opposite), Strong (matches), Slow (unrelated), Bitter (unrelated).",
+        "3. Strong and able to recover captures the meaning."
+      ],
+      "fastStrategy": "Resilient = bounce back from hardship = strong and recoverable."
+    }
+  ]
+}

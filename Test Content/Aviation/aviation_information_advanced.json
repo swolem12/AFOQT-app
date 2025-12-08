@@ -1,0 +1,45 @@
+{
+  "subjectId": "aviation_information",
+  "difficulty": "advanced",
+  "questions": [
+    {
+      "id": "ai_a1_001",
+      "question": "What is the standard sea level atmospheric pressure?",
+      "choices": {"A": "29.92 inches Hg", "B": "30.00 inches Hg", "C": "14.7 psi only", "D": "1013 mb only"},
+      "answer": "A",
+      "explanation": "Standard sea level pressure is 29.92 inches of mercury (Hg), which is equivalent to 1013.25 millibars (mb) or 14.7 psi.",
+      "steps": [
+        "Recognize the question is about standard atmosphere.",
+        "Recall the standard value: 29.92 inches Hg.",
+        "Eliminate distractors with incorrect units or values."
+      ],
+      "fastStrategy": "Remember: 29.92 in Hg = standard pressure."
+    },
+    {
+      "id": "ai_a1_002",
+      "question": "What is V1 speed?",
+      "choices": {"A": "Landing speed", "B": "Decision speed for takeoff", "C": "Cruise speed", "D": "Stall speed"},
+      "answer": "B",
+      "explanation": "V1 is the critical engine failure recognition speed during takeoff. Beyond V1, the takeoff must continue even if an emergency occurs.",
+      "steps": [
+        "Identify V1 as a takeoff speed.",
+        "Recall V1 = go/no-go decision point.",
+        "Eliminate other speeds (landing, cruise, stall)."
+      ],
+      "fastStrategy": "V1 = go/no-go speed for takeoff."
+    },
+    {
+      "id": "ai_a1_003",
+      "question": "What is the purpose of trim tabs?",
+      "choices": {"A": "Increase speed", "B": "Reduce control pressure", "C": "Control temperature", "D": "Measure altitude"},
+      "answer": "B",
+      "explanation": "Trim tabs help pilots maintain a desired flight attitude by reducing the control force needed on the yoke or stick.",
+      "steps": [
+        "Identify trim tabs as small surfaces on control surfaces.",
+        "Recall their function: reduce pilot workload.",
+        "Eliminate unrelated options (speed, temperature, altitude)."
+      ],
+      "fastStrategy": "Trim tabs = less effort to hold attitude."
+    }
+  ]
+}

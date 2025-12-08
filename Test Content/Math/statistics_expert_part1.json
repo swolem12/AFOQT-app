@@ -1,0 +1,23 @@
+{
+  "subjectId": "math",
+  "subtopicId": "statistics",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "math_stats_e1_001",
+      "question": "A dataset has values: 2, 4, 6, 8, 10. What is the standard deviation?",
+      "choices": {"A": "2.83", "B": "√8", "C": "3", "D": "√10"},
+      "answer": "A",
+      "explanation": "Mean = 6. Deviations: -4, -2, 0, 2, 4. Squared: 16, 4, 0, 4, 16. Sum = 40. Variance = 40/5 = 8. SD = √8 ≈ 2.83.",
+      "steps": [
+        "1. Calculate mean: (2+4+6+8+10)/5 = 6.",
+        "2. Find deviations: each value minus mean.",
+        "3. Square deviations: 16, 4, 0, 4, 16.",
+        "4. Calculate variance: sum of squared deviations / count = 40/5 = 8.",
+        "5. Standard deviation = √8 ≈ 2.83."
+      ],
+      "fastStrategy": "SD = √(variance); variance = average of squared deviations from mean."
+    }
+  ]
+}

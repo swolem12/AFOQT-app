@@ -1,0 +1,23 @@
+{
+  "subjectId": "reading_comprehension",
+  "subtopicId": "inference",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "rc_inf_e1_001",
+      "passage": "Throughout history, civilizations have risen and fallen based on their ability to adapt to environmental and social changes. The Roman Empire, despite its military might, failed to adapt to economic pressures and external threats, leading to its eventual collapse. In contrast, the Chinese civilization has endured for over 3,000 years through continuous adaptation and reform. Modern organizations face similar challenges; those that remain rigid in their structures and strategies often struggle to compete with more adaptive competitors.",
+      "question": "Based on the passage, which of the following would the author most likely support?",
+      "choices": {"A": "Military strength is the most important factor for survival.", "B": "Civilizations that adapt to change are more likely to endure.", "C": "Economic pressures always lead to collapse.", "D": "The Chinese civilization never faced significant challenges."},
+      "answer": "B",
+      "explanation": "The passage explicitly contrasts the fall of Rome (failure to adapt) with the endurance of China (continuous adaptation), and extends this principle to modern organizations.",
+      "steps": [
+        "1. Identify the main argument: adaptation determines survival.",
+        "2. Analyze supporting evidence: Rome (no adaptation) fell; China (adaptation) endured.",
+        "3. Consider the broader application to modern organizations.",
+        "4. Eliminate options contradicting the passage."
+      ],
+      "fastStrategy": "Look for the choice that reflects the author's main thesis and supporting evidence."
+    }
+  ]
+}

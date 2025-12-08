@@ -1,0 +1,49 @@
+{
+  "subjectId": "situational_judgment",
+  "difficulty": "beginner",
+  "scenarios": [
+    {
+      "id": "sj_b1_s01_q1",
+      "scenario": "You notice a team member is consistently late to meetings, affecting morale.",
+      "questionType": "single_best",
+      "choices": {"A": "Ignore the behavior", "B": "Confront them angrily in front of the team", "C": "Privately discuss the issue and offer support", "D": "Report them immediately to your supervisor"},
+      "answer": "C",
+      "explanation": "Addressing the issue privately and supportively is most effective for morale and professionalism.",
+      "steps": [
+        "Identify the core issue: punctuality and morale.",
+        "Apply professional norms: address privately, not publicly.",
+        "Support the team member while maintaining standards.",
+        "Eliminate overreactive or passive responses."
+      ],
+      "fastStrategy": "Handle issues privately and supportively first."
+    },
+    {
+      "id": "sj_b1_s02_q1",
+      "scenario": "A colleague makes a minor mistake in a report that does not affect the outcome.",
+      "questionType": "single_best",
+      "choices": {"A": "Correct it quietly and inform them later", "B": "Ignore it completely", "C": "Publicly criticize them", "D": "Report them to management"},
+      "answer": "A",
+      "explanation": "Correcting the mistake quietly and informing the colleague maintains professionalism and trust.",
+      "steps": [
+        "Identify the issue: minor error, no major impact.",
+        "Apply professionalism: correct quietly, inform privately.",
+        "Avoid public criticism or escalation for minor issues."
+      ],
+      "fastStrategy": "Correct minor issues quietly; inform privately."
+    },
+    {
+      "id": "sj_b1_s03_q1",
+      "scenario": "You are asked to take on extra work due to a colleague's absence.",
+      "questionType": "single_best",
+      "choices": {"A": "Refuse without explanation", "B": "Complain to others", "C": "Accept and do your best", "D": "Do the work but make mistakes on purpose"},
+      "answer": "C",
+      "explanation": "Accepting extra work and doing your best demonstrates teamwork and reliability.",
+      "steps": [
+        "Identify the issue: teamwork and reliability.",
+        "Accept responsibility and maintain standards.",
+        "Avoid negative or passive-aggressive responses."
+      ],
+      "fastStrategy": "Show teamwork and reliability when asked to help."
+    }
+  ]
+}

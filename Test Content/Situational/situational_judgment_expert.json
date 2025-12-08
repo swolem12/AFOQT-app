@@ -1,0 +1,49 @@
+{
+  "subjectId": "situational_judgment",
+  "difficulty": "expert",
+  "scenarios": [
+    {
+      "id": "sj_e1_s01_q1",
+      "scenario": "You are asked to cover for a supervisor who is absent, but you discover a serious error in their work that could have major consequences.",
+      "questionType": "single_best",
+      "choices": {"A": "Ignore the error to avoid trouble", "B": "Fix the error quietly without telling anyone", "C": "Report the error to the appropriate authority and document your actions", "D": "Blame the absent supervisor if discovered"},
+      "answer": "C",
+      "explanation": "Reporting and documenting a serious error is the most responsible and professional action, especially when consequences are significant.",
+      "steps": [
+        "Identify the issue: serious error with major consequences.",
+        "Take responsibility and document actions.",
+        "Report through the proper chain of command.",
+        "Avoid blame-shifting or hiding the issue."
+      ],
+      "fastStrategy": "Report and document serious issues through proper channels."
+    },
+    {
+      "id": "sj_e1_s02_q1",
+      "scenario": "A subordinate confides in you about unethical behavior by another team member.",
+      "questionType": "single_best",
+      "choices": {"A": "Ignore the report", "B": "Confront the accused publicly", "C": "Report the behavior confidentially to the appropriate authority", "D": "Spread rumors to warn others"},
+      "answer": "C",
+      "explanation": "Reporting unethical behavior confidentially is the most ethical and professional response.",
+      "steps": [
+        "Identify the issue: ethics and confidentiality.",
+        "Report through proper, confidential channels.",
+        "Avoid public confrontation or gossip."
+      ],
+      "fastStrategy": "Handle ethics issues confidentially and professionally."
+    },
+    {
+      "id": "sj_e1_s03_q1",
+      "scenario": "You are leading a team during a crisis and must make a decision with incomplete information.",
+      "questionType": "single_best",
+      "choices": {"A": "Wait for perfect information before acting", "B": "Make the best decision possible with available information", "C": "Let the team decide by vote", "D": "Refuse to act"},
+      "answer": "B",
+      "explanation": "Making timely decisions with available information is critical in crisis leadership.",
+      "steps": [
+        "Identify the issue: crisis leadership and decision-making.",
+        "Act decisively with available information.",
+        "Avoid indecision or abdication of responsibility."
+      ],
+      "fastStrategy": "In a crisis, act decisively with what you know."
+    }
+  ]
+}

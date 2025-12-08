@@ -1,0 +1,34 @@
+{
+  "subjectId": "aviation_information",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ai_e1_001",
+      "question": "What is the relationship between angle of attack and lift on an aircraft wing?",
+      "choices": {"A": "Lift increases linearly with angle of attack indefinitely", "B": "Lift increases with angle of attack until critical angle, then decreases sharply", "C": "Angle of attack has no effect on lift", "D": "Lift is proportional to the square of the angle of attack"},
+      "answer": "B",
+      "explanation": "As angle of attack increases, lift increases initially. However, beyond the critical angle of attack, the airflow separates and lift decreases sharply (stall).",
+      "steps": [
+        "1. Understand aerodynamic principles: angle of attack affects airflow.",
+        "2. Recognize the lift curve: lift increases then decreases.",
+        "3. Know the critical angle: beyond this point, stall occurs.",
+        "4. Eliminate linear and proportional relationships."
+      ],
+      "fastStrategy": "Lift curve: increases, peaks at critical angle, then drops sharply at stall."
+    },
+    {
+      "id": "ai_e1_002",
+      "question": "What is induced drag?",
+      "choices": {"A": "Drag caused by air friction on the fuselage", "B": "Drag caused by the wing generating lift", "C": "Drag due to engine inefficiency", "D": "Drag that occurs only at high speeds"},
+      "answer": "B",
+      "explanation": "Induced drag is the drag created as a side effect of the wing generating lift. It is inseparable from lift production.",
+      "steps": [
+        "1. Understand drag types: parasitic and induced.",
+        "2. Recall induced drag definition: created by lift generation.",
+        "3. Eliminate fuselage friction (parasitic), engine (not drag), speed-only (occurs at all speeds)."
+      ],
+      "fastStrategy": "Induced drag = drag caused by lift; cannot have lift without it."
+    }
+  ]
+}

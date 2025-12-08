@@ -1,0 +1,48 @@
+{
+  "subjectId": "math",
+  "subtopicId": "algebra",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "math_alg_a1_001",
+      "question": "Solve: 3x + 5 = 2x + 12",
+      "choices": {"A": "5", "B": "7", "C": "9", "D": "11"},
+      "answer": "B",
+      "explanation": "Subtract 2x from both sides: x + 5 = 12. Subtract 5: x = 7.",
+      "steps": [
+        "1. Subtract 2x from both sides: 3x − 2x + 5 = 12.",
+        "2. Simplify: x + 5 = 12.",
+        "3. Subtract 5: x = 7.",
+        "4. Verify: 3(7) + 5 = 26, and 2(7) + 12 = 26. ✓"
+      ],
+      "fastStrategy": "Collect like terms, then isolate the variable."
+    },
+    {
+      "id": "math_alg_a1_002",
+      "question": "If 4y − 7 = 25, what is y?",
+      "choices": {"A": "6", "B": "8", "C": "10", "D": "12"},
+      "answer": "B",
+      "explanation": "Add 7: 4y = 32. Divide by 4: y = 8.",
+      "steps": [
+        "1. Add 7 to both sides: 4y = 32.",
+        "2. Divide by 4: y = 8.",
+        "3. Verify: 4(8) − 7 = 25. ✓"
+      ],
+      "fastStrategy": "Inverse operations: undo subtraction first, then division."
+    },
+    {
+      "id": "math_alg_a1_003",
+      "question": "Solve: 2(x + 3) = 16",
+      "choices": {"A": "3", "B": "5", "C": "7", "D": "9"},
+      "answer": "B",
+      "explanation": "Divide by 2: x + 3 = 8. Subtract 3: x = 5.",
+      "steps": [
+        "1. Divide both sides by 2: x + 3 = 8.",
+        "2. Subtract 3: x = 5.",
+        "3. Verify: 2(5 + 3) = 2(8) = 16. ✓"
+      ],
+      "fastStrategy": "Eliminate parentheses first by dividing, then isolate x."
+    }
+  ]
+}

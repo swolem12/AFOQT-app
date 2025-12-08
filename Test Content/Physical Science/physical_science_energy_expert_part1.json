@@ -1,0 +1,34 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "energy",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ps_energy_e1_001",
+      "question": "If a 2 kg object moves at 10 m/s, what is its kinetic energy?",
+      "choices": {"A": "20 J", "B": "50 J", "C": "100 J", "D": "200 J"},
+      "answer": "C",
+      "explanation": "KE = (1/2)mv² = (1/2)(2)(10)² = (1/2)(2)(100) = 100 J.",
+      "steps": [
+        "1. Recall kinetic energy formula: KE = (1/2)mv².",
+        "2. Identify m = 2 kg, v = 10 m/s.",
+        "3. Calculate: (1/2)(2)(10)² = 100 J."
+      ],
+      "fastStrategy": "KE = (1/2)mv²; square the velocity first, then multiply by mass and 0.5."
+    },
+    {
+      "id": "ps_energy_e1_002",
+      "question": "A spring with spring constant 200 N/m is compressed by 0.5 m. What is the potential energy stored?",
+      "choices": {"A": "25 J", "B": "50 J", "C": "100 J", "D": "200 J"},
+      "answer": "A",
+      "explanation": "PE = (1/2)kx² = (1/2)(200)(0.5)² = (1/2)(200)(0.25) = 25 J.",
+      "steps": [
+        "1. Recall spring potential energy: PE = (1/2)kx².",
+        "2. Identify k = 200 N/m, x = 0.5 m.",
+        "3. Calculate: (1/2)(200)(0.25) = 25 J."
+      ],
+      "fastStrategy": "PE = (1/2)kx²; square the displacement, multiply by k and 0.5."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "subjectId": "situational_judgment",
+  "difficulty": "expert",
+  "part": 1,
+  "scenarios": [
+    {
+      "id": "sj_e1_s01_q1",
+      "scenario": "You discover that a high-level decision made by leadership is based on incomplete or incorrect information. Speaking up could embarrass the leader publicly.",
+      "questionType": "single_best",
+      "choices": {"A": "Keep silent to avoid conflict", "B": "Inform the leader privately with evidence", "C": "Publicly correct the leader in a meeting", "D": "Wait for someone else to speak up first"},
+      "answer": "B",
+      "explanation": "Inform the leader privately with evidence to allow them to correct course professionally while maintaining their authority and trust.",
+      "steps": [
+        "1. Identify the issue: incorrect information driving decisions.",
+        "2. Recognize the complexity: need to correct error while respecting leadership.",
+        "3. Choose private communication to preserve relationship and professionalism.",
+        "4. Provide evidence to support your concern."
+      ],
+      "fastStrategy": "Critical feedback works best when delivered privately with evidence."
+    },
+    {
+      "id": "sj_e1_s02_q1",
+      "scenario": "You are asked to oversee a project that requires skills you don't yet have. Declining might limit your career growth, but accepting might jeopardize the project.",
+      "questionType": "single_best",
+      "choices": {"A": "Decline immediately", "B": "Accept and figure it out as you go", "C": "Accept with a plan to acquire skills and support", "D": "Request someone else be assigned"},
+      "answer": "C",
+      "explanation": "Accept the challenge while committing to skill development and seeking appropriate support. This demonstrates growth mindset and professional responsibility.",
+      "steps": [
+        "1. Identify the dilemma: growth vs. capability vs. project success.",
+        "2. Consider options: decline (missed opportunity), accept blindly (risky), accept with preparation (balanced).",
+        "3. Best approach: accept while developing a plan to succeed."
+      ],
+      "fastStrategy": "Stretch assignments work when paired with intentional learning and support."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "subjectId": "reading_comprehension",
+  "subtopicId": "main_idea",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "rc_main_a1_001",
+      "passage": "Artificial intelligence has revolutionized numerous industries by automating complex tasks and improving decision-making processes. From healthcare to finance, AI systems analyze vast datasets to identify patterns and make predictions with remarkable accuracy. However, the rapid advancement of AI also raises ethical concerns regarding privacy, job displacement, and algorithmic bias. Policymakers and industry leaders must balance innovation with responsible AI development.",
+      "question": "What is the main idea of this passage?",
+      "choices": {"A": "AI is harmful and should be banned.", "B": "AI offers significant benefits but requires ethical oversight.", "C": "AI is only used in healthcare and finance.", "D": "AI has no impact on employment."},
+      "answer": "B",
+      "explanation": "The passage discusses both benefits of AI (automation, accuracy) and concerns (ethics, bias), concluding that development must be balanced and responsible.",
+      "steps": [
+        "1. Identify the topic: Artificial intelligence and its impact.",
+        "2. Note benefits mentioned: automation, pattern recognition, improved decisions.",
+        "3. Note concerns: privacy, job displacement, bias.",
+        "4. Identify the conclusion: need for responsible development.",
+        "5. Select the choice that captures this balance."
+      ],
+      "fastStrategy": "Look for the broadest statement that encompasses both benefits and concerns."
+    },
+    {
+      "id": "rc_main_a1_002",
+      "passage": "Climate change poses unprecedented challenges to global ecosystems and human societies. Rising temperatures are causing sea levels to rise, threatening coastal communities. Extreme weather events are becoming more frequent and severe. Scientific consensus confirms that human activities, particularly the burning of fossil fuels, are the primary cause. Mitigation strategies including renewable energy adoption and carbon reduction are essential to prevent catastrophic outcomes.",
+      "question": "What is the primary purpose of this passage?",
+      "choices": {"A": "To explain why sea levels are rising.", "B": "To argue for urgent action on climate change.", "C": "To describe renewable energy technologies.", "D": "To criticize fossil fuel companies."},
+      "answer": "B",
+      "explanation": "The passage presents evidence of climate change and explains why mitigation is essential, advocating for urgent action.",
+      "steps": [
+        "1. Identify the main topic: climate change and its impacts.",
+        "2. Note the evidence presented: rising temperatures, extreme weather, scientific consensus.",
+        "3. Identify the call to action: mitigation strategies are essential.",
+        "4. Determine the purpose: to persuade readers that urgent action is needed."
+      ],
+      "fastStrategy": "Look for the choice that reflects the overall argument or persuasive intent."
+    }
+  ]
+}

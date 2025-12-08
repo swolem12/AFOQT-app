@@ -1,0 +1,48 @@
+{
+  "subjectId": "aviation_information",
+  "difficulty": "beginner",
+  "questions": [
+    {
+      "id": "ai_b1_001",
+      "question": "What are the four forces of flight?",
+      "choices": {"A": "Lift, Weight, Thrust, Drag", "B": "Lift, Gravity, Speed, Wind", "C": "Up, Down, Forward, Backward", "D": "Pitch, Roll, Yaw, Speed"},
+      "answer": "A",
+      "explanation": "The four forces acting on an aircraft in flight are lift (upward), weight (downward), thrust (forward), and drag (backward). Understanding these is fundamental to all flight.",
+      "steps": [
+        "Identify the question is about basic flight principles.",
+        "Recall the four forces: lift, weight, thrust, drag.",
+        "Match each force to its direction and effect on the aircraft.",
+        "Eliminate distractors that mix up forces or use unrelated terms."
+      ],
+      "fastStrategy": "Remember: up (lift), down (weight), forward (thrust), back (drag)."
+    },
+    {
+      "id": "ai_b1_002",
+      "question": "What does the rudder control?",
+      "choices": {"A": "Pitch", "B": "Roll", "C": "Yaw", "D": "Altitude"},
+      "answer": "C",
+      "explanation": "The rudder controls yaw, which is the rotation of the aircraft around its vertical axis (nose left/right).",
+      "steps": [
+        "Identify the control surface: rudder.",
+        "Recall that rudder is attached to the vertical stabilizer.",
+        "Know that yaw is nose left/right movement.",
+        "Eliminate pitch (elevator) and roll (ailerons)."
+      ],
+      "fastStrategy": "Rudder = Yaw (nose left/right)."
+    },
+    {
+      "id": "ai_b1_003",
+      "question": "What is the purpose of flaps?",
+      "choices": {"A": "Increase lift and drag at lower speeds", "B": "Increase speed", "C": "Control direction", "D": "Reduce weight"},
+      "answer": "A",
+      "explanation": "Flaps increase the camber of the wing, generating more lift and drag. This allows safer takeoff and landing at lower speeds.",
+      "steps": [
+        "Identify the device: flaps (on the wing).",
+        "Recall that flaps are extended for takeoff/landing.",
+        "Understand that increased camber = more lift and drag.",
+        "Eliminate answers not related to lift/drag."
+      ],
+      "fastStrategy": "Flaps = more lift/drag for slow flight."
+    }
+  ]
+}

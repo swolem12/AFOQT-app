@@ -1,0 +1,45 @@
+{
+  "subjectId": "aviation_information",
+  "difficulty": "expert",
+  "questions": [
+    {
+      "id": "ai_e1_001",
+      "question": "What causes an aircraft to stall?",
+      "choices": {"A": "Flying too fast", "B": "Exceeding critical angle of attack", "C": "Running out of fuel", "D": "Engine failure"},
+      "answer": "B",
+      "explanation": "A stall occurs when the wing exceeds its critical angle of attack, disrupting airflow and causing loss of lift.",
+      "steps": [
+        "Recognize the question is about stalls.",
+        "Recall: stall = critical angle of attack exceeded.",
+        "Eliminate answers not related to angle of attack."
+      ],
+      "fastStrategy": "Stall = too high angle of attack, not speed."
+    },
+    {
+      "id": "ai_e1_002",
+      "question": "What is P-factor?",
+      "choices": {"A": "Asymmetric propeller thrust", "B": "Power factor", "C": "Pressure factor", "D": "Pitch factor"},
+      "answer": "A",
+      "explanation": "P-factor is the asymmetric thrust produced by a propeller at high angles of attack, causing the aircraft to yaw.",
+      "steps": [
+        "Identify P-factor as a propeller effect.",
+        "Recall: high angle of attack = more thrust on descending blade.",
+        "Eliminate distractors with unrelated terms."
+      ],
+      "fastStrategy": "P-factor = asymmetric thrust (propeller)."
+    },
+    {
+      "id": "ai_e1_003",
+      "question": "What is the coffin corner?",
+      "choices": {"A": "Where stall speed meets max speed", "B": "Landing pattern corner", "C": "Fuel tank corner", "D": "Cockpit corner"},
+      "answer": "A",
+      "explanation": "Coffin corner is the altitude where stall speed and maximum speed converge, limiting the flight envelope.",
+      "steps": [
+        "Recognize the term refers to high-altitude flight.",
+        "Recall: coffin corner = stall and max speed meet.",
+        "Eliminate unrelated options."
+      ],
+      "fastStrategy": "Coffin corner = stall speed meets max speed."
+    }
+  ]
+}

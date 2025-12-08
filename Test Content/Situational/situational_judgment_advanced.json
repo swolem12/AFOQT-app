@@ -1,0 +1,48 @@
+{
+  "subjectId": "situational_judgment",
+  "difficulty": "advanced",
+  "scenarios": [
+    {
+      "id": "sj_a1_s01_q1",
+      "scenario": "You observe a supervisor making a decision that could compromise safety.",
+      "questionType": "single_best",
+      "choices": {"A": "Follow the order without question", "B": "Raise your concern respectfully and suggest alternatives", "C": "Complain to coworkers", "D": "Refuse and leave the workplace"},
+      "answer": "B",
+      "explanation": "Raising concerns respectfully and suggesting alternatives upholds safety and professionalism.",
+      "steps": [
+        "Identify the core issue: safety and chain of command.",
+        "Apply professional norms: raise concerns respectfully.",
+        "Suggest alternatives rather than refusing or complaining."
+      ],
+      "fastStrategy": "Raise safety concerns respectfully and suggest solutions."
+    },
+    {
+      "id": "sj_a1_s02_q1",
+      "scenario": "A team member is not contributing to a group project, causing frustration among others.",
+      "questionType": "single_best",
+      "choices": {"A": "Do all the work yourself", "B": "Complain to the supervisor immediately", "C": "Discuss expectations and offer help", "D": "Exclude them from the project"},
+      "answer": "C",
+      "explanation": "Discussing expectations and offering help encourages collaboration and accountability.",
+      "steps": [
+        "Identify the issue: teamwork and accountability.",
+        "Encourage open communication and support.",
+        "Avoid exclusion or escalation as first steps."
+      ],
+      "fastStrategy": "Encourage teamwork and clarify expectations."
+    },
+    {
+      "id": "sj_a1_s03_q1",
+      "scenario": "You witness a peer violating a minor rule that does not endanger anyone.",
+      "questionType": "single_best",
+      "choices": {"A": "Report them immediately", "B": "Ignore it", "C": "Remind them of the rule privately", "D": "Publicly call them out"},
+      "answer": "C",
+      "explanation": "Reminding a peer privately maintains respect and professionalism without escalation.",
+      "steps": [
+        "Identify the issue: minor rule violation.",
+        "Address privately to maintain respect.",
+        "Avoid public confrontation or unnecessary escalation."
+      ],
+      "fastStrategy": "Address minor issues privately and respectfully."
+    }
+  ]
+}

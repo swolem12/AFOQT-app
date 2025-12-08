@@ -1,0 +1,36 @@
+{
+  "subjectId": "situational_judgment",
+  "difficulty": "advanced",
+  "part": 1,
+  "scenarios": [
+    {
+      "id": "sj_a1_s04_q1",
+      "scenario": "You are assigned to lead a high-stakes project with an unrealistic deadline. Your team expresses concerns about quality and safety.",
+      "questionType": "single_best",
+      "choices": {"A": "Push the team to meet the deadline at any cost", "B": "Request a timeline extension based on quality and safety concerns", "C": "Reduce project scope to meet the deadline without compromising safety", "D": "Accept the deadline and hope everything works out"},
+      "answer": "C",
+      "explanation": "A responsible leader balances competing demands: meeting objectives while maintaining safety and quality. Reducing scope is a professional compromise.",
+      "steps": [
+        "1. Identify the conflict: deadline vs. quality/safety.",
+        "2. Consider options: 1) ignore concerns (risky), 2) request extension (may not be approved), 3) reduce scope (proactive), 4) ignore problems (irresponsible).",
+        "3. Choose the option that demonstrates leadership and responsibility."
+      ],
+      "fastStrategy": "Safety and quality are non-negotiable; adjust scope or timeline, not standards."
+    },
+    {
+      "id": "sj_a1_s05_q1",
+      "scenario": "A trusted colleague admits they made a critical error in a report you submitted to leadership.",
+      "questionType": "single_best",
+      "choices": {"A": "Blame them to leadership", "B": "Help correct it immediately and notify leadership together", "C": "Ignore it and hope it goes unnoticed", "D": "Correct it quietly without telling them"},
+      "answer": "B",
+      "explanation": "Integrity and teamwork require prompt correction and transparent communication. Share responsibility and work together to fix it.",
+      "steps": [
+        "1. Recognize the error and its potential impact.",
+        "2. Support the colleague while addressing the problem.",
+        "3. Communicate transparently with leadership.",
+        "4. Implement fixes and preventive measures."
+      ],
+      "fastStrategy": "Errors require immediate, honest communication and collaborative solutions."
+    }
+  ]
+}

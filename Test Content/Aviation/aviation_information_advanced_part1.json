@@ -1,0 +1,34 @@
+{
+  "subjectId": "aviation_information",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ai_a1_s04",
+      "question": "What is the purpose of the autopilot system in an aircraft?",
+      "choices": {"A": "Replace the pilot entirely", "B": "Maintain a set heading and altitude automatically", "C": "Fly the aircraft in all weather", "D": "Prevent all accidents"},
+      "answer": "B",
+      "explanation": "The autopilot maintains the aircraft's heading, altitude, and speed without pilot input, reducing workload during steady flight.",
+      "steps": [
+        "1. Understand autopilot function: automated flight control.",
+        "2. Recall: autopilot maintains attitude (heading, altitude, speed).",
+        "3. Eliminate incorrect options: it doesn't replace the pilot, can't handle all weather, can't prevent accidents alone."
+      ],
+      "fastStrategy": "Autopilot = automatic attitude control, not full autonomous flight."
+    },
+    {
+      "id": "ai_a1_s05",
+      "question": "What is true about an aircraft's center of gravity?",
+      "choices": {"A": "It must never move", "B": "It must remain within the CG envelope", "C": "It should be as far back as possible", "D": "It is fixed regardless of cargo"},
+      "answer": "B",
+      "explanation": "The center of gravity must stay within aircraft-specific limits (CG envelope) to ensure safe flight characteristics and control.",
+      "steps": [
+        "1. Recall CG (center of gravity) definition and importance.",
+        "2. Understand CG affects stability and control.",
+        "3. Know that CG limits vary by aircraft type.",
+        "4. Eliminate incorrect options."
+      ],
+      "fastStrategy": "CG must be within limits to maintain safe, controllable flight."
+    }
+  ]
+}

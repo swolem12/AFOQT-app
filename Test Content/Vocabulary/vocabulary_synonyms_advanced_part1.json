@@ -1,0 +1,47 @@
+{
+  "subjectId": "vocabulary",
+  "subtopicId": "synonyms",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "vocab_syn_a1_001",
+      "question": "METICULOUS most closely means:",
+      "choices": {"A": "Quick", "B": "Careless", "C": "Precise", "D": "Suspicious"},
+      "answer": "C",
+      "explanation": "Meticulous means extremely careful and precise in detail. Precise is the closest synonym.",
+      "steps": [
+        "1. Define meticulous: very careful, attentive to detail.",
+        "2. Evaluate each choice: Quick (opposite), Careless (opposite), Precise (accurate), Suspicious (unrelated).",
+        "3. Precise aligns with meticulous."
+      ],
+      "fastStrategy": "Meticulous = detail-oriented and careful → Precise."
+    },
+    {
+      "id": "vocab_syn_a1_002",
+      "question": "AMBIGUOUS most closely means:",
+      "choices": {"A": "Clear", "B": "Unclear", "C": "Bold", "D": "Timid"},
+      "answer": "B",
+      "explanation": "Ambiguous means having more than one meaning or unclear. Unclear is the closest synonym.",
+      "steps": [
+        "1. Define ambiguous: open to more than one interpretation.",
+        "2. Evaluate: Clear (opposite), Unclear (matches), Bold (unrelated), Timid (unrelated).",
+        "3. Unclear captures the meaning."
+      ],
+      "fastStrategy": "Ambiguous = multiple meanings = Unclear."
+    },
+    {
+      "id": "vocab_syn_a1_003",
+      "question": "BENEVOLENT most closely means:",
+      "choices": {"A": "Harmful", "B": "Selfish", "C": "Kind", "D": "Lazy"},
+      "answer": "C",
+      "explanation": "Benevolent means showing kindness and generosity. Kind is the closest synonym.",
+      "steps": [
+        "1. Define benevolent: kind, generous, charitable.",
+        "2. Evaluate: Harmful (opposite), Selfish (opposite), Kind (matches), Lazy (unrelated).",
+        "3. Kind is the clear match."
+      ],
+      "fastStrategy": "Benevolent = charitable and kind → Kind."
+    }
+  ]
+}

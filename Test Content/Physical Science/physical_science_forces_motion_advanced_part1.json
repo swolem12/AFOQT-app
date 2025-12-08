@@ -1,0 +1,50 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "forces_motion",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ps_fm_a1_001",
+      "question": "An object has a mass of 5 kg and is accelerated at 3 m/s². What is the net force acting on it?",
+      "choices": {"A": "10 N", "B": "15 N", "C": "20 N", "D": "25 N"},
+      "answer": "B",
+      "explanation": "Using F = ma: F = 5 kg × 3 m/s² = 15 N.",
+      "steps": [
+        "1. Recall Newton's second law: F = ma.",
+        "2. Identify mass m = 5 kg and acceleration a = 3 m/s².",
+        "3. Calculate: F = 5 × 3 = 15 N.",
+        "4. Verify units: kg⋅m/s² = N. ✓"
+      ],
+      "fastStrategy": "F = ma is the fundamental equation; multiply mass and acceleration."
+    },
+    {
+      "id": "ps_fm_a1_002",
+      "question": "If an object is thrown upward with an initial velocity of 20 m/s, how long does it take to reach the maximum height? (Use g = 10 m/s²)",
+      "choices": {"A": "1 s", "B": "2 s", "C": "3 s", "D": "4 s"},
+      "answer": "B",
+      "explanation": "At maximum height, velocity = 0. Using v = u − gt: 0 = 20 − 10t → t = 2 s.",
+      "steps": [
+        "1. At maximum height, final velocity v = 0.",
+        "2. Use kinematic equation: v = u − gt.",
+        "3. Substitute: 0 = 20 − 10t.",
+        "4. Solve for t: t = 20/10 = 2 s."
+      ],
+      "fastStrategy": "At max height, velocity = 0; use v = u − gt to find time."
+    },
+    {
+      "id": "ps_fm_a1_003",
+      "question": "Two forces act on an object: 12 N to the right and 5 N to the left. What is the net force?",
+      "choices": {"A": "7 N to the right", "B": "7 N to the left", "C": "17 N to the right", "D": "17 N to the left"},
+      "answer": "A",
+      "explanation": "Net force = 12 N (right) − 5 N (left) = 7 N to the right.",
+      "steps": [
+        "1. Identify forces: 12 N right, 5 N left.",
+        "2. Subtract magnitudes: 12 − 5 = 7 N.",
+        "3. Direction follows the larger force: right.",
+        "4. Answer: 7 N to the right."
+      ],
+      "fastStrategy": "Subtract opposing forces; direction is toward the larger force."
+    }
+  ]
+}

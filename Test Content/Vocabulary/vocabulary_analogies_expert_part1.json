@@ -1,0 +1,36 @@
+{
+  "subjectId": "vocabulary",
+  "subtopicId": "analogies",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "vocab_ana_e1_001",
+      "question": "MICROSCOPE : CELL :: TELESCOPE : ?",
+      "choices": {"A": "Earth", "B": "Star", "C": "Lens", "D": "Distance"},
+      "answer": "B",
+      "explanation": "A microscope is used to examine a cell; similarly, a telescope is used to examine a star. The analogy is tool to object.",
+      "steps": [
+        "1. Identify the relationship: microscope examines cell.",
+        "2. Find analogous relationship: telescope examines ?",
+        "3. Eliminate: Earth (too broad), Lens (part of tool), Distance (abstract).",
+        "4. Star fits: telescope examines star."
+      ],
+      "fastStrategy": "Microscope:Cell :: Telescope:Star (both tools examine small/distant objects)."
+    },
+    {
+      "id": "vocab_ana_e1_002",
+      "question": "AUTHOR : BOOK :: ARCHITECT : ?",
+      "choices": {"A": "Blueprint", "B": "Structure", "C": "Building", "D": "Design"},
+      "answer": "C",
+      "explanation": "An author creates a book; similarly, an architect creates a building. The analogy is creator to creation.",
+      "steps": [
+        "1. Identify the relationship: author creates book (creator to creation).",
+        "2. Find analogous pair: architect creates ?",
+        "3. Evaluate: Blueprint (planning tool), Structure (abstract), Building (tangible creation), Design (process).",
+        "4. Building is the most direct parallel."
+      ],
+      "fastStrategy": "Author:Book :: Architect:Building (creator:creation)."
+    }
+  ]
+}
