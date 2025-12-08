@@ -3145,6 +3145,120 @@ function createBlockCountingTopicsFromRegistry() {
     return topicsBC;
 }
 
+// Function to create Vocabulary topics from questionRegistry (Patch 18 - Word Knowledge & Verbal Analogies)
+function createVocabularyTopicsFromRegistry() {
+    const vocabTopics = [];
+    
+    // Topic name mapping
+    const topicNames = {
+        'synonyms': 'Synonyms',
+        'antonyms': 'Antonyms',
+        'verbal_analogies': 'Verbal Analogies',
+        'vocabulary_in_context': 'Vocabulary in Context',
+        'confusing_word_pairs': 'Confusing Word Pairs',
+        'highfreq_vocab': 'High Frequency Vocabulary',
+        'sentence_completion': 'Sentence Completion',
+        'word_roots_affixes': 'Word Roots & Affixes'
+    };
+    
+    const topicDescriptions = {
+        'synonyms': 'Words with similar meanings',
+        'antonyms': 'Words with opposite meanings',
+        'verbal_analogies': 'Word relationship patterns',
+        'vocabulary_in_context': 'Word meanings from context',
+        'confusing_word_pairs': 'Commonly confused words',
+        'highfreq_vocab': 'Common AFOQT vocabulary words',
+        'sentence_completion': 'Fill in the blank with best word',
+        'word_roots_affixes': 'Latin and Greek word origins'
+    };
+    
+    // Check word_knowledge content
+    if (questionRegistry && questionRegistry.word_knowledge) {
+        const wkContent = questionRegistry.word_knowledge;
+        for (const subtopicId in wkContent) {
+            vocabTopics.push({
+                id: subtopicId,
+                name: topicNames[subtopicId] || subtopicId.replace(/_/g, ' '),
+                description: topicDescriptions[subtopicId] || 'Vocabulary practice',
+                subjectId: 'word_knowledge',
+                isOfficialAfoqtTopic: true,
+                hasContent: true
+            });
+        }
+    }
+    
+    // Check verbal_analogies content
+    if (questionRegistry && questionRegistry.verbal_analogies) {
+        const vaContent = questionRegistry.verbal_analogies;
+        for (const subtopicId in vaContent) {
+            vocabTopics.push({
+                id: subtopicId,
+                name: topicNames[subtopicId] || 'Verbal Analogies',
+                description: topicDescriptions[subtopicId] || 'Word relationship patterns',
+                subjectId: 'verbal_analogies',
+                isOfficialAfoqtTopic: true,
+                hasContent: true
+            });
+        }
+    }
+    
+    if (vocabTopics.length === 0) {
+        console.warn('Vocabulary content not loaded, using procedural fallbacks');
+        return vocabularyTopics;
+    }
+    
+    console.log(`Created ${vocabTopics.length} vocabulary topics from content`);
+    return vocabTopics;
+}
+
+// Function to create Physical Science topics from questionRegistry
+function createPhysicalScienceTopicsFromRegistry() {
+    if (!questionRegistry || !questionRegistry.physical_science) {
+        console.warn('Physical science content not loaded, using procedural fallbacks');
+        return scienceTopics;
+    }
+    
+    const psContent = questionRegistry.physical_science;
+    const dynamicTopics = [];
+    
+    // Topic name mapping (remove 'physical_science_' prefix from subtopicId)
+    const topicNames = {
+        'chemistry_basics': 'Chemistry Basics',
+        'earth_space': 'Earth & Space Science',
+        'electricity_magnetism': 'Electricity & Magnetism',
+        'energy_heat': 'Energy & Heat',
+        'fluids_pressure': 'Fluids & Pressure',
+        'motion_mechanics': 'Motion & Mechanics',
+        'optics_waves': 'Optics & Waves'
+    };
+    
+    const topicDescriptions = {
+        'chemistry_basics': 'Chemical reactions, compounds, and periodic table',
+        'earth_space': 'Geology, astronomy, and Earth systems',
+        'electricity_magnetism': 'Electric circuits, magnetism, and electromagnetic fields',
+        'energy_heat': 'Energy forms, conservation, and thermodynamics',
+        'fluids_pressure': 'Fluid mechanics, buoyancy, and pressure systems',
+        'motion_mechanics': 'Kinematics, forces, and Newton\'s laws',
+        'optics_waves': 'Light, sound, and wave properties'
+    };
+    
+    // Create topics from loaded content
+    for (const subtopicId in psContent) {
+        // Remove 'physical_science_' prefix if present
+        const cleanId = subtopicId.replace('physical_science_', '');
+        dynamicTopics.push({
+            id: cleanId,
+            name: topicNames[cleanId] || cleanId.replace(/_/g, ' '),
+            description: topicDescriptions[cleanId] || 'Physical science practice',
+            subjectId: 'physical_science',
+            hasContent: true
+        });
+    }
+    
+    console.log(`Created ${dynamicTopics.length} physical science topics from content`);
+    return dynamicTopics;
+}
+
 // Combine all topics and add subject IDs
 let topics = [
     ...vocabularyTopics,
@@ -4017,6 +4131,13 @@ const challenges = [
 ];
 
 function getSubjectForTopic(topicId) {
+    // Use the global topics array which contains all loaded topics
+    const topic = topics.find(t => t.id === topicId);
+    if (topic && topic.subjectId) {
+        return topic.subjectId;
+    }
+    
+    // Fallback to legacy lookup
     if (mathTopics.find(t => t.id === topicId)) return 'math';
     if (vocabularyTopics.find(t => t.id === topicId)) return 'verbal';
     if (readingTopics.find(t => t.id === topicId)) return 'reading';
@@ -10308,6 +10429,23 @@ async function init() {
                     topics = topics.filter(t => t.subjectId !== 'block_counting');
                     topics.push(...bcTopics);
                     console.log(`✓ Loaded ${bcTopics.length} block counting topics from content`);
+                }
+                
+                // Add Vocabulary topics from Patch 18 content (word_knowledge & verbal_analogies)
+                const vocabTopics = createVocabularyTopicsFromRegistry();
+                if (vocabTopics.length > 0) {
+                    // Remove old vocabulary procedural topics
+                    topics = topics.filter(t => t.subjectId !== 'word_knowledge' && t.subjectId !== 'verbal_analogies' && t.subjectId !== 'vocabulary');
+                    topics.push(...vocabTopics);
+                    console.log(`✓ Loaded ${vocabTopics.length} vocabulary topics from content`);
+                }
+                
+                // Add Physical Science topics from content
+                const psTopics = createPhysicalScienceTopicsFromRegistry();
+                if (psTopics.length > 0) {
+                    topics = topics.filter(t => t.subjectId !== 'physical_science');
+                    topics.push(...psTopics);
+                    console.log(`✓ Loaded ${psTopics.length} physical science topics from content`);
                 }
                 
                 // Add AFOQT practice test topics if available
