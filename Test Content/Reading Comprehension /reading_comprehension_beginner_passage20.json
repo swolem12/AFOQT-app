@@ -2,9 +2,7 @@
   "subjectId": "reading_comprehension",
   "difficulty": "beginner",
   "passageId": "rc_b1_p020",
-
   "passage": "Environmental engineers are researching new materials to filter pollutants from industrial wastewater. Traditional filters often clog quickly or break down when exposed to harsh chemicals, reducing efficiency. To improve durability, scientists are developing membranes made from advanced polymers that can withstand extreme conditions. These membranes contain microscopic pores that trap contaminants while allowing clean water to pass through. Some versions even use electrical charges to repel certain particles, enhancing filtration performance. Although promising, the technology is still expensive and requires further testing before it can be deployed widely. Early trials, however, show that these membranes remove significantly more pollutants than conventional filters. As research progresses, these advanced materials may play a key role in helping industries reduce their environmental impact and meet stricter water quality regulations.",
-
   "questions": [
     {
       "id": "rc_b1_p020_q1",
@@ -16,7 +14,15 @@
         "D": "The role of agriculture in water pollution"
       },
       "answer": "B",
-      "explanation": "The passage describes advanced filtration membranes being developed for wastewater treatment."
+      "explanation": "The passage describes advanced filtration membranes being developed for wastewater treatment.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p020_q2",
@@ -28,7 +34,15 @@
         "D": "They require electrical charges to operate"
       },
       "answer": "C",
-      "explanation": "The passage states that traditional filters clog and break down."
+      "explanation": "The passage states that traditional filters clog and break down.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p020_q3",
@@ -40,7 +54,15 @@
         "D": "They dissolve contaminants automatically"
       },
       "answer": "A",
-      "explanation": "Some advanced membranes use charges to enhance filtration."
+      "explanation": "Some advanced membranes use charges to enhance filtration.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p020_q4",
@@ -52,7 +74,15 @@
         "D": "It is banned by environmental regulators"
       },
       "answer": "B",
-      "explanation": "The passage states that cost and additional testing remain obstacles."
+      "explanation": "The passage states that cost and additional testing remain obstacles.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p020_q5",
@@ -64,7 +94,15 @@
         "D": "Have no environmental benefits"
       },
       "answer": "A",
-      "explanation": "The passage concludes that these materials may help industries reduce pollution and meet regulatory standards."
+      "explanation": "The passage concludes that these materials may help industries reduce pollution and meet regulatory standards.",
+      "steps": [
+        "1. Find relevant passage details.",
+        "2. Think about what those details tell you (beyond literal meaning).",
+        "3. Identify logical conclusions from the evidence.",
+        "4. Eliminate choices not supported by the passage.",
+        "5. Choose the inference most logically supported by the text."
+      ],
+      "fastStrategy": "Inference goes beyond stated facts—use passage clues to deduce meaning."
     }
   ]
 }

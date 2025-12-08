@@ -2,9 +2,7 @@
   "subjectId": "reading_comprehension",
   "difficulty": "beginner",
   "passageId": "rc_b1_p012",
-
   "passage": "In many regions, freshwater availability is becoming increasingly uncertain due to shifting weather patterns and growing demand. To help address these challenges, researchers are developing advanced water recycling systems that can treat wastewater to near-drinking quality. These systems use multiple filtration stages, including membranes, ultraviolet light, and activated carbon, to remove contaminants. One of the major advantages of modern recycling technology is its ability to operate efficiently in urban areas where traditional reservoirs cannot be expanded. However, public acceptance remains a significant barrier. Despite scientific evidence supporting safety, many residents are hesitant to adopt recycled water for household use. To overcome this, cities have begun public outreach campaigns that explain how the technology works, highlight successful examples, and emphasize the environmental benefits. As awareness grows, more communities are considering recycled water as a vital component of long-term resource planning.",
-
   "questions": [
     {
       "id": "rc_b1_p012_q1",
@@ -16,9 +14,16 @@
         "D": "To compare urban and rural water consumption habits"
       },
       "answer": "B",
-      "explanation": "The passage focuses on recycled water systems as a way to cope with uncertain freshwater supplies."
+      "explanation": "The passage focuses on recycled water systems as a way to cope with uncertain freshwater supplies.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
-
     {
       "id": "rc_b1_p012_q2",
       "question": "Which advantage of modern water recycling systems is mentioned?",
@@ -29,9 +34,16 @@
         "D": "They eliminate the need for natural freshwater sources"
       },
       "answer": "C",
-      "explanation": "The passage states that recycling systems work well in cities where reservoirs cannot expand."
+      "explanation": "The passage states that recycling systems work well in cities where reservoirs cannot expand.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
-
     {
       "id": "rc_b1_p012_q3",
       "question": "What challenge does the passage identify regarding recycled water?",
@@ -42,9 +54,16 @@
         "D": "Lack of successful case studies"
       },
       "answer": "C",
-      "explanation": "Many residents are hesitant to adopt recycled water despite scientific evidence of its safety."
+      "explanation": "Many residents are hesitant to adopt recycled water despite scientific evidence of its safety.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
-
     {
       "id": "rc_b1_p012_q4",
       "question": "According to the passage, cities encourage acceptance of recycled water by:",
@@ -55,9 +74,16 @@
         "D": "Increasing reliance on imported water"
       },
       "answer": "B",
-      "explanation": "Cities use education and real-world success stories to build public trust."
+      "explanation": "Cities use education and real-world success stories to build public trust.",
+      "steps": [
+        "1. Find the specific information in the passage.",
+        "2. Re-read that sentence or paragraph carefully.",
+        "3. Match the passage text to the choices.",
+        "4. Eliminate choices that add outside information.",
+        "5. Pick the choice that reflects what the passage directly says."
+      ],
+      "fastStrategy": "Look for exact or near-exact wording from the passage."
     },
-
     {
       "id": "rc_b1_p012_q5",
       "question": "In the passage, the word “component” most nearly means:",
@@ -68,7 +94,15 @@
         "D": "Temporary fix"
       },
       "answer": "C",
-      "explanation": "The passage describes recycled water as an important part of long-term resource planning."
+      "explanation": "The passage describes recycled water as an important part of long-term resource planning.",
+      "steps": [
+        "1. Locate the word in the passage context.",
+        "2. Read surrounding sentences for clues.",
+        "3. Try replacing the word with each choice.",
+        "4. See which replacement makes sense in context.",
+        "5. Select the meaning that fits the passage's usage."
+      ],
+      "fastStrategy": "Word meaning depends on context—reread nearby sentences."
     }
   ]
 }

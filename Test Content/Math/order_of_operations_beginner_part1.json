@@ -17,11 +17,12 @@
       "answer": "A",
       "explanation": "Multiplication first: 5×2 = 10; then 3+10 = 13.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Identify operations: addition and multiplication.",
+        "2. Apply PEMDAS: multiplication before addition.",
+        "3. Multiply 5 × 2 = 10.",
+        "4. Add 3 + 10 = 13."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Multiply first, add second. Ignore left-to-right for mixed operations—use PEMDAS."
     },
     {
       "id": "mk_oo_b_002",
@@ -36,11 +37,12 @@
       "answer": "C",
       "explanation": "Left to right for multiplication/division: 12÷3=4, then 4×2=8.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Identify operations: division and multiplication (same level).",
+        "2. When equal priority, work left to right.",
+        "3. Divide 12 ÷ 3 = 4.",
+        "4. Multiply 4 × 2 = 8."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "For same-priority operations, always go left to right."
     },
     {
       "id": "mk_oo_b_003",
@@ -55,11 +57,11 @@
       "answer": "A",
       "explanation": "Parentheses first: 3×2=6, then 18÷6=3.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Parentheses always first (highest priority).",
+        "2. Inside parentheses: 3 × 2 = 6.",
+        "3. Now divide outside: 18 ÷ 6 = 3."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Always do parentheses first—they override all other rules."
     },
     {
       "id": "mk_oo_b_004",
@@ -74,11 +76,11 @@
       "answer": "D",
       "explanation": "6÷3=2, then 4+2=6.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Division comes before addition.",
+        "2. Divide 6 ÷ 3 = 2.",
+        "3. Add 4 + 2 = 6."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Division before addition—do division first even if it appears on the right."
     },
     {
       "id": "mk_oo_b_005",
@@ -93,11 +95,11 @@
       "answer": "B",
       "explanation": "Inside parentheses: 3+4=7, then 2×7=14.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Parentheses first: 3 + 4 = 7.",
+        "2. Multiply result by 2: 2 × 7 = 14.",
+        "3. Note: 2(3+4) means 2 × (3+4)."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Always clear parentheses first. The number in front implies multiplication."
     },
     {
       "id": "mk_oo_b_006",
@@ -112,11 +114,10 @@
       "answer": "A",
       "explanation": "8−3=5, then 5×4=20.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Parentheses first: 8 − 3 = 5.",
+        "2. Multiply: 5 × 4 = 20."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Parentheses always come first—solve what's inside before doing anything outside."
     },
     {
       "id": "mk_oo_b_007",
@@ -131,11 +132,11 @@
       "answer": "A",
       "explanation": "Multiplication first: 5×2=10; then +9=19.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Identify operations: multiplication and addition.",
+        "2. Multiply first: 5 × 2 = 10.",
+        "3. Add: 10 + 9 = 19."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Multiplication always before addition—ignore position and do it first."
     },
     {
       "id": "mk_oo_b_008",
@@ -150,11 +151,11 @@
       "answer": "A",
       "explanation": "20÷5=4, then 4+1=5.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Division before addition.",
+        "2. Divide: 20 ÷ 5 = 4.",
+        "3. Add: 4 + 1 = 5."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Division first, addition second—priority order over left-to-right."
     },
     {
       "id": "mk_oo_b_009",
@@ -169,11 +170,11 @@
       "answer": "C",
       "explanation": "4×3=12; then 6+12=18.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Multiplication has priority over addition.",
+        "2. Multiply: 4 × 3 = 12.",
+        "3. Add: 6 + 12 = 18."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Watch for multiplication hiding on the right—do it before addition on the left."
     },
     {
       "id": "mk_oo_b_010",
@@ -188,11 +189,12 @@
       "answer": "B",
       "explanation": "(9−7)=2 and (6÷2)=3 → 2×3=6.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Solve both parentheses separately: left and right.",
+        "2. Left: 9 − 7 = 2.",
+        "3. Right: 6 ÷ 2 = 3.",
+        "4. Multiply: 2 × 3 = 6."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Multiple parentheses—clear each one, then combine results with the operation between."
     },
     {
       "id": "mk_oo_b_011",
@@ -207,11 +209,10 @@
       "answer": "A",
       "explanation": "4×2=8, then +3=11.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Parentheses first: 4 × 2 = 8.",
+        "2. Add: 3 + 8 = 11."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Parentheses first, then add result to remaining terms."
     },
     {
       "id": "mk_oo_b_012",

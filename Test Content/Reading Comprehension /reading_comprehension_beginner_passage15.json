@@ -2,9 +2,7 @@
   "subjectId": "reading_comprehension",
   "difficulty": "beginner",
   "passageId": "rc_b1_p015",
-
   "passage": "As renewable energy sources like wind and solar become more common, scientists are looking for effective ways to store excess power for later use. One emerging solution is the use of large-scale battery farms, which can absorb surplus energy when production is high and release it when demand increases. These facilities help stabilize the electrical grid, reducing the need for traditional fossil-fuel backup systems. Despite their potential, battery farms face several challenges. They require significant space, careful temperature control, and substantial upfront investment. Safety is also a concern, as large battery banks can overheat if not properly managed. To address these issues, engineers are developing new battery chemistries designed to operate more safely at scale. While the technology is still evolving, early results suggest that large-scale energy storage could play an important role in creating a more reliable and sustainable power grid.",
-
   "questions": [
     {
       "id": "rc_b1_p015_q1",
@@ -16,9 +14,16 @@
         "D": "To generate electricity from fossil fuels"
       },
       "answer": "B",
-      "explanation": "The passage explains that battery farms store surplus renewable energy and release it when needed."
+      "explanation": "The passage explains that battery farms store surplus renewable energy and release it when needed.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
-
     {
       "id": "rc_b1_p015_q2",
       "question": "Which challenge associated with battery farms is mentioned?",
@@ -29,9 +34,16 @@
         "D": "They do not work with solar power systems"
       },
       "answer": "C",
-      "explanation": "The passage notes that overheating is a safety concern and temperature must be managed."
+      "explanation": "The passage notes that overheating is a safety concern and temperature must be managed.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
-
     {
       "id": "rc_b1_p015_q3",
       "question": "What is one advantage of battery farms for the electrical grid?",
@@ -42,9 +54,16 @@
         "D": "They prevent renewable power plants from shutting down"
       },
       "answer": "A",
-      "explanation": "Battery storage can reduce reliance on fossil-fuel backup systems."
+      "explanation": "Battery storage can reduce reliance on fossil-fuel backup systems.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
-
     {
       "id": "rc_b1_p015_q4",
       "question": "What does the passage suggest about new battery chemistries?",
@@ -55,9 +74,16 @@
         "D": "They easily overheat compared to older designs"
       },
       "answer": "A",
-      "explanation": "Engineers are developing chemistries that operate more safely at scale."
+      "explanation": "Engineers are developing chemistries that operate more safely at scale.",
+      "steps": [
+        "1. Find relevant passage details.",
+        "2. Think about what those details tell you (beyond literal meaning).",
+        "3. Identify logical conclusions from the evidence.",
+        "4. Eliminate choices not supported by the passage.",
+        "5. Choose the inference most logically supported by the text."
+      ],
+      "fastStrategy": "Inference goes beyond stated facts—use passage clues to deduce meaning."
     },
-
     {
       "id": "rc_b1_p015_q5",
       "question": "The passage implies that large-scale energy storage:",
@@ -68,7 +94,15 @@
         "D": "Will cause renewable energy sources to decline"
       },
       "answer": "C",
-      "explanation": "The passage concludes that early results show battery farms may play an important role in grid reliability and sustainability."
+      "explanation": "The passage concludes that early results show battery farms may play an important role in grid reliability and sustainability.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     }
   ]
 }

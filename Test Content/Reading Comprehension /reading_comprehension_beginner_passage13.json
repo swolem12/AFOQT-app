@@ -2,9 +2,7 @@
   "subjectId": "reading_comprehension",
   "difficulty": "beginner",
   "passageId": "rc_b1_p013",
-
   "passage": "As electric vehicles become more widespread, researchers are working to improve the sustainability of the batteries that power them. Traditional lithium-ion batteries rely on metals that must be mined, a process that can cause significant environmental disruption. To reduce these impacts, scientists are exploring alternative materials such as sodium, which is far more abundant and easier to extract. Sodium-based batteries currently cannot match the energy density of lithium-ion cells, meaning they store less power for their size. However, they are cheaper to produce and may be sufficient for applications that do not require long driving ranges. In addition, researchers are studying new recycling methods that recover valuable metals from used batteries, reducing the need for new mining operations. Although many of these technologies are still in early stages, they represent promising pathways toward cleaner and more sustainable energy storage.",
-
   "questions": [
     {
       "id": "rc_b1_p013_q1",
@@ -16,9 +14,16 @@
         "D": "To compare driving habits across different countries"
       },
       "answer": "B",
-      "explanation": "The passage focuses on developing cleaner battery materials and improved recycling methods."
+      "explanation": "The passage focuses on developing cleaner battery materials and improved recycling methods.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
-
     {
       "id": "rc_b1_p013_q2",
       "question": "Why are scientists interested in sodium-based batteries?",
@@ -29,9 +34,16 @@
         "D": "They provide significantly longer driving ranges"
       },
       "answer": "B",
-      "explanation": "The passage states that sodium is abundant, easier to extract, and results in cheaper batteries."
+      "explanation": "The passage states that sodium is abundant, easier to extract, and results in cheaper batteries.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
-
     {
       "id": "rc_b1_p013_q3",
       "question": "Which limitation of sodium-based batteries is mentioned?",
@@ -42,9 +54,16 @@
         "D": "They require rare metals to manufacture"
       },
       "answer": "C",
-      "explanation": "The passage notes that sodium batteries have lower energy density."
+      "explanation": "The passage notes that sodium batteries have lower energy density.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
-
     {
       "id": "rc_b1_p013_q4",
       "question": "What benefit does improved battery recycling offer?",
@@ -55,9 +74,16 @@
         "D": "Lowering the cost of gasoline"
       },
       "answer": "A",
-      "explanation": "The passage explains that recycling can recover valuable metals, reducing the need for new mining."
+      "explanation": "The passage explains that recycling can recover valuable metals, reducing the need for new mining.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
-
     {
       "id": "rc_b1_p013_q5",
       "question": "In the passage, the phrase “early stages” most nearly refers to:",
@@ -68,7 +94,15 @@
         "D": "Concepts that have been abandoned"
       },
       "answer": "B",
-      "explanation": "The passage clarifies that many sustainability technologies are still in development."
+      "explanation": "The passage clarifies that many sustainability technologies are still in development.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     }
   ]
 }

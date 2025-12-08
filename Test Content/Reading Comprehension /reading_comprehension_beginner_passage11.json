@@ -2,9 +2,7 @@
   "subjectId": "reading_comprehension",
   "difficulty": "beginner",
   "passageId": "rc_b1_p011",
-
   "passage": "As coastal cities confront rising sea levels, engineers are exploring a range of adaptation strategies to protect infrastructure and communities. Traditional approaches such as seawalls and levees remain common, but modern planning emphasizes flexible, layered defenses rather than a single solution. One example is the use of ‘living shorelines,’ which incorporate natural features like wetlands and mangroves to absorb wave energy and reduce erosion. These solutions offer ecological benefits while also strengthening long-term resilience. However, implementing them can be complex, requiring coordination between environmental scientists, city planners, and local residents. In addition, living shorelines are not suitable for every coastline, particularly in areas with high wave intensity or limited space. Despite these challenges, many cities are beginning to combine engineered structures with natural defenses to create more adaptable coastal protection systems. This hybrid approach reflects a shift toward strategies that aim not just to resist changing conditions, but to work with them.",
-
   "questions": [
     {
       "id": "rc_b1_p011_q1",
@@ -16,9 +14,16 @@
         "D": "Mangroves are the only reliable option for reducing erosion."
       },
       "answer": "C",
-      "explanation": "The passage emphasizes the shift toward hybrid coastal protection that uses both natural features and engineered structures."
+      "explanation": "The passage emphasizes the shift toward hybrid coastal protection that uses both natural features and engineered structures.",
+      "steps": [
+        "1. Skim the passage for opening and closing sentences.",
+        "2. Identify the central theme—what is the passage mostly about?",
+        "3. Check if choices match the overall idea (not just details).",
+        "4. Eliminate choices that are too narrow, too broad, or off-topic.",
+        "5. Select the option that encompasses the passage's main point."
+      ],
+      "fastStrategy": "Main idea is usually in opening/closing sentences or repeated throughout."
     },
-
     {
       "id": "rc_b1_p011_q2",
       "question": "Which of the following describes an advantage of living shorelines?",
@@ -29,9 +34,16 @@
         "D": "They eliminate the need for community involvement."
       },
       "answer": "B",
-      "explanation": "The passage states that living shorelines absorb wave energy, reduce erosion, and offer ecological benefits."
+      "explanation": "The passage states that living shorelines absorb wave energy, reduce erosion, and offer ecological benefits.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
-
     {
       "id": "rc_b1_p011_q3",
       "question": "What challenge is associated with implementing living shorelines?",
@@ -42,9 +54,16 @@
         "D": "They only work when combined with seawalls."
       },
       "answer": "C",
-      "explanation": "The passage notes that implementing living shorelines involves coordination among scientists, planners, and residents."
+      "explanation": "The passage notes that implementing living shorelines involves coordination among scientists, planners, and residents.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
-
     {
       "id": "rc_b1_p011_q4",
       "question": "According to the passage, why might living shorelines not work in some locations?",
@@ -55,9 +74,16 @@
         "D": "They require complex underwater construction."
       },
       "answer": "B",
-      "explanation": "The passage states that high wave intensity and limited space can make them unsuitable for certain coasts."
+      "explanation": "The passage states that high wave intensity and limited space can make them unsuitable for certain coasts.",
+      "steps": [
+        "1. Find the specific information in the passage.",
+        "2. Re-read that sentence or paragraph carefully.",
+        "3. Match the passage text to the choices.",
+        "4. Eliminate choices that add outside information.",
+        "5. Pick the choice that reflects what the passage directly says."
+      ],
+      "fastStrategy": "Look for exact or near-exact wording from the passage."
     },
-
     {
       "id": "rc_b1_p011_q5",
       "question": "The author suggests that modern coastal strategies aim to:",
@@ -68,7 +94,15 @@
         "D": "Prioritize appearance over functionality."
       },
       "answer": "B",
-      "explanation": "The final sentence explicitly states that the new approach aims to work with changing conditions instead of resisting them."
+      "explanation": "The final sentence explicitly states that the new approach aims to work with changing conditions instead of resisting them.",
+      "steps": [
+        "1. Find relevant passage details.",
+        "2. Think about what those details tell you (beyond literal meaning).",
+        "3. Identify logical conclusions from the evidence.",
+        "4. Eliminate choices not supported by the passage.",
+        "5. Choose the inference most logically supported by the text."
+      ],
+      "fastStrategy": "Inference goes beyond stated facts—use passage clues to deduce meaning."
     }
   ]
 }

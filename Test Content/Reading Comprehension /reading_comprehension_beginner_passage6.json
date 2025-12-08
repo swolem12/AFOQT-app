@@ -14,7 +14,15 @@
         "D": "To compare bus and train systems in urban environments."
       },
       "answer": "B",
-      "explanation": "The passage describes adaptive traffic signals and how they improve congestion and efficiency."
+      "explanation": "The passage describes adaptive traffic signals and how they improve congestion and efficiency.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p006_q2",
@@ -26,7 +34,15 @@
         "D": "They only operate during rush hours."
       },
       "answer": "B",
-      "explanation": "Adaptive systems adjust timing according to vehicle flow using sensors."
+      "explanation": "Adaptive systems adjust timing according to vehicle flow using sensors.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p006_q3",
@@ -38,7 +54,15 @@
         "D": "They can be installed without modifying existing infrastructure."
       },
       "answer": "C",
-      "explanation": "The passage explicitly notes reduced idling and fuel savings."
+      "explanation": "The passage explicitly notes reduced idling and fuel savings.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p006_q4",
@@ -50,7 +74,15 @@
         "D": "They require frequent replacement of city roads."
       },
       "answer": "C",
-      "explanation": "The passage states that upgrading infrastructure is costly and slows implementation."
+      "explanation": "The passage states that upgrading infrastructure is costly and slows implementation.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p006_q5",
@@ -62,7 +94,15 @@
         "D": "Negative because cities are unlikely to invest in new systems."
       },
       "answer": "C",
-      "explanation": "The passage ends by stating engineers are optimistic as technology improves."
+      "explanation": "The passage ends by stating engineers are optimistic as technology improves.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     }
   ]
 }

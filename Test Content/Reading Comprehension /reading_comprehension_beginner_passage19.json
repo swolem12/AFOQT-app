@@ -2,9 +2,7 @@
   "subjectId": "reading_comprehension",
   "difficulty": "beginner",
   "passageId": "rc_b1_p019",
-
   "passage": "Public health officials are studying the impact of urban noise on long-term well-being. Constant exposure to traffic, construction, and dense population activity can elevate stress levels, interfere with sleep, and contribute to cardiovascular issues. Unlike sudden loud noises, which may cause immediate hearing damage, chronic noise develops gradually and is harder for people to notice. To better understand its effects, researchers use wearable sound monitors that track exposure throughout the day. These devices reveal that many city residents experience noise levels above recommended limits during both daytime and nighttime hours. In response, some cities are experimenting with noise-reducing pavement, redesigned building layouts, and expanded green spaces to absorb sound. While no single solution can eliminate urban noise, these strategies aim to create healthier environments by reducing its intensity and duration.",
-
   "questions": [
     {
       "id": "rc_b1_p019_q1",
@@ -16,7 +14,15 @@
         "D": "The dangers of sudden loud explosions"
       },
       "answer": "B",
-      "explanation": "The passage focuses on chronic urban noise and its long-term health impacts."
+      "explanation": "The passage focuses on chronic urban noise and its long-term health impacts.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p019_q2",
@@ -28,7 +34,15 @@
         "D": "Sudden noise only occurs at night"
       },
       "answer": "C",
-      "explanation": "The passage states chronic noise builds slowly and is less obvious."
+      "explanation": "The passage states chronic noise builds slowly and is less obvious.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p019_q3",
@@ -40,7 +54,15 @@
         "D": "Motion sensors"
       },
       "answer": "B",
-      "explanation": "Wearable monitors collect day-long exposure data."
+      "explanation": "Wearable monitors collect day-long exposure data.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p019_q4",
@@ -52,7 +74,15 @@
         "D": "Banning construction within city limits"
       },
       "answer": "C",
-      "explanation": "The passage lists pavement, building design, and green spaces as noise-reducing strategies."
+      "explanation": "The passage lists pavement, building design, and green spaces as noise-reducing strategies.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p019_q5",
@@ -64,7 +94,15 @@
         "D": "City residents rarely notice noise around them"
       },
       "answer": "C",
-      "explanation": "The passage notes that noise-reduction strategies aim to create healthier environments."
+      "explanation": "The passage notes that noise-reduction strategies aim to create healthier environments.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     }
   ]
 }

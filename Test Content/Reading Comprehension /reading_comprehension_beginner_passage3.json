@@ -14,7 +14,15 @@
         "D": "To describe the neurological stages of deep sleep in detail."
       },
       "answer": "B",
-      "explanation": "The passage discusses benefits of short naps and why workplaces are beginning to integrate them."
+      "explanation": "The passage discusses benefits of short naps and why workplaces are beginning to integrate them.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p003_q2",
@@ -26,7 +34,15 @@
         "D": "It provides enough time for deep REM sleep."
       },
       "answer": "B",
-      "explanation": "The passage states that short naps are brief enough to avoid sleep inertia."
+      "explanation": "The passage states that short naps are brief enough to avoid sleep inertia.",
+      "steps": [
+        "1. Find the specific information in the passage.",
+        "2. Re-read that sentence or paragraph carefully.",
+        "3. Match the passage text to the choices.",
+        "4. Eliminate choices that add outside information.",
+        "5. Pick the choice that reflects what the passage directly says."
+      ],
+      "fastStrategy": "Look for exact or near-exact wording from the passage."
     },
     {
       "id": "rc_b1_p003_q3",
@@ -38,7 +54,15 @@
         "D": "They do so mainly to offer attractive employee benefits."
       },
       "answer": "B",
-      "explanation": "The passage says high-stress industries adopt naps because rested employees make fewer mistakes and perform better."
+      "explanation": "The passage says high-stress industries adopt naps because rested employees make fewer mistakes and perform better.",
+      "steps": [
+        "1. Find relevant passage details.",
+        "2. Think about what those details tell you (beyond literal meaning).",
+        "3. Identify logical conclusions from the evidence.",
+        "4. Eliminate choices not supported by the passage.",
+        "5. Choose the inference most logically supported by the text."
+      ],
+      "fastStrategy": "Inference goes beyond stated facts—use passage clues to deduce meaning."
     },
     {
       "id": "rc_b1_p003_q4",
@@ -50,7 +74,15 @@
         "D": "It worsens recovery from fatigue."
       },
       "answer": "A",
-      "explanation": "The passage states critics argue napping reduces productivity."
+      "explanation": "The passage states critics argue napping reduces productivity.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p003_q5",
@@ -62,7 +94,15 @@
         "D": "Deep sleep is necessary for any meaningful improvement in performance."
       },
       "answer": "C",
-      "explanation": "The passage concludes most studies show strategic rest improves efficiency."
+      "explanation": "The passage concludes most studies show strategic rest improves efficiency.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     }
   ]
 }

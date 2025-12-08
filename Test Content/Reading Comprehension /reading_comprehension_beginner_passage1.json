@@ -14,7 +14,15 @@
         "D": "Only human judgment can effectively predict wildfire movement."
       },
       "answer": "B",
-      "explanation": "The passage contrasts wildfires with structural fires and emphasizes the rapidly changing environment that requires constant monitoring and adaptive decisions."
+      "explanation": "The passage contrasts wildfires with structural fires and emphasizes the rapidly changing environment that requires constant monitoring and adaptive decisions.",
+      "steps": [
+        "1. Skim the passage for opening and closing sentences.",
+        "2. Identify the central theme—what is the passage mostly about?",
+        "3. Check if choices match the overall idea (not just details).",
+        "4. Eliminate choices that are too narrow, too broad, or off-topic.",
+        "5. Select the option that encompasses the passage's main point."
+      ],
+      "fastStrategy": "Main idea is usually in opening/closing sentences or repeated throughout."
     },
     {
       "id": "rc_b1_p001_q2",
@@ -26,7 +34,15 @@
         "D": "They only occur in isolated, mountainous regions."
       },
       "answer": "C",
-      "explanation": "The passage states that small shifts in humidity, temperature, or wind can rapidly change the situation."
+      "explanation": "The passage states that small shifts in humidity, temperature, or wind can rapidly change the situation.",
+      "steps": [
+        "1. Find the specific information in the passage.",
+        "2. Re-read that sentence or paragraph carefully.",
+        "3. Match the passage text to the choices.",
+        "4. Eliminate choices that add outside information.",
+        "5. Pick the choice that reflects what the passage directly says."
+      ],
+      "fastStrategy": "Look for exact or near-exact wording from the passage."
     },
     {
       "id": "rc_b1_p001_q3",
@@ -38,7 +54,15 @@
         "D": "Less reliable than traditional tools."
       },
       "answer": "B",
-      "explanation": "It says technology improves response times, but human judgment remains essential."
+      "explanation": "It says technology improves response times, but human judgment remains essential.",
+      "steps": [
+        "1. Find relevant passage details.",
+        "2. Think about what those details tell you (beyond literal meaning).",
+        "3. Identify logical conclusions from the evidence.",
+        "4. Eliminate choices not supported by the passage.",
+        "5. Choose the inference most logically supported by the text."
+      ],
+      "fastStrategy": "Inference goes beyond stated facts—use passage clues to deduce meaning."
     },
     {
       "id": "rc_b1_p001_q4",
@@ -50,7 +74,15 @@
         "D": "Population density"
       },
       "answer": "C",
-      "explanation": "Temperature is listed among humidity and wind direction as variables that alter conditions."
+      "explanation": "Temperature is listed among humidity and wind direction as variables that alter conditions.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p001_q5",
@@ -62,7 +94,15 @@
         "D": "It eliminates the need for field-based monitoring."
       },
       "answer": "C",
-      "explanation": "The text states that satellite data helps crews anticipate the fire’s projected path."
+      "explanation": "The text states that satellite data helps crews anticipate the fire’s projected path.",
+      "steps": [
+        "1. Find relevant passage details.",
+        "2. Think about what those details tell you (beyond literal meaning).",
+        "3. Identify logical conclusions from the evidence.",
+        "4. Eliminate choices not supported by the passage.",
+        "5. Choose the inference most logically supported by the text."
+      ],
+      "fastStrategy": "Inference goes beyond stated facts—use passage clues to deduce meaning."
     }
   ]
 }

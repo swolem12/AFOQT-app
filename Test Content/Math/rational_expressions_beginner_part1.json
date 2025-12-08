@@ -17,11 +17,11 @@
       "answer": "A",
       "explanation": "6/x ÷ 3 = 6/(3x) = 2/x.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Dividing by a number means multiplying by its reciprocal.",
+        "2. For division by a whole number: divide the numerator OR multiply denominator.",
+        "3. Simplify by canceling common factors."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Division → flip and multiply, or just divide the top."
     },
     {
       "id": "mk_rat_b_002",
@@ -36,11 +36,11 @@
       "answer": "A",
       "explanation": "(x/2) ÷ (x/4)= (x/2)*(4/x)=2.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Dividing by a number means multiplying by its reciprocal.",
+        "2. For division by a whole number: divide the numerator OR multiply denominator.",
+        "3. Simplify by canceling common factors."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Division → flip and multiply, or just divide the top."
     },
     {
       "id": "mk_rat_b_003",
@@ -55,11 +55,11 @@
       "answer": "A",
       "explanation": "3x × 10/(5x)=30x/(5x)=6.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Multiply numerators together and denominators together.",
+        "2. Cancel common factors before multiplying (easier).",
+        "3. Simplify the resulting fraction."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Cancel common factors first, then multiply straight across."
     },
     {
       "id": "mk_rat_b_004",
@@ -74,11 +74,11 @@
       "answer": "A",
       "explanation": "Same denominator: (2+3)/x = 5/x.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Find common denominator (LCD of all terms).",
+        "2. Convert each fraction to equivalent form with LCD.",
+        "3. Add numerators, keep denominator, simplify."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Common denominator first—then add tops only."
     },
     {
       "id": "mk_rat_b_005",
@@ -93,11 +93,11 @@
       "answer": "A",
       "explanation": "Common denominator 6: (2x − x)/6 = x/6.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Find common denominator (LCD of all terms).",
+        "2. Convert each fraction to equivalent form with LCD.",
+        "3. Subtract numerators, keep denominator, simplify."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Common denominator first—then subtract tops only."
     },
     {
       "id": "mk_rat_b_006",
@@ -112,11 +112,11 @@
       "answer": "A",
       "explanation": "12/(4x)=3/x.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Factor numerator and denominator completely.",
+        "2. Cancel common factors that appear in both.",
+        "3. Write the simplified result."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Factor everything, cancel common terms top and bottom."
     },
     {
       "id": "mk_rat_b_007",
@@ -131,11 +131,11 @@
       "answer": "A",
       "explanation": "x cancels; 16/8 = 2.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Multiply numerators together and denominators together.",
+        "2. Cancel common factors before multiplying (easier).",
+        "3. Simplify the resulting fraction."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Cancel common factors first, then multiply straight across."
     },
     {
       "id": "mk_rat_b_008",
@@ -150,11 +150,11 @@
       "answer": "A",
       "explanation": "Add numerators: (5+10)/x = 15/x.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Find common denominator (LCD of all terms).",
+        "2. Convert each fraction to equivalent form with LCD.",
+        "3. Add numerators, keep denominator, simplify."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Common denominator first—then add tops only."
     },
     {
       "id": "mk_rat_b_009",
@@ -169,11 +169,11 @@
       "answer": "A",
       "explanation": "6x²/3x = 2x.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Factor numerator and denominator completely.",
+        "2. Cancel common factors that appear in both.",
+        "3. Write the simplified result."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Factor everything, cancel common terms top and bottom."
     },
     {
       "id": "mk_rat_b_010",
@@ -188,11 +188,11 @@
       "answer": "A",
       "explanation": "3x/(9x)=1/3.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Multiply numerators together and denominators together.",
+        "2. Cancel common factors before multiplying (easier).",
+        "3. Simplify the resulting fraction."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Cancel common factors first, then multiply straight across."
     },
     {
       "id": "mk_rat_b_011",
@@ -207,11 +207,11 @@
       "answer": "A",
       "explanation": "(2x+x)/3 = 3x/3 = x.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Find common denominator (LCD of all terms).",
+        "2. Convert each fraction to equivalent form with LCD.",
+        "3. Add numerators, keep denominator, simplify."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Common denominator first—then add tops only."
     },
     {
       "id": "mk_rat_b_012",
@@ -226,11 +226,11 @@
       "answer": "A",
       "explanation": "x/(2x) = 1/2.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Factor numerator and denominator completely.",
+        "2. Cancel common factors that appear in both.",
+        "3. Write the simplified result."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Factor everything, cancel common terms top and bottom."
     },
     {
       "id": "mk_rat_b_013",
@@ -245,11 +245,11 @@
       "answer": "A",
       "explanation": "4x/(2x)=2.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Multiply numerators together and denominators together.",
+        "2. Cancel common factors before multiplying (easier).",
+        "3. Simplify the resulting fraction."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Cancel common factors first, then multiply straight across."
     },
     {
       "id": "mk_rat_b_014",
@@ -264,11 +264,11 @@
       "answer": "A",
       "explanation": "(10-4)/x=6/x.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Find common denominator (LCD of all terms).",
+        "2. Convert each fraction to equivalent form with LCD.",
+        "3. Subtract numerators, keep denominator, simplify."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Common denominator first—then subtract tops only."
     },
     {
       "id": "mk_rat_b_015",
@@ -283,11 +283,11 @@
       "answer": "A",
       "explanation": "5/15 = 1/3 → x/3.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Factor numerator and denominator completely.",
+        "2. Cancel common factors that appear in both.",
+        "3. Write the simplified result."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Factor everything, cancel common terms top and bottom."
     },
     {
       "id": "mk_rat_b_016",
@@ -302,11 +302,11 @@
       "answer": "A",
       "explanation": "9/(3x) = 3/x.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Factor numerator and denominator completely.",
+        "2. Cancel common factors that appear in both.",
+        "3. Write the simplified result."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Factor everything, cancel common terms top and bottom."
     },
     {
       "id": "mk_rat_b_017",
@@ -321,11 +321,11 @@
       "answer": "A",
       "explanation": "x cancels; 8/4 = 2.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Multiply numerators together and denominators together.",
+        "2. Cancel common factors before multiplying (easier).",
+        "3. Simplify the resulting fraction."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Cancel common factors first, then multiply straight across."
     },
     {
       "id": "mk_rat_b_018",
@@ -340,11 +340,11 @@
       "answer": "A",
       "explanation": "(4+12)/x=16/x.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Find common denominator (LCD of all terms).",
+        "2. Convert each fraction to equivalent form with LCD.",
+        "3. Add numerators, keep denominator, simplify."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Common denominator first—then add tops only."
     },
     {
       "id": "mk_rat_b_019",
@@ -359,11 +359,11 @@
       "answer": "A",
       "explanation": "7x/14x = 1/2.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Factor numerator and denominator completely.",
+        "2. Cancel common factors that appear in both.",
+        "3. Write the simplified result."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Factor everything, cancel common terms top and bottom."
     },
     {
       "id": "mk_rat_b_020",
@@ -378,11 +378,11 @@
       "answer": "A",
       "explanation": "Cancels to 1.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Multiply numerators together and denominators together.",
+        "2. Cancel common factors before multiplying (easier).",
+        "3. Simplify the resulting fraction."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Cancel common factors first, then multiply straight across."
     },
     {
       "id": "mk_rat_b_021",
@@ -397,11 +397,11 @@
       "answer": "A",
       "explanation": "(12/x)/4 = 12/(4x)=3/x.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Dividing by a number means multiplying by its reciprocal.",
+        "2. For division by a whole number: divide the numerator OR multiply denominator.",
+        "3. Simplify by canceling common factors."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Division → flip and multiply, or just divide the top."
     },
     {
       "id": "mk_rat_b_022",
@@ -416,11 +416,11 @@
       "answer": "A",
       "explanation": "Common denom 6: x/6 + 2x/6 = 3x/6 = x/2.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Find common denominator (LCD of all terms).",
+        "2. Convert each fraction to equivalent form with LCD.",
+        "3. Add numerators, keep denominator, simplify."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Common denominator first—then add tops only."
     },
     {
       "id": "mk_rat_b_023",
@@ -435,11 +435,11 @@
       "answer": "A",
       "explanation": "2x²/4x = x/2.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Factor numerator and denominator completely.",
+        "2. Cancel common factors that appear in both.",
+        "3. Write the simplified result."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Factor everything, cancel common terms top and bottom."
     },
     {
       "id": "mk_rat_b_024",
@@ -454,11 +454,11 @@
       "answer": "A",
       "explanation": "4/(2x)=2/x.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Factor numerator and denominator completely.",
+        "2. Cancel common factors that appear in both.",
+        "3. Write the simplified result."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Factor everything, cancel common terms top and bottom."
     },
     {
       "id": "mk_rat_b_025",
@@ -473,11 +473,11 @@
       "answer": "A",
       "explanation": "(9-3)/x=6/x.",
       "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
+        "1. Find common denominator (LCD of all terms).",
+        "2. Convert each fraction to equivalent form with LCD.",
+        "3. Subtract numerators, keep denominator, simplify."
       ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "fastStrategy": "Common denominator first—then subtract tops only."
     }
   ]
 }

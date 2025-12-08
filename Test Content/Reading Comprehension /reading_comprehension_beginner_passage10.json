@@ -2,9 +2,7 @@
   "subjectId": "reading_comprehension",
   "difficulty": "beginner",
   "passageId": "rc_b1_p010",
-
   "passage": "Urban planners are increasingly turning to predictive analytics to improve city transportation systems. Instead of relying solely on historical data or manual traffic counts, modern models continuously incorporate live information from sensors, navigation apps, and public transit networks. These tools allow planners to forecast congestion hours in advance and evaluate the potential impact of proposed changes, such as adjusting bus routes or modifying traffic light timing. One of the major advantages of predictive analytics is its ability to test multiple scenarios before any physical changes occur, reducing both cost and risk. However, the effectiveness of these models depends heavily on the quality of the data they receive. Inaccurate or incomplete inputs can lead to flawed predictions, potentially worsening traffic patterns rather than improving them. Despite these challenges, cities adopting data-driven planning have seen notable improvements in commute times, public transit reliability, and overall urban mobility.",
-
   "questions": [
     {
       "id": "rc_b1_p010_q1",
@@ -16,9 +14,16 @@
         "D": "To replace traditional engineering methods entirely"
       },
       "answer": "C",
-      "explanation": "The passage states that predictive analytics helps planners forecast congestion and test the impact of proposed changes."
+      "explanation": "The passage states that predictive analytics helps planners forecast congestion and test the impact of proposed changes.",
+      "steps": [
+        "1. Skim the passage for opening and closing sentences.",
+        "2. Identify the central theme—what is the passage mostly about?",
+        "3. Check if choices match the overall idea (not just details).",
+        "4. Eliminate choices that are too narrow, too broad, or off-topic.",
+        "5. Select the option that encompasses the passage's main point."
+      ],
+      "fastStrategy": "Main idea is usually in opening/closing sentences or repeated throughout."
     },
-
     {
       "id": "rc_b1_p010_q2",
       "question": "Which of the following is described as a benefit of predictive analytics?",
@@ -29,9 +34,16 @@
         "D": "It eliminates the need for live traffic data"
       },
       "answer": "B",
-      "explanation": "The passage explicitly states that predictive analytics can test scenarios before implementing physical changes."
+      "explanation": "The passage explicitly states that predictive analytics can test scenarios before implementing physical changes.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
-
     {
       "id": "rc_b1_p010_q3",
       "question": "What potential problem does the passage mention regarding predictive analytics?",
@@ -42,9 +54,16 @@
         "D": "It increases the cost of transportation projects"
       },
       "answer": "C",
-      "explanation": "It notes that inaccurate or incomplete data can lead to flawed predictions."
+      "explanation": "It notes that inaccurate or incomplete data can lead to flawed predictions.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
-
     {
       "id": "rc_b1_p010_q4",
       "question": "The passage suggests that predictive analytics improves city mobility primarily by:",
@@ -55,9 +74,16 @@
         "D": "Replacing human planners with automated systems"
       },
       "answer": "C",
-      "explanation": "It highlights that predictive tools help foresee congestion and plan accordingly."
+      "explanation": "It highlights that predictive tools help foresee congestion and plan accordingly.",
+      "steps": [
+        "1. Find relevant passage details.",
+        "2. Think about what those details tell you (beyond literal meaning).",
+        "3. Identify logical conclusions from the evidence.",
+        "4. Eliminate choices not supported by the passage.",
+        "5. Choose the inference most logically supported by the text."
+      ],
+      "fastStrategy": "Inference goes beyond stated facts—use passage clues to deduce meaning."
     },
-
     {
       "id": "rc_b1_p010_q5",
       "question": "In the context of the passage, the phrase “data-driven planning” most closely means:",
@@ -68,7 +94,15 @@
         "D": "A method that restricts the use of real-time data"
       },
       "answer": "A",
-      "explanation": "The passage describes planners using live, continual data as part of predictive analytics."
+      "explanation": "The passage describes planners using live, continual data as part of predictive analytics.",
+      "steps": [
+        "1. Locate the word in the passage context.",
+        "2. Read surrounding sentences for clues.",
+        "3. Try replacing the word with each choice.",
+        "4. See which replacement makes sense in context.",
+        "5. Select the meaning that fits the passage's usage."
+      ],
+      "fastStrategy": "Word meaning depends on context—reread nearby sentences."
     }
   ]
 }

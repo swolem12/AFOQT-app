@@ -2,9 +2,7 @@
   "subjectId": "reading_comprehension",
   "difficulty": "beginner",
   "passageId": "rc_b1_p014",
-
   "passage": "Wildlife biologists are increasingly using acoustic monitoring systems to study animal populations in remote environments. These devices record natural soundscapes, capturing everything from bird calls to the movement of large mammals. Unlike traditional field surveys, which require researchers to physically visit each location, acoustic monitoring allows continuous observation with minimal disturbance to wildlife. The recordings can reveal patterns in migration, breeding, and habitat use that might otherwise be missed. However, analyzing large amounts of audio data can be challenging. Background noise, such as wind or river flow, often interferes with the clarity of recordings. To address this, researchers are developing software that automatically identifies species-specific sounds using machine learning. While these tools are not yet perfect, they significantly reduce the time required to review data and help scientists better understand how ecosystems are changing over time.",
-
   "questions": [
     {
       "id": "rc_b1_p014_q1",
@@ -16,9 +14,16 @@
         "D": "It is cheaper than all other monitoring methods."
       },
       "answer": "B",
-      "explanation": "The passage emphasizes continuous, low-disturbance observation as a key benefit."
+      "explanation": "The passage emphasizes continuous, low-disturbance observation as a key benefit.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
-
     {
       "id": "rc_b1_p014_q2",
       "question": "What challenge do researchers face when analyzing acoustic data?",
@@ -29,9 +34,16 @@
         "D": "Machine learning algorithms cannot process audio files."
       },
       "answer": "B",
-      "explanation": "Natural noise like wind and flowing water can make recordings difficult to interpret."
+      "explanation": "Natural noise like wind and flowing water can make recordings difficult to interpret.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
-
     {
       "id": "rc_b1_p014_q3",
       "question": "How are researchers addressing the difficulties of audio analysis?",
@@ -42,9 +54,16 @@
         "D": "By switching from sound recordings to visual surveys"
       },
       "answer": "C",
-      "explanation": "Machine learning tools help identify species-specific sounds and reduce manual review time."
+      "explanation": "Machine learning tools help identify species-specific sounds and reduce manual review time.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
-
     {
       "id": "rc_b1_p014_q4",
       "question": "In the context of the passage, the word “disturbance” most nearly means:",
@@ -55,9 +74,16 @@
         "D": "Environmental destruction caused by storms"
       },
       "answer": "B",
-      "explanation": "The passage highlights reduced human interference as an advantage of acoustic monitoring."
+      "explanation": "The passage highlights reduced human interference as an advantage of acoustic monitoring.",
+      "steps": [
+        "1. Locate the word in the passage context.",
+        "2. Read surrounding sentences for clues.",
+        "3. Try replacing the word with each choice.",
+        "4. See which replacement makes sense in context.",
+        "5. Select the meaning that fits the passage's usage."
+      ],
+      "fastStrategy": "Word meaning depends on context—reread nearby sentences."
     },
-
     {
       "id": "rc_b1_p014_q5",
       "question": "What purpose do the recordings primarily serve?",
@@ -68,7 +94,15 @@
         "D": "Replacing all traditional research methods"
       },
       "answer": "C",
-      "explanation": "Recordings help identify patterns in migration, breeding, and habitat use."
+      "explanation": "Recordings help identify patterns in migration, breeding, and habitat use.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     }
   ]
 }

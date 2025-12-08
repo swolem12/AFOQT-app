@@ -2,9 +2,7 @@
   "subjectId": "reading_comprehension",
   "difficulty": "beginner",
   "passageId": "rc_b1_p016",
-
   "passage": "Archaeologists are using advanced imaging technologies to explore ancient structures without disturbing them. Ground-penetrating radar, for example, sends radio waves into the earth and measures their reflections, allowing researchers to identify buried walls or chambers. This method is especially valuable at historical sites where excavation could damage fragile artifacts. In recent years, archaeologists have combined radar with aerial lidar, which maps the surface by measuring how quickly laser pulses return to sensors. When the two techniques are used together, scientists can create detailed 3D models of entire settlements. These models reveal patterns in city planning, trade activity, and cultural practices. Although the technology is costly and requires specialized training, it allows researchers to uncover information that might otherwise remain hidden. As imaging tools become more accessible, they are likely to play an increasingly important role in preserving archaeological sites across the world.",
-
   "questions": [
     {
       "id": "rc_b1_p016_q1",
@@ -16,7 +14,15 @@
         "D": "To allow tourists to view restricted sites"
       },
       "answer": "B",
-      "explanation": "The technologies enable noninvasive exploration of archaeological sites."
+      "explanation": "The technologies enable noninvasive exploration of archaeological sites.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p016_q2",
@@ -28,7 +34,15 @@
         "D": "Capturing images from satellite cameras"
       },
       "answer": "B",
-      "explanation": "The passage explains its use of radio waves to detect buried features."
+      "explanation": "The passage explains its use of radio waves to detect buried features.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p016_q3",
@@ -40,7 +54,15 @@
         "D": "It guarantees immediate discovery of artifacts"
       },
       "answer": "C",
-      "explanation": "Noninvasive techniques avoid damaging sensitive structures."
+      "explanation": "Noninvasive techniques avoid damaging sensitive structures.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p016_q4",
@@ -52,7 +74,15 @@
         "D": "It replaces ground-level surveys entirely"
       },
       "answer": "A",
-      "explanation": "The passage states that combining both yields detailed 3D settlement models."
+      "explanation": "The passage states that combining both yields detailed 3D settlement models.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p016_q5",
@@ -64,7 +94,15 @@
         "D": "Moving artifacts to museums"
       },
       "answer": "B",
-      "explanation": "The focus is on safeguarding archaeological sites using noninvasive tools."
+      "explanation": "The focus is on safeguarding archaeological sites using noninvasive tools.",
+      "steps": [
+        "1. Locate the word in the passage context.",
+        "2. Read surrounding sentences for clues.",
+        "3. Try replacing the word with each choice.",
+        "4. See which replacement makes sense in context.",
+        "5. Select the meaning that fits the passage's usage."
+      ],
+      "fastStrategy": "Word meaning depends on context—reread nearby sentences."
     }
   ]
 }

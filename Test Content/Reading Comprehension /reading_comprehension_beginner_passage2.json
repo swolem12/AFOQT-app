@@ -14,7 +14,15 @@
         "D": "Regulations restricting drone use in crowded areas."
       },
       "answer": "A",
-      "explanation": "The passage emphasizes how drones are useful in reaching isolated communities and accelerating relief efforts."
+      "explanation": "The passage emphasizes how drones are useful in reaching isolated communities and accelerating relief efforts.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p002_q2",
@@ -26,7 +34,15 @@
         "D": "They are exempt from airspace rules during emergencies."
       },
       "answer": "C",
-      "explanation": "The passage notes drones can navigate over collapsed bridges, floods, and landslides, unlike ground vehicles."
+      "explanation": "The passage notes drones can navigate over collapsed bridges, floods, and landslides, unlike ground vehicles.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p002_q3",
@@ -38,7 +54,15 @@
         "D": "Their navigation systems fail in high winds."
       },
       "answer": "C",
-      "explanation": "The passage states that drones have a small payload capacity."
+      "explanation": "The passage states that drones have a small payload capacity.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     },
     {
       "id": "rc_b1_p002_q4",
@@ -50,7 +74,15 @@
         "D": "They are equipped with heavy-duty industrial tools."
       },
       "answer": "A",
-      "explanation": "The text states that although drones carry small loads, deploying many at once compensates for that limitation."
+      "explanation": "The text states that although drones carry small loads, deploying many at once compensates for that limitation.",
+      "steps": [
+        "1. Find relevant passage details.",
+        "2. Think about what those details tell you (beyond literal meaning).",
+        "3. Identify logical conclusions from the evidence.",
+        "4. Eliminate choices not supported by the passage.",
+        "5. Choose the inference most logically supported by the text."
+      ],
+      "fastStrategy": "Inference goes beyond stated facts—use passage clues to deduce meaning."
     },
     {
       "id": "rc_b1_p002_q5",
@@ -62,7 +94,15 @@
         "D": "They will be replaced by larger aircraft that deliver more supplies."
       },
       "answer": "C",
-      "explanation": "The passage concludes that drones will carry heavier loads and operate longer, increasing their role in emergencies."
+      "explanation": "The passage concludes that drones will carry heavier loads and operate longer, increasing their role in emergencies.",
+      "steps": [
+        "1. Re-read the relevant passage section.",
+        "2. Identify key details that answer the question.",
+        "3. Eliminate obviously wrong choices.",
+        "4. Compare remaining choices with passage support.",
+        "5. Select the choice most directly supported by the text."
+      ],
+      "fastStrategy": "Always base answers on passage evidence, not outside knowledge."
     }
   ]
 }
