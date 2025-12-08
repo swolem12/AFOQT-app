@@ -1,0 +1,47 @@
+{
+  "subjectId": "vocabulary",
+  "subtopicId": "synonyms",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "vocab_syn_e1_001",
+      "question": "AMBIGUOUS most nearly means:",
+      "choices": {"A": "Obvious", "B": "Uncertain", "C": "Hostile", "D": "Ancient"},
+      "answer": "B",
+      "explanation": "Ambiguous means open to more than one interpretation; unclear or uncertain.",
+      "steps": [
+        "1. Understand meaning: ambiguous = having multiple possible meanings.",
+        "2. Evaluate: Obvious (antonym), Uncertain (synonym), Hostile (unrelated), Ancient (unrelated).",
+        "3. Uncertain best captures the essence of ambiguity."
+      ],
+      "fastStrategy": "Ambiguous = unclear, open to interpretation; opposite of clear/definite."
+    },
+    {
+      "id": "vocab_syn_e1_002",
+      "question": "SUCCINCT most nearly means:",
+      "choices": {"A": "Tasty", "B": "Lasting", "C": "Concise", "D": "Successful"},
+      "answer": "C",
+      "explanation": "Succinct means expressed in very few words; concise and brief.",
+      "steps": [
+        "1. Understand meaning: succinct = brief, to the point.",
+        "2. Evaluate: Tasty (unrelated), Lasting (unrelated), Concise (synonym), Successful (unrelated).",
+        "3. Concise is the closest synonym."
+      ],
+      "fastStrategy": "Succinct = brief, clear, minimal words; closely related to concise."
+    },
+    {
+      "id": "vocab_syn_e1_003",
+      "question": "METICULOUS most nearly means:",
+      "choices": {"A": "Careless", "B": "Careful", "C": "Meteoric", "D": "Methodical"},
+      "answer": "B",
+      "explanation": "Meticulous means showing great attention to detail; extremely careful and precise.",
+      "steps": [
+        "1. Understand meaning: meticulous = precise, detail-oriented.",
+        "2. Evaluate: Careless (antonym), Careful (synonym), Meteoric (unrelated), Methodical (related but not as direct).",
+        "3. Careful most directly captures meticulous."
+      ],
+      "fastStrategy": "Meticulous = extreme attention to detail; synonymous with careful and precise."
+    }
+  ]
+}

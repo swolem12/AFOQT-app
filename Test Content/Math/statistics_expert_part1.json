@@ -18,6 +18,34 @@
         "5. Standard deviation = √8 ≈ 2.83."
       ],
       "fastStrategy": "SD = √(variance); variance = average of squared deviations from mean."
+    },
+    {
+      "id": "math_stats_e1_002",
+      "question": "A sample of 50 test scores has mean 75 and standard deviation 10. What percentage of scores falls between 65 and 85?",
+      "choices": {"A": "68%", "B": "75%", "C": "82%", "D": "95%"},
+      "answer": "A",
+      "explanation": "Using the empirical rule (68-95-99.7), approximately 68% of data falls within 1 standard deviation of the mean. 65-85 is mean ± 1 SD.",
+      "steps": [
+        "1. Identify mean = 75, SD = 10.",
+        "2. Range 65-85 = 75 ± 10 = mean ± 1 SD.",
+        "3. Apply empirical rule: 68% within 1 SD, 95% within 2 SD.",
+        "4. Answer: 68%."
+      ],
+      "fastStrategy": "Empirical rule: ~68% within ±1 SD, ~95% within ±2 SD, ~99.7% within ±3 SD."
+    },
+    {
+      "id": "math_stats_e1_003",
+      "question": "If two datasets have the same mean but different standard deviations, which has more variability?",
+      "choices": {"A": "The one with larger standard deviation", "B": "The one with smaller standard deviation", "C": "They have equal variability", "D": "Cannot be determined from given info"},
+      "answer": "A",
+      "explanation": "Standard deviation measures spread/variability. Larger SD = greater variability, even with equal means.",
+      "steps": [
+        "1. Understand that mean measures center, SD measures spread.",
+        "2. Equal means: both datasets centered at same point.",
+        "3. Different SDs: one is more spread out than the other.",
+        "4. Larger SD = more variability."
+      ],
+      "fastStrategy": "SD directly indicates variability; compare SDs to compare spreads."
     }
   ]
 }

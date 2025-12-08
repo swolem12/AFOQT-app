@@ -31,6 +31,35 @@
         "3. Best approach: accept while developing a plan to succeed."
       ],
       "fastStrategy": "Stretch assignments work when paired with intentional learning and support."
+    },
+    {
+      "id": "sj_e1_s03_q1",
+      "scenario": "You overhear two colleagues discussing a project in a way that misrepresents your contribution. They are not aware you're listening.",
+      "questionType": "single_best",
+      "choices": {"A": "Interrupt immediately to correct them", "B": "Approach them later privately to clarify", "C": "Tell your supervisor about the misrepresentation", "D": "Do nothing and let it go"},
+      "answer": "B",
+      "explanation": "Address it privately and respectfully to give them opportunity to correct the misunderstanding without embarrassment or conflict escalation.",
+      "steps": [
+        "1. Recognize the situation: unintentional misrepresentation.",
+        "2. Evaluate options: interrupt (confrontational), private talk (professional), escalate (nuclear), ignore (damages trust).",
+        "3. Choose private conversation to preserve relationships while clarifying facts."
+      ],
+      "fastStrategy": "Resolve factual disputes privately before escalating to leadership."
+    },
+    {
+      "id": "sj_e1_s04_q1",
+      "scenario": "A subordinate comes to you with evidence that cost-cutting measures will compromise safety. Leadership has already approved the plan.",
+      "questionType": "single_best",
+      "choices": {"A": "Tell the subordinate to follow orders", "B": "Present the safety evidence to leadership for reconsideration", "C": "Help the subordinate submit concerns through proper channels", "D": "Ignore the issue to avoid conflict with leadership"},
+      "answer": "B",
+      "explanation": "Safety concerns trump cost savings. As a leader, you must escalate this to decision-makers with the evidence, even if it challenges approved decisions.",
+      "steps": [
+        "1. Identify the issue: safety risk from cost-cutting.",
+        "2. Recognize leadership authority but also safety obligation.",
+        "3. Present evidence-based concern through proper channels.",
+        "4. Allow leadership to reconsider with full information."
+      ],
+      "fastStrategy": "Safety and legal compliance override cost considerations and approval precedent."
     }
   ]
 }

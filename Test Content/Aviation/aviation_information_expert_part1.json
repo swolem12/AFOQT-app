@@ -29,6 +29,34 @@
         "3. Eliminate fuselage friction (parasitic), engine (not drag), speed-only (occurs at all speeds)."
       ],
       "fastStrategy": "Induced drag = drag caused by lift; cannot have lift without it."
+    },
+    {
+      "id": "ai_e1_003",
+      "question": "What does the term 'load factor' refer to in aviation?",
+      "choices": {"A": "The weight of cargo on the aircraft", "B": "The ratio of lift to weight, expressed in G-forces", "C": "The fuel consumption rate at cruise", "D": "The percentage of seats occupied"},
+      "answer": "B",
+      "explanation": "Load factor is the ratio of lift to weight, measured in G's. A load factor of 2 means lift is twice the weight.",
+      "steps": [
+        "1. Define load factor: lift / weight ratio.",
+        "2. Expressed in G-forces: 1G = normal level flight.",
+        "3. Understand implications: higher G = more stress on aircraft and occupants.",
+        "4. Eliminate unrelated options."
+      ],
+      "fastStrategy": "Load factor = Lift/Weight in G's; 1G = level flight, 2G = double weight effect."
+    },
+    {
+      "id": "ai_e1_004",
+      "question": "What is the purpose of the elevator on an aircraft?",
+      "choices": {"A": "Control horizontal position", "B": "Control pitch (nose up/down)", "C": "Increase speed", "D": "Reduce turbulence"},
+      "answer": "B",
+      "explanation": "The elevator, located on the horizontal stabilizer, controls pitch rotation around the lateral axis.",
+      "steps": [
+        "1. Identify control surface: elevator on horizontal stabilizer.",
+        "2. Understand pitch: rotation around lateral (wing-to-wing) axis.",
+        "3. Elevator deflection causes nose to rise or lower.",
+        "4. Eliminate unrelated functions."
+      ],
+      "fastStrategy": "Elevator controls pitch (nose up/down); located on tail."
     }
   ]
 }

@@ -1,0 +1,51 @@
+{
+  "subjectId": "math",
+  "subtopicId": "geometry",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "math_geom_e1_001",
+      "question": "A rectangle has a length of 12 cm and a diagonal of 15 cm. What is its width?",
+      "choices": {"A": "6 cm", "B": "7 cm", "C": "8 cm", "D": "9 cm"},
+      "answer": "D",
+      "explanation": "Use Pythagorean theorem: diagonal² = length² + width². So 15² = 12² + width² → 225 = 144 + width² → width² = 81 → width = 9 cm.",
+      "steps": [
+        "1. Apply Pythagorean theorem: d² = l² + w².",
+        "2. Substitute values: 15² = 12² + w².",
+        "3. Calculate: 225 = 144 + w².",
+        "4. Solve: w² = 81.",
+        "5. Take square root: w = 9 cm."
+      ],
+      "fastStrategy": "In rectangle, diagonal is hypotenuse; use Pythagorean theorem."
+    },
+    {
+      "id": "math_geom_e1_002",
+      "question": "What is the area of a triangle with sides 5 cm, 6 cm, and 7 cm?",
+      "choices": {"A": "6√6 cm²", "B": "5√6 cm²", "C": "4√6 cm²", "D": "3√6 cm²"},
+      "answer": "A",
+      "explanation": "Use Heron's formula. Semi-perimeter s = (5+6+7)/2 = 9. Area = √[s(s-a)(s-b)(s-c)] = √[9(9-5)(9-6)(9-7)] = √[9×4×3×2] = √216 = √(36×6) = 6√6 cm².",
+      "steps": [
+        "1. Calculate semi-perimeter: s = (5 + 6 + 7) / 2 = 9.",
+        "2. Apply Heron's formula: A = √[s(s-a)(s-b)(s-c)].",
+        "3. Substitute: A = √[9 × 4 × 3 × 2].",
+        "4. Multiply: A = √216.",
+        "5. Simplify: √216 = √(36 × 6) = 6√6 cm²."
+      ],
+      "fastStrategy": "Use Heron's formula for any triangle: A = √[s(s-a)(s-b)(s-c)], where s is semi-perimeter."
+    },
+    {
+      "id": "math_geom_e1_003",
+      "question": "A circle has a radius of 5 cm. What is the circumference?",
+      "choices": {"A": "5π cm", "B": "10π cm", "C": "25π cm", "D": "50π cm"},
+      "answer": "B",
+      "explanation": "Circumference = 2πr = 2π(5) = 10π cm.",
+      "steps": [
+        "1. Recall circumference formula: C = 2πr.",
+        "2. Substitute radius: r = 5 cm.",
+        "3. Calculate: C = 2π(5) = 10π cm."
+      ],
+      "fastStrategy": "Circumference = 2πr = πd; memorize this formula."
+    }
+  ]
+}

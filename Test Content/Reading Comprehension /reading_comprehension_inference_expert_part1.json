@@ -18,6 +18,36 @@
         "4. Eliminate options contradicting the passage."
       ],
       "fastStrategy": "Look for the choice that reflects the author's main thesis and supporting evidence."
+    },
+    {
+      "id": "rc_inf_e1_002",
+      "passage": "Modern quantum mechanics reveals that particles can exist in multiple states simultaneously—a phenomenon called superposition. This challenges our intuitive understanding of reality, where objects are thought to have definite properties at all times. Yet the mathematics describing this behavior is remarkably accurate in predicting experimental outcomes. Some physicists propose that this reflects a fundamental feature of the universe, while others argue it merely describes the limits of human knowledge rather than reality itself.",
+      "question": "What can be inferred about the scientific debate described in the passage?",
+      "choices": {"A": "Quantum mechanics is proven false.", "B": "There is disagreement about what quantum mechanics reveals about reality.", "C": "Superposition has been disproven by experiments.", "D": "All physicists agree on the interpretation of quantum mechanics."},
+      "answer": "B",
+      "explanation": "The passage explicitly states that some physicists propose one interpretation while others argue a different one, indicating ongoing disagreement.",
+      "steps": [
+        "1. Identify the main point: quantum mechanics describes superposition accurately.",
+        "2. Note the debate: interpretations differ among physicists.",
+        "3. Recognize that the math works (verified) but interpretation is disputed.",
+        "4. Eliminate options claiming consensus or falsehood."
+      ],
+      "fastStrategy": "Look for phrases indicating disagreement or multiple viewpoints."
+    },
+    {
+      "id": "rc_inf_e1_003",
+      "passage": "For centuries, mercury was used in medical treatments despite its toxicity. Physicians observed its effects but lacked understanding of why it worked. Modern research has revealed the mechanism: mercury binds to proteins in bacterial cells, disrupting their function. However, this same mechanism also damages human cells. The transition away from mercury-based treatments demonstrates how scientific understanding can lead to safer alternatives.",
+      "question": "What does the passage imply about using mercury in medicine?",
+      "choices": {"A": "It was always known to be dangerous.", "B": "It worked through accidental mechanisms physicians didn't understand.", "C": "Modern medicine has proven it was never effective.", "D": "It remains the best treatment despite its toxicity."},
+      "answer": "B",
+      "explanation": "The passage states physicians observed effects but lacked understanding of the mechanism, implying it worked by means they didn't comprehend.",
+      "steps": [
+        "1. Identify key phrase: 'observed its effects but lacked understanding.'",
+        "2. Note that the mechanism was later discovered.",
+        "3. Infer that effectiveness was real but mechanism was unknown.",
+        "4. Eliminate options claiming it was always known to be dangerous or never worked."
+      ],
+      "fastStrategy": "Look for evidence of observed effects versus understood mechanisms."
     }
   ]
 }

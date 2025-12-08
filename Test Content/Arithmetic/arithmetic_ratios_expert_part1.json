@@ -1,0 +1,50 @@
+{
+  "subjectId": "arithmetic",
+  "subtopicId": "ratios_and_proportions",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "arith_ratio_e1_001",
+      "question": "If the ratio of boys to girls in a class is 3:4 and there are 21 boys, how many girls are in the class?",
+      "choices": {"A": "16", "B": "21", "C": "28", "D": "35"},
+      "answer": "C",
+      "explanation": "If boys:girls = 3:4 and boys = 21, then 21 corresponds to 3 parts. So 1 part = 7. Girls = 4 parts = 4 × 7 = 28.",
+      "steps": [
+        "1. Set up ratio: boys:girls = 3:4.",
+        "2. If boys = 21 and this represents 3 parts: 1 part = 21 ÷ 3 = 7.",
+        "3. Girls = 4 parts = 4 × 7 = 28.",
+        "4. Verify ratio: 21:28 = 3:4. ✓"
+      ],
+      "fastStrategy": "Find value per part; multiply by the required number of parts."
+    },
+    {
+      "id": "arith_ratio_e1_002",
+      "question": "A recipe requires flour and sugar in the ratio 5:2. If you use 10 cups of flour, how much sugar is needed?",
+      "choices": {"A": "2 cups", "B": "3 cups", "C": "4 cups", "D": "5 cups"},
+      "answer": "C",
+      "explanation": "Flour:sugar = 5:2. If flour = 10, then 10 corresponds to 5 parts. So 1 part = 2 cups. Sugar = 2 parts = 2 × 2 = 4 cups.",
+      "steps": [
+        "1. Set up ratio: flour:sugar = 5:2.",
+        "2. If flour = 10 and this equals 5 parts: 1 part = 10 ÷ 5 = 2.",
+        "3. Sugar = 2 parts = 2 × 2 = 4 cups.",
+        "4. Verify: 10:4 simplifies to 5:2. ✓"
+      ],
+      "fastStrategy": "Divide by the ratio part's value, multiply by desired part's value."
+    },
+    {
+      "id": "arith_ratio_e1_003",
+      "question": "A painting's width to height ratio is 3:2. If the painting is 45 inches wide, what is its height?",
+      "choices": {"A": "27 inches", "B": "30 inches", "C": "36 inches", "D": "40 inches"},
+      "answer": "B",
+      "explanation": "Width:height = 3:2. If width = 45, then 45 corresponds to 3 parts. 1 part = 15 inches. Height = 2 parts = 2 × 15 = 30 inches.",
+      "steps": [
+        "1. Identify ratio: width:height = 3:2.",
+        "2. Width = 45 = 3 parts, so 1 part = 45 ÷ 3 = 15.",
+        "3. Height = 2 parts = 2 × 15 = 30 inches.",
+        "4. Check: 45:30 = 3:2. ✓"
+      ],
+      "fastStrategy": "Scale ratio by dividing known value by its ratio part; multiply by desired part."
+    }
+  ]
+}

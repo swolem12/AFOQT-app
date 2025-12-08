@@ -31,6 +31,34 @@
         "4. Building is the most direct parallel."
       ],
       "fastStrategy": "Author:Book :: Architect:Building (creator:creation)."
+    },
+    {
+      "id": "vocab_ana_e1_003",
+      "question": "THERMOMETER : TEMPERATURE :: SCALE : ?",
+      "choices": {"A": "Weight", "B": "Balance", "C": "Measure", "D": "Volume"},
+      "answer": "A",
+      "explanation": "A thermometer measures temperature; a scale measures weight. The analogy is instrument to property measured.",
+      "steps": [
+        "1. Identify relationship: thermometer measures temperature.",
+        "2. Find analogous pair: scale measures ?",
+        "3. Evaluate: Weight (correct), Balance (not a property), Measure (too broad), Volume (not measured by scale).",
+        "4. Weight is the correct property."
+      ],
+      "fastStrategy": "Thermometer:Temperature :: Scale:Weight (instrument:property measured)."
+    },
+    {
+      "id": "vocab_ana_e1_004",
+      "question": "SURGEON : SCALPEL :: CARPENTER : ?",
+      "choices": {"A": "Blueprint", "B": "Hammer", "C": "Wood", "D": "Construction"},
+      "answer": "B",
+      "explanation": "A surgeon uses a scalpel as a primary tool; a carpenter uses a hammer as a primary tool. The analogy is profession to primary tool.",
+      "steps": [
+        "1. Identify relationship: surgeon uses scalpel (profession to tool).",
+        "2. Find analogous pair: carpenter uses ?",
+        "3. Evaluate: Blueprint (planning, not tool), Hammer (primary tool), Wood (material), Construction (profession, not tool).",
+        "4. Hammer is the correct answer."
+      ],
+      "fastStrategy": "Surgeon:Scalpel :: Carpenter:Hammer (professional:primary tool)."
     }
   ]
 }

@@ -1,0 +1,49 @@
+{
+  "subjectId": "instrument_comprehension",
+  "subtopicId": "gauge_reading",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ic_exp_e1_001",
+      "question": "What is the altimeter reading (in feet)?",
+      "uiSpec": {
+        "type": "altimeter",
+        "window": 18000,
+        "needle": 150,
+        "description": "Three-needle altimeter showing 18,000 feet (ten-thousands window) + 1,500 feet (thin needle) = 18,500 feet."
+      },
+      "choices": {"A": "1,500 feet", "B": "8,500 feet", "C": "18,500 feet", "D": "28,500 feet"},
+      "answer": "C",
+      "explanation": "Read the altimeter: the ten-thousands window shows 1 (=10,000 ft), thin needle at 5 (=500 ft), thick needle at 8 (=8,000 ft). Total: 10,000 + 8,000 + 500 = 18,500 feet.",
+      "steps": [
+        "1. Identify altimeter type: three-needle instrument.",
+        "2. Read ten-thousands window: 1 = 10,000 ft.",
+        "3. Read thick needle (thousands): 8 = 8,000 ft.",
+        "4. Read thin needle (hundreds): 5 = 500 ft.",
+        "5. Add: 10,000 + 8,000 + 500 = 18,500 feet."
+      ],
+      "fastStrategy": "Three-needle altimeter: window (ten-thousands) + thick needle (thousands) + thin needle (hundreds)."
+    },
+    {
+      "id": "ic_exp_e1_002",
+      "question": "What is the airspeed (in knots)?",
+      "uiSpec": {
+        "type": "airspeed_indicator",
+        "pointer": 120,
+        "markings": ["0", "50", "100", "150", "200"],
+        "description": "Airspeed indicator with pointer at 120 knots."
+      },
+      "choices": {"A": "100 knots", "B": "110 knots", "C": "120 knots", "D": "130 knots"},
+      "answer": "C",
+      "explanation": "Read the airspeed indicator directly: the needle points to 120 on the scale.",
+      "steps": [
+        "1. Locate airspeed indicator gauge.",
+        "2. Find needle position on circular dial.",
+        "3. Read value directly: 120 knots.",
+        "4. Verify needle is between 100 and 150 markings, closer to 120."
+      ],
+      "fastStrategy": "Airspeed indicator: read needle position directly from dial in knots."
+    }
+  ]
+}

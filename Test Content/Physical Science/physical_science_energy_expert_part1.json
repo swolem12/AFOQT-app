@@ -29,6 +29,34 @@
         "3. Calculate: (1/2)(200)(0.25) = 25 J."
       ],
       "fastStrategy": "PE = (1/2)kx²; square the displacement, multiply by k and 0.5."
+    },
+    {
+      "id": "ps_energy_e1_003",
+      "question": "A 1,000 W heater operates for 2 hours. How much energy does it consume (in joules)?",
+      "choices": {"A": "2,000 J", "B": "7.2 × 10⁶ J", "C": "3.6 × 10⁶ J", "D": "7.2 × 10⁹ J"},
+      "answer": "B",
+      "explanation": "Energy = Power × Time = 1,000 W × (2 × 3,600 s) = 1,000 × 7,200 = 7,200,000 J = 7.2 × 10⁶ J.",
+      "steps": [
+        "1. Recall energy formula: E = P × t.",
+        "2. Convert hours to seconds: 2 h = 2 × 3,600 s = 7,200 s.",
+        "3. Calculate: E = 1,000 W × 7,200 s = 7,200,000 J.",
+        "4. Express in scientific notation: 7.2 × 10⁶ J."
+      ],
+      "fastStrategy": "Power (W) × Time (s) = Energy (J); convert hours to seconds first."
+    },
+    {
+      "id": "ps_energy_e1_004",
+      "question": "Which form of energy is NOT a type of mechanical energy?",
+      "choices": {"A": "Kinetic energy", "B": "Potential energy", "C": "Thermal energy", "D": "Elastic potential energy"},
+      "answer": "C",
+      "explanation": "Mechanical energy consists of kinetic and potential energy (including elastic). Thermal energy is internal energy related to heat, not mechanical.",
+      "steps": [
+        "1. Define mechanical energy: KE + PE.",
+        "2. Identify types of PE: gravitational, elastic, etc.",
+        "3. Recognize thermal energy as separate from mechanical.",
+        "4. Thermal comes from molecular motion, not macro motion."
+      ],
+      "fastStrategy": "Mechanical = kinetic + potential; thermal is non-mechanical energy."
     }
   ]
 }
