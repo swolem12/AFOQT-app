@@ -259,6 +259,22 @@ async function loadReadingComprehensionFile(filename) {
     }
 }
 
+// Physical Science loader
+async function loadPhysicalScienceFile(filename) {
+    try {
+        const response = await fetch(`./Test Content/Physical Science/${filename}`);
+        if (!response.ok) {
+            console.warn(`Failed to load ${filename}`);
+            return null;
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error(`Error loading ${filename}:`, error);
+        return null;
+    }
+}
+
 // Patch 21: Instrument Comprehension loader
 async function loadInstrumentComprehensionFile(filename) {
     try {
@@ -494,24 +510,41 @@ async function loadAllArithmeticContent() {
     }
     console.log('Loading arithmetic reasoning content...');
 
-    // Use explicit file list based on current repo contents (beginner parts 1-2)
+    // Use explicit file list based on current repo contents (beginner/advanced/expert)
+    // Generated from Test Content/Arithmetic/*_part*.json to avoid missing topics on GitHub Pages
     const files = [
-        'arithmetic_basic_arithmetic_beginner_part1.json',
-        'arithmetic_basic_arithmetic_beginner_part2.json',
-        'arithmetic_basic_word_problems_beginner_part1.json',
-        'arithmetic_basic_word_problems_beginner_part2.json',
-        'arithmetic_fractions_decimals_beginner_part1.json',
-        'arithmetic_fractions_decimals_beginner_part2.json',
-        'arithmetic_percent_problems_beginner_part1.json',
-        'arithmetic_percent_problems_beginner_part2.json',
-        'arithmetic_ratio_proportion_beginner_part1.json',
-        'arithmetic_ratio_proportion_beginner_part2.json',
-        'arithmetic_time_rates_work_beginner_part1.json',
-        'arithmetic_time_rates_work_beginner_part2.json',
+        'arithmetic_algebra_word_problems_advanced_part1.json',
+        'arithmetic_algebra_word_problems_beginner_part1.json',
+        'arithmetic_algebra_word_problems_beginner_part2.json',
+        'arithmetic_algebra_word_problems_expert_part1.json',
+        'arithmetic_average_word_problems_advanced_part1.json',
         'arithmetic_average_word_problems_beginner_part1.json',
         'arithmetic_average_word_problems_beginner_part2.json',
-        'arithmetic_algebra_word_problems_beginner_part1.json',
-        'arithmetic_algebra_word_problems_beginner_part2.json'
+        'arithmetic_average_word_problems_expert_part1.json',
+        'arithmetic_basic_arithmetic_advanced_part1.json',
+        'arithmetic_basic_arithmetic_beginner_part1.json',
+        'arithmetic_basic_arithmetic_beginner_part2.json',
+        'arithmetic_basic_arithmetic_expert_part1.json',
+        'arithmetic_basic_word_problems_advanced_part1.json',
+        'arithmetic_basic_word_problems_beginner_part1.json',
+        'arithmetic_basic_word_problems_beginner_part2.json',
+        'arithmetic_basic_word_problems_expert_part1.json',
+        'arithmetic_fractions_decimals_advanced_part1.json',
+        'arithmetic_fractions_decimals_beginner_part1.json',
+        'arithmetic_fractions_decimals_beginner_part2.json',
+        'arithmetic_fractions_decimals_expert_part1.json',
+        'arithmetic_percent_problems_advanced_part1.json',
+        'arithmetic_percent_problems_beginner_part1.json',
+        'arithmetic_percent_problems_beginner_part2.json',
+        'arithmetic_percent_problems_expert_part1.json',
+        'arithmetic_ratio_proportion_advanced_part1.json',
+        'arithmetic_ratio_proportion_beginner_part1.json',
+        'arithmetic_ratio_proportion_beginner_part2.json',
+        'arithmetic_ratio_proportion_expert_part1.json',
+        'arithmetic_time_rates_work_advanced_part1.json',
+        'arithmetic_time_rates_work_beginner_part1.json',
+        'arithmetic_time_rates_work_beginner_part2.json',
+        'arithmetic_time_rates_work_expert_part1.json'
     ];
 
     let loadedCount = 0;
@@ -709,6 +742,87 @@ async function loadAllTableReadingContent() {
     await Promise.all(loadPromises);
     console.log(`✓ Loaded ${loadedCount} table reading files`);
     console.log('Table Reading question registry:', questionRegistry.table_reading);
+    return questionRegistry;
+}
+
+/**
+ * Load all Physical Science files and build question registry
+ */
+async function loadAllPhysicalScienceContent() {
+    console.log('Loading physical science content...');
+
+    const physicalScienceFiles = [
+        'physical_science_chemistry_basics_advanced_part1.json',
+        'physical_science_chemistry_basics_advanced_part2.json',
+        'physical_science_chemistry_basics_beginner_part1.json',
+        'physical_science_chemistry_basics_beginner_part2.json',
+        'physical_science_earth_space_advanced_part1.json',
+        'physical_science_earth_space_advanced_part2.json',
+        'physical_science_earth_space_beginner_part1.json',
+        'physical_science_earth_space_beginner_part2.json',
+        'physical_science_electricity_magnetism_advanced_part1.json',
+        'physical_science_electricity_magnetism_advanced_part2.json',
+        'physical_science_electricity_magnetism_beginner_part1.json',
+        'physical_science_electricity_magnetism_beginner_part2.json',
+        'physical_science_energy_heat_advanced_part1.json',
+        'physical_science_energy_heat_advanced_part2.json',
+        'physical_science_energy_heat_beginner_part1.json',
+        'physical_science_energy_heat_beginner_part2.json',
+        'physical_science_fluids_pressure_advanced_part1.json',
+        'physical_science_fluids_pressure_advanced_part2.json',
+        'physical_science_fluids_pressure_beginner_part1.json',
+        'physical_science_fluids_pressure_beginner_part2.json',
+        'physical_science_motion_mechanics_advanced_part1.json',
+        'physical_science_motion_mechanics_advanced_part2.json',
+        'physical_science_motion_mechanics_beginner_part1.json',
+        'physical_science_motion_mechanics_beginner_part2.json',
+        'physical_science_optics_waves_advanced_part1.json',
+        'physical_science_optics_waves_advanced_part2.json',
+        'physical_science_optics_waves_beginner_part1.json',
+        'physical_science_optics_waves_beginner_part2.json'
+    ];
+
+    let loadedCount = 0;
+    let errorCount = 0;
+
+    const loadPromises = physicalScienceFiles.map(async (filename) => {
+        const data = await loadPhysicalScienceFile(filename);
+        if (!data || !data.questions) {
+            errorCount++;
+            return;
+        }
+
+        // Parse filename to extract subtopicId and difficulty
+        const parsed = parseFilename(filename);
+        if (!parsed) {
+            errorCount++;
+            return;
+        }
+
+        // Initialize registry structure
+        if (!questionRegistry['physical_science']) {
+            questionRegistry['physical_science'] = {};
+        }
+        if (!questionRegistry['physical_science'][parsed.subtopicId]) {
+            questionRegistry['physical_science'][parsed.subtopicId] = {
+                beginner: [],
+                advanced: [],
+                expert: []
+            };
+        }
+
+        const difficulty = data.difficulty || parsed.difficulty || 'beginner';
+        if (!questionRegistry['physical_science'][parsed.subtopicId][difficulty]) {
+            questionRegistry['physical_science'][parsed.subtopicId][difficulty] = [];
+        }
+
+        questionRegistry['physical_science'][parsed.subtopicId][difficulty].push(...data.questions);
+        loadedCount++;
+    });
+
+    await Promise.all(loadPromises);
+    console.log(`✓ Loaded ${loadedCount} physical science files (${errorCount} errors)`);
+    console.log('Physical Science question registry:', questionRegistry.physical_science);
     return questionRegistry;
 }
 
@@ -1083,6 +1197,9 @@ async function initializePatch18() {
     // Load Block Counting config (optional) and content
     await loadBlockCountingConfig();
     await loadAllBlockCountingContent();
+    
+    // Load Physical Science content
+    await loadAllPhysicalScienceContent();
     
     console.log('✓ Patch 18 initialized');
     return true;
