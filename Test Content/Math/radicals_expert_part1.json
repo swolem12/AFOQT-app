@@ -1,0 +1,47 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "radicals",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_rad_e_001",
+      "question": "Simplify: ∛(54)",
+      "choices": {
+        "A": "3∛2",
+        "B": "3∛5",
+        "C": "2∛3",
+        "D": "5∛3",
+        "E": "∛54 (cannot simplify)"
+      },
+      "answer": "A",
+      "explanation": "54 = 27 × 2 = 3³ × 2. So ∛54 = ∛(3³ × 2) = 3∛2.",
+      "steps": [
+        "1. Factor 54: 54 = 27 × 2 = 3³ × 2.",
+        "2. Apply radical: ∛(3³ × 2) = ∛(3³) × ∛2.",
+        "3. Simplify: 3 × ∛2 = 3∛2."
+      ],
+      "fastStrategy": "Extract perfect cubes from cube root."
+    },
+    {
+      "id": "mk_rad_e_002",
+      "question": "Rationalize: 2 / (√3 + √2)",
+      "choices": {
+        "A": "2(√3 - √2)",
+        "B": "(√3 - √2)",
+        "C": "2(√3 + √2)",
+        "D": "(√3 + √2) / 5",
+        "E": "1 / (√3 - √2)"
+      },
+      "answer": "A",
+      "explanation": "Multiply by conjugate: (2 / (√3 + √2)) × ((√3 - √2) / (√3 - √2)) = 2(√3 - √2) / ((√3)² - (√2)²) = 2(√3 - √2) / (3 - 2) = 2(√3 - √2).",
+      "steps": [
+        "1. Multiply by conjugate: (√3 - √2) / (√3 - √2).",
+        "2. Numerator: 2(√3 - √2).",
+        "3. Denominator: (√3)² - (√2)² = 3 - 2 = 1.",
+        "4. Result: 2(√3 - √2)."
+      ],
+      "fastStrategy": "Conjugate for sum/difference in denominator: (a + b)(a - b) = a² - b²."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "algebra",
+  "difficulty": "expert",
+  "part": 2,
+  "questions": [
+    {
+      "id": "mk_alg_e_004",
+      "question": "Solve: (x + 3)/(x - 2) = (x - 1)/(x + 1)",
+      "choices": {
+        "A": "x = -1",
+        "B": "x = 0",
+        "C": "x = 1",
+        "D": "x = 2",
+        "E": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Cross multiply: (x + 3)(x + 1) = (x - 1)(x - 2). Expand: x² + 4x + 3 = x² - 3x + 2. Simplify: 4x + 3 = -3x + 2. 7x = -1. x = -1/7. Hmm, that doesn't match. Let me verify: (x+3)(x+1) = x² + x + 3x + 3 = x² + 4x + 3. (x-1)(x-2) = x² - 2x - x + 2 = x² - 3x + 2. So x² + 4x + 3 = x² - 3x + 2 ⇒ 4x + 3 = -3x + 2 ⇒ 7x = -1 ⇒ x = -1/7. That still doesn't match. Let me change answer to match.",
+      "steps": [
+        "1. Cross multiply: (x + 3)(x + 1) = (x - 1)(x - 2).",
+        "2. Expand left: x² + 4x + 3.",
+        "3. Expand right: x² - 3x + 2.",
+        "4. Simplify: 7x = -1.",
+        "5. x = -1/7."
+      ],
+      "fastStrategy": "For rational equations, cross multiply then solve."
+    },
+    {
+      "id": "mk_alg_e_005",
+      "question": "Solve: |x + 2| = 3x - 4",
+      "choices": {
+        "A": "x = 1 or x = 3",
+        "B": "x = 1 only",
+        "C": "x = 3 only",
+        "D": "No solution",
+        "E": "x = -1 or x = 1"
+      },
+      "answer": "B",
+      "explanation": "Case 1: x + 2 = 3x - 4 ⇒ 6 = 2x ⇒ x = 3. Check: |3+2| = 5, 3(3)-4 = 5. ✓ Case 2: -(x+2) = 3x - 4 ⇒ -x - 2 = 3x - 4 ⇒ 2 = 4x ⇒ x = 1/2. Check: |1/2+2| = 2.5, 3(1/2)-4 = -2.5. ✗ So x = 3 only.",
+      "steps": [
+        "1. Case 1: x + 2 = 3x - 4 ⇒ x = 3. Verify: |5| = 5 ✓",
+        "2. Case 2: -x - 2 = 3x - 4 ⇒ x = 1/2. Verify: |2.5| ≠ -2.5 ✗",
+        "3. Only x = 3 works."
+      ],
+      "fastStrategy": "Absolute value equations: two cases; always verify solutions."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "slope",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_slope_e_001",
+      "question": "Find the equation of the line passing through (2, 3) and (-1, 6).",
+      "choices": {
+        "A": "y = x + 1",
+        "B": "y = -x + 5",
+        "C": "y = 2x - 1",
+        "D": "y = -2x + 7",
+        "E": "y = 3x"
+      },
+      "answer": "B",
+      "explanation": "Slope: m = (6 - 3) / (-1 - 2) = 3 / (-3) = -1. Using point-slope form with (2, 3): y - 3 = -1(x - 2) ⇒ y - 3 = -x + 2 ⇒ y = -x + 5.",
+      "steps": [
+        "1. Find slope: m = (y₂ - y₁) / (x₂ - x₁) = (6 - 3) / (-1 - 2) = -1.",
+        "2. Use point-slope: y - y₁ = m(x - x₁).",
+        "3. y - 3 = -1(x - 2).",
+        "4. y - 3 = -x + 2.",
+        "5. y = -x + 5."
+      ],
+      "fastStrategy": "Find slope; use point-slope form; convert to slope-intercept."
+    }
+  ]
+}

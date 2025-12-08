@@ -1,0 +1,47 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "sequences",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_seq_e_001",
+      "question": "Find the sum of the first 10 terms of the arithmetic sequence 3, 7, 11, 15, ...",
+      "choices": {
+        "A": "210",
+        "B": "220",
+        "C": "230",
+        "D": "240",
+        "E": "250"
+      },
+      "answer": "A",
+      "explanation": "First term a₁ = 3, common difference d = 4. 10th term: a₁₀ = 3 + (10-1)×4 = 3 + 36 = 39. Sum: S_n = n(a₁ + aₙ)/2 = 10(3 + 39)/2 = 10 × 42 / 2 = 210.",
+      "steps": [
+        "1. Identify: a₁ = 3, d = 4.",
+        "2. Find a₁₀: a₁₀ = a₁ + (n-1)d = 3 + 9×4 = 39.",
+        "3. Sum formula: S_n = n(a₁ + aₙ)/2.",
+        "4. S₁₀ = 10(3 + 39)/2 = 10 × 21 = 210."
+      ],
+      "fastStrategy": "Arithmetic sum: S_n = n(first + last)/2."
+    },
+    {
+      "id": "mk_seq_e_002",
+      "question": "What is the 5th term of the geometric sequence with first term 2 and common ratio 3?",
+      "choices": {
+        "A": "162",
+        "B": "243",
+        "C": "486",
+        "D": "81",
+        "E": "54"
+      },
+      "answer": "A",
+      "explanation": "aₙ = a₁ × r^(n-1). a₅ = 2 × 3^(5-1) = 2 × 3⁴ = 2 × 81 = 162.",
+      "steps": [
+        "1. Geometric formula: aₙ = a₁ × r^(n-1).",
+        "2. a₁ = 2, r = 3, n = 5.",
+        "3. a₅ = 2 × 3⁴ = 2 × 81 = 162."
+      ],
+      "fastStrategy": "Geometric term formula: aₙ = a₁ × r^(n-1)."
+    }
+  ]
+}

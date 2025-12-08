@@ -1,0 +1,45 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "transformations",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_trans_e_001",
+      "question": "A point (3, -2) is rotated 180° counterclockwise around the origin. What are the new coordinates?",
+      "choices": {
+        "A": "(3, 2)",
+        "B": "(-3, 2)",
+        "C": "(-3, -2)",
+        "D": "(2, 3)",
+        "E": "(-2, -3)"
+      },
+      "answer": "B",
+      "explanation": "180° rotation around origin: (x, y) → (-x, -y). So (3, -2) → (-3, 2).",
+      "steps": [
+        "1. 180° rotation formula: (x, y) → (-x, -y).",
+        "2. Apply to (3, -2): → (-3, -(-2)) = (-3, 2)."
+      ],
+      "fastStrategy": "Rotation formulas: 90° CCW: (x,y)→(-y,x); 180°: (x,y)→(-x,-y); 270° CCW: (x,y)→(y,-x)."
+    },
+    {
+      "id": "mk_trans_e_002",
+      "question": "If f(x) = x², what is the equation of the function after translating 2 units left and 3 units up?",
+      "choices": {
+        "A": "f(x) = (x + 2)² - 3",
+        "B": "f(x) = (x - 2)² + 3",
+        "C": "f(x) = (x + 2)² + 3",
+        "D": "f(x) = (x - 2)² - 3",
+        "E": "f(x) = x² + 2 + 3"
+      },
+      "answer": "C",
+      "explanation": "Translate 2 units left: replace x with (x + 2). Translate 3 units up: add 3. Result: f(x) = (x + 2)² + 3.",
+      "steps": [
+        "1. Original: f(x) = x².",
+        "2. Left 2: replace x with (x + 2) → (x + 2)².",
+        "3. Up 3: add 3 → (x + 2)² + 3."
+      ],
+      "fastStrategy": "Horizontal shift left h: (x + h); vertical shift up k: + k."
+    }
+  ]
+}

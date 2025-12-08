@@ -1,0 +1,49 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "rational_expressions",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_re_e_001",
+      "question": "Simplify: (x² + 5x + 6) / (x² - 4)",
+      "choices": {
+        "A": "(x + 3) / (x - 2)",
+        "B": "(x + 2) / (x + 2)",
+        "C": "(x + 3) / (x + 2)",
+        "D": "1",
+        "E": "(x + 2)² / (x² - 4)"
+      },
+      "answer": "A",
+      "explanation": "Factor: x² + 5x + 6 = (x + 2)(x + 3), x² - 4 = (x - 2)(x + 2). Simplify: ((x + 2)(x + 3)) / ((x - 2)(x + 2)) = (x + 3) / (x - 2) (when x ≠ -2).",
+      "steps": [
+        "1. Factor numerator: x² + 5x + 6 = (x + 2)(x + 3).",
+        "2. Factor denominator: x² - 4 = (x - 2)(x + 2).",
+        "3. Write: ((x + 2)(x + 3)) / ((x - 2)(x + 2)).",
+        "4. Cancel (x + 2): (x + 3) / (x - 2).",
+        "5. Note: x ≠ -2, 2."
+      ],
+      "fastStrategy": "Factor completely; cancel common binomials."
+    },
+    {
+      "id": "mk_re_e_002",
+      "question": "Add: (2x / (x² - 9)) + (1 / (x - 3))",
+      "choices": {
+        "A": "(2x + x + 3) / ((x - 3)(x + 3))",
+        "B": "(2x + x + 3) / (x² - 9)",
+        "C": "(3x + 3) / (x² - 9)",
+        "D": "(3x - 3) / (x² - 9)",
+        "E": "3 / (x + 3)"
+      },
+      "answer": "C",
+      "explanation": "Note x² - 9 = (x - 3)(x + 3). Rewrite second: 1 / (x - 3) = (x + 3) / ((x - 3)(x + 3)). Add: (2x + (x + 3)) / ((x - 3)(x + 3)) = (3x + 3) / (x² - 9).",
+      "steps": [
+        "1. Factor: x² - 9 = (x - 3)(x + 3).",
+        "2. Rewrite second fraction: 1/(x-3) = (x+3)/(x²-9).",
+        "3. Add: (2x + x + 3)/(x²-9) = (3x + 3)/(x² - 9).",
+        "4. Simplify if desired: 3(x + 1)/(x² - 9)."
+      ],
+      "fastStrategy": "Find LCD; convert all fractions; combine numerators."
+    }
+  ]
+}

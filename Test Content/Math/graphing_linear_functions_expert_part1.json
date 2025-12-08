@@ -1,0 +1,29 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "graphing_linear_functions",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_glf_e_001",
+      "question": "Write the equation of a line parallel to y = -2x + 5 and passing through (1, -3).",
+      "choices": {
+        "A": "y = -2x - 1",
+        "B": "y = -2x + 3",
+        "C": "y = 2x - 5",
+        "D": "y = -2x - 5",
+        "E": "y = -1/2 x - 2"
+      },
+      "answer": "A",
+      "explanation": "Parallel lines have the same slope. Original line has slope -2. Point (1, -3): y - (-3) = -2(x - 1) ⇒ y + 3 = -2x + 2 ⇒ y = -2x - 1.",
+      "steps": [
+        "1. Parallel lines have equal slopes: m = -2.",
+        "2. Use point-slope form with (1, -3).",
+        "3. y - (-3) = -2(x - 1).",
+        "4. y + 3 = -2x + 2.",
+        "5. y = -2x - 1."
+      ],
+      "fastStrategy": "Parallel lines: same slope; perpendicular: negative reciprocal slope."
+    }
+  ]
+}

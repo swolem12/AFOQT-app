@@ -1,0 +1,49 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "functions",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_func_e_001",
+      "question": "If f(x) = (x - 1)/(x + 2) and g(x) = x + 1, find (f ∘ g)(x).",
+      "choices": {
+        "A": "(x)/(x + 3)",
+        "B": "(x)/(x + 2)",
+        "C": "(x + 1)/(x + 3)",
+        "D": "(x - 1)/(x + 3)",
+        "E": "(x - 2)/(x + 1)"
+      },
+      "answer": "A",
+      "explanation": "(f ∘ g)(x) = f(g(x)) = f(x + 1) = ((x + 1) - 1) / ((x + 1) + 2) = x / (x + 3).",
+      "steps": [
+        "1. Composition: (f ∘ g)(x) = f(g(x)).",
+        "2. g(x) = x + 1.",
+        "3. f(g(x)) = f(x + 1) = ((x + 1) - 1) / ((x + 1) + 2).",
+        "4. Simplify: x / (x + 3)."
+      ],
+      "fastStrategy": "Composition: substitute g(x) into f."
+    },
+    {
+      "id": "mk_func_e_002",
+      "question": "Find the inverse of f(x) = 2x - 3.",
+      "choices": {
+        "A": "f⁻¹(x) = (x + 3)/2",
+        "B": "f⁻¹(x) = (x - 3)/2",
+        "C": "f⁻¹(x) = 2x + 3",
+        "D": "f⁻¹(x) = (2x - 3)⁻¹",
+        "E": "No inverse exists"
+      },
+      "answer": "A",
+      "explanation": "Set y = 2x - 3. Swap: x = 2y - 3. Solve for y: 2y = x + 3 ⇒ y = (x + 3)/2. So f⁻¹(x) = (x + 3)/2.",
+      "steps": [
+        "1. Set y = f(x): y = 2x - 3.",
+        "2. Swap x and y: x = 2y - 3.",
+        "3. Solve for y: 2y = x + 3.",
+        "4. y = (x + 3)/2.",
+        "5. f⁻¹(x) = (x + 3)/2."
+      ],
+      "fastStrategy": "Inverse: swap x and y, solve for y."
+    }
+  ]
+}

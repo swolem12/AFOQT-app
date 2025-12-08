@@ -1,0 +1,27 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "polygons_and_angles",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_pa_e_001",
+      "question": "What is the measure of each interior angle of a regular hexagon?",
+      "choices": {
+        "A": "90°",
+        "B": "108°",
+        "C": "120°",
+        "D": "135°",
+        "E": "144°"
+      },
+      "answer": "C",
+      "explanation": "For a regular n-gon, each interior angle = (n - 2) × 180° / n. For hexagon (n = 6): (6 - 2) × 180° / 6 = 4 × 180° / 6 = 720° / 6 = 120°.",
+      "steps": [
+        "1. Formula: Interior angle = (n - 2) × 180° / n.",
+        "2. For hexagon, n = 6.",
+        "3. = (6 - 2) × 180° / 6 = 4 × 30° = 120°."
+      ],
+      "fastStrategy": "Regular polygon interior angle: (n - 2) × 180° / n."
+    }
+  ]
+}

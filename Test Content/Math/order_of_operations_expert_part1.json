@@ -1,0 +1,29 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "order_of_operations",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_oo_e_001",
+      "question": "Calculate: 10 - 3 × 2 + 4² ÷ 2 - 1",
+      "choices": {
+        "A": "5",
+        "B": "10",
+        "C": "11",
+        "D": "15",
+        "E": "18"
+      },
+      "answer": "C",
+      "explanation": "PEMDAS: Exponents first: 4² = 16. Then multiplication/division left to right: 3 × 2 = 6, 16 ÷ 2 = 8. Then addition/subtraction left to right: 10 - 6 + 8 - 1 = 11.",
+      "steps": [
+        "1. Exponents: 4² = 16.",
+        "2. Expression becomes: 10 - 3 × 2 + 16 ÷ 2 - 1.",
+        "3. Multiply/divide: 3 × 2 = 6, 16 ÷ 2 = 8.",
+        "4. Expression: 10 - 6 + 8 - 1.",
+        "5. Add/subtract left to right: 10 - 6 = 4; 4 + 8 = 12; 12 - 1 = 11."
+      ],
+      "fastStrategy": "PEMDAS: Parentheses, Exponents, Multiply/Divide (left-to-right), Add/Subtract (left-to-right)."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "number_sets",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_ns_e_001",
+      "question": "Which statement is true about the relationship between integers and whole numbers?",
+      "choices": {
+        "A": "All integers are whole numbers.",
+        "B": "All whole numbers are integers.",
+        "C": "Integers and whole numbers are identical sets.",
+        "D": "Some integers are not whole numbers.",
+        "E": "0 is not an integer."
+      },
+      "answer": "B",
+      "explanation": "Whole numbers = {0, 1, 2, 3, ...}. Integers = {..., -3, -2, -1, 0, 1, 2, 3, ...}. Every whole number is an integer, but not every integer is a whole number (negatives are integers but not whole numbers).",
+      "steps": [
+        "1. Whole numbers: {0, 1, 2, 3, ...}.",
+        "2. Integers: {..., -2, -1, 0, 1, 2, ...}.",
+        "3. Every whole number is an integer.",
+        "4. But some integers (negatives) are not whole numbers."
+      ],
+      "fastStrategy": "Know the hierarchy: Natural ⊂ Whole ⊂ Integers ⊂ Rationals ⊂ Reals."
+    }
+  ]
+}

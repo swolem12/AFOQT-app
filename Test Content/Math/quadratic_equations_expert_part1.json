@@ -1,0 +1,48 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "quadratic_equations",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_qe_e_001",
+      "question": "Find all real solutions to x² + 6x + 13 = 0.",
+      "choices": {
+        "A": "x = -3 ± 2i (complex)",
+        "B": "x = -3",
+        "C": "No real solutions",
+        "D": "x = -6 or x = -2",
+        "E": "Infinitely many solutions"
+      },
+      "answer": "C",
+      "explanation": "Use discriminant: b² - 4ac = 6² - 4(1)(13) = 36 - 52 = -16 < 0. Negative discriminant means no real solutions.",
+      "steps": [
+        "1. Identify a = 1, b = 6, c = 13.",
+        "2. Calculate discriminant: Δ = b² - 4ac = 36 - 52 = -16.",
+        "3. Δ < 0 means no real solutions (complex conjugates exist)."
+      ],
+      "fastStrategy": "Discriminant determines number of real solutions."
+    },
+    {
+      "id": "mk_qe_e_002",
+      "question": "If the roots of 2x² + bx + 3 = 0 are r and s, and r + s = -5, find b.",
+      "choices": {
+        "A": "-10",
+        "B": "-5",
+        "C": "5",
+        "D": "10",
+        "E": "15"
+      },
+      "answer": "D",
+      "explanation": "By Vieta's formulas, sum of roots = -b/a. So -b/2 = -5 ⇒ -b = -10 ⇒ b = 10.",
+      "steps": [
+        "1. Recall Vieta's formula: r + s = -b/a.",
+        "2. Given: r + s = -5, a = 2.",
+        "3. So -b/2 = -5.",
+        "4. Multiply by 2: -b = -10.",
+        "5. b = 10."
+      ],
+      "fastStrategy": "Vieta's formulas: sum = -b/a, product = c/a."
+    }
+  ]
+}

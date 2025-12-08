@@ -1,0 +1,49 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "ratio_and_proportion",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_rp_e_001",
+      "question": "A recipe requires a 2:3 ratio of sugar to flour. If you use 8 cups of sugar, how many cups of flour do you need?",
+      "choices": {
+        "A": "10 cups",
+        "B": "12 cups",
+        "C": "15 cups",
+        "D": "16 cups",
+        "E": "18 cups"
+      },
+      "answer": "B",
+      "explanation": "Ratio 2:3 means 2 parts sugar to 3 parts flour. If 2 parts = 8 cups, then 1 part = 4 cups. 3 parts = 3 × 4 = 12 cups.",
+      "steps": [
+        "1. Ratio: sugar:flour = 2:3.",
+        "2. Sugar = 8 cups = 2 parts.",
+        "3. 1 part = 8/2 = 4 cups.",
+        "4. Flour = 3 parts = 3 × 4 = 12 cups."
+      ],
+      "fastStrategy": "Use ratio to scale: if a:b ratio and first = x, then second = x × (b/a)."
+    },
+    {
+      "id": "mk_rp_e_002",
+      "question": "If 5 workers can complete a job in 12 days, how many days will it take 8 workers to complete the same job?",
+      "choices": {
+        "A": "7.5 days",
+        "B": "8 days",
+        "C": "9 days",
+        "D": "10 days",
+        "E": "19.2 days"
+      },
+      "answer": "A",
+      "explanation": "Work is inversely proportional to workers. 5 workers × 12 days = 8 workers × x days. 60 = 8x. x = 7.5 days.",
+      "steps": [
+        "1. Work ∝ 1/workers (inverse proportion).",
+        "2. workers₁ × days₁ = workers₂ × days₂.",
+        "3. 5 × 12 = 8 × x.",
+        "4. 60 = 8x.",
+        "5. x = 7.5 days."
+      ],
+      "fastStrategy": "Inverse proportion: x₁ × y₁ = x₂ × y₂."
+    }
+  ]
+}

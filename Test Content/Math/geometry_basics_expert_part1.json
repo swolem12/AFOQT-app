@@ -1,0 +1,27 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "geometry_basics",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_gb_e_001",
+      "question": "What is the area of a triangle with sides 5, 12, and 13?",
+      "choices": {
+        "A": "30",
+        "B": "60",
+        "C": "90",
+        "D": "120",
+        "E": "150"
+      },
+      "answer": "A",
+      "explanation": "Note: 5² + 12² = 25 + 144 = 169 = 13². This is a right triangle (5-12-13). For a right triangle, Area = (1/2) × base × height = (1/2) × 5 × 12 = 30.",
+      "steps": [
+        "1. Check if right triangle: 5² + 12² = 25 + 144 = 169 = 13². Yes!",
+        "2. For right triangle, legs are 5 and 12.",
+        "3. Area = (1/2) × 5 × 12 = 30."
+      ],
+      "fastStrategy": "Right triangle area: (1/2) × leg₁ × leg₂; recognize Pythagorean triples."
+    }
+  ]
+}

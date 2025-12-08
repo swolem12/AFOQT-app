@@ -1,0 +1,28 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "graph_interpretation",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_gi_e_001",
+      "question": "A bar graph shows January sales of $2000, February sales of $3000, and March sales of $4000. By what percent did sales increase from January to March?",
+      "choices": {
+        "A": "50%",
+        "B": "100%",
+        "C": "150%",
+        "D": "200%",
+        "E": "300%"
+      },
+      "answer": "B",
+      "explanation": "January = $2000, March = $4000. Increase = $4000 - $2000 = $2000. Percent increase = (Increase / Original) × 100 = ($2000 / $2000) × 100 = 100%.",
+      "steps": [
+        "1. Original (January): $2000.",
+        "2. Final (March): $4000.",
+        "3. Increase: $4000 - $2000 = $2000.",
+        "4. Percent increase: ($2000 / $2000) × 100 = 100%."
+      ],
+      "fastStrategy": "Percent increase: [(new - old) / old] × 100."
+    }
+  ]
+}

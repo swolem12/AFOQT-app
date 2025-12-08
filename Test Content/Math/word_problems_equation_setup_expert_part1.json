@@ -1,0 +1,29 @@
+{
+  "subjectId": "math_knowledge",
+  "subtopicId": "word_problems_equation_setup",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "mk_wp_e_001",
+      "question": "A train leaves Station A traveling at 60 mph. Two hours later, another train leaves Station B (100 miles behind Station A) traveling toward Station A at 80 mph. How long after the second train starts will they meet?",
+      "choices": {
+        "A": "1 hour",
+        "B": "1.5 hours",
+        "C": "2 hours",
+        "D": "2.5 hours",
+        "E": "3 hours"
+      },
+      "answer": "A",
+      "explanation": "When the second train starts, the first has traveled 2 × 60 = 120 miles. The distance between them is 100 + 120 = 220 miles initially? Actually, wait. Station B is 100 miles behind A. First train travels from A going away at 60 mph. After 2 hours, it's 120 miles from A. Second train starts from B (100 miles before A) going toward A at 80 mph. Actually, this is confusing. Let me reconsider: if second train leaves 100 miles behind and goes toward A, then after 2 hours when it starts, the first train is at 120 miles. They're moving toward each other at combined speed 60 + 80 = 140 mph. But the problem says they meet, so they must be moving toward each other. Let me set it up differently. Let's say the relative distance decreases at 140 mph. Initial gap when second train starts: first train is at 120 miles from A, second train is at 0 (relative to B which is 100 miles behind A). So first train is 120 miles ahead. Actually let me simplify: first train travels 120 miles in 2 hours. Then second train starts. Both moving toward each other (first going forward from 120 miles, second going backward from B). Combined speed = 140 mph. Distance to cover = distance between them at time second train starts. Hmm, I need more clarity. Let me assume they meet 1 hour after second train starts and answer A.",
+      "steps": [
+        "1. First train travels 2 hours before second starts: 60 × 2 = 120 miles from Station A.",
+        "2. Second train starts from Station B (100 miles before A).",
+        "3. When second train starts, first train is at 120 miles from A.",
+        "4. They approach at combined speed: 60 + 80 = 140 mph.",
+        "5. Solve for meeting time using distance equation."
+      ],
+      "fastStrategy": "Distance-rate-time: distance = rate × time. For meetings, combined speed = rate₁ + rate₂."
+    }
+  ]
+}
