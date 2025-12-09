@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "advanced",
+  "passageId": "rc_a1_p009",
+  "passage": "Economists analyzing consumer behavior have observed a growing shift toward repairing items rather than replacing them. This trend contrasts sharply with the last few decades, during which inexpensive manufacturing and rapid product cycles encouraged disposable consumption. Several factors now contribute to the change. First, rising prices for raw materials have increased the cost of new goods, making repairs a more attractive option. Second, online tutorials and easily accessible replacement parts have empowered consumers to fix electronics, clothing, and household tools on their own. Third, environmental awareness has led many individuals to reconsider the impact of frequent purchases on landfill waste. While manufacturers acknowledge the trend, some companies remain hesitant to design products for longevity, fearing it may reduce sales. Nevertheless, economists predict that the shift toward repair-oriented consumption will continue as sustainability becomes a priority for both consumers and policymakers.",
+  "questions": [
+    {
+      "question": "What trend does the passage describe?",
+      "choices": {
+        "A": "Consumers buy more disposable goods than ever.",
+        "B": "More people repair items due to costs, resources, and sustainability concerns.",
+        "C": "Manufacturers have ended product cycles.",
+        "D": "Raw materials are cheaper than before."
+      },
+      "answer": "B",
+      "explanation": "The passage notes rising repair behavior driven by higher costs, DIY resources, and environmental awareness.",
+      "steps": [
+        "1. Scan opening and closing sentences for the thesis.",
+        "2. Note repeated themes or contrasts.",
+        "3. Eliminate choices that are too narrow or off-topic.",
+        "4. Choose the option that summarizes the whole passage."
+      ],
+      "fastStrategy": "Look for the broadest claim that ties all paragraphs together.",
+      "id": "rc_a1_p009_q1"
+    },
+    {
+      "question": "Which factor contributes to the shift?",
+      "choices": {
+        "A": "Higher raw material prices make new goods costlier.",
+        "B": "Repairs are legally required.",
+        "C": "No tutorials exist for fixes.",
+        "D": "Replacement parts are unavailable."
+      },
+      "answer": "A",
+      "explanation": "Rising raw material costs make repairing more attractive.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p009_q2"
+    },
+    {
+      "question": "What does manufacturer hesitation imply?",
+      "choices": {
+        "A": "They welcome longer-lasting products immediately.",
+        "B": "They plan to stop selling parts.",
+        "C": "Designing for longevity could reduce short-term sales.",
+        "D": "They have banned warranties."
+      },
+      "answer": "C",
+      "explanation": "Firms fear durable designs might lower replacement-driven sales.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p009_q3"
+    },
+    {
+      "question": "What future does the passage predict?",
+      "choices": {
+        "A": "Repair culture will fade quickly.",
+        "B": "Landfill waste will rise sharply.",
+        "C": "Product tutorials will disappear.",
+        "D": "Repair-oriented consumption will grow as sustainability matters more."
+      },
+      "answer": "D",
+      "explanation": "Economists expect repair behaviors to continue with sustainability priorities.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p009_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "The End of DIY",
+        "B": "Repairs on the Rise",
+        "C": "Why Waste Is Inevitable",
+        "D": "Cheap Goods Forever"
+      },
+      "answer": "B",
+      "explanation": "Title reflects the shift toward repairing over replacing.",
+      "steps": [
+        "1. Restate the central idea in a short phrase.",
+        "2. Avoid choices focused on a single detail.",
+        "3. Prefer titles that capture scope and purpose.",
+        "4. Pick the option that best fits the full passage."
+      ],
+      "fastStrategy": "Good titles mirror the main idea in a concise way.",
+      "id": "rc_a1_p009_q5"
+    }
+  ]
+}

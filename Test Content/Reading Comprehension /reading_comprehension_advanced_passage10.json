@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "advanced",
+  "passageId": "rc_a1_p010",
+  "passage": "Urban planners are increasingly turning to predictive analytics to improve city transportation systems. Instead of relying solely on historical data or manual traffic counts, modern models continuously incorporate live information from sensors, navigation apps, and public transit networks. These tools allow planners to forecast congestion hours in advance and evaluate the potential impact of proposed changes, such as adjusting bus routes or modifying traffic light timing. One of the major advantages of predictive analytics is its ability to test multiple scenarios before any physical changes occur, reducing both cost and risk. However, the effectiveness of these models depends heavily on the quality of the data they receive. Inaccurate or incomplete inputs can lead to flawed predictions, potentially worsening traffic patterns rather than improving them. Despite these challenges, cities adopting data-driven planning have seen notable improvements in commute times, public transit reliability, and overall urban mobility.",
+  "questions": [
+    {
+      "question": "What is the main idea about predictive analytics in transit planning?",
+      "choices": {
+        "A": "It relies only on historical traffic counts.",
+        "B": "Live data models forecast congestion and test scenarios but depend on data quality.",
+        "C": "It eliminates the need for public transit.",
+        "D": "It is too risky for cities to attempt."
+      },
+      "answer": "B",
+      "explanation": "The passage emphasizes live, data-driven forecasting with benefits and data-quality dependence.",
+      "steps": [
+        "1. Scan opening and closing sentences for the thesis.",
+        "2. Note repeated themes or contrasts.",
+        "3. Eliminate choices that are too narrow or off-topic.",
+        "4. Choose the option that summarizes the whole passage."
+      ],
+      "fastStrategy": "Look for the broadest claim that ties all paragraphs together.",
+      "id": "rc_a1_p010_q1"
+    },
+    {
+      "question": "Which advantage is noted?",
+      "choices": {
+        "A": "Models remove the need for sensors.",
+        "B": "They guarantee no congestion.",
+        "C": "They test multiple scenarios before physical changes.",
+        "D": "They replace city planners."
+      },
+      "answer": "C",
+      "explanation": "Analytics lets planners evaluate impacts virtually before modifying infrastructure.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p010_q2"
+    },
+    {
+      "question": "What risk comes from poor data?",
+      "choices": {
+        "A": "Permanent traffic elimination.",
+        "B": "Higher parking revenue.",
+        "C": "Instant subway expansion.",
+        "D": "Flawed predictions that can worsen congestion."
+      },
+      "answer": "D",
+      "explanation": "Bad inputs can lead to wrong forecasts, making traffic worse.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p010_q3"
+    },
+    {
+      "question": "On what does the effectiveness of these models heavily depend?",
+      "choices": {
+        "A": "Manual traffic counts only.",
+        "B": "Accurate, complete data inputs.",
+        "C": "The number of bus drivers employed.",
+        "D": "How many bridges a city has."
+      },
+      "answer": "B",
+      "explanation": "The text says quality of incoming data drives model usefulness.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p010_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Guesswork in Urban Planning",
+        "B": "Forecasting Traffic with Live Data",
+        "C": "Eliminating Transit Systems",
+        "D": "Historic Maps and Modern Cities"
+      },
+      "answer": "B",
+      "explanation": "Title mirrors the focus on live predictive analytics for transportation.",
+      "steps": [
+        "1. Restate the central idea in a short phrase.",
+        "2. Avoid choices focused on a single detail.",
+        "3. Prefer titles that capture scope and purpose.",
+        "4. Pick the option that best fits the full passage."
+      ],
+      "fastStrategy": "Good titles mirror the main idea in a concise way.",
+      "id": "rc_a1_p010_q5"
+    }
+  ]
+}

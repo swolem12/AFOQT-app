@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p008",
+  "passage": "Medical researchers investigating long-term astronaut health have discovered that extended exposure to microgravity affects more than just muscle strength and bone density. Recent studies show that fluid in the body shifts upward toward the head in low-gravity environments, placing pressure on the eyes and altering their shape. Some astronauts experience temporary vision changes during missions, while others develop longer-lasting issues upon returning to Earth. Scientists are exploring countermeasures, including specialized compression garments and adjustable spacecraft environments that simulate partial gravity. Although these solutions show promise, researchers caution that space agencies must continue studying the problem as missions to the Moon and Mars become more common. Understanding how microgravity impacts human physiology is essential for keeping astronauts healthy during increasingly ambitious space exploration.",
+  "questions": [
+    {
+      "question": "What physiological effect does microgravity produce?",
+      "choices": {
+        "A": "Fluid shifts upward increasing eye pressure",
+        "B": "More muscle growth",
+        "C": "Lower blood flow to head",
+        "D": "Improved vision"
+      },
+      "answer": "A",
+      "explanation": "Fluid moves toward head, affecting eyes.",
+      "steps": [
+        "1. Note described effect.",
+        "2. Pick matching option.",
+        "3. Exclude opposites."
+      ],
+      "fastStrategy": "Detail recall.",
+      "id": "rc_e1_p008_q1"
+    },
+    {
+      "question": "Why are countermeasures under study?",
+      "choices": {
+        "A": "Missions are shortening",
+        "B": "Vision issues threaten longer Moon/Mars flights",
+        "C": "Robots need them",
+        "D": "Gravity increases in space"
+      },
+      "answer": "B",
+      "explanation": "Longer missions need eye health solutions.",
+      "steps": [
+        "1. Link vision issues to future missions.",
+        "2. Infer need for fixes.",
+        "3. Choose aligned option."
+      ],
+      "fastStrategy": "Future missions drive mitigation.",
+      "id": "rc_e1_p008_q2"
+    },
+    {
+      "question": "What does ongoing research imply about current solutions?",
+      "choices": {
+        "A": "They are incomplete",
+        "B": "They are perfect",
+        "C": "They are irrelevant",
+        "D": "They worsen vision"
+      },
+      "answer": "A",
+      "explanation": "Researchers caution continued study\u2014solutions not final.",
+      "steps": [
+        "1. Note call for continued research.",
+        "2. Infer current gaps.",
+        "3. Choose matching option."
+      ],
+      "fastStrategy": "More research = not done.",
+      "id": "rc_e1_p008_q3"
+    },
+    {
+      "question": "Which countermeasure is mentioned?",
+      "choices": {
+        "A": "Gravity boots",
+        "B": "Compression garments",
+        "C": "Laser eye surgery in orbit",
+        "D": "Sleeping upright"
+      },
+      "answer": "B",
+      "explanation": "Compression garments noted to manage fluid shift.",
+      "steps": [
+        "1. Recall listed measures.",
+        "2. Pick exact one.",
+        "3. Exclude unstated."
+      ],
+      "fastStrategy": "Detail match.",
+      "id": "rc_e1_p008_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Microgravity and the Eyes",
+        "B": "Why Space Cures Vision",
+        "C": "Abandoning Manned Spaceflight",
+        "D": "No Need for Research"
+      },
+      "answer": "A",
+      "explanation": "Captures fluid shifts and vision concern.",
+      "steps": [
+        "1. Summarize passage.",
+        "2. Remove mismatches.",
+        "3. Choose concise fit."
+      ],
+      "fastStrategy": "Title = main focus.",
+      "id": "rc_e1_p008_q5"
+    }
+  ]
+}

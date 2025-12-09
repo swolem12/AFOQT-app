@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p003",
+  "passage": "Researchers studying sleep patterns have found that short naps can significantly improve cognitive performance, even when taken during busy workdays. Unlike extended sleep, which involves multiple cycles of deep and rapid-eye-movement stages, a brief nap typically lasts between 10 and 20 minutes and focuses on restoring alertness. This duration is short enough to avoid sleep inertia, the grogginess people often feel after waking from deeper sleep. Companies in high-stress industries have begun adopting structured napping policies, recognizing that well-rested employees tend to make fewer mistakes and recover more quickly from fatigue. Although some critics argue that napping reduces productivity, most studies indicate that strategic rest periods increase efficiency over the course of a full work shift. As the science behind sleep becomes better understood, more workplaces may integrate short naps as a standard part of employee wellness programs.",
+  "questions": [
+    {
+      "question": "Why are naps capped at ~20 minutes?",
+      "choices": {
+        "A": "Long naps stop REM",
+        "B": "To avoid sleep inertia that follows deeper sleep",
+        "C": "Short naps are fashionable",
+        "D": "Companies ban longer rest"
+      },
+      "answer": "B",
+      "explanation": "Brief naps prevent grogginess from deeper stages.",
+      "steps": [
+        "1. Identify risk of long naps.",
+        "2. Connect to cap rationale.",
+        "3. Choose option naming sleep inertia."
+      ],
+      "fastStrategy": "Use stated physiological reason.",
+      "id": "rc_e1_p003_q1"
+    },
+    {
+      "question": "What business logic supports nap policies?",
+      "choices": {
+        "A": "Lower rent",
+        "B": "Productivity and fewer errors outweigh the break time",
+        "C": "Legal compliance",
+        "D": "Eliminate night shifts"
+      },
+      "answer": "B",
+      "explanation": "Firms see fewer mistakes and better recovery improving net output.",
+      "steps": [
+        "1. Find stated benefits.",
+        "2. Weigh vs time cost.",
+        "3. Pick productivity-over-time rationale."
+      ],
+      "fastStrategy": "Cost-benefit stated in passage.",
+      "id": "rc_e1_p003_q2"
+    },
+    {
+      "question": "What inference counters critics who fear lost output?",
+      "choices": {
+        "A": "Studies show overall efficiency rises",
+        "B": "Naps end workdays",
+        "C": "Critics lack data",
+        "D": "Naps replace sleep"
+      },
+      "answer": "A",
+      "explanation": "Evidence shows performance gains offset break length.",
+      "steps": [
+        "1. Note critics\u2019 concern.",
+        "2. Identify passage evidence.",
+        "3. Choose evidence-based rebuttal."
+      ],
+      "fastStrategy": "Use passage data to rebut claim.",
+      "id": "rc_e1_p003_q3"
+    },
+    {
+      "question": "Which aspect is most central to the passage\u2019s claim?",
+      "choices": {
+        "A": "Caffeine pricing",
+        "B": "Optimal nap duration and benefits",
+        "C": "Weekend sleep patterns",
+        "D": "Office lighting"
+      },
+      "answer": "B",
+      "explanation": "Focus is on short nap duration and cognitive benefits at work.",
+      "steps": [
+        "1. Extract main theme.",
+        "2. Remove unrelated factors.",
+        "3. Select core focus."
+      ],
+      "fastStrategy": "Ask: what is the passage mostly about?",
+      "id": "rc_e1_p003_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Eliminating Overnight Shifts",
+        "B": "Short Naps, Sharper Work",
+        "C": "Why Sleep Is Harmful",
+        "D": "The End of Office Chairs"
+      },
+      "answer": "B",
+      "explanation": "Summarizes brief naps boosting performance.",
+      "steps": [
+        "1. Match to main claim.",
+        "2. Remove unrelated/absurd options.",
+        "3. Pick concise fit."
+      ],
+      "fastStrategy": "Title = main claim shorthand.",
+      "id": "rc_e1_p003_q5"
+    }
+  ]
+}

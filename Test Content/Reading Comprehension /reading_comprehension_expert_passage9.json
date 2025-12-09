@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p009",
+  "passage": "Economists analyzing consumer behavior have observed a growing shift toward repairing items rather than replacing them. This trend contrasts sharply with the last few decades, during which inexpensive manufacturing and rapid product cycles encouraged disposable consumption. Several factors now contribute to the change. First, rising prices for raw materials have increased the cost of new goods, making repairs a more attractive option. Second, online tutorials and easily accessible replacement parts have empowered consumers to fix electronics, clothing, and household tools on their own. Third, environmental awareness has led many individuals to reconsider the impact of frequent purchases on landfill waste. While manufacturers acknowledge the trend, some companies remain hesitant to design products for longevity, fearing it may reduce sales. Nevertheless, economists predict that the shift toward repair-oriented consumption will continue as sustainability becomes a priority for both consumers and policymakers.",
+  "questions": [
+    {
+      "question": "What trend does the passage highlight?",
+      "choices": {
+        "A": "More disposable buying",
+        "B": "Growing repair culture driven by cost and sustainability",
+        "C": "End of recycling",
+        "D": "Cheaper raw materials"
+      },
+      "answer": "B",
+      "explanation": "Repairs rising due to costs, DIY parts, environmental concerns.",
+      "steps": [
+        "1. Identify described shift.",
+        "2. Pick matching option.",
+        "3. Exclude opposite claims."
+      ],
+      "fastStrategy": "Main trend match.",
+      "id": "rc_e1_p009_q1"
+    },
+    {
+      "question": "Which factor enables DIY repairs?",
+      "choices": {
+        "A": "Fewer tutorials",
+        "B": "Accessible guides and parts",
+        "C": "Ban on replacements",
+        "D": "Cheaper new goods"
+      },
+      "answer": "B",
+      "explanation": "Tutorials/parts make repairs doable.",
+      "steps": [
+        "1. Recall enabling factors.",
+        "2. Choose stated one.",
+        "3. Exclude inverses."
+      ],
+      "fastStrategy": "Detail recall.",
+      "id": "rc_e1_p009_q2"
+    },
+    {
+      "question": "Why might manufacturers hesitate to build for longevity?",
+      "choices": {
+        "A": "Fear reduced replacement sales",
+        "B": "Legal bans",
+        "C": "Lack of materials",
+        "D": "Higher demand"
+      },
+      "answer": "A",
+      "explanation": "They worry durable designs cut short-term sales.",
+      "steps": [
+        "1. Find manufacturer concern.",
+        "2. Infer sales impact.",
+        "3. Choose matching option."
+      ],
+      "fastStrategy": "Use stated hesitation reason.",
+      "id": "rc_e1_p009_q3"
+    },
+    {
+      "question": "What future does the passage project?",
+      "choices": {
+        "A": "Repair culture fading",
+        "B": "Landfill growth",
+        "C": "Repair-oriented consumption expanding with sustainability focus",
+        "D": "Parts disappearing"
+      },
+      "answer": "C",
+      "explanation": "Economists expect repair trend to continue as sustainability matters more.",
+      "steps": [
+        "1. Note forecast.",
+        "2. Pick aligned option.",
+        "3. Exclude contrary outcomes."
+      ],
+      "fastStrategy": "Match stated projection.",
+      "id": "rc_e1_p009_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Repairs Rising with Sustainability",
+        "B": "End of DIY",
+        "C": "Cheap Goods Forever",
+        "D": "Waste Without Limits"
+      },
+      "answer": "A",
+      "explanation": "Summarizes the repair trend and sustainability driver.",
+      "steps": [
+        "1. Summarize passage.",
+        "2. Remove mismatches.",
+        "3. Select fit."
+      ],
+      "fastStrategy": "Title = trend + driver.",
+      "id": "rc_e1_p009_q5"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p005",
+  "passage": "Oceanographers studying coastal ecosystems have observed a steady rise in the number of harmful algal blooms over the last several decades. These blooms occur when certain algae species reproduce rapidly, often turning the water red or brown and releasing toxins that can harm marine life. Although some growth occurs naturally, scientists attribute the recent increase to nutrient runoff from agriculture and urban development. Fertilizers rich in nitrogen and phosphorus enter waterways during heavy rains, providing algae with an abundant food source. Warmer ocean temperatures also accelerate growth by creating favorable conditions for these species. The consequences can be severe: fish die-offs, shellfish contamination, and temporary closures of coastal industries such as tourism and fishing. In response, researchers are developing early-warning models that combine satellite imagery with water-quality sensors to predict bloom formation before it spreads widely.",
+  "questions": [
+    {
+      "question": "Which factor directly fuels the rise in blooms?",
+      "choices": {
+        "A": "Reduced nutrients",
+        "B": "Nutrient runoff plus warmer waters",
+        "C": "Less rainfall",
+        "D": "Fewer coastal cities"
+      },
+      "answer": "B",
+      "explanation": "Runoff rich in N/P and warmer temps drive blooms.",
+      "steps": [
+        "1. Find causal factors listed.",
+        "2. Combine as stated.",
+        "3. Select matching option."
+      ],
+      "fastStrategy": "Use explicit causal list.",
+      "id": "rc_e1_p005_q1"
+    },
+    {
+      "question": "What is the purpose of early-warning models?",
+      "choices": {
+        "A": "Promote tourism",
+        "B": "Predict blooms early to limit damage",
+        "C": "Ban fertilizers",
+        "D": "Raise ocean temps"
+      },
+      "answer": "B",
+      "explanation": "They forecast blooms before widespread spread.",
+      "steps": [
+        "1. Identify model goal.",
+        "2. Remove unrelated aims.",
+        "3. Pick prevention/mitigation."
+      ],
+      "fastStrategy": "Purpose question: why built?",
+      "id": "rc_e1_p005_q2"
+    },
+    {
+      "question": "Which consequence is highlighted?",
+      "choices": {
+        "A": "Better shellfish flavor",
+        "B": "Fish die-offs and contaminated shellfish",
+        "C": "Coral recovery",
+        "D": "Increased tourism"
+      },
+      "answer": "B",
+      "explanation": "Passage lists die-offs and contamination impacts.",
+      "steps": [
+        "1. Recall impacts stated.",
+        "2. Pick exact match.",
+        "3. Reject unstated outcomes."
+      ],
+      "fastStrategy": "Detail match.",
+      "id": "rc_e1_p005_q3"
+    },
+    {
+      "question": "What broader risk do blooms pose to coastal economies?",
+      "choices": {
+        "A": "Permanent cooling",
+        "B": "Temporary shutdowns of fishing/tourism",
+        "C": "Unlimited fertilizer sales",
+        "D": "Cheaper seafood"
+      },
+      "answer": "B",
+      "explanation": "Closures of coastal industries like fishing/tourism are mentioned.",
+      "steps": [
+        "1. Find economic effects.",
+        "2. Select shutdown/closure effect.",
+        "3. Remove opposites."
+      ],
+      "fastStrategy": "Look for economic impact statements.",
+      "id": "rc_e1_p005_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Rising Red Tides and Runoff",
+        "B": "The End of Coastlines",
+        "C": "Coral Reefs Recover",
+        "D": "Permanent Ocean Cooling"
+      },
+      "answer": "A",
+      "explanation": "Summarizes increasing blooms tied to runoff.",
+      "steps": [
+        "1. Summarize core trend.",
+        "2. Remove unrelated.",
+        "3. Choose concise match."
+      ],
+      "fastStrategy": "Title = main trend.",
+      "id": "rc_e1_p005_q5"
+    }
+  ]
+}

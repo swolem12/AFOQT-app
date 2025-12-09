@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p007",
+  "passage": "Archaeologists studying early human settlements have recently uncovered evidence suggesting that trade networks developed far earlier than previously believed. Excavations at inland sites revealed shells, minerals, and crafted objects originating from coastal regions hundreds of miles away. These findings challenge the idea that prehistoric communities were isolated and self-sufficient. Instead, they indicate that groups exchanged goods over considerable distances, likely through a chain of intermediary communities. Although the exact motivations behind these exchanges are not fully understood, researchers believe that early trade served both practical and social functions. Items such as pigments and decorative shells may have held symbolic value used in rituals or social ceremonies. The discovery reshapes our understanding of prehistoric society, revealing a level of cooperation and connection that predates the rise of formal civilizations.",
+  "questions": [
+    {
+      "question": "What do inland coastal artifacts suggest about prehistoric groups?",
+      "choices": {
+        "A": "They stayed isolated",
+        "B": "They traded across long distances",
+        "C": "They avoided symbolism",
+        "D": "They migrated yearly"
+      },
+      "answer": "B",
+      "explanation": "Coastal items far inland imply exchange networks.",
+      "steps": [
+        "1. Link evidence (coastal items inland).",
+        "2. Infer trade networks.",
+        "3. Choose matching option."
+      ],
+      "fastStrategy": "Evidence \u2192 inference.",
+      "id": "rc_e1_p007_q1"
+    },
+    {
+      "question": "Which evidence best supports early trade?",
+      "choices": {
+        "A": "Shells/minerals hundreds of miles inland",
+        "B": "Written ledgers",
+        "C": "Coins",
+        "D": "Horses"
+      },
+      "answer": "A",
+      "explanation": "Passage cites coastal-origin items inland.",
+      "steps": [
+        "1. Recall stated evidence.",
+        "2. Pick exact support.",
+        "3. Exclude unstated artifacts."
+      ],
+      "fastStrategy": "Detail match.",
+      "id": "rc_e1_p007_q2"
+    },
+    {
+      "question": "What social inference follows from exchanging symbolic items?",
+      "choices": {
+        "A": "Purely functional trade",
+        "B": "Shared rituals or status markers existed",
+        "C": "No cooperation",
+        "D": "Only coastal dominance"
+      },
+      "answer": "B",
+      "explanation": "Symbolic items suggest ritual/status uses, implying social links.",
+      "steps": [
+        "1. Note mention of pigments/shells.",
+        "2. Infer cultural exchange.",
+        "3. Choose aligned option."
+      ],
+      "fastStrategy": "Symbolic goods \u2192 social meaning.",
+      "id": "rc_e1_p007_q3"
+    },
+    {
+      "question": "Why does this finding shift prior assumptions?",
+      "choices": {
+        "A": "Shows isolation began later",
+        "B": "Reveals cooperation before formal civilizations",
+        "C": "Proves cities existed",
+        "D": "Invalidates archaeology"
+      },
+      "answer": "B",
+      "explanation": "Trade indicates cooperation earlier than assumed.",
+      "steps": [
+        "1. Identify old assumption (isolation).",
+        "2. New evidence (trade).",
+        "3. Choose inference about earlier cooperation."
+      ],
+      "fastStrategy": "Contrast old vs new view.",
+      "id": "rc_e1_p007_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Isolation of Early Villages",
+        "B": "Ancient Networks Across Distance",
+        "C": "Decline of Coastlines",
+        "D": "The Invention of Writing"
+      },
+      "answer": "B",
+      "explanation": "Title reflects early long-distance exchange.",
+      "steps": [
+        "1. Summarize discovery.",
+        "2. Remove mismatches.",
+        "3. Select concise fit."
+      ],
+      "fastStrategy": "Title = finding.",
+      "id": "rc_e1_p007_q5"
+    }
+  ]
+}

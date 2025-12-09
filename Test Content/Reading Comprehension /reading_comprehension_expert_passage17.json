@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p017",
+  "passage": "Modern agriculture is increasingly adopting precision farming, a technique that uses data to optimize crop production. Farmers deploy sensors that monitor soil moisture, nutrient levels, and temperature, allowing them to tailor irrigation and fertilizer use to specific areas of a field. This targeted approach reduces waste and can significantly improve yields. Drones equipped with cameras also play a role by surveying large areas quickly and identifying early signs of plant stress. While precision farming offers many benefits, it requires reliable internet access, which is still limited in some rural regions. Additionally, the cost of equipment can be a barrier for small farming operations. Despite these obstacles, many agricultural experts believe precision farming will become more common as technology becomes cheaper and more accessible, ultimately helping farmers use resources more efficiently.",
+  "questions": [
+    {
+      "question": "What is the main claim about precision farming?",
+      "choices": {
+        "A": "Data wastes resources",
+        "B": "Data-driven inputs boost efficiency despite connectivity/cost hurdles",
+        "C": "It ends irrigation",
+        "D": "Only indoor use"
+      },
+      "answer": "B",
+      "explanation": "Sensors/drones tailor inputs; barriers are cost/connectivity.",
+      "steps": [
+        "1. Identify benefits + hurdles.",
+        "2. Pick option with both.",
+        "3. Exclude others."
+      ],
+      "fastStrategy": "Include benefit + caveat.",
+      "id": "rc_e1_p017_q1"
+    },
+    {
+      "question": "How do drones assist?",
+      "choices": {
+        "A": "Harvest crops",
+        "B": "Survey fields to spot stress early",
+        "C": "Block sunlight",
+        "D": "Replace sensors"
+      },
+      "answer": "B",
+      "explanation": "They survey quickly and identify plant stress.",
+      "steps": [
+        "1. Recall drone role.",
+        "2. Choose matching option.",
+        "3. Exclude others."
+      ],
+      "fastStrategy": "Detail recall.",
+      "id": "rc_e1_p017_q2"
+    },
+    {
+      "question": "What barrier is noted?",
+      "choices": {
+        "A": "Excess rain",
+        "B": "Limited rural internet access",
+        "C": "Too many sensors",
+        "D": "Lack of sun"
+      },
+      "answer": "B",
+      "explanation": "Connectivity limits adoption.",
+      "steps": [
+        "1. Identify hurdle.",
+        "2. Pick matching option.",
+        "3. Exclude others."
+      ],
+      "fastStrategy": "Barrier recall.",
+      "id": "rc_e1_p017_q3"
+    },
+    {
+      "question": "What future is implied?",
+      "choices": {
+        "A": "Use will grow as tech becomes cheaper",
+        "B": "It will disappear",
+        "C": "It demands perfect weather",
+        "D": "It is illegal"
+      },
+      "answer": "A",
+      "explanation": "Passage expects wider use as cost/access improve.",
+      "steps": [
+        "1. Note forward-looking statement.",
+        "2. Choose aligned option.",
+        "3. Exclude opposites."
+      ],
+      "fastStrategy": "Future expectation noted.",
+      "id": "rc_e1_p017_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Data and Drones for Smarter Fields",
+        "B": "Farming Without Sensors",
+        "C": "Abandoning Agriculture",
+        "D": "Why Crops Don\u2019t Need Water"
+      },
+      "answer": "A",
+      "explanation": "Captures data-driven approach and tools.",
+      "steps": [
+        "1. Summarize theme.",
+        "2. Remove off options.",
+        "3. Pick fit."
+      ],
+      "fastStrategy": "Title = data + drones.",
+      "id": "rc_e1_p017_q5"
+    }
+  ]
+}

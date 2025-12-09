@@ -1,0 +1,143 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "chemistry_basics",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+      {
+        "id": "ps_cb_e1_001",
+        "question": "Heating 0.250 mol CaCO3(s) to completion releases what mass of CO2(g)?",
+        "choices": {"A": "11 g", "B": "22 g", "C": "33 g", "D": "44 g"},
+        "answer": "A",
+        "explanation": "CaCO3 → CaO + CO2. Moles CO2 = 0.250. Mass = 0.250×44 ≈ 11 g.",
+        "steps": [
+          "Use 1:1 mole ratio CaCO3→CO2",
+          "Multiply 0.250 mol by 44 g/mol",
+          "Round to ~11 g"
+        ],
+        "fastStrategy": "Quarter of 44 g is about 11 g."
+      },
+      {
+        "id": "ps_cb_e1_002",
+        "question": "A buffer has 0.30 M acetic acid (pKa 4.76) and 0.20 M acetate. Estimate its pH.",
+        "choices": {"A": "4.6", "B": "4.8", "C": "5.0", "D": "5.2"},
+        "answer": "A",
+        "explanation": "Henderson–Hasselbalch: pH = 4.76 + log(0.20/0.30) ≈ 4.76 − 0.18 ≈ 4.58 (≈4.6).",
+        "steps": [
+          "Apply pH = pKa + log(base/acid)",
+          "Ratio base/acid = 0.67",
+          "log 0.67 ≈ −0.18",
+          "Add to 4.76 → ~4.58"
+        ],
+        "fastStrategy": "Base smaller than acid → pH just below pKa."
+      },
+      {
+        "id": "ps_cb_e1_003",
+        "question": "For N2(g)+3H2(g) ⇌ 2NH3(g) (exothermic forward), which change increases Kp?",
+        "choices": {"A": "Adding catalyst", "B": "Compressing the vessel", "C": "Raising temperature", "D": "Lowering temperature"},
+        "answer": "D",
+        "explanation": "Only temperature changes K. Exothermic forward means cooler temperatures increase K by favoring products.",
+        "steps": [
+          "Recall K depends solely on T",
+          "Exothermic reaction → K grows when T drops",
+          "Catalysts/pressure shift position but not K"
+        ],
+        "fastStrategy": "Exothermic: colder → larger K; endothermic is opposite."
+      },
+      {
+        "id": "ps_cb_e1_004",
+        "question": "A 1.00 L flask has 0.10 mol SO2 and 0.20 mol O2 at 600 K. For 2SO2 + O2 ⇌ 2SO3 with Kc = 4.0, which statement is true initially?",
+        "choices": {"A": "Qc < Kc; proceeds forward", "B": "Qc > Kc; proceeds reverse", "C": "Qc = Kc", "D": "Qc cannot be found"},
+        "answer": "A",
+        "explanation": "Qc = [SO3]^2/([SO2]^2[O2]). With [SO3]=0 initially, Qc=0 < Kc, so the reaction moves forward.",
+        "steps": [
+          "Write Q using initial concentrations",
+          "Numerator is zero because [SO3]=0",
+          "0 < 4 → forward direction"
+        ],
+        "fastStrategy": "If products start at zero, Q=0 and the reaction goes forward."
+      },
+      {
+        "id": "ps_cb_e1_005",
+        "question": "CO2 effuses 48 s for a set volume; an unknown gas effuses 32 s. Using Graham's law, estimate the unknown's molar mass.",
+        "choices": {"A": "18 g/mol", "B": "20 g/mol", "C": "28 g/mol", "D": "44 g/mol"},
+        "answer": "B",
+        "explanation": "t_CO2/t_x = √(M_CO2/M_x). 48/32 = 1.5. Square: 2.25 = 44/Mx → Mx ≈ 19.6 g/mol ≈ 20 g/mol.",
+        "steps": [
+          "Set 1.5 = √(44/Mx)",
+          "Square to 2.25 = 44/Mx",
+          "Solve Mx ≈ 44/2.25 ≈ 20"
+        ],
+        "fastStrategy": "Square the time ratio, then divide known molar mass by that factor."
+      },
+      {
+        "id": "ps_cb_e1_006",
+        "question": "At 25°C, 25.0 mL of 0.100 M HF (Ka=6.8×10^-4) is titrated with 0.100 M NaOH. The pH at the equivalence point is closest to:",
+        "choices": {"A": "7.0", "B": "8.0", "C": "8.8", "D": "10.0"},
+        "answer": "C",
+        "explanation": "At equivalence the solution contains F^- (0.00250 mol in 0.0500 L → 0.050 M). Kb = Kw/Ka ≈ 1.0×10^-14 / 6.8×10^-4 ≈ 1.5×10^-11. pOH ≈ 5.2 → pH ≈ 8.8.",
+        "steps": [
+          "Moles HF = 0.00250; volume doubles to 0.0500 L",
+          "[F^-] ≈ 0.050 M; Kb = Kw/Ka ≈ 1.5×10^-11",
+          "pOH ≈ 0.5(pKb − log C) ≈ 5.2",
+          "pH = 14 − 5.2 ≈ 8.8"
+        ],
+        "fastStrategy": "Weak acid + strong base → basic salt; use Kb from Ka to estimate pH."
+      },
+      {
+        "id": "ps_cb_e1_007",
+        "question": "Ksp for Ag2CrO4 is 1.1×10^-12. What is its molar solubility in pure water?",
+        "choices": {"A": "1.0×10^-6 M", "B": "1.0×10^-4 M", "C": "1.0×10^-3 M", "D": "1.0×10^-2 M"},
+        "answer": "B",
+        "explanation": "Let s = solubility. Ksp = 4s^3 = 1.1×10^-12 → s^3 = 2.75×10^-13 → s ≈ 6.5×10^-5 M, closest to 1×10^-4 M.",
+        "steps": [
+          "Set up Ksp = 4s^3 for Ag2CrO4",
+          "Solve s^3 = 2.75×10^-13",
+          "Cube-root to s ≈ 6.5×10^-5 M",
+          "Pick nearest option"
+        ],
+        "fastStrategy": "For Ag2X salts, divide Ksp by 4 and cube-root."
+      },
+      {
+        "id": "ps_cb_e1_008",
+        "question": "Breaking all C–H bonds in CH4 (4×413 kJ) and forming CO2 + 2H2O (C=O 2×799, O–H 4×463) releases what approximate enthalpy?",
+        "choices": {"A": "−400 kJ", "B": "−800 kJ", "C": "−1,600 kJ", "D": "−2,400 kJ"},
+        "answer": "C",
+        "explanation": "Bonds broken: 1,652 kJ. Bonds formed: 3,450 kJ. ΔH ≈ 1,652 − 3,450 ≈ −1.8×10^3 kJ, closest to −1,600 kJ.",
+        "steps": [
+          "Sum bonds broken (positive)",
+          "Sum bonds formed (negative)",
+          "ΔH = broken − formed",
+          "Match nearest option"
+        ],
+        "fastStrategy": "Forming strong C=O and O–H bonds drives a large negative ΔH."
+      },
+      {
+        "id": "ps_cb_e1_009",
+        "question": "A first-order reaction has k = 0.035 s^-1. What fraction of reactant remains after 60 s?",
+        "choices": {"A": "<1%", "B": "5%", "C": "15%", "D": "35%"},
+        "answer": "C",
+        "explanation": "First order: fraction = e^(−kt) = e^(−2.1) ≈ 0.12 → about 12%, nearest 15%.",
+        "steps": [
+          "Calculate k·t = 0.035×60 = 2.1",
+          "Evaluate e^(−2.1) ≈ 0.12",
+          "Convert to ~12% remaining",
+          "Select closest option (15%)"
+        ],
+        "fastStrategy": "For first order, if k·t≈2, expect ~14% remaining."
+      },
+      {
+        "id": "ps_cb_e1_010",
+        "question": "Which IMF dominates the higher boiling point of HF compared to HCl?",
+        "choices": {"A": "Only London dispersion", "B": "Hydrogen bonding in HF", "C": "Ion–dipole interactions", "D": "Metallic bonding"},
+        "answer": "B",
+        "explanation": "HF can hydrogen bond strongly; HCl cannot, so HF boils higher despite similar molar mass.",
+        "steps": [
+          "Identify polar molecules",
+          "HF forms H-bonds; HCl does not",
+          "H-bonding raises boiling point"
+        ],
+        "fastStrategy": "Look for H bonded to F, O, N → hydrogen bonding dominates."
+      }
+    ]
+  }

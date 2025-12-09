@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "advanced",
+  "passageId": "rc_a1_p004",
+  "passage": "Urban planners have begun re-evaluating the role of public green spaces as cities grow denser and populations rise. These areas, which include parks, community gardens, and tree-lined walkways, were once viewed primarily as recreational amenities. Recent research, however, shows that green spaces have measurable effects on public health. They reduce air pollution, lower temperatures during heat waves, and provide residents with opportunities for low-intensity physical activity. Additionally, exposure to natural environments has been linked to reduced stress and improved cognitive function. Despite these benefits, green spaces often face competition from commercial development, especially in fast-growing urban centers. Planners now face the challenge of balancing economic interests with long-term community well-being. Many cities are exploring innovative solutions, such as rooftop gardens and vertical forests, to integrate nature into limited urban land.",
+  "questions": [
+    {
+      "question": "What is the central idea about urban green spaces?",
+      "choices": {
+        "A": "They are purely recreational and optional.",
+        "B": "They deliver health benefits and compete with development pressures.",
+        "C": "They raise city temperatures during heat waves.",
+        "D": "They are no longer feasible in dense cities."
+      },
+      "answer": "B",
+      "explanation": "The passage notes health benefits but also competition with commercial development.",
+      "steps": [
+        "1. Scan opening and closing sentences for the thesis.",
+        "2. Note repeated themes or contrasts.",
+        "3. Eliminate choices that are too narrow or off-topic.",
+        "4. Choose the option that summarizes the whole passage."
+      ],
+      "fastStrategy": "Look for the broadest claim that ties all paragraphs together.",
+      "id": "rc_a1_p004_q1"
+    },
+    {
+      "question": "Which benefit is specifically mentioned?",
+      "choices": {
+        "A": "Higher property taxes.",
+        "B": "Lower temperatures during heat waves.",
+        "C": "Free public transit.",
+        "D": "Guaranteed housing affordability."
+      },
+      "answer": "B",
+      "explanation": "Green spaces are credited with cooling during heat waves.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p004_q2"
+    },
+    {
+      "question": "What do rooftop gardens and vertical forests suggest?",
+      "choices": {
+        "A": "Cities are abandoning green space entirely.",
+        "B": "Planners prefer private parks.",
+        "C": "Developers resist integrating nature.",
+        "D": "Cities seek creative ways to add nature in dense areas."
+      },
+      "answer": "D",
+      "explanation": "These innovations show efforts to integrate greenery despite limited land.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p004_q3"
+    },
+    {
+      "question": "What is the author\u2019s purpose in citing research on stress reduction?",
+      "choices": {
+        "A": "To argue parks are too quiet.",
+        "B": "To show health benefits are exaggerated.",
+        "C": "To justify protecting and expanding green spaces.",
+        "D": "To compare parks to malls."
+      },
+      "answer": "C",
+      "explanation": "Health evidence supports preserving and growing green spaces despite development pressure.",
+      "steps": [
+        "1. Identify the problem-solution or argument structure.",
+        "2. Note any recommendations or calls to action.",
+        "3. Remove choices that mention only minor details.",
+        "4. Choose the option reflecting the author's intent."
+      ],
+      "fastStrategy": "Purpose answers explain why the author wrote the passage.",
+      "id": "rc_a1_p004_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "The Decline of Urban Commerce",
+        "B": "Nature\u2019s Value in Dense Cities",
+        "C": "Why Parks Are Obsolete",
+        "D": "Luxury Gardens for Developers"
+      },
+      "answer": "B",
+      "explanation": "The passage centers on the value and challenge of green space in dense cities.",
+      "steps": [
+        "1. Restate the central idea in a short phrase.",
+        "2. Avoid choices focused on a single detail.",
+        "3. Prefer titles that capture scope and purpose.",
+        "4. Pick the option that best fits the full passage."
+      ],
+      "fastStrategy": "Good titles mirror the main idea in a concise way.",
+      "id": "rc_a1_p004_q5"
+    }
+  ]
+}

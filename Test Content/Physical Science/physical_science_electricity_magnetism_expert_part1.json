@@ -1,0 +1,88 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "electricity_magnetism",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ps_em_e1_001",
+      "question": "Two resistors 6 Ω and 12 Ω are in parallel across 18 V. What total current is drawn?",
+      "choices": {"A": "3.0 A", "B": "4.5 A", "C": "6.0 A", "D": "9.0 A"},
+      "answer": "B",
+      "explanation": "Req = (6×12)/(6+12) = 4 Ω. Total current I = 18/4 = 4.5 A.",
+      "steps": ["Find parallel Req", "Divide voltage by Req", "Match 4.5 A"],
+      "fastStrategy": "Parallel lowers R; compute Req then use I=V/R."},
+    {
+      "id": "ps_em_e1_002",
+      "question": "A 10 μF capacitor is charged to 12 V then connected across a 4 kΩ resistor. What is the initial discharge current?",
+      "choices": {"A": "0.3 mA", "B": "3.0 mA", "C": "12 mA", "D": "30 mA"},
+      "answer": "B",
+      "explanation": "Initial current equals V/R: 12 V / 4000 Ω = 0.003 A = 3.0 mA.",
+      "steps": ["Use I0 = V/R", "Compute 12/4000", "Convert to mA"],
+      "fastStrategy": "For RC discharge, t=0 current is V/R."},
+    {
+      "id": "ps_em_e1_003",
+      "question": "Capacitors 4 μF and 6 μF are in series. What is the equivalent capacitance?",
+      "choices": {"A": "2.4 μF", "B": "5.0 μF", "C": "10 μF", "D": "24 μF"},
+      "answer": "A",
+      "explanation": "1/Ceq = 1/4 + 1/6 = 5/12 → Ceq = 12/5 = 2.4 μF.",
+      "steps": ["Add reciprocals", "Invert to find Ceq", "Report 2.4 μF"],
+      "fastStrategy": "Series caps combine like parallel resistors."},
+    {
+      "id": "ps_em_e1_004",
+      "question": "An electron moves at 2.0×10^6 m/s perpendicular to a 0.10 T magnetic field. What is the magnetic force magnitude? (q = 1.6×10^-19 C)",
+      "choices": {"A": "1.6×10^-14 N", "B": "3.2×10^-14 N", "C": "1.6×10^-13 N", "D": "3.2×10^-13 N"},
+      "answer": "B",
+      "explanation": "F = qvB = 1.6×10^-19 × 2.0×10^6 × 0.10 ≈ 3.2×10^-14 N.",
+      "steps": ["Use F = qvB", "Multiply magnitudes", "Keep powers of ten"],
+      "fastStrategy": "qvB with sinθ=1 gives force directly."},
+    {
+      "id": "ps_em_e1_005",
+      "question": "A transformer has 100 turns on the primary and 20 on the secondary. If 120 V AC is applied, what is the ideal secondary voltage?",
+      "choices": {"A": "12 V", "B": "24 V", "C": "60 V", "D": "600 V"},
+      "answer": "B",
+      "explanation": "Vs/Vp = Ns/Np = 20/100 = 0.20 → Vs = 0.20×120 V = 24 V.",
+      "steps": ["Take turns ratio 0.20", "Multiply by 120 V", "Get 24 V"],
+      "fastStrategy": "Secondary voltage = primary voltage × (Ns/Np)."
+    {
+      "id": "ps_em_e1_006",
+      "question": "A 60 Hz AC source has Vrms = 120 V. What is its Vpeak?",
+      "choices": {"A": "85 V", "B": "120 V", "C": "170 V", "D": "240 V"},
+      "answer": "C",
+      "explanation": "Vpeak = Vrms × √2 ≈ 120×1.414 ≈ 170 V.",
+      "steps": ["Multiply by √2", "Compute ≈170"],
+      "fastStrategy": "Peak voltage = rms × 1.414."},
+    {
+      "id": "ps_em_e1_007",
+      "question": "A uniform electric field of 500 N/C points downward. What potential difference exists between two points 0.40 m apart vertically?",
+      "choices": {"A": "100 V", "B": "200 V", "C": "250 V", "D": "500 V"},
+      "answer": "B",
+      "explanation": "ΔV = E·d = 500×0.40 = 200 V (higher point has higher potential).",
+      "steps": ["Use ΔV = E d", "Multiply 500 by 0.40", "Obtain 200 V"],
+      "fastStrategy": "Uniform field: voltage change equals field times distance."},
+    {
+      "id": "ps_em_e1_008",
+      "question": "A 100-turn coil (area 0.010 m^2) sees a perpendicular field drop from 0.20 T to 0 in 0.050 s. Average induced emf magnitude?",
+      "choices": {"A": "0.4 V", "B": "1.0 V", "C": "2.0 V", "D": "4.0 V"},
+      "answer": "D",
+      "explanation": "ΔΦ = A ΔB = 0.010×0.20 = 0.002 Wb. Multiply by N=100 → 0.2 Wb-turns. emf = 0.2/0.050 ≈ 4.0 V.",
+      "steps": ["Compute flux change AΔB", "Multiply by turns", "Divide by Δt"],
+      "fastStrategy": "emf = N·A·ΔB / Δt; keep units."
+    {
+      "id": "ps_em_e1_009",
+      "question": "A 12 V battery with 0.50 Ω internal resistance delivers 1.5 A to a load. What is the load resistance?",
+      "choices": {"A": "6.0 Ω", "B": "7.5 Ω", "C": "8.0 Ω", "D": "10.5 Ω"},
+      "answer": "B",
+      "explanation": "Internal drop = I r = 0.75 V. Terminal voltage = 12 − 0.75 = 11.25 V. Load R = 11.25 / 1.5 = 7.5 Ω.",
+      "steps": ["Find internal voltage drop", "Subtract from emf", "Divide by current for load R"],
+      "fastStrategy": "Subtract internal drop, then use Ohm's law on the load."
+    {
+      "id": "ps_em_e1_010",
+      "question": "A 5 μF capacitor connected to 300 V stores how much charge?",
+      "choices": {"A": "6.0×10^-4 C", "B": "1.5×10^-3 C", "C": "0.15 C", "D": "0.60 C"},
+      "answer": "B",
+      "explanation": "Q = CV = 5×10^-6 F × 300 V = 1.5×10^-3 C.",
+      "steps": ["Multiply capacitance by voltage", "Convert to coulombs"],
+      "fastStrategy": "Use Q=CV directly; watch microfarads."},
+  ]
+}

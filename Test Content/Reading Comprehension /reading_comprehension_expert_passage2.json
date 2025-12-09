@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p002",
+  "passage": "Autonomous delivery drones were originally designed for commercial package transport, but their use has expanded into humanitarian operations. In regions struck by natural disasters, damaged roads and blocked infrastructure often delay ground-based relief efforts. Drones, however, can navigate over collapsed bridges, flooded terrain, and landslides to reach isolated communities. Their small payload capacity limits the amount of medicine, food, or equipment they can deliver at once, but their speed and ability to deploy in large numbers compensates for this. Emergency planners now integrate drones into early-response protocols, recognizing that rapid delivery of even small quantities of critical supplies can significantly improve survival outcomes. As technology advances, drones are expected to carry heavier loads and operate for longer durations, further increasing their impact during emergencies.",
+  "questions": [
+    {
+      "question": "What core advantage makes drones valuable in disasters?",
+      "choices": {
+        "A": "Unlimited payload",
+        "B": "Bypass destroyed ground routes quickly",
+        "C": "Cheaper than all vehicles",
+        "D": "Require no planning"
+      },
+      "answer": "B",
+      "explanation": "They fly over blocked infrastructure to reach cut-off areas fast.",
+      "steps": [
+        "1. Find described advantage.",
+        "2. Note payload is limited.",
+        "3. Pick bypass/rapid access."
+      ],
+      "fastStrategy": "Match advantage explicitly stated.",
+      "id": "rc_e1_p002_q1"
+    },
+    {
+      "question": "What constraint shapes how drones are deployed?",
+      "choices": {
+        "A": "They cannot fly in rain",
+        "B": "They carry small loads so many flights are needed",
+        "C": "They need airports",
+        "D": "They only map terrain"
+      },
+      "answer": "B",
+      "explanation": "Small payloads mean multiple quick sorties compensate.",
+      "steps": [
+        "1. Identify stated limitation.",
+        "2. Link to operational pattern (many units).",
+        "3. Choose matching option."
+      ],
+      "fastStrategy": "Limitation \u2192 operational workaround.",
+      "id": "rc_e1_p002_q2"
+    },
+    {
+      "question": "What does their inclusion in early protocols imply?",
+      "choices": {
+        "A": "They are experimental only",
+        "B": "They are now considered essential first-wave assets",
+        "C": "They replace all trucks",
+        "D": "They wait for roads to reopen"
+      },
+      "answer": "B",
+      "explanation": "Planners integrate them at the start, showing core role.",
+      "steps": [
+        "1. Note timing: early response.",
+        "2. Infer status: standard tool.",
+        "3. Reject extremes (replace everything)."
+      ],
+      "fastStrategy": "Early-phase inclusion = essential.",
+      "id": "rc_e1_p002_q3"
+    },
+    {
+      "question": "Which outcome is directly supported?",
+      "choices": {
+        "A": "Heavier loads than trucks",
+        "B": "Slower than walking",
+        "C": "Faster relief despite small cargo",
+        "D": "Less reliable than blocked roads"
+      },
+      "answer": "C",
+      "explanation": "Speed and numbers offset small cargo, improving relief timing.",
+      "steps": [
+        "1. Link speed + multiplicity to outcome.",
+        "2. Remove claims contradicting text.",
+        "3. Choose supported outcome."
+      ],
+      "fastStrategy": "Look for the tradeoff resolved in text.",
+      "id": "rc_e1_p002_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Heavy Lift Drones Only",
+        "B": "Rapid Aerial Lifelines in Disasters",
+        "C": "Why Roads Beat Drones",
+        "D": "Tourism Uses of Drones"
+      },
+      "answer": "B",
+      "explanation": "Captures speed to cut-off areas with small loads.",
+      "steps": [
+        "1. Main idea: rapid relief over damaged routes.",
+        "2. Remove off-scope options.",
+        "3. Pick concise fit."
+      ],
+      "fastStrategy": "Title mirrors main benefit and context.",
+      "id": "rc_e1_p002_q5"
+    }
+  ]
+}

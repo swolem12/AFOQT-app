@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "advanced",
+  "passageId": "rc_a1_p013",
+  "passage": "As electric vehicles become more widespread, researchers are working to improve the sustainability of the batteries that power them. Traditional lithium-ion batteries rely on metals that must be mined, a process that can cause significant environmental disruption. To reduce these impacts, scientists are exploring alternative materials such as sodium, which is far more abundant and easier to extract. Sodium-based batteries currently cannot match the energy density of lithium-ion cells, meaning they store less power for their size. However, they are cheaper to produce and may be sufficient for applications that do not require long driving ranges. In addition, researchers are studying new recycling methods that recover valuable metals from used batteries, reducing the need for new mining operations. Although many of these technologies are still in early stages, they represent promising pathways toward cleaner and more sustainable energy storage.",
+  "questions": [
+    {
+      "question": "What shift in battery development is described?",
+      "choices": {
+        "A": "Abandoning electric vehicles.",
+        "B": "Focusing only on lithium mining.",
+        "C": "Pursuing sustainable chemistries like sodium and better recycling.",
+        "D": "Eliminating all metal use."
+      },
+      "answer": "C",
+      "explanation": "Researchers explore abundant sodium and improved recycling to cut environmental impacts.",
+      "steps": [
+        "1. Scan opening and closing sentences for the thesis.",
+        "2. Note repeated themes or contrasts.",
+        "3. Eliminate choices that are too narrow or off-topic.",
+        "4. Choose the option that summarizes the whole passage."
+      ],
+      "fastStrategy": "Look for the broadest claim that ties all paragraphs together.",
+      "id": "rc_a1_p013_q1"
+    },
+    {
+      "question": "Which advantage of sodium batteries is noted?",
+      "choices": {
+        "A": "Highest energy density available.",
+        "B": "Cheaper production due to abundant material.",
+        "C": "They require no mining at all.",
+        "D": "They never need recycling."
+      },
+      "answer": "B",
+      "explanation": "Sodium is abundant and easier to extract, making production cheaper.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p013_q2"
+    },
+    {
+      "question": "What inference is made about sodium batteries' applications?",
+      "choices": {
+        "A": "They suit shorter-range uses where top energy density is less critical.",
+        "B": "They already outperform lithium in every metric.",
+        "C": "They will replace grid storage overnight.",
+        "D": "They cannot be recharged."
+      },
+      "answer": "A",
+      "explanation": "Their lower energy density fits needs that do not require long ranges.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p013_q3"
+    },
+    {
+      "question": "What role does recycling play?",
+      "choices": {
+        "A": "It increases mining requirements.",
+        "B": "It prevents the reuse of metals.",
+        "C": "It only works for sodium batteries.",
+        "D": "It recovers metals to reduce new mining impacts."
+      },
+      "answer": "D",
+      "explanation": "Recycling methods recover valuable metals, lessening the need for new extraction.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p013_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Why Batteries Are Ending",
+        "B": "Greener Power: New Battery Paths",
+        "C": "The Decline of Recycling",
+        "D": "Gasoline's Return"
+      },
+      "answer": "B",
+      "explanation": "Title captures sustainable materials and recycling focus for batteries.",
+      "steps": [
+        "1. Restate the central idea in a short phrase.",
+        "2. Avoid choices focused on a single detail.",
+        "3. Prefer titles that capture scope and purpose.",
+        "4. Pick the option that best fits the full passage."
+      ],
+      "fastStrategy": "Good titles mirror the main idea in a concise way.",
+      "id": "rc_a1_p013_q5"
+    }
+  ]
+}

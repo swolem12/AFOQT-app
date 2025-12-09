@@ -1,0 +1,138 @@
+{
+  "subjectId": "physical_science",
+  "subtopicId": "earth_space",
+  "difficulty": "expert",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ps_es_e1_001",
+      "question": "Earth is closest to the Sun (perihelion) in early January yet the Northern Hemisphere is cold. What primary factor explains this?",
+      "choices": {"A": "Lower solar output in January", "B": "Earth spins slower in winter", "C": "Axial tilt reduces insolation angle and daylight length", "D": "Atmosphere absorbs all winter sunlight"},
+      "answer": "C",
+      "explanation": "Axial tilt controls seasonal sunlight angle and duration; perihelion distance change is small compared to tilt effects.",
+      "steps": [
+        "Recall seasons depend on tilt, not distance",
+        "Northern Hemisphere tilted away in January",
+        "Lower sun angle and shorter days reduce heating"
+      ],
+      "fastStrategy": "Season = tilt-driven sun angle/day length, not distance."
+    },
+    {
+      "id": "ps_es_e1_002",
+      "question": "A satellite orbits at altitude where speed is 7.8 km/s. If it moves to a circular orbit twice as far from Earth's center, what happens to orbital period?",
+      "choices": {"A": "Halves", "B": "Doubles", "C": "Increases by 2^(3/2)", "D": "Stays the same"},
+      "answer": "C",
+      "explanation": "Kepler's third law: T ∝ r^(3/2) for circular orbits. Doubling r multiplies period by 2^(3/2) ≈ 2.8.",
+      "steps": [
+        "Use T ∝ r^(3/2)",
+        "Plug r2 = 2r1 → T2/T1 = 2^(3/2)",
+        "Compute ≈ 2.8× longer"
+      ],
+      "fastStrategy": "Double radius → period × 2.8."
+    },
+    {
+      "id": "ps_es_e1_003",
+      "question": "Which layer contains the ozone maximum that absorbs most incoming UV-B radiation?",
+      "choices": {"A": "Troposphere", "B": "Stratosphere", "C": "Mesosphere", "D": "Thermosphere"},
+      "answer": "B",
+      "explanation": "The ozone layer peaks in the mid-stratosphere, filtering UV-B.",
+      "steps": [
+        "Identify ozone maximum location",
+        "Ozone concentration highest in stratosphere",
+        "This layer absorbs UV-B"
+      ],
+      "fastStrategy": "Think 'strato-ozone' filter."
+    },
+    {
+      "id": "ps_es_e1_004",
+      "question": "Radiocarbon dating relies on C-14 (t1/2 ≈ 5,730 y). A wood sample has 25% of modern C-14 activity. Approximate age?",
+      "choices": {"A": "2,900 y", "B": "5,700 y", "C": "8,600 y", "D": "11,500 y"},
+      "answer": "D",
+      "explanation": "25% remains means two half-lives elapsed: age ≈ 2×5,730 ≈ 11,500 years.",
+      "steps": [
+        "25% = (1/2)^2",
+        "Two half-lives have passed",
+        "Multiply 2×5,730 ≈ 11,500"
+      ],
+      "fastStrategy": "Each half-life halves activity; 25% = two half-lives."
+    },
+    {
+      "id": "ps_es_e1_005",
+      "question": "During spring tides, tidal range is greatest because:",
+      "choices": {"A": "Sun and Moon are at right angles", "B": "Sun and Moon gravities align", "C": "Earth is farthest from the Sun", "D": "Coriolis force weakens"},
+      "answer": "B",
+      "explanation": "Spring tides occur at new/full moon when lunar and solar tidal forces add, increasing range.",
+      "steps": [
+        "Identify lunar phase (new/full)",
+        "Gravitational pulls align",
+        "Resulting tidal bulges reinforce"
+      ],
+      "fastStrategy": "Alignment of Sun+Moon → biggest tides."
+    },
+    {
+      "id": "ps_es_e1_006",
+      "question": "A basalt flow cools, trapping magnetic minerals aligned with a reversed polarity. What does this record indicate?",
+      "choices": {"A": "Latitude of eruption only", "B": "Eruption during a geomagnetic reversal", "C": "Presence of iron but not field", "D": "Tide height at eruption"},
+      "answer": "B",
+      "explanation": "Frozen magnetic orientation records the field direction at solidification; reversed alignment indicates a polarity reversal time.",
+      "steps": [
+        "Magnetic minerals align with ambient field",
+        "Upon solidifying they lock in orientation",
+        "Reversed direction signals reversal epoch"
+      ],
+      "fastStrategy": "Locked-in magnetism = snapshot of field direction."
+    },
+    {
+      "id": "ps_es_e1_007",
+      "question": "Which process drives plate motion in the upper mantle?",
+      "choices": {"A": "Thermal convection and slab pull", "B": "Coriolis force", "C": "Moon's gravity directly", "D": "Static crustal expansion"},
+      "answer": "A",
+      "explanation": "Density-driven convection plus slab pull at subduction zones are primary forces moving plates.",
+      "steps": [
+        "Recall forces: ridge push, slab pull, convection",
+        "Coriolis and lunar tides are negligible",
+        "Slab pull + convection dominate"
+      ],
+      "fastStrategy": "Think density-driven mantle flow and sinking slabs."
+    },
+    {
+      "id": "ps_es_e1_008",
+      "question": "Albedo increase from extensive snow cover primarily causes which climate feedback?",
+      "choices": {"A": "Positive feedback cooling", "B": "Positive feedback warming", "C": "Negative feedback warming", "D": "No feedback"},
+      "answer": "A",
+      "explanation": "Higher albedo reflects more solar radiation, reinforcing cooling (positive feedback for temperature decrease).",
+      "steps": [
+        "Snow raises reflectivity",
+        "Less absorption cools surface",
+        "Cooling promotes more snow → positive feedback"
+      ],
+      "fastStrategy": "More snow → more reflection → more cooling."
+    },
+    {
+      "id": "ps_es_e1_009",
+      "question": "Seismic S-waves are not recorded on the opposite side of Earth from an epicenter. This indicates:",
+      "choices": {"A": "The mantle is solid", "B": "The outer core is liquid", "C": "The crust is thin", "D": "S-waves travel infinitely fast"},
+      "answer": "B",
+      "explanation": "S-waves do not propagate through liquids; their shadow zone evidences a liquid outer core.",
+      "steps": [
+        "Note S-wave shadow zone",
+        "S-waves cannot pass through liquid",
+        "Therefore outer core must be liquid"
+      ],
+      "fastStrategy": "S-wave absence → liquid layer."
+    },
+    {
+      "id": "ps_es_e1_010",
+      "question": "Earth's energy balance: which flux best describes outgoing longwave radiation to space?",
+      "choices": {"A": "Shortwave reflected by clouds", "B": "Infrared emitted by surface/atmosphere", "C": "Sensible heat flux to troposphere", "D": "Latent heat from evaporation"},
+      "answer": "B",
+      "explanation": "Outgoing longwave is infrared emitted by the surface and atmosphere to space; reflected solar is shortwave, latent/sensible are internal transfers.",
+      "steps": [
+        "Identify longwave = infrared",
+        "Surface/atmosphere emit IR to space",
+        "Differentiate from reflected shortwave and internal fluxes"
+      ],
+      "fastStrategy": "Longwave = IR emission leaving the system."
+    }
+  ]
+}

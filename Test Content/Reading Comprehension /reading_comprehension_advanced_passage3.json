@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "advanced",
+  "passageId": "rc_a1_p003",
+  "passage": "Researchers studying sleep patterns have found that short naps can significantly improve cognitive performance, even when taken during busy workdays. Unlike extended sleep, which involves multiple cycles of deep and rapid-eye-movement stages, a brief nap typically lasts between 10 and 20 minutes and focuses on restoring alertness. This duration is short enough to avoid sleep inertia, the grogginess people often feel after waking from deeper sleep. Companies in high-stress industries have begun adopting structured napping policies, recognizing that well-rested employees tend to make fewer mistakes and recover more quickly from fatigue. Although some critics argue that napping reduces productivity, most studies indicate that strategic rest periods increase efficiency over the course of a full work shift. As the science behind sleep becomes better understood, more workplaces may integrate short naps as a standard part of employee wellness programs.",
+  "questions": [
+    {
+      "question": "What is the main point about short workplace naps?",
+      "choices": {
+        "A": "They should replace full-night sleep.",
+        "B": "Brief naps boost alertness with minimal downsides.",
+        "C": "They always reduce productivity.",
+        "D": "They only help in low-stress jobs."
+      },
+      "answer": "B",
+      "explanation": "The passage says 10\u201320 minute naps improve cognition and avoid sleep inertia.",
+      "steps": [
+        "1. Scan opening and closing sentences for the thesis.",
+        "2. Note repeated themes or contrasts.",
+        "3. Eliminate choices that are too narrow or off-topic.",
+        "4. Choose the option that summarizes the whole passage."
+      ],
+      "fastStrategy": "Look for the broadest claim that ties all paragraphs together.",
+      "id": "rc_a1_p003_q1"
+    },
+    {
+      "question": "What inference explains why companies adopt nap policies?",
+      "choices": {
+        "A": "They have excess unused space.",
+        "B": "They want to shorten workdays.",
+        "C": "They expect fewer mistakes and better recovery outweigh time costs.",
+        "D": "They must follow legal requirements."
+      },
+      "answer": "C",
+      "explanation": "Firms in high-stress fields see error reduction and recovery benefits as worth the brief break.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p003_q2"
+    },
+    {
+      "question": "Why are short naps limited to 10\u201320 minutes?",
+      "choices": {
+        "A": "Longer naps increase heart rate.",
+        "B": "Longer naps prevent REM sleep.",
+        "C": "Short naps are more enjoyable.",
+        "D": "Longer naps risk sleep inertia and grogginess."
+      },
+      "answer": "D",
+      "explanation": "The passage says this duration avoids sleep inertia that follows deeper sleep.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p003_q3"
+    },
+    {
+      "question": "What does the passage imply about critics who fear productivity loss?",
+      "choices": {
+        "A": "They are correct because naps extend shifts.",
+        "B": "Data suggests productivity improves overall despite break time.",
+        "C": "They oppose all wellness programs.",
+        "D": "They have never reviewed sleep studies."
+      },
+      "answer": "B",
+      "explanation": "Studies indicate strategic naps increase efficiency across a full shift, countering critics' concerns.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p003_q4"
+    },
+    {
+      "question": "Which title fits best?",
+      "choices": {
+        "A": "Why All Sleep Is Harmful at Work",
+        "B": "Short Naps as a Productivity Tool",
+        "C": "Eliminating Fatigue Through Exercise",
+        "D": "The End of Overnight Shifts"
+      },
+      "answer": "B",
+      "explanation": "The passage argues brief naps improve cognitive performance and productivity.",
+      "steps": [
+        "1. Restate the central idea in a short phrase.",
+        "2. Avoid choices focused on a single detail.",
+        "3. Prefer titles that capture scope and purpose.",
+        "4. Pick the option that best fits the full passage."
+      ],
+      "fastStrategy": "Good titles mirror the main idea in a concise way.",
+      "id": "rc_a1_p003_q5"
+    }
+  ]
+}

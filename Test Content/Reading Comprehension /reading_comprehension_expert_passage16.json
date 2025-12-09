@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p016",
+  "passage": "Archaeologists are using advanced imaging technologies to explore ancient structures without disturbing them. Ground-penetrating radar, for example, sends radio waves into the earth and measures their reflections, allowing researchers to identify buried walls or chambers. This method is especially valuable at historical sites where excavation could damage fragile artifacts. In recent years, archaeologists have combined radar with aerial lidar, which maps the surface by measuring how quickly laser pulses return to sensors. When the two techniques are used together, scientists can create detailed 3D models of entire settlements. These models reveal patterns in city planning, trade activity, and cultural practices. Although the technology is costly and requires specialized training, it allows researchers to uncover information that might otherwise remain hidden. As imaging tools become more accessible, they are likely to play an increasingly important role in preserving archaeological sites across the world.",
+  "questions": [
+    {
+      "question": "What advantage does noninvasive imaging provide?",
+      "choices": {
+        "A": "Destroys artifacts",
+        "B": "Maps buried features without excavation damage",
+        "C": "Replaces analysis",
+        "D": "Guarantees treasure"
+      },
+      "answer": "B",
+      "explanation": "Radar/lidar reveal structures while preserving sites.",
+      "steps": [
+        "1. Identify advantage.",
+        "2. Pick matching option.",
+        "3. Exclude opposites."
+      ],
+      "fastStrategy": "Benefit = preserve + reveal.",
+      "id": "rc_e1_p016_q1"
+    },
+    {
+      "question": "What happens when radar and lidar combine?",
+      "choices": {
+        "A": "Instant fossils",
+        "B": "Detailed 3D settlement models",
+        "C": "No surface data",
+        "D": "Removes vegetation"
+      },
+      "answer": "B",
+      "explanation": "They produce detailed models showing patterns.",
+      "steps": [
+        "1. Recall combined effect.",
+        "2. Pick matching option.",
+        "3. Exclude others."
+      ],
+      "fastStrategy": "Detail recall.",
+      "id": "rc_e1_p016_q2"
+    },
+    {
+      "question": "What does cost/training imply about adoption?",
+      "choices": {
+        "A": "Will likely grow as access improves",
+        "B": "Will vanish",
+        "C": "Banned worldwide",
+        "D": "Already universal"
+      },
+      "answer": "A",
+      "explanation": "Though costly now, likely to expand as tools become accessible.",
+      "steps": [
+        "1. Note current hurdle.",
+        "2. Infer future trend mentioned.",
+        "3. Pick aligned option."
+      ],
+      "fastStrategy": "Hurdle now, growth later.",
+      "id": "rc_e1_p016_q3"
+    },
+    {
+      "question": "Why is the method valuable at fragile sites?",
+      "choices": {
+        "A": "Allows digging faster",
+        "B": "Avoids disturbance while revealing layout",
+        "C": "Raises water",
+        "D": "Removes need for permits"
+      },
+      "answer": "B",
+      "explanation": "It preserves artifacts while mapping them.",
+      "steps": [
+        "1. Link noninvasive to preservation.",
+        "2. Pick matching option.",
+        "3. Exclude irrelevant."
+      ],
+      "fastStrategy": "Noninvasive \u2192 preserve.",
+      "id": "rc_e1_p016_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Seeing Ancient Cities Without a Shovel",
+        "B": "Destroying History for Data",
+        "C": "Why Mapping Fails",
+        "D": "Fossils Overnight"
+      },
+      "answer": "A",
+      "explanation": "Title captures noninvasive mapping theme.",
+      "steps": [
+        "1. Summarize approach.",
+        "2. Remove off options.",
+        "3. Pick fit."
+      ],
+      "fastStrategy": "Title = noninvasive mapping.",
+      "id": "rc_e1_p016_q5"
+    }
+  ]
+}

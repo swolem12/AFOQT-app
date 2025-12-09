@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p010",
+  "passage": "Urban planners are increasingly turning to predictive analytics to improve city transportation systems. Instead of relying solely on historical data or manual traffic counts, modern models continuously incorporate live information from sensors, navigation apps, and public transit networks. These tools allow planners to forecast congestion hours in advance and evaluate the potential impact of proposed changes, such as adjusting bus routes or modifying traffic light timing. One of the major advantages of predictive analytics is its ability to test multiple scenarios before any physical changes occur, reducing both cost and risk. However, the effectiveness of these models depends heavily on the quality of the data they receive. Inaccurate or incomplete inputs can lead to flawed predictions, potentially worsening traffic patterns rather than improving them. Despite these challenges, cities adopting data-driven planning have seen notable improvements in commute times, public transit reliability, and overall urban mobility.",
+  "questions": [
+    {
+      "question": "What distinguishes predictive analytics in planning?",
+      "choices": {
+        "A": "Ignores live data",
+        "B": "Uses live feeds to forecast and test scenarios",
+        "C": "Removes transit",
+        "D": "Relies on guesswork"
+      },
+      "answer": "B",
+      "explanation": "It incorporates live sensor/app data to forecast and simulate changes.",
+      "steps": [
+        "1. Identify defining feature.",
+        "2. Pick matching option.",
+        "3. Exclude opposites."
+      ],
+      "fastStrategy": "Define the tool per text.",
+      "id": "rc_e1_p010_q1"
+    },
+    {
+      "question": "Why is data quality critical?",
+      "choices": {
+        "A": "Models ignore inputs",
+        "B": "Bad inputs yield flawed predictions that can worsen congestion",
+        "C": "It speeds coding",
+        "D": "It sets speed limits"
+      },
+      "answer": "B",
+      "explanation": "Poor data can produce wrong forecasts, harming traffic.",
+      "steps": [
+        "1. Note caution about input quality.",
+        "2. Connect to risk.",
+        "3. Choose matching option."
+      ],
+      "fastStrategy": "Garbage in \u2192 garbage out.",
+      "id": "rc_e1_p010_q2"
+    },
+    {
+      "question": "Which advantage is noted?",
+      "choices": {
+        "A": "No sensors needed",
+        "B": "Testing scenarios before physical changes",
+        "C": "Guaranteed no congestion",
+        "D": "Replacing planners"
+      },
+      "answer": "B",
+      "explanation": "Models trial impacts virtually to cut cost/risk.",
+      "steps": [
+        "1. Recall cited advantage.",
+        "2. Pick exact match.",
+        "3. Exclude exaggerations."
+      ],
+      "fastStrategy": "Detail recall.",
+      "id": "rc_e1_p010_q3"
+    },
+    {
+      "question": "What risk follows from inaccurate inputs?",
+      "choices": {
+        "A": "Instant subway expansion",
+        "B": "Flawed forecasts that may worsen traffic",
+        "C": "Free parking",
+        "D": "Better safety"
+      },
+      "answer": "B",
+      "explanation": "Text warns bad data can make predictions wrong, harming flow.",
+      "steps": [
+        "1. Identify risk.",
+        "2. Connect to output quality.",
+        "3. Choose aligned option."
+      ],
+      "fastStrategy": "Risk = bad outputs.",
+      "id": "rc_e1_p010_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Forecasting Traffic with Live Data",
+        "B": "Eliminating Transit",
+        "C": "Historic Maps Only",
+        "D": "Why Sensors Fail"
+      },
+      "answer": "A",
+      "explanation": "Captures live-data forecasting and scenario testing.",
+      "steps": [
+        "1. Summarize passage.",
+        "2. Remove mismatches.",
+        "3. Select fit."
+      ],
+      "fastStrategy": "Title = defining approach.",
+      "id": "rc_e1_p010_q5"
+    }
+  ]
+}

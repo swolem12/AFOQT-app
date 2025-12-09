@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "advanced",
+  "passageId": "rc_a1_p017",
+  "passage": "Modern agriculture is increasingly adopting precision farming, a technique that uses data to optimize crop production. Farmers deploy sensors that monitor soil moisture, nutrient levels, and temperature, allowing them to tailor irrigation and fertilizer use to specific areas of a field. This targeted approach reduces waste and can significantly improve yields. Drones equipped with cameras also play a role by surveying large areas quickly and identifying early signs of plant stress. While precision farming offers many benefits, it requires reliable internet access, which is still limited in some rural regions. Additionally, the cost of equipment can be a barrier for small farming operations. Despite these obstacles, many agricultural experts believe precision farming will become more common as technology becomes cheaper and more accessible, ultimately helping farmers use resources more efficiently.",
+  "questions": [
+    {
+      "question": "What is the main idea about precision farming?",
+      "choices": {
+        "A": "It wastes resources on unneeded data.",
+        "B": "Data-driven tools optimize inputs and yields despite connectivity and cost barriers.",
+        "C": "It eliminates the need for irrigation.",
+        "D": "It only works on indoor farms."
+      },
+      "answer": "B",
+      "explanation": "Sensors and drones tailor inputs, boosting efficiency, but rural internet and costs are obstacles.",
+      "steps": [
+        "1. Scan opening and closing sentences for the thesis.",
+        "2. Note repeated themes or contrasts.",
+        "3. Eliminate choices that are too narrow or off-topic.",
+        "4. Choose the option that summarizes the whole passage."
+      ],
+      "fastStrategy": "Look for the broadest claim that ties all paragraphs together.",
+      "id": "rc_a1_p017_q1"
+    },
+    {
+      "question": "Which role do drones play?",
+      "choices": {
+        "A": "They replace tractors.",
+        "B": "They harvest crops.",
+        "C": "They survey fields to spot early plant stress.",
+        "D": "They block sunlight."
+      },
+      "answer": "C",
+      "explanation": "Drones quickly survey and flag stress signals.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p017_q2"
+    },
+    {
+      "question": "What does the passage suggest about the future of precision farming?",
+      "choices": {
+        "A": "It will vanish as tech costs rise.",
+        "B": "It depends on banning fertilizers.",
+        "C": "It requires perfect weather.",
+        "D": "Adoption should grow as technology becomes cheaper and more accessible."
+      },
+      "answer": "D",
+      "explanation": "The passage notes costs and connectivity barriers now but expects wider use as tech improves.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p017_q3"
+    },
+    {
+      "question": "Which barrier is noted?",
+      "choices": {
+        "A": "Excessive urban traffic.",
+        "B": "Mandatory paper maps.",
+        "C": "Limited rural internet access.",
+        "D": "Too much rainfall."
+      },
+      "answer": "C",
+      "explanation": "Reliable internet is limited in some rural regions, slowing adoption.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p017_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Guesswork in Modern Farming",
+        "B": "Data, Drones, and Smarter Fields",
+        "C": "Farming Without Technology",
+        "D": "The End of Agriculture"
+      },
+      "answer": "B",
+      "explanation": "Title reflects data-driven practices like sensors and drones.",
+      "steps": [
+        "1. Restate the central idea in a short phrase.",
+        "2. Avoid choices focused on a single detail.",
+        "3. Prefer titles that capture scope and purpose.",
+        "4. Pick the option that best fits the full passage."
+      ],
+      "fastStrategy": "Good titles mirror the main idea in a concise way.",
+      "id": "rc_a1_p017_q5"
+    }
+  ]
+}

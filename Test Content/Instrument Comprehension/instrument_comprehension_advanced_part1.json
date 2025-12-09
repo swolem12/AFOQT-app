@@ -1,0 +1,323 @@
+{
+  "subjectId": "instrument_comprehension",
+  "subtopicId": "basic_attitude_and_heading",
+  "difficulty": "advanced",
+  "part": 1,
+  "questions": [
+    {
+      "id": "ic_a1_001",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "width": 420,
+        "height": 260,
+        "artificialHorizon": {
+          "bankDegrees": 25,
+          "pitchDegrees": 5
+        },
+        "compass": {
+          "headingDegrees": 135
+        },
+        "choiceSprites": {
+          "A": {
+            "spriteId": "jet_side_bank_right_southeast_climb",
+            "view": "side",
+            "headingDegrees": 135,
+            "bankDegrees": 25,
+            "pitchDegrees": 5
+          },
+          "B": {
+            "spriteId": "jet_side_bank_left_southeast",
+            "view": "side",
+            "headingDegrees": 135,
+            "bankDegrees": -25,
+            "pitchDegrees": 0
+          },
+          "C": {
+            "spriteId": "jet_side_level_southeast",
+            "view": "side",
+            "headingDegrees": 135,
+            "bankDegrees": 0,
+            "pitchDegrees": 0
+          },
+          "D": {
+            "spriteId": "jet_side_bank_right_southeast_descent",
+            "view": "side",
+            "headingDegrees": 135,
+            "bankDegrees": 25,
+            "pitchDegrees": -5
+          }
+        }
+      },
+      "copilotInstruction": "Render attitude with a right bank about 25° and slight nose-up +5°, heading 135 (southeast). Only one side-view jet should bank right and climb while heading 135.",
+      "question": "Which airplane matches a 25° right bank, +5° pitch, heading 135°?",
+      "choices": {
+        "A": "IMAGE",
+        "B": "IMAGE",
+        "C": "IMAGE",
+        "D": "IMAGE"
+      },
+      "answer": "A",
+      "explanation": "Attitude shows right bank and slight climb; compass 135° (southeast). Choice A is the only right-bank, nose-up jet pointed 135°.",
+      "steps": [
+        "1. Read bank: horizon tilted right wing down about 25°.",
+        "2. Read pitch: center symbol above horizon ~+5°.",
+        "3. Read heading: 135° (southeast) on compass.",
+        "4. Compare jets: pick the right-bank, nose-up silhouette pointing 135°.",
+        "5. Confirm no other option has both bank and pitch correct."
+      ],
+      "fastStrategy": "Check heading first, then bank direction, then pitch sign."
+    },
+    {
+      "id": "ic_a1_002",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "width": 420,
+        "height": 260,
+        "artificialHorizon": {
+          "bankDegrees": -30,
+          "pitchDegrees": -5
+        },
+        "compass": {
+          "headingDegrees": 300
+        },
+        "choiceSprites": {
+          "A": {
+            "spriteId": "jet_front_bank_right_northwest_descent",
+            "view": "front",
+            "headingDegrees": 300,
+            "bankDegrees": 30,
+            "pitchDegrees": -5
+          },
+          "B": {
+            "spriteId": "jet_front_bank_left_northwest_descent",
+            "view": "front",
+            "headingDegrees": 300,
+            "bankDegrees": -30,
+            "pitchDegrees": -5
+          },
+          "C": {
+            "spriteId": "jet_front_bank_left_northwest_climb",
+            "view": "front",
+            "headingDegrees": 300,
+            "bankDegrees": -30,
+            "pitchDegrees": 5
+          },
+          "D": {
+            "spriteId": "jet_front_level_northwest",
+            "view": "front",
+            "headingDegrees": 300,
+            "bankDegrees": 0,
+            "pitchDegrees": 0
+          }
+        }
+      },
+      "copilotInstruction": "Attitude shows left bank ~30° with slight nose-down -5°. Heading 300 (northwest). Only one front-view jet should bank left and descend on 300°.",
+      "question": "Which airplane matches a 30° left bank, -5° pitch, heading 300°?",
+      "choices": {
+        "A": "IMAGE",
+        "B": "IMAGE",
+        "C": "IMAGE",
+        "D": "IMAGE"
+      },
+      "answer": "B",
+      "explanation": "Heading 300°, left bank (left wing down) and slight descent (-5°). Option B is the only left-bank, nose-down jet on 300°.",
+      "steps": [
+        "1. Bank: left wing down ~30° (negative bank).",
+        "2. Pitch: nose below horizon (~-5°).",
+        "3. Heading: 300° (northwest).",
+        "4. Find the front-view jet banking left and descending on 300°.",
+        "5. Confirm other options have wrong bank or pitch."
+      ],
+      "fastStrategy": "Use wing-down direction to lock bank, then check pitch sign."
+    },
+    {
+      "id": "ic_a1_003",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "width": 420,
+        "height": 260,
+        "artificialHorizon": {
+          "bankDegrees": 0,
+          "pitchDegrees": 10
+        },
+        "compass": {
+          "headingDegrees": 45
+        },
+        "choiceSprites": {
+          "A": {
+            "spriteId": "jet_side_level_northeast_climb",
+            "view": "side",
+            "headingDegrees": 45,
+            "bankDegrees": 0,
+            "pitchDegrees": 10
+          },
+          "B": {
+            "spriteId": "jet_side_level_northeast",
+            "view": "side",
+            "headingDegrees": 45,
+            "bankDegrees": 0,
+            "pitchDegrees": 0
+          },
+          "C": {
+            "spriteId": "jet_side_bank_right_northeast_climb",
+            "view": "side",
+            "headingDegrees": 45,
+            "bankDegrees": 20,
+            "pitchDegrees": 10
+          },
+          "D": {
+            "spriteId": "jet_side_bank_left_northeast_descent",
+            "view": "side",
+            "headingDegrees": 45,
+            "bankDegrees": -15,
+            "pitchDegrees": -5
+          }
+        }
+      },
+      "copilotInstruction": "Attitude shows wings level, strong nose-up about +10°, heading 045 (northeast). Only one side-view jet should be wings level, climbing, and heading 045.",
+      "question": "Which airplane matches wings level, +10° pitch, heading 045°?",
+      "choices": {
+        "A": "IMAGE",
+        "B": "IMAGE",
+        "C": "IMAGE",
+        "D": "IMAGE"
+      },
+      "answer": "A",
+      "explanation": "Pitch is high (+10°) with no bank; compass 045°. Option A is the level, nose-up jet on 045°.",
+      "steps": [
+        "1. Bank: horizon level → bank 0°.",
+        "2. Pitch: center symbol well above horizon ~+10°.",
+        "3. Heading: 045° (northeast).",
+        "4. Choose the wings-level, nose-up jet pointed 045°.",
+        "5. Eliminate banked or level-pitch silhouettes."
+      ],
+      "fastStrategy": "If bank is zero, go straight to pitch sign and magnitude."
+    },
+    {
+      "id": "ic_a1_004",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "width": 420,
+        "height": 260,
+        "artificialHorizon": {
+          "bankDegrees": -15,
+          "pitchDegrees": 0
+        },
+        "compass": {
+          "headingDegrees": 210
+        },
+        "choiceSprites": {
+          "A": {
+            "spriteId": "jet_front_bank_left_southwest",
+            "view": "front",
+            "headingDegrees": 210,
+            "bankDegrees": -15,
+            "pitchDegrees": 0
+          },
+          "B": {
+            "spriteId": "jet_front_bank_right_southwest",
+            "view": "front",
+            "headingDegrees": 210,
+            "bankDegrees": 15,
+            "pitchDegrees": 0
+          },
+          "C": {
+            "spriteId": "jet_front_level_southwest",
+            "view": "front",
+            "headingDegrees": 210,
+            "bankDegrees": 0,
+            "pitchDegrees": 0
+          },
+          "D": {
+            "spriteId": "jet_front_bank_left_southwest_climb",
+            "view": "front",
+            "headingDegrees": 210,
+            "bankDegrees": -15,
+            "pitchDegrees": 8
+          }
+        }
+      },
+      "copilotInstruction": "Attitude shows a mild left bank (~15°) with level pitch. Heading 210 (southwest). Only one front-view jet should bank left, level pitch, on 210°.",
+      "question": "Which airplane matches ~15° left bank, level pitch, heading 210°?",
+      "choices": {
+        "A": "IMAGE",
+        "B": "IMAGE",
+        "C": "IMAGE",
+        "D": "IMAGE"
+      },
+      "answer": "A",
+      "explanation": "Bank left (-15°), pitch 0°, heading 210°. Option A is the left-bank, level jet on 210°.",
+      "steps": [
+        "1. Bank: left wing slightly low (~15°).",
+        "2. Pitch: horizon centered → level.",
+        "3. Heading: 210° (southwest).",
+        "4. Pick the front-view jet banking left with level pitch on 210°.",
+        "5. Discard right-bank or pitched options."
+      ],
+      "fastStrategy": "Confirm bank direction first; small banks still matter."
+    },
+    {
+      "id": "ic_a1_005",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "width": 420,
+        "height": 260,
+        "artificialHorizon": {
+          "bankDegrees": 20,
+          "pitchDegrees": -8
+        },
+        "compass": {
+          "headingDegrees": 270
+        },
+        "choiceSprites": {
+          "A": {
+            "spriteId": "jet_side_bank_right_west_descent",
+            "view": "side",
+            "headingDegrees": 270,
+            "bankDegrees": 20,
+            "pitchDegrees": -8
+          },
+          "B": {
+            "spriteId": "jet_side_bank_right_west",
+            "view": "side",
+            "headingDegrees": 270,
+            "bankDegrees": 20,
+            "pitchDegrees": 0
+          },
+          "C": {
+            "spriteId": "jet_side_bank_left_west_descent",
+            "view": "side",
+            "headingDegrees": 270,
+            "bankDegrees": -20,
+            "pitchDegrees": -8
+          },
+          "D": {
+            "spriteId": "jet_side_level_west_descent",
+            "view": "side",
+            "headingDegrees": 270,
+            "bankDegrees": 0,
+            "pitchDegrees": -8
+          }
+        }
+      },
+      "copilotInstruction": "Attitude shows right bank ~20° with nose-down about -8°. Heading 270 (west). Only one side-view jet should bank right and descend on 270°.",
+      "question": "Which airplane matches a 20° right bank, -8° pitch, heading 270°?",
+      "choices": {
+        "A": "IMAGE",
+        "B": "IMAGE",
+        "C": "IMAGE",
+        "D": "IMAGE"
+      },
+      "answer": "A",
+      "explanation": "Right bank (+20°), nose down (-8°), heading 270°. Option A is the right-bank, descending jet pointing west.",
+      "steps": [
+        "1. Bank: right wing down ~20°.",
+        "2. Pitch: nose below horizon (~-8°).",
+        "3. Heading: 270° (west).",
+        "4. Select the side-view jet banking right and descending on 270°.",
+        "5. Eliminate left-bank or level-pitch silhouettes."
+      ],
+      "fastStrategy": "Bank direction + pitch sign narrows to one silhouette quickly."
+    }
+  ]
+}

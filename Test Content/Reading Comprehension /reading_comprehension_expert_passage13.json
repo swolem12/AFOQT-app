@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p013",
+  "passage": "As electric vehicles become more widespread, researchers are working to improve the sustainability of the batteries that power them. Traditional lithium-ion batteries rely on metals that must be mined, a process that can cause significant environmental disruption. To reduce these impacts, scientists are exploring alternative materials such as sodium, which is far more abundant and easier to extract. Sodium-based batteries currently cannot match the energy density of lithium-ion cells, meaning they store less power for their size. However, they are cheaper to produce and may be sufficient for applications that do not require long driving ranges. In addition, researchers are studying new recycling methods that recover valuable metals from used batteries, reducing the need for new mining operations. Although many of these technologies are still in early stages, they represent promising pathways toward cleaner and more sustainable energy storage.",
+  "questions": [
+    {
+      "question": "What shift in battery R&D is described?",
+      "choices": {
+        "A": "More lithium mining only",
+        "B": "Exploring abundant sodium and better recycling",
+        "C": "Ending electric vehicles",
+        "D": "Dropping metal use"
+      },
+      "answer": "B",
+      "explanation": "Passage highlights sodium and recycling for sustainability.",
+      "steps": [
+        "1. Identify new directions.",
+        "2. Pick matching option.",
+        "3. Exclude opposites."
+      ],
+      "fastStrategy": "Main shift match.",
+      "id": "rc_e1_p013_q1"
+    },
+    {
+      "question": "What trade-off do sodium batteries face?",
+      "choices": {
+        "A": "Higher energy density",
+        "B": "Lower energy density but cheaper materials",
+        "C": "Require rare metals",
+        "D": "Non-rechargeable"
+      },
+      "answer": "B",
+      "explanation": "They are cheaper/abundant but store less per size.",
+      "steps": [
+        "1. Note pros/cons.",
+        "2. Pick combined trade-off.",
+        "3. Exclude mismatches."
+      ],
+      "fastStrategy": "Include both sides.",
+      "id": "rc_e1_p013_q2"
+    },
+    {
+      "question": "What role does recycling play?",
+      "choices": {
+        "A": "Increase mining",
+        "B": "Recover metals to cut new extraction",
+        "C": "Prevent reuse",
+        "D": "Only for sodium"
+      },
+      "answer": "B",
+      "explanation": "Recycling recovers valuable metals, reducing mining.",
+      "steps": [
+        "1. Find recycling purpose.",
+        "2. Pick aligned option.",
+        "3. Exclude others."
+      ],
+      "fastStrategy": "Purpose match.",
+      "id": "rc_e1_p013_q3"
+    },
+    {
+      "question": "Which applications suit sodium cells per passage?",
+      "choices": {
+        "A": "Where top energy density isn\u2019t critical",
+        "B": "All long-range EVs now",
+        "C": "Only grid storage",
+        "D": "No current uses"
+      },
+      "answer": "A",
+      "explanation": "Lower density fits shorter-range/less demanding uses.",
+      "steps": [
+        "1. Note limitation (density).",
+        "2. Infer suitable cases.",
+        "3. Pick aligned option."
+      ],
+      "fastStrategy": "Use limitation to pick fit.",
+      "id": "rc_e1_p013_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Greener Batteries: Sodium and Recycling",
+        "B": "End of Electricity",
+        "C": "Gasoline Forever",
+        "D": "Mining Without Metals"
+      },
+      "answer": "A",
+      "explanation": "Captures sustainable materials plus recycling focus.",
+      "steps": [
+        "1. Summarize shift.",
+        "2. Remove mismatches.",
+        "3. Pick fit."
+      ],
+      "fastStrategy": "Title = sustainability focus.",
+      "id": "rc_e1_p013_q5"
+    }
+  ]
+}

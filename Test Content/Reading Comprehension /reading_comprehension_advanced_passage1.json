@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "advanced",
+  "passageId": "rc_a1_p001",
+  "passage": "Wildland firefighting crews operate in conditions that change from minute to minute. Unlike structural firefighting, where buildings remain fixed, a wildfire moves with the wind, dries new fuel as it advances, and creates its own weather patterns. Small changes in humidity, temperature, or wind direction can rapidly turn a manageable situation into a dangerous one. For this reason, crews rely heavily on real-time environmental monitoring. Portable sensors track wind shifts, while satellite data helps crews anticipate the fire\u2019s projected path. Although advanced technology has improved response times, human judgment remains essential. Crews must evaluate terrain, vegetation, and escape routes before committing to a position. The combination of technology and experience allows teams to make informed decisions under extreme pressure.",
+  "questions": [
+    {
+      "question": "What best summarizes how crews manage wildfires?",
+      "choices": {
+        "A": "They rely exclusively on satellite imagery.",
+        "B": "They combine real-time technology with on-the-ground judgment.",
+        "C": "They avoid using technology in volatile conditions.",
+        "D": "They focus only on humidity readings."
+      },
+      "answer": "B",
+      "explanation": "The passage highlights rapid change and says teams pair sensors and satellite data with human judgment before committing to positions.",
+      "steps": [
+        "1. Scan opening and closing sentences for the thesis.",
+        "2. Note repeated themes or contrasts.",
+        "3. Eliminate choices that are too narrow or off-topic.",
+        "4. Choose the option that summarizes the whole passage."
+      ],
+      "fastStrategy": "Look for the broadest claim that ties all paragraphs together.",
+      "id": "rc_a1_p001_q1"
+    },
+    {
+      "question": "What inference can be made about escape routes?",
+      "choices": {
+        "A": "They are rarely needed once sensors are deployed.",
+        "B": "Technology removes the need to plan them.",
+        "C": "Crews keep options open because conditions can reverse quickly.",
+        "D": "Escape routes are mainly for equipment, not people."
+      },
+      "answer": "C",
+      "explanation": "Because small weather shifts can turn danger quickly, crews evaluate terrain and escape routes before committing.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p001_q2"
+    },
+    {
+      "question": "Which tools does the passage mention for tracking changing conditions?",
+      "choices": {
+        "A": "Only handheld weather radios.",
+        "B": "Long-term climate models.",
+        "C": "Manned aircraft patrols.",
+        "D": "Portable sensors and satellite projections."
+      },
+      "answer": "D",
+      "explanation": "It cites portable sensors for wind shifts and satellite data for projected fire paths.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p001_q3"
+    },
+    {
+      "question": "What does the passage imply about technology in wildfire response?",
+      "choices": {
+        "A": "It will soon replace experienced crews.",
+        "B": "It improves decisions but cannot replace experience.",
+        "C": "It slows teams because of data overload.",
+        "D": "It is useful only for long-term planning."
+      },
+      "answer": "B",
+      "explanation": "Technology improves response times, yet human judgment remains essential, showing tech is supportive, not a replacement.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p001_q4"
+    },
+    {
+      "question": "Which title best fits the passage?",
+      "choices": {
+        "A": "Why Humidity Predicts Every Wildfire",
+        "B": "Satellite Failures in Firefighting",
+        "C": "Real-Time Decisions in Wildfire Response",
+        "D": "The Decline of Structural Fire Risks"
+      },
+      "answer": "C",
+      "explanation": "The passage focuses on rapid change and the mix of tech and judgment needed for real-time wildfire decisions.",
+      "steps": [
+        "1. Restate the central idea in a short phrase.",
+        "2. Avoid choices focused on a single detail.",
+        "3. Prefer titles that capture scope and purpose.",
+        "4. Pick the option that best fits the full passage."
+      ],
+      "fastStrategy": "Good titles mirror the main idea in a concise way.",
+      "id": "rc_a1_p001_q5"
+    }
+  ]
+}

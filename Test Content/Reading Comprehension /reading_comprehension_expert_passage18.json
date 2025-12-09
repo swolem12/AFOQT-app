@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p018",
+  "passage": "Oceanographers are studying deep-sea hydrothermal vents to better understand extreme marine ecosystems. These vents release mineral-rich water heated by volcanic activity beneath the ocean floor. Despite the harsh conditions\u2014complete darkness, high pressure, and toxic chemicals\u2014unique organisms thrive there, including tube worms, specialized crabs, and bacteria that produce energy through chemosynthesis. Because these ecosystems do not rely on sunlight, they challenge long-held assumptions about the requirements for life. Scientists believe studying them may offer clues about how life began on Earth and whether similar environments could exist on other planets or moons. However, reaching these vents requires advanced submersible vehicles, making research expensive and logistically difficult. Even so, each expedition reveals new species and expands our understanding of the adaptability of life.",
+  "questions": [
+    {
+      "question": "What core insight do vents offer about life?",
+      "choices": {
+        "A": "Life needs sunlight",
+        "B": "Life can thrive via chemosynthesis in darkness",
+        "C": "Oceans are sterile",
+        "D": "Only shallow water matters"
+      },
+      "answer": "B",
+      "explanation": "Vents host life without sunlight using chemosynthesis.",
+      "steps": [
+        "1. Identify main insight.",
+        "2. Pick matching option.",
+        "3. Exclude opposites."
+      ],
+      "fastStrategy": "Core novelty = no sunlight needed.",
+      "id": "rc_e1_p018_q1"
+    },
+    {
+      "question": "How do vent organisms get energy?",
+      "choices": {
+        "A": "Photosynthesis",
+        "B": "Chemosynthesis from vent chemicals",
+        "C": "Stored plants",
+        "D": "Solar panels"
+      },
+      "answer": "B",
+      "explanation": "Bacteria use chemical energy from vents.",
+      "steps": [
+        "1. Recall energy source.",
+        "2. Pick matching option.",
+        "3. Exclude others."
+      ],
+      "fastStrategy": "Detail recall.",
+      "id": "rc_e1_p018_q2"
+    },
+    {
+      "question": "What obstacle limits research?",
+      "choices": {
+        "A": "Too shallow",
+        "B": "Need costly submersibles",
+        "C": "Lack of interest",
+        "D": "Free access"
+      },
+      "answer": "B",
+      "explanation": "Reaching vents requires advanced submersibles.",
+      "steps": [
+        "1. Identify hurdle.",
+        "2. Choose matching option.",
+        "3. Exclude others."
+      ],
+      "fastStrategy": "Barrier recall.",
+      "id": "rc_e1_p018_q3"
+    },
+    {
+      "question": "What broader implication is drawn?",
+      "choices": {
+        "A": "Life elsewhere might exist in similar extreme settings",
+        "B": "All planets need sun",
+        "C": "Space oceans are impossible",
+        "D": "Chemosynthesis is rare"
+      },
+      "answer": "A",
+      "explanation": "If life thrives without sun, similar environments elsewhere could host life.",
+      "steps": [
+        "1. Note implication stated.",
+        "2. Pick aligned option.",
+        "3. Exclude opposites."
+      ],
+      "fastStrategy": "Use explicit inference to astrobiology.",
+      "id": "rc_e1_p018_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Life in the Dark: Hydrothermal Lessons",
+        "B": "Sunlit Beaches",
+        "C": "Why Oceans Lack Life",
+        "D": "Boiling Away Research"
+      },
+      "answer": "A",
+      "explanation": "Captures unique dark ecosystems and significance.",
+      "steps": [
+        "1. Summarize focus.",
+        "2. Remove off options.",
+        "3. Choose fit."
+      ],
+      "fastStrategy": "Title = unique ecosystem + insight.",
+      "id": "rc_e1_p018_q5"
+    }
+  ]
+}

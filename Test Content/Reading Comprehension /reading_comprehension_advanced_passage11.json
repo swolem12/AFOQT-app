@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "advanced",
+  "passageId": "rc_a1_p011",
+  "passage": "As coastal cities confront rising sea levels, engineers are exploring a range of adaptation strategies to protect infrastructure and communities. Traditional approaches such as seawalls and levees remain common, but modern planning emphasizes flexible, layered defenses rather than a single solution. One example is the use of \u2018living shorelines,\u2019 which incorporate natural features like wetlands and mangroves to absorb wave energy and reduce erosion. These solutions offer ecological benefits while also strengthening long-term resilience. However, implementing them can be complex, requiring coordination between environmental scientists, city planners, and local residents. In addition, living shorelines are not suitable for every coastline, particularly in areas with high wave intensity or limited space. Despite these challenges, many cities are beginning to combine engineered structures with natural defenses to create more adaptable coastal protection systems. This hybrid approach reflects a shift toward strategies that aim not just to resist changing conditions, but to work with them.",
+  "questions": [
+    {
+      "question": "What approach to coastal protection is highlighted?",
+      "choices": {
+        "A": "Relying solely on tall concrete walls.",
+        "B": "Combining engineered defenses with natural 'living shorelines'.",
+        "C": "Waiting for seas to recede.",
+        "D": "Abandoning coastal cities."
+      },
+      "answer": "B",
+      "explanation": "The passage stresses layered defenses that mix seawalls with natural buffers like wetlands.",
+      "steps": [
+        "1. Scan opening and closing sentences for the thesis.",
+        "2. Note repeated themes or contrasts.",
+        "3. Eliminate choices that are too narrow or off-topic.",
+        "4. Choose the option that summarizes the whole passage."
+      ],
+      "fastStrategy": "Look for the broadest claim that ties all paragraphs together.",
+      "id": "rc_a1_p011_q1"
+    },
+    {
+      "question": "Which benefit of living shorelines is mentioned?",
+      "choices": {
+        "A": "They require no maintenance.",
+        "B": "They increase wave intensity.",
+        "C": "They absorb wave energy and reduce erosion while aiding ecology.",
+        "D": "They replace the need for planning."
+      },
+      "answer": "C",
+      "explanation": "Natural features absorb energy, reduce erosion, and provide ecological gains.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p011_q2"
+    },
+    {
+      "question": "What does the hybrid strategy indicate?",
+      "choices": {
+        "A": "Cities are moving away from single, rigid defenses.",
+        "B": "Natural solutions are banned.",
+        "C": "Engineered structures are obsolete.",
+        "D": "Sea-level rise has stopped."
+      },
+      "answer": "A",
+      "explanation": "The shift to layered, adaptable defenses replaces one-size-fits-all barriers.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p011_q3"
+    },
+    {
+      "question": "Which limitation is noted for living shorelines?",
+      "choices": {
+        "A": "They cannot coexist with wetlands.",
+        "B": "They only work in deserts.",
+        "C": "They require no community input.",
+        "D": "They may not suit high-energy coasts or tight spaces."
+      },
+      "answer": "D",
+      "explanation": "The passage says high wave energy or limited space can make them impractical.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p011_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Retreating from Every Coast",
+        "B": "Hybrid Defenses for Rising Seas",
+        "C": "Why Mangroves Cause Floods",
+        "D": "Eliminating Wetlands for Cities"
+      },
+      "answer": "B",
+      "explanation": "The title captures the mix of engineered and natural defenses against sea-level rise.",
+      "steps": [
+        "1. Restate the central idea in a short phrase.",
+        "2. Avoid choices focused on a single detail.",
+        "3. Prefer titles that capture scope and purpose.",
+        "4. Pick the option that best fits the full passage."
+      ],
+      "fastStrategy": "Good titles mirror the main idea in a concise way.",
+      "id": "rc_a1_p011_q5"
+    }
+  ]
+}

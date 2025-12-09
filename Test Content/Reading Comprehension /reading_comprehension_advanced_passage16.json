@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "advanced",
+  "passageId": "rc_a1_p016",
+  "passage": "Archaeologists are using advanced imaging technologies to explore ancient structures without disturbing them. Ground-penetrating radar, for example, sends radio waves into the earth and measures their reflections, allowing researchers to identify buried walls or chambers. This method is especially valuable at historical sites where excavation could damage fragile artifacts. In recent years, archaeologists have combined radar with aerial lidar, which maps the surface by measuring how quickly laser pulses return to sensors. When the two techniques are used together, scientists can create detailed 3D models of entire settlements. These models reveal patterns in city planning, trade activity, and cultural practices. Although the technology is costly and requires specialized training, it allows researchers to uncover information that might otherwise remain hidden. As imaging tools become more accessible, they are likely to play an increasingly important role in preserving archaeological sites across the world.",
+  "questions": [
+    {
+      "question": "What is the passage\u2019s main idea about archaeological imaging?",
+      "choices": {
+        "A": "Excavation is the only reliable method.",
+        "B": "Tools like radar and lidar map sites noninvasively, protecting artifacts.",
+        "C": "Technology has no role in archaeology.",
+        "D": "Only surface surveys matter."
+      },
+      "answer": "B",
+      "explanation": "Ground-penetrating radar and lidar create models without digging, preserving fragile sites.",
+      "steps": [
+        "1. Scan opening and closing sentences for the thesis.",
+        "2. Note repeated themes or contrasts.",
+        "3. Eliminate choices that are too narrow or off-topic.",
+        "4. Choose the option that summarizes the whole passage."
+      ],
+      "fastStrategy": "Look for the broadest claim that ties all paragraphs together.",
+      "id": "rc_a1_p016_q1"
+    },
+    {
+      "question": "What result comes from combining radar and lidar?",
+      "choices": {
+        "A": "Detailed 3D models of settlements.",
+        "B": "Instant fossil creation.",
+        "C": "Removal of vegetation.",
+        "D": "Guaranteed discovery of gold."
+      },
+      "answer": "A",
+      "explanation": "Together they yield detailed 3D models showing planning patterns.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p016_q2"
+    },
+    {
+      "question": "What does the cost and training requirement imply?",
+      "choices": {
+        "A": "Use will likely decline.",
+        "B": "Sites will be destroyed intentionally.",
+        "C": "Adoption may be gradual but expected to grow as tools become accessible.",
+        "D": "Excavation is banned."
+      },
+      "answer": "C",
+      "explanation": "Though costly now, the passage suggests tools will play larger roles as access improves.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p016_q3"
+    },
+    {
+      "question": "Why is noninvasive imaging valuable?",
+      "choices": {
+        "A": "It guarantees faster tourist access.",
+        "B": "It removes the need for any analysis.",
+        "C": "It allows digging without permits.",
+        "D": "It avoids damaging fragile artifacts while still revealing structures."
+      },
+      "answer": "D",
+      "explanation": "Imaging reveals buried features without harming sensitive sites.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p016_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Digging Deeper: Cutting Into Sites",
+        "B": "Seeing the Past with Sensors",
+        "C": "Why Mapping Fails",
+        "D": "Destroying History for Data"
+      },
+      "answer": "B",
+      "explanation": "Title captures noninvasive mapping via radar and lidar.",
+      "steps": [
+        "1. Restate the central idea in a short phrase.",
+        "2. Avoid choices focused on a single detail.",
+        "3. Prefer titles that capture scope and purpose.",
+        "4. Pick the option that best fits the full passage."
+      ],
+      "fastStrategy": "Good titles mirror the main idea in a concise way.",
+      "id": "rc_a1_p016_q5"
+    }
+  ]
+}

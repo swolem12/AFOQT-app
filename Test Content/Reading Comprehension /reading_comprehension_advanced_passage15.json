@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "advanced",
+  "passageId": "rc_a1_p015",
+  "passage": "As renewable energy sources like wind and solar become more common, scientists are looking for effective ways to store excess power for later use. One emerging solution is the use of large-scale battery farms, which can absorb surplus energy when production is high and release it when demand increases. These facilities help stabilize the electrical grid, reducing the need for traditional fossil-fuel backup systems. Despite their potential, battery farms face several challenges. They require significant space, careful temperature control, and substantial upfront investment. Safety is also a concern, as large battery banks can overheat if not properly managed. To address these issues, engineers are developing new battery chemistries designed to operate more safely at scale. While the technology is still evolving, early results suggest that large-scale energy storage could play an important role in creating a more reliable and sustainable power grid.",
+  "questions": [
+    {
+      "question": "What role do large-scale battery farms play?",
+      "choices": {
+        "A": "They replace all renewable generation.",
+        "B": "They stabilize the grid by storing surplus energy despite cost and safety hurdles.",
+        "C": "They guarantee free electricity.",
+        "D": "They eliminate temperature concerns."
+      },
+      "answer": "B",
+      "explanation": "Battery farms absorb surplus, release during demand peaks, but face space, cost, and safety issues.",
+      "steps": [
+        "1. Scan opening and closing sentences for the thesis.",
+        "2. Note repeated themes or contrasts.",
+        "3. Eliminate choices that are too narrow or off-topic.",
+        "4. Choose the option that summarizes the whole passage."
+      ],
+      "fastStrategy": "Look for the broadest claim that ties all paragraphs together.",
+      "id": "rc_a1_p015_q1"
+    },
+    {
+      "question": "Which risk is mentioned?",
+      "choices": {
+        "A": "Permanent loss of sunlight.",
+        "B": "Storms destroying wind farms.",
+        "C": "Overheating in large battery banks if unmanaged.",
+        "D": "Instant freezing of equipment."
+      },
+      "answer": "C",
+      "explanation": "The passage flags overheating as a safety concern.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p015_q2"
+    },
+    {
+      "question": "What do new chemistries aim to achieve?",
+      "choices": {
+        "A": "Higher risk of thermal runaway.",
+        "B": "Complete removal of storage needs.",
+        "C": "Safer, large-scale operation of storage systems.",
+        "D": "Elimination of public transit."
+      },
+      "answer": "C",
+      "explanation": "Engineers develop chemistries to operate more safely at scale.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p015_q3"
+    },
+    {
+      "question": "Which benefit is identified?",
+      "choices": {
+        "A": "Guaranteeing fossil fuels stay online.",
+        "B": "Reducing need for any grid.",
+        "C": "Storing excess renewable energy for later demand.",
+        "D": "Lowering space requirements to zero."
+      },
+      "answer": "C",
+      "explanation": "Battery farms absorb surplus generation and release it when demand rises.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p015_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Powering the Grid with Giant Batteries",
+        "B": "Why Renewables Are Impossible",
+        "C": "The End of Electricity",
+        "D": "Unlimited Free Energy"
+      },
+      "answer": "A",
+      "explanation": "Title reflects grid-scale batteries and their challenges.",
+      "steps": [
+        "1. Restate the central idea in a short phrase.",
+        "2. Avoid choices focused on a single detail.",
+        "3. Prefer titles that capture scope and purpose.",
+        "4. Pick the option that best fits the full passage."
+      ],
+      "fastStrategy": "Good titles mirror the main idea in a concise way.",
+      "id": "rc_a1_p015_q5"
+    }
+  ]
+}

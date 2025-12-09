@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "advanced",
+  "passageId": "rc_a1_p008",
+  "passage": "Medical researchers investigating long-term astronaut health have discovered that extended exposure to microgravity affects more than just muscle strength and bone density. Recent studies show that fluid in the body shifts upward toward the head in low-gravity environments, placing pressure on the eyes and altering their shape. Some astronauts experience temporary vision changes during missions, while others develop longer-lasting issues upon returning to Earth. Scientists are exploring countermeasures, including specialized compression garments and adjustable spacecraft environments that simulate partial gravity. Although these solutions show promise, researchers caution that space agencies must continue studying the problem as missions to the Moon and Mars become more common. Understanding how microgravity impacts human physiology is essential for keeping astronauts healthy during increasingly ambitious space exploration.",
+  "questions": [
+    {
+      "question": "What is the passage\u2019s main point about microgravity?",
+      "choices": {
+        "A": "It strengthens vision over time.",
+        "B": "Fluid shifts in low gravity affect astronauts\u2019 eyes, prompting search for countermeasures.",
+        "C": "It only impacts bone density.",
+        "D": "It eliminates the need for medical monitoring."
+      },
+      "answer": "B",
+      "explanation": "Microgravity pushes fluid toward the head, altering eyes; researchers test solutions.",
+      "steps": [
+        "1. Scan opening and closing sentences for the thesis.",
+        "2. Note repeated themes or contrasts.",
+        "3. Eliminate choices that are too narrow or off-topic.",
+        "4. Choose the option that summarizes the whole passage."
+      ],
+      "fastStrategy": "Look for the broadest claim that ties all paragraphs together.",
+      "id": "rc_a1_p008_q1"
+    },
+    {
+      "question": "Which countermeasure is mentioned?",
+      "choices": {
+        "A": "Daily eye surgery in orbit.",
+        "B": "Permanent helmets.",
+        "C": "Compression garments to manage fluid shift.",
+        "D": "Sleeping without oxygen."
+      },
+      "answer": "C",
+      "explanation": "Specialized compression garments are one option under study.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p008_q2"
+    },
+    {
+      "question": "What does the passage imply about future Moon and Mars missions?",
+      "choices": {
+        "A": "Vision changes are irrelevant for short trips.",
+        "B": "Only robots will fly to Mars.",
+        "C": "Long missions remove the need for countermeasures.",
+        "D": "Eye health solutions are critical before longer missions proceed."
+      },
+      "answer": "D",
+      "explanation": "As longer missions increase, managing microgravity eye effects becomes essential.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p008_q3"
+    },
+    {
+      "question": "What is implied about ongoing research?",
+      "choices": {
+        "A": "It can stop because solutions are perfect.",
+        "B": "It must continue as missions grow in duration and ambition.",
+        "C": "It is unrelated to human physiology.",
+        "D": "It focuses only on bone density."
+      },
+      "answer": "B",
+      "explanation": "Researchers caution continued study is needed for future deep-space travel.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p008_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Microgravity: A Vision Challenge for Explorers",
+        "B": "Why Space Is Easy on the Eyes",
+        "C": "Abandoning Manned Spaceflight",
+        "D": "Telescopes in Orbit"
+      },
+      "answer": "A",
+      "explanation": "Title captures fluid shifts impacting vision and need for solutions.",
+      "steps": [
+        "1. Restate the central idea in a short phrase.",
+        "2. Avoid choices focused on a single detail.",
+        "3. Prefer titles that capture scope and purpose.",
+        "4. Pick the option that best fits the full passage."
+      ],
+      "fastStrategy": "Good titles mirror the main idea in a concise way.",
+      "id": "rc_a1_p008_q5"
+    }
+  ]
+}

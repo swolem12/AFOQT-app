@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p020",
+  "passage": "Environmental engineers are researching new materials to filter pollutants from industrial wastewater. Traditional filters often clog quickly or break down when exposed to harsh chemicals, reducing efficiency. To improve durability, scientists are developing membranes made from advanced polymers that can withstand extreme conditions. These membranes contain microscopic pores that trap contaminants while allowing clean water to pass through. Some versions even use electrical charges to repel certain particles, enhancing filtration performance. Although promising, the technology is still expensive and requires further testing before it can be deployed widely. Early trials, however, show that these membranes remove significantly more pollutants than conventional filters. As research progresses, these advanced materials may play a key role in helping industries reduce their environmental impact and meet stricter water quality regulations.",
+  "questions": [
+    {
+      "question": "What advantage do new membranes offer?",
+      "choices": {
+        "A": "Weaker filtration",
+        "B": "Durable, high-removal filtration in harsh wastewater",
+        "C": "No pores",
+        "D": "They add pollutants"
+      },
+      "answer": "B",
+      "explanation": "Advanced polymers withstand harsh conditions and filter better.",
+      "steps": [
+        "1. Note stated advantage.",
+        "2. Pick matching option.",
+        "3. Exclude opposites."
+      ],
+      "fastStrategy": "Detail recall.",
+      "id": "rc_e1_p020_q1"
+    },
+    {
+      "question": "How do they work?",
+      "choices": {
+        "A": "Micropores trap contaminants while water passes",
+        "B": "Boiling",
+        "C": "Evaporation",
+        "D": "Adding chemicals"
+      },
+      "answer": "A",
+      "explanation": "Membranes use microscopic pores to filter.",
+      "steps": [
+        "1. Recall mechanism.",
+        "2. Pick matching option.",
+        "3. Exclude others."
+      ],
+      "fastStrategy": "Mechanism recall.",
+      "id": "rc_e1_p020_q2"
+    },
+    {
+      "question": "What does charged-membrane design imply?",
+      "choices": {
+        "A": "Repels certain particles to boost performance",
+        "B": "Stops water",
+        "C": "Only filters salt",
+        "D": "Reduces durability"
+      },
+      "answer": "A",
+      "explanation": "Electrical charges help repel targeted particles.",
+      "steps": [
+        "1. Note feature.",
+        "2. Infer function.",
+        "3. Pick aligned option."
+      ],
+      "fastStrategy": "Feature \u2192 function.",
+      "id": "rc_e1_p020_q3"
+    },
+    {
+      "question": "What future impact is suggested if trials succeed?",
+      "choices": {
+        "A": "No treatment needed",
+        "B": "Factories abandon water",
+        "C": "Better compliance with stricter regulations",
+        "D": "Filters clog faster"
+      },
+      "answer": "C",
+      "explanation": "Improved removal could help meet tighter rules.",
+      "steps": [
+        "1. Note potential outcome.",
+        "2. Pick matching option.",
+        "3. Exclude opposites."
+      ],
+      "fastStrategy": "Outcome = better compliance.",
+      "id": "rc_e1_p020_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Tough Membranes for Cleaner Wastewater",
+        "B": "Filters that Fail",
+        "C": "Pollution as Solution",
+        "D": "No Need for Regulation"
+      },
+      "answer": "A",
+      "explanation": "Captures durable membranes improving filtration.",
+      "steps": [
+        "1. Summarize passage.",
+        "2. Remove mismatches.",
+        "3. Pick fit."
+      ],
+      "fastStrategy": "Title = durability + filtration.",
+      "id": "rc_e1_p020_q5"
+    }
+  ]
+}

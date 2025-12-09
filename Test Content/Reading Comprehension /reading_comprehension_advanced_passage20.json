@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "advanced",
+  "passageId": "rc_a1_p020",
+  "passage": "Environmental engineers are researching new materials to filter pollutants from industrial wastewater. Traditional filters often clog quickly or break down when exposed to harsh chemicals, reducing efficiency. To improve durability, scientists are developing membranes made from advanced polymers that can withstand extreme conditions. These membranes contain microscopic pores that trap contaminants while allowing clean water to pass through. Some versions even use electrical charges to repel certain particles, enhancing filtration performance. Although promising, the technology is still expensive and requires further testing before it can be deployed widely. Early trials, however, show that these membranes remove significantly more pollutants than conventional filters. As research progresses, these advanced materials may play a key role in helping industries reduce their environmental impact and meet stricter water quality regulations.",
+  "questions": [
+    {
+      "question": "What is the main idea about new wastewater membranes?",
+      "choices": {
+        "A": "They are cheaper but less effective than traditional filters.",
+        "B": "Advanced polymers improve filtration in harsh conditions but remain costly.",
+        "C": "They remove only large debris.",
+        "D": "They eliminate the need for regulations."
+      },
+      "answer": "B",
+      "explanation": "The passage highlights durable polymer membranes with better pollutant removal yet higher costs and testing needs.",
+      "steps": [
+        "1. Scan opening and closing sentences for the thesis.",
+        "2. Note repeated themes or contrasts.",
+        "3. Eliminate choices that are too narrow or off-topic.",
+        "4. Choose the option that summarizes the whole passage."
+      ],
+      "fastStrategy": "Look for the broadest claim that ties all paragraphs together.",
+      "id": "rc_a1_p020_q1"
+    },
+    {
+      "question": "How do the membranes work?",
+      "choices": {
+        "A": "Microscopic pores trap contaminants while water passes.",
+        "B": "By boiling wastewater.",
+        "C": "Through natural evaporation only.",
+        "D": "By adding more pollutants."
+      },
+      "answer": "A",
+      "explanation": "They use tiny pores to capture contaminants and let clean water through.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p020_q2"
+    },
+    {
+      "question": "What does the charged-membrane feature imply?",
+      "choices": {
+        "A": "Charges repel certain particles to boost performance.",
+        "B": "It prevents any water from passing.",
+        "C": "It only filters salt.",
+        "D": "It reduces durability in harsh chemicals."
+      },
+      "answer": "A",
+      "explanation": "Some membranes use electrical charges to repel targeted particles, enhancing filtration.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p020_q3"
+    },
+    {
+      "question": "What future impact is suggested if trials continue to succeed?",
+      "choices": {
+        "A": "Industries will abandon water treatment.",
+        "B": "Pollution will automatically disappear.",
+        "C": "The membranes could help meet stricter regulations with better pollutant removal.",
+        "D": "All filters will clog faster."
+      },
+      "answer": "C",
+      "explanation": "Promising trials suggest these membranes could aid compliance with tighter water-quality rules.",
+      "steps": [
+        "1. Identify the problem-solution or argument structure.",
+        "2. Note any recommendations or calls to action.",
+        "3. Remove choices that mention only minor details.",
+        "4. Choose the option reflecting the author's intent."
+      ],
+      "fastStrategy": "Purpose answers explain why the author wrote the passage.",
+      "id": "rc_a1_p020_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Weak Filters and Failing Factories",
+        "B": "Tough Membranes for Cleaner Water",
+        "C": "Why Wastewater Cannot Be Treated",
+        "D": "The End of Industrial Regulation"
+      },
+      "answer": "B",
+      "explanation": "Title captures durable membranes improving wastewater filtration.",
+      "steps": [
+        "1. Restate the central idea in a short phrase.",
+        "2. Avoid choices focused on a single detail.",
+        "3. Prefer titles that capture scope and purpose.",
+        "4. Pick the option that best fits the full passage."
+      ],
+      "fastStrategy": "Good titles mirror the main idea in a concise way.",
+      "id": "rc_a1_p020_q5"
+    }
+  ]
+}

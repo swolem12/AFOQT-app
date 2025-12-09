@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "advanced",
+  "passageId": "rc_a1_p018",
+  "passage": "Oceanographers are studying deep-sea hydrothermal vents to better understand extreme marine ecosystems. These vents release mineral-rich water heated by volcanic activity beneath the ocean floor. Despite the harsh conditions\u2014complete darkness, high pressure, and toxic chemicals\u2014unique organisms thrive there, including tube worms, specialized crabs, and bacteria that produce energy through chemosynthesis. Because these ecosystems do not rely on sunlight, they challenge long-held assumptions about the requirements for life. Scientists believe studying them may offer clues about how life began on Earth and whether similar environments could exist on other planets or moons. However, reaching these vents requires advanced submersible vehicles, making research expensive and logistically difficult. Even so, each expedition reveals new species and expands our understanding of the adaptability of life.",
+  "questions": [
+    {
+      "question": "What is the central idea about hydrothermal vents?",
+      "choices": {
+        "A": "They cannot support life.",
+        "B": "Extreme vent ecosystems thrive without sunlight, offering clues to life\u2019s origins despite research challenges.",
+        "C": "They are easy to explore and common at beaches.",
+        "D": "They rely on photosynthesis."
+      },
+      "answer": "B",
+      "explanation": "Unique life thrives via chemosynthesis; studying vents is costly but revealing for origins and astrobiology.",
+      "steps": [
+        "1. Scan opening and closing sentences for the thesis.",
+        "2. Note repeated themes or contrasts.",
+        "3. Eliminate choices that are too narrow or off-topic.",
+        "4. Choose the option that summarizes the whole passage."
+      ],
+      "fastStrategy": "Look for the broadest claim that ties all paragraphs together.",
+      "id": "rc_a1_p018_q1"
+    },
+    {
+      "question": "How do organisms near vents obtain energy?",
+      "choices": {
+        "A": "Photosynthesis from sunlight.",
+        "B": "Directly from lava.",
+        "C": "Chemosynthesis using vent chemicals.",
+        "D": "Stored plant matter."
+      },
+      "answer": "C",
+      "explanation": "Bacteria use chemosynthesis from mineral-rich vent fluids.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p018_q2"
+    },
+    {
+      "question": "What inference do scientists make from these ecosystems?",
+      "choices": {
+        "A": "Life requires sunlight everywhere.",
+        "B": "Oceans lack diversity.",
+        "C": "Only shallow waters hold life.",
+        "D": "Life may arise in extreme, sunlight-free environments elsewhere."
+      },
+      "answer": "D",
+      "explanation": "Life independent of sunlight suggests similar habitats could host life on other worlds.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p018_q3"
+    },
+    {
+      "question": "What major hurdle does vent research face?",
+      "choices": {
+        "A": "Abundant free access.",
+        "B": "Lack of scientific interest.",
+        "C": "Data being publicly available already.",
+        "D": "Need for advanced, costly submersibles."
+      },
+      "answer": "D",
+      "explanation": "Reaching vents demands expensive submersible vehicles.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p018_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Sunlight Fuels All Oceans",
+        "B": "Mysteries of the Deep: Life at Hydrothermal Vents",
+        "C": "Beaches and Their Tides",
+        "D": "The End of Marine Research"
+      },
+      "answer": "B",
+      "explanation": "Title reflects unique deep-sea life and its scientific importance.",
+      "steps": [
+        "1. Restate the central idea in a short phrase.",
+        "2. Avoid choices focused on a single detail.",
+        "3. Prefer titles that capture scope and purpose.",
+        "4. Pick the option that best fits the full passage."
+      ],
+      "fastStrategy": "Good titles mirror the main idea in a concise way.",
+      "id": "rc_a1_p018_q5"
+    }
+  ]
+}

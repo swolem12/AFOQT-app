@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p012",
+  "passage": "In many regions, freshwater availability is becoming increasingly uncertain due to shifting weather patterns and growing demand. To help address these challenges, researchers are developing advanced water recycling systems that can treat wastewater to near-drinking quality. These systems use multiple filtration stages, including membranes, ultraviolet light, and activated carbon, to remove contaminants. One of the major advantages of modern recycling technology is its ability to operate efficiently in urban areas where traditional reservoirs cannot be expanded. However, public acceptance remains a significant barrier. Despite scientific evidence supporting safety, many residents are hesitant to adopt recycled water for household use. To overcome this, cities have begun public outreach campaigns that explain how the technology works, highlight successful examples, and emphasize the environmental benefits. As awareness grows, more communities are considering recycled water as a vital component of long-term resource planning.",
+  "questions": [
+    {
+      "question": "What dual challenge does advanced recycling address?",
+      "choices": {
+        "A": "Flooding and storms",
+        "B": "Water scarcity plus public hesitation",
+        "C": "Agricultural yields",
+        "D": "Traffic"
+      },
+      "answer": "B",
+      "explanation": "Tech solves scarcity but faces acceptance barriers.",
+      "steps": [
+        "1. Identify two issues: scarcity + acceptance.",
+        "2. Pick option with both.",
+        "3. Exclude others."
+      ],
+      "fastStrategy": "Note paired problem/solution.",
+      "id": "rc_e1_p012_q1"
+    },
+    {
+      "question": "Which treatment stages are listed?",
+      "choices": {
+        "A": "Boiling only",
+        "B": "Membranes, UV, activated carbon",
+        "C": "Evaporation",
+        "D": "Freezing"
+      },
+      "answer": "B",
+      "explanation": "These three stages are named.",
+      "steps": [
+        "1. Recall stages.",
+        "2. Choose exact set.",
+        "3. Exclude others."
+      ],
+      "fastStrategy": "Detail recall.",
+      "id": "rc_e1_p012_q2"
+    },
+    {
+      "question": "Why focus outreach on perception?",
+      "choices": {
+        "A": "Tech unsafe",
+        "B": "Residents hesitate despite safety evidence",
+        "C": "Filters unavailable",
+        "D": "Laws require it"
+      },
+      "answer": "B",
+      "explanation": "Hesitation persists even with safety data; outreach aims to build trust.",
+      "steps": [
+        "1. Identify barrier: perception.",
+        "2. Connect to outreach goal.",
+        "3. Choose matching option."
+      ],
+      "fastStrategy": "Barrier \u2192 outreach.",
+      "id": "rc_e1_p012_q3"
+    },
+    {
+      "question": "Why suit urban settings?",
+      "choices": {
+        "A": "Unlimited reservoirs",
+        "B": "Systems fit where reservoirs cannot expand",
+        "C": "Need more fertilizer",
+        "D": "Ban on imports"
+      },
+      "answer": "B",
+      "explanation": "Compact systems work where new reservoirs are impossible.",
+      "steps": [
+        "1. Note stated advantage.",
+        "2. Pick aligned option.",
+        "3. Exclude others."
+      ],
+      "fastStrategy": "Use explicit rationale.",
+      "id": "rc_e1_p012_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Winning Trust in Water Recycling",
+        "B": "Reservoirs Forever",
+        "C": "Abandoning Filtration",
+        "D": "Why Water Is Endless"
+      },
+      "answer": "A",
+      "explanation": "Reflects technology plus acceptance hurdle.",
+      "steps": [
+        "1. Summarize theme.",
+        "2. Remove mismatches.",
+        "3. Choose fit."
+      ],
+      "fastStrategy": "Title = tech + trust.",
+      "id": "rc_e1_p012_q5"
+    }
+  ]
+}

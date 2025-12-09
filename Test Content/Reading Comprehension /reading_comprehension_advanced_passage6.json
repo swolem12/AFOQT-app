@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "advanced",
+  "passageId": "rc_a1_p006",
+  "passage": "Transportation engineers are exploring ways to modernize traffic systems as urban congestion increases. One promising development is the implementation of adaptive traffic signals, which use sensors to monitor real-time conditions at intersections. Unlike traditional signals that operate on fixed timers, adaptive systems adjust the length of green and red lights based on vehicle flow. This approach reduces unnecessary idling, improves travel times, and helps decrease fuel consumption. Early trials have shown notable improvements, particularly during peak commuting hours. However, widespread adoption has been slow. Installing these systems requires upgraded infrastructure, and some cities face budget constraints that delay implementation. Engineers remain optimistic that continued advancements in sensor technology and data processing will eventually make adaptive traffic systems more accessible, leading to smoother and more efficient urban transportation networks.",
+  "questions": [
+    {
+      "question": "What is the passage\u2019s main point about adaptive traffic signals?",
+      "choices": {
+        "A": "They are outdated compared to fixed timers.",
+        "B": "They adjust to real-time flow and improve travel but require investment to scale.",
+        "C": "They only work on rural roads.",
+        "D": "They eliminate the need for traffic engineers."
+      },
+      "answer": "B",
+      "explanation": "Adaptive signals respond to real-time conditions, improving travel, but adoption lags due to infrastructure costs.",
+      "steps": [
+        "1. Scan opening and closing sentences for the thesis.",
+        "2. Note repeated themes or contrasts.",
+        "3. Eliminate choices that are too narrow or off-topic.",
+        "4. Choose the option that summarizes the whole passage."
+      ],
+      "fastStrategy": "Look for the broadest claim that ties all paragraphs together.",
+      "id": "rc_a1_p006_q1"
+    },
+    {
+      "question": "What requirement slows adoption?",
+      "choices": {
+        "A": "Upgrading infrastructure and budgets to install sensors.",
+        "B": "Removing all pedestrian crossings.",
+        "C": "Replacing every car with electric vehicles.",
+        "D": "Banning public transit routes."
+      },
+      "answer": "A",
+      "explanation": "The passage cites upgrade needs and budget constraints as barriers.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p006_q2"
+    },
+    {
+      "question": "What does the optimism of engineers imply?",
+      "choices": {
+        "A": "Data processing will get slower over time.",
+        "B": "Cities prefer fixed timers.",
+        "C": "Costs and access to technology are expected to improve.",
+        "D": "Congestion is impossible to address."
+      },
+      "answer": "C",
+      "explanation": "Engineers expect sensor and processing advances to make adoption easier and cheaper.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p006_q3"
+    },
+    {
+      "question": "Which benefit is explicitly mentioned?",
+      "choices": {
+        "A": "More billboards at intersections.",
+        "B": "Higher speed limits in cities.",
+        "C": "Guaranteed free parking.",
+        "D": "Reduced idling and fuel use from better-timed lights."
+      },
+      "answer": "D",
+      "explanation": "Adaptive signals cut unnecessary idling, improving travel times and fuel efficiency.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p006_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "The Decline of Urban Sensors",
+        "B": "Real-Time Signals and the Road to Adoption",
+        "C": "Why Traffic Lights Are Obsolete",
+        "D": "Manual Policing of Intersections"
+      },
+      "answer": "B",
+      "explanation": "Title captures adaptive signals' benefits and adoption challenge.",
+      "steps": [
+        "1. Restate the central idea in a short phrase.",
+        "2. Avoid choices focused on a single detail.",
+        "3. Prefer titles that capture scope and purpose.",
+        "4. Pick the option that best fits the full passage."
+      ],
+      "fastStrategy": "Good titles mirror the main idea in a concise way.",
+      "id": "rc_a1_p006_q5"
+    }
+  ]
+}

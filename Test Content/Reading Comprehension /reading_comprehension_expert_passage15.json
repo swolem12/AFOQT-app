@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p015",
+  "passage": "As renewable energy sources like wind and solar become more common, scientists are looking for effective ways to store excess power for later use. One emerging solution is the use of large-scale battery farms, which can absorb surplus energy when production is high and release it when demand increases. These facilities help stabilize the electrical grid, reducing the need for traditional fossil-fuel backup systems. Despite their potential, battery farms face several challenges. They require significant space, careful temperature control, and substantial upfront investment. Safety is also a concern, as large battery banks can overheat if not properly managed. To address these issues, engineers are developing new battery chemistries designed to operate more safely at scale. While the technology is still evolving, early results suggest that large-scale energy storage could play an important role in creating a more reliable and sustainable power grid.",
+  "questions": [
+    {
+      "question": "What grid role do battery farms serve?",
+      "choices": {
+        "A": "Eliminate renewables",
+        "B": "Store surplus and release during peaks",
+        "C": "Replace transmission",
+        "D": "Raise fossil use"
+      },
+      "answer": "B",
+      "explanation": "They absorb excess and deliver when demand rises.",
+      "steps": [
+        "1. Identify described role.",
+        "2. Pick matching option.",
+        "3. Exclude others."
+      ],
+      "fastStrategy": "Role = buffer.",
+      "id": "rc_e1_p015_q1"
+    },
+    {
+      "question": "Which risk is mentioned?",
+      "choices": {
+        "A": "Overheating if unmanaged",
+        "B": "Too cold",
+        "C": "No cost",
+        "D": "Instant payback"
+      },
+      "answer": "A",
+      "explanation": "Overheating in large banks is flagged.",
+      "steps": [
+        "1. Recall risk.",
+        "2. Choose matching option.",
+        "3. Exclude others."
+      ],
+      "fastStrategy": "Detail recall.",
+      "id": "rc_e1_p015_q2"
+    },
+    {
+      "question": "What do new chemistries aim to improve?",
+      "choices": {
+        "A": "Risk",
+        "B": "Safety at scale",
+        "C": "Eliminate storage need",
+        "D": "Stop renewables"
+      },
+      "answer": "B",
+      "explanation": "Designed for safer large-scale operation.",
+      "steps": [
+        "1. Note goal.",
+        "2. Pick matching option.",
+        "3. Exclude mismatches."
+      ],
+      "fastStrategy": "Goal = safer scaling.",
+      "id": "rc_e1_p015_q3"
+    },
+    {
+      "question": "Which benefit is explicit?",
+      "choices": {
+        "A": "Unlimited free power",
+        "B": "Stabilizing grid by shifting energy",
+        "C": "Ending grid demand",
+        "D": "Removing space needs"
+      },
+      "answer": "B",
+      "explanation": "Storing surplus then releasing stabilizes grid.",
+      "steps": [
+        "1. Recall benefit.",
+        "2. Choose matching option.",
+        "3. Exclude exaggerations."
+      ],
+      "fastStrategy": "Detail recall.",
+      "id": "rc_e1_p015_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Grid Batteries: Balancing Surplus and Demand",
+        "B": "Why Renewables Fail",
+        "C": "Free Power Forever",
+        "D": "No More Safety"
+      },
+      "answer": "A",
+      "explanation": "Captures balancing role and challenges.",
+      "steps": [
+        "1. Summarize passage.",
+        "2. Remove off options.",
+        "3. Pick fit."
+      ],
+      "fastStrategy": "Title = role + challenge.",
+      "id": "rc_e1_p015_q5"
+    }
+  ]
+}

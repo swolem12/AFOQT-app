@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p004",
+  "passage": "Urban planners have begun re-evaluating the role of public green spaces as cities grow denser and populations rise. These areas, which include parks, community gardens, and tree-lined walkways, were once viewed primarily as recreational amenities. Recent research, however, shows that green spaces have measurable effects on public health. They reduce air pollution, lower temperatures during heat waves, and provide residents with opportunities for low-intensity physical activity. Additionally, exposure to natural environments has been linked to reduced stress and improved cognitive function. Despite these benefits, green spaces often face competition from commercial development, especially in fast-growing urban centers. Planners now face the challenge of balancing economic interests with long-term community well-being. Many cities are exploring innovative solutions, such as rooftop gardens and vertical forests, to integrate nature into limited urban land.",
+  "questions": [
+    {
+      "question": "What tension drives the passage?",
+      "choices": {
+        "A": "Green spaces vs. recreation",
+        "B": "Health and environmental benefits vs. development pressure",
+        "C": "Parks vs. agriculture",
+        "D": "Trees vs. transit"
+      },
+      "answer": "B",
+      "explanation": "It contrasts benefits with competition from commercial development.",
+      "steps": [
+        "1. Identify two forces described.",
+        "2. Note competition for land.",
+        "3. Select option reflecting that tension."
+      ],
+      "fastStrategy": "Look for paired contrasts.",
+      "id": "rc_e1_p004_q1"
+    },
+    {
+      "question": "Which benefit is explicitly cited?",
+      "choices": {
+        "A": "Higher rents",
+        "B": "Cooling during heat waves",
+        "C": "More car traffic",
+        "D": "Guaranteed housing"
+      },
+      "answer": "B",
+      "explanation": "Cooling effect is listed among benefits.",
+      "steps": [
+        "1. Recall listed benefits.",
+        "2. Pick the stated one.",
+        "3. Discard unstated outcomes."
+      ],
+      "fastStrategy": "Detail question: match wording.",
+      "id": "rc_e1_p004_q2"
+    },
+    {
+      "question": "What do rooftop gardens and vertical forests signal?",
+      "choices": {
+        "A": "Cities abandon greenery",
+        "B": "Creative integration of nature in dense areas",
+        "C": "Preference for private parks",
+        "D": "Inevitable loss of trees"
+      },
+      "answer": "B",
+      "explanation": "They show innovative ways to add nature with limited land.",
+      "steps": [
+        "1. Note examples given.",
+        "2. Infer purpose: integrate despite constraints.",
+        "3. Choose aligned option."
+      ],
+      "fastStrategy": "Use examples as evidence.",
+      "id": "rc_e1_p004_q3"
+    },
+    {
+      "question": "What purpose does the health research serve?",
+      "choices": {
+        "A": "Oppose parks",
+        "B": "Justify protecting/expanding green spaces",
+        "C": "Promote shopping malls",
+        "D": "Limit outdoor exercise"
+      },
+      "answer": "B",
+      "explanation": "Health evidence supports defending green space amid pressure.",
+      "steps": [
+        "1. See how evidence is used.",
+        "2. Connect to argument for preservation.",
+        "3. Pick matching purpose."
+      ],
+      "fastStrategy": "Evidence usually backs the main argument.",
+      "id": "rc_e1_p004_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Nature\u2019s Edge in Crowded Cities",
+        "B": "Parking Lots vs. Parks",
+        "C": "The Cost of Roofs",
+        "D": "Abandoning Urban Trees"
+      },
+      "answer": "A",
+      "explanation": "Title captures benefit + constraint story.",
+      "steps": [
+        "1. Summarize passage.",
+        "2. Remove narrow/off options.",
+        "3. Pick concise fit."
+      ],
+      "fastStrategy": "Title mirrors central tension.",
+      "id": "rc_e1_p004_q5"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "advanced",
+  "passageId": "rc_a1_p012",
+  "passage": "In many regions, freshwater availability is becoming increasingly uncertain due to shifting weather patterns and growing demand. To help address these challenges, researchers are developing advanced water recycling systems that can treat wastewater to near-drinking quality. These systems use multiple filtration stages, including membranes, ultraviolet light, and activated carbon, to remove contaminants. One of the major advantages of modern recycling technology is its ability to operate efficiently in urban areas where traditional reservoirs cannot be expanded. However, public acceptance remains a significant barrier. Despite scientific evidence supporting safety, many residents are hesitant to adopt recycled water for household use. To overcome this, cities have begun public outreach campaigns that explain how the technology works, highlight successful examples, and emphasize the environmental benefits. As awareness grows, more communities are considering recycled water as a vital component of long-term resource planning.",
+  "questions": [
+    {
+      "question": "What is the main idea about advanced water recycling?",
+      "choices": {
+        "A": "It addresses water scarcity but faces public acceptance challenges.",
+        "B": "It is unsafe and untested.",
+        "C": "It only works in rural reservoirs.",
+        "D": "It eliminates the need for conservation."
+      },
+      "answer": "A",
+      "explanation": "The passage notes high-quality treatment plus a hurdle of public hesitance.",
+      "steps": [
+        "1. Scan opening and closing sentences for the thesis.",
+        "2. Note repeated themes or contrasts.",
+        "3. Eliminate choices that are too narrow or off-topic.",
+        "4. Choose the option that summarizes the whole passage."
+      ],
+      "fastStrategy": "Look for the broadest claim that ties all paragraphs together.",
+      "id": "rc_a1_p012_q1"
+    },
+    {
+      "question": "Which treatment methods are listed?",
+      "choices": {
+        "A": "Only boiling and chlorination.",
+        "B": "Membranes, ultraviolet light, and activated carbon.",
+        "C": "Natural evaporation ponds.",
+        "D": "Ice filtration."
+      },
+      "answer": "B",
+      "explanation": "Multiple filtration stages include membranes, UV, and activated carbon.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p012_q2"
+    },
+    {
+      "question": "What does public outreach aim to overcome?",
+      "choices": {
+        "A": "Lack of filtration technology.",
+        "B": "Legal bans on recycled water.",
+        "C": "Perception barriers despite safety evidence.",
+        "D": "Shortages of activated carbon."
+      },
+      "answer": "C",
+      "explanation": "Residents hesitate; outreach explains safety and benefits to change perceptions.",
+      "steps": [
+        "1. Identify the problem-solution or argument structure.",
+        "2. Note any recommendations or calls to action.",
+        "3. Remove choices that mention only minor details.",
+        "4. Choose the option reflecting the author's intent."
+      ],
+      "fastStrategy": "Purpose answers explain why the author wrote the passage.",
+      "id": "rc_a1_p012_q3"
+    },
+    {
+      "question": "Why are urban areas suited to this technology?",
+      "choices": {
+        "A": "They have limitless reservoir space.",
+        "B": "They need more fertilizer.",
+        "C": "They ban all imports of water.",
+        "D": "Systems fit where new reservoirs cannot be expanded."
+      },
+      "answer": "D",
+      "explanation": "The systems work efficiently in cities where expanding traditional reservoirs is not feasible.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p012_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "The End of Drinking Water",
+        "B": "Winning Trust in Water Recycling",
+        "C": "Why Reservoirs Are Obsolete",
+        "D": "Floods and Filtration"
+      },
+      "answer": "B",
+      "explanation": "Title reflects the technology\u2019s promise and the need for public acceptance.",
+      "steps": [
+        "1. Restate the central idea in a short phrase.",
+        "2. Avoid choices focused on a single detail.",
+        "3. Prefer titles that capture scope and purpose.",
+        "4. Pick the option that best fits the full passage."
+      ],
+      "fastStrategy": "Good titles mirror the main idea in a concise way.",
+      "id": "rc_a1_p012_q5"
+    }
+  ]
+}

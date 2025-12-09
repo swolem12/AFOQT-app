@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p019",
+  "passage": "Public health officials are studying the impact of urban noise on long-term well-being. Constant exposure to traffic, construction, and dense population activity can elevate stress levels, interfere with sleep, and contribute to cardiovascular issues. Unlike sudden loud noises, which may cause immediate hearing damage, chronic noise develops gradually and is harder for people to notice. To better understand its effects, researchers use wearable sound monitors that track exposure throughout the day. These devices reveal that many city residents experience noise levels above recommended limits during both daytime and nighttime hours. In response, some cities are experimenting with noise-reducing pavement, redesigned building layouts, and expanded green spaces to absorb sound. While no single solution can eliminate urban noise, these strategies aim to create healthier environments by reducing its intensity and duration.",
+  "questions": [
+    {
+      "question": "What health concern does chronic urban noise raise?",
+      "choices": {
+        "A": "Improved eyesight",
+        "B": "Stress, sleep disruption, cardiovascular strain",
+        "C": "Instant colds",
+        "D": "Better metabolism"
+      },
+      "answer": "B",
+      "explanation": "Passage ties chronic noise to stress, sleep issues, cardiovascular effects.",
+      "steps": [
+        "1. Recall listed effects.",
+        "2. Pick matching option.",
+        "3. Exclude others."
+      ],
+      "fastStrategy": "Detail recall.",
+      "id": "rc_e1_p019_q1"
+    },
+    {
+      "question": "What do wearables reveal?",
+      "choices": {
+        "A": "Noise below limits",
+        "B": "Exposures above limits day and night",
+        "C": "Only daytime noise",
+        "D": "Silence at night"
+      },
+      "answer": "B",
+      "explanation": "Devices show many residents exceed recommended levels both day/night.",
+      "steps": [
+        "1. Recall measurement finding.",
+        "2. Pick matching option.",
+        "3. Exclude opposites."
+      ],
+      "fastStrategy": "Detail recall.",
+      "id": "rc_e1_p019_q2"
+    },
+    {
+      "question": "What do mitigation experiments imply?",
+      "choices": {
+        "A": "Total silence achievable",
+        "B": "Cities accept permanent noise",
+        "C": "Reducing intensity/duration is realistic even if silence isn\u2019t",
+        "D": "Noise must rise"
+      },
+      "answer": "C",
+      "explanation": "Efforts aim to lessen noise, not eliminate it entirely.",
+      "steps": [
+        "1. Note mitigation goal.",
+        "2. Infer implication.",
+        "3. Pick aligned option."
+      ],
+      "fastStrategy": "Mitigation \u2260 elimination.",
+      "id": "rc_e1_p019_q3"
+    },
+    {
+      "question": "Which intervention is mentioned?",
+      "choices": {
+        "A": "Noise-amplifying pavement",
+        "B": "Noise-reducing pavement and green space",
+        "C": "24/7 sirens",
+        "D": "No building codes"
+      },
+      "answer": "B",
+      "explanation": "Cities test noise-reducing pavement, layouts, green spaces.",
+      "steps": [
+        "1. Recall interventions.",
+        "2. Pick correct set.",
+        "3. Exclude opposites."
+      ],
+      "fastStrategy": "Detail recall.",
+      "id": "rc_e1_p019_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "City Noise and Health: Finding Relief",
+        "B": "Silencing the Suburbs",
+        "C": "Why Noise Helps Sleep",
+        "D": "Traffic Joy"
+      },
+      "answer": "A",
+      "explanation": "Title reflects health impact and mitigation efforts.",
+      "steps": [
+        "1. Summarize passage.",
+        "2. Remove off options.",
+        "3. Pick fit."
+      ],
+      "fastStrategy": "Title = impact + response.",
+      "id": "rc_e1_p019_q5"
+    }
+  ]
+}

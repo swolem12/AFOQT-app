@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p014",
+  "passage": "Wildlife biologists are increasingly using acoustic monitoring systems to study animal populations in remote environments. These devices record natural soundscapes, capturing everything from bird calls to the movement of large mammals. Unlike traditional field surveys, which require researchers to physically visit each location, acoustic monitoring allows continuous observation with minimal disturbance to wildlife. The recordings can reveal patterns in migration, breeding, and habitat use that might otherwise be missed. However, analyzing large amounts of audio data can be challenging. Background noise, such as wind or river flow, often interferes with the clarity of recordings. To address this, researchers are developing software that automatically identifies species-specific sounds using machine learning. While these tools are not yet perfect, they significantly reduce the time required to review data and help scientists better understand how ecosystems are changing over time.",
+  "questions": [
+    {
+      "question": "What makes acoustic monitoring powerful?",
+      "choices": {
+        "A": "No data to review",
+        "B": "Continuous recordings plus ML to detect patterns",
+        "C": "It replaces all fieldwork instantly",
+        "D": "Only captures silence"
+      },
+      "answer": "B",
+      "explanation": "Continuous audio with ML helps reveal migration/breeding despite noise.",
+      "steps": [
+        "1. Identify key combo: continuous + ML.",
+        "2. Pick matching option.",
+        "3. Exclude extremes."
+      ],
+      "fastStrategy": "Combine two main tools.",
+      "id": "rc_e1_p014_q1"
+    },
+    {
+      "question": "What challenge complicates analysis?",
+      "choices": {
+        "A": "No animal sounds",
+        "B": "Background noise obscures signals",
+        "C": "Lack of storage",
+        "D": "No devices"
+      },
+      "answer": "B",
+      "explanation": "Wind/river noise interferes with clarity.",
+      "steps": [
+        "1. Recall obstacle.",
+        "2. Pick matching option.",
+        "3. Exclude others."
+      ],
+      "fastStrategy": "Detail recall.",
+      "id": "rc_e1_p014_q2"
+    },
+    {
+      "question": "What does ML adoption imply?",
+      "choices": {
+        "A": "Manual review time can drop even if models imperfect",
+        "B": "No need to record",
+        "C": "Noise eliminated",
+        "D": "Data unused"
+      },
+      "answer": "A",
+      "explanation": "ML aids ID, reducing review effort though not flawless.",
+      "steps": [
+        "1. Note stated effect.",
+        "2. Pick aligned option.",
+        "3. Exclude exaggerations."
+      ],
+      "fastStrategy": "Imperfect aid still helpful.",
+      "id": "rc_e1_p014_q3"
+    },
+    {
+      "question": "What insight can recordings reveal?",
+      "choices": {
+        "A": "Migration and breeding patterns",
+        "B": "Stock prices",
+        "C": "Tax records",
+        "D": "Planetary orbits"
+      },
+      "answer": "A",
+      "explanation": "Passage cites migration/breeding/habitat use patterns.",
+      "steps": [
+        "1. Recall insights listed.",
+        "2. Pick matching option.",
+        "3. Exclude unrelated."
+      ],
+      "fastStrategy": "Detail recall.",
+      "id": "rc_e1_p014_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Listening Smartly to Wildlife",
+        "B": "Silent Forests",
+        "C": "Noise Ends Ecology",
+        "D": "Why Sound Fails"
+      },
+      "answer": "A",
+      "explanation": "Title captures acoustic + ML approach.",
+      "steps": [
+        "1. Summarize main approach.",
+        "2. Remove off options.",
+        "3. Choose fit."
+      ],
+      "fastStrategy": "Title = approach.",
+      "id": "rc_e1_p014_q5"
+    }
+  ]
+}

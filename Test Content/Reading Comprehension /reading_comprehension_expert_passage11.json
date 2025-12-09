@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p011",
+  "passage": "As coastal cities confront rising sea levels, engineers are exploring a range of adaptation strategies to protect infrastructure and communities. Traditional approaches such as seawalls and levees remain common, but modern planning emphasizes flexible, layered defenses rather than a single solution. One example is the use of \u2018living shorelines,\u2019 which incorporate natural features like wetlands and mangroves to absorb wave energy and reduce erosion. These solutions offer ecological benefits while also strengthening long-term resilience. However, implementing them can be complex, requiring coordination between environmental scientists, city planners, and local residents. In addition, living shorelines are not suitable for every coastline, particularly in areas with high wave intensity or limited space. Despite these challenges, many cities are beginning to combine engineered structures with natural defenses to create more adaptable coastal protection systems. This hybrid approach reflects a shift toward strategies that aim not just to resist changing conditions, but to work with them.",
+  "questions": [
+    {
+      "question": "What strategy does the passage endorse for coastal protection?",
+      "choices": {
+        "A": "Single tall seawalls",
+        "B": "Layered defenses combining engineered and natural elements",
+        "C": "No defenses",
+        "D": "Only wetlands"
+      },
+      "answer": "B",
+      "explanation": "It highlights hybrid approaches with seawalls plus living shorelines.",
+      "steps": [
+        "1. Note described approach.",
+        "2. Select combined strategy.",
+        "3. Exclude extremes."
+      ],
+      "fastStrategy": "Hybrid is key.",
+      "id": "rc_e1_p011_q1"
+    },
+    {
+      "question": "Which benefit of living shorelines is mentioned?",
+      "choices": {
+        "A": "Increase erosion",
+        "B": "Absorb wave energy and aid ecology",
+        "C": "Eliminate planning",
+        "D": "Work only in deserts"
+      },
+      "answer": "B",
+      "explanation": "They reduce erosion and support ecosystems.",
+      "steps": [
+        "1. Recall benefit.",
+        "2. Pick exact match.",
+        "3. Exclude opposites."
+      ],
+      "fastStrategy": "Detail recall.",
+      "id": "rc_e1_p011_q2"
+    },
+    {
+      "question": "What limitation is acknowledged?",
+      "choices": {
+        "A": "Unsuitable in high-energy or space-limited coasts",
+        "B": "Always free",
+        "C": "Ban natural features",
+        "D": "Need no coordination"
+      },
+      "answer": "A",
+      "explanation": "High wave energy or limited space can make them impractical.",
+      "steps": [
+        "1. Find stated limits.",
+        "2. Choose matching option.",
+        "3. Exclude unstated claims."
+      ],
+      "fastStrategy": "Use explicit caveats.",
+      "id": "rc_e1_p011_q3"
+    },
+    {
+      "question": "What does the shift to layered defenses imply?",
+      "choices": {
+        "A": "Rigid barriers are being supplemented",
+        "B": "Sea-level rise ended",
+        "C": "Natural defenses banned",
+        "D": "Only walls remain"
+      },
+      "answer": "A",
+      "explanation": "Cities move from one-size seawalls to adaptable mixes.",
+      "steps": [
+        "1. Identify implication of hybrid approach.",
+        "2. Pick option showing supplementation.",
+        "3. Exclude contradictions."
+      ],
+      "fastStrategy": "Hybrid \u2192 supplement, not abandon.",
+      "id": "rc_e1_p011_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Hybrid Defenses for Rising Seas",
+        "B": "Abandoning Coasts",
+        "C": "Why Wetlands Cause Floods",
+        "D": "Single Walls Win"
+      },
+      "answer": "A",
+      "explanation": "Title reflects layered engineered + natural defenses.",
+      "steps": [
+        "1. Summarize focus.",
+        "2. Remove off-target titles.",
+        "3. Pick fit."
+      ],
+      "fastStrategy": "Title mirrors strategy.",
+      "id": "rc_e1_p011_q5"
+    }
+  ]
+}

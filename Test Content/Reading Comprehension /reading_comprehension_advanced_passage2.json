@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "advanced",
+  "passageId": "rc_a1_p002",
+  "passage": "Autonomous delivery drones were originally designed for commercial package transport, but their use has expanded into humanitarian operations. In regions struck by natural disasters, damaged roads and blocked infrastructure often delay ground-based relief efforts. Drones, however, can navigate over collapsed bridges, flooded terrain, and landslides to reach isolated communities. Their small payload capacity limits the amount of medicine, food, or equipment they can deliver at once, but their speed and ability to deploy in large numbers compensates for this. Emergency planners now integrate drones into early-response protocols, recognizing that rapid delivery of even small quantities of critical supplies can significantly improve survival outcomes. As technology advances, drones are expected to carry heavier loads and operate for longer durations, further increasing their impact during emergencies.",
+  "questions": [
+    {
+      "question": "What is the central claim about disaster-use drones?",
+      "choices": {
+        "A": "They replace the need for ground crews entirely.",
+        "B": "They extend delivery capabilities to cut-off areas despite payload limits.",
+        "C": "They mainly serve commercial routes during disasters.",
+        "D": "They are unsuitable for unstable terrain."
+      },
+      "answer": "B",
+      "explanation": "The passage explains drones reach isolated communities quickly even with small payloads, aiding disaster relief.",
+      "steps": [
+        "1. Scan opening and closing sentences for the thesis.",
+        "2. Note repeated themes or contrasts.",
+        "3. Eliminate choices that are too narrow or off-topic.",
+        "4. Choose the option that summarizes the whole passage."
+      ],
+      "fastStrategy": "Look for the broadest claim that ties all paragraphs together.",
+      "id": "rc_a1_p002_q1"
+    },
+    {
+      "question": "What limitation of drones is emphasized?",
+      "choices": {
+        "A": "They cannot fly in bad weather.",
+        "B": "They require paved landing zones.",
+        "C": "They carry only small payloads at once.",
+        "D": "They are slower than trucks."
+      },
+      "answer": "C",
+      "explanation": "Their small payload capacity is noted as a key constraint.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p002_q2"
+    },
+    {
+      "question": "What does the integration of drones into early-response protocols imply?",
+      "choices": {
+        "A": "They are considered experimental tools only.",
+        "B": "They are used only after roads reopen.",
+        "C": "They are viewed as core assets in the first wave of aid.",
+        "D": "They are deployed solely for surveillance."
+      },
+      "answer": "C",
+      "explanation": "Planners now include drones in early protocols, signaling they are standard assets in initial responses.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p002_q3"
+    },
+    {
+      "question": "How do drones compensate for small payloads?",
+      "choices": {
+        "A": "By deploying many units quickly to deliver critical items.",
+        "B": "By waiting until runways are restored.",
+        "C": "By avoiding long distances.",
+        "D": "By relying on ground vehicles for final delivery."
+      },
+      "answer": "A",
+      "explanation": "The passage notes speed and the ability to deploy in large numbers offsets limited capacity.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p002_q4"
+    },
+    {
+      "question": "Which title best captures the passage?",
+      "choices": {
+        "A": "Why Trucks Beat Drones in Emergencies",
+        "B": "The Limits of Aerial Mapping",
+        "C": "Rapid Aid: Drones in Disaster Relief",
+        "D": "Commercial Drone Marketing"
+      },
+      "answer": "C",
+      "explanation": "The focus is on drones speeding supplies to isolated areas during disasters.",
+      "steps": [
+        "1. Restate the central idea in a short phrase.",
+        "2. Avoid choices focused on a single detail.",
+        "3. Prefer titles that capture scope and purpose.",
+        "4. Pick the option that best fits the full passage."
+      ],
+      "fastStrategy": "Good titles mirror the main idea in a concise way.",
+      "id": "rc_a1_p002_q5"
+    }
+  ]
+}

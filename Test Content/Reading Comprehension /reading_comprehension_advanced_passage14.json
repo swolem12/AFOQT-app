@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "advanced",
+  "passageId": "rc_a1_p014",
+  "passage": "Wildlife biologists are increasingly using acoustic monitoring systems to study animal populations in remote environments. These devices record natural soundscapes, capturing everything from bird calls to the movement of large mammals. Unlike traditional field surveys, which require researchers to physically visit each location, acoustic monitoring allows continuous observation with minimal disturbance to wildlife. The recordings can reveal patterns in migration, breeding, and habitat use that might otherwise be missed. However, analyzing large amounts of audio data can be challenging. Background noise, such as wind or river flow, often interferes with the clarity of recordings. To address this, researchers are developing software that automatically identifies species-specific sounds using machine learning. While these tools are not yet perfect, they significantly reduce the time required to review data and help scientists better understand how ecosystems are changing over time.",
+  "questions": [
+    {
+      "question": "What is the main idea about acoustic monitoring?",
+      "choices": {
+        "A": "It replaces all field biology with labs.",
+        "B": "Continuous audio with machine learning helps study wildlife despite noise challenges.",
+        "C": "It only works for marine animals.",
+        "D": "It reduces the need for data analysis."
+      },
+      "answer": "B",
+      "explanation": "The passage emphasizes continuous recordings and ML tools to analyze them, even with noise hurdles.",
+      "steps": [
+        "1. Scan opening and closing sentences for the thesis.",
+        "2. Note repeated themes or contrasts.",
+        "3. Eliminate choices that are too narrow or off-topic.",
+        "4. Choose the option that summarizes the whole passage."
+      ],
+      "fastStrategy": "Look for the broadest claim that ties all paragraphs together.",
+      "id": "rc_a1_p014_q1"
+    },
+    {
+      "question": "What challenge is highlighted?",
+      "choices": {
+        "A": "Lack of any bird sounds.",
+        "B": "Too few microphones available.",
+        "C": "Background noise can obscure recordings.",
+        "D": "Animals dislike technology."
+      },
+      "answer": "C",
+      "explanation": "Wind and river sounds interfere, complicating analysis.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p014_q2"
+    },
+    {
+      "question": "What does the use of machine learning imply?",
+      "choices": {
+        "A": "Manual review time can be reduced even if tools are imperfect.",
+        "B": "Scientists stop checking data.",
+        "C": "Recordings are now unnecessary.",
+        "D": "Noise is eliminated entirely."
+      },
+      "answer": "A",
+      "explanation": "ML aids species identification, cutting review time though not flawless.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p014_q3"
+    },
+    {
+      "question": "Which insight can recordings reveal?",
+      "choices": {
+        "A": "Patterns in migration and breeding.",
+        "B": "Future stock prices.",
+        "C": "Historical tax records.",
+        "D": "Planetary orbits."
+      },
+      "answer": "A",
+      "explanation": "Passage notes patterns in migration, breeding, and habitat use become visible.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p014_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Silent Forests Forever",
+        "B": "Listening to Wildlife with Smart Audio",
+        "C": "How Noise Ended Ecology",
+        "D": "The Fall of Machine Learning"
+      },
+      "answer": "B",
+      "explanation": "Title captures acoustic monitoring aided by ML.",
+      "steps": [
+        "1. Restate the central idea in a short phrase.",
+        "2. Avoid choices focused on a single detail.",
+        "3. Prefer titles that capture scope and purpose.",
+        "4. Pick the option that best fits the full passage."
+      ],
+      "fastStrategy": "Good titles mirror the main idea in a concise way.",
+      "id": "rc_a1_p014_q5"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p001",
+  "passage": "Wildland firefighting crews operate in conditions that change from minute to minute. Unlike structural firefighting, where buildings remain fixed, a wildfire moves with the wind, dries new fuel as it advances, and creates its own weather patterns. Small changes in humidity, temperature, or wind direction can rapidly turn a manageable situation into a dangerous one. For this reason, crews rely heavily on real-time environmental monitoring. Portable sensors track wind shifts, while satellite data helps crews anticipate the fire\u2019s projected path. Although advanced technology has improved response times, human judgment remains essential. Crews must evaluate terrain, vegetation, and escape routes before committing to a position. The combination of technology and experience allows teams to make informed decisions under extreme pressure.",
+  "questions": [
+    {
+      "question": "What operational stance does the crew adopt toward wildfire behavior?",
+      "choices": {
+        "A": "Assume steady movement",
+        "B": "Treat conditions as volatile and monitor continuously",
+        "C": "Rely on past fire maps",
+        "D": "Wait for humidity to stabilize"
+      },
+      "answer": "B",
+      "explanation": "They regard small weather shifts as dangerous and rely on real-time sensing.",
+      "steps": [
+        "1. Note the emphasis on rapid change.",
+        "2. Identify response: continuous monitoring.",
+        "3. Eliminate options suggesting stability or delay."
+      ],
+      "fastStrategy": "Volatile conditions require constant checks.",
+      "id": "rc_e1_p001_q1"
+    },
+    {
+      "question": "Why does the passage pair technology with human judgment?",
+      "choices": {
+        "A": "Sensors replace terrain reading",
+        "B": "Data can mislead without field context",
+        "C": "Humans cannot read wind",
+        "D": "Satellites are too slow"
+      },
+      "answer": "B",
+      "explanation": "Crews still evaluate terrain and escape routes; tech is supportive, not sufficient.",
+      "steps": [
+        "1. Find statements about tech limits.",
+        "2. Note need for terrain/escape assessment.",
+        "3. Choose the option showing complementary roles."
+      ],
+      "fastStrategy": "Look for balance/limits language.",
+      "id": "rc_e1_p001_q2"
+    },
+    {
+      "question": "Which factor could most suddenly reverse crew safety?",
+      "choices": {
+        "A": "Slight wind shift",
+        "B": "Fuel truck delay",
+        "C": "Radio check",
+        "D": "Nightfall"
+      },
+      "answer": "A",
+      "explanation": "Small changes in wind/humidity/temperature can turn situations dangerous quickly.",
+      "steps": [
+        "1. Locate risks listed.",
+        "2. Identify which are rapid triggers.",
+        "3. Select the factor named as fast-changing."
+      ],
+      "fastStrategy": "Use the text\u2019s specific risk examples.",
+      "id": "rc_e1_p001_q3"
+    },
+    {
+      "question": "What implicit risk does the passage highlight about committing to a position?",
+      "choices": {
+        "A": "Crews forget exits",
+        "B": "Escape routes can close if not preplanned",
+        "C": "Satellites fail at night",
+        "D": "Sensors drain batteries"
+      },
+      "answer": "B",
+      "explanation": "They evaluate escape routes before committing because conditions can trap crews.",
+      "steps": [
+        "1. Note the sequencing: assess terrain/escape before committing.",
+        "2. Infer the danger of blocked exits.",
+        "3. Pick the consequence implied."
+      ],
+      "fastStrategy": "When preplanning is stressed, think what happens without it.",
+      "id": "rc_e1_p001_q4"
+    },
+    {
+      "question": "Which title best captures the passage\u2019s message?",
+      "choices": {
+        "A": "Humidity Alone Predicts Wildfires",
+        "B": "Set-and-Forget Fire Plans",
+        "C": "Real-Time Wildfire Decisions: Tech Plus Judgment",
+        "D": "Why Structural Fires Are Riskier"
+      },
+      "answer": "C",
+      "explanation": "Title reflects volatility and the combined use of sensing and human calls.",
+      "steps": [
+        "1. Extract main theme: rapid change + combined tools.",
+        "2. Remove narrow or off-target titles.",
+        "3. Choose the one summarizing both elements."
+      ],
+      "fastStrategy": "Main idea = volatility + blended decision-making.",
+      "id": "rc_e1_p001_q5"
+    }
+  ]
+}

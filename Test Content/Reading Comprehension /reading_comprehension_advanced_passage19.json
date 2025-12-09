@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "advanced",
+  "passageId": "rc_a1_p019",
+  "passage": "Public health officials are studying the impact of urban noise on long-term well-being. Constant exposure to traffic, construction, and dense population activity can elevate stress levels, interfere with sleep, and contribute to cardiovascular issues. Unlike sudden loud noises, which may cause immediate hearing damage, chronic noise develops gradually and is harder for people to notice. To better understand its effects, researchers use wearable sound monitors that track exposure throughout the day. These devices reveal that many city residents experience noise levels above recommended limits during both daytime and nighttime hours. In response, some cities are experimenting with noise-reducing pavement, redesigned building layouts, and expanded green spaces to absorb sound. While no single solution can eliminate urban noise, these strategies aim to create healthier environments by reducing its intensity and duration.",
+  "questions": [
+    {
+      "question": "What main concern about urban noise is discussed?",
+      "choices": {
+        "A": "It only affects hearing loss in factories.",
+        "B": "Chronic city noise harms health, prompting mitigation efforts.",
+        "C": "Noise has no impact on sleep.",
+        "D": "Short bursts of sound are the only issue."
+      },
+      "answer": "B",
+      "explanation": "The passage links chronic noise to stress, sleep disruption, and cardiovascular issues, leading cities to test solutions.",
+      "steps": [
+        "1. Scan opening and closing sentences for the thesis.",
+        "2. Note repeated themes or contrasts.",
+        "3. Eliminate choices that are too narrow or off-topic.",
+        "4. Choose the option that summarizes the whole passage."
+      ],
+      "fastStrategy": "Look for the broadest claim that ties all paragraphs together.",
+      "id": "rc_a1_p019_q1"
+    },
+    {
+      "question": "What do wearable monitors reveal?",
+      "choices": {
+        "A": "City noise stays below recommended limits.",
+        "B": "Noise is only daytime problem.",
+        "C": "Residents often exceed recommended noise levels day and night.",
+        "D": "Headphones eliminate all exposure."
+      },
+      "answer": "C",
+      "explanation": "Devices show many residents experience above-limit noise both day and night.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p019_q2"
+    },
+    {
+      "question": "What do the mitigation strategies imply?",
+      "choices": {
+        "A": "Noise can be completely eliminated overnight.",
+        "B": "Cities prefer louder environments.",
+        "C": "Sound will always rise with population.",
+        "D": "Reducing intensity and duration is a realistic goal even if silence is impossible."
+      },
+      "answer": "D",
+      "explanation": "Cities use pavement, layouts, and green space to lessen noise, aiming for reduction, not total silence.",
+      "steps": [
+        "1. Locate lines related to the idea.",
+        "2. Consider what is implied rather than directly stated.",
+        "3. Remove choices that add outside information.",
+        "4. Pick the conclusion best supported by the text."
+      ],
+      "fastStrategy": "Base inferences on clues in the passage, not outside knowledge.",
+      "id": "rc_a1_p019_q3"
+    },
+    {
+      "question": "Which health effects are mentioned?",
+      "choices": {
+        "A": "Improved metabolism.",
+        "B": "Enhanced eyesight.",
+        "C": "Instant colds.",
+        "D": "Elevated stress, sleep disruption, and cardiovascular strain."
+      },
+      "answer": "D",
+      "explanation": "The passage cites stress, sleep interference, and cardiovascular issues.",
+      "steps": [
+        "1. Find the sentence that addresses the detail.",
+        "2. Match wording closely to the choices.",
+        "3. Discard answers not stated or overstated.",
+        "4. Select the precise option supported by the passage."
+      ],
+      "fastStrategy": "Match exact wording; detail questions rarely require inference.",
+      "id": "rc_a1_p019_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Silencing the Suburbs",
+        "B": "Listening to the City: Health Costs of Noise",
+        "C": "The Joy of Traffic Jams",
+        "D": "Why Soundproofing Is Impossible"
+      },
+      "answer": "B",
+      "explanation": "Title captures urban noise impacts and mitigation efforts.",
+      "steps": [
+        "1. Restate the central idea in a short phrase.",
+        "2. Avoid choices focused on a single detail.",
+        "3. Prefer titles that capture scope and purpose.",
+        "4. Pick the option that best fits the full passage."
+      ],
+      "fastStrategy": "Good titles mirror the main idea in a concise way.",
+      "id": "rc_a1_p019_q5"
+    }
+  ]
+}

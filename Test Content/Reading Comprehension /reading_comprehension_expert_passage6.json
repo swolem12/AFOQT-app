@@ -1,0 +1,98 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e1_p006",
+  "passage": "Transportation engineers are exploring ways to modernize traffic systems as urban congestion increases. One promising development is the implementation of adaptive traffic signals, which use sensors to monitor real-time conditions at intersections. Unlike traditional signals that operate on fixed timers, adaptive systems adjust the length of green and red lights based on vehicle flow. This approach reduces unnecessary idling, improves travel times, and helps decrease fuel consumption. Early trials have shown notable improvements, particularly during peak commuting hours. However, widespread adoption has been slow. Installing these systems requires upgraded infrastructure, and some cities face budget constraints that delay implementation. Engineers remain optimistic that continued advancements in sensor technology and data processing will eventually make adaptive traffic systems more accessible, leading to smoother and more efficient urban transportation networks.",
+  "questions": [
+    {
+      "question": "What core benefit do adaptive signals provide?",
+      "choices": {
+        "A": "Fixed timing",
+        "B": "Real-time timing that cuts idling and improves flow",
+        "C": "Removal of sensors",
+        "D": "Higher speed limits"
+      },
+      "answer": "B",
+      "explanation": "They adjust to flow, reducing idling and improving travel times.",
+      "steps": [
+        "1. Note described benefit.",
+        "2. Match to option.",
+        "3. Exclude unrelated claims."
+      ],
+      "fastStrategy": "Use stated benefit.",
+      "id": "rc_e1_p006_q1"
+    },
+    {
+      "question": "Which barrier slows adoption?",
+      "choices": {
+        "A": "Too many pedestrians",
+        "B": "Need for infrastructure upgrades and budgets",
+        "C": "Ban on data",
+        "D": "Lack of interest"
+      },
+      "answer": "B",
+      "explanation": "Passage cites upgrade costs and budgets.",
+      "steps": [
+        "1. Identify cited barriers.",
+        "2. Choose matching option.",
+        "3. Remove unstated ones."
+      ],
+      "fastStrategy": "Barrier = cost/infra.",
+      "id": "rc_e1_p006_q2"
+    },
+    {
+      "question": "What does engineer optimism imply?",
+      "choices": {
+        "A": "Costs likely fall with better sensors",
+        "B": "Traffic is unsolvable",
+        "C": "Fixed timers will return",
+        "D": "Data processing will slow"
+      },
+      "answer": "A",
+      "explanation": "They expect tech advances to ease adoption.",
+      "steps": [
+        "1. Note optimism stated.",
+        "2. Infer reason: improving tech/cost.",
+        "3. Pick aligned option."
+      ],
+      "fastStrategy": "Optimism usually tied to tech/cost trends.",
+      "id": "rc_e1_p006_q3"
+    },
+    {
+      "question": "Which outcome is directly mentioned?",
+      "choices": {
+        "A": "Eliminating signals",
+        "B": "Reducing fuel use via less idling",
+        "C": "Doubling fares",
+        "D": "Banning buses"
+      },
+      "answer": "B",
+      "explanation": "Reduced idling lowers fuel use; explicitly noted.",
+      "steps": [
+        "1. Recall listed outcomes.",
+        "2. Choose matching one.",
+        "3. Remove others."
+      ],
+      "fastStrategy": "Detail match.",
+      "id": "rc_e1_p006_q4"
+    },
+    {
+      "question": "Best title?",
+      "choices": {
+        "A": "Signals that Listen to Traffic",
+        "B": "Why Sensors Are Obsolete",
+        "C": "Manual Policing at Intersections",
+        "D": "Banning Pedestrians"
+      },
+      "answer": "A",
+      "explanation": "Captures adaptive, data-driven timing theme.",
+      "steps": [
+        "1. Summarize core idea.",
+        "2. Remove irrelevant titles.",
+        "3. Choose concise fit."
+      ],
+      "fastStrategy": "Title reflects real-time adaptation.",
+      "id": "rc_e1_p006_q5"
+    }
+  ]
+}
