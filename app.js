@@ -5635,6 +5635,7 @@ function selectPlayer(playerId) {
  * Start an AFOQT Practice Test with official AFOQT subjects and difficulty level
  */
 async function startAFOQTPracticeTest(difficulty = 'beginner') {
+    console.log('Starting AFOQT Practice Test with difficulty:', difficulty);
     playSfx('select');
     
     state.quiz.questions = [];
@@ -5646,37 +5647,48 @@ async function startAFOQTPracticeTest(difficulty = 'beginner') {
     
     // Collect official AFOQT subjects
     const officialSubjects = subjects.filter(s => s.isAfoqtOfficialSubject === true);
+    console.log('Found official AFOQT subjects:', officialSubjects.length);
     
     if (officialSubjects.length === 0) {
-        console.warn('No official AFOQT subjects found');
-        state.screen = 'home';
-        render();
-        return;
+        console.warn('No official AFOQT subjects found, using all subjects');
+        // Fallback to all subjects if no official ones are marked
+        officialSubjects.push(...subjects);
     }
     
     const playerId = state.currentPlayer ? state.currentPlayer.id : null;
     const questionCount = 40; // Standard AFOQT test length
     const questionsPerSubject = Math.ceil(questionCount / officialSubjects.length);
     
+    console.log('Aggregating questions from subjects...');
+    
     // Aggregate questions from all official AFOQT subjects
     for (const subject of officialSubjects) {
         const officialTopics = topics.filter(t => 
             t.subjectId === subject.id && 
-            t.isOfficialAfoqtTopic === true
+            (t.isOfficialAfoqtTopic === true || !('isOfficialAfoqtTopic' in t))
         );
         
         if (officialTopics.length === 0) continue;
         
         // Get questions from each official topic
         for (const topic of officialTopics) {
-            const qs = await getQuestionsWithSpacedRepetition(
-                subject.id,
-                topic.id,
-                difficulty,
-                Math.ceil(questionsPerSubject / officialTopics.length),
-                playerId
-            );
-            state.quiz.questions.push(...qs);
+            if (typeof getQuestionsWithSpacedRepetition === 'function') {
+                const qs = await getQuestionsWithSpacedRepetition(
+                    subject.id,
+                    topic.id,
+                    difficulty,
+                    Math.ceil(questionsPerSubject / officialTopics.length),
+                    playerId
+                );
+                state.quiz.questions.push(...qs);
+            } else if (topic.generateQuestion && typeof topic.generateQuestion === 'function') {
+                // Use procedural generator if spaced repetition not available
+                const numToGenerate = Math.ceil(questionsPerSubject / officialTopics.length);
+                for (let i = 0; i < numToGenerate && state.quiz.questions.length < questionCount; i++) {
+                    const q = topic.generateQuestion(difficulty);
+                    if (q) state.quiz.questions.push(q);
+                }
+            }
             
             if (state.quiz.questions.length >= questionCount) break;
         }
@@ -5686,13 +5698,15 @@ async function startAFOQTPracticeTest(difficulty = 'beginner') {
     
     // Fallback: If not enough content-based questions, generate from procedural generators
     if (state.quiz.questions.length < questionCount) {
-        console.warn('Not enough content-based questions, filling with procedural generators');
+        console.warn('Not enough questions (' + state.quiz.questions.length + '), filling with procedural generators');
         const usedQuestions = new Set();
         
         for (const subject of officialSubjects) {
             const subjectTopics = topics.filter(t => t.subjectId === subject.id);
             
             for (const topic of subjectTopics) {
+                if (!topic.generateQuestion || typeof topic.generateQuestion !== 'function') continue;
+                
                 while (state.quiz.questions.length < questionCount && subjectTopics.length > 0) {
                     const question = topic.generateQuestion(difficulty);
                     if (!question) break;
@@ -5711,11 +5725,15 @@ async function startAFOQTPracticeTest(difficulty = 'beginner') {
         }
     }
     
+    console.log('Total questions collected:', state.quiz.questions.length);
+    
     // Shuffle questions
     state.quiz.questions = state.quiz.questions.sort(() => Math.random() - 0.5);
     
     // Limit to exact count
     state.quiz.questions = state.quiz.questions.slice(0, questionCount);
+    
+    console.log('Final question count:', state.quiz.questions.length);
     
     // Initialize quiz state
     state.quiz.currentQuestion = 0;
@@ -5725,6 +5743,7 @@ async function startAFOQTPracticeTest(difficulty = 'beginner') {
     state.quiz.selectedAnswer = null;
     
     state.screen = 'quiz';
+    console.log('Transitioning to quiz screen');
     render();
 }
 
