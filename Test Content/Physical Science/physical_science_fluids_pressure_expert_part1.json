@@ -83,6 +83,6 @@
       "answer": "A",
       "explanation": "Bernoulli with negligible height: P2 = P1 + 0.5ρ(v1^2 − v2^2). With v1 = 2 m/s and v2 = 4 m/s, term = 0.5·850·(4 − 16) = 425·(−12) ≈ −5100 Pa = −5.1 kPa. So P2 ≈ 300 kPa − 5.1 kPa ≈ 295 kPa.",
       "steps": ["Apply Bernoulli ignoring height", "Compute 0.5ρ(v1^2 − v2^2)", "Subtract ~5.1 kPa from 300 kPa", "Pick about 295 kPa"],
-      "fastStrategy": "Higher speed costs a small pressure drop: 300 → roughly 295 kPa."},
+      "fastStrategy": "Higher speed costs a small pressure drop: 300 → roughly 295 kPa."}
   ]
 }

@@ -83,6 +83,6 @@
       "answer": "B",
       "explanation": "Critical angle water→air is θc ≈ arcsin(1/1.33) ≈ 48.8°. At 60° (> θc), total internal reflection occurs.",
       "steps": ["Compute θc for water-air", "Compare incident angle to θc", "Conclude TIR when incident exceeds θc"],
-      "fastStrategy": "60° is well above ~49° critical angle for water, so it totally reflects."},
+      "fastStrategy": "60° is well above ~49° critical angle for water, so it totally reflects."}
   ]
 }

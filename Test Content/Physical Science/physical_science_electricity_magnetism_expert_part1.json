@@ -44,6 +44,7 @@
       "explanation": "Vs/Vp = Ns/Np = 20/100 = 0.20 → Vs = 0.20×120 V = 24 V.",
       "steps": ["Take turns ratio 0.20", "Multiply by 120 V", "Get 24 V"],
       "fastStrategy": "Secondary voltage = primary voltage × (Ns/Np)."
+    },
     {
       "id": "ps_em_e1_006",
       "question": "A 60 Hz AC source has Vrms = 120 V. What is its Vpeak?",
@@ -68,6 +69,7 @@
       "explanation": "ΔΦ = A ΔB = 0.010×0.20 = 0.002 Wb. Multiply by N=100 → 0.2 Wb-turns. emf = 0.2/0.050 ≈ 4.0 V.",
       "steps": ["Compute flux change AΔB", "Multiply by turns", "Divide by Δt"],
       "fastStrategy": "emf = N·A·ΔB / Δt; keep units."
+    },
     {
       "id": "ps_em_e1_009",
       "question": "A 12 V battery with 0.50 Ω internal resistance delivers 1.5 A to a load. What is the load resistance?",
@@ -76,6 +78,7 @@
       "explanation": "Internal drop = I r = 0.75 V. Terminal voltage = 12 − 0.75 = 11.25 V. Load R = 11.25 / 1.5 = 7.5 Ω.",
       "steps": ["Find internal voltage drop", "Subtract from emf", "Divide by current for load R"],
       "fastStrategy": "Subtract internal drop, then use Ohm's law on the load."
+    },
     {
       "id": "ps_em_e1_010",
       "question": "A 5 μF capacitor connected to 300 V stores how much charge?",
@@ -83,6 +86,6 @@
       "answer": "B",
       "explanation": "Q = CV = 5×10^-6 F × 300 V = 1.5×10^-3 C.",
       "steps": ["Multiply capacitance by voltage", "Convert to coulombs"],
-      "fastStrategy": "Use Q=CV directly; watch microfarads."},
+      "fastStrategy": "Use Q=CV directly; watch microfarads."}
   ]
 }
