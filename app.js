@@ -5650,7 +5650,7 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
         state.quiz.questions = generateAfoqtPracticeTest(topic.testConfig);
         state.quiz.mode = 'practiceTestMode'; // Force practice test mode
         state.quiz.showFeedback = false;
-    } else if ((topic.subjectId === 'vocabulary' || topic.subjectId === 'math_knowledge') && typeof getQuestionsWithSpacedRepetition === 'function') {
+    } else if ((topic.subjectId === 'vocabulary' || topic.subjectId === 'word_knowledge' || topic.subjectId === 'verbal_analogies' || topic.subjectId === 'math_knowledge') && typeof getQuestionsWithSpacedRepetition === 'function') {
         // Patch 18: Use content-based questions with spaced repetition for vocabulary and math topics
         const questionCount = mode === 'sprint' ? 5 : 10;
         const playerId = state.currentPlayer ? state.currentPlayer.id : null;
@@ -7264,19 +7264,23 @@ function renderBlockStackIso(uiSpec) {
     if (!uiSpec || !Array.isArray(uiSpec.stacks)) return '';
 
     const width = uiSpec.width || 360;
-    const height = uiSpec.height || 320;
+    const height = uiSpec.height || 360;
     const grid = uiSpec.grid || { cols: 3, rows: 3 };
     const logicalCols = Math.max(1, grid.cols || 3);
     const logicalRows = Math.max(1, grid.rows || 3);
-    const cubeBase = Math.max(22, Math.min(46, Math.min(width / (logicalCols + logicalRows + 1), height / (logicalRows + 4))));
+    
+    // Better cube sizing for isometric view
+    const maxStacks = Math.max(logicalCols, logicalRows);
+    const cubeBase = Math.max(28, Math.min(50, width / (maxStacks * 1.8)));
     const cubeW = cubeBase;
-    const cubeH = Math.round(cubeBase * 0.6);
+    const cubeH = Math.round(cubeBase * 0.58);
 
-    const baseLeft = (width / 2) - (logicalCols * cubeW * 0.45);
-    const baseBottom = cubeH * 1.9;
-    const colStep = cubeW * 0.9;
-    const rowStepX = cubeW * -0.45;
-    const rowStepY = cubeH * 0.95;
+    // Center the grid and provide better spacing
+    const baseLeft = (width / 2) - ((logicalCols - 1) * cubeW * 0.5) - ((logicalRows - 1) * cubeW * 0.25);
+    const baseBottom = Math.max(cubeH * 2, height * 0.15);
+    const colStep = cubeW * 0.866; // √3/2 for proper isometric spacing
+    const rowStepX = -cubeW * 0.433; // -√3/4 for isometric depth
+    const rowStepY = cubeH * 1.0;
 
     const sortedStacks = [...uiSpec.stacks].sort((a, b) => {
         if (a.row !== b.row) return a.row - b.row; // front to back
