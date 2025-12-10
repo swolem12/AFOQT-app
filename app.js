@@ -5630,6 +5630,104 @@ function selectPlayer(playerId) {
 // ============================================================================
 // Quiz Management
 // ============================================================================
+
+/**
+ * Start an AFOQT Practice Test with official AFOQT subjects and difficulty level
+ */
+async function startAFOQTPracticeTest(difficulty = 'beginner') {
+    playSfx('select');
+    
+    state.quiz.questions = [];
+    state.quiz.mode = 'practiceTestMode';
+    state.quiz.difficulty = difficulty;
+    state.quiz.showFeedback = false; // No feedback until end
+    state.quiz.isPracticeTest = true;
+    state.quiz.isAFOQTOfficial = true;
+    
+    // Collect official AFOQT subjects
+    const officialSubjects = subjects.filter(s => s.isAfoqtOfficialSubject === true);
+    
+    if (officialSubjects.length === 0) {
+        console.warn('No official AFOQT subjects found');
+        state.screen = 'home';
+        render();
+        return;
+    }
+    
+    const playerId = state.currentPlayer ? state.currentPlayer.id : null;
+    const questionCount = 40; // Standard AFOQT test length
+    const questionsPerSubject = Math.ceil(questionCount / officialSubjects.length);
+    
+    // Aggregate questions from all official AFOQT subjects
+    for (const subject of officialSubjects) {
+        const officialTopics = topics.filter(t => 
+            t.subjectId === subject.id && 
+            t.isOfficialAfoqtTopic === true
+        );
+        
+        if (officialTopics.length === 0) continue;
+        
+        // Get questions from each official topic
+        for (const topic of officialTopics) {
+            const qs = await getQuestionsWithSpacedRepetition(
+                subject.id,
+                topic.id,
+                difficulty,
+                Math.ceil(questionsPerSubject / officialTopics.length),
+                playerId
+            );
+            state.quiz.questions.push(...qs);
+            
+            if (state.quiz.questions.length >= questionCount) break;
+        }
+        
+        if (state.quiz.questions.length >= questionCount) break;
+    }
+    
+    // Fallback: If not enough content-based questions, generate from procedural generators
+    if (state.quiz.questions.length < questionCount) {
+        console.warn('Not enough content-based questions, filling with procedural generators');
+        const usedQuestions = new Set();
+        
+        for (const subject of officialSubjects) {
+            const subjectTopics = topics.filter(t => t.subjectId === subject.id);
+            
+            for (const topic of subjectTopics) {
+                while (state.quiz.questions.length < questionCount && subjectTopics.length > 0) {
+                    const question = topic.generateQuestion(difficulty);
+                    if (!question) break;
+                    
+                    const questionKey = `${question.prompt}|${question.options[question.correctIndex]}`;
+                    if (!usedQuestions.has(questionKey)) {
+                        usedQuestions.add(questionKey);
+                        state.quiz.questions.push(question);
+                    }
+                }
+                
+                if (state.quiz.questions.length >= questionCount) break;
+            }
+            
+            if (state.quiz.questions.length >= questionCount) break;
+        }
+    }
+    
+    // Shuffle questions
+    state.quiz.questions = state.quiz.questions.sort(() => Math.random() - 0.5);
+    
+    // Limit to exact count
+    state.quiz.questions = state.quiz.questions.slice(0, questionCount);
+    
+    // Initialize quiz state
+    state.quiz.currentQuestion = 0;
+    state.quiz.answers = [];
+    state.quiz.isAnswered = false;
+    state.quiz.timeStarted = Date.now();
+    state.quiz.selectedAnswer = null;
+    
+    state.screen = 'quiz';
+    render();
+}
+
 async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     const topic = topics.find(t => t.id === topicId);
     if (!topic) return;
@@ -6072,9 +6170,13 @@ function render() {
         case 'home':
             root.innerHTML = renderHome();
             break;
-        case 'subject':
-            root.innerHTML = renderSubject();
+        case 'subject-list':
+            root.innerHTML = renderSubjectList();
             break;
+        case 'afoqt-practice':
+            root.innerHTML = renderAFOQTDifficultySelect();
+            break;
+        case 'subject':
         case 'mode-select':
             root.innerHTML = renderModeSelect();
             break;
@@ -6167,10 +6269,11 @@ function renderLogin() {
 
 function renderHome() {
     const playerInfo = state.currentPlayer ? computePlayerTotals(state.currentPlayer) : null;
+    const testResults = state.currentPlayer && state.currentPlayer.testResults ? state.currentPlayer.testResults : [];
     
     return `
         <div class="panel">
-            <h1 class="panel-header" style="text-align: center; margin-bottom: 20px;">AFOQT QUEST</h1>
+            <h1 class="panel-header">AFOQT QUEST</h1>
             
             <div class="home-controls-box">
                 <div class="header-controls">
@@ -6187,9 +6290,6 @@ function renderHome() {
                         <button class="btn btn-small" id="achievements-btn">
                             🏆 Awards
                         </button>
-                        <button class="btn btn-small" id="results-btn">
-                            📈 Results
-                        </button>
                     ` : ''}
                     <button class="btn btn-small" id="settings-btn">
                         ⚙ Settings
@@ -6197,15 +6297,39 @@ function renderHome() {
                 </div>
             </div>
             
-            <h2>Subjects</h2>
-            <div class="grid grid-2">
-                ${subjects.map(subject => `
-                    <div class="tile" data-subject-id="${subject.id}">
-                        <div class="tile-title">${subject.name}</div>
-                        <div class="tile-description">${subject.description}</div>
-                    </div>
-                `).join('')}
+            <div class="home-main-grid">
+                <div class="home-primary-tile" id="practice-test-selector">
+                    <div class="home-tile-icon">🧠</div>
+                    <div class="home-tile-title">AFOQT PRACTICE</div>
+                    <div class="home-tile-subtitle">Full-Length Timed Test</div>
+                    <div class="home-tile-description">Complete official AFOQT sections with realistic timing and scoring</div>
+                </div>
+                
+                <div class="home-primary-tile" id="subjects-selector">
+                    <div class="home-tile-icon">📚</div>
+                    <div class="home-tile-title">SUBJECTS</div>
+                    <div class="home-tile-subtitle">Topic Practice</div>
+                    <div class="home-tile-description">Master individual topics with targeted drills by difficulty</div>
+                </div>
             </div>
+            
+            ${testResults.length > 0 ? `
+            <div class="home-secondary-section">
+                <h2 class="home-section-title">Test Results & Analytics</h2>
+                <div class="home-results-grid">
+                    ${testResults.slice().reverse().map((result, idx) => `
+                        <div class="home-result-card">
+                            <div class="home-result-label">Attempt ${testResults.length - idx}</div>
+                            <div class="home-result-score">${Math.round(result.compositeScore || 0)}</div>
+                            <div class="home-result-detail">Composite</div>
+                            <div class="home-result-detail" style="margin-top: 0.5rem;">Difficulty: ${(result.difficulty || 'unknown').toUpperCase()}</div>
+                            <div class="home-result-detail">Date: ${new Date(result.timestamp || Date.now()).toLocaleDateString()}</div>
+                            <div class="home-result-detail" style="margin-top: 0.5rem; color: #ffaa00;">Blanks: ${result.blanksPerSection ? Object.values(result.blanksPerSection).reduce((a, b) => a + b, 0) : 0}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+            ` : ``}
         </div>
         ${renderFloatingNav({ showBack: false })}
         
@@ -6262,6 +6386,81 @@ function renderPlayerModal() {
                 </div>
             </div>
         </div>
+    `;
+}
+
+/**
+ * Render Subject List - Shows all available subjects for practice
+ */
+function renderSubjectList() {
+    return `
+        <div class="panel">
+            <h1 class="panel-header">SUBJECTS</h1>
+            
+            <div class="action-buttons quiz-action-buttons" style="margin-bottom: 20px;">
+                <button class="btn" id="home-btn">🏠 Home</button>
+            </div>
+            
+            <div class="grid grid-3">
+                ${subjects.map(subject => `
+                    <div class="tile" data-subject-id="${subject.id}" style="cursor: pointer;">
+                        <div class="tile-title">${subject.name}</div>
+                        <div class="tile-description">${subject.description}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+        ${renderFloatingNav({ showBack: true })}
+        ${renderPlayerModal()}
+    `;
+}
+
+/**
+ * Render AFOQT Practice Difficulty Select - Choose difficulty for official AFOQT practice test
+ */
+function renderAFOQTDifficultySelect() {
+    return `
+        <div class="panel">
+            <h1 class="panel-header">AFOQT PRACTICE</h1>
+            
+            <div style="margin: 40px 0; text-align: center;">
+                <p style="margin-bottom: 30px; color: rgba(0, 255, 255, 0.8);">Select Difficulty Level</p>
+                
+                <div class="grid grid-3" style="max-width: 900px; margin: 0 auto;">
+                    <div class="tile mode-tile" id="practice-beginner-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">🟢 BEGINNER</div>
+                        <div class="tile-description">
+                            • Fundamental concepts<br>
+                            • 40 questions<br>
+                            • No time pressure<br>
+                            • Great for learning
+                        </div>
+                    </div>
+                    
+                    <div class="tile mode-tile" id="practice-advanced-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">🟡 ADVANCED</div>
+                        <div class="tile-description">
+                            • Realistic difficulty<br>
+                            • 40 questions<br>
+                            • Timed sections<br>
+                            • Official format
+                        </div>
+                    </div>
+                    
+                    <div class="tile mode-tile" id="practice-expert-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">🔴 EXPERT</div>
+                        <div class="tile-description">
+                            • Advanced concepts<br>
+                            • 40 questions<br>
+                            • Strict timing<br>
+                            • Maximum challenge
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        ${renderFloatingNav({ showBack: true })}
+        ${renderPlayerModal()}
     `;
 }
 
@@ -9974,6 +10173,26 @@ function attachEventListeners() {
         });
     });
     
+    // NEW: Home page primary selectors - AFOQT Practice
+    const practiceTestSelector = document.getElementById('practice-test-selector');
+    if (practiceTestSelector) {
+        practiceTestSelector.addEventListener('click', () => {
+            state.screen = 'afoqt-practice';
+            playSfx('select');
+            render();
+        });
+    }
+    
+    // NEW: Home page primary selectors - Subjects
+    const subjectsSelector = document.getElementById('subjects-selector');
+    if (subjectsSelector) {
+        subjectsSelector.addEventListener('click', () => {
+            state.screen = 'subject-list';
+            playSfx('select');
+            render();
+        });
+    }
+    
     // Topic tiles
     const topicTiles = document.querySelectorAll('[data-topic-id]');
     topicTiles.forEach(tile => {
@@ -10055,6 +10274,31 @@ function attachEventListeners() {
             if (state.currentTopic) {
                 startQuiz(state.currentTopic.id, 'practice', 'expert');
             }
+        });
+    }
+    
+    // NEW: AFOQT Practice difficulty buttons
+    const practiceBeginnerBtn = document.getElementById('practice-beginner-btn');
+    if (practiceBeginnerBtn) {
+        practiceBeginnerBtn.addEventListener('click', () => {
+            // Start AFOQT practice test with beginner difficulty
+            startAFOQTPracticeTest('beginner');
+        });
+    }
+    
+    const practiceAdvancedBtn = document.getElementById('practice-advanced-btn');
+    if (practiceAdvancedBtn) {
+        practiceAdvancedBtn.addEventListener('click', () => {
+            // Start AFOQT practice test with advanced difficulty
+            startAFOQTPracticeTest('advanced');
+        });
+    }
+    
+    const practiceExpertBtn = document.getElementById('practice-expert-btn');
+    if (practiceExpertBtn) {
+        practiceExpertBtn.addEventListener('click', () => {
+            // Start AFOQT practice test with expert difficulty
+            startAFOQTPracticeTest('expert');
         });
     }
     
