@@ -5732,7 +5732,7 @@ async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
     console.log('Total questions for full AFOQT test:', state.quiz.questions.length);
     
     // Initialize quiz state
-    state.quiz.currentQuestion = 0;
+    state.quiz.currentIndex = 0;
     state.quiz.answers = [];
     state.quiz.isAnswered = false;
     state.quiz.timeStarted = Date.now();
@@ -5981,7 +5981,7 @@ function advanceToNextSection() {
     if (state.quiz.currentSection < state.quiz.sections.length - 1) {
         state.quiz.currentSection++;
         state.quiz.sectionTimeStarted = Date.now();
-        state.quiz.currentQuestion = state.quiz.sections[state.quiz.currentSection].startIndex;
+        state.quiz.currentIndex = state.quiz.sections[state.quiz.currentSection].startIndex;
         console.log('Advanced to section', state.quiz.currentSection + 1);
         render();
     } else {
@@ -6071,11 +6071,11 @@ function nextQuestion() {
     // For AFOQT practice tests with sections
     if (state.quiz.sections && state.quiz.sections.length > 0) {
         const currentSection = state.quiz.sections[state.quiz.currentSection];
-        const nextQuestionIndex = state.quiz.currentQuestion + 1;
-        
+        const nextIndex = state.quiz.currentIndex + 1;
+
         // Check if next question is in the same section
-        if (nextQuestionIndex <= currentSection.endIndex) {
-            state.quiz.currentQuestion = nextQuestionIndex;
+        if (nextIndex <= currentSection.endIndex) {
+            state.quiz.currentIndex = nextIndex;
             state.quiz.selectedAnswer = null;
             render();
         } else {
@@ -6083,7 +6083,7 @@ function nextQuestion() {
             if (state.quiz.currentSection < state.quiz.sections.length - 1) {
                 state.quiz.currentSection++;
                 state.quiz.sectionTimeStarted = Date.now();
-                state.quiz.currentQuestion = state.quiz.sections[state.quiz.currentSection].startIndex;
+                state.quiz.currentIndex = state.quiz.sections[state.quiz.currentSection].startIndex;
                 state.quiz.selectedAnswer = null;
                 console.log('Advanced to section', state.quiz.currentSection + 1);
                 render();
@@ -8354,7 +8354,7 @@ function renderQuiz() {
                     ` : `
                         <strong>${state.quiz.isPracticeTest ? 'AFOQT Practice Test' : (state.currentTopic ? state.currentTopic.name : 'Quiz')}</strong><br>
                     `}
-                    Question ${state.quiz.currentQuestion + 1} / ${state.quiz.questions.length}
+                    Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}
                     ${modeLabel}
                 </div>
                 <div class="timer" id="section-timer">
