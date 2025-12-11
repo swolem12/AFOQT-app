@@ -9839,6 +9839,8 @@ async function loadDetailedAnalytics() {
 // Event Listeners
 // ============================================================================
 function attachEventListeners() {
+    console.log('attachEventListeners called');
+    
     // Login screen - Character selection
     const selectPlayerBtns = document.querySelectorAll('.select-player-btn');
     selectPlayerBtns.forEach(btn => {
@@ -10186,6 +10188,7 @@ function attachEventListeners() {
     
     // Subject tiles
     const subjectTiles = document.querySelectorAll('[data-subject-id]');
+    console.log('Found subject tiles:', subjectTiles.length);
     subjectTiles.forEach(tile => {
         tile.addEventListener('click', () => {
             goToSubject(tile.dataset.subjectId);
@@ -10194,8 +10197,10 @@ function attachEventListeners() {
     
     // NEW: Home page primary selectors - AFOQT Practice
     const practiceTestSelector = document.getElementById('practice-test-selector');
+    console.log('Found practice test selector:', !!practiceTestSelector);
     if (practiceTestSelector) {
         practiceTestSelector.addEventListener('click', () => {
+            console.log('Practice test selector clicked');
             state.screen = 'afoqt-practice';
             playSfx('select');
             render();
@@ -10204,8 +10209,10 @@ function attachEventListeners() {
     
     // NEW: Home page primary selectors - Subjects
     const subjectsSelector = document.getElementById('subjects-selector');
+    console.log('Found subjects selector:', !!subjectsSelector);
     if (subjectsSelector) {
         subjectsSelector.addEventListener('click', () => {
+            console.log('Subjects selector clicked');
             state.screen = 'subject-list';
             playSfx('select');
             render();
@@ -10301,7 +10308,10 @@ function attachEventListeners() {
     if (afoqtBeginnerBtn) {
         afoqtBeginnerBtn.addEventListener('click', () => {
             console.log('AFOQT Beginner button clicked');
-            _startAFOQTPracticeTestAsync('beginner');
+            _startAFOQTPracticeTestAsync('beginner').catch(err => {
+                console.error('Error starting AFOQT test:', err);
+                playSfx('wrong');
+            });
         });
     }
     
@@ -10309,7 +10319,10 @@ function attachEventListeners() {
     if (afoqtAdvancedBtn) {
         afoqtAdvancedBtn.addEventListener('click', () => {
             console.log('AFOQT Advanced button clicked');
-            _startAFOQTPracticeTestAsync('advanced');
+            _startAFOQTPracticeTestAsync('advanced').catch(err => {
+                console.error('Error starting AFOQT test:', err);
+                playSfx('wrong');
+            });
         });
     }
     
@@ -10317,7 +10330,10 @@ function attachEventListeners() {
     if (afoqtExpertBtn) {
         afoqtExpertBtn.addEventListener('click', () => {
             console.log('AFOQT Expert button clicked');
-            _startAFOQTPracticeTestAsync('expert');
+            _startAFOQTPracticeTestAsync('expert').catch(err => {
+                console.error('Error starting AFOQT test:', err);
+                playSfx('wrong');
+            });
         });
     }
     
