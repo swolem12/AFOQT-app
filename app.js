@@ -5634,7 +5634,7 @@ function selectPlayer(playerId) {
 /**
  * Start an AFOQT Practice Test with official AFOQT subjects and difficulty level
  */
-async function startAFOQTPracticeTest(difficulty = 'beginner') {
+async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
     console.log('Starting AFOQT Practice Test with difficulty:', difficulty);
     playSfx('select');
     
@@ -5747,8 +5747,20 @@ async function startAFOQTPracticeTest(difficulty = 'beginner') {
     render();
 }
 
-// Expose to window for inline onclick handlers
-window.startAFOQTPracticeTest = startAFOQTPracticeTest;
+// Create a synchronous wrapper that handles the async function properly
+window.startAFOQTPracticeTest = function(difficulty = 'beginner') {
+    try {
+        console.log('onclick handler called with difficulty:', difficulty);
+        // Call async function and don't wait - let it update state
+        _startAFOQTPracticeTestAsync(difficulty).catch(err => {
+            console.error('Error in startAFOQTPracticeTest:', err);
+            playSfx('wrong');
+        });
+    } catch (err) {
+        console.error('Error calling startAFOQTPracticeTest:', err);
+        playSfx('wrong');
+    }
+};
 
 async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     const topic = topics.find(t => t.id === topicId);
