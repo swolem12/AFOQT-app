@@ -5634,108 +5634,100 @@ function selectPlayer(playerId) {
 // ============================================================================
 
 /**
- * Start an AFOQT Practice Test with official AFOQT subjects and difficulty level
+ * Start an AFOQT Practice Test following full_afoqt_practice_test_config_v1.json structure
  */
 async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
     console.log('Starting AFOQT Practice Test with difficulty:', difficulty);
     playSfx('select');
     
+    // Initialize AFOQT practice test state
     state.quiz.questions = [];
     state.quiz.mode = 'practiceTestMode';
     state.quiz.difficulty = difficulty;
     state.quiz.showFeedback = false; // No feedback until end
     state.quiz.isPracticeTest = true;
     state.quiz.isAFOQTOfficial = true;
+    state.quiz.sections = [];
+    state.quiz.currentSection = 0;
+    state.quiz.sectionScores = {};
     
-    // Collect official AFOQT subjects
-    const officialSubjects = subjects.filter(s => s.isAfoqtOfficialSubject === true);
-    console.log('Found official AFOQT subjects:', officialSubjects.length);
+    // AFOQT section configuration - following the official spec
+    const sectionConfig = [
+        { name: 'Verbal Analogies', topicId: 'verbal_analogies', count: 25 },
+        { name: 'Arithmetic Reasoning', topicId: 'arithmetic_reasoning', count: 25 },
+        { name: 'Word Knowledge', topicId: 'vocabulary', count: 25 },
+        { name: 'Math Knowledge', topicId: 'math_knowledge', count: 25 },
+        { name: 'Reading Comprehension', topicId: 'reading_comprehension', count: 25 },
+        { name: 'Physical Science', topicId: 'physical_science', count: 20 },
+        { name: 'Table Reading', topicId: 'table_reading', count: 40 },
+        { name: 'Instrument Comprehension', topicId: 'instrument_comprehension', count: 25 },
+        { name: 'Block Counting', topicId: 'block_counting', count: 30 }
+    ];
     
-    if (officialSubjects.length === 0) {
-        console.warn('No official AFOQT subjects found, using all subjects');
-        // Fallback to all subjects if no official ones are marked
-        officialSubjects.push(...subjects);
-    }
+    console.log('Loading AFOQT sections...');
     
     const playerId = state.currentPlayer ? state.currentPlayer.id : null;
-    const questionCount = 40; // Standard AFOQT test length
-    const questionsPerSubject = Math.ceil(questionCount / officialSubjects.length);
     
-    console.log('Aggregating questions from subjects...');
-    
-    // Aggregate questions from all official AFOQT subjects
-    for (const subject of officialSubjects) {
-        const officialTopics = topics.filter(t => 
-            t.subjectId === subject.id && 
-            (t.isOfficialAfoqtTopic === true || !('isOfficialAfoqtTopic' in t))
-        );
+    // Process each section according to config
+    for (const section of sectionConfig) {
+        const matchingTopics = topics.filter(t => t.id === section.topicId);
+        let sectionQuestions = [];
         
-        if (officialTopics.length === 0) continue;
-        
-        // Get questions from each official topic
-        for (const topic of officialTopics) {
+        for (const topic of matchingTopics) {
             if (typeof getQuestionsWithSpacedRepetition === 'function') {
-                const qs = await getQuestionsWithSpacedRepetition(
-                    subject.id,
-                    topic.id,
-                    difficulty,
-                    Math.ceil(questionsPerSubject / officialTopics.length),
-                    playerId
-                );
-                state.quiz.questions.push(...qs);
-            } else if (topic.generateQuestion && typeof topic.generateQuestion === 'function') {
-                // Use procedural generator if spaced repetition not available
-                const numToGenerate = Math.ceil(questionsPerSubject / officialTopics.length);
-                for (let i = 0; i < numToGenerate && state.quiz.questions.length < questionCount; i++) {
-                    const q = topic.generateQuestion(difficulty);
-                    if (q) state.quiz.questions.push(q);
+                try {
+                    const qs = await getQuestionsWithSpacedRepetition(
+                        topic.subjectId || section.topicId,
+                        section.topicId,
+                        difficulty,
+                        section.count,
+                        playerId
+                    );
+                    sectionQuestions.push(...qs);
+                } catch (e) {
+                    console.warn(`Failed to load via spaced repetition for ${section.topicId}:`, e);
                 }
             }
             
-            if (state.quiz.questions.length >= questionCount) break;
-        }
-        
-        if (state.quiz.questions.length >= questionCount) break;
-    }
-    
-    // Fallback: If not enough content-based questions, generate from procedural generators
-    if (state.quiz.questions.length < questionCount) {
-        console.warn('Not enough questions (' + state.quiz.questions.length + '), filling with procedural generators');
-        const usedQuestions = new Set();
-        
-        for (const subject of officialSubjects) {
-            const subjectTopics = topics.filter(t => t.subjectId === subject.id);
-            
-            for (const topic of subjectTopics) {
-                if (!topic.generateQuestion || typeof topic.generateQuestion !== 'function') continue;
-                
-                while (state.quiz.questions.length < questionCount && subjectTopics.length > 0) {
-                    const question = topic.generateQuestion(difficulty);
-                    if (!question) break;
-                    
-                    const questionKey = `${question.prompt}|${question.options[question.correctIndex]}`;
-                    if (!usedQuestions.has(questionKey)) {
-                        usedQuestions.add(questionKey);
-                        state.quiz.questions.push(question);
+            // Fallback to procedural generation
+            if (sectionQuestions.length < section.count && topic.generateQuestion) {
+                const needed = section.count - sectionQuestions.length;
+                for (let i = 0; i < needed; i++) {
+                    const q = topic.generateQuestion(difficulty);
+                    if (q) {
+                        q._section = section.name;
+                        q._topicId = section.topicId;
+                        sectionQuestions.push(q);
                     }
                 }
-                
-                if (state.quiz.questions.length >= questionCount) break;
             }
-            
-            if (state.quiz.questions.length >= questionCount) break;
         }
+        
+        // Ensure we have exactly the right count
+        sectionQuestions = sectionQuestions.slice(0, section.count);
+        
+        // Add metadata
+        sectionQuestions.forEach((q, idx) => {
+            q._section = section.name;
+            q._sectionIndex = state.quiz.sections.length;
+            q._questionInSection = idx + 1;
+            q._topicId = section.topicId;
+        });
+        
+        // Store section metadata
+        state.quiz.sections.push({
+            name: section.name,
+            topicId: section.topicId,
+            totalQuestions: sectionQuestions.length,
+            startIndex: state.quiz.questions.length,
+            endIndex: state.quiz.questions.length + sectionQuestions.length - 1
+        });
+        
+        state.quiz.questions.push(...sectionQuestions);
+        console.log(`Loaded ${sectionQuestions.length} questions for ${section.name}`);
     }
     
-    console.log('Total questions collected:', state.quiz.questions.length);
-    
-    // Shuffle questions
-    state.quiz.questions = state.quiz.questions.sort(() => Math.random() - 0.5);
-    
-    // Limit to exact count
-    state.quiz.questions = state.quiz.questions.slice(0, questionCount);
-    
-    console.log('Final question count:', state.quiz.questions.length);
+    console.log('Total questions for full AFOQT test:', state.quiz.questions.length);
     
     // Initialize quiz state
     state.quiz.currentQuestion = 0;
@@ -5745,7 +5737,7 @@ async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
     state.quiz.selectedAnswer = null;
     
     state.screen = 'quiz';
-    console.log('Transitioning to quiz screen');
+    console.log('Transitioning to quiz screen with', state.quiz.questions.length, 'questions across', state.quiz.sections.length, 'sections');
     render();
 }
 
@@ -8244,8 +8236,13 @@ function renderQuiz() {
             
             <div class="quiz-header">
                 <div class="quiz-info">
-                    <strong>${state.quiz.isPracticeTest ? 'AFOQT Practice Test' : (state.currentTopic ? state.currentTopic.name : 'Quiz')}</strong><br>
-                    Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}
+                    ${state.quiz.sections.length > 0 ? `
+                        <strong>${state.quiz.isPracticeTest ? 'AFOQT Practice Test' : (state.currentTopic ? state.currentTopic.name : 'Quiz')}</strong><br>
+                        <span style="font-size: 0.9em; color: #00ff00;">Section ${state.quiz.currentSection + 1}/${state.quiz.sections.length}: ${state.quiz.sections[state.quiz.currentSection].name}</span><br>
+                    ` : `
+                        <strong>${state.quiz.isPracticeTest ? 'AFOQT Practice Test' : (state.currentTopic ? state.currentTopic.name : 'Quiz')}</strong><br>
+                    `}
+                    Question ${state.quiz.currentQuestion + 1} / ${state.quiz.questions.length}
                     ${modeLabel}
                 </div>
                 <div class="timer">60.0s</div>
