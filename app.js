@@ -8244,7 +8244,7 @@ function renderQuiz() {
             
             <div class="quiz-header">
                 <div class="quiz-info">
-                    <strong>${state.currentTopic.name}</strong><br>
+                    <strong>${state.quiz.isPracticeTest ? 'AFOQT Practice Test' : (state.currentTopic ? state.currentTopic.name : 'Quiz')}</strong><br>
                     Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}
                     ${modeLabel}
                 </div>
