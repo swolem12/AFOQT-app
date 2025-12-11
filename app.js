@@ -5653,15 +5653,15 @@ async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
     
     // AFOQT section configuration - following the official spec
     const sectionConfig = [
-        { name: 'Verbal Analogies', topicId: 'verbal_analogies', count: 25 },
-        { name: 'Arithmetic Reasoning', topicId: 'arithmetic_reasoning', count: 25 },
-        { name: 'Word Knowledge', topicId: 'vocabulary', count: 25 },
-        { name: 'Math Knowledge', topicId: 'math_knowledge', count: 25 },
-        { name: 'Reading Comprehension', topicId: 'reading_comprehension', count: 25 },
-        { name: 'Physical Science', topicId: 'physical_science', count: 20 },
-        { name: 'Table Reading', topicId: 'table_reading', count: 40 },
-        { name: 'Instrument Comprehension', topicId: 'instrument_comprehension', count: 25 },
-        { name: 'Block Counting', topicId: 'block_counting', count: 30 }
+        { name: 'Verbal Analogies', topicId: 'verbal_analogies', count: 25, timeSeconds: 480 },
+        { name: 'Arithmetic Reasoning', topicId: 'arithmetic_reasoning', count: 25, timeSeconds: 1740 },
+        { name: 'Word Knowledge', topicId: 'vocabulary', count: 25, timeSeconds: 300 },
+        { name: 'Math Knowledge', topicId: 'math_knowledge', count: 25, timeSeconds: 1320 },
+        { name: 'Reading Comprehension', topicId: 'reading_comprehension', count: 25, timeSeconds: 2280 },
+        { name: 'Physical Science', topicId: 'physical_science', count: 20, timeSeconds: 600 },
+        { name: 'Table Reading', topicId: 'table_reading', count: 40, timeSeconds: 420 },
+        { name: 'Instrument Comprehension', topicId: 'instrument_comprehension', count: 25, timeSeconds: 300 },
+        { name: 'Block Counting', topicId: 'block_counting', count: 30, timeSeconds: 270 }
     ];
     
     console.log('Loading AFOQT sections...');
@@ -5720,7 +5720,9 @@ async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
             topicId: section.topicId,
             totalQuestions: sectionQuestions.length,
             startIndex: state.quiz.questions.length,
-            endIndex: state.quiz.questions.length + sectionQuestions.length - 1
+            endIndex: state.quiz.questions.length + sectionQuestions.length - 1,
+            timeSeconds: section.timeSeconds,
+            timeRemaining: section.timeSeconds
         });
         
         state.quiz.questions.push(...sectionQuestions);
@@ -5734,6 +5736,7 @@ async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
     state.quiz.answers = [];
     state.quiz.isAnswered = false;
     state.quiz.timeStarted = Date.now();
+    state.quiz.sectionTimeStarted = Date.now();
     state.quiz.selectedAnswer = null;
     
     state.screen = 'quiz';
@@ -5904,18 +5907,73 @@ function startQuestionTimer() {
 }
 
 function updateTimerDisplay() {
-    const timerEl = document.querySelector('.timer');
+    const timerEl = document.getElementById('section-timer') || document.querySelector('.timer');
     if (!timerEl) return;
     
-    const elapsed = (Date.now() - state.quiz.questionStartTime) / 1000;
-    const remaining = 60 - elapsed;
-    
-    timerEl.textContent = formatTime(remaining) + 's';
-    
-    if (remaining < 0) {
-        timerEl.classList.add('negative');
+    // For AFOQT practice tests with sections, show section time
+    if (state.quiz.sections && state.quiz.sections.length > 0) {
+        const currentSection = state.quiz.sections[state.quiz.currentSection];
+        if (!currentSection) return;
+        
+        const elapsedSeconds = (Date.now() - state.quiz.sectionTimeStarted) / 1000;
+        const remainingSeconds = Math.max(0, currentSection.timeSeconds - elapsedSeconds);
+        
+        const minutes = Math.floor(remainingSeconds / 60);
+        const seconds = Math.floor(remainingSeconds % 60);
+        timerEl.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        
+        // Color change when time is running out
+        if (remainingSeconds < 60) {
+            timerEl.style.color = '#ff6666';
+        } else if (remainingSeconds < 300) {
+            timerEl.style.color = '#ffff00';
+        } else {
+            timerEl.style.color = '#00ffff';
+        }
+        
+        // Auto-submit section when time expires
+        if (remainingSeconds <= 0) {
+            console.log('Section time expired, moving to next section');
+            advanceToNextSection();
+        }
     } else {
-        timerEl.classList.remove('negative');
+        // Fall back to question timer
+        const elapsed = (Date.now() - state.quiz.questionStartTime) / 1000;
+        const remaining = 60 - elapsed;
+        
+        timerEl.textContent = formatTime(remaining) + 's';
+        
+        if (remaining < 0) {
+            timerEl.classList.add('negative');
+        } else {
+            timerEl.classList.remove('negative');
+        }
+    }
+}
+
+function advanceToNextSection() {
+    // Auto-submit any unanswered questions in current section
+    const currentSection = state.quiz.sections[state.quiz.currentSection];
+    if (!currentSection) return;
+    
+    for (let i = currentSection.startIndex; i <= currentSection.endIndex; i++) {
+        if (!state.quiz.answers[i]) {
+            state.quiz.answers[i] = null; // Mark as blank
+        }
+    }
+    
+    // Move to next section
+    if (state.quiz.currentSection < state.quiz.sections.length - 1) {
+        state.quiz.currentSection++;
+        state.quiz.sectionTimeStarted = Date.now();
+        state.quiz.currentQuestion = state.quiz.sections[state.quiz.currentSection].startIndex;
+        console.log('Advanced to section', state.quiz.currentSection + 1);
+        render();
+    } else {
+        // Test complete
+        console.log('All sections complete, showing results');
+        state.screen = 'results';
+        render();
     }
 }
 
@@ -8245,7 +8303,12 @@ function renderQuiz() {
                     Question ${state.quiz.currentQuestion + 1} / ${state.quiz.questions.length}
                     ${modeLabel}
                 </div>
-                <div class="timer">60.0s</div>
+                <div class="timer" id="section-timer">
+                    ${state.quiz.sections.length > 0 ? 
+                        `${Math.max(0, Math.floor((state.quiz.sections[state.quiz.currentSection].timeSeconds - (Date.now() - state.quiz.sectionTimeStarted) / 1000)))} s` :
+                        '60.0s'
+                    }
+                </div>
             </div>
             
             ${currentQuestion.image ? `
