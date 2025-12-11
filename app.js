@@ -6446,7 +6446,7 @@ function renderAFOQTDifficultySelect() {
                 <p style="margin-bottom: 30px; color: rgba(0, 255, 255, 0.8);">Select Difficulty Level</p>
                 
                 <div class="grid grid-3" style="max-width: 900px; margin: 0 auto;">
-                    <div class="tile mode-tile" id="practice-beginner-btn" style="cursor: pointer; padding: 30px;">
+                    <div class="tile mode-tile practice-difficulty-btn" data-difficulty="beginner" style="cursor: pointer; padding: 30px;">
                         <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">🟢 BEGINNER</div>
                         <div class="tile-description">
                             • Fundamental concepts<br>
@@ -6456,7 +6456,7 @@ function renderAFOQTDifficultySelect() {
                         </div>
                     </div>
                     
-                    <div class="tile mode-tile" id="practice-advanced-btn" style="cursor: pointer; padding: 30px;">
+                    <div class="tile mode-tile practice-difficulty-btn" data-difficulty="advanced" style="cursor: pointer; padding: 30px;">
                         <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">🟡 ADVANCED</div>
                         <div class="tile-description">
                             • Realistic difficulty<br>
@@ -6466,7 +6466,7 @@ function renderAFOQTDifficultySelect() {
                         </div>
                     </div>
                     
-                    <div class="tile mode-tile" id="practice-expert-btn" style="cursor: pointer; padding: 30px;">
+                    <div class="tile mode-tile practice-difficulty-btn" data-difficulty="expert" style="cursor: pointer; padding: 30px;">
                         <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">🔴 EXPERT</div>
                         <div class="tile-description">
                             • Advanced concepts<br>
@@ -10296,30 +10296,16 @@ function attachEventListeners() {
         });
     }
     
-    // NEW: AFOQT Practice difficulty buttons
-    const practiceBeginnerBtn = document.getElementById('practice-beginner-btn');
-    if (practiceBeginnerBtn) {
-        practiceBeginnerBtn.addEventListener('click', () => {
-            // Start AFOQT practice test with beginner difficulty
-            startAFOQTPracticeTest('beginner');
+    // NEW: AFOQT Practice difficulty buttons - using class selector for better reliability
+    const practiceDifficultyBtns = document.querySelectorAll('.practice-difficulty-btn');
+    practiceDifficultyBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const difficulty = btn.dataset.difficulty;
+            console.log('AFOQT Practice button clicked, difficulty:', difficulty);
+            // Start AFOQT practice test with selected difficulty
+            startAFOQTPracticeTest(difficulty);
         });
-    }
-    
-    const practiceAdvancedBtn = document.getElementById('practice-advanced-btn');
-    if (practiceAdvancedBtn) {
-        practiceAdvancedBtn.addEventListener('click', () => {
-            // Start AFOQT practice test with advanced difficulty
-            startAFOQTPracticeTest('advanced');
-        });
-    }
-    
-    const practiceExpertBtn = document.getElementById('practice-expert-btn');
-    if (practiceExpertBtn) {
-        practiceExpertBtn.addEventListener('click', () => {
-            // Start AFOQT practice test with expert difficulty
-            startAFOQTPracticeTest('expert');
-        });
-    }
+    });
     
     const backToModeBtn = document.getElementById('back-to-mode-btn');
     if (backToModeBtn) {
