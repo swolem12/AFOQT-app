@@ -5906,6 +5906,21 @@ function startQuestionTimer() {
     }, 100);
 }
 
+function startAFOQTSectionTimer() {
+    // Clear any existing timer
+    if (state.quiz.timerInterval) {
+        clearInterval(state.quiz.timerInterval);
+    }
+    
+    // Update timer immediately
+    updateTimerDisplay();
+    
+    // Update every 100ms for smooth countdown
+    state.quiz.timerInterval = setInterval(() => {
+        updateTimerDisplay();
+    }, 100);
+}
+
 function updateTimerDisplay() {
     const timerEl = document.getElementById('section-timer') || document.querySelector('.timer');
     if (!timerEl) return;
@@ -6041,18 +6056,52 @@ function handleAnswer(optionIndex) {
     }
     
     render();
+    
+    // Auto-advance for AFOQT practice tests after showing feedback
+    if (state.quiz.isPracticeTest && state.quiz.sections && state.quiz.sections.length > 0) {
+        setTimeout(() => {
+            nextQuestion();
+        }, 800); // Brief delay to show feedback
+    }
 }
 
 function nextQuestion() {
     playSfx('nav');
     
-    if (state.quiz.currentIndex < state.quiz.questions.length - 1) {
-        state.quiz.currentIndex++;
-        state.quiz.selectedAnswer = null;
-        state.quiz.questionStartTime = Date.now();
-        render();
+    // For AFOQT practice tests with sections
+    if (state.quiz.sections && state.quiz.sections.length > 0) {
+        const currentSection = state.quiz.sections[state.quiz.currentSection];
+        const nextQuestionIndex = state.quiz.currentQuestion + 1;
+        
+        // Check if next question is in the same section
+        if (nextQuestionIndex <= currentSection.endIndex) {
+            state.quiz.currentQuestion = nextQuestionIndex;
+            state.quiz.selectedAnswer = null;
+            render();
+        } else {
+            // Move to next section if available
+            if (state.quiz.currentSection < state.quiz.sections.length - 1) {
+                state.quiz.currentSection++;
+                state.quiz.sectionTimeStarted = Date.now();
+                state.quiz.currentQuestion = state.quiz.sections[state.quiz.currentSection].startIndex;
+                state.quiz.selectedAnswer = null;
+                console.log('Advanced to section', state.quiz.currentSection + 1);
+                render();
+            } else {
+                // All sections complete
+                finishQuiz();
+            }
+        }
     } else {
-        finishQuiz();
+        // Regular quiz mode
+        if (state.quiz.currentIndex < state.quiz.questions.length - 1) {
+            state.quiz.currentIndex++;
+            state.quiz.selectedAnswer = null;
+            state.quiz.questionStartTime = Date.now();
+            render();
+        } else {
+            finishQuiz();
+        }
     }
 }
 
@@ -6287,6 +6336,11 @@ function render() {
     
     // Initialize anime.js button animations (ripple effects, hover)
     initButtonAnimations();
+    
+    // Start timer for AFOQT practice tests
+    if (state.screen === 'quiz' && state.quiz.isPracticeTest && state.quiz.sections && state.quiz.sections.length > 0) {
+        startAFOQTSectionTimer();
+    }
     
     // Animate panel entrances
     animatePanelEntrance();
