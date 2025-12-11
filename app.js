@@ -3,6 +3,8 @@
 // Offline single-page app with localStorage persistence
 // ============================================================================
 
+console.log('app.js loading - v86');
+
 // ============================================================================
 // Anime.js v4 Enhanced Animation System
 // Using anime.animate(), anime.stagger(), anime.createTimeline()
