@@ -5999,6 +5999,13 @@ function handleAnswer(optionIndex) {
     state.quiz.questionTimes.push(elapsed);
     state.quiz.selectedAnswer = optionIndex;
     
+    // Initialize answers array if needed (for all quiz modes)
+    if (!state.quiz.answers) {
+        state.quiz.answers = [];
+    }
+    // Store answer in array
+    state.quiz.answers[state.quiz.currentIndex] = optionIndex;
+    
     const currentQuestion = state.quiz.questions[state.quiz.currentIndex];
     const isCorrect = optionIndex === currentQuestion.correctIndex;
     
@@ -6049,7 +6056,6 @@ function handleAnswer(optionIndex) {
     }
     
     if (isCorrect) {
-        state.quiz.score++;
         playSfx('correct');
     } else {
         playSfx('wrong');
@@ -6110,7 +6116,22 @@ function finishQuiz() {
         clearInterval(state.quiz.timerInterval);
     }
     
-    const avgTime = state.quiz.questionTimes.reduce((a, b) => a + b, 0) / state.quiz.questionTimes.length;
+    // Calculate final score from answers array (works for ALL quiz modes: practice, test, sprint, AFOQT)
+    let score = 0;
+    if (state.quiz.answers && state.quiz.answers.length > 0) {
+        for (let i = 0; i < state.quiz.answers.length; i++) {
+            const answer = state.quiz.answers[i];
+            if (answer !== null && answer !== undefined) {
+                const question = state.quiz.questions[i];
+                if (question && answer === question.correctIndex) {
+                    score++;
+                }
+            }
+        }
+    }
+    state.quiz.score = score;
+    
+    const avgTime = state.quiz.questionTimes.length > 0 ? state.quiz.questionTimes.reduce((a, b) => a + b, 0) / state.quiz.questionTimes.length : 0;
     
     if (state.currentPlayer) {
         const session = {
