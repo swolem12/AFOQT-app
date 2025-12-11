@@ -5747,21 +5747,6 @@ async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
     render();
 }
 
-// Create a synchronous wrapper that handles the async function properly
-window.startAFOQTPracticeTest = function(difficulty = 'beginner') {
-    try {
-        console.log('onclick handler called with difficulty:', difficulty);
-        // Call async function and don't wait - let it update state
-        _startAFOQTPracticeTestAsync(difficulty).catch(err => {
-            console.error('Error in startAFOQTPracticeTest:', err);
-            playSfx('wrong');
-        });
-    } catch (err) {
-        console.error('Error calling startAFOQTPracticeTest:', err);
-        playSfx('wrong');
-    }
-};
-
 async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     const topic = topics.find(t => t.id === topicId);
     if (!topic) return;
@@ -6461,7 +6446,7 @@ function renderAFOQTDifficultySelect() {
                 <p style="margin-bottom: 30px; color: rgba(0, 255, 255, 0.8);">Select Difficulty Level</p>
                 
                 <div class="grid grid-3" style="max-width: 900px; margin: 0 auto;">
-                    <div class="tile mode-tile" onclick="window.startAFOQTPracticeTest('beginner')" style="cursor: pointer; padding: 30px;">
+                    <div class="tile mode-tile" id="afoqt-beginner-btn" style="cursor: pointer; padding: 30px;">
                         <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">🟢 BEGINNER</div>
                         <div class="tile-description">
                             • Fundamental concepts<br>
@@ -6471,7 +6456,7 @@ function renderAFOQTDifficultySelect() {
                         </div>
                     </div>
                     
-                    <div class="tile mode-tile" onclick="window.startAFOQTPracticeTest('advanced')" style="cursor: pointer; padding: 30px;">
+                    <div class="tile mode-tile" id="afoqt-advanced-btn" style="cursor: pointer; padding: 30px;">
                         <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">🟡 ADVANCED</div>
                         <div class="tile-description">
                             • Realistic difficulty<br>
@@ -6481,7 +6466,7 @@ function renderAFOQTDifficultySelect() {
                         </div>
                     </div>
                     
-                    <div class="tile mode-tile" onclick="window.startAFOQTPracticeTest('expert')" style="cursor: pointer; padding: 30px;">
+                    <div class="tile mode-tile" id="afoqt-expert-btn" style="cursor: pointer; padding: 30px;">
                         <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">🔴 EXPERT</div>
                         <div class="tile-description">
                             • Advanced concepts<br>
@@ -10311,8 +10296,30 @@ function attachEventListeners() {
         });
     }
     
-    // NEW: AFOQT Practice difficulty buttons - using onclick handlers in HTML
-    // Function is exposed globally as window.startAFOQTPracticeTest
+    // AFOQT Practice difficulty buttons
+    const afoqtBeginnerBtn = document.getElementById('afoqt-beginner-btn');
+    if (afoqtBeginnerBtn) {
+        afoqtBeginnerBtn.addEventListener('click', () => {
+            console.log('AFOQT Beginner button clicked');
+            _startAFOQTPracticeTestAsync('beginner');
+        });
+    }
+    
+    const afoqtAdvancedBtn = document.getElementById('afoqt-advanced-btn');
+    if (afoqtAdvancedBtn) {
+        afoqtAdvancedBtn.addEventListener('click', () => {
+            console.log('AFOQT Advanced button clicked');
+            _startAFOQTPracticeTestAsync('advanced');
+        });
+    }
+    
+    const afoqtExpertBtn = document.getElementById('afoqt-expert-btn');
+    if (afoqtExpertBtn) {
+        afoqtExpertBtn.addEventListener('click', () => {
+            console.log('AFOQT Expert button clicked');
+            _startAFOQTPracticeTestAsync('expert');
+        });
+    }
     
     const backToModeBtn = document.getElementById('back-to-mode-btn');
     if (backToModeBtn) {
