@@ -3174,15 +3174,15 @@ function createVocabularyTopicsFromRegistry() {
         'word_roots_affixes': 'Latin and Greek word origins'
     };
     
-    // Check word_knowledge content
-    if (questionRegistry && questionRegistry.word_knowledge) {
-        const wkContent = questionRegistry.word_knowledge;
+    // Check word_knowledge content (registry uses 'vocabulary' as subjectId from Patch 18)
+    if (questionRegistry && questionRegistry.vocabulary) {
+        const wkContent = questionRegistry.vocabulary;
         for (const subtopicId in wkContent) {
             vocabTopics.push({
                 id: subtopicId,
                 name: topicNames[subtopicId] || subtopicId.replace(/_/g, ' '),
                 description: topicDescriptions[subtopicId] || 'Vocabulary practice',
-                subjectId: 'word_knowledge',
+                subjectId: 'vocabulary', // Use 'vocabulary' to match registry
                 isOfficialAfoqtTopic: true,
                 hasContent: true
             });
@@ -3246,10 +3246,10 @@ function createPhysicalScienceTopicsFromRegistry() {
     
     // Create topics from loaded content
     for (const subtopicId in psContent) {
-        // Remove 'physical_science_' prefix if present
+        // Remove 'physical_science_' prefix for display name, but keep full ID for registry lookup
         const cleanId = subtopicId.replace('physical_science_', '');
         dynamicTopics.push({
-            id: cleanId,
+            id: subtopicId, // Keep full ID for registry lookup
             name: topicNames[cleanId] || cleanId.replace(/_/g, ' '),
             description: topicDescriptions[cleanId] || 'Physical science practice',
             subjectId: 'physical_science',
