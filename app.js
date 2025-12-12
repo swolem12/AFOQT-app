@@ -6318,6 +6318,8 @@ function render() {
             root.innerHTML = renderAFOQTDifficultySelect();
             break;
         case 'subject':
+            root.innerHTML = renderSubject();
+            break;
         case 'mode-select':
             root.innerHTML = renderModeSelect();
             break;
