@@ -1,0 +1,70 @@
+{
+  "patchId": "patch_21",
+  "title": "Patch 21 - Instrument Comprehension Integration",
+  "description": "Adds Instrument Comprehension as a full AFOQT subject with instrument panel questions testing attitude, heading, and climb/descent interpretation.",
+  "subjectsIncluded": ["instrument_comprehension"],
+  "subjects": [
+    {
+      "id": "instrument_comprehension",
+      "displayName": "AFOQT Instrument Comprehension",
+      "isAfoqtOfficialSubject": true,
+      "officialFormat": {
+        "questionType": "instrument_panel_interpretation",
+        "responseType": "multiple choice image selection",
+        "timePressure": "high (12 seconds per question)"
+      },
+      "difficultyLevels": [
+        "beginner",
+        "advanced",
+        "expert"
+      ],
+      "mappedGameSubtopics": [
+        {
+          "subtopicId": "basic_attitude_and_heading",
+          "description": "Reading bank, pitch, and heading from artificial horizon and compass instruments.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "instrument_gauge_reading",
+          "description": "Advanced gauge interpretation with multiple instruments including climb/descent indicators.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["advanced", "expert"]
+        }
+      ]
+    }
+  ],
+  "contentRules": {
+    "filenamePattern": "instrument_comprehension_<difficulty>_part<index>.json",
+    "inferenceNotesForCopilot": [
+      "Infer difficulty level from the filename: 'instrument_comprehension_beginner_part1.json' → difficulty=beginner.",
+      "Each JSON file contains questions with instrument_panel uiSpec showing attitude indicator and heading indicator.",
+      "Choices are image-based (aircraft silhouettes) with only one matching all three parameters: bank, pitch, and heading."
+    ]
+  },
+  "questionRoutingRules": [
+    "1. Load all instrument_comprehension_<difficulty>_part<X>.json files.",
+    "2. Each JSON contains questions with uiSpec type 'instrument_panel'.",
+    "3. Aggregate questions into registry by difficulty: questions['instrument_comprehension']['basic_attitude_and_heading'][difficulty].",
+    "4. Randomly select questions for practice tests ensuring variety of attitudes (level, climbing, descending, banking left/right)."
+  ],
+  "uiIntegration": [
+    "Use instrument_panel uiSpec to render attitude indicator (artificial horizon) and heading indicator (compass).",
+    "Display four aircraft image choices (A-D) where only one matches all instrument readings.",
+    "In practice test mode, hide explanations until section is complete.",
+    "Follow AFOQT/Trivium style: instruments on top/left, aircraft choices as selectable images below/right."
+  ],
+  "implementationNotes": [
+    "Instrument panel questions test ability to read pitch (climb/level/descend), bank (left/right/level), and heading (0-359 degrees).",
+    "Choice A is typically correct by construction; distractors B, C, D each differ in exactly one parameter.",
+    "Questions use 'IMAGE' placeholder in choices text; actual rendering driven by choiceSprites in uiSpec.",
+    "Ensure frontend IC component properly interprets artificialHorizon, compass, and choiceSprites fields.",
+    "Generator-based approach maintains consistency across beginner/advanced/expert levels."
+  ],
+  "validationRules": {
+    "uiSpecRequired": "All IC questions must have uiSpec with type='instrument_panel'",
+    "choiceFormat": "Choices must reference image sprites via choiceSprites in uiSpec",
+    "correctAnswerConstruction": "Choice A should match all instrument readings exactly; B/C/D differ by one parameter each",
+    "timingGuidance": "12 seconds per question average for full AFOQT simulation"
+  }
+}
