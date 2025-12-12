@@ -8,6 +8,7 @@
       "displayName": "AFOQT Math Knowledge",
       "isAfoqtOfficialSubject": true,
       "officialTopicsPerPdf": [
+        "algebra",
         "word_problems_equation_setup",
         "absolute_value",
         "coordinate_geometry",
@@ -18,6 +19,7 @@
         "fractions",
         "function_evaluation",
         "functions",
+        "geometry",
         "geometry_basics",
         "graph_interpretation",
         "graphing_linear_functions",
@@ -29,16 +31,22 @@
         "polynomials",
         "probability",
         "quadratic_equations",
-        "radical_expressions",
+        "radicals",
         "ratio_and_proportion",
         "rational_expressions",
         "sequences",
-        "slope_and_rate_of_change",
+        "slope",
         "statistics",
-        "systems_of_linear_equations",
+        "systems_linear",
         "transformations"
       ],
       "mappedGameSubtopics": [
+        {
+          "subtopicId": "algebra",
+          "description": "Fundamental algebra operations, simplification, and equation solving.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
         {
           "subtopicId": "word_problems_equation_setup",
           "description": "Translating word problems into algebraic equations.",
@@ -67,7 +75,7 @@
           "subtopicId": "evaluate_expressions",
           "description": "Plugging in values and simplifying expressions with proper order of operations.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner", "advanced"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "exponents_roots",
@@ -98,6 +106,12 @@
           "description": "Recognizing function relationships and basic function notation.",
           "isOfficialAfoqtTopic": true,
           "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "geometry",
+          "description": "Advanced geometry concepts including theorems and proofs.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["advanced", "expert"]
         },
         {
           "subtopicId": "geometry_basics",
@@ -166,7 +180,7 @@
           "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
-          "subtopicId": "radical_expressions",
+          "subtopicId": "radicals",
           "description": "Simplifying radical expressions and converting between radical and exponential form.",
           "isOfficialAfoqtTopic": true,
           "difficultyLevels": ["beginner", "advanced", "expert"]
@@ -190,7 +204,7 @@
           "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
-          "subtopicId": "slope_and_rate_of_change",
+          "subtopicId": "slope",
           "description": "Calculating slope from graphs, tables, or two points; interpreting steepness and direction.",
           "isOfficialAfoqtTopic": true,
           "difficultyLevels": ["beginner", "advanced", "expert"]
@@ -202,7 +216,7 @@
           "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
-          "subtopicId": "systems_of_linear_equations",
+          "subtopicId": "systems_linear",
           "description": "Solving simple systems of linear equations.",
           "isOfficialAfoqtTopic": true,
           "difficultyLevels": ["beginner", "advanced", "expert"]
