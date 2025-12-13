@@ -4190,6 +4190,30 @@ function showAchievementNotification(achievement) {
     }, 4000);
 }
 
+function showErrorNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'achievement-notification'; // Reuse same styling
+    notification.style.background = 'rgba(255, 0, 0, 0.9)'; // Red background for errors
+    notification.innerHTML = `
+        <div class="achievement-icon">⚠</div>
+        <div class="achievement-content">
+            <div class="achievement-title">Error</div>
+            <div class="achievement-desc">${message}</div>
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Play error sound
+    playSfx('wrong');
+    
+    // Remove after animation
+    setTimeout(() => {
+        notification.style.opacity = '0';
+        setTimeout(() => notification.remove(), 500);
+    }, 3000);
+}
+
 function updateChallengeProgress(player, progressType, value = 1) {
     if (!player.challengeProgress) {
         player.challengeProgress = {};
@@ -5760,6 +5784,7 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     const topic = topics.find(t => t.id === topicId);
     if (!topic) {
         console.error('Topic not found:', topicId);
+        playSfx('wrong');
         return;
     }
     
@@ -5900,8 +5925,7 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     // Check if we have any questions before starting quiz
     if (state.quiz.questions.length === 0) {
         console.error('Failed to generate any questions for quiz');
-        playSfx('wrong');
-        alert('Failed to generate questions for this quiz. Please try a different topic or difficulty.');
+        showErrorNotification('Failed to generate questions for this quiz. Please try a different topic or difficulty.');
         return;
     }
     
@@ -10694,50 +10718,59 @@ function attachEventListeners() {
     // Difficulty selection buttons
     const beginnerDiffBtn = document.getElementById('beginner-diff-btn');
     if (beginnerDiffBtn) {
+        console.log('✓ Beginner difficulty button found, attaching click handler');
         beginnerDiffBtn.addEventListener('click', () => {
             console.log('Beginner difficulty button clicked', {currentTopic: state.currentTopic});
             if (state.currentTopic) {
                 startQuiz(state.currentTopic.id, 'practice', 'beginner').catch(err => {
                     console.error('Error starting quiz:', err);
-                    playSfx('wrong');
+                    showErrorNotification('Failed to start quiz. Please try again or select a different topic.');
                 });
             } else {
                 console.error('Cannot start quiz: state.currentTopic is not set');
-                playSfx('wrong');
+                showErrorNotification('No topic selected. Please go back and select a topic first.');
             }
         });
+    } else {
+        console.warn('✗ Beginner difficulty button NOT found in DOM');
     }
     
     const advancedDiffBtn = document.getElementById('advanced-diff-btn');
     if (advancedDiffBtn) {
+        console.log('✓ Advanced difficulty button found, attaching click handler');
         advancedDiffBtn.addEventListener('click', () => {
             console.log('Advanced difficulty button clicked', {currentTopic: state.currentTopic});
             if (state.currentTopic) {
                 startQuiz(state.currentTopic.id, 'practice', 'advanced').catch(err => {
                     console.error('Error starting quiz:', err);
-                    playSfx('wrong');
+                    showErrorNotification('Failed to start quiz. Please try again or select a different topic.');
                 });
             } else {
                 console.error('Cannot start quiz: state.currentTopic is not set');
-                playSfx('wrong');
+                showErrorNotification('No topic selected. Please go back and select a topic first.');
             }
         });
+    } else {
+        console.warn('✗ Advanced difficulty button NOT found in DOM');
     }
     
     const expertDiffBtn = document.getElementById('expert-diff-btn');
     if (expertDiffBtn) {
+        console.log('✓ Expert difficulty button found, attaching click handler');
         expertDiffBtn.addEventListener('click', () => {
             console.log('Expert difficulty button clicked', {currentTopic: state.currentTopic});
             if (state.currentTopic) {
                 startQuiz(state.currentTopic.id, 'practice', 'expert').catch(err => {
                     console.error('Error starting quiz:', err);
-                    playSfx('wrong');
+                    showErrorNotification('Failed to start quiz. Please try again or select a different topic.');
                 });
             } else {
                 console.error('Cannot start quiz: state.currentTopic is not set');
-                playSfx('wrong');
+                showErrorNotification('No topic selected. Please go back and select a topic first.');
             }
         });
+    } else {
+        console.warn('✗ Expert difficulty button NOT found in DOM');
     }
     
     // AFOQT Practice difficulty buttons
