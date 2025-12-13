@@ -8548,7 +8548,7 @@ function renderSectionTransitionModal() {
                             ✓ Yes, Continue
                         </button>
                         <button class="btn btn-secondary" id="stay-section-btn" style="flex: 1; max-width: 200px;">
-                            ← Review Section
+                            ← Wait
                         </button>
                     </div>
                 </div>
