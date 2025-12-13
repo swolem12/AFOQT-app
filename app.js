@@ -6127,14 +6127,12 @@ function proceedToNextSection() {
     const nextSectionIndex = state.quiz.currentSection + 1;
     if (nextSectionIndex < state.quiz.sections.length) {
         const nextSection = state.quiz.sections[nextSectionIndex];
-        if (nextSection) {
-            state.quiz.currentSection = nextSectionIndex;
-            state.quiz.sectionTimeStarted = Date.now();
-            state.quiz.currentIndex = nextSection.startIndex;
-            state.quiz.selectedAnswer = null;
-            console.log('Advanced to section', state.quiz.currentSection + 1);
-            playSfx('select');
-        }
+        state.quiz.currentSection = nextSectionIndex;
+        state.quiz.sectionTimeStarted = Date.now();
+        state.quiz.currentIndex = nextSection.startIndex;
+        state.quiz.selectedAnswer = null;
+        console.log('Advanced to section', state.quiz.currentSection + 1);
+        playSfx('select');
     }
     render();
 }
@@ -8402,7 +8400,9 @@ function renderQuiz() {
     let questionDisplay = '';
     if (state.quiz.sections.length > 0) {
         const currentSection = state.quiz.sections[state.quiz.currentSection];
-        if (currentSection && state.quiz.currentIndex >= currentSection.startIndex) {
+        if (currentSection && 
+            state.quiz.currentIndex >= currentSection.startIndex && 
+            state.quiz.currentIndex <= currentSection.endIndex) {
             const questionInSection = state.quiz.currentIndex - currentSection.startIndex + 1;
             const totalInSection = currentSection.totalQuestions;
             questionDisplay = `Question ${questionInSection} / ${totalInSection}`;
