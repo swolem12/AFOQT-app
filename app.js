@@ -7422,10 +7422,127 @@ const topicLearningContent = {
     }
 };
 
+// Subject-level learning content (fallback when a topic lacks specifics)
+const subjectLearningContent = {
+    math_knowledge: {
+        concept: 'Core algebra, geometry, and number properties needed for AFOQT quantitative sections.',
+        steps: [
+            '1. Identify the topic (algebra, geometry, number properties).',
+            '2. Write given values and required formula or rule.',
+            '3. Plug in carefully, keep units consistent, and simplify.',
+            '4. Sanity-check: magnitude, sign, and units make sense.'
+        ],
+        fastStrategy: 'Label what’s asked, pick the right rule, then plug and chug with clean arithmetic.',
+        examples: ['Solve for x in 3x + 12 = 27 → x = 5']
+    },
+    arithmetic_reasoning: {
+        concept: 'Word problems on rates, ratios, work, mixtures, and proportional reasoning.',
+        steps: [
+            '1. Translate words to math: list givens, unknowns, and units.',
+            '2. Choose the structure: rate×time=distance, work=rate×time, ratio/percent.',
+            '3. Set a clear equation with consistent units.',
+            '4. Solve, then double-check units and reasonableness.'
+        ],
+        fastStrategy: 'Underline quantities, circle the question, pick the matching formula, solve with unit discipline.',
+        examples: ['A plane travels 420 miles in 1.5 hours → speed = 280 mph']
+    },
+    vocabulary: {
+        concept: 'Word knowledge, synonyms, antonyms, analogies, and context clues.',
+        steps: [
+            '1. Isolate the target word and its part of speech.',
+            '2. Use context: tone, contrast words (however, but), or restatements.',
+            '3. Eliminate answers with wrong tone or part of speech.',
+            '4. Pick the choice closest in meaning or opposition (for antonyms).'
+        ],
+        fastStrategy: 'Anchor on context and tone; drop answers that don’t fit the sentence vibe.',
+        examples: ['"astute" in context → options: dull, clever, tired, loud → clever']
+    },
+    reading_comprehension: {
+        concept: 'Extract main idea, detail, inference, and tone from short passages.',
+        steps: [
+            '1. Skim the first/last sentences for main idea.',
+            '2. For detail questions, locate and reread the exact lines.',
+            '3. For inference, choose what must be true, not what could be.',
+            '4. For tone, look at adjective/verb choices and overall stance.'
+        ],
+        fastStrategy: 'Read the question stem first, then hunt the lines. Answer from text, not memory.',
+        examples: ['If asked “The author suggests…” → pick the choice directly supported by the lines.']
+    },
+    physical_science: {
+        concept: 'Newton’s laws, forces, energy, simple machines, electricity, waves, and basic thermo.',
+        steps: [
+            '1. Identify the domain: motion, energy, electricity, fluids, or waves.',
+            '2. Write the governing law (F=ma, W=Fd, P=VI, etc.).',
+            '3. Keep units consistent; convert early.',
+            '4. Solve, then check scale and units.'
+        ],
+        fastStrategy: 'Name the law first; plug numbers carefully; watch units.',
+        examples: ['Force with mass 5 kg, accel 3 m/s² → F=15 N']
+    },
+    situational: {
+        concept: 'Judgment on teamwork, integrity, chain of command, professionalism, and safety.',
+        steps: [
+            '1. Identify the core issue (safety, respect, integrity, following orders).',
+            '2. Prefer actions that are calm, professional, and chain-of-command aligned.',
+            '3. Avoid extremes: no overreaction, no ignoring the problem.',
+            '4. Pick the option that preserves safety, respect, and mission readiness.'
+        ],
+        fastStrategy: 'Calm, professional, safety-first, respect the chain of command.',
+        examples: ['Report safety hazards up the chain; don’t confront recklessly or ignore.']
+    },
+    aviation: {
+        concept: 'Aircraft basics: aerodynamics, controls, performance, navigation, and operations.',
+        steps: [
+            '1. Identify the domain: lift/drag/thrust/weight, stability, instruments, procedures.',
+            '2. Recall the governing principle (e.g., lift via angle of attack, drag types).',
+            '3. Apply to the scenario (takeoff, climb, cruise, maneuver).',
+            '4. Eliminate answers that violate fundamentals or safety.'
+        ],
+        fastStrategy: 'Use fundamentals: lift vs. weight, thrust vs. drag, coordinated flight basics.',
+        examples: ['Increasing angle of attack (within limits) increases lift but also drag.']
+    },
+    instrument_comprehension: {
+        concept: 'Read attitude (pitch/bank) and heading from simplified instruments.',
+        steps: [
+            '1. Attitude indicator first: nose up/down, bank left/right.',
+            '2. Heading indicator next: note the cardinal/ordinal heading.',
+            '3. Cross-check climb/descend indicator if shown.',
+            '4. Combine: “climbing left bank, heading north” style answer.'
+        ],
+        fastStrategy: 'Attitude first, heading second, trend last.',
+        examples: ['Bank left + nose down + heading east → descending left turn, heading east.']
+    },
+    table_reading: {
+        concept: 'Rapidly find and compare values in data tables under time pressure.',
+        steps: [
+            '1. Lock the row (Y) first, then the column (X).',
+            '2. For aggregates, scan whole row/column (sum, max, min, avg).',
+            '3. Watch units and headers; avoid column/row swaps.',
+            '4. Estimate first; then pick the exact value or best match.'
+        ],
+        fastStrategy: 'Row first, column second. Finger-trace; avoid swapping axes.',
+        examples: ['Find X=4, Y=30 → trace to intersection; for “largest row total” sum each row quickly.']
+    },
+    block_counting: {
+        concept: 'Count visible and hidden cubes in stacked isometric figures.',
+        steps: [
+            '1. Slice the figure into columns; note each column height.',
+            '2. Add columns per layer; watch for hidden blocks behind others.',
+            '3. Use symmetry: mirrored sides often match counts.',
+            '4. Recount quickly to verify totals.'
+        ],
+        fastStrategy: 'Group columns by height; multiply instead of counting one-by-one.',
+        examples: ['If 4 columns of height 3 → 4×3 = 12 blocks (check for hidden support).']
+    }
+};
+
 // Get learning content for a topic (with fallback)
-function getTopicLearningContent(topicId) {
+function getTopicLearningContent(topicId, subjectId) {
     if (topicLearningContent[topicId]) {
         return topicLearningContent[topicId];
+    }
+    if (subjectId && subjectLearningContent[subjectId]) {
+        return subjectLearningContent[subjectId];
     }
     
     // Fallback for topics without specific content
@@ -7445,7 +7562,7 @@ function getTopicLearningContent(topicId) {
 function renderLearn() {
     if (!state.currentTopic) return '';
     
-    const content = getTopicLearningContent(state.currentTopic.id);
+    const content = getTopicLearningContent(state.currentTopic.id, state.currentTopic.subjectId);
     
     return `
         <div class="panel">
