@@ -6114,10 +6114,11 @@ function proceedToNextSection() {
     state.quiz.showSectionTransition = false;
     
     // Validate next section exists before advancing
-    if (state.quiz.currentSection + 1 < state.quiz.sections.length) {
-        state.quiz.currentSection++;
-        const nextSection = state.quiz.sections[state.quiz.currentSection];
+    const nextSectionIndex = state.quiz.currentSection + 1;
+    if (nextSectionIndex < state.quiz.sections.length) {
+        const nextSection = state.quiz.sections[nextSectionIndex];
         if (nextSection) {
+            state.quiz.currentSection = nextSectionIndex;
             state.quiz.sectionTimeStarted = Date.now();
             state.quiz.currentIndex = nextSection.startIndex;
             state.quiz.selectedAnswer = null;
@@ -8409,7 +8410,7 @@ function renderQuiz() {
             
             <div class="quiz-header">
                 <div class="quiz-info">
-                    ${state.quiz.sections.length > 0 ? `
+                    ${state.quiz.sections.length > 0 && state.quiz.sections[state.quiz.currentSection] ? `
                         <strong>${state.quiz.isPracticeTest ? 'AFOQT Practice Test' : (state.currentTopic ? state.currentTopic.name : 'Quiz')}</strong><br>
                         <span style="font-size: 0.9em; color: #00ff00;">Section ${state.quiz.currentSection + 1}/${state.quiz.sections.length}: ${state.quiz.sections[state.quiz.currentSection].name}</span><br>
                     ` : `
@@ -8419,7 +8420,7 @@ function renderQuiz() {
                     ${modeLabel}
                 </div>
                 <div class="timer" id="section-timer">
-                    ${state.quiz.sections.length > 0 ? 
+                    ${state.quiz.sections.length > 0 && state.quiz.sections[state.quiz.currentSection] && state.quiz.sections[state.quiz.currentSection].timeSeconds ? 
                         `${Math.max(0, Math.floor((state.quiz.sections[state.quiz.currentSection].timeSeconds - (Date.now() - state.quiz.sectionTimeStarted) / 1000)))} s` :
                         '60.0s'
                     }
