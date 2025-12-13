@@ -863,8 +863,8 @@ const state = {
         showSectionTransition: false // Flag to show section transition confirmation modal
     },
     patch18Loaded: false, // Track if Patch 18 content is loaded
-    contentLoading: false, // Track if content is currently loading
-    contentReady: false // Track if content is ready for quiz start
+    contentLoading: false, // Track if content loading async operation is in progress
+    contentReady: false // Track if content is available (loaded or using procedural fallbacks)
 };
 
 // ============================================================================
@@ -11298,13 +11298,14 @@ async function init() {
                 }
             }
             
-            console.log('✅ Content ready for quiz start');
+            console.log('✅ Content loaded - quiz ready');
         } catch (error) {
-            console.warn('Patch 18 initialization failed:', error);
+            console.warn('⚠ Patch 18 initialization failed, using procedural fallbacks:', error);
         }
     }
     
     // Mark content as ready (either loaded successfully or using procedural fallbacks)
+    // Always set to true because app can fall back to procedural question generators
     state.contentLoading = false;
     state.contentReady = true;
     

@@ -103,9 +103,12 @@ self.addEventListener('fetch', (event) => {
           return cachedResponse || fetchPromise;
         });
       }).catch((error) => {
-        console.error('Failed to serve JSON content:', error);
-        // Return a basic error response
-        return new Response(JSON.stringify({ error: 'Content unavailable' }), {
+        console.error('Failed to serve JSON content for', url.pathname, ':', error);
+        // Return a basic error response with specific URL
+        return new Response(JSON.stringify({ 
+          error: 'Content unavailable',
+          url: url.pathname 
+        }), {
           status: 503,
           headers: { 'Content-Type': 'application/json' }
         });
