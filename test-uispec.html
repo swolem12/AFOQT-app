@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UISpec Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { background: #000; color: #00ffff; padding: 20px; font-family: monospace; }
+        .test-section { margin: 30px 0; border: 1px solid #006666; padding: 20px; }
+    </style>
+</head>
+<body>
+    <h1>UISpec Rendering Test</h1>
+    
+    <div class="test-section">
+        <h2>Test 1: Direct uiSpec data</h2>
+        <div id="test1"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 2: From JSON file</h2>
+        <div id="test2"></div>
+    </div>
+    
+    <script src="patch-loader.js"></script>
+    <script src="app.js"></script>
+    <script>
+        // Test 1: Render a simple uiSpec directly
+        const testUISpec = {
+            type: 'slope_graph',
+            width: 300,
+            height: 300,
+            xRange: [-5, 5],
+            yRange: [-5, 5],
+            line: {
+                point1: { x: -4, y: -2 },
+                point2: { x: 4, y: 3 }
+            },
+            showGrid: true,
+            showAxes: true
+        };
+        
+        console.log('Test 1: Rendering uiSpec:', testUISpec);
+        const html1 = renderMathUI(testUISpec);
+        console.log('Test 1: Generated HTML:', html1.substring(0, 200));
+        document.getElementById('test1').innerHTML = html1;
+        
+        // Test 2: Load from JSON file
+        async function test2() {
+            try {
+                const response = await fetch('./Test Content/Math/slope_beginner_part1.json');
+                const data = await response.json();
+                const question = data.questions[0];
+                
+                console.log('Test 2: Question object:', question);
+                console.log('Test 2: Has uiSpec?', !!question.uiSpec);
+                
+                if (question.uiSpec) {
+                    const html2 = renderMathUI(question.uiSpec);
+                    console.log('Test 2: Generated HTML:', html2.substring(0, 200));
+                    document.getElementById('test2').innerHTML = `
+                        <p>Question: ${question.question}</p>
+                        ${html2}
+                    `;
+                } else {
+                    document.getElementById('test2').innerHTML = '<p style="color: red;">ERROR: No uiSpec found in question!</p>';
+                }
+            } catch (error) {
+                document.getElementById('test2').innerHTML = `<p style="color: red;">ERROR: ${error.message}</p>`;
+                console.error('Test 2 error:', error);
+            }
+        }
+        
+        test2();
+    </script>
+</body>
+</html>

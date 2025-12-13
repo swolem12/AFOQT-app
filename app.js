@@ -7442,6 +7442,32 @@ function renderMathUI(uiSpec) {
             return renderDataTable(uiSpec);
         case 'block_stack_iso':
             return renderBlockStackIso(uiSpec);
+        // Additional angle diagram types - all use renderGeometryAnglePairDiagram
+        // These types share the same structure: lines array + angleLabels array
+        case 'adjacent_angles_on_line':
+        case 'angle_linear_pair':
+        case 'angle_pair_vertical':
+        case 'angle_vertical_pair':
+        case 'triangle_exterior_angle':
+        case 'quadrilateral_angles':
+            return renderGeometryAnglePairDiagram(uiSpec);
+        // Parallel lines diagram
+        case 'coordinate_parallel_lines':
+        case 'geometry_parallel_lines_diagram':
+            return renderGeometryAnglePairDiagram(uiSpec); // Uses same structure
+        // Circle diagram
+        case 'geometry_circle_diagram':
+            return renderGeometryCircleDiagram(uiSpec);
+        // Simple line types (horizontal/vertical) - render as single line
+        case 'horizontal':
+        case 'vertical':
+            return renderSimpleLineDiagram(uiSpec);
+        // Point mapping - use coordinate points renderer  
+        case 'point_mapping':
+            return renderCoordinatePointsCss(uiSpec);
+        // Rectangle reflection - use reflection renderer for proper shape handling
+        case 'rectangle_reflection':
+            return renderReflectionCss(uiSpec);
         default:
             console.warn('Unknown uiSpec type:', uiSpec.type);
             return '';
@@ -8356,6 +8382,114 @@ function renderGeometryAnglePairDiagram(uiSpec) {
         <div class="graphContainer" style="width: ${width}px; height: ${height}px; position: relative;">
             ${renderLines()}
             ${renderAngleLabels()}
+        </div>
+    `;
+}
+
+/**
+ * Render geometry circle diagram
+ * uiSpec shape: { type: 'geometry_circle_diagram', width, height, circle: {center: {x,y}, radius}, labels, styleHints }
+ */
+function renderGeometryCircleDiagram(uiSpec) {
+    const { width = 300, height = 300, circle = {}, labels = [], styleHints = {} } = uiSpec;
+    const { center = {x: width/2, y: height/2}, radius = 50 } = circle;
+    const baseColor = styleHints.lineColor || '#00ffff';
+    const labelColor = styleHints.labelsColor || '#00ffff';
+    
+    // Label positioning constants
+    const LABEL_OFFSET_Y = 10;   // pixels above/below elements
+    const LABEL_OFFSET_X = 10;   // pixels to the side of elements
+    const LABEL_CENTER_OFFSET = 15; // pixels from center point
+    
+    // Render circle using SVG
+    const circleSvg = `
+        <svg style="position: absolute; left: 0; top: 0; width: ${width}px; height: ${height}px; pointer-events: none;">
+            <circle 
+                cx="${center.x}" 
+                cy="${center.y}" 
+                r="${radius}" 
+                stroke="${baseColor}" 
+                stroke-width="2" 
+                fill="none"
+            />
+        </svg>
+    `;
+    
+    // Render center point
+    const centerPoint = `<div class="graphPoint" style="left: ${center.x - 4}px; top: ${center.y - 4}px;"></div>`;
+    
+    // Render labels (radius, diameter, etc.)
+    const renderLabels = () => {
+        return labels.map(label => {
+            const { text, position } = label;
+            let x = center.x;
+            let y = center.y;
+            
+            // Position label based on type
+            if (position === 'radius') {
+                x = center.x + radius / 2;
+                y = center.y - LABEL_OFFSET_Y;
+            } else if (position === 'center') {
+                x = center.x + LABEL_OFFSET_X;
+                y = center.y + LABEL_CENTER_OFFSET;
+            } else if (label.x !== undefined && label.y !== undefined) {
+                x = label.x;
+                y = label.y;
+            }
+            
+            return `<div class="graphLabel" style="left: ${x}px; top: ${y}px; color: ${labelColor};">${text}</div>`;
+        }).join('');
+    };
+    
+    return `
+        <div class="graphContainer" style="width: ${width}px; height: ${height}px; position: relative;">
+            ${circleSvg}
+            ${centerPoint}
+            ${renderLabels()}
+        </div>
+    `;
+}
+
+/**
+ * Render simple line diagram (horizontal or vertical line)
+ * uiSpec shape: { type: 'horizontal'|'vertical', width, height, line: {position, label}, styleHints }
+ */
+function renderSimpleLineDiagram(uiSpec) {
+    const { type, width = 300, height = 300, line = {}, styleHints = {} } = uiSpec;
+    const baseColor = styleHints.lineColor || '#00ffff';
+    const labelColor = styleHints.labelsColor || '#00ffff';
+    
+    // Label positioning constants (in pixels)
+    const LABEL_OFFSET_FROM_LINE = 20;  // distance from line to label
+    const LABEL_SIDE_OFFSET = 10;       // horizontal offset for labels next to vertical lines
+    
+    let lineHtml = '';
+    let labelHtml = '';
+    
+    if (type === 'horizontal') {
+        const position = line.position !== undefined ? line.position : height / 2;
+        const label = line.label || '';
+        
+        // Horizontal line across the width
+        lineHtml = `<div class="graphLine" style="left: 0; top: ${position}px; width: ${width}px; background: ${baseColor};"></div>`;
+        if (label) {
+            labelHtml = `<div class="graphLabel" style="left: ${width / 2 - LABEL_OFFSET_FROM_LINE}px; top: ${position - LABEL_OFFSET_FROM_LINE}px; color: ${labelColor};">${label}</div>`;
+        }
+    } else if (type === 'vertical') {
+        const position = line.position !== undefined ? line.position : width / 2;
+        const label = line.label || '';
+        
+        // Vertical line - can't use .graphLine class (designed for horizontal) so use explicit styling
+        lineHtml = `<div style="position: absolute; left: ${position}px; top: 0; width: 2px; height: ${height}px; background: ${baseColor};"></div>`;
+        if (label) {
+            labelHtml = `<div class="graphLabel" style="left: ${position + LABEL_SIDE_OFFSET}px; top: ${height / 2}px; color: ${labelColor};">${label}</div>`;
+        }
+    }
+    
+    return `
+        <div class="graphContainer" style="width: ${width}px; height: ${height}px; position: relative;">
+            ${lineHtml}
+            ${labelHtml}
         </div>
     `;
 }
