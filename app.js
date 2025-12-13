@@ -857,7 +857,7 @@ const state = {
         difficulty: 'beginner', // Store difficulty with quiz session
         showFeedback: true, // Patch 18: control feedback visibility
         isPracticeTest: false, // Patch 18: flag for AFOQT practice tests
-        showSectionTransition: false // Flag to show section transition modal
+        showSectionTransition: false // Flag to show section transition confirmation modal
     },
     patch18Loaded: false // Track if Patch 18 content is loaded
 };
@@ -8414,6 +8414,9 @@ function renderQuiz() {
         questionDisplay = `Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}`;
     }
 
+    // Check if current section is valid
+    const hasValidCurrentSection = state.quiz.sections.length > 0 && state.quiz.sections[state.quiz.currentSection];
+
     return `
         <div class="panel">
             <div class="quiz-progress-bar">
@@ -8422,7 +8425,7 @@ function renderQuiz() {
             
             <div class="quiz-header">
                 <div class="quiz-info">
-                    ${state.quiz.sections.length > 0 && state.quiz.sections[state.quiz.currentSection] ? `
+                    ${hasValidCurrentSection ? `
                         <strong>${state.quiz.isPracticeTest ? 'AFOQT Practice Test' : (state.currentTopic ? state.currentTopic.name : 'Quiz')}</strong><br>
                         <span style="font-size: 0.9em; color: #00ff00;">Section ${state.quiz.currentSection + 1}/${state.quiz.sections.length}: ${state.quiz.sections[state.quiz.currentSection].name}</span><br>
                     ` : `
@@ -8432,7 +8435,7 @@ function renderQuiz() {
                     ${modeLabel}
                 </div>
                 <div class="timer" id="section-timer">
-                    ${state.quiz.sections.length > 0 && state.quiz.sections[state.quiz.currentSection] && state.quiz.sections[state.quiz.currentSection].timeSeconds ? 
+                    ${hasValidCurrentSection && state.quiz.sections[state.quiz.currentSection].timeSeconds ? 
                         `${Math.max(0, Math.floor((state.quiz.sections[state.quiz.currentSection].timeSeconds - (Date.now() - state.quiz.sectionTimeStarted) / 1000)))} s` :
                         '60.0s'
                     }
@@ -8546,9 +8549,8 @@ function renderSectionTransitionModal() {
         return '';
     }
 
-    // Validate section indices are in bounds
-    if (state.quiz.currentSection >= state.quiz.sections.length || 
-        state.quiz.currentSection + 1 >= state.quiz.sections.length) {
+    // Check if there's a next section
+    if (state.quiz.currentSection + 1 >= state.quiz.sections.length) {
         return '';
     }
 
