@@ -3174,15 +3174,15 @@ function createVocabularyTopicsFromRegistry() {
         'word_roots_affixes': 'Latin and Greek word origins'
     };
     
-    // Check word_knowledge content
-    if (questionRegistry && questionRegistry.word_knowledge) {
-        const wkContent = questionRegistry.word_knowledge;
+    // Check word_knowledge content (registry uses 'vocabulary' as subjectId from Patch 18)
+    if (questionRegistry && questionRegistry.vocabulary) {
+        const wkContent = questionRegistry.vocabulary;
         for (const subtopicId in wkContent) {
             vocabTopics.push({
                 id: subtopicId,
                 name: topicNames[subtopicId] || subtopicId.replace(/_/g, ' '),
                 description: topicDescriptions[subtopicId] || 'Vocabulary practice',
-                subjectId: 'word_knowledge',
+                subjectId: 'vocabulary', // Use 'vocabulary' to match registry
                 isOfficialAfoqtTopic: true,
                 hasContent: true
             });
@@ -3246,10 +3246,10 @@ function createPhysicalScienceTopicsFromRegistry() {
     
     // Create topics from loaded content
     for (const subtopicId in psContent) {
-        // Remove 'physical_science_' prefix if present
+        // Remove 'physical_science_' prefix for display name, but keep full ID for registry lookup
         const cleanId = subtopicId.replace('physical_science_', '');
         dynamicTopics.push({
-            id: cleanId,
+            id: subtopicId, // Keep full ID for registry lookup
             name: topicNames[cleanId] || cleanId.replace(/_/g, ' '),
             description: topicDescriptions[cleanId] || 'Physical science practice',
             subjectId: 'physical_science',
@@ -5670,33 +5670,43 @@ async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
     
     // Process each section according to config
     for (const section of sectionConfig) {
-        const matchingTopics = topics.filter(t => t.id === section.topicId);
+        // Match topics by subjectId instead of id (to aggregate all subtopics for a subject)
+        const matchingTopics = topics.filter(t => t.subjectId === section.topicId || t.id === section.topicId);
         let sectionQuestions = [];
         
+        console.log(`Section ${section.name}: Found ${matchingTopics.length} matching topics for ${section.topicId}`);
+        
+        // Calculate questions per topic to distribute evenly
+        const questionsPerTopic = matchingTopics.length > 0 ? Math.ceil(section.count / matchingTopics.length) : section.count;
+        
         for (const topic of matchingTopics) {
+            const questionsNeeded = Math.min(questionsPerTopic, section.count - sectionQuestions.length);
+            if (questionsNeeded <= 0) break;
+            
             if (typeof getQuestionsWithSpacedRepetition === 'function') {
                 try {
                     const qs = await getQuestionsWithSpacedRepetition(
                         topic.subjectId || section.topicId,
-                        section.topicId,
+                        topic.id,
                         difficulty,
-                        section.count,
+                        questionsNeeded,
                         playerId
                     );
                     sectionQuestions.push(...qs);
                 } catch (e) {
-                    console.warn(`Failed to load via spaced repetition for ${section.topicId}:`, e);
+                    console.warn(`Failed to load via spaced repetition for ${topic.id}:`, e);
                 }
             }
             
             // Fallback to procedural generation
             if (sectionQuestions.length < section.count && topic.generateQuestion) {
-                const needed = section.count - sectionQuestions.length;
+                const needed = Math.min(questionsPerTopic, section.count - sectionQuestions.length);
                 for (let i = 0; i < needed; i++) {
                     const q = topic.generateQuestion(difficulty);
                     if (q) {
                         q._section = section.name;
                         q._topicId = section.topicId;
+                        q._sourceTopicId = topic.id;
                         sectionQuestions.push(q);
                     }
                 }
@@ -6318,6 +6328,8 @@ function render() {
             root.innerHTML = renderAFOQTDifficultySelect();
             break;
         case 'subject':
+            root.innerHTML = renderSubject();
+            break;
         case 'mode-select':
             root.innerHTML = renderModeSelect();
             break;
