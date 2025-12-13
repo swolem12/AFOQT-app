@@ -810,6 +810,9 @@ const DIFFICULTY_LEVELS = ['beginner', 'advanced', 'expert'];
 // ============================================================================
 // Global State
 // ============================================================================
+// Debug flag - set to false in production
+const DEBUG_MODE = false;
+
 const state = {
     screen: 'login', // 'login' | 'create-account' | 'home' | 'subject' | 'mode-select' | 'difficulty-select' | 'quiz' | 'results' | 'status' | 'equipment' | 'settings'
     players: [],
@@ -857,7 +860,7 @@ const state = {
         difficulty: 'beginner', // Store difficulty with quiz session
         showFeedback: true, // Patch 18: control feedback visibility
         isPracticeTest: false, // Patch 18: flag for AFOQT practice tests
-        showSectionTransition: false // Flag to show section transition modal
+        showSectionTransition: false // Flag to show section transition confirmation modal
     },
     patch18Loaded: false // Track if Patch 18 content is loaded
 };
@@ -3175,15 +3178,15 @@ function createVocabularyTopicsFromRegistry() {
         'word_roots_affixes': 'Latin and Greek word origins'
     };
     
-    // Check word_knowledge content
-    if (questionRegistry && questionRegistry.word_knowledge) {
-        const wkContent = questionRegistry.word_knowledge;
+    // Check word_knowledge content (registry uses 'vocabulary' as subjectId from Patch 18)
+    if (questionRegistry && questionRegistry.vocabulary) {
+        const wkContent = questionRegistry.vocabulary;
         for (const subtopicId in wkContent) {
             vocabTopics.push({
                 id: subtopicId,
                 name: topicNames[subtopicId] || subtopicId.replace(/_/g, ' '),
                 description: topicDescriptions[subtopicId] || 'Vocabulary practice',
-                subjectId: 'word_knowledge',
+                subjectId: 'vocabulary', // Use 'vocabulary' to match registry
                 isOfficialAfoqtTopic: true,
                 hasContent: true
             });
@@ -3247,10 +3250,10 @@ function createPhysicalScienceTopicsFromRegistry() {
     
     // Create topics from loaded content
     for (const subtopicId in psContent) {
-        // Remove 'physical_science_' prefix if present
+        // Remove 'physical_science_' prefix for display name, but keep full ID for registry lookup
         const cleanId = subtopicId.replace('physical_science_', '');
         dynamicTopics.push({
-            id: cleanId,
+            id: subtopicId, // Keep full ID for registry lookup
             name: topicNames[cleanId] || cleanId.replace(/_/g, ' '),
             description: topicDescriptions[cleanId] || 'Physical science practice',
             subjectId: 'physical_science',
@@ -4184,6 +4187,30 @@ function showAchievementNotification(achievement) {
     playSfx('levelup');
     
     // Remove after animation
+    setTimeout(() => {
+        notification.style.opacity = '0';
+        setTimeout(() => notification.remove(), 500);
+    }, 4000);
+}
+
+function showErrorNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'achievement-notification'; // Reuse same styling
+    notification.style.background = 'rgba(255, 0, 0, 0.9)'; // Red background for errors
+    notification.innerHTML = `
+        <div class="achievement-icon">⚠</div>
+        <div class="achievement-content">
+            <div class="achievement-title">Error</div>
+            <div class="achievement-desc">${message}</div>
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Play error sound
+    playSfx('wrong');
+    
+    // Remove after animation (consistent with achievement notification timing)
     setTimeout(() => {
         notification.style.opacity = '0';
         setTimeout(() => notification.remove(), 500);
@@ -5671,33 +5698,43 @@ async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
     
     // Process each section according to config
     for (const section of sectionConfig) {
-        const matchingTopics = topics.filter(t => t.id === section.topicId);
+        // Match topics by subjectId instead of id (to aggregate all subtopics for a subject)
+        const matchingTopics = topics.filter(t => t.subjectId === section.topicId || t.id === section.topicId);
         let sectionQuestions = [];
         
+        console.log(`Section ${section.name}: Found ${matchingTopics.length} matching topics for ${section.topicId}`);
+        
+        // Calculate questions per topic to distribute evenly
+        const questionsPerTopic = matchingTopics.length > 0 ? Math.ceil(section.count / matchingTopics.length) : section.count;
+        
         for (const topic of matchingTopics) {
+            const questionsNeeded = Math.min(questionsPerTopic, section.count - sectionQuestions.length);
+            if (questionsNeeded <= 0) break;
+            
             if (typeof getQuestionsWithSpacedRepetition === 'function') {
                 try {
                     const qs = await getQuestionsWithSpacedRepetition(
                         topic.subjectId || section.topicId,
-                        section.topicId,
+                        topic.id,
                         difficulty,
-                        section.count,
+                        questionsNeeded,
                         playerId
                     );
                     sectionQuestions.push(...qs);
                 } catch (e) {
-                    console.warn(`Failed to load via spaced repetition for ${section.topicId}:`, e);
+                    console.warn(`Failed to load via spaced repetition for ${topic.id}:`, e);
                 }
             }
             
             // Fallback to procedural generation
             if (sectionQuestions.length < section.count && topic.generateQuestion) {
-                const needed = section.count - sectionQuestions.length;
+                const needed = Math.min(questionsPerTopic, section.count - sectionQuestions.length);
                 for (let i = 0; i < needed; i++) {
                     const q = topic.generateQuestion(difficulty);
                     if (q) {
                         q._section = section.name;
                         q._topicId = section.topicId;
+                        q._sourceTopicId = topic.id;
                         sectionQuestions.push(q);
                     }
                 }
@@ -5746,14 +5783,15 @@ async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
 }
 
 async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
-    console.log('startQuiz called with:', {topicId, mode, difficulty});
+    if (DEBUG_MODE) console.log('startQuiz called with:', {topicId, mode, difficulty});
     const topic = topics.find(t => t.id === topicId);
     if (!topic) {
         console.error('Topic not found:', topicId);
+        playSfx('wrong');
         return;
     }
     
-    console.log('Starting quiz for topic:', topic.name);
+    if (DEBUG_MODE) console.log('Starting quiz for topic:', topic.name);
     state.currentTopic = topic;
     state.quiz.questions = [];
     state.quiz.mode = mode;
@@ -5887,6 +5925,14 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
         }
     }
     
+    // Check if we have any questions before starting quiz
+    if (state.quiz.questions.length === 0) {
+        console.error('Failed to generate any questions for quiz');
+        showErrorNotification('Failed to generate questions for this quiz. Please try a different topic or difficulty.');
+        return;
+    }
+    
+    if (DEBUG_MODE) console.log(`Starting quiz with ${state.quiz.questions.length} questions`);
     state.quiz.currentIndex = 0;
     state.quiz.score = 0;
     state.quiz.selectedAnswer = null;
@@ -6346,6 +6392,8 @@ function render() {
             root.innerHTML = renderAFOQTDifficultySelect();
             break;
         case 'subject':
+            root.innerHTML = renderSubject();
+            break;
         case 'mode-select':
             root.innerHTML = renderModeSelect();
             break;
@@ -6670,7 +6718,20 @@ function renderSubject() {
 }
 
 function renderModeSelect() {
-    if (!state.currentTopic) return '';
+    if (!state.currentTopic) {
+        console.error('renderModeSelect: state.currentTopic is not set!');
+        return `
+            <div class="panel">
+                <h1 class="panel-header">Error</h1>
+                <p style="text-align: center; color: var(--color-primary); padding: 40px;">
+                    No topic selected. Please go back and select a topic.
+                </p>
+                <div class="action-buttons quiz-action-buttons">
+                    <button class="btn" id="home-btn">🏠 Home</button>
+                </div>
+            </div>
+        `;
+    }
     
     return `
         <div class="panel">
@@ -6731,7 +6792,20 @@ function renderModeSelect() {
 }
 
 function renderDifficultySelect() {
-    if (!state.currentTopic) return '';
+    if (!state.currentTopic) {
+        console.error('renderDifficultySelect: state.currentTopic is not set!');
+        return `
+            <div class="panel">
+                <h1 class="panel-header">Error</h1>
+                <p style="text-align: center; color: var(--color-primary); padding: 40px;">
+                    No topic selected. Please go back and select a topic.
+                </p>
+                <div class="action-buttons quiz-action-buttons">
+                    <button class="btn" id="home-btn">🏠 Home</button>
+                </div>
+            </div>
+        `;
+    }
     
     return `
         <div class="panel">
@@ -8546,6 +8620,9 @@ function renderQuiz() {
         questionDisplay = `Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}`;
     }
 
+    // Check if current section is valid
+    const hasValidCurrentSection = state.quiz.sections.length > 0 && state.quiz.sections[state.quiz.currentSection];
+
     return `
         <div class="panel">
             <div class="quiz-progress-bar">
@@ -8554,7 +8631,7 @@ function renderQuiz() {
             
             <div class="quiz-header">
                 <div class="quiz-info">
-                    ${state.quiz.sections.length > 0 && state.quiz.sections[state.quiz.currentSection] ? `
+                    ${hasValidCurrentSection ? `
                         <strong>${state.quiz.isPracticeTest ? 'AFOQT Practice Test' : (state.currentTopic ? state.currentTopic.name : 'Quiz')}</strong><br>
                         <span style="font-size: 0.9em; color: #00ff00;">Section ${state.quiz.currentSection + 1}/${state.quiz.sections.length}: ${state.quiz.sections[state.quiz.currentSection].name}</span><br>
                     ` : `
@@ -8564,7 +8641,7 @@ function renderQuiz() {
                     ${modeLabel}
                 </div>
                 <div class="timer" id="section-timer">
-                    ${state.quiz.sections.length > 0 && state.quiz.sections[state.quiz.currentSection] && state.quiz.sections[state.quiz.currentSection].timeSeconds ? 
+                    ${hasValidCurrentSection && state.quiz.sections[state.quiz.currentSection].timeSeconds ? 
                         `${Math.max(0, Math.floor((state.quiz.sections[state.quiz.currentSection].timeSeconds - (Date.now() - state.quiz.sectionTimeStarted) / 1000)))} s` :
                         '60.0s'
                     }
@@ -8678,9 +8755,8 @@ function renderSectionTransitionModal() {
         return '';
     }
 
-    // Validate section indices are in bounds
-    if (state.quiz.currentSection >= state.quiz.sections.length || 
-        state.quiz.currentSection + 1 >= state.quiz.sections.length) {
+    // Check if there's a next section
+    if (state.quiz.currentSection + 1 >= state.quiz.sections.length) {
         return '';
     }
 
@@ -10650,50 +10726,59 @@ function attachEventListeners() {
     // Difficulty selection buttons
     const beginnerDiffBtn = document.getElementById('beginner-diff-btn');
     if (beginnerDiffBtn) {
+        if (DEBUG_MODE) console.log('✓ Beginner difficulty button found, attaching click handler');
         beginnerDiffBtn.addEventListener('click', () => {
-            console.log('Beginner difficulty button clicked', {currentTopic: state.currentTopic});
+            if (DEBUG_MODE) console.log('Beginner difficulty button clicked', {currentTopic: state.currentTopic});
             if (state.currentTopic) {
                 startQuiz(state.currentTopic.id, 'practice', 'beginner').catch(err => {
                     console.error('Error starting quiz:', err);
-                    playSfx('wrong');
+                    showErrorNotification('Failed to start quiz. Please try again or select a different topic.');
                 });
             } else {
                 console.error('Cannot start quiz: state.currentTopic is not set');
-                playSfx('wrong');
+                showErrorNotification('No topic selected. Please go back and select a topic first.');
             }
         });
+    } else {
+        if (DEBUG_MODE) console.warn('✗ Beginner difficulty button NOT found in DOM');
     }
     
     const advancedDiffBtn = document.getElementById('advanced-diff-btn');
     if (advancedDiffBtn) {
+        if (DEBUG_MODE) console.log('✓ Advanced difficulty button found, attaching click handler');
         advancedDiffBtn.addEventListener('click', () => {
-            console.log('Advanced difficulty button clicked', {currentTopic: state.currentTopic});
+            if (DEBUG_MODE) console.log('Advanced difficulty button clicked', {currentTopic: state.currentTopic});
             if (state.currentTopic) {
                 startQuiz(state.currentTopic.id, 'practice', 'advanced').catch(err => {
                     console.error('Error starting quiz:', err);
-                    playSfx('wrong');
+                    showErrorNotification('Failed to start quiz. Please try again or select a different topic.');
                 });
             } else {
                 console.error('Cannot start quiz: state.currentTopic is not set');
-                playSfx('wrong');
+                showErrorNotification('No topic selected. Please go back and select a topic first.');
             }
         });
+    } else {
+        if (DEBUG_MODE) console.warn('✗ Advanced difficulty button NOT found in DOM');
     }
     
     const expertDiffBtn = document.getElementById('expert-diff-btn');
     if (expertDiffBtn) {
+        if (DEBUG_MODE) console.log('✓ Expert difficulty button found, attaching click handler');
         expertDiffBtn.addEventListener('click', () => {
-            console.log('Expert difficulty button clicked', {currentTopic: state.currentTopic});
+            if (DEBUG_MODE) console.log('Expert difficulty button clicked', {currentTopic: state.currentTopic});
             if (state.currentTopic) {
                 startQuiz(state.currentTopic.id, 'practice', 'expert').catch(err => {
                     console.error('Error starting quiz:', err);
-                    playSfx('wrong');
+                    showErrorNotification('Failed to start quiz. Please try again or select a different topic.');
                 });
             } else {
                 console.error('Cannot start quiz: state.currentTopic is not set');
-                playSfx('wrong');
+                showErrorNotification('No topic selected. Please go back and select a topic first.');
             }
         });
+    } else {
+        if (DEBUG_MODE) console.warn('✗ Expert difficulty button NOT found in DOM');
     }
     
     // AFOQT Practice difficulty buttons
