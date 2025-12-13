@@ -24,6 +24,52 @@
       "lookup": {
         "x": 4,
         "y": 8
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          8,
+          16,
+          24,
+          32
+        ],
+        "cellValues": [
+          [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          [
+            21,
+            22,
+            23,
+            24,
+            25
+          ],
+          [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          [
+            41,
+            42,
+            43,
+            44,
+            45
+          ]
+        ]
       }
     },
     {
@@ -42,7 +88,8 @@
         "2. Always check the table's headers and labels.",
         "3. Don't assume standard axis assignments; follow the table's design."
       ],
-      "fastStrategy": "Read the table headers; they define which axis represents what."
+      "fastStrategy": "Read the table headers; they define which axis represents what.",
+      "lookup": null
     }
   ]
 }

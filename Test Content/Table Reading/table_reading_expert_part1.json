@@ -60,7 +60,54 @@
         "3. Identify maximum: 25.7% in 2021.",
         "4. Answer: 2021."
       ],
-      "fastStrategy": "Find the column of interest; scan for highest/lowest value; read corresponding row."
+      "fastStrategy": "Find the column of interest; scan for highest/lowest value; read corresponding row.",
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "cellValues": [
+          [
+            2019,
+            150,
+            120,
+            30,
+            20
+          ],
+          [
+            2020,
+            160,
+            125,
+            35,
+            21.9
+          ],
+          [
+            2021,
+            175,
+            130,
+            45,
+            25.7
+          ],
+          [
+            2022,
+            190,
+            145,
+            45,
+            23.7
+          ]
+        ]
+      },
+      "lookup": null
     },
     {
       "id": "tr_exp_e1_002",
@@ -119,7 +166,54 @@
         "4. Find min: $150M (2019).",
         "5. Calculate difference: $190M - $150M = $40M."
       ],
-      "fastStrategy": "Find max and min values in a column; subtract to find difference."
+      "fastStrategy": "Find max and min values in a column; subtract to find difference.",
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "cellValues": [
+          [
+            2019,
+            150,
+            120,
+            30,
+            20
+          ],
+          [
+            2020,
+            160,
+            125,
+            35,
+            21.9
+          ],
+          [
+            2021,
+            175,
+            130,
+            45,
+            25.7
+          ],
+          [
+            2022,
+            190,
+            145,
+            45,
+            23.7
+          ]
+        ]
+      },
+      "lookup": null
     }
   ]
 }

@@ -121,17 +121,16 @@ def validate_question(question: Dict, index: int) -> List[str]:
     elif question.get("answer") not in ["A", "B", "C", "D"]:
         errors.append(f"Question {index}: invalid answer '{question.get('answer')}'")
     
-    # Check tableSpec
-    if "tableSpec" not in question:
-        errors.append(f"Question {index}: missing 'tableSpec'")
-    else:
+    # Check tableSpec (optional for non-lookup questions)
+    if "tableSpec" in question:
         table_spec_errors = validate_table_spec(question.get("tableSpec", {}))
         errors.extend([f"Question {index}: {e}" for e in table_spec_errors])
     
-    # Check lookup coordinates
+    # Check lookup coordinates (can be null for non-lookup questions)
     if "lookup" not in question:
         errors.append(f"Question {index}: missing 'lookup' (fallback: parse from text)")
-    else:
+    elif question.get("lookup") is not None:
+        # Validate lookup if it's not null (null = aggregate/non-lookup type)
         table_spec = question.get("tableSpec", {})
         lookup_errors = validate_lookup(question.get("lookup", {}), table_spec)
         errors.extend([f"Question {index}: {e}" for e in lookup_errors])
