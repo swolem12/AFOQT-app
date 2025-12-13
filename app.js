@@ -5897,6 +5897,15 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
         }
     }
     
+    // Check if we have any questions before starting quiz
+    if (state.quiz.questions.length === 0) {
+        console.error('Failed to generate any questions for quiz');
+        playSfx('wrong');
+        alert('Failed to generate questions for this quiz. Please try a different topic or difficulty.');
+        return;
+    }
+    
+    console.log(`Starting quiz with ${state.quiz.questions.length} questions`);
     state.quiz.currentIndex = 0;
     state.quiz.score = 0;
     state.quiz.selectedAnswer = null;
@@ -6677,7 +6686,20 @@ function renderSubject() {
 }
 
 function renderModeSelect() {
-    if (!state.currentTopic) return '';
+    if (!state.currentTopic) {
+        console.error('renderModeSelect: state.currentTopic is not set!');
+        return `
+            <div class="panel">
+                <h1 class="panel-header">Error</h1>
+                <p style="text-align: center; color: var(--color-primary); padding: 40px;">
+                    No topic selected. Please go back and select a topic.
+                </p>
+                <div class="action-buttons quiz-action-buttons">
+                    <button class="btn" id="home-btn">🏠 Home</button>
+                </div>
+            </div>
+        `;
+    }
     
     return `
         <div class="panel">
@@ -6738,7 +6760,20 @@ function renderModeSelect() {
 }
 
 function renderDifficultySelect() {
-    if (!state.currentTopic) return '';
+    if (!state.currentTopic) {
+        console.error('renderDifficultySelect: state.currentTopic is not set!');
+        return `
+            <div class="panel">
+                <h1 class="panel-header">Error</h1>
+                <p style="text-align: center; color: var(--color-primary); padding: 40px;">
+                    No topic selected. Please go back and select a topic.
+                </p>
+                <div class="action-buttons quiz-action-buttons">
+                    <button class="btn" id="home-btn">🏠 Home</button>
+                </div>
+            </div>
+        `;
+    }
     
     return `
         <div class="panel">
