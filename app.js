@@ -3157,14 +3157,14 @@ function createBlockCountingTopicsFromRegistry() {
 function createVocabularyTopicsFromRegistry() {
     const vocabTopics = [];
     
-    // Topic name mapping
+    // Topic name mapping (keys must match filenames in Test Content/Vocabulary/)
     const topicNames = {
         'synonyms': 'Synonyms',
         'antonyms': 'Antonyms',
         'verbal_analogies': 'Verbal Analogies',
         'vocabulary_in_context': 'Vocabulary in Context',
         'confusing_word_pairs': 'Confusing Word Pairs',
-        'high_frequency_vocab': 'High Frequency Vocabulary',
+        'highfreq_vocab': 'High Frequency Vocabulary',
         'sentence_completion': 'Sentence Completion',
         'word_roots_affixes': 'Word Roots & Affixes'
     };
@@ -3175,7 +3175,7 @@ function createVocabularyTopicsFromRegistry() {
         'verbal_analogies': 'Word relationship patterns',
         'vocabulary_in_context': 'Word meanings from context',
         'confusing_word_pairs': 'Commonly confused words',
-        'high_frequency_vocab': 'Common AFOQT vocabulary words',
+        'highfreq_vocab': 'Common AFOQT vocabulary words',
         'sentence_completion': 'Fill in the blank with best word',
         'word_roots_affixes': 'Latin and Greek word origins'
     };
