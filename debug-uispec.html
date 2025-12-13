@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UISpec Debug Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #000;
+            color: #00ffff;
+            padding: 20px;
+            font-family: monospace;
+        }
+        .test-section {
+            margin: 30px 0;
+            border: 2px solid #006666;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .success { color: #00ff00; }
+        .error { color: #ff6666; }
+        .info { color: #ffff00; }
+        pre {
+            background: #001a1a;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>UISpec Rendering Debug Test</h1>
+    <p class="info">This page tests if uiSpec questions are loaded and rendered correctly.</p>
+    
+    <div class="test-section">
+        <h2>Test 1: Load question registry and check for uiSpec</h2>
+        <div id="test1-output"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 2: Get questions from registry</h2>
+        <div id="test2-output"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 3: Render uiSpec HTML</h2>
+        <div id="test3-output"></div>
+    </div>
+    
+    <script src="patch-loader.js"></script>
+    <script src="app.js"></script>
+    <script>
+        async function runTests() {
+            const output1 = document.getElementById('test1-output');
+            const output2 = document.getElementById('test2-output');
+            const output3 = document.getElementById('test3-output');
+            
+            try {
+                // Test 1: Load content and check registry
+                output1.innerHTML = '<p class="info">Loading question content...</p>';
+                await loadAllContent();
+                
+                let test1Result = '<p class="success">✓ Content loaded successfully</p>';
+                
+                // Check if questionRegistry has math_knowledge
+                if (questionRegistry && questionRegistry.math_knowledge) {
+                    test1Result += '<p class="success">✓ math_knowledge exists in registry</p>';
+                    
+                    // Check slope questions
+                    if (questionRegistry.math_knowledge.slope_and_rate_of_change) {
+                        const slopeQuestions = questionRegistry.math_knowledge.slope_and_rate_of_change.beginner;
+                        test1Result += `<p class="success">✓ Found ${slopeQuestions.length} slope beginner questions</p>`;
+                        
+                        // Check first question
+                        if (slopeQuestions.length > 0) {
+                            const q = slopeQuestions[0];
+                            test1Result += `<p class="info">First question ID: ${q.id}</p>`;
+                            test1Result += `<p class="info">Has uiSpec: ${!!q.uiSpec ? '<span class="success">YES</span>' : '<span class="error">NO</span>'}</p>`;
+                            
+                            if (q.uiSpec) {
+                                test1Result += `<p class="info">uiSpec type: ${q.uiSpec.type}</p>`;
+                                test1Result += `<pre>${JSON.stringify(q.uiSpec, null, 2)}</pre>`;
+                            }
+                        }
+                    } else {
+                        test1Result += '<p class="error">✗ slope_and_rate_of_change not found in registry</p>';
+                    }
+                } else {
+                    test1Result += '<p class="error">✗ math_knowledge not found in registry</p>';
+                }
+                
+                output1.innerHTML = test1Result;
+                
+                // Test 2: Get questions using the app's function
+                output2.innerHTML = '<p class="info">Getting questions from registry...</p>';
+                
+                if (typeof getQuestionsFromRegistry !== 'undefined') {
+                    const questions = getQuestionsFromRegistry('math_knowledge', 'slope_and_rate_of_change', 'beginner', 3);
+                    
+                    let test2Result = `<p class="success">✓ Got ${questions.length} questions</p>`;
+                    
+                    questions.forEach((q, i) => {
+                        test2Result += `<h4>Question ${i + 1}: ${q.id}</h4>`;
+                        test2Result += `<p class="info">Has uiSpec: ${!!q.uiSpec ? '<span class="success">YES</span>' : '<span class="error">NO</span>'}</p>`;
+                        test2Result += `<p>Prompt: ${q.prompt.substring(0, 100)}...</p>`;
+                        
+                        if (q.uiSpec) {
+                            test2Result += `<p class="info">uiSpec type: ${q.uiSpec.type}</p>`;
+                        }
+                    });
+                    
+                    output2.innerHTML = test2Result;
+                    
+                    // Test 3: Render the uiSpec
+                    if (questions.length > 0 && questions[0].uiSpec) {
+                        output3.innerHTML = '<p class="success">✓ Rendering first question uiSpec...</p>';
+                        
+                        if (typeof renderMathUI !== 'undefined') {
+                            const rendered = renderMathUI(questions[0].uiSpec);
+                            output3.innerHTML += '<h3>Rendered HTML:</h3>';
+                            output3.innerHTML += '<pre>' + rendered.substring(0, 500) + '...</pre>';
+                            output3.innerHTML += '<h3>Visual Output:</h3>';
+                            output3.innerHTML += rendered;
+                        } else {
+                            output3.innerHTML = '<p class="error">✗ renderMathUI function not found</p>';
+                        }
+                    } else {
+                        output3.innerHTML = '<p class="error">✗ No questions with uiSpec to render</p>';
+                    }
+                } else {
+                    output2.innerHTML = '<p class="error">✗ getQuestionsFromRegistry function not found</p>';
+                }
+                
+            } catch (error) {
+                output1.innerHTML += `<p class="error">✗ Error: ${error.message}</p>`;
+                console.error('Test error:', error);
+            }
+        }
+        
+        // Run tests when page loads
+        runTests();
+    </script>
+</body>
+</html>
