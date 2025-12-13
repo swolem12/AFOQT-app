@@ -862,7 +862,9 @@ const state = {
         isPracticeTest: false, // Patch 18: flag for AFOQT practice tests
         showSectionTransition: false // Flag to show section transition confirmation modal
     },
-    patch18Loaded: false // Track if Patch 18 content is loaded
+    patch18Loaded: false, // Track if Patch 18 content is loaded
+    contentLoading: true, // Track if content is currently loading
+    contentReady: false // Track if content is ready for quiz start
 };
 
 // ============================================================================
@@ -5927,8 +5929,31 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     
     // Check if we have any questions before starting quiz
     if (state.quiz.questions.length === 0) {
-        console.error('Failed to generate any questions for quiz');
-        showErrorNotification('Failed to generate questions for this quiz. Please try a different topic or difficulty.');
+        const topicInfo = `${topic.subjectId || 'unknown'}/${topic.id}/${difficulty}`;
+        console.error('❌ Failed to generate any questions for quiz');
+        console.error('  Topic:', topic.name);
+        console.error('  Subject ID:', topic.subjectId);
+        console.error('  Topic ID:', topic.id);
+        console.error('  Difficulty:', difficulty);
+        console.error('  Mode:', mode);
+        
+        // Check registry status for this topic
+        if (typeof questionRegistry !== 'undefined' && topic.subjectId) {
+            const subjectPool = questionRegistry[topic.subjectId];
+            if (subjectPool && subjectPool[topic.id]) {
+                const poolSizes = subjectPool[topic.id];
+                console.error('  Registry pools:', {
+                    beginner: poolSizes.beginner?.length || 0,
+                    advanced: poolSizes.advanced?.length || 0,
+                    expert: poolSizes.expert?.length || 0
+                });
+            } else {
+                console.error('  Registry: No pool found for', topicInfo);
+            }
+        }
+        
+        showErrorNotification(`No questions available for ${topic.name} (${difficulty}). Try a different topic or difficulty.`);
+        playSfx('wrong');
         return;
     }
     
@@ -6498,6 +6523,13 @@ function renderHome() {
     const playerInfo = state.currentPlayer ? computePlayerTotals(state.currentPlayer) : null;
     const testResults = state.currentPlayer && state.currentPlayer.testResults ? state.currentPlayer.testResults : [];
     
+    const loadingIndicator = state.contentLoading ? `
+        <div style="text-align: center; padding: 20px; color: var(--color-primary);">
+            <div style="font-size: 2rem; margin-bottom: 10px;">⏳</div>
+            <div>Loading question content...</div>
+        </div>
+    ` : '';
+    
     return `
         <div class="panel">
             <h1 class="panel-header">AFOQT QUEST</h1>
@@ -6523,6 +6555,8 @@ function renderHome() {
                     </button>
                 </div>
             </div>
+            
+            ${loadingIndicator}
             
             <div class="home-main-grid">
                 <div class="home-primary-tile" id="practice-test-selector">
@@ -6807,14 +6841,19 @@ function renderDifficultySelect() {
         `;
     }
     
+    const isLoading = state.contentLoading || !state.contentReady;
+    const disabledStyle = isLoading ? 'opacity: 0.5; pointer-events: none;' : '';
+    const loadingMessage = isLoading ? '<p style="text-align: center; color: var(--color-primary); margin-top: 20px;">⏳ Loading question content...</p>' : '';
+    
     return `
         <div class="panel">
             <h1 class="panel-header">Select Difficulty</h1>
             
             <div style="margin: 40px 0;">
                 <h2 style="text-align: center; margin-bottom: 30px;">${state.currentTopic.name} - Practice Mode</h2>
+                ${loadingMessage}
                 
-                <div class="grid grid-3" style="max-width: 900px; margin: 0 auto;">
+                <div class="grid grid-3" style="max-width: 900px; margin: 0 auto; ${disabledStyle}">
                     <div class="tile difficulty-tile" id="beginner-diff-btn" style="cursor: pointer; padding: 30px;">
                         <div class="tile-title" style="font-size: 1.5rem; margin-bottom: 15px;">⭐ Beginner</div>
                         <div class="tile-description">
@@ -11157,6 +11196,10 @@ async function init() {
     // Patch 18: Initialize content-based question system
     if (typeof initializePatch18 === 'function') {
         try {
+            state.contentLoading = true;
+            state.contentReady = false;
+            render(); // Show loading state
+            
             const success = await initializePatch18();
             if (success) {
                 state.patch18Loaded = true;
@@ -11235,10 +11278,37 @@ async function init() {
                         console.log(`✓ Added ${practiceTests.length} AFOQT practice tests`);
                     }
                 }
+                
+                // Log registry diagnostics
+                if (typeof questionRegistry !== 'undefined') {
+                    console.log('📊 Question Registry Status:');
+                    Object.keys(questionRegistry).forEach(subjectId => {
+                        console.log(`  ${subjectId}:`);
+                        Object.keys(questionRegistry[subjectId]).forEach(subtopicId => {
+                            const difficulties = questionRegistry[subjectId][subtopicId];
+                            const counts = {
+                                beginner: difficulties.beginner?.length || 0,
+                                advanced: difficulties.advanced?.length || 0,
+                                expert: difficulties.expert?.length || 0
+                            };
+                            const total = counts.beginner + counts.advanced + counts.expert;
+                            console.log(`    ${subtopicId}: ${total} questions (B:${counts.beginner}, A:${counts.advanced}, E:${counts.expert})`);
+                        });
+                    });
+                }
             }
+            
+            state.contentLoading = false;
+            state.contentReady = true;
+            console.log('✅ Content ready for quiz start');
         } catch (error) {
             console.warn('Patch 18 initialization failed:', error);
+            state.contentLoading = false;
+            state.contentReady = true; // Allow fallback to procedural generators
         }
+    } else {
+        state.contentLoading = false;
+        state.contentReady = true; // No content loader, use procedural only
     }
     
     render();
