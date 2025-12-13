@@ -7430,7 +7430,8 @@ function renderMathUI(uiSpec) {
             return renderDataTable(uiSpec);
         case 'block_stack_iso':
             return renderBlockStackIso(uiSpec);
-        // Additional angle diagram types - all use the angle pair diagram renderer
+        // Additional angle diagram types - all use renderGeometryAnglePairDiagram
+        // These types share the same structure: lines array + angleLabels array
         case 'adjacent_angles_on_line':
         case 'angle_linear_pair':
         case 'angle_pair_vertical':
@@ -8381,6 +8382,11 @@ function renderGeometryCircleDiagram(uiSpec) {
     const baseColor = styleHints.lineColor || '#00ffff';
     const labelColor = styleHints.labelsColor || '#00ffff';
     
+    // Label positioning constants
+    const LABEL_OFFSET_Y = 10;   // pixels above/below elements
+    const LABEL_OFFSET_X = 10;   // pixels to the side of elements
+    const LABEL_CENTER_OFFSET = 15; // pixels from center point
+    
     // Render circle using SVG
     const circleSvg = `
         <svg style="position: absolute; left: 0; top: 0; width: ${width}px; height: ${height}px; pointer-events: none;">
@@ -8408,10 +8414,10 @@ function renderGeometryCircleDiagram(uiSpec) {
             // Position label based on type
             if (position === 'radius') {
                 x = center.x + radius / 2;
-                y = center.y - 10;
+                y = center.y - LABEL_OFFSET_Y;
             } else if (position === 'center') {
-                x = center.x + 10;
-                y = center.y + 15;
+                x = center.x + LABEL_OFFSET_X;
+                y = center.y + LABEL_CENTER_OFFSET;
             } else if (label.x !== undefined && label.y !== undefined) {
                 x = label.x;
                 y = label.y;
@@ -8436,24 +8442,33 @@ function renderGeometryCircleDiagram(uiSpec) {
  */
 function renderSimpleLineDiagram(uiSpec) {
     const { type, width = 300, height = 300, line = {}, styleHints = {} } = uiSpec;
-    const { position = height / 2, label = '' } = line;
     const baseColor = styleHints.lineColor || '#00ffff';
     const labelColor = styleHints.labelsColor || '#00ffff';
+    
+    // Label positioning constants
+    const LABEL_OFFSET_HORIZONTAL = 20;  // pixels below/above line
+    const LABEL_OFFSET_VERTICAL = 10;     // pixels to right of line
     
     let lineHtml = '';
     let labelHtml = '';
     
     if (type === 'horizontal') {
+        const position = line.position !== undefined ? line.position : height / 2;
+        const label = line.label || '';
+        
         // Horizontal line across the width
         lineHtml = `<div class="graphLine" style="left: 0; top: ${position}px; width: ${width}px; background: ${baseColor};"></div>`;
         if (label) {
-            labelHtml = `<div class="graphLabel" style="left: ${width / 2 - 20}px; top: ${position - 20}px; color: ${labelColor};">${label}</div>`;
+            labelHtml = `<div class="graphLabel" style="left: ${width / 2 - LABEL_OFFSET_HORIZONTAL}px; top: ${position - LABEL_OFFSET_HORIZONTAL}px; color: ${labelColor};">${label}</div>`;
         }
     } else if (type === 'vertical') {
-        // Vertical line - need to rotate it
-        lineHtml = `<div class="graphLine" style="left: ${position}px; top: 0; width: ${height}px; transform: rotate(90deg); transform-origin: 0 0; background: ${baseColor};"></div>`;
+        const position = line.position !== undefined ? line.position : width / 2;
+        const label = line.label || '';
+        
+        // Vertical line using CSS width/height directly (not rotation)
+        lineHtml = `<div style="position: absolute; left: ${position}px; top: 0; width: 2px; height: ${height}px; background: ${baseColor};"></div>`;
         if (label) {
-            labelHtml = `<div class="graphLabel" style="left: ${position + 10}px; top: ${height / 2}px; color: ${labelColor};">${label}</div>`;
+            labelHtml = `<div class="graphLabel" style="left: ${position + LABEL_OFFSET_VERTICAL}px; top: ${height / 2}px; color: ${labelColor};">${label}</div>`;
         }
     }
     
