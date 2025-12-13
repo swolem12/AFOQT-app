@@ -1,0 +1,122 @@
+{
+  "id": "table_reading_table_component_spec",
+  "version": "1.0.0",
+  "purpose": "Define a standalone TableReadingTable component (React) that renders an AFOQT-style data table, binds to tableSpec + a question, and does not break the host application's CSS/UX.",
+  "integrationRule": "DO NOT import the full Table Reading preview page. Import ONLY the table component + its scoped styles.",
+  "dataContract": {
+    "tableSpec": {
+      "type": "data_table",
+      "xHeader": "number[]",
+      "yHeader": "number[]",
+      "cellValues": "number[][]",
+      "constraints": [
+        "cellValues.length must equal yHeader.length",
+        "each row in cellValues must have length equal to xHeader.length"
+      ]
+    },
+    "question": {
+      "id": "string",
+      "stem": "string",
+      "choices": "{A:string,B:string,C:string,D:string}",
+      "answer": "\"A\"|\"B\"|\"C\"|\"D\"",
+      "lookup": {
+        "x": "number",
+        "y": "number"
+      },
+      "notes": [
+        "Prefer explicit lookup.x and lookup.y instead of parsing text.",
+        "If lookup is missing, component should render without highlight."
+      ]
+    }
+  },
+  "componentAPI": {
+    "name": "TableReadingTable",
+    "props": {
+      "tableSpec": "TableSpec",
+      "lookup": "{x:number|null,y:number|null}",
+      "mode": "\"practice\"|\"test\"",
+      "showLegend": "boolean",
+      "enableCueAnimation": "boolean",
+      "className": "string (optional)",
+      "style": "React.CSSProperties (optional)"
+    },
+    "behavior": [
+      "Compute rowIndex = yHeader.indexOf(lookup.y), colIndex = xHeader.indexOf(lookup.x).",
+      "If rowIndex or colIndex is -1, render table normally (no highlight).",
+      "If mode === 'test', never show debug info such as computed cell value.",
+      "If enableCueAnimation is true, run a short cue: pulse row header -> pulse column header -> pulse cell (Web Animations API)."
+    ]
+  },
+  "cssIsolationPlan": {
+    "requirement": "Component styles must not alter :root, body, html, generic tags, or shared button/table styles in the host app.",
+    "approvedApproaches": [
+      {
+        "approach": "CSS Modules",
+        "details": "Use TableReadingTable.module.css and import styles as 'styles'. All class names become locally scoped."
+      },
+      {
+        "approach": "Styled-components or emotion",
+        "details": "Component-scoped styles only."
+      },
+      {
+        "approach": "Prefixed global CSS",
+        "details": "If you must use global CSS, every selector must be prefixed with .trtScope and the component root must render <div className='trtScope'>."
+      }
+    ],
+    "hardBlocks": [
+      "No :root variables",
+      "No body background or font overrides",
+      "No generic button styling",
+      "No unprefixed table/th/td rules"
+    ]
+  },
+  "visualDesignTokens": {
+    "theme": "inherits host app, but can accept optional CSS variables for styling",
+    "cssVars": {
+      "--trt-bg": "rgba(8,12,24,.55)",
+      "--trt-border": "rgba(255,255,255,.10)",
+      "--trt-border2": "rgba(255,255,255,.16)",
+      "--trt-text": "rgba(255,255,255,.92)",
+      "--trt-muted": "rgba(255,255,255,.62)",
+      "--trt-headerBg": "rgba(10,16,36,.92)",
+      "--trt-targetBg": "linear-gradient(135deg, rgba(149,120,255,.20), rgba(66,226,255,.14))"
+    },
+    "layout": {
+      "minWidth": 520,
+      "cellPaddingPx": 10,
+      "radiusPx": 14,
+      "stickyHeader": true,
+      "stickyFirstColumn": true
+    }
+  },
+  "renderStructure": {
+    "root": "div (scoped)",
+    "legend": [
+      "optional div legend for X and Y meaning",
+      "legend uses small text; no effect on global typography"
+    ],
+    "table": {
+      "thead": "top header row: corner label + X headers",
+      "tbody": "each row: Y header + value cells",
+      "sticky": [
+        "thead th is sticky top",
+        "first column th is sticky left"
+      ],
+      "targetCell": "apply target background class when rowIndex/colIndex matches"
+    }
+  },
+  "questionToTableMapping": {
+    "recommended": "Store lookup coordinates explicitly on each question: question.lookup.x and question.lookup.y",
+    "fallback": "If your legacy dataset only has text, parse with regex for 'X = n' and 'Y = n', but migrate to explicit lookup ASAP.",
+    "validation": [
+      "If lookup.x not in xHeader OR lookup.y not in yHeader, treat as non-highlight question (no crash)."
+    ]
+  },
+  "acceptanceTests": [
+    "Does not change host app background, fonts, or button styles.",
+    "Renders correctly inside any container width (scrolls horizontally if too narrow).",
+    "Sticky header and sticky Y column work while scrolling.",
+    "Highlights correct cell when lookup matches headers.",
+    "No highlight and no crash when lookup is null or not found."
+  ]
+}

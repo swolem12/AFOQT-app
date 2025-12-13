@@ -7,7 +7,12 @@
     {
       "id": "tr_axis_a1_001",
       "question": "In a table where X represents hours and Y represents workers, what does the value at X = 4, Y = 8 represent?",
-      "choices": {"A": "4 workers for 8 hours", "B": "8 workers for 4 hours", "C": "4 hours with 8 workers", "D": "32 worker-hours"},
+      "choices": {
+        "A": "4 workers for 8 hours",
+        "B": "8 workers for 4 hours",
+        "C": "4 hours with 8 workers",
+        "D": "32 worker-hours"
+      },
       "answer": "C",
       "explanation": "X = 4 hours and Y = 8 workers. The intersection represents the condition at 4 hours with 8 workers.",
       "steps": [
@@ -15,12 +20,21 @@
         "2. Locate X = 4 (along horizontal) and Y = 8 (along vertical).",
         "3. The intersection represents 4 hours with 8 workers."
       ],
-      "fastStrategy": "Read axis labels carefully; X values go horizontal, Y values go vertical."
+      "fastStrategy": "Read axis labels carefully; X values go horizontal, Y values go vertical.",
+      "lookup": {
+        "x": 4,
+        "y": 8
+      }
     },
     {
       "id": "tr_axis_a1_002",
       "question": "A data table has columns for Temperature (°C) and Pressure (kPa). Which axis should temperature occupy?",
-      "choices": {"A": "Always X", "B": "Always Y", "C": "Whichever the table specifies", "D": "It doesn't matter"},
+      "choices": {
+        "A": "Always X",
+        "B": "Always Y",
+        "C": "Whichever the table specifies",
+        "D": "It doesn't matter"
+      },
       "answer": "C",
       "explanation": "The axis assignments depend on how the table is structured and labeled. Always refer to the table's specific layout.",
       "steps": [

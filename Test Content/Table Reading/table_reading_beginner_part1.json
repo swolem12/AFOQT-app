@@ -7,14 +7,56 @@
     "type": "data_table",
     "width": 400,
     "height": 220,
-    "xHeader": [1, 2, 3, 4, 5],
-    "yHeader": [10, 20, 30, 40, 50],
+    "xHeader": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "yHeader": [
+      10,
+      20,
+      30,
+      40,
+      50
+    ],
     "cellValues": [
-      [12, 15, 18, 21, 24],
-      [14, 18, 22, 26, 30],
-      [16, 21, 26, 31, 36],
-      [18, 24, 30, 36, 42],
-      [20, 27, 34, 41, 48]
+      [
+        12,
+        15,
+        18,
+        21,
+        24
+      ],
+      [
+        14,
+        18,
+        22,
+        26,
+        30
+      ],
+      [
+        16,
+        21,
+        26,
+        31,
+        36
+      ],
+      [
+        18,
+        24,
+        30,
+        36,
+        42
+      ],
+      [
+        20,
+        27,
+        34,
+        41,
+        48
+      ]
     ]
   },
   "questions": [
@@ -41,7 +83,67 @@
         "4. Read the number in that cell: 12.",
         "5. Match 12 to the correct option."
       ],
-      "fastStrategy": "Lock onto the row using Y first, then slide across to the X column."
+      "fastStrategy": "Lock onto the row using Y first, then slide across to the X column.",
+      "lookup": {
+        "x": 1,
+        "y": 10
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_002",
@@ -66,7 +168,67 @@
         "4. Compare 15 with the answer choices.",
         "5. Select the option showing 15."
       ],
-      "fastStrategy": "Read Y first for the row, then X for the column; do not bounce around the grid."
+      "fastStrategy": "Read Y first for the row, then X for the column; do not bounce around the grid.",
+      "lookup": {
+        "x": 2,
+        "y": 10
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_003",
@@ -91,7 +253,67 @@
         "4. Confirm it matches one of the options.",
         "5. Choose 18."
       ],
-      "fastStrategy": "When Y is fixed, treat the row like a number line and count columns."
+      "fastStrategy": "When Y is fixed, treat the row like a number line and count columns.",
+      "lookup": {
+        "x": 3,
+        "y": 10
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_004",
@@ -116,7 +338,67 @@
         "4. Compare 21 with the options.",
         "5. Select 21."
       ],
-      "fastStrategy": "Use the labels directly; do not estimate from position alone."
+      "fastStrategy": "Use the labels directly; do not estimate from position alone.",
+      "lookup": {
+        "x": 4,
+        "y": 10
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_005",
@@ -141,7 +423,67 @@
         "4. Match 24 to the choices.",
         "5. Choose 24."
       ],
-      "fastStrategy": "For edge X values like 5, jump to the far right end of the row quickly."
+      "fastStrategy": "For edge X values like 5, jump to the far right end of the row quickly.",
+      "lookup": {
+        "x": 5,
+        "y": 10
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_006",
@@ -166,7 +508,67 @@
         "4. Confirm 14 appears in the options.",
         "5. Select 14."
       ],
-      "fastStrategy": "Row first, then the first column; treat X = 1 as the starting point for that row."
+      "fastStrategy": "Row first, then the first column; treat X = 1 as the starting point for that row.",
+      "lookup": {
+        "x": 1,
+        "y": 20
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_007",
@@ -191,7 +593,67 @@
         "4. Compare 22 with the choices.",
         "5. Choose 22."
       ],
-      "fastStrategy": "Use the coordinate pair (X, Y) like a grid reference: Y picks row, X picks column."
+      "fastStrategy": "Use the coordinate pair (X, Y) like a grid reference: Y picks row, X picks column.",
+      "lookup": {
+        "x": 3,
+        "y": 20
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_008",
@@ -216,7 +678,67 @@
         "4. Confirm 30 is among the choices.",
         "5. Select 30."
       ],
-      "fastStrategy": "For repeated lookups, memorize some row patterns to move faster."
+      "fastStrategy": "For repeated lookups, memorize some row patterns to move faster.",
+      "lookup": {
+        "x": 5,
+        "y": 20
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_009",
@@ -241,7 +763,67 @@
         "4. Compare 21 to the answer options.",
         "5. Pick 21."
       ],
-      "fastStrategy": "Always confirm both the X and Y labels before trusting the cell."
+      "fastStrategy": "Always confirm both the X and Y labels before trusting the cell.",
+      "lookup": {
+        "x": 2,
+        "y": 30
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_010",
@@ -266,7 +848,67 @@
         "4. Ensure 31 is in the options.",
         "5. Select 31."
       ],
-      "fastStrategy": "Visualize a crosshair: horizontal from Y, vertical from X, meet at the cell."
+      "fastStrategy": "Visualize a crosshair: horizontal from Y, vertical from X, meet at the cell.",
+      "lookup": {
+        "x": 4,
+        "y": 30
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_011",
@@ -291,7 +933,67 @@
         "4. Match 18 to the choices.",
         "5. Choose 18."
       ],
-      "fastStrategy": "For X = 1, you only need to check the first numeric column after the Y label."
+      "fastStrategy": "For X = 1, you only need to check the first numeric column after the Y label.",
+      "lookup": {
+        "x": 1,
+        "y": 40
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_012",
@@ -316,7 +1018,67 @@
         "4. Confirm 30 appears as an option.",
         "5. Select 30."
       ],
-      "fastStrategy": "Count columns slowly the first time; speed comes after you trust the pattern."
+      "fastStrategy": "Count columns slowly the first time; speed comes after you trust the pattern.",
+      "lookup": {
+        "x": 3,
+        "y": 40
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_013",
@@ -341,7 +1103,67 @@
         "4. Match 42 to the options.",
         "5. Choose 42."
       ],
-      "fastStrategy": "When both X and Y are large, go straight to the bottom-right region of the table."
+      "fastStrategy": "When both X and Y are large, go straight to the bottom-right region of the table.",
+      "lookup": {
+        "x": 5,
+        "y": 40
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_014",
@@ -366,7 +1188,67 @@
         "4. Compare 27 to the options.",
         "5. Choose 27."
       ],
-      "fastStrategy": "Fix your finger on the Y row first; then slide right to X."
+      "fastStrategy": "Fix your finger on the Y row first; then slide right to X.",
+      "lookup": {
+        "x": 2,
+        "y": 50
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_015",
@@ -391,7 +1273,67 @@
         "4. Confirm 41 is listed as an option.",
         "5. Select 41."
       ],
-      "fastStrategy": "Use the row and column labels every time; don’t assume based on rough position."
+      "fastStrategy": "Use the row and column labels every time; don’t assume based on rough position.",
+      "lookup": {
+        "x": 4,
+        "y": 50
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_016",
@@ -416,7 +1358,63 @@
         "4. Match this to the choices.",
         "5. Select X = 3."
       ],
-      "fastStrategy": "Scan the row visually for the target number, then read the X label above it."
+      "fastStrategy": "Scan the row visually for the target number, then read the X label above it.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_017",
@@ -441,7 +1439,63 @@
         "4. Read the column header (X = 4).",
         "5. Choose X = 4."
       ],
-      "fastStrategy": "When the row is short, read all values once and note the position of the target."
+      "fastStrategy": "When the row is short, read all values once and note the position of the target.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_018",
@@ -466,7 +1520,63 @@
         "4. Read the Y label of that row (Y = 30).",
         "5. Select Y = 30."
       ],
-      "fastStrategy": "For column questions, scan vertically and then read the Y label at that row."
+      "fastStrategy": "For column questions, scan vertically and then read the Y label at that row.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_019",
@@ -491,7 +1601,63 @@
         "4. Check the Y label for that row (Y = 50).",
         "5. Choose Y = 50."
       ],
-      "fastStrategy": "When values increase downward, look near the bottom for the largest number."
+      "fastStrategy": "When values increase downward, look near the bottom for the largest number.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_020",
@@ -516,7 +1682,67 @@
         "4. Recognize 26 is greater than 21.",
         "5. Choose the coordinate with value 26."
       ],
-      "fastStrategy": "Write both numbers down or hold them clearly in mind before deciding which is greater."
+      "fastStrategy": "Write both numbers down or hold them clearly in mind before deciding which is greater.",
+      "lookup": {
+        "x": 2,
+        "y": 30
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_021",
@@ -541,7 +1767,67 @@
         "4. Identify 18 as the smaller number.",
         "5. Select the coordinate with 18."
       ],
-      "fastStrategy": "Always compare the actual numbers, not just how far down or right they are."
+      "fastStrategy": "Always compare the actual numbers, not just how far down or right they are.",
+      "lookup": {
+        "x": 1,
+        "y": 50
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_022",
@@ -566,7 +1852,67 @@
         "4. Match 26 with the answer options.",
         "5. Choose 26."
       ],
-      "fastStrategy": "For a 5-column row, the third entry is always the middle."
+      "fastStrategy": "For a 5-column row, the third entry is always the middle.",
+      "lookup": {
+        "x": 3,
+        "y": 30
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_023",
@@ -591,7 +1937,67 @@
         "4. Confirm 36 appears as an option.",
         "5. Select 36."
       ],
-      "fastStrategy": "Trace with one finger down from X and one across from Y to meet at the cell."
+      "fastStrategy": "Trace with one finger down from X and one across from Y to meet at the cell.",
+      "lookup": {
+        "x": 4,
+        "y": 40
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_024",
@@ -616,7 +2022,63 @@
         "4. Check the column header above it (X = 3).",
         "5. Choose X = 3."
       ],
-      "fastStrategy": "Scan the row from left to right and note where the target number appears."
+      "fastStrategy": "Scan the row from left to right and note where the target number appears.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_025",
@@ -641,7 +2103,63 @@
         "4. Note the Y label for that row (Y = 20).",
         "5. Select Y = 20."
       ],
-      "fastStrategy": "Read the column as a short list and match the number to its row label."
+      "fastStrategy": "Read the column as a short list and match the number to its row label.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     }
   ]
 }

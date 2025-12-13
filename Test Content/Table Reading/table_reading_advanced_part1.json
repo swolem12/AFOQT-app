@@ -7,7 +7,12 @@
     {
       "id": "tr_a1_001",
       "question": "In the table below, what is the sum of the values at X = 2, Y = 30 and X = 4, Y = 40?",
-      "choices": {"A": "39", "B": "41", "C": "47", "D": "49"},
+      "choices": {
+        "A": "39",
+        "B": "41",
+        "C": "47",
+        "D": "49"
+      },
       "answer": "C",
       "explanation": "Look up X = 2, Y = 30 and X = 4, Y = 40 in the table, add their values. For example, if values are 18 and 29, sum is 47.",
       "steps": [
@@ -16,12 +21,21 @@
         "3. Add the two values together.",
         "4. Confirm the sum matches one of the answer choices."
       ],
-      "fastStrategy": "Write down both values before adding to avoid mistakes."
+      "fastStrategy": "Write down both values before adding to avoid mistakes.",
+      "lookup": {
+        "x": 2,
+        "y": 30
+      }
     },
     {
       "id": "tr_a1_002",
       "question": "Which row in the table has the greatest total when all its values are added together?",
-      "choices": {"A": "Y = 10", "B": "Y = 20", "C": "Y = 30", "D": "Y = 40"},
+      "choices": {
+        "A": "Y = 10",
+        "B": "Y = 20",
+        "C": "Y = 30",
+        "D": "Y = 40"
+      },
       "answer": "D",
       "explanation": "Add all values in each row and compare. The row with the largest sum is the answer.",
       "steps": [
@@ -34,7 +48,12 @@
     {
       "id": "tr_a1_003",
       "question": "If the value at X = 3, Y = 20 increases by 5, what is the new total for row Y = 20?",
-      "choices": {"A": "85", "B": "90", "C": "95", "D": "100"},
+      "choices": {
+        "A": "85",
+        "B": "90",
+        "C": "95",
+        "D": "100"
+      },
       "answer": "B",
       "explanation": "Add 5 to the original value at X = 3, Y = 20, then sum all values in row Y = 20 for the new total.",
       "steps": [
@@ -43,7 +62,11 @@
         "3. Add the new value to the other values in row Y = 20.",
         "4. Calculate the new total."
       ],
-      "fastStrategy": "Adjust the changed value first, then sum the row."
+      "fastStrategy": "Adjust the changed value first, then sum the row.",
+      "lookup": {
+        "x": 3,
+        "y": 20
+      }
     }
   ]
 }

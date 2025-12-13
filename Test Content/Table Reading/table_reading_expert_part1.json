@@ -8,15 +8,50 @@
       "id": "tr_exp_e1_001",
       "question": "In which year was the profit margin the highest?",
       "tableData": {
-        "headers": ["Year", "Revenue ($M)", "Expenses ($M)", "Profit ($M)", "Profit Margin (%)"],
+        "headers": [
+          "Year",
+          "Revenue ($M)",
+          "Expenses ($M)",
+          "Profit ($M)",
+          "Profit Margin (%)"
+        ],
         "rows": [
-          ["2019", "150", "120", "30", "20%"],
-          ["2020", "160", "125", "35", "21.9%"],
-          ["2021", "175", "130", "45", "25.7%"],
-          ["2022", "190", "145", "45", "23.7%"]
+          [
+            "2019",
+            "150",
+            "120",
+            "30",
+            "20%"
+          ],
+          [
+            "2020",
+            "160",
+            "125",
+            "35",
+            "21.9%"
+          ],
+          [
+            "2021",
+            "175",
+            "130",
+            "45",
+            "25.7%"
+          ],
+          [
+            "2022",
+            "190",
+            "145",
+            "45",
+            "23.7%"
+          ]
         ]
       },
-      "choices": {"A": "2019", "B": "2020", "C": "2021", "D": "2022"},
+      "choices": {
+        "A": "2019",
+        "B": "2020",
+        "C": "2021",
+        "D": "2022"
+      },
       "answer": "C",
       "explanation": "Examining the Profit Margin (%) column: 2019=20%, 2020=21.9%, 2021=25.7%, 2022=23.7%. The highest is 2021 at 25.7%.",
       "steps": [
@@ -31,15 +66,50 @@
       "id": "tr_exp_e1_002",
       "question": "What is the difference in total revenue between the highest and lowest revenue years?",
       "tableData": {
-        "headers": ["Year", "Revenue ($M)", "Expenses ($M)", "Profit ($M)", "Profit Margin (%)"],
+        "headers": [
+          "Year",
+          "Revenue ($M)",
+          "Expenses ($M)",
+          "Profit ($M)",
+          "Profit Margin (%)"
+        ],
         "rows": [
-          ["2019", "150", "120", "30", "20%"],
-          ["2020", "160", "125", "35", "21.9%"],
-          ["2021", "175", "130", "45", "25.7%"],
-          ["2022", "190", "145", "45", "23.7%"]
+          [
+            "2019",
+            "150",
+            "120",
+            "30",
+            "20%"
+          ],
+          [
+            "2020",
+            "160",
+            "125",
+            "35",
+            "21.9%"
+          ],
+          [
+            "2021",
+            "175",
+            "130",
+            "45",
+            "25.7%"
+          ],
+          [
+            "2022",
+            "190",
+            "145",
+            "45",
+            "23.7%"
+          ]
         ]
       },
-      "choices": {"A": "$25 M", "B": "$30 M", "C": "$35 M", "D": "$40 M"},
+      "choices": {
+        "A": "$25 M",
+        "B": "$30 M",
+        "C": "$35 M",
+        "D": "$40 M"
+      },
       "answer": "D",
       "explanation": "Revenue values: 2019=$150M, 2020=$160M, 2021=$175M, 2022=$190M. Highest=2022 ($190M), Lowest=2019 ($150M). Difference = $190M - $150M = $40M.",
       "steps": [

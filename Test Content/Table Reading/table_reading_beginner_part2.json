@@ -7,14 +7,56 @@
     "type": "data_table",
     "width": 400,
     "height": 220,
-    "xHeader": [1, 2, 3, 4, 5],
-    "yHeader": [10, 20, 30, 40, 50],
+    "xHeader": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "yHeader": [
+      10,
+      20,
+      30,
+      40,
+      50
+    ],
     "cellValues": [
-      [12, 15, 18, 21, 24],
-      [14, 18, 22, 26, 30],
-      [16, 21, 26, 31, 36],
-      [18, 24, 30, 36, 42],
-      [20, 27, 34, 41, 48]
+      [
+        12,
+        15,
+        18,
+        21,
+        24
+      ],
+      [
+        14,
+        18,
+        22,
+        26,
+        30
+      ],
+      [
+        16,
+        21,
+        26,
+        31,
+        36
+      ],
+      [
+        18,
+        24,
+        30,
+        36,
+        42
+      ],
+      [
+        20,
+        27,
+        34,
+        41,
+        48
+      ]
     ]
   },
   "questions": [
@@ -41,7 +83,67 @@
         "4. Compare 12 with the options.",
         "5. Select 12."
       ],
-      "fastStrategy": "Always pick the row first with Y, then the column with X."
+      "fastStrategy": "Always pick the row first with Y, then the column with X.",
+      "lookup": {
+        "x": 1,
+        "y": 10
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_027",
@@ -66,7 +168,67 @@
         "4. Confirm 18 matches an answer choice.",
         "5. Choose 18."
       ],
-      "fastStrategy": "Mentally rehearse the row once so repeated lookups become faster."
+      "fastStrategy": "Mentally rehearse the row once so repeated lookups become faster.",
+      "lookup": {
+        "x": 3,
+        "y": 10
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_028",
@@ -91,7 +253,67 @@
         "4. Match 24 to the options.",
         "5. Select 24."
       ],
-      "fastStrategy": "When X is 5, you can jump directly to the right end of the row."
+      "fastStrategy": "When X is 5, you can jump directly to the right end of the row.",
+      "lookup": {
+        "x": 5,
+        "y": 10
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_029",
@@ -116,7 +338,67 @@
         "4. Compare with the answers.",
         "5. Select 18."
       ],
-      "fastStrategy": "Use the Y row label to anchor yourself before scanning across."
+      "fastStrategy": "Use the Y row label to anchor yourself before scanning across.",
+      "lookup": {
+        "x": 2,
+        "y": 20
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_030",
@@ -141,7 +423,67 @@
         "4. Confirm 26 is one of the choices.",
         "5. Choose 26."
       ],
-      "fastStrategy": "When reading within a row, keep your eyes on the same horizontal line to avoid sliding to the wrong row."
+      "fastStrategy": "When reading within a row, keep your eyes on the same horizontal line to avoid sliding to the wrong row.",
+      "lookup": {
+        "x": 4,
+        "y": 20
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_031",
@@ -166,7 +508,63 @@
         "4. Check the column header above 36 (X = 5).",
         "5. Choose X = 5."
       ],
-      "fastStrategy": "Scan left to right and update the 'current maximum' as you go."
+      "fastStrategy": "Scan left to right and update the 'current maximum' as you go.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_032",
@@ -191,7 +589,63 @@
         "4. Check the Y label at that row (Y = 10).",
         "5. Select Y = 10."
       ],
-      "fastStrategy": "Scan top to bottom for the minimum when Y is the unknown."
+      "fastStrategy": "Scan top to bottom for the minimum when Y is the unknown.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_033",
@@ -216,7 +670,67 @@
         "4. Compute 42 − 24 = 18.",
         "5. Choose 18."
       ],
-      "fastStrategy": "Always subtract smaller from larger to stay positive and avoid sign mistakes."
+      "fastStrategy": "Always subtract smaller from larger to stay positive and avoid sign mistakes.",
+      "lookup": {
+        "x": 5,
+        "y": 40
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_034",
@@ -241,7 +755,67 @@
         "4. Compute 41 − 26 = 15.",
         "5. Select 15."
       ],
-      "fastStrategy": "When both cells are in one column, focus on that column only and ignore the rest of the table."
+      "fastStrategy": "When both cells are in one column, focus on that column only and ignore the rest of the table.",
+      "lookup": {
+        "x": 4,
+        "y": 50
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_035",
@@ -266,7 +840,63 @@
         "4. Check that no other cell is larger.",
         "5. Choose X = 5, Y = 50."
       ],
-      "fastStrategy": "In a steadily increasing grid, check the bottom-right cell first for the maximum."
+      "fastStrategy": "In a steadily increasing grid, check the bottom-right cell first for the maximum.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_036",
@@ -291,7 +921,63 @@
         "4. Confirm that all other cells you glance at are larger.",
         "5. Select X = 1, Y = 10."
       ],
-      "fastStrategy": "In an increasing table, check the top-left cell first for the minimum."
+      "fastStrategy": "In an increasing table, check the top-left cell first for the minimum.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_037",
@@ -316,7 +1002,63 @@
         "4. Record the row label as Y = 40.",
         "5. Choose Y = 40."
       ],
-      "fastStrategy": "Scan row by row and stop as soon as you find the target number."
+      "fastStrategy": "Scan row by row and stop as soon as you find the target number.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_038",
@@ -341,7 +1083,63 @@
         "4. Confirm it is not needed to search further once found.",
         "5. Select X = 2."
       ],
-      "fastStrategy": "When the question asks for X, scan by column, not by row."
+      "fastStrategy": "When the question asks for X, scan by column, not by row.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_039",
@@ -366,7 +1164,67 @@
         "4. Compute 44.",
         "5. Choose 44."
       ],
-      "fastStrategy": "Grab both numbers first, then perform a single addition."
+      "fastStrategy": "Grab both numbers first, then perform a single addition.",
+      "lookup": {
+        "x": 1,
+        "y": 20
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_040",
@@ -391,7 +1249,67 @@
         "4. Divide 52 by 2 to get 26.",
         "5. Select 26."
       ],
-      "fastStrategy": "For a two-number average, add and divide by 2—quick and exact."
+      "fastStrategy": "For a two-number average, add and divide by 2—quick and exact.",
+      "lookup": {
+        "x": 2,
+        "y": 30
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_041",
@@ -416,7 +1334,63 @@
         "4. Confirm this holds across the row.",
         "5. Choose 3."
       ],
-      "fastStrategy": "Check a couple of consecutive differences to spot the pattern."
+      "fastStrategy": "Check a couple of consecutive differences to spot the pattern.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_042",
@@ -441,7 +1415,63 @@
         "4. Recognize this continues down the column.",
         "5. Choose 2."
       ],
-      "fastStrategy": "Vertical patterns are found by subtracting one row from the next."
+      "fastStrategy": "Vertical patterns are found by subtracting one row from the next.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_043",
@@ -466,7 +1496,67 @@
         "4. Decide that 31 is greater.",
         "5. Choose the coordinate with 31."
       ],
-      "fastStrategy": "Find both numbers first, then compare them directly."
+      "fastStrategy": "Find both numbers first, then compare them directly.",
+      "lookup": {
+        "x": 2,
+        "y": 40
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_044",
@@ -491,7 +1581,67 @@
         "4. Compare 36 and 48.",
         "5. Choose Y = 50."
       ],
-      "fastStrategy": "When values rise down the column, the lower Y usually has the larger value."
+      "fastStrategy": "When values rise down the column, the lower Y usually has the larger value.",
+      "lookup": {
+        "x": 5,
+        "y": 30
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_045",
@@ -516,7 +1666,63 @@
         "4. Combine labels to form (X = 3, Y = 20).",
         "5. Select that coordinate pair."
       ],
-      "fastStrategy": "Once you find the number, immediately check both the X and Y labels before moving on."
+      "fastStrategy": "Once you find the number, immediately check both the X and Y labels before moving on.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_046",
@@ -541,7 +1747,63 @@
         "4. Record the coordinates (X = 2, Y = 50).",
         "5. Select that option."
       ],
-      "fastStrategy": "Scan systematically—row by row—to avoid skipping the target."
+      "fastStrategy": "Scan systematically—row by row—to avoid skipping the target.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_047",
@@ -566,7 +1828,63 @@
         "4. Compare 110 and 150.",
         "5. Choose Y = 40."
       ],
-      "fastStrategy": "If every entry in one row is larger than the matching entry in another, its total must be larger."
+      "fastStrategy": "If every entry in one row is larger than the matching entry in another, its total must be larger.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_048",
@@ -591,7 +1909,63 @@
         "4. No exact sums are required.",
         "5. Pick Y = 50."
       ],
-      "fastStrategy": "Use quick comparisons of pairs instead of full addition when one row dominates the other."
+      "fastStrategy": "Use quick comparisons of pairs instead of full addition when one row dominates the other.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_049",
@@ -616,7 +1990,67 @@
         "4. Compute 22 − 14 = 8.",
         "5. Select 8."
       ],
-      "fastStrategy": "For increases along a row, subtract the starting cell from the ending cell."
+      "fastStrategy": "For increases along a row, subtract the starting cell from the ending cell.",
+      "lookup": {
+        "x": 1,
+        "y": 20
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     },
     {
       "id": "trb_b1_050",
@@ -641,7 +2075,63 @@
         "4. Recognize 15 is the smallest.",
         "5. Choose X = 2, Y = 10."
       ],
-      "fastStrategy": "When comparing a small set of coordinates, list each value briefly, then pick the smallest or largest."
+      "fastStrategy": "When comparing a small set of coordinates, list each value briefly, then pick the smallest or largest.",
+      "tableSpec": {
+        "type": "data_table",
+        "width": 400,
+        "height": 220,
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "cellValues": [
+          [
+            12,
+            15,
+            18,
+            21,
+            24
+          ],
+          [
+            14,
+            18,
+            22,
+            26,
+            30
+          ],
+          [
+            16,
+            21,
+            26,
+            31,
+            36
+          ],
+          [
+            18,
+            24,
+            30,
+            36,
+            42
+          ],
+          [
+            20,
+            27,
+            34,
+            41,
+            48
+          ]
+        ]
+      }
     }
   ]
 }
