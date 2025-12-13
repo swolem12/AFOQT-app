@@ -92,12 +92,22 @@ self.addEventListener('fetch', (event) => {
             }
             return networkResponse;
           }).catch(() => {
-            // Network failed, return cached version
-            return cachedResponse;
+            // Network failed - return cached if available, otherwise throw
+            if (cachedResponse) {
+              return cachedResponse;
+            }
+            throw new Error('No network and no cached response available');
           });
           
           // Return cached immediately if available, otherwise wait for network
           return cachedResponse || fetchPromise;
+        });
+      }).catch((error) => {
+        console.error('Failed to serve JSON content:', error);
+        // Return a basic error response
+        return new Response(JSON.stringify({ error: 'Content unavailable' }), {
+          status: 503,
+          headers: { 'Content-Type': 'application/json' }
         });
       })
     );

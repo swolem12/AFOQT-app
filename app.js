@@ -863,7 +863,7 @@ const state = {
         showSectionTransition: false // Flag to show section transition confirmation modal
     },
     patch18Loaded: false, // Track if Patch 18 content is loaded
-    contentLoading: true, // Track if content is currently loading
+    contentLoading: false, // Track if content is currently loading
     contentReady: false // Track if content is ready for quiz start
 };
 
@@ -11195,11 +11195,11 @@ async function init() {
     
     // Patch 18: Initialize content-based question system
     if (typeof initializePatch18 === 'function') {
+        state.contentLoading = true;
+        state.contentReady = false;
+        render(); // Show loading state
+        
         try {
-            state.contentLoading = true;
-            state.contentReady = false;
-            render(); // Show loading state
-            
             const success = await initializePatch18();
             if (success) {
                 state.patch18Loaded = true;
@@ -11298,18 +11298,15 @@ async function init() {
                 }
             }
             
-            state.contentLoading = false;
-            state.contentReady = true;
             console.log('✅ Content ready for quiz start');
         } catch (error) {
             console.warn('Patch 18 initialization failed:', error);
-            state.contentLoading = false;
-            state.contentReady = true; // Allow fallback to procedural generators
         }
-    } else {
-        state.contentLoading = false;
-        state.contentReady = true; // No content loader, use procedural only
     }
+    
+    // Mark content as ready (either loaded successfully or using procedural fallbacks)
+    state.contentLoading = false;
+    state.contentReady = true;
     
     render();
     registerServiceWorker();
