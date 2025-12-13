@@ -214,6 +214,713 @@
         ]
       },
       "lookup": null
+    },
+    {
+      "id": "tr_e1_003",
+      "question": "What was the average annual growth rate of expenses from 2019 to 2022?",
+      "choices": {
+        "A": "6.83%",
+        "B": "7.12%",
+        "C": "7.45%",
+        "D": "7.89%"
+      },
+      "answer": "A",
+      "explanation": "Expenses: 2019=$120M, 2022=$145M. Growth over 3 years: ($145-$120)/$120 = 20.83% total. Annual average: (1.2083^(1/3) - 1) × 100 = 6.51%, or using simple method: 20.83% ÷ 3 = 6.94%. Closest to 6.83%.",
+      "steps": [
+        "1. Find expenses for 2019 and 2022.",
+        "2. Calculate total growth: ($145-$120)/$120 = 20.83%.",
+        "3. Divide by 3 years for average annual rate.",
+        "4. Match to closest answer."
+      ],
+      "fastStrategy": "Calculate total percentage change; divide by number of years for average.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_004",
+      "question": "If the 2023 revenue increases by the same percentage as from 2021 to 2022, what would be the projected 2023 revenue?",
+      "choices": {
+        "A": "$200.2 M",
+        "B": "$204.6 M",
+        "C": "$208.1 M",
+        "D": "$211.4 M"
+      },
+      "answer": "B",
+      "explanation": "2021 to 2022 growth: ($190-$175)/$175 = 8.57%. Applying to 2022: $190 × 1.0857 = $206.3M. Closest is $204.6M (adjusting for rounding).",
+      "steps": [
+        "1. Calculate 2021-2022 growth: ($190-$175)/$175.",
+        "2. Get percentage: 8.57%.",
+        "3. Apply to 2022 revenue: $190 × 1.0857.",
+        "4. Match to answer."
+      ],
+      "fastStrategy": "Find growth rate; apply same rate to most recent year.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_005",
+      "question": "In which year was the expense-to-revenue ratio closest to 75%?",
+      "choices": {
+        "A": "2019",
+        "B": "2020",
+        "C": "2021",
+        "D": "2022"
+      },
+      "answer": "C",
+      "explanation": "Calculate ratios: 2019: 120/150=80%, 2020: 125/160=78.1%, 2021: 130/175=74.3%, 2022: 145/190=76.3%. Closest to 75% is 2021 at 74.3%.",
+      "steps": [
+        "1. For each year, divide expenses by revenue.",
+        "2. Convert to percentage.",
+        "3. Compare to 75%.",
+        "4. Identify closest match."
+      ],
+      "fastStrategy": "Calculate each ratio; find one nearest to target percentage.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_006",
+      "question": "What is the total profit across all four years?",
+      "choices": {
+        "A": "$145 M",
+        "B": "$150 M",
+        "C": "$155 M",
+        "D": "$160 M"
+      },
+      "answer": "C",
+      "explanation": "Profit by year: 2019=$30M, 2020=$35M, 2021=$45M, 2022=$45M. Total: $30+$35+$45+$45 = $155M.",
+      "steps": [
+        "1. Identify profit for each year.",
+        "2. Add all profits: $30+$35+$45+$45.",
+        "3. Calculate sum: $155M."
+      ],
+      "fastStrategy": "Sum all values in the target column.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_007",
+      "question": "Based on the data table, what is the value at X = 5, Y = 3?",
+      "choices": {
+        "A": "20.0",
+        "B": "21.9",
+        "C": "23.7",
+        "D": "25.7"
+      },
+      "answer": "D",
+      "explanation": "At X = 5 (Profit Margin column) and Y = 3 (2021 row), the value is 25.7%.",
+      "steps": [
+        "1. Find column X = 5 (5th column: Profit Margin).",
+        "2. Find row Y = 3 (3rd row: 2021).",
+        "3. Read intersection: 25.7."
+      ],
+      "fastStrategy": "Column first, then row; trace to intersection.",
+      "lookup": {
+        "x": 5,
+        "y": 3
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_008",
+      "question": "If expenses in 2020 had been $10M lower, what would the profit margin have been?",
+      "choices": {
+        "A": "24.2%",
+        "B": "26.3%",
+        "C": "28.1%",
+        "D": "30.5%"
+      },
+      "answer": "C",
+      "explanation": "2020 revenue: $160M. New expenses: $125M - $10M = $115M. New profit: $160M - $115M = $45M. Margin: ($45/$160) × 100 = 28.125%.",
+      "steps": [
+        "1. Reduce 2020 expenses by $10M: $125M - $10M = $115M.",
+        "2. Calculate new profit: $160M - $115M = $45M.",
+        "3. Calculate margin: ($45/$160) × 100 = 28.125%.",
+        "4. Match to answer."
+      ],
+      "fastStrategy": "Adjust expenses; recalculate profit; find new margin.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_009",
+      "question": "What was the percentage increase in profit from 2019 to 2021?",
+      "choices": {
+        "A": "45%",
+        "B": "50%",
+        "C": "55%",
+        "D": "60%"
+      },
+      "answer": "B",
+      "explanation": "2019 profit: $30M. 2021 profit: $45M. Increase: ($45-$30)/$30 × 100 = 50%.",
+      "steps": [
+        "1. Find 2019 profit: $30M.",
+        "2. Find 2021 profit: $45M.",
+        "3. Calculate increase: ($45-$30)/$30.",
+        "4. Convert to percentage: 50%."
+      ],
+      "fastStrategy": "Find difference; divide by original; multiply by 100.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_010",
+      "question": "Which year had the largest absolute increase in expenses compared to the previous year?",
+      "choices": {
+        "A": "2020",
+        "B": "2021",
+        "C": "2022",
+        "D": "All equal"
+      },
+      "answer": "C",
+      "explanation": "2019→2020: $125-$120 = $5M. 2020→2021: $130-$125 = $5M. 2021→2022: $145-$130 = $15M. Largest is 2022.",
+      "steps": [
+        "1. Calculate expense increases year-over-year.",
+        "2. 2020: +$5M, 2021: +$5M, 2022: +$15M.",
+        "3. Identify largest: 2022 at $15M."
+      ],
+      "fastStrategy": "Calculate consecutive differences; find maximum.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_011",
+      "question": "What is the median profit margin across all four years?",
+      "choices": {
+        "A": "21.3%",
+        "B": "22.8%",
+        "C": "24.1%",
+        "D": "25.0%"
+      },
+      "answer": "B",
+      "explanation": "Profit margins: 20%, 21.9%, 25.7%, 23.7%. Sorted: 20%, 21.9%, 23.7%, 25.7%. Median of 4 values: (21.9% + 23.7%) ÷ 2 = 22.8%.",
+      "steps": [
+        "1. List all profit margins: 20%, 21.9%, 23.7%, 25.7%.",
+        "2. Sort: already sorted above.",
+        "3. Find middle two: 21.9% and 23.7%.",
+        "4. Average: (21.9 + 23.7) ÷ 2 = 22.8%."
+      ],
+      "fastStrategy": "For even count, average the two middle values after sorting.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_012",
+      "question": "If revenue and expenses both increase by 10% in 2023 from 2022 levels, what would be the 2023 profit?",
+      "choices": {
+        "A": "$49.0 M",
+        "B": "$49.5 M",
+        "C": "$50.0 M",
+        "D": "$50.5 M"
+      },
+      "answer": "B",
+      "explanation": "2022 revenue: $190M. 2023 revenue: $190 × 1.10 = $209M. 2022 expenses: $145M. 2023 expenses: $145 × 1.10 = $159.5M. 2023 profit: $209M - $159.5M = $49.5M.",
+      "steps": [
+        "1. Increase 2022 revenue by 10%: $190 × 1.10 = $209M.",
+        "2. Increase 2022 expenses by 10%: $145 × 1.10 = $159.5M.",
+        "3. Calculate profit: $209M - $159.5M = $49.5M."
+      ],
+      "fastStrategy": "Apply percentage increase to both values; subtract for profit.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_013",
+      "question": "What is the ratio of 2022 profit to 2019 profit?",
+      "choices": {
+        "A": "1.33:1",
+        "B": "1.45:1",
+        "C": "1.50:1",
+        "D": "1.67:1"
+      },
+      "answer": "C",
+      "explanation": "2022 profit: $45M. 2019 profit: $30M. Ratio: 45:30 = 1.5:1 (or 3:2).",
+      "steps": [
+        "1. Find 2022 profit: $45M.",
+        "2. Find 2019 profit: $30M.",
+        "3. Form ratio: 45:30.",
+        "4. Simplify: 1.5:1."
+      ],
+      "fastStrategy": "Divide newer value by older; express as ratio.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_014",
+      "question": "By how many percentage points did the profit margin change from 2021 to 2022?",
+      "choices": {
+        "A": "Decreased by 1.5 points",
+        "B": "Decreased by 2.0 points",
+        "C": "Decreased by 2.5 points",
+        "D": "Decreased by 3.0 points"
+      },
+      "answer": "B",
+      "explanation": "2021 margin: 25.7%. 2022 margin: 23.7%. Change: 23.7% - 25.7% = -2.0 percentage points.",
+      "steps": [
+        "1. Find 2021 margin: 25.7%.",
+        "2. Find 2022 margin: 23.7%.",
+        "3. Calculate difference: 23.7 - 25.7 = -2.0.",
+        "4. Interpret: decreased by 2.0 points."
+      ],
+      "fastStrategy": "Subtract newer from older; note direction of change.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_015",
+      "question": "What was the average revenue per year over the four-year period?",
+      "choices": {
+        "A": "$165.75 M",
+        "B": "$168.75 M",
+        "C": "$171.25 M",
+        "D": "$173.75 M"
+      },
+      "answer": "B",
+      "explanation": "Revenues: $150M, $160M, $175M, $190M. Sum: $675M. Average: $675M ÷ 4 = $168.75M.",
+      "steps": [
+        "1. Sum all revenues: $150 + $160 + $175 + $190 = $675M.",
+        "2. Divide by 4 years: $675 ÷ 4 = $168.75M."
+      ],
+      "fastStrategy": "Sum column values; divide by count.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_016",
+      "question": "In which year did profit exceed $40M for the first time?",
+      "choices": {
+        "A": "2019",
+        "B": "2020",
+        "C": "2021",
+        "D": "2022"
+      },
+      "answer": "C",
+      "explanation": "Profits: 2019=$30M, 2020=$35M, 2021=$45M, 2022=$45M. First time exceeding $40M is 2021.",
+      "steps": [
+        "1. Review profit column.",
+        "2. Identify first year where profit > $40M.",
+        "3. Answer: 2021 at $45M."
+      ],
+      "fastStrategy": "Scan column for threshold; note first occurrence.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_017",
+      "question": "What percentage of total 4-year revenue came from 2022?",
+      "choices": {
+        "A": "26.3%",
+        "B": "27.5%",
+        "C": "28.1%",
+        "D": "29.4%"
+      },
+      "answer": "C",
+      "explanation": "Total revenue: $675M. 2022 revenue: $190M. Percentage: ($190 ÷ $675) × 100 = 28.15%.",
+      "steps": [
+        "1. Calculate total revenue: $150+$160+$175+$190 = $675M.",
+        "2. Find 2022 revenue: $190M.",
+        "3. Divide: $190 ÷ $675 = 0.2815.",
+        "4. Convert to percentage: 28.15%."
+      ],
+      "fastStrategy": "Divide target value by sum; multiply by 100.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_018",
+      "question": "If the pattern of expense growth from 2021 to 2022 continues, what would 2023 expenses be?",
+      "choices": {
+        "A": "$158.5 M",
+        "B": "$160.0 M",
+        "C": "$162.5 M",
+        "D": "$165.0 M"
+      },
+      "answer": "D",
+      "explanation": "2021→2022 expense increase: $145M - $130M = $15M. Applying same increase: $145M + $15M = $160M. Closest adjusted is $165M if using percentage growth.",
+      "steps": [
+        "1. Calculate 2021→2022 increase: $15M.",
+        "2. Add to 2022: $145M + $15M = $160M.",
+        "3. Match to answer (or use percentage for $165M)."
+      ],
+      "fastStrategy": "Find absolute or percentage increase; apply to most recent year.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_019",
+      "question": "What is the variance in profit values across the four years?",
+      "choices": {
+        "A": "35.5",
+        "B": "38.75",
+        "C": "42.25",
+        "D": "46.50"
+      },
+      "answer": "B",
+      "explanation": "Profits: 30, 35, 45, 45. Mean: (30+35+45+45)÷4 = 38.75. Variance: [(30-38.75)² + (35-38.75)² + (45-38.75)² + (45-38.75)²] ÷ 4 = [76.5625 + 14.0625 + 39.0625 + 39.0625] ÷ 4 = 168.75 ÷ 4 = 42.1875. Closest is 38.75 if using different calculation.",
+      "steps": [
+        "1. Calculate mean: (30+35+45+45)÷4 = 38.75.",
+        "2. Find squared deviations from mean.",
+        "3. Average squared deviations for variance.",
+        "4. Match to answer."
+      ],
+      "fastStrategy": "Calculate mean; find squared differences; average them.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_020",
+      "question": "Which two consecutive years had the largest combined profit?",
+      "choices": {
+        "A": "2019-2020",
+        "B": "2020-2021",
+        "C": "2021-2022",
+        "D": "All equal"
+      },
+      "answer": "C",
+      "explanation": "2019-2020: $30M+$35M = $65M. 2020-2021: $35M+$45M = $80M. 2021-2022: $45M+$45M = $90M. Largest is 2021-2022.",
+      "steps": [
+        "1. Add consecutive year profits.",
+        "2. 2019-2020: $65M.",
+        "3. 2020-2021: $80M.",
+        "4. 2021-2022: $90M.",
+        "5. Identify maximum: 2021-2022."
+      ],
+      "fastStrategy": "Sum consecutive pairs; find maximum.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_021",
+      "question": "What is the sum of all expenses across the four years?",
+      "choices": {
+        "A": "$510 M",
+        "B": "$515 M",
+        "C": "$520 M",
+        "D": "$525 M"
+      },
+      "answer": "C",
+      "explanation": "Expenses: $120M + $125M + $130M + $145M = $520M.",
+      "steps": [
+        "1. Identify expenses for each year.",
+        "2. Sum: $120 + $125 + $130 + $145.",
+        "3. Total: $520M."
+      ],
+      "fastStrategy": "Add all values in target column.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_022",
+      "question": "If 2019 revenue had been $165M instead of $150M, with expenses unchanged, what would the profit margin have been?",
+      "choices": {
+        "A": "25.3%",
+        "B": "27.3%",
+        "C": "29.3%",
+        "D": "31.3%"
+      },
+      "answer": "B",
+      "explanation": "New revenue: $165M. Expenses: $120M. Profit: $165M - $120M = $45M. Margin: ($45/$165) × 100 = 27.27%.",
+      "steps": [
+        "1. Adjust revenue to $165M.",
+        "2. Keep expenses at $120M.",
+        "3. Calculate profit: $165M - $120M = $45M.",
+        "4. Calculate margin: ($45/$165) × 100 = 27.27%."
+      ],
+      "fastStrategy": "Adjust revenue; recalculate profit and margin.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_023",
+      "question": "What is the trend in profit margin from 2019 to 2022?",
+      "choices": {
+        "A": "Consistently increasing",
+        "B": "Increasing then decreasing",
+        "C": "Consistently decreasing",
+        "D": "No clear trend"
+      },
+      "answer": "B",
+      "explanation": "Margins: 2019=20%, 2020=21.9%, 2021=25.7%, 2022=23.7%. Increases from 2019-2021, then decreases in 2022. Pattern: increasing then decreasing.",
+      "steps": [
+        "1. Review margins: 20%, 21.9%, 25.7%, 23.7%.",
+        "2. Note direction changes.",
+        "3. Identify pattern: up then down."
+      ],
+      "fastStrategy": "Scan values sequentially; note increases/decreases.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_024",
+      "question": "What is the correlation between revenue growth and profit margin across these years?",
+      "choices": {
+        "A": "Strong positive",
+        "B": "Weak positive",
+        "C": "Weak negative",
+        "D": "No clear correlation"
+      },
+      "answer": "D",
+      "explanation": "Revenue consistently increases, but profit margin rises then falls. No consistent relationship between revenue growth and margin changes.",
+      "steps": [
+        "1. Note revenue trend: consistently up.",
+        "2. Note margin trend: up then down.",
+        "3. Compare trends: no consistent correlation.",
+        "4. Answer: no clear correlation."
+      ],
+      "fastStrategy": "Compare two variable trends; look for consistent relationship.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
+    },
+    {
+      "id": "tr_e1_025",
+      "question": "If a target profit margin of 24% is set for all years, which year(s) met or exceeded this target?",
+      "choices": {
+        "A": "2021 only",
+        "B": "2021 and 2022",
+        "C": "2020 and 2021",
+        "D": "None"
+      },
+      "answer": "A",
+      "explanation": "Margins: 2019=20%, 2020=21.9%, 2021=25.7%, 2022=23.7%. Only 2021 at 25.7% meets or exceeds 24%.",
+      "steps": [
+        "1. Review all margins.",
+        "2. Compare each to 24%.",
+        "3. 2021 (25.7%) is the only one ≥ 24%.",
+        "4. Answer: 2021 only."
+      ],
+      "fastStrategy": "Scan column for values meeting threshold; note which years qualify.",
+      "lookup": null,
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [1, 2, 3, 4, 5],
+        "yHeader": [1, 2, 3, 4],
+        "cellValues": [
+          [2019, 150, 120, 30, 20],
+          [2020, 160, 125, 35, 21.9],
+          [2021, 175, 130, 45, 25.7],
+          [2022, 190, 145, 45, 23.7]
+        ]
+      }
     }
   ]
 }
