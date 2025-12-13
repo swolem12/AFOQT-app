@@ -5746,9 +5746,14 @@ async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
 }
 
 async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
+    console.log('startQuiz called with:', {topicId, mode, difficulty});
     const topic = topics.find(t => t.id === topicId);
-    if (!topic) return;
+    if (!topic) {
+        console.error('Topic not found:', topicId);
+        return;
+    }
     
+    console.log('Starting quiz for topic:', topic.name);
     state.currentTopic = topic;
     state.quiz.questions = [];
     state.quiz.mode = mode;
@@ -10641,8 +10646,15 @@ function attachEventListeners() {
     const beginnerDiffBtn = document.getElementById('beginner-diff-btn');
     if (beginnerDiffBtn) {
         beginnerDiffBtn.addEventListener('click', () => {
+            console.log('Beginner difficulty button clicked', {currentTopic: state.currentTopic});
             if (state.currentTopic) {
-                startQuiz(state.currentTopic.id, 'practice', 'beginner');
+                startQuiz(state.currentTopic.id, 'practice', 'beginner').catch(err => {
+                    console.error('Error starting quiz:', err);
+                    playSfx('wrong');
+                });
+            } else {
+                console.error('Cannot start quiz: state.currentTopic is not set');
+                playSfx('wrong');
             }
         });
     }
@@ -10650,8 +10662,15 @@ function attachEventListeners() {
     const advancedDiffBtn = document.getElementById('advanced-diff-btn');
     if (advancedDiffBtn) {
         advancedDiffBtn.addEventListener('click', () => {
+            console.log('Advanced difficulty button clicked', {currentTopic: state.currentTopic});
             if (state.currentTopic) {
-                startQuiz(state.currentTopic.id, 'practice', 'advanced');
+                startQuiz(state.currentTopic.id, 'practice', 'advanced').catch(err => {
+                    console.error('Error starting quiz:', err);
+                    playSfx('wrong');
+                });
+            } else {
+                console.error('Cannot start quiz: state.currentTopic is not set');
+                playSfx('wrong');
             }
         });
     }
@@ -10659,8 +10678,15 @@ function attachEventListeners() {
     const expertDiffBtn = document.getElementById('expert-diff-btn');
     if (expertDiffBtn) {
         expertDiffBtn.addEventListener('click', () => {
+            console.log('Expert difficulty button clicked', {currentTopic: state.currentTopic});
             if (state.currentTopic) {
-                startQuiz(state.currentTopic.id, 'practice', 'expert');
+                startQuiz(state.currentTopic.id, 'practice', 'expert').catch(err => {
+                    console.error('Error starting quiz:', err);
+                    playSfx('wrong');
+                });
+            } else {
+                console.error('Cannot start quiz: state.currentTopic is not set');
+                playSfx('wrong');
             }
         });
     }
