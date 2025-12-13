@@ -856,7 +856,8 @@ const state = {
         mode: 'practice', // Store mode with quiz session
         difficulty: 'beginner', // Store difficulty with quiz session
         showFeedback: true, // Patch 18: control feedback visibility
-        isPracticeTest: false // Patch 18: flag for AFOQT practice tests
+        isPracticeTest: false, // Patch 18: flag for AFOQT practice tests
+        showSectionTransition: false // Flag to show section transition confirmation modal
     },
     patch18Loaded: false // Track if Patch 18 content is loaded
 };
@@ -6095,13 +6096,10 @@ function nextQuestion() {
             state.quiz.selectedAnswer = null;
             render();
         } else {
-            // Move to next section if available
+            // Reached end of section - show confirmation modal if there's a next section
             if (state.quiz.currentSection < state.quiz.sections.length - 1) {
-                state.quiz.currentSection++;
-                state.quiz.sectionTimeStarted = Date.now();
-                state.quiz.currentIndex = state.quiz.sections[state.quiz.currentSection].startIndex;
-                state.quiz.selectedAnswer = null;
-                console.log('Advanced to section', state.quiz.currentSection + 1);
+                state.quiz.showSectionTransition = true;
+                playSfx('modal-open');
                 render();
             } else {
                 // All sections complete
@@ -6119,6 +6117,31 @@ function nextQuestion() {
             finishQuiz();
         }
     }
+}
+
+function proceedToNextSection() {
+    // Hide the modal and advance to next section
+    state.quiz.showSectionTransition = false;
+    
+    // Validate next section exists before advancing
+    const nextSectionIndex = state.quiz.currentSection + 1;
+    if (nextSectionIndex < state.quiz.sections.length) {
+        const nextSection = state.quiz.sections[nextSectionIndex];
+        state.quiz.currentSection = nextSectionIndex;
+        state.quiz.sectionTimeStarted = Date.now();
+        state.quiz.currentIndex = nextSection.startIndex;
+        state.quiz.selectedAnswer = null;
+        console.log('Advanced to section', state.quiz.currentSection + 1);
+        playSfx('select');
+    }
+    render();
+}
+
+function stayInCurrentSection() {
+    // Hide modal and stay on current question
+    state.quiz.showSectionTransition = false;
+    playSfx('modal-close');
+    render();
 }
 
 function finishQuiz() {
@@ -8373,6 +8396,27 @@ function renderQuiz() {
         modeLabel = ` <span style="color: #00ff00;">• ${diffLabel} ${xpLabel} XP</span>`;
     }
     
+    // Calculate question number within current section
+    let questionDisplay = '';
+    if (state.quiz.sections.length > 0) {
+        const currentSection = state.quiz.sections[state.quiz.currentSection];
+        if (currentSection && 
+            state.quiz.currentIndex >= currentSection.startIndex && 
+            state.quiz.currentIndex <= currentSection.endIndex) {
+            const questionInSection = state.quiz.currentIndex - currentSection.startIndex + 1;
+            const totalInSection = currentSection.totalQuestions;
+            questionDisplay = `Question ${questionInSection} / ${totalInSection}`;
+        } else {
+            // Fallback if section is undefined or index is out of range
+            questionDisplay = `Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}`;
+        }
+    } else {
+        questionDisplay = `Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}`;
+    }
+
+    // Check if current section is valid
+    const hasValidCurrentSection = state.quiz.sections.length > 0 && state.quiz.sections[state.quiz.currentSection];
+
     return `
         <div class="panel">
             <div class="quiz-progress-bar">
@@ -8381,17 +8425,17 @@ function renderQuiz() {
             
             <div class="quiz-header">
                 <div class="quiz-info">
-                    ${state.quiz.sections.length > 0 ? `
+                    ${hasValidCurrentSection ? `
                         <strong>${state.quiz.isPracticeTest ? 'AFOQT Practice Test' : (state.currentTopic ? state.currentTopic.name : 'Quiz')}</strong><br>
                         <span style="font-size: 0.9em; color: #00ff00;">Section ${state.quiz.currentSection + 1}/${state.quiz.sections.length}: ${state.quiz.sections[state.quiz.currentSection].name}</span><br>
                     ` : `
                         <strong>${state.quiz.isPracticeTest ? 'AFOQT Practice Test' : (state.currentTopic ? state.currentTopic.name : 'Quiz')}</strong><br>
                     `}
-                    Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}
+                    ${questionDisplay}
                     ${modeLabel}
                 </div>
                 <div class="timer" id="section-timer">
-                    ${state.quiz.sections.length > 0 ? 
+                    ${hasValidCurrentSection && state.quiz.sections[state.quiz.currentSection].timeSeconds ? 
                         `${Math.max(0, Math.floor((state.quiz.sections[state.quiz.currentSection].timeSeconds - (Date.now() - state.quiz.sectionTimeStarted) / 1000)))} s` :
                         '60.0s'
                     }
@@ -8495,6 +8539,55 @@ function renderQuiz() {
             </div>
         </div>
         ${renderFloatingNav({ showBack: false })}
+        ${renderSectionTransitionModal()}
+    `;
+}
+
+function renderSectionTransitionModal() {
+    // Only show for AFOQT practice tests with sections
+    if (!state.quiz.sections || state.quiz.sections.length === 0 || !state.quiz.showSectionTransition) {
+        return '';
+    }
+
+    // Check if there's a next section
+    if (state.quiz.currentSection + 1 >= state.quiz.sections.length) {
+        return '';
+    }
+
+    const currentSection = state.quiz.sections[state.quiz.currentSection];
+    const nextSection = state.quiz.sections[state.quiz.currentSection + 1];
+    
+    // Validate both sections exist
+    if (!currentSection || !nextSection) return '';
+
+    return `
+        <div id="section-transition-modal" class="modal" style="display: flex;">
+            <div class="modal-content" style="max-width: 500px; text-align: center;">
+                <div class="auth-header">
+                    <div class="auth-header-bracket left"></div>
+                    <h2 class="auth-title">SECTION COMPLETE</h2>
+                    <div class="auth-header-bracket right"></div>
+                </div>
+                <div class="modal-body" style="padding: 30px;">
+                    <div style="font-size: 1.2em; color: #00ff00; margin-bottom: 20px;">
+                        ✓ You have completed:<br>
+                        <strong>${currentSection.name}</strong>
+                    </div>
+                    <div style="font-size: 1.1em; color: #00ffff; margin-bottom: 30px;">
+                        Are you ready to move on to the next section?<br>
+                        <strong>${nextSection.name}</strong>
+                    </div>
+                    <div style="display: flex; gap: 15px; justify-content: center;">
+                        <button class="btn" id="confirm-next-section-btn" style="flex: 1; max-width: 200px;">
+                            ✓ Yes, Continue
+                        </button>
+                        <button class="btn btn-secondary" id="stay-section-btn" style="flex: 1; max-width: 200px;">
+                            ← Wait
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     `;
 }
 
@@ -10569,6 +10662,17 @@ function attachEventListeners() {
     const nextBtn = document.getElementById('next-btn');
     if (nextBtn) {
         nextBtn.addEventListener('click', nextQuestion);
+    }
+    
+    // Section transition modal buttons
+    const confirmNextSectionBtn = document.getElementById('confirm-next-section-btn');
+    if (confirmNextSectionBtn) {
+        confirmNextSectionBtn.addEventListener('click', proceedToNextSection);
+    }
+    
+    const staySectionBtn = document.getElementById('stay-section-btn');
+    if (staySectionBtn) {
+        staySectionBtn.addEventListener('click', stayInCurrentSection);
     }
     
     const retryBtn = document.getElementById('retry-btn');
