@@ -8445,9 +8445,9 @@ function renderSimpleLineDiagram(uiSpec) {
     const baseColor = styleHints.lineColor || '#00ffff';
     const labelColor = styleHints.labelsColor || '#00ffff';
     
-    // Label positioning constants
-    const LABEL_OFFSET_HORIZONTAL = 20;  // pixels below/above line
-    const LABEL_OFFSET_VERTICAL = 10;     // pixels to right of line
+    // Label positioning constants (in pixels)
+    const LABEL_OFFSET_FROM_LINE = 20;  // distance from line to label
+    const LABEL_SIDE_OFFSET = 10;       // horizontal offset for labels next to vertical lines
     
     let lineHtml = '';
     let labelHtml = '';
@@ -8459,16 +8459,16 @@ function renderSimpleLineDiagram(uiSpec) {
         // Horizontal line across the width
         lineHtml = `<div class="graphLine" style="left: 0; top: ${position}px; width: ${width}px; background: ${baseColor};"></div>`;
         if (label) {
-            labelHtml = `<div class="graphLabel" style="left: ${width / 2 - LABEL_OFFSET_HORIZONTAL}px; top: ${position - LABEL_OFFSET_HORIZONTAL}px; color: ${labelColor};">${label}</div>`;
+            labelHtml = `<div class="graphLabel" style="left: ${width / 2 - LABEL_OFFSET_FROM_LINE}px; top: ${position - LABEL_OFFSET_FROM_LINE}px; color: ${labelColor};">${label}</div>`;
         }
     } else if (type === 'vertical') {
         const position = line.position !== undefined ? line.position : width / 2;
         const label = line.label || '';
         
-        // Vertical line using CSS width/height directly (not rotation)
+        // Vertical line - can't use .graphLine class (designed for horizontal) so use explicit styling
         lineHtml = `<div style="position: absolute; left: ${position}px; top: 0; width: 2px; height: ${height}px; background: ${baseColor};"></div>`;
         if (label) {
-            labelHtml = `<div class="graphLabel" style="left: ${position + LABEL_OFFSET_VERTICAL}px; top: ${height / 2}px; color: ${labelColor};">${label}</div>`;
+            labelHtml = `<div class="graphLabel" style="left: ${position + LABEL_SIDE_OFFSET}px; top: ${height / 2}px; color: ${labelColor};">${label}</div>`;
         }
     }
     
