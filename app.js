@@ -6393,6 +6393,11 @@ function render() {
     
     // Animate panel entrances
     animatePanelEntrance();
+    
+    // Save session state for persistence across page refreshes
+    if (state.currentPlayer) {
+        saveSessionState();
+    }
 }
 
 function renderLogin() {
