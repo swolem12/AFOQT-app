@@ -6112,12 +6112,19 @@ function nextQuestion() {
 function proceedToNextSection() {
     // Hide the modal and advance to next section
     state.quiz.showSectionTransition = false;
-    state.quiz.currentSection++;
-    state.quiz.sectionTimeStarted = Date.now();
-    state.quiz.currentIndex = state.quiz.sections[state.quiz.currentSection].startIndex;
-    state.quiz.selectedAnswer = null;
-    console.log('Advanced to section', state.quiz.currentSection + 1);
-    playSfx('select');
+    
+    // Validate next section exists before advancing
+    if (state.quiz.currentSection + 1 < state.quiz.sections.length) {
+        state.quiz.currentSection++;
+        const nextSection = state.quiz.sections[state.quiz.currentSection];
+        if (nextSection) {
+            state.quiz.sectionTimeStarted = Date.now();
+            state.quiz.currentIndex = nextSection.startIndex;
+            state.quiz.selectedAnswer = null;
+            console.log('Advanced to section', state.quiz.currentSection + 1);
+            playSfx('select');
+        }
+    }
     render();
 }
 
@@ -8382,12 +8389,12 @@ function renderQuiz() {
     let questionDisplay = '';
     if (state.quiz.sections.length > 0) {
         const currentSection = state.quiz.sections[state.quiz.currentSection];
-        if (currentSection) {
+        if (currentSection && state.quiz.currentIndex >= currentSection.startIndex) {
             const questionInSection = state.quiz.currentIndex - currentSection.startIndex + 1;
             const totalInSection = currentSection.totalQuestions;
             questionDisplay = `Question ${questionInSection} / ${totalInSection}`;
         } else {
-            // Fallback if section is undefined
+            // Fallback if section is undefined or index is out of range
             questionDisplay = `Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}`;
         }
     } else {
@@ -8523,6 +8530,12 @@ function renderQuiz() {
 function renderSectionTransitionModal() {
     // Only show for AFOQT practice tests with sections
     if (!state.quiz.sections || state.quiz.sections.length === 0 || !state.quiz.showSectionTransition) {
+        return '';
+    }
+
+    // Validate section indices are in bounds
+    if (state.quiz.currentSection >= state.quiz.sections.length || 
+        state.quiz.currentSection + 1 >= state.quiz.sections.length) {
         return '';
     }
 
