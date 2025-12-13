@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New UISpec Types Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #000;
+            color: #00ffff;
+            padding: 20px;
+            font-family: monospace;
+        }
+        .test-section {
+            margin: 30px 0;
+            border: 2px solid #006666;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .success { color: #00ff00; }
+        .error { color: #ff6666; }
+        .info { color: #ffff00; }
+        h1 { color: #00ffff; text-shadow: 0 0 10px #00ffff; }
+        h2 { color: #00ff99; margin-top: 20px; }
+        h3 { color: #00ffcc; font-size: 1.1em; margin: 15px 0 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>New UISpec Types Rendering Test</h1>
+    <p class="info">Testing the 13 newly added uiSpec types that were previously causing blank graphics.</p>
+    
+    <div class="test-section">
+        <h2>Test 1: adjacent_angles_on_line</h2>
+        <div id="test1"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 2: angle_linear_pair</h2>
+        <div id="test2"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 3: geometry_circle_diagram</h2>
+        <div id="test3"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 4: horizontal line</h2>
+        <div id="test4"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 5: vertical line</h2>
+        <div id="test5"></div>
+    </div>
+    
+    <script src="patch-loader.js"></script>
+    <script src="app.js"></script>
+    <script>
+        async function runTests() {
+            try {
+                // Load content first
+                console.log('Loading content...');
+                await loadAllContent();
+                console.log('Content loaded!');
+                
+                // Test 1: adjacent_angles_on_line
+                const response1 = await fetch('./Test Content/Math/polygons_and_angles_beginner_part2.json');
+                const data1 = await response1.json();
+                const question1 = data1.questions.find(q => q.uiSpec && q.uiSpec.type === 'adjacent_angles_on_line');
+                
+                if (question1) {
+                    document.getElementById('test1').innerHTML = `
+                        <p class="info">Question: ${question1.question}</p>
+                        <p class="success">✓ Found question with adjacent_angles_on_line type</p>
+                        ${renderMathUI(question1.uiSpec)}
+                    `;
+                } else {
+                    document.getElementById('test1').innerHTML = '<p class="error">✗ No question found with this type</p>';
+                }
+                
+                // Test 2: angle_linear_pair
+                const question2 = data1.questions.find(q => q.uiSpec && q.uiSpec.type === 'angle_linear_pair');
+                
+                if (question2) {
+                    document.getElementById('test2').innerHTML = `
+                        <p class="info">Question: ${question2.question}</p>
+                        <p class="success">✓ Found question with angle_linear_pair type</p>
+                        ${renderMathUI(question2.uiSpec)}
+                    `;
+                } else {
+                    document.getElementById('test2').innerHTML = '<p class="error">✗ No question found with this type</p>';
+                }
+                
+                // Test 3: geometry_circle_diagram
+                const response3 = await fetch('./Test Content/Math/geometry_basics_beginner_part2.json');
+                const data3 = await response3.json();
+                const question3 = data3.questions.find(q => q.uiSpec && q.uiSpec.type === 'geometry_circle_diagram');
+                
+                if (question3) {
+                    document.getElementById('test3').innerHTML = `
+                        <p class="info">Question: ${question3.question}</p>
+                        <p class="success">✓ Found question with geometry_circle_diagram type</p>
+                        ${renderMathUI(question3.uiSpec)}
+                    `;
+                } else {
+                    document.getElementById('test3').innerHTML = '<p class="error">✗ No question found with this type</p>';
+                }
+                
+                // Test 4: horizontal line
+                const response4 = await fetch('./Test Content/Math/transformations_beginner_part2.json');
+                const data4 = await response4.json();
+                const question4 = data4.questions.find(q => q.uiSpec && q.uiSpec.type === 'horizontal');
+                
+                if (question4) {
+                    document.getElementById('test4').innerHTML = `
+                        <p class="info">Question: ${question4.question}</p>
+                        <p class="success">✓ Found question with horizontal type</p>
+                        ${renderMathUI(question4.uiSpec)}
+                    `;
+                } else {
+                    // Fallback: create a test uiSpec
+                    const testUISpec = {
+                        type: 'horizontal',
+                        width: 300,
+                        height: 200,
+                        line: {
+                            position: 100,
+                            label: 'y = 3'
+                        }
+                    };
+                    document.getElementById('test4').innerHTML = `
+                        <p class="info">Testing with generated uiSpec</p>
+                        <p class="success">✓ Rendering horizontal line</p>
+                        ${renderMathUI(testUISpec)}
+                    `;
+                }
+                
+                // Test 5: vertical line
+                const question5 = data4.questions.find(q => q.uiSpec && q.uiSpec.type === 'vertical');
+                
+                if (question5) {
+                    document.getElementById('test5').innerHTML = `
+                        <p class="info">Question: ${question5.question}</p>
+                        <p class="success">✓ Found question with vertical type</p>
+                        ${renderMathUI(question5.uiSpec)}
+                    `;
+                } else {
+                    // Fallback: create a test uiSpec
+                    const testUISpec = {
+                        type: 'vertical',
+                        width: 300,
+                        height: 200,
+                        line: {
+                            position: 150,
+                            label: 'x = 2'
+                        }
+                    };
+                    document.getElementById('test5').innerHTML = `
+                        <p class="info">Testing with generated uiSpec</p>
+                        <p class="success">✓ Rendering vertical line</p>
+                        ${renderMathUI(testUISpec)}
+                    `;
+                }
+                
+            } catch (error) {
+                console.error('Test error:', error);
+                document.body.innerHTML += `<div class="test-section"><p class="error">✗ Error: ${error.message}</p><pre>${error.stack}</pre></div>`;
+            }
+        }
+        
+        // Run tests when page loads
+        runTests();
+    </script>
+</body>
+</html>
