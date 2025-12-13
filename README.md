@@ -56,11 +56,20 @@ open http://localhost:8000
 
 ## 📦 Latest Updates
 
+### **Practice Test Enhancements** (Dec 13, 2024)
+- **Feedback Toggle**: Switch between Study Mode (immediate feedback) and Practice Test Style (deferred feedback) mid-quiz
+- **Composite Scores**: AFOQT results now show Verbal, Quantitative, Pilot, and CSO composite percentages
+- **Section Analytics**: Per-section breakdown with timing and accuracy for AFOQT practice tests
+- **Difficulty Distribution**: Sampling uses 35% beginner, 45% advanced, 20% expert distribution for official AFOQT content
+- **Enhanced Persistence**: Session data includes subject/subtopic/difficulty breakdown for detailed analytics
+- **Legacy Format Support**: Table renderer handles both `tableSpec` (new) and `tableData` (legacy) formats
+
 ### **Patch 22: Table Reading** (Dec 6, 2024)
-- 50 beginner questions (25 per part) with shared tableSpec
-- `renderDataTable()` with X/Y axis legend and labeled headers
-- AFOQT Table Reading Practice Test (40 questions, 40/40/20 difficulty mix)
-- Subject ID standardized to `table_reading`
+- **152 Total Questions**: 50 beginner, 52 advanced (incl. axis clarity), 50 expert across 6 JSON files
+- **tableSpec Format**: X/Y axis headers with cellValues grid for consistent rendering
+- **Table Reading UI**: Scoped CSS grid with column/row headers, target cell highlighting in feedback
+- **AFOQT Practice Test**: 40 questions, 7-minute timer, X/Y coordinate lookup emphasis
+- **100% Validation**: All questions verified for tableSpec integrity and lookup accuracy
 
 ### **Patch 21: Instrument Comprehension** (Dec 6, 2024)
 - 10 beginner questions with `instrument_panel` uiSpec
