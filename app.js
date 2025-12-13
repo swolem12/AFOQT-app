@@ -5653,6 +5653,42 @@ function selectPlayer(playerId) {
 // ============================================================================
 
 /**
+ * Sample questions for a section using difficulty distribution
+ * E.g., for 25 questions with distribution {beginner: 0.35, advanced: 0.45, expert: 0.20}
+ * Will sample ~9 beginner, ~11 advanced, ~5 expert questions
+ */
+function sampleQuestionsWithDifficultyDistribution(subjectId, subtopicId, requestedCount, distribution = null) {
+    // Default distribution: 35% beginner, 45% advanced, 20% expert
+    const defaultDist = { beginner: 0.35, advanced: 0.45, expert: 0.20 };
+    const dist = distribution || defaultDist;
+    
+    const sampled = [];
+    for (const [diff, ratio] of Object.entries(dist)) {
+        const count = Math.round(requestedCount * ratio);
+        if (count > 0) {
+            const qs = getQuestionsFromRegistry(subjectId, subtopicId, diff, count);
+            if (qs && qs.length > 0) {
+                sampled.push(...qs);
+            }
+        }
+    }
+    
+    // Ensure we have the right count
+    if (sampled.length > requestedCount) {
+        return sampled.slice(0, requestedCount);
+    } else if (sampled.length < requestedCount) {
+        // Fallback: fill remaining with beginner questions
+        const remaining = requestedCount - sampled.length;
+        const fallback = getQuestionsFromRegistry(subjectId, subtopicId, 'beginner', remaining);
+        if (fallback && fallback.length > 0) {
+            sampled.push(...fallback);
+        }
+    }
+    
+    return sampled;
+}
+
+/**
  * Start an AFOQT Practice Test following full_afoqt_practice_test_config_v1.json structure
  */
 async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
@@ -5687,6 +5723,10 @@ async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
     
     const playerId = state.currentPlayer ? state.currentPlayer.id : null;
     
+    // Difficulty distribution: 35% beginner, 45% advanced, 20% expert
+    // Can be customized per section if needed
+    const defaultDistribution = { beginner: 0.35, advanced: 0.45, expert: 0.20 };
+    
     // Process each section according to config
     for (const section of sectionConfig) {
         // Match topics by subjectId instead of id (to aggregate all subtopics for a subject)
@@ -5695,30 +5735,57 @@ async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
         
         console.log(`Section ${section.name}: Found ${matchingTopics.length} matching topics for ${section.topicId}`);
         
-        // Calculate questions per topic to distribute evenly
-        const questionsPerTopic = matchingTopics.length > 0 ? Math.ceil(section.count / matchingTopics.length) : section.count;
+        // For official AFOQT subjects with content, use difficulty distribution sampling
+        const hasOfficialContent = matchingTopics.some(t => t.hasContent && t.isOfficialAfoqtTopic);
         
-        for (const topic of matchingTopics) {
-            const questionsNeeded = Math.min(questionsPerTopic, section.count - sectionQuestions.length);
-            if (questionsNeeded <= 0) break;
-            
-            if (typeof getQuestionsWithSpacedRepetition === 'function') {
-                try {
-                    const qs = await getQuestionsWithSpacedRepetition(
+        if (hasOfficialContent && typeof sampleQuestionsWithDifficultyDistribution === 'function') {
+            // Use distribution-based sampling for official content
+            for (const topic of matchingTopics) {
+                if (topic.hasContent) {
+                    const questionsNeeded = Math.min(
+                        Math.ceil(section.count / matchingTopics.length),
+                        section.count - sectionQuestions.length
+                    );
+                    
+                    if (questionsNeeded <= 0) break;
+                    
+                    const qs = sampleQuestionsWithDifficultyDistribution(
                         topic.subjectId || section.topicId,
                         topic.id,
-                        difficulty,
                         questionsNeeded,
-                        playerId
+                        defaultDistribution
                     );
-                    sectionQuestions.push(...qs);
-                } catch (e) {
-                    console.warn(`Failed to load via spaced repetition for ${topic.id}:`, e);
+                    
+                    if (qs && qs.length > 0) {
+                        sectionQuestions.push(...qs);
+                    }
                 }
             }
+        } else {
+            // Fallback: use spaced repetition or procedural generation
+            const questionsPerTopic = matchingTopics.length > 0 ? Math.ceil(section.count / matchingTopics.length) : section.count;
             
-            // Fallback to procedural generation
-            if (sectionQuestions.length < section.count && topic.generateQuestion) {
+            for (const topic of matchingTopics) {
+                const questionsNeeded = Math.min(questionsPerTopic, section.count - sectionQuestions.length);
+                if (questionsNeeded <= 0) break;
+                
+                if (typeof getQuestionsWithSpacedRepetition === 'function') {
+                    try {
+                        const qs = await getQuestionsWithSpacedRepetition(
+                            topic.subjectId || section.topicId,
+                            topic.id,
+                            difficulty,
+                            questionsNeeded,
+                            playerId
+                        );
+                        sectionQuestions.push(...qs);
+                    } catch (e) {
+                        console.warn(`Failed to load via spaced repetition for ${topic.id}:`, e);
+                    }
+                }
+                
+                // Fallback to procedural generation
+                if (sectionQuestions.length < section.count && topic.generateQuestion) {
                 const needed = Math.min(questionsPerTopic, section.count - sectionQuestions.length);
                 for (let i = 0; i < needed; i++) {
                     const q = topic.generateQuestion(difficulty);
@@ -6221,6 +6288,24 @@ function finishQuiz() {
     
     const avgTime = state.quiz.questionTimes.length > 0 ? state.quiz.questionTimes.reduce((a, b) => a + b, 0) / state.quiz.questionTimes.length : 0;
     
+    // Calculate subject/subtopic/difficulty breakdown for analytics
+    const breakdown = {};
+    state.quiz.userAnswers.forEach(answer => {
+        const question = state.quiz.questions[answer.questionIndex];
+        if (question) {
+            const subjectId = question._topicId || state.currentTopic?.subjectId || 'unknown';
+            const subtopicId = question._sourceTopicId || state.currentTopic?.id || 'unknown';
+            const diff = question.difficulty || state.quiz.difficulty || 'mixed';
+            const key = `${subjectId}|${subtopicId}|${diff}`;
+            
+            if (!breakdown[key]) {
+                breakdown[key] = { subject: subjectId, subtopic: subtopicId, difficulty: diff, correct: 0, total: 0 };
+            }
+            breakdown[key].total += 1;
+            if (answer.isCorrect) breakdown[key].correct += 1;
+        }
+    });
+    
     if (state.currentPlayer) {
         const session = {
             topicId: state.currentTopic.id,
@@ -6230,7 +6315,10 @@ function finishQuiz() {
             avgTime: avgTime,
             timestamp: Date.now(),
             difficulty: state.quiz.difficulty,
-            playerId: state.currentPlayer.id // Add playerId for database
+            playerId: state.currentPlayer.id, // Add playerId for database
+            mode: state.quiz.mode, // practice, test, sprint, practiceTestMode
+            isPracticeTest: state.quiz.isPracticeTest || false,
+            breakdown: Object.values(breakdown) // Per-subtopic/difficulty results
         };
         
         // Add to player's sessions array (in-memory)
@@ -8771,6 +8859,7 @@ function renderQuiz() {
     const isPracticeTestMode = state.quiz.mode === 'practiceTestMode';
     const isSprintMode = state.quiz.mode === 'sprint';
     const showFeedback = state.quiz.showFeedback; // Patch 18: use flag
+    const allowFeedbackToggle = !isTestMode && !isPracticeTestMode;
     const progressPercent = ((state.quiz.currentIndex + 1) / state.quiz.questions.length) * 100;
     
     // Determine mode label with difficulty
@@ -8844,6 +8933,14 @@ function renderQuiz() {
                     }
                 </div>
             </div>
+
+            ${allowFeedbackToggle ? `
+                <div class="quiz-subheader" style="display: flex; justify-content: flex-end; margin-top: 8px;">
+                    <button class="btn btn-secondary" id="feedback-toggle-btn" style="min-width: 180px;">
+                        Feedback: ${showFeedback ? 'On (Study Mode)' : 'Off (Practice Test Style)'}
+                    </button>
+                </div>
+            ` : ''}
             
             ${currentQuestion.image ? `
                 <div class="question-image">
@@ -8999,6 +9096,85 @@ function renderSectionTransitionModal() {
 function renderResults() {
     const percentage = (state.quiz.score / state.quiz.questions.length * 100).toFixed(1);
     const avgTime = state.quiz.questionTimes.reduce((a, b) => a + b, 0) / state.quiz.questionTimes.length;
+    const difficultyStats = {};
+    state.quiz.userAnswers.forEach(answer => {
+        const question = state.quiz.questions[answer.questionIndex] || {};
+        const diff = question.difficulty || state.quiz.difficulty || 'mixed';
+        if (!difficultyStats[diff]) {
+            difficultyStats[diff] = { total: 0, correct: 0 };
+        }
+        difficultyStats[diff].total += 1;
+        if (answer.isCorrect) {
+            difficultyStats[diff].correct += 1;
+        }
+    });
+
+    const missedAnswers = state.quiz.userAnswers.filter(a => !a.isCorrect);
+    const deferredFeedback = !state.quiz.showFeedback || state.quiz.mode === 'practiceTestMode' || state.quiz.mode === 'test';
+    
+    // For AFOQT practice tests, calculate composite scores
+    let compositeScores = {};
+    if (state.quiz.isPracticeTest && state.quiz.sections && state.quiz.sections.length > 0) {
+        // Calculate section scores
+        const sectionScores = {};
+        state.quiz.sections.forEach(section => {
+            let sectionCorrect = 0;
+            for (let i = section.startIndex; i <= section.endIndex; i++) {
+                const answer = state.quiz.userAnswers.find(a => a.questionIndex === i);
+                if (answer && answer.isCorrect) {
+                    sectionCorrect++;
+                }
+            }
+            sectionScores[section.name] = {
+                correct: sectionCorrect,
+                total: section.totalQuestions,
+                percent: ((sectionCorrect / section.totalQuestions) * 100).toFixed(1)
+            };
+        });
+        
+        // Composite scores based on full_afoqt_practice_test_config_v1.json structure
+        // Verbal = Verbal Analogies + Word Knowledge + Reading Comprehension
+        if (sectionScores['Verbal Analogies'] && sectionScores['Word Knowledge'] && sectionScores['Reading Comprehension']) {
+            const verbalScores = [
+                parseFloat(sectionScores['Verbal Analogies'].percent),
+                parseFloat(sectionScores['Word Knowledge'].percent),
+                parseFloat(sectionScores['Reading Comprehension'].percent)
+            ];
+            compositeScores['Verbal'] = (verbalScores.reduce((a, b) => a + b, 0) / verbalScores.length).toFixed(1);
+        }
+        
+        // Quantitative = Arithmetic Reasoning + Math Knowledge
+        if (sectionScores['Arithmetic Reasoning'] && sectionScores['Math Knowledge']) {
+            const quantScores = [
+                parseFloat(sectionScores['Arithmetic Reasoning'].percent),
+                parseFloat(sectionScores['Math Knowledge'].percent)
+            ];
+            compositeScores['Quantitative'] = (quantScores.reduce((a, b) => a + b, 0) / quantScores.length).toFixed(1);
+        }
+        
+        // Pilot = Instrument Comprehension + Table Reading + Aviation Information + Math Knowledge
+        if (sectionScores['Instrument Comprehension'] && sectionScores['Table Reading'] && sectionScores['Math Knowledge']) {
+            const pilotScores = [
+                parseFloat(sectionScores['Instrument Comprehension'].percent),
+                parseFloat(sectionScores['Table Reading'].percent),
+                parseFloat(sectionScores['Math Knowledge'].percent)
+            ];
+            compositeScores['Pilot'] = (pilotScores.reduce((a, b) => a + b, 0) / pilotScores.length).toFixed(1);
+        }
+        
+        // CSO = Verbal Analogies + Arithmetic Reasoning + Table Reading + Math Knowledge + Block Counting + Physical Science
+        if (sectionScores['Verbal Analogies'] && sectionScores['Arithmetic Reasoning'] && sectionScores['Table Reading'] && sectionScores['Math Knowledge'] && sectionScores['Block Counting'] && sectionScores['Physical Science']) {
+            const csoScores = [
+                parseFloat(sectionScores['Verbal Analogies'].percent),
+                parseFloat(sectionScores['Arithmetic Reasoning'].percent),
+                parseFloat(sectionScores['Table Reading'].percent),
+                parseFloat(sectionScores['Math Knowledge'].percent),
+                parseFloat(sectionScores['Block Counting'].percent),
+                parseFloat(sectionScores['Physical Science'].percent)
+            ];
+            compositeScores['CSO'] = (csoScores.reduce((a, b) => a + b, 0) / csoScores.length).toFixed(1);
+        }
+    }
     
     return `
         <div class="panel">
@@ -9018,6 +9194,61 @@ function renderResults() {
                     Topic: ${state.currentTopic.name}
                 </div>
             </div>
+
+            ${Object.keys(difficultyStats).length > 0 ? `
+                <div class="results-summary" style="margin-top: 10px;">
+                    <div class="stat-line" style="font-weight: bold;">Difficulty Breakdown</div>
+                    ${Object.entries(difficultyStats).map(([diff, stats]) => {
+                        const percent = stats.total > 0 ? ((stats.correct / stats.total) * 100).toFixed(1) : '0.0';
+                        return `<div class="stat-line">${diff}: ${stats.correct}/${stats.total} (${percent}%)</div>`;
+                    }).join('')}
+                </div>
+            ` : ''}
+
+            ${Object.keys(compositeScores).length > 0 ? `
+                <div class="results-summary" style="margin-top: 10px; border: 2px solid #ffa500;">
+                    <div class="stat-line" style="font-weight: bold; color: #ffa500;">🎖️ AFOQT Composite Scores</div>
+                    ${Object.entries(compositeScores).map(([composite, score]) => {
+                        return `<div class="stat-line" style="color: #00ffff;">${composite}: ${score}%</div>`;
+                    }).join('')}
+                </div>
+            ` : ''}
+
+            ${deferredFeedback ? `
+                <div class="question-review-section">
+                    <h2 class="review-title">📊 Practice Test Summary</h2>
+                    ${missedAnswers.length === 0 ? `
+                        <div class="review-question review-correct">
+                            <div class="review-header">
+                                <div class="review-number">All Questions</div>
+                                <div class="review-status status-correct">Perfect!</div>
+                            </div>
+                            <div class="review-prompt">You held all feedback to the end and still aced it. Great work.</div>
+                        </div>
+                    ` : missedAnswers.map(answer => {
+                        const question = state.quiz.questions[answer.questionIndex];
+                        const correctAnswerText = question.options[question.correctIndex];
+                        const correctLabel = String.fromCharCode(65 + question.correctIndex);
+                        return `
+                            <div class="review-question review-incorrect">
+                                <div class="review-header">
+                                    <div class="review-number">Question ${answer.questionIndex + 1}</div>
+                                    <div class="review-status status-incorrect">Missed</div>
+                                    <div class="review-time">⏱ ${formatTime(answer.timeSpent)}s</div>
+                                </div>
+                                <div class="review-prompt">${question.prompt}</div>
+                                ${question.tableSpec ? renderTableReading(question, { highlight: true }) : ''}
+                                <div class="review-explanation" style="margin-top: 10px;">
+                                    <strong>Correct:</strong> ${correctLabel}. ${correctAnswerText}
+                                </div>
+                                <div class="review-explanation" style="margin-top: 8px;">
+                                    <strong>Explanation:</strong> ${question.explanation}
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            ` : ''}
             
             <!-- Question Review Section -->
             <div class="question-review-section">
@@ -11051,6 +11282,15 @@ function attachEventListeners() {
             handleAnswer(parseInt(btn.dataset.optionIndex));
         });
     });
+
+    const feedbackToggleBtn = document.getElementById('feedback-toggle-btn');
+    if (feedbackToggleBtn) {
+        feedbackToggleBtn.addEventListener('click', () => {
+            state.quiz.showFeedback = !state.quiz.showFeedback;
+            playSfx('nav');
+            render();
+        });
+    }
     
     // Navigation buttons
     const homeBtn = document.getElementById('home-btn');
