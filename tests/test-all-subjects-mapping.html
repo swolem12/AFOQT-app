@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Subjects Mapping Test</title>
+    <style>
+        body { font-family: monospace; background: #000; color: #0f0; padding: 20px; }
+        .success { color: #0f0; }
+        .error { color: #f00; }
+        .warning { color: #ff0; }
+        .info { color: #0ff; }
+        table { border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #0f0; padding: 8px; text-align: left; }
+        th { background: #003300; }
+    </style>
+</head>
+<body>
+    <h1>All Subjects Content Loading Test</h1>
+    <div id="output"></div>
+    <script src="../patch-loader.js"></script>
+    <script>
+        const output = document.getElementById('output');
+        
+        async function test() {
+            output.innerHTML += '<p class="info">Starting comprehensive subject mapping test...</p>';
+            output.innerHTML += '<p class="info">Initializing Patch 18 system (loads all content)...</p>';
+            
+            // Initialize Patch 18 (loads all subjects)
+            const startTime = Date.now();
+            await initializePatch18();
+            const loadTime = Date.now() - startTime;
+            
+            output.innerHTML += `<p class="success">✓ Patch 18 initialized in ${loadTime}ms</p>`;
+            
+            // Check registry
+            const subjects = Object.keys(questionRegistry).sort();
+            output.innerHTML += `<p class="success">✓ Found ${subjects.length} subject(s) in registry</p>`;
+            
+            // Create summary table
+            let table = '<table><tr><th>Subject ID</th><th>Subtopics</th><th>Total Questions</th><th>B/A/E</th><th>Status</th></tr>';
+            
+            const expectedSubjects = [
+                'vocabulary',
+                'math_knowledge',
+                'arithmetic_reasoning',
+                'reading_comprehension',
+                'instrument_comprehension',
+                'table_reading',
+                'physical_science',
+                'block_counting',
+                'aviation_information',
+                'situational_judgment'
+            ];
+            
+            expectedSubjects.forEach(expectedSubject => {
+                if (questionRegistry[expectedSubject]) {
+                    const subtopics = Object.keys(questionRegistry[expectedSubject]);
+                    let totalQuestions = 0;
+                    let beginnerTotal = 0, advancedTotal = 0, expertTotal = 0;
+                    
+                    subtopics.forEach(subtopic => {
+                        const diff = questionRegistry[expectedSubject][subtopic];
+                        if (diff.beginner) beginnerTotal += diff.beginner.length;
+                        if (diff.advanced) advancedTotal += diff.advanced.length;
+                        if (diff.expert) expertTotal += diff.expert.length;
+                    });
+                    
+                    totalQuestions = beginnerTotal + advancedTotal + expertTotal;
+                    const status = totalQuestions > 0 ? '<span class="success">✓ LOADED</span>' : '<span class="warning">⚠ EMPTY</span>';
+                    table += `<tr><td>${expectedSubject}</td><td>${subtopics.length}</td><td>${totalQuestions}</td><td>B:${beginnerTotal} A:${advancedTotal} E:${expertTotal}</td><td>${status}</td></tr>`;
+                } else {
+                    table += `<tr><td>${expectedSubject}</td><td colspan="4"><span class="error">✗ NOT FOUND IN REGISTRY</span></td></tr>`;
+                }
+            });
+            
+            // Check for unexpected subjects
+            subjects.forEach(subject => {
+                if (!expectedSubjects.includes(subject)) {
+                    const subtopics = Object.keys(questionRegistry[subject]);
+                    let totalQuestions = 0;
+                    subtopics.forEach(subtopic => {
+                        const diff = questionRegistry[subject][subtopic];
+                        totalQuestions += (diff.beginner?.length || 0) + (diff.advanced?.length || 0) + (diff.expert?.length || 0);
+                    });
+                    table += `<tr><td>${subject}</td><td>${subtopics.length}</td><td>${totalQuestions}</td><td>-</td><td><span class="warning">⚠ UNEXPECTED</span></td></tr>`;
+                }
+            });
+            
+            table += '</table>';
+            output.innerHTML += table;
+            
+            // Summary
+            const loadedCount = expectedSubjects.filter(s => questionRegistry[s]).length;
+            const emptyCount = expectedSubjects.filter(s => {
+                if (!questionRegistry[s]) return false;
+                const subtopics = Object.keys(questionRegistry[s]);
+                let total = 0;
+                subtopics.forEach(st => {
+                    const diff = questionRegistry[s][st];
+                    total += (diff.beginner?.length || 0) + (diff.advanced?.length || 0) + (diff.expert?.length || 0);
+                });
+                return total === 0;
+            }).length;
+            
+            output.innerHTML += `<p class="info">Summary: ${loadedCount}/${expectedSubjects.length} subjects found in registry</p>`;
+            if (emptyCount > 0) {
+                output.innerHTML += `<p class="warning">⚠ ${emptyCount} subject(s) have no questions loaded</p>`;
+            }
+            
+            if (loadedCount === expectedSubjects.length && emptyCount === 0) {
+                output.innerHTML += '<p class="success">✓✓✓ ALL SUBJECTS CORRECTLY MAPPED AND LOADED! ✓✓✓</p>';
+            } else if (loadedCount === expectedSubjects.length) {
+                output.innerHTML += '<p class="warning">⚠ All subjects mapped but some have no content</p>';
+            } else {
+                output.innerHTML += '<p class="error">✗ Some subjects are not mapped correctly</p>';
+            }
+            
+            output.innerHTML += '<p class="success">✓ Test complete!</p>';
+        }
+        
+        test().catch(err => {
+            output.innerHTML += `<p class="error">✗ Error: ${err.message}</p>`;
+            console.error(err);
+        });
+    </script>
+</body>
+</html>

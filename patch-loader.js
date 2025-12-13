@@ -77,7 +77,7 @@ async function loadPatch20Config() {
 
 async function loadPatch21Config() {
     try {
-        const response = await fetch('./Test Content/Instrument Comprehension/patch_21_instrument_comprehension_generator_meta.json');
+        const response = await fetch('./Test Content/Patch_21.json');
         if (!response.ok) {
             console.warn('Patch 21 config not found');
             return null;
@@ -93,7 +93,7 @@ async function loadPatch21Config() {
 
 async function loadPatch22Config() {
     try {
-        const response = await fetch('./Test Content/Table Reading/patch_20_table_reading_axis_clarity.json');
+        const response = await fetch('./Test Content/Patch_22.json');
         if (!response.ok) {
             console.warn('Patch 22 config not found');
             return null;
@@ -314,6 +314,34 @@ async function loadBlockCountingFile(filename) {
         return await response.json();
     } catch (error) {
         console.warn('Failed to load block counting file', filename, error);
+        return null;
+    }
+}
+
+async function loadAviationFile(filename) {
+    try {
+        const url = `./Test Content/Aviation/${filename}`;
+        const response = await fetch(url);
+        if (!response.ok) {
+            return null;
+        }
+        return await response.json();
+    } catch (error) {
+        console.warn('Failed to load aviation file', filename, error);
+        return null;
+    }
+}
+
+async function loadSituationalFile(filename) {
+    try {
+        const url = `./Test Content/Situational/${filename}`;
+        const response = await fetch(url);
+        if (!response.ok) {
+            return null;
+        }
+        return await response.json();
+    } catch (error) {
+        console.warn('Failed to load situational file', filename, error);
         return null;
     }
 }
@@ -877,6 +905,96 @@ async function loadAllBlockCountingContent() {
     return questionRegistry;
 }
 
+async function loadAllAviationContent() {
+    console.log('Loading aviation content...');
+
+    const aviationFiles = [
+        'aviation_information_beginner.json',
+        'aviation_information_advanced.json',
+        'aviation_information_advanced_part1.json',
+        'aviation_information_expert.json',
+        'aviation_information_expert_part1.json'
+    ];
+
+    let loadedCount = 0;
+    const loadPromises = aviationFiles.map(async (filename) => {
+        const data = await loadAviationFile(filename);
+        if (!data || !data.questions) {
+            return; // skip missing files silently
+        }
+
+        const subjectId = data.subjectId || 'aviation_information';
+        const subtopicId = data.subtopicId || 'aviation_basics';
+        const difficulty = data.difficulty || 'beginner';
+
+        if (!questionRegistry[subjectId]) {
+            questionRegistry[subjectId] = {};
+        }
+        if (!questionRegistry[subjectId][subtopicId]) {
+            questionRegistry[subjectId][subtopicId] = { beginner: [], advanced: [], expert: [] };
+        }
+        if (!questionRegistry[subjectId][subtopicId][difficulty]) {
+            questionRegistry[subjectId][subtopicId][difficulty] = [];
+        }
+
+        questionRegistry[subjectId][subtopicId][difficulty].push(...data.questions);
+        loadedCount++;
+    });
+
+    await Promise.all(loadPromises);
+    console.log(`✓ Loaded ${loadedCount} aviation files`);
+    console.log('Aviation question registry:', questionRegistry.aviation_information);
+    return questionRegistry;
+}
+
+async function loadAllSituationalContent() {
+    console.log('Loading situational judgment content...');
+
+    const situationalFiles = [
+        'situational_judgment_beginner.json',
+        'situational_judgment_advanced.json',
+        'situational_judgment_advanced_part1.json',
+        'situational_judgment_expert.json',
+        'situational_judgment_expert_part1.json'
+    ];
+
+    let loadedCount = 0;
+    const loadPromises = situationalFiles.map(async (filename) => {
+        const data = await loadSituationalFile(filename);
+        if (!data) {
+            return; // skip missing files silently
+        }
+
+        const subjectId = data.subjectId || 'situational_judgment';
+        const subtopicId = data.subtopicId || 'judgment_scenarios';
+        const difficulty = data.difficulty || 'beginner';
+
+        // Handle scenarios array instead of questions array
+        const items = data.scenarios || data.questions || [];
+        if (items.length === 0) {
+            return;
+        }
+
+        if (!questionRegistry[subjectId]) {
+            questionRegistry[subjectId] = {};
+        }
+        if (!questionRegistry[subjectId][subtopicId]) {
+            questionRegistry[subjectId][subtopicId] = { beginner: [], advanced: [], expert: [] };
+        }
+        if (!questionRegistry[subjectId][subtopicId][difficulty]) {
+            questionRegistry[subjectId][subtopicId][difficulty] = [];
+        }
+
+        questionRegistry[subjectId][subtopicId][difficulty].push(...items);
+        loadedCount++;
+    });
+
+    await Promise.all(loadPromises);
+    console.log(`✓ Loaded ${loadedCount} situational judgment files`);
+    console.log('Situational Judgment question registry:', questionRegistry.situational_judgment);
+    return questionRegistry;
+}
+
 /**
  * Convert JSON question format to app question format
  */
@@ -1208,6 +1326,12 @@ async function initializePatch18() {
     // Load Physical Science content
     await loadAllPhysicalScienceContent();
     
+    // Load Aviation content
+    await loadAllAviationContent();
+    
+    // Load Situational Judgment content
+    await loadAllSituationalContent();
+    
     console.log('✓ Patch 18 initialized');
     return true;
 }
@@ -1227,6 +1351,8 @@ if (typeof module !== 'undefined' && module.exports) {
         loadAllTableReadingContent,
         loadBlockCountingConfig,
         loadAllBlockCountingContent,
+        loadAllAviationContent,
+        loadAllSituationalContent,
         questionRegistry
     };
 }
