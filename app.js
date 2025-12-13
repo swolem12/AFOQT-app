@@ -2797,18 +2797,17 @@ const instrumentTopics = [
 // ============================================================================
 const tableTopics = [
     {
-        id: 'table-reading',
+        id: 'basic_lookup',
         name: 'Table Reading',
-        description: 'Quick data extraction from tables',
-        subjectId: 'table',
+        description: 'Rapid value lookups, aggregates, and comparisons from tables',
+        subjectId: 'table_reading',
+        hasContent: true,
+        // Procedural fallback (rarely used if content exists)
         generateQuestion: (difficulty = 'beginner') => {
-            // Generate a random data table
             const rows = 5;
             const cols = 5;
-            const rowLabels = Array.from({length: rows}, (_, i) => (i + 1) * 10);
-            const colLabels = Array.from({length: cols}, (_, i) => (i + 1) * 5);
-            
-            // Create table data
+            const rowLabels = Array.from({ length: rows }, (_, i) => (i + 1) * 10);
+            const colLabels = Array.from({ length: cols }, (_, i) => (i + 1) * 5);
             const table = {};
             rowLabels.forEach(row => {
                 table[row] = {};
@@ -2816,40 +2815,30 @@ const tableTopics = [
                     table[row][col] = Math.floor(Math.random() * 90) + 10;
                 });
             });
-            
-            // Pick a random cell
             const targetRow = rowLabels[Math.floor(Math.random() * rows)];
             const targetCol = colLabels[Math.floor(Math.random() * cols)];
             const correctValue = table[targetRow][targetCol];
-            
-            // Generate distractors from nearby cells
             const distractors = [];
             rowLabels.forEach(row => {
                 colLabels.forEach(col => {
-                    if (row !== targetRow || col !== targetCol) {
-                        distractors.push(table[row][col]);
-                    }
+                    if (row !== targetRow || col !== targetCol) distractors.push(table[row][col]);
                 });
             });
-            
             const shuffledDistractors = shuffleArray(distractors);
             const options = [correctValue, ...shuffledDistractors.slice(0, 3)];
-            const shuffled = shuffleArray([...new Set(options)].map(String)); // Remove duplicates
-            
-            // Build table display
-            let tableDisplay = `Row\\Col  ${colLabels.join('   ')}\n`;
-            rowLabels.forEach(row => {
-                tableDisplay += `${row.toString().padStart(3)}     `;
-                tableDisplay += colLabels.map(col => table[row][col].toString().padStart(2)).join('  ');
-                tableDisplay += '\n';
-            });
-            
+            const shuffled = shuffleArray([...new Set(options)].map(String));
             return {
-                prompt: `Find the value at Row ${targetRow}, Column ${targetCol}:\n\n${tableDisplay}`,
+                prompt: `Find the value at Row ${targetRow}, Column ${targetCol}.` ,
                 options: shuffled,
                 correctIndex: shuffled.indexOf(String(correctValue)),
                 explanation: `The value at Row ${targetRow}, Column ${targetCol} is ${correctValue}`,
-                image: "assets/icons/table-sample.svg"
+                tableSpec: {
+                    type: 'data_table',
+                    xHeader: colLabels,
+                    yHeader: rowLabels,
+                    cellValues: rowLabels.map(r => colLabels.map(c => table[r][c]))
+                },
+                lookup: { x: targetCol, y: targetRow }
             };
         }
     }
@@ -7702,6 +7691,58 @@ function renderMathUI(uiSpec) {
     }
 }
 
+// Render table reading tables with optional cell highlighting
+function renderTableReading(question, { highlight = false } = {}) {
+    const spec = question.tableSpec || {};
+    const xHeader = spec.xHeader || [];
+    const yHeader = spec.yHeader || [];
+    const values = spec.cellValues || [];
+    const lookup = question.lookup;
+
+    let highlightX = -1;
+    let highlightY = -1;
+    if (highlight && lookup && lookup.x !== undefined && lookup.y !== undefined) {
+        highlightX = xHeader.indexOf(lookup.x);
+        highlightY = yHeader.indexOf(lookup.y);
+    }
+
+    const headerRow = ['<th class="tr-corner"></th>', ...xHeader.map(x => `<th class="tr-header tr-x">${x}</th>`)];
+
+    const bodyRows = yHeader.map((yVal, yIdx) => {
+        const rowCells = values[yIdx] || [];
+        const cells = rowCells.map((cell, xIdx) => {
+            const isTarget = highlightX === xIdx && highlightY === yIdx;
+            const cls = isTarget ? 'tr-cell tr-target' : 'tr-cell';
+            return `<td class="${cls}">${cell}</td>`;
+        });
+        return `
+            <tr>
+                <th class="tr-header tr-y">${yVal}</th>
+                ${cells.join('')}
+            </tr>
+        `;
+    });
+
+    return `
+        <div class="table-reading-card">
+            <div class="tr-labels">
+                <span class="tr-label">Row (Y)</span>
+                <span class="tr-label">Column (X)</span>
+            </div>
+            <div class="table-reading-grid-wrapper">
+                <table class="table-reading-grid" role="grid">
+                    <thead>
+                        <tr>${headerRow.join('')}</tr>
+                    </thead>
+                    <tbody>
+                        ${bodyRows.join('')}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    `;
+}
+
 // Reading Comprehension renderers (Patch 20)
 function renderRCPassageBlock(uiSpec) {
     if (!uiSpec || !uiSpec.passage) return '';
@@ -8815,6 +8856,8 @@ function renderQuiz() {
             <div class="question-prompt">
                 ${currentQuestion.prompt}
             </div>
+
+            ${currentQuestion.tableSpec ? renderTableReading(currentQuestion, { highlight: answered && showFeedback }) : ''}
             
             <div class="options-grid">
                 ${currentQuestion.options.map((option, idx) => {

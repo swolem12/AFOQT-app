@@ -1018,6 +1018,14 @@ function convertJsonQuestionToAppFormat(jsonQuestion) {
     if (jsonQuestion.uiSpec) {
         converted.uiSpec = jsonQuestion.uiSpec;
     }
+
+    // Preserve table reading structures
+    if (jsonQuestion.tableSpec) {
+        converted.tableSpec = jsonQuestion.tableSpec;
+    }
+    if (jsonQuestion.lookup !== undefined) {
+        converted.lookup = jsonQuestion.lookup;
+    }
     
     // Preserve fastStrategy for quick tips display
     if (jsonQuestion.fastStrategy) {

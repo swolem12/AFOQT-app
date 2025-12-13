@@ -11180,6 +11180,59 @@ textarea {
     font-size: clamp(12px, 3vw, 16px);
 }
 
+/* Table Reading (scoped) */
+.table-reading-card {
+    background: rgba(5, 15, 30, 0.85);
+    border: 2px solid var(--color-primary, #00ffff);
+    border-radius: 8px;
+    padding: 12px;
+    margin: 16px 0 20px;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+}
+.tr-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 6px;
+}
+.table-reading-grid-wrapper {
+    overflow-x: auto;
+}
+.table-reading-grid {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    color: #e6f5ff;
+    font-size: 0.95rem;
+}
+.table-reading-grid th,
+.table-reading-grid td {
+    border: 1px solid rgba(0, 255, 255, 0.25);
+    padding: 8px 10px;
+    background: rgba(0, 0, 0, 0.35);
+}
+.table-reading-grid th.tr-header {
+    background: rgba(0, 255, 255, 0.1);
+    font-weight: 700;
+    color: #8ae8ff;
+}
+.table-reading-grid th.tr-corner {
+    background: rgba(0, 255, 255, 0.08);
+}
+.table-reading-grid td.tr-cell {
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+.table-reading-grid td.tr-cell:hover {
+    background: rgba(0, 255, 255, 0.08);
+}
+.table-reading-grid td.tr-target {
+    background: rgba(0, 255, 255, 0.18);
+    box-shadow: inset 0 0 0 2px rgba(0, 255, 255, 0.6);
+    font-weight: 700;
+    color: #ffffff;
+}
+
 /* Responsive adjustments for small screens */
 @media (max-width: 600px) {
     .home-main-grid {
