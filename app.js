@@ -8394,9 +8394,14 @@ function renderQuiz() {
     let questionDisplay = '';
     if (state.quiz.sections.length > 0) {
         const currentSection = state.quiz.sections[state.quiz.currentSection];
-        const questionInSection = state.quiz.currentIndex - currentSection.startIndex + 1;
-        const totalInSection = currentSection.totalQuestions;
-        questionDisplay = `Question ${questionInSection} / ${totalInSection}`;
+        if (currentSection) {
+            const questionInSection = state.quiz.currentIndex - currentSection.startIndex + 1;
+            const totalInSection = currentSection.totalQuestions;
+            questionDisplay = `Question ${questionInSection} / ${totalInSection}`;
+        } else {
+            // Fallback if section is undefined
+            questionDisplay = `Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}`;
+        }
     } else {
         questionDisplay = `Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}`;
     }
@@ -8536,7 +8541,8 @@ function renderSectionTransitionModal() {
     const currentSection = state.quiz.sections[state.quiz.currentSection];
     const nextSection = state.quiz.sections[state.quiz.currentSection + 1];
     
-    if (!nextSection) return ''; // No next section
+    // Validate both sections exist
+    if (!currentSection || !nextSection) return '';
 
     return `
         <div id="section-transition-modal" class="modal" style="display: flex;">
