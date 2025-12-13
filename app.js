@@ -7442,6 +7442,29 @@ function renderMathUI(uiSpec) {
             return renderDataTable(uiSpec);
         case 'block_stack_iso':
             return renderBlockStackIso(uiSpec);
+        // Additional angle diagram types - all use the angle pair diagram renderer
+        case 'adjacent_angles_on_line':
+        case 'angle_linear_pair':
+        case 'angle_pair_vertical':
+        case 'angle_vertical_pair':
+        case 'triangle_exterior_angle':
+        case 'quadrilateral_angles':
+            return renderGeometryAnglePairDiagram(uiSpec);
+        // Parallel lines diagram
+        case 'coordinate_parallel_lines':
+        case 'geometry_parallel_lines_diagram':
+            return renderGeometryAnglePairDiagram(uiSpec); // Uses same structure
+        // Circle diagram
+        case 'geometry_circle_diagram':
+            return renderGeometryCircleDiagram(uiSpec);
+        // Simple line types (horizontal/vertical) - render as single line
+        case 'horizontal':
+        case 'vertical':
+            return renderSimpleLineDiagram(uiSpec);
+        // Point mapping and reflections - use coordinate points renderer
+        case 'point_mapping':
+        case 'rectangle_reflection':
+            return renderCoordinatePointsCss(uiSpec);
         default:
             console.warn('Unknown uiSpec type:', uiSpec.type);
             return '';
@@ -8356,6 +8379,100 @@ function renderGeometryAnglePairDiagram(uiSpec) {
         <div class="graphContainer" style="width: ${width}px; height: ${height}px; position: relative;">
             ${renderLines()}
             ${renderAngleLabels()}
+        </div>
+    `;
+}
+
+/**
+ * Render geometry circle diagram
+ * uiSpec shape: { type: 'geometry_circle_diagram', width, height, circle: {center: {x,y}, radius}, labels, styleHints }
+ */
+function renderGeometryCircleDiagram(uiSpec) {
+    const { width = 300, height = 300, circle = {}, labels = [], styleHints = {} } = uiSpec;
+    const { center = {x: width/2, y: height/2}, radius = 50 } = circle;
+    const baseColor = styleHints.lineColor || '#00ffff';
+    const labelColor = styleHints.labelsColor || '#00ffff';
+    
+    // Render circle using SVG
+    const circleSvg = `
+        <svg style="position: absolute; left: 0; top: 0; width: ${width}px; height: ${height}px; pointer-events: none;">
+            <circle 
+                cx="${center.x}" 
+                cy="${center.y}" 
+                r="${radius}" 
+                stroke="${baseColor}" 
+                stroke-width="2" 
+                fill="none"
+            />
+        </svg>
+    `;
+    
+    // Render center point
+    const centerPoint = `<div class="graphPoint" style="left: ${center.x - 4}px; top: ${center.y - 4}px;"></div>`;
+    
+    // Render labels (radius, diameter, etc.)
+    const renderLabels = () => {
+        return labels.map(label => {
+            const { text, position } = label;
+            let x = center.x;
+            let y = center.y;
+            
+            // Position label based on type
+            if (position === 'radius') {
+                x = center.x + radius / 2;
+                y = center.y - 10;
+            } else if (position === 'center') {
+                x = center.x + 10;
+                y = center.y + 15;
+            } else if (label.x !== undefined && label.y !== undefined) {
+                x = label.x;
+                y = label.y;
+            }
+            
+            return `<div class="graphLabel" style="left: ${x}px; top: ${y}px; color: ${labelColor};">${text}</div>`;
+        }).join('');
+    };
+    
+    return `
+        <div class="graphContainer" style="width: ${width}px; height: ${height}px; position: relative;">
+            ${circleSvg}
+            ${centerPoint}
+            ${renderLabels()}
+        </div>
+    `;
+}
+
+/**
+ * Render simple line diagram (horizontal or vertical line)
+ * uiSpec shape: { type: 'horizontal'|'vertical', width, height, line: {position, label}, styleHints }
+ */
+function renderSimpleLineDiagram(uiSpec) {
+    const { type, width = 300, height = 300, line = {}, styleHints = {} } = uiSpec;
+    const { position = height / 2, label = '' } = line;
+    const baseColor = styleHints.lineColor || '#00ffff';
+    const labelColor = styleHints.labelsColor || '#00ffff';
+    
+    let lineHtml = '';
+    let labelHtml = '';
+    
+    if (type === 'horizontal') {
+        // Horizontal line across the width
+        lineHtml = `<div class="graphLine" style="left: 0; top: ${position}px; width: ${width}px; background: ${baseColor};"></div>`;
+        if (label) {
+            labelHtml = `<div class="graphLabel" style="left: ${width / 2 - 20}px; top: ${position - 20}px; color: ${labelColor};">${label}</div>`;
+        }
+    } else if (type === 'vertical') {
+        // Vertical line - need to rotate it
+        lineHtml = `<div class="graphLine" style="left: ${position}px; top: 0; width: ${height}px; transform: rotate(90deg); transform-origin: 0 0; background: ${baseColor};"></div>`;
+        if (label) {
+            labelHtml = `<div class="graphLabel" style="left: ${position + 10}px; top: ${height / 2}px; color: ${labelColor};">${label}</div>`;
+        }
+    }
+    
+    return `
+        <div class="graphContainer" style="width: ${width}px; height: ${height}px; position: relative;">
+            ${lineHtml}
+            ${labelHtml}
         </div>
     `;
 }
