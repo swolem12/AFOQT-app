@@ -7781,11 +7781,28 @@ function renderMathUI(uiSpec) {
 
 // Render table reading tables with optional cell highlighting
 function renderTableReading(question, { highlight = false } = {}) {
-    const spec = question.tableSpec || {};
-    const xHeader = spec.xHeader || [];
-    const yHeader = spec.yHeader || [];
-    const values = spec.cellValues || [];
-    const lookup = question.lookup;
+    // Support both tableSpec (new format) and tableData (legacy format)
+    let xHeader = [];
+    let yHeader = [];
+    let values = [];
+    let lookup = question.lookup;
+    
+    if (question.tableSpec) {
+        // New format with tableSpec
+        const spec = question.tableSpec;
+        xHeader = spec.xHeader || [];
+        yHeader = spec.yHeader || [];
+        values = spec.cellValues || [];
+    } else if (question.tableData) {
+        // Legacy format with tableData
+        const tableData = question.tableData;
+        xHeader = tableData.headers || [];
+        values = tableData.rows || [];
+        // For tableData, first column is Y header (row labels)
+        yHeader = values.map(row => row[0] || '');
+        // Cell values are remaining columns (excluding first column)
+        values = values.map(row => row.slice(1));
+    }
 
     let highlightX = -1;
     let highlightY = -1;
@@ -9217,6 +9234,26 @@ function renderResults() {
             ${deferredFeedback ? `
                 <div class="question-review-section">
                     <h2 class="review-title">📊 Practice Test Summary</h2>
+                    ${Object.keys(compositeScores).length > 0 ? `
+                        <div class="results-summary" style="margin-bottom: 10px;">
+                            <div class="stat-line" style="font-weight: bold;">Composite Scores</div>
+                            ${Object.entries(compositeScores).map(([name, score]) => `<div class="stat-line">${name}: ${score}%</div>`).join('')}
+                        </div>
+                    ` : ''}
+                    ${state.quiz.sections && state.quiz.sections.length > 0 ? `
+                        <div class="results-summary" style="margin-bottom: 10px;">
+                            <div class="stat-line" style="font-weight: bold;">Section Results</div>
+                            ${state.quiz.sections.map(section => {
+                                let sectionCorrect = 0;
+                                for (let i = section.startIndex; i <= section.endIndex; i++) {
+                                    const ans = state.quiz.userAnswers.find(a => a.questionIndex === i);
+                                    if (ans && ans.isCorrect) sectionCorrect++;
+                                }
+                                const percent = section.totalQuestions > 0 ? ((sectionCorrect / section.totalQuestions) * 100).toFixed(1) : '0.0';
+                                return `<div class="stat-line">${section.name}: ${sectionCorrect}/${section.totalQuestions} (${percent}%) · Time: ${formatTime(section.timeSeconds)}s</div>`;
+                            }).join('')}
+                        </div>
+                    ` : ''}
                     ${missedAnswers.length === 0 ? `
                         <div class="review-question review-correct">
                             <div class="review-header">
