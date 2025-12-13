@@ -1,7 +1,7 @@
 // Service Worker for AFOQT Study Console
 // Provides offline caching and PWA functionality
 
-const CACHE_NAME = 'afoqt-quest-v86';
+const CACHE_NAME = 'afoqt-quest-v87';
 const urlsToCache = [
   './',
   './index.html',
@@ -11,7 +11,10 @@ const urlsToCache = [
   './db.js',
   './patch-loader.js',
   './manifest.json',
-  './Test Content/Patch_18.json'
+  './Test Content/Patch_18.json',
+  './Test Content/Patch_20.json',
+  './Test Content/Patch_21.json',
+  './Test Content/Patch_22.json'
 ];
 
 // Install event - cache assets
@@ -74,6 +77,47 @@ self.addEventListener('activate', (event) => {
 
 // Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
+  const url = new URL(event.request.url);
+  
+  // Special handling for Test Content JSON files - cache-first with network update
+  if (url.pathname.includes('/Test Content/') && url.pathname.endsWith('.json')) {
+    event.respondWith(
+      caches.open(CACHE_NAME).then((cache) => {
+        return cache.match(event.request).then((cachedResponse) => {
+          // Always try to fetch from network for updates
+          const fetchPromise = fetch(event.request).then((networkResponse) => {
+            if (networkResponse && networkResponse.status === 200) {
+              // Update cache with fresh content
+              cache.put(event.request, networkResponse.clone());
+            }
+            return networkResponse;
+          }).catch(() => {
+            // Network failed - return cached if available, otherwise throw
+            if (cachedResponse) {
+              return cachedResponse;
+            }
+            throw new Error('No network and no cached response available');
+          });
+          
+          // Return cached immediately if available, otherwise wait for network
+          return cachedResponse || fetchPromise;
+        });
+      }).catch((error) => {
+        console.error('Failed to serve JSON content for', url.pathname, ':', error);
+        // Return a basic error response with specific URL
+        return new Response(JSON.stringify({ 
+          error: 'Content unavailable',
+          url: url.pathname 
+        }), {
+          status: 503,
+          headers: { 'Content-Type': 'application/json' }
+        });
+      })
+    );
+    return;
+  }
+  
+  // Standard cache-first strategy for other resources
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
