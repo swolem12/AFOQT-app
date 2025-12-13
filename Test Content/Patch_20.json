@@ -6,11 +6,21 @@
   "rules": {
     "practiceTestModeDefault": true,
     "questionsPerPassage": "4–6",
+    "questionsPerPassageValidation": {
+      "minimum": 4,
+      "maximum": 6,
+      "fallbackBehavior": "If a passage has < 4 questions, still include it but flag as incomplete. If > 6 questions, truncate to first 6 or split into two passage groups."
+    },
     "defaultTestLength": 20,
     "difficultyMix": {
       "beginner": 0.40,
       "advanced": 0.40,
       "expert": 0.20
+    },
+    "passageClusteringEnforcement": {
+      "rule": "All questions for a passage must be presented together as a cohesive block.",
+      "validation": "Loader must verify each passage JSON contains between 4-6 questions before adding to registry.",
+      "implementation": "Group questions by passageId during test generation; do not interleave questions from different passages."
     }
   },
   "questionRoutingRules": [
@@ -21,8 +31,10 @@
     "5. Deliver questions in passage-cluster groups."
   ],
   "uiIntegration": [
-    "Use rc_passage_block to render the passage.",
-    "Use rc_question_block for each question under the passage."
+    "Use rc_passage_block to render the passage text at the top of the question group.",
+    "Use rc_question_block for each question under the passage.",
+    "Display passage once, followed by all associated questions in sequence.",
+    "In practice test mode, do not reveal correct answers until all passages are complete."
   ],
   "implementationNotes": [
     "Ensure grouped questions remain attached to their parent passage.",

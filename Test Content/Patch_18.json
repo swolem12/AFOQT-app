@@ -14,7 +14,10 @@
         "word_roots_affixes",
         "highfreq_vocab",
         "sentence_completion",
-        "verbal_analogies"
+        "verbal_analogies",
+        "vocabulary_word_knowledge",
+        "vocabulary_synonyms",
+        "vocabulary_analogies"
       ],
       "difficultyLevels": [
         "beginner",
@@ -76,6 +79,12 @@
           "description": "Opposite meaning; supports analogies and vocab depth.",
           "isOfficialAfoqtTopic": false,
           "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "sentence_completion",
+          "description": "Fill-in-the-blank vocabulary questions testing word meaning in context.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         }
       ]
     },
@@ -128,6 +137,7 @@
       "displayName": "AFOQT Math Knowledge",
       "isAfoqtOfficialSubject": true,
       "officialTopicsPerPdf": [
+        "algebra",
         "word_problems_equation_setup",
         "absolute_value",
         "coordinate_geometry",
@@ -138,6 +148,7 @@
         "fractions",
         "function_evaluation",
         "functions",
+        "geometry",
         "geometry_basics",
         "graph_interpretation",
         "graphing_linear_functions",
@@ -160,82 +171,94 @@
       ],
       "mappedGameSubtopics": [
         {
+          "subtopicId": "algebra",
+          "description": "Fundamental algebra operations, simplification, and equation solving.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
           "subtopicId": "word_problems_equation_setup",
           "description": "Translating word problems into algebraic equations.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "absolute_value",
           "description": "Understanding and solving problems with absolute value expressions and equations.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "coordinate_geometry",
           "description": "Points, quadrants, distances, and simple shapes in the coordinate plane.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "distributive_foil",
           "description": "Using the distributive property and FOIL to expand or simplify expressions.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "evaluate_expressions",
           "description": "Plugging in values and simplifying expressions with proper order of operations.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner", "advanced"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "exponents_roots",
           "description": "Integer exponents, square roots, and basic power rules.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "factoring",
           "description": "Factoring polynomials and simple quadratic expressions.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "fractions",
           "description": "Operations with fractions, equivalent forms, and comparisons.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "function_evaluation",
           "description": "Evaluating functions from rules, tables, or graphs.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "functions",
           "description": "Recognizing function relationships and basic function notation.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "geometry",
+          "description": "Advanced geometry concepts including theorems and proofs.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["advanced", "expert"]
         },
         {
           "subtopicId": "geometry_basics",
           "description": "Lines, angles, area, and perimeter basics.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "graph_interpretation",
           "description": "Reading information from line graphs and charts.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "graphing_linear_functions",
           "description": "Graphing y = mx + b and interpreting linear graphs.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "inequalities",
@@ -247,91 +270,91 @@
           "subtopicId": "linear_equations",
           "description": "Solving one- and two-step linear equations.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "number_sets",
           "description": "Integers, rational numbers, reals, and classification of numbers.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "order_of_operations",
           "description": "Applying PEMDAS to simplify numeric and algebraic expressions.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "polygons_and_angles",
           "description": "Interior and exterior angles in polygons, triangle angle facts.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "polynomials",
           "description": "Adding, subtracting, and simplifying polynomial expressions.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "probability",
           "description": "Basic probability of simple events and combined events.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "quadratic_equations",
           "description": "Recognizing and solving simple quadratic equations.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "radicals",
           "description": "Simplifying radical expressions and converting between radical and exponential form.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "ratio_and_proportion",
           "description": "Setting up and solving ratio and proportion problems.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "rational_expressions",
           "description": "Simplifying and evaluating simple rational expressions.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "sequences",
           "description": "Recognizing arithmetic and simple geometric sequences.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "slope",
-          "description": "Slope as rise over run and interpreting steepness and direction.",
+          "description": "Calculating slope from graphs, tables, or two points; interpreting steepness and direction.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "statistics",
           "description": "Mean, median, mode, range, and reading data displays.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "systems_linear",
           "description": "Solving simple systems of linear equations.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         },
         {
           "subtopicId": "transformations",
           "description": "Reflections, translations, and rotations in the coordinate plane.",
           "isOfficialAfoqtTopic": true,
-          "difficultyLevels": ["beginner"]
+          "difficultyLevels": ["beginner", "advanced", "expert"]
         }
       ]
     }
