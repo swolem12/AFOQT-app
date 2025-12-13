@@ -1,18 +1,28 @@
 {
   "appVersion": "1.0.0",
-  "cacheVersion": 87,
-  "contentHash": "c282794000b96eda",
-  "lastUpdated": "2025-12-11T06:24:24.084Z",
+  "cacheVersion": 88,
+  "contentHash": "8823f091c0a7fed2",
+  "lastUpdated": "2025-12-13T00:12:30.837Z",
   "patches": {
     "patch_18": {
       "version": 1,
-      "hash": "db399c55",
-      "lastUpdated": "2025-12-11T06:24:24.085Z"
+      "hash": "f8b1131b",
+      "lastUpdated": "2025-12-13T00:12:30.837Z"
     },
     "patch_20": {
       "version": 1,
-      "hash": "b260b2d1",
-      "lastUpdated": "2025-12-11T06:24:24.085Z"
+      "hash": "6a2e0c29",
+      "lastUpdated": "2025-12-13T00:12:30.837Z"
+    },
+    "patch_21": {
+      "version": 1,
+      "hash": "6d843443",
+      "lastUpdated": "2025-12-13T00:12:30.838Z"
+    },
+    "patch_22": {
+      "version": 1,
+      "hash": "8616041c",
+      "lastUpdated": "2025-12-13T00:12:30.838Z"
     }
   }
 }
