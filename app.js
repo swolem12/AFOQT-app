@@ -7450,10 +7450,12 @@ function renderMathUI(uiSpec) {
         case 'horizontal':
         case 'vertical':
             return renderSimpleLineDiagram(uiSpec);
-        // Point mapping and reflections - use coordinate points renderer
+        // Point mapping - use coordinate points renderer  
         case 'point_mapping':
-        case 'rectangle_reflection':
             return renderCoordinatePointsCss(uiSpec);
+        // Rectangle reflection - use reflection renderer for proper shape handling
+        case 'rectangle_reflection':
+            return renderReflectionCss(uiSpec);
         default:
             console.warn('Unknown uiSpec type:', uiSpec.type);
             return '';
