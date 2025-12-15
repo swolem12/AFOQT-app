@@ -11106,6 +11106,11 @@ function attachEventListeners() {
     console.log('Found subject tiles:', subjectTiles.length);
     subjectTiles.forEach(tile => {
         tile.addEventListener('click', () => {
+            if (!state.contentReady) {
+                console.warn('Subject click ignored: content not ready yet');
+                showErrorNotification && showErrorNotification('Loading content… Please wait.');
+                return;
+            }
             goToSubject(tile.dataset.subjectId);
         });
     });
@@ -11941,4 +11946,5 @@ function renderCreateAccount() {
             </div>
         </div>
     `;
+}
 }
