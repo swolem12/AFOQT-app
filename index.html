@@ -41,6 +41,19 @@
     <script src="db.js"></script>
     <script src="patch-loader.js"></script>
     <script src="app.js" defer></script>
+        <script>
+            // Fallback: if app.js fails to load, show a helpful message
+            document.addEventListener('DOMContentLoaded', function(){
+                setTimeout(function(){
+                    if (!window.__AFOQT_BOOT_MARKER__) {
+                        var root=document.getElementById('app-root');
+                        if (root) {
+                            root.innerHTML = '<div style="color:#ff6666;font-family:monospace;padding:16px">Failed to load app.js. If you see this on GitHub Pages, try hard refresh or check that paths resolve under <code>/AFOQT-app/</code>.</div>';
+                        }
+                    }
+                }, 800);
+            });
+        </script>
 </head>
 <body>
     <div id="app-root"><div style="color:#00ffff;font-family:monospace;padding:16px">Booting AFOQT Quest…</div></div>

@@ -4,6 +4,8 @@
 // ============================================================================
 
 console.log('app.js loading - v86');
+// Marker for index.html to detect app.js load
+window.__AFOQT_BOOT_MARKER__ = true;
 console.log('[BOOT]', 'document.readyState =', document.readyState);
 window.addEventListener('error', (e) => {
     console.error('[GLOBAL ERROR]', e.message, 'at', e.filename + ':' + e.lineno + ':' + e.colno);
