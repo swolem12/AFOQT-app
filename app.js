@@ -11947,4 +11947,5 @@ function renderCreateAccount() {
         </div>
     `;
 }
+
 }
