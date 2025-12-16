@@ -11758,6 +11758,8 @@ async function init() {
 
 // Register Service Worker for PWA functionality
 function registerServiceWorker() {
+    console.log('Service Worker registration temporarily disabled for troubleshooting');
+    return; // TEMPORARY DISABLE
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
             navigator.serviceWorker.register('./sw.js')
