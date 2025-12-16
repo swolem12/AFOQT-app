@@ -11974,3 +11974,6 @@ function renderCreateAccount() {
         </div>
     `;
 }
+
+// Auto-fix: closing brace to balance file-level scope
+}
