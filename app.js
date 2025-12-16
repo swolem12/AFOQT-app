@@ -11561,6 +11561,7 @@ function handleScrollForFAB() {
 // Initialization
 // ============================================================================
 async function init() {
+    console.log('🚀 AFOQT Quest initializing...');
     // ====================================================================
     // VERSION CHECK - Automatic cache invalidation on app update
     // ====================================================================
@@ -11776,10 +11777,26 @@ function registerServiceWorker() {
 }
 
 // Start the app when DOM is ready
+async function startApp() {
+    try {
+        await init();
+    } catch (error) {
+        console.error('❌ CRITICAL: App initialization failed:', error);
+        document.getElementById('app-root').innerHTML = `
+            <div style="color: red; font-family: monospace; padding: 20px;">
+                <h2>App Initialization Error</h2>
+                <p>${error.message}</p>
+                <pre>${error.stack}</pre>
+                <p>Check browser console (F12) for more details</p>
+            </div>
+        `;
+    }
+}
+
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', startApp);
 } else {
-    init();
+    startApp();
 }
 
 // ============================================================================
