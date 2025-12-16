@@ -42,16 +42,46 @@
     <script src="patch-loader.js"></script>
     <script src="app.js" defer></script>
         <script>
+            // Debug overlay + fallback improvements
+            window.__AFOQT_BOOT_MARKER__ = window.__AFOQT_BOOT_MARKER__ || false;
+            function showDebug(msg) {
+                try {
+                    var d = document.getElementById('afoqt-debug');
+                    if (!d) {
+                        d = document.createElement('div');
+                        d.id = 'afoqt-debug';
+                        d.style.position='fixed';
+                        d.style.right='8px';
+                        d.style.top='8px';
+                        d.style.zIndex=99999;
+                        d.style.background='rgba(0,0,0,0.8)';
+                        d.style.color='#0ff';
+                        d.style.fontFamily='monospace';
+                        d.style.padding='8px';
+                        d.style.fontSize='12px';
+                        d.style.borderRadius='6px';
+                        d.style.maxWidth='360px';
+                        d.style.pointerEvents='none';
+                        document.body.appendChild(d);
+                    }
+                    d.textContent = msg;
+                } catch (e) { /* ignore */ }
+            }
+            showDebug('Booting... SW controller: ' + (!!navigator.serviceWorker.controller));
+
             // Fallback: if app.js fails to load, show a helpful message
             document.addEventListener('DOMContentLoaded', function(){
                 setTimeout(function(){
                     if (!window.__AFOQT_BOOT_MARKER__) {
                         var root=document.getElementById('app-root');
                         if (root) {
-                            root.innerHTML = '<div style="color:#ff6666;font-family:monospace;padding:16px">Failed to load app.js. If you see this on GitHub Pages, try hard refresh or check that paths resolve under <code>/AFOQT-app/</code>.</div>';
+                            root.innerHTML = '<div style="color:#ff6666;font-family:monospace;padding:16px;background:#111;">Failed to load app.js. If you see this on GitHub Pages, try hard refresh or check that paths resolve under <code>/AFOQT-app/</code>. SW controlled: ' + (!!navigator.serviceWorker.controller) + '</div>';
+                            showDebug('BOOT FAIL; SW controlled: ' + (!!navigator.serviceWorker.controller));
                         }
+                    } else {
+                        showDebug('App booted OK');
                     }
-                }, 800);
+                }, 2000);
             });
         </script>
 </head>
