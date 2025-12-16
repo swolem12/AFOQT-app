@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="AFOQT Quest - RPG-style study app with procedurally generated questions">
     <meta name="theme-color" content="#00ffff">
+        <script>
+        // Hard SW unregister on first load to avoid stale caches
+        (function(){
+            try {
+                if ('serviceWorker' in navigator && !sessionStorage.getItem('swHardRefreshDone')) {
+                    navigator.serviceWorker.getRegistrations().then(function(regs){
+                        if (regs && regs.length) {
+                            regs.forEach(function(reg){ reg.unregister(); });
+                            sessionStorage.setItem('swHardRefreshDone','1');
+                            // Reload to ensure fresh resources are fetched
+                            location.reload();
+                        }
+                    }).catch(function(){});
+                }
+            } catch(e) { /* ignore */ }
+        })();
+        </script>
     
     <!-- PWA Configuration -->
     <link rel="manifest" href="manifest.json">

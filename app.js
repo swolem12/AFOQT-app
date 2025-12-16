@@ -6480,6 +6480,7 @@ function renderFloatingNav(options = {}) {
 function render() {
     const root = document.getElementById('app-root');
     if (!root) return;
+    console.log('[render] screen=', state.screen);
     
     switch (state.screen) {
         case 'login':
