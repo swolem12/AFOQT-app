@@ -4,6 +4,10 @@
 // ============================================================================
 
 console.log('app.js loading - v86');
+console.log('[BOOT]', 'document.readyState =', document.readyState);
+window.addEventListener('error', (e) => {
+    console.error('[GLOBAL ERROR]', e.message, 'at', e.filename + ':' + e.lineno + ':' + e.colno);
+});
 
 // ============================================================================
 // Anime.js v4 Enhanced Animation System
@@ -11781,7 +11785,9 @@ function registerServiceWorker() {
 // Start the app when DOM is ready
 async function startApp() {
     try {
+        console.log('[startApp] called');
         await init();
+        console.log('[startApp] init() resolved');
     } catch (error) {
         console.error('❌ CRITICAL: App initialization failed:', error);
         document.getElementById('app-root').innerHTML = `
@@ -11796,8 +11802,10 @@ async function startApp() {
 }
 
 if (document.readyState === 'loading') {
+    console.log('[BOOT] DOM is loading; attaching DOMContentLoaded handler');
     document.addEventListener('DOMContentLoaded', startApp);
 } else {
+    console.log('[BOOT] DOM is ready; calling startApp immediately');
     startApp();
 }
 
