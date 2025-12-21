@@ -1,0 +1,270 @@
+{
+  "fileId": "full_afoqt_practice_test_config_v1",
+  "subjectId": "full_afoqt_practice_test",
+  "displayName": "Full AFOQT Practice Test",
+
+  "description": "Defines a full-length AFOQT practice exam mode with Beginner, Advanced, and Expert variants. Each run simulates the real AFOQT timing and section order, randomly drawing questions from the existing question-bank JSON files across all subtopics and parts. Sections are timed, and composites (Verbal, Quantitative, Academic Aptitude, Pilot, CSO, ABM) are computed from the relevant subtests.",
+
+  "difficultyModes": {
+    "beginner": {
+      "summary": "Use only beginner-difficulty questions from each subtest's pools.",
+      "sectionSequence": "Use the exact AFOQT section order shown in examSections, but always pull from beginner difficulty pools.",
+      "sectionConfigRef": "examSections"
+    },
+    "advanced": {
+      "summary": "Use only advanced-difficulty questions from each subtest's pools.",
+      "sectionSequence": "Same section order and timing as real AFOQT, but questions pulled from advanced difficulty pools.",
+      "sectionConfigRef": "examSections"
+    },
+    "expert": {
+      "summary": "Use only expert-difficulty questions from each subtest's pools.",
+      "sectionSequence": "Same section order and timing as real AFOQT, but questions pulled from expert difficulty pools.",
+      "sectionConfigRef": "examSections"
+    }
+  },
+
+  "examSections": [
+    {
+      "sectionId": "verbal_analogies",
+      "displayName": "Verbal Analogies",
+      "sourceSubjectId": "verbal_analogies",
+      "questionCount": 25,
+      "timeLimitMinutes": 8,
+      "timeLimitSeconds": 480,
+      "secondsPerQuestion": 19.2,
+      "selectionStrategy": "stratified_random_by_subtopic",
+      "selectionDetails": {
+        "subtopicPool": "ALL verbal_analogies subtopics for chosen difficulty",
+        "questionSources": ["verbal_analogies_*_part1.json", "verbal_analogies_*_part2.json"],
+        "rule": "Distribute draws as evenly as possible across all subtopics. On each exam run, randomize both subtopic order and question ids. Do not repeat any question id within a single exam run."
+      }
+    },
+    {
+      "sectionId": "arithmetic_reasoning",
+      "displayName": "Arithmetic Reasoning",
+      "sourceSubjectId": "arithmetic_reasoning",
+      "questionCount": 25,
+      "timeLimitMinutes": 29,
+      "timeLimitSeconds": 1740,
+      "secondsPerQuestion": 69.6,
+      "selectionStrategy": "stratified_random_by_subtopic",
+      "selectionDetails": {
+        "subtopicPool": "ratio_and_proportion, percent_problems, fractions_and_decimals, time_rates_work, probability, algebra, averages, mixed_word_problems",
+        "questionSources": ["arithmetic_reasoning_*_part1.json", "arithmetic_reasoning_*_part2.json"],
+        "rule": "Attempt to pull a roughly equal number of questions from each AR subtopic. If 25 does not divide evenly, randomly allocate the extra questions across random subtopics."
+      }
+    },
+    {
+      "sectionId": "word_knowledge",
+      "displayName": "Word Knowledge",
+      "sourceSubjectId": "vocabulary",
+      "questionCount": 25,
+      "timeLimitMinutes": 5,
+      "timeLimitSeconds": 300,
+      "secondsPerQuestion": 12.0,
+      "selectionStrategy": "uniform_random",
+      "selectionDetails": {
+        "subtopicPool": "general_service_words, academic_words, military_context_words, prefix_suffix_root_patterns",
+        "questionSources": ["vocabulary_*_part1.json", "vocabulary_*_part2.json"],
+        "rule": "Sample uniformly across all vocab subtopics and difficulty pool; balance synonyms vs antonyms questions."
+      }
+    },
+    {
+      "sectionId": "math_knowledge",
+      "displayName": "Math Knowledge",
+      "sourceSubjectId": "math_knowledge",
+      "questionCount": 25,
+      "timeLimitMinutes": 22,
+      "timeLimitSeconds": 1320,
+      "secondsPerQuestion": 52.8,
+      "selectionStrategy": "stratified_random_by_subtopic",
+      "selectionDetails": {
+        "subtopicPool": "ALL Math Knowledge subtopics for chosen difficulty (order_of_operations, number_sets, fractions, decimals, ratio_and_proportion, percent_problems, exponents_and_roots, algebra_basics, evaluating_expressions, solving_linear_equations, functions, function_evaluation, slope, graphing_linear_functions, coordinate_geometry, polygons_and_angles, circles, transformations, sequences, probability, statistics, etc.)",
+        "questionSources": ["*_beginner_part1.json", "*_beginner_part2.json"],
+        "rule": "Treat each MK subtopic as an equal-weight bucket. For 25 total questions, repeatedly select a random subtopic, then a random unused question from either its part1 or part2 file, until 25 questions are assembled with no duplicates."
+      }
+    },
+    {
+      "sectionId": "reading_comprehension",
+      "displayName": "Reading Comprehension",
+      "sourceSubjectId": "reading_comprehension",
+      "questionCount": 25,
+      "timeLimitMinutes": 38,
+      "timeLimitSeconds": 2280,
+      "secondsPerQuestion": 91.2,
+      "selectionStrategy": "random_passage_then_all_questions",
+      "selectionDetails": {
+        "passagePool": "For chosen difficulty, use the appropriate passage-number range (e.g., beginner: 1–20).",
+        "rule": "Randomly sample 5 passages for this section; for each selected passage, include all 5 questions for that passage. Shuffle question order across passages."
+      }
+    },
+    {
+      "sectionId": "situational_judgment",
+      "displayName": "Situational Judgment",
+      "sourceSubjectId": "situational_judgment",
+      "questionCount": 50,
+      "timeLimitMinutes": 35,
+      "timeLimitSeconds": 2100,
+      "secondsPerQuestion": 42.0,
+      "selectionStrategy": "random_scenarios",
+      "selectionDetails": {
+        "scenarioThemes": "chain_of_command, teamwork, ethics, conflict_resolution, professionalism, safety",
+        "rule": "Randomly select scenarios so that major themes are represented approximately evenly. Each scenario contributes 1 scored question (single-best or best/worst); no duplicates in a single run."
+      }
+    },
+    {
+      "sectionId": "self_description_inventory",
+      "displayName": "Self-Description Inventory",
+      "sourceSubjectId": "self_description_inventory",
+      "questionCount": 240,
+      "timeLimitMinutes": 45,
+      "timeLimitSeconds": 2700,
+      "secondsPerQuestion": 11.25,
+      "selectionStrategy": "fixed_item_pool",
+      "selectionDetails": {
+        "rule": "Typically use a fixed inventory of 240 items. These are NOT included in composites and are not right/wrong scored – they are Likert-style responses for internal matching. App may present them for practice but keep them separate from score reports."
+      }
+    },
+    {
+      "sectionId": "physical_science",
+      "displayName": "Physical Science",
+      "sourceSubjectId": "physical_science",
+      "questionCount": 20,
+      "timeLimitMinutes": 10,
+      "timeLimitSeconds": 600,
+      "secondsPerQuestion": 30.0,
+      "selectionStrategy": "stratified_random_by_subtopic",
+      "selectionDetails": {
+        "subtopicPool": "newtons_laws, forces_and_motion, energy_and_work, simple_machines, electricity_basics, magnetism_basics, waves_and_sound, basic_thermodynamics",
+        "rule": "Sample questions evenly across physics/chemistry subtopics; prefer conceptual and non-calculus-level numeric questions."
+      }
+    },
+    {
+      "sectionId": "table_reading",
+      "displayName": "Table Reading",
+      "sourceSubjectId": "table_reading",
+      "questionCount": 40,
+      "timeLimitMinutes": 7,
+      "timeLimitSeconds": 420,
+      "secondsPerQuestion": 10.5,
+      "selectionStrategy": "fixed_table_sets",
+      "selectionDetails": {
+        "rule": "Build several table sets per difficulty, each with multiple questions. For the full practice exam, choose a small number of sets (e.g., 4–6) and include enough questions from those sets to total 40 items, emphasizing row/column lookup and simple comparisons."
+      }
+    },
+    {
+      "sectionId": "instrument_comprehension",
+      "displayName": "Instrument Comprehension",
+      "sourceSubjectId": "instrument_comprehension",
+      "questionCount": 25,
+      "timeLimitMinutes": 5,
+      "timeLimitSeconds": 300,
+      "secondsPerQuestion": 12.0,
+      "selectionStrategy": "random_instrument_panels",
+      "selectionDetails": {
+        "rule": "Randomly choose instrument panel sets (attitude + heading + climb/descent). For each panel, generate one or more questions about aircraft attitude and heading. Ensure combinations of climbing/descending, banking left/right, and different headings appear across the section."
+      }
+    },
+    {
+      "sectionId": "block_counting",
+      "displayName": "Block Counting",
+      "sourceSubjectId": "block_counting",
+      "questionCount": 30,
+      "timeLimitMinutes": 4.5,
+      "timeLimitSeconds": 270,
+      "secondsPerQuestion": 9.0,
+      "selectionStrategy": "random_block_figures",
+      "selectionDetails": {
+        "rule": "Randomly choose block figures with varying complexity. For each figure, ask for total blocks (including hidden ones). Vary height, depth, and stacking. Use isometric-style visuals via uiSpec and HTML/CSS."
+      }
+    },
+    {
+      "sectionId": "aviation_information",
+      "displayName": "Aviation Information",
+      "sourceSubjectId": "aviation_information",
+      "questionCount": 20,
+      "timeLimitMinutes": 8,
+      "timeLimitSeconds": 480,
+      "secondsPerQuestion": 24.0,
+      "selectionStrategy": "stratified_random_by_subtopic",
+      "selectionDetails": {
+        "subtopicPool": "basic_aerodynamics, aircraft_controls_and_axes, aircraft_components_and_systems, helicopter_basics, basic_navigation_concepts, flight_instruments_concepts, flight_operations_and_procedures",
+        "rule": "Draw roughly equal numbers of items from each AI subtopic. Use clear, non-classified, high-level aviation knowledge suitable for public test prep."
+      }
+    }
+  ],
+
+  "navigationFlow": {
+    "order": [
+      "verbal_analogies",
+      "arithmetic_reasoning",
+      "word_knowledge",
+      "math_knowledge",
+      "reading_comprehension",
+      "situational_judgment",
+      "self_description_inventory",
+      "physical_science",
+      "table_reading",
+      "instrument_comprehension",
+      "block_counting",
+      "aviation_information"
+    ],
+    "sectionTransition": "After finishing each section (time expires or user submits all answers), show a 'Section Complete' summary screen with score for that section (where applicable) and a 'Continue' button. Once user confirms, load the next section in the order above with its own timer.",
+    "examCompletion": "At the end of Aviation Information, show a full test summary page with per-section accuracy, timing, and composite score breakdown."
+  },
+
+  "compositeScoring": {
+    "notes": "This app uses percentage-correct by section to approximate composites; it does NOT replicate the Air Force’s proprietary scaled-score formulas. For training purposes, composite scores are computed as the average percent-correct of their contributing subtests.",
+    "composites": {
+      "Verbal": {
+        "id": "verbal_composite",
+        "subtests": ["verbal_analogies", "word_knowledge", "reading_comprehension"],
+        "minimumRequiredScore": 15,
+        "calculationRule": "Average percent correct across the three subtests."
+      },
+      "Quantitative": {
+        "id": "quantitative_composite",
+        "subtests": ["arithmetic_reasoning", "math_knowledge"],
+        "minimumRequiredScore": 10,
+        "calculationRule": "Average percent correct across AR and MK."
+      },
+      "AcademicAptitude": {
+        "id": "academic_aptitude_composite",
+        "subtests": ["verbal_analogies", "word_knowledge", "arithmetic_reasoning", "math_knowledge"],
+        "minimumRequiredScore": null,
+        "calculationRule": "Average percent correct across the four subtests."
+      },
+      "Pilot": {
+        "id": "pilot_composite",
+        "subtests": ["instrument_comprehension", "table_reading", "aviation_information", "math_knowledge"],
+        "minimumRequiredScore": 25,
+        "calculationRule": "Average percent correct across the four subtests."
+      },
+      "CSO": {
+        "id": "cso_composite",
+        "displayName": "Combat Systems Officer",
+        "subtests": ["verbal_analogies", "arithmetic_reasoning", "table_reading", "math_knowledge", "block_counting", "physical_science"],
+        "minimumRequiredScore": 25,
+        "calculationRule": "Average percent correct across the six subtests."
+      },
+      "ABM": {
+        "id": "abm_composite",
+        "displayName": "Air Battle Manager",
+        "subtests": ["verbal_analogies", "word_knowledge", "table_reading", "instrument_comprehension", "block_counting", "aviation_information"],
+        "minimumRequiredScore": 25,
+        "calculationRule": "Average percent correct across the six subtests."
+      }
+    },
+    "excludedFromComposites": [
+      "situational_judgment",
+      "self_description_inventory"
+    ]
+  },
+
+  "copilotImplementationNotes": {
+    "difficultyBinding": "When user chooses Beginner/Advanced/Expert Full Exam, bind the difficulty field for every section’s question selection to that difficulty.",
+    "randomization": "Every exam run must re-sample questions. No question id may appear more than once within a single full exam instance.",
+    "timers": "Each section uses a dedicated countdown timer based on timeLimitSeconds. Once timer hits zero, section auto-submits unanswered items as blank.",
+    "persistence": "Store per-question references back to original JSON file & id for review mode and analytics (e.g., which subtopics user is weak on)."
+  }
+}
