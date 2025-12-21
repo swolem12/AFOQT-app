@@ -1,0 +1,83 @@
+{
+  "patchId": "patch_22",
+  "title": "Patch 22 - Table Reading Integration",
+  "description": "Adds Table Reading as a full AFOQT subject with data table questions testing rapid row/column lookup and numerical comparison.",
+  "subjectsIncluded": ["table_reading"],
+  "subjects": [
+    {
+      "id": "table_reading",
+      "displayName": "AFOQT Table Reading",
+      "isAfoqtOfficialSubject": true,
+      "officialFormat": {
+        "questionType": "data_table_lookup",
+        "responseType": "multiple choice",
+        "timePressure": "very high (10.5 seconds per question)",
+        "coordinateSystem": "X = columns (top axis), Y = rows (left axis)"
+      },
+      "difficultyLevels": [
+        "beginner",
+        "advanced",
+        "expert"
+      ],
+      "mappedGameSubtopics": [
+        {
+          "subtopicId": "basic_table_lookup",
+          "description": "Finding values at specific X,Y coordinates in a data table.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["beginner", "advanced", "expert"]
+        },
+        {
+          "subtopicId": "table_comparison",
+          "description": "Comparing values across rows or columns to find differences, sums, or patterns.",
+          "isOfficialAfoqtTopic": true,
+          "difficultyLevels": ["advanced", "expert"]
+        }
+      ]
+    }
+  ],
+  "contentRules": {
+    "filenamePattern": "table_reading_<difficulty>_part<index>.json",
+    "inferenceNotesForCopilot": [
+      "Infer difficulty level from the filename: 'table_reading_beginner_part1.json' → difficulty=beginner.",
+      "Each JSON file may contain a top-level tableSpec defining the shared data table used by all questions in that file.",
+      "Questions use uiSpec type 'data_table' with useTableSpec flag to reference the shared table.",
+      "Coordinate system: X = columns (horizontal axis, top headers), Y = rows (vertical axis, left headers)."
+    ]
+  },
+  "questionRoutingRules": [
+    "1. Load all table_reading_<difficulty>_part<X>.json files.",
+    "2. Each JSON may contain a shared tableSpec at the top level defining the data grid.",
+    "3. Questions reference the tableSpec via uiSpec.useTableSpec = true.",
+    "4. Aggregate questions into registry by difficulty: questions['table_reading']['basic_table_lookup'][difficulty].",
+    "5. For practice tests, select table sets ensuring variety of lookup patterns and coordinate combinations."
+  ],
+  "uiIntegration": [
+    "Use data_table uiSpec to render a grid with X (column) headers on top and Y (row) headers on left.",
+    "Display a legend above the table explaining: 'X = Columns (Top), Y = Rows (Left)'.",
+    "Render cell values from tableSpec.cellValues[rowIndex][colIndex].",
+    "Questions ask for values at specific (X, Y) coordinates or comparisons between cells.",
+    "In practice test mode, hide explanations until section is complete.",
+    "Emphasize speed: table reading questions are designed for rapid scanning (10.5 sec average)."
+  ],
+  "implementationNotes": [
+    "Table reading tests cognitive speed and accuracy in finding values in a numeric grid.",
+    "Beginner: simple single-cell lookups with small tables (5x5 or similar).",
+    "Advanced: multi-step comparisons (e.g., 'difference between X=3,Y=20 and X=5,Y=40').",
+    "Expert: larger tables, more complex arithmetic on retrieved values.",
+    "Each file may have a shared tableSpec to avoid repetition; questions use uiSpec.useTableSpec = true.",
+    "Highlight field in uiSpec (optional) can emphasize specific cells/rows/columns for visual assistance.",
+    "Ensure consistent coordinate language: X = columns, Y = rows (never inverted)."
+  ],
+  "validationRules": {
+    "uiSpecRequired": "All table reading questions must have uiSpec with type='data_table'",
+    "tableSpecFormat": "Files may include top-level tableSpec with xHeader, yHeader, and cellValues arrays",
+    "coordinateConsistency": "All questions must use X for columns and Y for rows consistently",
+    "timingGuidance": "10.5 seconds per question average for full AFOQT simulation (40 questions in 7 minutes)"
+  },
+  "axisClarity": {
+    "convention": "X = Columns (Top Axis), Y = Rows (Left Axis)",
+    "reasoning": "Matches standard Cartesian coordinate system where X is horizontal and Y is vertical.",
+    "questionFormat": "Questions should ask: 'What value is at X = ? and Y = ?' or 'For Y = ?, find X = ?'",
+    "uiDisplay": "Render legend above table: 'X = Columns (Top) | Y = Rows (Left)' for clarity."
+  }
+}
