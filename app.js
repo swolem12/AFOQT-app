@@ -5707,8 +5707,8 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
                 state.quiz.questions.push(...qs);
             }
             
-            // Shuffle and limit to exact count
-            state.quiz.questions = state.quiz.questions.sort(() => Math.random() - 0.5).slice(0, questionCount);
+            // Shuffle and limit to exact count using Fisher-Yates algorithm
+            state.quiz.questions = shuffleArray(state.quiz.questions).slice(0, questionCount);
         } else {
             // Regular practice/test mode - use spaced repetition with specified difficulty
             state.quiz.questions = await getQuestionsWithSpacedRepetition(
@@ -5749,7 +5749,7 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
             difficulties.forEach(diff => {
                 pooled.push(...getQuestionsFromRegistry(topic.subjectId, topic.id, diff, perDiff));
             });
-            state.quiz.questions = pooled.sort(() => Math.random() - 0.5).slice(0, questionCount);
+            state.quiz.questions = shuffleArray(pooled).slice(0, questionCount);
         } else {
             state.quiz.questions = getQuestionsFromRegistry(topic.subjectId, topic.id, difficulty, questionCount);
             // Fallback to beginner if chosen difficulty has no pool (common for arithmetic where only beginner exists)
@@ -5808,6 +5808,11 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     state.quiz.selectedAnswer = null;
     state.quiz.questionTimes = [];
     state.quiz.userAnswers = [];
+    
+    // Final shuffle: randomize question order so users get different order each session
+    // This applies to ALL question sources (content-based and procedurally generated)
+    state.quiz.questions = shuffleArray(state.quiz.questions);
+    
     state.quiz.questionStartTime = Date.now();
     
     state.screen = 'quiz';
