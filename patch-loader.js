@@ -947,6 +947,67 @@ async function loadAllAviationContent() {
     return questionRegistry;
 }
 
+async function loadAllPhysicalScienceContent() {
+    console.log('Loading physical science content...');
+
+    const physicsScienceTopics = [
+        'chemistry_basics',
+        'earth_space',
+        'electricity_magnetism',
+        'energy_heat',
+        'fluids_pressure',
+        'motion_mechanics',
+        'optics_waves'
+    ];
+
+    const difficulties = ['beginner', 'advanced', 'expert'];
+    const maxParts = 2; // Most physical science files have up to 2 parts
+
+    let loadedCount = 0;
+    const files = [];
+    
+    // Generate all expected filenames
+    physicsScienceTopics.forEach(topic => {
+        difficulties.forEach(difficulty => {
+            for (let part = 1; part <= maxParts; part++) {
+                files.push(`physical_science_${topic}_${difficulty}_part${part}.json`);
+            }
+        });
+    });
+
+    const loadPromises = files.map(async (filename) => {
+        const data = await loadPhysicalScienceFile(filename);
+        if (!data || !data.questions) {
+            return; // skip missing files silently
+        }
+
+        const subjectId = data.subjectId || 'physical_science';
+        const subtopicId = data.subtopicId || 'physics_general';
+        const difficulty = data.difficulty || 'beginner';
+
+        if (!questionRegistry[subjectId]) {
+            questionRegistry[subjectId] = {};
+        }
+        if (!questionRegistry[subjectId][subtopicId]) {
+            questionRegistry[subjectId][subtopicId] = { beginner: [], advanced: [], expert: [] };
+        }
+        if (!questionRegistry[subjectId][subtopicId][difficulty]) {
+            questionRegistry[subjectId][subtopicId][difficulty] = [];
+        }
+
+        questionRegistry[subjectId][subtopicId][difficulty].push(...data.questions);
+        loadedCount++;
+    });
+
+    await Promise.all(loadPromises);
+    console.log(`✓ Loaded ${loadedCount} physical science files`);
+    if (questionRegistry.physical_science) {
+        console.log('Physical Science question registry topics:', Object.keys(questionRegistry.physical_science));
+    }
+    return questionRegistry;
+}
+
+
 async function loadAllSituationalContent() {
     console.log('Loading situational judgment content...');
 

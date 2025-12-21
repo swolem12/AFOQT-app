@@ -1806,8 +1806,14 @@ const scienceTopics = [
         name: 'Chemistry Basics',
         description: 'Atomic structure, periodic table, reactions',
         subjectId: 'physical_science',
+        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
             // Loaded from patch-loader.js physical_science question registry
+            // See startQuiz() which uses getQuestionsFromRegistry for topics with hasContent
+            if (typeof getQuestionsFromRegistry === 'function') {
+                const questions = getQuestionsFromRegistry('physical_science', 'chemistry_basics', difficulty, 1);
+                return questions.length > 0 ? questions[0] : null;
+            }
             return null;
         }
     },
@@ -1816,7 +1822,12 @@ const scienceTopics = [
         name: 'Earth & Space Science',
         description: 'Geology, atmosphere, solar system',
         subjectId: 'physical_science',
+        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
+            if (typeof getQuestionsFromRegistry === 'function') {
+                const questions = getQuestionsFromRegistry('physical_science', 'earth_space', difficulty, 1);
+                return questions.length > 0 ? questions[0] : null;
+            }
             return null;
         }
     },
@@ -1825,7 +1836,12 @@ const scienceTopics = [
         name: 'Electricity & Magnetism',
         description: 'Circuits, current, magnetic fields',
         subjectId: 'physical_science',
+        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
+            if (typeof getQuestionsFromRegistry === 'function') {
+                const questions = getQuestionsFromRegistry('physical_science', 'electricity_magnetism', difficulty, 1);
+                return questions.length > 0 ? questions[0] : null;
+            }
             return null;
         }
     },
@@ -1834,7 +1850,12 @@ const scienceTopics = [
         name: 'Energy & Heat',
         description: 'Energy transfer, temperature, thermodynamics',
         subjectId: 'physical_science',
+        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
+            if (typeof getQuestionsFromRegistry === 'function') {
+                const questions = getQuestionsFromRegistry('physical_science', 'energy_heat', difficulty, 1);
+                return questions.length > 0 ? questions[0] : null;
+            }
             return null;
         }
     },
@@ -1843,7 +1864,12 @@ const scienceTopics = [
         name: 'Fluids & Pressure',
         description: 'Density, buoyancy, fluid dynamics',
         subjectId: 'physical_science',
+        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
+            if (typeof getQuestionsFromRegistry === 'function') {
+                const questions = getQuestionsFromRegistry('physical_science', 'fluids_pressure', difficulty, 1);
+                return questions.length > 0 ? questions[0] : null;
+            }
             return null;
         }
     },
@@ -1852,7 +1878,12 @@ const scienceTopics = [
         name: 'Motion & Mechanics',
         description: 'Forces, Newton\'s laws, kinematics',
         subjectId: 'physical_science',
+        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
+            if (typeof getQuestionsFromRegistry === 'function') {
+                const questions = getQuestionsFromRegistry('physical_science', 'motion_mechanics', difficulty, 1);
+                return questions.length > 0 ? questions[0] : null;
+            }
             return null;
         }
     },
@@ -1861,7 +1892,12 @@ const scienceTopics = [
         name: 'Optics & Waves',
         description: 'Light, sound, electromagnetic spectrum',
         subjectId: 'physical_science',
+        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
+            if (typeof getQuestionsFromRegistry === 'function') {
+                const questions = getQuestionsFromRegistry('physical_science', 'optics_waves', difficulty, 1);
+                return questions.length > 0 ? questions[0] : null;
+            }
             return null;
         }
     }
