@@ -6015,7 +6015,9 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     }
     
     // Check if we have any questions before starting quiz
-    if (state.quiz.questions.length === 0) {
+    console.log('[BEFORE-CHECK] state.quiz.questions type:', typeof state.quiz.questions, 'isDefined:', typeof state.quiz.questions !== 'undefined', 'isArray:', Array.isArray(state.quiz.questions));
+    
+    if (!state.quiz.questions || !Array.isArray(state.quiz.questions) || state.quiz.questions.length === 0) {
         const topicInfo = `${topic.subjectId || 'unknown'}/${topic.id}/${difficulty}`;
         console.error('❌ Failed to generate any questions for quiz');
         console.error('  Topic:', topic.name);
