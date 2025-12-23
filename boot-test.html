@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Boot Test</title>
+    <link rel="stylesheet" href="/AFOQT-app/styles.css">
+</head>
+<body>
+    <div id="app-root">
+        <div class="panel" style="padding: 20px;">
+            <h1 class="panel-header">BOOT TEST</h1>
+            <p id="status">Testing...</p>
+        </div>
+    </div>
+    
+    <script>
+        console.log('[TEST] Starting boot test...');
+        const status = document.getElementById('status');
+        
+        // Load app.js and check if boot code runs
+        const script = document.createElement('script');
+        script.src = '/AFOQT-app/app.js?nocache=' + Date.now();
+        script.onload = () => {
+            console.log('[TEST] app.js loaded');
+            status.textContent = 'app.js loaded. Check console for [DEBUG] message.';
+            
+            // Wait a bit then check if startApp was called
+            setTimeout(() => {
+                if (typeof startApp === 'function') {
+                    console.log('[TEST] startApp function exists, calling manually...');
+                    startApp();
+                } else {
+                    console.error('[TEST] startApp function NOT FOUND!');
+                    status.textContent = 'ERROR: startApp not defined!';
+                }
+            }, 1000);
+        };
+        script.onerror = () => {
+            console.error('[TEST] Failed to load app.js');
+            status.textContent = 'Failed to load app.js';
+        };
+        document.head.appendChild(script);
+        
+        // Also load dependencies
+        const loadScript = (src) => {
+            const s = document.createElement('script');
+            s.src = src;
+            document.head.appendChild(s);
+        };
+        loadScript('/AFOQT-app/assets/libs/anime.min.js');
+        loadScript('/AFOQT-app/db.js');
+        loadScript('/AFOQT-app/patch-loader.js');
+    </script>
+</body>
+</html>
