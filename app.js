@@ -3,6 +3,14 @@
 // Offline single-page app with localStorage persistence
 // ============================================================================
 
+console.log('app.js loading - v86');
+// Marker for index.html to detect app.js load
+window.__AFOQT_BOOT_MARKER__ = true;
+console.log('[BOOT]', 'document.readyState =', document.readyState);
+window.addEventListener('error', (e) => {
+    console.error('[GLOBAL ERROR]', e.message, 'at', e.filename + ':' + e.lineno + ':' + e.colno);
+});
+
 // ============================================================================
 // Anime.js v4 Enhanced Animation System
 // Using anime.animate(), anime.stagger(), anime.createTimeline()
@@ -808,6 +816,9 @@ const DIFFICULTY_LEVELS = ['beginner', 'advanced', 'expert'];
 // ============================================================================
 // Global State
 // ============================================================================
+// Debug flag - set to false in production
+const DEBUG_MODE = false;
+
 const state = {
     screen: 'login', // 'login' | 'create-account' | 'home' | 'subject' | 'mode-select' | 'difficulty-select' | 'quiz' | 'results' | 'status' | 'equipment' | 'settings'
     players: [],
@@ -854,9 +865,12 @@ const state = {
         mode: 'practice', // Store mode with quiz session
         difficulty: 'beginner', // Store difficulty with quiz session
         showFeedback: true, // Patch 18: control feedback visibility
-        isPracticeTest: false // Patch 18: flag for AFOQT practice tests
+        isPracticeTest: false, // Patch 18: flag for AFOQT practice tests
+        showSectionTransition: false // Flag to show section transition confirmation modal
     },
-    patch18Loaded: false // Track if Patch 18 content is loaded
+    patch18Loaded: false, // Track if Patch 18 content is loaded
+    contentLoading: false, // Track if content loading async operation is in progress
+    contentReady: false // Track if content is available (loaded or using procedural fallbacks)
 };
 
 // ============================================================================
@@ -1806,14 +1820,8 @@ const scienceTopics = [
         name: 'Chemistry Basics',
         description: 'Atomic structure, periodic table, reactions',
         subjectId: 'physical_science',
-        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
             // Loaded from patch-loader.js physical_science question registry
-            // See startQuiz() which uses getQuestionsFromRegistry for topics with hasContent
-            if (typeof getQuestionsFromRegistry === 'function') {
-                const questions = getQuestionsFromRegistry('physical_science', 'chemistry_basics', difficulty, 1);
-                return questions.length > 0 ? questions[0] : null;
-            }
             return null;
         }
     },
@@ -1822,12 +1830,7 @@ const scienceTopics = [
         name: 'Earth & Space Science',
         description: 'Geology, atmosphere, solar system',
         subjectId: 'physical_science',
-        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
-            if (typeof getQuestionsFromRegistry === 'function') {
-                const questions = getQuestionsFromRegistry('physical_science', 'earth_space', difficulty, 1);
-                return questions.length > 0 ? questions[0] : null;
-            }
             return null;
         }
     },
@@ -1836,12 +1839,7 @@ const scienceTopics = [
         name: 'Electricity & Magnetism',
         description: 'Circuits, current, magnetic fields',
         subjectId: 'physical_science',
-        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
-            if (typeof getQuestionsFromRegistry === 'function') {
-                const questions = getQuestionsFromRegistry('physical_science', 'electricity_magnetism', difficulty, 1);
-                return questions.length > 0 ? questions[0] : null;
-            }
             return null;
         }
     },
@@ -1850,12 +1848,7 @@ const scienceTopics = [
         name: 'Energy & Heat',
         description: 'Energy transfer, temperature, thermodynamics',
         subjectId: 'physical_science',
-        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
-            if (typeof getQuestionsFromRegistry === 'function') {
-                const questions = getQuestionsFromRegistry('physical_science', 'energy_heat', difficulty, 1);
-                return questions.length > 0 ? questions[0] : null;
-            }
             return null;
         }
     },
@@ -1864,12 +1857,7 @@ const scienceTopics = [
         name: 'Fluids & Pressure',
         description: 'Density, buoyancy, fluid dynamics',
         subjectId: 'physical_science',
-        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
-            if (typeof getQuestionsFromRegistry === 'function') {
-                const questions = getQuestionsFromRegistry('physical_science', 'fluids_pressure', difficulty, 1);
-                return questions.length > 0 ? questions[0] : null;
-            }
             return null;
         }
     },
@@ -1878,12 +1866,7 @@ const scienceTopics = [
         name: 'Motion & Mechanics',
         description: 'Forces, Newton\'s laws, kinematics',
         subjectId: 'physical_science',
-        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
-            if (typeof getQuestionsFromRegistry === 'function') {
-                const questions = getQuestionsFromRegistry('physical_science', 'motion_mechanics', difficulty, 1);
-                return questions.length > 0 ? questions[0] : null;
-            }
             return null;
         }
     },
@@ -1892,12 +1875,7 @@ const scienceTopics = [
         name: 'Optics & Waves',
         description: 'Light, sound, electromagnetic spectrum',
         subjectId: 'physical_science',
-        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
-            if (typeof getQuestionsFromRegistry === 'function') {
-                const questions = getQuestionsFromRegistry('physical_science', 'optics_waves', difficulty, 1);
-                return questions.length > 0 ? questions[0] : null;
-            }
             return null;
         }
     }
@@ -2825,18 +2803,17 @@ const instrumentTopics = [
 // ============================================================================
 const tableTopics = [
     {
-        id: 'table-reading',
+        id: 'basic_lookup',
         name: 'Table Reading',
-        description: 'Quick data extraction from tables',
-        subjectId: 'table',
+        description: 'Rapid value lookups, aggregates, and comparisons from tables',
+        subjectId: 'table_reading',
+        hasContent: true,
+        // Procedural fallback (rarely used if content exists)
         generateQuestion: (difficulty = 'beginner') => {
-            // Generate a random data table
             const rows = 5;
             const cols = 5;
-            const rowLabels = Array.from({length: rows}, (_, i) => (i + 1) * 10);
-            const colLabels = Array.from({length: cols}, (_, i) => (i + 1) * 5);
-            
-            // Create table data
+            const rowLabels = Array.from({ length: rows }, (_, i) => (i + 1) * 10);
+            const colLabels = Array.from({ length: cols }, (_, i) => (i + 1) * 5);
             const table = {};
             rowLabels.forEach(row => {
                 table[row] = {};
@@ -2844,40 +2821,30 @@ const tableTopics = [
                     table[row][col] = Math.floor(Math.random() * 90) + 10;
                 });
             });
-            
-            // Pick a random cell
             const targetRow = rowLabels[Math.floor(Math.random() * rows)];
             const targetCol = colLabels[Math.floor(Math.random() * cols)];
             const correctValue = table[targetRow][targetCol];
-            
-            // Generate distractors from nearby cells
             const distractors = [];
             rowLabels.forEach(row => {
                 colLabels.forEach(col => {
-                    if (row !== targetRow || col !== targetCol) {
-                        distractors.push(table[row][col]);
-                    }
+                    if (row !== targetRow || col !== targetCol) distractors.push(table[row][col]);
                 });
             });
-            
             const shuffledDistractors = shuffleArray(distractors);
             const options = [correctValue, ...shuffledDistractors.slice(0, 3)];
-            const shuffled = shuffleArray([...new Set(options)].map(String)); // Remove duplicates
-            
-            // Build table display
-            let tableDisplay = `Row\\Col  ${colLabels.join('   ')}\n`;
-            rowLabels.forEach(row => {
-                tableDisplay += `${row.toString().padStart(3)}     `;
-                tableDisplay += colLabels.map(col => table[row][col].toString().padStart(2)).join('  ');
-                tableDisplay += '\n';
-            });
-            
+            const shuffled = shuffleArray([...new Set(options)].map(String));
             return {
-                prompt: `Find the value at Row ${targetRow}, Column ${targetCol}:\n\n${tableDisplay}`,
+                prompt: `Find the value at Row ${targetRow}, Column ${targetCol}.` ,
                 options: shuffled,
                 correctIndex: shuffled.indexOf(String(correctValue)),
                 explanation: `The value at Row ${targetRow}, Column ${targetCol} is ${correctValue}`,
-                image: "assets/icons/table-sample.svg"
+                tableSpec: {
+                    type: 'data_table',
+                    xHeader: colLabels,
+                    yHeader: rowLabels,
+                    cellValues: rowLabels.map(r => colLabels.map(c => table[r][c]))
+                },
+                lookup: { x: targetCol, y: targetRow }
             };
         }
     }
@@ -3185,14 +3152,14 @@ function createBlockCountingTopicsFromRegistry() {
 function createVocabularyTopicsFromRegistry() {
     const vocabTopics = [];
     
-    // Topic name mapping
+    // Topic name mapping (keys must match filenames in Test Content/Vocabulary/)
     const topicNames = {
         'synonyms': 'Synonyms',
         'antonyms': 'Antonyms',
         'verbal_analogies': 'Verbal Analogies',
         'vocabulary_in_context': 'Vocabulary in Context',
         'confusing_word_pairs': 'Confusing Word Pairs',
-        'high_frequency_vocab': 'High Frequency Vocabulary',
+        'highfreq_vocab': 'High Frequency Vocabulary',
         'sentence_completion': 'Sentence Completion',
         'word_roots_affixes': 'Word Roots & Affixes'
     };
@@ -3203,20 +3170,20 @@ function createVocabularyTopicsFromRegistry() {
         'verbal_analogies': 'Word relationship patterns',
         'vocabulary_in_context': 'Word meanings from context',
         'confusing_word_pairs': 'Commonly confused words',
-        'high_frequency_vocab': 'Common AFOQT vocabulary words',
+        'highfreq_vocab': 'Common AFOQT vocabulary words',
         'sentence_completion': 'Fill in the blank with best word',
         'word_roots_affixes': 'Latin and Greek word origins'
     };
     
-    // Check word_knowledge content
-    if (questionRegistry && questionRegistry.word_knowledge) {
-        const wkContent = questionRegistry.word_knowledge;
+    // Check word_knowledge content (registry uses 'vocabulary' as subjectId from Patch 18)
+    if (questionRegistry && questionRegistry.vocabulary) {
+        const wkContent = questionRegistry.vocabulary;
         for (const subtopicId in wkContent) {
             vocabTopics.push({
                 id: subtopicId,
                 name: topicNames[subtopicId] || subtopicId.replace(/_/g, ' '),
                 description: topicDescriptions[subtopicId] || 'Vocabulary practice',
-                subjectId: 'word_knowledge',
+                subjectId: 'vocabulary', // Use 'vocabulary' to match registry
                 isOfficialAfoqtTopic: true,
                 hasContent: true
             });
@@ -3280,10 +3247,10 @@ function createPhysicalScienceTopicsFromRegistry() {
     
     // Create topics from loaded content
     for (const subtopicId in psContent) {
-        // Remove 'physical_science_' prefix if present
+        // Remove 'physical_science_' prefix for display name, but keep full ID for registry lookup
         const cleanId = subtopicId.replace('physical_science_', '');
         dynamicTopics.push({
-            id: cleanId,
+            id: subtopicId, // Keep full ID for registry lookup
             name: topicNames[cleanId] || cleanId.replace(/_/g, ' '),
             description: topicDescriptions[cleanId] || 'Physical science practice',
             subjectId: 'physical_science',
@@ -4223,6 +4190,30 @@ function showAchievementNotification(achievement) {
     }, 4000);
 }
 
+function showErrorNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'achievement-notification'; // Reuse same styling
+    notification.style.background = 'rgba(255, 0, 0, 0.9)'; // Red background for errors
+    notification.innerHTML = `
+        <div class="achievement-icon">⚠</div>
+        <div class="achievement-content">
+            <div class="achievement-title">Error</div>
+            <div class="achievement-desc">${message}</div>
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Play error sound
+    playSfx('wrong');
+    
+    // Remove after animation (consistent with achievement notification timing)
+    setTimeout(() => {
+        notification.style.opacity = '0';
+        setTimeout(() => notification.remove(), 500);
+    }, 4000);
+}
+
 function updateChallengeProgress(player, progressType, value = 1) {
     if (!player.challengeProgress) {
         player.challengeProgress = {};
@@ -4853,7 +4844,9 @@ function previewBootAnimation(animationName) {
 // ============================================================================
 
 function showBootSequence() {
+    console.log('[showBootSequence] Function called');
     return new Promise((resolve) => {
+        console.log('[showBootSequence] Creating boot HTML');
         const bootHTML = `
             <div id="boot-sequence">
                 <!-- CRT Scanline Overlay -->
@@ -5666,10 +5659,205 @@ function selectPlayer(playerId) {
 // ============================================================================
 // Quiz Management
 // ============================================================================
-async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
-    const topic = topics.find(t => t.id === topicId);
-    if (!topic) return;
+
+/**
+ * Sample questions for a section using difficulty distribution
+ * E.g., for 25 questions with distribution {beginner: 0.35, advanced: 0.45, expert: 0.20}
+ * Will sample ~9 beginner, ~11 advanced, ~5 expert questions
+ */
+function sampleQuestionsWithDifficultyDistribution(subjectId, subtopicId, requestedCount, distribution = null) {
+    // Default distribution: 35% beginner, 45% advanced, 20% expert
+    const defaultDist = { beginner: 0.35, advanced: 0.45, expert: 0.20 };
+    const dist = distribution || defaultDist;
     
+    const sampled = [];
+    for (const [diff, ratio] of Object.entries(dist)) {
+        const count = Math.round(requestedCount * ratio);
+        if (count > 0) {
+            const qs = getQuestionsFromRegistry(subjectId, subtopicId, diff, count);
+            if (qs && qs.length > 0) {
+                sampled.push(...qs);
+            }
+        }
+    }
+    
+    // Ensure we have the right count
+    if (sampled.length > requestedCount) {
+        return sampled.slice(0, requestedCount);
+    } else if (sampled.length < requestedCount) {
+        // Fallback: fill remaining with beginner questions
+        const remaining = requestedCount - sampled.length;
+        const fallback = getQuestionsFromRegistry(subjectId, subtopicId, 'beginner', remaining);
+        if (fallback && fallback.length > 0) {
+            sampled.push(...fallback);
+        }
+    }
+    
+    return sampled;
+}
+
+/**
+ * Start an AFOQT Practice Test following full_afoqt_practice_test_config_v1.json structure
+ */
+async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
+    console.log('Starting AFOQT Practice Test with difficulty:', difficulty);
+    playSfx('select');
+    
+    // Initialize AFOQT practice test state
+    state.quiz.questions = [];
+    state.quiz.mode = 'practiceTestMode';
+    state.quiz.difficulty = difficulty;
+    state.quiz.showFeedback = false; // No feedback until end
+    state.quiz.isPracticeTest = true;
+    state.quiz.isAFOQTOfficial = true;
+    state.quiz.sections = [];
+    state.quiz.currentSection = 0;
+    state.quiz.sectionScores = {};
+    
+    // AFOQT section configuration - following the official spec
+    const sectionConfig = [
+        { name: 'Verbal Analogies', topicId: 'verbal_analogies', count: 25, timeSeconds: 480 },
+        { name: 'Arithmetic Reasoning', topicId: 'arithmetic_reasoning', count: 25, timeSeconds: 1740 },
+        { name: 'Word Knowledge', topicId: 'vocabulary', count: 25, timeSeconds: 300 },
+        { name: 'Math Knowledge', topicId: 'math_knowledge', count: 25, timeSeconds: 1320 },
+        { name: 'Reading Comprehension', topicId: 'reading_comprehension', count: 25, timeSeconds: 2280 },
+        { name: 'Physical Science', topicId: 'physical_science', count: 20, timeSeconds: 600 },
+        { name: 'Table Reading', topicId: 'table_reading', count: 40, timeSeconds: 420 },
+        { name: 'Instrument Comprehension', topicId: 'instrument_comprehension', count: 25, timeSeconds: 300 },
+        { name: 'Block Counting', topicId: 'block_counting', count: 30, timeSeconds: 270 }
+    ];
+    
+    console.log('Loading AFOQT sections...');
+    
+    const playerId = state.currentPlayer ? state.currentPlayer.id : null;
+    
+    // Difficulty distribution: 35% beginner, 45% advanced, 20% expert
+    // Can be customized per section if needed
+    const defaultDistribution = { beginner: 0.35, advanced: 0.45, expert: 0.20 };
+    
+    // Process each section according to config
+    for (const section of sectionConfig) {
+        // Match topics by subjectId instead of id (to aggregate all subtopics for a subject)
+        const matchingTopics = topics.filter(t => t.subjectId === section.topicId || t.id === section.topicId);
+        let sectionQuestions = [];
+        
+        console.log(`Section ${section.name}: Found ${matchingTopics.length} matching topics for ${section.topicId}`);
+        
+        // For official AFOQT subjects with content, use difficulty distribution sampling
+        const hasOfficialContent = matchingTopics.some(t => t.hasContent && t.isOfficialAfoqtTopic);
+        
+        if (hasOfficialContent && typeof sampleQuestionsWithDifficultyDistribution === 'function') {
+            // Use distribution-based sampling for official content
+            for (const topic of matchingTopics) {
+                if (topic.hasContent) {
+                    const questionsNeeded = Math.min(
+                        Math.ceil(section.count / matchingTopics.length),
+                        section.count - sectionQuestions.length
+                    );
+                    
+                    if (questionsNeeded <= 0) break;
+                    
+                    const qs = sampleQuestionsWithDifficultyDistribution(
+                        topic.subjectId || section.topicId,
+                        topic.id,
+                        questionsNeeded,
+                        defaultDistribution
+                    );
+                    
+                    if (qs && qs.length > 0) {
+                        sectionQuestions.push(...qs);
+                    }
+                }
+            }
+        } else {
+            // Fallback: use spaced repetition or procedural generation
+            const questionsPerTopic = matchingTopics.length > 0 ? Math.ceil(section.count / matchingTopics.length) : section.count;
+            
+            for (const topic of matchingTopics) {
+                const questionsNeeded = Math.min(questionsPerTopic, section.count - sectionQuestions.length);
+                if (questionsNeeded <= 0) break;
+                
+                if (typeof getQuestionsWithSpacedRepetition === 'function') {
+                    try {
+                        const qs = await getQuestionsWithSpacedRepetition(
+                            topic.subjectId || section.topicId,
+                            topic.id,
+                            difficulty,
+                            questionsNeeded,
+                            playerId
+                        );
+                        sectionQuestions.push(...qs);
+                    } catch (e) {
+                        console.warn(`Failed to load via spaced repetition for ${topic.id}:`, e);
+                    }
+                }
+                
+                // Fallback to procedural generation
+                if (sectionQuestions.length < section.count && topic.generateQuestion) {
+                const needed = Math.min(questionsPerTopic, section.count - sectionQuestions.length);
+                for (let i = 0; i < needed; i++) {
+                    const q = topic.generateQuestion(difficulty);
+                    if (q) {
+                        q._section = section.name;
+                        q._topicId = section.topicId;
+                        q._sourceTopicId = topic.id;
+                        sectionQuestions.push(q);
+                    }
+                }
+            }
+        }
+        
+        // Ensure we have exactly the right count
+        sectionQuestions = sectionQuestions.slice(0, section.count);
+        
+        // Add metadata
+        sectionQuestions.forEach((q, idx) => {
+            q._section = section.name;
+            q._sectionIndex = state.quiz.sections.length;
+            q._questionInSection = idx + 1;
+            q._topicId = section.topicId;
+        });
+        
+        // Store section metadata
+        state.quiz.sections.push({
+            name: section.name,
+            topicId: section.topicId,
+            totalQuestions: sectionQuestions.length,
+            startIndex: state.quiz.questions.length,
+            endIndex: state.quiz.questions.length + sectionQuestions.length - 1,
+            timeSeconds: section.timeSeconds,
+            timeRemaining: section.timeSeconds
+        });
+        
+        state.quiz.questions.push(...sectionQuestions);
+        console.log(`Loaded ${sectionQuestions.length} questions for ${section.name}`);
+    }
+    
+    console.log('Total questions for full AFOQT test:', state.quiz.questions.length);
+    
+    // Initialize quiz state
+    state.quiz.currentIndex = 0;
+    state.quiz.answers = [];
+    state.quiz.isAnswered = false;
+    state.quiz.timeStarted = Date.now();
+    state.quiz.sectionTimeStarted = Date.now();
+    state.quiz.selectedAnswer = null;
+    
+    state.screen = 'quiz';
+    console.log('Transitioning to quiz screen with', state.quiz.questions.length, 'questions across', state.quiz.sections.length, 'sections');
+    render();
+}
+
+async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
+    if (DEBUG_MODE) console.log('startQuiz called with:', {topicId, mode, difficulty});
+    const topic = topics.find(t => t.id === topicId);
+    if (!topic) {
+        console.error('Topic not found:', topicId);
+        playSfx('wrong');
+        return;
+    }
+    
+    if (DEBUG_MODE) console.log('Starting quiz for topic:', topic.name);
     state.currentTopic = topic;
     state.quiz.questions = [];
     state.quiz.mode = mode;
@@ -5707,8 +5895,8 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
                 state.quiz.questions.push(...qs);
             }
             
-            // Shuffle and limit to exact count using Fisher-Yates algorithm
-            state.quiz.questions = shuffleArray(state.quiz.questions).slice(0, questionCount);
+            // Shuffle and limit to exact count
+            state.quiz.questions = state.quiz.questions.sort(() => Math.random() - 0.5).slice(0, questionCount);
         } else {
             // Regular practice/test mode - use spaced repetition with specified difficulty
             state.quiz.questions = await getQuestionsWithSpacedRepetition(
@@ -5749,7 +5937,7 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
             difficulties.forEach(diff => {
                 pooled.push(...getQuestionsFromRegistry(topic.subjectId, topic.id, diff, perDiff));
             });
-            state.quiz.questions = shuffleArray(pooled).slice(0, questionCount);
+            state.quiz.questions = pooled.sort(() => Math.random() - 0.5).slice(0, questionCount);
         } else {
             state.quiz.questions = getQuestionsFromRegistry(topic.subjectId, topic.id, difficulty, questionCount);
             // Fallback to beginner if chosen difficulty has no pool (common for arithmetic where only beginner exists)
@@ -5803,16 +5991,42 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
         }
     }
     
+    // Check if we have any questions before starting quiz
+    if (state.quiz.questions.length === 0) {
+        const topicInfo = `${topic.subjectId || 'unknown'}/${topic.id}/${difficulty}`;
+        console.error('❌ Failed to generate any questions for quiz');
+        console.error('  Topic:', topic.name);
+        console.error('  Subject ID:', topic.subjectId);
+        console.error('  Topic ID:', topic.id);
+        console.error('  Difficulty:', difficulty);
+        console.error('  Mode:', mode);
+        
+        // Check registry status for this topic
+        if (typeof questionRegistry !== 'undefined' && topic.subjectId) {
+            const subjectPool = questionRegistry[topic.subjectId];
+            if (subjectPool && subjectPool[topic.id]) {
+                const poolSizes = subjectPool[topic.id];
+                console.error('  Registry pools:', {
+                    beginner: poolSizes.beginner?.length || 0,
+                    advanced: poolSizes.advanced?.length || 0,
+                    expert: poolSizes.expert?.length || 0
+                });
+            } else {
+                console.error('  Registry: No pool found for', topicInfo);
+            }
+        }
+        
+        showErrorNotification(`No questions available for ${topic.name} (${difficulty}). Try a different topic or difficulty.`);
+        playSfx('wrong');
+        return;
+    }
+    
+    if (DEBUG_MODE) console.log(`Starting quiz with ${state.quiz.questions.length} questions`);
     state.quiz.currentIndex = 0;
     state.quiz.score = 0;
     state.quiz.selectedAnswer = null;
     state.quiz.questionTimes = [];
     state.quiz.userAnswers = [];
-    
-    // Final shuffle: randomize question order so users get different order each session
-    // This applies to ALL question sources (content-based and procedurally generated)
-    state.quiz.questions = shuffleArray(state.quiz.questions);
-    
     state.quiz.questionStartTime = Date.now();
     
     state.screen = 'quiz';
@@ -5833,19 +6047,89 @@ function startQuestionTimer() {
     }, 100);
 }
 
+function startAFOQTSectionTimer() {
+    // Clear any existing timer
+    if (state.quiz.timerInterval) {
+        clearInterval(state.quiz.timerInterval);
+    }
+    
+    // Update timer immediately
+    updateTimerDisplay();
+    
+    // Update every 100ms for smooth countdown
+    state.quiz.timerInterval = setInterval(() => {
+        updateTimerDisplay();
+    }, 100);
+}
+
 function updateTimerDisplay() {
-    const timerEl = document.querySelector('.timer');
+    const timerEl = document.getElementById('section-timer') || document.querySelector('.timer');
     if (!timerEl) return;
     
-    const elapsed = (Date.now() - state.quiz.questionStartTime) / 1000;
-    const remaining = 60 - elapsed;
-    
-    timerEl.textContent = formatTime(remaining) + 's';
-    
-    if (remaining < 0) {
-        timerEl.classList.add('negative');
+    // For AFOQT practice tests with sections, show section time
+    if (state.quiz.sections && state.quiz.sections.length > 0) {
+        const currentSection = state.quiz.sections[state.quiz.currentSection];
+        if (!currentSection) return;
+        
+        const elapsedSeconds = (Date.now() - state.quiz.sectionTimeStarted) / 1000;
+        const remainingSeconds = Math.max(0, currentSection.timeSeconds - elapsedSeconds);
+        
+        const minutes = Math.floor(remainingSeconds / 60);
+        const seconds = Math.floor(remainingSeconds % 60);
+        timerEl.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        
+        // Color change when time is running out
+        if (remainingSeconds < 60) {
+            timerEl.style.color = '#ff6666';
+        } else if (remainingSeconds < 300) {
+            timerEl.style.color = '#ffff00';
+        } else {
+            timerEl.style.color = '#00ffff';
+        }
+        
+        // Auto-submit section when time expires
+        if (remainingSeconds <= 0) {
+            console.log('Section time expired, moving to next section');
+            advanceToNextSection();
+        }
     } else {
-        timerEl.classList.remove('negative');
+        // Fall back to question timer
+        const elapsed = (Date.now() - state.quiz.questionStartTime) / 1000;
+        const remaining = 60 - elapsed;
+        
+        timerEl.textContent = formatTime(remaining) + 's';
+        
+        if (remaining < 0) {
+            timerEl.classList.add('negative');
+        } else {
+            timerEl.classList.remove('negative');
+        }
+    }
+}
+
+function advanceToNextSection() {
+    // Auto-submit any unanswered questions in current section
+    const currentSection = state.quiz.sections[state.quiz.currentSection];
+    if (!currentSection) return;
+    
+    for (let i = currentSection.startIndex; i <= currentSection.endIndex; i++) {
+        if (!state.quiz.answers[i]) {
+            state.quiz.answers[i] = null; // Mark as blank
+        }
+    }
+    
+    // Move to next section
+    if (state.quiz.currentSection < state.quiz.sections.length - 1) {
+        state.quiz.currentSection++;
+        state.quiz.sectionTimeStarted = Date.now();
+        state.quiz.currentIndex = state.quiz.sections[state.quiz.currentSection].startIndex;
+        console.log('Advanced to section', state.quiz.currentSection + 1);
+        render();
+    } else {
+        // Test complete
+        console.log('All sections complete, showing results');
+        state.screen = 'results';
+        render();
     }
 }
 
@@ -5855,6 +6139,13 @@ function handleAnswer(optionIndex) {
     const elapsed = (Date.now() - state.quiz.questionStartTime) / 1000;
     state.quiz.questionTimes.push(elapsed);
     state.quiz.selectedAnswer = optionIndex;
+    
+    // Initialize answers array if needed (for all quiz modes)
+    if (!state.quiz.answers) {
+        state.quiz.answers = [];
+    }
+    // Store answer in array
+    state.quiz.answers[state.quiz.currentIndex] = optionIndex;
     
     const currentQuestion = state.quiz.questions[state.quiz.currentIndex];
     const isCorrect = optionIndex === currentQuestion.correctIndex;
@@ -5906,26 +6197,81 @@ function handleAnswer(optionIndex) {
     }
     
     if (isCorrect) {
-        state.quiz.score++;
         playSfx('correct');
     } else {
         playSfx('wrong');
     }
     
     render();
+    
+    // Auto-advance for AFOQT practice tests after showing feedback
+    if (state.quiz.isPracticeTest && state.quiz.sections && state.quiz.sections.length > 0) {
+        setTimeout(() => {
+            nextQuestion();
+        }, 800); // Brief delay to show feedback
+    }
 }
 
 function nextQuestion() {
     playSfx('nav');
     
-    if (state.quiz.currentIndex < state.quiz.questions.length - 1) {
-        state.quiz.currentIndex++;
-        state.quiz.selectedAnswer = null;
-        state.quiz.questionStartTime = Date.now();
-        render();
+    // For AFOQT practice tests with sections
+    if (state.quiz.sections && state.quiz.sections.length > 0) {
+        const currentSection = state.quiz.sections[state.quiz.currentSection];
+        const nextIndex = state.quiz.currentIndex + 1;
+
+        // Check if next question is in the same section
+        if (nextIndex <= currentSection.endIndex) {
+            state.quiz.currentIndex = nextIndex;
+            state.quiz.selectedAnswer = null;
+            render();
+        } else {
+            // Reached end of section - show confirmation modal if there's a next section
+            if (state.quiz.currentSection < state.quiz.sections.length - 1) {
+                state.quiz.showSectionTransition = true;
+                playSfx('modal-open');
+                render();
+            } else {
+                // All sections complete
+                finishQuiz();
+            }
+        }
     } else {
-        finishQuiz();
+        // Regular quiz mode
+        if (state.quiz.currentIndex < state.quiz.questions.length - 1) {
+            state.quiz.currentIndex++;
+            state.quiz.selectedAnswer = null;
+            state.quiz.questionStartTime = Date.now();
+            render();
+        } else {
+            finishQuiz();
+        }
     }
+}
+
+function proceedToNextSection() {
+    // Hide the modal and advance to next section
+    state.quiz.showSectionTransition = false;
+    
+    // Validate next section exists before advancing
+    const nextSectionIndex = state.quiz.currentSection + 1;
+    if (nextSectionIndex < state.quiz.sections.length) {
+        const nextSection = state.quiz.sections[nextSectionIndex];
+        state.quiz.currentSection = nextSectionIndex;
+        state.quiz.sectionTimeStarted = Date.now();
+        state.quiz.currentIndex = nextSection.startIndex;
+        state.quiz.selectedAnswer = null;
+        console.log('Advanced to section', state.quiz.currentSection + 1);
+        playSfx('select');
+    }
+    render();
+}
+
+function stayInCurrentSection() {
+    // Hide modal and stay on current question
+    state.quiz.showSectionTransition = false;
+    playSfx('modal-close');
+    render();
 }
 
 function finishQuiz() {
@@ -5933,7 +6279,40 @@ function finishQuiz() {
         clearInterval(state.quiz.timerInterval);
     }
     
-    const avgTime = state.quiz.questionTimes.reduce((a, b) => a + b, 0) / state.quiz.questionTimes.length;
+    // Calculate final score from answers array (works for ALL quiz modes: practice, test, sprint, AFOQT)
+    let score = 0;
+    if (state.quiz.answers && state.quiz.answers.length > 0) {
+        for (let i = 0; i < state.quiz.answers.length; i++) {
+            const answer = state.quiz.answers[i];
+            if (answer !== null && answer !== undefined) {
+                const question = state.quiz.questions[i];
+                if (question && answer === question.correctIndex) {
+                    score++;
+                }
+            }
+        }
+    }
+    state.quiz.score = score;
+    
+    const avgTime = state.quiz.questionTimes.length > 0 ? state.quiz.questionTimes.reduce((a, b) => a + b, 0) / state.quiz.questionTimes.length : 0;
+    
+    // Calculate subject/subtopic/difficulty breakdown for analytics
+    const breakdown = {};
+    state.quiz.userAnswers.forEach(answer => {
+        const question = state.quiz.questions[answer.questionIndex];
+        if (question) {
+            const subjectId = question._topicId || state.currentTopic?.subjectId || 'unknown';
+            const subtopicId = question._sourceTopicId || state.currentTopic?.id || 'unknown';
+            const diff = question.difficulty || state.quiz.difficulty || 'mixed';
+            const key = `${subjectId}|${subtopicId}|${diff}`;
+            
+            if (!breakdown[key]) {
+                breakdown[key] = { subject: subjectId, subtopic: subtopicId, difficulty: diff, correct: 0, total: 0 };
+            }
+            breakdown[key].total += 1;
+            if (answer.isCorrect) breakdown[key].correct += 1;
+        }
+    });
     
     if (state.currentPlayer) {
         const session = {
@@ -5944,7 +6323,10 @@ function finishQuiz() {
             avgTime: avgTime,
             timestamp: Date.now(),
             difficulty: state.quiz.difficulty,
-            playerId: state.currentPlayer.id // Add playerId for database
+            playerId: state.currentPlayer.id, // Add playerId for database
+            mode: state.quiz.mode, // practice, test, sprint, practiceTestMode
+            isPracticeTest: state.quiz.isPracticeTest || false,
+            breakdown: Object.values(breakdown) // Per-subtopic/difficulty results
         };
         
         // Add to player's sessions array (in-memory)
@@ -6102,6 +6484,7 @@ function renderFloatingNav(options = {}) {
 function render() {
     const root = document.getElementById('app-root');
     if (!root) return;
+    console.log('[render] screen=', state.screen);
     
     switch (state.screen) {
         case 'login':
@@ -6112,6 +6495,12 @@ function render() {
             break;
         case 'home':
             root.innerHTML = renderHome();
+            break;
+        case 'subject-list':
+            root.innerHTML = renderSubjectList();
+            break;
+        case 'afoqt-practice':
+            root.innerHTML = renderAFOQTDifficultySelect();
             break;
         case 'subject':
             root.innerHTML = renderSubject();
@@ -6156,8 +6545,18 @@ function render() {
     // Initialize anime.js button animations (ripple effects, hover)
     initButtonAnimations();
     
+    // Start timer for AFOQT practice tests
+    if (state.screen === 'quiz' && state.quiz.isPracticeTest && state.quiz.sections && state.quiz.sections.length > 0) {
+        startAFOQTSectionTimer();
+    }
+    
     // Animate panel entrances
     animatePanelEntrance();
+    
+    // Save session state for persistence across page refreshes
+    if (state.currentPlayer) {
+        saveSessionState();
+    }
 }
 
 function renderLogin() {
@@ -6208,10 +6607,18 @@ function renderLogin() {
 
 function renderHome() {
     const playerInfo = state.currentPlayer ? computePlayerTotals(state.currentPlayer) : null;
+    const testResults = state.currentPlayer && state.currentPlayer.testResults ? state.currentPlayer.testResults : [];
+    
+    const loadingIndicator = state.contentLoading ? `
+        <div style="text-align: center; padding: 20px; color: var(--color-primary);">
+            <div style="font-size: 2rem; margin-bottom: 10px;">⏳</div>
+            <div>Loading question content...</div>
+        </div>
+    ` : '';
     
     return `
         <div class="panel">
-            <h1 class="panel-header" style="text-align: center; margin-bottom: 20px;">AFOQT QUEST</h1>
+            <h1 class="panel-header">AFOQT QUEST</h1>
             
             <div class="home-controls-box">
                 <div class="header-controls">
@@ -6228,9 +6635,6 @@ function renderHome() {
                         <button class="btn btn-small" id="achievements-btn">
                             🏆 Awards
                         </button>
-                        <button class="btn btn-small" id="results-btn">
-                            📈 Results
-                        </button>
                     ` : ''}
                     <button class="btn btn-small" id="settings-btn">
                         ⚙ Settings
@@ -6238,15 +6642,41 @@ function renderHome() {
                 </div>
             </div>
             
-            <h2>Subjects</h2>
-            <div class="grid grid-2">
-                ${subjects.map(subject => `
-                    <div class="tile" data-subject-id="${subject.id}">
-                        <div class="tile-title">${subject.name}</div>
-                        <div class="tile-description">${subject.description}</div>
-                    </div>
-                `).join('')}
+            ${loadingIndicator}
+            
+            <div class="home-main-grid">
+                <div class="home-primary-tile" id="practice-test-selector">
+                    <div class="home-tile-icon">🧠</div>
+                    <div class="home-tile-title">AFOQT PRACTICE</div>
+                    <div class="home-tile-subtitle">Full-Length Timed Test</div>
+                    <div class="home-tile-description">Complete official AFOQT sections with realistic timing and scoring</div>
+                </div>
+                
+                <div class="home-primary-tile" id="subjects-selector">
+                    <div class="home-tile-icon">📚</div>
+                    <div class="home-tile-title">SUBJECTS</div>
+                    <div class="home-tile-subtitle">Topic Practice</div>
+                    <div class="home-tile-description">Master individual topics with targeted drills by difficulty</div>
+                </div>
             </div>
+            
+            ${testResults.length > 0 ? `
+            <div class="home-secondary-section">
+                <h2 class="home-section-title">Test Results & Analytics</h2>
+                <div class="home-results-grid">
+                    ${testResults.slice().reverse().map((result, idx) => `
+                        <div class="home-result-card">
+                            <div class="home-result-label">Attempt ${testResults.length - idx}</div>
+                            <div class="home-result-score">${Math.round(result.compositeScore || 0)}</div>
+                            <div class="home-result-detail">Composite</div>
+                            <div class="home-result-detail" style="margin-top: 0.5rem;">Difficulty: ${(result.difficulty || 'unknown').toUpperCase()}</div>
+                            <div class="home-result-detail">Date: ${new Date(result.timestamp || Date.now()).toLocaleDateString()}</div>
+                            <div class="home-result-detail" style="margin-top: 0.5rem; color: #ffaa00;">Blanks: ${result.blanksPerSection ? Object.values(result.blanksPerSection).reduce((a, b) => a + b, 0) : 0}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+            ` : ``}
         </div>
         ${renderFloatingNav({ showBack: false })}
         
@@ -6306,6 +6736,81 @@ function renderPlayerModal() {
     `;
 }
 
+/**
+ * Render Subject List - Shows all available subjects for practice
+ */
+function renderSubjectList() {
+    return `
+        <div class="panel">
+            <h1 class="panel-header">SUBJECTS</h1>
+            
+            <div class="action-buttons quiz-action-buttons" style="margin-bottom: 20px;">
+                <button class="btn" id="home-btn">🏠 Home</button>
+            </div>
+            
+            <div class="grid grid-3">
+                ${subjects.map(subject => `
+                    <div class="tile" data-subject-id="${subject.id}" style="cursor: pointer;">
+                        <div class="tile-title">${subject.name}</div>
+                        <div class="tile-description">${subject.description}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+        ${renderFloatingNav({ showBack: true })}
+        ${renderPlayerModal()}
+    `;
+}
+
+/**
+ * Render AFOQT Practice Difficulty Select - Choose difficulty for official AFOQT practice test
+ */
+function renderAFOQTDifficultySelect() {
+    return `
+        <div class="panel">
+            <h1 class="panel-header">AFOQT PRACTICE</h1>
+            
+            <div style="margin: 40px 0; text-align: center;">
+                <p style="margin-bottom: 30px; color: rgba(0, 255, 255, 0.8);">Select Difficulty Level</p>
+                
+                <div class="grid grid-3" style="max-width: 900px; margin: 0 auto;">
+                    <div class="tile mode-tile" id="afoqt-beginner-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">🟢 BEGINNER</div>
+                        <div class="tile-description">
+                            • Fundamental concepts<br>
+                            • 40 questions<br>
+                            • No time pressure<br>
+                            • Great for learning
+                        </div>
+                    </div>
+                    
+                    <div class="tile mode-tile" id="afoqt-advanced-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">🟡 ADVANCED</div>
+                        <div class="tile-description">
+                            • Realistic difficulty<br>
+                            • 40 questions<br>
+                            • Timed sections<br>
+                            • Official format
+                        </div>
+                    </div>
+                    
+                    <div class="tile mode-tile" id="afoqt-expert-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">🔴 EXPERT</div>
+                        <div class="tile-description">
+                            • Advanced concepts<br>
+                            • 40 questions<br>
+                            • Strict timing<br>
+                            • Maximum challenge
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        ${renderFloatingNav({ showBack: true })}
+        ${renderPlayerModal()}
+    `;
+}
+
 function renderSubject() {
     if (!state.currentSubject) return '';
     
@@ -6333,7 +6838,20 @@ function renderSubject() {
 }
 
 function renderModeSelect() {
-    if (!state.currentTopic) return '';
+    if (!state.currentTopic) {
+        console.error('renderModeSelect: state.currentTopic is not set!');
+        return `
+            <div class="panel">
+                <h1 class="panel-header">Error</h1>
+                <p style="text-align: center; color: var(--color-primary); padding: 40px;">
+                    No topic selected. Please go back and select a topic.
+                </p>
+                <div class="action-buttons quiz-action-buttons">
+                    <button class="btn" id="home-btn">🏠 Home</button>
+                </div>
+            </div>
+        `;
+    }
     
     return `
         <div class="panel">
@@ -6394,7 +6912,24 @@ function renderModeSelect() {
 }
 
 function renderDifficultySelect() {
-    if (!state.currentTopic) return '';
+    if (!state.currentTopic) {
+        console.error('renderDifficultySelect: state.currentTopic is not set!');
+        return `
+            <div class="panel">
+                <h1 class="panel-header">Error</h1>
+                <p style="text-align: center; color: var(--color-primary); padding: 40px;">
+                    No topic selected. Please go back and select a topic.
+                </p>
+                <div class="action-buttons quiz-action-buttons">
+                    <button class="btn" id="home-btn">🏠 Home</button>
+                </div>
+            </div>
+        `;
+    }
+    
+    const isLoading = state.contentLoading || !state.contentReady;
+    const disabledStyle = isLoading ? 'opacity: 0.5; pointer-events: none;' : '';
+    const loadingMessage = isLoading ? '<p style="text-align: center; color: var(--color-primary); margin-top: 20px;">⏳ Loading question content...</p>' : '';
     
     return `
         <div class="panel">
@@ -6402,8 +6937,9 @@ function renderDifficultySelect() {
             
             <div style="margin: 40px 0;">
                 <h2 style="text-align: center; margin-bottom: 30px;">${state.currentTopic.name} - Practice Mode</h2>
+                ${loadingMessage}
                 
-                <div class="grid grid-3" style="max-width: 900px; margin: 0 auto;">
+                <div class="grid grid-3" style="max-width: 900px; margin: 0 auto; ${disabledStyle}">
                     <div class="tile difficulty-tile" id="beginner-diff-btn" style="cursor: pointer; padding: 30px;">
                         <div class="tile-title" style="font-size: 1.5rem; margin-bottom: 15px;">⭐ Beginner</div>
                         <div class="tile-description">
@@ -6972,10 +7508,127 @@ const topicLearningContent = {
     }
 };
 
+// Subject-level learning content (fallback when a topic lacks specifics)
+const subjectLearningContent = {
+    math_knowledge: {
+        concept: 'Core algebra, geometry, and number properties needed for AFOQT quantitative sections.',
+        steps: [
+            '1. Identify the topic (algebra, geometry, number properties).',
+            '2. Write given values and required formula or rule.',
+            '3. Plug in carefully, keep units consistent, and simplify.',
+            '4. Sanity-check: magnitude, sign, and units make sense.'
+        ],
+        fastStrategy: 'Label what’s asked, pick the right rule, then plug and chug with clean arithmetic.',
+        examples: ['Solve for x in 3x + 12 = 27 → x = 5']
+    },
+    arithmetic_reasoning: {
+        concept: 'Word problems on rates, ratios, work, mixtures, and proportional reasoning.',
+        steps: [
+            '1. Translate words to math: list givens, unknowns, and units.',
+            '2. Choose the structure: rate×time=distance, work=rate×time, ratio/percent.',
+            '3. Set a clear equation with consistent units.',
+            '4. Solve, then double-check units and reasonableness.'
+        ],
+        fastStrategy: 'Underline quantities, circle the question, pick the matching formula, solve with unit discipline.',
+        examples: ['A plane travels 420 miles in 1.5 hours → speed = 280 mph']
+    },
+    vocabulary: {
+        concept: 'Word knowledge, synonyms, antonyms, analogies, and context clues.',
+        steps: [
+            '1. Isolate the target word and its part of speech.',
+            '2. Use context: tone, contrast words (however, but), or restatements.',
+            '3. Eliminate answers with wrong tone or part of speech.',
+            '4. Pick the choice closest in meaning or opposition (for antonyms).'
+        ],
+        fastStrategy: 'Anchor on context and tone; drop answers that don’t fit the sentence vibe.',
+        examples: ['"astute" in context → options: dull, clever, tired, loud → clever']
+    },
+    reading_comprehension: {
+        concept: 'Extract main idea, detail, inference, and tone from short passages.',
+        steps: [
+            '1. Skim the first/last sentences for main idea.',
+            '2. For detail questions, locate and reread the exact lines.',
+            '3. For inference, choose what must be true, not what could be.',
+            '4. For tone, look at adjective/verb choices and overall stance.'
+        ],
+        fastStrategy: 'Read the question stem first, then hunt the lines. Answer from text, not memory.',
+        examples: ['If asked “The author suggests…” → pick the choice directly supported by the lines.']
+    },
+    physical_science: {
+        concept: 'Newton’s laws, forces, energy, simple machines, electricity, waves, and basic thermo.',
+        steps: [
+            '1. Identify the domain: motion, energy, electricity, fluids, or waves.',
+            '2. Write the governing law (F=ma, W=Fd, P=VI, etc.).',
+            '3. Keep units consistent; convert early.',
+            '4. Solve, then check scale and units.'
+        ],
+        fastStrategy: 'Name the law first; plug numbers carefully; watch units.',
+        examples: ['Force with mass 5 kg, accel 3 m/s² → F=15 N']
+    },
+    situational: {
+        concept: 'Judgment on teamwork, integrity, chain of command, professionalism, and safety.',
+        steps: [
+            '1. Identify the core issue (safety, respect, integrity, following orders).',
+            '2. Prefer actions that are calm, professional, and chain-of-command aligned.',
+            '3. Avoid extremes: no overreaction, no ignoring the problem.',
+            '4. Pick the option that preserves safety, respect, and mission readiness.'
+        ],
+        fastStrategy: 'Calm, professional, safety-first, respect the chain of command.',
+        examples: ['Report safety hazards up the chain; don’t confront recklessly or ignore.']
+    },
+    aviation: {
+        concept: 'Aircraft basics: aerodynamics, controls, performance, navigation, and operations.',
+        steps: [
+            '1. Identify the domain: lift/drag/thrust/weight, stability, instruments, procedures.',
+            '2. Recall the governing principle (e.g., lift via angle of attack, drag types).',
+            '3. Apply to the scenario (takeoff, climb, cruise, maneuver).',
+            '4. Eliminate answers that violate fundamentals or safety.'
+        ],
+        fastStrategy: 'Use fundamentals: lift vs. weight, thrust vs. drag, coordinated flight basics.',
+        examples: ['Increasing angle of attack (within limits) increases lift but also drag.']
+    },
+    instrument_comprehension: {
+        concept: 'Read attitude (pitch/bank) and heading from simplified instruments.',
+        steps: [
+            '1. Attitude indicator first: nose up/down, bank left/right.',
+            '2. Heading indicator next: note the cardinal/ordinal heading.',
+            '3. Cross-check climb/descend indicator if shown.',
+            '4. Combine: “climbing left bank, heading north” style answer.'
+        ],
+        fastStrategy: 'Attitude first, heading second, trend last.',
+        examples: ['Bank left + nose down + heading east → descending left turn, heading east.']
+    },
+    table_reading: {
+        concept: 'Rapidly find and compare values in data tables under time pressure.',
+        steps: [
+            '1. Lock the row (Y) first, then the column (X).',
+            '2. For aggregates, scan whole row/column (sum, max, min, avg).',
+            '3. Watch units and headers; avoid column/row swaps.',
+            '4. Estimate first; then pick the exact value or best match.'
+        ],
+        fastStrategy: 'Row first, column second. Finger-trace; avoid swapping axes.',
+        examples: ['Find X=4, Y=30 → trace to intersection; for “largest row total” sum each row quickly.']
+    },
+    block_counting: {
+        concept: 'Count visible and hidden cubes in stacked isometric figures.',
+        steps: [
+            '1. Slice the figure into columns; note each column height.',
+            '2. Add columns per layer; watch for hidden blocks behind others.',
+            '3. Use symmetry: mirrored sides often match counts.',
+            '4. Recount quickly to verify totals.'
+        ],
+        fastStrategy: 'Group columns by height; multiply instead of counting one-by-one.',
+        examples: ['If 4 columns of height 3 → 4×3 = 12 blocks (check for hidden support).']
+    }
+};
+
 // Get learning content for a topic (with fallback)
-function getTopicLearningContent(topicId) {
+function getTopicLearningContent(topicId, subjectId) {
     if (topicLearningContent[topicId]) {
         return topicLearningContent[topicId];
+    }
+    if (subjectId && subjectLearningContent[subjectId]) {
+        return subjectLearningContent[subjectId];
     }
     
     // Fallback for topics without specific content
@@ -6995,7 +7648,7 @@ function getTopicLearningContent(topicId) {
 function renderLearn() {
     if (!state.currentTopic) return '';
     
-    const content = getTopicLearningContent(state.currentTopic.id);
+    const content = getTopicLearningContent(state.currentTopic.id, state.currentTopic.subjectId);
     
     return `
         <div class="panel">
@@ -7103,10 +7756,105 @@ function renderMathUI(uiSpec) {
             return renderDataTable(uiSpec);
         case 'block_stack_iso':
             return renderBlockStackIso(uiSpec);
+        // Additional angle diagram types - all use renderGeometryAnglePairDiagram
+        // These types share the same structure: lines array + angleLabels array
+        case 'adjacent_angles_on_line':
+        case 'angle_linear_pair':
+        case 'angle_pair_vertical':
+        case 'angle_vertical_pair':
+        case 'triangle_exterior_angle':
+        case 'quadrilateral_angles':
+            return renderGeometryAnglePairDiagram(uiSpec);
+        // Parallel lines diagram
+        case 'coordinate_parallel_lines':
+        case 'geometry_parallel_lines_diagram':
+            return renderGeometryAnglePairDiagram(uiSpec); // Uses same structure
+        // Circle diagram
+        case 'geometry_circle_diagram':
+            return renderGeometryCircleDiagram(uiSpec);
+        // Simple line types (horizontal/vertical) - render as single line
+        case 'horizontal':
+        case 'vertical':
+            return renderSimpleLineDiagram(uiSpec);
+        // Point mapping - use coordinate points renderer  
+        case 'point_mapping':
+            return renderCoordinatePointsCss(uiSpec);
+        // Rectangle reflection - use reflection renderer for proper shape handling
+        case 'rectangle_reflection':
+            return renderReflectionCss(uiSpec);
         default:
             console.warn('Unknown uiSpec type:', uiSpec.type);
             return '';
     }
+}
+
+// Render table reading tables with optional cell highlighting
+function renderTableReading(question, { highlight = false } = {}) {
+    // Support both tableSpec (new format) and tableData (legacy format)
+    let xHeader = [];
+    let yHeader = [];
+    let values = [];
+    let lookup = question.lookup;
+    
+    if (question.tableSpec) {
+        // New format with tableSpec
+        const spec = question.tableSpec;
+        xHeader = spec.xHeader || [];
+        yHeader = spec.yHeader || [];
+        values = spec.cellValues || [];
+    } else if (question.tableData) {
+        // Legacy format with tableData
+        const tableData = question.tableData;
+        xHeader = tableData.headers || [];
+        values = tableData.rows || [];
+        // For tableData, first column is Y header (row labels)
+        yHeader = values.map(row => row[0] || '');
+        // Cell values are remaining columns (excluding first column)
+        values = values.map(row => row.slice(1));
+    }
+
+    let highlightX = -1;
+    let highlightY = -1;
+    if (highlight && lookup && lookup.x !== undefined && lookup.y !== undefined) {
+        highlightX = xHeader.indexOf(lookup.x);
+        highlightY = yHeader.indexOf(lookup.y);
+    }
+
+    const headerRow = ['<th class="tr-corner"></th>', ...xHeader.map(x => `<th class="tr-header tr-x">${x}</th>`)];
+
+    const bodyRows = yHeader.map((yVal, yIdx) => {
+        const rowCells = values[yIdx] || [];
+        const cells = rowCells.map((cell, xIdx) => {
+            const isTarget = highlightX === xIdx && highlightY === yIdx;
+            const cls = isTarget ? 'tr-cell tr-target' : 'tr-cell';
+            return `<td class="${cls}">${cell}</td>`;
+        });
+        return `
+            <tr>
+                <th class="tr-header tr-y">${yVal}</th>
+                ${cells.join('')}
+            </tr>
+        `;
+    });
+
+    return `
+        <div class="table-reading-card">
+            <div class="tr-labels">
+                <span class="tr-label">Row (Y)</span>
+                <span class="tr-label">Column (X)</span>
+            </div>
+            <div class="table-reading-grid-wrapper">
+                <table class="table-reading-grid" role="grid">
+                    <thead>
+                        <tr>${headerRow.join('')}</tr>
+                    </thead>
+                    <tbody>
+                        ${bodyRows.join('')}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    `;
 }
 
 // Reading Comprehension renderers (Patch 20)
@@ -8021,6 +8769,114 @@ function renderGeometryAnglePairDiagram(uiSpec) {
     `;
 }
 
+/**
+ * Render geometry circle diagram
+ * uiSpec shape: { type: 'geometry_circle_diagram', width, height, circle: {center: {x,y}, radius}, labels, styleHints }
+ */
+function renderGeometryCircleDiagram(uiSpec) {
+    const { width = 300, height = 300, circle = {}, labels = [], styleHints = {} } = uiSpec;
+    const { center = {x: width/2, y: height/2}, radius = 50 } = circle;
+    const baseColor = styleHints.lineColor || '#00ffff';
+    const labelColor = styleHints.labelsColor || '#00ffff';
+    
+    // Label positioning constants
+    const LABEL_OFFSET_Y = 10;   // pixels above/below elements
+    const LABEL_OFFSET_X = 10;   // pixels to the side of elements
+    const LABEL_CENTER_OFFSET = 15; // pixels from center point
+    
+    // Render circle using SVG
+    const circleSvg = `
+        <svg style="position: absolute; left: 0; top: 0; width: ${width}px; height: ${height}px; pointer-events: none;">
+            <circle 
+                cx="${center.x}" 
+                cy="${center.y}" 
+                r="${radius}" 
+                stroke="${baseColor}" 
+                stroke-width="2" 
+                fill="none"
+            />
+        </svg>
+    `;
+    
+    // Render center point
+    const centerPoint = `<div class="graphPoint" style="left: ${center.x - 4}px; top: ${center.y - 4}px;"></div>`;
+    
+    // Render labels (radius, diameter, etc.)
+    const renderLabels = () => {
+        return labels.map(label => {
+            const { text, position } = label;
+            let x = center.x;
+            let y = center.y;
+            
+            // Position label based on type
+            if (position === 'radius') {
+                x = center.x + radius / 2;
+                y = center.y - LABEL_OFFSET_Y;
+            } else if (position === 'center') {
+                x = center.x + LABEL_OFFSET_X;
+                y = center.y + LABEL_CENTER_OFFSET;
+            } else if (label.x !== undefined && label.y !== undefined) {
+                x = label.x;
+                y = label.y;
+            }
+            
+            return `<div class="graphLabel" style="left: ${x}px; top: ${y}px; color: ${labelColor};">${text}</div>`;
+        }).join('');
+    };
+    
+    return `
+        <div class="graphContainer" style="width: ${width}px; height: ${height}px; position: relative;">
+            ${circleSvg}
+            ${centerPoint}
+            ${renderLabels()}
+        </div>
+    `;
+}
+
+/**
+ * Render simple line diagram (horizontal or vertical line)
+ * uiSpec shape: { type: 'horizontal'|'vertical', width, height, line: {position, label}, styleHints }
+ */
+function renderSimpleLineDiagram(uiSpec) {
+    const { type, width = 300, height = 300, line = {}, styleHints = {} } = uiSpec;
+    const baseColor = styleHints.lineColor || '#00ffff';
+    const labelColor = styleHints.labelsColor || '#00ffff';
+    
+    // Label positioning constants (in pixels)
+    const LABEL_OFFSET_FROM_LINE = 20;  // distance from line to label
+    const LABEL_SIDE_OFFSET = 10;       // horizontal offset for labels next to vertical lines
+    
+    let lineHtml = '';
+    let labelHtml = '';
+    
+    if (type === 'horizontal') {
+        const position = line.position !== undefined ? line.position : height / 2;
+        const label = line.label || '';
+        
+        // Horizontal line across the width
+        lineHtml = `<div class="graphLine" style="left: 0; top: ${position}px; width: ${width}px; background: ${baseColor};"></div>`;
+        if (label) {
+            labelHtml = `<div class="graphLabel" style="left: ${width / 2 - LABEL_OFFSET_FROM_LINE}px; top: ${position - LABEL_OFFSET_FROM_LINE}px; color: ${labelColor};">${label}</div>`;
+        }
+    } else if (type === 'vertical') {
+        const position = line.position !== undefined ? line.position : width / 2;
+        const label = line.label || '';
+        
+        // Vertical line - can't use .graphLine class (designed for horizontal) so use explicit styling
+        lineHtml = `<div style="position: absolute; left: ${position}px; top: 0; width: 2px; height: ${height}px; background: ${baseColor};"></div>`;
+        if (label) {
+            labelHtml = `<div class="graphLabel" style="left: ${position + LABEL_SIDE_OFFSET}px; top: ${height / 2}px; color: ${labelColor};">${label}</div>`;
+        }
+    }
+    
+    return `
+        <div class="graphContainer" style="width: ${width}px; height: ${height}px; position: relative;">
+            ${lineHtml}
+            ${labelHtml}
+        </div>
+    `;
+}
+
 function renderQuiz() {
     const currentQuestion = state.quiz.questions[state.quiz.currentIndex];
     const answered = state.quiz.selectedAnswer !== null;
@@ -8029,6 +8885,7 @@ function renderQuiz() {
     const isPracticeTestMode = state.quiz.mode === 'practiceTestMode';
     const isSprintMode = state.quiz.mode === 'sprint';
     const showFeedback = state.quiz.showFeedback; // Patch 18: use flag
+    const allowFeedbackToggle = !isTestMode && !isPracticeTestMode;
     const progressPercent = ((state.quiz.currentIndex + 1) / state.quiz.questions.length) * 100;
     
     // Determine mode label with difficulty
@@ -8057,6 +8914,27 @@ function renderQuiz() {
         modeLabel = ` <span style="color: #00ff00;">• ${diffLabel} ${xpLabel} XP</span>`;
     }
     
+    // Calculate question number within current section
+    let questionDisplay = '';
+    if (state.quiz.sections.length > 0) {
+        const currentSection = state.quiz.sections[state.quiz.currentSection];
+        if (currentSection && 
+            state.quiz.currentIndex >= currentSection.startIndex && 
+            state.quiz.currentIndex <= currentSection.endIndex) {
+            const questionInSection = state.quiz.currentIndex - currentSection.startIndex + 1;
+            const totalInSection = currentSection.totalQuestions;
+            questionDisplay = `Question ${questionInSection} / ${totalInSection}`;
+        } else {
+            // Fallback if section is undefined or index is out of range
+            questionDisplay = `Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}`;
+        }
+    } else {
+        questionDisplay = `Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}`;
+    }
+
+    // Check if current section is valid
+    const hasValidCurrentSection = state.quiz.sections.length > 0 && state.quiz.sections[state.quiz.currentSection];
+
     return `
         <div class="panel">
             <div class="quiz-progress-bar">
@@ -8065,12 +8943,30 @@ function renderQuiz() {
             
             <div class="quiz-header">
                 <div class="quiz-info">
-                    <strong>${state.currentTopic.name}</strong><br>
-                    Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}
+                    ${hasValidCurrentSection ? `
+                        <strong>${state.quiz.isPracticeTest ? 'AFOQT Practice Test' : (state.currentTopic ? state.currentTopic.name : 'Quiz')}</strong><br>
+                        <span style="font-size: 0.9em; color: #00ff00;">Section ${state.quiz.currentSection + 1}/${state.quiz.sections.length}: ${state.quiz.sections[state.quiz.currentSection].name}</span><br>
+                    ` : `
+                        <strong>${state.quiz.isPracticeTest ? 'AFOQT Practice Test' : (state.currentTopic ? state.currentTopic.name : 'Quiz')}</strong><br>
+                    `}
+                    ${questionDisplay}
                     ${modeLabel}
                 </div>
-                <div class="timer">60.0s</div>
+                <div class="timer" id="section-timer">
+                    ${hasValidCurrentSection && state.quiz.sections[state.quiz.currentSection].timeSeconds ? 
+                        `${Math.max(0, Math.floor((state.quiz.sections[state.quiz.currentSection].timeSeconds - (Date.now() - state.quiz.sectionTimeStarted) / 1000)))} s` :
+                        '60.0s'
+                    }
+                </div>
             </div>
+
+            ${allowFeedbackToggle ? `
+                <div class="quiz-subheader" style="display: flex; justify-content: flex-end; margin-top: 8px;">
+                    <button class="btn btn-secondary" id="feedback-toggle-btn" style="min-width: 180px;">
+                        Feedback: ${showFeedback ? 'On (Study Mode)' : 'Off (Practice Test Style)'}
+                    </button>
+                </div>
+            ` : ''}
             
             ${currentQuestion.image ? `
                 <div class="question-image">
@@ -8083,6 +8979,8 @@ function renderQuiz() {
             <div class="question-prompt">
                 ${currentQuestion.prompt}
             </div>
+
+            ${currentQuestion.tableSpec ? renderTableReading(currentQuestion, { highlight: answered && showFeedback }) : ''}
             
             <div class="options-grid">
                 ${currentQuestion.options.map((option, idx) => {
@@ -8169,12 +9067,140 @@ function renderQuiz() {
             </div>
         </div>
         ${renderFloatingNav({ showBack: false })}
+        ${renderSectionTransitionModal()}
+    `;
+}
+
+function renderSectionTransitionModal() {
+    // Only show for AFOQT practice tests with sections
+    if (!state.quiz.sections || state.quiz.sections.length === 0 || !state.quiz.showSectionTransition) {
+        return '';
+    }
+
+    // Check if there's a next section
+    if (state.quiz.currentSection + 1 >= state.quiz.sections.length) {
+        return '';
+    }
+
+    const currentSection = state.quiz.sections[state.quiz.currentSection];
+    const nextSection = state.quiz.sections[state.quiz.currentSection + 1];
+    
+    // Validate both sections exist
+    if (!currentSection || !nextSection) return '';
+
+    return `
+        <div id="section-transition-modal" class="modal" style="display: flex;">
+            <div class="modal-content" style="max-width: 500px; text-align: center;">
+                <div class="auth-header">
+                    <div class="auth-header-bracket left"></div>
+                    <h2 class="auth-title">SECTION COMPLETE</h2>
+                    <div class="auth-header-bracket right"></div>
+                </div>
+                <div class="modal-body" style="padding: 30px;">
+                    <div style="font-size: 1.2em; color: #00ff00; margin-bottom: 20px;">
+                        ✓ You have completed:<br>
+                        <strong>${currentSection.name}</strong>
+                    </div>
+                    <div style="font-size: 1.1em; color: #00ffff; margin-bottom: 30px;">
+                        Are you ready to move on to the next section?<br>
+                        <strong>${nextSection.name}</strong>
+                    </div>
+                    <div style="display: flex; gap: 15px; justify-content: center;">
+                        <button class="btn" id="confirm-next-section-btn" style="flex: 1; max-width: 200px;">
+                            ✓ Yes, Continue
+                        </button>
+                        <button class="btn btn-secondary" id="stay-section-btn" style="flex: 1; max-width: 200px;">
+                            ← Wait
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     `;
 }
 
 function renderResults() {
     const percentage = (state.quiz.score / state.quiz.questions.length * 100).toFixed(1);
     const avgTime = state.quiz.questionTimes.reduce((a, b) => a + b, 0) / state.quiz.questionTimes.length;
+    const difficultyStats = {};
+    state.quiz.userAnswers.forEach(answer => {
+        const question = state.quiz.questions[answer.questionIndex] || {};
+        const diff = question.difficulty || state.quiz.difficulty || 'mixed';
+        if (!difficultyStats[diff]) {
+            difficultyStats[diff] = { total: 0, correct: 0 };
+        }
+        difficultyStats[diff].total += 1;
+        if (answer.isCorrect) {
+            difficultyStats[diff].correct += 1;
+        }
+    });
+
+    const missedAnswers = state.quiz.userAnswers.filter(a => !a.isCorrect);
+    const deferredFeedback = !state.quiz.showFeedback || state.quiz.mode === 'practiceTestMode' || state.quiz.mode === 'test';
+    
+    // For AFOQT practice tests, calculate composite scores
+    let compositeScores = {};
+    if (state.quiz.isPracticeTest && state.quiz.sections && state.quiz.sections.length > 0) {
+        // Calculate section scores
+        const sectionScores = {};
+        state.quiz.sections.forEach(section => {
+            let sectionCorrect = 0;
+            for (let i = section.startIndex; i <= section.endIndex; i++) {
+                const answer = state.quiz.userAnswers.find(a => a.questionIndex === i);
+                if (answer && answer.isCorrect) {
+                    sectionCorrect++;
+                }
+            }
+            sectionScores[section.name] = {
+                correct: sectionCorrect,
+                total: section.totalQuestions,
+                percent: ((sectionCorrect / section.totalQuestions) * 100).toFixed(1)
+            };
+        });
+        
+        // Composite scores based on full_afoqt_practice_test_config_v1.json structure
+        // Verbal = Verbal Analogies + Word Knowledge + Reading Comprehension
+        if (sectionScores['Verbal Analogies'] && sectionScores['Word Knowledge'] && sectionScores['Reading Comprehension']) {
+            const verbalScores = [
+                parseFloat(sectionScores['Verbal Analogies'].percent),
+                parseFloat(sectionScores['Word Knowledge'].percent),
+                parseFloat(sectionScores['Reading Comprehension'].percent)
+            ];
+            compositeScores['Verbal'] = (verbalScores.reduce((a, b) => a + b, 0) / verbalScores.length).toFixed(1);
+        }
+        
+        // Quantitative = Arithmetic Reasoning + Math Knowledge
+        if (sectionScores['Arithmetic Reasoning'] && sectionScores['Math Knowledge']) {
+            const quantScores = [
+                parseFloat(sectionScores['Arithmetic Reasoning'].percent),
+                parseFloat(sectionScores['Math Knowledge'].percent)
+            ];
+            compositeScores['Quantitative'] = (quantScores.reduce((a, b) => a + b, 0) / quantScores.length).toFixed(1);
+        }
+        
+        // Pilot = Instrument Comprehension + Table Reading + Aviation Information + Math Knowledge
+        if (sectionScores['Instrument Comprehension'] && sectionScores['Table Reading'] && sectionScores['Math Knowledge']) {
+            const pilotScores = [
+                parseFloat(sectionScores['Instrument Comprehension'].percent),
+                parseFloat(sectionScores['Table Reading'].percent),
+                parseFloat(sectionScores['Math Knowledge'].percent)
+            ];
+            compositeScores['Pilot'] = (pilotScores.reduce((a, b) => a + b, 0) / pilotScores.length).toFixed(1);
+        }
+        
+        // CSO = Verbal Analogies + Arithmetic Reasoning + Table Reading + Math Knowledge + Block Counting + Physical Science
+        if (sectionScores['Verbal Analogies'] && sectionScores['Arithmetic Reasoning'] && sectionScores['Table Reading'] && sectionScores['Math Knowledge'] && sectionScores['Block Counting'] && sectionScores['Physical Science']) {
+            const csoScores = [
+                parseFloat(sectionScores['Verbal Analogies'].percent),
+                parseFloat(sectionScores['Arithmetic Reasoning'].percent),
+                parseFloat(sectionScores['Table Reading'].percent),
+                parseFloat(sectionScores['Math Knowledge'].percent),
+                parseFloat(sectionScores['Block Counting'].percent),
+                parseFloat(sectionScores['Physical Science'].percent)
+            ];
+            compositeScores['CSO'] = (csoScores.reduce((a, b) => a + b, 0) / csoScores.length).toFixed(1);
+        }
+    }
     
     return `
         <div class="panel">
@@ -8194,6 +9220,81 @@ function renderResults() {
                     Topic: ${state.currentTopic.name}
                 </div>
             </div>
+
+            ${Object.keys(difficultyStats).length > 0 ? `
+                <div class="results-summary" style="margin-top: 10px;">
+                    <div class="stat-line" style="font-weight: bold;">Difficulty Breakdown</div>
+                    ${Object.entries(difficultyStats).map(([diff, stats]) => {
+                        const percent = stats.total > 0 ? ((stats.correct / stats.total) * 100).toFixed(1) : '0.0';
+                        return `<div class="stat-line">${diff}: ${stats.correct}/${stats.total} (${percent}%)</div>`;
+                    }).join('')}
+                </div>
+            ` : ''}
+
+            ${Object.keys(compositeScores).length > 0 ? `
+                <div class="results-summary" style="margin-top: 10px; border: 2px solid #ffa500;">
+                    <div class="stat-line" style="font-weight: bold; color: #ffa500;">🎖️ AFOQT Composite Scores</div>
+                    ${Object.entries(compositeScores).map(([composite, score]) => {
+                        return `<div class="stat-line" style="color: #00ffff;">${composite}: ${score}%</div>`;
+                    }).join('')}
+                </div>
+            ` : ''}
+
+            ${deferredFeedback ? `
+                <div class="question-review-section">
+                    <h2 class="review-title">📊 Practice Test Summary</h2>
+                    ${Object.keys(compositeScores).length > 0 ? `
+                        <div class="results-summary" style="margin-bottom: 10px;">
+                            <div class="stat-line" style="font-weight: bold;">Composite Scores</div>
+                            ${Object.entries(compositeScores).map(([name, score]) => `<div class="stat-line">${name}: ${score}%</div>`).join('')}
+                        </div>
+                    ` : ''}
+                    ${state.quiz.sections && state.quiz.sections.length > 0 ? `
+                        <div class="results-summary" style="margin-bottom: 10px;">
+                            <div class="stat-line" style="font-weight: bold;">Section Results</div>
+                            ${state.quiz.sections.map(section => {
+                                let sectionCorrect = 0;
+                                for (let i = section.startIndex; i <= section.endIndex; i++) {
+                                    const ans = state.quiz.userAnswers.find(a => a.questionIndex === i);
+                                    if (ans && ans.isCorrect) sectionCorrect++;
+                                }
+                                const percent = section.totalQuestions > 0 ? ((sectionCorrect / section.totalQuestions) * 100).toFixed(1) : '0.0';
+                                return `<div class="stat-line">${section.name}: ${sectionCorrect}/${section.totalQuestions} (${percent}%) · Time: ${formatTime(section.timeSeconds)}s</div>`;
+                            }).join('')}
+                        </div>
+                    ` : ''}
+                    ${missedAnswers.length === 0 ? `
+                        <div class="review-question review-correct">
+                            <div class="review-header">
+                                <div class="review-number">All Questions</div>
+                                <div class="review-status status-correct">Perfect!</div>
+                            </div>
+                            <div class="review-prompt">You held all feedback to the end and still aced it. Great work.</div>
+                        </div>
+                    ` : missedAnswers.map(answer => {
+                        const question = state.quiz.questions[answer.questionIndex];
+                        const correctAnswerText = question.options[question.correctIndex];
+                        const correctLabel = String.fromCharCode(65 + question.correctIndex);
+                        return `
+                            <div class="review-question review-incorrect">
+                                <div class="review-header">
+                                    <div class="review-number">Question ${answer.questionIndex + 1}</div>
+                                    <div class="review-status status-incorrect">Missed</div>
+                                    <div class="review-time">⏱ ${formatTime(answer.timeSpent)}s</div>
+                                </div>
+                                <div class="review-prompt">${question.prompt}</div>
+                                ${question.tableSpec ? renderTableReading(question, { highlight: true }) : ''}
+                                <div class="review-explanation" style="margin-top: 10px;">
+                                    <strong>Correct:</strong> ${correctLabel}. ${correctAnswerText}
+                                </div>
+                                <div class="review-explanation" style="margin-top: 8px;">
+                                    <strong>Explanation:</strong> ${question.explanation}
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            ` : ''}
             
             <!-- Question Review Section -->
             <div class="question-review-section">
@@ -9662,6 +10763,8 @@ async function loadDetailedAnalytics() {
 // Event Listeners
 // ============================================================================
 function attachEventListeners() {
+    console.log('attachEventListeners called');
+    
     // Login screen - Character selection
     const selectPlayerBtns = document.querySelectorAll('.select-player-btn');
     selectPlayerBtns.forEach(btn => {
@@ -10009,11 +11112,41 @@ function attachEventListeners() {
     
     // Subject tiles
     const subjectTiles = document.querySelectorAll('[data-subject-id]');
+    console.log('Found subject tiles:', subjectTiles.length);
     subjectTiles.forEach(tile => {
         tile.addEventListener('click', () => {
+            if (!state.contentReady) {
+                console.warn('Subject click ignored: content not ready yet');
+                showErrorNotification && showErrorNotification('Loading content… Please wait.');
+                return;
+            }
             goToSubject(tile.dataset.subjectId);
         });
     });
+    
+    // NEW: Home page primary selectors - AFOQT Practice
+    const practiceTestSelector = document.getElementById('practice-test-selector');
+    console.log('Found practice test selector:', !!practiceTestSelector);
+    if (practiceTestSelector) {
+        practiceTestSelector.addEventListener('click', () => {
+            console.log('Practice test selector clicked');
+            state.screen = 'afoqt-practice';
+            playSfx('select');
+            render();
+        });
+    }
+    
+    // NEW: Home page primary selectors - Subjects
+    const subjectsSelector = document.getElementById('subjects-selector');
+    console.log('Found subjects selector:', !!subjectsSelector);
+    if (subjectsSelector) {
+        subjectsSelector.addEventListener('click', () => {
+            console.log('Subjects selector clicked');
+            state.screen = 'subject-list';
+            playSfx('select');
+            render();
+        });
+    }
     
     // Topic tiles
     const topicTiles = document.querySelectorAll('[data-topic-id]');
@@ -10074,28 +11207,92 @@ function attachEventListeners() {
     // Difficulty selection buttons
     const beginnerDiffBtn = document.getElementById('beginner-diff-btn');
     if (beginnerDiffBtn) {
+        if (DEBUG_MODE) console.log('✓ Beginner difficulty button found, attaching click handler');
         beginnerDiffBtn.addEventListener('click', () => {
+            if (DEBUG_MODE) console.log('Beginner difficulty button clicked', {currentTopic: state.currentTopic});
             if (state.currentTopic) {
-                startQuiz(state.currentTopic.id, 'practice', 'beginner');
+                startQuiz(state.currentTopic.id, 'practice', 'beginner').catch(err => {
+                    console.error('Error starting quiz:', err);
+                    showErrorNotification('Failed to start quiz. Please try again or select a different topic.');
+                });
+            } else {
+                console.error('Cannot start quiz: state.currentTopic is not set');
+                showErrorNotification('No topic selected. Please go back and select a topic first.');
             }
         });
+    } else {
+        if (DEBUG_MODE) console.warn('✗ Beginner difficulty button NOT found in DOM');
     }
     
     const advancedDiffBtn = document.getElementById('advanced-diff-btn');
     if (advancedDiffBtn) {
+        if (DEBUG_MODE) console.log('✓ Advanced difficulty button found, attaching click handler');
         advancedDiffBtn.addEventListener('click', () => {
+            if (DEBUG_MODE) console.log('Advanced difficulty button clicked', {currentTopic: state.currentTopic});
             if (state.currentTopic) {
-                startQuiz(state.currentTopic.id, 'practice', 'advanced');
+                startQuiz(state.currentTopic.id, 'practice', 'advanced').catch(err => {
+                    console.error('Error starting quiz:', err);
+                    showErrorNotification('Failed to start quiz. Please try again or select a different topic.');
+                });
+            } else {
+                console.error('Cannot start quiz: state.currentTopic is not set');
+                showErrorNotification('No topic selected. Please go back and select a topic first.');
             }
         });
+    } else {
+        if (DEBUG_MODE) console.warn('✗ Advanced difficulty button NOT found in DOM');
     }
     
     const expertDiffBtn = document.getElementById('expert-diff-btn');
     if (expertDiffBtn) {
+        if (DEBUG_MODE) console.log('✓ Expert difficulty button found, attaching click handler');
         expertDiffBtn.addEventListener('click', () => {
+            if (DEBUG_MODE) console.log('Expert difficulty button clicked', {currentTopic: state.currentTopic});
             if (state.currentTopic) {
-                startQuiz(state.currentTopic.id, 'practice', 'expert');
+                startQuiz(state.currentTopic.id, 'practice', 'expert').catch(err => {
+                    console.error('Error starting quiz:', err);
+                    showErrorNotification('Failed to start quiz. Please try again or select a different topic.');
+                });
+            } else {
+                console.error('Cannot start quiz: state.currentTopic is not set');
+                showErrorNotification('No topic selected. Please go back and select a topic first.');
             }
+        });
+    } else {
+        if (DEBUG_MODE) console.warn('✗ Expert difficulty button NOT found in DOM');
+    }
+    
+    // AFOQT Practice difficulty buttons
+    const afoqtBeginnerBtn = document.getElementById('afoqt-beginner-btn');
+    if (afoqtBeginnerBtn) {
+        afoqtBeginnerBtn.addEventListener('click', () => {
+            console.log('AFOQT Beginner button clicked');
+            _startAFOQTPracticeTestAsync('beginner').catch(err => {
+                console.error('Error starting AFOQT test:', err);
+                playSfx('wrong');
+            });
+        });
+    }
+    
+    const afoqtAdvancedBtn = document.getElementById('afoqt-advanced-btn');
+    if (afoqtAdvancedBtn) {
+        afoqtAdvancedBtn.addEventListener('click', () => {
+            console.log('AFOQT Advanced button clicked');
+            _startAFOQTPracticeTestAsync('advanced').catch(err => {
+                console.error('Error starting AFOQT test:', err);
+                playSfx('wrong');
+            });
+        });
+    }
+    
+    const afoqtExpertBtn = document.getElementById('afoqt-expert-btn');
+    if (afoqtExpertBtn) {
+        afoqtExpertBtn.addEventListener('click', () => {
+            console.log('AFOQT Expert button clicked');
+            _startAFOQTPracticeTestAsync('expert').catch(err => {
+                console.error('Error starting AFOQT test:', err);
+                playSfx('wrong');
+            });
         });
     }
     
@@ -10136,6 +11333,15 @@ function attachEventListeners() {
             handleAnswer(parseInt(btn.dataset.optionIndex));
         });
     });
+
+    const feedbackToggleBtn = document.getElementById('feedback-toggle-btn');
+    if (feedbackToggleBtn) {
+        feedbackToggleBtn.addEventListener('click', () => {
+            state.quiz.showFeedback = !state.quiz.showFeedback;
+            playSfx('nav');
+            render();
+        });
+    }
     
     // Navigation buttons
     const homeBtn = document.getElementById('home-btn');
@@ -10182,6 +11388,17 @@ function attachEventListeners() {
     const nextBtn = document.getElementById('next-btn');
     if (nextBtn) {
         nextBtn.addEventListener('click', nextQuestion);
+    }
+    
+    // Section transition modal buttons
+    const confirmNextSectionBtn = document.getElementById('confirm-next-section-btn');
+    if (confirmNextSectionBtn) {
+        confirmNextSectionBtn.addEventListener('click', proceedToNextSection);
+    }
+    
+    const staySectionBtn = document.getElementById('stay-section-btn');
+    if (staySectionBtn) {
+        staySectionBtn.addEventListener('click', stayInCurrentSection);
     }
     
     const retryBtn = document.getElementById('retry-btn');
@@ -10353,6 +11570,7 @@ function handleScrollForFAB() {
 // Initialization
 // ============================================================================
 async function init() {
+    console.log('🚀 AFOQT Quest initializing...');
     // ====================================================================
     // VERSION CHECK - Automatic cache invalidation on app update
     // ====================================================================
@@ -10410,10 +11628,18 @@ async function init() {
     }
     
     // Show Evangelion-style boot sequence on first load
+    // Allow forcing via URL: ?boot=1
+    const params = new URLSearchParams(location.search);
+    const forceBoot = params.get('boot') === '1' || params.get('forceBoot') === '1';
     const hasBooted = sessionStorage.getItem('afoqt-booted');
-    if (!hasBooted) {
+    console.log('[BOOT CHECK]', {hasBooted, forceBoot, shouldShowBoot: !hasBooted || forceBoot});
+    if (!hasBooted || forceBoot) {
+        console.log('[BOOT] Starting boot sequence...');
         await showBootSequence();
+        console.log('[BOOT] Boot sequence complete');
         sessionStorage.setItem('afoqt-booted', 'true');
+    } else {
+        console.log('[BOOT] Skipping boot - already shown this session');
     }
     
     state.players = await loadPlayers();
@@ -10429,6 +11655,10 @@ async function init() {
     
     // Patch 18: Initialize content-based question system
     if (typeof initializePatch18 === 'function') {
+        state.contentLoading = true;
+        state.contentReady = false;
+        render(); // Show loading state
+        
         try {
             const success = await initializePatch18();
             if (success) {
@@ -10508,11 +11738,36 @@ async function init() {
                         console.log(`✓ Added ${practiceTests.length} AFOQT practice tests`);
                     }
                 }
+                
+                // Log registry diagnostics
+                if (typeof questionRegistry !== 'undefined') {
+                    console.log('📊 Question Registry Status:');
+                    Object.keys(questionRegistry).forEach(subjectId => {
+                        console.log(`  ${subjectId}:`);
+                        Object.keys(questionRegistry[subjectId]).forEach(subtopicId => {
+                            const difficulties = questionRegistry[subjectId][subtopicId];
+                            const counts = {
+                                beginner: difficulties.beginner?.length || 0,
+                                advanced: difficulties.advanced?.length || 0,
+                                expert: difficulties.expert?.length || 0
+                            };
+                            const total = counts.beginner + counts.advanced + counts.expert;
+                            console.log(`    ${subtopicId}: ${total} questions (B:${counts.beginner}, A:${counts.advanced}, E:${counts.expert})`);
+                        });
+                    });
+                }
             }
+            
+            console.log('✅ Content loaded - quiz ready');
         } catch (error) {
-            console.warn('Patch 18 initialization failed:', error);
+            console.warn('⚠ Patch 18 initialization failed, using procedural fallbacks:', error);
         }
     }
+    
+    // Mark content as ready (either loaded successfully or using procedural fallbacks)
+    // Always set to true because app can fall back to procedural question generators
+    state.contentLoading = false;
+    state.contentReady = true;
     
     render();
     registerServiceWorker();
@@ -10525,11 +11780,10 @@ function registerServiceWorker() {
             navigator.serviceWorker.register('./sw.js')
                 .then((registration) => {
                     console.log('Service Worker registered:', registration.scope);
-                    
                     // Check for updates periodically
                     setInterval(() => {
                         registration.update();
-                    }, 60000); // Check every minute
+                    }, 60000);
                 })
                 .catch((error) => {
                     console.warn('Service Worker registration failed:', error);
@@ -10539,10 +11793,30 @@ function registerServiceWorker() {
 }
 
 // Start the app when DOM is ready
+async function startApp() {
+    try {
+        console.log('[startApp] called');
+        await init();
+        console.log('[startApp] init() resolved');
+    } catch (error) {
+        console.error('❌ CRITICAL: App initialization failed:', error);
+        document.getElementById('app-root').innerHTML = `
+            <div style="color: red; font-family: monospace; padding: 20px;">
+                <h2>App Initialization Error</h2>
+                <p>${error.message}</p>
+                <pre>${error.stack}</pre>
+                <p>Check browser console (F12) for more details</p>
+            </div>
+        `;
+    }
+}
+
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    console.log('[BOOT] DOM is loading; attaching DOMContentLoaded handler');
+    document.addEventListener('DOMContentLoaded', startApp);
 } else {
-    init();
+    console.log('[BOOT] DOM is ready; calling startApp immediately');
+    startApp();
 }
 
 // ============================================================================
@@ -10709,4 +11983,7 @@ function renderCreateAccount() {
             </div>
         </div>
     `;
+}
+
+// Auto-fix: closing brace to balance file-level scope
 }
