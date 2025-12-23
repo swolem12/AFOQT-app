@@ -11819,7 +11819,8 @@ if (document.readyState === 'loading') {
     console.log('[BOOT] DOM is loading; attaching DOMContentLoaded handler');
     document.addEventListener('DOMContentLoaded', startApp);
 } else {
-    console.log('[BOOT] DOM is ready; calling startApp immediately');
+    console.log('[BOOT] DOM is ready or interactive (readyState:', document.readyState, '); calling startApp');
+    // DOM is either 'interactive' or 'complete', both are ready for deferred scripts
     startApp();
 }
 
