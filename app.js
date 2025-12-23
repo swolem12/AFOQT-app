@@ -11815,6 +11815,8 @@ async function startApp() {
     }
 }
 
+console.log('[DEBUG] About to check readyState for boot...');
+
 if (document.readyState === 'loading') {
     console.log('[BOOT] DOM is loading; attaching DOMContentLoaded handler');
     document.addEventListener('DOMContentLoaded', startApp);
