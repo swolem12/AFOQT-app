@@ -19,12 +19,44 @@
     
     <title>AFOQT Quest</title>
     <link rel="stylesheet" href="/AFOQT-app/styles.css">
-    <script src="/AFOQT-app/assets/libs/anime.min.js" defer></script>
-    <script src="/AFOQT-app/db.js" defer></script>
-    <script src="/AFOQT-app/patch-loader.js" defer></script>
-    <script src="/AFOQT-app/app.js" defer></script>
+    <script src="/AFOQT-app/assets/libs/anime.min.js" defer onload="scriptLoaded('anime')" onerror="document.getElementById('boot-status').textContent='Anime failed to load'"></script>
+    <script src="/AFOQT-app/db.js" defer onload="scriptLoaded('db')" onerror="document.getElementById('boot-status').textContent='DB failed to load'"></script>
+    <script src="/AFOQT-app/patch-loader.js" defer onload="scriptLoaded('patch-loader')" onerror="document.getElementById('boot-status').textContent='Patch-loader failed to load'"></script>
+    <script src="/AFOQT-app/app.js" defer onload="scriptLoaded('app')" onerror="document.getElementById('boot-status').textContent='App failed to load'"></script>
 </head>
 <body>
-    <div id="app-root"></div>
+    <div id="app-root">
+        <div class="panel" style="padding: 20px;">
+            <h1 class="panel-header">LOADING...</h1>
+            <p id="boot-status">Initializing scripts...</p>
+        </div>
+    </div>
+    
+    <script>
+        // Inline boot diagnostics
+        console.log('[INLINE] Script executing');
+        const status = document.getElementById('boot-status');
+        status.textContent = 'Inline script running...';
+        
+        window.addEventListener('error', (e) => {
+            console.error('[ERROR]', e.message, e.filename, e.lineno);
+            status.textContent = 'ERROR: ' + e.message + ' at ' + e.filename;
+            status.style.color = 'red';
+        });
+        
+        // Track script loading
+        let loadedScripts = [];
+        window.scriptLoaded = (name) => {
+            loadedScripts.push(name);
+            status.textContent = 'Loaded: ' + loadedScripts.join(', ');
+        };
+        
+        setTimeout(() => {
+            if (!window.__AFOQT_BOOT_MARKER__) {
+                status.textContent = 'ERROR: app.js did not load!';
+                status.style.color = 'red';
+            }
+        }, 5000);
+    </script>
 </body>
 </html>
