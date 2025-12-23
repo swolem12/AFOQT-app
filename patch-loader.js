@@ -14,20 +14,22 @@ let patch18Config = null;
  */
 async function loadPatch18Config() {
     try {
+        console.log('[Patch 18] Attempting to load from patches folder...');
         // Try new patches folder first, then fallback for backwards compatibility
         let response = await fetch(encodeURI('./Test Content/patches/Patch_18.json'));
         if (!response.ok) {
+            console.log('[Patch 18] Not found in patches folder, trying legacy path...');
             response = await fetch(encodeURI('./Test Content/Patch_18.json'));
         }
         if (!response.ok) {
-            console.warn('Patch 18 config not found');
+            console.warn('[Patch 18] Config not found in either location');
             return null;
         }
         patch18Config = await response.json();
-        console.log('✓ Patch 18 config loaded');
+        console.log('✓ Patch 18 config loaded successfully');
         return patch18Config;
     } catch (error) {
-        console.error('Failed to load Patch 18 config:', error);
+        console.error('[Patch 18] Failed to load config:', error);
         return null;
     }
 }
@@ -1328,63 +1330,84 @@ function createPracticeTestTopic(testConfig) {
  * Initialize Patch 18 system
  */
 async function initializePatch18() {
-    console.log('Initializing Patch 18...');
+    console.log('🔧 [INIT] Starting Patch 18 initialization...');
     
-    // Load config
-    await loadPatch18Config();
-    if (!patch18Config) {
-        console.warn('Patch 18 not available');
-        return false;
+    try {
+        // Load config
+        console.log('[INIT] Loading Patch 18 config...');
+        await loadPatch18Config();
+        if (!patch18Config) {
+            console.warn('[INIT] Patch 18 config not available - will use fallback procedural generation');
+            return false;
+        }
+        console.log('[INIT] Patch 18 config loaded');
+        
+        // Load vocabulary content
+        console.log('[INIT] Loading vocabulary content...');
+        await loadAllVocabularyContent();
+        
+        // Load math knowledge content
+        console.log('[INIT] Loading math knowledge content...');
+        await loadAllMathKnowledgeContent();
+
+        // Load Patch 19 and arithmetic content
+        console.log('[INIT] Loading Patch 19 (Arithmetic)...');
+        await loadPatch19Config();
+        if (patch19Config) {
+            await loadAllArithmeticContent();
+        }
+
+        // Load Patch 20 and reading comprehension content
+        console.log('[INIT] Loading Patch 20 (Reading Comprehension)...');
+        await loadPatch20Config();
+        if (patch20Config) {
+            await loadAllReadingComprehensionContent();
+        }
+
+        // Load Patch 21 and instrument comprehension content
+        console.log('[INIT] Loading Patch 21 (Instrument Comprehension)...');
+        await loadPatch21Config();
+        if (patch21Config) {
+            await loadAllInstrumentComprehensionContent();
+        }
+
+        // Load Patch 22 and table reading content
+        console.log('[INIT] Loading Patch 22 (Table Reading)...');
+        await loadPatch22Config();
+        if (patch22Config) {
+            await loadAllTableReadingContent();
+        }
+
+        // Load Patch 24 (scoped Table Reading renderer)
+        console.log('[INIT] Loading Patch 24 (UI renderer)...');
+        await loadPatch24Config();
+        if (!patch24Config) {
+            console.log('[INIT] Patch 24 not loaded - will use legacy table renderer');
+        }
+
+        // Load Block Counting config (optional) and content
+        console.log('[INIT] Loading Block Counting content...');
+        await loadBlockCountingConfig();
+        await loadAllBlockCountingContent();
+        
+        // Load Physical Science content
+        console.log('[INIT] Loading Physical Science content...');
+        await loadAllPhysicalScienceContent();
+        
+        // Load Aviation content
+        console.log('[INIT] Loading Aviation content...');
+        await loadAllAviationContent();
+        
+        // Load Situational Judgment content
+        console.log('[INIT] Loading Situational Judgment content...');
+        await loadAllSituationalContent();
+        
+        console.log('✓✓✓ [INIT] Patch 18 initialized successfully');
+        return true;
+    } catch (error) {
+        console.error('[INIT] ERROR during initialization:', error);
+        throw error; // Re-throw so caller can handle
     }
-    
-    // Load vocabulary content
-    await loadAllVocabularyContent();
-    
-    // Load math knowledge content
-    await loadAllMathKnowledgeContent();
-
-    // Load Patch 19 and arithmetic content
-    await loadPatch19Config();
-    if (patch19Config) {
-        await loadAllArithmeticContent();
-    }
-
-    // Load Patch 20 and reading comprehension content
-    await loadPatch20Config();
-    if (patch20Config) {
-        await loadAllReadingComprehensionContent();
-    }
-
-    // Load Patch 21 and instrument comprehension content
-    await loadPatch21Config();
-    if (patch21Config) {
-        await loadAllInstrumentComprehensionContent();
-    }
-
-    // Load Patch 22 and table reading content
-    await loadPatch22Config();
-    if (patch22Config) {
-        await loadAllTableReadingContent();
-    }
-
-    // Load Patch 24 (scoped Table Reading renderer)
-    await loadPatch24Config();
-
-    // Load Block Counting config (optional) and content
-    await loadBlockCountingConfig();
-    await loadAllBlockCountingContent();
-    
-    // Load Physical Science content
-    await loadAllPhysicalScienceContent();
-    
-    // Load Aviation content
-    await loadAllAviationContent();
-    
-    // Load Situational Judgment content
-    await loadAllSituationalContent();
-    
-    console.log('✓ Patch 18 initialized');
-    return true;
 }
 
 // Export for use in main app

@@ -11721,7 +11721,9 @@ async function init() {
         render(); // Show loading state
         
         try {
+            console.log('[INIT-APP] Calling initializePatch18...');
             const success = await initializePatch18();
+            console.log('[INIT-APP] initializePatch18 returned:', success);
             if (success) {
                 state.patch18Loaded = true;
                 console.log('✓ Patch 18 active');
@@ -11821,6 +11823,8 @@ async function init() {
             
             console.log('✅ Content loaded - quiz ready');
         } catch (error) {
+            console.error('❌ [INIT-APP] Patch 18 initialization FAILED:', error.message);
+            console.error('[INIT-APP] Stack:', error.stack);
             console.warn('⚠ Patch 18 initialization failed, using procedural fallbacks:', error);
         }
     }
