@@ -16,10 +16,10 @@ async function loadPatch18Config() {
     try {
         console.log('[Patch 18] Attempting to load from patches folder...');
         // Try new patches folder first, then fallback for backwards compatibility
-        let response = await fetch(encodeURI('./Test Content/patches/Patch_18.json'));
+        let response = await fetch(encodeURI('/AFOQT-app/Test Content/patches/Patch_18.json'));
         if (!response.ok) {
             console.log('[Patch 18] Not found in patches folder, trying legacy path...');
-            response = await fetch(encodeURI('./Test Content/Patch_18.json'));
+            response = await fetch(encodeURI('/AFOQT-app/Test Content/Patch_18.json'));
         }
         if (!response.ok) {
             console.warn('[Patch 18] Config not found in either location');
@@ -55,9 +55,9 @@ let patchBlockCountingConfig = null;
 async function loadPatch19Config() {
     try {
         // Prefer centralized patches folder, fallback to legacy Arithmetic path
-        let response = await fetch(encodeURI('./Test Content/patches/Patch_19.json'));
+        let response = await fetch(encodeURI('/AFOQT-app/Test Content/patches/Patch_19.json'));
         if (!response.ok) {
-            response = await fetch(encodeURI('./Test Content/Arithmetic/Patch_19.json'));
+            response = await fetch(encodeURI('/AFOQT-app/Test Content/Arithmetic/Patch_19.json'));
         }
         if (!response.ok) {
             console.warn('Patch 19 config not found');
@@ -74,9 +74,9 @@ async function loadPatch19Config() {
 
 async function loadPatch20Config() {
     try {
-        let response = await fetch(encodeURI('./Test Content/patches/Patch_20.json'));
+        let response = await fetch(encodeURI('/AFOQT-app/Test Content/patches/Patch_20.json'));
         if (!response.ok) {
-            response = await fetch(encodeURI('./Test Content/Patch_20.json'));
+            response = await fetch(encodeURI('/AFOQT-app/Test Content/Patch_20.json'));
         }
         if (!response.ok) {
             console.warn('Patch 20 config not found');
@@ -93,9 +93,9 @@ async function loadPatch20Config() {
 
 async function loadPatch21Config() {
     try {
-        let response = await fetch(encodeURI('./Test Content/patches/Patch_21.json'));
+        let response = await fetch(encodeURI('/AFOQT-app/Test Content/patches/Patch_21.json'));
         if (!response.ok) {
-            response = await fetch(encodeURI('./Test Content/Patch_21.json'));
+            response = await fetch(encodeURI('/AFOQT-app/Test Content/Patch_21.json'));
         }
         if (!response.ok) {
             console.warn('Patch 21 config not found');
@@ -112,9 +112,9 @@ async function loadPatch21Config() {
 
 async function loadPatch22Config() {
     try {
-        let response = await fetch(encodeURI('./Test Content/patches/Patch_22.json'));
+        let response = await fetch(encodeURI('/AFOQT-app/Test Content/patches/Patch_22.json'));
         if (!response.ok) {
-            response = await fetch(encodeURI('./Test Content/Patch_22.json'));
+            response = await fetch(encodeURI('/AFOQT-app/Test Content/Patch_22.json'));
         }
         if (!response.ok) {
             console.warn('Patch 22 config not found');
@@ -131,7 +131,7 @@ async function loadPatch22Config() {
 
 async function loadPatch24Config() {
     try {
-        const response = await fetch(encodeURI('./Test Content/patches/patch_24.json'));
+        const response = await fetch(encodeURI('/AFOQT-app/Test Content/patches/patch_24.json'));
         if (!response.ok) {
             console.warn('Patch 24 config not found');
             return null;
@@ -148,7 +148,7 @@ async function loadPatch24Config() {
 // Block Counting loader (no external config yet)
 async function loadBlockCountingConfig() {
     try {
-        const response = await fetch(encodeURI('./Test Content/Block Counting/patch_22_block_counting_ui_integration.json'));
+        const response = await fetch(encodeURI('/AFOQT-app/Test Content/Block Counting/patch_22_block_counting_ui_integration.json'));
         if (!response.ok) {
             console.warn('Block Counting config not found');
             return null;
