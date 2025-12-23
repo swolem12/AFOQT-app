@@ -5850,6 +5850,7 @@ async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
 }
 
 async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
+    console.log('[ENTER] startQuiz called with:', {topicId, mode, difficulty, topicsLength: topics?.length});
     try {
         if (DEBUG_MODE) console.log('startQuiz called with:', {topicId, mode, difficulty});
         const topic = topics.find(t => t.id === topicId);
@@ -5862,6 +5863,7 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
         if (DEBUG_MODE) console.log('Starting quiz for topic:', topic.name, {subjectId: topic.subjectId, hasContent: topic.hasContent});
         state.currentTopic = topic;
         state.quiz.questions = [];
+        console.log('[INIT] state.quiz.questions initialized to empty array');
         state.quiz.mode = mode;
         state.quiz.difficulty = difficulty;
     
@@ -6037,6 +6039,18 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
             }
         }
         
+        console.log('[BEFORE-RENDER] state.quiz.questions:', {
+            isDefined: typeof state.quiz.questions !== 'undefined',
+            isArray: Array.isArray(state.quiz.questions),
+            length: state.quiz.questions?.length,
+            value: state.quiz.questions
+        });
+        
+        console.error('[ERROR] No questions available!', {
+            isDefined: typeof state.quiz.questions !== 'undefined',
+            isArray: Array.isArray(state.quiz.questions),
+            length: state.quiz.questions?.length
+        });
         showErrorNotification(`No questions available for ${topic.name} (${difficulty}). Try a different topic or difficulty.`);
         playSfx('wrong');
         return;
