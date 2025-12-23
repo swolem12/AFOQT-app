@@ -7,18 +7,8 @@ console.log('app.js loading - v86');
 // Marker for index.html to detect app.js load
 window.__AFOQT_BOOT_MARKER__ = true;
 console.log('[BOOT]', 'document.readyState =', document.readyState);
-
-// Add visual error handler
 window.addEventListener('error', (e) => {
     console.error('[GLOBAL ERROR]', e.message, 'at', e.filename + ':' + e.lineno + ':' + e.colno);
-    const root = document.getElementById('app-root');
-    if (root && root.innerHTML === '') {
-        root.innerHTML = `<div style="color: red; padding: 20px; font-family: monospace;">
-            <h2>ERROR DURING BOOT</h2>
-            <p>${e.message}</p>
-            <p>File: ${e.filename}</p>
-        </div>`;
-    }
 });
 
 // ============================================================================
@@ -6493,27 +6483,18 @@ function renderFloatingNav(options = {}) {
 // ============================================================================
 function render() {
     const root = document.getElementById('app-root');
-    if (!root) {
-        console.error('[render] ERROR: app-root not found!');
-        return;
-    }
-    console.log('[render] screen=', state.screen, 'contentLoading=', state.contentLoading);
+    if (!root) return;
+    console.log('[render] screen=', state.screen);
     
-    let html = '';
     switch (state.screen) {
         case 'login':
-            html = renderLogin();
-            console.log('[render] login HTML length:', html.length);
-            root.innerHTML = html;
+            root.innerHTML = renderLogin();
             break;
         case 'create-account':
-            html = renderCreateAccount();
-            root.innerHTML = html;
+            root.innerHTML = renderCreateAccount();
             break;
         case 'home':
-            html = renderHome();
-            console.log('[render] home HTML length:', html.length);
-            root.innerHTML = html;
+            root.innerHTML = renderHome();
             break;
         case 'subject-list':
             root.innerHTML = renderSubjectList();
@@ -11637,15 +11618,13 @@ async function init() {
     }
     
     // Initialize database
-    console.log('[INIT] Initializing database...');
     await afoqtDB.init();
-    console.log('[INIT] Database initialized');
     
     // Check if we need to migrate from localStorage
     if (!afoqtDB.hasMigrationCompleted()) {
-        console.log('[INIT] Migrating data from localStorage to IndexedDB...');
+        console.log('Migrating data from localStorage to IndexedDB...');
         const migrationResults = await afoqtDB.migrateFromLocalStorage();
-        console.log('[INIT] Migration complete:', migrationResults);
+        console.log('Migration complete:', migrationResults);
     }
     
     // Show Evangelion-style boot sequence on first load
@@ -11653,37 +11632,24 @@ async function init() {
     const params = new URLSearchParams(location.search);
     const forceBoot = params.get('boot') === '1' || params.get('forceBoot') === '1';
     const hasBooted = sessionStorage.getItem('afoqt-booted');
-    console.log('[INIT] BOOT CHECK', {hasBooted, forceBoot, shouldShowBoot: !hasBooted || forceBoot});
+    console.log('[BOOT CHECK]', {hasBooted, forceBoot, shouldShowBoot: !hasBooted || forceBoot});
     if (!hasBooted || forceBoot) {
-        console.log('[INIT] Starting boot sequence...');
-        try {
-            await showBootSequence();
-            console.log('[INIT] Boot sequence complete');
-        } catch (bootErr) {
-            console.error('[INIT] Boot sequence failed:', bootErr);
-        }
+        console.log('[BOOT] Starting boot sequence...');
+        await showBootSequence();
+        console.log('[BOOT] Boot sequence complete');
         sessionStorage.setItem('afoqt-booted', 'true');
     } else {
-        console.log('[INIT] Skipping boot - already shown this session');
+        console.log('[BOOT] Skipping boot - already shown this session');
     }
     
-    console.log('[INIT] Loading players...');
     state.players = await loadPlayers();
-    console.log('[INIT] Loaded', state.players.length, 'players');
-    
-    console.log('[INIT] Loading settings...');
     await loadSettings(); // Load settings from database
-    console.log('[INIT] Settings loaded');
-    
     if (state.players.length > 0) {
         state.currentPlayer = state.players[0];
-        console.log('[INIT] Restoring session state...');
         // Restore session state after boot (user should see their last screen)
         await restoreSessionState();
-        console.log('[INIT] Session state restored, screen:', state.screen);
     } else {
         // No players, show login
-        console.log('[INIT] No players, setting screen to login');
         state.screen = 'login';
     }
     
@@ -11804,15 +11770,11 @@ async function init() {
     
     // Mark content as ready (either loaded successfully or using procedural fallbacks)
     // Always set to true because app can fall back to procedural question generators
-    console.log('[INIT] Marking content ready, about to call render()...');
     state.contentLoading = false;
     state.contentReady = true;
     
-    console.log('[INIT] Calling final render()...');
     render();
-    console.log('[INIT] render() completed, calling registerServiceWorker()...');
     registerServiceWorker();
-    console.log('[INIT] init() COMPLETE');
 }
 
 // Register Service Worker for PWA functionality
@@ -11855,17 +11817,10 @@ async function startApp() {
 
 if (document.readyState === 'loading') {
     console.log('[BOOT] DOM is loading; attaching DOMContentLoaded handler');
-    document.addEventListener('DOMContentLoaded', () => {
-        console.log('[BOOT] DOMContentLoaded fired, calling startApp');
-        startApp().catch(err => console.error('[BOOT] startApp error:', err));
-    });
+    document.addEventListener('DOMContentLoaded', startApp);
 } else {
-    console.log('[BOOT] DOM is ready (readyState:', document.readyState, '); calling startApp immediately');
-    // Use setTimeout to ensure all deferred scripts have executed
-    setTimeout(() => {
-        console.log('[BOOT] setTimeout calling startApp');
-        startApp().catch(err => console.error('[BOOT] startApp error:', err));
-    }, 0);
+    console.log('[BOOT] DOM is ready; calling startApp immediately');
+    startApp();
 }
 
 // ============================================================================
