@@ -5850,19 +5850,20 @@ async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
 }
 
 async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
-    if (DEBUG_MODE) console.log('startQuiz called with:', {topicId, mode, difficulty});
-    const topic = topics.find(t => t.id === topicId);
-    if (!topic) {
-        console.error('Topic not found:', topicId);
-        playSfx('wrong');
-        return;
-    }
-    
-    if (DEBUG_MODE) console.log('Starting quiz for topic:', topic.name);
-    state.currentTopic = topic;
-    state.quiz.questions = [];
-    state.quiz.mode = mode;
-    state.quiz.difficulty = difficulty;
+    try {
+        if (DEBUG_MODE) console.log('startQuiz called with:', {topicId, mode, difficulty});
+        const topic = topics.find(t => t.id === topicId);
+        if (!topic) {
+            console.error('Topic not found:', topicId);
+            playSfx('wrong');
+            return;
+        }
+        
+        if (DEBUG_MODE) console.log('Starting quiz for topic:', topic.name, {subjectId: topic.subjectId, hasContent: topic.hasContent});
+        state.currentTopic = topic;
+        state.quiz.questions = [];
+        state.quiz.mode = mode;
+        state.quiz.difficulty = difficulty;
     
     // Patch 18: Set feedback visibility based on mode
     // test/practiceTestMode = no feedback until end, practice/sprint = immediate feedback
@@ -6034,6 +6035,13 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     playSfx('start');
     render();
     startQuestionTimer();
+    } catch (error) {
+        console.error('[CRITICAL ERROR in startQuiz]', error);
+        console.error('Stack:', error.stack);
+        showErrorNotification(`Quiz initialization failed: ${error.message}`);
+        state.screen = 'subject';
+        render();
+    }
 }
 
 function startQuestionTimer() {
