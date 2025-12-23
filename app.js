@@ -5870,13 +5870,30 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     state.quiz.showFeedback = (mode !== 'practiceTestMode' && mode !== 'test');
     state.quiz.isPracticeTest = topic.isPracticeTest || false;
     
+    // Log topic properties for debugging
+    console.log('[DEBUG] Topic properties:', {
+        id: topic.id,
+        subjectId: topic.subjectId,
+        isPracticeTest: topic.isPracticeTest,
+        hasContent: topic.hasContent,
+        hasGenerateQuestion: typeof topic.generateQuestion === 'function'
+    });
+    
+    console.log('[DEBUG] Available functions:', {
+        generateAfoqtPracticeTest: typeof generateAfoqtPracticeTest,
+        getQuestionsWithSpacedRepetition: typeof getQuestionsWithSpacedRepetition,
+        getQuestionsFromRegistry: typeof getQuestionsFromRegistry
+    });
+    
     // Patch 18: Check if this is an AFOQT practice test
     if (topic.isPracticeTest && topic.testConfig && typeof generateAfoqtPracticeTest === 'function') {
+        console.log('[QUIZ] Using AFOQT practice test path');
         // Use Patch 18 content-based questions
         state.quiz.questions = generateAfoqtPracticeTest(topic.testConfig);
         state.quiz.mode = 'practiceTestMode'; // Force practice test mode
         state.quiz.showFeedback = false;
     } else if ((topic.subjectId === 'vocabulary' || topic.subjectId === 'word_knowledge' || topic.subjectId === 'verbal_analogies' || topic.subjectId === 'math_knowledge') && typeof getQuestionsWithSpacedRepetition === 'function') {
+        console.log('[QUIZ] Using spaced repetition path for', topic.subjectId);
         // Patch 18: Use content-based questions with spaced repetition for vocabulary and math topics
         const questionCount = mode === 'sprint' ? 5 : 10;
         const playerId = state.currentPlayer ? state.currentPlayer.id : null;
@@ -5930,6 +5947,7 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
             }
         }
     } else if (topic.hasContent && typeof getQuestionsFromRegistry === 'function') {
+        console.log('[QUIZ] Using registry path for', topic.subjectId, '/', topic.id);
         // Content-based subjects (instrument, table reading, block counting, etc.)
         const questionCount = mode === 'sprint' ? 5 : 10;
         if (mode === 'sprint') {
@@ -5965,6 +5983,7 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
             }
         }
     } else {
+        console.log('[QUIZ] Using procedural generator fallback for', topic.id);
         // Use procedural generators for non-vocabulary topics
         const questionCount = mode === 'sprint' ? 5 : 10;
         const usedQuestions = new Set();
