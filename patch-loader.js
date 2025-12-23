@@ -137,10 +137,6 @@ async function loadPatch24Config() {
             return null;
         }
         patch24Config = await response.json();
-        // Expose globally for app.js renderer usage
-        if (typeof window !== 'undefined') {
-            window.patch24Config = patch24Config;
-        }
         console.log('✓ Patch 24 config loaded');
         return patch24Config;
     } catch (error) {

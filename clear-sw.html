@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clear Service Worker</title>
+    <base href="/AFOQT-app/">
+</head>
+<body style="background: #000; color: #0f0; font-family: monospace; padding: 20px;">
+    <h1>Clearing Service Worker Cache...</h1>
+    <pre id="log"></pre>
+    <script>
+        const log = document.getElementById('log');
+        
+        async function clear() {
+            try {
+                // Unregister all SWs
+                const registrations = await navigator.serviceWorker.getRegistrations();
+                for (const reg of registrations) {
+                    const unregistered = await reg.unregister();
+                    log.innerText += `Unregistered: ${unregistered}\n`;
+                }
+                
+                // Clear caches
+                const cacheNames = await caches.keys();
+                for (const name of cacheNames) {
+                    const deleted = await caches.delete(name);
+                    log.innerText += `Deleted cache: ${name} = ${deleted}\n`;
+                }
+                
+                log.innerText += '\n✓ Cleared all caches and SWs\n';
+                log.innerText += 'Reloading in 2 seconds...\n';
+                
+                setTimeout(() => {
+                    window.location.href = './';
+                }, 2000);
+            } catch (error) {
+                log.innerText += `ERROR: ${error.message}\n${error.stack}`;
+            }
+        }
+        
+        clear();
+    </script>
+</body>
+</html>
