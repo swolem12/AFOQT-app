@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/AFOQT-app/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFOQT Minimal Test</title>
+    <style>
+        body {
+            background: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            padding: 20px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>AFOQT Minimal Boot Test</h1>
+    <p id="status">Loading...</p>
+    
+    <script>
+        document.getElementById('status').textContent = 'Scripts starting...';
+        
+        console.log('[MINIMAL] Page loaded, about to load scripts');
+        
+        // Add inline error handler
+        window.addEventListener('error', (e) => {
+            document.getElementById('status').textContent = 'ERROR: ' + e.message;
+            console.error('Global error:', e);
+        });
+    </script>
+    
+    <script src="assets/libs/anime.min.js" defer onload="document.getElementById('status').textContent='Anime loaded'" onerror="document.getElementById('status').textContent='Anime failed'"></script>
+    <script src="db.js" defer onload="document.getElementById('status').textContent='DB loaded'" onerror="document.getElementById('status').textContent='DB failed'"></script>
+    <script src="patch-loader.js" defer onload="document.getElementById('status').textContent='Patch loader loaded'" onerror="document.getElementById('status').textContent='Patch loader failed'"></script>
+    <script src="app.js" defer onload="document.getElementById('status').textContent='App loaded - check full app'" onerror="document.getElementById('status').textContent='App failed'"></script>
+    
+    <script>
+        console.log('[MINIMAL] Scripts enqueued');
+    </script>
+</body>
+</html>

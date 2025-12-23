@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/AFOQT-app/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFOQT Debug</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        body {
+            background: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            padding: 20px;
+            line-height: 1.5;
+        }
+        h1 { color: #00ffff; margin: 10px 0; }
+        .status { 
+            background: #001100; 
+            border: 1px solid #0f0;
+            padding: 15px;
+            margin: 10px 0;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .good { color: #0f0; }
+        .bad { color: #f00; }
+    </style>
+</head>
+<body>
+    <h1>[AFOQT DEBUG CONSOLE]</h1>
+    <div class="status" id="status"></div>
+    
+    <script>
+        const statusDiv = document.getElementById('status');
+        let messages = [];
+        
+        function log(msg, good = true) {
+            messages.push(msg);
+            console.log(msg);
+            const line = document.createElement('div');
+            line.className = good ? 'good' : 'bad';
+            line.textContent = msg;
+            statusDiv.appendChild(line);
+            statusDiv.scrollTop = statusDiv.scrollHeight;
+        }
+        
+        // Intercept global errors
+        window.addEventListener('error', (e) => {
+            log(`[ERROR] ${e.message} at ${e.filename}:${e.lineno}`, false);
+        });
+        
+        window.addEventListener('unhandledrejection', (e) => {
+            log(`[REJECT] ${e.reason}`, false);
+        });
+        
+        log('[BOOT] Debug console ready');
+        log(`[BOOT] Base URI: ${document.baseURI}`);
+        log(`[BOOT] Loading dependencies...`);
+        
+        // Try to load scripts in sequence with error handling
+        async function loadScripts() {
+            const scripts = [
+                { src: './assets/libs/anime.min.js', name: 'Anime.js' },
+                { src: './db.js', name: 'Database' },
+                { src: './patch-loader.js', name: 'Patch Loader' },
+                { src: './app.js', name: 'Main App' }
+            ];
+            
+            for (const script of scripts) {
+                try {
+                    log(`[LOAD] Fetching ${script.name}...`);
+                    const response = await fetch(script.src);
+                    if (response.ok) {
+                        log(`[✓] ${script.name} exists (${response.status})`);
+                    } else {
+                        log(`[✗] ${script.name} returned ${response.status}`, false);
+                    }
+                } catch (e) {
+                    log(`[✗] ${script.name} fetch failed: ${e.message}`, false);
+                }
+            }
+            
+            log('[BOOT] All checks complete. App should have loaded via deferred scripts.');
+        }
+        
+        loadScripts();
+    </script>
+</body>
+</html>
