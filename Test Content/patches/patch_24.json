@@ -1,0 +1,155 @@
+{
+  "patchId": "patch_24",
+  "componentName": "TableReadingTable",
+  "intent": "Recreate the AFOQT-style Table Reading data table exactly, using scoped styles only, without modifying global CSS, root variables, fonts, or layout of the host application.",
+  "doNotImport": [
+    "StyleBlock",
+    "global CSS resets",
+    ":root variables",
+    "body or html styling",
+    "generic table/th/td selectors"
+  ],
+  "dataContract": {
+    "tableSpec": {
+      "xHeader": "number[]",
+      "yHeader": "number[]",
+      "cellValues": "number[][]",
+      "constraints": [
+        "cellValues.length === yHeader.length",
+        "cellValues[row].length === xHeader.length"
+      ]
+    },
+    "questionBinding": {
+      "lookup": {
+        "x": "number",
+        "y": "number"
+      },
+      "rule": "Do NOT parse X/Y from question text. Coordinates must be explicit."
+    }
+  },
+  "renderHierarchy": {
+    "root": {
+      "element": "div",
+      "class": "trTableScope",
+      "purpose": "CSS isolation boundary"
+    },
+    "legend": {
+      "wrapperClass": "trLegendWrap",
+      "items": [
+        {
+          "class": "trLegend trLegendX",
+          "text": "Columns (X): values across the top →"
+        },
+        {
+          "class": "trLegend trLegendY",
+          "text": "Rows (Y): values down the left ↓"
+        }
+      ]
+    },
+    "table": {
+      "wrapperClass": "trTableWrap",
+      "tableClass": "trTable",
+      "structure": {
+        "thead": {
+          "cornerCell": {
+            "class": "trCorner",
+            "text": "Y (rows ↓) / X (columns →)"
+          },
+          "columnHeaders": {
+            "class": "trColHdr",
+            "format": "X = {value}",
+            "sticky": true
+          }
+        },
+        "tbody": {
+          "rowHeader": {
+            "class": "trRowHdr",
+            "format": "Y = {value}",
+            "sticky": true
+          },
+          "cell": {
+            "class": "trCell",
+            "highlightClass": "trCellTarget",
+            "rule": "Apply highlight only when rowIndex and colIndex match lookup"
+          }
+        }
+      }
+    }
+  },
+  "stickyBehavior": {
+    "xHeader": {
+      "position": "sticky",
+      "top": 0,
+      "zIndex": 2
+    },
+    "yHeader": {
+      "position": "sticky",
+      "left": 0,
+      "zIndex": 1
+    },
+    "corner": {
+      "zIndex": 3
+    }
+  },
+  "styleTokens": {
+    "scope": ".trTableScope",
+    "cssVariables": {
+      "--tr-bg": "rgba(8,12,24,.55)",
+      "--tr-border": "rgba(255,255,255,.10)",
+      "--tr-header-bg": "rgba(10,16,36,.92)",
+      "--tr-text": "rgba(255,255,255,.86)",
+      "--tr-muted": "rgba(255,255,255,.62)",
+      "--tr-target": "linear-gradient(135deg, rgba(149,120,255,.20), rgba(66,226,255,.14))"
+    }
+  },
+  "cellStylingRules": {
+    "base": {
+      "paddingPx": 10,
+      "textAlign": "center",
+      "borderRight": "1px solid var(--tr-border)",
+      "borderBottom": "1px solid var(--tr-border)"
+    },
+    "targetCell": {
+      "background": "var(--tr-target)",
+      "fontWeight": "inherit"
+    }
+  },
+  "scrollingRules": {
+    "minTableWidthPx": 520,
+    "overflow": "auto",
+    "rule": "Table scrolls inside its own container, never the page"
+  },
+  "animationPolicy": {
+    "allowed": [
+      "Web Animations API (element.animate)",
+      "inline style effects only"
+    ],
+    "disallowed": [
+      "anime.js import",
+      "CSS keyframes",
+      "global animation definitions"
+    ],
+    "cueSequence": [
+      "pulse legends",
+      "pulse Y header",
+      "pulse X header",
+      "pulse target cell"
+    ]
+  },
+  "accessibility": {
+    "ariaRole": "img",
+    "ariaLabel": "Table reading data grid",
+    "keyboard": "No keyboard trap introduced by table"
+  },
+  "failureHandling": {
+    "missingLookup": "Render table normally with no highlighted cell",
+    "outOfRangeLookup": "Do not crash; ignore highlight"
+  },
+  "acceptanceCriteria": [
+    "Does not modify global CSS or fonts",
+    "Does not change body background",
+    "Sticky headers work during scroll",
+    "Target cell highlight matches lookup coordinates",
+    "Table can be dropped into any layout safely"
+  ]
+}
