@@ -6493,18 +6493,27 @@ function renderFloatingNav(options = {}) {
 // ============================================================================
 function render() {
     const root = document.getElementById('app-root');
-    if (!root) return;
-    console.log('[render] screen=', state.screen);
+    if (!root) {
+        console.error('[render] ERROR: app-root not found!');
+        return;
+    }
+    console.log('[render] screen=', state.screen, 'contentLoading=', state.contentLoading);
     
+    let html = '';
     switch (state.screen) {
         case 'login':
-            root.innerHTML = renderLogin();
+            html = renderLogin();
+            console.log('[render] login HTML length:', html.length);
+            root.innerHTML = html;
             break;
         case 'create-account':
-            root.innerHTML = renderCreateAccount();
+            html = renderCreateAccount();
+            root.innerHTML = html;
             break;
         case 'home':
-            root.innerHTML = renderHome();
+            html = renderHome();
+            console.log('[render] home HTML length:', html.length);
+            root.innerHTML = html;
             break;
         case 'subject-list':
             root.innerHTML = renderSubjectList();

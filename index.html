@@ -49,12 +49,25 @@
         window.scriptLoaded = (name) => {
             loadedScripts.push(name);
             status.textContent = 'Loaded: ' + loadedScripts.join(', ');
+            console.log('[LOADED]', name);
         };
+        
+        // Monitor when app tries to modify app-root
+        const appRoot = document.getElementById('app-root');
+        const observer = new MutationObserver((mutations) => {
+            console.log('[MUTATION] app-root changed, new innerHTML length:', appRoot.innerHTML.length);
+            if (appRoot.innerHTML.length === 0) {
+                console.error('[MUTATION] WARNING: app-root was cleared!');
+            }
+        });
+        observer.observe(appRoot, { childList: true, subtree: true });
         
         setTimeout(() => {
             if (!window.__AFOQT_BOOT_MARKER__) {
-                status.textContent = 'ERROR: app.js did not load!';
+                status.textContent = 'ERROR: app.js did not set boot marker!';
                 status.style.color = 'red';
+            } else {
+                console.log('[CHECK] Boot marker found, app.js executed');
             }
         }, 5000);
     </script>
