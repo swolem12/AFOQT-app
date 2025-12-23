@@ -7795,21 +7795,17 @@ function renderTableReading(question, { highlight = false } = {}) {
     let yHeader = [];
     let values = [];
     let lookup = question.lookup;
-    
+
     if (question.tableSpec) {
-        // New format with tableSpec
         const spec = question.tableSpec;
         xHeader = spec.xHeader || [];
         yHeader = spec.yHeader || [];
         values = spec.cellValues || [];
     } else if (question.tableData) {
-        // Legacy format with tableData
         const tableData = question.tableData;
         xHeader = tableData.headers || [];
         values = tableData.rows || [];
-        // For tableData, first column is Y header (row labels)
         yHeader = values.map(row => row[0] || '');
-        // Cell values are remaining columns (excluding first column)
         values = values.map(row => row.slice(1));
     }
 
@@ -7820,8 +7816,73 @@ function renderTableReading(question, { highlight = false } = {}) {
         highlightY = yHeader.indexOf(lookup.y);
     }
 
-    const headerRow = ['<th class="tr-corner"></th>', ...xHeader.map(x => `<th class="tr-header tr-x">${x}</th>`)];
+    // If Patch 24 config is available, render scoped component per spec
+    if (typeof patch24Config === 'object' && patch24Config) {
+        const scopeClass = (patch24Config.styleTokens && patch24Config.styleTokens.scope) || 'trTableScope';
+        const colors = (patch24Config.styleTokens && patch24Config.styleTokens.colors) || {};
+        const cCyan = colors.cyan || '#00ffff';
+        const cBgDark = colors.bgDark || 'rgba(0,0,0,0.4)';
+        const cPanel = colors.panel || 'rgba(0,20,40,0.6)';
+        const cHeaderBg = colors.headerBg || 'rgba(0,255,255,0.1)';
+        const cBorder = colors.border || 'rgba(0,255,255,0.3)';
+        const cCellBg = colors.cellBg || 'rgba(0,40,60,0.3)';
+        const cText = colors.text || '#e8f6ff';
 
+        const styleBlock = `
+            <style>
+            .${scopeClass} { background: ${cBgDark}; border: 1px solid ${cBorder}; padding: 16px; margin: 10px 0; border-radius: 6px; }
+            .${scopeClass} .trLegendWrap { text-align: center; margin-bottom: 10px; font-size: 13px; color: ${cCyan}; opacity: 0.9; }
+            .${scopeClass} .trTableWrap { overflow: auto; max-height: 280px; }
+            .${scopeClass} table.trTable { margin: 0 auto; border-collapse: collapse; background: ${cPanel}; }
+            .${scopeClass} thead th { position: sticky; top: 0; z-index: 2; padding: 10px; border: 1px solid ${cBorder}; background: ${cHeaderBg}; color: ${cCyan}; font-weight: 700; }
+            .${scopeClass} .trCorner { position: sticky; left: 0; z-index: 3; }
+            .${scopeClass} tbody th { position: sticky; left: 0; z-index: 1; padding: 10px; border: 1px solid ${cBorder}; background: ${cHeaderBg}; color: ${cCyan}; font-weight: 700; }
+            .${scopeClass} td { padding: 10px; border: 1px solid ${cBorder}; background: ${cCellBg}; color: ${cText}; text-align: center; font-size: 16px; }
+            .${scopeClass} .trCellTarget { outline: 2px solid ${cCyan}; box-shadow: 0 0 12px ${cCyan}; }
+            </style>
+        `;
+
+        const headerRowHtml = `
+            <tr>
+                <th class="trCorner">Y (rows ↓) / X (columns →)</th>
+                ${xHeader.map(x => `<th>X = ${x}</th>`).join('')}
+            </tr>
+        `;
+
+        const bodyRowsHtml = yHeader.map((yVal, yIdx) => {
+            const rowCells = values[yIdx] || [];
+            const cells = rowCells.map((cell, xIdx) => {
+                const isTarget = highlightX === xIdx && highlightY === yIdx;
+                const cls = isTarget ? 'trCellTarget' : '';
+                return `<td class="${cls}">${cell}</td>`;
+            }).join('');
+            return `
+                <tr>
+                    <th>Y = ${yVal}</th>
+                    ${cells}
+                </tr>
+            `;
+        }).join('');
+
+        return `
+            <div class="${scopeClass}">
+                ${styleBlock}
+                <div class="trLegendWrap">
+                    <div><strong>Columns (X):</strong> ${xHeader.join(', ')}</div>
+                    <div><strong>Rows (Y):</strong> ${yHeader.join(', ')}</div>
+                </div>
+                <div class="trTableWrap">
+                    <table class="trTable" role="grid">
+                        <thead>${headerRowHtml}</thead>
+                        <tbody>${bodyRowsHtml}</tbody>
+                    </table>
+                </div>
+            </div>
+        `;
+    }
+
+    // Fallback legacy rendering
+    const headerRow = ['<th class="tr-corner"></th>', ...xHeader.map(x => `<th class="tr-header tr-x">${x}</th>`)];
     const bodyRows = yHeader.map((yVal, yIdx) => {
         const rowCells = values[yIdx] || [];
         const cells = rowCells.map((cell, xIdx) => {

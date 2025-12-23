@@ -14,7 +14,11 @@ let patch18Config = null;
  */
 async function loadPatch18Config() {
     try {
-        const response = await fetch('./Test Content/Patch_18.json');
+        // Try new patches folder first, then fallback for backwards compatibility
+        let response = await fetch(encodeURI('./Test Content/patches/Patch_18.json'));
+        if (!response.ok) {
+            response = await fetch(encodeURI('./Test Content/Patch_18.json'));
+        }
         if (!response.ok) {
             console.warn('Patch 18 config not found');
             return null;
@@ -40,12 +44,19 @@ let patch21Config = null;
 // Patch 22 configuration (Table Reading)
 let patch22Config = null;
 
+// Patch 24 configuration (Scoped Table Reading renderer)
+let patch24Config = null;
+
 // Patch: Block Counting (uiSpec-based stacks)
 let patchBlockCountingConfig = null;
 
 async function loadPatch19Config() {
     try {
-        const response = await fetch('./Test Content/Arithmetic/Patch_19.json');
+        // Prefer centralized patches folder, fallback to legacy Arithmetic path
+        let response = await fetch(encodeURI('./Test Content/patches/Patch_19.json'));
+        if (!response.ok) {
+            response = await fetch(encodeURI('./Test Content/Arithmetic/Patch_19.json'));
+        }
         if (!response.ok) {
             console.warn('Patch 19 config not found');
             return null;
@@ -61,7 +72,10 @@ async function loadPatch19Config() {
 
 async function loadPatch20Config() {
     try {
-        const response = await fetch('./Test Content/Patch_20.json');
+        let response = await fetch(encodeURI('./Test Content/patches/Patch_20.json'));
+        if (!response.ok) {
+            response = await fetch(encodeURI('./Test Content/Patch_20.json'));
+        }
         if (!response.ok) {
             console.warn('Patch 20 config not found');
             return null;
@@ -77,7 +91,10 @@ async function loadPatch20Config() {
 
 async function loadPatch21Config() {
     try {
-        const response = await fetch('./Test Content/Patch_21.json');
+        let response = await fetch(encodeURI('./Test Content/patches/Patch_21.json'));
+        if (!response.ok) {
+            response = await fetch(encodeURI('./Test Content/Patch_21.json'));
+        }
         if (!response.ok) {
             console.warn('Patch 21 config not found');
             return null;
@@ -93,7 +110,10 @@ async function loadPatch21Config() {
 
 async function loadPatch22Config() {
     try {
-        const response = await fetch('./Test Content/Patch_22.json');
+        let response = await fetch(encodeURI('./Test Content/patches/Patch_22.json'));
+        if (!response.ok) {
+            response = await fetch(encodeURI('./Test Content/Patch_22.json'));
+        }
         if (!response.ok) {
             console.warn('Patch 22 config not found');
             return null;
@@ -107,10 +127,30 @@ async function loadPatch22Config() {
     }
 }
 
+async function loadPatch24Config() {
+    try {
+        const response = await fetch(encodeURI('./Test Content/patches/patch_24.json'));
+        if (!response.ok) {
+            console.warn('Patch 24 config not found');
+            return null;
+        }
+        patch24Config = await response.json();
+        // Expose globally for app.js renderer usage
+        if (typeof window !== 'undefined') {
+            window.patch24Config = patch24Config;
+        }
+        console.log('✓ Patch 24 config loaded');
+        return patch24Config;
+    } catch (error) {
+        console.error('Failed to load Patch 24 config:', error);
+        return null;
+    }
+}
+
 // Block Counting loader (no external config yet)
 async function loadBlockCountingConfig() {
     try {
-        const response = await fetch('./Test Content/Block Counting/patch_22_block_counting_ui_integration.json');
+        const response = await fetch(encodeURI('./Test Content/Block Counting/patch_22_block_counting_ui_integration.json'));
         if (!response.ok) {
             console.warn('Block Counting config not found');
             return null;
@@ -197,7 +237,7 @@ function findSubjectForSubtopicPatch19(subtopicId) {
  */
 async function loadVocabularyFile(filename) {
     try {
-        const response = await fetch(`./Test Content/Vocabulary/${filename}`);
+        const response = await fetch(encodeURI(`./Test Content/Vocabulary/${filename}`));
         if (!response.ok) {
             console.warn(`Failed to load ${filename}`);
             return null;
@@ -215,7 +255,7 @@ async function loadVocabularyFile(filename) {
  */
 async function loadMathKnowledgeFile(filename) {
     try {
-        const response = await fetch(`./Test Content/Math/${filename}`);
+        const response = await fetch(encodeURI(`./Test Content/Math/${filename}`));
         if (!response.ok) {
             console.warn(`Failed to load ${filename}`);
             return null;
@@ -230,7 +270,7 @@ async function loadMathKnowledgeFile(filename) {
 
 async function loadArithmeticFile(filename) {
     try {
-        const response = await fetch(`./Test Content/Arithmetic/${filename}`);
+        const response = await fetch(encodeURI(`./Test Content/Arithmetic/${filename}`));
         if (!response.ok) {
             console.warn(`Failed to load ${filename}`);
             return null;
@@ -262,7 +302,7 @@ async function loadReadingComprehensionFile(filename) {
 // Physical Science loader
 async function loadPhysicalScienceFile(filename) {
     try {
-        const response = await fetch(`./Test Content/Physical Science/${filename}`);
+        const response = await fetch(encodeURI(`./Test Content/Physical Science/${filename}`));
         if (!response.ok) {
             console.warn(`Failed to load ${filename}`);
             return null;
@@ -278,7 +318,7 @@ async function loadPhysicalScienceFile(filename) {
 // Patch 21: Instrument Comprehension loader
 async function loadInstrumentComprehensionFile(filename) {
     try {
-        const url = `./Test Content/Instrument Comprehension/${filename}`;
+        const url = encodeURI(`./Test Content/Instrument Comprehension/${filename}`);
         const response = await fetch(url);
         if (!response.ok) {
             return null;
@@ -292,7 +332,7 @@ async function loadInstrumentComprehensionFile(filename) {
 
 async function loadTableReadingFile(filename) {
     try {
-        const url = `./Test Content/Table Reading/${filename}`;
+        const url = encodeURI(`./Test Content/Table Reading/${filename}`);
         const response = await fetch(url);
         if (!response.ok) {
             return null;
@@ -306,7 +346,7 @@ async function loadTableReadingFile(filename) {
 
 async function loadBlockCountingFile(filename) {
     try {
-        const url = `./Test Content/Block Counting/${filename}`;
+        const url = encodeURI(`./Test Content/Block Counting/${filename}`);
         const response = await fetch(url);
         if (!response.ok) {
             return null;
@@ -320,7 +360,7 @@ async function loadBlockCountingFile(filename) {
 
 async function loadAviationFile(filename) {
     try {
-        const url = `./Test Content/Aviation/${filename}`;
+        const url = encodeURI(`./Test Content/Aviation/${filename}`);
         const response = await fetch(url);
         if (!response.ok) {
             return null;
@@ -334,7 +374,7 @@ async function loadAviationFile(filename) {
 
 async function loadSituationalFile(filename) {
     try {
-        const url = `./Test Content/Situational/${filename}`;
+        const url = encodeURI(`./Test Content/Situational/${filename}`);
         const response = await fetch(url);
         if (!response.ok) {
             return null;
@@ -618,7 +658,7 @@ async function loadAllReadingComprehensionContent() {
     console.log('Loading reading comprehension content...');
 
     const difficulties = ['beginner', 'advanced', 'expert'];
-    const maxPassages = 30; // reasonable upper bound to scan per difficulty
+    const maxPassages = 20; // actual max passages per difficulty in repo
     const files = [];
     for (const d of difficulties) {
         for (let idx = 1; idx <= maxPassages; idx++) {
@@ -682,7 +722,7 @@ async function loadAllInstrumentComprehensionContent() {
     console.log('Loading instrument comprehension content...');
 
     const difficulties = ['beginner', 'advanced', 'expert'];
-    const maxParts = 5; // scan for part1, part2, etc.
+    const maxParts = 1; // only part1 exists per difficulty
     const files = [];
     for (const d of difficulties) {
         for (let part = 1; part <= maxParts; part++) {
@@ -732,7 +772,7 @@ async function loadAllTableReadingContent() {
     console.log('Loading table reading content...');
 
     const difficulties = ['beginner', 'advanced', 'expert'];
-    const maxParts = 5;
+    const maxParts = 2; // part1 and part2 exist
     const files = [];
     for (const d of difficulties) {
         for (let part = 1; part <= maxParts; part++) {
@@ -866,7 +906,7 @@ async function loadAllBlockCountingContent() {
     console.log('Loading block counting content...');
 
     const difficulties = ['beginner', 'advanced', 'expert'];
-    const maxParts = 5;
+    const maxParts = 2; // part1 and part2 exist
     const files = [];
     for (const d of difficulties) {
         for (let part = 1; part <= maxParts; part++) {
@@ -947,67 +987,6 @@ async function loadAllAviationContent() {
     return questionRegistry;
 }
 
-async function loadAllPhysicalScienceContent() {
-    console.log('Loading physical science content...');
-
-    const physicsScienceTopics = [
-        'chemistry_basics',
-        'earth_space',
-        'electricity_magnetism',
-        'energy_heat',
-        'fluids_pressure',
-        'motion_mechanics',
-        'optics_waves'
-    ];
-
-    const difficulties = ['beginner', 'advanced', 'expert'];
-    const maxParts = 2; // Most physical science files have up to 2 parts
-
-    let loadedCount = 0;
-    const files = [];
-    
-    // Generate all expected filenames
-    physicsScienceTopics.forEach(topic => {
-        difficulties.forEach(difficulty => {
-            for (let part = 1; part <= maxParts; part++) {
-                files.push(`physical_science_${topic}_${difficulty}_part${part}.json`);
-            }
-        });
-    });
-
-    const loadPromises = files.map(async (filename) => {
-        const data = await loadPhysicalScienceFile(filename);
-        if (!data || !data.questions) {
-            return; // skip missing files silently
-        }
-
-        const subjectId = data.subjectId || 'physical_science';
-        const subtopicId = data.subtopicId || 'physics_general';
-        const difficulty = data.difficulty || 'beginner';
-
-        if (!questionRegistry[subjectId]) {
-            questionRegistry[subjectId] = {};
-        }
-        if (!questionRegistry[subjectId][subtopicId]) {
-            questionRegistry[subjectId][subtopicId] = { beginner: [], advanced: [], expert: [] };
-        }
-        if (!questionRegistry[subjectId][subtopicId][difficulty]) {
-            questionRegistry[subjectId][subtopicId][difficulty] = [];
-        }
-
-        questionRegistry[subjectId][subtopicId][difficulty].push(...data.questions);
-        loadedCount++;
-    });
-
-    await Promise.all(loadPromises);
-    console.log(`✓ Loaded ${loadedCount} physical science files`);
-    if (questionRegistry.physical_science) {
-        console.log('Physical Science question registry topics:', Object.keys(questionRegistry.physical_science));
-    }
-    return questionRegistry;
-}
-
-
 async function loadAllSituationalContent() {
     console.log('Loading situational judgment content...');
 
@@ -1078,6 +1057,14 @@ function convertJsonQuestionToAppFormat(jsonQuestion) {
     // Preserve uiSpec for math UI rendering
     if (jsonQuestion.uiSpec) {
         converted.uiSpec = jsonQuestion.uiSpec;
+    }
+
+    // Preserve table reading structures
+    if (jsonQuestion.tableSpec) {
+        converted.tableSpec = jsonQuestion.tableSpec;
+    }
+    if (jsonQuestion.lookup !== undefined) {
+        converted.lookup = jsonQuestion.lookup;
     }
     
     // Preserve fastStrategy for quick tips display
@@ -1379,6 +1366,9 @@ async function initializePatch18() {
     if (patch22Config) {
         await loadAllTableReadingContent();
     }
+
+    // Load Patch 24 (scoped Table Reading renderer)
+    await loadPatch24Config();
 
     // Load Block Counting config (optional) and content
     await loadBlockCountingConfig();
