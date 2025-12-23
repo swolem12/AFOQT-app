@@ -1,7 +1,7 @@
 // Service Worker for AFOQT Study Console
 // Provides offline caching and PWA functionality
 
-const CACHE_NAME = 'afoqt-quest-v105';
+const CACHE_NAME = 'afoqt-quest-v107';
 const urlsToCache = [
   './',
   './index.html',
@@ -81,9 +81,8 @@ self.addEventListener('activate', (event) => {
           );
         });
       })
+      .then(() => self.clients.claim())
   );
-  // Claim clients immediately
-  return self.clients.claim();
 });
 
 // Fetch event - serve from cache, fallback to network
