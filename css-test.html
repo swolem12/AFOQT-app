@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path Test</title>
+    <link rel="stylesheet" href="/AFOQT-app/styles.css">
+    <style>
+        #test-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--color-bg-panel, red);
+            color: var(--color-primary, yellow);
+            padding: 40px;
+            border: 2px solid var(--color-primary, yellow);
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <div id="test-box">
+        <h1>CSS Test</h1>
+        <p>If you see cyan/blue colors, CSS is loading.</p>
+        <p>If you see red/yellow, CSS is NOT loading.</p>
+    </div>
+    
+    <script>
+        console.log('Simple test loaded');
+        console.log('getComputedStyle test:', getComputedStyle(document.body).getPropertyValue('--color-primary'));
+    </script>
+</body>
+</html>
