@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/AFOQT-app/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Loading</title>
+    <style>
+        body {
+            background: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            padding: 20px;
+            margin: 0;
+        }
+        .log {
+            background: #001100;
+            border: 1px solid #0f0;
+            padding: 10px;
+            margin: 10px 0;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>AFOQT Load Test</h1>
+    <div class="log" id="log"></div>
+    
+    <script>
+        const log = document.getElementById('log');
+        
+        function addLog(msg) {
+            const line = document.createElement('div');
+            line.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
+            log.appendChild(line);
+            log.scrollTop = log.scrollHeight;
+            console.log(msg);
+        }
+        
+        addLog('Starting diagnostics...');
+        addLog(`Base href: ${document.baseURI}`);
+        
+        // Test fetch paths
+        async function testFetches() {
+            const paths = [
+                './index.html',
+                './app.js',
+                './styles.css',
+                './Test Content/patches/Patch_18.json',
+                './db.js',
+                './patch-loader.js'
+            ];
+            
+            for (const path of paths) {
+                try {
+                    const response = await fetch(path, { method: 'HEAD' });
+                    addLog(`✓ ${path} - ${response.status}`);
+                } catch (e) {
+                    addLog(`✗ ${path} - ${e.message}`);
+                }
+            }
+        }
+        
+        testFetches().then(() => {
+            addLog('');
+            addLog('Now attempting to load app.js...');
+            
+            // Try to load actual app
+            const script = document.createElement('script');
+            script.src = './app.js';
+            script.onerror = () => {
+                addLog('✗ app.js failed to load!');
+            };
+            script.onload = () => {
+                addLog('✓ app.js loaded successfully');
+            };
+            document.head.appendChild(script);
+        });
+    </script>
+</body>
+</html>
