@@ -11637,13 +11637,15 @@ async function init() {
     }
     
     // Initialize database
+    console.log('[INIT] Initializing database...');
     await afoqtDB.init();
+    console.log('[INIT] Database initialized');
     
     // Check if we need to migrate from localStorage
     if (!afoqtDB.hasMigrationCompleted()) {
-        console.log('Migrating data from localStorage to IndexedDB...');
+        console.log('[INIT] Migrating data from localStorage to IndexedDB...');
         const migrationResults = await afoqtDB.migrateFromLocalStorage();
-        console.log('Migration complete:', migrationResults);
+        console.log('[INIT] Migration complete:', migrationResults);
     }
     
     // Show Evangelion-style boot sequence on first load
@@ -11651,24 +11653,37 @@ async function init() {
     const params = new URLSearchParams(location.search);
     const forceBoot = params.get('boot') === '1' || params.get('forceBoot') === '1';
     const hasBooted = sessionStorage.getItem('afoqt-booted');
-    console.log('[BOOT CHECK]', {hasBooted, forceBoot, shouldShowBoot: !hasBooted || forceBoot});
+    console.log('[INIT] BOOT CHECK', {hasBooted, forceBoot, shouldShowBoot: !hasBooted || forceBoot});
     if (!hasBooted || forceBoot) {
-        console.log('[BOOT] Starting boot sequence...');
-        await showBootSequence();
-        console.log('[BOOT] Boot sequence complete');
+        console.log('[INIT] Starting boot sequence...');
+        try {
+            await showBootSequence();
+            console.log('[INIT] Boot sequence complete');
+        } catch (bootErr) {
+            console.error('[INIT] Boot sequence failed:', bootErr);
+        }
         sessionStorage.setItem('afoqt-booted', 'true');
     } else {
-        console.log('[BOOT] Skipping boot - already shown this session');
+        console.log('[INIT] Skipping boot - already shown this session');
     }
     
+    console.log('[INIT] Loading players...');
     state.players = await loadPlayers();
+    console.log('[INIT] Loaded', state.players.length, 'players');
+    
+    console.log('[INIT] Loading settings...');
     await loadSettings(); // Load settings from database
+    console.log('[INIT] Settings loaded');
+    
     if (state.players.length > 0) {
         state.currentPlayer = state.players[0];
+        console.log('[INIT] Restoring session state...');
         // Restore session state after boot (user should see their last screen)
         await restoreSessionState();
+        console.log('[INIT] Session state restored, screen:', state.screen);
     } else {
         // No players, show login
+        console.log('[INIT] No players, setting screen to login');
         state.screen = 'login';
     }
     
@@ -11789,11 +11804,15 @@ async function init() {
     
     // Mark content as ready (either loaded successfully or using procedural fallbacks)
     // Always set to true because app can fall back to procedural question generators
+    console.log('[INIT] Marking content ready, about to call render()...');
     state.contentLoading = false;
     state.contentReady = true;
     
+    console.log('[INIT] Calling final render()...');
     render();
+    console.log('[INIT] render() completed, calling registerServiceWorker()...');
     registerServiceWorker();
+    console.log('[INIT] init() COMPLETE');
 }
 
 // Register Service Worker for PWA functionality
