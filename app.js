@@ -11209,10 +11209,10 @@ function attachEventListeners() {
     const beginnerDiffBtn = document.getElementById('beginner-diff-btn');
     if (beginnerDiffBtn) {
         if (DEBUG_MODE) console.log('✓ Beginner difficulty button found, attaching click handler');
-        beginnerDiffBtn.addEventListener('click', () => {
+        beginnerDiffBtn.addEventListener('click', async () => {
             if (DEBUG_MODE) console.log('Beginner difficulty button clicked', {currentTopic: state.currentTopic});
             if (state.currentTopic) {
-                startQuiz(state.currentTopic.id, 'practice', 'beginner').catch(err => {
+                await startQuiz(state.currentTopic.id, 'practice', 'beginner').catch(err => {
                     console.error('Error starting quiz:', err);
                     showErrorNotification('Failed to start quiz. Please try again or select a different topic.');
                 });
@@ -11228,10 +11228,10 @@ function attachEventListeners() {
     const advancedDiffBtn = document.getElementById('advanced-diff-btn');
     if (advancedDiffBtn) {
         if (DEBUG_MODE) console.log('✓ Advanced difficulty button found, attaching click handler');
-        advancedDiffBtn.addEventListener('click', () => {
+        advancedDiffBtn.addEventListener('click', async () => {
             if (DEBUG_MODE) console.log('Advanced difficulty button clicked', {currentTopic: state.currentTopic});
             if (state.currentTopic) {
-                startQuiz(state.currentTopic.id, 'practice', 'advanced').catch(err => {
+                await startQuiz(state.currentTopic.id, 'practice', 'advanced').catch(err => {
                     console.error('Error starting quiz:', err);
                     showErrorNotification('Failed to start quiz. Please try again or select a different topic.');
                 });
@@ -11247,10 +11247,10 @@ function attachEventListeners() {
     const expertDiffBtn = document.getElementById('expert-diff-btn');
     if (expertDiffBtn) {
         if (DEBUG_MODE) console.log('✓ Expert difficulty button found, attaching click handler');
-        expertDiffBtn.addEventListener('click', () => {
+        expertDiffBtn.addEventListener('click', async () => {
             if (DEBUG_MODE) console.log('Expert difficulty button clicked', {currentTopic: state.currentTopic});
             if (state.currentTopic) {
-                startQuiz(state.currentTopic.id, 'practice', 'expert').catch(err => {
+                await startQuiz(state.currentTopic.id, 'practice', 'expert').catch(err => {
                     console.error('Error starting quiz:', err);
                     showErrorNotification('Failed to start quiz. Please try again or select a different topic.');
                 });
