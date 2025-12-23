@@ -5794,14 +5794,15 @@ async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
                 
                 // Fallback to procedural generation
                 if (sectionQuestions.length < section.count && topic.generateQuestion) {
-                const needed = Math.min(questionsPerTopic, section.count - sectionQuestions.length);
-                for (let i = 0; i < needed; i++) {
-                    const q = topic.generateQuestion(difficulty);
-                    if (q) {
-                        q._section = section.name;
-                        q._topicId = section.topicId;
-                        q._sourceTopicId = topic.id;
-                        sectionQuestions.push(q);
+                    const needed = Math.min(questionsPerTopic, section.count - sectionQuestions.length);
+                    for (let i = 0; i < needed; i++) {
+                        const q = topic.generateQuestion(difficulty);
+                        if (q) {
+                            q._section = section.name;
+                            q._topicId = section.topicId;
+                            q._sourceTopicId = topic.id;
+                            sectionQuestions.push(q);
+                        }
                     }
                 }
             }
@@ -11990,6 +11991,4 @@ function renderCreateAccount() {
             </div>
         </div>
     `;
-}
-
 }
