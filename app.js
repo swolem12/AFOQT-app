@@ -11855,10 +11855,17 @@ async function startApp() {
 
 if (document.readyState === 'loading') {
     console.log('[BOOT] DOM is loading; attaching DOMContentLoaded handler');
-    document.addEventListener('DOMContentLoaded', startApp);
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('[BOOT] DOMContentLoaded fired, calling startApp');
+        startApp().catch(err => console.error('[BOOT] startApp error:', err));
+    });
 } else {
-    console.log('[BOOT] DOM is ready; calling startApp immediately');
-    startApp();
+    console.log('[BOOT] DOM is ready (readyState:', document.readyState, '); calling startApp immediately');
+    // Use setTimeout to ensure all deferred scripts have executed
+    setTimeout(() => {
+        console.log('[BOOT] setTimeout calling startApp');
+        startApp().catch(err => console.error('[BOOT] startApp error:', err));
+    }, 0);
 }
 
 // ============================================================================
