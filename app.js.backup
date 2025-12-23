@@ -11815,14 +11815,11 @@ async function startApp() {
     }
 }
 
-console.log('[DEBUG] About to check readyState for boot...');
-
 if (document.readyState === 'loading') {
     console.log('[BOOT] DOM is loading; attaching DOMContentLoaded handler');
     document.addEventListener('DOMContentLoaded', startApp);
 } else {
-    console.log('[BOOT] DOM is ready or interactive (readyState:', document.readyState, '); calling startApp');
-    // DOM is either 'interactive' or 'complete', both are ready for deferred scripts
+    console.log('[BOOT] DOM is ready; calling startApp immediately');
     startApp();
 }
 
@@ -11992,4 +11989,5 @@ function renderCreateAccount() {
     `;
 }
 
+// Auto-fix: closing brace to balance file-level scope
 }
