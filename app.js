@@ -11945,12 +11945,47 @@ async function restoreSessionState() {
         state.currentSubject = subjects.find(s => s.id === sessionState.currentSubjectId);
         state.screen = 'subject';
     } else if (sessionState.currentTopicId && ['mode-select', 'difficulty-select', 'quiz', 'results'].includes(sessionState.screen)) {
-        state.currentTopic = topics.find(t => t.id === sessionState.currentTopicId);
-        // Only restore quiz states if we have questions (avoid loading incomplete quizzes)
-        if (sessionState.screen !== 'quiz' || state.quiz.questions.length > 0) {
-            state.screen = sessionState.screen;
+        // Try to find topic by ID - handle legacy topic IDs that might not have subject prefix
+        let topic = topics.find(t => t.id === sessionState.currentTopicId);
+        
+        // Migration: If topic not found, try matching with subject prefix (for old saved sessions)
+        if (!topic) {
+            const legacyTopicId = sessionState.currentTopicId;
+            console.log(`⚠ Topic not found for ID: ${legacyTopicId}, attempting migration...`);
+            
+            // Try prepending various subject prefixes
+            const possiblePrefixes = ['physical_science', 'math_knowledge', 'arithmetic_reasoning', 'vocabulary', 'word_knowledge', 'verbal_analogies'];
+            for (const prefix of possiblePrefixes) {
+                const newId = `${prefix}_${legacyTopicId}`;
+                topic = topics.find(t => t.id === newId);
+                if (topic) {
+                    console.log(`✓ Migrated legacy topic ID: ${legacyTopicId} → ${topic.id}`);
+                    break;
+                }
+            }
+            
+            // If still not found, try partial match
+            if (!topic) {
+                topic = topics.find(t => t.id.endsWith(`_${legacyTopicId}`) || t.id.includes(legacyTopicId));
+                if (topic) {
+                    console.log(`✓ Partial match migration: ${legacyTopicId} → ${topic.id}`);
+                }
+            }
+        }
+        
+        state.currentTopic = topic;
+        
+        // If we still don't have a topic, go to home instead of staying on difficulty-select
+        if (!topic) {
+            console.warn(`❌ Could not restore topic ${sessionState.currentTopicId}, redirecting to home`);
+            state.screen = 'home';
         } else {
-            state.screen = 'home'; // Quiz questions lost, go home
+            // Only restore quiz states if we have questions (avoid loading incomplete quizzes)
+            if (sessionState.screen !== 'quiz' || state.quiz.questions.length > 0) {
+                state.screen = sessionState.screen;
+            } else {
+                state.screen = 'home'; // Quiz questions lost, go home
+            }
         }
     } else if (sessionState.screen === 'home' || sessionState.screen === 'settings' || sessionState.screen === 'status' || sessionState.screen === 'equipment' || sessionState.screen === 'achievements' || sessionState.screen === 'analytics') {
         state.screen = sessionState.screen;
