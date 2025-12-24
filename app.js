@@ -11739,7 +11739,11 @@ async function init() {
     if (state.players.length > 0) {
         state.currentPlayer = state.players[0];
         // Restore session state after boot (user should see their last screen)
+        // Save the session topic ID for later re-migration after topics are created
+        state._sessionTopicId = null;
         await restoreSessionState();
+        // Note: If restoreSessionState couldn't find the topic, state._sessionTopicId will be set
+        // so we can re-migrate it after topics are created
     } else {
         // No players, show login
         state.screen = 'login';
@@ -11833,10 +11837,10 @@ async function init() {
                     }
                 }
                 
-                // Re-migrate session topic ID if needed (in case session was restored before topics were created)
-                if (state.currentTopic && !topics.find(t => t.id === state.currentTopic.id)) {
-                    console.log(`[RE-MIGRATE] Current topic not found in topics array, re-migrating...`);
-                    const oldTopicId = state.currentTopic.id;
+                // Re-migrate session topic ID if it couldn't be found when session was restored
+                if (state._sessionTopicId) {
+                    console.log(`[RE-MIGRATE] Re-migrating saved topic ID: ${state._sessionTopicId}...`);
+                    const oldTopicId = state._sessionTopicId;
                     let migratedTopic = null;
                     
                     // Try to find the topic in the new topics array
@@ -11863,10 +11867,12 @@ async function init() {
                     
                     if (migratedTopic) {
                         state.currentTopic = migratedTopic;
+                        state.screen = 'difficulty-select'; // Restore to difficulty selection
                         console.log(`[RE-MIGRATE] ✓ Topic re-migrated to: ${migratedTopic.id}`);
+                        state._sessionTopicId = null; // Clear the flag
                     } else {
-                        console.error(`[RE-MIGRATE] ❌ Could not find topic for ${oldTopicId}, clearing currentTopic`);
-                        state.currentTopic = null;
+                        console.error(`[RE-MIGRATE] ❌ Could not find topic for ${oldTopicId}, staying on home`);
+                        state._sessionTopicId = null; // Clear the flag
                     }
                 }
                 
@@ -12060,9 +12066,10 @@ async function restoreSessionState() {
         
         state.currentTopic = topic;
         
-        // If we still don't have a topic, go to home instead of staying on difficulty-select
+        // If we still don't have a topic, save the topic ID for re-migration after topics are created
         if (!topic) {
-            console.warn(`❌ Could not restore topic ${sessionState.currentTopicId}, redirecting to home`);
+            console.warn(`❌ Could not restore topic ${sessionState.currentTopicId}, saving for re-migration after topics load`);
+            state._sessionTopicId = sessionState.currentTopicId; // Save for re-migration
             state.screen = 'home';
         } else {
             // Only restore quiz states if we have questions (avoid loading incomplete quizzes)
