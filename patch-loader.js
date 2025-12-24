@@ -801,7 +801,13 @@ async function loadAllTableReadingContent() {
             questionRegistry['table_reading']['basic_lookup'][difficulty] = [];
         }
 
-        questionRegistry['table_reading']['basic_lookup'][difficulty].push(...data.questions);
+        // Attach file-level tableSpec to each question
+        const questionsWithTableSpec = data.questions.map(q => ({
+            ...q,
+            tableSpec: data.tableSpec
+        }));
+        
+        questionRegistry['table_reading']['basic_lookup'][difficulty].push(...questionsWithTableSpec);
         loadedCount++;
     });
 

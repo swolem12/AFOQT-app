@@ -8160,11 +8160,17 @@ function renderBlockStackIso(uiSpec) {
     let heightMap;
     if (uiSpec.heightMap) {
         heightMap = uiSpec.heightMap;
-    } else if (uiSpec.grid) {
-        // Convert legacy 0/1 grid to heightMap
-        heightMap = uiSpec.grid.map(row => row.map(cell => cell === 1 ? 1 : 0));
+    } else if (uiSpec.stacks && uiSpec.grid) {
+        // Convert stacks array to heightMap
+        const { cols, rows } = uiSpec.grid;
+        heightMap = Array.from({ length: rows }, () => Array(cols).fill(0));
+        uiSpec.stacks.forEach(stack => {
+            if (stack.row < rows && stack.col < cols) {
+                heightMap[stack.row][stack.col] = stack.height;
+            }
+        });
     } else {
-        console.warn('No heightMap or grid found for block_stack_iso');
+        console.warn('No heightMap or stacks found for block_stack_iso');
         return '';
     }
     
