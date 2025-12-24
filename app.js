@@ -6044,6 +6044,16 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
         }
     }
     
+    // CRITICAL: Ensure state.quiz.questions is ALWAYS a valid array before any operations
+    if (typeof state.quiz.questions === 'undefined' || state.quiz.questions === null) {
+        console.error('[CRITICAL] state.quiz.questions was undefined/null, initializing to []');
+        state.quiz.questions = [];
+    }
+    if (!Array.isArray(state.quiz.questions)) {
+        console.error('[CRITICAL] state.quiz.questions is not an array:', typeof state.quiz.questions, state.quiz.questions);
+        state.quiz.questions = [];
+    }
+    
     // Check if we have any questions before starting quiz
     console.log('[BEFORE-CHECK] state.quiz.questions type:', typeof state.quiz.questions, 'isDefined:', typeof state.quiz.questions !== 'undefined', 'isArray:', Array.isArray(state.quiz.questions));
     
@@ -6103,6 +6113,14 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     } catch (error) {
         console.error('[CRITICAL ERROR in startQuiz]', error);
         console.error('Stack:', error.stack);
+        console.error('[ERROR-CONTEXT] Quiz was for:', {
+            topicId,
+            topicName: state.currentTopic?.name,
+            subjectId: state.currentTopic?.subjectId,
+            mode,
+            difficulty,
+            questionsLoaded: Array.isArray(state.quiz.questions) ? state.quiz.questions.length : 'NOT_ARRAY'
+        });
         showErrorNotification(`Quiz initialization failed: ${error.message}`);
         state.screen = 'subject';
         render();
