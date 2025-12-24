@@ -18,6 +18,21 @@ open http://localhost:8000
 
 > **Note:** After updates, hard refresh (Ctrl+Shift+R / Cmd+Shift+R) to clear service worker cache.
 
+## 🧪 Tests & Debugging
+
+Use these pages to verify content loading, question rendering, and spaced repetition logic. If assets look stale, append `?v=debug1` and hard refresh.
+
+- **Content Loader**: Shows subjects, subtopics, and question counts
+   - https://swolem12.github.io/AFOQT-app/tests/test-content-loading.html
+- **Real Questions Viewer**: Renders real JSON questions with math UI
+   - https://swolem12.github.io/AFOQT-app/tests/test-real-questions.html
+- **Tracking & Spaced Repetition Suite**: Full DB tests (15/15)
+   - https://swolem12.github.io/AFOQT-app/tests/test-question-tracking.html
+
+Tips
+- Service worker caching is enabled. If a test fetches an HTML 404 instead of JSON, hard refresh or add `?v=debug1`.
+- Test pages use absolute paths (`/AFOQT-app/...`) so they work on GitHub Pages.
+
 ## 📋 Features
 
 ### Core Functionality
@@ -95,7 +110,7 @@ AFOQT-app/
 ├── app.js                  # Core app logic (10,300+ lines)
 ├── styles.css              # CSS with theme system and math UI
 ├── manifest.json           # PWA manifest
-├── sw.js                   # Service worker (v75)
+├── sw.js                   # Service worker (v108)
 ├── patch-loader.js         # Patch system & question registry (1,000+ lines)
 ├── db.js                   # IndexedDB for spaced repetition
 ├── assets/
@@ -142,6 +157,18 @@ AFOQT-app/
    - No feedback until end
    - Summary report with analytics (score, breakdowns, missed questions)
    - Realistic AFOQT test experience
+
+## 🔀 Question Randomization
+
+All practice experiences randomize questions to avoid repetition while respecting mode rules:
+
+- **Registry Selection**: `getQuestionsFromRegistry()` shuffles pools and samples up to the requested count per subtopic/difficulty.
+- **Spaced Repetition**: `getQuestionsWithSpacedRepetition()` prioritizes due items, fills with unseen, then random seen items; each bucket is shuffled.
+- **Practice Tests (AFOQT)**: `generateAfoqtPracticeTest()` performs stratified random sampling according to configured `difficultyDistribution`, then shuffles to exact length.
+- **Sprint Mode**: Mixes difficulties and shuffles before slicing to size.
+- **Procedural Fallbacks**: Generators construct unique sets and use shuffled choices per item.
+
+Result: Every run provides a varied order and selection across study, sprint, and practice test modes.
 
 ## 🛠️ Technical Stack
 

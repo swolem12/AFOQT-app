@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Block Counting Isometric Test</title>
+  <base href="/AFOQT-app/" />
+  <style>
+    body { font-family: monospace; background: #0a0e27; color: #00ffff; padding: 20px; }
+    h1 { margin-top: 0; text-shadow: 0 0 8px #00ffff; }
+    .controls { margin-bottom: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+    button { background: #00ffff; color: #0a0e27; border: none; padding: 8px 12px; cursor: pointer; font-weight: bold; border-radius: 4px; }
+    button:hover { background: #00cccc; }
+    .note { color: #ffff66; margin: 8px 0; }
+    .bcFigureScope { display: inline-block; padding: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(0,255,255,0.3); border-radius: 8px; box-shadow: 0 0 12px rgba(0,255,255,0.2); }
+    .bcFigureScope svg { overflow: visible; }
+    .bcFigureScope .bc-face--top { fill: rgba(255,255,255,.92); stroke: rgba(0,0,0,.92); stroke-width: 2.2; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+    .bcFigureScope .bc-face--left { fill: rgba(220,220,220,.92); stroke: rgba(0,0,0,.92); stroke-width: 2.2; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+    .bcFigureScope .bc-face--right { fill: rgba(190,190,190,.92); stroke: rgba(0,0,0,.92); stroke-width: 2.2; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+    .meta { margin-top: 8px; color: #99f6ff; }
+    .grid-preview { font-size: 12px; color: #9ae6b4; white-space: pre; background: rgba(0,0,0,0.35); padding: 8px; border-radius: 4px; margin-top: 8px; display: inline-block; }
+  </style>
+</head>
+<body>
+  <h1>Block Counting Isometric Renderer (Test Only)</h1>
+  <div class="note">Uses an isometric projection, exposed-face culling, and scoped styles. No globals leaked.</div>
+  <div class="controls" id="controls"></div>
+  <div id="figure"></div>
+  <div class="meta" id="meta"></div>
+  <div class="grid-preview" id="grid"></div>
+
+  <script>
+    // Sample heightMaps (y rows, x columns)
+    const samples = [
+      { id: 'Single Stack', map: [ [1] ] },
+      { id: 'Stair 2x2', map: [ [1,2], [2,3] ] },
+      { id: 'Pyramid 3x3', map: [ [1,2,1], [2,3,2], [1,2,1] ] },
+      { id: 'L-Shape', map: [ [0,2,2], [0,2,3], [0,0,1] ] },
+      { id: 'Plus 3x3', map: [ [0,2,0], [2,3,2], [0,2,0] ] }
+    ];
+
+    const size = 26;
+    const xVec = { x: size, y: size / 2 };
+    const yVec = { x: -size, y: size / 2 };
+    const zVec = { x: 0, y: -size };
+
+    function hasCube(set, x, y, z) {
+      return set.has(`${x},${y},${z}`);
+    }
+
+    function projectPoint(x, y, z, origin) {
+      return {
+        x: origin.x + x * xVec.x + y * yVec.x + z * zVec.x,
+        y: origin.y + x * xVec.y + y * yVec.y + z * zVec.y
+      };
+    }
+
+    function buildVoxelSet(heightMap) {
+      const set = new Set();
+      for (let y = 0; y < heightMap.length; y++) {
+        const row = heightMap[y] || [];
+        for (let x = 0; x < row.length; x++) {
+          const h = row[x] || 0;
+          for (let z = 0; z < h; z++) {
+            set.add(`${x},${y},${z}`);
+          }
+        }
+      }
+      return set;
+    }
+
+    function cubeCorners(x, y, z, origin) {
+      return {
+        p000: projectPoint(x, y, z, origin),
+        p100: projectPoint(x + 1, y, z, origin),
+        p010: projectPoint(x, y + 1, z, origin),
+        p110: projectPoint(x + 1, y + 1, z, origin),
+        p001: projectPoint(x, y, z + 1, origin),
+        p101: projectPoint(x + 1, y, z + 1, origin),
+        p011: projectPoint(x, y + 1, z + 1, origin),
+        p111: projectPoint(x + 1, y + 1, z + 1, origin)
+      };
+    }
+
+    function facesForCube(x, y, z, origin, voxels) {
+      const pts = cubeCorners(x, y, z, origin);
+      const faces = [];
+      // Top face
+      if (!hasCube(voxels, x, y, z + 1)) {
+        faces.push({
+          type: 'top',
+          depth: x + y + (z + 1) * 2,
+          points: [pts.p001, pts.p101, pts.p111, pts.p011]
+        });
+      }
+      // Right face (+X)
+      if (!hasCube(voxels, x + 1, y, z)) {
+        faces.push({
+          type: 'right',
+          depth: (x + 1) + y + z * 2,
+          points: [pts.p100, pts.p110, pts.p111, pts.p101]
+        });
+      }
+      // Left face (+Y)
+      if (!hasCube(voxels, x, y + 1, z)) {
+        faces.push({
+          type: 'left',
+          depth: x + (y + 1) + z * 2,
+          points: [pts.p010, pts.p110, pts.p111, pts.p011]
+        });
+      }
+      return faces;
+    }
+
+    function renderHeightMap(heightMap) {
+      const voxels = buildVoxelSet(heightMap);
+      const totalBlocks = voxels.size;
+      // Compute bounds
+      const rows = heightMap.length;
+      const cols = heightMap[0]?.length || 0;
+      const maxH = Math.max(0, ...heightMap.flat());
+      const origin = { x: cols * size, y: rows * size + maxH * size * 0.5 + 40 };
+
+      const allFaces = [];
+      for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
+          const h = heightMap[y]?.[x] || 0;
+          for (let z = 0; z < h; z++) {
+            allFaces.push(...facesForCube(x, y, z, origin, voxels));
+          }
+        }
+      }
+
+      allFaces.sort((a, b) => a.depth - b.depth);
+
+      const svgPolys = allFaces.map(face => {
+        const pts = face.points.map(p => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
+        return `<polygon class="bc-face--${face.type}" points="${pts}"></polygon>`;
+      }).join('\n');
+
+      const w = (cols + rows) * size + 120;
+      const h = (cols + rows + maxH) * size + 120;
+
+      return {
+        svg: `<div class="bcFigureScope"><svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" aria-label="Isometric block figure">${svgPolys}</svg></div>`,
+        totalBlocks
+      };
+    }
+
+    function showSample(sample) {
+      const { svg, totalBlocks } = renderHeightMap(sample.map);
+      document.getElementById('figure').innerHTML = svg;
+      document.getElementById('meta').textContent = `Sample: ${sample.id} | Blocks: ${totalBlocks}`;
+      document.getElementById('grid').textContent = sample.map.map(row => row.join(' ')).join('\n');
+    }
+
+    function init() {
+      const controls = document.getElementById('controls');
+      samples.forEach((s, idx) => {
+        const btn = document.createElement('button');
+        btn.textContent = s.id;
+        btn.onclick = () => showSample(s);
+        if (idx === 0) btn.style.outline = '2px solid #ff00ff';
+        controls.appendChild(btn);
+      });
+      showSample(samples[0]);
+    }
+
+    init();
+  </script>
+</body>
+</html>
