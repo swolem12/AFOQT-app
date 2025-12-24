@@ -5891,9 +5891,14 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     if (topic.isPracticeTest && topic.testConfig && typeof generateAfoqtPracticeTest === 'function') {
         console.log('[QUIZ] Using AFOQT practice test path');
         // Use Patch 18 content-based questions
-        state.quiz.questions = generateAfoqtPracticeTest(topic.testConfig);
+        const qs = generateAfoqtPracticeTest(topic.testConfig);
+        state.quiz.questions = (qs && Array.isArray(qs)) ? qs : [];
         state.quiz.mode = 'practiceTestMode'; // Force practice test mode
         state.quiz.showFeedback = false;
+        // Ensure questions is always an array
+        if (!Array.isArray(state.quiz.questions)) {
+            state.quiz.questions = [];
+        }
     } else if ((topic.subjectId === 'vocabulary' || topic.subjectId === 'word_knowledge' || topic.subjectId === 'verbal_analogies' || topic.subjectId === 'math_knowledge') && typeof getQuestionsWithSpacedRepetition === 'function') {
         console.log('[QUIZ] Using spaced repetition path for', topic.subjectId);
         // Patch 18: Use content-based questions with spaced repetition for vocabulary and math topics
@@ -5913,20 +5918,28 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
                     questionsPerDifficulty,
                     playerId
                 );
-                state.quiz.questions.push(...qs);
+                if (qs && Array.isArray(qs)) {
+                    state.quiz.questions.push(...qs);
+                }
             }
             
             // Shuffle and limit to exact count
             state.quiz.questions = state.quiz.questions.sort(() => Math.random() - 0.5).slice(0, questionCount);
         } else {
             // Regular practice/test mode - use spaced repetition with specified difficulty
-            state.quiz.questions = await getQuestionsWithSpacedRepetition(
+            const qs = await getQuestionsWithSpacedRepetition(
                 topic.subjectId, 
                 topic.id, 
                 difficulty, 
                 questionCount,
                 playerId
             );
+            state.quiz.questions = (qs && Array.isArray(qs)) ? qs : [];
+        }
+        
+        // Ensure questions is always an array
+        if (!Array.isArray(state.quiz.questions)) {
+            state.quiz.questions = [];
         }
         
         // Fallback to procedural if no content available
@@ -5964,15 +5977,25 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
             const perDiff = Math.ceil(questionCount / difficulties.length);
             const pooled = [];
             difficulties.forEach(diff => {
-                pooled.push(...getQuestionsFromRegistry(topic.subjectId, topic.id, diff, perDiff));
+                const qsFromReg = getQuestionsFromRegistry(topic.subjectId, topic.id, diff, perDiff);
+                if (qsFromReg && Array.isArray(qsFromReg)) {
+                    pooled.push(...qsFromReg);
+                }
             });
             state.quiz.questions = pooled.sort(() => Math.random() - 0.5).slice(0, questionCount);
         } else {
-            state.quiz.questions = getQuestionsFromRegistry(topic.subjectId, topic.id, difficulty, questionCount);
+            const qsFromReg = getQuestionsFromRegistry(topic.subjectId, topic.id, difficulty, questionCount);
+            state.quiz.questions = (qsFromReg && Array.isArray(qsFromReg)) ? qsFromReg : [];
             // Fallback to beginner if chosen difficulty has no pool (common for arithmetic where only beginner exists)
             if ((!state.quiz.questions || state.quiz.questions.length === 0) && difficulty !== 'beginner') {
-                state.quiz.questions = getQuestionsFromRegistry(topic.subjectId, topic.id, 'beginner', questionCount);
+                const qsFromRegBeginner = getQuestionsFromRegistry(topic.subjectId, topic.id, 'beginner', questionCount);
+                state.quiz.questions = (qsFromRegBeginner && Array.isArray(qsFromRegBeginner)) ? qsFromRegBeginner : [];
             }
+        }
+        
+        // Ensure questions is always an array
+        if (!Array.isArray(state.quiz.questions)) {
+            state.quiz.questions = [];
         }
 
         // Fallback to procedural generator when registry is empty
