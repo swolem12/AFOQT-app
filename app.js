@@ -11833,6 +11833,43 @@ async function init() {
                     }
                 }
                 
+                // Re-migrate session topic ID if needed (in case session was restored before topics were created)
+                if (state.currentTopic && !topics.find(t => t.id === state.currentTopic.id)) {
+                    console.log(`[RE-MIGRATE] Current topic not found in topics array, re-migrating...`);
+                    const oldTopicId = state.currentTopic.id;
+                    let migratedTopic = null;
+                    
+                    // Try to find the topic in the new topics array
+                    migratedTopic = topics.find(t => t.id === oldTopicId);
+                    
+                    if (!migratedTopic) {
+                        const possiblePrefixes = ['physical_science', 'math_knowledge', 'arithmetic_reasoning', 'vocabulary', 'word_knowledge', 'verbal_analogies'];
+                        for (const prefix of possiblePrefixes) {
+                            const newId = `${prefix}_${oldTopicId}`;
+                            migratedTopic = topics.find(t => t.id === newId);
+                            if (migratedTopic) {
+                                console.log(`[RE-MIGRATE] Found topic with prefix: ${oldTopicId} → ${migratedTopic.id}`);
+                                break;
+                            }
+                        }
+                    }
+                    
+                    if (!migratedTopic) {
+                        migratedTopic = topics.find(t => t.id.endsWith(`_${oldTopicId}`) || t.id.includes(oldTopicId));
+                        if (migratedTopic) {
+                            console.log(`[RE-MIGRATE] Found topic by partial match: ${oldTopicId} → ${migratedTopic.id}`);
+                        }
+                    }
+                    
+                    if (migratedTopic) {
+                        state.currentTopic = migratedTopic;
+                        console.log(`[RE-MIGRATE] ✓ Topic re-migrated to: ${migratedTopic.id}`);
+                    } else {
+                        console.error(`[RE-MIGRATE] ❌ Could not find topic for ${oldTopicId}, clearing currentTopic`);
+                        state.currentTopic = null;
+                    }
+                }
+                
                 // Log registry diagnostics
                 if (typeof questionRegistry !== 'undefined') {
                     console.log('📊 Question Registry Status:');
