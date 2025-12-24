@@ -6100,11 +6100,13 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
     
     if (DEBUG_MODE) console.log(`Starting quiz with ${state.quiz.questions.length} questions`);
     state.quiz.currentIndex = 0;
+    state.quiz.currentSection = 0;
     state.quiz.score = 0;
     state.quiz.selectedAnswer = null;
     state.quiz.questionTimes = [];
     state.quiz.userAnswers = [];
     state.quiz.questionStartTime = Date.now();
+    state.quiz.sections = state.quiz.sections || []; // Ensure sections array exists
     
     state.screen = 'quiz';
     playSfx('start');
