@@ -8102,101 +8102,169 @@ function renderDataTable(uiSpec) {
     if (!uiSpec) return '';
     
     // Get table data from uiSpec or from question's tableSpec
-    const tableSpec = uiSpec.tableSpec || state.quiz.questions[state.quiz.currentIndex].tableSpec;
+    const tableSpec = uiSpec.tableSpec || state.quiz.questions[state.quiz.currentIndex]?.tableSpec;
     if (!tableSpec) {
         console.warn('No tableSpec found for data_table');
         return '';
     }
     
     const { xHeader = [], yHeader = [], cellValues = [] } = tableSpec;
+    const lookup = uiSpec.lookup || null;
     
-    // Build table HTML
-    let tableHtml = `
-        <div class="data-table-container" style="background: rgba(0,0,0,0.4); border: 1px solid rgba(0,255,255,0.2); padding: 20px; margin: 10px 0; border-radius: 6px; overflow-x: auto;">
-            <div style="text-align: center; margin-bottom: 12px; font-size: 13px; color: #00ffff; opacity: 0.9;">
-                <div style="margin-bottom: 4px;"><strong>Columns (X):</strong> values across the top → (X = ${xHeader.join(', ')})</div>
-                <div><strong>Rows (Y):</strong> values down the left ↓ (Y = ${yHeader.join(', ')})</div>
-            </div>
-            <table style="margin: 0 auto; border-collapse: collapse; background: rgba(0,20,40,0.6);">
-                <thead>
-                    <tr>
-                        <th style="padding: 10px; border: 1px solid rgba(0,255,255,0.3); background: rgba(0,255,255,0.1); color: #00ffff; font-weight: 700;">Y (rows ↓) / X (columns →)</th>
-                        ${xHeader.map(x => `<th style="padding: 10px; border: 1px solid rgba(0,255,255,0.3); background: rgba(0,255,255,0.1); color: #00ffff; font-weight: 700;">X = ${x}</th>`).join('')}
-                    </tr>
-                </thead>
-                <tbody>
-                    ${yHeader.map((y, rowIdx) => `
-                        <tr>
-                            <th style="padding: 10px; border: 1px solid rgba(0,255,255,0.3); background: rgba(0,255,255,0.1); color: #00ffff; font-weight: 700;">Y = ${y}</th>
-                            ${xHeader.map((x, colIdx) => {
-                                const value = cellValues[rowIdx] && cellValues[rowIdx][colIdx] !== undefined ? cellValues[rowIdx][colIdx] : '—';
-                                return `<td style="padding: 10px; border: 1px solid rgba(0,255,255,0.3); background: rgba(0,40,60,0.3); color: #e8f6ff; text-align: center; font-size: 16px;">${value}</td>`;
-                            }).join('')}
-                        </tr>
-                    `).join('')}
-                </tbody>
-            </table>
-        </div>
-    `;
+    // Find target cell indices
+    let targetRow = -1, targetCol = -1;
+    if (lookup) {
+        targetRow = yHeader.indexOf(lookup.y);
+        targetCol = xHeader.indexOf(lookup.x);
+    }
     
-    return tableHtml;
+    // Build HTML with sticky headers
+    let html = '<div class="trTableScope">';
+    html += '<div class="trLegendWrap">X-axis (columns) and Y-axis (rows). Sticky headers for easy reference.</div>';
+    html += '<div class="trTableWrap">';
+    html += '<table class="trTable">';
+    
+    // Header row
+    html += '<thead><tr>';
+    html += '<th class="trCorner">X \\ Y</th>';
+    xHeader.forEach((x, colIdx) => {
+        const cls = (targetCol === colIdx && lookup) ? 'trColHdr trPulseAnim' : 'trColHdr';
+        html += `<th class="${cls}">${x}</th>`;
+    });
+    html += '</tr></thead>';
+    
+    // Body rows
+    html += '<tbody>';
+    yHeader.forEach((y, rowIdx) => {
+        html += '<tr>';
+        const rowCls = (targetRow === rowIdx && lookup) ? 'trRowHdr trPulseAnim' : 'trRowHdr';
+        html += `<th class="${rowCls}">${y}</th>`;
+        cellValues[rowIdx].forEach((val, colIdx) => {
+            const isTarget = (rowIdx === targetRow && colIdx === targetCol && lookup);
+            const cellCls = isTarget ? 'trCell trCell--target trPulseAnim' : 'trCell';
+            html += `<td class="${cellCls}">${val}</td>`;
+        });
+        html += '</tr>';
+    });
+    html += '</tbody>';
+    
+    html += '</table></div></div>';
+    return html;
 }
 
-// Block Counting isometric renderer
+// Block Counting isometric renderer with full voxel-based face culling
 function renderBlockStackIso(uiSpec) {
-    if (!uiSpec || !Array.isArray(uiSpec.stacks)) return '';
-
-    const width = uiSpec.width || 360;
-    const height = uiSpec.height || 360;
-    const grid = uiSpec.grid || { cols: 3, rows: 3 };
-    const logicalCols = Math.max(1, grid.cols || 3);
-    const logicalRows = Math.max(1, grid.rows || 3);
+    if (!uiSpec) return '';
     
-    // Better cube sizing for isometric view
-    const maxStacks = Math.max(logicalCols, logicalRows);
-    const cubeBase = Math.max(28, Math.min(50, width / (maxStacks * 1.8)));
-    const cubeW = cubeBase;
-    const cubeH = Math.round(cubeBase * 0.58);
-
-    // Center the grid and provide better spacing
-    const baseLeft = (width / 2) - ((logicalCols - 1) * cubeW * 0.5) - ((logicalRows - 1) * cubeW * 0.25);
-    const baseBottom = Math.max(cubeH * 2, height * 0.15);
-    const colStep = cubeW * 0.866; // √3/2 for proper isometric spacing
-    const rowStepX = -cubeW * 0.433; // -√3/4 for isometric depth
-    const rowStepY = cubeH * 1.0;
-
-    const sortedStacks = [...uiSpec.stacks].sort((a, b) => {
-        if (a.row !== b.row) return a.row - b.row; // front to back
-        return a.col - b.col; // left to right
-    });
-
-    const columnsHtml = sortedStacks.map((stack) => {
-        const { col = 0, row = 0, height: stackHeight = 0 } = stack;
-        const left = baseLeft + (col * colStep) + (row * rowStepX);
-        const bottom = baseBottom + (row * rowStepY);
-        const safeHeight = Math.max(0, stackHeight);
-        const cubes = Array.from({ length: safeHeight }).map((_, level) => {
-            const yOffset = -level * (cubeH * 0.95);
-            const zIndex = (row * 100) + (col * 10) + level;
-            return `<div class="bc-cube" style=\"transform: translateY(${yOffset}px) skewY(-30deg) skewX(-45deg); z-index:${zIndex}; width:${cubeW}px; height:${cubeH}px;\"></div>`;
-        }).join('');
-        const columnZ = (row * 100) + (col * 10);
-        return `<div class="bc-column" style="left:${left}px; bottom:${bottom}px; z-index:${columnZ};">${cubes}</div>`;
-    }).join('');
-
-    const gridHeight = Math.max(height - 120, cubeH * (logicalRows + 3));
-
-    return `
-        <div class="bc-scene" style="width:${width}px; height:${height}px;">
-            <div class="bc-legend">
-                <div class="bc-legend-line">Each column is a stack of cubes.</div>
-                <div class="bc-legend-line">Rows farther back sit higher in view.</div>
-            </div>
-            <div class="bc-grid" style="height:${gridHeight}px;">
-                ${columnsHtml}
-            </div>
-        </div>
-    `;
+    // Normalize to heightMap
+    let heightMap;
+    if (uiSpec.heightMap) {
+        heightMap = uiSpec.heightMap;
+    } else if (uiSpec.grid) {
+        // Convert legacy 0/1 grid to heightMap
+        heightMap = uiSpec.grid.map(row => row.map(cell => cell === 1 ? 1 : 0));
+    } else {
+        console.warn('No heightMap or grid found for block_stack_iso');
+        return '';
+    }
+    
+    const size = 26;
+    const xVec = { x: size, y: size / 2 };
+    const yVec = { x: -size, y: size / 2 };
+    const zVec = { x: 0, y: -size };
+    
+    function hasCube(set, x, y, z) {
+        return set.has(`${x},${y},${z}`);
+    }
+    
+    function projectPoint(x, y, z, origin) {
+        return {
+            x: origin.x + x * xVec.x + y * yVec.x + z * zVec.x,
+            y: origin.y + x * xVec.y + y * yVec.y + z * zVec.y
+        };
+    }
+    
+    function buildVoxelSet(hMap) {
+        const set = new Set();
+        for (let y = 0; y < hMap.length; y++) {
+            const row = hMap[y] || [];
+            for (let x = 0; x < row.length; x++) {
+                const h = row[x] || 0;
+                for (let z = 0; z < h; z++) {
+                    set.add(`${x},${y},${z}`);
+                }
+            }
+        }
+        return set;
+    }
+    
+    function cubeCorners(x, y, z, origin) {
+        return {
+            p000: projectPoint(x, y, z, origin),
+            p100: projectPoint(x + 1, y, z, origin),
+            p010: projectPoint(x, y + 1, z, origin),
+            p110: projectPoint(x + 1, y + 1, z, origin),
+            p001: projectPoint(x, y, z + 1, origin),
+            p101: projectPoint(x + 1, y, z + 1, origin),
+            p011: projectPoint(x, y + 1, z + 1, origin),
+            p111: projectPoint(x + 1, y + 1, z + 1, origin)
+        };
+    }
+    
+    function facesForCube(x, y, z, origin, voxels) {
+        const pts = cubeCorners(x, y, z, origin);
+        const faces = [];
+        if (!hasCube(voxels, x, y, z + 1)) {
+            faces.push({
+                type: 'top',
+                depth: x + y + (z + 1) * 2,
+                points: [pts.p001, pts.p101, pts.p111, pts.p011]
+            });
+        }
+        if (!hasCube(voxels, x + 1, y, z)) {
+            faces.push({
+                type: 'right',
+                depth: (x + 1) + y + z * 2,
+                points: [pts.p100, pts.p110, pts.p111, pts.p101]
+            });
+        }
+        if (!hasCube(voxels, x, y + 1, z)) {
+            faces.push({
+                type: 'left',
+                depth: x + (y + 1) + z * 2,
+                points: [pts.p010, pts.p110, pts.p111, pts.p011]
+            });
+        }
+        return faces;
+    }
+    
+    const voxels = buildVoxelSet(heightMap);
+    const rows = heightMap.length;
+    const cols = heightMap[0]?.length || 0;
+    const maxH = Math.max(0, ...heightMap.flat());
+    const origin = { x: cols * size, y: rows * size + maxH * size * 0.5 + 40 };
+    
+    const allFaces = [];
+    for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
+            const h = heightMap[y]?.[x] || 0;
+            for (let z = 0; z < h; z++) {
+                allFaces.push(...facesForCube(x, y, z, origin, voxels));
+            }
+        }
+    }
+    
+    allFaces.sort((a, b) => a.depth - b.depth);
+    
+    const svgPolys = allFaces.map(face => {
+        const pts = face.points.map(p => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
+        return `<polygon class="bc-face--${face.type}" points="${pts}"></polygon>`;
+    }).join('\n');
+    
+    const w = (cols + rows) * size + 120;
+    const h = (cols + rows + maxH) * size + 120;
+    
+    return `<div class="bcFigureScope"><svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" aria-label="Isometric block figure">${svgPolys}</svg></div>`;
 }
 
 /**
