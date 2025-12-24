@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Content Loading Test</title>
+    <base href="/AFOQT-app/">
     <style>
         body { font-family: monospace; background: #000; color: #0f0; padding: 20px; }
         .success { color: #0f0; }
@@ -12,7 +13,8 @@
 <body>
     <h1>Vocabulary Content Loading Test</h1>
     <div id="output"></div>
-    <script src="patch-loader.js"></script>
+    <!-- Use absolute path to ensure loading on GitHub Pages (cache-busted) -->
+    <script src="/AFOQT-app/patch-loader.js?v=debug1"></script>
     <script>
         const output = document.getElementById('output');
         

@@ -1426,3 +1426,23 @@ if (typeof module !== 'undefined' && module.exports) {
         questionRegistry
     };
 }
+
+// Attach to window for test pages and non-module environments
+if (typeof window !== 'undefined') {
+    window.initializePatch18 = initializePatch18;
+    window.createAfoqtPracticeTestTopics = createAfoqtPracticeTestTopics;
+    window.getQuestionsFromRegistry = getQuestionsFromRegistry;
+    window.generateAfoqtPracticeTest = generateAfoqtPracticeTest;
+    window.loadPatch20Config = loadPatch20Config;
+    window.loadAllReadingComprehensionContent = loadAllReadingComprehensionContent;
+    window.loadPatch21Config = loadPatch21Config;
+    window.loadAllInstrumentComprehensionContent = loadAllInstrumentComprehensionContent;
+    window.loadPatch22Config = loadPatch22Config;
+    window.loadAllTableReadingContent = loadAllTableReadingContent;
+    window.loadBlockCountingConfig = loadBlockCountingConfig;
+    window.loadAllBlockCountingContent = loadAllBlockCountingContent;
+    window.loadAllAviationContent = loadAllAviationContent;
+    window.loadAllSituationalContent = loadAllSituationalContent;
+    window.questionRegistry = questionRegistry;
+    window.getQuestionsWithSpacedRepetition = getQuestionsWithSpacedRepetition;
+}

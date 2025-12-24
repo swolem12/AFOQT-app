@@ -913,4 +913,7 @@ if (typeof window !== 'undefined') {
     afoqtDB.init().catch(err => {
         console.error('Failed to initialize database:', err);
     });
+    // Attach globals for test pages and non-module use
+    window.AfoqtDatabase = AfoqtDatabase;
+    window.afoqtDB = afoqtDB;
 }

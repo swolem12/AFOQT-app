@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question Tracking & Spaced Repetition Test - AFOQT Quest</title>
+    <base href="/AFOQT-app/">
     <style>
         body {
             font-family: 'Courier New', monospace;
@@ -117,8 +118,9 @@
             margin-top: 5px;
         }
     </style>
-    <script src="db.js"></script>
-    <script src="patch-loader.js"></script>
+    <!-- Absolute paths to load core scripts on GitHub Pages (cache-busted) -->
+    <script src="/AFOQT-app/db.js?v=debug1"></script>
+    <script src="/AFOQT-app/patch-loader.js?v=debug1"></script>
 </head>
 <body>
     <h1>🧪 Question Tracking & Spaced Repetition Test Suite</h1>
