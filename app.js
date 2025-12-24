@@ -5950,6 +5950,13 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
         }
     } else if (topic.hasContent && typeof getQuestionsFromRegistry === 'function') {
         console.log('[QUIZ] Using registry path for', topic.subjectId, '/', topic.id);
+        console.log('[REGISTRY-CHECK] Checking questionRegistry:', {
+            registryExists: typeof questionRegistry !== 'undefined',
+            subjectExists: typeof questionRegistry !== 'undefined' && !!questionRegistry[topic.subjectId],
+            subtopicExists: typeof questionRegistry !== 'undefined' && questionRegistry[topic.subjectId] && !!questionRegistry[topic.subjectId][topic.id],
+            difficultyExists: typeof questionRegistry !== 'undefined' && questionRegistry[topic.subjectId] && questionRegistry[topic.subjectId][topic.id] && !!questionRegistry[topic.subjectId][topic.id][difficulty]
+        });
+        
         // Content-based subjects (instrument, table reading, block counting, etc.)
         const questionCount = mode === 'sprint' ? 5 : 10;
         if (mode === 'sprint') {
