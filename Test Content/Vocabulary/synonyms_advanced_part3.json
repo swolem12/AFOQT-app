@@ -1,482 +1,308 @@
 {
-  "subtopicId": "synonyms",
+  "subjectId": null,
   "difficulty": "advanced",
   "part": 3,
   "questions": [
     {
-      "id": "syn_adv_051",
-      "question": "Which word is closest in meaning to 'imbue'?",
+      "id": "synonyms_advanced_q026",
+      "question": "Synonyms: Choose the best match for \"garrulous\"",
       "choices": {
-        "A": "drain",
-        "B": "encourage",
-        "C": "inspire",
-        "D": "measure"
-      },
-      "answer": "C",
-      "explanation": "'Imbue' means fill or inspire with a feeling or quality. 'inspire' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Eliminate first: Cross out opposites or unrelated words. 'inspire' remains as the synonym."
-    },
-    {
-      "id": "syn_adv_052",
-      "question": "Which word is closest in meaning to 'refractory'?",
-      "choices": {
-        "A": "obedient",
-        "B": "stubborn",
-        "C": "cautious",
-        "D": "unstable"
-      },
-      "answer": "B",
-      "explanation": "'Refractory' means someone difficult to control; stubborn or unmanageable. 'stubborn' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of 'refractory' in a sentence—'stubborn' can replace it without changing the meaning."
-    },
-    {
-      "id": "syn_adv_053",
-      "question": "Which word is closest in meaning to 'insipid'?",
-      "choices": {
-        "A": "dull",
-        "B": "sharp",
-        "C": "bitter",
-        "D": "subtle"
+        "A": "talkative",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "ambiguous"
       },
       "answer": "A",
-      "explanation": "'Insipid' means something lacking flavor, zest, or interest; bland or dull. 'dull' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Quick check: 'dull' means the same as 'insipid'. Eliminate opposites and unrelated words."
+      "explanation": "\"garrulous\" and \"talkative\" are closely related in meaning."
     },
     {
-      "id": "syn_adv_054",
-      "question": "Which word is closest in meaning to 'quell'?",
+      "id": "synonyms_advanced_q027",
+      "question": "Synonyms: Choose the best match for \"indolent\"",
       "choices": {
-        "A": "trigger",
-        "B": "suppress",
-        "C": "shift",
+        "A": "lazy",
+        "B": "ambiguous",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"indolent\" and \"lazy\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_advanced_q028",
+      "question": "Synonyms: Choose the best match for \"lucrative\"",
+      "choices": {
+        "A": "profitable",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"lucrative\" and \"profitable\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_advanced_q029",
+      "question": "Synonyms: Choose the best match for \"magnanimous\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "candid",
+        "C": "generous",
+        "D": "ambiguous"
+      },
+      "answer": "C",
+      "explanation": "\"magnanimous\" and \"generous\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_advanced_q030",
+      "question": "Synonyms: Choose the best match for \"perfunctory\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "cursory",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"perfunctory\" and \"cursory\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_advanced_q031",
+      "question": "Synonyms: Choose the best match for \"plausible\"",
+      "choices": {
+        "A": "believable",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"plausible\" and \"believable\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_advanced_q032",
+      "question": "Synonyms: Choose the best match for \"requisite\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "necessary"
+      },
+      "answer": "D",
+      "explanation": "\"requisite\" and \"necessary\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_advanced_q033",
+      "question": "Synonyms: Choose the best match for \"sanguine\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "candid",
+        "C": "optimistic",
+        "D": "ambiguous"
+      },
+      "answer": "C",
+      "explanation": "\"sanguine\" and \"optimistic\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_advanced_q034",
+      "question": "Synonyms: Choose the best match for \"stringent\"",
+      "choices": {
+        "A": "strict",
+        "B": "ambiguous",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "A",
+      "explanation": "\"stringent\" and \"strict\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_advanced_q035",
+      "question": "Synonyms: Choose the best match for \"tedious\"",
+      "choices": {
+        "A": "boring",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"tedious\" and \"boring\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_advanced_q036",
+      "question": "Synonyms: Choose the best match for \"vacuous\"",
+      "choices": {
+        "A": "empty",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"vacuous\" and \"empty\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_advanced_q037",
+      "question": "Synonyms: Choose the best match for \"verisimilitude\"",
+      "choices": {
+        "A": "authenticity",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"verisimilitude\" and \"authenticity\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_advanced_q038",
+      "question": "Synonyms: Choose the best match for \"viable\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "benevolent",
+        "C": "feasible",
+        "D": "candid"
+      },
+      "answer": "C",
+      "explanation": "\"viable\" and \"feasible\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_advanced_q039",
+      "question": "Synonyms: Choose the best match for \"vindicate\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "ambiguous",
+        "C": "candid",
         "D": "justify"
       },
-      "answer": "B",
-      "explanation": "'Quell' means put an end to something, typically by force; to suppress or calm. 'suppress' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Use substitution: Would 'suppress' work in place of 'quell'? Yes—that confirms it."
+      "answer": "D",
+      "explanation": "\"vindicate\" and \"justify\" are closely related in meaning."
     },
     {
-      "id": "syn_adv_055",
-      "question": "Which word is closest in meaning to 'lucid'?",
+      "id": "synonyms_advanced_q040",
+      "question": "Synonyms: Choose the best match for \"voluble\"",
       "choices": {
-        "A": "clear",
-        "B": "lengthy",
-        "C": "fragile",
-        "D": "uncertain"
+        "A": "candid",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "talkative"
       },
-      "answer": "A",
-      "explanation": "'Lucid' means expressed clearly; easy to understand. 'clear' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of sentences using 'lucid'. 'clear' fits the same contexts."
+      "answer": "D",
+      "explanation": "\"voluble\" and \"talkative\" are closely related in meaning."
     },
     {
-      "id": "syn_adv_056",
-      "question": "Which word is closest in meaning to 'prosaic'?",
+      "id": "synonyms_advanced_q041",
+      "question": "Synonyms: Choose the best match for \"ambiguous\"",
       "choices": {
-        "A": "creative",
-        "B": "unimaginative",
-        "C": "delicate",
-        "D": "fragile"
-      },
-      "answer": "B",
-      "explanation": "'Prosaic' means something dull, lacking in imagination or originality. 'unimaginative' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Eliminate first: Cross out opposites or unrelated words. 'unimaginative' remains as the synonym."
-    },
-    {
-      "id": "syn_adv_057",
-      "question": "Which word is closest in meaning to 'zenith'?",
-      "choices": {
-        "A": "beginning",
-        "B": "average",
-        "C": "peak",
-        "D": "decline"
+        "A": "benevolent",
+        "B": "candid",
+        "C": "unclear",
+        "D": "diligent"
       },
       "answer": "C",
-      "explanation": "'Zenith' means the highest point or peak of something. 'peak' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of 'zenith' in a sentence—'peak' can replace it without changing the meaning."
+      "explanation": "\"ambiguous\" and \"unclear\" are closely related in meaning."
     },
     {
-      "id": "syn_adv_058",
-      "question": "Which word is closest in meaning to 'conflate'?",
+      "id": "synonyms_advanced_q042",
+      "question": "Synonyms: Choose the best match for \"benevolent\"",
       "choices": {
-        "A": "separate",
-        "B": "merge",
-        "C": "weaken",
-        "D": "doubt"
+        "A": "diligent",
+        "B": "kind-hearted",
+        "C": "ambiguous",
+        "D": "candid"
       },
       "answer": "B",
-      "explanation": "'Conflate' means combine two or more things, often confusingly. 'merge' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Quick check: 'merge' means the same as 'conflate'. Eliminate opposites and unrelated words."
+      "explanation": "\"benevolent\" and \"kind-hearted\" are closely related in meaning."
     },
     {
-      "id": "syn_adv_059",
-      "question": "Which word is closest in meaning to 'acrimonious'?",
+      "id": "synonyms_advanced_q043",
+      "question": "Synonyms: Choose the best match for \"candid\"",
       "choices": {
-        "A": "bitter",
-        "B": "polite",
-        "C": "formal",
-        "D": "shy"
+        "A": "ambiguous",
+        "B": "diligent",
+        "C": "benevolent",
+        "D": "frank"
       },
-      "answer": "A",
-      "explanation": "'Acrimonious' means bitter or angry speech or debate. 'bitter' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Use substitution: Would 'bitter' work in place of 'acrimonious'? Yes—that confirms it."
+      "answer": "D",
+      "explanation": "\"candid\" and \"frank\" are closely related in meaning."
     },
     {
-      "id": "syn_adv_060",
-      "question": "Which word is closest in meaning to 'fastidious'?",
+      "id": "synonyms_advanced_q044",
+      "question": "Synonyms: Choose the best match for \"diligent\"",
       "choices": {
-        "A": "careless",
-        "B": "meticulous",
-        "C": "rapid",
-        "D": "ordinary"
-      },
-      "answer": "B",
-      "explanation": "'Fastidious' means very attentive to detail or hard to please; meticulous. 'meticulous' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of sentences using 'fastidious'. 'meticulous' fits the same contexts."
-    },
-    {
-      "id": "syn_adv_061",
-      "question": "Which word is closest in meaning to 'ineffable'?",
-      "choices": {
-        "A": "confusing",
-        "B": "unspeakable",
-        "C": "subtle",
-        "D": "delayed"
-      },
-      "answer": "B",
-      "explanation": "'Ineffable' means something too great or extreme to be expressed in words. 'unspeakable' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Eliminate first: Cross out opposites or unrelated words. 'unspeakable' remains as the synonym."
-    },
-    {
-      "id": "syn_adv_062",
-      "question": "Which word is closest in meaning to 'relinquish'?",
-      "choices": {
-        "A": "hold",
-        "B": "restore",
-        "C": "surrender",
-        "D": "justify"
+        "A": "candid",
+        "B": "benevolent",
+        "C": "hardworking",
+        "D": "ambiguous"
       },
       "answer": "C",
-      "explanation": "'Relinquish' means voluntarily give up or surrender something. 'surrender' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of 'relinquish' in a sentence—'surrender' can replace it without changing the meaning."
+      "explanation": "\"diligent\" and \"hardworking\" are closely related in meaning."
     },
     {
-      "id": "syn_adv_063",
-      "question": "Which word is closest in meaning to 'castigate'?",
+      "id": "synonyms_advanced_q045",
+      "question": "Synonyms: Choose the best match for \"eloquent\"",
       "choices": {
-        "A": "train",
-        "B": "praise",
-        "C": "scold",
-        "D": "reward"
+        "A": "ambiguous",
+        "B": "benevolent",
+        "C": "articulate",
+        "D": "candid"
       },
       "answer": "C",
-      "explanation": "'Castigate' means to reprimand or criticize someone harshly. 'scold' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Quick check: 'scold' means the same as 'castigate'. Eliminate opposites and unrelated words."
+      "explanation": "\"eloquent\" and \"articulate\" are closely related in meaning."
     },
     {
-      "id": "syn_adv_064",
-      "question": "Which word is closest in meaning to 'gregarious'?",
+      "id": "synonyms_advanced_q046",
+      "question": "Synonyms: Choose the best match for \"frugal\"",
       "choices": {
-        "A": "shy",
-        "B": "sociable",
-        "C": "quiet",
-        "D": "formal"
+        "A": "candid",
+        "B": "thrifty",
+        "C": "ambiguous",
+        "D": "benevolent"
       },
       "answer": "B",
-      "explanation": "'Gregarious' means someone who enjoys being around other people; sociable. 'sociable' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Use substitution: Would 'sociable' work in place of 'gregarious'? Yes—that confirms it."
+      "explanation": "\"frugal\" and \"thrifty\" are closely related in meaning."
     },
     {
-      "id": "syn_adv_065",
-      "question": "Which word is closest in meaning to 'flagrant'?",
+      "id": "synonyms_advanced_q047",
+      "question": "Synonyms: Choose the best match for \"gregarious\"",
       "choices": {
-        "A": "subtle",
-        "B": "minor",
-        "C": "notorious",
-        "D": "useful"
+        "A": "social",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"gregarious\" and \"social\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_advanced_q048",
+      "question": "Synonyms: Choose the best match for \"harbinger\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "forerunner"
+      },
+      "answer": "D",
+      "explanation": "\"harbinger\" and \"forerunner\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_advanced_q049",
+      "question": "Synonyms: Choose the best match for \"incisive\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "ambiguous",
+        "C": "candid",
+        "D": "penetrating"
+      },
+      "answer": "D",
+      "explanation": "\"incisive\" and \"penetrating\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_advanced_q050",
+      "question": "Synonyms: Choose the best match for \"jocular\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "humorous",
+        "D": "ambiguous"
       },
       "answer": "C",
-      "explanation": "'Flagrant' means something glaringly bad or obviously offensive. 'notorious' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of sentences using 'flagrant'. 'notorious' fits the same contexts."
-    },
-    {
-      "id": "syn_adv_066",
-      "question": "Which word is closest in meaning to 'disparate'?",
-      "choices": {
-        "A": "similar",
-        "B": "distinct",
-        "C": "distant",
-        "D": "stable"
-      },
-      "answer": "B",
-      "explanation": "'Disparate' means fundamentally different or distinct in kind. 'distinct' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Eliminate first: Cross out opposites or unrelated words. 'distinct' remains as the synonym."
-    },
-    {
-      "id": "syn_adv_067",
-      "question": "Which word is closest in meaning to 'enmity'?",
-      "choices": {
-        "A": "friendship",
-        "B": "loyalty",
-        "C": "hostility",
-        "D": "distance"
-      },
-      "answer": "C",
-      "explanation": "'Enmity' means active hatred or hostility between parties. 'hostility' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of 'enmity' in a sentence—'hostility' can replace it without changing the meaning."
-    },
-    {
-      "id": "syn_adv_068",
-      "question": "Which word is closest in meaning to 'ponderous'?",
-      "choices": {
-        "A": "light",
-        "B": "heavy",
-        "C": "swift",
-        "D": "delicate"
-      },
-      "answer": "B",
-      "explanation": "'Ponderous' means something heavy, slow, and difficult to move or handle. 'heavy' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Quick check: 'heavy' means the same as 'ponderous'. Eliminate opposites and unrelated words."
-    },
-    {
-      "id": "syn_adv_069",
-      "question": "Which word is closest in meaning to 'replete'?",
-      "choices": {
-        "A": "full",
-        "B": "scarce",
-        "C": "excessive",
-        "D": "partial"
-      },
-      "answer": "A",
-      "explanation": "'Replete' means fully supplied or filled with something. 'full' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Use substitution: Would 'full' work in place of 'replete'? Yes—that confirms it."
-    },
-    {
-      "id": "syn_adv_070",
-      "question": "Which word is closest in meaning to 'obfuscate'?",
-      "choices": {
-        "A": "clarify",
-        "B": "confuse",
-        "C": "reduce",
-        "D": "measure"
-      },
-      "answer": "B",
-      "explanation": "'Obfuscate' means deliberately make something unclear or difficult to understand. 'confuse' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of sentences using 'obfuscate'. 'confuse' fits the same contexts."
-    },
-    {
-      "id": "syn_adv_071",
-      "question": "Which word is closest in meaning to 'elucidate'?",
-      "choices": {
-        "A": "explain",
-        "B": "question",
-        "C": "avoid",
-        "D": "repeat"
-      },
-      "answer": "A",
-      "explanation": "'Elucidate' means to explain or make something clear. 'explain' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Eliminate first: Cross out opposites or unrelated words. 'explain' remains as the synonym."
-    },
-    {
-      "id": "syn_adv_072",
-      "question": "Which word is closest in meaning to 'molify' (commonly spelled 'mollify')?",
-      "choices": {
-        "A": "aggravate",
-        "B": "soften",
-        "C": "delay",
-        "D": "compare"
-      },
-      "answer": "B",
-      "explanation": "'Molify' means to soften or calm someone's feelings; to appease or pacify. 'soften' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of 'molify' in a sentence—'soften' can replace it without changing the meaning."
-    },
-    {
-      "id": "syn_adv_073",
-      "question": "Which word is closest in meaning to 'auspicious'?",
-      "choices": {
-        "A": "unlucky",
-        "B": "favorable",
-        "C": "neutral",
-        "D": "early"
-      },
-      "answer": "B",
-      "explanation": "'Auspicious' means something that is favorable or suggests a good outcome. 'favorable' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Quick check: 'favorable' means the same as 'auspicious'. Eliminate opposites and unrelated words."
-    },
-    {
-      "id": "syn_adv_074",
-      "question": "Which word is closest in meaning to 'delineate'?",
-      "choices": {
-        "A": "erase",
-        "B": "outline",
-        "C": "weaken",
-        "D": "repeat"
-      },
-      "answer": "B",
-      "explanation": "'Delineate' means describe or outline something precisely. 'outline' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Use substitution: Would 'outline' work in place of 'delineate'? Yes—that confirms it."
-    },
-    {
-      "id": "syn_adv_075",
-      "question": "Which word is closest in meaning to 'deleterious'?",
-      "choices": {
-        "A": "harmful",
-        "B": "complex",
-        "C": "subtle",
-        "D": "temporary"
-      },
-      "answer": "A",
-      "explanation": "'Deleterious' means causing harm or damage. 'harmful' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of sentences using 'deleterious'. 'harmful' fits the same contexts."
+      "explanation": "\"jocular\" and \"humorous\" are closely related in meaning."
     }
-  ]
+  ],
+  "subtopicId": "synonyms"
 }

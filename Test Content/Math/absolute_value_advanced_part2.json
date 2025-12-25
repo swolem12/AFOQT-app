@@ -1,83 +1,308 @@
 {
   "subjectId": "math_knowledge",
-  "subtopicId": "absolute_value",
   "difficulty": "advanced",
   "part": 2,
   "questions": [
     {
-      "id": "mk_av_a_007",
-      "question": "Solve: |x + 3| = 8",
+      "id": "absolute_value_advanced_q020",
+      "question": "Solve: |4x| = 8",
       "choices": {
-        "A": "x = 5 or x = -11",
-        "B": "x = 5 or x = 11",
-        "C": "x = -5 or x = 11",
-        "D": "x = -5 or x = -11",
-        "E": "x = 8 or x = -8"
-      },
-      "answer": "A",
-      "explanation": "Case 1: x + 3 = 8 ⇒ x = 5. Case 2: x + 3 = -8 ⇒ x = -11.",
-      "steps": [
-        "1. Case 1: x + 3 = 8 ⇒ x = 5.",
-        "2. Case 2: x + 3 = -8 ⇒ x = -11.",
-        "3. Check both: |5+3| = 8 ✓, |-11+3| = |-8| = 8 ✓"
-      ],
-      "fastStrategy": "Absolute value equation: split into two cases, positive and negative."
-    },
-    {
-      "id": "mk_av_a_008",
-      "question": "Solve: |3x| = 15",
-      "choices": {
-        "A": "x = 5",
-        "B": "x = -5",
-        "C": "x = 5 or x = -5",
-        "D": "x = 15 or x = -15",
-        "E": "x = 3 or x = -3"
+        "A": "2",
+        "B": "-2",
+        "C": "\u00b12",
+        "D": "No solution"
       },
       "answer": "C",
-      "explanation": "Case 1: 3x = 15 ⇒ x = 5. Case 2: 3x = -15 ⇒ x = -5.",
-      "steps": [
-        "1. Case 1: 3x = 15 ⇒ x = 5.",
-        "2. Case 2: 3x = -15 ⇒ x = -5."
-      ],
-      "fastStrategy": "Absolute value equation: split into two cases."
+      "explanation": "Both x = 2 and x = -2 satisfy the equation."
     },
     {
-      "id": "mk_av_a_009",
-      "question": "What is |-12| + |8| - |-5|?",
+      "id": "absolute_value_advanced_q021",
+      "question": "Solve: |1x| = 9",
       "choices": {
-        "A": "15",
-        "B": "25",
-        "C": "5",
-        "D": "9",
-        "E": "11"
+        "A": "9",
+        "B": "-9",
+        "C": "\u00b19",
+        "D": "No solution"
       },
-      "answer": "A",
-      "explanation": "|-12| = 12, |8| = 8, |-5| = 5. So 12 + 8 - 5 = 15.",
-      "steps": [
-        "1. Calculate |-12| = 12.",
-        "2. Calculate |8| = 8.",
-        "3. Calculate |-5| = 5.",
-        "4. Combine: 12 + 8 - 5 = 15."
-      ],
-      "fastStrategy": "Evaluate each absolute value separately; then perform operations."
+      "answer": "C",
+      "explanation": "Both x = 9 and x = -9 satisfy the equation."
     },
     {
-      "id": "mk_av_a_010",
-      "question": "Solve: |x - 1| = 0",
+      "id": "absolute_value_advanced_q022",
+      "question": "Solve: |1x| = 3",
       "choices": {
-        "A": "x = 0",
-        "B": "x = 1",
-        "C": "x = -1",
-        "D": "x = 1 or x = -1",
-        "E": "No solution"
+        "A": "3",
+        "B": "-3",
+        "C": "\u00b13",
+        "D": "No solution"
       },
-      "answer": "B",
-      "explanation": "|x - 1| = 0 means x - 1 = 0, so x = 1. Absolute value equals zero only when expression inside is zero.",
-      "steps": [
-        "1. |x - 1| = 0 means x - 1 = 0.",
-        "2. Solve: x = 1."
-      ],
-      "fastStrategy": "|A| = 0 only when A = 0."
+      "answer": "C",
+      "explanation": "Both x = 3 and x = -3 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q023",
+      "question": "Solve: |5x| = 9",
+      "choices": {
+        "A": "1",
+        "B": "-1",
+        "C": "\u00b11",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 1 and x = -1 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q024",
+      "question": "Solve: |2x| = 7",
+      "choices": {
+        "A": "3",
+        "B": "-3",
+        "C": "\u00b13",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 3 and x = -3 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q025",
+      "question": "Solve: |4x| = 6",
+      "choices": {
+        "A": "1",
+        "B": "-1",
+        "C": "\u00b11",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 1 and x = -1 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q026",
+      "question": "Solve: |4x| = 1",
+      "choices": {
+        "A": "0",
+        "B": "0",
+        "C": "\u00b10",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 0 and x = -0 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q027",
+      "question": "Solve: |2x| = 8",
+      "choices": {
+        "A": "4",
+        "B": "-4",
+        "C": "\u00b14",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 4 and x = -4 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q028",
+      "question": "Solve: |5x| = 4",
+      "choices": {
+        "A": "0",
+        "B": "0",
+        "C": "\u00b10",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 0 and x = -0 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q029",
+      "question": "Solve: |4x| = 2",
+      "choices": {
+        "A": "0",
+        "B": "0",
+        "C": "\u00b10",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 0 and x = -0 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q030",
+      "question": "Solve: |3x| = 6",
+      "choices": {
+        "A": "2",
+        "B": "-2",
+        "C": "\u00b12",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 2 and x = -2 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q031",
+      "question": "Solve: |2x| = 2",
+      "choices": {
+        "A": "1",
+        "B": "-1",
+        "C": "\u00b11",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 1 and x = -1 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q032",
+      "question": "Solve: |1x| = 2",
+      "choices": {
+        "A": "2",
+        "B": "-2",
+        "C": "\u00b12",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 2 and x = -2 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q033",
+      "question": "Solve: |4x| = 6",
+      "choices": {
+        "A": "1",
+        "B": "-1",
+        "C": "\u00b11",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 1 and x = -1 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q034",
+      "question": "Solve: |1x| = 9",
+      "choices": {
+        "A": "9",
+        "B": "-9",
+        "C": "\u00b19",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 9 and x = -9 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q035",
+      "question": "Solve: |4x| = 9",
+      "choices": {
+        "A": "2",
+        "B": "-2",
+        "C": "\u00b12",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 2 and x = -2 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q036",
+      "question": "Solve: |5x| = 3",
+      "choices": {
+        "A": "0",
+        "B": "0",
+        "C": "\u00b10",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 0 and x = -0 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q037",
+      "question": "Solve: |4x| = 9",
+      "choices": {
+        "A": "2",
+        "B": "-2",
+        "C": "\u00b12",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 2 and x = -2 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q038",
+      "question": "Solve: |4x| = 1",
+      "choices": {
+        "A": "0",
+        "B": "0",
+        "C": "\u00b10",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 0 and x = -0 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q039",
+      "question": "Solve: |2x| = 6",
+      "choices": {
+        "A": "3",
+        "B": "-3",
+        "C": "\u00b13",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 3 and x = -3 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q040",
+      "question": "Solve: |5x| = 3",
+      "choices": {
+        "A": "0",
+        "B": "0",
+        "C": "\u00b10",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 0 and x = -0 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q041",
+      "question": "Solve: |2x| = 3",
+      "choices": {
+        "A": "1",
+        "B": "-1",
+        "C": "\u00b11",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 1 and x = -1 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q042",
+      "question": "Solve: |2x| = 1",
+      "choices": {
+        "A": "0",
+        "B": "0",
+        "C": "\u00b10",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 0 and x = -0 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q043",
+      "question": "Solve: |4x| = 5",
+      "choices": {
+        "A": "1",
+        "B": "-1",
+        "C": "\u00b11",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 1 and x = -1 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q044",
+      "question": "Solve: |3x| = 8",
+      "choices": {
+        "A": "2",
+        "B": "-2",
+        "C": "\u00b12",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 2 and x = -2 satisfy the equation."
     }
-  ]
+  ],
+  "subtopicId": "absolute_value"
 }

@@ -1,0 +1,44 @@
+{
+  "subjectId": "math_knowledge",
+  "difficulty": "expert",
+  "part": 3,
+  "questions": [
+    {
+      "id": "absolute_value_expert_q048",
+      "question": "Solve: ||x + 2| - 3| = 1",
+      "choices": {
+        "A": "{-4, 0, -6, 2}",
+        "B": "{-2, 2}",
+        "C": "{0}",
+        "D": "No solution"
+      },
+      "answer": "A",
+      "explanation": "Nested absolute value requires multiple steps."
+    },
+    {
+      "id": "absolute_value_expert_q049",
+      "question": "Solve: ||x + 2| - 3| = 1",
+      "choices": {
+        "A": "{-4, 0, -6, 2}",
+        "B": "{-2, 2}",
+        "C": "{0}",
+        "D": "No solution"
+      },
+      "answer": "A",
+      "explanation": "Nested absolute value requires multiple steps."
+    },
+    {
+      "id": "absolute_value_expert_q050",
+      "question": "Solve: ||x + 2| - 3| = 1",
+      "choices": {
+        "A": "{-4, 0, -6, 2}",
+        "B": "{-2, 2}",
+        "C": "{0}",
+        "D": "No solution"
+      },
+      "answer": "A",
+      "explanation": "Nested absolute value requires multiple steps."
+    }
+  ],
+  "subtopicId": "absolute_value"
+}

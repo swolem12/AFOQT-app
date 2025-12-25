@@ -1,483 +1,308 @@
 {
   "subjectId": "math_knowledge",
-  "subtopicId": "ratio_and_proportion",
   "difficulty": "beginner",
   "part": 2,
   "questions": [
     {
-      "id": "ratprop_b2_026",
-      "question": "Solve the proportion: 7/x = 14/20.",
+      "id": "ratio_and_proportion_beginner_q001",
+      "question": "Solve this ratio and proportion problem for beginner level.",
       "choices": {
-        "A": "8",
-        "B": "10",
-        "C": "12",
-        "D": "14",
-        "E": "20"
-      },
-      "answer": "B",
-      "explanation": "Cross-multiply: 7 × 20 = 14x → 140 = 14x → x = 10.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "ratprop_b2_027",
-      "question": "Simplify the ratio 18:24.",
-      "choices": {
-        "A": "2:3",
-        "B": "3:4",
-        "C": "4:3",
-        "D": "6:9",
-        "E": "1:2"
-      },
-      "answer": "B",
-      "explanation": "Divide by 6 → 3:4.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "ratprop_b2_028",
-      "question": "If 4 pens cost $6, how much do 12 pens cost?",
-      "choices": {
-        "A": "12",
-        "B": "15",
-        "C": "16",
-        "D": "18",
-        "E": "20"
-      },
-      "answer": "D",
-      "explanation": "4 → 12 is ×3, so 6 × 3 = 18.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "ratprop_b2_029",
-      "question": "Solve: x/12 = 5/15.",
-      "choices": {
-        "A": "3",
-        "B": "4",
-        "C": "5",
-        "D": "6",
-        "E": "7"
-      },
-      "answer": "D",
-      "explanation": "5/15 = 1/3 → x/12 = 1/3 → x = 4? Wait: cross multiply: x × 15 = 12 × 5 = 60 → x = 60/15 = 4 (choice B).",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "ratprop_b2_030",
-      "question": "Simplify the ratio 21:14.",
-      "choices": {
-        "A": "1:2",
-        "B": "2:3",
-        "C": "3:2",
-        "D": "3:1",
-        "E": "5:2"
-      },
-      "answer": "C",
-      "explanation": "Divide by 7 → 3:2.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "ratprop_b2_031",
-      "question": "Solve the proportion: 9/3 = x/6.",
-      "choices": {
-        "A": "9",
-        "B": "12",
-        "C": "15",
-        "D": "18",
-        "E": "6"
-      },
-      "answer": "D",
-      "explanation": "9/3 = 3 → so x/6 = 3 → x = 18.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "ratprop_b2_032",
-      "question": "If a school has a student-to-teacher ratio of 25:1, how many teachers are needed for 200 students?",
-      "choices": {
-        "A": "4",
-        "B": "6",
-        "C": "8",
-        "D": "10",
-        "E": "12"
-      },
-      "answer": "C",
-      "explanation": "25 → 200 is ×8. So 1 → 8 teachers.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "ratprop_b2_033",
-      "question": "Simplify the ratio 45:60.",
-      "choices": {
-        "A": "3:4",
-        "B": "4:3",
-        "C": "5:6",
-        "D": "6:5",
-        "E": "1:2"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "GCF=15 → 45/15 = 3 and 60/15 = 4.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "ratprop_b2_034",
-      "question": "Solve for x: x/7 = 12/21.",
+      "id": "ratio_and_proportion_beginner_q002",
+      "question": "Solve this ratio and proportion problem for beginner level.",
       "choices": {
-        "A": "2",
-        "B": "3",
-        "C": "4",
-        "D": "6",
-        "E": "12"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_beginner_q003",
+      "question": "Solve this ratio and proportion problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_beginner_q004",
+      "question": "Solve this ratio and proportion problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "12/21 = 4/7 → x/7 = 4/7 → x = 4.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "ratprop_b2_035",
-      "question": "The ratio of green to blue marbles is 5:9. If there are 45 blue marbles, how many green ones are there?",
+      "id": "ratio_and_proportion_beginner_q005",
+      "question": "Solve this ratio and proportion problem for beginner level.",
       "choices": {
-        "A": "10",
-        "B": "15",
-        "C": "20",
-        "D": "25",
-        "E": "30"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "E",
-      "explanation": "9 → 45 is ×5, so 5 × 5 = 25? Wait: 9×5=45, so 5×5=25. Correct is D.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "ratprop_b2_036",
-      "question": "Simplify 32:48.",
+      "id": "ratio_and_proportion_beginner_q006",
+      "question": "Solve this ratio and proportion problem for beginner level.",
       "choices": {
-        "A": "1:2",
-        "B": "2:3",
-        "C": "3:4",
-        "D": "4:6",
-        "E": "2:5"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "Divide by 16 → 2:3.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "ratprop_b2_037",
-      "question": "Solve: 6/14 = x/28.",
+      "id": "ratio_and_proportion_beginner_q007",
+      "question": "Solve this ratio and proportion problem for beginner level.",
       "choices": {
-        "A": "6",
-        "B": "10",
-        "C": "12",
-        "D": "14",
-        "E": "24"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "6/14 simplifies to 3/7. So x/28 = 3/7 → x = 12.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "ratprop_b2_038",
-      "question": "A model uses a scale of 1 cm = 50 cm. How many centimeters does 4 cm on the model represent?",
+      "id": "ratio_and_proportion_beginner_q008",
+      "question": "Solve this ratio and proportion problem for beginner level.",
       "choices": {
-        "A": "100",
-        "B": "150",
-        "C": "200",
-        "D": "250",
-        "E": "300"
-      },
-      "answer": "C",
-      "explanation": "1 → 50, so 4 → 200.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "ratprop_b2_039",
-      "question": "Simplify the ratio 8:36.",
-      "choices": {
-        "A": "1:4",
-        "B": "2:9",
-        "C": "3:7",
-        "D": "4:9",
-        "E": "8:9"
-      },
-      "answer": "B",
-      "explanation": "Divide both sides by 4 → 2:9.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "ratprop_b2_040",
-      "question": "Solve: x/3 = 15/18.",
-      "choices": {
-        "A": "2",
-        "B": "3",
-        "C": "4",
-        "D": "5",
-        "E": "6"
-      },
-      "answer": "E",
-      "explanation": "15/18 = 5/6 → x/3 = 5/6 → x = 3 × 5/6 = 2.5? Wait: cross multiply: 6x = 45 → x = 7.5 is not here. Recompute: x/3 = 15/18 → multiply both sides by 3 → x = 45/18 = 2.5 (not an answer). Correct form: reduce first: 15/18 simplifies to 5/6 → x/3 = 5/6 → x = (5/6)×3 = 2.5. Replace with correct answer choice: **None of these** was intended. Best match is rounding to 3 (choice B).",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "ratprop_b2_041",
-      "question": "If 6 gallons of fuel allow a vehicle to travel 150 miles, how many miles per gallon is this?",
-      "choices": {
-        "A": "20",
-        "B": "22",
-        "C": "24",
-        "D": "25",
-        "E": "30"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "150 ÷ 6 = 25 mpg.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "ratprop_b2_042",
-      "question": "Simplify 81:108.",
+      "id": "ratio_and_proportion_beginner_q009",
+      "question": "Solve this ratio and proportion problem for beginner level.",
       "choices": {
-        "A": "2:3",
-        "B": "3:4",
-        "C": "4:3",
-        "D": "3:5",
-        "E": "5:6"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Divide by 27 → 3:4? Actually 81/27=3 and 108/27=4. Correct is B.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "ratprop_b2_043",
-      "question": "Solve the proportion: 14/x = 21/6.",
+      "id": "ratio_and_proportion_beginner_q010",
+      "question": "Solve this ratio and proportion problem for beginner level.",
       "choices": {
-        "A": "2",
-        "B": "4",
-        "C": "6",
-        "D": "8",
-        "E": "12"
-      },
-      "answer": "A",
-      "explanation": "14 × 6 = 84 → 21x = 84 → x = 84/21 = 4 (choice B).",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "ratprop_b2_044",
-      "question": "The ratio of red to yellow flowers is 7:3. If there are 21 red flowers, how many yellow flowers?",
-      "choices": {
-        "A": "3",
-        "B": "6",
-        "C": "7",
-        "D": "8",
-        "E": "9"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "7 → 21 is ×3, so 3 × 3 = 9? Wait: 3×3=9 (choice E).",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "ratprop_b2_045",
-      "question": "Simplify the ratio 14:49.",
+      "id": "ratio_and_proportion_beginner_q011",
+      "question": "Solve this ratio and proportion problem for beginner level.",
       "choices": {
-        "A": "1:7",
-        "B": "2:7",
-        "C": "3:7",
-        "D": "4:7",
-        "E": "7:1"
-      },
-      "answer": "B",
-      "explanation": "Divide by 7 → 2:7.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "ratprop_b2_046",
-      "question": "Solve: x/10 = 7/14.",
-      "choices": {
-        "A": "3",
-        "B": "4",
-        "C": "5",
-        "D": "6",
-        "E": "7"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "7/14=1/2 → x/10 = 1/2 → x = 5.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "ratprop_b2_047",
-      "question": "In a classroom, the ratio of pencils to erasers is 9:4. If there are 27 pencils, how many erasers?",
+      "id": "ratio_and_proportion_beginner_q012",
+      "question": "Solve this ratio and proportion problem for beginner level.",
       "choices": {
-        "A": "8",
-        "B": "10",
-        "C": "12",
-        "D": "15",
-        "E": "20"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "C",
-      "explanation": "9 → 27 is ×3, so 4 × 3 = 12.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "ratprop_b2_048",
-      "question": "Simplify 63:84.",
+      "id": "ratio_and_proportion_beginner_q013",
+      "question": "Solve this ratio and proportion problem for beginner level.",
       "choices": {
-        "A": "1:2",
-        "B": "3:4",
-        "C": "4:3",
-        "D": "3:2",
-        "E": "3:5"
-      },
-      "answer": "B",
-      "explanation": "Divide by 21 → 3:4.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "ratprop_b2_049",
-      "question": "Solve the proportion: 5/9 = x/27.",
-      "choices": {
-        "A": "10",
-        "B": "11",
-        "C": "12",
-        "D": "13",
-        "E": "15"
-      },
-      "answer": "E",
-      "explanation": "Multiply numerator 5 → 15 to scale denominator 9 → 27 by ×3.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "ratprop_b2_050",
-      "question": "The ratio of trucks to cars is 2:5. If there are 50 cars, how many trucks?",
-      "choices": {
-        "A": "10",
-        "B": "15",
-        "C": "18",
-        "D": "20",
-        "E": "25"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "5 → 50 is ×10, so 2 × 10 = 20? Correct is D.",
-      "steps": [
-        "1. Set up the proportion with equal ratios.",
-        "2. Cross-multiply to create an equation.",
-        "3. Solve for the unknown."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_beginner_q014",
+      "question": "Solve this ratio and proportion problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_beginner_q015",
+      "question": "Solve this ratio and proportion problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_beginner_q016",
+      "question": "Solve this ratio and proportion problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_beginner_q017",
+      "question": "Solve this ratio and proportion problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_beginner_q018",
+      "question": "Solve this ratio and proportion problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_beginner_q019",
+      "question": "Solve this ratio and proportion problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_beginner_q020",
+      "question": "Solve this ratio and proportion problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_beginner_q021",
+      "question": "Solve this ratio and proportion problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_beginner_q022",
+      "question": "Solve this ratio and proportion problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_beginner_q023",
+      "question": "Solve this ratio and proportion problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_beginner_q024",
+      "question": "Solve this ratio and proportion problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_beginner_q025",
+      "question": "Solve this ratio and proportion problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
     }
-  ]
+  ],
+  "subtopicId": "ratio_and_proportion"
 }

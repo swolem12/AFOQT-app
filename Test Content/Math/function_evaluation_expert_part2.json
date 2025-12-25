@@ -1,65 +1,308 @@
 {
   "subjectId": "math_knowledge",
-  "subtopicId": "function_evaluation",
   "difficulty": "expert",
   "part": 2,
   "questions": [
     {
-      "id": "mk_func_e_003",
-      "question": "[Expert function evaluation question 3]",
+      "id": "function_evaluation_expert_q025",
+      "question": "Solve this function evaluation problem for expert level.",
       "choices": {
         "A": "Option A",
         "B": "Option B",
         "C": "Option C",
-        "D": "Option D",
-        "E": "Option E"
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Explanation for function_evaluation expert question 3.",
-      "steps": [
-        "1. Step 1",
-        "2. Step 2",
-        "3. Step 3"
-      ],
-      "fastStrategy": "Expert strategy for function_evaluation."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_func_e_004",
-      "question": "[Expert function evaluation question 4]",
+      "id": "function_evaluation_expert_q026",
+      "question": "Solve this function evaluation problem for expert level.",
       "choices": {
         "A": "Option A",
         "B": "Option B",
         "C": "Option C",
-        "D": "Option D",
-        "E": "Option E"
+        "D": "Option D"
       },
-      "answer": "A",
-      "explanation": "Explanation for function_evaluation expert question 4.",
-      "steps": [
-        "1. Step 1",
-        "2. Step 2",
-        "3. Step 3"
-      ],
-      "fastStrategy": "Expert strategy for function_evaluation."
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_func_e_005",
-      "question": "[Expert function evaluation question 5]",
+      "id": "function_evaluation_expert_q027",
+      "question": "Solve this function evaluation problem for expert level.",
       "choices": {
         "A": "Option A",
         "B": "Option B",
         "C": "Option C",
-        "D": "Option D",
-        "E": "Option E"
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q028",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q029",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Explanation for function_evaluation expert question 5.",
-      "steps": [
-        "1. Step 1",
-        "2. Step 2",
-        "3. Step 3"
-      ],
-      "fastStrategy": "Expert strategy for function_evaluation."
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q030",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q031",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q032",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q033",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q034",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q035",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q036",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q037",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q038",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q039",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q040",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q041",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q042",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q043",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q044",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q045",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q046",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q047",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q048",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_expert_q049",
+      "question": "Solve this function evaluation problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
     }
-  ]
+  ],
+  "subtopicId": "function_evaluation"
 }

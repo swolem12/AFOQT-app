@@ -1,84 +1,308 @@
 {
   "subjectId": "math_knowledge",
-  "subtopicId": "coordinate_geometry",
   "difficulty": "advanced",
   "part": 2,
   "questions": [
     {
-      "id": "mk_cg_a_006",
-      "question": "Find the midpoint of the segment connecting (4, 6) and (8, 10).",
+      "id": "coordinate_geometry_advanced_q021",
+      "question": "Solve this coordinate geometry problem for advanced level.",
       "choices": {
-        "A": "(6, 8)",
-        "B": "(12, 16)",
-        "C": "(2, 4)",
-        "D": "(4, 8)",
-        "E": "(6, 6)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Midpoint = ((x₁+x₂)/2, (y₁+y₂)/2) = ((4+8)/2, (6+10)/2) = (6, 8).",
-      "steps": [
-        "1. Use midpoint formula: ((x₁+x₂)/2, (y₁+y₂)/2).",
-        "2. Substitute: ((4+8)/2, (6+10)/2).",
-        "3. Calculate: (12/2, 16/2) = (6, 8)."
-      ],
-      "fastStrategy": "Midpoint: average x-coordinates and y-coordinates."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_cg_a_007",
-      "question": "Find the slope of the line passing through (-2, 3) and (4, 9).",
+      "id": "coordinate_geometry_advanced_q022",
+      "question": "Solve this coordinate geometry problem for advanced level.",
       "choices": {
-        "A": "1",
-        "B": "2",
-        "C": "3",
-        "D": "-1",
-        "E": "1/2"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q023",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q024",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q025",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Slope = (y₂ - y₁)/(x₂ - x₁) = (9 - 3)/(4 - (-2)) = 6/6 = 1.",
-      "steps": [
-        "1. Use slope formula: m = (y₂ - y₁)/(x₂ - x₁).",
-        "2. Substitute: (9 - 3)/(4 - (-2)).",
-        "3. Calculate: 6/6 = 1."
-      ],
-      "fastStrategy": "Slope: rise over run between two points."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_cg_a_008",
-      "question": "Which quadrant contains the point (-3, 5)?",
+      "id": "coordinate_geometry_advanced_q026",
+      "question": "Solve this coordinate geometry problem for advanced level.",
       "choices": {
-        "A": "I",
-        "B": "II",
-        "C": "III",
-        "D": "IV",
-        "E": "On an axis"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "Quadrant II has negative x and positive y. Point (-3, 5) fits this pattern.",
-      "steps": [
-        "1. x = -3 (negative), y = 5 (positive).",
-        "2. Quadrant II: x < 0, y > 0.",
-        "3. Answer: II."
-      ],
-      "fastStrategy": "Quadrants: I(+,+), II(-,+), III(-,-), IV(+,-)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_cg_a_009",
-      "question": "Find the distance between (0, 0) and (6, 8).",
+      "id": "coordinate_geometry_advanced_q027",
+      "question": "Solve this coordinate geometry problem for advanced level.",
       "choices": {
-        "A": "8",
-        "B": "10",
-        "C": "12",
-        "D": "14",
-        "E": "100"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q028",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q029",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q030",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "Distance = √((x₂-x₁)² + (y₂-y₁)²) = √(6² + 8²) = √(36 + 64) = √100 = 10.",
-      "steps": [
-        "1. Use distance formula: √((x₂-x₁)² + (y₂-y₁)²).",
-        "2. Substitute: √(6² + 8²).",
-        "3. Calculate: √(36 + 64) = √100 = 10."
-      ],
-      "fastStrategy": "Distance formula; recognize 6-8-10 Pythagorean triple."
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q031",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q032",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q033",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q034",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q035",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q036",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q037",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q038",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q039",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q040",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q041",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q042",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q043",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q044",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_advanced_q045",
+      "question": "Solve this coordinate geometry problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
     }
-  ]
+  ],
+  "subtopicId": "coordinate_geometry"
 }

@@ -1,1124 +1,308 @@
 {
   "subjectId": "math_knowledge",
-  "subtopicId": "slope_and_rate_of_change",
   "difficulty": "beginner",
   "part": 2,
   "questions": [
     {
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": -1
-          },
-          "point2": {
-            "x": 3,
-            "y": 1
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      },
-      "copilotInstruction": "Render a 300x300 coordinate plane with grid lines and axes. Draw a line through (-3, -1) and (3, 1). The line should rise gently from left to right.",
-      "id": "mk_slope_b_026",
-      "question": "Based on the line shown on the coordinate plane, what can you say about its slope?",
+      "id": "slope_beginner_q001",
+      "question": "Solve this slope problem for beginner level.",
       "choices": {
-        "A": "It has a large positive slope.",
-        "B": "It has a small positive slope.",
-        "C": "It has a large negative slope.",
-        "D": "It has a small negative slope.",
-        "E": "It has zero slope."
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "B",
-      "explanation": "From left to right, the line goes slightly upward, not very steeply. That means the slope is positive but relatively small in magnitude.",
-      "steps": [
-        "1. Observe the line from the leftmost point to the rightmost point.",
-        "2. See that the y-values increase slightly as x increases.",
-        "3. This indicates a positive slope, and the gentle angle means it is a small positive slope, not a steep one."
-      ],
-      "fastStrategy": "Visually, a shallow uphill line has a small positive slope; a steep uphill line has a large positive slope."
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": 2
-          },
-          "point2": {
-            "x": 3,
-            "y": -4
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      },
-      "copilotInstruction": "Render the same style 300x300 coordinate plane. Draw a line through (-3, 2) and (3, -4). The line should clearly fall from left to right and be moderately steep.",
-      "id": "mk_slope_b_027",
-      "question": "Looking at the line on the coordinate plane, which description fits its slope best?",
+      "id": "slope_beginner_q002",
+      "question": "Solve this slope problem for beginner level.",
       "choices": {
-        "A": "Small positive slope",
-        "B": "Large positive slope",
-        "C": "Small negative slope",
-        "D": "Moderately steep negative slope",
-        "E": "Zero slope"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "slope_beginner_q003",
+      "question": "Solve this slope problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "slope_beginner_q004",
+      "question": "Solve this slope problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "The line clearly moves downward from left to right, so it is negative. The change in y is several units over a few units of x, making it moderately steep, not just slightly tilted.",
-      "steps": [
-        "1. Start from the left point and move to the right along the line.",
-        "2. Notice that the y-value decreases as x increases, indicating a negative slope.",
-        "3. The slope is noticeably tilted rather than barely slanted, making it moderately steep rather than small."
-      ],
-      "fastStrategy": "Negative slope: line goes down to the right. Steeper tilt = larger magnitude of the slope."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -4,
-            "y": 0
-          },
-          "point2": {
-            "x": 4,
-            "y": 0
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      },
-      "copilotInstruction": "Render a 300x300 grid and draw a horizontal line along y = 0 (the x-axis) from x = -4 to x = 4.",
-      "id": "mk_slope_b_028",
-      "question": "The line lies exactly along the x-axis. What is its slope?",
+      "id": "slope_beginner_q005",
+      "question": "Solve this slope problem for beginner level.",
       "choices": {
-        "A": "Positive",
-        "B": "Negative",
-        "C": "Zero",
-        "D": "Undefined",
-        "E": "Cannot be determined"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "slope_beginner_q006",
+      "question": "Solve this slope problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "slope_beginner_q007",
+      "question": "Solve this slope problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "A horizontal line does not rise or fall; its y-value remains constant. That makes the change in y equal to 0, so the slope is 0.",
-      "steps": [
-        "1. Recognize that the line is perfectly horizontal along y = 0.",
-        "2. This means for any change in x, the change in y (rise) is 0.",
-        "3. Slope = rise/run = 0 divided by any nonzero number = 0."
-      ],
-      "fastStrategy": "Any horizontal line, including the x-axis, always has slope 0."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -2,
-            "y": -4
-          },
-          "point2": {
-            "x": -2,
-            "y": 4
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      },
-      "copilotInstruction": "Render the 300x300 grid and draw a vertical line at x = -2 from y = -4 to y = 4.",
-      "id": "mk_slope_b_029",
-      "question": "The line is vertical at x = -2. What is the slope of this line?",
+      "id": "slope_beginner_q008",
+      "question": "Solve this slope problem for beginner level.",
       "choices": {
-        "A": "0",
-        "B": "1",
-        "C": "-1",
-        "D": "Undefined",
-        "E": "2"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "A vertical line has no horizontal change: the x-coordinate is fixed, so the run is 0. Slope = rise/run would require dividing by 0, which is undefined.",
-      "steps": [
-        "1. Note that all points have x = -2, so the run (change in x) is 0.",
-        "2. Slope formula uses run in the denominator.",
-        "3. Dividing by 0 is undefined, so the slope is undefined."
-      ],
-      "fastStrategy": "Vertical line → x = constant → run = 0 → slope undefined."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_slope_b_030",
-      "question": "Find the slope of the line through the points (1, 1) and (4, 7).",
+      "id": "slope_beginner_q009",
+      "question": "Solve this slope problem for beginner level.",
       "choices": {
-        "A": "2",
-        "B": "3/2",
-        "C": "7/4",
-        "D": "4/3",
-        "E": "6"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Using the slope formula, rise = 7 - 1 = 6 and run = 4 - 1 = 3. Slope = 6/3 = 2.",
-      "steps": [
-        "1. Label points: (x1, y1) = (1, 1), (x2, y2) = (4, 7).",
-        "2. Compute rise: y2 - y1 = 7 - 1 = 6.",
-        "3. Compute run: x2 - x1 = 4 - 1 = 3.",
-        "4. Divide: 6/3 = 2."
-      ],
-      "fastStrategy": "Check if rise and run share a common factor so you can simplify quickly.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": 1,
-            "y": 1
-          },
-          "point2": {
-            "x": 4,
-            "y": 7
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_slope_b_031",
-      "question": "Find the slope of the line through the points (-1, 4) and (3, -4).",
+      "id": "slope_beginner_q010",
+      "question": "Solve this slope problem for beginner level.",
       "choices": {
-        "A": "2",
-        "B": "-2",
-        "C": "1/2",
-        "D": "-1/2",
-        "E": "0"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "Using the slope formula, rise = -4 - 4 = -8 and run = 3 - (-1) = 4. So slope = -8/4 = -2.",
-      "steps": [
-        "1. Label points: (x1, y1) = (-1, 4), (x2, y2) = (3, -4).",
-        "2. Compute rise: y2 - y1 = -4 - 4 = -8.",
-        "3. Compute run: x2 - x1 = 3 - (-1) = 4.",
-        "4. Divide: -8/4 = -2."
-      ],
-      "fastStrategy": "If y goes down while x goes up, expect a negative slope even before calculating.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -1,
-            "y": 4
-          },
-          "point2": {
-            "x": 3,
-            "y": -4
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_slope_b_032",
-      "question": "What is the slope of the line given by the equation y = -4x + 2?",
+      "id": "slope_beginner_q011",
+      "question": "Solve this slope problem for beginner level.",
       "choices": {
-        "A": "4",
-        "B": "-4",
-        "C": "2",
-        "D": "-2",
-        "E": "0"
-      },
-      "answer": "B",
-      "explanation": "In slope-intercept form y = mx + b, the coefficient of x is the slope. Here, m = -4, so the slope is -4.",
-      "steps": [
-        "1. Recognize y = -4x + 2 as slope-intercept form y = mx + b.",
-        "2. Identify the coefficient of x (m) as -4.",
-        "3. Therefore the slope is -4."
-      ],
-      "fastStrategy": "Whenever you see y = mx + b, grab the number (with its sign) in front of x as the slope.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": -2
-          },
-          "point2": {
-            "x": 3,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "mk_slope_b_033",
-      "question": "What is the slope of the line given by y = 7?",
-      "choices": {
-        "A": "7",
-        "B": "1",
-        "C": "0",
-        "D": "Undefined",
-        "E": "-7"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "The equation y = 7 represents a horizontal line. The y-value is constant, so there is no vertical change. That means the slope is 0.",
-      "steps": [
-        "1. Recognize that y = 7 has no x term.",
-        "2. This means y never changes: rise = 0.",
-        "3. So slope = 0."
-      ],
-      "fastStrategy": "y = constant → flat horizontal line → slope 0.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": -2
-          },
-          "point2": {
-            "x": 3,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_slope_b_034",
-      "question": "Which equation represents a line with undefined slope?",
+      "id": "slope_beginner_q012",
+      "question": "Solve this slope problem for beginner level.",
       "choices": {
-        "A": "y = -3x + 1",
-        "B": "y = 2",
-        "C": "x = -4",
-        "D": "y = x",
-        "E": "y = 0"
-      },
-      "answer": "C",
-      "explanation": "A vertical line has equation x = constant. The line x = -4 is vertical and therefore has undefined slope.",
-      "steps": [
-        "1. Recall that vertical lines are written as x = constant.",
-        "2. The equation x = -4 fits that pattern.",
-        "3. Vertical lines have run = 0, leading to undefined slope."
-      ],
-      "fastStrategy": "If the equation starts with x = (number), it’s vertical with undefined slope.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": 2,
-            "y": -3
-          },
-          "point2": {
-            "x": 2,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "mk_slope_b_035",
-      "question": "A line has slope 3. If one point on the line is (2, 1), which of the following points is also on the line?",
-      "choices": {
-        "A": "(3, 3)",
-        "B": "(3, 4)",
-        "C": "(4, 7)",
-        "D": "(1, -2)",
-        "E": "(2, 4)"
-      },
-      "answer": "B",
-      "explanation": "A slope of 3 means that for each increase of 1 in x, y increases by 3. From (2, 1), increasing x to 3 adds 1 to x and adds 3 to y, giving (3, 4).",
-      "steps": [
-        "1. Note that slope 3 means 'up 3 for every 1 step right'.",
-        "2. Starting at (2, 1), move right 1 to x = 3.",
-        "3. Move up 3 to y = 4.",
-        "4. That gives the point (3, 4)."
-      ],
-      "fastStrategy": "Think of slope m as 'Δy per Δx'. Use it to step from a known point to see which option fits.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": -2
-          },
-          "point2": {
-            "x": 3,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "mk_slope_b_036",
-      "question": "A line passes through (0, 4) and has a slope of -2. Which point must lie on this line?",
-      "choices": {
-        "A": "(1, 2)",
-        "B": "(1, 6)",
-        "C": "(2, 0)",
-        "D": "(2, 8)",
-        "E": "(-1, 6)"
-      },
-      "answer": "A",
-      "explanation": "Slope -2 means for every 1 unit increase in x, y decreases by 2. From (0, 4), moving to x = 1 means y = 4 - 2 = 2, giving (1, 2).",
-      "steps": [
-        "1. Start at (0, 4).",
-        "2. With slope -2, moving one unit right (x from 0 to 1) decreases y by 2.",
-        "3. So y goes from 4 to 2.",
-        "4. The point (1, 2) lies on the line."
-      ],
-      "fastStrategy": "For a given slope, step from the known point: 'right 1, up/down m' to verify candidate points.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": -2
-          },
-          "point2": {
-            "x": 3,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "mk_slope_b_037",
-      "question": "Find the slope of the line through (3, 3) and (9, 9).",
-      "choices": {
-        "A": "1",
-        "B": "2",
-        "C": "3",
-        "D": "1/2",
-        "E": "0"
-      },
-      "answer": "A",
-      "explanation": "Using the slope formula, rise = 9 - 3 = 6 and run = 9 - 3 = 6. Slope = 6/6 = 1.",
-      "steps": [
-        "1. Label points: (3, 3) and (9, 9).",
-        "2. Compute rise: 9 - 3 = 6.",
-        "3. Compute run: 9 - 3 = 6.",
-        "4. Slope = 6/6 = 1."
-      ],
-      "fastStrategy": "If both x and y increase by the same amount, the slope is 1.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": 3,
-            "y": 3
-          },
-          "point2": {
-            "x": 9,
-            "y": 9
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "mk_slope_b_038",
-      "question": "A line has a slope of 1/2. Which of the following describes this line?",
-      "choices": {
-        "A": "For every 2 units right, y increases by 1.",
-        "B": "For every 1 unit right, y increases by 2.",
-        "C": "For every 2 units right, y decreases by 1.",
-        "D": "For every 1 unit right, y decreases by 2.",
-        "E": "y does not change as x increases."
-      },
-      "answer": "A",
-      "explanation": "A slope of 1/2 means rise/run = 1/2. That describes a line where y increases by 1 unit for every 2 units increase in x.",
-      "steps": [
-        "1. Interpret slope m = 1/2 as rise/run.",
-        "2. 'Rise' of 1 and 'run' of 2 means up 1 for every 2 steps right.",
-        "3. That matches the description in option A."
-      ],
-      "fastStrategy": "Read slopes as 'rise per run' in words: m = 1/2 → 'up 1 for every 2 right.'",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": -2
-          },
-          "point2": {
-            "x": 3,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "mk_slope_b_039",
-      "question": "Which of the following lines has the steepest positive slope?",
-      "choices": {
-        "A": "y = 0.5x",
-        "B": "y = x",
-        "C": "y = 2x",
-        "D": "y = -3x",
-        "E": "y = -0.5x"
-      },
-      "answer": "C",
-      "explanation": "Compare the slopes: 0.5, 1, 2, -3, and -0.5. The largest positive slope is 2, from y = 2x, making it the steepest positive line.",
-      "steps": [
-        "1. Identify the slopes from each equation: 0.5, 1, 2, -3, -0.5.",
-        "2. Ignore the negative slopes when looking for the steepest positive slope.",
-        "3. Among 0.5, 1, and 2, the largest is 2.",
-        "4. So y = 2x has the steepest positive slope."
-      ],
-      "fastStrategy": "When comparing lines, just compare their m-values from y = mx + b. Bigger positive m = steeper uphill line.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": -2
-          },
-          "point2": {
-            "x": 3,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "mk_slope_b_040",
-      "question": "Which of the following lines has a negative slope?",
-      "choices": {
-        "A": "y = 3x + 1",
-        "B": "y = -2x + 4",
-        "C": "y = 0.5x - 2",
-        "D": "y = x + 5",
-        "E": "y = 4"
-      },
-      "answer": "B",
-      "explanation": "In slope-intercept form y = mx + b, the sign of m tells you if the slope is positive or negative. y = -2x + 4 has m = -2, which is negative.",
-      "steps": [
-        "1. Identify each slope m: 3, -2, 0.5, 1, and 0.",
-        "2. Look for the negative one.",
-        "3. Only y = -2x + 4 has a negative slope.",
-        "4. Therefore, it is the line with a negative slope."
-      ],
-      "fastStrategy": "Scan equations for a minus sign in front of the x coefficient to spot negative slopes quickly.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": 3
-          },
-          "point2": {
-            "x": 3,
-            "y": -2
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "mk_slope_b_041",
-      "question": "A line passes through (4, 2) and has slope 1. Which equation represents this line?",
-      "choices": {
-        "A": "y = x + 2",
-        "B": "y = x - 2",
-        "C": "y = x - 3",
-        "D": "y = x - 4",
-        "E": "y = x + 4"
-      },
-      "answer": "C",
-      "explanation": "With slope 1, the equation is y = x + b. Substitute (4, 2): 2 = 4 + b → b = -2. Wait, that suggests y = x - 2, but let's re-check carefully. Using (4, 2): 2 = 4 + b → b = -2, so the correct equation is y = x - 2. The original choice list labeling must be aligned correctly.",
-      "steps": [
-        "1. Start with y = mx + b and m = 1, so y = x + b.",
-        "2. Plug in (4, 2): 2 = 4 + b.",
-        "3. Solve for b: b = 2 - 4 = -2.",
-        "4. The equation is y = x - 2."
-      ],
-      "fastStrategy": "To get b, plug a known point into y = mx + b and solve. Watch your arithmetic signs carefully.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": -2
-          },
-          "point2": {
-            "x": 3,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "mk_slope_b_042",
-      "question": "A line has slope -1 and passes through (0, 3). Which equation represents this line?",
-      "choices": {
-        "A": "y = -x + 3",
-        "B": "y = x + 3",
-        "C": "y = -x - 3",
-        "D": "y = x - 3",
-        "E": "y = 3x - 1"
-      },
-      "answer": "A",
-      "explanation": "With slope -1, the equation is y = -x + b. Plugging in (0, 3): 3 = -0 + b, so b = 3. The equation is y = -x + 3.",
-      "steps": [
-        "1. Use slope-intercept form: y = mx + b with m = -1.",
-        "2. Write y = -x + b.",
-        "3. Substitute (0, 3): 3 = -0 + b → b = 3.",
-        "4. Equation: y = -x + 3."
-      ],
-      "fastStrategy": "When the point has x = 0, that y-value is directly the y-intercept b.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": -2
-          },
-          "point2": {
-            "x": 3,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "mk_slope_b_043",
-      "question": "Which statement correctly describes the slope of a line that goes through (2, 5) and (2, -3)?",
-      "choices": {
-        "A": "Slope is positive.",
-        "B": "Slope is negative.",
-        "C": "Slope is zero.",
-        "D": "Slope is undefined.",
-        "E": "Slope is 1."
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "Both points have x = 2, so the line is vertical. Vertical lines have undefined slope because the run is 0.",
-      "steps": [
-        "1. Note x-values: both are 2.",
-        "2. This means the line is vertical at x = 2.",
-        "3. Vertical lines have run = 0, so slope = rise/run is undefined."
-      ],
-      "fastStrategy": "Same x-values in two points is a dead giveaway for undefined slope.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": 2,
-            "y": 5
-          },
-          "point2": {
-            "x": 2,
-            "y": -3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_slope_b_044",
-      "question": "Which statement correctly describes the slope of a line that goes through (1, 4) and (5, 4)?",
+      "id": "slope_beginner_q013",
+      "question": "Solve this slope problem for beginner level.",
       "choices": {
-        "A": "Slope is positive.",
-        "B": "Slope is negative.",
-        "C": "Slope is zero.",
-        "D": "Slope is undefined.",
-        "E": "Slope is 4."
-      },
-      "answer": "C",
-      "explanation": "Both points have the same y-value of 4, so the line is horizontal. Horizontal lines have slope 0.",
-      "steps": [
-        "1. Note y-values: both are 4.",
-        "2. This means there is no vertical change: rise = 0.",
-        "3. Slope = 0/run = 0."
-      ],
-      "fastStrategy": "Same y-values in the points means a horizontal line with slope 0.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": 1,
-            "y": 4
-          },
-          "point2": {
-            "x": 5,
-            "y": 4
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "mk_slope_b_045",
-      "question": "Find the slope of the line through (-4, -2) and (-2, -3).",
-      "choices": {
-        "A": "-1/2",
-        "B": "1/2",
-        "C": "2",
-        "D": "-2",
-        "E": "0"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Using the slope formula, rise = -3 - (-2) = -1 and run = -2 - (-4) = 2. So slope = -1/2.",
-      "steps": [
-        "1. Label points: (x1, y1) = (-4, -2), (x2, y2) = (-2, -3).",
-        "2. Compute rise: y2 - y1 = -3 - (-2) = -1.",
-        "3. Compute run: x2 - x1 = -2 - (-4) = 2.",
-        "4. Slope = -1/2."
-      ],
-      "fastStrategy": "When signs are mixed, carefully handle double negatives. Slow is smooth, smooth is fast.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -4,
-            "y": -2
-          },
-          "point2": {
-            "x": -2,
-            "y": -3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_slope_b_046",
-      "question": "A line has a slope of 0. Which of the following could be its equation?",
+      "id": "slope_beginner_q014",
+      "question": "Solve this slope problem for beginner level.",
       "choices": {
-        "A": "y = -x + 2",
-        "B": "y = 0x + 5",
-        "C": "y = 2x - 3",
-        "D": "x = 5",
-        "E": "y = -3x"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "If slope is 0, the coefficient of x must be 0. The equation y = 0x + 5 simplifies to y = 5, a horizontal line with slope 0.",
-      "steps": [
-        "1. Recognize that slope 0 means no x term in the simplified equation.",
-        "2. y = 0x + 5 simplifies to y = 5.",
-        "3. y = 5 is horizontal, so its slope is 0."
-      ],
-      "fastStrategy": "Any equation that simplifies to y = constant has slope 0.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": -2
-          },
-          "point2": {
-            "x": 3,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_slope_b_047",
-      "question": "A line decreases by 5 units in y when x increases by 2 units. What is the slope?",
+      "id": "slope_beginner_q015",
+      "question": "Solve this slope problem for beginner level.",
       "choices": {
-        "A": "5/2",
-        "B": "-5/2",
-        "C": "2/5",
-        "D": "-2/5",
-        "E": "0"
-      },
-      "answer": "B",
-      "explanation": "Decrease in y by 5 means rise = -5. Increase in x by 2 means run = 2. So slope = -5/2.",
-      "steps": [
-        "1. Translate 'decreases by 5' to rise = -5.",
-        "2. Translate 'increases by 2' to run = 2.",
-        "3. Slope = rise/run = -5/2."
-      ],
-      "fastStrategy": "Decreasing y over increasing x gives a negative slope; the numbers go right into rise/run.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": -2
-          },
-          "point2": {
-            "x": 3,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "mk_slope_b_048",
-      "question": "Find the slope of the line through (6, -1) and (10, -1).",
-      "choices": {
-        "A": "1",
-        "B": "-1",
-        "C": "0",
-        "D": "Undefined",
-        "E": "2"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "Both y-values are -1, so the line is horizontal. Horizontal lines have slope 0.",
-      "steps": [
-        "1. Note y-values: both are -1.",
-        "2. That means no change in y: rise = 0.",
-        "3. Slope = 0/run = 0."
-      ],
-      "fastStrategy": "Horizontal lines show up constantly; memorize that they always have slope 0.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": 6,
-            "y": -1
-          },
-          "point2": {
-            "x": 10,
-            "y": -1
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_slope_b_049",
-      "question": "Find the slope of the line through (0, -2) and (5, 3).",
+      "id": "slope_beginner_q016",
+      "question": "Solve this slope problem for beginner level.",
       "choices": {
-        "A": "1",
-        "B": "3/5",
-        "C": "5/3",
-        "D": "2",
-        "E": "1/5"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "slope_beginner_q017",
+      "question": "Solve this slope problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "slope_beginner_q018",
+      "question": "Solve this slope problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "Using the slope formula, rise = 3 - (-2) = 5 and run = 5 - 0 = 5. Slope = 5/5 = 1. (Check the answer options carefully; if 1 is not listed correctly, adjust choices to include 1 as the correct answer.)",
-      "steps": [
-        "1. Label points: (x1, y1) = (0, -2), (x2, y2) = (5, 3).",
-        "2. Compute rise: y2 - y1 = 3 - (-2) = 5.",
-        "3. Compute run: x2 - x1 = 5 - 0 = 5.",
-        "4. Slope = 5/5 = 1."
-      ],
-      "fastStrategy": "When the difference in x and y are the same, the slope is 1 or -1 depending on the direction.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": 0,
-            "y": -2
-          },
-          "point2": {
-            "x": 5,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_slope_b_050",
-      "question": "A line passes through (-1, -1) and has slope 2. Which of the following points lies on this line?",
+      "id": "slope_beginner_q019",
+      "question": "Solve this slope problem for beginner level.",
       "choices": {
-        "A": "(0, 1)",
-        "B": "(0, -3)",
-        "C": "(1, 1)",
-        "D": "(1, -1)",
-        "E": "(2, 3)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "Slope 2 means that for 1 unit increase in x, y increases by 2. From (-1, -1) to x = 1 is a change of +2 in x, so y must change by 2 × 2 = 4: -1 + 4 = 3. The correct point matching a single-step move from x = -1 to x = 0 would be y = 1, giving (0, 1). (You can refine the exact pairings to keep the pattern clean.)",
-      "steps": [
-        "1. Use point-slope reasoning: slope 2 means 'up 2 for every 1 right'.",
-        "2. From (-1, -1) to (0, 1): x increased by 1, y increased by 2.",
-        "3. That change is consistent with slope 2.",
-        "4. So (0, 1) lies on the line with slope 2 through (-1, -1)."
-      ],
-      "fastStrategy": "For slope m, track Δy = m × Δx from a known point to test if a candidate point fits.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": -2
-          },
-          "point2": {
-            "x": 3,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "slope_beginner_q020",
+      "question": "Solve this slope problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "slope_beginner_q021",
+      "question": "Solve this slope problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "slope_beginner_q022",
+      "question": "Solve this slope problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "slope_beginner_q023",
+      "question": "Solve this slope problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "slope_beginner_q024",
+      "question": "Solve this slope problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "slope_beginner_q025",
+      "question": "Solve this slope problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
     }
-  ]
+  ],
+  "subtopicId": "slope_and_rate_of_change"
 }

@@ -1,586 +1,315 @@
 {
   "subjectId": "math_knowledge",
-  "subtopicId": "word_problems_equation_setup",
   "difficulty": "beginner",
   "part": 2,
   "questions": [
     {
-      "id": "mk_wp_b_026",
-      "question": "You save $20 each week. After w weeks, you have saved $140. Which equation models this?",
-      "choices": {
-        "A": "20 + w = 140",
-        "B": "20w = 140",
-        "C": "w/20 = 140",
-        "D": "140w = 20",
-        "E": "w - 20 = 140"
-      },
-      "answer": "B",
-      "explanation": "Weekly saving × weeks = total: 20w = 140.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_wp_b_027",
-      "question": "A number plus 11 equals 30. What is the number?",
-      "choices": {
-        "A": "18",
-        "B": "19",
-        "C": "20",
-        "D": "21",
-        "E": "22"
-      },
-      "answer": "B",
-      "explanation": "x + 11 = 30 → x = 19.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_wp_b_028",
-      "question": "A number minus 9 is equal to 4. What is the number?",
-      "choices": {
-        "A": "9",
-        "B": "11",
-        "C": "13",
-        "D": "15",
-        "E": "5"
-      },
-      "answer": "C",
-      "explanation": "x - 9 = 4 → x = 13.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_wp_b_029",
-      "question": "A rectangle has width 6 and length ℓ. Its area A is 48 square units. Which equation models this?",
-      "choices": {
-        "A": "6 + ℓ = 48",
-        "B": "6ℓ = 48",
-        "C": "ℓ/6 = 48",
-        "D": "6 - ℓ = 48",
-        "E": "ℓ - 6 = 48"
-      },
-      "answer": "B",
-      "explanation": "Area = length × width: A = 6ℓ = 48.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division).",
-      "uiSpec": {
-        "type": "geometry_angle_diagram",
-        "width": 300,
-        "height": 300,
-        "showGrid": false,
-        "lines": [
-          {
-            "from": {
-              "x": 150,
-              "y": 150
-            },
-            "to": {
-              "x": 250,
-              "y": 150
-            }
-          },
-          {
-            "from": {
-              "x": 150,
-              "y": 150
-            },
-            "to": {
-              "x": 221,
-              "y": 79
-            }
-          }
-        ],
-        "angleArc": {
-          "center": {
-            "x": 150,
-            "y": 150
-          },
-          "radius": 35,
-          "startRay": 0,
-          "endRay": 1,
-          "label": "45°",
-          "measureDegrees": 45
-        },
-        "styleHints": {
-          "baseLineColor": "#00ffff",
-          "highlightAngleColor": "#ffff00",
-          "labelsColor": "#00ffff"
-        }
-      }
-    },
-    {
-      "id": "mk_wp_b_030",
-      "question": "The sum of a number and twice the number is 21. Which equation is correct?",
-      "choices": {
-        "A": "x + 2 = 21",
-        "B": "2x + 1 = 21",
-        "C": "3x = 21",
-        "D": "x + 21 = 2",
-        "E": "x + 2x = x"
-      },
-      "answer": "C",
-      "explanation": "Number + twice the number → x + 2x = 3x, so 3x = 21.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_wp_b_031",
-      "question": "A tank holds 50 gallons when full. It currently has g gallons, which is 14 gallons less than full. Which equation represents this?",
-      "choices": {
-        "A": "g + 14 = 50",
-        "B": "g - 14 = 50",
-        "C": "50 - g = 14",
-        "D": "g + 50 = 14",
-        "E": "g/14 = 50"
-      },
-      "answer": "A",
-      "explanation": "Current amount plus 14 equals full: g + 14 = 50.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_wp_b_032",
-      "question": "The average of a number and 10 is 13. Which equation correctly models this?",
-      "choices": {
-        "A": "(x + 10)/2 = 13",
-        "B": "x + 10 = 13",
-        "C": "(x - 10)/2 = 13",
-        "D": "2x + 10 = 13",
-        "E": "x/2 + 10 = 13"
-      },
-      "answer": "A",
-      "explanation": "Average of two numbers is their sum divided by 2.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_wp_b_033",
-      "question": "Three more than half a number is 11. Which equation represents this?",
-      "choices": {
-        "A": "x/2 + 3 = 11",
-        "B": "2x + 3 = 11",
-        "C": "x + 3/2 = 11",
-        "D": "(x + 3)/2 = 11",
-        "E": "x/3 + 2 = 11"
-      },
-      "answer": "A",
-      "explanation": "Half a number → x/2; three more → x/2 + 3 = 11.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_wp_b_034",
-      "question": "You pay $4 for each coffee. Your total bill is $28. How many coffees c did you buy?",
-      "choices": {
-        "A": "5",
-        "B": "6",
-        "C": "7",
-        "D": "8",
-        "E": "9"
-      },
-      "answer": "C",
-      "explanation": "4c = 28 → c = 7.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_wp_b_035",
-      "question": "A number is 7 more than twice another number y. Which expression represents the number?",
-      "choices": {
-        "A": "2y - 7",
-        "B": "2y + 7",
-        "C": "y + 7",
-        "D": "7y + 2",
-        "E": "y - 2 + 7"
-      },
-      "answer": "B",
-      "explanation": "Twice y is 2y; 7 more than that is 2y + 7.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_wp_b_036",
-      "question": "The total price for x identical books is $72. Each book costs $9. Which equation is correct?",
-      "choices": {
-        "A": "9 + x = 72",
-        "B": "x/9 = 72",
-        "C": "9x = 72",
-        "D": "x - 9 = 72",
-        "E": "72x = 9"
-      },
-      "answer": "C",
-      "explanation": "Price = 9x = 72.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_wp_b_037",
-      "question": "You jog at 6 miles per hour. How long t will it take to go 18 miles?",
-      "choices": {
-        "A": "t = 18/6",
-        "B": "t = 6/18",
-        "C": "t = 18 × 6",
-        "D": "t = 18 - 6",
-        "E": "t = 6 - 18"
-      },
-      "answer": "A",
-      "explanation": "Time = distance / rate → t = 18/6 = 3 hours.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_wp_b_038",
-      "question": "Seven less than three times a number is 20. Which equation represents this?",
-      "choices": {
-        "A": "3x - 7 = 20",
-        "B": "3x + 7 = 20",
-        "C": "7x - 3 = 20",
-        "D": "3(x - 7) = 20",
-        "E": "7 - 3x = 20"
-      },
-      "answer": "A",
-      "explanation": "Three times a number → 3x; seven less than that → 3x - 7.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_wp_b_039",
-      "question": "The perimeter of a triangle with sides x, x, and 10 is 30. Which equation is correct?",
-      "choices": {
-        "A": "x + x + 10 = 30",
-        "B": "3x + 10 = 30",
-        "C": "2x + 10 = 30",
-        "D": "x + 10 = 30",
-        "E": "x^2 + 10 = 30"
-      },
-      "answer": "A",
-      "explanation": "Perimeter is sum of sides: x + x + 10 = 30 → 2x + 10 = 30.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division).",
-      "uiSpec": {
-        "type": "geometry_triangle_diagram",
-        "width": 300,
-        "height": 300,
-        "vertices": [
-          {
-            "x": 150,
-            "y": 50,
-            "label": "A"
-          },
-          {
-            "x": 80,
-            "y": 220,
-            "label": "B"
-          },
-          {
-            "x": 220,
-            "y": 220,
-            "label": "C"
-          }
-        ],
-        "angles": [
-          {
-            "vertex": 0,
-            "label": "60°"
-          },
-          {
-            "vertex": 1,
-            "label": "x°"
-          },
-          {
-            "vertex": 2,
-            "label": "y°"
-          }
-        ],
-        "styleHints": {
-          "lineColor": "#00ffff",
-          "labelColor": "#00ffff"
-        }
-      }
-    },
-    {
-      "id": "mk_wp_b_040",
-      "question": "You roll a cart at 4 meters per second for t seconds and travel 32 meters. Which equation models this?",
-      "choices": {
-        "A": "4 + t = 32",
-        "B": "4t = 32",
-        "C": "t/4 = 32",
-        "D": "32t = 4",
-        "E": "4/t = 32"
-      },
-      "answer": "B",
-      "explanation": "Distance = speed × time → 4t = 32.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_wp_b_041",
-      "question": "Twice a number plus 4 is 18. What is the number?",
+      "id": "mk_wp_b_025",
+      "question": "The product of a number and 4 is 28. What is the number?",
       "choices": {
         "A": "6",
         "B": "7",
         "C": "8",
-        "D": "9",
+        "D": "4",
         "E": "10"
       },
+      "answer": "B",
+      "explanation": "4x = 28 \u2192 x = 7.",
+      "steps": [
+        "1. Identify what you're solving for.",
+        "2. Isolate the variable using inverse operations.",
+        "3. Simplify and check your answer."
+      ],
+      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q001",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
       "answer": "A",
-      "explanation": "2x + 4 = 18 → 2x = 14 → x = 7.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_wp_b_041_corrected",
-      "question": "Twice a number plus 4 is 18. What is the number?",
+      "id": "word_problems_equation_setup_beginner_q002",
+      "question": "Solve this word problems equation setup problem for beginner level.",
       "choices": {
-        "A": "6",
-        "B": "7",
-        "C": "8",
-        "D": "5",
-        "E": "9"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "2x + 4 = 18 → 2x = 14 → x = 7.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_wp_b_042",
-      "question": "A class has n students. Each student pays $3 for a field trip. The total collected is $75. Which equation is correct?",
+      "id": "word_problems_equation_setup_beginner_q003",
+      "question": "Solve this word problems equation setup problem for beginner level.",
       "choices": {
-        "A": "3 + n = 75",
-        "B": "3n = 75",
-        "C": "n/3 = 75",
-        "D": "n - 3 = 75",
-        "E": "75n = 3"
-      },
-      "answer": "B",
-      "explanation": "Total = fee × students: 3n = 75.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_wp_b_043",
-      "question": "The length of a rope is 5 meters longer than twice its width w. Which expression represents the length L?",
-      "choices": {
-        "A": "L = 2w - 5",
-        "B": "L = w + 5",
-        "C": "L = 2w + 5",
-        "D": "L = 5w + 2",
-        "E": "L = w - 2 + 5"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "Twice the width is 2w; 5 meters longer means 2w + 5.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_wp_b_044",
-      "question": "The total of a number, its double, and 4 is 25. Which equation represents this?",
+      "id": "word_problems_equation_setup_beginner_q004",
+      "question": "Solve this word problems equation setup problem for beginner level.",
       "choices": {
-        "A": "x + 2x + 4 = 25",
-        "B": "x + 4x = 25",
-        "C": "2x + 4 = 25",
-        "D": "x + 4 = 2x",
-        "E": "x + 2x = 4"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q005",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Number x, its double 2x, plus 4 → x + 2x + 4 = 25.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_wp_b_045",
-      "question": "You buy x pens at $2 each and a notebook for $6. Your total cost is $20. Which equation models this?",
+      "id": "word_problems_equation_setup_beginner_q006",
+      "question": "Solve this word problems equation setup problem for beginner level.",
       "choices": {
-        "A": "2x + 6 = 20",
-        "B": "2 + 6x = 20",
-        "C": "2x - 6 = 20",
-        "D": "x + 6 = 20",
-        "E": "2x = 20"
-      },
-      "answer": "A",
-      "explanation": "Total = 2x (pens) + 6 (notebook) = 20.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_wp_b_046",
-      "question": "A swimming pool is filled at a rate of 500 liters per hour. After h hours, it contains 4000 liters. Which equation represents this?",
-      "choices": {
-        "A": "500 + h = 4000",
-        "B": "500h = 4000",
-        "C": "h/500 = 4000",
-        "D": "4000h = 500",
-        "E": "500 - h = 4000"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "Rate × time = total: 500h = 4000.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_wp_b_047",
-      "question": "Five less than a number is equal to 12. Which equation models this?",
+      "id": "word_problems_equation_setup_beginner_q007",
+      "question": "Solve this word problems equation setup problem for beginner level.",
       "choices": {
-        "A": "x - 5 = 12",
-        "B": "5 - x = 12",
-        "C": "x + 5 = 12",
-        "D": "12 - x = 5",
-        "E": "x/5 = 12"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q008",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q009",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Five less than a number → x - 5.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_wp_b_048",
-      "question": "The product of a number and 6 is 54. Which equation represents this?",
+      "id": "word_problems_equation_setup_beginner_q010",
+      "question": "Solve this word problems equation setup problem for beginner level.",
       "choices": {
-        "A": "x + 6 = 54",
-        "B": "6x = 54",
-        "C": "x/6 = 54",
-        "D": "54x = 6",
-        "E": "x - 6 = 54"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "Product with 6 → 6x = 54.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_wp_b_049",
-      "question": "Ellen is 3 years younger than twice her sister's age s. Which expression gives Ellen's age?",
+      "id": "word_problems_equation_setup_beginner_q011",
+      "question": "Solve this word problems equation setup problem for beginner level.",
       "choices": {
-        "A": "2s - 3",
-        "B": "2s + 3",
-        "C": "s - 3",
-        "D": "3 - 2s",
-        "E": "2(s - 3)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "A",
-      "explanation": "Twice her sister's age is 2s; 3 years younger → 2s - 3.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_wp_b_050",
-      "question": "A tank initially has 200 liters of water. You drain water at a rate of 15 liters per minute. After t minutes, 50 liters remain. Which equation is correct?",
+      "id": "word_problems_equation_setup_beginner_q012",
+      "question": "Solve this word problems equation setup problem for beginner level.",
       "choices": {
-        "A": "200 - 15t = 50",
-        "B": "200 + 15t = 50",
-        "C": "15t - 200 = 50",
-        "D": "200t - 15 = 50",
-        "E": "15 - 200t = 50"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q013",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Start at 200 and subtract 15t; remaining amount is 50 → 200 - 15t = 50.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q014",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q015",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q016",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q017",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q018",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q019",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q020",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q021",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q022",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q023",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q024",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
     }
-  ]
+  ],
+  "subtopicId": "word_problems_equation_setup"
 }

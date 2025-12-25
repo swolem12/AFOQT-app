@@ -1,708 +1,308 @@
 {
   "subjectId": "math_knowledge",
-  "subtopicId": "graph_interpretation",
   "difficulty": "beginner",
   "part": 2,
   "questions": [
     {
-      "id": "mk_gi_b_026",
-      "question": "If the graph of a line crosses the x-axis at (4, 0), this means:",
+      "id": "graph_interpretation_beginner_q001",
+      "question": "Solve this graph interpretation problem for beginner level.",
       "choices": {
-        "A": "The y value is always 4",
-        "B": "The slope is 4",
-        "C": "The x-intercept is 4",
-        "D": "The line is vertical",
-        "E": "The slope is 0"
-      },
-      "answer": "C",
-      "explanation": "Crossing x-axis at (4,0) means x-intercept = 4.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis).",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": -2
-          },
-          "point2": {
-            "x": 3,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "mk_gi_b_027",
-      "question": "What does a vertical line on a graph represent?",
-      "choices": {
-        "A": "x is constant",
-        "B": "y is constant",
-        "C": "Slope is 1",
-        "D": "Slope is positive",
-        "E": "Slope is negative"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Vertical lines fix x at a specific value.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis).",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": 2,
-            "y": -3
-          },
-          "point2": {
-            "x": 2,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_gi_b_028",
-      "question": "Which quadrant contains points where x < 0 and y > 0?",
+      "id": "graph_interpretation_beginner_q002",
+      "question": "Solve this graph interpretation problem for beginner level.",
       "choices": {
-        "A": "I",
-        "B": "II",
-        "C": "III",
-        "D": "IV",
-        "E": "Origin"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "Quadrant II = negative x, positive y.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_gi_b_029",
-      "question": "If the slope of a line is 0, the line is:",
+      "id": "graph_interpretation_beginner_q003",
+      "question": "Solve this graph interpretation problem for beginner level.",
       "choices": {
-        "A": "Vertical",
-        "B": "Horizontal",
-        "C": "Diagonal",
-        "D": "Undefined",
-        "E": "Random"
-      },
-      "answer": "B",
-      "explanation": "Zero slope = horizontal line.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis).",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": -2
-          },
-          "point2": {
-            "x": 3,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "mk_gi_b_030",
-      "question": "If a line increases by 2 units in y for every 1 unit in x, the slope is:",
-      "choices": {
-        "A": "1/2",
-        "B": "-2",
-        "C": "2",
-        "D": "-1/2",
-        "E": "0"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "Slope = rise/run = 2/1 = 2.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis).",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": -2
-          },
-          "point2": {
-            "x": 3,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_gi_b_031",
-      "question": "A point at (−3, −4) lies in which quadrant?",
+      "id": "graph_interpretation_beginner_q004",
+      "question": "Solve this graph interpretation problem for beginner level.",
       "choices": {
-        "A": "I",
-        "B": "II",
-        "C": "III",
-        "D": "IV",
-        "E": "On an axis"
-      },
-      "answer": "C",
-      "explanation": "Both x and y negative = Quadrant III.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
-    },
-    {
-      "id": "mk_gi_b_032",
-      "question": "Which point lies on the y-axis?",
-      "choices": {
-        "A": "(0, 5)",
-        "B": "(5, 0)",
-        "C": "(1, 1)",
-        "D": "(−2, 3)",
-        "E": "(3, −2)"
-      },
-      "answer": "A",
-      "explanation": "Points on y-axis always have x=0.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
-    },
-    {
-      "id": "mk_gi_b_033",
-      "question": "A line with an undefined slope is:",
-      "choices": {
-        "A": "Horizontal",
-        "B": "Vertical",
-        "C": "Diagonal",
-        "D": "Flat",
-        "E": "Random"
-      },
-      "answer": "B",
-      "explanation": "Undefined slope = vertical line.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis).",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": 2,
-            "y": -3
-          },
-          "point2": {
-            "x": 2,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "mk_gi_b_034",
-      "question": "If a bar graph shows bars of equal height, the data is:",
-      "choices": {
-        "A": "Increasing",
-        "B": "Decreasing",
-        "C": "Constant",
-        "D": "Random",
-        "E": "Undefined"
-      },
-      "answer": "C",
-      "explanation": "Equal heights = no change between categories.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
-    },
-    {
-      "id": "mk_gi_b_035",
-      "question": "If the y-intercept is −5, where does the line cross the y-axis?",
-      "choices": {
-        "A": "(5, 0)",
-        "B": "(0, −5)",
-        "C": "(-5,0)",
-        "D": "(5,5)",
-        "E": "(0,5)"
-      },
-      "answer": "B",
-      "explanation": "Y-intercept always uses x=0.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
-    },
-    {
-      "id": "mk_gi_b_036",
-      "question": "Scatterplot points forming no pattern indicate:",
-      "choices": {
-        "A": "Strong correlation",
-        "B": "Weak or no correlation",
-        "C": "Negative correlation",
-        "D": "Positive correlation",
-        "E": "Constant slope"
-      },
-      "answer": "B",
-      "explanation": "Random dots = no consistent relationship.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
-    },
-    {
-      "id": "mk_gi_b_037",
-      "question": "A histogram is best used for:",
-      "choices": {
-        "A": "Percentages",
-        "B": "Frequency ranges",
-        "C": "Causation analysis",
-        "D": "Showing lines of best fit",
-        "E": "Showing categories"
-      },
-      "answer": "B",
-      "explanation": "Histograms show distribution across bins or ranges.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
-    },
-    {
-      "id": "mk_gi_b_038",
-      "question": "Two lines intersect at one point. This means:",
-      "choices": {
-        "A": "Parallel lines",
-        "B": "Infinite solutions",
-        "C": "One solution",
-        "D": "No solution",
-        "E": "Vertical slope"
-      },
-      "answer": "C",
-      "explanation": "Single intersection = one solution in systems terms.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
-    },
-    {
-      "id": "mk_gi_b_039",
-      "question": "A steep negative slope indicates:",
-      "choices": {
-        "A": "Slow decrease",
-        "B": "Fast decrease",
-        "C": "Fast increase",
-        "D": "Random change",
-        "E": "Constant values"
-      },
-      "answer": "B",
-      "explanation": "Steeper = faster rate of change.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis).",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": 3
-          },
-          "point2": {
-            "x": 3,
-            "y": -2
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "mk_gi_b_040",
-      "question": "A line passing through (2, 0) and (0, 2) shows:",
-      "choices": {
-        "A": "Positive slope",
-        "B": "Negative slope",
-        "C": "Undefined slope",
-        "D": "Zero slope",
-        "E": "Vertical line"
-      },
-      "answer": "B",
-      "explanation": "As x increases from 0→2, y decreases from 2→0.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
-    },
-    {
-      "id": "mk_gi_b_041",
-      "question": "Which graph is ideal for showing distribution shape?",
-      "choices": {
-        "A": "Pie chart",
-        "B": "Histogram",
-        "C": "Line graph",
-        "D": "Scatterplot",
-        "E": "Bar graph"
-      },
-      "answer": "B",
-      "explanation": "Histograms reveal distribution curves quickly.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
-    },
-    {
-      "id": "mk_gi_b_042",
-      "question": "If a graph has a point at (0, 0), what is this point called?",
-      "choices": {
-        "A": "Y-intercept",
-        "B": "X-intercept",
-        "C": "Slope",
-        "D": "Origin",
-        "E": "Midpoint"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "Origin = (0,0).",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_gi_b_043",
-      "question": "Bars touching in a graph indicate:",
+      "id": "graph_interpretation_beginner_q005",
+      "question": "Solve this graph interpretation problem for beginner level.",
       "choices": {
-        "A": "Bar graph",
-        "B": "Line graph",
-        "C": "Pie chart",
-        "D": "Histogram",
-        "E": "Scatterplot"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_beginner_q006",
+      "question": "Solve this graph interpretation problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_beginner_q007",
+      "question": "Solve this graph interpretation problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_beginner_q008",
+      "question": "Solve this graph interpretation problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "Histograms have touching bars because ranges are continuous.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_gi_b_044",
-      "question": "Which graph is best for showing comparison between distinct categories?",
+      "id": "graph_interpretation_beginner_q009",
+      "question": "Solve this graph interpretation problem for beginner level.",
       "choices": {
-        "A": "Bar graph",
-        "B": "Histogram",
-        "C": "Scatterplot",
-        "D": "Line graph",
-        "E": "Pie chart"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Bar graphs excel at category comparisons.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_gi_b_045",
-      "question": "If a dataset has a single large spike, this is likely:",
+      "id": "graph_interpretation_beginner_q010",
+      "question": "Solve this graph interpretation problem for beginner level.",
       "choices": {
-        "A": "An outlier",
-        "B": "A mean",
-        "C": "A mode",
-        "D": "A median",
-        "E": "A slope"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "A",
-      "explanation": "One tall bar or point indicates an outlier or anomaly.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_gi_b_046",
-      "question": "A graph showing variable frequency over ranges is:",
+      "id": "graph_interpretation_beginner_q011",
+      "question": "Solve this graph interpretation problem for beginner level.",
       "choices": {
-        "A": "Scatterplot",
-        "B": "Pie chart",
-        "C": "Histogram",
-        "D": "Bar graph",
-        "E": "Line graph"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "Histogram groups frequency into bins.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_gi_b_047",
-      "question": "If all points lie exactly on a line in a scatterplot, correlation is:",
+      "id": "graph_interpretation_beginner_q012",
+      "question": "Solve this graph interpretation problem for beginner level.",
       "choices": {
-        "A": "None",
-        "B": "Weak",
-        "C": "Perfect",
-        "D": "Inverted",
-        "E": "Random"
-      },
-      "answer": "C",
-      "explanation": "Perfect alignment = perfect correlation.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
-    },
-    {
-      "id": "mk_gi_b_048",
-      "question": "A line graph that rises steadily indicates:",
-      "choices": {
-        "A": "Constant increase",
-        "B": "Constant decrease",
-        "C": "Random change",
-        "D": "No change",
-        "E": "Rapid decrease"
-      },
-      "answer": "A",
-      "explanation": "Straight upward = constant rate of growth.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis).",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": -2
-          },
-          "point2": {
-            "x": 3,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "mk_gi_b_049",
-      "question": "Which point lies in quadrant IV?",
-      "choices": {
-        "A": "(3, 4)",
-        "B": "(-3, 4)",
-        "C": "(-3, -4)",
-        "D": "(3, -4)",
-        "E": "(0, -4)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "Quadrant IV = +x, -y.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_gi_b_050",
-      "question": "A flat line on a time graph means:",
+      "id": "graph_interpretation_beginner_q013",
+      "question": "Solve this graph interpretation problem for beginner level.",
       "choices": {
-        "A": "Increase over time",
-        "B": "Decrease over time",
-        "C": "No change",
-        "D": "Sudden drop",
-        "E": "Sudden rise"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_beginner_q014",
+      "question": "Solve this graph interpretation problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_beginner_q015",
+      "question": "Solve this graph interpretation problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "Flat = no change in value despite time passing.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "y = mx + b: m is slope (rise/run), b is y-intercept (where line crosses y-axis).",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": -2
-          },
-          "point2": {
-            "x": 3,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_beginner_q016",
+      "question": "Solve this graph interpretation problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_beginner_q017",
+      "question": "Solve this graph interpretation problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_beginner_q018",
+      "question": "Solve this graph interpretation problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_beginner_q019",
+      "question": "Solve this graph interpretation problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_beginner_q020",
+      "question": "Solve this graph interpretation problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_beginner_q021",
+      "question": "Solve this graph interpretation problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_beginner_q022",
+      "question": "Solve this graph interpretation problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_beginner_q023",
+      "question": "Solve this graph interpretation problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_beginner_q024",
+      "question": "Solve this graph interpretation problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_beginner_q025",
+      "question": "Solve this graph interpretation problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
     }
-  ]
+  ],
+  "subtopicId": "graph_interpretation"
 }

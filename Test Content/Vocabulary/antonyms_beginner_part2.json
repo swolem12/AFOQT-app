@@ -1,482 +1,308 @@
 {
-  "subtopicId": "antonyms",
+  "subjectId": null,
   "difficulty": "beginner",
   "part": 2,
   "questions": [
     {
-      "id": "ant_beg_026",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'urban'?",
+      "id": "antonyms_beginner_q001",
+      "question": "Antonyms: Choose the best match for \"happy\"",
       "choices": {
-        "A": "central",
-        "B": "suburban",
-        "C": "rural",
-        "D": "crowded"
+        "A": "quick",
+        "B": "large",
+        "C": "beautiful",
+        "D": "joyful"
+      },
+      "answer": "D",
+      "explanation": "\"happy\" and \"joyful\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_beginner_q002",
+      "question": "Antonyms: Choose the best match for \"large\"",
+      "choices": {
+        "A": "big",
+        "B": "beautiful",
+        "C": "happy",
+        "D": "quick"
+      },
+      "answer": "A",
+      "explanation": "\"large\" and \"big\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_beginner_q003",
+      "question": "Antonyms: Choose the best match for \"beautiful\"",
+      "choices": {
+        "A": "pretty",
+        "B": "quick",
+        "C": "large",
+        "D": "happy"
+      },
+      "answer": "A",
+      "explanation": "\"beautiful\" and \"pretty\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_beginner_q004",
+      "question": "Antonyms: Choose the best match for \"quick\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "fast",
+        "C": "large",
+        "D": "happy"
+      },
+      "answer": "B",
+      "explanation": "\"quick\" and \"fast\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_beginner_q005",
+      "question": "Antonyms: Choose the best match for \"start\"",
+      "choices": {
+        "A": "happy",
+        "B": "begin",
+        "C": "large",
+        "D": "beautiful"
+      },
+      "answer": "B",
+      "explanation": "\"start\" and \"begin\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_beginner_q006",
+      "question": "Antonyms: Choose the best match for \"smart\"",
+      "choices": {
+        "A": "large",
+        "B": "intelligent",
+        "C": "beautiful",
+        "D": "happy"
+      },
+      "answer": "B",
+      "explanation": "\"smart\" and \"intelligent\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_beginner_q007",
+      "question": "Antonyms: Choose the best match for \"tired\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "large",
+        "C": "weary",
+        "D": "happy"
       },
       "answer": "C",
-      "explanation": "Urban refers to the city; 'rural' refers to the countryside, its opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Quick test: Can 'urban' and 'rural' both be true at once? No—they're opposites."
+      "explanation": "\"tired\" and \"weary\" are closely related in meaning."
     },
     {
-      "id": "ant_beg_027",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'expand'?",
+      "id": "antonyms_beginner_q008",
+      "question": "Antonyms: Choose the best match for \"strong\"",
       "choices": {
-        "A": "narrow",
-        "B": "reduce",
-        "C": "limit",
-        "D": "contract"
-      },
-      "answer": "D",
-      "explanation": "To expand is to increase in size; 'contract' means to shrink or become smaller. 'contract' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "'expand' means one thing; 'contract' means the opposite. Look for the direct flip."
-    },
-    {
-      "id": "ant_beg_028",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'admire'?",
-      "choices": {
-        "A": "ignore",
-        "B": "despise",
-        "C": "refuse",
-        "D": "avoid"
+        "A": "large",
+        "B": "powerful",
+        "C": "beautiful",
+        "D": "happy"
       },
       "answer": "B",
-      "explanation": "Admire means respect or approve; 'despise' means strongly dislike. 'despise' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Ask: If 'admire' is positive, what's negative? (Or vice versa.) That's 'despise'."
+      "explanation": "\"strong\" and \"powerful\" are closely related in meaning."
     },
     {
-      "id": "ant_beg_029",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'include'?",
+      "id": "antonyms_beginner_q009",
+      "question": "Antonyms: Choose the best match for \"bright\"",
       "choices": {
-        "A": "omit",
-        "B": "select",
-        "C": "divide",
-        "D": "adjust"
+        "A": "luminous",
+        "B": "happy",
+        "C": "beautiful",
+        "D": "large"
       },
       "answer": "A",
-      "explanation": "Include means to contain or involve; 'omit' means to leave out. 'omit' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Picture a scale: 'include' on one end, 'omit' on the other."
+      "explanation": "\"bright\" and \"luminous\" are closely related in meaning."
     },
     {
-      "id": "ant_beg_030",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'willing'?",
+      "id": "antonyms_beginner_q010",
+      "question": "Antonyms: Choose the best match for \"kind\"",
       "choices": {
-        "A": "hesitant",
-        "B": "reluctant",
-        "C": "unable",
-        "D": "unclear"
+        "A": "compassionate",
+        "B": "happy",
+        "C": "beautiful",
+        "D": "large"
       },
-      "answer": "B",
-      "explanation": "Willing means ready to do something; 'reluctant' means unwilling or hesitant. 'reluctant' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Avoid traps: Some choices are synonyms of 'willing'. 'reluctant' contradicts it."
+      "answer": "A",
+      "explanation": "\"kind\" and \"compassionate\" are closely related in meaning."
     },
     {
-      "id": "ant_beg_031",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'progress'?",
+      "id": "antonyms_beginner_q011",
+      "question": "Antonyms: Choose the best match for \"difficult\"",
       "choices": {
-        "A": "delay",
-        "B": "retreat",
-        "C": "decline",
-        "D": "regress"
+        "A": "challenging",
+        "B": "large",
+        "C": "happy",
+        "D": "beautiful"
+      },
+      "answer": "A",
+      "explanation": "\"difficult\" and \"challenging\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_beginner_q012",
+      "question": "Antonyms: Choose the best match for \"angry\"",
+      "choices": {
+        "A": "happy",
+        "B": "large",
+        "C": "beautiful",
+        "D": "furious"
       },
       "answer": "D",
-      "explanation": "Progress is forward movement or improvement; 'regress' means to go backward or worsen. 'regress' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Quick test: Can 'progress' and 'regress' both be true at once? No—they're opposites."
+      "explanation": "\"angry\" and \"furious\" are closely related in meaning."
     },
     {
-      "id": "ant_beg_032",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'secure'?",
+      "id": "antonyms_beginner_q013",
+      "question": "Antonyms: Choose the best match for \"small\"",
       "choices": {
-        "A": "unsafe",
-        "B": "loose",
-        "C": "open",
-        "D": "weak"
-      },
-      "answer": "A",
-      "explanation": "Secure means safe or protected; 'unsafe' is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "'secure' means one thing; 'unsafe' means the opposite. Look for the direct flip."
-    },
-    {
-      "id": "ant_beg_033",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'victory'?",
-      "choices": {
-        "A": "failure",
-        "B": "defeat",
-        "C": "loss",
-        "D": "surrender"
-      },
-      "answer": "B",
-      "explanation": "Victory is winning; 'defeat' is being beaten by an opponent. 'defeat' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Ask: If 'victory' is positive, what's negative? (Or vice versa.) That's 'defeat'."
-    },
-    {
-      "id": "ant_beg_034",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'expandable'?",
-      "choices": {
-        "A": "fixed",
-        "B": "limited",
-        "C": "solid",
-        "D": "dense"
-      },
-      "answer": "A",
-      "explanation": "Expandable means able to be enlarged; 'fixed' means not able to change size. 'fixed' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Picture a scale: 'expandable' on one end, 'fixed' on the other."
-    },
-    {
-      "id": "ant_beg_035",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'minimum'?",
-      "choices": {
-        "A": "basic",
-        "B": "moderate",
-        "C": "average",
-        "D": "maximum"
+        "A": "happy",
+        "B": "large",
+        "C": "beautiful",
+        "D": "tiny"
       },
       "answer": "D",
-      "explanation": "Minimum is the smallest amount; 'maximum' is the largest. 'maximum' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Avoid traps: Some choices are synonyms of 'minimum'. 'maximum' contradicts it."
+      "explanation": "\"small\" and \"tiny\" are closely related in meaning."
     },
     {
-      "id": "ant_beg_036",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'relaxed'?",
+      "id": "antonyms_beginner_q014",
+      "question": "Antonyms: Choose the best match for \"quiet\"",
       "choices": {
-        "A": "tense",
-        "B": "alert",
-        "C": "awake",
-        "D": "steady"
+        "A": "beautiful",
+        "B": "silent",
+        "C": "happy",
+        "D": "large"
       },
-      "answer": "A",
-      "explanation": "Relaxed means calm; 'tense' means tight, anxious, or stressed. 'tense' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Quick test: Can 'relaxed' and 'tense' both be true at once? No—they're opposites."
+      "answer": "B",
+      "explanation": "\"quiet\" and \"silent\" are closely related in meaning."
     },
     {
-      "id": "ant_beg_037",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'permanent'?",
+      "id": "antonyms_beginner_q015",
+      "question": "Antonyms: Choose the best match for \"hot\"",
       "choices": {
-        "A": "stable",
-        "B": "lasting",
-        "C": "temporary",
-        "D": "reliable"
+        "A": "beautiful",
+        "B": "large",
+        "C": "warm",
+        "D": "happy"
       },
       "answer": "C",
-      "explanation": "Permanent means lasting forever; 'temporary' means lasting for a short time. 'temporary' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "'permanent' means one thing; 'temporary' means the opposite. Look for the direct flip."
+      "explanation": "\"hot\" and \"warm\" are closely related in meaning."
     },
     {
-      "id": "ant_beg_038",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'orderly'?",
+      "id": "antonyms_beginner_q016",
+      "question": "Antonyms: Choose the best match for \"wet\"",
       "choices": {
-        "A": "steady",
+        "A": "beautiful",
+        "B": "damp",
+        "C": "large",
+        "D": "happy"
+      },
+      "answer": "B",
+      "explanation": "\"wet\" and \"damp\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_beginner_q017",
+      "question": "Antonyms: Choose the best match for \"clean\"",
+      "choices": {
+        "A": "large",
         "B": "neat",
-        "C": "chaotic",
-        "D": "regular"
-      },
-      "answer": "C",
-      "explanation": "Orderly means well-organized; 'chaotic' means disorganized and confusing. 'chaotic' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Ask: If 'orderly' is positive, what's negative? (Or vice versa.) That's 'chaotic'."
-    },
-    {
-      "id": "ant_beg_039",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'encourage'?",
-      "choices": {
-        "A": "discourage",
-        "B": "block",
-        "C": "limit",
-        "D": "weaken"
-      },
-      "answer": "A",
-      "explanation": "Encourage means give support or confidence; 'discourage' means to take it away. 'discourage' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Picture a scale: 'encourage' on one end, 'discourage' on the other."
-    },
-    {
-      "id": "ant_beg_040",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'expand'?",
-      "choices": {
-        "A": "contract",
-        "B": "remove",
-        "C": "shorten",
-        "D": "reduce"
-      },
-      "answer": "A",
-      "explanation": "To expand is to grow; 'contract' means to shrink back. 'contract' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Avoid traps: Some choices are synonyms of 'expand'. 'contract' contradicts it."
-    },
-    {
-      "id": "ant_beg_041",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'harsh'?",
-      "choices": {
-        "A": "soft",
-        "B": "gentle",
-        "C": "quiet",
-        "D": "mild"
+        "C": "happy",
+        "D": "beautiful"
       },
       "answer": "B",
-      "explanation": "Harsh means severe or rough; 'gentle' means kind and soft in effect. 'gentle' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Quick test: Can 'harsh' and 'gentle' both be true at once? No—they're opposites."
+      "explanation": "\"clean\" and \"neat\" are closely related in meaning."
     },
     {
-      "id": "ant_beg_042",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'scarce'?",
+      "id": "antonyms_beginner_q018",
+      "question": "Antonyms: Choose the best match for \"safe\"",
       "choices": {
-        "A": "rare",
-        "B": "plentiful",
-        "C": "tight",
-        "D": "light"
-      },
-      "answer": "B",
-      "explanation": "Scarce means hard to find; 'plentiful' means available in large amounts. 'plentiful' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "'scarce' means one thing; 'plentiful' means the opposite. Look for the direct flip."
-    },
-    {
-      "id": "ant_beg_043",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'liberate'?",
-      "choices": {
-        "A": "hold",
-        "B": "restrict",
-        "C": "capture",
-        "D": "confine"
+        "A": "happy",
+        "B": "beautiful",
+        "C": "large",
+        "D": "secure"
       },
       "answer": "D",
-      "explanation": "Liberate means set free; 'confine' means keep within limits or imprison. 'confine' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Ask: If 'liberate' is positive, what's negative? (Or vice versa.) That's 'confine'."
+      "explanation": "\"safe\" and \"secure\" are closely related in meaning."
     },
     {
-      "id": "ant_beg_044",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'intricate'?",
+      "id": "antonyms_beginner_q019",
+      "question": "Antonyms: Choose the best match for \"brave\"",
       "choices": {
-        "A": "basic",
-        "B": "simple",
-        "C": "clear",
-        "D": "plain"
-      },
-      "answer": "B",
-      "explanation": "Intricate means very detailed or complex; 'simple' means easy or uncomplicated. 'simple' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Picture a scale: 'intricate' on one end, 'simple' on the other."
-    },
-    {
-      "id": "ant_beg_045",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'strict'?",
-      "choices": {
-        "A": "loose",
-        "B": "lenient",
-        "C": "soft",
-        "D": "weak"
-      },
-      "answer": "B",
-      "explanation": "Strict means tough and demanding; 'lenient' means gentle and forgiving. 'lenient' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Avoid traps: Some choices are synonyms of 'strict'. 'lenient' contradicts it."
-    },
-    {
-      "id": "ant_beg_046",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'superior'?",
-      "choices": {
-        "A": "modest",
-        "B": "junior",
-        "C": "inferior",
-        "D": "lower"
-      },
-      "answer": "C",
-      "explanation": "Superior means higher in rank or quality; 'inferior' means lower. 'inferior' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Quick test: Can 'superior' and 'inferior' both be true at once? No—they're opposites."
-    },
-    {
-      "id": "ant_beg_047",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'expand'?",
-      "choices": {
-        "A": "limit",
-        "B": "reduce",
-        "C": "contract",
-        "D": "shrink"
-      },
-      "answer": "C",
-      "explanation": "Again, expand vs 'contract' is the standard antonym pair used in exams. 'contract' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "'expand' means one thing; 'contract' means the opposite. Look for the direct flip."
-    },
-    {
-      "id": "ant_beg_048",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'conceal'?",
-      "choices": {
-        "A": "reveal",
-        "B": "remove",
-        "C": "improve",
-        "D": "present"
+        "A": "courageous",
+        "B": "happy",
+        "C": "beautiful",
+        "D": "large"
       },
       "answer": "A",
-      "explanation": "Conceal means hide; 'reveal' means show or make known. 'reveal' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Ask: If 'conceal' is positive, what's negative? (Or vice versa.) That's 'reveal'."
+      "explanation": "\"brave\" and \"courageous\" are closely related in meaning."
     },
     {
-      "id": "ant_beg_049",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'advance'?",
+      "id": "antonyms_beginner_q020",
+      "question": "Antonyms: Choose the best match for \"rich\"",
       "choices": {
-        "A": "retreat",
-        "B": "pause",
-        "C": "wait",
-        "D": "halt"
+        "A": "large",
+        "B": "happy",
+        "C": "beautiful",
+        "D": "wealthy"
       },
-      "answer": "A",
-      "explanation": "Advance means move forward; 'retreat' means move back. 'retreat' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Picture a scale: 'advance' on one end, 'retreat' on the other."
+      "answer": "D",
+      "explanation": "\"rich\" and \"wealthy\" are closely related in meaning."
     },
     {
-      "id": "ant_beg_050",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'admit'?",
+      "id": "antonyms_beginner_q021",
+      "question": "Antonyms: Choose the best match for \"cold\"",
       "choices": {
-        "A": "reject",
-        "B": "deny",
-        "C": "refuse",
-        "D": "ignore"
+        "A": "happy",
+        "B": "beautiful",
+        "C": "chilly",
+        "D": "large"
+      },
+      "answer": "C",
+      "explanation": "\"cold\" and \"chilly\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_beginner_q022",
+      "question": "Antonyms: Choose the best match for \"fast\"",
+      "choices": {
+        "A": "happy",
+        "B": "swift",
+        "C": "large",
+        "D": "beautiful"
       },
       "answer": "B",
-      "explanation": "Admit means acknowledge or accept; 'deny' means refuse to accept as true. 'deny' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Avoid traps: Some choices are synonyms of 'admit'. 'deny' contradicts it."
+      "explanation": "\"fast\" and \"swift\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_beginner_q023",
+      "question": "Antonyms: Choose the best match for \"slow\"",
+      "choices": {
+        "A": "sluggish",
+        "B": "happy",
+        "C": "large",
+        "D": "beautiful"
+      },
+      "answer": "A",
+      "explanation": "\"slow\" and \"sluggish\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_beginner_q024",
+      "question": "Antonyms: Choose the best match for \"ugly\"",
+      "choices": {
+        "A": "large",
+        "B": "happy",
+        "C": "beautiful",
+        "D": "hideous"
+      },
+      "answer": "D",
+      "explanation": "\"ugly\" and \"hideous\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_beginner_q025",
+      "question": "Antonyms: Choose the best match for \"loud\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "large",
+        "C": "happy",
+        "D": "noisy"
+      },
+      "answer": "D",
+      "explanation": "\"loud\" and \"noisy\" are closely related in meaning."
     }
-  ]
+  ],
+  "subtopicId": "antonyms"
 }

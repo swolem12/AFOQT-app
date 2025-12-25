@@ -1,502 +1,308 @@
 {
   "subjectId": "math_knowledge",
-  "subtopicId": "factoring",
   "difficulty": "beginner",
   "part": 2,
   "questions": [
     {
-      "id": "mk_fact_b_026",
-      "question": "Factor: 4x + 20",
+      "id": "factoring_beginner_q001",
+      "question": "Solve this factoring problem for beginner level.",
       "choices": {
-        "A": "4(x + 5)",
-        "B": "2(2x + 10)",
-        "C": "5(4x + 1)",
-        "D": "20(x + 4)",
-        "E": "4(x + 2)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "GCF is 4: 4(x + 5).",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_fact_b_027",
-      "question": "Factor: 14x - 7",
+      "id": "factoring_beginner_q002",
+      "question": "Solve this factoring problem for beginner level.",
       "choices": {
-        "A": "7(2x - 1)",
-        "B": "7(2x - 7)",
-        "C": "14(x - 1)",
-        "D": "7(2x + 1)",
-        "E": "7(2x + 7)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "A",
-      "explanation": "GCF is 7: 7(2x - 1).",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_fact_b_028",
-      "question": "Factor: x^2 + 9x + 20",
+      "id": "factoring_beginner_q003",
+      "question": "Solve this factoring problem for beginner level.",
       "choices": {
-        "A": "(x + 4)(x + 5)",
-        "B": "(x + 2)(x + 10)",
-        "C": "(x + 1)(x + 20)",
-        "D": "(x + 3)(x + 7)",
-        "E": "(x + 5)(x + 6)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "A",
-      "explanation": "4×5 = 20 and 4 + 5 = 9.",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_fact_b_029",
-      "question": "Factor: x^2 - 7x + 12",
+      "id": "factoring_beginner_q004",
+      "question": "Solve this factoring problem for beginner level.",
       "choices": {
-        "A": "(x - 3)(x - 4)",
-        "B": "(x - 2)(x - 6)",
-        "C": "(x - 1)(x - 12)",
-        "D": "(x - 4)(x - 7)",
-        "E": "(x - 3)(x - 5)"
-      },
-      "answer": "A",
-      "explanation": "-3×-4 = 12 and -3 + -4 = -7.",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
-    },
-    {
-      "id": "mk_fact_b_030",
-      "question": "Factor: x^2 + x - 12",
-      "choices": {
-        "A": "(x + 4)(x - 3)",
-        "B": "(x + 3)(x - 4)",
-        "C": "(x + 6)(x - 2)",
-        "D": "(x + 2)(x - 6)",
-        "E": "(x + 1)(x - 12)"
-      },
-      "answer": "A",
-      "explanation": "4×(-3) = -12 and 4 + (-3) = 1.",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
-    },
-    {
-      "id": "mk_fact_b_031",
-      "question": "Factor: x^2 - 10x + 25",
-      "choices": {
-        "A": "(x - 5)(x - 5)",
-        "B": "(x - 1)(x - 25)",
-        "C": "(x - 2)(x - 8)",
-        "D": "(x + 5)(x - 5)",
-        "E": "(x - 7)(x - 3)"
-      },
-      "answer": "A",
-      "explanation": "Perfect square trinomial: (x - 5)^2.",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
-    },
-    {
-      "id": "mk_fact_b_032",
-      "question": "Factor: 6x^2 + 12x",
-      "choices": {
-        "A": "6x(x + 2)",
-        "B": "6x(x + 12)",
-        "C": "3x(2x + 12)",
-        "D": "2x(3x + 12)",
-        "E": "12x(x + 1)"
-      },
-      "answer": "A",
-      "explanation": "GCF is 6x: 6x(x + 2).",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
-    },
-    {
-      "id": "mk_fact_b_033",
-      "question": "Factor: x^2 - 1",
-      "choices": {
-        "A": "(x - 1)(x + 1)",
-        "B": "(x - 1)(x - 1)",
-        "C": "(x + 1)(x + 1)",
-        "D": "(x - 2)(x + 2)",
-        "E": "(x - 1)(x + 2)"
-      },
-      "answer": "A",
-      "explanation": "Difference of squares: x^2 - 1^2.",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
-    },
-    {
-      "id": "mk_fact_b_034",
-      "question": "Factor: 3x^2 + 9x",
-      "choices": {
-        "A": "3x(x + 3)",
-        "B": "3(x^2 + 9x)",
-        "C": "9x(x + 1)",
-        "D": "3x(x + 9)",
-        "E": "x(3x + 9)"
-      },
-      "answer": "A",
-      "explanation": "GCF is 3x: 3x(x + 3).",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
-    },
-    {
-      "id": "mk_fact_b_035",
-      "question": "Factor: x^2 + 11x + 30",
-      "choices": {
-        "A": "(x + 5)(x + 6)",
-        "B": "(x + 3)(x + 10)",
-        "C": "(x + 2)(x + 15)",
-        "D": "(x + 1)(x + 30)",
-        "E": "(x + 4)(x + 7)"
-      },
-      "answer": "A",
-      "explanation": "5×6 = 30 and 5 + 6 = 11.",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
-    },
-    {
-      "id": "mk_fact_b_036",
-      "question": "Factor: x^2 - 3x - 18",
-      "choices": {
-        "A": "(x - 6)(x + 3)",
-        "B": "(x + 6)(x - 3)",
-        "C": "(x - 9)(x + 2)",
-        "D": "(x + 9)(x - 2)",
-        "E": "(x - 1)(x - 18)"
-      },
-      "answer": "A",
-      "explanation": "-6×3 = -18 and -6 + 3 = -3.",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
-    },
-    {
-      "id": "mk_fact_b_037",
-      "question": "Factor: 2x^2 + 6x + 4",
-      "choices": {
-        "A": "2(x^2 + 3x + 2)",
-        "B": "2(x + 1)(x + 2)",
-        "C": "2(x + 2)(x + 1)",
-        "D": "All of the above",
-        "E": "None of the above"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "First factor GCF 2: 2(x^2 + 3x + 2), then factor trinomial as (x+1)(x+2).",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_fact_b_038",
-      "question": "Factor: 4x^2 - 9",
+      "id": "factoring_beginner_q005",
+      "question": "Solve this factoring problem for beginner level.",
       "choices": {
-        "A": "(2x - 3)(2x + 3)",
-        "B": "(2x - 9)(2x + 1)",
-        "C": "(4x - 3)(x + 3)",
-        "D": "(x - 3)(x + 3)",
-        "E": "(4x - 9)(4x + 1)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Difference of squares: (2x)^2 - 3^2.",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_fact_b_039",
-      "question": "Factor: x^2 + 4x - 5",
+      "id": "factoring_beginner_q006",
+      "question": "Solve this factoring problem for beginner level.",
       "choices": {
-        "A": "(x + 5)(x - 1)",
-        "B": "(x + 1)(x - 5)",
-        "C": "(x + 2)(x - 2)",
-        "D": "(x + 5)(x + 1)",
-        "E": "(x - 4)(x + 5)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "A",
-      "explanation": "5×(-1) = -5 and 5 + (-1) = 4.",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_fact_b_040",
-      "question": "Factor: 18x + 12",
+      "id": "factoring_beginner_q007",
+      "question": "Solve this factoring problem for beginner level.",
       "choices": {
-        "A": "6(3x + 2)",
-        "B": "3(6x + 4)",
-        "C": "2(9x + 6)",
-        "D": "All of the above",
-        "E": "None of the above"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_beginner_q008",
+      "question": "Solve this factoring problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "All three forms are equivalent factorizations; GCF is 6, 3, or 2 pulled differently.",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_fact_b_041",
-      "question": "Factor: x^2 - 2x - 15",
+      "id": "factoring_beginner_q009",
+      "question": "Solve this factoring problem for beginner level.",
       "choices": {
-        "A": "(x - 5)(x + 3)",
-        "B": "(x + 5)(x - 3)",
-        "C": "(x - 1)(x - 15)",
-        "D": "(x - 3)(x + 5)",
-        "E": "(x + 1)(x - 15)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_beginner_q010",
+      "question": "Solve this factoring problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_beginner_q011",
+      "question": "Solve this factoring problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_beginner_q012",
+      "question": "Solve this factoring problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "-3×5 = -15 and -3 + 5 = 2 → so reverse signs for -2: (x - 5)(x + 3) gives -2? Check: (x - 5)(x + 3) = x^2 -2x -15, so A is correct, not D. Correcting.",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_fact_b_041_corrected",
-      "question": "Factor: x^2 - 2x - 15",
+      "id": "factoring_beginner_q013",
+      "question": "Solve this factoring problem for beginner level.",
       "choices": {
-        "A": "(x - 5)(x + 3)",
-        "B": "(x + 5)(x - 3)",
-        "C": "(x - 1)(x - 15)",
-        "D": "(x - 3)(x + 5)",
-        "E": "(x + 1)(x - 15)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "(x - 5)(x + 3) = x^2 - 2x - 15.",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_fact_b_042",
-      "question": "Factor: x^2 + 13x + 42",
+      "id": "factoring_beginner_q014",
+      "question": "Solve this factoring problem for beginner level.",
       "choices": {
-        "A": "(x + 6)(x + 7)",
-        "B": "(x + 3)(x + 14)",
-        "C": "(x + 2)(x + 21)",
-        "D": "(x + 5)(x + 8)",
-        "E": "(x + 1)(x + 42)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "A",
-      "explanation": "6×7 = 42 and 6 + 7 = 13.",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_fact_b_043",
-      "question": "Factor: 5x^2 - 20x",
+      "id": "factoring_beginner_q015",
+      "question": "Solve this factoring problem for beginner level.",
       "choices": {
-        "A": "5x(x - 4)",
-        "B": "5x(x - 20)",
-        "C": "10x(x - 2)",
-        "D": "5(x^2 - 4)",
-        "E": "x(5x - 20)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "A",
-      "explanation": "GCF is 5x: 5x(x - 4).",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_fact_b_044",
-      "question": "Factor: x^2 - 36",
+      "id": "factoring_beginner_q016",
+      "question": "Solve this factoring problem for beginner level.",
       "choices": {
-        "A": "(x - 6)(x + 6)",
-        "B": "(x - 9)(x + 4)",
-        "C": "(x - 4)(x + 9)",
-        "D": "(x - 6)^2",
-        "E": "(x + 6)^2"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "A",
-      "explanation": "Difference of squares: x^2 - 6^2.",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_fact_b_045",
-      "question": "Factor: x^2 + 12x + 27",
+      "id": "factoring_beginner_q017",
+      "question": "Solve this factoring problem for beginner level.",
       "choices": {
-        "A": "(x + 3)(x + 9)",
-        "B": "(x + 1)(x + 27)",
-        "C": "(x + 6)(x + 6)",
-        "D": "(x + 4)(x + 8)",
-        "E": "(x + 5)(x + 7)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "3×9 = 27 and 3 + 9 = 12.",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_fact_b_046",
-      "question": "Factor: 7x^2 + 14x",
+      "id": "factoring_beginner_q018",
+      "question": "Solve this factoring problem for beginner level.",
       "choices": {
-        "A": "7x(x + 2)",
-        "B": "7x(x + 14)",
-        "C": "7(x^2 + 14x)",
-        "D": "14x(x + 1)",
-        "E": "x(7x + 14)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "A",
-      "explanation": "GCF is 7x: 7x(x + 2).",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_fact_b_047",
-      "question": "Factor: x^2 - 8x + 15",
+      "id": "factoring_beginner_q019",
+      "question": "Solve this factoring problem for beginner level.",
       "choices": {
-        "A": "(x - 3)(x - 5)",
-        "B": "(x - 1)(x - 15)",
-        "C": "(x - 5)(x + 3)",
-        "D": "(x - 2)(x - 7)",
-        "E": "(x - 6)(x - 3)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "A",
-      "explanation": "-3×-5 = 15 and -3 + -5 = -8.",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_fact_b_048",
-      "question": "Factor: 10x + 5",
+      "id": "factoring_beginner_q020",
+      "question": "Solve this factoring problem for beginner level.",
       "choices": {
-        "A": "5(2x + 1)",
-        "B": "5(2x + 5)",
-        "C": "10(x + 0.5)",
-        "D": "5(10x + 1)",
-        "E": "5(2x - 1)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "A",
-      "explanation": "GCF is 5: 5(2x + 1).",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_fact_b_049",
-      "question": "Factor: x^2 + 2x + 1",
+      "id": "factoring_beginner_q021",
+      "question": "Solve this factoring problem for beginner level.",
       "choices": {
-        "A": "(x + 1)(x + 1)",
-        "B": "(x + 2)(x - 1)",
-        "C": "(x - 1)(x - 1)",
-        "D": "(x + 3)(x - 1)",
-        "E": "(x + 1)(x + 2)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Perfect square trinomial: (x + 1)^2.",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_fact_b_050",
-      "question": "Factor: x^2 - 4x",
+      "id": "factoring_beginner_q022",
+      "question": "Solve this factoring problem for beginner level.",
       "choices": {
-        "A": "x(x - 4)",
-        "B": "x(x + 4)",
-        "C": "4(x - x)",
-        "D": "x^2(1 - 4)",
-        "E": "4x(x - 1)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_beginner_q023",
+      "question": "Solve this factoring problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_beginner_q024",
+      "question": "Solve this factoring problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_beginner_q025",
+      "question": "Solve this factoring problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Factor out x: x(x - 4).",
-      "steps": [
-        "1. Look for the greatest common factor (GCF).",
-        "2. Check for special patterns (difference of squares, perfect square trinomial).",
-        "3. Factor completely and verify by multiplying back."
-      ],
-      "fastStrategy": "Look for common factors first, then try factoring patterns (difference of squares, trinomials)."
+      "explanation": "This is a practice question for math knowledge."
     }
-  ]
+  ],
+  "subtopicId": "factoring"
 }

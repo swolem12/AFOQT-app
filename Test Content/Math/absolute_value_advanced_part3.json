@@ -1,0 +1,80 @@
+{
+  "subjectId": "math_knowledge",
+  "difficulty": "advanced",
+  "part": 3,
+  "questions": [
+    {
+      "id": "absolute_value_advanced_q045",
+      "question": "Solve: |3x| = 3",
+      "choices": {
+        "A": "1",
+        "B": "-1",
+        "C": "\u00b11",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 1 and x = -1 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q046",
+      "question": "Solve: |1x| = 3",
+      "choices": {
+        "A": "3",
+        "B": "-3",
+        "C": "\u00b13",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 3 and x = -3 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q047",
+      "question": "Solve: |2x| = 1",
+      "choices": {
+        "A": "0",
+        "B": "0",
+        "C": "\u00b10",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 0 and x = -0 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q048",
+      "question": "Solve: |5x| = 5",
+      "choices": {
+        "A": "1",
+        "B": "-1",
+        "C": "\u00b11",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 1 and x = -1 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q049",
+      "question": "Solve: |1x| = 8",
+      "choices": {
+        "A": "8",
+        "B": "-8",
+        "C": "\u00b18",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 8 and x = -8 satisfy the equation."
+    },
+    {
+      "id": "absolute_value_advanced_q050",
+      "question": "Solve: |4x| = 8",
+      "choices": {
+        "A": "2",
+        "B": "-2",
+        "C": "\u00b12",
+        "D": "No solution"
+      },
+      "answer": "C",
+      "explanation": "Both x = 2 and x = -2 satisfy the equation."
+    }
+  ],
+  "subtopicId": "absolute_value"
+}

@@ -1,482 +1,308 @@
 {
-  "subtopicId": "synonyms",
+  "subjectId": null,
   "difficulty": "expert",
   "part": 3,
   "questions": [
     {
-      "id": "syn_exp_051",
-      "question": "Which word is closest in meaning to 'prolixity'?",
+      "id": "synonyms_expert_q026",
+      "question": "Synonyms: Choose the best match for \"maladroit\"",
       "choices": {
-        "A": "verbosity",
-        "B": "fertility",
-        "C": "clarity",
-        "D": "density"
-      },
-      "answer": "A",
-      "explanation": "'Prolixity' means using too many words; 'verbosity' is the direct synonym. 'verbosity' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Eliminate first: Cross out opposites or unrelated words. 'verbosity' remains as the synonym."
-    },
-    {
-      "id": "syn_exp_052",
-      "question": "Which word is closest in meaning to 'propitiate'?",
-      "choices": {
-        "A": "calm",
-        "B": "appease",
-        "C": " soften",
-        "D": "convince"
+        "A": "perspicuous",
+        "B": "clumsy",
+        "C": "sanguine",
+        "D": "pellucid"
       },
       "answer": "B",
-      "explanation": "'Propitiate' means win or regain the favor of someone, often by appeasing them. 'appease' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of 'propitiate' in a sentence—'appease' can replace it without changing the meaning."
+      "explanation": "\"maladroit\" and \"clumsy\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_053",
-      "question": "Which word is closest in meaning to 'pusillanimous'?",
+      "id": "synonyms_expert_q027",
+      "question": "Synonyms: Choose the best match for \"mellifluous\"",
       "choices": {
-        "A": "cowardly",
-        "B": "timid",
-        "C": "cautious",
-        "D": "reticent"
+        "A": "sweet",
+        "B": "pellucid",
+        "C": "sanguine",
+        "D": "perspicuous"
       },
       "answer": "A",
-      "explanation": "'Pusillanimous' means showing a lack of courage or determination; 'cowardly' is strongest. 'cowardly' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Quick check: 'cowardly' means the same as 'pusillanimous'. Eliminate opposites and unrelated words."
+      "explanation": "\"mellifluous\" and \"sweet\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_054",
-      "question": "Which word is closest in meaning to 'refulgent'?",
+      "id": "synonyms_expert_q028",
+      "question": "Synonyms: Choose the best match for \"obdurate\"",
       "choices": {
-        "A": "radiant",
-        "B": "reflective",
-        "C": "polished",
-        "D": "lucid"
+        "A": "sanguine",
+        "B": "stubborn",
+        "C": "perspicuous",
+        "D": "pellucid"
       },
-      "answer": "A",
-      "explanation": "'Refulgent' means shining brightly; 'radiant' is the best synonym. 'radiant' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Use substitution: Would 'radiant' work in place of 'refulgent'? Yes—that confirms it."
+      "answer": "B",
+      "explanation": "\"obdurate\" and \"stubborn\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_055",
-      "question": "Which word is closest in meaning to 'sedulous'?",
+      "id": "synonyms_expert_q029",
+      "question": "Synonyms: Choose the best match for \"parsimonious\"",
       "choices": {
-        "A": "studious",
-        "B": "careful",
-        "C": "diligent",
-        "D": "persistent"
+        "A": "sanguine",
+        "B": "perspicuous",
+        "C": "stingy",
+        "D": "pellucid"
       },
       "answer": "C",
-      "explanation": "'Sedulous' means showing dedication and diligence; 'diligent' is the most direct match. 'diligent' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of sentences using 'sedulous'. 'diligent' fits the same contexts."
+      "explanation": "\"parsimonious\" and \"stingy\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_056",
-      "question": "Which word is closest in meaning to 'sinecure'?",
+      "id": "synonyms_expert_q030",
+      "question": "Synonyms: Choose the best match for \"pellucid\"",
       "choices": {
-        "A": "appointment",
-        "B": "position",
-        "C": "title",
-        "D": "cushy job"
+        "A": "clear",
+        "B": "perspicuous",
+        "C": "precocious",
+        "D": "sanguine"
+      },
+      "answer": "A",
+      "explanation": "\"pellucid\" and \"clear\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q031",
+      "question": "Synonyms: Choose the best match for \"penurious\"",
+      "choices": {
+        "A": "poor",
+        "B": "pellucid",
+        "C": "sanguine",
+        "D": "perspicuous"
+      },
+      "answer": "A",
+      "explanation": "\"penurious\" and \"poor\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q032",
+      "question": "Synonyms: Choose the best match for \"perspicacious\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "keen",
+        "C": "perspicuous",
+        "D": "sanguine"
+      },
+      "answer": "B",
+      "explanation": "\"perspicacious\" and \"keen\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q033",
+      "question": "Synonyms: Choose the best match for \"phlegmatic\"",
+      "choices": {
+        "A": "perspicuous",
+        "B": "calm",
+        "C": "sanguine",
+        "D": "pellucid"
+      },
+      "answer": "B",
+      "explanation": "\"phlegmatic\" and \"calm\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q034",
+      "question": "Synonyms: Choose the best match for \"picayune\"",
+      "choices": {
+        "A": "trivial",
+        "B": "perspicuous",
+        "C": "pellucid",
+        "D": "sanguine"
+      },
+      "answer": "A",
+      "explanation": "\"picayune\" and \"trivial\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q035",
+      "question": "Synonyms: Choose the best match for \"propitious\"",
+      "choices": {
+        "A": "auspicious",
+        "B": "pellucid",
+        "C": "sanguine",
+        "D": "perspicuous"
+      },
+      "answer": "A",
+      "explanation": "\"propitious\" and \"auspicious\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q036",
+      "question": "Synonyms: Choose the best match for \"pulchritude\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "perspicuous",
+        "C": "sanguine",
+        "D": "beauty"
       },
       "answer": "D",
-      "explanation": "'Sinecure' means A sinecure is a job with status and pay but little actual work; 'cushy job' signals that clearly. 'cushy job' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Eliminate first: Cross out opposites or unrelated words. 'cushy job' remains as the synonym."
+      "explanation": "\"pulchritude\" and \"beauty\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_057",
-      "question": "Which word is closest in meaning to 'specious'?",
+      "id": "synonyms_expert_q037",
+      "question": "Synonyms: Choose the best match for \"redolent\"",
       "choices": {
-        "A": "false",
-        "B": "plausible",
-        "C": "deceptive",
-        "D": "misleading"
+        "A": "pellucid",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "fragrant"
       },
       "answer": "D",
-      "explanation": "'Specious' means something that seems correct or attractive but is actually wrong or misleading. 'misleading' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of 'specious' in a sentence—'misleading' can replace it without changing the meaning."
+      "explanation": "\"redolent\" and \"fragrant\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_058",
-      "question": "Which word is closest in meaning to 'stentorian'?",
+      "id": "synonyms_expert_q038",
+      "question": "Synonyms: Choose the best match for \"sedulous\"",
       "choices": {
-        "A": "harsh",
-        "B": "loud",
-        "C": "forceful",
-        "D": "urgent"
-      },
-      "answer": "B",
-      "explanation": "'Stentorian' means extremely loud, especially of a voice. 'loud' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Quick check: 'loud' means the same as 'stentorian'. Eliminate opposites and unrelated words."
-    },
-    {
-      "id": "syn_exp_059",
-      "question": "Which word is closest in meaning to 'supercilious'?",
-      "choices": {
-        "A": "arrogant",
-        "B": "apathetic",
-        "C": "aloof",
-        "D": "superficial"
-      },
-      "answer": "A",
-      "explanation": "'Supercilious' means a haughty, superior attitude; 'arrogant' is the core meaning. 'arrogant' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Use substitution: Would 'arrogant' work in place of 'supercilious'? Yes—that confirms it."
-    },
-    {
-      "id": "syn_exp_060",
-      "question": "Which word is closest in meaning to 'trenchant'?",
-      "choices": {
-        "A": "decisive",
-        "B": "forceful",
-        "C": "incisive",
-        "D": "severe"
-      },
-      "answer": "C",
-      "explanation": "'Trenchant' means Trenchant usually refers to comments that are sharp, incisive, and effective. 'incisive' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of sentences using 'trenchant'. 'incisive' fits the same contexts."
-    },
-    {
-      "id": "syn_exp_061",
-      "question": "Which word is closest in meaning to 'turbid'?",
-      "choices": {
-        "A": "unclear",
-        "B": "agitated",
-        "C": "thick",
-        "D": "disturbed"
-      },
-      "answer": "A",
-      "explanation": "'Turbid' means Turbid literally refers to liquids that are cloudy; figuratively, ideas that are confused or unclear. 'unclear' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Eliminate first: Cross out opposites or unrelated words. 'unclear' remains as the synonym."
-    },
-    {
-      "id": "syn_exp_062",
-      "question": "Which word is closest in meaning to 'turgid'?",
-      "choices": {
-        "A": "ornate",
-        "B": "pompous",
-        "C": "inflated",
-        "D": "verbose"
-      },
-      "answer": "C",
-      "explanation": "'Turgid' means swollen or inflated; in writing it implies bombastic, overblown style. 'inflated' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of 'turgid' in a sentence—'inflated' can replace it without changing the meaning."
-    },
-    {
-      "id": "syn_exp_063",
-      "question": "Which word is closest in meaning to 'umbrage'?",
-      "choices": {
-        "A": "annoyance",
-        "B": "resentment",
-        "C": "offense",
-        "D": "irritation"
-      },
-      "answer": "C",
-      "explanation": "'Umbrage' means Taking umbrage means taking offense; 'offense' is the most direct synonym. 'offense' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Quick check: 'offense' means the same as 'umbrage'. Eliminate opposites and unrelated words."
-    },
-    {
-      "id": "syn_exp_064",
-      "question": "Which word is closest in meaning to 'venerate'?",
-      "choices": {
-        "A": "admire",
-        "B": "honor",
-        "C": "revere",
-        "D": "respect"
-      },
-      "answer": "C",
-      "explanation": "'Venerate' means to regard with great respect; 'revere' captures the intensity best. 'revere' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Use substitution: Would 'revere' work in place of 'venerate'? Yes—that confirms it."
-    },
-    {
-      "id": "syn_exp_065",
-      "question": "Which word is closest in meaning to 'abrogate'?",
-      "choices": {
-        "A": "void",
-        "B": "nullify",
-        "C": "rescind",
-        "D": "repeal"
+        "A": "perspicuous",
+        "B": "sanguine",
+        "C": "pellucid",
+        "D": "diligent"
       },
       "answer": "D",
-      "explanation": "'Abrogate' means to repeal or abolish a law or agreement; 'repeal' is the cleanest match. 'repeal' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of sentences using 'abrogate'. 'repeal' fits the same contexts."
+      "explanation": "\"sedulous\" and \"diligent\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_066",
-      "question": "Which word is closest in meaning to 'antediluvian'?",
+      "id": "synonyms_expert_q039",
+      "question": "Synonyms: Choose the best match for \"solipsistic\"",
       "choices": {
-        "A": "ancient",
-        "B": "obsolete",
-        "C": "extinct",
-        "D": "mythic"
+        "A": "self-centered",
+        "B": "perspicuous",
+        "C": "pellucid",
+        "D": "sanguine"
       },
       "answer": "A",
-      "explanation": "'Antediluvian' means Antediluvian literally means 'before the flood,' figuratively extremely old; 'ancient' fits core meaning. 'ancient' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Eliminate first: Cross out opposites or unrelated words. 'ancient' remains as the synonym."
+      "explanation": "\"solipsistic\" and \"self-centered\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_067",
-      "question": "Which word is closest in meaning to 'bilk'?",
+      "id": "synonyms_expert_q040",
+      "question": "Synonyms: Choose the best match for \"stolid\"",
       "choices": {
-        "A": "cheat",
-        "B": "avoid",
-        "C": "evade",
-        "D": "mislead"
+        "A": "impassive",
+        "B": "pellucid",
+        "C": "sanguine",
+        "D": "perspicuous"
       },
       "answer": "A",
-      "explanation": "'Bilk' means cheat or defraud someone, especially out of money. 'cheat' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of 'bilk' in a sentence—'cheat' can replace it without changing the meaning."
+      "explanation": "\"stolid\" and \"impassive\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_068",
-      "question": "Which word is closest in meaning to 'cabal'?",
+      "id": "synonyms_expert_q041",
+      "question": "Synonyms: Choose the best match for \"surreptitious\"",
       "choices": {
-        "A": "plot",
-        "B": "clique",
-        "C": "conspiracy",
-        "D": "faction"
-      },
-      "answer": "C",
-      "explanation": "'Cabal' means A cabal is a secret political clique or faction; 'conspiracy' best expresses the secret-scheme aspect. 'conspiracy' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Quick check: 'conspiracy' means the same as 'cabal'. Eliminate opposites and unrelated words."
-    },
-    {
-      "id": "syn_exp_069",
-      "question": "Which word is closest in meaning to 'cavil'?",
-      "choices": {
-        "A": "criticize",
-        "B": "nitpick",
-        "C": "complain",
-        "D": "object"
-      },
-      "answer": "B",
-      "explanation": "'Cavil' means raise petty or trivial objections; 'nitpick' is exactly that. 'nitpick' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Use substitution: Would 'nitpick' work in place of 'cavil'? Yes—that confirms it."
-    },
-    {
-      "id": "syn_exp_070",
-      "question": "Which word is closest in meaning to 'chary'?",
-      "choices": {
-        "A": "careful",
-        "B": "reluctant",
-        "C": "cautious",
-        "D": "sparing"
-      },
-      "answer": "C",
-      "explanation": "'Chary' means very cautious or wary about giving, doing, or trusting. 'cautious' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of sentences using 'chary'. 'cautious' fits the same contexts."
-    },
-    {
-      "id": "syn_exp_071",
-      "question": "Which word is closest in meaning to 'contumely'?",
-      "choices": {
-        "A": "insult",
-        "B": "injury",
-        "C": "resentment",
-        "D": "slander"
+        "A": "covert",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "pellucid"
       },
       "answer": "A",
-      "explanation": "'Contumely' means Contumely is insolent or insulting language or treatment; 'insult' is core meaning. 'insult' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Eliminate first: Cross out opposites or unrelated words. 'insult' remains as the synonym."
+      "explanation": "\"surreptitious\" and \"covert\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_072",
-      "question": "Which word is closest in meaning to 'cupidity'?",
+      "id": "synonyms_expert_q042",
+      "question": "Synonyms: Choose the best match for \"temeritous\"",
       "choices": {
-        "A": "desire",
-        "B": "greed",
-        "C": "curiosity",
-        "D": "lust"
+        "A": "sanguine",
+        "B": "reckless",
+        "C": "pellucid",
+        "D": "perspicuous"
       },
       "answer": "B",
-      "explanation": "'Cupidity' means strong greed, especially for money or possessions. 'greed' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of 'cupidity' in a sentence—'greed' can replace it without changing the meaning."
+      "explanation": "\"temeritous\" and \"reckless\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_073",
-      "question": "Which word is closest in meaning to 'dearth'?",
+      "id": "synonyms_expert_q043",
+      "question": "Synonyms: Choose the best match for \"tendentious\"",
       "choices": {
-        "A": "lack",
-        "B": "scarcity",
-        "C": "shortage",
-        "D": "deficit"
+        "A": "sanguine",
+        "B": "biased",
+        "C": "pellucid",
+        "D": "perspicuous"
       },
       "answer": "B",
-      "explanation": "'Dearth' means Dearth is a scarcity or lack of something; 'scarcity' is the most standard pairing. 'scarcity' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Quick check: 'scarcity' means the same as 'dearth'. Eliminate opposites and unrelated words."
+      "explanation": "\"tendentious\" and \"biased\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_074",
-      "question": "Which word is closest in meaning to 'disparate'?",
+      "id": "synonyms_expert_q044",
+      "question": "Synonyms: Choose the best match for \"tenuous\"",
       "choices": {
-        "A": "diverse",
-        "B": "different",
-        "C": "distinct",
-        "D": "varied"
+        "A": "pellucid",
+        "B": "perspicuous",
+        "C": "weak",
+        "D": "sanguine"
       },
       "answer": "C",
-      "explanation": "'Disparate' means essentially different in kind; 'distinct' emphasizes that essential difference. 'distinct' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Use substitution: Would 'distinct' work in place of 'disparate'? Yes—that confirms it."
+      "explanation": "\"tenuous\" and \"weak\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_075",
-      "question": "Which word is closest in meaning to 'effulgent'?",
+      "id": "synonyms_expert_q045",
+      "question": "Synonyms: Choose the best match for \"perspicuous\"",
       "choices": {
-        "A": "bright",
-        "B": "radiant",
-        "C": "gleaming",
-        "D": "brilliant"
+        "A": "precocious",
+        "B": "sanguine",
+        "C": "transparent",
+        "D": "pellucid"
+      },
+      "answer": "C",
+      "explanation": "\"perspicuous\" and \"transparent\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q046",
+      "question": "Synonyms: Choose the best match for \"pellucid\"",
+      "choices": {
+        "A": "clear",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "precocious"
+      },
+      "answer": "A",
+      "explanation": "\"pellucid\" and \"clear\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q047",
+      "question": "Synonyms: Choose the best match for \"sanguine\"",
+      "choices": {
+        "A": "precocious",
+        "B": "hopeful",
+        "C": "pellucid",
+        "D": "perspicuous"
       },
       "answer": "B",
-      "explanation": "'Effulgent' means shining brightly; 'radiant' best conveys the sense of emitting light. 'radiant' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of sentences using 'effulgent'. 'radiant' fits the same contexts."
+      "explanation": "\"sanguine\" and \"hopeful\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q048",
+      "question": "Synonyms: Choose the best match for \"precocious\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "perspicuous",
+        "C": "intelligent",
+        "D": "sanguine"
+      },
+      "answer": "C",
+      "explanation": "\"precocious\" and \"intelligent\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q049",
+      "question": "Synonyms: Choose the best match for \"propitious\"",
+      "choices": {
+        "A": "favorable",
+        "B": "perspicuous",
+        "C": "pellucid",
+        "D": "sanguine"
+      },
+      "answer": "A",
+      "explanation": "\"propitious\" and \"favorable\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q050",
+      "question": "Synonyms: Choose the best match for \"nugatory\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "worthless",
+        "C": "perspicuous",
+        "D": "pellucid"
+      },
+      "answer": "B",
+      "explanation": "\"nugatory\" and \"worthless\" are closely related in meaning."
     }
-  ]
+  ],
+  "subtopicId": "synonyms"
 }

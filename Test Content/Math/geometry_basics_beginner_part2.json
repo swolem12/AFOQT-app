@@ -1,1139 +1,308 @@
 {
   "subjectId": "math_knowledge",
-  "subtopicId": "geometry_basics",
   "difficulty": "beginner",
   "part": 2,
   "questions": [
     {
-      "uiSpec": {
-        "type": "geometry_triangle_diagram",
-        "width": 300,
-        "height": 300,
-        "points": [
-          {
-            "name": "A",
-            "x": 60,
-            "y": 220
-          },
-          {
-            "name": "B",
-            "x": 240,
-            "y": 220
-          },
-          {
-            "name": "C",
-            "x": 150,
-            "y": 80
-          }
-        ],
-        "angleLabels": [
-          {
-            "vertex": "A",
-            "label": "50°"
-          },
-          {
-            "vertex": "B",
-            "label": "60°"
-          },
-          {
-            "vertex": "C",
-            "label": "x°",
-            "highlight": true
-          }
-        ],
-        "styleHints": {
-          "triangleColor": "black",
-          "labelColor": "black",
-          "highlightAngleColor": "red"
-        }
-      },
-      "copilotInstruction": "Draw triangle ABC with base AB horizontal. Label ∠A = 50°, ∠B = 60°, and ∠C = x°. Highlight angle C in red.",
-      "id": "mk_geo_b_026",
-      "question": "In triangle ABC, ∠A = 50° and ∠B = 60°. What is the measure of ∠C?",
+      "id": "geometry_basics_beginner_q001",
+      "question": "Solve this geometry basics problem for beginner level.",
       "choices": {
-        "A": "40°",
-        "B": "50°",
-        "C": "60°",
-        "D": "70°",
-        "E": "80°"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "The interior angles of a triangle sum to 180°. Add the known angles: 50° + 60° = 110°. Then 180° − 110° = 70° would be wrong—careful—let's recompute: 180 − 110 = 70. This means ∠C = 70°, so the correct option is 70°. (Use this as a template and align your choice list so 70° is selected.)",
-      "steps": [
-        "1. Use triangle angle sum: ∠A + ∠B + ∠C = 180°.",
-        "2. Add known angles: 50° + 60° = 110°.",
-        "3. Subtract from 180°: 180° − 110° = 70°.",
-        "4. So ∠C = 70°."
-      ],
-      "fastStrategy": "For a missing triangle angle, just subtract the sum of the other two from 180°."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_geo_b_027",
-      "question": "A triangle has angles 30°, 60°, and 90°. What special name is often given to this triangle?",
+      "id": "geometry_basics_beginner_q002",
+      "question": "Solve this geometry basics problem for beginner level.",
       "choices": {
-        "A": "Equilateral triangle",
-        "B": "Isosceles right triangle",
-        "C": "30-60-90 triangle",
-        "D": "Scalene obtuse triangle",
-        "E": "Reflex triangle"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q003",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "The angle measures 30°, 60°, and 90° identify a special right triangle known as a 30-60-90 triangle. Its sides follow a consistent ratio, but for this question, recognizing the angle pattern is enough.",
-      "steps": [
-        "1. Notice one angle is 90° → right triangle.",
-        "2. The other two angles are 30° and 60°.",
-        "3. That specific combination is called a 30-60-90 triangle."
-      ],
-      "fastStrategy": "Memorize 30-60-90 and 45-45-90 as the two classic special right triangles.",
-      "uiSpec": {
-        "type": "geometry_triangle_diagram",
-        "width": 300,
-        "height": 300,
-        "vertices": [
-          {
-            "x": 150,
-            "y": 50,
-            "label": "A"
-          },
-          {
-            "x": 80,
-            "y": 220,
-            "label": "B"
-          },
-          {
-            "x": 220,
-            "y": 220,
-            "label": "C"
-          }
-        ],
-        "angles": [
-          {
-            "vertex": 0,
-            "label": "30°"
-          },
-          {
-            "vertex": 1,
-            "label": "x°"
-          },
-          {
-            "vertex": 2,
-            "label": "y°"
-          }
-        ],
-        "styleHints": {
-          "lineColor": "#00ffff",
-          "labelColor": "#00ffff"
-        }
-      }
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_geo_b_028",
-      "question": "A polygon has 5 sides. What is the correct name for this polygon?",
+      "id": "geometry_basics_beginner_q004",
+      "question": "Solve this geometry basics problem for beginner level.",
       "choices": {
-        "A": "Triangle",
-        "B": "Quadrilateral",
-        "C": "Pentagon",
-        "D": "Hexagon",
-        "E": "Octagon"
-      },
-      "answer": "C",
-      "explanation": "A triangle has 3 sides, a quadrilateral has 4, a pentagon has 5, a hexagon has 6, and an octagon has 8. Therefore, a 5-sided polygon is a pentagon.",
-      "steps": [
-        "1. Recall the standard polygon names.",
-        "2. Match 5 sides to 'pentagon'."
-      ],
-      "fastStrategy": "Think of 'Pentagon' building (DOD HQ) to remember 5 sides = pentagon.",
-      "uiSpec": {
-        "type": "polygon_basic",
-        "width": 300,
-        "height": 300,
-        "points": [
-          {
-            "x": 150,
-            "y": 50,
-            "label": "A"
-          },
-          {
-            "x": 245,
-            "y": 119,
-            "label": "B"
-          },
-          {
-            "x": 209,
-            "y": 231,
-            "label": "C"
-          },
-          {
-            "x": 91,
-            "y": 231,
-            "label": "D"
-          },
-          {
-            "x": 55,
-            "y": 119,
-            "label": "E"
-          }
-        ],
-        "labels": true,
-        "styleHints": {
-          "lineColor": "#00ffff",
-          "labelColor": "#00ffff"
-        }
-      }
-    },
-    {
-      "id": "mk_geo_b_029",
-      "question": "A regular hexagon has 6 equal sides. How many degrees are in the sum of its interior angles?",
-      "choices": {
-        "A": "360°",
-        "B": "540°",
-        "C": "720°",
-        "D": "900°",
-        "E": "1080°"
-      },
-      "answer": "C",
-      "explanation": "The sum of interior angles of an n-sided polygon is (n − 2) × 180°. For a hexagon, n = 6. So (6 − 2) × 180° = 4 × 180° = 720°.",
-      "steps": [
-        "1. Use formula: (n − 2) × 180°.",
-        "2. Substitute n = 6 → (6 − 2) × 180° = 4 × 180°.",
-        "3. Compute 4 × 180° = 720°."
-      ],
-      "fastStrategy": "Polygon sum formula: (n − 2) × 180°. For quick checks, a quadrilateral (n=4) gives 360°; that anchors the pattern.",
-      "uiSpec": {
-        "type": "polygon_basic",
-        "width": 300,
-        "height": 300,
-        "points": [
-          {
-            "x": 150,
-            "y": 50,
-            "label": "A"
-          },
-          {
-            "x": 237,
-            "y": 100,
-            "label": "B"
-          },
-          {
-            "x": 237,
-            "y": 200,
-            "label": "C"
-          },
-          {
-            "x": 150,
-            "y": 250,
-            "label": "D"
-          },
-          {
-            "x": 63,
-            "y": 200,
-            "label": "E"
-          },
-          {
-            "x": 63,
-            "y": 100,
-            "label": "F"
-          }
-        ],
-        "labels": true,
-        "styleHints": {
-          "lineColor": "#00ffff",
-          "labelColor": "#00ffff"
-        }
-      }
-    },
-    {
-      "id": "mk_geo_b_030",
-      "question": "A regular quadrilateral is a polygon with four equal sides and four right angles. What is the name of this shape?",
-      "choices": {
-        "A": "Rectangle",
-        "B": "Rhombus",
-        "C": "Parallelogram",
-        "D": "Square",
-        "E": "Trapezoid"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "A square has four equal sides and four right angles. A rectangle has right angles but not necessarily equal sides; a rhombus has equal sides but not necessarily right angles.",
-      "steps": [
-        "1. Identify 'four equal sides' and 'four right angles'.",
-        "2. That is the definition of a square.",
-        "3. Other quadrilaterals miss either equal sides or right angles."
-      ],
-      "fastStrategy": "Square = rectangle + rhombus: both equal sides and right angles.",
-      "uiSpec": {
-        "type": "polygon_basic",
-        "width": 300,
-        "height": 300,
-        "points": [
-          {
-            "x": 150,
-            "y": 50,
-            "label": "A"
-          },
-          {
-            "x": 250,
-            "y": 150,
-            "label": "B"
-          },
-          {
-            "x": 150,
-            "y": 250,
-            "label": "C"
-          },
-          {
-            "x": 50,
-            "y": 150,
-            "label": "D"
-          }
-        ],
-        "labels": true,
-        "styleHints": {
-          "lineColor": "#00ffff",
-          "labelColor": "#00ffff"
-        }
-      }
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "uiSpec": {
-        "type": "geometry_triangle_diagram",
-        "width": 300,
-        "height": 300,
-        "points": [
-          {
-            "name": "A",
-            "x": 80,
-            "y": 220
-          },
-          {
-            "name": "B",
-            "x": 220,
-            "y": 220
-          },
-          {
-            "name": "C",
-            "x": 150,
-            "y": 100
-          }
-        ],
-        "angleLabels": [
-          {
-            "vertex": "A",
-            "label": "x°",
-            "highlight": true
-          },
-          {
-            "vertex": "B",
-            "label": "x°",
-            "highlight": true
-          },
-          {
-            "vertex": "C",
-            "label": "40°"
-          }
-        ]
-      },
-      "copilotInstruction": "Draw an isosceles triangle with base AB horizontal and equal legs AC and BC. Label ∠A and ∠B each as x° and ∠C as 40°.",
-      "id": "mk_geo_b_031",
-      "question": "In an isosceles triangle, the two base angles are equal. If the vertex angle (top) is 40°, what is the measure of each base angle?",
+      "id": "geometry_basics_beginner_q005",
+      "question": "Solve this geometry basics problem for beginner level.",
       "choices": {
-        "A": "40°",
-        "B": "60°",
-        "C": "70°",
-        "D": "80°",
-        "E": "100°"
-      },
-      "answer": "C",
-      "explanation": "The three angles must add to 180°. One angle is 40°, so the other two share the remaining 140°. Divide by 2: 140° ÷ 2 = 70°. Each base angle is 70°.",
-      "steps": [
-        "1. Triangle sum: 180° total.",
-        "2. Subtract the vertex angle: 180° − 40° = 140°.",
-        "3. Two equal base angles share 140°, so each is 140° ÷ 2 = 70°."
-      ],
-      "fastStrategy": "Isosceles with known top angle: subtract from 180, then split the remainder in half."
-    },
-    {
-      "id": "mk_geo_b_032",
-      "question": "A right triangle has legs of 8 units and 15 units. What is the length of the hypotenuse?",
-      "choices": {
-        "A": "15 units",
-        "B": "17 units",
-        "C": "16 units",
-        "D": "10 units",
-        "E": "23 units"
-      },
-      "answer": "B",
-      "explanation": "Use the Pythagorean theorem: a² + b² = c². Here, 8² + 15² = 64 + 225 = 289. The square root of 289 is 17, so the hypotenuse is 17 units.",
-      "steps": [
-        "1. Compute 8² = 64.",
-        "2. Compute 15² = 225.",
-        "3. Add: 64 + 225 = 289.",
-        "4. √289 = 17."
-      ],
-      "fastStrategy": "8–15–17 is another standard Pythagorean triple to memorize (along with 3–4–5 and 5–12–13).",
-      "uiSpec": {
-        "type": "geometry_triangle_diagram",
-        "width": 300,
-        "height": 300,
-        "vertices": [
-          {
-            "x": 150,
-            "y": 50,
-            "label": "A"
-          },
-          {
-            "x": 80,
-            "y": 220,
-            "label": "B"
-          },
-          {
-            "x": 220,
-            "y": 220,
-            "label": "C"
-          }
-        ],
-        "angles": [
-          {
-            "vertex": 0,
-            "label": "60°"
-          },
-          {
-            "vertex": 1,
-            "label": "x°"
-          },
-          {
-            "vertex": 2,
-            "label": "y°"
-          }
-        ],
-        "styleHints": {
-          "lineColor": "#00ffff",
-          "labelColor": "#00ffff"
-        }
-      }
-    },
-    {
-      "id": "mk_geo_b_033",
-      "question": "A circle has diameter 14 units. What is its radius?",
-      "choices": {
-        "A": "3 units",
-        "B": "5 units",
-        "C": "7 units",
-        "D": "14 units",
-        "E": "28 units"
-      },
-      "answer": "C",
-      "explanation": "The radius is half the diameter. Radius = 14 ÷ 2 = 7 units.",
-      "steps": [
-        "1. Recall: diameter = 2 × radius.",
-        "2. So radius = diameter ÷ 2.",
-        "3. 14 ÷ 2 = 7."
-      ],
-      "fastStrategy": "Diameter and radius are always a factor-of-two pair."
-    },
-    {
-      "id": "mk_geo_b_034",
-      "question": "A circle has radius 10 units. What is the approximate circumference? (Use π ≈ 3.14.)",
-      "choices": {
-        "A": "20 units",
-        "B": "31.4 units",
-        "C": "62.8 units",
-        "D": "78.5 units",
-        "E": "100 units"
-      },
-      "answer": "C",
-      "explanation": "Circumference C = 2πr. With r = 10, C ≈ 2 × 3.14 × 10 = 6.28 × 10 = 62.8 units.",
-      "steps": [
-        "1. Use C = 2πr.",
-        "2. Substitute r = 10: C = 2 × 3.14 × 10.",
-        "3. Multiply 2 × 3.14 = 6.28.",
-        "4. Multiply 6.28 × 10 = 62.8."
-      ],
-      "fastStrategy": "For easy radii like 10, circumference is about 6.28 × r."
-    },
-    {
-      "uiSpec": {
-        "type": "geometry_angle_pair_diagram",
-        "width": 300,
-        "height": 300,
-        "lines": [
-          {
-            "from": {
-              "x": 40,
-              "y": 150
-            },
-            "to": {
-              "x": 260,
-              "y": 150
-            }
-          },
-          {
-            "from": {
-              "x": 150,
-              "y": 150
-            },
-            "to": {
-              "x": 260,
-              "y": 80
-            }
-          }
-        ],
-        "angleLabels": [
-          {
-            "position": "right",
-            "label": "130°",
-            "highlight": true
-          },
-          {
-            "position": "left",
-            "label": "x°",
-            "highlight": true
-          }
-        ]
-      },
-      "copilotInstruction": "Draw a straight horizontal line and another ray sharing the same vertex on the right, forming a straight-line pair. Label the larger angle on the right as 130° and the adjacent angle on the left along the straight line as x°.",
-      "id": "mk_geo_b_035",
-      "question": "Two angles form a linear pair along a straight line. One angle measures 130°. What is the measure of the adjacent angle x°?",
-      "choices": {
-        "A": "40°",
-        "B": "50°",
-        "C": "60°",
-        "D": "70°",
-        "E": "90°"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Angles in a linear pair are supplementary and add to 180°. So x + 130° = 180°. Subtract: x = 180° − 130° = 50° would be wrong; correct calculation is 50°, so align answer choices accordingly in your implementation.",
-      "steps": [
-        "1. Recognize that a linear pair forms a straight angle of 180°.",
-        "2. Set up x + 130° = 180°.",
-        "3. Subtract: x = 180° − 130° = 50°."
-      ],
-      "fastStrategy": "Straight line = 180°. Just do 180 − given angle."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_geo_b_036",
-      "question": "Which of the following pairs of lines are perpendicular?",
+      "id": "geometry_basics_beginner_q006",
+      "question": "Solve this geometry basics problem for beginner level.",
       "choices": {
-        "A": "y = 2x and y = 2x + 3",
-        "B": "y = x and y = -x",
-        "C": "y = -2x and y = -1/2x",
-        "D": "y = 3 and y = 5",
-        "E": "x = 2 and x = -4"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "Two non-vertical lines are perpendicular if their slopes are negative reciprocals. The slope of y = x is 1, and y = -x has slope -1. Since -1 is the negative reciprocal of 1, these lines are perpendicular.",
-      "steps": [
-        "1. Find slopes: for y = x → m = 1; for y = -x → m = -1.",
-        "2. Check if m₂ = -1/m₁ → -1 = -1/1.",
-        "3. This condition is satisfied, so the lines are perpendicular."
-      ],
-      "fastStrategy": "Perpendicular slopes multiply to -1 (m₁ × m₂ = -1). For lines like y = x and y = -x, it's easy to spot."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_geo_b_037",
-      "question": "Which of the following pairs of lines are parallel?",
+      "id": "geometry_basics_beginner_q007",
+      "question": "Solve this geometry basics problem for beginner level.",
       "choices": {
-        "A": "y = 2x + 1 and y = 2x - 3",
-        "B": "y = -x and y = x",
-        "C": "y = 3x and y = -1/3x",
-        "D": "y = 4 and y = x + 4",
-        "E": "x = 2 and y = 2"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "A",
-      "explanation": "Parallel non-vertical lines have the same slope but different y-intercepts. Both y = 2x + 1 and y = 2x − 3 have slope 2 but different intercepts, so they are parallel.",
-      "steps": [
-        "1. Compare slopes of each pair.",
-        "2. Option A: slopes are both 2; intercepts differ → parallel.",
-        "3. Other options have different slopes or different forms (one vertical, one horizontal)."
-      ],
-      "fastStrategy": "Same m, different b → parallel. Different m → not parallel (except special vertical line case)."
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "uiSpec": {
-        "type": "geometry_quadrilateral_diagram",
-        "width": 300,
-        "height": 300,
-        "points": [
-          {
-            "name": "A",
-            "x": 70,
-            "y": 220
-          },
-          {
-            "name": "B",
-            "x": 230,
-            "y": 220
-          },
-          {
-            "name": "C",
-            "x": 260,
-            "y": 120
-          },
-          {
-            "name": "D",
-            "x": 40,
-            "y": 120
-          }
-        ],
-        "sideLabels": [
-          {
-            "from": "A",
-            "to": "B",
-            "label": "parallel"
-          },
-          {
-            "from": "D",
-            "to": "C",
-            "label": "parallel"
-          }
-        ]
-      },
-      "copilotInstruction": "Draw a trapezoid with top and bottom bases horizontal. Label the top and bottom bases as 'parallel'. Leave the legs slanted.",
-      "id": "mk_geo_b_038",
-      "question": "A trapezoid is a quadrilateral with exactly one pair of parallel sides. In the diagram, which sides are parallel?",
+      "id": "geometry_basics_beginner_q008",
+      "question": "Solve this geometry basics problem for beginner level.",
       "choices": {
-        "A": "AB and BC",
-        "B": "BC and CD",
-        "C": "CD and DA",
-        "D": "AB and CD",
-        "E": "AD and BC"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "In the typical trapezoid orientation, the top and bottom horizontal sides are the parallel sides. These are AB and CD.",
-      "steps": [
-        "1. Identify the two sides that are both horizontal.",
-        "2. Label them as AB (top) and CD (bottom).",
-        "3. These two are parallel in a trapezoid."
-      ],
-      "fastStrategy": "For standard diagrams, the 'bases' (top and bottom) in a trapezoid are the parallel sides."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_geo_b_039",
-      "question": "Which of the following must be true for a parallelogram?",
+      "id": "geometry_basics_beginner_q009",
+      "question": "Solve this geometry basics problem for beginner level.",
       "choices": {
-        "A": "All sides are equal and all angles are right angles.",
-        "B": "Only one pair of opposite sides is parallel.",
-        "C": "Both pairs of opposite sides are parallel.",
-        "D": "All angles are acute.",
-        "E": "All sides are unequal."
-      },
-      "answer": "C",
-      "explanation": "A parallelogram is defined as a quadrilateral in which both pairs of opposite sides are parallel. That is the key property.",
-      "steps": [
-        "1. Recall the definition of a parallelogram.",
-        "2. Eliminate options that are too specific (like 'all sides equal' or 'all angles right').",
-        "3. Choose the statement that matches the core definition: both pairs of opposite sides parallel."
-      ],
-      "fastStrategy": "Parallelogram → think 'parallel pair × 2.'"
-    },
-    {
-      "id": "mk_geo_b_040",
-      "question": "Which statement about a rectangle is always true?",
-      "choices": {
-        "A": "All sides are equal.",
-        "B": "All angles are right angles.",
-        "C": "Opposite angles are obtuse.",
-        "D": "Exactly one pair of sides is parallel.",
-        "E": "It is always a square."
-      },
-      "answer": "B",
-      "explanation": "By definition, a rectangle is a quadrilateral with four right angles. The sides can be equal (in which case it is also a square), but they are not required to be.",
-      "steps": [
-        "1. Recall the basic property of rectangles: 4 right angles.",
-        "2. Opposite sides are parallel, but that is also true of parallelograms.",
-        "3. Equal sides are not required; that is a square."
-      ],
-      "fastStrategy": "Rectangles: four 90° angles; squares are 'special rectangles' with all sides equal.",
-      "uiSpec": {
-        "type": "geometry_angle_diagram",
-        "width": 300,
-        "height": 300,
-        "showGrid": false,
-        "lines": [
-          {
-            "from": {
-              "x": 150,
-              "y": 150
-            },
-            "to": {
-              "x": 250,
-              "y": 150
-            }
-          },
-          {
-            "from": {
-              "x": 150,
-              "y": 150
-            },
-            "to": {
-              "x": 221,
-              "y": 79
-            }
-          }
-        ],
-        "angleArc": {
-          "center": {
-            "x": 150,
-            "y": 150
-          },
-          "radius": 35,
-          "startRay": 0,
-          "endRay": 1,
-          "label": "45°",
-          "measureDegrees": 45
-        },
-        "styleHints": {
-          "baseLineColor": "#00ffff",
-          "highlightAngleColor": "#ffff00",
-          "labelsColor": "#00ffff"
-        }
-      }
-    },
-    {
-      "uiSpec": {
-        "type": "geometry_circle_diagram",
-        "width": 300,
-        "height": 300,
-        "center": {
-          "x": 150,
-          "y": 150
-        },
-        "radius": 80,
-        "radii": [
-          {
-            "from": "center",
-            "toAngleDegrees": 0,
-            "label": "r"
-          },
-          {
-            "from": "center",
-            "toAngleDegrees": 180,
-            "label": "r"
-          }
-        ],
-        "diameter": {
-          "throughCenter": true,
-          "label": "d"
-        }
-      },
-      "copilotInstruction": "Draw a circle with a horizontal line through the center representing the diameter, labeled 'd'. Also draw two radius segments from the center to the circle on left and right, each labeled 'r'.",
-      "id": "mk_geo_b_041",
-      "question": "In a circle, which relationship between radius r and diameter d is always true?",
-      "choices": {
-        "A": "d = r",
-        "B": "d = 2r",
-        "C": "d = r/2",
-        "D": "d = r²",
-        "E": "d = πr"
-      },
-      "answer": "B",
-      "explanation": "The diameter is the full distance across the circle through its center; it is exactly twice the radius: d = 2r.",
-      "steps": [
-        "1. Picture radius as 'center to edge'.",
-        "2. Two radii back-to-back make a diameter.",
-        "3. So d = 2r."
-      ],
-      "fastStrategy": "Center outward is r; across the whole circle is 2r."
-    },
-    {
-      "id": "mk_geo_b_042",
-      "question": "On a number line, point P is at −3 and point Q is at 4. What is the distance between P and Q?",
-      "choices": {
-        "A": "1",
-        "B": "3",
-        "C": "4",
-        "D": "7",
-        "E": "8"
-      },
-      "answer": "D",
-      "explanation": "Distance on a number line is the absolute difference: |4 − (−3)| = |4 + 3| = |7| = 7.",
-      "steps": [
-        "1. Subtract: 4 − (−3) = 4 + 3.",
-        "2. Get 7.",
-        "3. Distance is 7 units."
-      ],
-      "fastStrategy": "Distance on a number line = absolute difference in coordinates."
-    },
-    {
-      "id": "mk_geo_b_043",
-      "question": "Which of the following best describes a radius of a circle?",
-      "choices": {
-        "A": "A segment connecting two points on the circle.",
-        "B": "A segment passing through the center and connecting two points on the circle.",
-        "C": "A segment connecting the center of the circle to a point on the circle.",
-        "D": "The distance around the circle.",
-        "E": "Half the circumference."
-      },
-      "answer": "C",
-      "explanation": "A radius is any line segment connecting the center of the circle to a point on the circle.",
-      "steps": [
-        "1. Recall definitions: radius, diameter, chord, circumference.",
-        "2. Radius = center to circle.",
-        "3. Diameter = circle to circle through center.",
-        "4. Chord = circle to circle, not necessarily through center."
-      ],
-      "fastStrategy": "Radius = 'center-to-edge' segment."
-    },
-    {
-      "id": "mk_geo_b_044",
-      "question": "Which of the following best describes a chord of a circle?",
-      "choices": {
-        "A": "A segment from the center to the circle.",
-        "B": "A segment passing through the center and connecting two points on the circle.",
-        "C": "A segment connecting any two points on the circle.",
-        "D": "A segment that is always equal to the radius.",
-        "E": "A line tangent to the circle."
-      },
-      "answer": "C",
-      "explanation": "A chord is any segment whose endpoints both lie on the circle. A diameter is a special type of chord that passes through the center.",
-      "steps": [
-        "1. Recall: chord endpoints are on the circle itself.",
-        "2. Recognize that a diameter is just a 'through-center' chord.",
-        "3. Thus, the general definition is 'segment joining any two points on the circle.'"
-      ],
-      "fastStrategy": "Every diameter is a chord, but not every chord is a diameter."
-    },
-    {
-      "uiSpec": {
-        "type": "geometry_angle_diagram",
-        "width": 300,
-        "height": 300,
-        "lines": [
-          {
-            "from": {
-              "x": 150,
-              "y": 150
-            },
-            "to": {
-              "x": 250,
-              "y": 150
-            }
-          },
-          {
-            "from": {
-              "x": 150,
-              "y": 150
-            },
-            "to": {
-              "x": 150,
-              "y": 50
-            }
-          },
-          {
-            "from": {
-              "x": 150,
-              "y": 150
-            },
-            "to": {
-              "x": 70,
-              "y": 210
-            }
-          }
-        ],
-        "angleLabels": [
-          {
-            "vertex": "center",
-            "label": "30°",
-            "betweenRays": [
-              0,
-              1
-            ]
-          },
-          {
-            "vertex": "center",
-            "label": "x°",
-            "betweenRays": [
-              1,
-              2
-            ],
-            "highlight": true
-          }
-        ]
-      },
-      "copilotInstruction": "Draw three rays from a common vertex forming adjacent angles on a straight half-plane. Label the first angle (between right and up rays) 30°, and the next angle (between up and down-left rays) as x°. Show that together they form a right angle (90°).",
-      "id": "mk_geo_b_045",
-      "question": "Two adjacent angles form a right angle of 90°. One angle measures 30°. What is the measure of the other angle x°?",
-      "choices": {
-        "A": "30°",
-        "B": "45°",
-        "C": "60°",
-        "D": "70°",
-        "E": "90°"
-      },
-      "answer": "C",
-      "explanation": "A right angle is 90°. If one of the adjacent angles is 30°, then the other must be 90° − 30° = 60°.",
-      "steps": [
-        "1. Recognize that the two angles together form 90°.",
-        "2. Subtract the known angle: 90° − 30° = 60°.",
-        "3. So angle x° is 60°."
-      ],
-      "fastStrategy": "If two angles 'make a right angle', they sum to 90°. Just do 90 minus the given angle."
-    },
-    {
-      "id": "mk_geo_b_046",
-      "question": "Which shape must have all sides equal and all angles equal?",
-      "choices": {
-        "A": "Rectangle",
-        "B": "Square",
-        "C": "Parallelogram",
-        "D": "Trapezoid",
-        "E": "Rhombus"
-      },
-      "answer": "B",
-      "explanation": "A square has four equal sides and four equal angles (each 90°). A rhombus has four equal sides but not necessarily equal angles; a rectangle has four equal angles but not necessarily equal sides.",
-      "steps": [
-        "1. Compare definitions of rectangle, square, rhombus, and parallelogram.",
-        "2. Only the square guarantees both equal sides and 90° angles.",
-        "3. So the answer is square."
-      ],
-      "fastStrategy": "Square = 'perfect quadrilateral': equal sides AND right angles.",
-      "uiSpec": {
-        "type": "geometry_angle_diagram",
-        "width": 300,
-        "height": 300,
-        "showGrid": false,
-        "lines": [
-          {
-            "from": {
-              "x": 150,
-              "y": 150
-            },
-            "to": {
-              "x": 250,
-              "y": 150
-            }
-          },
-          {
-            "from": {
-              "x": 150,
-              "y": 150
-            },
-            "to": {
-              "x": 221,
-              "y": 79
-            }
-          }
-        ],
-        "angleArc": {
-          "center": {
-            "x": 150,
-            "y": 150
-          },
-          "radius": 35,
-          "startRay": 0,
-          "endRay": 1,
-          "label": "45°",
-          "measureDegrees": 45
-        },
-        "styleHints": {
-          "baseLineColor": "#00ffff",
-          "highlightAngleColor": "#ffff00",
-          "labelsColor": "#00ffff"
-        }
-      }
-    },
-    {
-      "id": "mk_geo_b_047",
-      "question": "Which of the following is NOT a property of all rectangles?",
-      "choices": {
-        "A": "Opposite sides are parallel.",
-        "B": "Opposite sides are equal.",
-        "C": "All angles are right angles.",
-        "D": "All sides are equal.",
-        "E": "It is a quadrilateral."
-      },
-      "answer": "D",
-      "explanation": "All rectangles have opposite sides parallel and equal, four right angles, and four sides (quadrilateral). They are not required to have all four sides equal; that extra condition makes it a square.",
-      "steps": [
-        "1. List true properties of rectangles.",
-        "2. Identify the statement that is only true for squares, not general rectangles: all sides equal.",
-        "3. Thus option D is not a required rectangle property."
-      ],
-      "fastStrategy": "If you see 'all sides equal', think 'square or rhombus', not generic rectangle.",
-      "uiSpec": {
-        "type": "geometry_angle_diagram",
-        "width": 300,
-        "height": 300,
-        "showGrid": false,
-        "lines": [
-          {
-            "from": {
-              "x": 150,
-              "y": 150
-            },
-            "to": {
-              "x": 250,
-              "y": 150
-            }
-          },
-          {
-            "from": {
-              "x": 150,
-              "y": 150
-            },
-            "to": {
-              "x": 221,
-              "y": 79
-            }
-          }
-        ],
-        "angleArc": {
-          "center": {
-            "x": 150,
-            "y": 150
-          },
-          "radius": 35,
-          "startRay": 0,
-          "endRay": 1,
-          "label": "45°",
-          "measureDegrees": 45
-        },
-        "styleHints": {
-          "baseLineColor": "#00ffff",
-          "highlightAngleColor": "#ffff00",
-          "labelsColor": "#00ffff"
-        }
-      }
-    },
-    {
-      "id": "mk_geo_b_048",
-      "question": "Which point is the midpoint of the segment from (−2, 6) to (4, 2)?",
-      "choices": {
-        "A": "(1, 4)",
-        "B": "(2, 4)",
-        "C": "(3, 3)",
-        "D": "(1, 2)",
-        "E": "(0, 4)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Midpoint = ((x₁ + x₂)/2, (y₁ + y₂)/2). Here, ((−2 + 4)/2, (6 + 2)/2) = (2/2, 8/2) = (1, 4).",
-      "steps": [
-        "1. Add x-coordinates: −2 + 4 = 2.",
-        "2. Divide by 2 → 2 ÷ 2 = 1.",
-        "3. Add y-coordinates: 6 + 2 = 8.",
-        "4. Divide by 2 → 8 ÷ 2 = 4.",
-        "5. Midpoint is (1, 4)."
-      ],
-      "fastStrategy": "Midpoint: take the average of the x’s and the average of the y’s."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_geo_b_049",
-      "question": "A triangle has side lengths 6, 7, and 12 units. Can these lengths form a triangle?",
+      "id": "geometry_basics_beginner_q010",
+      "question": "Solve this geometry basics problem for beginner level.",
       "choices": {
-        "A": "Yes, because 6 + 7 = 13 > 12.",
-        "B": "Yes, because 6 + 12 = 18 > 7.",
-        "C": "Yes, because 7 + 12 = 19 > 6.",
-        "D": "No, because 6 + 7 = 13 = 12.",
-        "E": "No, because the sum of the two shorter sides must be greater than the longest side, and here it is not."
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "A",
-      "explanation": "The triangle inequality says the sum of any two sides must be greater than the third. The critical check is the two shorter sides versus the longest: 6 + 7 = 13, and 13 > 12, so a triangle can be formed.",
-      "steps": [
-        "1. Identify the longest side: 12.",
-        "2. Add the two shorter sides: 6 + 7 = 13.",
-        "3. Check: 13 > 12 → inequality satisfied.",
-        "4. Therefore, these sides can form a triangle."
-      ],
-      "fastStrategy": "Quick test: add the two smallest sides; if that sum is bigger than the largest, the triangle works.",
-      "uiSpec": {
-        "type": "geometry_triangle_diagram",
-        "width": 300,
-        "height": 300,
-        "vertices": [
-          {
-            "x": 150,
-            "y": 50,
-            "label": "A"
-          },
-          {
-            "x": 80,
-            "y": 220,
-            "label": "B"
-          },
-          {
-            "x": 220,
-            "y": 220,
-            "label": "C"
-          }
-        ],
-        "angles": [
-          {
-            "vertex": 0,
-            "label": "60°"
-          },
-          {
-            "vertex": 1,
-            "label": "x°"
-          },
-          {
-            "vertex": 2,
-            "label": "y°"
-          }
-        ],
-        "styleHints": {
-          "lineColor": "#00ffff",
-          "labelColor": "#00ffff"
-        }
-      }
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_geo_b_050",
-      "question": "A triangle has side lengths 2, 3, and 6 units. Can these lengths form a triangle?",
+      "id": "geometry_basics_beginner_q011",
+      "question": "Solve this geometry basics problem for beginner level.",
       "choices": {
-        "A": "Yes, because the sides are all different.",
-        "B": "Yes, because 2 + 3 = 5.",
-        "C": "No, because 2 + 3 = 5 is less than 6.",
-        "D": "No, because 2 + 6 = 8 is greater than 3.",
-        "E": "Yes, because 3 + 6 = 9 is greater than 2."
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "For a triangle, the sum of any two sides must be greater than the third. Here, 2 + 3 = 5, which is less than 6. Since the two shorter sides do not add to more than the longest side, no triangle can be formed.",
-      "steps": [
-        "1. Identify the longest side: 6.",
-        "2. Add the two shorter sides: 2 + 3 = 5.",
-        "3. Compare: 5 < 6 → triangle inequality fails.",
-        "4. Therefore, these lengths cannot form a triangle."
-      ],
-      "fastStrategy": "If the sum of the two smallest sides is less than or equal to the largest, triangle is impossible.",
-      "uiSpec": {
-        "type": "geometry_triangle_diagram",
-        "width": 300,
-        "height": 300,
-        "vertices": [
-          {
-            "x": 150,
-            "y": 50,
-            "label": "A"
-          },
-          {
-            "x": 80,
-            "y": 220,
-            "label": "B"
-          },
-          {
-            "x": 220,
-            "y": 220,
-            "label": "C"
-          }
-        ],
-        "angles": [
-          {
-            "vertex": 0,
-            "label": "60°"
-          },
-          {
-            "vertex": 1,
-            "label": "x°"
-          },
-          {
-            "vertex": 2,
-            "label": "y°"
-          }
-        ],
-        "styleHints": {
-          "lineColor": "#00ffff",
-          "labelColor": "#00ffff"
-        }
-      }
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q012",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q013",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q014",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q015",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q016",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q017",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q018",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q019",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q020",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q021",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q022",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q023",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q024",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q025",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
     }
-  ]
+  ],
+  "subtopicId": "geometry_basics"
 }

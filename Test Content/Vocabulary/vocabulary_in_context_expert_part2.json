@@ -1,482 +1,308 @@
 {
-  "subtopicId": "vocabulary_in_context",
+  "subjectId": null,
   "difficulty": "expert",
   "part": 2,
   "questions": [
     {
-      "id": "vic_exp_026",
-      "question": "His argument was dismissed as **tendentious**, favoring one side far too heavily.",
+      "id": "vocabulary_in_context_expert_q001",
+      "question": "Vocabulary In Context: Choose the best match for \"perspicuous\"",
       "choices": {
-        "A": "biased",
-        "B": "balanced",
-        "C": "neutral",
-        "D": "indifferent"
-      },
-      "answer": "A",
-      "explanation": "In this sentence, 'Tendentious' means biased or promoting a specific viewpoint. 'biased' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Predict the meaning first, then find 'biased' as the best match."
-    },
-    {
-      "id": "vic_exp_027",
-      "question": "The unit’s progress was **moribund**, showing no signs of improvement.",
-      "choices": {
-        "A": "thriving",
-        "B": "stagnant",
-        "C": "recent",
-        "D": "erratic"
-      },
-      "answer": "B",
-      "explanation": "In this sentence, 'Moribund' means stagnant, near failure. 'stagnant' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Use the surrounding words in the sentence. It points to 'stagnant'."
-    },
-    {
-      "id": "vic_exp_028",
-      "question": "Her concerns were **prurient**, unrelated to the mission and focused on inappropriate topics.",
-      "choices": {
-        "A": "serious",
-        "B": "moral",
-        "C": "lustful",
-        "D": "academic"
+        "A": "sanguine",
+        "B": "pellucid",
+        "C": "transparent",
+        "D": "precocious"
       },
       "answer": "C",
-      "explanation": "In this sentence, 'Prurient' means having or encouraging an excessive interest in sexual matters. 'lustful' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Substitute each choice into the sentence. Only 'lustful' makes logical sense."
+      "explanation": "\"perspicuous\" and \"transparent\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_029",
-      "question": "The lieutenant’s speech was **maudlin**, overly sentimental and emotional.",
+      "id": "vocabulary_in_context_expert_q002",
+      "question": "Vocabulary In Context: Choose the best match for \"pellucid\"",
       "choices": {
-        "A": "restrained",
-        "B": "excessively sentimental",
-        "C": "formal",
-        "D": "analytical"
-      },
-      "answer": "B",
-      "explanation": "In this sentence, 'Maudlin' means overly emotional, often tearful. 'excessively sentimental' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Look for surrounding words. The context tells you 'excessively sentimental' is correct."
-    },
-    {
-      "id": "vic_exp_030",
-      "question": "The new recruit’s explanation was **jejune**, revealing a shallow understanding of the issue.",
-      "choices": {
-        "A": "sophisticated",
-        "B": "naive",
-        "C": "confident",
-        "D": "dishonest"
-      },
-      "answer": "B",
-      "explanation": "In this sentence, 'Jejune' means simplistic, naive. 'naive' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'naive'."
-    },
-    {
-      "id": "vic_exp_031",
-      "question": "The scientist found the data **irrefragable**, leaving no room for dispute.",
-      "choices": {
-        "A": "indisputable",
-        "B": "weak",
-        "C": "irrelevant",
-        "D": "misleading"
+        "A": "clear",
+        "B": "perspicuous",
+        "C": "precocious",
+        "D": "sanguine"
       },
       "answer": "A",
-      "explanation": "In this sentence, 'Irrefragable' means impossible to refute. 'indisputable' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Predict the meaning first, then find 'indisputable' as the best match."
+      "explanation": "\"pellucid\" and \"clear\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_032",
-      "question": "The engineer’s **parsimonious** allocation of resources frustrated the rest of the team.",
+      "id": "vocabulary_in_context_expert_q003",
+      "question": "Vocabulary In Context: Choose the best match for \"sanguine\"",
       "choices": {
-        "A": "wasteful",
-        "B": "stingy",
-        "C": "efficient",
-        "D": "supportive"
+        "A": "hopeful",
+        "B": "perspicuous",
+        "C": "precocious",
+        "D": "pellucid"
+      },
+      "answer": "A",
+      "explanation": "\"sanguine\" and \"hopeful\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q004",
+      "question": "Vocabulary In Context: Choose the best match for \"precocious\"",
+      "choices": {
+        "A": "intelligent",
+        "B": "pellucid",
+        "C": "sanguine",
+        "D": "perspicuous"
+      },
+      "answer": "A",
+      "explanation": "\"precocious\" and \"intelligent\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q005",
+      "question": "Vocabulary In Context: Choose the best match for \"propitious\"",
+      "choices": {
+        "A": "perspicuous",
+        "B": "favorable",
+        "C": "pellucid",
+        "D": "sanguine"
       },
       "answer": "B",
-      "explanation": "In this sentence, 'Parsimonious' means excessively frugal or stingy. 'stingy' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Use the surrounding words in the sentence. It points to 'stingy'."
+      "explanation": "\"propitious\" and \"favorable\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_033",
-      "question": "The speech was filled with **platitudes**, offering familiar sayings without meaningful insight.",
+      "id": "vocabulary_in_context_expert_q006",
+      "question": "Vocabulary In Context: Choose the best match for \"nugatory\"",
       "choices": {
-        "A": "original ideas",
-        "B": "wise analysis",
-        "C": "clichés",
-        "D": "technical detail"
+        "A": "worthless",
+        "B": "perspicuous",
+        "C": "pellucid",
+        "D": "sanguine"
+      },
+      "answer": "A",
+      "explanation": "\"nugatory\" and \"worthless\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q007",
+      "question": "Vocabulary In Context: Choose the best match for \"pusillanimous\"",
+      "choices": {
+        "A": "perspicuous",
+        "B": "sanguine",
+        "C": "cowardly",
+        "D": "pellucid"
       },
       "answer": "C",
-      "explanation": "In this sentence, 'Platitudes' means clichés or overused statements. 'clichés' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Substitute each choice into the sentence. Only 'clichés' makes logical sense."
+      "explanation": "\"pusillanimous\" and \"cowardly\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_034",
-      "question": "Her remarks were **disingenuous**, pretending innocence while concealing true intentions.",
+      "id": "vocabulary_in_context_expert_q008",
+      "question": "Vocabulary In Context: Choose the best match for \"ebullient\"",
       "choices": {
-        "A": "sincere",
-        "B": "deceptive",
-        "C": "accurate",
-        "D": "careless"
+        "A": "pellucid",
+        "B": "enthusiastic",
+        "C": "sanguine",
+        "D": "perspicuous"
       },
       "answer": "B",
-      "explanation": "In this sentence, 'Disingenuous' means insincere, misleading. 'deceptive' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Look for surrounding words. The context tells you 'deceptive' is correct."
+      "explanation": "\"ebullient\" and \"enthusiastic\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_035",
-      "question": "His tone was **trenchant**, slicing directly to the heart of the matter.",
+      "id": "vocabulary_in_context_expert_q009",
+      "question": "Vocabulary In Context: Choose the best match for \"effete\"",
       "choices": {
-        "A": "ambiguous",
-        "B": "sharp",
-        "C": "incomplete",
-        "D": "calming"
+        "A": "perspicuous",
+        "B": "sanguine",
+        "C": "exhausted",
+        "D": "pellucid"
       },
-      "answer": "B",
-      "explanation": "In this sentence, 'Trenchant' means sharp and effective. 'sharp' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'sharp'."
+      "answer": "C",
+      "explanation": "\"effete\" and \"exhausted\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_036",
-      "question": "Her leadership style was **autocratic**, granting no input from subordinates.",
+      "id": "vocabulary_in_context_expert_q010",
+      "question": "Vocabulary In Context: Choose the best match for \"enervate\"",
       "choices": {
-        "A": "democratic",
-        "B": "authoritarian",
-        "C": "casual",
-        "D": "supportive"
+        "A": "pellucid",
+        "B": "weaken",
+        "C": "perspicuous",
+        "D": "sanguine"
       },
       "answer": "B",
-      "explanation": "In this sentence, 'Autocratic' means controlling, dictatorial. 'authoritarian' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Predict the meaning first, then find 'authoritarian' as the best match."
+      "explanation": "\"enervate\" and \"weaken\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_037",
-      "question": "The results were so **incontrovertible** that even critics conceded the argument.",
+      "id": "vocabulary_in_context_expert_q011",
+      "question": "Vocabulary In Context: Choose the best match for \"exiguous\"",
       "choices": {
-        "A": "disputable",
-        "B": "unquestionable",
-        "C": "partial",
-        "D": "incomplete"
+        "A": "meager",
+        "B": "perspicuous",
+        "C": "sanguine",
+        "D": "pellucid"
       },
-      "answer": "B",
-      "explanation": "In this sentence, 'Incontrovertible' means undeniable. 'unquestionable' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Use the surrounding words in the sentence. It points to 'unquestionable'."
+      "answer": "A",
+      "explanation": "\"exiguous\" and \"meager\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_038",
-      "question": "The lieutenant’s **laconic** replies suggested she was withholding deeper concerns.",
+      "id": "vocabulary_in_context_expert_q012",
+      "question": "Vocabulary In Context: Choose the best match for \"factious\"",
       "choices": {
-        "A": "lengthy",
-        "B": "brief",
-        "C": "incorrect",
-        "D": "sarcastic"
+        "A": "divisive",
+        "B": "pellucid",
+        "C": "perspicuous",
+        "D": "sanguine"
       },
-      "answer": "B",
-      "explanation": "In this sentence, 'Laconic' means using very few words. 'brief' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Substitute each choice into the sentence. Only 'brief' makes logical sense."
+      "answer": "A",
+      "explanation": "\"factious\" and \"divisive\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_039",
-      "question": "His outlook was **sanguine**, remaining hopeful despite numerous setbacks.",
+      "id": "vocabulary_in_context_expert_q013",
+      "question": "Vocabulary In Context: Choose the best match for \"felicitous\"",
       "choices": {
-        "A": "pessimistic",
-        "B": "optimistic",
-        "C": "frustrated",
-        "D": "apathetic"
+        "A": "pellucid",
+        "B": "appropriate",
+        "C": "sanguine",
+        "D": "perspicuous"
       },
       "answer": "B",
-      "explanation": "In this sentence, 'Sanguine' means optimistic. 'optimistic' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Look for contrast clue. The context tells you 'optimistic' is correct."
+      "explanation": "\"felicitous\" and \"appropriate\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_040",
-      "question": "The cadet’s actions were deemed **reprehensible**, violating core ethical standards.",
+      "id": "vocabulary_in_context_expert_q014",
+      "question": "Vocabulary In Context: Choose the best match for \"fulgent\"",
       "choices": {
-        "A": "praiseworthy",
-        "B": "blameworthy",
-        "C": "accidental",
-        "D": "imperfect"
+        "A": "sanguine",
+        "B": "brilliant",
+        "C": "perspicuous",
+        "D": "pellucid"
       },
       "answer": "B",
-      "explanation": "In this sentence, 'Reprehensible' means deserving condemnation. 'blameworthy' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'blameworthy'."
+      "explanation": "\"fulgent\" and \"brilliant\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_041",
-      "question": "The commander held an **unassailable** position, immune to criticism thanks to flawless performance.",
+      "id": "vocabulary_in_context_expert_q015",
+      "question": "Vocabulary In Context: Choose the best match for \"fulsome\"",
       "choices": {
-        "A": "indefensible",
-        "B": "undeniable",
-        "C": "temporary",
-        "D": "symbolic"
+        "A": "perspicuous",
+        "B": "pellucid",
+        "C": "excessive",
+        "D": "sanguine"
       },
-      "answer": "B",
-      "explanation": "In this sentence, 'Unassailable' means impossible to challenge. 'undeniable' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Predict the meaning first, then find 'undeniable' as the best match."
+      "answer": "C",
+      "explanation": "\"fulsome\" and \"excessive\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_042",
-      "question": "His remarks were **antediluvian**, relics from an era long past.",
+      "id": "vocabulary_in_context_expert_q016",
+      "question": "Vocabulary In Context: Choose the best match for \"grandiloquent\"",
       "choices": {
-        "A": "modern",
-        "B": "ancient",
-        "C": "inspired",
-        "D": "scientific"
+        "A": "sanguine",
+        "B": "bombastic",
+        "C": "perspicuous",
+        "D": "pellucid"
       },
       "answer": "B",
-      "explanation": "In this sentence, 'Antediluvian' means extremely old-fashioned. 'ancient' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Use the surrounding words in the sentence. It points to 'ancient'."
+      "explanation": "\"grandiloquent\" and \"bombastic\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_043",
-      "question": "Her plan was **ameliorative**, designed to improve a deteriorating situation.",
+      "id": "vocabulary_in_context_expert_q017",
+      "question": "Vocabulary In Context: Choose the best match for \"implacable\"",
       "choices": {
-        "A": "harmful",
-        "B": "improving",
-        "C": "regressive",
-        "D": "neutral"
+        "A": "sanguine",
+        "B": "perspicuous",
+        "C": "relentless",
+        "D": "pellucid"
       },
-      "answer": "B",
-      "explanation": "In this sentence, 'Ameliorative' means intended to improve. 'improving' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Substitute each choice into the sentence. Only 'improving' makes logical sense."
+      "answer": "C",
+      "explanation": "\"implacable\" and \"relentless\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_044",
-      "question": "The officer’s **obdurate** refusal frustrated negotiators.",
+      "id": "vocabulary_in_context_expert_q018",
+      "question": "Vocabulary In Context: Choose the best match for \"impugn\"",
       "choices": {
-        "A": "compliant",
-        "B": "stubborn",
-        "C": "confused",
-        "D": "careful"
+        "A": "challenge",
+        "B": "pellucid",
+        "C": "perspicuous",
+        "D": "sanguine"
       },
-      "answer": "B",
-      "explanation": "In this sentence, 'Obdurate' means stubbornly refusing to change. 'stubborn' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Look for surrounding words. The context tells you 'stubborn' is correct."
+      "answer": "A",
+      "explanation": "\"impugn\" and \"challenge\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_045",
-      "question": "The analyst’s conclusions were **spurious**, lacking factual basis.",
+      "id": "vocabulary_in_context_expert_q019",
+      "question": "Vocabulary In Context: Choose the best match for \"ineffable\"",
       "choices": {
-        "A": "legitimate",
-        "B": "false",
-        "C": "detailed",
-        "D": "minor"
+        "A": "perspicuous",
+        "B": "pellucid",
+        "C": "indescribable",
+        "D": "sanguine"
       },
-      "answer": "B",
-      "explanation": "In this sentence, 'Spurious' means false or fake. 'false' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'false'."
+      "answer": "C",
+      "explanation": "\"ineffable\" and \"indescribable\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_046",
-      "question": "His resignation was **precipitate**, occurring far sooner than expected.",
+      "id": "vocabulary_in_context_expert_q020",
+      "question": "Vocabulary In Context: Choose the best match for \"ineluctable\"",
       "choices": {
-        "A": "deliberate",
-        "B": "sudden",
-        "C": "planned",
-        "D": "meaningless"
+        "A": "sanguine",
+        "B": "perspicuous",
+        "C": "pellucid",
+        "D": "inevitable"
       },
-      "answer": "B",
-      "explanation": "In this sentence, 'Precipitate' means sudden or rushed. 'sudden' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Predict the meaning first, then find 'sudden' as the best match."
+      "answer": "D",
+      "explanation": "\"ineluctable\" and \"inevitable\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_047",
-      "question": "The inquiry revealed **mendacious** testimony, undermining the case.",
+      "id": "vocabulary_in_context_expert_q021",
+      "question": "Vocabulary In Context: Choose the best match for \"insouciant\"",
       "choices": {
-        "A": "truthful",
-        "B": "dishonest",
-        "C": "uncertain",
-        "D": "irrelevant"
+        "A": "pellucid",
+        "B": "perspicuous",
+        "C": "unconcerned",
+        "D": "sanguine"
       },
-      "answer": "B",
-      "explanation": "In this sentence, 'Mendacious' means lying, dishonest. 'dishonest' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Use the surrounding words in the sentence. It points to 'dishonest'."
+      "answer": "C",
+      "explanation": "\"insouciant\" and \"unconcerned\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_048",
-      "question": "Her encouragement proved **indefatigable**, persisting even during the toughest moments.",
+      "id": "vocabulary_in_context_expert_q022",
+      "question": "Vocabulary In Context: Choose the best match for \"intemperate\"",
       "choices": {
-        "A": "tiring",
-        "B": "unyielding",
-        "C": "inappropriate",
-        "D": "unfocused"
+        "A": "pellucid",
+        "B": "perspicuous",
+        "C": "excessive",
+        "D": "sanguine"
       },
-      "answer": "B",
-      "explanation": "In this sentence, 'Indefatigable' means tireless. 'unyielding' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Substitute each choice into the sentence. Only 'unyielding' makes logical sense."
+      "answer": "C",
+      "explanation": "\"intemperate\" and \"excessive\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_049",
-      "question": "The argument relied on **sophistry**, persuading through clever but misleading reasoning.",
+      "id": "vocabulary_in_context_expert_q023",
+      "question": "Vocabulary In Context: Choose the best match for \"inveterate\"",
       "choices": {
-        "A": "wisdom",
-        "B": "deception",
-        "C": "clarity",
-        "D": "evidence"
+        "A": "habitual",
+        "B": "pellucid",
+        "C": "perspicuous",
+        "D": "sanguine"
       },
-      "answer": "B",
-      "explanation": "In this sentence, 'Sophistry' means deceptive reasoning. 'deception' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Look for surrounding words. The context tells you 'deception' is correct."
+      "answer": "A",
+      "explanation": "\"inveterate\" and \"habitual\" are closely related in meaning."
     },
     {
-      "id": "vic_exp_050",
-      "question": "The lieutenant’s attitude was **equanimous**, remaining composed in the face of crisis.",
+      "id": "vocabulary_in_context_expert_q024",
+      "question": "Vocabulary In Context: Choose the best match for \"lethargic\"",
       "choices": {
-        "A": "agitated",
-        "B": "calm",
-        "C": "hostile",
-        "D": "apathetic"
+        "A": "sluggish",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "pellucid"
       },
-      "answer": "B",
-      "explanation": "In this sentence, 'Equanimous' means calm, emotionally balanced. 'calm' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'calm'."
+      "answer": "A",
+      "explanation": "\"lethargic\" and \"sluggish\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q025",
+      "question": "Vocabulary In Context: Choose the best match for \"magniloquent\"",
+      "choices": {
+        "A": "grandiose",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "pellucid"
+      },
+      "answer": "A",
+      "explanation": "\"magniloquent\" and \"grandiose\" are closely related in meaning."
     }
-  ]
+  ],
+  "subtopicId": "vocabulary_in_context"
 }

@@ -1,482 +1,308 @@
 {
-  "subtopicId": "word_roots_affixes",
+  "subjectId": null,
   "difficulty": "advanced",
   "part": 2,
   "questions": [
     {
-      "id": "wra_adv_026",
-      "question": "Given the prefix 'hyper-,' what does 'hyperactive' MOST likely mean in context?",
+      "id": "word_roots_affixes_advanced_q001",
+      "question": "Word Roots Affixes: Choose the best match for \"ambiguous\"",
       "choices": {
-        "A": "excessively active",
-        "B": "barely active",
-        "C": "actively hidden",
-        "D": "lightly active"
+        "A": "benevolent",
+        "B": "diligent",
+        "C": "candid",
+        "D": "unclear"
       },
-      "answer": "A",
-      "explanation": "The prefix 'hyperactive' means 'excessive'. Knowing this prefix helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "'hyperactive' shows 'hyperactive' = 'excessively active'. Use word families."
+      "answer": "D",
+      "explanation": "\"ambiguous\" and \"unclear\" are closely related in meaning."
     },
     {
-      "id": "wra_adv_027",
-      "question": "If 'circum-' means around, a 'circumference' MOST likely refers to:",
+      "id": "word_roots_affixes_advanced_q002",
+      "question": "Word Roots Affixes: Choose the best match for \"benevolent\"",
       "choices": {
-        "A": "the direction of movement",
-        "B": "the measurement around something",
-        "C": "the inside surface",
-        "D": "the area below an object"
+        "A": "diligent",
+        "B": "kind-hearted",
+        "C": "candid",
+        "D": "ambiguous"
       },
       "answer": "B",
-      "explanation": "The root 'circum-' means 'distance around a circle'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Think of 'circumference'—it contains 'circum-' which means 'the measurement around something'."
+      "explanation": "\"benevolent\" and \"kind-hearted\" are closely related in meaning."
     },
     {
-      "id": "wra_adv_028",
-      "question": "Given the root 'cred' (believe), 'incredulous' MOST likely means:",
+      "id": "word_roots_affixes_advanced_q003",
+      "question": "Word Roots Affixes: Choose the best match for \"candid\"",
       "choices": {
-        "A": "believing fully",
-        "B": "unable to believe",
-        "C": "slow to think",
-        "D": "likely to trust"
+        "A": "ambiguous",
+        "B": "diligent",
+        "C": "benevolent",
+        "D": "frank"
+      },
+      "answer": "D",
+      "explanation": "\"candid\" and \"frank\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q004",
+      "question": "Word Roots Affixes: Choose the best match for \"diligent\"",
+      "choices": {
+        "A": "candid",
+        "B": "hardworking",
+        "C": "benevolent",
+        "D": "ambiguous"
       },
       "answer": "B",
-      "explanation": "The root 'cred' means 'unable to believe'. In- (not) + cred (believe) = unwilling to believe. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Word association: 'not' uses 'cred' = 'unable to believe'."
+      "explanation": "\"diligent\" and \"hardworking\" are closely related in meaning."
     },
     {
-      "id": "wra_adv_029",
-      "question": "If 'mut' means change, a 'mutation' is MOST likely:",
+      "id": "word_roots_affixes_advanced_q005",
+      "question": "Word Roots Affixes: Choose the best match for \"eloquent\"",
       "choices": {
-        "A": "a stable form",
-        "B": "a controlled experiment",
-        "C": "a change in structure",
-        "D": "a repeated cycle"
+        "A": "ambiguous",
+        "B": "articulate",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"eloquent\" and \"articulate\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q006",
+      "question": "Word Roots Affixes: Choose the best match for \"frugal\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "thrifty",
+        "D": "benevolent"
       },
       "answer": "C",
-      "explanation": "The root 'mut' means 'a change'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Remember 'mut'. The root 'mut' means 'a change in structure'."
+      "explanation": "\"frugal\" and \"thrifty\" are closely related in meaning."
     },
     {
-      "id": "wra_adv_030",
-      "question": "Given the prefix 'pseudo-', a 'pseudoscience' is:",
+      "id": "word_roots_affixes_advanced_q007",
+      "question": "Word Roots Affixes: Choose the best match for \"gregarious\"",
       "choices": {
-        "A": "a proven science",
-        "B": "a false science",
-        "C": "a new branch of science",
-        "D": "a broad science"
+        "A": "ambiguous",
+        "B": "social",
+        "C": "benevolent",
+        "D": "candid"
       },
       "answer": "B",
-      "explanation": "The prefix 'pseudo-' means 'a false science'. 'Pseudo' = false. Knowing this prefix helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Link 'pseudo-' to 'pseudoscience'. That shows it means 'a false science'."
+      "explanation": "\"gregarious\" and \"social\" are closely related in meaning."
     },
     {
-      "id": "wra_adv_031",
-      "question": "Given that 'bene' means good, a 'benefactor' MOST likely is:",
+      "id": "word_roots_affixes_advanced_q008",
+      "question": "Word Roots Affixes: Choose the best match for \"harbinger\"",
       "choices": {
-        "A": "one who harms",
-        "B": "one who steals credit",
-        "C": "one who gives help",
-        "D": "one who ignores others"
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "forerunner",
+        "D": "benevolent"
       },
       "answer": "C",
-      "explanation": "The root 'bene' means 'one who gives help'. A benefactor provides good/help. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "'bene' shows 'bene' = 'one who gives help'. Use word families."
+      "explanation": "\"harbinger\" and \"forerunner\" are closely related in meaning."
     },
     {
-      "id": "wra_adv_032",
-      "question": "If 'omni' means all, what does 'omniscient' MOST likely mean?",
+      "id": "word_roots_affixes_advanced_q009",
+      "question": "Word Roots Affixes: Choose the best match for \"incisive\"",
       "choices": {
-        "A": "all-knowing",
-        "B": "all-moving",
-        "C": "all-seeing physically",
-        "D": "all-changing"
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "penetrating"
+      },
+      "answer": "D",
+      "explanation": "\"incisive\" and \"penetrating\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q010",
+      "question": "Word Roots Affixes: Choose the best match for \"jocular\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "humorous"
+      },
+      "answer": "D",
+      "explanation": "\"jocular\" and \"humorous\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q011",
+      "question": "Word Roots Affixes: Choose the best match for \"meticulous\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "careful"
+      },
+      "answer": "D",
+      "explanation": "\"meticulous\" and \"careful\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q012",
+      "question": "Word Roots Affixes: Choose the best match for \"nonchalant\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "indifferent",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "B",
+      "explanation": "\"nonchalant\" and \"indifferent\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q013",
+      "question": "Word Roots Affixes: Choose the best match for \"obstinate\"",
+      "choices": {
+        "A": "stubborn",
+        "B": "ambiguous",
+        "C": "benevolent",
+        "D": "candid"
       },
       "answer": "A",
-      "explanation": "The root 'omni' means 'all; scient = knowledge'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Think of 'omni'—it contains 'omni' which means 'all-knowing'."
+      "explanation": "\"obstinate\" and \"stubborn\" are closely related in meaning."
     },
     {
-      "id": "wra_adv_033",
-      "question": "Given the root 'duct' (lead), 'aqueduct' MOST likely means:",
+      "id": "word_roots_affixes_advanced_q014",
+      "question": "Word Roots Affixes: Choose the best match for \"perspicacious\"",
       "choices": {
-        "A": "water leader or channel",
-        "B": "water speaker",
-        "C": "water mixer",
-        "D": "water destroyer"
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "benevolent",
+        "D": "insightful"
+      },
+      "answer": "D",
+      "explanation": "\"perspicacious\" and \"insightful\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q015",
+      "question": "Word Roots Affixes: Choose the best match for \"querulous\"",
+      "choices": {
+        "A": "complaining",
+        "B": "ambiguous",
+        "C": "candid",
+        "D": "benevolent"
       },
       "answer": "A",
-      "explanation": "The root 'duct' means 'water leader or channel'. Aqueduct leads water. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Word association: 'duct' uses 'duct' = 'water leader or channel'."
+      "explanation": "\"querulous\" and \"complaining\" are closely related in meaning."
     },
     {
-      "id": "wra_adv_034",
-      "question": "Given the root 'micro', 'microscopic' MOST likely means:",
+      "id": "word_roots_affixes_advanced_q016",
+      "question": "Word Roots Affixes: Choose the best match for \"raucous\"",
       "choices": {
-        "A": "too large to measure",
-        "B": "visible with eyes only",
-        "C": "very small",
-        "D": "rapid moving"
+        "A": "ambiguous",
+        "B": "loud",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "B",
+      "explanation": "\"raucous\" and \"loud\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q017",
+      "question": "Word Roots Affixes: Choose the best match for \"sagacious\"",
+      "choices": {
+        "A": "candid",
+        "B": "wise",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"sagacious\" and \"wise\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q018",
+      "question": "Word Roots Affixes: Choose the best match for \"taciturn\"",
+      "choices": {
+        "A": "candid",
+        "B": "quiet",
+        "C": "benevolent",
+        "D": "ambiguous"
+      },
+      "answer": "B",
+      "explanation": "\"taciturn\" and \"quiet\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q019",
+      "question": "Word Roots Affixes: Choose the best match for \"ubiquitous\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "everywhere",
+        "D": "ambiguous"
       },
       "answer": "C",
-      "explanation": "The root 'micro' means 'small'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Remember 'micro'. The root 'micro' means 'very small'."
+      "explanation": "\"ubiquitous\" and \"everywhere\" are closely related in meaning."
     },
     {
-      "id": "wra_adv_035",
-      "question": "If 'therm' means heat, 'thermal' MOST likely refers to:",
+      "id": "word_roots_affixes_advanced_q020",
+      "question": "Word Roots Affixes: Choose the best match for \"vivacious\"",
       "choices": {
-        "A": "related to heat",
-        "B": "related to movement",
-        "C": "related to sound",
-        "D": "related to pressure"
+        "A": "benevolent",
+        "B": "candid",
+        "C": "lively",
+        "D": "ambiguous"
       },
-      "answer": "A",
-      "explanation": "The root 'therm' means 'heat'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Link 'therm' to 'therm'. That shows it means 'related to heat'."
+      "answer": "C",
+      "explanation": "\"vivacious\" and \"lively\" are closely related in meaning."
     },
     {
-      "id": "wra_adv_036",
-      "question": "Given 'macro' means large, 'macroeconomics' refers to:",
+      "id": "word_roots_affixes_advanced_q021",
+      "question": "Word Roots Affixes: Choose the best match for \"obfuscate\"",
       "choices": {
-        "A": "small-scale economies",
-        "B": "global or large-scale economic systems",
-        "C": "personal finance",
-        "D": "low-profit markets"
+        "A": "ambiguous",
+        "B": "obscure",
+        "C": "benevolent",
+        "D": "candid"
       },
       "answer": "B",
-      "explanation": "The root 'macro' means 'large'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "'macro' shows 'macro' = 'global or large-scale economic systems'. Use word families."
+      "explanation": "\"obfuscate\" and \"obscure\" are closely related in meaning."
     },
     {
-      "id": "wra_adv_037",
-      "question": "If 'trans' means across, 'transmit' MOST likely means:",
+      "id": "word_roots_affixes_advanced_q022",
+      "question": "Word Roots Affixes: Choose the best match for \"copious\"",
       "choices": {
-        "A": "send across",
-        "B": "cut apart",
-        "C": "join together",
-        "D": "mix rapidly"
+        "A": "abundant",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "benevolent"
       },
       "answer": "A",
-      "explanation": "The root 'trans' means 'send across'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Think of 'trans'—it contains 'trans' which means 'send across'."
+      "explanation": "\"copious\" and \"abundant\" are closely related in meaning."
     },
     {
-      "id": "wra_adv_038",
-      "question": "Given the root 'aud' (hear), 'inaudible' MOST likely means:",
+      "id": "word_roots_affixes_advanced_q023",
+      "question": "Word Roots Affixes: Choose the best match for \"ephemeral\"",
       "choices": {
-        "A": "pleasant to hear",
-        "B": "unable to be heard",
-        "C": "amplified",
-        "D": "steady"
-      },
-      "answer": "B",
-      "explanation": "The root 'aud' means 'unable to be heard'. In- (not) + aud (hear). Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Word association: 'not' uses 'aud' = 'unable to be heard'."
-    },
-    {
-      "id": "wra_adv_039",
-      "question": "If 'geo' means earth, 'geothermal' refers to:",
-      "choices": {
-        "A": "heat from the earth",
-        "B": "heat from the sun",
-        "C": "cold weather",
-        "D": "rain cycles"
+        "A": "fleeting",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "candid"
       },
       "answer": "A",
-      "explanation": "The root 'geo' means 'earth; therm = heat'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Remember 'geo'. The root 'geo' means 'heat from the earth'."
+      "explanation": "\"ephemeral\" and \"fleeting\" are closely related in meaning."
     },
     {
-      "id": "wra_adv_040",
-      "question": "Given the prefix 'anti-', 'antiseptic' MOST likely means:",
+      "id": "word_roots_affixes_advanced_q024",
+      "question": "Word Roots Affixes: Choose the best match for \"fastidious\"",
       "choices": {
-        "A": "against infection",
-        "B": "before medicine",
-        "C": "outside the skin",
-        "D": "helpful to bacteria"
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "meticulous",
+        "D": "benevolent"
       },
-      "answer": "A",
-      "explanation": "The prefix 'anti-' means 'against infection'. 'Anti' = against. Knowing this prefix helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Link 'anti-' to 'antiseptic'. That shows it means 'against infection'."
+      "answer": "C",
+      "explanation": "\"fastidious\" and \"meticulous\" are closely related in meaning."
     },
     {
-      "id": "wra_adv_041",
-      "question": "If 'semi' means half, a 'semicircle' is:",
+      "id": "word_roots_affixes_advanced_q025",
+      "question": "Word Roots Affixes: Choose the best match for \"fortuitous\"",
       "choices": {
-        "A": "a tiny circle",
-        "B": "half a circle",
-        "C": "one-third of a circle",
-        "D": "a rotating circle"
+        "A": "ambiguous",
+        "B": "benevolent",
+        "C": "fortunate",
+        "D": "candid"
       },
-      "answer": "B",
-      "explanation": "The root 'semi' means 'half'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "'semi' shows 'semi' = 'half a circle'. Use word families."
-    },
-    {
-      "id": "wra_adv_042",
-      "question": "If 'chrono' means time, 'chronicle' MOST likely means:",
-      "choices": {
-        "A": "a record of events over time",
-        "B": "an argument",
-        "C": "a prediction",
-        "D": "a calculation"
-      },
-      "answer": "A",
-      "explanation": "The root 'chrono' means 'written record of events in time order'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Think of 'chrono'—it contains 'chrono' which means 'a record of events over time'."
-    },
-    {
-      "id": "wra_adv_043",
-      "question": "Given 'vid/vis' means see, 'visualize' MOST nearly means:",
-      "choices": {
-        "A": "measure carefully",
-        "B": "imagine or see mentally",
-        "C": "predict quickly",
-        "D": "change form"
-      },
-      "answer": "B",
-      "explanation": "The root 'visualize' means 'imagine or see mentally'. 'Visual' = see. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Word association: 'visualize' uses 'visualize' = 'imagine or see mentally'."
-    },
-    {
-      "id": "wra_adv_044",
-      "question": "If 'scrib/script' means write, 'subscribe' MOST likely means:",
-      "choices": {
-        "A": "write beneath or sign up",
-        "B": "write secretly",
-        "C": "write repeatedly",
-        "D": "write incorrectly"
-      },
-      "answer": "A",
-      "explanation": "The root 'subscribe' means 'under; scribe = write'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Remember 'subscribe'. The root 'subscribe' means 'write beneath or sign up'."
-    },
-    {
-      "id": "wra_adv_045",
-      "question": "Given 'dict' means speak, 'contradict' MOST likely means:",
-      "choices": {
-        "A": "speak together",
-        "B": "speak against",
-        "C": "speak slowly",
-        "D": "speak politely"
-      },
-      "answer": "B",
-      "explanation": "The root 'dict' means 'against'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Link 'dict' to 'dict'. That shows it means 'speak against'."
-    },
-    {
-      "id": "wra_adv_046",
-      "question": "If 'rupt' means break, 'interrupt' MOST likely means:",
-      "choices": {
-        "A": "break into",
-        "B": "break apart fully",
-        "C": "break movement entirely",
-        "D": "break speed"
-      },
-      "answer": "A",
-      "explanation": "'Interrupt' = break into. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "'rupt' shows 'rupt' = 'break into'. Use word families."
-    },
-    {
-      "id": "wra_adv_047",
-      "question": "Given 'meta' means change, 'metaphor' MOST likely means:",
-      "choices": {
-        "A": "change in meaning",
-        "B": "change in form physically",
-        "C": "change in sound",
-        "D": "change in heat"
-      },
-      "answer": "A",
-      "explanation": "The root 'meta' means 'change in meaning'. Metaphor changes meaning from literal to figurative. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Think of 'meta'—it contains 'meta' which means 'change in meaning'."
-    },
-    {
-      "id": "wra_adv_048",
-      "question": "If 'aqua' means water, 'aqueduct' MOST likely refers to:",
-      "choices": {
-        "A": "a water-carrying channel",
-        "B": "a water filter",
-        "C": "a water wave",
-        "D": "a water ritual"
-      },
-      "answer": "A",
-      "explanation": "The root 'aqua' means 'lead; aqua = water'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Word association: 'aqua' uses 'aqua' = 'a water-carrying channel'."
-    },
-    {
-      "id": "wra_adv_049",
-      "question": "Given 'anti' means against, 'antagonist' MOST likely means:",
-      "choices": {
-        "A": "one who opposes",
-        "B": "one who supports",
-        "C": "one who reads",
-        "D": "one who records"
-      },
-      "answer": "A",
-      "explanation": "The root 'anti' means 'opponent'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Remember 'anti'. The root 'anti' means 'one who opposes'."
-    },
-    {
-      "id": "wra_adv_050",
-      "question": "If 'therm' means heat, 'exothermic' refers to:",
-      "choices": {
-        "A": "absorbing heat",
-        "B": "releasing heat",
-        "C": "neutralizing heat",
-        "D": "preventing heat"
-      },
-      "answer": "B",
-      "explanation": "The root 'therm' means 'out; therm = heat'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Link 'therm' to 'therm'. That shows it means 'releasing heat'."
+      "answer": "C",
+      "explanation": "\"fortuitous\" and \"fortunate\" are closely related in meaning."
     }
-  ]
+  ],
+  "subtopicId": "word_roots_affixes"
 }

@@ -1,0 +1,32 @@
+{
+  "subjectId": "math_knowledge",
+  "difficulty": "beginner",
+  "part": 4,
+  "questions": [
+    {
+      "id": "absolute_value_beginner_q049",
+      "question": "What is |-7|?",
+      "choices": {
+        "A": "7",
+        "B": "-7",
+        "C": "0",
+        "D": "14"
+      },
+      "answer": "A",
+      "explanation": "The absolute value of -7 is 7."
+    },
+    {
+      "id": "absolute_value_beginner_q050",
+      "question": "What is |-1|?",
+      "choices": {
+        "A": "1",
+        "B": "-1",
+        "C": "0",
+        "D": "2"
+      },
+      "answer": "A",
+      "explanation": "The absolute value of -1 is 1."
+    }
+  ],
+  "subtopicId": "absolute_value"
+}

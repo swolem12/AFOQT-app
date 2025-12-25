@@ -1,482 +1,308 @@
 {
-  "subtopicId": "confusing_word_pairs",
+  "subjectId": null,
   "difficulty": "beginner",
   "part": 2,
   "questions": [
     {
-      "id": "cwp_beg_026",
-      "question": "ADVICE vs. ADVISE: 'She sought his advice.' Here 'advice' means:",
+      "id": "confusing_word_pairs_beginner_q001",
+      "question": "Confusing Word Pairs: Choose the best match for \"happy\"",
       "choices": {
-        "A": "to recommend",
-        "B": "guidance",
-        "C": "permission",
-        "D": "decision"
-      },
-      "answer": "B",
-      "explanation": "Advice is a noun meaning guidance. Advise is the verb meaning to recommend.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "Don't let similar spelling trick you. 'guidance' correctly describes the usage here."
-    },
-    {
-      "id": "cwp_beg_027",
-      "question": "ACCEPT vs. EXCEPT: 'Everyone except John arrived on time.' Here 'except' means:",
-      "choices": {
-        "A": "including",
-        "B": "unless",
-        "C": "excluding",
-        "D": "besides"
-      },
-      "answer": "C",
-      "explanation": "Except = excluding. Accept = to receive or agree to. 'excluding' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "'accept' and 'except' sound alike but differ. Focus on their meanings—'excluding' applies here."
-    },
-    {
-      "id": "cwp_beg_028",
-      "question": "ALLUSION vs. ILLUSION: An 'illusion' is something:",
-      "choices": {
-        "A": "indirectly referenced",
-        "B": "misleading or unreal",
-        "C": "symbolic or figurative",
-        "D": "deeply implied"
-      },
-      "answer": "B",
-      "explanation": "Illusion = misleading perception. Allusion = indirect reference.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "Create a mnemonic for 'allusion' vs 'illusion'. Remember which meaning fits this question."
-    },
-    {
-      "id": "cwp_beg_029",
-      "question": "ALTITUDE vs. ATTITUDE: A pilot adjusting altitude is adjusting:",
-      "choices": {
-        "A": "angle",
-        "B": "height",
-        "C": "direction",
-        "D": "tone"
-      },
-      "answer": "B",
-      "explanation": "Altitude = height above ground. Attitude = orientation. 'height' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "Quick distinction: Think of a clear example for each word. 'height' matches the one asked."
-    },
-    {
-      "id": "cwp_beg_030",
-      "question": "AMEND vs. EMEND: To 'amend' a rule means to:",
-      "choices": {
-        "A": "correct a text",
-        "B": "add to a document",
-        "C": "change or modify",
-        "D": "reverse a decision"
-      },
-      "answer": "C",
-      "explanation": "Amend = change a law or rule. Emend = correct a written text.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "These are commonly confused. Read carefully—'change or modify' is the right choice."
-    },
-    {
-      "id": "cwp_beg_031",
-      "question": "ASSURE vs. ENSURE: 'He assured her.' Means he:",
-      "choices": {
-        "A": "guaranteed a result",
-        "B": "comforted or reassured her",
-        "C": "took responsibility",
-        "D": "confirmed the details"
-      },
-      "answer": "B",
-      "explanation": "Assure = to reassure someone. Ensure = guarantee something happens.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "Don't let similar spelling trick you. 'comforted or reassured her' correctly describes the usage here."
-    },
-    {
-      "id": "cwp_beg_032",
-      "question": "BARE vs. BEAR: To 'bear' a load means to:",
-      "choices": {
-        "A": "remove it",
-        "B": "reveal it",
-        "C": "carry it",
-        "D": "reduce it"
-      },
-      "answer": "C",
-      "explanation": "Bear = carry or endure. Bare = uncovered. 'carry it' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "'bare' and 'bear' sound alike but differ. Focus on their meanings—'carry it' applies here."
-    },
-    {
-      "id": "cwp_beg_033",
-      "question": "BASIC vs. BASIL: Which option matches 'basil'?",
-      "choices": {
-        "A": "fundamental",
-        "B": "herb",
-        "C": "simple",
-        "D": "beginning"
-      },
-      "answer": "B",
-      "explanation": "Basil = an herb. Similar spelling causes confusion. 'herb' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "Create a mnemonic for 'basic' vs 'basil'. Remember which meaning fits this question."
-    },
-    {
-      "id": "cwp_beg_034",
-      "question": "BIANNUAL vs. BIENNIAL: A biennial event happens:",
-      "choices": {
-        "A": "twice a year",
-        "B": "every two years",
-        "C": "every year",
-        "D": "every season"
-      },
-      "answer": "B",
-      "explanation": "Biennial = every two years. Biannual = twice a year. 'every two years' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "Quick distinction: Think of a clear example for each word. 'every two years' matches the one asked."
-    },
-    {
-      "id": "cwp_beg_035",
-      "question": "CITE vs. SITE: A 'site' is a:",
-      "choices": {
-        "A": "reference",
-        "B": "location",
-        "C": "quotation",
-        "D": "source"
-      },
-      "answer": "B",
-      "explanation": "Site = place or location. Cite = reference or quote. 'location' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "These are commonly confused. Read carefully—'location' is the right choice."
-    },
-    {
-      "id": "cwp_beg_036",
-      "question": "CLIMACTIC vs. CLIMATIC: A climactic moment is:",
-      "choices": {
-        "A": "weather-related",
-        "B": "peak or exciting",
-        "C": "severe or intense",
-        "D": "atmospheric"
-      },
-      "answer": "B",
-      "explanation": "Climactic = peak moment. Climatic = related to climate. 'peak or exciting' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "Don't let similar spelling trick you. 'peak or exciting' correctly describes the usage here."
-    },
-    {
-      "id": "cwp_beg_037",
-      "question": "CONSCIENCE vs. CONSCIOUS: Your conscience helps you:",
-      "choices": {
-        "A": "stay awake",
-        "B": "make moral choices",
-        "C": "stay aware",
-        "D": "think clearly"
-      },
-      "answer": "B",
-      "explanation": "Conscience = moral compass. Conscious = awake/aware. 'make moral choices' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "'conscience' and 'conscious' sound alike but differ. Focus on their meanings—'make moral choices' applies here."
-    },
-    {
-      "id": "cwp_beg_038",
-      "question": "COUNCIL vs. COUNSEL: To 'counsel' someone means to:",
-      "choices": {
-        "A": "offer advice",
-        "B": "form a group",
-        "C": "debate publicly",
-        "D": "vote formally"
-      },
-      "answer": "A",
-      "explanation": "Counsel = advise. Council = group or assembly. 'offer advice' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "Create a mnemonic for 'council' vs 'counsel'. Remember which meaning fits this question."
-    },
-    {
-      "id": "cwp_beg_039",
-      "question": "DEVISE vs. DEVICE: A 'device' is a:",
-      "choices": {
-        "A": "plan you create",
-        "B": "piece of equipment",
-        "C": "method or idea",
-        "D": "solution to test"
-      },
-      "answer": "B",
-      "explanation": "Device = tool/equipment. Devise = create or plan. 'piece of equipment' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "Quick distinction: Think of a clear example for each word. 'piece of equipment' matches the one asked."
-    },
-    {
-      "id": "cwp_beg_040",
-      "question": "DISCREET vs. DISCRETE: 'Discrete units' are:",
-      "choices": {
-        "A": "carefully hidden",
-        "B": "separate or distinct",
-        "C": "rare or unusual",
-        "D": "secretive"
-      },
-      "answer": "B",
-      "explanation": "Discrete = separate parts. Discreet = careful, tactful. 'separate or distinct' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "These are commonly confused. Read carefully—'separate or distinct' is the right choice."
-    },
-    {
-      "id": "cwp_beg_041",
-      "question": "ELIGIBLE vs. LEGIBLE: Something 'legible' is:",
-      "choices": {
-        "A": "qualified",
-        "B": "readable",
-        "C": "permitted",
-        "D": "authorized"
-      },
-      "answer": "B",
-      "explanation": "Legible = readable text. Eligible = qualified. 'readable' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "Don't let similar spelling trick you. 'readable' correctly describes the usage here."
-    },
-    {
-      "id": "cwp_beg_042",
-      "question": "EMIGRATE vs. IMMIGRATE: To 'emigrate' means:",
-      "choices": {
-        "A": "to enter a new country",
-        "B": "to leave one's country",
-        "C": "to travel domestically",
-        "D": "to relocate temporarily"
-      },
-      "answer": "B",
-      "explanation": "Emigrate = leave a country. Immigrate = enter a new one. 'to leave one's country' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "'emigrate' and 'immigrate' sound alike but differ. Focus on their meanings—'to leave one's country' applies here."
-    },
-    {
-      "id": "cwp_beg_043",
-      "question": "FAIR vs. FARE: A 'fare' is:",
-      "choices": {
-        "A": "equal",
+        "A": "joyful",
         "B": "beautiful",
-        "C": "transportation payment",
-        "D": "unbiased"
-      },
-      "answer": "C",
-      "explanation": "Fare = cost of travel. Fair = just or beautiful. 'transportation payment' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "Create a mnemonic for 'fair' vs 'fare'. Remember which meaning fits this question."
-    },
-    {
-      "id": "cwp_beg_044",
-      "question": "FLOUR vs. FLOWER: Which one is an ingredient?",
-      "choices": {
-        "A": "flour",
-        "B": "flower",
-        "C": "flouer",
-        "D": "flourish"
+        "C": "large",
+        "D": "quick"
       },
       "answer": "A",
-      "explanation": "Flour = baking ingredient. Flower = plant blossom. 'flour' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "Quick distinction: Think of a clear example for each word. 'flour' matches the one asked."
+      "explanation": "\"happy\" and \"joyful\" are closely related in meaning."
     },
     {
-      "id": "cwp_beg_045",
-      "question": "GILDED vs. GUILD: A 'gilded' object is:",
+      "id": "confusing_word_pairs_beginner_q002",
+      "question": "Confusing Word Pairs: Choose the best match for \"large\"",
       "choices": {
-        "A": "gold-colored",
-        "B": "professionally trained",
-        "C": "group-organized",
-        "D": "handcrafted"
+        "A": "happy",
+        "B": "quick",
+        "C": "beautiful",
+        "D": "big"
+      },
+      "answer": "D",
+      "explanation": "\"large\" and \"big\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q003",
+      "question": "Confusing Word Pairs: Choose the best match for \"beautiful\"",
+      "choices": {
+        "A": "large",
+        "B": "happy",
+        "C": "quick",
+        "D": "pretty"
+      },
+      "answer": "D",
+      "explanation": "\"beautiful\" and \"pretty\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q004",
+      "question": "Confusing Word Pairs: Choose the best match for \"quick\"",
+      "choices": {
+        "A": "fast",
+        "B": "happy",
+        "C": "large",
+        "D": "beautiful"
       },
       "answer": "A",
-      "explanation": "Gilded = covered with gold. Guild = association. 'gold-colored' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "These are commonly confused. Read carefully—'gold-colored' is the right choice."
+      "explanation": "\"quick\" and \"fast\" are closely related in meaning."
     },
     {
-      "id": "cwp_beg_046",
-      "question": "HOARD vs. HORDE: A 'horde' is:",
+      "id": "confusing_word_pairs_beginner_q005",
+      "question": "Confusing Word Pairs: Choose the best match for \"start\"",
       "choices": {
-        "A": "to collect excessively",
-        "B": "a large crowd",
-        "C": "a hidden stash",
-        "D": "an organized group"
+        "A": "beautiful",
+        "B": "large",
+        "C": "happy",
+        "D": "begin"
+      },
+      "answer": "D",
+      "explanation": "\"start\" and \"begin\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q006",
+      "question": "Confusing Word Pairs: Choose the best match for \"smart\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "intelligent",
+        "C": "happy",
+        "D": "large"
       },
       "answer": "B",
-      "explanation": "Horde = large group of people. Hoard = store things. 'a large crowd' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "Don't let similar spelling trick you. 'a large crowd' correctly describes the usage here."
+      "explanation": "\"smart\" and \"intelligent\" are closely related in meaning."
     },
     {
-      "id": "cwp_beg_047",
-      "question": "LEAD vs. LED: 'He led the team' uses 'led' as:",
+      "id": "confusing_word_pairs_beginner_q007",
+      "question": "Confusing Word Pairs: Choose the best match for \"tired\"",
       "choices": {
-        "A": "present tense",
-        "B": "past tense",
-        "C": "future tense",
-        "D": "conditional tense"
-      },
-      "answer": "B",
-      "explanation": "Led = past tense of lead. 'past tense' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "'lead' and 'led' sound alike but differ. Focus on their meanings—'past tense' applies here."
-    },
-    {
-      "id": "cwp_beg_048",
-      "question": "LIGHTENING vs. LIGHTNING: Lightning refers to:",
-      "choices": {
-        "A": "making something lighter",
-        "B": "flashing electricity",
-        "C": "brightening a room",
-        "D": "reducing weight"
-      },
-      "answer": "B",
-      "explanation": "Lightning = electrical discharge. Lightening = making lighter.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "Create a mnemonic for 'lightening' vs 'lightning'. Remember which meaning fits this question."
-    },
-    {
-      "id": "cwp_beg_049",
-      "question": "LOAN vs. LONE: A 'lone' person is:",
-      "choices": {
-        "A": "borrowing money",
-        "B": "giving money",
-        "C": "alone",
-        "D": "debating"
+        "A": "beautiful",
+        "B": "large",
+        "C": "weary",
+        "D": "happy"
       },
       "answer": "C",
-      "explanation": "Lone = alone. Loan = borrowed money. 'alone' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "Quick distinction: Think of a clear example for each word. 'alone' matches the one asked."
+      "explanation": "\"tired\" and \"weary\" are closely related in meaning."
     },
     {
-      "id": "cwp_beg_050",
-      "question": "MEDAL vs. METAL: A 'medal' is:",
+      "id": "confusing_word_pairs_beginner_q008",
+      "question": "Confusing Word Pairs: Choose the best match for \"strong\"",
       "choices": {
-        "A": "a hard material",
-        "B": "an award",
-        "C": "a mineral",
-        "D": "a type of steel"
+        "A": "happy",
+        "B": "powerful",
+        "C": "large",
+        "D": "beautiful"
       },
       "answer": "B",
-      "explanation": "Medal = award. Metal = material. 'an award' is the correct answer because it matches the meaning being asked about.",
-      "steps": [
-        "1. Read both words in the pair carefully.",
-        "2. Recall the specific meaning difference (e.g., affect vs effect).",
-        "3. Check the context to see which meaning fits.",
-        "4. Choose the word that matches the intended meaning."
-      ],
-      "fastStrategy": "These are commonly confused. Read carefully—'an award' is the right choice."
+      "explanation": "\"strong\" and \"powerful\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q009",
+      "question": "Confusing Word Pairs: Choose the best match for \"bright\"",
+      "choices": {
+        "A": "happy",
+        "B": "beautiful",
+        "C": "luminous",
+        "D": "large"
+      },
+      "answer": "C",
+      "explanation": "\"bright\" and \"luminous\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q010",
+      "question": "Confusing Word Pairs: Choose the best match for \"kind\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "happy",
+        "C": "compassionate",
+        "D": "large"
+      },
+      "answer": "C",
+      "explanation": "\"kind\" and \"compassionate\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q011",
+      "question": "Confusing Word Pairs: Choose the best match for \"difficult\"",
+      "choices": {
+        "A": "challenging",
+        "B": "large",
+        "C": "happy",
+        "D": "beautiful"
+      },
+      "answer": "A",
+      "explanation": "\"difficult\" and \"challenging\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q012",
+      "question": "Confusing Word Pairs: Choose the best match for \"angry\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "large",
+        "C": "happy",
+        "D": "furious"
+      },
+      "answer": "D",
+      "explanation": "\"angry\" and \"furious\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q013",
+      "question": "Confusing Word Pairs: Choose the best match for \"small\"",
+      "choices": {
+        "A": "tiny",
+        "B": "happy",
+        "C": "large",
+        "D": "beautiful"
+      },
+      "answer": "A",
+      "explanation": "\"small\" and \"tiny\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q014",
+      "question": "Confusing Word Pairs: Choose the best match for \"quiet\"",
+      "choices": {
+        "A": "silent",
+        "B": "happy",
+        "C": "beautiful",
+        "D": "large"
+      },
+      "answer": "A",
+      "explanation": "\"quiet\" and \"silent\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q015",
+      "question": "Confusing Word Pairs: Choose the best match for \"hot\"",
+      "choices": {
+        "A": "happy",
+        "B": "large",
+        "C": "warm",
+        "D": "beautiful"
+      },
+      "answer": "C",
+      "explanation": "\"hot\" and \"warm\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q016",
+      "question": "Confusing Word Pairs: Choose the best match for \"wet\"",
+      "choices": {
+        "A": "happy",
+        "B": "beautiful",
+        "C": "damp",
+        "D": "large"
+      },
+      "answer": "C",
+      "explanation": "\"wet\" and \"damp\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q017",
+      "question": "Confusing Word Pairs: Choose the best match for \"clean\"",
+      "choices": {
+        "A": "large",
+        "B": "happy",
+        "C": "neat",
+        "D": "beautiful"
+      },
+      "answer": "C",
+      "explanation": "\"clean\" and \"neat\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q018",
+      "question": "Confusing Word Pairs: Choose the best match for \"safe\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "large",
+        "C": "happy",
+        "D": "secure"
+      },
+      "answer": "D",
+      "explanation": "\"safe\" and \"secure\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q019",
+      "question": "Confusing Word Pairs: Choose the best match for \"brave\"",
+      "choices": {
+        "A": "large",
+        "B": "happy",
+        "C": "courageous",
+        "D": "beautiful"
+      },
+      "answer": "C",
+      "explanation": "\"brave\" and \"courageous\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q020",
+      "question": "Confusing Word Pairs: Choose the best match for \"rich\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "large",
+        "C": "happy",
+        "D": "wealthy"
+      },
+      "answer": "D",
+      "explanation": "\"rich\" and \"wealthy\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q021",
+      "question": "Confusing Word Pairs: Choose the best match for \"cold\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "large",
+        "C": "chilly",
+        "D": "happy"
+      },
+      "answer": "C",
+      "explanation": "\"cold\" and \"chilly\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q022",
+      "question": "Confusing Word Pairs: Choose the best match for \"fast\"",
+      "choices": {
+        "A": "swift",
+        "B": "large",
+        "C": "beautiful",
+        "D": "happy"
+      },
+      "answer": "A",
+      "explanation": "\"fast\" and \"swift\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q023",
+      "question": "Confusing Word Pairs: Choose the best match for \"slow\"",
+      "choices": {
+        "A": "happy",
+        "B": "sluggish",
+        "C": "beautiful",
+        "D": "large"
+      },
+      "answer": "B",
+      "explanation": "\"slow\" and \"sluggish\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q024",
+      "question": "Confusing Word Pairs: Choose the best match for \"ugly\"",
+      "choices": {
+        "A": "hideous",
+        "B": "large",
+        "C": "beautiful",
+        "D": "happy"
+      },
+      "answer": "A",
+      "explanation": "\"ugly\" and \"hideous\" are closely related in meaning."
+    },
+    {
+      "id": "confusing_word_pairs_beginner_q025",
+      "question": "Confusing Word Pairs: Choose the best match for \"loud\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "noisy",
+        "C": "large",
+        "D": "happy"
+      },
+      "answer": "B",
+      "explanation": "\"loud\" and \"noisy\" are closely related in meaning."
     }
-  ]
+  ],
+  "subtopicId": "confusing_word_pairs"
 }

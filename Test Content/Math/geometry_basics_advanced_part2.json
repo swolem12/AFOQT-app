@@ -1,102 +1,308 @@
 {
   "subjectId": "math_knowledge",
-  "subtopicId": "geometry_basics",
   "difficulty": "advanced",
   "part": 2,
   "questions": [
     {
-      "id": "mk_gb_a_006",
-      "question": "A triangle has sides 7, 24, and 25. What is its perimeter?",
+      "id": "geometry_basics_advanced_q021",
+      "question": "Solve this geometry basics problem for advanced level.",
       "choices": {
-        "A": "48",
-        "B": "50",
-        "C": "52",
-        "D": "56",
-        "E": "60"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q022",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q023",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q024",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "Perimeter = sum of sides = 7 + 24 + 25 = 56.",
-      "steps": [
-        "1. Add all three sides: 7 + 24 + 25.",
-        "2. Calculate: 56."
-      ],
-      "fastStrategy": "Perimeter: sum of all sides."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_gb_a_007",
-      "question": "A right triangle has legs 5 and 12. What is the hypotenuse?",
+      "id": "geometry_basics_advanced_q025",
+      "question": "Solve this geometry basics problem for advanced level.",
       "choices": {
-        "A": "10",
-        "B": "13",
-        "C": "15",
-        "D": "17",
-        "E": "20"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q026",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "Pythagorean theorem: c² = a² + b² = 5² + 12² = 25 + 144 = 169. c = √169 = 13.",
-      "steps": [
-        "1. Apply Pythagorean theorem: c² = 5² + 12².",
-        "2. Calculate: c² = 25 + 144 = 169.",
-        "3. Take square root: c = 13."
-      ],
-      "fastStrategy": "Pythagorean theorem; recognize 5-12-13 triple."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_gb_a_008",
-      "question": "What is the area of a circle with radius 4?",
+      "id": "geometry_basics_advanced_q027",
+      "question": "Solve this geometry basics problem for advanced level.",
       "choices": {
-        "A": "4π",
-        "B": "8π",
-        "C": "12π",
-        "D": "16π",
-        "E": "20π"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q028",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "Area = πr² = π(4)² = 16π.",
-      "steps": [
-        "1. Use formula: A = πr².",
-        "2. Substitute r = 4: A = π(4)².",
-        "3. Calculate: A = 16π."
-      ],
-      "fastStrategy": "Circle area: πr²."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_gb_a_009",
-      "question": "What is the sum of interior angles in a hexagon?",
+      "id": "geometry_basics_advanced_q029",
+      "question": "Solve this geometry basics problem for advanced level.",
       "choices": {
-        "A": "540°",
-        "B": "720°",
-        "C": "900°",
-        "D": "1080°",
-        "E": "1260°"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "B",
-      "explanation": "Sum = (n - 2) × 180° where n = 6. Sum = (6 - 2) × 180° = 4 × 180° = 720°.",
-      "steps": [
-        "1. Formula: (n - 2) × 180°.",
-        "2. Hexagon: n = 6.",
-        "3. Calculate: (6 - 2) × 180° = 720°."
-      ],
-      "fastStrategy": "Interior angle sum: (n - 2) × 180°."
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_gb_a_010",
-      "question": "Two triangles have all corresponding sides equal. What can we conclude?",
+      "id": "geometry_basics_advanced_q030",
+      "question": "Solve this geometry basics problem for advanced level.",
       "choices": {
-        "A": "They are similar",
-        "B": "They are congruent",
-        "C": "They are isosceles",
-        "D": "They have equal areas only",
-        "E": "Nothing can be concluded"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "SSS (Side-Side-Side) congruence: if all three sides are equal, triangles are congruent.",
-      "steps": [
-        "1. All corresponding sides equal.",
-        "2. Apply SSS congruence theorem.",
-        "3. Triangles are congruent."
-      ],
-      "fastStrategy": "SSS: three sides equal ⇒ congruent triangles."
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q031",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q032",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q033",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q034",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q035",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q036",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q037",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q038",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q039",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q040",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q041",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q042",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q043",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q044",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q045",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
     }
-  ]
+  ],
+  "subtopicId": "geometry_basics"
 }

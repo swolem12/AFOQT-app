@@ -1,482 +1,308 @@
 {
-  "subtopicId": "antonyms",
+  "subjectId": null,
   "difficulty": "expert",
   "part": 3,
   "questions": [
     {
-      "id": "ant_exp_051",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'acerbic'?",
+      "id": "antonyms_expert_q026",
+      "question": "Antonyms: Choose the best match for \"maladroit\"",
       "choices": {
-        "A": "gentle",
-        "B": "mild",
-        "C": "soothing",
-        "D": "affable"
+        "A": "clumsy",
+        "B": "perspicuous",
+        "C": "sanguine",
+        "D": "pellucid"
+      },
+      "answer": "A",
+      "explanation": "\"maladroit\" and \"clumsy\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_expert_q027",
+      "question": "Antonyms: Choose the best match for \"mellifluous\"",
+      "choices": {
+        "A": "perspicuous",
+        "B": "sweet",
+        "C": "pellucid",
+        "D": "sanguine"
       },
       "answer": "B",
-      "explanation": "Acerbic describes harsh or biting tone; 'mild' suggests softened, less harsh expression. 'mild' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Quick test: Can 'acerbic' and 'mild' both be true at once? No—they're opposites."
+      "explanation": "\"mellifluous\" and \"sweet\" are closely related in meaning."
     },
     {
-      "id": "ant_exp_052",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'anodyne' (as an adjective)?",
+      "id": "antonyms_expert_q028",
+      "question": "Antonyms: Choose the best match for \"obdurate\"",
       "choices": {
-        "A": "provocative",
-        "B": "stimulating",
-        "C": "irritating",
-        "D": "controversial"
-      },
-      "answer": "A",
-      "explanation": "Anodyne means not likely to offend, bland; 'provocative' means likely to arouse strong reaction. 'provocative' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "'anodyne' means one thing; 'provocative' means the opposite. Look for the direct flip."
-    },
-    {
-      "id": "ant_exp_053",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'antediluvian'?",
-      "choices": {
-        "A": "modern",
-        "B": "current",
-        "C": "contemporary",
-        "D": "up-to-date"
-      },
-      "answer": "C",
-      "explanation": "Antediluvian means extremely old-fashioned; 'contemporary' means belonging to the present. 'contemporary' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Ask: If 'antediluvian' is positive, what's negative? (Or vice versa.) That's 'contemporary'."
-    },
-    {
-      "id": "ant_exp_054",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'apocryphal'?",
-      "choices": {
-        "A": "authentic",
-        "B": "verifiable",
-        "C": "reliable",
-        "D": "documented"
-      },
-      "answer": "A",
-      "explanation": "Apocryphal means of doubtful authenticity; 'authentic' means genuine and real. 'authentic' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Picture a scale: 'apocryphal' on one end, 'authentic' on the other."
-    },
-    {
-      "id": "ant_exp_055",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'concomitant'?",
-      "choices": {
-        "A": "separate",
-        "B": "independent",
-        "C": "isolated",
-        "D": "unrelated"
+        "A": "pellucid",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "stubborn"
       },
       "answer": "D",
-      "explanation": "Concomitant means accompanying or associated; 'unrelated' means having no connection. 'unrelated' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Avoid traps: Some choices are synonyms of 'concomitant'. 'unrelated' contradicts it."
+      "explanation": "\"obdurate\" and \"stubborn\" are closely related in meaning."
     },
     {
-      "id": "ant_exp_056",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'contumacious'?",
+      "id": "antonyms_expert_q029",
+      "question": "Antonyms: Choose the best match for \"parsimonious\"",
       "choices": {
-        "A": "obedient",
-        "B": "submissive",
-        "C": "amenable",
-        "D": "compliant"
+        "A": "stingy",
+        "B": "sanguine",
+        "C": "pellucid",
+        "D": "perspicuous"
+      },
+      "answer": "A",
+      "explanation": "\"parsimonious\" and \"stingy\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_expert_q030",
+      "question": "Antonyms: Choose the best match for \"pellucid\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "perspicuous",
+        "C": "clear",
+        "D": "precocious"
+      },
+      "answer": "C",
+      "explanation": "\"pellucid\" and \"clear\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_expert_q031",
+      "question": "Antonyms: Choose the best match for \"penurious\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "poor"
       },
       "answer": "D",
-      "explanation": "Contumacious means stubbornly disobedient, especially to authority; 'compliant' is the institutional opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Quick test: Can 'contumacious' and 'compliant' both be true at once? No—they're opposites."
+      "explanation": "\"penurious\" and \"poor\" are closely related in meaning."
     },
     {
-      "id": "ant_exp_057",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'exegete' (as a verb, to interpret)?",
+      "id": "antonyms_expert_q032",
+      "question": "Antonyms: Choose the best match for \"perspicacious\"",
       "choices": {
-        "A": "confuse",
-        "B": "obscure",
-        "C": "distort",
-        "D": "garble"
-      },
-      "answer": "B",
-      "explanation": "To exegete is to explain or interpret clearly; 'obscure' means to make unclear or hard to understand. 'obscure' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "'exegete' means one thing; 'obscure' means the opposite. Look for the direct flip."
-    },
-    {
-      "id": "ant_exp_058",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'inchoate'?",
-      "choices": {
-        "A": "mature",
-        "B": "fully-formed",
-        "C": "developed",
-        "D": "complete"
-      },
-      "answer": "B",
-      "explanation": "Inchoate means just begun, not fully formed; 'fully-formed' is the conceptual opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Ask: If 'inchoate' is positive, what's negative? (Or vice versa.) That's 'fully-formed'."
-    },
-    {
-      "id": "ant_exp_059",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'jejune' (as in jejune remarks)?",
-      "choices": {
-        "A": "insightful",
-        "B": "penetrating",
-        "C": "subtle",
-        "D": "astute"
+        "A": "keen",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "pellucid"
       },
       "answer": "A",
-      "explanation": "Jejune remarks are dull or simplistic; 'insightful' remarks show understanding and depth. 'insightful' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Picture a scale: 'jejune' on one end, 'insightful' on the other."
+      "explanation": "\"perspicacious\" and \"keen\" are closely related in meaning."
     },
     {
-      "id": "ant_exp_060",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'lachrymose'?",
+      "id": "antonyms_expert_q033",
+      "question": "Antonyms: Choose the best match for \"phlegmatic\"",
       "choices": {
-        "A": "cheerful",
-        "B": "buoyant",
-        "C": "jovial",
-        "D": "blithe"
+        "A": "calm",
+        "B": "pellucid",
+        "C": "sanguine",
+        "D": "perspicuous"
       },
-      "answer": "C",
-      "explanation": "Lachrymose means tearful or inclined to weep; 'jovial' means cheerful and good-humored. 'jovial' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Avoid traps: Some choices are synonyms of 'lachrymose'. 'jovial' contradicts it."
+      "answer": "A",
+      "explanation": "\"phlegmatic\" and \"calm\" are closely related in meaning."
     },
     {
-      "id": "ant_exp_061",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'limpid'?",
+      "id": "antonyms_expert_q034",
+      "question": "Antonyms: Choose the best match for \"picayune\"",
       "choices": {
-        "A": "muddy",
-        "B": "turbid",
-        "C": "obscure",
-        "D": "clouded"
+        "A": "trivial",
+        "B": "perspicuous",
+        "C": "sanguine",
+        "D": "pellucid"
       },
-      "answer": "B",
-      "explanation": "Limpid means clear and transparent; 'turbid' means cloudy or muddy. 'turbid' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Quick test: Can 'limpid' and 'turbid' both be true at once? No—they're opposites."
+      "answer": "A",
+      "explanation": "\"picayune\" and \"trivial\" are closely related in meaning."
     },
     {
-      "id": "ant_exp_062",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'mercurial'?",
+      "id": "antonyms_expert_q035",
+      "question": "Antonyms: Choose the best match for \"propitious\"",
       "choices": {
-        "A": "steady",
-        "B": "reliable",
-        "C": "constant",
-        "D": "stable"
+        "A": "pellucid",
+        "B": "perspicuous",
+        "C": "sanguine",
+        "D": "auspicious"
       },
       "answer": "D",
-      "explanation": "Mercurial describes rapidly changing moods; 'stable' means not easily changed. 'stable' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "'mercurial' means one thing; 'stable' means the opposite. Look for the direct flip."
+      "explanation": "\"propitious\" and \"auspicious\" are closely related in meaning."
     },
     {
-      "id": "ant_exp_063",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'myopic'?",
+      "id": "antonyms_expert_q036",
+      "question": "Antonyms: Choose the best match for \"pulchritude\"",
       "choices": {
-        "A": "broad-minded",
-        "B": "far-sighted",
-        "C": "visionary",
-        "D": "strategic"
+        "A": "beauty",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "pellucid"
+      },
+      "answer": "A",
+      "explanation": "\"pulchritude\" and \"beauty\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_expert_q037",
+      "question": "Antonyms: Choose the best match for \"redolent\"",
+      "choices": {
+        "A": "fragrant",
+        "B": "sanguine",
+        "C": "pellucid",
+        "D": "perspicuous"
+      },
+      "answer": "A",
+      "explanation": "\"redolent\" and \"fragrant\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_expert_q038",
+      "question": "Antonyms: Choose the best match for \"sedulous\"",
+      "choices": {
+        "A": "diligent",
+        "B": "sanguine",
+        "C": "pellucid",
+        "D": "perspicuous"
+      },
+      "answer": "A",
+      "explanation": "\"sedulous\" and \"diligent\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_expert_q039",
+      "question": "Antonyms: Choose the best match for \"solipsistic\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "pellucid",
+        "C": "self-centered",
+        "D": "perspicuous"
+      },
+      "answer": "C",
+      "explanation": "\"solipsistic\" and \"self-centered\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_expert_q040",
+      "question": "Antonyms: Choose the best match for \"stolid\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "perspicuous",
+        "C": "impassive",
+        "D": "sanguine"
+      },
+      "answer": "C",
+      "explanation": "\"stolid\" and \"impassive\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_expert_q041",
+      "question": "Antonyms: Choose the best match for \"surreptitious\"",
+      "choices": {
+        "A": "perspicuous",
+        "B": "covert",
+        "C": "sanguine",
+        "D": "pellucid"
       },
       "answer": "B",
-      "explanation": "Myopic literally means nearsighted; figuratively it means lacking long-term vision; 'far-sighted' directly contrasts. 'far-sighted' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Ask: If 'myopic' is positive, what's negative? (Or vice versa.) That's 'far-sighted'."
+      "explanation": "\"surreptitious\" and \"covert\" are closely related in meaning."
     },
     {
-      "id": "ant_exp_064",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'neophyte'?",
+      "id": "antonyms_expert_q042",
+      "question": "Antonyms: Choose the best match for \"temeritous\"",
       "choices": {
-        "A": "veteran",
-        "B": "adept",
-        "C": "expert",
-        "D": "authority"
+        "A": "pellucid",
+        "B": "perspicuous",
+        "C": "reckless",
+        "D": "sanguine"
       },
-      "answer": "A",
-      "explanation": "Neophyte means beginner; 'veteran' means someone experienced in a field. 'veteran' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Picture a scale: 'neophyte' on one end, 'veteran' on the other."
+      "answer": "C",
+      "explanation": "\"temeritous\" and \"reckless\" are closely related in meaning."
     },
     {
-      "id": "ant_exp_065",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'obviate'?",
+      "id": "antonyms_expert_q043",
+      "question": "Antonyms: Choose the best match for \"tendentious\"",
       "choices": {
-        "A": "provoke",
-        "B": "necessitate",
-        "C": "cause",
-        "D": "trigger"
+        "A": "pellucid",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "biased"
+      },
+      "answer": "D",
+      "explanation": "\"tendentious\" and \"biased\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_expert_q044",
+      "question": "Antonyms: Choose the best match for \"tenuous\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "perspicuous",
+        "C": "pellucid",
+        "D": "weak"
+      },
+      "answer": "D",
+      "explanation": "\"tenuous\" and \"weak\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_expert_q045",
+      "question": "Antonyms: Choose the best match for \"perspicuous\"",
+      "choices": {
+        "A": "precocious",
+        "B": "transparent",
+        "C": "sanguine",
+        "D": "pellucid"
       },
       "answer": "B",
-      "explanation": "Obviate means to make unnecessary; 'necessitate' means to make something necessary. 'necessitate' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Avoid traps: Some choices are synonyms of 'obviate'. 'necessitate' contradicts it."
+      "explanation": "\"perspicuous\" and \"transparent\" are closely related in meaning."
     },
     {
-      "id": "ant_exp_066",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'protean'?",
+      "id": "antonyms_expert_q046",
+      "question": "Antonyms: Choose the best match for \"pellucid\"",
       "choices": {
-        "A": "fixed",
-        "B": "static",
-        "C": "stable",
-        "D": "unchanging"
+        "A": "clear",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "precocious"
       },
       "answer": "A",
-      "explanation": "Protean means easily changing or adaptable; 'fixed' means not changing. 'fixed' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Quick test: Can 'protean' and 'fixed' both be true at once? No—they're opposites."
+      "explanation": "\"pellucid\" and \"clear\" are closely related in meaning."
     },
     {
-      "id": "ant_exp_067",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'pusillanimous'?",
+      "id": "antonyms_expert_q047",
+      "question": "Antonyms: Choose the best match for \"sanguine\"",
       "choices": {
-        "A": "undaunted",
-        "B": "stalwart",
-        "C": "intrepid",
-        "D": "lionhearted"
-      },
-      "answer": "C",
-      "explanation": "Pusillanimous is cowardly; 'intrepid' emphasizes fearless determination. 'intrepid' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "'pusillanimous' means one thing; 'intrepid' means the opposite. Look for the direct flip."
-    },
-    {
-      "id": "ant_exp_068",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'quixotic'?",
-      "choices": {
-        "A": "realistic",
-        "B": "pragmatic",
-        "C": "sober",
-        "D": "measured"
+        "A": "perspicuous",
+        "B": "hopeful",
+        "C": "precocious",
+        "D": "pellucid"
       },
       "answer": "B",
-      "explanation": "Quixotic means idealistic and impractical; 'pragmatic' means focused on practical results. 'pragmatic' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Ask: If 'quixotic' is positive, what's negative? (Or vice versa.) That's 'pragmatic'."
+      "explanation": "\"sanguine\" and \"hopeful\" are closely related in meaning."
     },
     {
-      "id": "ant_exp_069",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'rebarbative'?",
+      "id": "antonyms_expert_q048",
+      "question": "Antonyms: Choose the best match for \"precocious\"",
       "choices": {
-        "A": "pleasant",
-        "B": "inviting",
-        "C": "winsome",
-        "D": "charming"
+        "A": "sanguine",
+        "B": "pellucid",
+        "C": "intelligent",
+        "D": "perspicuous"
       },
       "answer": "C",
-      "explanation": "Rebarbative means unattractive or irritating; 'winsome' means appealing and engaging. 'winsome' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Picture a scale: 'rebarbative' on one end, 'winsome' on the other."
+      "explanation": "\"precocious\" and \"intelligent\" are closely related in meaning."
     },
     {
-      "id": "ant_exp_070",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'rubicund'?",
+      "id": "antonyms_expert_q049",
+      "question": "Antonyms: Choose the best match for \"propitious\"",
       "choices": {
-        "A": "pale",
-        "B": "sallow",
-        "C": "wan",
-        "D": "ashen"
-      },
-      "answer": "A",
-      "explanation": "Rubicund means reddish and healthy in color; 'pale' is the simplest opposite in complexion.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Avoid traps: Some choices are synonyms of 'rubicund'. 'pale' contradicts it."
-    },
-    {
-      "id": "ant_exp_071",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'soporific'?",
-      "choices": {
-        "A": "bracing",
-        "B": "galvanizing",
-        "C": "stimulating",
-        "D": "invigorating"
+        "A": "pellucid",
+        "B": "sanguine",
+        "C": "favorable",
+        "D": "perspicuous"
       },
       "answer": "C",
-      "explanation": "A soporific lecture puts you to sleep; a 'stimulating' one wakes up your brain. 'stimulating' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Quick test: Can 'soporific' and 'stimulating' both be true at once? No—they're opposites."
+      "explanation": "\"propitious\" and \"favorable\" are closely related in meaning."
     },
     {
-      "id": "ant_exp_072",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'taciturn'?",
+      "id": "antonyms_expert_q050",
+      "question": "Antonyms: Choose the best match for \"nugatory\"",
       "choices": {
-        "A": "garrulous",
-        "B": "voluble",
-        "C": "loquacious",
-        "D": "expansive"
+        "A": "perspicuous",
+        "B": "worthless",
+        "C": "sanguine",
+        "D": "pellucid"
       },
-      "answer": "A",
-      "explanation": "Taciturn means habitually silent; 'garrulous' means overly talkative. 'garrulous' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "'taciturn' means one thing; 'garrulous' means the opposite. Look for the direct flip."
-    },
-    {
-      "id": "ant_exp_073",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'trenchant'?",
-      "choices": {
-        "A": "muted",
-        "B": "indirect",
-        "C": "bland",
-        "D": "feeble"
-      },
-      "answer": "C",
-      "explanation": "Trenchant criticism is sharp and penetrating; 'bland' criticism is mild and dull. 'bland' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Ask: If 'trenchant' is positive, what's negative? (Or vice versa.) That's 'bland'."
-    },
-    {
-      "id": "ant_exp_074",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'uxorious'?",
-      "choices": {
-        "A": "independent",
-        "B": "detached",
-        "C": "aloof",
-        "D": "dismissive"
-      },
-      "answer": "A",
-      "explanation": "Uxorious means excessively devoted to one's wife; 'independent' implies not being overly attached. 'independent' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Picture a scale: 'uxorious' on one end, 'independent' on the other."
-    },
-    {
-      "id": "ant_exp_075",
-      "question": "Which word is most nearly OPPOSITE in meaning to 'venal'?",
-      "choices": {
-        "A": "honest",
-        "B": "principled",
-        "C": "incorruptible",
-        "D": "scrupulous"
-      },
-      "answer": "C",
-      "explanation": "Venal means susceptible to bribery; 'incorruptible' means cannot be bribed or morally compromised. 'incorruptible' is the correct answer because it is the direct opposite.",
-      "steps": [
-        "1. Read the target word and identify its meaning.",
-        "2. Think of what the opposite concept would be.",
-        "3. Scan the choices for the word that represents the opposite meaning.",
-        "4. Eliminate synonyms and unrelated words."
-      ],
-      "fastStrategy": "Avoid traps: Some choices are synonyms of 'venal'. 'incorruptible' contradicts it."
+      "answer": "B",
+      "explanation": "\"nugatory\" and \"worthless\" are closely related in meaning."
     }
-  ]
+  ],
+  "subtopicId": "antonyms"
 }

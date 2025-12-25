@@ -1,506 +1,308 @@
 {
   "subjectId": "math_knowledge",
-  "subtopicId": "probability",
   "difficulty": "beginner",
   "part": 2,
   "questions": [
-
     {
-      "id": "prob_b2_026",
-      "question": "A bag contains 3 red balls and 2 blue balls. You draw one ball, replace it, then draw another ball. What is the probability that BOTH balls are red?",
+      "id": "probability_beginner_q001",
+      "question": "Solve this probability problem for beginner level.",
       "choices": {
-        "A": "3/10",
-        "B": "6/25",
-        "C": "9/25",
-        "D": "9/10",
-        "E": "3/5"
-      },
-      "answer": "C",
-      "explanation": "With replacement, each draw is independent and the probabilities stay the same. The probability of red on one draw is 3 out of 5. For two reds in a row, multiply: (3/5) × (3/5) = 9/25.",
-      "steps": [
-        "1. P(red on first draw) = 3/5.",
-        "2. P(red on second draw) = 3/5 (because you replace the ball).",
-        "3. Multiply: (3/5) × (3/5) = 9/25."
-      ],
-      "fastStrategy": "For repeated independent events like this, multiply the single-draw probability by itself."
-    },
-
-    {
-      "id": "prob_b2_027",
-      "question": "You flip a fair coin and roll a fair six-sided die. What is the probability of getting heads on the coin AND a 1 on the die?",
-      "choices": {
-        "A": "1/2",
-        "B": "1/3",
-        "C": "1/6",
-        "D": "1/12",
-        "E": "1/36"
-      },
-      "answer": "D",
-      "explanation": "The events are independent. P(heads) = 1/2, P(rolling a 1) = 1/6. Multiply: (1/2) × (1/6) = 1/12.",
-      "steps": [
-        "1. P(heads) = 1/2.",
-        "2. P(1 on die) = 1/6.",
-        "3. P(both) = (1/2) × (1/6) = 1/12."
-      ],
-      "fastStrategy": "When you see AND for independent events, multiply the probabilities."
-    },
-
-    {
-      "id": "prob_b2_028",
-      "question": "You flip a fair coin twice. What is the probability of getting exactly ONE head?",
-      "choices": {
-        "A": "1/4",
-        "B": "1/2",
-        "C": "3/4",
-        "D": "1/3",
-        "E": "2/3"
-      },
-      "answer": "B",
-      "explanation": "The possible outcomes are HH, HT, TH, TT (4 equally likely). Exactly one head occurs in HT and TH → 2 outcomes. Probability = 2/4 = 1/2.",
-      "steps": [
-        "1. List all outcomes: HH, HT, TH, TT.",
-        "2. Count those with exactly one head: HT, TH → 2 outcomes.",
-        "3. Probability = 2/4 = 1/2."
-      ],
-      "fastStrategy": "For two flips, memorize: 0 heads = 1/4, exactly 1 head = 1/2, 2 heads = 1/4."
-    },
-
-    {
-      "id": "prob_b2_029",
-      "question": "From a standard 52-card deck, what is the probability of drawing a face card (Jack, Queen, or King)?",
-      "choices": {
-        "A": "1/13",
-        "B": "2/13",
-        "C": "3/13",
-        "D": "1/4",
-        "E": "12/52"
-      },
-      "answer": "C",
-      "explanation": "Each suit has 3 face cards (J, Q, K). There are 4 suits, so total face cards = 3 × 4 = 12. Probability = 12/52 = 3/13.",
-      "steps": [
-        "1. Face cards per suit: 3.",
-        "2. Total face cards: 3 × 4 = 12.",
-        "3. P(face card) = 12/52 = 3/13."
-      ],
-      "fastStrategy": "Face cards: 12 in a deck → 12/52 reduces to 3/13."
-    },
-
-    {
-      "id": "prob_b2_030",
-      "question": "From a standard deck of 52 cards, what is the probability that a randomly drawn card is NOT a heart?",
-      "choices": {
-        "A": "1/4",
-        "B": "3/4",
-        "C": "13/52",
-        "D": "26/52",
-        "E": "39/52"
-      },
-      "answer": "B",
-      "explanation": "Hearts are 1 of the 4 suits, so P(heart) = 1/4. P(not heart) = 1 − 1/4 = 3/4. In fraction over 52, that’s 39/52.",
-      "steps": [
-        "1. P(heart) = 13/52 = 1/4.",
-        "2. P(not heart) = 1 − 1/4 = 3/4.",
-        "3. 3/4 = 39/52 if expressed over 52."
-      ],
-      "fastStrategy": "Sometimes it’s easier to find the probability of the opposite event and subtract from 1."
-    },
-
-    {
-      "id": "prob_b2_031",
-      "question": "A jar has 4 red, 3 blue, and 3 green marbles. One marble is drawn at random. What is the probability it is red OR blue?",
-      "choices": {
-        "A": "3/10",
-        "B": "4/10",
-        "C": "7/10",
-        "D": "7/4",
-        "E": "3/4"
-      },
-      "answer": "C",
-      "explanation": "Total marbles = 4 + 3 + 3 = 10. Red or blue marbles = 4 + 3 = 7. P(red or blue) = 7/10.",
-      "steps": [
-        "1. Count total marbles: 10.",
-        "2. Count red or blue marbles: 4 + 3 = 7.",
-        "3. Probability = 7/10."
-      ],
-      "fastStrategy": "For OR with no overlap issues, just add the favorable counts."
-    },
-
-    {
-      "id": "prob_b2_032",
-      "question": "A number is chosen at random from 1 to 20 (inclusive). What is the probability the number is a multiple of 5?",
-      "choices": {
-        "A": "1/20",
-        "B": "1/10",
-        "C": "1/5",
-        "D": "1/4",
-        "E": "5/20"
-      },
-      "answer": "D",
-      "explanation": "Multiples of 5 between 1 and 20: 5, 10, 15, 20 → 4 numbers. Total numbers = 20. Probability = 4/20 = 1/5? Wait carefully: 4/20 reduces to 1/5, which is choice C.",
-      "steps": [
-        "1. List multiples of 5: 5, 10, 15, 20 → 4 values.",
-        "2. Total choices from 1–20: 20.",
-        "3. Probability = 4/20 = 1/5."
-      ],
-      "fastStrategy": "Count how many are multiples, then simplify the fraction."
-    },
-
-    {
-      "id": "prob_b2_033",
-      "question": "You roll a fair six-sided die. What is the probability of rolling a prime number? (Consider 2, 3, and 5 as primes on the die.)",
-      "choices": {
-        "A": "1/6",
-        "B": "2/6",
-        "C": "3/6",
-        "D": "4/6",
-        "E": "5/6"
-      },
-      "answer": "C",
-      "explanation": "Prime numbers on a die: 2, 3, 5 → 3 outcomes. Total outcomes = 6. Probability = 3/6 = 1/2.",
-      "steps": [
-        "1. Identify prime faces: 2, 3, 5 → 3 primes.",
-        "2. P(prime) = 3/6 = 1/2."
-      ],
-      "fastStrategy": "On a die, prime faces are 2,3,5 (3 out of 6 → half)."
-    },
-
-    {
-      "id": "prob_b2_034",
-      "question": "A bag has 5 red and 5 blue chips. You draw one chip without replacement, then a second chip. What is the probability that BOTH chips are red?",
-      "choices": {
-        "A": "1/4",
-        "B": "1/5",
-        "C": "2/9",
-        "D": "5/9",
-        "E": "1/2"
-      },
-      "answer": "C",
-      "explanation": "First draw: P(red) = 5/10 = 1/2. After drawing a red, remaining red = 4 and total chips = 9, so P(red on second) = 4/9. Multiply: (1/2) × (4/9) = 4/18 = 2/9.",
-      "steps": [
-        "1. P(first red) = 5/10 = 1/2.",
-        "2. P(second red | first red) = 4/9.",
-        "3. Multiply: (1/2) × (4/9) = 2/9."
-      ],
-      "fastStrategy": "Without replacement: adjust the numbers on the second probability and then multiply."
-    },
-
-    {
-      "id": "prob_b2_035",
-      "question": "A fair coin is flipped three times. What is the probability of getting at least one head?",
-      "choices": {
-        "A": "1/8",
-        "B": "3/8",
-        "C": "1/2",
-        "D": "5/8",
-        "E": "7/8"
-      },
-      "answer": "E",
-      "explanation": "It’s easier to find the opposite: P(no heads) = P(all tails). For three flips: P(all tails) = (1/2)^3 = 1/8. So P(at least one head) = 1 − 1/8 = 7/8.",
-      "steps": [
-        "1. Compute P(all tails) = (1/2)^3 = 1/8.",
-        "2. Use complement: P(at least one head) = 1 − 1/8 = 7/8."
-      ],
-      "fastStrategy": "For “at least one”, use 1 − P(none) to avoid listing every case."
-    },
-
-    {
-      "id": "prob_b2_036",
-      "question": "You roll two fair six-sided dice. How many total possible outcomes are there?",
-      "choices": {
-        "A": "6",
-        "B": "12",
-        "C": "18",
-        "D": "36",
-        "E": "72"
-      },
-      "answer": "D",
-      "explanation": "Each die has 6 outcomes. For two dice, total outcomes = 6 × 6 = 36 pairs (like (1,1), (1,2), …, (6,6)).",
-      "steps": [
-        "1. Outcomes for 1 die = 6.",
-        "2. Multiply for two dice: 6 × 6 = 36."
-      ],
-      "fastStrategy": "Independent counts multiply: 6 options × 6 options = 36 outcomes."
-    },
-
-    {
-      "id": "prob_b2_037",
-      "question": "You roll two fair six-sided dice. What is the probability that the sum of the two dice is 7?",
-      "choices": {
-        "A": "1/6",
-        "B": "1/8",
-        "C": "1/9",
-        "D": "5/36",
-        "E": "6/36"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Pairs that sum to 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) → 6 outcomes. Total outcomes = 36. Probability = 6/36 = 1/6.",
-      "steps": [
-        "1. List pairs that total 7.",
-        "2. Count them: 6 pairs.",
-        "3. P(sum 7) = 6/36 = 1/6."
-      ],
-      "fastStrategy": "Sum of 7 is the most common roll on two dice, with probability 1/6."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "prob_b2_038",
-      "question": "A box contains 3 green, 2 yellow, and 1 red ball. One ball is chosen at random. What is the probability that it is NOT green?",
+      "id": "probability_beginner_q002",
+      "question": "Solve this probability problem for beginner level.",
       "choices": {
-        "A": "1/6",
-        "B": "2/6",
-        "C": "3/6",
-        "D": "4/6",
-        "E": "5/6"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "D",
-      "explanation": "Total balls = 3 + 2 + 1 = 6. Non-green = 2 yellow + 1 red = 3 balls. Probability = 3/6 = 1/2, which matches choice C, not D. The correct simplified probability is 1/2.",
-      "steps": [
-        "1. Total balls: 6.",
-        "2. Non-green: 2 yellow + 1 red = 3.",
-        "3. P(not green) = 3/6 = 1/2."
-      ],
-      "fastStrategy": "If you know P(green) = 3/6, then P(not green) is the other half: 3/6."
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "prob_b2_039",
-      "question": "A drawer has 8 socks: 3 black, 3 white, and 2 gray. If you pick one sock at random, what is the probability it is black or gray?",
+      "id": "probability_beginner_q003",
+      "question": "Solve this probability problem for beginner level.",
       "choices": {
-        "A": "2/8",
-        "B": "3/8",
-        "C": "5/8",
-        "D": "6/8",
-        "E": "7/8"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "Black or gray socks = 3 black + 2 gray = 5. Total socks = 8. Probability = 5/8.",
-      "steps": [
-        "1. Count black and gray: 3 + 2 = 5.",
-        "2. Total socks = 8.",
-        "3. P(black or gray) = 5/8."
-      ],
-      "fastStrategy": "OR with no overlap: just add the counts that qualify."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "prob_b2_040",
-      "question": "A box has 4 red and 6 blue marbles. One marble is drawn, NOT replaced, and then a second marble is drawn. What is the probability that the first is red and the second is blue?",
+      "id": "probability_beginner_q004",
+      "question": "Solve this probability problem for beginner level.",
       "choices": {
-        "A": "4/10",
-        "B": "6/10",
-        "C": "24/100",
-        "D": "12/90",
-        "E": "24/90"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "First draw: P(red) = 4/10. After drawing red, there are 3 red and 6 blue left → 9 marbles. P(blue on second | first red) = 6/9. Multiply: (4/10) × (6/9) = 24/90, which reduces to 4/15.",
-      "steps": [
-        "1. P(first red) = 4/10.",
-        "2. After red, P(second blue) = 6/9.",
-        "3. Multiply: (4/10) × (6/9) = 24/90 = 4/15."
-      ],
-      "fastStrategy": "Track how the counts change when you don’t replace the first pick, then multiply."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "prob_b2_041",
-      "question": "A code lock uses a 3-digit code where each digit can be 0–9 and digits can repeat. How many possible codes are there?",
+      "id": "probability_beginner_q005",
+      "question": "Solve this probability problem for beginner level.",
       "choices": {
-        "A": "30",
-        "B": "100",
-        "C": "300",
-        "D": "900",
-        "E": "1000"
-      },
-      "answer": "E",
-      "explanation": "Each of the 3 positions has 10 possible digits (0–9). Total codes = 10 × 10 × 10 = 1000.",
-      "steps": [
-        "1. Choices for first digit: 10.",
-        "2. Choices for second digit: 10.",
-        "3. Choices for third digit: 10.",
-        "4. Multiply: 10 × 10 × 10 = 1000."
-      ],
-      "fastStrategy": "When each slot has 10 choices, a 3-slot code has 10³ = 1000 possibilities."
-    },
-
-    {
-      "id": "prob_b2_042",
-      "question": "A bookshelf has 5 different books. If you randomly pick 1 book, what is the probability of picking a specific book (for example, Book A)?",
-      "choices": {
-        "A": "1/5",
-        "B": "2/5",
-        "C": "3/5",
-        "D": "4/5",
-        "E": "5/5"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "There is 1 copy of Book A out of 5 books. Probability = 1/5.",
-      "steps": [
-        "1. Total options: 5.",
-        "2. Favorable option: just Book A → 1.",
-        "3. P(Book A) = 1/5."
-      ],
-      "fastStrategy": "Picking one specific item out of n equally likely items is 1/n."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "prob_b2_043",
-      "question": "A jar contains 12 candies: 5 are chocolate and 7 are fruit-flavored. What is the probability a randomly chosen candy is chocolate?",
+      "id": "probability_beginner_q006",
+      "question": "Solve this probability problem for beginner level.",
       "choices": {
-        "A": "5/12",
-        "B": "7/12",
-        "C": "1/2",
-        "D": "5/7",
-        "E": "7/5"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "A",
-      "explanation": "Chocolate candies = 5, total candies = 12. Probability = 5/12.",
-      "steps": [
-        "1. Favorable outcomes: 5.",
-        "2. Total outcomes: 12.",
-        "3. P(chocolate) = 5/12."
-      ],
-      "fastStrategy": "Always think: favorable ÷ total, then reduce if possible."
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "prob_b2_044",
-      "question": "You roll a fair die once. What is the probability of NOT rolling a 6?",
+      "id": "probability_beginner_q007",
+      "question": "Solve this probability problem for beginner level.",
       "choices": {
-        "A": "1/6",
-        "B": "2/6",
-        "C": "3/6",
-        "D": "4/6",
-        "E": "5/6"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "E",
-      "explanation": "P(rolling a 6) = 1/6. So P(not 6) = 1 − 1/6 = 5/6.",
-      "steps": [
-        "1. P(6) = 1/6.",
-        "2. P(not 6) = 1 − 1/6 = 5/6."
-      ],
-      "fastStrategy": "For a single excluded face on a die, probability of 'not that face' is always 5/6."
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "prob_b2_045",
-      "question": "You pick a card at random from a standard 52-card deck. What is the probability that the card is an ace or a king?",
+      "id": "probability_beginner_q008",
+      "question": "Solve this probability problem for beginner level.",
       "choices": {
-        "A": "2/52",
-        "B": "4/52",
-        "C": "6/52",
-        "D": "8/52",
-        "E": "16/52"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "There are 4 aces and 4 kings, and no overlap between those sets. Total favorable = 4 + 4 = 8 cards. Probability = 8/52 = 2/13.",
-      "steps": [
-        "1. Count aces: 4.",
-        "2. Count kings: 4.",
-        "3. Total favorable = 8, so P = 8/52 = 2/13."
-      ],
-      "fastStrategy": "For two non-overlapping card types, just add their counts, then divide by 52."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "prob_b2_046",
-      "question": "A small company has 8 employees: 3 work in sales and 5 work in support. If one employee is chosen at random for a bonus, what is the probability a support employee is chosen?",
+      "id": "probability_beginner_q009",
+      "question": "Solve this probability problem for beginner level.",
       "choices": {
-        "A": "3/8",
-        "B": "5/8",
-        "C": "1/2",
-        "D": "3/5",
-        "E": "8/5"
-      },
-      "answer": "B",
-      "explanation": "Support = 5 employees, total = 8. Probability = 5/8.",
-      "steps": [
-        "1. Favorable employees: 5 support.",
-        "2. Total employees: 8.",
-        "3. P(support) = 5/8."
-      ],
-      "fastStrategy": "Translate verbal counts into a simple fraction: support ÷ total."
-    },
-
-    {
-      "id": "prob_b2_047",
-      "question": "You roll two fair six-sided dice. What is the probability that both dice show the SAME number?",
-      "choices": {
-        "A": "1/6",
-        "B": "1/3",
-        "C": "1/4",
-        "D": "5/36",
-        "E": "6/36"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Matching pairs: (1,1), (2,2), (3,3), (4,4), (5,5), (6,6) → 6 outcomes. Total outcomes = 36. Probability = 6/36 = 1/6.",
-      "steps": [
-        "1. List equal pairs: 6 of them.",
-        "2. Total outcomes: 36.",
-        "3. P(same number) = 6/36 = 1/6."
-      ],
-      "fastStrategy": "For two dice, matching faces probability is always 1/6."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "prob_b2_048",
-      "question": "A bag contains 4 green and 6 yellow balls. One ball is drawn at random. What is the probability it is green?",
+      "id": "probability_beginner_q010",
+      "question": "Solve this probability problem for beginner level.",
       "choices": {
-        "A": "4/6",
-        "B": "6/10",
-        "C": "4/10",
-        "D": "2/5",
-        "E": "3/5"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q011",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q012",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "Total balls = 4 + 6 = 10. Green = 4. Probability = 4/10 = 2/5.",
-      "steps": [
-        "1. Total = 10 balls.",
-        "2. Favorable (green) = 4.",
-        "3. P(green) = 4/10 = 2/5."
-      ],
-      "fastStrategy": "If both counts end in 0 (like 4/10), you can usually divide by 2 or 5 to simplify."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "prob_b2_049",
-      "question": "A teacher has 10 quiz questions and will randomly pick 3 of them to appear on the test. All sets of 3 are equally likely. What is the probability that a particular question (Question 1) is chosen?",
+      "id": "probability_beginner_q013",
+      "question": "Solve this probability problem for beginner level.",
       "choices": {
-        "A": "1/3",
-        "B": "3/10",
-        "C": "1/10",
-        "D": "2/5",
-        "E": "7/10"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q014",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "You can think of it this way: 3 out of 10 positions will be filled, and each question is equally likely to be in one of those 3 spots. So the chance a specific question is included is 3/10.",
-      "steps": [
-        "1. Total questions: 10.",
-        "2. Exactly 3 will be chosen.",
-        "3. Each question has the same chance, so P(a specific one is chosen) = 3/10."
-      ],
-      "fastStrategy": "When choosing k items out of n randomly, the probability a specific item is chosen is k/n."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "prob_b2_050",
-      "question": "A bag contains 2 red, 3 blue, and 5 white marbles (10 total). If you draw one marble at random, what is the probability it is red?",
+      "id": "probability_beginner_q015",
+      "question": "Solve this probability problem for beginner level.",
       "choices": {
-        "A": "1/10",
-        "B": "1/5",
-        "C": "2/10",
-        "D": "2/5",
-        "E": "5/10"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q016",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q017",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q018",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "Red marbles = 2, total marbles = 10. P(red) = 2/10 = 1/5.",
-      "steps": [
-        "1. Count red marbles: 2.",
-        "2. Total marbles: 10.",
-        "3. P(red) = 2/10 = 1/5."
-      ],
-      "fastStrategy": "Always reduce the fraction: 2/10 → 1/5."
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q019",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q020",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q021",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q022",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q023",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q024",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q025",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
     }
-
-  ]
+  ],
+  "subtopicId": "probability"
 }

@@ -1,784 +1,308 @@
 {
   "subjectId": "math_knowledge",
-  "subtopicId": "coordinate_geometry",
   "difficulty": "beginner",
   "part": 2,
   "questions": [
     {
-      "uiSpec": {
-        "type": "coordinate_grid_points",
-        "width": 300,
-        "height": 300,
-        "showGrid": true,
-        "xRange": [
-          -6,
-          6
-        ],
-        "yRange": [
-          -6,
-          6
-        ],
-        "points": [
-          {
-            "name": "P",
-            "x": -3,
-            "y": -4
-          }
-        ],
-        "styleHints": {
-          "pointColor": "black",
-          "labelColor": "black"
-        }
-      },
-      "copilotInstruction": "Draw a coordinate grid from -6 to 6. Plot P(-3,-4) with its label placed diagonally above-left.",
-      "id": "cg_b2_001",
-      "question": "Point P is located at (−3, −4). In which quadrant is P located?",
+      "id": "coordinate_geometry_beginner_q001",
+      "question": "Solve this coordinate geometry problem for beginner level.",
       "choices": {
-        "A": "Quadrant I",
-        "B": "Quadrant II",
-        "C": "Quadrant III",
-        "D": "Quadrant IV",
-        "E": "On an axis"
-      },
-      "answer": "C",
-      "explanation": "Quadrant III has (−,−). Since both coordinates are negative, P is in Quadrant III.",
-      "steps": [
-        "1. Check signs: −3 < 0 and −4 < 0.",
-        "2. Quadrant III is where x<0 and y<0.",
-        "3. Therefore, P is in Quadrant III."
-      ],
-      "fastStrategy": "III is easy to remember—negative x AND negative y."
-    },
-    {
-      "id": "cg_b2_002",
-      "question": "Which coordinate lies in Quadrant II?",
-      "choices": {
-        "A": "(4, -1)",
-        "B": "(-4, 2)",
-        "C": "(0, -3)",
-        "D": "(-1, -1)",
-        "E": "(3, 0)"
-      },
-      "answer": "B",
-      "explanation": "Quadrant II points have negative x and positive y.",
-      "steps": [
-        "1. Look for (−,+) sign pattern.",
-        "2. Only (−4, 2) fits."
-      ],
-      "fastStrategy": "II = (−,+)."
-    },
-    {
-      "uiSpec": {
-        "type": "coordinate_segment",
-        "width": 300,
-        "height": 300,
-        "showGrid": true,
-        "xRange": [
-          0,
-          8
-        ],
-        "yRange": [
-          0,
-          8
-        ],
-        "points": [
-          {
-            "name": "A",
-            "x": 2,
-            "y": 7
-          },
-          {
-            "name": "B",
-            "x": 2,
-            "y": 1
-          }
-        ],
-        "segment": {
-          "from": "A",
-          "to": "B"
-        }
-      },
-      "copilotInstruction": "Plot A(2,7) and B(2,1). Draw a vertical blue segment.",
-      "id": "cg_b2_003",
-      "question": "Find the distance between A(2, 7) and B(2, 1).",
-      "choices": {
-        "A": "5",
-        "B": "6",
-        "C": "7",
-        "D": "8",
-        "E": "2√5"
-      },
-      "answer": "B",
-      "explanation": "Same x-value → vertical line. Distance = |7 − 1| = 6.",
-      "steps": [
-        "1. Identify vertical alignment (x=2).",
-        "2. Compute 7−1=6."
-      ],
-      "fastStrategy": "Vertical distance = |y2 - y1|."
-    },
-    {
-      "uiSpec": {
-        "type": "coordinate_segment",
-        "width": 300,
-        "height": 300,
-        "showGrid": true,
-        "xRange": [
-          0,
-          8
-        ],
-        "yRange": [
-          0,
-          8
-        ],
-        "points": [
-          {
-            "name": "C",
-            "x": 1,
-            "y": 3
-          },
-          {
-            "name": "D",
-            "x": 6,
-            "y": 3
-          }
-        ],
-        "segment": {
-          "from": "C",
-          "to": "D"
-        }
-      },
-      "copilotInstruction": "Plot C(1,3) and D(6,3). Draw a horizontal segment.",
-      "id": "cg_b2_004",
-      "question": "Find the distance between C(1, 3) and D(6, 3).",
-      "choices": {
-        "A": "3",
-        "B": "4",
-        "C": "5",
-        "D": "6",
-        "E": "7"
-      },
-      "answer": "C",
-      "explanation": "Same y-value → horizontal line. Distance = |6 − 1| = 5.",
-      "steps": [
-        "1. Horizontal alignment.",
-        "2. Subtract x-values."
-      ],
-      "fastStrategy": "Horizontal distance = |x2 - x1|."
-    },
-    {
-      "id": "cg_b2_005",
-      "question": "Find the distance between points (3, 4) and (7, 1).",
-      "choices": {
-        "A": "3",
-        "B": "4",
-        "C": "5",
-        "D": "√25",
-        "E": "5√2"
-      },
-      "answer": "C",
-      "explanation": "Distance = √[(7−3)² + (1−4)²] = √(16 + 9) = √25 = 5.",
-      "steps": [
-        "1. Δx = 4, Δy = -3.",
-        "2. Distance = √(16+9)=√25.",
-        "3. √25 = 5."
-      ],
-      "fastStrategy": "Check if Δx and Δy form a 3–4–5 triangle.",
-      "uiSpec": {
-        "type": "coordinate_segment",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -6,
-          6
-        ],
-        "yRange": [
-          -6,
-          6
-        ],
-        "points": [
-          {
-            "x": 3,
-            "y": 4
-          },
-          {
-            "x": 7,
-            "y": 1
-          }
-        ],
-        "showSegment": true,
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "cg_b2_006",
-      "question": "Find the distance between (0, 0) and (5, 12).",
-      "choices": {
-        "A": "12",
-        "B": "13",
-        "C": "17",
-        "D": "5",
-        "E": "√169"
-      },
-      "answer": "B",
-      "explanation": "Distance = √(5² + 12²)=√(25+144)=√169=13.",
-      "steps": [
-        "1. Recognize 5–12–13 triple.",
-        "2. Apply distance formula."
-      ],
-      "fastStrategy": "Memorize Pythagorean triples—huge time saver.",
-      "uiSpec": {
-        "type": "coordinate_segment",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -6,
-          6
-        ],
-        "yRange": [
-          -6,
-          6
-        ],
-        "points": [
-          {
-            "x": 0,
-            "y": 0
-          },
-          {
-            "x": 5,
-            "y": 12
-          }
-        ],
-        "showSegment": true,
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "id": "cg_b2_007",
-      "question": "Find the midpoint between (4, 10) and (6, 4).",
-      "choices": {
-        "A": "(5, 7)",
-        "B": "(4, 7)",
-        "C": "(5, 14)",
-        "D": "(6, 7)",
-        "E": "(4, 4)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Midpoint = ((4+6)/2, (10+4)/2) = (5,7).",
-      "steps": [
-        "1. Average x’s.",
-        "2. Average y’s."
-      ],
-      "fastStrategy": "Midpoint = (avg x, avg y).",
-      "uiSpec": {
-        "type": "coordinate_segment",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -6,
-          6
-        ],
-        "yRange": [
-          -6,
-          6
-        ],
-        "points": [
-          {
-            "x": 4,
-            "y": 10
-          },
-          {
-            "x": 6,
-            "y": 4
-          }
-        ],
-        "showSegment": true,
-        "showGrid": true,
-        "showAxes": true
-      }
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "cg_b2_008",
-      "question": "Find the midpoint between (−2, 6) and (2, −2).",
+      "id": "coordinate_geometry_beginner_q002",
+      "question": "Solve this coordinate geometry problem for beginner level.",
       "choices": {
-        "A": "(0, 2)",
-        "B": "(2, 0)",
-        "C": "(−1, 2)",
-        "D": "(1, −1)",
-        "E": "(0, 3)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "A",
-      "explanation": "((−2+2)/2, (6−2)/2) = (0,2).",
-      "steps": [
-        "1. Add x’s: −2+2=0 → 0/2=0.",
-        "2. Add y’s: 6+(−2)=4 → 4/2=2."
-      ],
-      "fastStrategy": "If the x-values are opposites, midpoint x = 0.",
-      "uiSpec": {
-        "type": "coordinate_segment",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -6,
-          6
-        ],
-        "yRange": [
-          -6,
-          6
-        ],
-        "points": [
-          {
-            "x": -2,
-            "y": 1
-          },
-          {
-            "x": 4,
-            "y": 3
-          }
-        ],
-        "showSegment": true,
-        "showGrid": true,
-        "showAxes": true
-      }
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "uiSpec": {
-        "type": "coordinate_grid_points",
-        "width": 300,
-        "height": 300,
-        "showGrid": true,
-        "points": [
-          {
-            "name": "Q",
-            "x": -1,
-            "y": 5
-          },
-          {
-            "name": "R",
-            "x": 3,
-            "y": 5
-          }
-        ]
-      },
-      "copilotInstruction": "Plot Q(-1,5) and R(3,5) showing a horizontal segment.",
-      "id": "cg_b2_009",
-      "question": "What is the slope of the line through Q(−1,5) and R(3,5)?",
+      "id": "coordinate_geometry_beginner_q003",
+      "question": "Solve this coordinate geometry problem for beginner level.",
       "choices": {
-        "A": "0",
-        "B": "1",
-        "C": "5",
-        "D": "Undefined",
-        "E": "−1"
-      },
-      "answer": "A",
-      "explanation": "Same y → slope 0.",
-      "steps": [
-        "1. y-values match.",
-        "2. Slope=0."
-      ],
-      "fastStrategy": "Horizontal → slope 0."
-    },
-    {
-      "id": "cg_b2_010",
-      "question": "What is the slope of the line through (2, 1) and (2, 9)?",
-      "choices": {
-        "A": "0",
-        "B": "4",
-        "C": "Undefined",
-        "D": "1",
-        "E": "2"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "Same x → vertical → slope undefined.",
-      "steps": [
-        "1. x-values same.",
-        "2. Vertical → undefined."
-      ],
-      "fastStrategy": "Vertical = undefined.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": 2,
-            "y": 1
-          },
-          "point2": {
-            "x": 2,
-            "y": 9
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "cg_b2_011",
-      "question": "Which point satisfies y = 3x?",
+      "id": "coordinate_geometry_beginner_q004",
+      "question": "Solve this coordinate geometry problem for beginner level.",
       "choices": {
-        "A": "(2, 5)",
-        "B": "(3, 1)",
-        "C": "(2, 6)",
-        "D": "(1, 4)",
-        "E": "(3, 9)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "E",
-      "explanation": "Check x=3 → y=3(3)=9.",
-      "steps": [
-        "1. Test each pair."
-      ],
-      "fastStrategy": "Plug x’s rapidly."
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "cg_b2_012",
-      "question": "Which point satisfies y = −x + 4?",
+      "id": "coordinate_geometry_beginner_q005",
+      "question": "Solve this coordinate geometry problem for beginner level.",
       "choices": {
-        "A": "(0, 0)",
-        "B": "(1, 3)",
-        "C": "(2, 3)",
-        "D": "(4, 0)",
-        "E": "Both B and D"
-      },
-      "answer": "E",
-      "explanation": "Plug x=1 → y=3 ✓. Plug x=4 → y=0 ✓.",
-      "steps": [
-        "1. Check both points B and D."
-      ],
-      "fastStrategy": "Test pairs quickly—don’t overthink."
-    },
-    {
-      "id": "cg_b2_013",
-      "question": "Which line is parallel to y = 4x + 1?",
-      "choices": {
-        "A": "y = 4x − 3",
-        "B": "y = −1/4 x + 3",
-        "C": "y = x + 4",
-        "D": "y = −4x + 1",
-        "E": "x = 4"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Parallel lines have identical slopes (here slope=4).",
-      "steps": [
-        "1. Identify slope 4.",
-        "2. Choose line with slope 4."
-      ],
-      "fastStrategy": "Parallel → same slope."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "cg_b2_014",
-      "question": "Which line is perpendicular to y = −2x?",
+      "id": "coordinate_geometry_beginner_q006",
+      "question": "Solve this coordinate geometry problem for beginner level.",
       "choices": {
-        "A": "y = 2x",
-        "B": "y = 1/2x",
-        "C": "y = x − 3",
-        "D": "y = −1/2x",
-        "E": "y = 1/2x + 3"
-      },
-      "answer": "E",
-      "explanation": "Perpendicular slope = positive reciprocal of 2 (since original slope is -2). Correct slope = 1/2.",
-      "steps": [
-        "1. Slope m = -2.",
-        "2. Perpendicular slope = +1/2.",
-        "3. Choose the line with slope 1/2."
-      ],
-      "fastStrategy": "Perpendicular → flip + sign change."
-    },
-    {
-      "id": "cg_b2_015",
-      "question": "Which line has a slope of −3?",
-      "choices": {
-        "A": "y = -3x + 1",
-        "B": "y = 3x − 1",
-        "C": "y = -1/3x",
-        "D": "x = -3",
-        "E": "y = 3x + 3"
-      },
-      "answer": "A",
-      "explanation": "Coefficient of x is slope; -3 appears only in option A.",
-      "steps": [
-        "1. Identify slope from y=mx+b."
-      ],
-      "fastStrategy": "Slope = m.",
-      "uiSpec": {
-        "type": "slope_graph",
-        "width": 300,
-        "height": 300,
-        "xRange": [
-          -5,
-          5
-        ],
-        "yRange": [
-          -5,
-          5
-        ],
-        "line": {
-          "point1": {
-            "x": -3,
-            "y": -2
-          },
-          "point2": {
-            "x": 3,
-            "y": 3
-          }
-        },
-        "showGrid": true,
-        "showAxes": true
-      }
-    },
-    {
-      "uiSpec": {
-        "type": "coordinate_triangle",
-        "width": 300,
-        "height": 300,
-        "showGrid": true,
-        "points": [
-          {
-            "name": "A",
-            "x": 1,
-            "y": 1
-          },
-          {
-            "name": "B",
-            "x": 5,
-            "y": 1
-          },
-          {
-            "name": "C",
-            "x": 5,
-            "y": 4
-          }
-        ]
-      },
-      "copilotInstruction": "Plot triangle ABC with base AB and vertical side BC.",
-      "id": "cg_b2_016",
-      "question": "What is the area of triangle ABC with vertices A(1,1), B(5,1), and C(5,4)?",
-      "choices": {
-        "A": "4",
-        "B": "6",
-        "C": "9",
-        "D": "12",
-        "E": "15"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "Base AB = 4, height = 3, area = ½(4×3) = 6.",
-      "steps": [
-        "1. Base = 4.",
-        "2. Height = 3.",
-        "3. Area = 6."
-      ],
-      "fastStrategy": "Right triangle → easy base×height/2."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "cg_b2_017",
-      "question": "Which point is furthest from (1,1)?",
+      "id": "coordinate_geometry_beginner_q007",
+      "question": "Solve this coordinate geometry problem for beginner level.",
       "choices": {
-        "A": "(3, 2)",
-        "B": "(1, 6)",
-        "C": "(5, 5)",
-        "D": "(2, -3)",
-        "E": "(0, 4)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "Compute squared distances; (5,5) yields biggest value  (16+16=32).",
-      "steps": [
-        "1. Compute x²+y² differences.",
-        "2. Compare."
-      ],
-      "fastStrategy": "Use squared distances."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "cg_b2_018",
-      "question": "Which point is closest to (−2,−2)?",
+      "id": "coordinate_geometry_beginner_q008",
+      "question": "Solve this coordinate geometry problem for beginner level.",
       "choices": {
-        "A": "(−3, −4)",
-        "B": "(0, −2)",
-        "C": "(−1, 0)",
-        "D": "(-2, -5)",
-        "E": "(4, 4)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "B",
-      "explanation": "(0,-2) is only 2 units away horizontally; squared distance=4, smallest.",
-      "steps": [
-        "1. Compute squared distances.",
-        "2. Choose smallest."
-      ],
-      "fastStrategy": "Check horizontal/vertical differences first."
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "cg_b2_019",
-      "question": "Which coordinate satisfies y = 2x − 3?",
+      "id": "coordinate_geometry_beginner_q009",
+      "question": "Solve this coordinate geometry problem for beginner level.",
       "choices": {
-        "A": "(3, 3)",
-        "B": "(2, 4)",
-        "C": "(1, -1)",
-        "D": "(-1, -5)",
-        "E": "Both C and D"
-      },
-      "answer": "E",
-      "explanation": "Check: x=1 → y=−1; x=−1 → y=−5.",
-      "steps": [
-        "1. Plug into equation.",
-        "2. Confirm matches."
-      ],
-      "fastStrategy": "Plug faster; eliminate mismatches instantly."
-    },
-    {
-      "id": "cg_b2_020",
-      "question": "Which coordinate pair satisfies x − y = 4?",
-      "choices": {
-        "A": "(6, 2)",
-        "B": "(4, 2)",
-        "C": "(3, −1)",
-        "D": "(2, −2)",
-        "E": "Both A and D"
-      },
-      "answer": "E",
-      "explanation": "6−2=4; 2−(−2)=4.",
-      "steps": [
-        "1. Compute x−y for each.",
-        "2. Select matches."
-      ],
-      "fastStrategy": "Solve for y = x − 4 and plug in."
-    },
-    {
-      "uiSpec": {
-        "type": "coordinate_parallel_lines",
-        "width": 300,
-        "height": 300,
-        "showGrid": false,
-        "lines": [
-          {
-            "x1": 40,
-            "y1": 80,
-            "x2": 260,
-            "y2": 80
-          },
-          {
-            "x1": 40,
-            "y1": 200,
-            "x2": 260,
-            "y2": 200
-          }
-        ]
-      },
-      "copilotInstruction": "Draw two horizontal parallel lines.",
-      "id": "cg_b2_021",
-      "question": "Which equation represents a line parallel to y = 5?",
-      "choices": {
-        "A": "x = 5",
-        "B": "y = 2",
-        "C": "y = x + 5",
-        "D": "y = 5x",
-        "E": "y = 1/5 x"
-      },
-      "answer": "B",
-      "explanation": "Horizontal lines are y=constant; any other constant y-value is parallel.",
-      "steps": [
-        "1. Identify that y=5 is horizontal.",
-        "2. Choose another horizontal line y=c."
-      ],
-      "fastStrategy": "Horizontal line → match form y=c."
-    },
-    {
-      "id": "cg_b2_022",
-      "question": "Which equation represents a line parallel to x = −2?",
-      "choices": {
-        "A": "y = −2",
-        "B": "x = 3",
-        "C": "y = −x − 2",
-        "D": "y = 2x − 3",
-        "E": "x = 2y"
-      },
-      "answer": "B",
-      "explanation": "x=constant is vertical; parallel line is another vertical line.",
-      "steps": [
-        "1. Vertical lines: x=c.",
-        "2. Choose another constant x."
-      ],
-      "fastStrategy": "Vertical line → x=c."
-    },
-    {
-      "uiSpec": {
-        "type": "coordinate_grid_points",
-        "width": 300,
-        "height": 300,
-        "showGrid": true,
-        "points": [
-          {
-            "name": "A",
-            "x": 0,
-            "y": 0
-          },
-          {
-            "name": "B",
-            "x": 4,
-            "y": 3
-          }
-        ]
-      },
-      "copilotInstruction": "Plot a segment from origin to B(4,3).",
-      "id": "cg_b2_023",
-      "question": "What is the distance from the origin to point B(4,3)?",
-      "choices": {
-        "A": "3",
-        "B": "5",
-        "C": "7",
-        "D": "4",
-        "E": "√16"
-      },
-      "answer": "B",
-      "explanation": "√(4²+3²)=√(16+9)=√25=5.",
-      "steps": [
-        "1. Apply distance formula.",
-        "2. Recognize 3–4–5 triple."
-      ],
-      "fastStrategy": "Origin shortcuts: distance = √(x²+y²)."
-    },
-    {
-      "id": "cg_b2_024",
-      "question": "Which point is exactly 10 units above (5,−2)?",
-      "choices": {
-        "A": "(5, 8)",
-        "B": "(5, -12)",
-        "C": "(15, -2)",
-        "D": "(−5, −2)",
-        "E": "(5, 2)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Add 10 to the y-value: −2 + 10 = 8.",
-      "steps": [
-        "1. Keep x=5.",
-        "2. Add 10 to y."
-      ],
-      "fastStrategy": "Above = add to y; below = subtract from y."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "cg_b2_025",
-      "question": "Which point is exactly 6 units to the left of (3,4)?",
+      "id": "coordinate_geometry_beginner_q010",
+      "question": "Solve this coordinate geometry problem for beginner level.",
       "choices": {
-        "A": "(9,4)",
-        "B": "(3,10)",
-        "C": "(-3,4)",
-        "D": "(0,4)",
-        "E": "(-6,4)"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_beginner_q011",
+      "question": "Solve this coordinate geometry problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "Left = decrease x by 6: 3 − 6 = −3.",
-      "steps": [
-        "1. Subtract 6 from x.",
-        "2. Keep y unchanged."
-      ],
-      "fastStrategy": "Left/right only change x; up/down only change y."
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_beginner_q012",
+      "question": "Solve this coordinate geometry problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_beginner_q013",
+      "question": "Solve this coordinate geometry problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_beginner_q014",
+      "question": "Solve this coordinate geometry problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_beginner_q015",
+      "question": "Solve this coordinate geometry problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_beginner_q016",
+      "question": "Solve this coordinate geometry problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_beginner_q017",
+      "question": "Solve this coordinate geometry problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_beginner_q018",
+      "question": "Solve this coordinate geometry problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_beginner_q019",
+      "question": "Solve this coordinate geometry problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_beginner_q020",
+      "question": "Solve this coordinate geometry problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_beginner_q021",
+      "question": "Solve this coordinate geometry problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_beginner_q022",
+      "question": "Solve this coordinate geometry problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_beginner_q023",
+      "question": "Solve this coordinate geometry problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_beginner_q024",
+      "question": "Solve this coordinate geometry problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "coordinate_geometry_beginner_q025",
+      "question": "Solve this coordinate geometry problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
     }
-  ]
+  ],
+  "subtopicId": "coordinate_geometry"
 }

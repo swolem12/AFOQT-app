@@ -1,508 +1,308 @@
 {
   "subjectId": "math_knowledge",
-  "subtopicId": "distributive_foil",
   "difficulty": "beginner",
   "part": 2,
   "questions": [
     {
-      "id": "mk_distfoil_b_026",
-      "question": "Simplify: 2(x + 7).",
+      "id": "distributive_foil_beginner_q001",
+      "question": "Solve this distributive foil problem for beginner level.",
       "choices": {
-        "A": "2x + 7",
-        "B": "2x + 9",
-        "C": "2x + 14",
-        "D": "x + 14",
-        "E": "x + 9"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_beginner_q002",
+      "question": "Solve this distributive foil problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_beginner_q003",
+      "question": "Solve this distributive foil problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "2(x + 7) = 2x + 14.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_distfoil_b_027",
-      "question": "Which expression is equivalent to 4(x - 3)?",
+      "id": "distributive_foil_beginner_q004",
+      "question": "Solve this distributive foil problem for beginner level.",
       "choices": {
-        "A": "4x - 3",
-        "B": "4x - 12",
-        "C": "x - 12",
-        "D": "4x + 12",
-        "E": "x + 12"
-      },
-      "answer": "B",
-      "explanation": "4(x - 3) = 4x - 12.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "mk_distfoil_b_028",
-      "question": "Simplify: -5(x + 1).",
-      "choices": {
-        "A": "-5x + 1",
-        "B": "-5x - 1",
-        "C": "-5x - 5",
-        "D": "5x - 1",
-        "E": "5x + 5"
-      },
-      "answer": "C",
-      "explanation": "-5(x + 1) = -5x - 5.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "mk_distfoil_b_029",
-      "question": "Simplify: (x + 2)(x + 5).",
-      "choices": {
-        "A": "x^2 + 5x + 2",
-        "B": "x^2 + 7x + 10",
-        "C": "x^2 + 10x + 7",
-        "D": "x^2 + 3x + 10",
-        "E": "x^2 + 2x + 5"
-      },
-      "answer": "B",
-      "explanation": "FOIL: x^2 + 5x + 2x + 10 = x^2 + 7x + 10.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "mk_distfoil_b_030",
-      "question": "Simplify: (x + 4)(x - 2).",
-      "choices": {
-        "A": "x^2 + 2x - 8",
-        "B": "x^2 - 2x - 8",
-        "C": "x^2 + 2x + 8",
-        "D": "x^2 + 4x - 2",
-        "E": "x^2 - 4x - 2"
-      },
-      "answer": "A",
-      "explanation": "FOIL: x^2 - 2x + 4x - 8 = x^2 + 2x - 8.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "mk_distfoil_b_031",
-      "question": "Which expression is equivalent to 3(2x + 5)?",
-      "choices": {
-        "A": "6x + 5",
-        "B": "6x + 15",
-        "C": "5x + 6",
-        "D": "6x + 8",
-        "E": "2x + 15"
-      },
-      "answer": "B",
-      "explanation": "3(2x + 5) = 6x + 15.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "mk_distfoil_b_032",
-      "question": "Simplify: (x - 3)(x + 1).",
-      "choices": {
-        "A": "x^2 - 2x - 3",
-        "B": "x^2 - 2x + 3",
-        "C": "x^2 + 4x - 3",
-        "D": "x^2 - 4x + 3",
-        "E": "x^2 + x - 3"
-      },
-      "answer": "A",
-      "explanation": "FOIL: x^2 + x - 3x - 3 = x^2 - 2x - 3.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "mk_distfoil_b_033",
-      "question": "Simplify: (2x + 3)(x + 1).",
-      "choices": {
-        "A": "2x^2 + 5x + 3",
-        "B": "2x^2 + 3x + 1",
-        "C": "2x^2 + x + 3",
-        "D": "2x^2 + 4x + 3",
-        "E": "2x^2 + 5x + 1"
-      },
-      "answer": "A",
-      "explanation": "FOIL: 2x·x + 2x·1 + 3·x + 3·1 = 2x^2 + 2x + 3x + 3 = 2x^2 + 5x + 3.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "mk_distfoil_b_034",
-      "question": "Simplify: (x + 7)(x + 1).",
-      "choices": {
-        "A": "x^2 + 7x + 1",
-        "B": "x^2 + 8x + 7",
-        "C": "x^2 + 8x + 1",
-        "D": "x^2 + x + 7",
-        "E": "x^2 + 7x + 7"
-      },
-      "answer": "B",
-      "explanation": "FOIL: x^2 + x + 7x + 7 = x^2 + 8x + 7.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "mk_distfoil_b_035",
-      "question": "Simplify: (x - 5)(x - 1).",
-      "choices": {
-        "A": "x^2 - 6x + 5",
-        "B": "x^2 - 4x - 5",
-        "C": "x^2 + 4x + 5",
-        "D": "x^2 + 6x - 5",
-        "E": "x^2 - 6x - 5"
-      },
-      "answer": "A",
-      "explanation": "FOIL: x^2 - x - 5x + 5 = x^2 - 6x + 5.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "mk_distfoil_b_036",
-      "question": "Which is the simplified form of 2(x + 3) + 4?",
-      "choices": {
-        "A": "2x + 3",
-        "B": "2x + 4",
-        "C": "2x + 6",
-        "D": "2x + 10",
-        "E": "x + 10"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "2(x + 3) = 2x + 6. Then 2x + 6 + 4 = 2x + 10.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_distfoil_b_037",
-      "question": "Simplify: 3(x - 2) + x.",
+      "id": "distributive_foil_beginner_q005",
+      "question": "Solve this distributive foil problem for beginner level.",
       "choices": {
-        "A": "3x - 2",
-        "B": "4x - 2",
-        "C": "3x - 6",
-        "D": "4x - 6",
-        "E": "x - 6"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_beginner_q006",
+      "question": "Solve this distributive foil problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_beginner_q007",
+      "question": "Solve this distributive foil problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_beginner_q008",
+      "question": "Solve this distributive foil problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "3(x - 2) = 3x - 6. Then 3x - 6 + x = 4x - 6.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_distfoil_b_038",
-      "question": "Which expression is equivalent to -4(x - 3)?",
+      "id": "distributive_foil_beginner_q009",
+      "question": "Solve this distributive foil problem for beginner level.",
       "choices": {
-        "A": "-4x - 3",
-        "B": "-4x + 3",
-        "C": "-4x + 12",
-        "D": "4x + 12",
-        "E": "4x - 12"
-      },
-      "answer": "C",
-      "explanation": "-4(x - 3) = -4x + 12.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "mk_distfoil_b_039",
-      "question": "Simplify: (x + 2)(x - 2).",
-      "choices": {
-        "A": "x^2 - 4",
-        "B": "x^2 + 4",
-        "C": "x^2 - 2x + 2",
-        "D": "x^2 + 2x - 4",
-        "E": "x^2 - 2x - 4"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "(x + 2)(x - 2) = x^2 - 4, a difference of squares.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_distfoil_b_040",
-      "question": "Simplify: (x + 3)(x + 4).",
+      "id": "distributive_foil_beginner_q010",
+      "question": "Solve this distributive foil problem for beginner level.",
       "choices": {
-        "A": "x^2 + 7x + 12",
-        "B": "x^2 + 3x + 4",
-        "C": "x^2 + 12x + 7",
-        "D": "x^2 + 6x + 12",
-        "E": "x^2 + 7x + 7"
-      },
-      "answer": "A",
-      "explanation": "FOIL: x^2 + 4x + 3x + 12 = x^2 + 7x + 12.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "mk_distfoil_b_041",
-      "question": "Which expression is equivalent to 6(x + 1)?",
-      "choices": {
-        "A": "6x + 1",
-        "B": "6x + 6",
-        "C": "x + 7",
-        "D": "7x + 1",
-        "E": "6x - 1"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "6(x + 1) = 6x + 6.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_distfoil_b_042",
-      "question": "Simplify: 2(x - 4) + 3x.",
+      "id": "distributive_foil_beginner_q011",
+      "question": "Solve this distributive foil problem for beginner level.",
       "choices": {
-        "A": "5x - 4",
-        "B": "5x - 8",
-        "C": "5x + 8",
-        "D": "x - 8",
-        "E": "x + 8"
-      },
-      "answer": "B",
-      "explanation": "2(x - 4) = 2x - 8. Then 2x - 8 + 3x = 5x - 8.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "mk_distfoil_b_043",
-      "question": "Which expression is equivalent to (x - 1)(x - 2)?",
-      "choices": {
-        "A": "x^2 - x - 2",
-        "B": "x^2 - 3x + 2",
-        "C": "x^2 + 3x + 2",
-        "D": "x^2 + x - 2",
-        "E": "x^2 - x + 2"
-      },
-      "answer": "B",
-      "explanation": "FOIL: x^2 - 2x - x + 2 = x^2 - 3x + 2.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "mk_distfoil_b_044",
-      "question": "Simplify: (3x + 1)(x + 2).",
-      "choices": {
-        "A": "3x^2 + 7x + 2",
-        "B": "3x^2 + 5x + 2",
-        "C": "3x^2 + 6x + 1",
-        "D": "3x^2 + x + 2",
-        "E": "3x^2 + 7x + 1"
-      },
-      "answer": "A",
-      "explanation": "FOIL: 3x·x + 3x·2 + 1·x + 1·2 = 3x^2 + 6x + x + 2 = 3x^2 + 7x + 2.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
-    },
-    {
-      "id": "mk_distfoil_b_045",
-      "question": "Which is the simplified form of -2(x - 6)?",
-      "choices": {
-        "A": "-2x - 6",
-        "B": "-2x + 6",
-        "C": "-2x + 12",
-        "D": "2x - 12",
-        "E": "2x + 12"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "-2(x - 6) = -2x + 12.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_distfoil_b_046",
-      "question": "Simplify: (x + 5)(x - 3).",
+      "id": "distributive_foil_beginner_q012",
+      "question": "Solve this distributive foil problem for beginner level.",
       "choices": {
-        "A": "x^2 + 2x - 15",
-        "B": "x^2 + 8x + 15",
-        "C": "x^2 - 2x - 15",
-        "D": "x^2 + 2x + 15",
-        "E": "x^2 - 8x - 15"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_beginner_q013",
+      "question": "Solve this distributive foil problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "FOIL: x^2 - 3x + 5x - 15 = x^2 + 2x - 15.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_distfoil_b_047",
-      "question": "Which expression is equivalent to 4(x + 2) - x?",
+      "id": "distributive_foil_beginner_q014",
+      "question": "Solve this distributive foil problem for beginner level.",
       "choices": {
-        "A": "4x + 2",
-        "B": "3x + 2",
-        "C": "3x + 8",
-        "D": "4x + 8",
-        "E": "x + 8"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_beginner_q015",
+      "question": "Solve this distributive foil problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "4(x + 2) = 4x + 8. Then 4x + 8 - x = 3x + 8.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_distfoil_b_048",
-      "question": "Simplify: (x + 9)(x + 1).",
+      "id": "distributive_foil_beginner_q016",
+      "question": "Solve this distributive foil problem for beginner level.",
       "choices": {
-        "A": "x^2 + 10x + 9",
-        "B": "x^2 + 9x + 1",
-        "C": "x^2 + x + 9",
-        "D": "x^2 + 9x + 10",
-        "E": "x^2 + 10x + 1"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "A",
-      "explanation": "FOIL: x^2 + x + 9x + 9 = x^2 + 10x + 9.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_distfoil_b_049",
-      "question": "Which expression is equivalent to 5(x - 1) + 2?",
+      "id": "distributive_foil_beginner_q017",
+      "question": "Solve this distributive foil problem for beginner level.",
       "choices": {
-        "A": "5x - 3",
-        "B": "5x + 1",
-        "C": "5x - 5",
-        "D": "5x + 7",
-        "E": "x - 3"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "5(x - 1) = 5x - 5. Then 5x - 5 + 2 = 5x - 3.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_distfoil_b_050",
-      "question": "Simplify: (x - 4)(x - 2).",
+      "id": "distributive_foil_beginner_q018",
+      "question": "Solve this distributive foil problem for beginner level.",
       "choices": {
-        "A": "x^2 - 6x + 8",
-        "B": "x^2 - 2x - 8",
-        "C": "x^2 + 6x + 8",
-        "D": "x^2 - 4x + 8",
-        "E": "x^2 + 2x + 8"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_beginner_q019",
+      "question": "Solve this distributive foil problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_beginner_q020",
+      "question": "Solve this distributive foil problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_beginner_q021",
+      "question": "Solve this distributive foil problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "FOIL: x^2 - 2x - 4x + 8 = x^2 - 6x + 8.",
-      "steps": [
-        "1. Read the problem and identify what's being asked.",
-        "2. Write down the relevant formula or rule.",
-        "3. Substitute values and solve step by step.",
-        "4. Check your answer against the choices."
-      ],
-      "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_beginner_q022",
+      "question": "Solve this distributive foil problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_beginner_q023",
+      "question": "Solve this distributive foil problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_beginner_q024",
+      "question": "Solve this distributive foil problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_beginner_q025",
+      "question": "Solve this distributive foil problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
     }
-  ]
+  ],
+  "subtopicId": "distributive_foil"
 }

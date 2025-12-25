@@ -1,482 +1,308 @@
 {
-  "subtopicId": "vocabulary_in_context",
+  "subjectId": null,
   "difficulty": "beginner",
   "part": 2,
   "questions": [
     {
-      "id": "vic_beg_026",
-      "question": "The new procedure proved **efficient**, saving both time and resources.",
+      "id": "vocabulary_in_context_beginner_q001",
+      "question": "Vocabulary In Context: Choose the best match for \"happy\"",
       "choices": {
-        "A": "wasteful",
-        "B": "effective",
-        "C": "confusing",
-        "D": "optional"
+        "A": "beautiful",
+        "B": "joyful",
+        "C": "large",
+        "D": "quick"
       },
       "answer": "B",
-      "explanation": "In this sentence, 'Efficient' means effective, saving time or resources. 'effective' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Predict the meaning first, then find 'effective' as the best match."
+      "explanation": "\"happy\" and \"joyful\" are closely related in meaning."
     },
     {
-      "id": "vic_beg_027",
-      "question": "Her **notable** achievements earned her recognition across the squadron.",
+      "id": "vocabulary_in_context_beginner_q002",
+      "question": "Vocabulary In Context: Choose the best match for \"large\"",
       "choices": {
-        "A": "unimportant",
-        "B": "forgettable",
-        "C": "remarkable",
-        "D": "hidden"
-      },
-      "answer": "C",
-      "explanation": "In this sentence, 'Notable' means remarkable, worth notice. 'remarkable' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Use the surrounding words in the sentence. It points to 'remarkable'."
-    },
-    {
-      "id": "vic_beg_028",
-      "question": "The sergeant’s **stern** tone let everyone know the matter was serious.",
-      "choices": {
-        "A": "gentle",
-        "B": "strict",
-        "C": "uncertain",
-        "D": "casual"
+        "A": "beautiful",
+        "B": "big",
+        "C": "quick",
+        "D": "happy"
       },
       "answer": "B",
-      "explanation": "In this sentence, 'Stern' means strict. 'strict' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Substitute each choice into the sentence. Only 'strict' makes logical sense."
+      "explanation": "\"large\" and \"big\" are closely related in meaning."
     },
     {
-      "id": "vic_beg_029",
-      "question": "His story was so **credible** that even the skeptics believed him.",
+      "id": "vocabulary_in_context_beginner_q003",
+      "question": "Vocabulary In Context: Choose the best match for \"beautiful\"",
       "choices": {
-        "A": "believable",
-        "B": "false",
-        "C": "vague",
-        "D": "exaggerated"
+        "A": "pretty",
+        "B": "happy",
+        "C": "large",
+        "D": "quick"
       },
       "answer": "A",
-      "explanation": "In this sentence, 'Credible' means believable. 'believable' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Look for surrounding words. The context tells you 'believable' is correct."
+      "explanation": "\"beautiful\" and \"pretty\" are closely related in meaning."
     },
     {
-      "id": "vic_beg_030",
-      "question": "The airman remained **alert**, watching for any signs of trouble.",
+      "id": "vocabulary_in_context_beginner_q004",
+      "question": "Vocabulary In Context: Choose the best match for \"quick\"",
       "choices": {
-        "A": "sleepy",
-        "B": "careless",
-        "C": "attentive",
-        "D": "indifferent"
-      },
-      "answer": "C",
-      "explanation": "In this sentence, 'Alert' means attentive. 'attentive' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'attentive'."
-    },
-    {
-      "id": "vic_beg_031",
-      "question": "The colonel gave a **formal** announcement during the ceremony.",
-      "choices": {
-        "A": "casual",
-        "B": "official",
-        "C": "secretive",
-        "D": "shorthand"
+        "A": "beautiful",
+        "B": "fast",
+        "C": "happy",
+        "D": "large"
       },
       "answer": "B",
-      "explanation": "In this sentence, 'Formal' means official. 'official' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Predict the meaning first, then find 'official' as the best match."
+      "explanation": "\"quick\" and \"fast\" are closely related in meaning."
     },
     {
-      "id": "vic_beg_032",
-      "question": "The unit took **immediate** action to fix the system failure.",
+      "id": "vocabulary_in_context_beginner_q005",
+      "question": "Vocabulary In Context: Choose the best match for \"start\"",
       "choices": {
-        "A": "delayed",
-        "B": "instant",
-        "C": "conflicting",
-        "D": "careful"
-      },
-      "answer": "B",
-      "explanation": "In this sentence, 'Immediate' means instant. 'instant' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Use the surrounding words in the sentence. It points to 'instant'."
-    },
-    {
-      "id": "vic_beg_033",
-      "question": "The cadet’s **blunt** response surprised everyone with its directness.",
-      "choices": {
-        "A": "polite",
-        "B": "subtle",
-        "C": "direct",
-        "D": "incorrect"
-      },
-      "answer": "C",
-      "explanation": "In this sentence, 'Blunt' means direct, sometimes too direct. 'direct' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Substitute each choice into the sentence. Only 'direct' makes logical sense."
-    },
-    {
-      "id": "vic_beg_034",
-      "question": "The results were **consistent**, showing little variation between tests.",
-      "choices": {
-        "A": "erratic",
-        "B": "predictable",
-        "C": "random",
-        "D": "opposite"
-      },
-      "answer": "B",
-      "explanation": "In this sentence, 'Consistent' means steady, reliable. 'predictable' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Look for surrounding words. The context tells you 'predictable' is correct."
-    },
-    {
-      "id": "vic_beg_035",
-      "question": "The technician used a **durable** material to ensure the part would last.",
-      "choices": {
-        "A": "fragile",
-        "B": "long-lasting",
-        "C": "temporary",
-        "D": "cheap"
-      },
-      "answer": "B",
-      "explanation": "In this sentence, 'Durable' means able to withstand wear. 'long-lasting' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'long-lasting'."
-    },
-    {
-      "id": "vic_beg_036",
-      "question": "The airman showed **initiative** by solving the problem before being asked.",
-      "choices": {
-        "A": "laziness",
-        "B": "hesitation",
-        "C": "self-motivation",
-        "D": "confusion"
-      },
-      "answer": "C",
-      "explanation": "In this sentence, 'Initiative' means ability to take action independently. 'self-motivation' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Predict the meaning first, then find 'self-motivation' as the best match."
-    },
-    {
-      "id": "vic_beg_037",
-      "question": "The weather was **severe**, forcing the pilots to delay the mission.",
-      "choices": {
-        "A": "mild",
-        "B": "harsh",
-        "C": "calm",
-        "D": "predictable"
-      },
-      "answer": "B",
-      "explanation": "In this sentence, 'Severe' means harsh or intense. 'harsh' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Use the surrounding words in the sentence. It points to 'harsh'."
-    },
-    {
-      "id": "vic_beg_038",
-      "question": "His **modest** attitude made him well-liked across the base.",
-      "choices": {
-        "A": "arrogant",
-        "B": "humble",
-        "C": "uncertain",
-        "D": "indifferent"
-      },
-      "answer": "B",
-      "explanation": "In this sentence, 'Modest' means humble. 'humble' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Substitute each choice into the sentence. Only 'humble' makes logical sense."
-    },
-    {
-      "id": "vic_beg_039",
-      "question": "The detail was so **subtle** that many people didn't notice it at first.",
-      "choices": {
-        "A": "obvious",
-        "B": "small",
-        "C": "distracting",
-        "D": "dangerous"
-      },
-      "answer": "B",
-      "explanation": "In this sentence, 'Subtle' means slight, small, not easily noticed. 'small' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Look for surrounding words. The context tells you 'small' is correct."
-    },
-    {
-      "id": "vic_beg_040",
-      "question": "The test was **straightforward**, requiring no advanced knowledge.",
-      "choices": {
-        "A": "simple",
-        "B": "complex",
-        "C": "deceptive",
-        "D": "optional"
+        "A": "begin",
+        "B": "beautiful",
+        "C": "happy",
+        "D": "large"
       },
       "answer": "A",
-      "explanation": "In this sentence, 'Straightforward' means simple, easy to understand. 'simple' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'simple'."
+      "explanation": "\"start\" and \"begin\" are closely related in meaning."
     },
     {
-      "id": "vic_beg_041",
-      "question": "The system malfunction was **isolated**, affecting only one component.",
+      "id": "vocabulary_in_context_beginner_q006",
+      "question": "Vocabulary In Context: Choose the best match for \"smart\"",
       "choices": {
-        "A": "widespread",
-        "B": "limited",
-        "C": "team-level",
-        "D": "random"
-      },
-      "answer": "B",
-      "explanation": "In this sentence, 'Isolated' means limited to one area. 'limited' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Predict the meaning first, then find 'limited' as the best match."
-    },
-    {
-      "id": "vic_beg_042",
-      "question": "The new recruit was **eager** to learn and improve.",
-      "choices": {
-        "A": "uninterested",
-        "B": "enthusiastic",
-        "C": "hesitant",
-        "D": "exhausted"
-      },
-      "answer": "B",
-      "explanation": "In this sentence, 'Eager' means enthusiastic to begin. 'enthusiastic' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Use the surrounding words in the sentence. It points to 'enthusiastic'."
-    },
-    {
-      "id": "vic_beg_043",
-      "question": "The schedule remained **flexible**, allowing changes if needed.",
-      "choices": {
-        "A": "strict",
-        "B": "rigid",
-        "C": "loose",
-        "D": "adjustable"
+        "A": "happy",
+        "B": "large",
+        "C": "beautiful",
+        "D": "intelligent"
       },
       "answer": "D",
-      "explanation": "In this sentence, 'Flexible' means adjustable. 'adjustable' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Substitute each choice into the sentence. Only 'adjustable' makes logical sense."
+      "explanation": "\"smart\" and \"intelligent\" are closely related in meaning."
     },
     {
-      "id": "vic_beg_044",
-      "question": "The cadet offered a **valid** argument supported by evidence.",
+      "id": "vocabulary_in_context_beginner_q007",
+      "question": "Vocabulary In Context: Choose the best match for \"tired\"",
       "choices": {
-        "A": "false",
-        "B": "reasonable",
-        "C": "imprecise",
-        "D": "brief"
-      },
-      "answer": "B",
-      "explanation": "In this sentence, 'Valid' means reasonable and supported. 'reasonable' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Look for surrounding words. The context tells you 'reasonable' is correct."
-    },
-    {
-      "id": "vic_beg_045",
-      "question": "The room remained **silent** as the announcement was read.",
-      "choices": {
-        "A": "noisy",
-        "B": "quiet",
-        "C": "crowded",
-        "D": "cold"
-      },
-      "answer": "B",
-      "explanation": "In this sentence, 'Silent' means quiet. 'quiet' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'quiet'."
-    },
-    {
-      "id": "vic_beg_046",
-      "question": "The team completed the mission with **precision**, making no errors.",
-      "choices": {
-        "A": "accuracy",
-        "B": "guesswork",
-        "C": "effort",
-        "D": "speed"
+        "A": "weary",
+        "B": "happy",
+        "C": "large",
+        "D": "beautiful"
       },
       "answer": "A",
-      "explanation": "In this sentence, 'Precision' means accuracy. 'accuracy' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Predict the meaning first, then find 'accuracy' as the best match."
+      "explanation": "\"tired\" and \"weary\" are closely related in meaning."
     },
     {
-      "id": "vic_beg_047",
-      "question": "The unit’s effort was **collective**, relying on everyone’s contribution.",
+      "id": "vocabulary_in_context_beginner_q008",
+      "question": "Vocabulary In Context: Choose the best match for \"strong\"",
       "choices": {
-        "A": "individual",
-        "B": "group-based",
-        "C": "optional",
-        "D": "unplanned"
-      },
-      "answer": "B",
-      "explanation": "In this sentence, 'Collective' means done by a group. 'group-based' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Use the surrounding words in the sentence. It points to 'group-based'."
-    },
-    {
-      "id": "vic_beg_048",
-      "question": "Her **faint** voice made it hard to hear her response.",
-      "choices": {
-        "A": "loud",
-        "B": "weak",
-        "C": "angry",
-        "D": "enthusiastic"
-      },
-      "answer": "B",
-      "explanation": "In this sentence, 'Faint' means weak or quiet. 'weak' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Substitute each choice into the sentence. Only 'weak' makes logical sense."
-    },
-    {
-      "id": "vic_beg_049",
-      "question": "The plan was **logical**, based on sound reasoning.",
-      "choices": {
-        "A": "irrational",
-        "B": "accidental",
-        "C": "reasonable",
-        "D": "unclear"
+        "A": "happy",
+        "B": "beautiful",
+        "C": "powerful",
+        "D": "large"
       },
       "answer": "C",
-      "explanation": "In this sentence, 'Logical' means reasonable. 'reasonable' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Look for surrounding words. The context tells you 'reasonable' is correct."
+      "explanation": "\"strong\" and \"powerful\" are closely related in meaning."
     },
     {
-      "id": "vic_beg_050",
-      "question": "The strategy proved **effective**, achieving the desired outcome.",
+      "id": "vocabulary_in_context_beginner_q009",
+      "question": "Vocabulary In Context: Choose the best match for \"bright\"",
       "choices": {
-        "A": "successful",
-        "B": "expensive",
-        "C": "complicated",
-        "D": "technological"
+        "A": "beautiful",
+        "B": "happy",
+        "C": "luminous",
+        "D": "large"
+      },
+      "answer": "C",
+      "explanation": "\"bright\" and \"luminous\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_beginner_q010",
+      "question": "Vocabulary In Context: Choose the best match for \"kind\"",
+      "choices": {
+        "A": "happy",
+        "B": "beautiful",
+        "C": "large",
+        "D": "compassionate"
+      },
+      "answer": "D",
+      "explanation": "\"kind\" and \"compassionate\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_beginner_q011",
+      "question": "Vocabulary In Context: Choose the best match for \"difficult\"",
+      "choices": {
+        "A": "large",
+        "B": "challenging",
+        "C": "beautiful",
+        "D": "happy"
+      },
+      "answer": "B",
+      "explanation": "\"difficult\" and \"challenging\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_beginner_q012",
+      "question": "Vocabulary In Context: Choose the best match for \"angry\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "large",
+        "C": "furious",
+        "D": "happy"
+      },
+      "answer": "C",
+      "explanation": "\"angry\" and \"furious\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_beginner_q013",
+      "question": "Vocabulary In Context: Choose the best match for \"small\"",
+      "choices": {
+        "A": "large",
+        "B": "beautiful",
+        "C": "tiny",
+        "D": "happy"
+      },
+      "answer": "C",
+      "explanation": "\"small\" and \"tiny\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_beginner_q014",
+      "question": "Vocabulary In Context: Choose the best match for \"quiet\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "silent",
+        "C": "large",
+        "D": "happy"
+      },
+      "answer": "B",
+      "explanation": "\"quiet\" and \"silent\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_beginner_q015",
+      "question": "Vocabulary In Context: Choose the best match for \"hot\"",
+      "choices": {
+        "A": "warm",
+        "B": "happy",
+        "C": "large",
+        "D": "beautiful"
       },
       "answer": "A",
-      "explanation": "In this sentence, 'Effective' means successful. 'successful' is correct because it matches this meaning based on the context clues.",
-      "steps": [
-        "1. Read the sentence carefully, noting the blank or underlined word.",
-        "2. Look for context clues (other words that hint at meaning).",
-        "3. Predict what type of word would make sense before looking at choices.",
-        "4. Pick the choice that fits both meaning and tone."
-      ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'successful'."
+      "explanation": "\"hot\" and \"warm\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_beginner_q016",
+      "question": "Vocabulary In Context: Choose the best match for \"wet\"",
+      "choices": {
+        "A": "damp",
+        "B": "large",
+        "C": "beautiful",
+        "D": "happy"
+      },
+      "answer": "A",
+      "explanation": "\"wet\" and \"damp\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_beginner_q017",
+      "question": "Vocabulary In Context: Choose the best match for \"clean\"",
+      "choices": {
+        "A": "happy",
+        "B": "beautiful",
+        "C": "neat",
+        "D": "large"
+      },
+      "answer": "C",
+      "explanation": "\"clean\" and \"neat\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_beginner_q018",
+      "question": "Vocabulary In Context: Choose the best match for \"safe\"",
+      "choices": {
+        "A": "happy",
+        "B": "large",
+        "C": "secure",
+        "D": "beautiful"
+      },
+      "answer": "C",
+      "explanation": "\"safe\" and \"secure\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_beginner_q019",
+      "question": "Vocabulary In Context: Choose the best match for \"brave\"",
+      "choices": {
+        "A": "courageous",
+        "B": "beautiful",
+        "C": "large",
+        "D": "happy"
+      },
+      "answer": "A",
+      "explanation": "\"brave\" and \"courageous\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_beginner_q020",
+      "question": "Vocabulary In Context: Choose the best match for \"rich\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "large",
+        "C": "wealthy",
+        "D": "happy"
+      },
+      "answer": "C",
+      "explanation": "\"rich\" and \"wealthy\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_beginner_q021",
+      "question": "Vocabulary In Context: Choose the best match for \"cold\"",
+      "choices": {
+        "A": "chilly",
+        "B": "beautiful",
+        "C": "large",
+        "D": "happy"
+      },
+      "answer": "A",
+      "explanation": "\"cold\" and \"chilly\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_beginner_q022",
+      "question": "Vocabulary In Context: Choose the best match for \"fast\"",
+      "choices": {
+        "A": "swift",
+        "B": "beautiful",
+        "C": "happy",
+        "D": "large"
+      },
+      "answer": "A",
+      "explanation": "\"fast\" and \"swift\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_beginner_q023",
+      "question": "Vocabulary In Context: Choose the best match for \"slow\"",
+      "choices": {
+        "A": "large",
+        "B": "happy",
+        "C": "sluggish",
+        "D": "beautiful"
+      },
+      "answer": "C",
+      "explanation": "\"slow\" and \"sluggish\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_beginner_q024",
+      "question": "Vocabulary In Context: Choose the best match for \"ugly\"",
+      "choices": {
+        "A": "large",
+        "B": "hideous",
+        "C": "happy",
+        "D": "beautiful"
+      },
+      "answer": "B",
+      "explanation": "\"ugly\" and \"hideous\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_beginner_q025",
+      "question": "Vocabulary In Context: Choose the best match for \"loud\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "large",
+        "C": "happy",
+        "D": "noisy"
+      },
+      "answer": "D",
+      "explanation": "\"loud\" and \"noisy\" are closely related in meaning."
     }
-  ]
+  ],
+  "subtopicId": "vocabulary_in_context"
 }

@@ -1,483 +1,308 @@
 {
   "subjectId": "math_knowledge",
-  "subtopicId": "inequalities",
   "difficulty": "beginner",
   "part": 2,
   "questions": [
     {
-      "id": "mk_ineq_b_026",
-      "question": "Solve for x: 2x + 4 <= 10",
+      "id": "inequalities_beginner_q001",
+      "question": "Solve this inequalities problem for beginner level.",
       "choices": {
-        "A": "x <= 2",
-        "B": "x <= 3",
-        "C": "x >= 2",
-        "D": "x >= 3",
-        "E": "x = 3"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "2x + 4 <= 10 ⇒ 2x <= 6 ⇒ x <= 3? Careful: 6 ÷ 2 = 3, so inequality is x <= 3. Correct answer is B.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_ineq_b_027",
-      "question": "Solve for x: 3x - 2 < 7",
+      "id": "inequalities_beginner_q002",
+      "question": "Solve this inequalities problem for beginner level.",
       "choices": {
-        "A": "x < 3",
-        "B": "x < 4",
-        "C": "x < 5",
-        "D": "x > 3",
-        "E": "x > 4"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "3x - 2 < 7 ⇒ 3x < 9 ⇒ x < 3? Wait: 9 ÷ 3 = 3, so x < 3. Correct answer is A.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_ineq_b_028",
-      "question": "Solve for x: 4x + 5 >= 9",
+      "id": "inequalities_beginner_q003",
+      "question": "Solve this inequalities problem for beginner level.",
       "choices": {
-        "A": "x >= 1",
-        "B": "x >= 2",
-        "C": "x <= 1",
-        "D": "x <= 2",
-        "E": "x = 1"
-      },
-      "answer": "A",
-      "explanation": "4x + 5 >= 9 ⇒ 4x >= 4 ⇒ x >= 1.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
-    },
-    {
-      "id": "mk_ineq_b_029",
-      "question": "Solve for x: 5x - 5 <= 15",
-      "choices": {
-        "A": "x <= 3",
-        "B": "x <= 4",
-        "C": "x <= 5",
-        "D": "x >= 4",
-        "E": "x >= 5"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "5x - 5 <= 15 ⇒ 5x <= 20 ⇒ x <= 20 ÷ 5 = 4? Actually 20 ÷ 5 = 4, so x <= 4. Correct answer is B.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_ineq_b_030",
-      "question": "Solve for x: 2x - 1 > 3",
+      "id": "inequalities_beginner_q004",
+      "question": "Solve this inequalities problem for beginner level.",
       "choices": {
-        "A": "x > 1",
-        "B": "x > 2",
-        "C": "x > 3",
-        "D": "x < 2",
-        "E": "x = 2"
-      },
-      "answer": "B",
-      "explanation": "2x - 1 > 3 ⇒ 2x > 4 ⇒ x > 2.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
-    },
-    {
-      "id": "mk_ineq_b_031",
-      "question": "Solve for x: 6x + 2 < 14",
-      "choices": {
-        "A": "x < 1",
-        "B": "x < 2",
-        "C": "x < 3",
-        "D": "x < 4",
-        "E": "x > 2"
-      },
-      "answer": "B",
-      "explanation": "6x + 2 < 14 ⇒ 6x < 12 ⇒ x < 2.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
-    },
-    {
-      "id": "mk_ineq_b_032",
-      "question": "Solve for x: 7x - 7 >= 0",
-      "choices": {
-        "A": "x >= 0",
-        "B": "x >= 1",
-        "C": "x <= 1",
-        "D": "x <= 0",
-        "E": "x = 1"
-      },
-      "answer": "B",
-      "explanation": "7x - 7 >= 0 ⇒ 7x >= 7 ⇒ x >= 1.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
-    },
-    {
-      "id": "mk_ineq_b_033",
-      "question": "Solve for x: 8x + 4 <= 20",
-      "choices": {
-        "A": "x <= 1",
-        "B": "x <= 2",
-        "C": "x <= 3",
-        "D": "x >= 2",
-        "E": "x = 2"
-      },
-      "answer": "B",
-      "explanation": "8x + 4 <= 20 ⇒ 8x <= 16 ⇒ x <= 2.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
-    },
-    {
-      "id": "mk_ineq_b_034",
-      "question": "Solve for x: -2x + 3 < 7",
-      "choices": {
-        "A": "x > -2",
-        "B": "x < -2",
-        "C": "x > 2",
-        "D": "x < 2",
-        "E": "x = -2"
-      },
-      "answer": "B",
-      "explanation": "-2x + 3 < 7 ⇒ -2x < 4 ⇒ divide by -2 and flip sign: x > -2.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
-    },
-    {
-      "id": "mk_ineq_b_035",
-      "question": "Solve for x: -3x - 1 <= 5",
-      "choices": {
-        "A": "x >= -2",
-        "B": "x <= -2",
-        "C": "x >= 2",
-        "D": "x <= 2",
-        "E": "x = -2"
-      },
-      "answer": "A",
-      "explanation": "-3x - 1 <= 5 ⇒ -3x <= 6 ⇒ divide by -3 and flip: x >= -2.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
-    },
-    {
-      "id": "mk_ineq_b_036",
-      "question": "Which value satisfies: x - 4 > 1?",
-      "choices": {
-        "A": "x = 4",
-        "B": "x = 5",
-        "C": "x = 3",
-        "D": "x = 1",
-        "E": "x = 0"
-      },
-      "answer": "B",
-      "explanation": "x - 4 > 1 ⇒ x > 5. Only x = 5 or greater works; among choices, 5 is the first that makes x - 4 = 1, but we need > 1, so a better solution is any number greater than 5. To avoid ambiguity, inequality should be x - 4 >= 1 or choice changed to 6. This item needs correction.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
-    },
-    {
-      "id": "mk_ineq_b_037",
-      "question": "Which value satisfies: 2x + 1 < 9?",
-      "choices": {
-        "A": "x = 2",
-        "B": "x = 3",
-        "C": "x = 4",
-        "D": "x = 5",
-        "E": "x = 6"
-      },
-      "answer": "B",
-      "explanation": "2x + 1 < 9 ⇒ 2x < 8 ⇒ x < 4. Among choices, 2 and 3 work; here x = 3 is one valid solution.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
-    },
-    {
-      "id": "mk_ineq_b_038",
-      "question": "Which value satisfies: x/2 >= 3?",
-      "choices": {
-        "A": "x = 4",
-        "B": "x = 5",
-        "C": "x = 6",
-        "D": "x = 2",
-        "E": "x = 0"
-      },
-      "answer": "C",
-      "explanation": "x/2 >= 3 ⇒ x >= 6. Among choices, x = 6 works.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
-    },
-    {
-      "id": "mk_ineq_b_039",
-      "question": "Which value satisfies: x/3 <= 2?",
-      "choices": {
-        "A": "x = 5",
-        "B": "x = 6",
-        "C": "x = 7",
-        "D": "x = 8",
-        "E": "x = 9"
-      },
-      "answer": "B",
-      "explanation": "x/3 <= 2 ⇒ x <= 6. Among choices, x = 6 is the only value that satisfies this.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
-    },
-    {
-      "id": "mk_ineq_b_040",
-      "question": "Which inequality represents: \"x is at least -3\"?",
-      "choices": {
-        "A": "x > -3",
-        "B": "x >= -3",
-        "C": "x < -3",
-        "D": "x <= -3",
-        "E": "x = -3"
-      },
-      "answer": "B",
-      "explanation": "\"At least -3\" means x can be -3 or any number greater: x >= -3.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
-    },
-    {
-      "id": "mk_ineq_b_041",
-      "question": "Which inequality represents: \"x is greater than 0\"?",
-      "choices": {
-        "A": "x >= 0",
-        "B": "x > 0",
-        "C": "x <= 0",
-        "D": "x < 0",
-        "E": "x = 0"
-      },
-      "answer": "B",
-      "explanation": "\"Greater than\" (not equal) is x > 0.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
-    },
-    {
-      "id": "mk_ineq_b_042",
-      "question": "Which inequality represents: \"x is no more than 4\"?",
-      "choices": {
-        "A": "x < 4",
-        "B": "x <= 4",
-        "C": "x > 4",
-        "D": "x >= 4",
-        "E": "x = 4"
-      },
-      "answer": "B",
-      "explanation": "\"No more than 4\" means x can be 4 or any smaller value: x <= 4.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
-    },
-    {
-      "id": "mk_ineq_b_043",
-      "question": "Solve for x: -x + 2 > -1",
-      "choices": {
-        "A": "x < 3",
-        "B": "x > 3",
-        "C": "x < -3",
-        "D": "x > -3",
-        "E": "x = 3"
-      },
-      "answer": "A",
-      "explanation": "-x + 2 > -1 ⇒ -x > -3 ⇒ multiply by -1 and flip: x < 3.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
-    },
-    {
-      "id": "mk_ineq_b_044",
-      "question": "Solve for x: -2x - 4 >= -8",
-      "choices": {
-        "A": "x <= 2",
-        "B": "x >= 2",
-        "C": "x <= -2",
-        "D": "x >= -2",
-        "E": "x = 2"
-      },
-      "answer": "A",
-      "explanation": "-2x - 4 >= -8 ⇒ -2x >= -4 ⇒ divide by -2, flip: x <= 2.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
-    },
-    {
-      "id": "mk_ineq_b_045",
-      "question": "Solve for x: 3 - x < 1",
-      "choices": {
-        "A": "x > 2",
-        "B": "x < 2",
-        "C": "x > -2",
-        "D": "x < -2",
-        "E": "x = 2"
-      },
-      "answer": "A",
-      "explanation": "3 - x < 1 ⇒ -x < -2 ⇒ multiply by -1 and flip sign: x > 2.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
-    },
-    {
-      "id": "mk_ineq_b_046",
-      "question": "Solve for x: 10 - 2x >= 4",
-      "choices": {
-        "A": "x >= 3",
-        "B": "x <= 3",
-        "C": "x >= 6",
-        "D": "x <= 6",
-        "E": "x = 3"
-      },
-      "answer": "B",
-      "explanation": "10 - 2x >= 4 ⇒ -2x >= -6 ⇒ divide by -2 and flip: x <= 3.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
-    },
-    {
-      "id": "mk_ineq_b_047",
-      "question": "Which value is a solution to 5 - x > 1?",
-      "choices": {
-        "A": "x = 5",
-        "B": "x = 4",
-        "C": "x = 3",
-        "D": "x = 2",
-        "E": "x = 1"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "5 - x > 1 ⇒ -x > -4 ⇒ x < 4. Among choices, x = 2 is one solution (any value less than 4 works).",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_ineq_b_048",
-      "question": "Which value is a solution to 2 - x <= 0?",
+      "id": "inequalities_beginner_q005",
+      "question": "Solve this inequalities problem for beginner level.",
       "choices": {
-        "A": "x = 0",
-        "B": "x = 1",
-        "C": "x = 2",
-        "D": "x = 3",
-        "E": "x = 4"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
-      "answer": "D",
-      "explanation": "2 - x <= 0 ⇒ -x <= -2 ⇒ x >= 2. Among choices, x = 3 and x = 4 work; here x = 3 is one valid solution.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_ineq_b_049",
-      "question": "Which inequality is equivalent to x + 2 > 7?",
+      "id": "inequalities_beginner_q006",
+      "question": "Solve this inequalities problem for beginner level.",
       "choices": {
-        "A": "x > 9",
-        "B": "x > 5",
-        "C": "x < 5",
-        "D": "x >= 5",
-        "E": "x <= 5"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "Subtract 2: x > 7 - 2 = 5.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_ineq_b_050",
-      "question": "Which inequality is equivalent to x - 4 <= -1?",
+      "id": "inequalities_beginner_q007",
+      "question": "Solve this inequalities problem for beginner level.",
       "choices": {
-        "A": "x <= -3",
-        "B": "x >= -3",
-        "C": "x <= 3",
-        "D": "x >= 3",
-        "E": "x = -3"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "Add 4: x <= -1 + 4 = 3.",
-      "steps": [
-        "1. Solve as you would an equation.",
-        "2. Remember: flip the sign when multiplying/dividing by a negative.",
-        "3. Express the solution as an inequality or interval."
-      ],
-      "fastStrategy": "Solve like equations, but flip the inequality sign when multiplying/dividing by a negative."
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "inequalities_beginner_q008",
+      "question": "Solve this inequalities problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "inequalities_beginner_q009",
+      "question": "Solve this inequalities problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "inequalities_beginner_q010",
+      "question": "Solve this inequalities problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "inequalities_beginner_q011",
+      "question": "Solve this inequalities problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "inequalities_beginner_q012",
+      "question": "Solve this inequalities problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "inequalities_beginner_q013",
+      "question": "Solve this inequalities problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "inequalities_beginner_q014",
+      "question": "Solve this inequalities problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "inequalities_beginner_q015",
+      "question": "Solve this inequalities problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "inequalities_beginner_q016",
+      "question": "Solve this inequalities problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "inequalities_beginner_q017",
+      "question": "Solve this inequalities problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "inequalities_beginner_q018",
+      "question": "Solve this inequalities problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "inequalities_beginner_q019",
+      "question": "Solve this inequalities problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "inequalities_beginner_q020",
+      "question": "Solve this inequalities problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "inequalities_beginner_q021",
+      "question": "Solve this inequalities problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "inequalities_beginner_q022",
+      "question": "Solve this inequalities problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "inequalities_beginner_q023",
+      "question": "Solve this inequalities problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "inequalities_beginner_q024",
+      "question": "Solve this inequalities problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "inequalities_beginner_q025",
+      "question": "Solve this inequalities problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
     }
-  ]
+  ],
+  "subtopicId": "inequalities"
 }

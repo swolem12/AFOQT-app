@@ -1,482 +1,308 @@
 {
-  "subtopicId": "synonyms",
+  "subjectId": null,
   "difficulty": "expert",
   "part": 2,
   "questions": [
     {
-      "id": "syn_exp_026",
-      "question": "Which word is closest in meaning to 'abstruse'?",
+      "id": "synonyms_expert_q001",
+      "question": "Synonyms: Choose the best match for \"perspicuous\"",
       "choices": {
-        "A": "subtle",
-        "B": "obscure",
-        "C": "complex",
-        "D": "technical"
-      },
-      "answer": "B",
-      "explanation": "'Abstruse' means difficult to understand because it is obscure or highly abstract. 'obscure' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Eliminate first: Cross out opposites or unrelated words. 'obscure' remains as the synonym."
-    },
-    {
-      "id": "syn_exp_027",
-      "question": "Which word is closest in meaning to 'anticlimactic'?",
-      "choices": {
-        "A": "redundant",
-        "B": "disappointing",
-        "C": "uneven",
-        "D": "abrupt"
-      },
-      "answer": "B",
-      "explanation": "'Anticlimactic' means something that is strikingly less exciting than expected; 'disappointing' is closest. 'disappointing' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of 'anticlimactic' in a sentence—'disappointing' can replace it without changing the meaning."
-    },
-    {
-      "id": "syn_exp_028",
-      "question": "Which word is closest in meaning to 'ascetic'?",
-      "choices": {
-        "A": "rigid",
-        "B": "austere",
-        "C": "frugal",
-        "D": "dedicated"
-      },
-      "answer": "B",
-      "explanation": "'Ascetic' means severe self-discipline and avoidance of indulgence; 'austere' aligns strongly. 'austere' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Quick check: 'austere' means the same as 'ascetic'. Eliminate opposites and unrelated words."
-    },
-    {
-      "id": "syn_exp_029",
-      "question": "Which word is closest in meaning to 'calumny'?",
-      "choices": {
-        "A": "insult",
-        "B": "slander",
-        "C": "rumor",
-        "D": "gossip"
-      },
-      "answer": "B",
-      "explanation": "'Calumny' means Calumny is the making of false and defamatory statements; 'slander' is the precise legal/semantic match. 'slander' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Use substitution: Would 'slander' work in place of 'calumny'? Yes—that confirms it."
-    },
-    {
-      "id": "syn_exp_030",
-      "question": "Which word is closest in meaning to 'complaisant'?",
-      "choices": {
-        "A": "complacent",
-        "B": "obliging",
-        "C": "content",
-        "D": "modest"
-      },
-      "answer": "B",
-      "explanation": "'Complaisant' means Complaisant (not complacent) means willing to please or oblige; 'obliging' is correct. 'obliging' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of sentences using 'complaisant'. 'obliging' fits the same contexts."
-    },
-    {
-      "id": "syn_exp_031",
-      "question": "Which word is closest in meaning to 'demur'?",
-      "choices": {
-        "A": "object",
-        "B": "delay",
-        "C": "doubt",
-        "D": "hesitate"
+        "A": "transparent",
+        "B": "precocious",
+        "C": "pellucid",
+        "D": "sanguine"
       },
       "answer": "A",
-      "explanation": "'Demur' means raise objections or show reluctance, often in a formal or polite way. 'object' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Eliminate first: Cross out opposites or unrelated words. 'object' remains as the synonym."
+      "explanation": "\"perspicuous\" and \"transparent\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_032",
-      "question": "Which word is closest in meaning to 'desultory'?",
+      "id": "synonyms_expert_q002",
+      "question": "Synonyms: Choose the best match for \"pellucid\"",
       "choices": {
-        "A": "rambling",
-        "B": "random",
-        "C": "abrupt",
-        "D": "incomplete"
-      },
-      "answer": "B",
-      "explanation": "'Desultory' means something lacking a clear plan or purpose, jumping around randomly. 'random' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of 'desultory' in a sentence—'random' can replace it without changing the meaning."
-    },
-    {
-      "id": "syn_exp_033",
-      "question": "Which word is closest in meaning to 'discomfit'?",
-      "choices": {
-        "A": "confuse",
-        "B": "frustrate",
-        "C": "embarrass",
-        "D": "delay"
-      },
-      "answer": "C",
-      "explanation": "'Discomfit' means make someone feel uneasy or embarrassed; 'embarrass' is strongest here. 'embarrass' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Quick check: 'embarrass' means the same as 'discomfit'. Eliminate opposites and unrelated words."
-    },
-    {
-      "id": "syn_exp_034",
-      "question": "Which word is closest in meaning to 'egregious'?",
-      "choices": {
-        "A": "gross",
+        "A": "perspicuous",
         "B": "clear",
-        "C": "trivial",
-        "D": "harsh"
-      },
-      "answer": "A",
-      "explanation": "'Egregious' means something outstandingly bad or shocking; 'gross' captures that extremity. 'gross' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Use substitution: Would 'gross' work in place of 'egregious'? Yes—that confirms it."
-    },
-    {
-      "id": "syn_exp_035",
-      "question": "Which word is closest in meaning to 'elliptical' (in writing)?",
-      "choices": {
-        "A": "oblique",
-        "B": "compact",
-        "C": "curved",
-        "D": "subtle"
-      },
-      "answer": "A",
-      "explanation": "'Elliptical' means Elliptical prose is indirect or deliberately ambiguous; 'oblique' is the best stylistic synonym. 'oblique' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of sentences using 'elliptical'. 'oblique' fits the same contexts."
-    },
-    {
-      "id": "syn_exp_036",
-      "question": "Which word is closest in meaning to 'entiatre' is not a standard form. For 'entreat' which is intended?",
-      "choices": {
-        "A": "urge",
-        "B": "explain",
-        "C": "defend",
-        "D": "clarify"
-      },
-      "answer": "A",
-      "explanation": "'Entiatre' means beg or implore earnestly; 'urge' is the closest choice. 'urge' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Eliminate first: Cross out opposites or unrelated words. 'urge' remains as the synonym."
-    },
-    {
-      "id": "syn_exp_037",
-      "question": "Which word is closest in meaning to 'fractious'?",
-      "choices": {
-        "A": "anxious",
-        "B": "irritable",
-        "C": "defensive",
-        "D": "impulsive"
+        "C": "precocious",
+        "D": "sanguine"
       },
       "answer": "B",
-      "explanation": "'Fractious' means someone who is easily irritated and difficult to control. 'irritable' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of 'fractious' in a sentence—'irritable' can replace it without changing the meaning."
+      "explanation": "\"pellucid\" and \"clear\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_038",
-      "question": "Which word is closest in meaning to 'gainsay'?",
+      "id": "synonyms_expert_q003",
+      "question": "Synonyms: Choose the best match for \"sanguine\"",
       "choices": {
-        "A": "criticize",
-        "B": "question",
-        "C": "deny",
-        "D": "refine"
-      },
-      "answer": "C",
-      "explanation": "'Gainsay' means deny or contradict a statement or fact. 'deny' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Quick check: 'deny' means the same as 'gainsay'. Eliminate opposites and unrelated words."
-    },
-    {
-      "id": "syn_exp_039",
-      "question": "Which word is closest in meaning to 'implacable'?",
-      "choices": {
-        "A": "calm",
-        "B": "unyielding",
-        "C": "vigilant",
-        "D": "cautious"
+        "A": "perspicuous",
+        "B": "hopeful",
+        "C": "precocious",
+        "D": "pellucid"
       },
       "answer": "B",
-      "explanation": "'Implacable' means unable to be appeased or pacified; 'unyielding' captures that. 'unyielding' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Use substitution: Would 'unyielding' work in place of 'implacable'? Yes—that confirms it."
+      "explanation": "\"sanguine\" and \"hopeful\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_040",
-      "question": "Which word is closest in meaning to 'ineffable'?",
+      "id": "synonyms_expert_q004",
+      "question": "Synonyms: Choose the best match for \"precocious\"",
       "choices": {
-        "A": "mysterious",
-        "B": "unspeakable",
-        "C": "invisible",
-        "D": "abstract"
+        "A": "perspicuous",
+        "B": "intelligent",
+        "C": "pellucid",
+        "D": "sanguine"
       },
       "answer": "B",
-      "explanation": "'Ineffable' means something too great or extreme to be expressed in words; 'unspeakable' matches well. 'unspeakable' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of sentences using 'ineffable'. 'unspeakable' fits the same contexts."
+      "explanation": "\"precocious\" and \"intelligent\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_041",
-      "question": "Which word is closest in meaning to 'ineluctable'?",
+      "id": "synonyms_expert_q005",
+      "question": "Synonyms: Choose the best match for \"propitious\"",
       "choices": {
-        "A": "avoidable",
-        "B": "inescapable",
-        "C": "implicit",
-        "D": "imminent"
-      },
-      "answer": "B",
-      "explanation": "'Ineluctable' means unable to be resisted or avoided; 'inescapable' is the exact sense. 'inescapable' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Eliminate first: Cross out opposites or unrelated words. 'inescapable' remains as the synonym."
-    },
-    {
-      "id": "syn_exp_042",
-      "question": "Which word is closest in meaning to 'insouciant'?",
-      "choices": {
-        "A": "carefree",
-        "B": "apathetic",
-        "C": "optimistic",
-        "D": "lazy"
+        "A": "favorable",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "pellucid"
       },
       "answer": "A",
-      "explanation": "'Insouciant' means a relaxed, unconcerned attitude; 'carefree' is closest. 'carefree' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of 'insouciant' in a sentence—'carefree' can replace it without changing the meaning."
+      "explanation": "\"propitious\" and \"favorable\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_043",
-      "question": "Which word is closest in meaning to 'invidious'?",
+      "id": "synonyms_expert_q006",
+      "question": "Synonyms: Choose the best match for \"nugatory\"",
       "choices": {
-        "A": "envious",
-        "B": "divisive",
-        "C": "unjust",
-        "D": "offensive"
+        "A": "pellucid",
+        "B": "worthless",
+        "C": "perspicuous",
+        "D": "sanguine"
+      },
+      "answer": "B",
+      "explanation": "\"nugatory\" and \"worthless\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q007",
+      "question": "Synonyms: Choose the best match for \"pusillanimous\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "cowardly",
+        "C": "perspicuous",
+        "D": "pellucid"
+      },
+      "answer": "B",
+      "explanation": "\"pusillanimous\" and \"cowardly\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q008",
+      "question": "Synonyms: Choose the best match for \"ebullient\"",
+      "choices": {
+        "A": "enthusiastic",
+        "B": "pellucid",
+        "C": "sanguine",
+        "D": "perspicuous"
+      },
+      "answer": "A",
+      "explanation": "\"ebullient\" and \"enthusiastic\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q009",
+      "question": "Synonyms: Choose the best match for \"effete\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "exhausted",
+        "C": "pellucid",
+        "D": "perspicuous"
+      },
+      "answer": "B",
+      "explanation": "\"effete\" and \"exhausted\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q010",
+      "question": "Synonyms: Choose the best match for \"enervate\"",
+      "choices": {
+        "A": "perspicuous",
+        "B": "sanguine",
+        "C": "pellucid",
+        "D": "weaken"
       },
       "answer": "D",
-      "explanation": "'Invidious' means Invidious normally refers to actions or comparisons likely to arouse resentment; 'offensive' best matches overall. 'offensive' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Quick check: 'offensive' means the same as 'invidious'. Eliminate opposites and unrelated words."
+      "explanation": "\"enervate\" and \"weaken\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_044",
-      "question": "Which word is closest in meaning to 'lachrymose'?",
+      "id": "synonyms_expert_q011",
+      "question": "Synonyms: Choose the best match for \"exiguous\"",
       "choices": {
-        "A": "tearful",
-        "B": "regretful",
-        "C": "wistful",
-        "D": "subdued"
+        "A": "meager",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "pellucid"
       },
       "answer": "A",
-      "explanation": "'Lachrymose' means Lachrymose literally means tearful or given to weeping. 'tearful' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Use substitution: Would 'tearful' work in place of 'lachrymose'? Yes—that confirms it."
+      "explanation": "\"exiguous\" and \"meager\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_045",
-      "question": "Which word is closest in meaning to 'mordant'?",
+      "id": "synonyms_expert_q012",
+      "question": "Synonyms: Choose the best match for \"factious\"",
       "choices": {
-        "A": "bitter",
-        "B": "curt",
-        "C": "sharp",
-        "D": "subtle"
+        "A": "perspicuous",
+        "B": "sanguine",
+        "C": "divisive",
+        "D": "pellucid"
       },
       "answer": "C",
-      "explanation": "'Mordant' means biting or sharply critical wit; 'sharp' focuses on that cutting quality. 'sharp' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of sentences using 'mordant'. 'sharp' fits the same contexts."
+      "explanation": "\"factious\" and \"divisive\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_046",
-      "question": "Which word is closest in meaning to 'obviate'?",
+      "id": "synonyms_expert_q013",
+      "question": "Synonyms: Choose the best match for \"felicitous\"",
       "choices": {
-        "A": "anticipate",
-        "B": "avoid",
-        "C": "remove",
-        "D": "forestall"
+        "A": "appropriate",
+        "B": "perspicuous",
+        "C": "pellucid",
+        "D": "sanguine"
+      },
+      "answer": "A",
+      "explanation": "\"felicitous\" and \"appropriate\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q014",
+      "question": "Synonyms: Choose the best match for \"fulgent\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "brilliant"
       },
       "answer": "D",
-      "explanation": "'Obviate' means prevent or remove a difficulty by anticipating it; 'forestall' captures that nuance best. 'forestall' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Eliminate first: Cross out opposites or unrelated words. 'forestall' remains as the synonym."
+      "explanation": "\"fulgent\" and \"brilliant\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_047",
-      "question": "Which word is closest in meaning to 'paragon'?",
+      "id": "synonyms_expert_q015",
+      "question": "Synonyms: Choose the best match for \"fulsome\"",
       "choices": {
-        "A": "standard",
-        "B": "model",
-        "C": "ideal",
-        "D": "example"
+        "A": "excessive",
+        "B": "perspicuous",
+        "C": "sanguine",
+        "D": "pellucid"
+      },
+      "answer": "A",
+      "explanation": "\"fulsome\" and \"excessive\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q016",
+      "question": "Synonyms: Choose the best match for \"grandiloquent\"",
+      "choices": {
+        "A": "bombastic",
+        "B": "perspicuous",
+        "C": "pellucid",
+        "D": "sanguine"
+      },
+      "answer": "A",
+      "explanation": "\"grandiloquent\" and \"bombastic\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q017",
+      "question": "Synonyms: Choose the best match for \"implacable\"",
+      "choices": {
+        "A": "perspicuous",
+        "B": "sanguine",
+        "C": "relentless",
+        "D": "pellucid"
       },
       "answer": "C",
-      "explanation": "'Paragon' means A paragon is a perfect example of a quality; 'ideal' emphasizes the perfection aspect. 'ideal' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of 'paragon' in a sentence—'ideal' can replace it without changing the meaning."
+      "explanation": "\"implacable\" and \"relentless\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_048",
-      "question": "Which word is closest in meaning to 'pell-mell'?",
+      "id": "synonyms_expert_q018",
+      "question": "Synonyms: Choose the best match for \"impugn\"",
       "choices": {
-        "A": "hurriedly",
-        "B": "chaotically",
-        "C": "clumsily",
-        "D": "loudly"
+        "A": "perspicuous",
+        "B": "sanguine",
+        "C": "challenge",
+        "D": "pellucid"
+      },
+      "answer": "C",
+      "explanation": "\"impugn\" and \"challenge\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q019",
+      "question": "Synonyms: Choose the best match for \"ineffable\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "indescribable",
+        "C": "perspicuous",
+        "D": "pellucid"
       },
       "answer": "B",
-      "explanation": "'Pell-mell' means Pell-mell means in a confused, disorganized rush; 'chaotically' is the best fit. 'chaotically' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Quick check: 'chaotically' means the same as 'pell-mell'. Eliminate opposites and unrelated words."
+      "explanation": "\"ineffable\" and \"indescribable\" are closely related in meaning."
     },
     {
-      "id": "syn_exp_049",
-      "question": "Which word is closest in meaning to 'perfidious'?",
+      "id": "synonyms_expert_q020",
+      "question": "Synonyms: Choose the best match for \"ineluctable\"",
       "choices": {
-        "A": "unfaithful",
-        "B": "insincere",
-        "C": "disloyal",
-        "D": "deceptive"
-      },
-      "answer": "C",
-      "explanation": "'Perfidious' means deceitful and untrustworthy; 'disloyal' is the most central idea. 'disloyal' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Use substitution: Would 'disloyal' work in place of 'perfidious'? Yes—that confirms it."
-    },
-    {
-      "id": "syn_exp_050",
-      "question": "Which word is closest in meaning to 'prevaricate'?",
-      "choices": {
-        "A": "evade",
-        "B": "delay",
-        "C": "argue",
-        "D": "equivocate"
+        "A": "pellucid",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "inevitable"
       },
       "answer": "D",
-      "explanation": "'Prevaricate' means speak or act in an evasive way; 'equivocate' is the precise rhetorical match. 'equivocate' is the correct answer because it shares this same meaning.",
-      "steps": [
-        "1. Read the target word and recall its meaning.",
-        "2. Look at each choice and think of its definition.",
-        "3. Find the choice that means the same or nearly the same as the target word.",
-        "4. Eliminate options that are opposites or unrelated."
-      ],
-      "fastStrategy": "Think of sentences using 'prevaricate'. 'equivocate' fits the same contexts."
+      "explanation": "\"ineluctable\" and \"inevitable\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q021",
+      "question": "Synonyms: Choose the best match for \"insouciant\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "unconcerned",
+        "C": "sanguine",
+        "D": "perspicuous"
+      },
+      "answer": "B",
+      "explanation": "\"insouciant\" and \"unconcerned\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q022",
+      "question": "Synonyms: Choose the best match for \"intemperate\"",
+      "choices": {
+        "A": "perspicuous",
+        "B": "sanguine",
+        "C": "pellucid",
+        "D": "excessive"
+      },
+      "answer": "D",
+      "explanation": "\"intemperate\" and \"excessive\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q023",
+      "question": "Synonyms: Choose the best match for \"inveterate\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "perspicuous",
+        "C": "habitual",
+        "D": "sanguine"
+      },
+      "answer": "C",
+      "explanation": "\"inveterate\" and \"habitual\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q024",
+      "question": "Synonyms: Choose the best match for \"lethargic\"",
+      "choices": {
+        "A": "perspicuous",
+        "B": "sanguine",
+        "C": "pellucid",
+        "D": "sluggish"
+      },
+      "answer": "D",
+      "explanation": "\"lethargic\" and \"sluggish\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_expert_q025",
+      "question": "Synonyms: Choose the best match for \"magniloquent\"",
+      "choices": {
+        "A": "grandiose",
+        "B": "pellucid",
+        "C": "sanguine",
+        "D": "perspicuous"
+      },
+      "answer": "A",
+      "explanation": "\"magniloquent\" and \"grandiose\" are closely related in meaning."
     }
-  ]
+  ],
+  "subtopicId": "synonyms"
 }

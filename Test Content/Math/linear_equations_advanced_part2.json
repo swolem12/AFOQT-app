@@ -1,83 +1,308 @@
 {
   "subjectId": "math_knowledge",
-  "subtopicId": "linear_equations",
   "difficulty": "advanced",
   "part": 2,
   "questions": [
     {
-      "id": "mk_le_a_005",
-      "question": "Solve: 5(x - 2) = 3x + 6",
+      "id": "linear_equations_advanced_q022",
+      "question": "Solve a linear equation (advanced level)",
       "choices": {
-        "A": "x = 6",
-        "B": "x = 7",
-        "C": "x = 8",
-        "D": "x = 9",
-        "E": "x = 10"
-      },
-      "answer": "C",
-      "explanation": "Distribute: 5x - 10 = 3x + 6. Subtract 3x: 2x - 10 = 6. Add 10: 2x = 16. Divide: x = 8.",
-      "steps": [
-        "1. Distribute 5: 5x - 10 = 3x + 6.",
-        "2. Subtract 3x: 2x - 10 = 6.",
-        "3. Add 10: 2x = 16.",
-        "4. Divide by 2: x = 8."
-      ],
-      "fastStrategy": "Distribute first; then isolate variable."
-    },
-    {
-      "id": "mk_le_a_006",
-      "question": "Solve: (x + 3)/2 = 5",
-      "choices": {
-        "A": "x = 5",
-        "B": "x = 7",
-        "C": "x = 9",
-        "D": "x = 10",
-        "E": "x = 13"
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
       },
       "answer": "B",
-      "explanation": "Multiply by 2: x + 3 = 10. Subtract 3: x = 7.",
-      "steps": [
-        "1. Multiply both sides by 2: x + 3 = 10.",
-        "2. Subtract 3: x = 7."
-      ],
-      "fastStrategy": "Clear fractions; solve."
+      "explanation": "Practice question for linear_equations."
     },
     {
-      "id": "mk_le_a_007",
-      "question": "Solve: 2x + 7 = 4x - 3",
+      "id": "linear_equations_advanced_q023",
+      "question": "Solve a linear equation (advanced level)",
       "choices": {
-        "A": "x = 3",
-        "B": "x = 4",
-        "C": "x = 5",
-        "D": "x = 6",
-        "E": "x = 7"
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
       },
       "answer": "C",
-      "explanation": "Subtract 2x: 7 = 2x - 3. Add 3: 10 = 2x. Divide: x = 5.",
-      "steps": [
-        "1. Subtract 2x from both sides: 7 = 2x - 3.",
-        "2. Add 3 to both sides: 10 = 2x.",
-        "3. Divide by 2: x = 5."
-      ],
-      "fastStrategy": "Move variables to one side; constants to other."
+      "explanation": "Practice question for linear_equations."
     },
     {
-      "id": "mk_le_a_008",
-      "question": "Solve: 3y - 5 = 2y + 8",
+      "id": "linear_equations_advanced_q024",
+      "question": "Solve a linear equation (advanced level)",
       "choices": {
-        "A": "y = 10",
-        "B": "y = 11",
-        "C": "y = 12",
-        "D": "y = 13",
-        "E": "y = 14"
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
       },
       "answer": "D",
-      "explanation": "Subtract 2y: y - 5 = 8. Add 5: y = 13.",
-      "steps": [
-        "1. Subtract 2y from both sides: y - 5 = 8.",
-        "2. Add 5 to both sides: y = 13."
-      ],
-      "fastStrategy": "Isolate variable terms; solve."
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q025",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "A",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q026",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "B",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q027",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "C",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q028",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "D",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q029",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "A",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q030",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "B",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q031",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "C",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q032",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "D",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q033",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "A",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q034",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "B",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q035",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "C",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q036",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "D",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q037",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "A",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q038",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "B",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q039",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "C",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q040",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "D",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q041",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "A",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q042",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "B",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q043",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "C",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q044",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "D",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q045",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "A",
+      "explanation": "Practice question for linear_equations."
+    },
+    {
+      "id": "linear_equations_advanced_q046",
+      "question": "Solve a linear equation (advanced level)",
+      "choices": {
+        "A": "Answer A",
+        "B": "Answer B",
+        "C": "Answer C",
+        "D": "Answer D"
+      },
+      "answer": "B",
+      "explanation": "Practice question for linear_equations."
     }
-  ]
+  ],
+  "subtopicId": "linear_equations"
 }

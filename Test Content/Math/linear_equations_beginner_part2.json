@@ -1,483 +1,308 @@
 {
   "subjectId": "math_knowledge",
-  "subtopicId": "linear_equations",
   "difficulty": "beginner",
   "part": 2,
   "questions": [
     {
-      "id": "mk_lineq_b_026",
-      "question": "Solve for x: x + 3 = 15",
-      "choices": {
-        "A": "9",
-        "B": "10",
-        "C": "11",
-        "D": "12",
-        "E": "15"
-      },
-      "answer": "D",
-      "explanation": "x = 15 - 3 = 12.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_027",
-      "question": "Solve for x: x - 7 = 2",
-      "choices": {
-        "A": "5",
-        "B": "6",
-        "C": "7",
-        "D": "8",
-        "E": "9"
-      },
-      "answer": "E",
-      "explanation": "Add 7 to both sides: x = 2 + 7 = 9.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_028",
-      "question": "Solve for x: 4x = 12",
-      "choices": {
-        "A": "2",
-        "B": "3",
-        "C": "4",
-        "D": "5",
-        "E": "6"
-      },
-      "answer": "B",
-      "explanation": "x = 12 ÷ 4 = 3.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_029",
-      "question": "Solve for x: 2x - 4 = 0",
+      "id": "linear_equations_beginner_q001",
+      "question": "Solve: x + 18 = 19",
       "choices": {
         "A": "1",
-        "B": "2",
-        "C": "3",
-        "D": "4",
-        "E": "6"
-      },
-      "answer": "B",
-      "explanation": "2x - 4 = 0 ⇒ 2x = 4 ⇒ x = 4 ÷ 2 = 2.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_030",
-      "question": "Solve for x: x / 8 = 5",
-      "choices": {
-        "A": "20",
-        "B": "30",
-        "C": "35",
-        "D": "40",
-        "E": "45"
-      },
-      "answer": "D",
-      "explanation": "Multiply by 8: x = 5 × 8 = 40.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_031",
-      "question": "Solve for x: x / 7 = 6",
-      "choices": {
-        "A": "36",
-        "B": "40",
-        "C": "42",
-        "D": "48",
-        "E": "56"
-      },
-      "answer": "C",
-      "explanation": "x = 6 × 7 = 42.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_032",
-      "question": "Solve for x: 3x + 9 = 0",
-      "choices": {
-        "A": "-6",
-        "B": "-4",
-        "C": "-3",
-        "D": "-2",
-        "E": "0"
-      },
-      "answer": "C",
-      "explanation": "3x + 9 = 0 ⇒ 3x = -9 ⇒ x = -9 ÷ 3 = -3.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_033",
-      "question": "Solve for x: 9x + 9 = 18",
-      "choices": {
-        "A": "0",
-        "B": "1",
+        "B": "-1",
         "C": "2",
-        "D": "3",
-        "E": "9"
-      },
-      "answer": "B",
-      "explanation": "9x + 9 = 18 ⇒ 9x = 9 ⇒ x = 9 ÷ 9 = 1.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_034",
-      "question": "Solve for x: 2x = -10",
-      "choices": {
-        "A": "-10",
-        "B": "-5",
-        "C": "-2",
-        "D": "2",
-        "E": "5"
-      },
-      "answer": "B",
-      "explanation": "x = -10 ÷ 2 = -5.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_035",
-      "question": "Solve for x: 7x = -21",
-      "choices": {
-        "A": "-7",
-        "B": "-5",
-        "C": "-3",
-        "D": "3",
-        "E": "7"
-      },
-      "answer": "C",
-      "explanation": "x = -21 ÷ 7 = -3.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_036",
-      "question": "Solve for x: x + 12 = 0",
-      "choices": {
-        "A": "-12",
-        "B": "-10",
-        "C": "-8",
-        "D": "0",
-        "E": "12"
+        "D": "18"
       },
       "answer": "A",
-      "explanation": "x = -12.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+      "explanation": "Subtract 18 from both sides: x = 1"
     },
     {
-      "id": "mk_lineq_b_037",
-      "question": "Solve for x: x - 9 = -4",
-      "choices": {
-        "A": "-13",
-        "B": "-5",
-        "C": "-4",
-        "D": "4",
-        "E": "5"
-      },
-      "answer": "E",
-      "explanation": "x = -4 + 9 = 5.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_038",
-      "question": "Solve for x: 10x = 100",
-      "choices": {
-        "A": "5",
-        "B": "8",
-        "C": "9",
-        "D": "10",
-        "E": "12"
-      },
-      "answer": "D",
-      "explanation": "x = 100 ÷ 10 = 10.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_039",
-      "question": "Solve for x: 8x = 64",
+      "id": "linear_equations_beginner_q002",
+      "question": "Solve: x + 20 = 24",
       "choices": {
         "A": "4",
-        "B": "6",
-        "C": "7",
-        "D": "8",
-        "E": "9"
-      },
-      "answer": "D",
-      "explanation": "x = 64 ÷ 8 = 8.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_040",
-      "question": "Solve for x: x / 9 = -2",
-      "choices": {
-        "A": "-18",
-        "B": "-12",
-        "C": "-9",
-        "D": "-6",
-        "E": "0"
+        "B": "-4",
+        "C": "8",
+        "D": "20"
       },
       "answer": "A",
-      "explanation": "x = -2 × 9 = -18.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+      "explanation": "Subtract 20 from both sides: x = 4"
     },
     {
-      "id": "mk_lineq_b_041",
-      "question": "Solve for x: x / 2 = -4",
+      "id": "linear_equations_beginner_q003",
+      "question": "Solve: x + 8 = 10",
       "choices": {
-        "A": "-10",
-        "B": "-8",
-        "C": "-6",
-        "D": "-4",
-        "E": "-2"
+        "A": "2",
+        "B": "-2",
+        "C": "4",
+        "D": "8"
       },
-      "answer": "B",
-      "explanation": "x = -4 × 2 = -8.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+      "answer": "A",
+      "explanation": "Subtract 8 from both sides: x = 2"
     },
     {
-      "id": "mk_lineq_b_042",
-      "question": "Solve for x: 3x - 3 = 0",
+      "id": "linear_equations_beginner_q004",
+      "question": "Solve: x + 19 = 23",
       "choices": {
-        "A": "-2",
+        "A": "4",
+        "B": "-4",
+        "C": "8",
+        "D": "19"
+      },
+      "answer": "A",
+      "explanation": "Subtract 19 from both sides: x = 4"
+    },
+    {
+      "id": "linear_equations_beginner_q005",
+      "question": "Solve: x + 15 = 19",
+      "choices": {
+        "A": "4",
+        "B": "-4",
+        "C": "8",
+        "D": "15"
+      },
+      "answer": "A",
+      "explanation": "Subtract 15 from both sides: x = 4"
+    },
+    {
+      "id": "linear_equations_beginner_q006",
+      "question": "Solve: x + 15 = 16",
+      "choices": {
+        "A": "1",
         "B": "-1",
-        "C": "0",
-        "D": "1",
-        "E": "2"
-      },
-      "answer": "D",
-      "explanation": "3x - 3 = 0 ⇒ 3x = 3 ⇒ x = 1.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_043",
-      "question": "Solve for x: 4x + 20 = 0",
-      "choices": {
-        "A": "-10",
-        "B": "-8",
-        "C": "-6",
-        "D": "-5",
-        "E": "5"
-      },
-      "answer": "D",
-      "explanation": "4x + 20 = 0 ⇒ 4x = -20 ⇒ x = -20 ÷ 4 = -5.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_044",
-      "question": "Solve for x: x - 11 = -1",
-      "choices": {
-        "A": "-12",
-        "B": "-10",
-        "C": "0",
-        "D": "10",
-        "E": "12"
-      },
-      "answer": "D",
-      "explanation": "Add 11 to both sides: x = -1 + 11 = 10.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_045",
-      "question": "Solve for x: 6x - 6 = 12",
-      "choices": {
-        "A": "2",
-        "B": "3",
-        "C": "4",
-        "D": "6",
-        "E": "8"
-      },
-      "answer": "B",
-      "explanation": "6x - 6 = 12 ⇒ 6x = 18 ⇒ x = 18 ÷ 6 = 3.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_046",
-      "question": "Solve for x: x + 1 = -8",
-      "choices": {
-        "A": "-9",
-        "B": "-8",
-        "C": "-7",
-        "D": "7",
-        "E": "9"
+        "C": "2",
+        "D": "15"
       },
       "answer": "A",
-      "explanation": "x = -8 - 1 = -9.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+      "explanation": "Subtract 15 from both sides: x = 1"
     },
     {
-      "id": "mk_lineq_b_047",
-      "question": "Solve for x: 2x + 4 = 10",
-      "choices": {
-        "A": "2",
-        "B": "3",
-        "C": "4",
-        "D": "5",
-        "E": "6"
-      },
-      "answer": "B",
-      "explanation": "2x + 4 = 10 ⇒ 2x = 6 ⇒ x = 3.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_048",
-      "question": "Solve for x: 7x = 49",
+      "id": "linear_equations_beginner_q007",
+      "question": "Solve: x + 20 = 25",
       "choices": {
         "A": "5",
-        "B": "6",
-        "C": "7",
-        "D": "8",
-        "E": "9"
-      },
-      "answer": "C",
-      "explanation": "x = 49 ÷ 7 = 7.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
-    },
-    {
-      "id": "mk_lineq_b_049",
-      "question": "Solve for x: x - 15 = -5",
-      "choices": {
-        "A": "-10",
         "B": "-5",
-        "C": "0",
-        "D": "5",
-        "E": "10"
+        "C": "10",
+        "D": "20"
       },
-      "answer": "E",
-      "explanation": "Add 15 to both sides: x = -5 + 15 = 10.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+      "answer": "A",
+      "explanation": "Subtract 20 from both sides: x = 5"
     },
     {
-      "id": "mk_lineq_b_050",
-      "question": "Solve for x: 9x + 18 = 0",
+      "id": "linear_equations_beginner_q008",
+      "question": "Solve: x + 1 = 3",
       "choices": {
-        "A": "-4",
-        "B": "-3",
-        "C": "-2",
-        "D": "-1",
-        "E": "0"
+        "A": "2",
+        "B": "-2",
+        "C": "4",
+        "D": "1"
       },
-      "answer": "C",
-      "explanation": "9x + 18 = 0 ⇒ 9x = -18 ⇒ x = -18 ÷ 9 = -2.",
-      "steps": [
-        "1. Identify what you're solving for.",
-        "2. Isolate the variable using inverse operations.",
-        "3. Simplify and check your answer."
-      ],
-      "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+      "answer": "A",
+      "explanation": "Subtract 1 from both sides: x = 2"
+    },
+    {
+      "id": "linear_equations_beginner_q009",
+      "question": "Solve: x + 18 = 21",
+      "choices": {
+        "A": "3",
+        "B": "-3",
+        "C": "6",
+        "D": "18"
+      },
+      "answer": "A",
+      "explanation": "Subtract 18 from both sides: x = 3"
+    },
+    {
+      "id": "linear_equations_beginner_q010",
+      "question": "Solve: x + 20 = 25",
+      "choices": {
+        "A": "5",
+        "B": "-5",
+        "C": "10",
+        "D": "20"
+      },
+      "answer": "A",
+      "explanation": "Subtract 20 from both sides: x = 5"
+    },
+    {
+      "id": "linear_equations_beginner_q011",
+      "question": "Solve: x + 7 = 8",
+      "choices": {
+        "A": "1",
+        "B": "-1",
+        "C": "2",
+        "D": "7"
+      },
+      "answer": "A",
+      "explanation": "Subtract 7 from both sides: x = 1"
+    },
+    {
+      "id": "linear_equations_beginner_q012",
+      "question": "Solve: x + 6 = 8",
+      "choices": {
+        "A": "2",
+        "B": "-2",
+        "C": "4",
+        "D": "6"
+      },
+      "answer": "A",
+      "explanation": "Subtract 6 from both sides: x = 2"
+    },
+    {
+      "id": "linear_equations_beginner_q013",
+      "question": "Solve: x + 2 = 5",
+      "choices": {
+        "A": "3",
+        "B": "-3",
+        "C": "6",
+        "D": "2"
+      },
+      "answer": "A",
+      "explanation": "Subtract 2 from both sides: x = 3"
+    },
+    {
+      "id": "linear_equations_beginner_q014",
+      "question": "Solve: x + 2 = 4",
+      "choices": {
+        "A": "2",
+        "B": "-2",
+        "C": "4",
+        "D": "2"
+      },
+      "answer": "A",
+      "explanation": "Subtract 2 from both sides: x = 2"
+    },
+    {
+      "id": "linear_equations_beginner_q015",
+      "question": "Solve: x + 2 = 7",
+      "choices": {
+        "A": "5",
+        "B": "-5",
+        "C": "10",
+        "D": "2"
+      },
+      "answer": "A",
+      "explanation": "Subtract 2 from both sides: x = 5"
+    },
+    {
+      "id": "linear_equations_beginner_q016",
+      "question": "Solve: x + 20 = 23",
+      "choices": {
+        "A": "3",
+        "B": "-3",
+        "C": "6",
+        "D": "20"
+      },
+      "answer": "A",
+      "explanation": "Subtract 20 from both sides: x = 3"
+    },
+    {
+      "id": "linear_equations_beginner_q017",
+      "question": "Solve: x + 11 = 12",
+      "choices": {
+        "A": "1",
+        "B": "-1",
+        "C": "2",
+        "D": "11"
+      },
+      "answer": "A",
+      "explanation": "Subtract 11 from both sides: x = 1"
+    },
+    {
+      "id": "linear_equations_beginner_q018",
+      "question": "Solve: x + 2 = 3",
+      "choices": {
+        "A": "1",
+        "B": "-1",
+        "C": "2",
+        "D": "2"
+      },
+      "answer": "A",
+      "explanation": "Subtract 2 from both sides: x = 1"
+    },
+    {
+      "id": "linear_equations_beginner_q019",
+      "question": "Solve: x + 14 = 16",
+      "choices": {
+        "A": "2",
+        "B": "-2",
+        "C": "4",
+        "D": "14"
+      },
+      "answer": "A",
+      "explanation": "Subtract 14 from both sides: x = 2"
+    },
+    {
+      "id": "linear_equations_beginner_q020",
+      "question": "Solve: x + 6 = 9",
+      "choices": {
+        "A": "3",
+        "B": "-3",
+        "C": "6",
+        "D": "6"
+      },
+      "answer": "A",
+      "explanation": "Subtract 6 from both sides: x = 3"
+    },
+    {
+      "id": "linear_equations_beginner_q021",
+      "question": "Solve: x + 20 = 25",
+      "choices": {
+        "A": "5",
+        "B": "-5",
+        "C": "10",
+        "D": "20"
+      },
+      "answer": "A",
+      "explanation": "Subtract 20 from both sides: x = 5"
+    },
+    {
+      "id": "linear_equations_beginner_q022",
+      "question": "Solve: x + 19 = 24",
+      "choices": {
+        "A": "5",
+        "B": "-5",
+        "C": "10",
+        "D": "19"
+      },
+      "answer": "A",
+      "explanation": "Subtract 19 from both sides: x = 5"
+    },
+    {
+      "id": "linear_equations_beginner_q023",
+      "question": "Solve: x + 6 = 10",
+      "choices": {
+        "A": "4",
+        "B": "-4",
+        "C": "8",
+        "D": "6"
+      },
+      "answer": "A",
+      "explanation": "Subtract 6 from both sides: x = 4"
+    },
+    {
+      "id": "linear_equations_beginner_q024",
+      "question": "Solve: x + 19 = 22",
+      "choices": {
+        "A": "3",
+        "B": "-3",
+        "C": "6",
+        "D": "19"
+      },
+      "answer": "A",
+      "explanation": "Subtract 19 from both sides: x = 3"
+    },
+    {
+      "id": "linear_equations_beginner_q025",
+      "question": "Solve: x + 2 = 3",
+      "choices": {
+        "A": "1",
+        "B": "-1",
+        "C": "2",
+        "D": "2"
+      },
+      "answer": "A",
+      "explanation": "Subtract 2 from both sides: x = 1"
     }
-  ]
+  ],
+  "subtopicId": "linear_equations"
 }

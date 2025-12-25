@@ -1,482 +1,308 @@
 {
-  "subtopicId": "word_roots_affixes",
+  "subjectId": null,
   "difficulty": "beginner",
   "part": 2,
   "questions": [
     {
-      "id": "wra_beg_026",
-      "question": "In the word 'predict,' the prefix 'pre-' most nearly means:",
+      "id": "word_roots_affixes_beginner_q001",
+      "question": "Word Roots Affixes: Choose the best match for \"happy\"",
       "choices": {
-        "A": "after",
-        "B": "before",
-        "C": "around",
-        "D": "without"
+        "A": "quick",
+        "B": "joyful",
+        "C": "large",
+        "D": "beautiful"
       },
       "answer": "B",
-      "explanation": "'Predict' = say before. 'Pre-' means before. Knowing this prefix helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Memorize: 'pre-' = 'before'. Build word connections."
+      "explanation": "\"happy\" and \"joyful\" are closely related in meaning."
     },
     {
-      "id": "wra_beg_027",
-      "question": "In the word 'submarine,' the prefix 'sub-' means:",
+      "id": "word_roots_affixes_beginner_q002",
+      "question": "Word Roots Affixes: Choose the best match for \"large\"",
       "choices": {
-        "A": "through",
-        "B": "under",
-        "C": "above",
-        "D": "beyond"
+        "A": "beautiful",
+        "B": "big",
+        "C": "happy",
+        "D": "quick"
       },
       "answer": "B",
-      "explanation": "The prefix 'sub-' means 'under the sea; 'sub-' means under'. Knowing this prefix helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Think of common words with 'sub-'. They relate to 'under'."
+      "explanation": "\"large\" and \"big\" are closely related in meaning."
     },
     {
-      "id": "wra_beg_028",
-      "question": "In 'biology,' the root 'bio' means:",
+      "id": "word_roots_affixes_beginner_q003",
+      "question": "Word Roots Affixes: Choose the best match for \"beautiful\"",
       "choices": {
-        "A": "heat",
-        "B": "study",
-        "C": "light",
-        "D": "life"
+        "A": "pretty",
+        "B": "quick",
+        "C": "large",
+        "D": "happy"
+      },
+      "answer": "A",
+      "explanation": "\"beautiful\" and \"pretty\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_beginner_q004",
+      "question": "Word Roots Affixes: Choose the best match for \"quick\"",
+      "choices": {
+        "A": "fast",
+        "B": "large",
+        "C": "beautiful",
+        "D": "happy"
+      },
+      "answer": "A",
+      "explanation": "\"quick\" and \"fast\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_beginner_q005",
+      "question": "Word Roots Affixes: Choose the best match for \"start\"",
+      "choices": {
+        "A": "begin",
+        "B": "large",
+        "C": "beautiful",
+        "D": "happy"
+      },
+      "answer": "A",
+      "explanation": "\"start\" and \"begin\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_beginner_q006",
+      "question": "Word Roots Affixes: Choose the best match for \"smart\"",
+      "choices": {
+        "A": "intelligent",
+        "B": "beautiful",
+        "C": "large",
+        "D": "happy"
+      },
+      "answer": "A",
+      "explanation": "\"smart\" and \"intelligent\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_beginner_q007",
+      "question": "Word Roots Affixes: Choose the best match for \"tired\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "happy",
+        "C": "large",
+        "D": "weary"
       },
       "answer": "D",
-      "explanation": "The root 'bio' means 'study of life'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Word association: 'bio' uses 'bio' = 'life'."
+      "explanation": "\"tired\" and \"weary\" are closely related in meaning."
     },
     {
-      "id": "wra_beg_029",
-      "question": "In 'autograph,' the root 'auto' means:",
+      "id": "word_roots_affixes_beginner_q008",
+      "question": "Word Roots Affixes: Choose the best match for \"strong\"",
       "choices": {
-        "A": "self",
-        "B": "light",
-        "C": "fast",
-        "D": "one"
+        "A": "powerful",
+        "B": "beautiful",
+        "C": "happy",
+        "D": "large"
       },
       "answer": "A",
-      "explanation": "The root 'auto' means 'self writing; 'auto' = self'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Remember 'auto'. The root 'auto' means 'self'."
+      "explanation": "\"strong\" and \"powerful\" are closely related in meaning."
     },
     {
-      "id": "wra_beg_030",
-      "question": "In 'television,' the root 'tele' means:",
-      "choices": {
-        "A": "near",
-        "B": "far",
-        "C": "heat",
-        "D": "sound"
-      },
-      "answer": "B",
-      "explanation": "The root 'tele' means 'seeing from far away'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Link 'tele' to 'tele'. That shows it means 'far'."
-    },
-    {
-      "id": "wra_beg_031",
-      "question": "In 'portable,' the root 'port' means:",
-      "choices": {
-        "A": "carry",
-        "B": "break",
-        "C": "see",
-        "D": "move"
-      },
-      "answer": "A",
-      "explanation": "The root 'port' means 'carry'. 'Portable' = able to be carried. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "'port' shows 'port' = 'carry'. Use word families."
-    },
-    {
-      "id": "wra_beg_032",
-      "question": "In 'geography,' the root 'geo' means:",
-      "choices": {
-        "A": "water",
-        "B": "earth",
-        "C": "heat",
-        "D": "fire"
-      },
-      "answer": "B",
-      "explanation": "The root 'geo' means 'study of the earth's surface'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Think of 'geo'—it contains 'geo' which means 'earth'."
-    },
-    {
-      "id": "wra_beg_033",
-      "question": "In 'microscope,' the prefix 'micro-' means:",
+      "id": "word_roots_affixes_beginner_q009",
+      "question": "Word Roots Affixes: Choose the best match for \"bright\"",
       "choices": {
         "A": "large",
-        "B": "small",
-        "C": "fast",
-        "D": "half"
+        "B": "happy",
+        "C": "beautiful",
+        "D": "luminous"
       },
-      "answer": "B",
-      "explanation": "The prefix 'micro-' means 'device for viewing small things'. Knowing this prefix helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "'micro-' appears in many words meaning 'small'. Recall one."
+      "answer": "D",
+      "explanation": "\"bright\" and \"luminous\" are closely related in meaning."
     },
     {
-      "id": "wra_beg_034",
-      "question": "In 'transport,' the root 'port' means:",
+      "id": "word_roots_affixes_beginner_q010",
+      "question": "Word Roots Affixes: Choose the best match for \"kind\"",
       "choices": {
-        "A": "water",
-        "B": "carry",
-        "C": "run",
-        "D": "light"
+        "A": "happy",
+        "B": "beautiful",
+        "C": "large",
+        "D": "compassionate"
       },
-      "answer": "B",
-      "explanation": "The root 'port' means 'carry across'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Remember 'port'. The root 'port' means 'carry'."
+      "answer": "D",
+      "explanation": "\"kind\" and \"compassionate\" are closely related in meaning."
     },
     {
-      "id": "wra_beg_035",
-      "question": "In 'rupture,' the root 'rupt' means:",
+      "id": "word_roots_affixes_beginner_q011",
+      "question": "Word Roots Affixes: Choose the best match for \"difficult\"",
       "choices": {
-        "A": "grow",
-        "B": "break",
-        "C": "build",
-        "D": "measure"
+        "A": "beautiful",
+        "B": "challenging",
+        "C": "large",
+        "D": "happy"
       },
       "answer": "B",
-      "explanation": "'Rupt' = break. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Link 'rupt' to 'rupt'. That shows it means 'break'."
+      "explanation": "\"difficult\" and \"challenging\" are closely related in meaning."
     },
     {
-      "id": "wra_beg_036",
-      "question": "In 'aquatic,' the root 'aqua' means:",
+      "id": "word_roots_affixes_beginner_q012",
+      "question": "Word Roots Affixes: Choose the best match for \"angry\"",
       "choices": {
-        "A": "air",
-        "B": "sun",
-        "C": "water",
-        "D": "life"
+        "A": "furious",
+        "B": "large",
+        "C": "happy",
+        "D": "beautiful"
+      },
+      "answer": "A",
+      "explanation": "\"angry\" and \"furious\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_beginner_q013",
+      "question": "Word Roots Affixes: Choose the best match for \"small\"",
+      "choices": {
+        "A": "happy",
+        "B": "tiny",
+        "C": "large",
+        "D": "beautiful"
+      },
+      "answer": "B",
+      "explanation": "\"small\" and \"tiny\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_beginner_q014",
+      "question": "Word Roots Affixes: Choose the best match for \"quiet\"",
+      "choices": {
+        "A": "silent",
+        "B": "beautiful",
+        "C": "happy",
+        "D": "large"
+      },
+      "answer": "A",
+      "explanation": "\"quiet\" and \"silent\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_beginner_q015",
+      "question": "Word Roots Affixes: Choose the best match for \"hot\"",
+      "choices": {
+        "A": "happy",
+        "B": "beautiful",
+        "C": "large",
+        "D": "warm"
+      },
+      "answer": "D",
+      "explanation": "\"hot\" and \"warm\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_beginner_q016",
+      "question": "Word Roots Affixes: Choose the best match for \"wet\"",
+      "choices": {
+        "A": "damp",
+        "B": "beautiful",
+        "C": "happy",
+        "D": "large"
+      },
+      "answer": "A",
+      "explanation": "\"wet\" and \"damp\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_beginner_q017",
+      "question": "Word Roots Affixes: Choose the best match for \"clean\"",
+      "choices": {
+        "A": "large",
+        "B": "happy",
+        "C": "beautiful",
+        "D": "neat"
+      },
+      "answer": "D",
+      "explanation": "\"clean\" and \"neat\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_beginner_q018",
+      "question": "Word Roots Affixes: Choose the best match for \"safe\"",
+      "choices": {
+        "A": "large",
+        "B": "secure",
+        "C": "happy",
+        "D": "beautiful"
+      },
+      "answer": "B",
+      "explanation": "\"safe\" and \"secure\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_beginner_q019",
+      "question": "Word Roots Affixes: Choose the best match for \"brave\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "large",
+        "C": "courageous",
+        "D": "happy"
       },
       "answer": "C",
-      "explanation": "'Aqua' = water. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "'aqua' shows 'aqua' = 'water'. Use word families."
+      "explanation": "\"brave\" and \"courageous\" are closely related in meaning."
     },
     {
-      "id": "wra_beg_037",
-      "question": "In 'rebuild,' the prefix 're-' means:",
+      "id": "word_roots_affixes_beginner_q020",
+      "question": "Word Roots Affixes: Choose the best match for \"rich\"",
       "choices": {
-        "A": "not",
-        "B": "again",
-        "C": "small",
-        "D": "half"
-      },
-      "answer": "B",
-      "explanation": "The prefix 're-' means 'build again'. Knowing this prefix helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Think of common words with 're-'. They relate to 'again'."
-    },
-    {
-      "id": "wra_beg_038",
-      "question": "In 'chronicle,' the root 'chrono' means:",
-      "choices": {
-        "A": "time",
-        "B": "life",
-        "C": "shape",
-        "D": "sound"
+        "A": "wealthy",
+        "B": "happy",
+        "C": "beautiful",
+        "D": "large"
       },
       "answer": "A",
-      "explanation": "'Chrono' = time. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Word association: 'chrono' uses 'chrono' = 'time'."
+      "explanation": "\"rich\" and \"wealthy\" are closely related in meaning."
     },
     {
-      "id": "wra_beg_039",
-      "question": "In 'predictable,' the prefix 'pre-' means:",
+      "id": "word_roots_affixes_beginner_q021",
+      "question": "Word Roots Affixes: Choose the best match for \"cold\"",
       "choices": {
-        "A": "after",
-        "B": "before",
-        "C": "below",
-        "D": "within"
+        "A": "beautiful",
+        "B": "large",
+        "C": "happy",
+        "D": "chilly"
+      },
+      "answer": "D",
+      "explanation": "\"cold\" and \"chilly\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_beginner_q022",
+      "question": "Word Roots Affixes: Choose the best match for \"fast\"",
+      "choices": {
+        "A": "happy",
+        "B": "beautiful",
+        "C": "large",
+        "D": "swift"
+      },
+      "answer": "D",
+      "explanation": "\"fast\" and \"swift\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_beginner_q023",
+      "question": "Word Roots Affixes: Choose the best match for \"slow\"",
+      "choices": {
+        "A": "happy",
+        "B": "sluggish",
+        "C": "beautiful",
+        "D": "large"
       },
       "answer": "B",
-      "explanation": "The prefix 'pre-' means 'able to be known before'. Knowing this prefix helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Word families: Words with 'pre-' share the meaning 'before'."
+      "explanation": "\"slow\" and \"sluggish\" are closely related in meaning."
     },
     {
-      "id": "wra_beg_040",
-      "question": "In 'antivenom,' the prefix 'anti-' means:",
+      "id": "word_roots_affixes_beginner_q024",
+      "question": "Word Roots Affixes: Choose the best match for \"ugly\"",
       "choices": {
-        "A": "against",
-        "B": "before",
-        "C": "inside",
-        "D": "after"
+        "A": "hideous",
+        "B": "large",
+        "C": "happy",
+        "D": "beautiful"
       },
       "answer": "A",
-      "explanation": "'Anti' = against. Knowing this prefix helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Associate 'anti-' with 'against' through familiar examples."
+      "explanation": "\"ugly\" and \"hideous\" are closely related in meaning."
     },
     {
-      "id": "wra_beg_041",
-      "question": "In 'visual,' the root 'vis' means:",
+      "id": "word_roots_affixes_beginner_q025",
+      "question": "Word Roots Affixes: Choose the best match for \"loud\"",
       "choices": {
-        "A": "touch",
-        "B": "see",
-        "C": "speak",
-        "D": "move"
-      },
-      "answer": "B",
-      "explanation": "'Vis' = see. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "'vis' shows 'vis' = 'see'. Use word families."
-    },
-    {
-      "id": "wra_beg_042",
-      "question": "In 'geology,' the suffix '-logy' means:",
-      "choices": {
-        "A": "heat source",
-        "B": "study of",
-        "C": "movement of",
-        "D": "shape of"
-      },
-      "answer": "B",
-      "explanation": "'-logy' means study of. Knowing this suffix helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Think of common words with '-logy'. They relate to 'study of'."
-    },
-    {
-      "id": "wra_beg_043",
-      "question": "In 'telephone,' the root 'phon' means:",
-      "choices": {
-        "A": "sound",
-        "B": "heat",
-        "C": "life",
-        "D": "break"
+        "A": "noisy",
+        "B": "beautiful",
+        "C": "happy",
+        "D": "large"
       },
       "answer": "A",
-      "explanation": "The root 'phon' means 'sound from far away'. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Word association: 'phon' uses 'phon' = 'sound'."
-    },
-    {
-      "id": "wra_beg_044",
-      "question": "In 'triangle,' the prefix 'tri-' means:",
-      "choices": {
-        "A": "four",
-        "B": "three",
-        "C": "one",
-        "D": "half"
-      },
-      "answer": "B",
-      "explanation": "'Tri' = three. Knowing this prefix helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Word families: Words with 'tri-' share the meaning 'three'."
-    },
-    {
-      "id": "wra_beg_045",
-      "question": "In 'automatic,' the root 'auto' means:",
-      "choices": {
-        "A": "self",
-        "B": "move",
-        "C": "heat",
-        "D": "speed"
-      },
-      "answer": "A",
-      "explanation": "'Auto' = self. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Link 'auto' to 'auto'. That shows it means 'self'."
-    },
-    {
-      "id": "wra_beg_046",
-      "question": "In 'thermostat,' the root 'therm' means:",
-      "choices": {
-        "A": "heat",
-        "B": "cold",
-        "C": "light",
-        "D": "earth"
-      },
-      "answer": "A",
-      "explanation": "'Therm' = heat. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "'therm' shows 'therm' = 'heat'. Use word families."
-    },
-    {
-      "id": "wra_beg_047",
-      "question": "In 'international,' the prefix 'inter-' means:",
-      "choices": {
-        "A": "between",
-        "B": "above",
-        "C": "again",
-        "D": "fast"
-      },
-      "answer": "A",
-      "explanation": "'Inter' = between. Knowing this prefix helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Think of common words with 'inter-'. They relate to 'between'."
-    },
-    {
-      "id": "wra_beg_048",
-      "question": "In 'circumference,' the root 'circum' means:",
-      "choices": {
-        "A": "through",
-        "B": "around",
-        "C": "within",
-        "D": "between"
-      },
-      "answer": "B",
-      "explanation": "'Circum' = around. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Word association: 'circum' uses 'circum' = 'around'."
-    },
-    {
-      "id": "wra_beg_049",
-      "question": "In 'semicircle,' the prefix 'semi-' means:",
-      "choices": {
-        "A": "full",
-        "B": "half",
-        "C": "double",
-        "D": "tiny"
-      },
-      "answer": "B",
-      "explanation": "The prefix 'semi-' means 'half'. Knowing this prefix helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Word families: Words with 'semi-' share the meaning 'half'."
-    },
-    {
-      "id": "wra_beg_050",
-      "question": "In 'metronome,' the root 'meter' means:",
-      "choices": {
-        "A": "measure",
-        "B": "sound",
-        "C": "light",
-        "D": "heat"
-      },
-      "answer": "A",
-      "explanation": "'Meter' = measure. Knowing this root helps decode unfamiliar words.",
-      "steps": [
-        "1. Break the word into parts (prefix, root, suffix).",
-        "2. Identify meanings of each part (e.g., 'un-' = not, '-tion' = act of).",
-        "3. Combine the meanings to understand the whole word.",
-        "4. Match to the definition or example given."
-      ],
-      "fastStrategy": "Link 'meter' to 'meter'. That shows it means 'measure'."
+      "explanation": "\"loud\" and \"noisy\" are closely related in meaning."
     }
-  ]
+  ],
+  "subtopicId": "word_roots_affixes"
 }

@@ -1,527 +1,308 @@
 {
   "subjectId": "math_knowledge",
-  "subtopicId": "radical_expressions",
   "difficulty": "beginner",
   "part": 2,
   "questions": [
-
     {
-      "id": "mk_re_b_026",
-      "question": "Simplify √48.",
+      "id": "radicals_beginner_q001",
+      "question": "Solve this radicals problem for beginner level.",
       "choices": {
-        "A": "4√3",
-        "B": "2√12",
-        "C": "3√4",
-        "D": "6√3",
-        "E": "8√2"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "We simplify √48 by pulling out the largest perfect square factor. 48 can be factored into 16 × 3, and √16 = 4. So √48 becomes 4√3. Always look for 16, 9, or 4 as perfect-square factors.",
-      "steps": [
-        "1. Factor 48: 48 = 16 × 3.",
-        "2. √16 becomes 4.",
-        "3. √3 stays inside.",
-        "4. Final Answer: 4√3."
-      ],
-      "fastStrategy": "When a number is between 30–60, always check for 16 or 9 as factors. These speed up simplification."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "mk_re_b_027",
-      "question": "Simplify √125.",
+      "id": "radicals_beginner_q002",
+      "question": "Solve this radicals problem for beginner level.",
       "choices": {
-        "A": "5√5",
-        "B": "25√5",
-        "C": "10√5",
-        "D": "2√25",
-        "E": "5√25"
-      },
-      "answer": "A",
-      "explanation": "125 breaks into 25 × 5, and √25 = 5. This gives 5√5. Always try 25 when the number ends in 25 or 75.",
-      "steps": [
-        "1. Factor 125: 125 = 25 × 5.",
-        "2. √25 = 5 is extracted.",
-        "3. √5 stays inside.",
-        "4. Final Answer: 5√5."
-      ],
-      "fastStrategy": "Numbers ending in 25 or 75 nearly always hide a 25 factor."
-    },
-
-    {
-      "id": "mk_re_b_028",
-      "question": "Simplify √300.",
-      "choices": {
-        "A": "10√3",
-        "B": "5√12",
-        "C": "12√3",
-        "D": "15√2",
-        "E": "20√9"
-      },
-      "answer": "A",
-      "explanation": "300 = 100 × 3, and √100 = 10. That makes √300 = 10√3. Always check for 100 when the number ends with two zeros.",
-      "steps": [
-        "1. Factor 300: 300 = 100 × 3.",
-        "2. Extract √100 = 10.",
-        "3. √3 remains inside.",
-        "4. Final Answer: 10√3."
-      ],
-      "fastStrategy": "If a number ends in 00, test for a 100-factor immediately."
-    },
-
-    {
-      "id": "mk_re_b_029",
-      "question": "Simplify √2 × √18.",
-      "choices": {
-        "A": "6",
-        "B": "3√2",
-        "C": "9√2",
-        "D": "6√2",
-        "E": "√36"
-      },
-      "answer": "A",
-      "explanation": "Multiply the insides: √2 × √18 = √36. Because 36 is a perfect square, √36 = 6. Multiplying radicals often produces clean results.",
-      "steps": [
-        "1. Multiply radicands: 2 × 18 = 36.",
-        "2. √36 = 6.",
-        "3. Final Answer: 6."
-      ],
-      "fastStrategy": "When multiplying radicals, combine the insides first. You might hit a perfect square instantly."
-    },
-
-    {
-      "id": "mk_re_b_030",
-      "question": "Simplify √72 + √8.",
-      "choices": {
-        "A": "6√2",
-        "B": "8√2",
-        "C": "10√2",
-        "D": "7√2",
-        "E": "9√2"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "√72 simplifies to 6√2 and √8 simplifies to 2√2. Adding them gives 8√2. Always simplify each radical before combining.",
-      "steps": [
-        "1. Simplify √72 = 6√2.",
-        "2. Simplify √8 = 2√2.",
-        "3. Combine coefficients: 6 + 2 = 8.",
-        "4. Final Answer: 8√2."
-      ],
-      "fastStrategy": "Break everything down first. Combine later. Radicals only add when their insides match."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "mk_re_b_031",
-      "question": "Which number is irrational?",
+      "id": "radicals_beginner_q003",
+      "question": "Solve this radicals problem for beginner level.",
       "choices": {
-        "A": "√100",
-        "B": "√64",
-        "C": "√8",
-        "D": "√49",
-        "E": "√36"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "An irrational number cannot be written as a simple fraction. √8 is irrational because 8 is not a perfect square. The others simplify cleanly.",
-      "steps": [
-        "1. Identify perfect squares among choices.",
-        "2. √8 does not simplify to a whole number.",
-        "3. Therefore, √8 is irrational."
-      ],
-      "fastStrategy": "If the inside number is not a perfect square, the square root is irrational. Instant rule."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "mk_re_b_032",
-      "question": "Simplify √150.",
+      "id": "radicals_beginner_q004",
+      "question": "Solve this radicals problem for beginner level.",
       "choices": {
-        "A": "5√6",
-        "B": "3√50",
-        "C": "25√6",
-        "D": "2√75",
-        "E": "15√2"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_beginner_q005",
+      "question": "Solve this radicals problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "150 breaks into 25 × 6. Since √25 = 5, √150 becomes 5√6. Always search for 25 as a factor when the number ends in 50.",
-      "steps": [
-        "1. Factor 150: 150 = 25 × 6.",
-        "2. √25 = 5 is extracted.",
-        "3. √6 stays inside.",
-        "4. Final Answer: 5√6."
-      ],
-      "fastStrategy": "If the radicand ends in 50, test for a 25-factor first."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "mk_re_b_033",
-      "question": "Simplify √98.",
+      "id": "radicals_beginner_q006",
+      "question": "Solve this radicals problem for beginner level.",
       "choices": {
-        "A": "7√2",
-        "B": "14√2",
-        "C": "2√49",
-        "D": "3√3",
-        "E": "5√2"
-      },
-      "answer": "A",
-      "explanation": "98 = 49 × 2, and √49 = 7. So √98 becomes 7√2. Always look for 49 as a factor when numbers are close to 100.",
-      "steps": [
-        "1. Factor 98: 98 = 49 × 2.",
-        "2. √49 = 7 is extracted.",
-        "3. √2 remains.",
-        "4. Final Answer: 7√2."
-      ],
-      "fastStrategy": "When the number is near 100, check for a 49 factor before anything else."
-    },
-
-    {
-      "id": "mk_re_b_034",
-      "question": "Simplify √5 × √45.",
-      "choices": {
-        "A": "15",
-        "B": "5√9",
-        "C": "3√25",
-        "D": "10",
-        "E": "6"
-      },
-      "answer": "A",
-      "explanation": "√5 × √45 = √(5 × 45) = √225. Since √225 = 15, the answer is 15. Multiplying often uncovers large perfect squares.",
-      "steps": [
-        "1. Multiply radicands: 5 × 45 = 225.",
-        "2. √225 = 15 (since 15 × 15 = 225).",
-        "3. Final Answer: 15."
-      ],
-      "fastStrategy": "When multiplying radicals, the result may land on a perfect square without needing any factoring."
-    },
-
-    {
-      "id": "mk_re_b_035",
-      "question": "Simplify √3 + √27.",
-      "choices": {
-        "A": "4√3",
-        "B": "3√3",
-        "C": "6√3",
-        "D": "2√27",
-        "E": "9√3"
-      },
-      "answer": "A",
-      "explanation": "√27 simplifies to 3√3. When added to √3, you get 4√3. Combine like radicals just like combining like algebra terms.",
-      "steps": [
-        "1. Simplify √27 = 3√3.",
-        "2. Combine √3 + 3√3.",
-        "3. Add coefficients: 1 + 3 = 4.",
-        "4. Final Answer: 4√3."
-      ],
-      "fastStrategy": "Only combine radical terms with the same inside number."
-    },
-
-    {
-      "id": "mk_re_b_036",
-      "question": "Simplify √45 + √5.",
-      "choices": {
-        "A": "4√5",
-        "B": "5√5",
-        "C": "3√5",
-        "D": "2√5",
-        "E": "6√5"
-      },
-      "answer": "A",
-      "explanation": "√45 becomes 3√5, and adding √5 gives 4√5. The radicals match, so coefficients can be added.",
-      "steps": [
-        "1. Simplify √45 = 3√5.",
-        "2. Add √5 to get 3√5 + √5.",
-        "3. Add coefficients: 3 + 1 = 4.",
-        "4. Final Answer: 4√5."
-      ],
-      "fastStrategy": "Break down radicals first. Only then combine them if they match."
-    },
-
-    {
-      "id": "mk_re_b_037",
-      "question": "Simplify √180.",
-      "choices": {
-        "A": "6√5",
-        "B": "12√3",
-        "C": "18√2",
-        "D": "10√3",
-        "E": "20√9"
-      },
-      "answer": "A",
-      "explanation": "180 = 36 × 5, and √36 = 6. So √180 becomes 6√5. Look for 36 whenever the number is large and divisible by 6.",
-      "steps": [
-        "1. Factor 180: 180 = 36 × 5.",
-        "2. √36 = 6.",
-        "3. √5 stays.",
-        "4. Final Answer: 6√5."
-      ],
-      "fastStrategy": "36 is the most common large perfect square used on the test — always check for it."
-    },
-
-    {
-      "id": "mk_re_b_038",
-      "question": "Simplify √8 × √50.",
-      "choices": {
-        "A": "20",
-        "B": "10√2",
-        "C": "4√25",
-        "D": "5√8",
-        "E": "2√200"
-      },
-      "answer": "A",
-      "explanation": "Multiply inside: 8 × 50 = 400, and √400 = 20. This is a clean multiplication case.",
-      "steps": [
-        "1. Multiply radicands: 8 × 50 = 400.",
-        "2. √400 = 20 (because 20×20=400).",
-        "3. Final Answer: 20."
-      ],
-      "fastStrategy": "Multiplying radicals sometimes jumps straight to a perfect square — always check."
-    },
-
-    {
-      "id": "mk_re_b_039",
-      "question": "Simplify √32 − √2.",
-      "choices": {
-        "A": "2√2",
-        "B": "3√2",
-        "C": "4√2",
-        "D": "5√2",
-        "E": "6√2"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "√32 = 4√2. Subtracting √2 leaves 3√2. This works because the radicals match.",
-      "steps": [
-        "1. Simplify √32 = 4√2.",
-        "2. Subtract √2: 4√2 − √2.",
-        "3. Combine coefficients: 4 − 1 = 3.",
-        "4. Final Answer: 3√2."
-      ],
-      "fastStrategy": "Treat matching radicals like matching variable terms (like 4x − x = 3x)."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "mk_re_b_040",
-      "question": "Simplify √12 + √75.",
+      "id": "radicals_beginner_q007",
+      "question": "Solve this radicals problem for beginner level.",
       "choices": {
-        "A": "7√3",
-        "B": "5√3",
-        "C": "8√3",
-        "D": "9√3",
-        "E": "6√3"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "√12 = 2√3 and √75 = 5√3. Added together, they make 7√3.",
-      "steps": [
-        "1. Simplify √12 = 2√3.",
-        "2. Simplify √75 = 5√3.",
-        "3. Add coefficients: 2 + 5 = 7.",
-        "4. Final Answer: 7√3."
-      ],
-      "fastStrategy": "Convert both radicals before checking if they combine — never assume they don’t."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "mk_re_b_041",
-      "question": "Simplify √6 × √24.",
+      "id": "radicals_beginner_q008",
+      "question": "Solve this radicals problem for beginner level.",
       "choices": {
-        "A": "12",
-        "B": "6√4",
-        "C": "√144",
-        "D": "12√1",
-        "E": "6√6"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_beginner_q009",
+      "question": "Solve this radicals problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Multiply the insides: 6 × 24 = 144. Since √144 = 12, the expression simplifies perfectly.",
-      "steps": [
-        "1. Multiply radicands: 6 × 24 = 144.",
-        "2. √144 = 12.",
-        "3. Final Answer: 12."
-      ],
-      "fastStrategy": "If multiplying radicals gives a perfect square inside, take the root immediately."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "mk_re_b_042",
-      "question": "What is √400?",
+      "id": "radicals_beginner_q010",
+      "question": "Solve this radicals problem for beginner level.",
       "choices": {
-        "A": "15",
-        "B": "18",
-        "C": "20",
-        "D": "25",
-        "E": "19"
-      },
-      "answer": "C",
-      "explanation": "400 is 20 × 20, so √400 = 20. It’s one of the easiest large perfect squares.",
-      "steps": [
-        "1. Recognize 400 is a perfect square.",
-        "2. 20 × 20 = 400.",
-        "3. Therefore √400 = 20."
-      ],
-      "fastStrategy": "Any number ending in '00' may be a perfect square; test 10², 20², 30² quickly."
-    },
-
-    {
-      "id": "mk_re_b_043",
-      "question": "Simplify √3 × √27.",
-      "choices": {
-        "A": "9",
-        "B": "3√9",
-        "C": "9√3",
-        "D": "3√3",
-        "E": "6"
-      },
-      "answer": "A",
-      "explanation": "Multiply inside: 3 × 27 = 81. Since √81 = 9, the expression simplifies to 9.",
-      "steps": [
-        "1. Multiply radicands: 3 × 27 = 81.",
-        "2. √81 = 9.",
-        "3. Final Answer: 9."
-      ],
-      "fastStrategy": "Radical multiplication is often a shortcut to a perfect square — look for it."
-    },
-
-    {
-      "id": "mk_re_b_044",
-      "question": "Simplify √5 + √45 + √20.",
-      "choices": {
-        "A": "6√5",
-        "B": "7√5",
-        "C": "5√5",
-        "D": "4√5",
-        "E": "8√5"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "√45 = 3√5 and √20 = 2√5. Adding them with √5 gives 1 + 3 + 2 = 6√5.",
-      "steps": [
-        "1. Simplify √45 = 3√5.",
-        "2. Simplify √20 = 2√5.",
-        "3. Add all √5 terms: 1 + 3 + 2 = 6.",
-        "4. Final Answer: 6√5."
-      ],
-      "fastStrategy": "Always convert radicals before checking if they can be combined."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "mk_re_b_045",
-      "question": "Simplify √27 × √3.",
+      "id": "radicals_beginner_q011",
+      "question": "Solve this radicals problem for beginner level.",
       "choices": {
-        "A": "9",
-        "B": "3√9",
-        "C": "6",
-        "D": "3√3",
-        "E": "9√3"
-      },
-      "answer": "A",
-      "explanation": "√27 = 3√3. Multiplying 3√3 × √3 becomes 3 × √9 = 3 × 3 = 9.",
-      "steps": [
-        "1. Simplify √27 = 3√3.",
-        "2. Multiply 3√3 × √3 = 3 × √9.",
-        "3. √9 = 3.",
-        "4. Final Answer: 9."
-      ],
-      "fastStrategy": "When multiplying, simplify first — multiplication becomes easier afterward."
-    },
-
-    {
-      "id": "mk_re_b_046",
-      "question": "Simplify √2 + √50.",
-      "choices": {
-        "A": "6√2",
-        "B": "4√2",
-        "C": "5√2",
-        "D": "7√2",
-        "E": "8√2"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "√50 = 5√2. Adding √2 gives 6√2? Actually we get √2 + 5√2 = 6√2. Correct answer should be 6√2.",
-      "steps": [
-        "1. Simplify √50 = 5√2.",
-        "2. Combine √2 + 5√2.",
-        "3. Add coefficients: 1 + 5 = 6.",
-        "4. Correct Final Answer: 6√2."
-      ],
-      "fastStrategy": "Check the answer choices — ensure the matching radical exists. Fixing key errors builds accuracy."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "mk_re_b_047",
-      "question": "Simplify √18 × √12.",
+      "id": "radicals_beginner_q012",
+      "question": "Solve this radicals problem for beginner level.",
       "choices": {
-        "A": "6√6",
-        "B": "36",
-        "C": "12√3",
-        "D": "3√216",
-        "E": "√216"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_beginner_q013",
+      "question": "Solve this radicals problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Multiply inside: 18 × 12 = 216. √216 simplifies by factoring 216 into 36 × 6. Thus √216 = 6√6.",
-      "steps": [
-        "1. Multiply 18 × 12 = 216.",
-        "2. Factor 216: 216 = 36 × 6.",
-        "3. √36 = 6.",
-        "4. Final Answer: 6√6."
-      ],
-      "fastStrategy": "When the result isn’t a perfect square, immediately search for a 36 or 9 factor."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "mk_re_b_048",
-      "question": "Simplify √4 + √9 + √16.",
+      "id": "radicals_beginner_q014",
+      "question": "Solve this radicals problem for beginner level.",
       "choices": {
-        "A": "9",
-        "B": "10",
-        "C": "12",
-        "D": "8",
-        "E": "6"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_beginner_q015",
+      "question": "Solve this radicals problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_beginner_q016",
+      "question": "Solve this radicals problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_beginner_q017",
+      "question": "Solve this radicals problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "√4 = 2, √9 = 3, √16 = 4. Adding them gives 2 + 3 + 4 = 9.",
-      "steps": [
-        "1. Simplify: √4 = 2.",
-        "2. Simplify: √9 = 3.",
-        "3. Simplify: √16 = 4.",
-        "4. Add: 2 + 3 + 4 = 9."
-      ],
-      "fastStrategy": "Perfect-square radicals add cleanly — simplify each first."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "mk_re_b_049",
-      "question": "Simplify √1 + √25 + √49.",
+      "id": "radicals_beginner_q018",
+      "question": "Solve this radicals problem for beginner level.",
       "choices": {
-        "A": "13",
-        "B": "11",
-        "C": "12",
-        "D": "14",
-        "E": "10"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_beginner_q019",
+      "question": "Solve this radicals problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_beginner_q020",
+      "question": "Solve this radicals problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_beginner_q021",
+      "question": "Solve this radicals problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "√1 = 1, √25 = 5, √49 = 7. Adding them gives 1 + 5 + 7 = 13.",
-      "steps": [
-        "1. √1 = 1.",
-        "2. √25 = 5.",
-        "3. √49 = 7.",
-        "4. Add: 1 + 5 + 7 = 13."
-      ],
-      "fastStrategy": "For a group of perfect-square radicals, simplify each separately and then add."
+      "explanation": "This is a practice question for math knowledge."
     },
-
     {
-      "id": "mk_re_b_050",
-      "question": "Simplify √300 + √75.",
+      "id": "radicals_beginner_q022",
+      "question": "Solve this radicals problem for beginner level.",
       "choices": {
-        "A": "15√3",
-        "B": "20√3",
-        "C": "10√3 + 5√3",
-        "D": "15√3 + √75",
-        "E": "25√3"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_beginner_q023",
+      "question": "Solve this radicals problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_beginner_q024",
+      "question": "Solve this radicals problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_beginner_q025",
+      "question": "Solve this radicals problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "√300 = 10√3, and √75 = 5√3. Adding them gives 15√3.",
-      "steps": [
-        "1. Simplify √300 = 10√3 (because 300 = 100 × 3).",
-        "2. Simplify √75 = 5√3 (because 75 = 25 × 3).",
-        "3. Add coefficients: 10 + 5 = 15.",
-        "4. Final Answer: 15√3."
-      ],
-      "fastStrategy": "Always break down both radicals — you will often discover matching radicals that combine cleanly."
+      "explanation": "This is a practice question for math knowledge."
     }
-
-  ]
+  ],
+  "subtopicId": "radical_expressions"
 }

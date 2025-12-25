@@ -1,483 +1,308 @@
 {
   "subjectId": "math_knowledge",
-  "subtopicId": "exponents_roots",
   "difficulty": "beginner",
   "part": 2,
   "questions": [
     {
-      "id": "mk_er_b_026",
-      "question": "Simplify: x^2 × x^3",
+      "id": "exponents_roots_beginner_q001",
+      "question": "Solve this exponents roots problem for beginner level.",
       "choices": {
-        "A": "x^5",
-        "B": "x^6",
-        "C": "x^9",
-        "D": "x^1",
-        "E": "x^0"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "Add exponents: x^2 × x^3 = x^(2+3) = x^5.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_er_b_027",
-      "question": "Simplify: x^4 ÷ x^2 (x ≠ 0)",
+      "id": "exponents_roots_beginner_q002",
+      "question": "Solve this exponents roots problem for beginner level.",
       "choices": {
-        "A": "x^2",
-        "B": "x^6",
-        "C": "x^8",
-        "D": "x^3",
-        "E": "x^1"
-      },
-      "answer": "A",
-      "explanation": "Subtract exponents: x^4 ÷ x^2 = x^(4−2) = x^2.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
-    },
-    {
-      "id": "mk_er_b_028",
-      "question": "Simplify: (x^2)^3",
-      "choices": {
-        "A": "x^5",
-        "B": "x^6",
-        "C": "x^9",
-        "D": "x^8",
-        "E": "x^3"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "Power of a power: (x^2)^3 = x^(2×3) = x^6.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_er_b_029",
-      "question": "Simplify: x^3 × x",
+      "id": "exponents_roots_beginner_q003",
+      "question": "Solve this exponents roots problem for beginner level.",
       "choices": {
-        "A": "x^3",
-        "B": "x^4",
-        "C": "x^5",
-        "D": "x^2",
-        "E": "x"
-      },
-      "answer": "B",
-      "explanation": "x is x^1, so x^3 × x^1 = x^4.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
-    },
-    {
-      "id": "mk_er_b_030",
-      "question": "Simplify: x^5 ÷ x (x ≠ 0)",
-      "choices": {
-        "A": "x^4",
-        "B": "x^6",
-        "C": "x^3",
-        "D": "x^2",
-        "E": "x^0"
-      },
-      "answer": "A",
-      "explanation": "x^5 ÷ x^1 = x^(5−1) = x^4.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
-    },
-    {
-      "id": "mk_er_b_031",
-      "question": "Simplify: (2x)^2",
-      "choices": {
-        "A": "2x^2",
-        "B": "4x",
-        "C": "4x^2",
-        "D": "x^2",
-        "E": "2x"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "(2x)^2 = 2^2 × x^2 = 4x^2.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_er_b_032",
-      "question": "Simplify: (3x)^2",
+      "id": "exponents_roots_beginner_q004",
+      "question": "Solve this exponents roots problem for beginner level.",
       "choices": {
-        "A": "3x^2",
-        "B": "6x",
-        "C": "9x^2",
-        "D": "9x",
-        "E": "x^2"
-      },
-      "answer": "C",
-      "explanation": "(3x)^2 = 3^2 × x^2 = 9x^2.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
-    },
-    {
-      "id": "mk_er_b_033",
-      "question": "Simplify: √(x^2) (x ≥ 0)",
-      "choices": {
-        "A": "x^2",
-        "B": "x",
-        "C": "√x",
-        "D": "1/x",
-        "E": "x^3"
-      },
-      "answer": "B",
-      "explanation": "For x ≥ 0, √(x^2) = x.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
-    },
-    {
-      "id": "mk_er_b_034",
-      "question": "Simplify: √(25x^2) (x ≥ 0)",
-      "choices": {
-        "A": "5x^2",
-        "B": "25x",
-        "C": "5x",
-        "D": "x/5",
-        "E": "√25x"
-      },
-      "answer": "C",
-      "explanation": "√25 = 5 and √(x^2) = x, so √(25x^2) = 5x.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
-    },
-    {
-      "id": "mk_er_b_035",
-      "question": "Simplify: √(9x^2) (x ≥ 0)",
-      "choices": {
-        "A": "3x",
-        "B": "9x",
-        "C": "x^2",
-        "D": "3x^2",
-        "E": "x/3"
-      },
-      "answer": "A",
-      "explanation": "√9 = 3 and √(x^2) = x, so √(9x^2) = 3x.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
-    },
-    {
-      "id": "mk_er_b_036",
-      "question": "Simplify: x^0 (x ≠ 0)",
-      "choices": {
-        "A": "0",
-        "B": "1",
-        "C": "x",
-        "D": "x^2",
-        "E": "-1"
-      },
-      "answer": "B",
-      "explanation": "Any nonzero base to the zero power equals 1.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
-    },
-    {
-      "id": "mk_er_b_037",
-      "question": "Simplify: (x^3)^2",
-      "choices": {
-        "A": "x^5",
-        "B": "x^6",
-        "C": "x^9",
-        "D": "x^3",
-        "E": "x^4"
-      },
-      "answer": "B",
-      "explanation": "Power of a power: (x^3)^2 = x^(3×2) = x^6.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
-    },
-    {
-      "id": "mk_er_b_038",
-      "question": "Simplify: x^4 × x^4",
-      "choices": {
-        "A": "x^7",
-        "B": "x^8",
-        "C": "x^6",
-        "D": "x^5",
-        "E": "x^4"
-      },
-      "answer": "B",
-      "explanation": "Add exponents: x^(4+4) = x^8.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
-    },
-    {
-      "id": "mk_er_b_039",
-      "question": "Simplify: x^7 ÷ x^3 (x ≠ 0)",
-      "choices": {
-        "A": "x^4",
-        "B": "x^5",
-        "C": "x^3",
-        "D": "x^2",
-        "E": "x^6"
-      },
-      "answer": "A",
-      "explanation": "Subtract exponents: x^(7−3) = x^4.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
-    },
-    {
-      "id": "mk_er_b_040",
-      "question": "Simplify: (4x^2)^2",
-      "choices": {
-        "A": "4x^4",
-        "B": "8x^2",
-        "C": "16x^2",
-        "D": "16x^4",
-        "E": "8x^4"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "(4x^2)^2 = 4^2 × x^4 = 16x^4.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_er_b_041",
-      "question": "Simplify: √(16x^2) (x ≥ 0)",
+      "id": "exponents_roots_beginner_q005",
+      "question": "Solve this exponents roots problem for beginner level.",
       "choices": {
-        "A": "4x",
-        "B": "16x",
-        "C": "4x^2",
-        "D": "2x",
-        "E": "x/4"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "A",
-      "explanation": "√16 = 4 and √(x^2) = x, so √(16x^2) = 4x.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_er_b_042",
-      "question": "Simplify: √(4x^2) (x ≥ 0)",
+      "id": "exponents_roots_beginner_q006",
+      "question": "Solve this exponents roots problem for beginner level.",
       "choices": {
-        "A": "4x",
-        "B": "2x",
-        "C": "x^2",
-        "D": "2x^2",
-        "E": "x/2"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "√4 = 2 and √(x^2) = x, so √(4x^2) = 2x.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_er_b_043",
-      "question": "Simplify: (x^2)(x^0)",
+      "id": "exponents_roots_beginner_q007",
+      "question": "Solve this exponents roots problem for beginner level.",
       "choices": {
-        "A": "x^2",
-        "B": "x^0",
-        "C": "x",
-        "D": "1",
-        "E": "x^3"
-      },
-      "answer": "A",
-      "explanation": "x^0 = 1, so x^2 × 1 = x^2.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
-    },
-    {
-      "id": "mk_er_b_044",
-      "question": "Simplify: (2x^2)(3x)",
-      "choices": {
-        "A": "5x^3",
-        "B": "6x^3",
-        "C": "6x^4",
-        "D": "6x^2",
-        "E": "2x^4"
-      },
-      "answer": "B",
-      "explanation": "2×3 = 6 and x^2×x = x^3, so 6x^3.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
-    },
-    {
-      "id": "mk_er_b_045",
-      "question": "Simplify: (5x)(5x)",
-      "choices": {
-        "A": "10x",
-        "B": "10x^2",
-        "C": "25x",
-        "D": "25x^2",
-        "E": "5x^2"
-      },
-      "answer": "D",
-      "explanation": "(5x)(5x) = 25x^2.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
-    },
-    {
-      "id": "mk_er_b_046",
-      "question": "Simplify: (x^2y)(x^3)",
-      "choices": {
-        "A": "x^5y",
-        "B": "x^6y",
-        "C": "x^2y^3",
-        "D": "x^3y^2",
-        "E": "x^4y"
-      },
-      "answer": "A",
-      "explanation": "x^2 × x^3 = x^5; y stays, so x^5y.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
-    },
-    {
-      "id": "mk_er_b_047",
-      "question": "Simplify: (2x^2)(3x^2)",
-      "choices": {
-        "A": "5x^4",
-        "B": "6x^2",
-        "C": "6x^4",
-        "D": "6x^3",
-        "E": "x^4"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "C",
-      "explanation": "2×3 = 6 and x^2×x^2 = x^4, so 6x^4.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_er_b_048",
-      "question": "Simplify: x^5 ÷ x^2 (x ≠ 0)",
+      "id": "exponents_roots_beginner_q008",
+      "question": "Solve this exponents roots problem for beginner level.",
       "choices": {
-        "A": "x^2",
-        "B": "x^3",
-        "C": "x^4",
-        "D": "x",
-        "E": "1"
-      },
-      "answer": "B",
-      "explanation": "x^(5−2) = x^3.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
-    },
-    {
-      "id": "mk_er_b_049",
-      "question": "Simplify: (x^2)^0 (x ≠ 0)",
-      "choices": {
-        "A": "x^2",
-        "B": "x",
-        "C": "0",
-        "D": "1",
-        "E": "x^0"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "D",
-      "explanation": "Any nonzero expression to the zero power equals 1.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "explanation": "This is a practice question for math knowledge."
     },
     {
-      "id": "mk_er_b_050",
-      "question": "Simplify: √(81x^2) (x ≥ 0)",
+      "id": "exponents_roots_beginner_q009",
+      "question": "Solve this exponents roots problem for beginner level.",
       "choices": {
-        "A": "3x",
-        "B": "9x",
-        "C": "81x",
-        "D": "9x^2",
-        "E": "x/9"
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q010",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
       },
       "answer": "B",
-      "explanation": "√81 = 9 and √(x^2) = x, so √(81x^2) = 9x.",
-      "steps": [
-        "1. Identify which exponent rule applies.",
-        "2. Apply the rule to simplify.",
-        "3. Calculate the final value."
-      ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q011",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q012",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q013",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q014",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q015",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q016",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q017",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q018",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q019",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q020",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q021",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q022",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q023",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q024",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q025",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
     }
-  ]
+  ],
+  "subtopicId": "exponents_roots"
 }
