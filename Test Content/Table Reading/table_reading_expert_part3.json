@@ -1,0 +1,2283 @@
+{
+  "subjectId": "table_reading",
+  "subtopicId": "table_lookup",
+  "difficulty": "expert",
+  "part": 3,
+  "questions": [
+    {
+      "id": "tr_e3_001",
+      "question": "What is the value at X = 3, Y = 20?",
+      "choices": {
+        "A": "94",
+        "B": "104",
+        "C": "101",
+        "D": "97"
+      },
+      "answer": "D",
+      "explanation": "Locate column 3 and row 20; the intersection shows 97.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 3,
+        "y": 20
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_002",
+      "question": "What is the value at X = 5, Y = 30?",
+      "choices": {
+        "A": "118",
+        "B": "114",
+        "C": "121",
+        "D": "111"
+      },
+      "answer": "B",
+      "explanation": "Locate column 5 and row 30; the intersection shows 114.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 5,
+        "y": 30
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_003",
+      "question": "What is the value at X = 1, Y = 40?",
+      "choices": {
+        "A": "105",
+        "B": "98",
+        "C": "108",
+        "D": "101"
+      },
+      "answer": "D",
+      "explanation": "Locate column 1 and row 40; the intersection shows 101.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 1,
+        "y": 40
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_004",
+      "question": "What is the value at X = 3, Y = 50?",
+      "choices": {
+        "A": "115",
+        "B": "125",
+        "C": "118",
+        "D": "122"
+      },
+      "answer": "C",
+      "explanation": "Locate column 3 and row 50; the intersection shows 118.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 3,
+        "y": 50
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_005",
+      "question": "What is the value at X = 5, Y = 60?",
+      "choices": {
+        "A": "132",
+        "B": "142",
+        "C": "135",
+        "D": "139"
+      },
+      "answer": "C",
+      "explanation": "Locate column 5 and row 60; the intersection shows 135.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 5,
+        "y": 60
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_006",
+      "question": "What is the value at X = 1, Y = 10?",
+      "choices": {
+        "A": "87",
+        "B": "77",
+        "C": "80",
+        "D": "84"
+      },
+      "answer": "C",
+      "explanation": "Locate column 1 and row 10; the intersection shows 80.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 1,
+        "y": 10
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_007",
+      "question": "What is the value at X = 3, Y = 20?",
+      "choices": {
+        "A": "97",
+        "B": "104",
+        "C": "94",
+        "D": "101"
+      },
+      "answer": "A",
+      "explanation": "Locate column 3 and row 20; the intersection shows 97.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 3,
+        "y": 20
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_008",
+      "question": "What is the value at X = 5, Y = 30?",
+      "choices": {
+        "A": "111",
+        "B": "114",
+        "C": "118",
+        "D": "121"
+      },
+      "answer": "B",
+      "explanation": "Locate column 5 and row 30; the intersection shows 114.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 5,
+        "y": 30
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_009",
+      "question": "What is the value at X = 1, Y = 40?",
+      "choices": {
+        "A": "98",
+        "B": "108",
+        "C": "101",
+        "D": "105"
+      },
+      "answer": "C",
+      "explanation": "Locate column 1 and row 40; the intersection shows 101.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 1,
+        "y": 40
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_010",
+      "question": "What is the value at X = 3, Y = 50?",
+      "choices": {
+        "A": "118",
+        "B": "115",
+        "C": "125",
+        "D": "122"
+      },
+      "answer": "A",
+      "explanation": "Locate column 3 and row 50; the intersection shows 118.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 3,
+        "y": 50
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_011",
+      "question": "What is the value at X = 5, Y = 60?",
+      "choices": {
+        "A": "139",
+        "B": "132",
+        "C": "135",
+        "D": "142"
+      },
+      "answer": "C",
+      "explanation": "Locate column 5 and row 60; the intersection shows 135.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 5,
+        "y": 60
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_012",
+      "question": "What is the value at X = 1, Y = 10?",
+      "choices": {
+        "A": "80",
+        "B": "84",
+        "C": "87",
+        "D": "77"
+      },
+      "answer": "A",
+      "explanation": "Locate column 1 and row 10; the intersection shows 80.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 1,
+        "y": 10
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_013",
+      "question": "What is the value at X = 3, Y = 20?",
+      "choices": {
+        "A": "101",
+        "B": "94",
+        "C": "104",
+        "D": "97"
+      },
+      "answer": "D",
+      "explanation": "Locate column 3 and row 20; the intersection shows 97.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 3,
+        "y": 20
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_014",
+      "question": "What is the value at X = 5, Y = 30?",
+      "choices": {
+        "A": "118",
+        "B": "121",
+        "C": "111",
+        "D": "114"
+      },
+      "answer": "D",
+      "explanation": "Locate column 5 and row 30; the intersection shows 114.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 5,
+        "y": 30
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_015",
+      "question": "What is the value at X = 1, Y = 40?",
+      "choices": {
+        "A": "105",
+        "B": "108",
+        "C": "98",
+        "D": "101"
+      },
+      "answer": "D",
+      "explanation": "Locate column 1 and row 40; the intersection shows 101.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 1,
+        "y": 40
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_016",
+      "question": "What is the value at X = 3, Y = 50?",
+      "choices": {
+        "A": "122",
+        "B": "118",
+        "C": "125",
+        "D": "115"
+      },
+      "answer": "B",
+      "explanation": "Locate column 3 and row 50; the intersection shows 118.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 3,
+        "y": 50
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_017",
+      "question": "What is the value at X = 5, Y = 60?",
+      "choices": {
+        "A": "142",
+        "B": "132",
+        "C": "135",
+        "D": "139"
+      },
+      "answer": "C",
+      "explanation": "Locate column 5 and row 60; the intersection shows 135.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 5,
+        "y": 60
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_018",
+      "question": "What is the value at X = 1, Y = 10?",
+      "choices": {
+        "A": "87",
+        "B": "77",
+        "C": "84",
+        "D": "80"
+      },
+      "answer": "D",
+      "explanation": "Locate column 1 and row 10; the intersection shows 80.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 1,
+        "y": 10
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_019",
+      "question": "What is the value at X = 3, Y = 20?",
+      "choices": {
+        "A": "104",
+        "B": "97",
+        "C": "101",
+        "D": "94"
+      },
+      "answer": "B",
+      "explanation": "Locate column 3 and row 20; the intersection shows 97.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 3,
+        "y": 20
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_020",
+      "question": "What is the value at X = 5, Y = 30?",
+      "choices": {
+        "A": "114",
+        "B": "111",
+        "C": "118",
+        "D": "121"
+      },
+      "answer": "A",
+      "explanation": "Locate column 5 and row 30; the intersection shows 114.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 5,
+        "y": 30
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_021",
+      "question": "What is the value at X = 1, Y = 40?",
+      "choices": {
+        "A": "101",
+        "B": "98",
+        "C": "105",
+        "D": "108"
+      },
+      "answer": "A",
+      "explanation": "Locate column 1 and row 40; the intersection shows 101.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 1,
+        "y": 40
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_022",
+      "question": "What is the value at X = 3, Y = 50?",
+      "choices": {
+        "A": "122",
+        "B": "115",
+        "C": "125",
+        "D": "118"
+      },
+      "answer": "D",
+      "explanation": "Locate column 3 and row 50; the intersection shows 118.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 3,
+        "y": 50
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_023",
+      "question": "What is the value at X = 5, Y = 60?",
+      "choices": {
+        "A": "132",
+        "B": "142",
+        "C": "139",
+        "D": "135"
+      },
+      "answer": "D",
+      "explanation": "Locate column 5 and row 60; the intersection shows 135.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 5,
+        "y": 60
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_024",
+      "question": "What is the value at X = 1, Y = 10?",
+      "choices": {
+        "A": "87",
+        "B": "80",
+        "C": "84",
+        "D": "77"
+      },
+      "answer": "B",
+      "explanation": "Locate column 1 and row 10; the intersection shows 80.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 1,
+        "y": 10
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tr_e3_025",
+      "question": "What is the value at X = 3, Y = 20?",
+      "choices": {
+        "A": "101",
+        "B": "104",
+        "C": "94",
+        "D": "97"
+      },
+      "answer": "D",
+      "explanation": "Locate column 3 and row 20; the intersection shows 97.",
+      "steps": [
+        "Find the column label X.",
+        "Find the row label Y.",
+        "Read the intersecting cell value."
+      ],
+      "fastStrategy": "Column then row; trace with a finger to avoid off-by-one errors.",
+      "lookup": {
+        "x": 3,
+        "y": 20
+      },
+      "tableSpec": {
+        "type": "data_table",
+        "xHeader": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yHeader": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "cellValues": [
+          [
+            80,
+            85,
+            90,
+            95,
+            100,
+            105
+          ],
+          [
+            87,
+            92,
+            97,
+            102,
+            107,
+            112
+          ],
+          [
+            94,
+            99,
+            104,
+            109,
+            114,
+            119
+          ],
+          [
+            101,
+            106,
+            111,
+            116,
+            121,
+            126
+          ],
+          [
+            108,
+            113,
+            118,
+            123,
+            128,
+            133
+          ],
+          [
+            115,
+            120,
+            125,
+            130,
+            135,
+            140
+          ]
+        ]
+      }
+    }
+  ]
+}

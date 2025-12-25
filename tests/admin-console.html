@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AFOQT Admin Console</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: #0b1220;
+      color: #d6f6ff;
+    }
+    header {
+      background: linear-gradient(90deg, #0cf, #0af, #08c);
+      color: #0b1220;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0.03em;
+    }
+    nav a {
+      color: #0b1220;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 18px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.25);
+    }
+    nav a:hover { background: rgba(255, 255, 255, 0.4); }
+    .wrap { max-width: 1100px; margin: 28px auto 40px; padding: 0 18px; }
+    section { background: #0f1c30; border: 1px solid #123455; border-radius: 10px; padding: 18px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.35); }
+    h2 { margin-top: 0; color: #7ae8ff; font-size: 17px; }
+    p { line-height: 1.45; margin: 8px 0; }
+    code { background: #11233d; color: #9ae9ff; padding: 2px 6px; border-radius: 4px; }
+    .btn { display: inline-block; margin: 8px 8px 0 0; padding: 10px 14px; border-radius: 8px; background: #0cf; color: #0b1220; font-weight: 700; text-decoration: none; box-shadow: 0 4px 14px rgba(0,255,255,0.35); }
+    .btn:hover { background: #5df; }
+    ul { padding-left: 18px; }
+    li { margin: 6px 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AFOQT Admin Console</h1>
+    <nav>
+      <a href="https://swolem12.github.io/AFOQT-app/tests/test-admin-all-questions.html?v=admin1" target="_blank" rel="noopener noreferrer">Admin Browser</a>
+    </nav>
+  </header>
+
+  <div class="wrap">
+    <section>
+      <h2>Quick Launch</h2>
+      <p>Open the admin question browser (loads patch-loader and all content):</p>
+      <a class="btn" href="https://swolem12.github.io/AFOQT-app/tests/test-admin-all-questions.html?v=admin1" target="_blank" rel="noopener noreferrer">Open Admin Browser</a>
+      <p>If running locally: start a server from repo root then open the local page.</p>
+      <code>python3 -m http.server 8000</code>
+      <p>Then visit: <a href="http://localhost:8000/tests/test-admin-all-questions.html" target="_blank" rel="noopener noreferrer">http://localhost:8000/tests/test-admin-all-questions.html</a></p>
+    </section>
+
+    <section>
+      <h2>What to Verify</h2>
+      <ul>
+        <li>Registry aggregation: new part3 files for aviation, block counting, instrument comprehension, physical science, table reading, and RC passages 21–25 appear in filters.</li>
+        <li>Rendering: questions show stems, choices, answer highlight (when toggled), explanations.</li>
+        <li>Search: keyword search surfaces newly generated items.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Hints</h2>
+      <ul>
+        <li>Toggle “Show answers/explanations” in the admin page to reveal solutions.</li>
+        <li>Use subject/subtopic/difficulty filters to jump to the new part3 files.</li>
+        <li>Table Reading items embed tableSpec; confirm X/Y labels and lookup values render.</li>
+        <li>Reading Comprehension passages 21–25 each include 5 questions; search “redundancy” to spot-check.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

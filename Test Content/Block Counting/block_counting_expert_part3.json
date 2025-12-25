@@ -1,0 +1,683 @@
+{
+  "subjectId": "block_counting",
+  "difficulty": "expert",
+  "part": 3,
+  "setId": "bc_e_set03",
+  "questions": [
+    {
+      "id": "bc_e_set03_q01",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "20",
+        "B": "22",
+        "C": "21",
+        "D": "19"
+      },
+      "answer": "A",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 20 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q02",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "22",
+        "B": "23",
+        "C": "21",
+        "D": "20"
+      },
+      "answer": "C",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 21 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q03",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "24",
+        "B": "21",
+        "C": "22",
+        "D": "23"
+      },
+      "answer": "C",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 22 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q04",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "21",
+        "B": "19",
+        "C": "20",
+        "D": "18"
+      },
+      "answer": "B",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 19 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q05",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "21",
+        "B": "22",
+        "C": "20",
+        "D": "19"
+      },
+      "answer": "C",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 20 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q06",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "23",
+        "B": "21",
+        "C": "22",
+        "D": "20"
+      },
+      "answer": "B",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 21 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q07",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "24",
+        "B": "23",
+        "C": "22",
+        "D": "21"
+      },
+      "answer": "C",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 22 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q08",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "18",
+        "B": "19",
+        "C": "21",
+        "D": "20"
+      },
+      "answer": "B",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 19 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q09",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "19",
+        "B": "21",
+        "C": "20",
+        "D": "22"
+      },
+      "answer": "C",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 20 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q10",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "22",
+        "B": "23",
+        "C": "20",
+        "D": "21"
+      },
+      "answer": "D",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 21 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q11",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "21",
+        "B": "24",
+        "C": "23",
+        "D": "22"
+      },
+      "answer": "D",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 22 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q12",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "21",
+        "B": "18",
+        "C": "20",
+        "D": "19"
+      },
+      "answer": "D",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 19 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q13",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "22",
+        "B": "20",
+        "C": "19",
+        "D": "21"
+      },
+      "answer": "B",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 20 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q14",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "21",
+        "B": "20",
+        "C": "22",
+        "D": "23"
+      },
+      "answer": "A",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 21 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q15",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "24",
+        "B": "23",
+        "C": "22",
+        "D": "21"
+      },
+      "answer": "C",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 22 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q16",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "19",
+        "B": "18",
+        "C": "21",
+        "D": "20"
+      },
+      "answer": "A",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 19 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q17",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "21",
+        "B": "19",
+        "C": "20",
+        "D": "22"
+      },
+      "answer": "C",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 20 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q18",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "20",
+        "B": "22",
+        "C": "21",
+        "D": "23"
+      },
+      "answer": "C",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 21 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q19",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "24",
+        "B": "21",
+        "C": "22",
+        "D": "23"
+      },
+      "answer": "C",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 22 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q20",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "20",
+        "B": "18",
+        "C": "19",
+        "D": "21"
+      },
+      "answer": "C",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 19 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q21",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "22",
+        "B": "20",
+        "C": "19",
+        "D": "21"
+      },
+      "answer": "B",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 20 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q22",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "23",
+        "B": "21",
+        "C": "20",
+        "D": "22"
+      },
+      "answer": "B",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 21 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q23",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "23",
+        "B": "21",
+        "C": "22",
+        "D": "24"
+      },
+      "answer": "C",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 22 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q24",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "19",
+        "B": "21",
+        "C": "20",
+        "D": "18"
+      },
+      "answer": "A",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 19 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    },
+    {
+      "id": "bc_e_set03_q25",
+      "question": "How many blocks are in the figure?",
+      "choices": {
+        "A": "20",
+        "B": "21",
+        "C": "19",
+        "D": "22"
+      },
+      "answer": "A",
+      "explanation": "Count visible stacks, add the hidden layer noted in the side/top views, totaling 20 blocks.",
+      "steps": [
+        "Group visible columns by equal height.",
+        "Add layers indicated by the side view.",
+        "Include hidden blocks inferred from top coverage."
+      ],
+      "fastStrategy": "Cluster columns with the same height and multiply instead of single-block counting.",
+      "uiSpec": {
+        "type": "isometric_blocks",
+        "views": [
+          "front",
+          "side",
+          "top"
+        ],
+        "blockLayoutDescription": "Front view shows 6 columns of stacked blocks at heights 2-4; side view reveals an extra hidden column; top view implies 3 covered blocks."
+      }
+    }
+  ]
+}

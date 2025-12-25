@@ -1,0 +1,908 @@
+{
+  "subjectId": "instrument_comprehension",
+  "difficulty": "beginner",
+  "part": 3,
+  "setId": "ic_b_set03",
+  "questions": [
+    {
+      "id": "ic_b_set03_q01",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is slightly nose-up, shallow left bank, heading northeast, and descending.",
+        "B": "The aircraft is level pitch, level wings, heading northeast, and descending.",
+        "C": "The aircraft is slightly nose-up, opposite bank, heading northeast, and descending.",
+        "D": "The aircraft is slightly nose-up, shallow left bank, heading southeast, and descending."
+      },
+      "answer": "A",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "slightly nose-up",
+              "bank": "shallow left bank"
+            }
+          },
+          {
+            "heading_indicator": "northeast"
+          },
+          {
+            "climb_descent_indicator": "descending"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q02",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is level pitch, level wings, heading east, and level.",
+        "B": "The aircraft is level, shallow left bank, heading south, and level.",
+        "C": "The aircraft is level, shallow left bank, heading east, and level.",
+        "D": "The aircraft is level, opposite bank, heading east, and level."
+      },
+      "answer": "C",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "level",
+              "bank": "shallow left bank"
+            }
+          },
+          {
+            "heading_indicator": "east"
+          },
+          {
+            "climb_descent_indicator": "level"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q03",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is level, opposite bank, heading southeast, and climbing.",
+        "B": "The aircraft is level pitch, level wings, heading southeast, and climbing.",
+        "C": "The aircraft is level, level wings, heading southwest, and climbing.",
+        "D": "The aircraft is level, level wings, heading southeast, and climbing."
+      },
+      "answer": "D",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "level",
+              "bank": "level wings"
+            }
+          },
+          {
+            "heading_indicator": "southeast"
+          },
+          {
+            "climb_descent_indicator": "climbing"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q04",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is slightly nose-down, opposite bank, heading south, and descending.",
+        "B": "The aircraft is slightly nose-down, level wings, heading south, and descending.",
+        "C": "The aircraft is slightly nose-down, level wings, heading west, and descending.",
+        "D": "The aircraft is level pitch, level wings, heading south, and descending."
+      },
+      "answer": "B",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "slightly nose-down",
+              "bank": "level wings"
+            }
+          },
+          {
+            "heading_indicator": "south"
+          },
+          {
+            "climb_descent_indicator": "descending"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q05",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is level pitch, level wings, heading southwest, and level.",
+        "B": "The aircraft is slightly nose-down, level wings, heading southwest, and level.",
+        "C": "The aircraft is slightly nose-down, opposite bank, heading southwest, and level.",
+        "D": "The aircraft is slightly nose-down, level wings, heading northwest, and level."
+      },
+      "answer": "B",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "slightly nose-down",
+              "bank": "level wings"
+            }
+          },
+          {
+            "heading_indicator": "southwest"
+          },
+          {
+            "climb_descent_indicator": "level"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q06",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is nose-down, shallow right bank, heading west, and climbing.",
+        "B": "The aircraft is level pitch, level wings, heading west, and climbing.",
+        "C": "The aircraft is nose-down, opposite bank, heading west, and climbing.",
+        "D": "The aircraft is nose-down, shallow right bank, heading north, and climbing."
+      },
+      "answer": "A",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "nose-down",
+              "bank": "shallow right bank"
+            }
+          },
+          {
+            "heading_indicator": "west"
+          },
+          {
+            "climb_descent_indicator": "climbing"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q07",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is level pitch, level wings, heading northwest, and descending.",
+        "B": "The aircraft is nose-down, shallow right bank, heading northeast, and descending.",
+        "C": "The aircraft is nose-down, opposite bank, heading northwest, and descending.",
+        "D": "The aircraft is nose-down, shallow right bank, heading northwest, and descending."
+      },
+      "answer": "D",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "nose-down",
+              "bank": "shallow right bank"
+            }
+          },
+          {
+            "heading_indicator": "northwest"
+          },
+          {
+            "climb_descent_indicator": "descending"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q08",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is level pitch, level wings, heading north, and level.",
+        "B": "The aircraft is slightly nose-up, shallow right bank, heading north, and level.",
+        "C": "The aircraft is slightly nose-up, opposite bank, heading north, and level.",
+        "D": "The aircraft is slightly nose-up, shallow right bank, heading east, and level."
+      },
+      "answer": "B",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "slightly nose-up",
+              "bank": "shallow right bank"
+            }
+          },
+          {
+            "heading_indicator": "north"
+          },
+          {
+            "climb_descent_indicator": "level"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q09",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is slightly nose-up, opposite bank, heading northeast, and climbing.",
+        "B": "The aircraft is level pitch, level wings, heading northeast, and climbing.",
+        "C": "The aircraft is slightly nose-up, steep right bank, heading northeast, and climbing.",
+        "D": "The aircraft is slightly nose-up, steep right bank, heading southeast, and climbing."
+      },
+      "answer": "C",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "slightly nose-up",
+              "bank": "steep right bank"
+            }
+          },
+          {
+            "heading_indicator": "northeast"
+          },
+          {
+            "climb_descent_indicator": "climbing"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q10",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is level, steep right bank, heading south, and descending.",
+        "B": "The aircraft is level pitch, level wings, heading east, and descending.",
+        "C": "The aircraft is level, steep right bank, heading east, and descending.",
+        "D": "The aircraft is level, opposite bank, heading east, and descending."
+      },
+      "answer": "C",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "level",
+              "bank": "steep right bank"
+            }
+          },
+          {
+            "heading_indicator": "east"
+          },
+          {
+            "climb_descent_indicator": "descending"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q11",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is level, opposite bank, heading southeast, and level.",
+        "B": "The aircraft is level, steep right bank, heading southeast, and level.",
+        "C": "The aircraft is level pitch, level wings, heading southeast, and level.",
+        "D": "The aircraft is level, steep right bank, heading southwest, and level."
+      },
+      "answer": "B",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "level",
+              "bank": "steep right bank"
+            }
+          },
+          {
+            "heading_indicator": "southeast"
+          },
+          {
+            "climb_descent_indicator": "level"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q12",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is slightly nose-down, shallow left bank, heading west, and climbing.",
+        "B": "The aircraft is slightly nose-down, opposite bank, heading south, and climbing.",
+        "C": "The aircraft is slightly nose-down, shallow left bank, heading south, and climbing.",
+        "D": "The aircraft is level pitch, level wings, heading south, and climbing."
+      },
+      "answer": "C",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "slightly nose-down",
+              "bank": "shallow left bank"
+            }
+          },
+          {
+            "heading_indicator": "south"
+          },
+          {
+            "climb_descent_indicator": "climbing"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q13",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is slightly nose-down, opposite bank, heading southwest, and descending.",
+        "B": "The aircraft is level pitch, level wings, heading southwest, and descending.",
+        "C": "The aircraft is slightly nose-down, shallow left bank, heading northwest, and descending.",
+        "D": "The aircraft is slightly nose-down, shallow left bank, heading southwest, and descending."
+      },
+      "answer": "D",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "slightly nose-down",
+              "bank": "shallow left bank"
+            }
+          },
+          {
+            "heading_indicator": "southwest"
+          },
+          {
+            "climb_descent_indicator": "descending"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q14",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is nose-down, shallow left bank, heading west, and level.",
+        "B": "The aircraft is nose-down, shallow left bank, heading north, and level.",
+        "C": "The aircraft is nose-down, opposite bank, heading west, and level.",
+        "D": "The aircraft is level pitch, level wings, heading west, and level."
+      },
+      "answer": "A",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "nose-down",
+              "bank": "shallow left bank"
+            }
+          },
+          {
+            "heading_indicator": "west"
+          },
+          {
+            "climb_descent_indicator": "level"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q15",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is level pitch, level wings, heading northwest, and climbing.",
+        "B": "The aircraft is nose-down, level wings, heading northeast, and climbing.",
+        "C": "The aircraft is nose-down, level wings, heading northwest, and climbing.",
+        "D": "The aircraft is nose-down, opposite bank, heading northwest, and climbing."
+      },
+      "answer": "C",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "nose-down",
+              "bank": "level wings"
+            }
+          },
+          {
+            "heading_indicator": "northwest"
+          },
+          {
+            "climb_descent_indicator": "climbing"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q16",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is level pitch, level wings, heading north, and descending.",
+        "B": "The aircraft is slightly nose-up, opposite bank, heading north, and descending.",
+        "C": "The aircraft is slightly nose-up, level wings, heading east, and descending.",
+        "D": "The aircraft is slightly nose-up, level wings, heading north, and descending."
+      },
+      "answer": "D",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "slightly nose-up",
+              "bank": "level wings"
+            }
+          },
+          {
+            "heading_indicator": "north"
+          },
+          {
+            "climb_descent_indicator": "descending"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q17",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is slightly nose-up, opposite bank, heading northeast, and level.",
+        "B": "The aircraft is slightly nose-up, level wings, heading northeast, and level.",
+        "C": "The aircraft is slightly nose-up, level wings, heading southeast, and level.",
+        "D": "The aircraft is level pitch, level wings, heading northeast, and level."
+      },
+      "answer": "B",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "slightly nose-up",
+              "bank": "level wings"
+            }
+          },
+          {
+            "heading_indicator": "northeast"
+          },
+          {
+            "climb_descent_indicator": "level"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q18",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is level, opposite bank, heading east, and climbing.",
+        "B": "The aircraft is level, shallow right bank, heading south, and climbing.",
+        "C": "The aircraft is level, shallow right bank, heading east, and climbing.",
+        "D": "The aircraft is level pitch, level wings, heading east, and climbing."
+      },
+      "answer": "C",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "level",
+              "bank": "shallow right bank"
+            }
+          },
+          {
+            "heading_indicator": "east"
+          },
+          {
+            "climb_descent_indicator": "climbing"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q19",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is level, opposite bank, heading southeast, and descending.",
+        "B": "The aircraft is level, shallow right bank, heading southeast, and descending.",
+        "C": "The aircraft is level, shallow right bank, heading southwest, and descending.",
+        "D": "The aircraft is level pitch, level wings, heading southeast, and descending."
+      },
+      "answer": "B",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "level",
+              "bank": "shallow right bank"
+            }
+          },
+          {
+            "heading_indicator": "southeast"
+          },
+          {
+            "climb_descent_indicator": "descending"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q20",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is slightly nose-down, shallow right bank, heading south, and level.",
+        "B": "The aircraft is slightly nose-down, shallow right bank, heading west, and level.",
+        "C": "The aircraft is level pitch, level wings, heading south, and level.",
+        "D": "The aircraft is slightly nose-down, opposite bank, heading south, and level."
+      },
+      "answer": "A",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "slightly nose-down",
+              "bank": "shallow right bank"
+            }
+          },
+          {
+            "heading_indicator": "south"
+          },
+          {
+            "climb_descent_indicator": "level"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q21",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is slightly nose-down, opposite bank, heading southwest, and climbing.",
+        "B": "The aircraft is slightly nose-down, steep right bank, heading northwest, and climbing.",
+        "C": "The aircraft is slightly nose-down, steep right bank, heading southwest, and climbing.",
+        "D": "The aircraft is level pitch, level wings, heading southwest, and climbing."
+      },
+      "answer": "C",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "slightly nose-down",
+              "bank": "steep right bank"
+            }
+          },
+          {
+            "heading_indicator": "southwest"
+          },
+          {
+            "climb_descent_indicator": "climbing"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q22",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is nose-down, steep right bank, heading west, and descending.",
+        "B": "The aircraft is level pitch, level wings, heading west, and descending.",
+        "C": "The aircraft is nose-down, opposite bank, heading west, and descending.",
+        "D": "The aircraft is nose-down, steep right bank, heading north, and descending."
+      },
+      "answer": "A",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "nose-down",
+              "bank": "steep right bank"
+            }
+          },
+          {
+            "heading_indicator": "west"
+          },
+          {
+            "climb_descent_indicator": "descending"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q23",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is nose-down, steep right bank, heading northeast, and level.",
+        "B": "The aircraft is nose-down, steep right bank, heading northwest, and level.",
+        "C": "The aircraft is nose-down, opposite bank, heading northwest, and level.",
+        "D": "The aircraft is level pitch, level wings, heading northwest, and level."
+      },
+      "answer": "B",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "nose-down",
+              "bank": "steep right bank"
+            }
+          },
+          {
+            "heading_indicator": "northwest"
+          },
+          {
+            "climb_descent_indicator": "level"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q24",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is slightly nose-up, opposite bank, heading north, and climbing.",
+        "B": "The aircraft is slightly nose-up, shallow left bank, heading east, and climbing.",
+        "C": "The aircraft is level pitch, level wings, heading north, and climbing.",
+        "D": "The aircraft is slightly nose-up, shallow left bank, heading north, and climbing."
+      },
+      "answer": "D",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "slightly nose-up",
+              "bank": "shallow left bank"
+            }
+          },
+          {
+            "heading_indicator": "north"
+          },
+          {
+            "climb_descent_indicator": "climbing"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    },
+    {
+      "id": "ic_b_set03_q25",
+      "question": "Which option best describes the aircraft state shown by the instruments?",
+      "choices": {
+        "A": "The aircraft is level pitch, level wings, heading northeast, and descending.",
+        "B": "The aircraft is slightly nose-up, opposite bank, heading northeast, and descending.",
+        "C": "The aircraft is slightly nose-up, shallow left bank, heading southeast, and descending.",
+        "D": "The aircraft is slightly nose-up, shallow left bank, heading northeast, and descending."
+      },
+      "answer": "D",
+      "explanation": "Read attitude first (pitch/bank), then heading, then vertical speed to match the combined description.",
+      "steps": [
+        "Check attitude indicator for pitch and bank.",
+        "Read heading indicator for cardinal direction.",
+        "Confirm climb/descent from vertical speed."
+      ],
+      "fastStrategy": "Attitude \u2192 heading \u2192 vertical speed. Prioritize attitude to eliminate options quickly.",
+      "uiSpec": {
+        "type": "instrument_panel",
+        "instruments": [
+          {
+            "attitude_indicator": {
+              "pitch": "slightly nose-up",
+              "bank": "shallow left bank"
+            }
+          },
+          {
+            "heading_indicator": "northeast"
+          },
+          {
+            "climb_descent_indicator": "descending"
+          }
+        ],
+        "renderHints": "Simple round dials; bank tick marks; heading tape; VSI arrow up/down/level."
+      }
+    }
+  ]
+}

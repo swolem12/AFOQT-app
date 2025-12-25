@@ -1,0 +1,457 @@
+{
+  "subjectId": "aviation_information",
+  "difficulty": "expert",
+  "part": 3,
+  "questions": [
+    {
+      "id": "ai_e_001",
+      "question": "Which statement best reflects edge-case operational consideration about aircraft controls and axes?",
+      "choices": {
+        "A": "aileron input causes roll around the longitudinal axis",
+        "B": "Ailerons change yaw by altering vertical lift on the tail",
+        "C": "Increasing bank angle always reduces load factor",
+        "D": "Transponder mode C turns off altitude reporting by default"
+      },
+      "answer": "A",
+      "explanation": "aileron input causes roll around the longitudinal axis. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_002",
+      "question": "Which statement best reflects edge-case operational consideration about aircraft components and systems?",
+      "choices": {
+        "A": "pitot-static errors affect indicated airspeed",
+        "B": "Increasing bank angle always reduces load factor",
+        "C": "Transponder mode C turns off altitude reporting by default",
+        "D": "Gyroscopic instruments never experience precession"
+      },
+      "answer": "A",
+      "explanation": "pitot-static errors affect indicated airspeed. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_003",
+      "question": "Which statement best reflects edge-case operational consideration about basic navigation concepts?",
+      "choices": {
+        "A": "VOR radials reference magnetic north",
+        "B": "Transponder mode C turns off altitude reporting by default",
+        "C": "Gyroscopic instruments never experience precession",
+        "D": "Increasing bank angle always reduces load factor"
+      },
+      "answer": "A",
+      "explanation": "VOR radials reference magnetic north. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_004",
+      "question": "Which statement best reflects edge-case operational consideration about helicopter basics?",
+      "choices": {
+        "A": "translational lift reduces induced drag during forward flight",
+        "B": "Gyroscopic instruments never experience precession",
+        "C": "Ailerons change yaw by altering vertical lift on the tail",
+        "D": "Increasing bank angle always reduces load factor"
+      },
+      "answer": "A",
+      "explanation": "translational lift reduces induced drag during forward flight. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_005",
+      "question": "Which statement best reflects edge-case operational consideration about flight instruments concepts?",
+      "choices": {
+        "A": "attitude indicator shows pitch and bank relative to horizon",
+        "B": "Rudder primarily controls pitch in coordinated flight",
+        "C": "Ailerons change yaw by altering vertical lift on the tail",
+        "D": "Increasing bank angle always reduces load factor"
+      },
+      "answer": "A",
+      "explanation": "attitude indicator shows pitch and bank relative to horizon. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_006",
+      "question": "Which statement best reflects edge-case operational consideration about flight operations and procedures?",
+      "choices": {
+        "A": "stabilized approach minimizes large power changes on final",
+        "B": "Ailerons change yaw by altering vertical lift on the tail",
+        "C": "Increasing bank angle always reduces load factor",
+        "D": "Transponder mode C turns off altitude reporting by default"
+      },
+      "answer": "A",
+      "explanation": "stabilized approach minimizes large power changes on final. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_007",
+      "question": "Which statement best reflects edge-case operational consideration about basic aerodynamics?",
+      "choices": {
+        "A": "lift increases with airspeed and angle of attack until stall",
+        "B": "Increasing bank angle always reduces load factor",
+        "C": "Transponder mode C turns off altitude reporting by default",
+        "D": "Gyroscopic instruments never experience precession"
+      },
+      "answer": "A",
+      "explanation": "lift increases with airspeed and angle of attack until stall. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_008",
+      "question": "Which statement best reflects edge-case operational consideration about aircraft controls and axes?",
+      "choices": {
+        "A": "aileron input causes roll around the longitudinal axis",
+        "B": "Transponder mode C turns off altitude reporting by default",
+        "C": "Gyroscopic instruments never experience precession",
+        "D": "Increasing bank angle always reduces load factor"
+      },
+      "answer": "A",
+      "explanation": "aileron input causes roll around the longitudinal axis. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_009",
+      "question": "Which statement best reflects edge-case operational consideration about aircraft components and systems?",
+      "choices": {
+        "A": "pitot-static errors affect indicated airspeed",
+        "B": "Gyroscopic instruments never experience precession",
+        "C": "Ailerons change yaw by altering vertical lift on the tail",
+        "D": "Increasing bank angle always reduces load factor"
+      },
+      "answer": "A",
+      "explanation": "pitot-static errors affect indicated airspeed. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_010",
+      "question": "Which statement best reflects edge-case operational consideration about basic navigation concepts?",
+      "choices": {
+        "A": "VOR radials reference magnetic north",
+        "B": "Rudder primarily controls pitch in coordinated flight",
+        "C": "Ailerons change yaw by altering vertical lift on the tail",
+        "D": "Increasing bank angle always reduces load factor"
+      },
+      "answer": "A",
+      "explanation": "VOR radials reference magnetic north. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_011",
+      "question": "Which statement best reflects edge-case operational consideration about helicopter basics?",
+      "choices": {
+        "A": "translational lift reduces induced drag during forward flight",
+        "B": "Ailerons change yaw by altering vertical lift on the tail",
+        "C": "Increasing bank angle always reduces load factor",
+        "D": "Transponder mode C turns off altitude reporting by default"
+      },
+      "answer": "A",
+      "explanation": "translational lift reduces induced drag during forward flight. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_012",
+      "question": "Which statement best reflects edge-case operational consideration about flight instruments concepts?",
+      "choices": {
+        "A": "attitude indicator shows pitch and bank relative to horizon",
+        "B": "Increasing bank angle always reduces load factor",
+        "C": "Transponder mode C turns off altitude reporting by default",
+        "D": "Gyroscopic instruments never experience precession"
+      },
+      "answer": "A",
+      "explanation": "attitude indicator shows pitch and bank relative to horizon. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_013",
+      "question": "Which statement best reflects edge-case operational consideration about flight operations and procedures?",
+      "choices": {
+        "A": "stabilized approach minimizes large power changes on final",
+        "B": "Transponder mode C turns off altitude reporting by default",
+        "C": "Gyroscopic instruments never experience precession",
+        "D": "Increasing bank angle always reduces load factor"
+      },
+      "answer": "A",
+      "explanation": "stabilized approach minimizes large power changes on final. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_014",
+      "question": "Which statement best reflects edge-case operational consideration about basic aerodynamics?",
+      "choices": {
+        "A": "lift increases with airspeed and angle of attack until stall",
+        "B": "Gyroscopic instruments never experience precession",
+        "C": "Ailerons change yaw by altering vertical lift on the tail",
+        "D": "Increasing bank angle always reduces load factor"
+      },
+      "answer": "A",
+      "explanation": "lift increases with airspeed and angle of attack until stall. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_015",
+      "question": "Which statement best reflects edge-case operational consideration about aircraft controls and axes?",
+      "choices": {
+        "A": "aileron input causes roll around the longitudinal axis",
+        "B": "Rudder primarily controls pitch in coordinated flight",
+        "C": "Ailerons change yaw by altering vertical lift on the tail",
+        "D": "Increasing bank angle always reduces load factor"
+      },
+      "answer": "A",
+      "explanation": "aileron input causes roll around the longitudinal axis. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_016",
+      "question": "Which statement best reflects edge-case operational consideration about aircraft components and systems?",
+      "choices": {
+        "A": "pitot-static errors affect indicated airspeed",
+        "B": "Ailerons change yaw by altering vertical lift on the tail",
+        "C": "Increasing bank angle always reduces load factor",
+        "D": "Transponder mode C turns off altitude reporting by default"
+      },
+      "answer": "A",
+      "explanation": "pitot-static errors affect indicated airspeed. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_017",
+      "question": "Which statement best reflects edge-case operational consideration about basic navigation concepts?",
+      "choices": {
+        "A": "VOR radials reference magnetic north",
+        "B": "Increasing bank angle always reduces load factor",
+        "C": "Transponder mode C turns off altitude reporting by default",
+        "D": "Gyroscopic instruments never experience precession"
+      },
+      "answer": "A",
+      "explanation": "VOR radials reference magnetic north. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_018",
+      "question": "Which statement best reflects edge-case operational consideration about helicopter basics?",
+      "choices": {
+        "A": "translational lift reduces induced drag during forward flight",
+        "B": "Transponder mode C turns off altitude reporting by default",
+        "C": "Gyroscopic instruments never experience precession",
+        "D": "Increasing bank angle always reduces load factor"
+      },
+      "answer": "A",
+      "explanation": "translational lift reduces induced drag during forward flight. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_019",
+      "question": "Which statement best reflects edge-case operational consideration about flight instruments concepts?",
+      "choices": {
+        "A": "attitude indicator shows pitch and bank relative to horizon",
+        "B": "Gyroscopic instruments never experience precession",
+        "C": "Ailerons change yaw by altering vertical lift on the tail",
+        "D": "Increasing bank angle always reduces load factor"
+      },
+      "answer": "A",
+      "explanation": "attitude indicator shows pitch and bank relative to horizon. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_020",
+      "question": "Which statement best reflects edge-case operational consideration about flight operations and procedures?",
+      "choices": {
+        "A": "stabilized approach minimizes large power changes on final",
+        "B": "Rudder primarily controls pitch in coordinated flight",
+        "C": "Ailerons change yaw by altering vertical lift on the tail",
+        "D": "Increasing bank angle always reduces load factor"
+      },
+      "answer": "A",
+      "explanation": "stabilized approach minimizes large power changes on final. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_021",
+      "question": "Which statement best reflects edge-case operational consideration about basic aerodynamics?",
+      "choices": {
+        "A": "lift increases with airspeed and angle of attack until stall",
+        "B": "Ailerons change yaw by altering vertical lift on the tail",
+        "C": "Increasing bank angle always reduces load factor",
+        "D": "Transponder mode C turns off altitude reporting by default"
+      },
+      "answer": "A",
+      "explanation": "lift increases with airspeed and angle of attack until stall. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_022",
+      "question": "Which statement best reflects edge-case operational consideration about aircraft controls and axes?",
+      "choices": {
+        "A": "aileron input causes roll around the longitudinal axis",
+        "B": "Increasing bank angle always reduces load factor",
+        "C": "Transponder mode C turns off altitude reporting by default",
+        "D": "Gyroscopic instruments never experience precession"
+      },
+      "answer": "A",
+      "explanation": "aileron input causes roll around the longitudinal axis. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_023",
+      "question": "Which statement best reflects edge-case operational consideration about aircraft components and systems?",
+      "choices": {
+        "A": "pitot-static errors affect indicated airspeed",
+        "B": "Transponder mode C turns off altitude reporting by default",
+        "C": "Gyroscopic instruments never experience precession",
+        "D": "Increasing bank angle always reduces load factor"
+      },
+      "answer": "A",
+      "explanation": "pitot-static errors affect indicated airspeed. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_024",
+      "question": "Which statement best reflects edge-case operational consideration about basic navigation concepts?",
+      "choices": {
+        "A": "VOR radials reference magnetic north",
+        "B": "Gyroscopic instruments never experience precession",
+        "C": "Ailerons change yaw by altering vertical lift on the tail",
+        "D": "Increasing bank angle always reduces load factor"
+      },
+      "answer": "A",
+      "explanation": "VOR radials reference magnetic north. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    },
+    {
+      "id": "ai_e_025",
+      "question": "Which statement best reflects edge-case operational consideration about helicopter basics?",
+      "choices": {
+        "A": "translational lift reduces induced drag during forward flight",
+        "B": "Rudder primarily controls pitch in coordinated flight",
+        "C": "Ailerons change yaw by altering vertical lift on the tail",
+        "D": "Increasing bank angle always reduces load factor"
+      },
+      "answer": "A",
+      "explanation": "translational lift reduces induced drag during forward flight. Other options misstate control effects or avionics behavior.",
+      "steps": [
+        "Identify the control or system referenced.",
+        "Recall the standard aerodynamic or systems effect.",
+        "Eliminate statements that conflict with fundamentals."
+      ],
+      "fastStrategy": "Match the option to core aerodynamic or systems doctrine; discard claims that invert control effects."
+    }
+  ]
+}

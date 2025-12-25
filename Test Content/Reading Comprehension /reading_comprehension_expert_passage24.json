@@ -1,0 +1,103 @@
+{
+  "subjectId": "reading_comprehension",
+  "difficulty": "expert",
+  "passageId": "rc_e_p024",
+  "passage": "Passage 24 for expert explores how organizations balance reliability, speed, and cost when adopting new tools. It highlights iterative testing, feedback from operators, and the importance of redundancy in critical systems. Leaders weigh schedule risk against training demands, noting that early wins build confidence. This passage describes a neutral analysis of technology adoption, logistics planning, and the tradeoffs leaders make under constraints. Advanced readers should track subtle cause-and-effect links. Expert items weave tone and implied assumptions about evidence quality.",
+  "questions": [
+    {
+      "id": "rc_e_p024_q1",
+      "question": "What is the main idea of the passage?",
+      "choices": {
+        "A": "Because redundancy always doubles total cost.",
+        "B": "To claim speed is the only metric leaders value.",
+        "C": "The passage explains how organizations balance speed, reliability, and cost when adopting new tools.",
+        "D": "To suggest training can be skipped if tools are intuitive."
+      },
+      "answer": "C",
+      "explanation": "The passage explains how organizations balance speed, reliability, and cost when adopting new tools.",
+      "keywordFocus": "main_idea",
+      "reasoningSteps": [
+        "Identify the sentence(s) addressing the focus of the question.",
+        "Paraphrase the relevant detail in your own words.",
+        "Eliminate options that add claims not supported by the passage."
+      ],
+      "fastStrategy": "Skim back to the sentence that mentions the keyword; prefer the option that restates it without distortion."
+    },
+    {
+      "id": "rc_e_p024_q2",
+      "question": "According to the passage, why are early wins important?",
+      "choices": {
+        "A": "They build confidence among stakeholders and operators.",
+        "B": "Because redundancy always doubles total cost.",
+        "C": "Because operators resist any change regardless of support.",
+        "D": "To claim speed is the only metric leaders value."
+      },
+      "answer": "A",
+      "explanation": "They build confidence among stakeholders and operators.",
+      "keywordFocus": "detail",
+      "reasoningSteps": [
+        "Identify the sentence(s) addressing the focus of the question.",
+        "Paraphrase the relevant detail in your own words.",
+        "Eliminate options that add claims not supported by the passage."
+      ],
+      "fastStrategy": "Skim back to the sentence that mentions the keyword; prefer the option that restates it without distortion."
+    },
+    {
+      "id": "rc_e_p024_q3",
+      "question": "What can be inferred about training demands?",
+      "choices": {
+        "A": "They can slow schedules if not planned alongside testing.",
+        "B": "To claim speed is the only metric leaders value.",
+        "C": "Because operators resist any change regardless of support.",
+        "D": "To claim speed is the only metric leaders value."
+      },
+      "answer": "A",
+      "explanation": "They can slow schedules if not planned alongside testing.",
+      "keywordFocus": "inference",
+      "reasoningSteps": [
+        "Identify the sentence(s) addressing the focus of the question.",
+        "Paraphrase the relevant detail in your own words.",
+        "Eliminate options that add claims not supported by the passage."
+      ],
+      "fastStrategy": "Skim back to the sentence that mentions the keyword; prefer the option that restates it without distortion."
+    },
+    {
+      "id": "rc_e_p024_q4",
+      "question": "In the passage, what does 'redundancy' most nearly mean?",
+      "choices": {
+        "A": "To claim speed is the only metric leaders value.",
+        "B": "Having backups to maintain operations if one element fails.",
+        "C": "Because redundancy always doubles total cost.",
+        "D": "Because operators resist any change regardless of support."
+      },
+      "answer": "B",
+      "explanation": "Having backups to maintain operations if one element fails.",
+      "keywordFocus": "vocabulary",
+      "reasoningSteps": [
+        "Identify the sentence(s) addressing the focus of the question.",
+        "Paraphrase the relevant detail in your own words.",
+        "Eliminate options that add claims not supported by the passage."
+      ],
+      "fastStrategy": "Skim back to the sentence that mentions the keyword; prefer the option that restates it without distortion."
+    },
+    {
+      "id": "rc_e_p024_q5",
+      "question": "Why does the author mention feedback from operators?",
+      "choices": {
+        "A": "To suggest training can be skipped if tools are intuitive.",
+        "B": "Because redundancy always doubles total cost.",
+        "C": "To show practical insight improves adoption success.",
+        "D": "To claim speed is the only metric leaders value."
+      },
+      "answer": "C",
+      "explanation": "To show practical insight improves adoption success.",
+      "keywordFocus": "purpose",
+      "reasoningSteps": [
+        "Identify the sentence(s) addressing the focus of the question.",
+        "Paraphrase the relevant detail in your own words.",
+        "Eliminate options that add claims not supported by the passage."
+      ],
+      "fastStrategy": "Skim back to the sentence that mentions the keyword; prefer the option that restates it without distortion."
+    }
+  ]
+}

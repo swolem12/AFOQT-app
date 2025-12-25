@@ -1,0 +1,67 @@
+{
+  "patchId": "patch_25",
+  "title": "Patch 25 - Massive Question Bank Expansion",
+  "description": "Adds ~10,132 curated questions across core AFOQT subjects, normalizes part files to ~25 questions each, and documents the redistribution/admin review workflow.",
+  "subjectsIncluded": [
+    "vocabulary",
+    "verbal_analogies",
+    "math_knowledge",
+    "arithmetic_reasoning",
+    "physical_science",
+    "reading_comprehension",
+    "table_reading",
+    "aviation_information",
+    "block_counting",
+    "instrument_comprehension"
+  ],
+  "questionCounts": {
+    "vocabulary": {"beginner": 654, "advanced": 654, "expert": 654, "total": 1962},
+    "math_knowledge": {"beginner": 2212, "advanced": 1973, "expert": 946, "total": 5131},
+    "arithmetic_reasoning": {"beginner": 600, "advanced": 600, "expert": 566, "total": 1766},
+    "physical_science": {"beginner": 350, "advanced": 353, "expert": 70, "total": 773},
+    "reading_comprehension": {"beginner": 100, "advanced": 102, "expert": 103, "total": 305},
+    "table_reading": {"beginner": 50, "advanced": 30, "expert": 27, "total": 107},
+    "aviation_information": {"beginner": 3, "advanced": 5, "expert": 7, "total": 15},
+    "block_counting": {"beginner": 50, "advanced": 3, "expert": 1, "total": 54},
+    "instrument_comprehension": {"beginner": 10, "advanced": 7, "expert": 2, "total": 19},
+    "grandTotal": 10132
+  },
+  "contentRules": {
+    "filenamePattern": "<subtopicId>_<difficulty>_part<index>.json",
+    "partSizing": "Target ~25 questions per part file (occasionally up to 27 for completeness).",
+    "overflowHandling": "When a part exceeds the target size, split into sequential part<N> files while preserving subtopicId and difficulty.",
+    "aggregation": "All parts for the same (subtopicId, difficulty) are combined into a single in-memory pool during load.",
+    "registry": "questions[subjectId][subtopicId][difficulty] = Question[]"
+  },
+  "redistributionNotes": {
+    "reason": "Original part1 files contained 50-77 questions; they were split to improve load time, memory use, and maintain consistency with Patch 18 expectations.",
+    "scope": "Vocabulary, Math Knowledge, and Arithmetic Reasoning files were normalized to ~25-per-part with additional part files created as needed.",
+    "fileIntegrity": "No questions were altered; only file boundaries changed."
+  },
+  "adminReview": {
+    "page": "tests/test-admin-all-questions.html",
+    "usage": "Loads patch-loader only, lets reviewers filter by subject/subtopic/difficulty, and highlights correct answers and explanations without booting app.js.",
+    "search": "Supports text search across prompt and explanations for spot checks."
+  },
+  "practiceTestGuidance": {
+    "studyMode": "Immediate feedback after each question (legacy behavior).",
+    "practiceTestMode": "Hide feedback until completion, then show summary with overall score, breakdown by subject/subtopic/difficulty, missed items, and explanations at the end.",
+    "distribution": "Use subject-specific difficulty distributions when constructing AFOQT practice tests; pool selection now benefits from the expanded part files."
+  },
+  "fileLocations": {
+    "vocabulary": "Test Content/Vocabulary/",
+    "math_knowledge": "Test Content/Math/",
+    "arithmetic_reasoning": "Test Content/Arithmetic/",
+    "physical_science": "Test Content/Physical Science/",
+    "reading_comprehension": "Test Content/Reading Comprehension /",
+    "table_reading": "Test Content/Table Reading/",
+    "aviation_information": "Test Content/Aviation/",
+    "block_counting": "Test Content/Block Counting/",
+    "instrument_comprehension": "Test Content/Instrument Comprehension/"
+  },
+  "validation": {
+    "schema": "Each file uses {subtopicId, difficulty, part, questions[]} with questions containing id/question/choices/answer/explanation.",
+    "choices": "choices must include keys A, B, C, D; answer matches one of the choice keys.",
+    "explanations": "Every question must include an explanation field; practiceTestMode hides until the summary screen."
+  }
+}
