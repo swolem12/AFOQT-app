@@ -7883,75 +7883,8 @@ function renderMathUI(uiSpec) {
 }
 
 // Render table reading tables with optional cell highlighting
-function renderTableReading(question, { highlight = false } = {}) {
-    // Support both tableSpec (new format) and tableData (legacy format)
-    let xHeader = [];
-    let yHeader = [];
-    let values = [];
-    let lookup = question.lookup;
-    
-    if (question.tableSpec) {
-        // New format with tableSpec
-        const spec = question.tableSpec;
-        xHeader = spec.xHeader || [];
-        yHeader = spec.yHeader || [];
-        values = spec.cellValues || [];
-    } else if (question.tableData) {
-        // Legacy format with tableData
-        const tableData = question.tableData;
-        xHeader = tableData.headers || [];
-        values = tableData.rows || [];
-        // For tableData, first column is Y header (row labels)
-        yHeader = values.map(row => row[0] || '');
-        // Cell values are remaining columns (excluding first column)
-        values = values.map(row => row.slice(1));
-    }
-
-    let highlightX = -1;
-    let highlightY = -1;
-    if (highlight && lookup && lookup.x !== undefined && lookup.y !== undefined) {
-        highlightX = xHeader.indexOf(lookup.x);
-        highlightY = yHeader.indexOf(lookup.y);
-    }
-
-    const headerRow = ['<th class="tr-corner"></th>', ...xHeader.map(x => `<th class="tr-header tr-x">${x}</th>`)];
-
-    const bodyRows = yHeader.map((yVal, yIdx) => {
-        const rowCells = values[yIdx] || [];
-        const cells = rowCells.map((cell, xIdx) => {
-            const isTarget = highlightX === xIdx && highlightY === yIdx;
-            const cls = isTarget ? 'tr-cell tr-target' : 'tr-cell';
-            return `<td class="${cls}">${cell}</td>`;
-        });
-        return `
-            <tr>
-                <th class="tr-header tr-y">${yVal}</th>
-                ${cells.join('')}
-            </tr>
-        `;
-    });
-
-    return `
-        <div class="table-reading-card">
-            <div class="tr-labels">
-                <span class="tr-label">Row (Y)</span>
-                <span class="tr-label">Column (X)</span>
-            </div>
-            <div class="table-reading-grid-wrapper">
-                <table class="table-reading-grid" role="grid">
-                    <thead>
-                        <tr>${headerRow.join('')}</tr>
-                    </thead>
-                    <tbody>
-                        ${bodyRows.join('')}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    `;
-}
-
-// Reading Comprehension renderers (Patch 20)
+/**
+ * Reading Comprehension renderers (Patch 20)
 function renderRCPassageBlock(uiSpec) {
     if (!uiSpec || !uiSpec.passage) return '';
     return `
@@ -9147,8 +9080,6 @@ function renderQuiz() {
             <div class="question-prompt">
                 ${currentQuestion.prompt}
             </div>
-
-            ${currentQuestion.tableSpec ? renderTableReading(currentQuestion, { highlight: answered && showFeedback }) : ''}
             
             <div class="options-grid">
                 ${currentQuestion.options.map((option, idx) => {
@@ -9451,7 +9382,7 @@ function renderResults() {
                                     <div class="review-time">⏱ ${formatTime(answer.timeSpent)}s</div>
                                 </div>
                                 <div class="review-prompt">${question.prompt}</div>
-                                ${question.tableSpec ? renderTableReading(question, { highlight: true }) : ''}
+                                ${question.uiSpec ? renderMathUI(question.uiSpec) : ''}
                                 <div class="review-explanation" style="margin-top: 10px;">
                                     <strong>Correct:</strong> ${correctLabel}. ${correctAnswerText}
                                 </div>
