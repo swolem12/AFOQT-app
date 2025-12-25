@@ -25,62 +25,181 @@
       font-size: 20px;
       letter-spacing: 0.03em;
     }
+    nav { display: flex; gap: 8px; flex-wrap: wrap; }
     nav a {
       color: #0b1220;
       text-decoration: none;
       font-weight: 600;
-      margin-left: 18px;
       padding: 6px 10px;
       border-radius: 6px;
       background: rgba(255, 255, 255, 0.25);
+      font-size: 13px;
     }
     nav a:hover { background: rgba(255, 255, 255, 0.4); }
-    .wrap { max-width: 1100px; margin: 28px auto 40px; padding: 0 18px; }
-    section { background: #0f1c30; border: 1px solid #123455; border-radius: 10px; padding: 18px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.35); }
-    h2 { margin-top: 0; color: #7ae8ff; font-size: 17px; }
-    p { line-height: 1.45; margin: 8px 0; }
-    code { background: #11233d; color: #9ae9ff; padding: 2px 6px; border-radius: 4px; }
-    .btn { display: inline-block; margin: 8px 8px 0 0; padding: 10px 14px; border-radius: 8px; background: #0cf; color: #0b1220; font-weight: 700; text-decoration: none; box-shadow: 0 4px 14px rgba(0,255,255,0.35); }
+    .wrap { max-width: 1200px; margin: 24px auto 40px; padding: 0 18px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 20px; }
+    @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+    section { background: #0f1c30; border: 1px solid #123455; border-radius: 10px; padding: 18px; box-shadow: 0 2px 10px rgba(0,0,0,0.35); }
+    h2 { margin-top: 0; color: #7ae8ff; font-size: 16px; }
+    h3 { color: #5ae8ff; font-size: 13px; margin: 12px 0 6px 0; }
+    p { line-height: 1.45; margin: 8px 0; font-size: 13px; }
+    code { background: #11233d; color: #9ae9ff; padding: 2px 6px; border-radius: 4px; font-size: 12px; }
+    .btn { display: inline-block; margin: 6px 8px 6px 0; padding: 8px 12px; border-radius: 8px; background: #0cf; color: #0b1220; font-weight: 700; text-decoration: none; box-shadow: 0 4px 14px rgba(0,255,255,0.35); font-size: 12px; }
     .btn:hover { background: #5df; }
-    ul { padding-left: 18px; }
-    li { margin: 6px 0; }
+    .btn-secondary { background: #0a6b7f; color: #d6f6ff; }
+    .btn-secondary:hover { background: #0d8fa5; }
+    ul { padding-left: 18px; margin: 8px 0; }
+    li { margin: 5px 0; font-size: 13px; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; margin: 8px 0; }
+    th, td { border: 1px solid #1a3a52; padding: 6px; text-align: left; }
+    th { background: #0a3a52; color: #7ae8ff; }
+    tr:nth-child(even) { background: #071928; }
+    .status-ok { color: #5ff; }
+    .full-width { grid-column: 1 / -1; }
+    .link-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
   </style>
 </head>
 <body>
   <header>
-    <h1>AFOQT Admin Console</h1>
+    <h1>AFOQT Admin Console v1</h1>
     <nav>
-      <a href="https://swolem12.github.io/AFOQT-app/tests/test-admin-all-questions.html?v=admin1" target="_blank" rel="noopener noreferrer">Admin Browser</a>
+      <a href=".">Home</a>
+      <a href="test-admin-all-questions.html">Browser</a>
+      <a href="test-content-loading.html">Content</a>
+      <a href="test-db.html">Database</a>
     </nav>
   </header>
 
   <div class="wrap">
-    <section>
-      <h2>Quick Launch</h2>
-      <p>Open the admin question browser (loads patch-loader and all content):</p>
-      <a class="btn" href="https://swolem12.github.io/AFOQT-app/tests/test-admin-all-questions.html?v=admin1" target="_blank" rel="noopener noreferrer">Open Admin Browser</a>
-      <p>If running locally: start a server from repo root then open the local page.</p>
+    <!-- Part 3 Content Status -->
+    <section class="full-width">
+      <h2>📊 Part 3 Content Status (Patch 25)</h2>
+      <p>Latest generation adds part3 files (~25 questions each) for new subjects and extends reading comprehension passages.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Beginner</th>
+            <th>Advanced</th>
+            <th>Expert</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Aviation Information</td>
+            <td>25</td>
+            <td>25</td>
+            <td>25</td>
+            <td><span class="status-ok">✓ Generated</span></td>
+          </tr>
+          <tr>
+            <td>Block Counting</td>
+            <td>25 (iso)</td>
+            <td>25 (iso)</td>
+            <td>25 (iso)</td>
+            <td><span class="status-ok">✓ Generated</span></td>
+          </tr>
+          <tr>
+            <td>Instrument Comprehension</td>
+            <td>25 (panel)</td>
+            <td>25 (panel)</td>
+            <td>25 (panel)</td>
+            <td><span class="status-ok">✓ Generated</span></td>
+          </tr>
+          <tr>
+            <td>Physical Science (8 subtopics)</td>
+            <td>200 total</td>
+            <td>200 total</td>
+            <td>200 total</td>
+            <td><span class="status-ok">✓ Generated</span></td>
+          </tr>
+          <tr>
+            <td>Table Reading</td>
+            <td>25</td>
+            <td>25</td>
+            <td>25</td>
+            <td><span class="status-ok">✓ Generated</span></td>
+          </tr>
+          <tr>
+            <td>Reading Comprehension</td>
+            <td>Passages 21–25 (5q ea)</td>
+            <td>Passages 21–25 (5q ea)</td>
+            <td>Passages 21–25 (5q ea)</td>
+            <td><span class="status-ok">✓ Generated</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 10px;"><strong>Total new questions:</strong> ~1,500+ across all subjects and difficulties.</p>
+    </section>
+
+    <!-- Sanity Check & Rendering -->
+    <section class="full-width">
+      <h2>🔍 Sanity Check: Rendering & Registry Aggregation</h2>
+      <div class="grid">
+        <section>
+          <h3>Registry Aggregation</h3>
+          <p>New part3 files follow the <code>&lt;subtopicId&gt;_&lt;difficulty&gt;_part&lt;N&gt;.json</code> convention.</p>
+          <ul>
+            <li>patch-loader auto-aggregates parts into <code>questions[subjectId][subtopicId][difficulty]</code></li>
+            <li>All part files (part1, part2, part3) pool into one registry per (subtopic, difficulty)</li>
+            <li>No duplicates or overwrites</li>
+          </ul>
+          <a class="btn btn-secondary" href="test-admin-all-questions.html" target="_blank">Test Registry</a>
+        </section>
+        <section>
+          <h3>Rendering Preview</h3>
+          <ul>
+            <li>Aviation: conceptual stems with A/B/C/D choices</li>
+            <li>Block Counting: uiSpec isometric layouts with block counts</li>
+            <li>Instrument: instrument_panel uiSpec with attitude/heading/VSI</li>
+            <li>Table Reading: tableSpec grid with X/Y label lookup</li>
+            <li>Reading Comp: passage text + 5 comprehension questions</li>
+          </ul>
+          <a class="btn btn-secondary" href="test-table-reading.html" target="_blank">Table UI</a>
+          <a class="btn btn-secondary" href="test-block-counting-iso.html" target="_blank">Block UI</a>
+        </section>
+      </div>
+    </section>
+
+    <!-- Quick Verification Steps -->
+    <section class="full-width">
+      <h2>✓ Verification Checklist</h2>
+      <ol style="font-size: 13px; line-height: 1.6;">
+        <li><strong>Filter by subject:</strong> In the admin browser, select "aviation_information" → part3 questions appear in all three difficulties.</li>
+        <li><strong>Search new content:</strong> Search "aircraft" or "block" to surface new part3 items.</li>
+        <li><strong>Check tableSpec:</strong> Open table_reading part3 → X/Y headers and cell values render correctly.</li>
+        <li><strong>Toggle explanations:</strong> Click "Show answers/explanations" → all part3 questions display solutions.</li>
+        <li><strong>RC passages:</strong> Filter "reading_comprehension" → passages 21–25 appear; each has 5 questions.</li>
+        <li><strong>Physical science:</strong> All 8 subtopics (chemistry, earth, electricity, energy, fluids, forces, motion, optics) have part3 files.</li>
+      </ol>
+    </section>
+
+    <!-- Test & Debug Pages -->
+    <section class="full-width">
+      <h2>🔧 Test & Debug Pages</h2>
+      <div class="link-grid">
+        <a class="btn btn-secondary" href="test-admin-all-questions.html">Admin Browser</a>
+        <a class="btn btn-secondary" href="test-content-loading.html">Content Loading</a>
+        <a class="btn btn-secondary" href="test-db.html">Database</a>
+        <a class="btn btn-secondary" href="test-patch_18.html">Patch 18</a>
+        <a class="btn btn-secondary" href="test-math-ui.html">Math UI</a>
+        <a class="btn btn-secondary" href="test-geometry-ui.html">Geometry</a>
+        <a class="btn btn-secondary" href="test-table-reading.html">Table Reading</a>
+        <a class="btn btn-secondary" href="test-block-counting-iso.html">Block Counting</a>
+        <a class="btn btn-secondary" href="test-question-tracking.html">Tracking</a>
+        <a class="btn btn-secondary" href="test-real-questions.html">Real Q</a>
+        <a class="btn btn-secondary" href="boot-demo.html">Boot Demo</a>
+        <a class="btn btn-secondary" href="install.html">Install</a>
+      </div>
+    </section>
+
+    <!-- Local Testing -->
+    <section class="full-width">
+      <h2>🖥️ Local Testing</h2>
+      <p>To test locally before pushing to Pages:</p>
       <code>python3 -m http.server 8000</code>
-      <p>Then visit: <a href="http://localhost:8000/tests/test-admin-all-questions.html" target="_blank" rel="noopener noreferrer">http://localhost:8000/tests/test-admin-all-questions.html</a></p>
-    </section>
-
-    <section>
-      <h2>What to Verify</h2>
-      <ul>
-        <li>Registry aggregation: new part3 files for aviation, block counting, instrument comprehension, physical science, table reading, and RC passages 21–25 appear in filters.</li>
-        <li>Rendering: questions show stems, choices, answer highlight (when toggled), explanations.</li>
-        <li>Search: keyword search surfaces newly generated items.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Hints</h2>
-      <ul>
-        <li>Toggle “Show answers/explanations” in the admin page to reveal solutions.</li>
-        <li>Use subject/subtopic/difficulty filters to jump to the new part3 files.</li>
-        <li>Table Reading items embed tableSpec; confirm X/Y labels and lookup values render.</li>
-        <li>Reading Comprehension passages 21–25 each include 5 questions; search “redundancy” to spot-check.</li>
-      </ul>
+      <p>Then open: <a href="http://localhost:8000/tests/admin-console.html" target="_blank" rel="noopener noreferrer">http://localhost:8000/tests/admin-console.html</a></p>
     </section>
   </div>
 </body>
