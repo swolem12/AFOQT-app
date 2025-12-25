@@ -39,7 +39,7 @@
         "3. Find the choice that means the same or nearly the same as the target word.",
         "4. Eliminate options that are opposites or unrelated."
       ],
-      "fastStrategy": "Think of 'adjacent' in a sentence—'nearby' can replace it without changing the meaning."
+      "fastStrategy": "Think of 'adjacent' in a sentence\u2014'nearby' can replace it without changing the meaning."
     },
     {
       "id": "syn_beg_003",
@@ -77,7 +77,7 @@
         "3. Find the choice that means the same or nearly the same as the target word.",
         "4. Eliminate options that are opposites or unrelated."
       ],
-      "fastStrategy": "Use substitution: Would 'careful' work in place of 'diligent'? Yes—that confirms it."
+      "fastStrategy": "Use substitution: Would 'careful' work in place of 'diligent'? Yes\u2014that confirms it."
     },
     {
       "id": "syn_beg_005",
@@ -134,7 +134,7 @@
         "3. Find the choice that means the same or nearly the same as the target word.",
         "4. Eliminate options that are opposites or unrelated."
       ],
-      "fastStrategy": "Think of 'hostile' in a sentence—'aggressive' can replace it without changing the meaning."
+      "fastStrategy": "Think of 'hostile' in a sentence\u2014'aggressive' can replace it without changing the meaning."
     },
     {
       "id": "syn_beg_008",
@@ -172,7 +172,7 @@
         "3. Find the choice that means the same or nearly the same as the target word.",
         "4. Eliminate options that are opposites or unrelated."
       ],
-      "fastStrategy": "Use substitution: Would 'infamous' work in place of 'notorious'? Yes—that confirms it."
+      "fastStrategy": "Use substitution: Would 'infamous' work in place of 'notorious'? Yes\u2014that confirms it."
     },
     {
       "id": "syn_beg_010",
@@ -229,7 +229,7 @@
         "3. Find the choice that means the same or nearly the same as the target word.",
         "4. Eliminate options that are opposites or unrelated."
       ],
-      "fastStrategy": "Think of 'arduous' in a sentence—'tedious' can replace it without changing the meaning."
+      "fastStrategy": "Think of 'arduous' in a sentence\u2014'tedious' can replace it without changing the meaning."
     },
     {
       "id": "syn_beg_013",
@@ -267,7 +267,7 @@
         "3. Find the choice that means the same or nearly the same as the target word.",
         "4. Eliminate options that are opposites or unrelated."
       ],
-      "fastStrategy": "Use substitution: Would 'scattered' work in place of 'sporadic'? Yes—that confirms it."
+      "fastStrategy": "Use substitution: Would 'scattered' work in place of 'sporadic'? Yes\u2014that confirms it."
     },
     {
       "id": "syn_beg_015",
@@ -324,7 +324,7 @@
         "3. Find the choice that means the same or nearly the same as the target word.",
         "4. Eliminate options that are opposites or unrelated."
       ],
-      "fastStrategy": "Think of 'mediocre' in a sentence—'ordinary' can replace it without changing the meaning."
+      "fastStrategy": "Think of 'mediocre' in a sentence\u2014'ordinary' can replace it without changing the meaning."
     },
     {
       "id": "syn_beg_018",
@@ -362,7 +362,7 @@
         "3. Find the choice that means the same or nearly the same as the target word.",
         "4. Eliminate options that are opposites or unrelated."
       ],
-      "fastStrategy": "Use substitution: Would 'kind' work in place of 'benevolent'? Yes—that confirms it."
+      "fastStrategy": "Use substitution: Would 'kind' work in place of 'benevolent'? Yes\u2014that confirms it."
     },
     {
       "id": "syn_beg_020",
@@ -419,7 +419,7 @@
         "3. Find the choice that means the same or nearly the same as the target word.",
         "4. Eliminate options that are opposites or unrelated."
       ],
-      "fastStrategy": "Think of 'frugal' in a sentence—'thrifty' can replace it without changing the meaning."
+      "fastStrategy": "Think of 'frugal' in a sentence\u2014'thrifty' can replace it without changing the meaning."
     },
     {
       "id": "syn_beg_023",
@@ -457,7 +457,7 @@
         "3. Find the choice that means the same or nearly the same as the target word.",
         "4. Eliminate options that are opposites or unrelated."
       ],
-      "fastStrategy": "Use substitution: Would 'unimportant' work in place of 'trivial'? Yes—that confirms it."
+      "fastStrategy": "Use substitution: Would 'unimportant' work in place of 'trivial'? Yes\u2014that confirms it."
     },
     {
       "id": "syn_beg_025",
@@ -477,6 +477,606 @@
         "4. Eliminate options that are opposites or unrelated."
       ],
       "fastStrategy": "Think of sentences using 'lucid'. 'clear' fits the same contexts."
+    },
+    {
+      "id": "synonyms_beginner_q001",
+      "question": "Synonyms: Choose the best match for \"happy\"",
+      "choices": {
+        "A": "quick",
+        "B": "beautiful",
+        "C": "joyful",
+        "D": "large"
+      },
+      "answer": "C",
+      "explanation": "\"happy\" and \"joyful\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q002",
+      "question": "Synonyms: Choose the best match for \"large\"",
+      "choices": {
+        "A": "happy",
+        "B": "quick",
+        "C": "big",
+        "D": "beautiful"
+      },
+      "answer": "C",
+      "explanation": "\"large\" and \"big\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q003",
+      "question": "Synonyms: Choose the best match for \"beautiful\"",
+      "choices": {
+        "A": "happy",
+        "B": "large",
+        "C": "quick",
+        "D": "pretty"
+      },
+      "answer": "D",
+      "explanation": "\"beautiful\" and \"pretty\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q004",
+      "question": "Synonyms: Choose the best match for \"quick\"",
+      "choices": {
+        "A": "fast",
+        "B": "beautiful",
+        "C": "large",
+        "D": "happy"
+      },
+      "answer": "A",
+      "explanation": "\"quick\" and \"fast\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q005",
+      "question": "Synonyms: Choose the best match for \"start\"",
+      "choices": {
+        "A": "large",
+        "B": "begin",
+        "C": "happy",
+        "D": "beautiful"
+      },
+      "answer": "B",
+      "explanation": "\"start\" and \"begin\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q006",
+      "question": "Synonyms: Choose the best match for \"smart\"",
+      "choices": {
+        "A": "large",
+        "B": "beautiful",
+        "C": "happy",
+        "D": "intelligent"
+      },
+      "answer": "D",
+      "explanation": "\"smart\" and \"intelligent\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q007",
+      "question": "Synonyms: Choose the best match for \"tired\"",
+      "choices": {
+        "A": "happy",
+        "B": "large",
+        "C": "beautiful",
+        "D": "weary"
+      },
+      "answer": "D",
+      "explanation": "\"tired\" and \"weary\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q008",
+      "question": "Synonyms: Choose the best match for \"strong\"",
+      "choices": {
+        "A": "large",
+        "B": "beautiful",
+        "C": "happy",
+        "D": "powerful"
+      },
+      "answer": "D",
+      "explanation": "\"strong\" and \"powerful\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q009",
+      "question": "Synonyms: Choose the best match for \"bright\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "large",
+        "C": "happy",
+        "D": "luminous"
+      },
+      "answer": "D",
+      "explanation": "\"bright\" and \"luminous\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q010",
+      "question": "Synonyms: Choose the best match for \"kind\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "happy",
+        "C": "large",
+        "D": "compassionate"
+      },
+      "answer": "D",
+      "explanation": "\"kind\" and \"compassionate\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q011",
+      "question": "Synonyms: Choose the best match for \"difficult\"",
+      "choices": {
+        "A": "happy",
+        "B": "challenging",
+        "C": "large",
+        "D": "beautiful"
+      },
+      "answer": "B",
+      "explanation": "\"difficult\" and \"challenging\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q012",
+      "question": "Synonyms: Choose the best match for \"angry\"",
+      "choices": {
+        "A": "happy",
+        "B": "furious",
+        "C": "large",
+        "D": "beautiful"
+      },
+      "answer": "B",
+      "explanation": "\"angry\" and \"furious\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q013",
+      "question": "Synonyms: Choose the best match for \"small\"",
+      "choices": {
+        "A": "happy",
+        "B": "tiny",
+        "C": "beautiful",
+        "D": "large"
+      },
+      "answer": "B",
+      "explanation": "\"small\" and \"tiny\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q014",
+      "question": "Synonyms: Choose the best match for \"quiet\"",
+      "choices": {
+        "A": "large",
+        "B": "happy",
+        "C": "silent",
+        "D": "beautiful"
+      },
+      "answer": "C",
+      "explanation": "\"quiet\" and \"silent\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q015",
+      "question": "Synonyms: Choose the best match for \"hot\"",
+      "choices": {
+        "A": "warm",
+        "B": "happy",
+        "C": "beautiful",
+        "D": "large"
+      },
+      "answer": "A",
+      "explanation": "\"hot\" and \"warm\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q016",
+      "question": "Synonyms: Choose the best match for \"wet\"",
+      "choices": {
+        "A": "large",
+        "B": "happy",
+        "C": "damp",
+        "D": "beautiful"
+      },
+      "answer": "C",
+      "explanation": "\"wet\" and \"damp\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q017",
+      "question": "Synonyms: Choose the best match for \"clean\"",
+      "choices": {
+        "A": "neat",
+        "B": "happy",
+        "C": "beautiful",
+        "D": "large"
+      },
+      "answer": "A",
+      "explanation": "\"clean\" and \"neat\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q018",
+      "question": "Synonyms: Choose the best match for \"safe\"",
+      "choices": {
+        "A": "large",
+        "B": "happy",
+        "C": "secure",
+        "D": "beautiful"
+      },
+      "answer": "C",
+      "explanation": "\"safe\" and \"secure\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q019",
+      "question": "Synonyms: Choose the best match for \"brave\"",
+      "choices": {
+        "A": "happy",
+        "B": "courageous",
+        "C": "beautiful",
+        "D": "large"
+      },
+      "answer": "B",
+      "explanation": "\"brave\" and \"courageous\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q020",
+      "question": "Synonyms: Choose the best match for \"rich\"",
+      "choices": {
+        "A": "large",
+        "B": "wealthy",
+        "C": "happy",
+        "D": "beautiful"
+      },
+      "answer": "B",
+      "explanation": "\"rich\" and \"wealthy\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q021",
+      "question": "Synonyms: Choose the best match for \"cold\"",
+      "choices": {
+        "A": "large",
+        "B": "beautiful",
+        "C": "chilly",
+        "D": "happy"
+      },
+      "answer": "C",
+      "explanation": "\"cold\" and \"chilly\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q022",
+      "question": "Synonyms: Choose the best match for \"fast\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "large",
+        "C": "happy",
+        "D": "swift"
+      },
+      "answer": "D",
+      "explanation": "\"fast\" and \"swift\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q023",
+      "question": "Synonyms: Choose the best match for \"slow\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "sluggish",
+        "C": "large",
+        "D": "happy"
+      },
+      "answer": "B",
+      "explanation": "\"slow\" and \"sluggish\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q024",
+      "question": "Synonyms: Choose the best match for \"ugly\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "happy",
+        "C": "large",
+        "D": "hideous"
+      },
+      "answer": "D",
+      "explanation": "\"ugly\" and \"hideous\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q025",
+      "question": "Synonyms: Choose the best match for \"loud\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "noisy",
+        "C": "large",
+        "D": "happy"
+      },
+      "answer": "B",
+      "explanation": "\"loud\" and \"noisy\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q026",
+      "question": "Synonyms: Choose the best match for \"calm\"",
+      "choices": {
+        "A": "large",
+        "B": "happy",
+        "C": "beautiful",
+        "D": "peaceful"
+      },
+      "answer": "D",
+      "explanation": "\"calm\" and \"peaceful\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q027",
+      "question": "Synonyms: Choose the best match for \"heavy\"",
+      "choices": {
+        "A": "happy",
+        "B": "weighty",
+        "C": "beautiful",
+        "D": "large"
+      },
+      "answer": "B",
+      "explanation": "\"heavy\" and \"weighty\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q028",
+      "question": "Synonyms: Choose the best match for \"light\"",
+      "choices": {
+        "A": "airy",
+        "B": "happy",
+        "C": "beautiful",
+        "D": "large"
+      },
+      "answer": "A",
+      "explanation": "\"light\" and \"airy\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q029",
+      "question": "Synonyms: Choose the best match for \"thick\"",
+      "choices": {
+        "A": "large",
+        "B": "beautiful",
+        "C": "dense",
+        "D": "happy"
+      },
+      "answer": "C",
+      "explanation": "\"thick\" and \"dense\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q030",
+      "question": "Synonyms: Choose the best match for \"thin\"",
+      "choices": {
+        "A": "happy",
+        "B": "large",
+        "C": "beautiful",
+        "D": "slender"
+      },
+      "answer": "D",
+      "explanation": "\"thin\" and \"slender\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q031",
+      "question": "Synonyms: Choose the best match for \"fresh\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "large",
+        "C": "happy",
+        "D": "new"
+      },
+      "answer": "D",
+      "explanation": "\"fresh\" and \"new\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q032",
+      "question": "Synonyms: Choose the best match for \"stale\"",
+      "choices": {
+        "A": "happy",
+        "B": "large",
+        "C": "old",
+        "D": "beautiful"
+      },
+      "answer": "C",
+      "explanation": "\"stale\" and \"old\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q033",
+      "question": "Synonyms: Choose the best match for \"perfect\"",
+      "choices": {
+        "A": "flawless",
+        "B": "happy",
+        "C": "beautiful",
+        "D": "large"
+      },
+      "answer": "A",
+      "explanation": "\"perfect\" and \"flawless\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q034",
+      "question": "Synonyms: Choose the best match for \"broken\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "large",
+        "C": "damaged",
+        "D": "happy"
+      },
+      "answer": "C",
+      "explanation": "\"broken\" and \"damaged\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q035",
+      "question": "Synonyms: Choose the best match for \"steep\"",
+      "choices": {
+        "A": "sharp",
+        "B": "large",
+        "C": "beautiful",
+        "D": "happy"
+      },
+      "answer": "A",
+      "explanation": "\"steep\" and \"sharp\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q036",
+      "question": "Synonyms: Choose the best match for \"deep\"",
+      "choices": {
+        "A": "large",
+        "B": "happy",
+        "C": "beautiful",
+        "D": "profound"
+      },
+      "answer": "D",
+      "explanation": "\"deep\" and \"profound\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q037",
+      "question": "Synonyms: Choose the best match for \"shallow\"",
+      "choices": {
+        "A": "superficial",
+        "B": "large",
+        "C": "beautiful",
+        "D": "happy"
+      },
+      "answer": "A",
+      "explanation": "\"shallow\" and \"superficial\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q038",
+      "question": "Synonyms: Choose the best match for \"bitter\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "harsh",
+        "C": "happy",
+        "D": "large"
+      },
+      "answer": "B",
+      "explanation": "\"bitter\" and \"harsh\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q039",
+      "question": "Synonyms: Choose the best match for \"sweet\"",
+      "choices": {
+        "A": "happy",
+        "B": "beautiful",
+        "C": "large",
+        "D": "pleasant"
+      },
+      "answer": "D",
+      "explanation": "\"sweet\" and \"pleasant\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q040",
+      "question": "Synonyms: Choose the best match for \"sour\"",
+      "choices": {
+        "A": "tart",
+        "B": "beautiful",
+        "C": "happy",
+        "D": "large"
+      },
+      "answer": "A",
+      "explanation": "\"sour\" and \"tart\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q041",
+      "question": "Synonyms: Choose the best match for \"soft\"",
+      "choices": {
+        "A": "large",
+        "B": "gentle",
+        "C": "beautiful",
+        "D": "happy"
+      },
+      "answer": "B",
+      "explanation": "\"soft\" and \"gentle\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q042",
+      "question": "Synonyms: Choose the best match for \"hard\"",
+      "choices": {
+        "A": "rigid",
+        "B": "happy",
+        "C": "large",
+        "D": "beautiful"
+      },
+      "answer": "A",
+      "explanation": "\"hard\" and \"rigid\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q043",
+      "question": "Synonyms: Choose the best match for \"smooth\"",
+      "choices": {
+        "A": "large",
+        "B": "beautiful",
+        "C": "sleek",
+        "D": "happy"
+      },
+      "answer": "C",
+      "explanation": "\"smooth\" and \"sleek\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q044",
+      "question": "Synonyms: Choose the best match for \"rough\"",
+      "choices": {
+        "A": "happy",
+        "B": "beautiful",
+        "C": "large",
+        "D": "coarse"
+      },
+      "answer": "D",
+      "explanation": "\"rough\" and \"coarse\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q045",
+      "question": "Synonyms: Choose the best match for \"wild\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "happy",
+        "C": "large",
+        "D": "untamed"
+      },
+      "answer": "D",
+      "explanation": "\"wild\" and \"untamed\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q046",
+      "question": "Synonyms: Choose the best match for \"tame\"",
+      "choices": {
+        "A": "beautiful",
+        "B": "happy",
+        "C": "docile",
+        "D": "large"
+      },
+      "answer": "C",
+      "explanation": "\"tame\" and \"docile\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q047",
+      "question": "Synonyms: Choose the best match for \"free\"",
+      "choices": {
+        "A": "liberated",
+        "B": "beautiful",
+        "C": "happy",
+        "D": "large"
+      },
+      "answer": "A",
+      "explanation": "\"free\" and \"liberated\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q048",
+      "question": "Synonyms: Choose the best match for \"busy\"",
+      "choices": {
+        "A": "occupied",
+        "B": "happy",
+        "C": "beautiful",
+        "D": "large"
+      },
+      "answer": "A",
+      "explanation": "\"busy\" and \"occupied\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q049",
+      "question": "Synonyms: Choose the best match for \"lazy\"",
+      "choices": {
+        "A": "happy",
+        "B": "beautiful",
+        "C": "idle",
+        "D": "large"
+      },
+      "answer": "C",
+      "explanation": "\"lazy\" and \"idle\" are closely related in meaning."
+    },
+    {
+      "id": "synonyms_beginner_q050",
+      "question": "Synonyms: Choose the best match for \"active\"",
+      "choices": {
+        "A": "energetic",
+        "B": "beautiful",
+        "C": "happy",
+        "D": "large"
+      },
+      "answer": "A",
+      "explanation": "\"active\" and \"energetic\" are closely related in meaning."
     }
   ]
 }

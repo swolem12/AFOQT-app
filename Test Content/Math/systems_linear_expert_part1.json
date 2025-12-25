@@ -15,13 +15,13 @@
         "E": "No solution"
       },
       "answer": "A",
-      "explanation": "Elimination: multiply first by 2 and second by 3: 4x + 6y = 14 and 15x - 6y = 24. Add: 19x = 38 ⇒ x = 2. Substitute: 2(2) + 3y = 7 ⇒ 3y = 3 ⇒ y = 1.",
+      "explanation": "Elimination: multiply first by 2 and second by 3: 4x + 6y = 14 and 15x - 6y = 24. Add: 19x = 38 \u21d2 x = 2. Substitute: 2(2) + 3y = 7 \u21d2 3y = 3 \u21d2 y = 1.",
       "steps": [
         "1. Multiply first equation by 2: 4x + 6y = 14.",
         "2. Multiply second by 3: 15x - 6y = 24.",
         "3. Add to eliminate y: 19x = 38.",
         "4. Solve: x = 2.",
-        "5. Substitute into first: 4 + 3y = 7 ⇒ 3y = 3 ⇒ y = 1."
+        "5. Substitute into first: 4 + 3y = 7 \u21d2 3y = 3 \u21d2 y = 1."
       ],
       "fastStrategy": "Elimination method: multiply to align coefficients."
     },
@@ -36,7 +36,7 @@
         "E": "Requires Gaussian elimination"
       },
       "answer": "A",
-      "explanation": "Check if rows are independent. The coefficient matrix has 3 equations and 3 unknowns. If determinant ≠ 0, unique solution. Quick check: no obvious dependency between rows.",
+      "explanation": "Check if rows are independent. The coefficient matrix has 3 equations and 3 unknowns. If determinant \u2260 0, unique solution. Quick check: no obvious dependency between rows.",
       "steps": [
         "1. Analyze the augmented matrix.",
         "2. No row is a scalar multiple of another.",
@@ -44,6 +44,606 @@
         "4. To verify, would need determinant or row reduction."
       ],
       "fastStrategy": "Rank analysis: if rank(A) = rank(A|b) = n, unique solution."
+    },
+    {
+      "id": "systems_linear_expert_q001",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q002",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q003",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q004",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q005",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q006",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q007",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q008",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q009",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q010",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q011",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q012",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q013",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q014",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q015",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q016",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q017",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q018",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q019",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q020",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q021",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q022",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q023",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q024",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q025",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q026",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q027",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q028",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q029",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q030",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q031",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q032",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q033",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q034",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q035",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q036",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q037",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q038",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q039",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q040",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q041",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q042",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q043",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q044",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q045",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q046",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q047",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q048",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q049",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_expert_q050",
+      "question": "Solve this systems linear problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

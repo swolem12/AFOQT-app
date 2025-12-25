@@ -6,7 +6,7 @@
   "questions": [
     {
       "id": "mk_oo_b_001",
-      "question": "What is the value of 3 + 5 × 2?",
+      "question": "What is the value of 3 + 5 \u00d7 2?",
       "choices": {
         "A": "13",
         "B": "16",
@@ -15,18 +15,18 @@
         "E": "8"
       },
       "answer": "A",
-      "explanation": "Multiplication first: 5×2 = 10; then 3+10 = 13.",
+      "explanation": "Multiplication first: 5\u00d72 = 10; then 3+10 = 13.",
       "steps": [
         "1. Identify operations: addition and multiplication.",
         "2. Apply PEMDAS: multiplication before addition.",
-        "3. Multiply 5 × 2 = 10.",
+        "3. Multiply 5 \u00d7 2 = 10.",
         "4. Add 3 + 10 = 13."
       ],
-      "fastStrategy": "Multiply first, add second. Ignore left-to-right for mixed operations—use PEMDAS."
+      "fastStrategy": "Multiply first, add second. Ignore left-to-right for mixed operations\u2014use PEMDAS."
     },
     {
       "id": "mk_oo_b_002",
-      "question": "Evaluate: 12 ÷ 3 × 2",
+      "question": "Evaluate: 12 \u00f7 3 \u00d7 2",
       "choices": {
         "A": "2",
         "B": "6",
@@ -35,18 +35,18 @@
         "E": "12"
       },
       "answer": "C",
-      "explanation": "Left to right for multiplication/division: 12÷3=4, then 4×2=8.",
+      "explanation": "Left to right for multiplication/division: 12\u00f73=4, then 4\u00d72=8.",
       "steps": [
         "1. Identify operations: division and multiplication (same level).",
         "2. When equal priority, work left to right.",
-        "3. Divide 12 ÷ 3 = 4.",
-        "4. Multiply 4 × 2 = 8."
+        "3. Divide 12 \u00f7 3 = 4.",
+        "4. Multiply 4 \u00d7 2 = 8."
       ],
       "fastStrategy": "For same-priority operations, always go left to right."
     },
     {
       "id": "mk_oo_b_003",
-      "question": "Evaluate: 18 ÷ (3 × 2)",
+      "question": "Evaluate: 18 \u00f7 (3 \u00d7 2)",
       "choices": {
         "A": "3",
         "B": "9",
@@ -55,17 +55,17 @@
         "E": "18"
       },
       "answer": "A",
-      "explanation": "Parentheses first: 3×2=6, then 18÷6=3.",
+      "explanation": "Parentheses first: 3\u00d72=6, then 18\u00f76=3.",
       "steps": [
         "1. Parentheses always first (highest priority).",
-        "2. Inside parentheses: 3 × 2 = 6.",
-        "3. Now divide outside: 18 ÷ 6 = 3."
+        "2. Inside parentheses: 3 \u00d7 2 = 6.",
+        "3. Now divide outside: 18 \u00f7 6 = 3."
       ],
-      "fastStrategy": "Always do parentheses first—they override all other rules."
+      "fastStrategy": "Always do parentheses first\u2014they override all other rules."
     },
     {
       "id": "mk_oo_b_004",
-      "question": "What is 4 + 6 ÷ 3?",
+      "question": "What is 4 + 6 \u00f7 3?",
       "choices": {
         "A": "6",
         "B": "4",
@@ -74,13 +74,13 @@
         "E": "2"
       },
       "answer": "D",
-      "explanation": "6÷3=2, then 4+2=6.",
+      "explanation": "6\u00f73=2, then 4+2=6.",
       "steps": [
         "1. Division comes before addition.",
-        "2. Divide 6 ÷ 3 = 2.",
+        "2. Divide 6 \u00f7 3 = 2.",
         "3. Add 4 + 2 = 6."
       ],
-      "fastStrategy": "Division before addition—do division first even if it appears on the right."
+      "fastStrategy": "Division before addition\u2014do division first even if it appears on the right."
     },
     {
       "id": "mk_oo_b_005",
@@ -93,17 +93,17 @@
         "E": "8"
       },
       "answer": "B",
-      "explanation": "Inside parentheses: 3+4=7, then 2×7=14.",
+      "explanation": "Inside parentheses: 3+4=7, then 2\u00d77=14.",
       "steps": [
         "1. Parentheses first: 3 + 4 = 7.",
-        "2. Multiply result by 2: 2 × 7 = 14.",
-        "3. Note: 2(3+4) means 2 × (3+4)."
+        "2. Multiply result by 2: 2 \u00d7 7 = 14.",
+        "3. Note: 2(3+4) means 2 \u00d7 (3+4)."
       ],
       "fastStrategy": "Always clear parentheses first. The number in front implies multiplication."
     },
     {
       "id": "mk_oo_b_006",
-      "question": "Evaluate: (8 − 3) × 4",
+      "question": "Evaluate: (8 \u2212 3) \u00d7 4",
       "choices": {
         "A": "20",
         "B": "12",
@@ -112,16 +112,16 @@
         "E": "16"
       },
       "answer": "A",
-      "explanation": "8−3=5, then 5×4=20.",
+      "explanation": "8\u22123=5, then 5\u00d74=20.",
       "steps": [
-        "1. Parentheses first: 8 − 3 = 5.",
-        "2. Multiply: 5 × 4 = 20."
+        "1. Parentheses first: 8 \u2212 3 = 5.",
+        "2. Multiply: 5 \u00d7 4 = 20."
       ],
-      "fastStrategy": "Parentheses always come first—solve what's inside before doing anything outside."
+      "fastStrategy": "Parentheses always come first\u2014solve what's inside before doing anything outside."
     },
     {
       "id": "mk_oo_b_007",
-      "question": "Compute: 5 × 2 + 9",
+      "question": "Compute: 5 \u00d7 2 + 9",
       "choices": {
         "A": "19",
         "B": "28",
@@ -130,17 +130,17 @@
         "E": "14"
       },
       "answer": "A",
-      "explanation": "Multiplication first: 5×2=10; then +9=19.",
+      "explanation": "Multiplication first: 5\u00d72=10; then +9=19.",
       "steps": [
         "1. Identify operations: multiplication and addition.",
-        "2. Multiply first: 5 × 2 = 10.",
+        "2. Multiply first: 5 \u00d7 2 = 10.",
         "3. Add: 10 + 9 = 19."
       ],
-      "fastStrategy": "Multiplication always before addition—ignore position and do it first."
+      "fastStrategy": "Multiplication always before addition\u2014ignore position and do it first."
     },
     {
       "id": "mk_oo_b_008",
-      "question": "Evaluate: 20 ÷ 5 + 1",
+      "question": "Evaluate: 20 \u00f7 5 + 1",
       "choices": {
         "A": "6",
         "B": "4",
@@ -149,17 +149,17 @@
         "E": "2"
       },
       "answer": "A",
-      "explanation": "20÷5=4, then 4+1=5.",
+      "explanation": "20\u00f75=4, then 4+1=5.",
       "steps": [
         "1. Division before addition.",
-        "2. Divide: 20 ÷ 5 = 4.",
+        "2. Divide: 20 \u00f7 5 = 4.",
         "3. Add: 4 + 1 = 5."
       ],
-      "fastStrategy": "Division first, addition second—priority order over left-to-right."
+      "fastStrategy": "Division first, addition second\u2014priority order over left-to-right."
     },
     {
       "id": "mk_oo_b_009",
-      "question": "What is 6 + 4 × 3?",
+      "question": "What is 6 + 4 \u00d7 3?",
       "choices": {
         "A": "30",
         "B": "12",
@@ -168,17 +168,17 @@
         "E": "7"
       },
       "answer": "C",
-      "explanation": "4×3=12; then 6+12=18.",
+      "explanation": "4\u00d73=12; then 6+12=18.",
       "steps": [
         "1. Multiplication has priority over addition.",
-        "2. Multiply: 4 × 3 = 12.",
+        "2. Multiply: 4 \u00d7 3 = 12.",
         "3. Add: 6 + 12 = 18."
       ],
-      "fastStrategy": "Watch for multiplication hiding on the right—do it before addition on the left."
+      "fastStrategy": "Watch for multiplication hiding on the right\u2014do it before addition on the left."
     },
     {
       "id": "mk_oo_b_010",
-      "question": "Evaluate: (9 − 7) × (6 ÷ 2)",
+      "question": "Evaluate: (9 \u2212 7) \u00d7 (6 \u00f7 2)",
       "choices": {
         "A": "2",
         "B": "4",
@@ -187,18 +187,18 @@
         "E": "12"
       },
       "answer": "B",
-      "explanation": "(9−7)=2 and (6÷2)=3 → 2×3=6.",
+      "explanation": "(9\u22127)=2 and (6\u00f72)=3 \u2192 2\u00d73=6.",
       "steps": [
         "1. Solve both parentheses separately: left and right.",
-        "2. Left: 9 − 7 = 2.",
-        "3. Right: 6 ÷ 2 = 3.",
-        "4. Multiply: 2 × 3 = 6."
+        "2. Left: 9 \u2212 7 = 2.",
+        "3. Right: 6 \u00f7 2 = 3.",
+        "4. Multiply: 2 \u00d7 3 = 6."
       ],
-      "fastStrategy": "Multiple parentheses—clear each one, then combine results with the operation between."
+      "fastStrategy": "Multiple parentheses\u2014clear each one, then combine results with the operation between."
     },
     {
       "id": "mk_oo_b_011",
-      "question": "Evaluate: 3 + (4 × 2)",
+      "question": "Evaluate: 3 + (4 \u00d7 2)",
       "choices": {
         "A": "11",
         "B": "14",
@@ -207,16 +207,16 @@
         "E": "7"
       },
       "answer": "A",
-      "explanation": "4×2=8, then +3=11.",
+      "explanation": "4\u00d72=8, then +3=11.",
       "steps": [
-        "1. Parentheses first: 4 × 2 = 8.",
+        "1. Parentheses first: 4 \u00d7 2 = 8.",
         "2. Add: 3 + 8 = 11."
       ],
       "fastStrategy": "Parentheses first, then add result to remaining terms."
     },
     {
       "id": "mk_oo_b_012",
-      "question": "Simplify: (10 + 2) ÷ 2",
+      "question": "Simplify: (10 + 2) \u00f7 2",
       "choices": {
         "A": "5",
         "B": "6",
@@ -225,7 +225,7 @@
         "E": "8"
       },
       "answer": "B",
-      "explanation": "10+2=12; 12÷2=6.",
+      "explanation": "10+2=12; 12\u00f72=6.",
       "steps": [
         "1. Set up the proportion with equal ratios.",
         "2. Cross-multiply to create an equation.",
@@ -235,7 +235,7 @@
     },
     {
       "id": "mk_oo_b_013",
-      "question": "Evaluate: 7 × (8 − 5)",
+      "question": "Evaluate: 7 \u00d7 (8 \u2212 5)",
       "choices": {
         "A": "21",
         "B": "35",
@@ -244,7 +244,7 @@
         "E": "7"
       },
       "answer": "A",
-      "explanation": "8−5=3; 7×3=21.",
+      "explanation": "8\u22125=3; 7\u00d73=21.",
       "steps": [
         "1. Set up the proportion with equal ratios.",
         "2. Cross-multiply to create an equation.",
@@ -254,7 +254,7 @@
     },
     {
       "id": "mk_oo_b_014",
-      "question": "Compute: (3 + 3) × 4",
+      "question": "Compute: (3 + 3) \u00d7 4",
       "choices": {
         "A": "24",
         "B": "12",
@@ -263,7 +263,7 @@
         "E": "6"
       },
       "answer": "A",
-      "explanation": "3+3=6; 6×4=24.",
+      "explanation": "3+3=6; 6\u00d74=24.",
       "steps": [
         "1. Set up the proportion with equal ratios.",
         "2. Cross-multiply to create an equation.",
@@ -273,7 +273,7 @@
     },
     {
       "id": "mk_oo_b_015",
-      "question": "Evaluate: 12 − 4 × 2",
+      "question": "Evaluate: 12 \u2212 4 \u00d7 2",
       "choices": {
         "A": "16",
         "B": "12",
@@ -282,7 +282,7 @@
         "E": "20"
       },
       "answer": "C",
-      "explanation": "4×2=8; 12−8=4.",
+      "explanation": "4\u00d72=8; 12\u22128=4.",
       "steps": [
         "1. Set up the proportion with equal ratios.",
         "2. Cross-multiply to create an equation.",
@@ -292,7 +292,7 @@
     },
     {
       "id": "mk_oo_b_016",
-      "question": "Compute: 30 ÷ (5 × 3)",
+      "question": "Compute: 30 \u00f7 (5 \u00d7 3)",
       "choices": {
         "A": "1",
         "B": "2",
@@ -301,7 +301,7 @@
         "E": "10"
       },
       "answer": "A",
-      "explanation": "5×3=15; 30÷15=2.",
+      "explanation": "5\u00d73=15; 30\u00f715=2.",
       "steps": [
         "1. Set up the proportion with equal ratios.",
         "2. Cross-multiply to create an equation.",
@@ -311,7 +311,7 @@
     },
     {
       "id": "mk_oo_b_017",
-      "question": "What is (6 + 4) ÷ 5?",
+      "question": "What is (6 + 4) \u00f7 5?",
       "choices": {
         "A": "1",
         "B": "2",
@@ -320,7 +320,7 @@
         "E": "10"
       },
       "answer": "A",
-      "explanation": "6+4=10; 10÷5=2.",
+      "explanation": "6+4=10; 10\u00f75=2.",
       "steps": [
         "1. Set up the proportion with equal ratios.",
         "2. Cross-multiply to create an equation.",
@@ -330,7 +330,7 @@
     },
     {
       "id": "mk_oo_b_018",
-      "question": "Evaluate: 8 × 2 + 6",
+      "question": "Evaluate: 8 \u00d7 2 + 6",
       "choices": {
         "A": "22",
         "B": "16",
@@ -339,7 +339,7 @@
         "E": "8"
       },
       "answer": "A",
-      "explanation": "8×2=16; 16+6=22.",
+      "explanation": "8\u00d72=16; 16+6=22.",
       "steps": [
         "1. Set up the proportion with equal ratios.",
         "2. Cross-multiply to create an equation.",
@@ -349,7 +349,7 @@
     },
     {
       "id": "mk_oo_b_019",
-      "question": "Compute: 5 + 12 ÷ 4",
+      "question": "Compute: 5 + 12 \u00f7 4",
       "choices": {
         "A": "3",
         "B": "5",
@@ -358,7 +358,7 @@
         "E": "11"
       },
       "answer": "C",
-      "explanation": "12÷4=3; 5+3=8.",
+      "explanation": "12\u00f74=3; 5+3=8.",
       "steps": [
         "1. Set up the proportion with equal ratios.",
         "2. Cross-multiply to create an equation.",
@@ -368,7 +368,7 @@
     },
     {
       "id": "mk_oo_b_020",
-      "question": "Simplify: 9 − (3 × 2)",
+      "question": "Simplify: 9 \u2212 (3 \u00d7 2)",
       "choices": {
         "A": "3",
         "B": "6",
@@ -377,7 +377,7 @@
         "E": "1"
       },
       "answer": "A",
-      "explanation": "3×2=6; 9−6=3.",
+      "explanation": "3\u00d72=6; 9\u22126=3.",
       "steps": [
         "1. Set up the proportion with equal ratios.",
         "2. Cross-multiply to create an equation.",
@@ -387,7 +387,7 @@
     },
     {
       "id": "mk_oo_b_021",
-      "question": "Evaluate: (2 + 6) × (5 − 3)",
+      "question": "Evaluate: (2 + 6) \u00d7 (5 \u2212 3)",
       "choices": {
         "A": "16",
         "B": "10",
@@ -396,7 +396,7 @@
         "E": "32"
       },
       "answer": "A",
-      "explanation": "(2+6)=8 and (5−3)=2 → 8×2=16.",
+      "explanation": "(2+6)=8 and (5\u22123)=2 \u2192 8\u00d72=16.",
       "steps": [
         "1. Set up the proportion with equal ratios.",
         "2. Cross-multiply to create an equation.",
@@ -406,7 +406,7 @@
     },
     {
       "id": "mk_oo_b_022",
-      "question": "Compute: 14 ÷ 7 + 4",
+      "question": "Compute: 14 \u00f7 7 + 4",
       "choices": {
         "A": "2",
         "B": "4",
@@ -415,7 +415,7 @@
         "E": "10"
       },
       "answer": "C",
-      "explanation": "14÷7=2; 2+4=6.",
+      "explanation": "14\u00f77=2; 2+4=6.",
       "steps": [
         "1. Set up the proportion with equal ratios.",
         "2. Cross-multiply to create an equation.",
@@ -425,7 +425,7 @@
     },
     {
       "id": "mk_oo_b_023",
-      "question": "Evaluate: 10 − 8 ÷ 4",
+      "question": "Evaluate: 10 \u2212 8 \u00f7 4",
       "choices": {
         "A": "2",
         "B": "8",
@@ -434,7 +434,7 @@
         "E": "4"
       },
       "answer": "D",
-      "explanation": "8÷4=2; 10−2=8.",
+      "explanation": "8\u00f74=2; 10\u22122=8.",
       "steps": [
         "1. Set up the proportion with equal ratios.",
         "2. Cross-multiply to create an equation.",
@@ -444,7 +444,7 @@
     },
     {
       "id": "mk_oo_b_024",
-      "question": "Compute: 3 × (4 + 4)",
+      "question": "Compute: 3 \u00d7 (4 + 4)",
       "choices": {
         "A": "8",
         "B": "12",
@@ -453,7 +453,7 @@
         "E": "6"
       },
       "answer": "C",
-      "explanation": "4+4=8; 3×8=24.",
+      "explanation": "4+4=8; 3\u00d78=24.",
       "steps": [
         "1. Set up the proportion with equal ratios.",
         "2. Cross-multiply to create an equation.",
@@ -463,7 +463,7 @@
     },
     {
       "id": "mk_oo_b_025",
-      "question": "Evaluate: (16 ÷ 4) × 3",
+      "question": "Evaluate: (16 \u00f7 4) \u00d7 3",
       "choices": {
         "A": "12",
         "B": "8",
@@ -472,13 +472,613 @@
         "E": "6"
       },
       "answer": "A",
-      "explanation": "16÷4=4; 4×3=12.",
+      "explanation": "16\u00f74=4; 4\u00d73=12.",
       "steps": [
         "1. Set up the proportion with equal ratios.",
         "2. Cross-multiply to create an equation.",
         "3. Solve for the unknown."
       ],
       "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+    },
+    {
+      "id": "order_of_operations_beginner_q001",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q002",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q003",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q004",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q005",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q006",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q007",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q008",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q009",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q010",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q011",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q012",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q013",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q014",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q015",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q016",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q017",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q018",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q019",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q020",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q021",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q022",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q023",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q024",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q025",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q026",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q027",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q028",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q029",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q030",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q031",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q032",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q033",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q034",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q035",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q036",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q037",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q038",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q039",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q040",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q041",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q042",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q043",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q044",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q045",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q046",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q047",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q048",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q049",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_beginner_q050",
+      "question": "Solve this order of operations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

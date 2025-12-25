@@ -15,7 +15,7 @@
         "E": "9"
       },
       "answer": "D",
-      "explanation": "Square root shortcut: x = ±√9 = ±3.",
+      "explanation": "Square root shortcut: x = \u00b1\u221a9 = \u00b13.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -34,7 +34,7 @@
         "E": "8"
       },
       "answer": "D",
-      "explanation": "Square root both sides: x = ±4.",
+      "explanation": "Square root both sides: x = \u00b14.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -53,7 +53,7 @@
         "E": "10"
       },
       "answer": "D",
-      "explanation": "Square root trick: x = ±5.",
+      "explanation": "Square root trick: x = \u00b15.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -72,7 +72,7 @@
         "E": "No solution"
       },
       "answer": "C",
-      "explanation": "Add 9: x^2 = 9 → x = ±3.",
+      "explanation": "Add 9: x^2 = 9 \u2192 x = \u00b13.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -91,7 +91,7 @@
         "E": "No solution"
       },
       "answer": "B",
-      "explanation": "Add 16: x^2 = 16 → x = ±4.",
+      "explanation": "Add 16: x^2 = 16 \u2192 x = \u00b14.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -110,7 +110,7 @@
         "E": "No solution"
       },
       "answer": "C",
-      "explanation": "Difference of squares shortcut: x = ±1.",
+      "explanation": "Difference of squares shortcut: x = \u00b11.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -129,7 +129,7 @@
         "E": "No solution"
       },
       "answer": "C",
-      "explanation": "|x| = 2 → x = ±2.",
+      "explanation": "|x| = 2 \u2192 x = \u00b12.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -148,7 +148,7 @@
         "E": "No solution"
       },
       "answer": "C",
-      "explanation": "x = ±√36 = ±6.",
+      "explanation": "x = \u00b1\u221a36 = \u00b16.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -167,7 +167,7 @@
         "E": "No solution"
       },
       "answer": "C",
-      "explanation": "x = ±1.",
+      "explanation": "x = \u00b11.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -186,7 +186,7 @@
         "E": "No solution"
       },
       "answer": "C",
-      "explanation": "Add 25: x^2 = 25 → x = ±5.",
+      "explanation": "Add 25: x^2 = 25 \u2192 x = \u00b15.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -205,7 +205,7 @@
         "E": "No solution"
       },
       "answer": "A",
-      "explanation": "Factor shortcut: x(x + 5) = 0 → x = 0 or -5.",
+      "explanation": "Factor shortcut: x(x + 5) = 0 \u2192 x = 0 or -5.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -224,7 +224,7 @@
         "E": "No solution"
       },
       "answer": "A",
-      "explanation": "x(x - 6) = 0 → x = 0 or 6.",
+      "explanation": "x(x - 6) = 0 \u2192 x = 0 or 6.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -243,7 +243,7 @@
         "E": "No solution"
       },
       "answer": "A",
-      "explanation": "x(x - 3) = 0 → x = 0 or 3.",
+      "explanation": "x(x - 3) = 0 \u2192 x = 0 or 3.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -262,7 +262,7 @@
         "E": "No solution"
       },
       "answer": "A",
-      "explanation": "x(x + 4) = 0 → x = 0 or -4.",
+      "explanation": "x(x + 4) = 0 \u2192 x = 0 or -4.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -281,7 +281,7 @@
         "E": "No solution"
       },
       "answer": "B",
-      "explanation": "x(x - 1) = 0 → x = 0 or 1.",
+      "explanation": "x(x - 1) = 0 \u2192 x = 0 or 1.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -300,7 +300,7 @@
         "E": "No solution"
       },
       "answer": "C",
-      "explanation": "Zero product rule: each factor = 0 → x = ±4.",
+      "explanation": "Zero product rule: each factor = 0 \u2192 x = \u00b14.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -376,7 +376,7 @@
         "E": "No solution"
       },
       "answer": "A",
-      "explanation": "Perfect square: (x + 1)^2 = 0 ⇒ x = -1.",
+      "explanation": "Perfect square: (x + 1)^2 = 0 \u21d2 x = -1.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -395,7 +395,7 @@
         "E": "No solution"
       },
       "answer": "C",
-      "explanation": "(x - 2)^2 = 0 ⇒ x = 2.",
+      "explanation": "(x - 2)^2 = 0 \u21d2 x = 2.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -414,7 +414,7 @@
         "E": "No solution"
       },
       "answer": "B",
-      "explanation": "(x + 3)^2 = 0 ⇒ x = -3.",
+      "explanation": "(x + 3)^2 = 0 \u21d2 x = -3.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -429,11 +429,11 @@
         "A": "x = 1 only",
         "B": "x = -1 only",
         "C": "x = 0",
-        "D": "x = ±1",
+        "D": "x = \u00b11",
         "E": "No solution"
       },
       "answer": "A",
-      "explanation": "(x - 1)^2 = 0 ⇒ x = 1.",
+      "explanation": "(x - 1)^2 = 0 \u21d2 x = 1.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -478,6 +478,606 @@
         "3. Simplify and check your answer."
       ],
       "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+    },
+    {
+      "id": "quadratic_equations_beginner_q001",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q002",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q003",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q004",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q005",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q006",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q007",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q008",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q009",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q010",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q011",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q012",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q013",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q014",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q015",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q016",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q017",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q018",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q019",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q020",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q021",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q022",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q023",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q024",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q025",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q026",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q027",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q028",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q029",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q030",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q031",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q032",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q033",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q034",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q035",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q036",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q037",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q038",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q039",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q040",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q041",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q042",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q043",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q044",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q045",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q046",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q047",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q048",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q049",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_beginner_q050",
+      "question": "Solve this quadratic equations problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

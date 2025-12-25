@@ -8,45 +8,45 @@
       "id": "mk_pa_a_001",
       "question": "What is the sum of interior angles of a pentagon?",
       "choices": {
-        "A": "540°",
-        "B": "600°",
-        "C": "720°",
-        "D": "900°",
-        "E": "1080°"
+        "A": "540\u00b0",
+        "B": "600\u00b0",
+        "C": "720\u00b0",
+        "D": "900\u00b0",
+        "E": "1080\u00b0"
       },
       "answer": "A",
-      "explanation": "Sum of interior angles = (n - 2) × 180°, where n = number of sides. For pentagon (n = 5): (5 - 2) × 180° = 3 × 180° = 540°.",
+      "explanation": "Sum of interior angles = (n - 2) \u00d7 180\u00b0, where n = number of sides. For pentagon (n = 5): (5 - 2) \u00d7 180\u00b0 = 3 \u00d7 180\u00b0 = 540\u00b0.",
       "steps": [
-        "1. Formula: Sum = (n - 2) × 180°.",
+        "1. Formula: Sum = (n - 2) \u00d7 180\u00b0.",
         "2. Pentagon has 5 sides: n = 5.",
-        "3. Sum = (5 - 2) × 180°.",
-        "4. Sum = 3 × 180° = 540°."
+        "3. Sum = (5 - 2) \u00d7 180\u00b0.",
+        "4. Sum = 3 \u00d7 180\u00b0 = 540\u00b0."
       ],
-      "fastStrategy": "Interior angle sum formula: (n - 2) × 180°."
+      "fastStrategy": "Interior angle sum formula: (n - 2) \u00d7 180\u00b0."
     },
     {
       "id": "mk_pa_a_002",
       "question": "If a polygon has 8 sides, what is the sum of its interior angles?",
       "choices": {
-        "A": "720°",
-        "B": "900°",
-        "C": "1080°",
-        "D": "1260°",
-        "E": "1440°"
+        "A": "720\u00b0",
+        "B": "900\u00b0",
+        "C": "1080\u00b0",
+        "D": "1260\u00b0",
+        "E": "1440\u00b0"
       },
       "answer": "C",
-      "explanation": "Sum = (n - 2) × 180°, where n = 8. Sum = (8 - 2) × 180° = 6 × 180° = 1080°.",
+      "explanation": "Sum = (n - 2) \u00d7 180\u00b0, where n = 8. Sum = (8 - 2) \u00d7 180\u00b0 = 6 \u00d7 180\u00b0 = 1080\u00b0.",
       "steps": [
-        "1. Formula: Sum = (n - 2) × 180°.",
+        "1. Formula: Sum = (n - 2) \u00d7 180\u00b0.",
         "2. Octagon has 8 sides: n = 8.",
-        "3. Sum = (8 - 2) × 180°.",
-        "4. Sum = 6 × 180° = 1080°."
+        "3. Sum = (8 - 2) \u00d7 180\u00b0.",
+        "4. Sum = 6 \u00d7 180\u00b0 = 1080\u00b0."
       ],
-      "fastStrategy": "Interior angle sum formula: (n - 2) × 180°."
+      "fastStrategy": "Interior angle sum formula: (n - 2) \u00d7 180\u00b0."
     },
     {
       "id": "mk_pa_a_003",
-      "question": "A regular polygon has each interior angle measuring 135°. How many sides does it have?",
+      "question": "A regular polygon has each interior angle measuring 135\u00b0. How many sides does it have?",
       "choices": {
         "A": "6",
         "B": "8",
@@ -55,57 +55,657 @@
         "E": "12"
       },
       "answer": "B",
-      "explanation": "For regular n-gon: each interior angle = (n - 2) × 180° / n. So 135 = (n - 2) × 180 / n. Solve: 135n = 180n - 360. -45n = -360. n = 8.",
+      "explanation": "For regular n-gon: each interior angle = (n - 2) \u00d7 180\u00b0 / n. So 135 = (n - 2) \u00d7 180 / n. Solve: 135n = 180n - 360. -45n = -360. n = 8.",
       "steps": [
-        "1. Formula: Each angle = (n - 2) × 180° / n.",
-        "2. Set equal: 135 = (n - 2) × 180 / n.",
-        "3. Multiply by n: 135n = (n - 2) × 180.",
+        "1. Formula: Each angle = (n - 2) \u00d7 180\u00b0 / n.",
+        "2. Set equal: 135 = (n - 2) \u00d7 180 / n.",
+        "3. Multiply by n: 135n = (n - 2) \u00d7 180.",
         "4. 135n = 180n - 360.",
         "5. -45n = -360.",
         "6. n = 8."
       ],
-      "fastStrategy": "Interior angle of regular polygon = (n - 2) × 180° / n."
+      "fastStrategy": "Interior angle of regular polygon = (n - 2) \u00d7 180\u00b0 / n."
     },
     {
       "id": "mk_pa_a_004",
       "question": "Two supplementary angles have measures in the ratio 2:3. What are their measures?",
       "choices": {
-        "A": "60° and 120°",
-        "B": "70° and 110°",
-        "C": "72° and 108°",
-        "D": "80° and 100°",
-        "E": "50° and 130°"
+        "A": "60\u00b0 and 120\u00b0",
+        "B": "70\u00b0 and 110\u00b0",
+        "C": "72\u00b0 and 108\u00b0",
+        "D": "80\u00b0 and 100\u00b0",
+        "E": "50\u00b0 and 130\u00b0"
       },
       "answer": "C",
-      "explanation": "Supplementary angles sum to 180°. Ratio 2:3 means 2x + 3x = 180. 5x = 180. x = 36. Angles: 2(36) = 72°, 3(36) = 108°.",
+      "explanation": "Supplementary angles sum to 180\u00b0. Ratio 2:3 means 2x + 3x = 180. 5x = 180. x = 36. Angles: 2(36) = 72\u00b0, 3(36) = 108\u00b0.",
       "steps": [
-        "1. Supplementary means sum = 180°.",
-        "2. Ratio 2:3 → angles are 2x and 3x.",
+        "1. Supplementary means sum = 180\u00b0.",
+        "2. Ratio 2:3 \u2192 angles are 2x and 3x.",
         "3. Equation: 2x + 3x = 180.",
         "4. 5x = 180.",
         "5. x = 36.",
-        "6. Angles: 72° and 108°."
+        "6. Angles: 72\u00b0 and 108\u00b0."
       ],
-      "fastStrategy": "Supplementary angles sum to 180°; use ratio to set up proportion."
+      "fastStrategy": "Supplementary angles sum to 180\u00b0; use ratio to set up proportion."
     },
     {
       "id": "mk_pa_a_005",
-      "question": "A line intersects two parallel lines. If one alternate interior angle measures 65°, what is the other alternate interior angle?",
+      "question": "A line intersects two parallel lines. If one alternate interior angle measures 65\u00b0, what is the other alternate interior angle?",
       "choices": {
-        "A": "65°",
-        "B": "115°",
-        "C": "125°",
-        "D": "155°",
-        "E": "180°"
+        "A": "65\u00b0",
+        "B": "115\u00b0",
+        "C": "125\u00b0",
+        "D": "155\u00b0",
+        "E": "180\u00b0"
       },
       "answer": "A",
-      "explanation": "When a transversal intersects parallel lines, alternate interior angles are equal. Both measure 65°.",
+      "explanation": "When a transversal intersects parallel lines, alternate interior angles are equal. Both measure 65\u00b0.",
       "steps": [
         "1. Transversal crosses two parallel lines.",
         "2. Alternate interior angles are equal.",
-        "3. If one angle = 65°, the other = 65°."
+        "3. If one angle = 65\u00b0, the other = 65\u00b0."
       ],
       "fastStrategy": "Parallel lines + transversal: alternate interior angles are equal."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q001",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q002",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q003",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q004",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q005",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q006",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q007",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q008",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q009",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q010",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q011",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q012",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q013",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q014",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q015",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q016",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q017",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q018",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q019",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q020",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q021",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q022",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q023",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q024",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q025",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q026",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q027",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q028",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q029",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q030",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q031",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q032",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q033",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q034",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q035",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q036",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q037",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q038",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q039",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q040",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q041",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q042",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q043",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q044",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q045",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q046",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q047",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q048",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q049",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_advanced_q050",
+      "question": "Solve this polygons and angles problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

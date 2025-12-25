@@ -43,7 +43,7 @@
     },
     {
       "id": "vic_adv_003",
-      "question": "The captain’s **astute** observation allowed the team to correct a subtle flaw in the mission plan.",
+      "question": "The captain\u2019s **astute** observation allowed the team to correct a subtle flaw in the mission plan.",
       "choices": {
         "A": "keen",
         "B": "predictable",
@@ -62,7 +62,7 @@
     },
     {
       "id": "vic_adv_004",
-      "question": "Her remarks were surprisingly **cynical**, suggesting she doubted anyone’s motives.",
+      "question": "Her remarks were surprisingly **cynical**, suggesting she doubted anyone\u2019s motives.",
       "choices": {
         "A": "trusting",
         "B": "skeptical",
@@ -96,7 +96,7 @@
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'detached'."
+      "fastStrategy": "Read the full sentence\u2014the tone and logic require 'detached'."
     },
     {
       "id": "vic_adv_006",
@@ -119,7 +119,7 @@
     },
     {
       "id": "vic_adv_007",
-      "question": "The colonel’s **formidable** presence commanded respect from everyone in the room.",
+      "question": "The colonel\u2019s **formidable** presence commanded respect from everyone in the room.",
       "choices": {
         "A": "weak",
         "B": "intimidating",
@@ -138,7 +138,7 @@
     },
     {
       "id": "vic_adv_008",
-      "question": "His explanation seemed **peripheral** to the actual issue and didn’t address the main concern.",
+      "question": "His explanation seemed **peripheral** to the actual issue and didn\u2019t address the main concern.",
       "choices": {
         "A": "central",
         "B": "unrelated",
@@ -157,7 +157,7 @@
     },
     {
       "id": "vic_adv_009",
-      "question": "The unexpected malfunction made the mission’s success increasingly **tenuous**.",
+      "question": "The unexpected malfunction made the mission\u2019s success increasingly **tenuous**.",
       "choices": {
         "A": "fragile",
         "B": "guaranteed",
@@ -191,7 +191,7 @@
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'controlled'."
+      "fastStrategy": "Read the full sentence\u2014the tone and logic require 'controlled'."
     },
     {
       "id": "vic_adv_011",
@@ -233,7 +233,7 @@
     },
     {
       "id": "vic_adv_013",
-      "question": "The officer’s **discreet** handling of the issue avoided unnecessary attention.",
+      "question": "The officer\u2019s **discreet** handling of the issue avoided unnecessary attention.",
       "choices": {
         "A": "private",
         "B": "loud",
@@ -286,7 +286,7 @@
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'muted'."
+      "fastStrategy": "Read the full sentence\u2014the tone and logic require 'muted'."
     },
     {
       "id": "vic_adv_016",
@@ -328,7 +328,7 @@
     },
     {
       "id": "vic_adv_018",
-      "question": "The senator’s response was **evasive**, avoiding a direct answer.",
+      "question": "The senator\u2019s response was **evasive**, avoiding a direct answer.",
       "choices": {
         "A": "clear",
         "B": "indirect",
@@ -381,7 +381,7 @@
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'unsupported'."
+      "fastStrategy": "Read the full sentence\u2014the tone and logic require 'unsupported'."
     },
     {
       "id": "vic_adv_021",
@@ -476,7 +476,607 @@
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'copied'."
+      "fastStrategy": "Read the full sentence\u2014the tone and logic require 'copied'."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q001",
+      "question": "Vocabulary In Context: Choose the best match for \"ambiguous\"",
+      "choices": {
+        "A": "diligent",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "unclear"
+      },
+      "answer": "D",
+      "explanation": "\"ambiguous\" and \"unclear\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q002",
+      "question": "Vocabulary In Context: Choose the best match for \"benevolent\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "kind-hearted",
+        "D": "diligent"
+      },
+      "answer": "C",
+      "explanation": "\"benevolent\" and \"kind-hearted\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q003",
+      "question": "Vocabulary In Context: Choose the best match for \"candid\"",
+      "choices": {
+        "A": "frank",
+        "B": "benevolent",
+        "C": "diligent",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"candid\" and \"frank\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q004",
+      "question": "Vocabulary In Context: Choose the best match for \"diligent\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "ambiguous",
+        "C": "candid",
+        "D": "hardworking"
+      },
+      "answer": "D",
+      "explanation": "\"diligent\" and \"hardworking\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q005",
+      "question": "Vocabulary In Context: Choose the best match for \"eloquent\"",
+      "choices": {
+        "A": "candid",
+        "B": "articulate",
+        "C": "benevolent",
+        "D": "ambiguous"
+      },
+      "answer": "B",
+      "explanation": "\"eloquent\" and \"articulate\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q006",
+      "question": "Vocabulary In Context: Choose the best match for \"frugal\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "thrifty"
+      },
+      "answer": "D",
+      "explanation": "\"frugal\" and \"thrifty\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q007",
+      "question": "Vocabulary In Context: Choose the best match for \"gregarious\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "social"
+      },
+      "answer": "D",
+      "explanation": "\"gregarious\" and \"social\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q008",
+      "question": "Vocabulary In Context: Choose the best match for \"harbinger\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "forerunner",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"harbinger\" and \"forerunner\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q009",
+      "question": "Vocabulary In Context: Choose the best match for \"incisive\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "penetrating",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"incisive\" and \"penetrating\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q010",
+      "question": "Vocabulary In Context: Choose the best match for \"jocular\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "humorous"
+      },
+      "answer": "D",
+      "explanation": "\"jocular\" and \"humorous\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q011",
+      "question": "Vocabulary In Context: Choose the best match for \"meticulous\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "careful",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "B",
+      "explanation": "\"meticulous\" and \"careful\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q012",
+      "question": "Vocabulary In Context: Choose the best match for \"nonchalant\"",
+      "choices": {
+        "A": "indifferent",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"nonchalant\" and \"indifferent\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q013",
+      "question": "Vocabulary In Context: Choose the best match for \"obstinate\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "stubborn",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"obstinate\" and \"stubborn\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q014",
+      "question": "Vocabulary In Context: Choose the best match for \"perspicacious\"",
+      "choices": {
+        "A": "insightful",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"perspicacious\" and \"insightful\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q015",
+      "question": "Vocabulary In Context: Choose the best match for \"querulous\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "complaining"
+      },
+      "answer": "D",
+      "explanation": "\"querulous\" and \"complaining\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q016",
+      "question": "Vocabulary In Context: Choose the best match for \"raucous\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "loud",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"raucous\" and \"loud\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q017",
+      "question": "Vocabulary In Context: Choose the best match for \"sagacious\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "wise",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "B",
+      "explanation": "\"sagacious\" and \"wise\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q018",
+      "question": "Vocabulary In Context: Choose the best match for \"taciturn\"",
+      "choices": {
+        "A": "quiet",
+        "B": "ambiguous",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"taciturn\" and \"quiet\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q019",
+      "question": "Vocabulary In Context: Choose the best match for \"ubiquitous\"",
+      "choices": {
+        "A": "everywhere",
+        "B": "ambiguous",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"ubiquitous\" and \"everywhere\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q020",
+      "question": "Vocabulary In Context: Choose the best match for \"vivacious\"",
+      "choices": {
+        "A": "lively",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"vivacious\" and \"lively\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q021",
+      "question": "Vocabulary In Context: Choose the best match for \"obfuscate\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "obscure",
+        "D": "ambiguous"
+      },
+      "answer": "C",
+      "explanation": "\"obfuscate\" and \"obscure\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q022",
+      "question": "Vocabulary In Context: Choose the best match for \"copious\"",
+      "choices": {
+        "A": "abundant",
+        "B": "ambiguous",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "A",
+      "explanation": "\"copious\" and \"abundant\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q023",
+      "question": "Vocabulary In Context: Choose the best match for \"ephemeral\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "fleeting",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"ephemeral\" and \"fleeting\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q024",
+      "question": "Vocabulary In Context: Choose the best match for \"fastidious\"",
+      "choices": {
+        "A": "meticulous",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"fastidious\" and \"meticulous\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q025",
+      "question": "Vocabulary In Context: Choose the best match for \"fortuitous\"",
+      "choices": {
+        "A": "fortunate",
+        "B": "ambiguous",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"fortuitous\" and \"fortunate\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q026",
+      "question": "Vocabulary In Context: Choose the best match for \"garrulous\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "talkative"
+      },
+      "answer": "D",
+      "explanation": "\"garrulous\" and \"talkative\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q027",
+      "question": "Vocabulary In Context: Choose the best match for \"indolent\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "lazy",
+        "D": "ambiguous"
+      },
+      "answer": "C",
+      "explanation": "\"indolent\" and \"lazy\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q028",
+      "question": "Vocabulary In Context: Choose the best match for \"lucrative\"",
+      "choices": {
+        "A": "candid",
+        "B": "profitable",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"lucrative\" and \"profitable\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q029",
+      "question": "Vocabulary In Context: Choose the best match for \"magnanimous\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "ambiguous",
+        "C": "generous",
+        "D": "candid"
+      },
+      "answer": "C",
+      "explanation": "\"magnanimous\" and \"generous\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q030",
+      "question": "Vocabulary In Context: Choose the best match for \"perfunctory\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "ambiguous",
+        "C": "cursory",
+        "D": "candid"
+      },
+      "answer": "C",
+      "explanation": "\"perfunctory\" and \"cursory\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q031",
+      "question": "Vocabulary In Context: Choose the best match for \"plausible\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "candid",
+        "C": "believable",
+        "D": "ambiguous"
+      },
+      "answer": "C",
+      "explanation": "\"plausible\" and \"believable\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q032",
+      "question": "Vocabulary In Context: Choose the best match for \"requisite\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "ambiguous",
+        "C": "necessary",
+        "D": "candid"
+      },
+      "answer": "C",
+      "explanation": "\"requisite\" and \"necessary\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q033",
+      "question": "Vocabulary In Context: Choose the best match for \"sanguine\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "optimistic",
+        "D": "ambiguous"
+      },
+      "answer": "C",
+      "explanation": "\"sanguine\" and \"optimistic\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q034",
+      "question": "Vocabulary In Context: Choose the best match for \"stringent\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "benevolent",
+        "D": "strict"
+      },
+      "answer": "D",
+      "explanation": "\"stringent\" and \"strict\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q035",
+      "question": "Vocabulary In Context: Choose the best match for \"tedious\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "boring"
+      },
+      "answer": "D",
+      "explanation": "\"tedious\" and \"boring\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q036",
+      "question": "Vocabulary In Context: Choose the best match for \"vacuous\"",
+      "choices": {
+        "A": "empty",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"vacuous\" and \"empty\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q037",
+      "question": "Vocabulary In Context: Choose the best match for \"verisimilitude\"",
+      "choices": {
+        "A": "authenticity",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"verisimilitude\" and \"authenticity\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q038",
+      "question": "Vocabulary In Context: Choose the best match for \"viable\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "feasible"
+      },
+      "answer": "D",
+      "explanation": "\"viable\" and \"feasible\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q039",
+      "question": "Vocabulary In Context: Choose the best match for \"vindicate\"",
+      "choices": {
+        "A": "candid",
+        "B": "justify",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"vindicate\" and \"justify\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q040",
+      "question": "Vocabulary In Context: Choose the best match for \"voluble\"",
+      "choices": {
+        "A": "talkative",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"voluble\" and \"talkative\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q041",
+      "question": "Vocabulary In Context: Choose the best match for \"ambiguous\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "unclear",
+        "D": "diligent"
+      },
+      "answer": "C",
+      "explanation": "\"ambiguous\" and \"unclear\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q042",
+      "question": "Vocabulary In Context: Choose the best match for \"benevolent\"",
+      "choices": {
+        "A": "diligent",
+        "B": "candid",
+        "C": "kind-hearted",
+        "D": "ambiguous"
+      },
+      "answer": "C",
+      "explanation": "\"benevolent\" and \"kind-hearted\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q043",
+      "question": "Vocabulary In Context: Choose the best match for \"candid\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "benevolent",
+        "C": "frank",
+        "D": "diligent"
+      },
+      "answer": "C",
+      "explanation": "\"candid\" and \"frank\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q044",
+      "question": "Vocabulary In Context: Choose the best match for \"diligent\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "hardworking"
+      },
+      "answer": "D",
+      "explanation": "\"diligent\" and \"hardworking\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q045",
+      "question": "Vocabulary In Context: Choose the best match for \"eloquent\"",
+      "choices": {
+        "A": "articulate",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"eloquent\" and \"articulate\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q046",
+      "question": "Vocabulary In Context: Choose the best match for \"frugal\"",
+      "choices": {
+        "A": "candid",
+        "B": "thrifty",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"frugal\" and \"thrifty\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q047",
+      "question": "Vocabulary In Context: Choose the best match for \"gregarious\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "candid",
+        "C": "social",
+        "D": "ambiguous"
+      },
+      "answer": "C",
+      "explanation": "\"gregarious\" and \"social\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q048",
+      "question": "Vocabulary In Context: Choose the best match for \"harbinger\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "forerunner",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "B",
+      "explanation": "\"harbinger\" and \"forerunner\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q049",
+      "question": "Vocabulary In Context: Choose the best match for \"incisive\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "penetrating",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"incisive\" and \"penetrating\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_advanced_q050",
+      "question": "Vocabulary In Context: Choose the best match for \"jocular\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "humorous",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"jocular\" and \"humorous\" are closely related in meaning."
     }
   ]
 }

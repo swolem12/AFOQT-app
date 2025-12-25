@@ -6,7 +6,7 @@
   "questions": [
     {
       "id": "mk_oo_e_001",
-      "question": "Calculate: 10 - 3 × 2 + 4² ÷ 2 - 1",
+      "question": "Calculate: 10 - 3 \u00d7 2 + 4\u00b2 \u00f7 2 - 1",
       "choices": {
         "A": "5",
         "B": "10",
@@ -15,15 +15,615 @@
         "E": "18"
       },
       "answer": "C",
-      "explanation": "PEMDAS: Exponents first: 4² = 16. Then multiplication/division left to right: 3 × 2 = 6, 16 ÷ 2 = 8. Then addition/subtraction left to right: 10 - 6 + 8 - 1 = 11.",
+      "explanation": "PEMDAS: Exponents first: 4\u00b2 = 16. Then multiplication/division left to right: 3 \u00d7 2 = 6, 16 \u00f7 2 = 8. Then addition/subtraction left to right: 10 - 6 + 8 - 1 = 11.",
       "steps": [
-        "1. Exponents: 4² = 16.",
-        "2. Expression becomes: 10 - 3 × 2 + 16 ÷ 2 - 1.",
-        "3. Multiply/divide: 3 × 2 = 6, 16 ÷ 2 = 8.",
+        "1. Exponents: 4\u00b2 = 16.",
+        "2. Expression becomes: 10 - 3 \u00d7 2 + 16 \u00f7 2 - 1.",
+        "3. Multiply/divide: 3 \u00d7 2 = 6, 16 \u00f7 2 = 8.",
         "4. Expression: 10 - 6 + 8 - 1.",
         "5. Add/subtract left to right: 10 - 6 = 4; 4 + 8 = 12; 12 - 1 = 11."
       ],
       "fastStrategy": "PEMDAS: Parentheses, Exponents, Multiply/Divide (left-to-right), Add/Subtract (left-to-right)."
+    },
+    {
+      "id": "order_of_operations_expert_q001",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q002",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q003",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q004",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q005",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q006",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q007",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q008",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q009",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q010",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q011",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q012",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q013",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q014",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q015",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q016",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q017",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q018",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q019",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q020",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q021",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q022",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q023",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q024",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q025",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q026",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q027",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q028",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q029",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q030",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q031",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q032",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q033",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q034",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q035",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q036",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q037",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q038",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q039",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q040",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q041",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q042",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q043",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q044",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q045",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q046",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q047",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q048",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q049",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "order_of_operations_expert_q050",
+      "question": "Solve this order of operations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

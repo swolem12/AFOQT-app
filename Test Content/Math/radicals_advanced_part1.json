@@ -6,80 +6,680 @@
   "questions": [
     {
       "id": "mk_rad_a_001",
-      "question": "Simplify: √(12)",
+      "question": "Simplify: \u221a(12)",
       "choices": {
-        "A": "2√3",
-        "B": "3√4",
-        "C": "4√3",
-        "D": "2√6",
-        "E": "√12 (cannot simplify)"
+        "A": "2\u221a3",
+        "B": "3\u221a4",
+        "C": "4\u221a3",
+        "D": "2\u221a6",
+        "E": "\u221a12 (cannot simplify)"
       },
       "answer": "A",
-      "explanation": "12 = 4 × 3. √12 = √(4 × 3) = √4 × √3 = 2√3.",
+      "explanation": "12 = 4 \u00d7 3. \u221a12 = \u221a(4 \u00d7 3) = \u221a4 \u00d7 \u221a3 = 2\u221a3.",
       "steps": [
-        "1. Factor: 12 = 4 × 3.",
-        "2. Separate: √12 = √4 × √3.",
-        "3. Simplify: 2√3."
+        "1. Factor: 12 = 4 \u00d7 3.",
+        "2. Separate: \u221a12 = \u221a4 \u00d7 \u221a3.",
+        "3. Simplify: 2\u221a3."
       ],
       "fastStrategy": "Extract perfect squares from under the radical."
     },
     {
       "id": "mk_rad_a_002",
-      "question": "Simplify: √(8) + √(18)",
+      "question": "Simplify: \u221a(8) + \u221a(18)",
       "choices": {
-        "A": "5√2",
-        "B": "5√5",
-        "C": "√26",
-        "D": "2√10",
-        "E": "√8 + √18 (cannot simplify)"
+        "A": "5\u221a2",
+        "B": "5\u221a5",
+        "C": "\u221a26",
+        "D": "2\u221a10",
+        "E": "\u221a8 + \u221a18 (cannot simplify)"
       },
       "answer": "A",
-      "explanation": "√8 = 2√2 and √18 = 3√2. Sum: 2√2 + 3√2 = 5√2.",
+      "explanation": "\u221a8 = 2\u221a2 and \u221a18 = 3\u221a2. Sum: 2\u221a2 + 3\u221a2 = 5\u221a2.",
       "steps": [
-        "1. Simplify √8: 8 = 4 × 2, so √8 = 2√2.",
-        "2. Simplify √18: 18 = 9 × 2, so √18 = 3√2.",
-        "3. Add like terms: 2√2 + 3√2 = 5√2."
+        "1. Simplify \u221a8: 8 = 4 \u00d7 2, so \u221a8 = 2\u221a2.",
+        "2. Simplify \u221a18: 18 = 9 \u00d7 2, so \u221a18 = 3\u221a2.",
+        "3. Add like terms: 2\u221a2 + 3\u221a2 = 5\u221a2."
       ],
       "fastStrategy": "Simplify each radical first; combine like radicals."
     },
     {
       "id": "mk_rad_a_003",
-      "question": "Simplify: √(x⁶)",
+      "question": "Simplify: \u221a(x\u2076)",
       "choices": {
-        "A": "x³",
-        "B": "x²",
-        "C": "x⁶",
-        "D": "|x³|",
+        "A": "x\u00b3",
+        "B": "x\u00b2",
+        "C": "x\u2076",
+        "D": "|x\u00b3|",
         "E": "x^(1/2)"
       },
       "answer": "A",
-      "explanation": "√(x⁶) = x^(6/2) = x³.",
+      "explanation": "\u221a(x\u2076) = x^(6/2) = x\u00b3.",
       "steps": [
-        "1. Apply radical rule: √(a^n) = a^(n/2).",
+        "1. Apply radical rule: \u221a(a^n) = a^(n/2).",
         "2. 6/2 = 3.",
-        "3. Result: x³."
+        "3. Result: x\u00b3."
       ],
-      "fastStrategy": "For √(x^n), divide exponent by 2."
+      "fastStrategy": "For \u221a(x^n), divide exponent by 2."
     },
     {
       "id": "mk_rad_a_004",
-      "question": "Rationalize: 1/√2",
+      "question": "Rationalize: 1/\u221a2",
       "choices": {
-        "A": "√2/2",
+        "A": "\u221a2/2",
         "B": "1/2",
-        "C": "√2",
-        "D": "2/√2",
-        "E": "√2/√2"
+        "C": "\u221a2",
+        "D": "2/\u221a2",
+        "E": "\u221a2/\u221a2"
       },
       "answer": "A",
-      "explanation": "Multiply by √2/√2: (1/√2) × (√2/√2) = √2/2.",
+      "explanation": "Multiply by \u221a2/\u221a2: (1/\u221a2) \u00d7 (\u221a2/\u221a2) = \u221a2/2.",
       "steps": [
-        "1. Multiply by √2/√2.",
-        "2. Numerator: 1 × √2 = √2.",
-        "3. Denominator: √2 × √2 = 2.",
-        "4. Result: √2/2."
+        "1. Multiply by \u221a2/\u221a2.",
+        "2. Numerator: 1 \u00d7 \u221a2 = \u221a2.",
+        "3. Denominator: \u221a2 \u00d7 \u221a2 = 2.",
+        "4. Result: \u221a2/2."
       ],
       "fastStrategy": "Rationalize by multiplying by conjugate or same radical."
+    },
+    {
+      "id": "radicals_advanced_q001",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q002",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q003",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q004",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q005",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q006",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q007",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q008",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q009",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q010",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q011",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q012",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q013",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q014",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q015",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q016",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q017",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q018",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q019",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q020",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q021",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q022",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q023",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q024",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q025",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q026",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q027",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q028",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q029",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q030",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q031",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q032",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q033",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q034",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q035",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q036",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q037",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q038",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q039",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q040",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q041",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q042",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q043",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q044",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q045",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q046",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q047",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q048",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q049",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_advanced_q050",
+      "question": "Solve this radicals problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

@@ -39,7 +39,7 @@
         "3. Combine the meanings to understand the whole word.",
         "4. Match to the definition or example given."
       ],
-      "fastStrategy": "Think of 'dictate'—it contains 'dict' which means 'to say'."
+      "fastStrategy": "Think of 'dictate'\u2014it contains 'dict' which means 'to say'."
     },
     {
       "id": "wra_adv_003",
@@ -134,7 +134,7 @@
         "3. Combine the meanings to understand the whole word.",
         "4. Match to the definition or example given."
       ],
-      "fastStrategy": "Think of 'visual'—it contains 'vid' which means 'see'."
+      "fastStrategy": "Think of 'visual'\u2014it contains 'vid' which means 'see'."
     },
     {
       "id": "wra_adv_008",
@@ -229,7 +229,7 @@
         "3. Combine the meanings to understand the whole word.",
         "4. Match to the definition or example given."
       ],
-      "fastStrategy": "Think of 'scribe'—it contains 'scribe' which means 'write'."
+      "fastStrategy": "Think of 'scribe'\u2014it contains 'scribe' which means 'write'."
     },
     {
       "id": "wra_adv_013",
@@ -419,7 +419,7 @@
         "3. Combine the meanings to understand the whole word.",
         "4. Match to the definition or example given."
       ],
-      "fastStrategy": "Think of 'submit'—it contains 'mis' which means 'send'."
+      "fastStrategy": "Think of 'submit'\u2014it contains 'mis' which means 'send'."
     },
     {
       "id": "wra_adv_023",
@@ -477,6 +477,606 @@
         "4. Match to the definition or example given."
       ],
       "fastStrategy": "Link 'dict' to 'dict'. That shows it means 'say'."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q001",
+      "question": "Word Roots Affixes: Choose the best match for \"ambiguous\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "diligent",
+        "C": "candid",
+        "D": "unclear"
+      },
+      "answer": "D",
+      "explanation": "\"ambiguous\" and \"unclear\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q002",
+      "question": "Word Roots Affixes: Choose the best match for \"benevolent\"",
+      "choices": {
+        "A": "diligent",
+        "B": "kind-hearted",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "B",
+      "explanation": "\"benevolent\" and \"kind-hearted\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q003",
+      "question": "Word Roots Affixes: Choose the best match for \"candid\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "diligent",
+        "C": "benevolent",
+        "D": "frank"
+      },
+      "answer": "D",
+      "explanation": "\"candid\" and \"frank\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q004",
+      "question": "Word Roots Affixes: Choose the best match for \"diligent\"",
+      "choices": {
+        "A": "candid",
+        "B": "hardworking",
+        "C": "benevolent",
+        "D": "ambiguous"
+      },
+      "answer": "B",
+      "explanation": "\"diligent\" and \"hardworking\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q005",
+      "question": "Word Roots Affixes: Choose the best match for \"eloquent\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "articulate",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"eloquent\" and \"articulate\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q006",
+      "question": "Word Roots Affixes: Choose the best match for \"frugal\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "thrifty",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"frugal\" and \"thrifty\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q007",
+      "question": "Word Roots Affixes: Choose the best match for \"gregarious\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "social",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "B",
+      "explanation": "\"gregarious\" and \"social\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q008",
+      "question": "Word Roots Affixes: Choose the best match for \"harbinger\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "forerunner",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"harbinger\" and \"forerunner\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q009",
+      "question": "Word Roots Affixes: Choose the best match for \"incisive\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "penetrating"
+      },
+      "answer": "D",
+      "explanation": "\"incisive\" and \"penetrating\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q010",
+      "question": "Word Roots Affixes: Choose the best match for \"jocular\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "humorous"
+      },
+      "answer": "D",
+      "explanation": "\"jocular\" and \"humorous\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q011",
+      "question": "Word Roots Affixes: Choose the best match for \"meticulous\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "careful"
+      },
+      "answer": "D",
+      "explanation": "\"meticulous\" and \"careful\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q012",
+      "question": "Word Roots Affixes: Choose the best match for \"nonchalant\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "indifferent",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "B",
+      "explanation": "\"nonchalant\" and \"indifferent\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q013",
+      "question": "Word Roots Affixes: Choose the best match for \"obstinate\"",
+      "choices": {
+        "A": "stubborn",
+        "B": "ambiguous",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "A",
+      "explanation": "\"obstinate\" and \"stubborn\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q014",
+      "question": "Word Roots Affixes: Choose the best match for \"perspicacious\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "benevolent",
+        "D": "insightful"
+      },
+      "answer": "D",
+      "explanation": "\"perspicacious\" and \"insightful\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q015",
+      "question": "Word Roots Affixes: Choose the best match for \"querulous\"",
+      "choices": {
+        "A": "complaining",
+        "B": "ambiguous",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"querulous\" and \"complaining\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q016",
+      "question": "Word Roots Affixes: Choose the best match for \"raucous\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "loud",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "B",
+      "explanation": "\"raucous\" and \"loud\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q017",
+      "question": "Word Roots Affixes: Choose the best match for \"sagacious\"",
+      "choices": {
+        "A": "candid",
+        "B": "wise",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"sagacious\" and \"wise\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q018",
+      "question": "Word Roots Affixes: Choose the best match for \"taciturn\"",
+      "choices": {
+        "A": "candid",
+        "B": "quiet",
+        "C": "benevolent",
+        "D": "ambiguous"
+      },
+      "answer": "B",
+      "explanation": "\"taciturn\" and \"quiet\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q019",
+      "question": "Word Roots Affixes: Choose the best match for \"ubiquitous\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "everywhere",
+        "D": "ambiguous"
+      },
+      "answer": "C",
+      "explanation": "\"ubiquitous\" and \"everywhere\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q020",
+      "question": "Word Roots Affixes: Choose the best match for \"vivacious\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "candid",
+        "C": "lively",
+        "D": "ambiguous"
+      },
+      "answer": "C",
+      "explanation": "\"vivacious\" and \"lively\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q021",
+      "question": "Word Roots Affixes: Choose the best match for \"obfuscate\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "obscure",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "B",
+      "explanation": "\"obfuscate\" and \"obscure\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q022",
+      "question": "Word Roots Affixes: Choose the best match for \"copious\"",
+      "choices": {
+        "A": "abundant",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"copious\" and \"abundant\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q023",
+      "question": "Word Roots Affixes: Choose the best match for \"ephemeral\"",
+      "choices": {
+        "A": "fleeting",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "candid"
+      },
+      "answer": "A",
+      "explanation": "\"ephemeral\" and \"fleeting\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q024",
+      "question": "Word Roots Affixes: Choose the best match for \"fastidious\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "meticulous",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"fastidious\" and \"meticulous\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q025",
+      "question": "Word Roots Affixes: Choose the best match for \"fortuitous\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "benevolent",
+        "C": "fortunate",
+        "D": "candid"
+      },
+      "answer": "C",
+      "explanation": "\"fortuitous\" and \"fortunate\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q026",
+      "question": "Word Roots Affixes: Choose the best match for \"garrulous\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "talkative",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "B",
+      "explanation": "\"garrulous\" and \"talkative\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q027",
+      "question": "Word Roots Affixes: Choose the best match for \"indolent\"",
+      "choices": {
+        "A": "lazy",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"indolent\" and \"lazy\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q028",
+      "question": "Word Roots Affixes: Choose the best match for \"lucrative\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "profitable",
+        "D": "ambiguous"
+      },
+      "answer": "C",
+      "explanation": "\"lucrative\" and \"profitable\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q029",
+      "question": "Word Roots Affixes: Choose the best match for \"magnanimous\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "generous"
+      },
+      "answer": "D",
+      "explanation": "\"magnanimous\" and \"generous\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q030",
+      "question": "Word Roots Affixes: Choose the best match for \"perfunctory\"",
+      "choices": {
+        "A": "cursory",
+        "B": "ambiguous",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"perfunctory\" and \"cursory\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q031",
+      "question": "Word Roots Affixes: Choose the best match for \"plausible\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "believable",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "B",
+      "explanation": "\"plausible\" and \"believable\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q032",
+      "question": "Word Roots Affixes: Choose the best match for \"requisite\"",
+      "choices": {
+        "A": "necessary",
+        "B": "ambiguous",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"requisite\" and \"necessary\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q033",
+      "question": "Word Roots Affixes: Choose the best match for \"sanguine\"",
+      "choices": {
+        "A": "optimistic",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "candid"
+      },
+      "answer": "A",
+      "explanation": "\"sanguine\" and \"optimistic\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q034",
+      "question": "Word Roots Affixes: Choose the best match for \"stringent\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "strict"
+      },
+      "answer": "D",
+      "explanation": "\"stringent\" and \"strict\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q035",
+      "question": "Word Roots Affixes: Choose the best match for \"tedious\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "boring",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"tedious\" and \"boring\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q036",
+      "question": "Word Roots Affixes: Choose the best match for \"vacuous\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "empty",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"vacuous\" and \"empty\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q037",
+      "question": "Word Roots Affixes: Choose the best match for \"verisimilitude\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "authenticity",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"verisimilitude\" and \"authenticity\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q038",
+      "question": "Word Roots Affixes: Choose the best match for \"viable\"",
+      "choices": {
+        "A": "feasible",
+        "B": "ambiguous",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"viable\" and \"feasible\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q039",
+      "question": "Word Roots Affixes: Choose the best match for \"vindicate\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "justify",
+        "D": "ambiguous"
+      },
+      "answer": "C",
+      "explanation": "\"vindicate\" and \"justify\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q040",
+      "question": "Word Roots Affixes: Choose the best match for \"voluble\"",
+      "choices": {
+        "A": "talkative",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "candid"
+      },
+      "answer": "A",
+      "explanation": "\"voluble\" and \"talkative\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q041",
+      "question": "Word Roots Affixes: Choose the best match for \"ambiguous\"",
+      "choices": {
+        "A": "diligent",
+        "B": "unclear",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"ambiguous\" and \"unclear\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q042",
+      "question": "Word Roots Affixes: Choose the best match for \"benevolent\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "diligent",
+        "C": "kind-hearted",
+        "D": "candid"
+      },
+      "answer": "C",
+      "explanation": "\"benevolent\" and \"kind-hearted\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q043",
+      "question": "Word Roots Affixes: Choose the best match for \"candid\"",
+      "choices": {
+        "A": "frank",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "diligent"
+      },
+      "answer": "A",
+      "explanation": "\"candid\" and \"frank\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q044",
+      "question": "Word Roots Affixes: Choose the best match for \"diligent\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "benevolent",
+        "D": "hardworking"
+      },
+      "answer": "D",
+      "explanation": "\"diligent\" and \"hardworking\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q045",
+      "question": "Word Roots Affixes: Choose the best match for \"eloquent\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "articulate"
+      },
+      "answer": "D",
+      "explanation": "\"eloquent\" and \"articulate\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q046",
+      "question": "Word Roots Affixes: Choose the best match for \"frugal\"",
+      "choices": {
+        "A": "thrifty",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"frugal\" and \"thrifty\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q047",
+      "question": "Word Roots Affixes: Choose the best match for \"gregarious\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "ambiguous",
+        "C": "social",
+        "D": "candid"
+      },
+      "answer": "C",
+      "explanation": "\"gregarious\" and \"social\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q048",
+      "question": "Word Roots Affixes: Choose the best match for \"harbinger\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "benevolent",
+        "D": "forerunner"
+      },
+      "answer": "D",
+      "explanation": "\"harbinger\" and \"forerunner\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q049",
+      "question": "Word Roots Affixes: Choose the best match for \"incisive\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "penetrating",
+        "C": "ambiguous",
+        "D": "candid"
+      },
+      "answer": "B",
+      "explanation": "\"incisive\" and \"penetrating\" are closely related in meaning."
+    },
+    {
+      "id": "word_roots_affixes_advanced_q050",
+      "question": "Word Roots Affixes: Choose the best match for \"jocular\"",
+      "choices": {
+        "A": "humorous",
+        "B": "ambiguous",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "A",
+      "explanation": "\"jocular\" and \"humorous\" are closely related in meaning."
     }
   ]
 }

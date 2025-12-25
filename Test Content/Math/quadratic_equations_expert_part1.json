@@ -6,26 +6,26 @@
   "questions": [
     {
       "id": "mk_qe_e_001",
-      "question": "Find all real solutions to x² + 6x + 13 = 0.",
+      "question": "Find all real solutions to x\u00b2 + 6x + 13 = 0.",
       "choices": {
-        "A": "x = -3 ± 2i (complex)",
+        "A": "x = -3 \u00b1 2i (complex)",
         "B": "x = -3",
         "C": "No real solutions",
         "D": "x = -6 or x = -2",
         "E": "Infinitely many solutions"
       },
       "answer": "C",
-      "explanation": "Use discriminant: b² - 4ac = 6² - 4(1)(13) = 36 - 52 = -16 < 0. Negative discriminant means no real solutions.",
+      "explanation": "Use discriminant: b\u00b2 - 4ac = 6\u00b2 - 4(1)(13) = 36 - 52 = -16 < 0. Negative discriminant means no real solutions.",
       "steps": [
         "1. Identify a = 1, b = 6, c = 13.",
-        "2. Calculate discriminant: Δ = b² - 4ac = 36 - 52 = -16.",
-        "3. Δ < 0 means no real solutions (complex conjugates exist)."
+        "2. Calculate discriminant: \u0394 = b\u00b2 - 4ac = 36 - 52 = -16.",
+        "3. \u0394 < 0 means no real solutions (complex conjugates exist)."
       ],
       "fastStrategy": "Discriminant determines number of real solutions."
     },
     {
       "id": "mk_qe_e_002",
-      "question": "If the roots of 2x² + bx + 3 = 0 are r and s, and r + s = -5, find b.",
+      "question": "If the roots of 2x\u00b2 + bx + 3 = 0 are r and s, and r + s = -5, find b.",
       "choices": {
         "A": "-10",
         "B": "-5",
@@ -34,7 +34,7 @@
         "E": "15"
       },
       "answer": "D",
-      "explanation": "By Vieta's formulas, sum of roots = -b/a. So -b/2 = -5 ⇒ -b = -10 ⇒ b = 10.",
+      "explanation": "By Vieta's formulas, sum of roots = -b/a. So -b/2 = -5 \u21d2 -b = -10 \u21d2 b = 10.",
       "steps": [
         "1. Recall Vieta's formula: r + s = -b/a.",
         "2. Given: r + s = -5, a = 2.",
@@ -43,6 +43,606 @@
         "5. b = 10."
       ],
       "fastStrategy": "Vieta's formulas: sum = -b/a, product = c/a."
+    },
+    {
+      "id": "quadratic_equations_expert_q001",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q002",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q003",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q004",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q005",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q006",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q007",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q008",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q009",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q010",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q011",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q012",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q013",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q014",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q015",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q016",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q017",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q018",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q019",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q020",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q021",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q022",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q023",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q024",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q025",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q026",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q027",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q028",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q029",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q030",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q031",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q032",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q033",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q034",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q035",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q036",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q037",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q038",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q039",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q040",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q041",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q042",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q043",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q044",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q045",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q046",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q047",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q048",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q049",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "quadratic_equations_expert_q050",
+      "question": "Solve this quadratic equations problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

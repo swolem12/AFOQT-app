@@ -77,7 +77,7 @@
         "3. Find the choice that means the same or nearly the same as the target word.",
         "4. Eliminate options that are opposites or unrelated."
       ],
-      "fastStrategy": "Quick recall: 'alleviate' → 'relieve'. Common on the AFOQT."
+      "fastStrategy": "Quick recall: 'alleviate' \u2192 'relieve'. Common on the AFOQT."
     },
     {
       "id": "hf_adv_005",
@@ -172,7 +172,7 @@
         "3. Find the choice that means the same or nearly the same as the target word.",
         "4. Eliminate options that are opposites or unrelated."
       ],
-      "fastStrategy": "Quick recall: 'rebuke' → 'criticize sharply'. Common on the AFOQT."
+      "fastStrategy": "Quick recall: 'rebuke' \u2192 'criticize sharply'. Common on the AFOQT."
     },
     {
       "id": "hf_adv_010",
@@ -267,7 +267,7 @@
         "3. Find the choice that means the same or nearly the same as the target word.",
         "4. Eliminate options that are opposites or unrelated."
       ],
-      "fastStrategy": "Quick recall: 'obscure' → 'unclear'. Common on the AFOQT."
+      "fastStrategy": "Quick recall: 'obscure' \u2192 'unclear'. Common on the AFOQT."
     },
     {
       "id": "hf_adv_015",
@@ -362,7 +362,7 @@
         "3. Find the choice that means the same or nearly the same as the target word.",
         "4. Eliminate options that are opposites or unrelated."
       ],
-      "fastStrategy": "Quick recall: 'vindicate' → 'clear of blame'. Common on the AFOQT."
+      "fastStrategy": "Quick recall: 'vindicate' \u2192 'clear of blame'. Common on the AFOQT."
     },
     {
       "id": "hf_adv_020",
@@ -457,7 +457,7 @@
         "3. Find the choice that means the same or nearly the same as the target word.",
         "4. Eliminate options that are opposites or unrelated."
       ],
-      "fastStrategy": "Quick recall: 'coherent' → 'logical'. Common on the AFOQT."
+      "fastStrategy": "Quick recall: 'coherent' \u2192 'logical'. Common on the AFOQT."
     },
     {
       "id": "hf_adv_025",
@@ -477,6 +477,606 @@
         "4. Eliminate options that are opposites or unrelated."
       ],
       "fastStrategy": "AFOQT staple: 'capricious' means 'impulsive'. Commit to memory."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q001",
+      "question": "Highfreq Vocab: Choose the best match for \"ambiguous\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "unclear",
+        "D": "diligent"
+      },
+      "answer": "C",
+      "explanation": "\"ambiguous\" and \"unclear\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q002",
+      "question": "Highfreq Vocab: Choose the best match for \"benevolent\"",
+      "choices": {
+        "A": "kind-hearted",
+        "B": "diligent",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"benevolent\" and \"kind-hearted\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q003",
+      "question": "Highfreq Vocab: Choose the best match for \"candid\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "diligent",
+        "C": "frank",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"candid\" and \"frank\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q004",
+      "question": "Highfreq Vocab: Choose the best match for \"diligent\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "hardworking"
+      },
+      "answer": "D",
+      "explanation": "\"diligent\" and \"hardworking\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q005",
+      "question": "Highfreq Vocab: Choose the best match for \"eloquent\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "articulate"
+      },
+      "answer": "D",
+      "explanation": "\"eloquent\" and \"articulate\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q006",
+      "question": "Highfreq Vocab: Choose the best match for \"frugal\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "thrifty"
+      },
+      "answer": "D",
+      "explanation": "\"frugal\" and \"thrifty\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q007",
+      "question": "Highfreq Vocab: Choose the best match for \"gregarious\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "candid",
+        "C": "social",
+        "D": "ambiguous"
+      },
+      "answer": "C",
+      "explanation": "\"gregarious\" and \"social\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q008",
+      "question": "Highfreq Vocab: Choose the best match for \"harbinger\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "forerunner",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"harbinger\" and \"forerunner\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q009",
+      "question": "Highfreq Vocab: Choose the best match for \"incisive\"",
+      "choices": {
+        "A": "penetrating",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"incisive\" and \"penetrating\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q010",
+      "question": "Highfreq Vocab: Choose the best match for \"jocular\"",
+      "choices": {
+        "A": "humorous",
+        "B": "ambiguous",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "A",
+      "explanation": "\"jocular\" and \"humorous\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q011",
+      "question": "Highfreq Vocab: Choose the best match for \"meticulous\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "careful",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"meticulous\" and \"careful\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q012",
+      "question": "Highfreq Vocab: Choose the best match for \"nonchalant\"",
+      "choices": {
+        "A": "indifferent",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"nonchalant\" and \"indifferent\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q013",
+      "question": "Highfreq Vocab: Choose the best match for \"obstinate\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "stubborn"
+      },
+      "answer": "D",
+      "explanation": "\"obstinate\" and \"stubborn\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q014",
+      "question": "Highfreq Vocab: Choose the best match for \"perspicacious\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "insightful"
+      },
+      "answer": "D",
+      "explanation": "\"perspicacious\" and \"insightful\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q015",
+      "question": "Highfreq Vocab: Choose the best match for \"querulous\"",
+      "choices": {
+        "A": "candid",
+        "B": "complaining",
+        "C": "benevolent",
+        "D": "ambiguous"
+      },
+      "answer": "B",
+      "explanation": "\"querulous\" and \"complaining\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q016",
+      "question": "Highfreq Vocab: Choose the best match for \"raucous\"",
+      "choices": {
+        "A": "loud",
+        "B": "ambiguous",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "A",
+      "explanation": "\"raucous\" and \"loud\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q017",
+      "question": "Highfreq Vocab: Choose the best match for \"sagacious\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "wise",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "B",
+      "explanation": "\"sagacious\" and \"wise\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q018",
+      "question": "Highfreq Vocab: Choose the best match for \"taciturn\"",
+      "choices": {
+        "A": "quiet",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"taciturn\" and \"quiet\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q019",
+      "question": "Highfreq Vocab: Choose the best match for \"ubiquitous\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "everywhere",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"ubiquitous\" and \"everywhere\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q020",
+      "question": "Highfreq Vocab: Choose the best match for \"vivacious\"",
+      "choices": {
+        "A": "lively",
+        "B": "ambiguous",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "A",
+      "explanation": "\"vivacious\" and \"lively\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q021",
+      "question": "Highfreq Vocab: Choose the best match for \"obfuscate\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "ambiguous",
+        "C": "obscure",
+        "D": "candid"
+      },
+      "answer": "C",
+      "explanation": "\"obfuscate\" and \"obscure\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q022",
+      "question": "Highfreq Vocab: Choose the best match for \"copious\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "abundant"
+      },
+      "answer": "D",
+      "explanation": "\"copious\" and \"abundant\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q023",
+      "question": "Highfreq Vocab: Choose the best match for \"ephemeral\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "fleeting",
+        "D": "ambiguous"
+      },
+      "answer": "C",
+      "explanation": "\"ephemeral\" and \"fleeting\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q024",
+      "question": "Highfreq Vocab: Choose the best match for \"fastidious\"",
+      "choices": {
+        "A": "meticulous",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"fastidious\" and \"meticulous\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q025",
+      "question": "Highfreq Vocab: Choose the best match for \"fortuitous\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "benevolent",
+        "D": "fortunate"
+      },
+      "answer": "D",
+      "explanation": "\"fortuitous\" and \"fortunate\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q026",
+      "question": "Highfreq Vocab: Choose the best match for \"garrulous\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "talkative",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"garrulous\" and \"talkative\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q027",
+      "question": "Highfreq Vocab: Choose the best match for \"indolent\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "lazy",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"indolent\" and \"lazy\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q028",
+      "question": "Highfreq Vocab: Choose the best match for \"lucrative\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "profitable",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"lucrative\" and \"profitable\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q029",
+      "question": "Highfreq Vocab: Choose the best match for \"magnanimous\"",
+      "choices": {
+        "A": "generous",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"magnanimous\" and \"generous\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q030",
+      "question": "Highfreq Vocab: Choose the best match for \"perfunctory\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "cursory",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "B",
+      "explanation": "\"perfunctory\" and \"cursory\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q031",
+      "question": "Highfreq Vocab: Choose the best match for \"plausible\"",
+      "choices": {
+        "A": "believable",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"plausible\" and \"believable\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q032",
+      "question": "Highfreq Vocab: Choose the best match for \"requisite\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "necessary",
+        "D": "ambiguous"
+      },
+      "answer": "C",
+      "explanation": "\"requisite\" and \"necessary\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q033",
+      "question": "Highfreq Vocab: Choose the best match for \"sanguine\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "optimistic"
+      },
+      "answer": "D",
+      "explanation": "\"sanguine\" and \"optimistic\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q034",
+      "question": "Highfreq Vocab: Choose the best match for \"stringent\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "ambiguous",
+        "C": "strict",
+        "D": "candid"
+      },
+      "answer": "C",
+      "explanation": "\"stringent\" and \"strict\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q035",
+      "question": "Highfreq Vocab: Choose the best match for \"tedious\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "boring",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"tedious\" and \"boring\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q036",
+      "question": "Highfreq Vocab: Choose the best match for \"vacuous\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "empty",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"vacuous\" and \"empty\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q037",
+      "question": "Highfreq Vocab: Choose the best match for \"verisimilitude\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "ambiguous",
+        "C": "candid",
+        "D": "authenticity"
+      },
+      "answer": "D",
+      "explanation": "\"verisimilitude\" and \"authenticity\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q038",
+      "question": "Highfreq Vocab: Choose the best match for \"viable\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "feasible",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "B",
+      "explanation": "\"viable\" and \"feasible\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q039",
+      "question": "Highfreq Vocab: Choose the best match for \"vindicate\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "justify",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "B",
+      "explanation": "\"vindicate\" and \"justify\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q040",
+      "question": "Highfreq Vocab: Choose the best match for \"voluble\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "candid",
+        "C": "talkative",
+        "D": "ambiguous"
+      },
+      "answer": "C",
+      "explanation": "\"voluble\" and \"talkative\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q041",
+      "question": "Highfreq Vocab: Choose the best match for \"ambiguous\"",
+      "choices": {
+        "A": "candid",
+        "B": "unclear",
+        "C": "diligent",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"ambiguous\" and \"unclear\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q042",
+      "question": "Highfreq Vocab: Choose the best match for \"benevolent\"",
+      "choices": {
+        "A": "kind-hearted",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "diligent"
+      },
+      "answer": "A",
+      "explanation": "\"benevolent\" and \"kind-hearted\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q043",
+      "question": "Highfreq Vocab: Choose the best match for \"candid\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "diligent",
+        "C": "frank",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"candid\" and \"frank\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q044",
+      "question": "Highfreq Vocab: Choose the best match for \"diligent\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "hardworking"
+      },
+      "answer": "D",
+      "explanation": "\"diligent\" and \"hardworking\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q045",
+      "question": "Highfreq Vocab: Choose the best match for \"eloquent\"",
+      "choices": {
+        "A": "articulate",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"eloquent\" and \"articulate\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q046",
+      "question": "Highfreq Vocab: Choose the best match for \"frugal\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "benevolent",
+        "D": "thrifty"
+      },
+      "answer": "D",
+      "explanation": "\"frugal\" and \"thrifty\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q047",
+      "question": "Highfreq Vocab: Choose the best match for \"gregarious\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "social"
+      },
+      "answer": "D",
+      "explanation": "\"gregarious\" and \"social\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q048",
+      "question": "Highfreq Vocab: Choose the best match for \"harbinger\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "forerunner"
+      },
+      "answer": "D",
+      "explanation": "\"harbinger\" and \"forerunner\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q049",
+      "question": "Highfreq Vocab: Choose the best match for \"incisive\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "ambiguous",
+        "C": "candid",
+        "D": "penetrating"
+      },
+      "answer": "D",
+      "explanation": "\"incisive\" and \"penetrating\" are closely related in meaning."
+    },
+    {
+      "id": "highfreq_vocab_advanced_q050",
+      "question": "Highfreq Vocab: Choose the best match for \"jocular\"",
+      "choices": {
+        "A": "humorous",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "candid"
+      },
+      "answer": "A",
+      "explanation": "\"jocular\" and \"humorous\" are closely related in meaning."
     }
   ]
 }

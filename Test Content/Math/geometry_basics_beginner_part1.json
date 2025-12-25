@@ -42,7 +42,7 @@
           "radius": 35,
           "startRay": 0,
           "endRay": 1,
-          "label": "∠BAC",
+          "label": "\u2220BAC",
           "measureDegrees": 60
         },
         "styleHints": {
@@ -51,9 +51,9 @@
           "labelsColor": "black"
         }
       },
-      "copilotInstruction": "Render a 300x300 SVG or absolutely-positioned div. Draw two rays sharing a common vertex at the center: one pointing straight up, one down-right. Draw a red angle arc between them labeled '∠BAC = 60°'. Use a clean, exam-style look: black rays, red arc, small point labels near each endpoint.",
+      "copilotInstruction": "Render a 300x300 SVG or absolutely-positioned div. Draw two rays sharing a common vertex at the center: one pointing straight up, one down-right. Draw a red angle arc between them labeled '\u2220BAC = 60\u00b0'. Use a clean, exam-style look: black rays, red arc, small point labels near each endpoint.",
       "id": "mk_geo_b_001",
-      "question": "The diagram shows ∠BAC measuring 60°. How is this angle best classified?",
+      "question": "The diagram shows \u2220BAC measuring 60\u00b0. How is this angle best classified?",
       "choices": {
         "A": "Right angle",
         "B": "Acute angle",
@@ -62,13 +62,13 @@
         "E": "Reflex angle"
       },
       "answer": "B",
-      "explanation": "An acute angle is any angle that is greater than 0° but less than 90°. Since 60° is between 0° and 90°, it is acute. Right angles measure exactly 90°, obtuse angles are between 90° and 180°, straight angles are 180°, and reflex angles are greater than 180°.",
+      "explanation": "An acute angle is any angle that is greater than 0\u00b0 but less than 90\u00b0. Since 60\u00b0 is between 0\u00b0 and 90\u00b0, it is acute. Right angles measure exactly 90\u00b0, obtuse angles are between 90\u00b0 and 180\u00b0, straight angles are 180\u00b0, and reflex angles are greater than 180\u00b0.",
       "steps": [
-        "1. Recall angle types: acute (< 90°), right (= 90°), obtuse (90°–180°), straight (= 180°), reflex (> 180°).",
-        "2. Compare 60° to 90°: 60° is less than 90°.",
-        "3. Therefore, 60° must be an acute angle."
+        "1. Recall angle types: acute (< 90\u00b0), right (= 90\u00b0), obtuse (90\u00b0\u2013180\u00b0), straight (= 180\u00b0), reflex (> 180\u00b0).",
+        "2. Compare 60\u00b0 to 90\u00b0: 60\u00b0 is less than 90\u00b0.",
+        "3. Therefore, 60\u00b0 must be an acute angle."
       ],
-      "fastStrategy": "Memorize: acute = cute and small (< 90°), right = 90°, obtuse = big but not straight (90°–180°)."
+      "fastStrategy": "Memorize: acute = cute and small (< 90\u00b0), right = 90\u00b0, obtuse = big but not straight (90\u00b0\u2013180\u00b0)."
     },
     {
       "uiSpec": {
@@ -108,7 +108,7 @@
           "radius": 35,
           "startRay": 0,
           "endRay": 1,
-          "label": "90°",
+          "label": "90\u00b0",
           "measureDegrees": 90,
           "rightAngleBox": true
         },
@@ -117,9 +117,9 @@
           "highlightAngleColor": "red"
         }
       },
-      "copilotInstruction": "Draw a horizontal ray from center to the right and a vertical ray from center upwards. At the vertex, draw a small square (right-angle marker) inside the angle and label the angle '90°'.",
+      "copilotInstruction": "Draw a horizontal ray from center to the right and a vertical ray from center upwards. At the vertex, draw a small square (right-angle marker) inside the angle and label the angle '90\u00b0'.",
       "id": "mk_geo_b_002",
-      "question": "The diagram shows an angle marked with a small square at the vertex and labeled 90°. How is this angle classified?",
+      "question": "The diagram shows an angle marked with a small square at the vertex and labeled 90\u00b0. How is this angle classified?",
       "choices": {
         "A": "Acute",
         "B": "Obtuse",
@@ -128,33 +128,33 @@
         "E": "Reflex"
       },
       "answer": "C",
-      "explanation": "A right angle is an angle that measures exactly 90°. The small square at the vertex is a standard diagram symbol indicating a right angle.",
+      "explanation": "A right angle is an angle that measures exactly 90\u00b0. The small square at the vertex is a standard diagram symbol indicating a right angle.",
       "steps": [
         "1. Recognize the right-angle square symbol in geometry diagrams.",
-        "2. Know that this symbol always means 90°.",
+        "2. Know that this symbol always means 90\u00b0.",
         "3. Therefore, the angle is a right angle."
       ],
-      "fastStrategy": "See the little square at the corner? That’s always a 90° right angle."
+      "fastStrategy": "See the little square at the corner? That\u2019s always a 90\u00b0 right angle."
     },
     {
       "id": "mk_geo_b_003",
-      "question": "Two angles are complementary. One angle measures 35°. What is the measure of the other angle?",
+      "question": "Two angles are complementary. One angle measures 35\u00b0. What is the measure of the other angle?",
       "choices": {
-        "A": "35°",
-        "B": "45°",
-        "C": "55°",
-        "D": "145°",
-        "E": "180°"
+        "A": "35\u00b0",
+        "B": "45\u00b0",
+        "C": "55\u00b0",
+        "D": "145\u00b0",
+        "E": "180\u00b0"
       },
       "answer": "C",
-      "explanation": "Complementary angles add up to 90°. If one is 35°, the other must be 90° − 35° = 55°.",
+      "explanation": "Complementary angles add up to 90\u00b0. If one is 35\u00b0, the other must be 90\u00b0 \u2212 35\u00b0 = 55\u00b0.",
       "steps": [
-        "1. Recall that 'complementary' means the two angles total 90°.",
-        "2. Set up 90° − 35° to find the missing angle.",
-        "3. Subtract: 90 − 35 = 55.",
-        "4. So the other angle is 55°."
+        "1. Recall that 'complementary' means the two angles total 90\u00b0.",
+        "2. Set up 90\u00b0 \u2212 35\u00b0 to find the missing angle.",
+        "3. Subtract: 90 \u2212 35 = 55.",
+        "4. So the other angle is 55\u00b0."
       ],
-      "fastStrategy": "Complementary → think 'C' for 'corner' (90°). Just do 90 minus the given angle.",
+      "fastStrategy": "Complementary \u2192 think 'C' for 'corner' (90\u00b0). Just do 90 minus the given angle.",
       "uiSpec": {
         "type": "geometry_angle_diagram",
         "width": 300,
@@ -190,7 +190,7 @@
           "radius": 35,
           "startRay": 0,
           "endRay": 1,
-          "label": "35°",
+          "label": "35\u00b0",
           "measureDegrees": 35
         },
         "styleHints": {
@@ -202,23 +202,23 @@
     },
     {
       "id": "mk_geo_b_004",
-      "question": "Two angles are supplementary. One angle measures 110°. What is the measure of the other angle?",
+      "question": "Two angles are supplementary. One angle measures 110\u00b0. What is the measure of the other angle?",
       "choices": {
-        "A": "20°",
-        "B": "40°",
-        "C": "60°",
-        "D": "70°",
-        "E": "90°"
+        "A": "20\u00b0",
+        "B": "40\u00b0",
+        "C": "60\u00b0",
+        "D": "70\u00b0",
+        "E": "90\u00b0"
       },
       "answer": "B",
-      "explanation": "Supplementary angles add up to 180°. If one is 110°, the other must be 180° − 110° = 70°. (Be careful to pick the correct answer choice.)",
+      "explanation": "Supplementary angles add up to 180\u00b0. If one is 110\u00b0, the other must be 180\u00b0 \u2212 110\u00b0 = 70\u00b0. (Be careful to pick the correct answer choice.)",
       "steps": [
-        "1. Recall that 'supplementary' means the two angles total 180°.",
-        "2. Compute 180° − 110°.",
-        "3. 180 − 110 = 70.",
-        "4. The missing angle is 70°."
+        "1. Recall that 'supplementary' means the two angles total 180\u00b0.",
+        "2. Compute 180\u00b0 \u2212 110\u00b0.",
+        "3. 180 \u2212 110 = 70.",
+        "4. The missing angle is 70\u00b0."
       ],
-      "fastStrategy": "Supplementary → 'straight line' → 180°. Do 180 minus the known angle.",
+      "fastStrategy": "Supplementary \u2192 'straight line' \u2192 180\u00b0. Do 180 minus the known angle.",
       "uiSpec": {
         "type": "geometry_angle_diagram",
         "width": 300,
@@ -254,7 +254,7 @@
           "radius": 35,
           "startRay": 0,
           "endRay": 1,
-          "label": "110°",
+          "label": "110\u00b0",
           "measureDegrees": 110
         },
         "styleHints": {
@@ -294,12 +294,12 @@
         "angleLabels": [
           {
             "position": "topRight",
-            "label": "120°",
+            "label": "120\u00b0",
             "highlight": true
           },
           {
             "position": "bottomLeft",
-            "label": "x°",
+            "label": "x\u00b0",
             "highlight": true
           }
         ],
@@ -308,22 +308,22 @@
           "highlightAngleColor": "red"
         }
       },
-      "copilotInstruction": "Draw two perpendicular lines crossing at the center, forming four angles. Label the top-right angle '120°' in red and the bottom-left opposite angle 'x°' in red as well. Emphasize they are vertical angles (opposite).",
+      "copilotInstruction": "Draw two perpendicular lines crossing at the center, forming four angles. Label the top-right angle '120\u00b0' in red and the bottom-left opposite angle 'x\u00b0' in red as well. Emphasize they are vertical angles (opposite).",
       "id": "mk_geo_b_005",
-      "question": "In the diagram, the top-right angle measures 120°. What is the measure of the vertical angle labeled x° (bottom-left)?",
+      "question": "In the diagram, the top-right angle measures 120\u00b0. What is the measure of the vertical angle labeled x\u00b0 (bottom-left)?",
       "choices": {
-        "A": "30°",
-        "B": "60°",
-        "C": "90°",
-        "D": "120°",
-        "E": "180°"
+        "A": "30\u00b0",
+        "B": "60\u00b0",
+        "C": "90\u00b0",
+        "D": "120\u00b0",
+        "E": "180\u00b0"
       },
       "answer": "D",
-      "explanation": "Vertical angles are the opposite angles formed when two lines intersect. Vertical angles are always equal. Since the top-right angle is 120°, the opposite bottom-left angle must also be 120°.",
+      "explanation": "Vertical angles are the opposite angles formed when two lines intersect. Vertical angles are always equal. Since the top-right angle is 120\u00b0, the opposite bottom-left angle must also be 120\u00b0.",
       "steps": [
         "1. Identify vertical angles as the pair of opposite angles formed by crossing lines.",
         "2. Know that vertical angles are congruent (equal in measure).",
-        "3. So if one is 120°, its vertical partner is also 120°."
+        "3. So if one is 120\u00b0, its vertical partner is also 120\u00b0."
       ],
       "fastStrategy": "Opposite angles at an X intersection are always equal. Match the given one."
     },
@@ -342,10 +342,10 @@
       "steps": [
         "1. Compare side lengths: 5, 5, 8.",
         "2. Notice two sides are equal (5 and 5).",
-        "3. Since not all three are equal, it’s not equilateral.",
+        "3. Since not all three are equal, it\u2019s not equilateral.",
         "4. Two equal sides means the triangle is isosceles."
       ],
-      "fastStrategy": "Two equal sides → isosceles. Three equal → equilateral. None equal → scalene.",
+      "fastStrategy": "Two equal sides \u2192 isosceles. Three equal \u2192 equilateral. None equal \u2192 scalene.",
       "uiSpec": {
         "type": "geometry_triangle_diagram",
         "width": 300,
@@ -370,15 +370,15 @@
         "angles": [
           {
             "vertex": 0,
-            "label": "60°"
+            "label": "60\u00b0"
           },
           {
             "vertex": 1,
-            "label": "x°"
+            "label": "x\u00b0"
           },
           {
             "vertex": 2,
-            "label": "y°"
+            "label": "y\u00b0"
           }
         ],
         "styleHints": {
@@ -398,14 +398,14 @@
         "E": "It is impossible to form a triangle."
       },
       "answer": "C",
-      "explanation": "A triangle is right if the Pythagorean theorem holds: a² + b² = c². Here, 3² + 4² = 9 + 16 = 25, and 5² = 25. Since 3² + 4² = 5², this is a right triangle.",
+      "explanation": "A triangle is right if the Pythagorean theorem holds: a\u00b2 + b\u00b2 = c\u00b2. Here, 3\u00b2 + 4\u00b2 = 9 + 16 = 25, and 5\u00b2 = 25. Since 3\u00b2 + 4\u00b2 = 5\u00b2, this is a right triangle.",
       "steps": [
         "1. Identify the largest side as the potential hypotenuse (5).",
-        "2. Compute 3² + 4² = 9 + 16 = 25.",
-        "3. Compute 5² = 25.",
-        "4. Since 3² + 4² = 5², the triangle is right."
+        "2. Compute 3\u00b2 + 4\u00b2 = 9 + 16 = 25.",
+        "3. Compute 5\u00b2 = 25.",
+        "4. Since 3\u00b2 + 4\u00b2 = 5\u00b2, the triangle is right."
       ],
-      "fastStrategy": "Memorize the classic right triangle: 3–4–5. It shows up constantly on tests.",
+      "fastStrategy": "Memorize the classic right triangle: 3\u20134\u20135. It shows up constantly on tests.",
       "uiSpec": {
         "type": "geometry_triangle_diagram",
         "width": 300,
@@ -430,15 +430,15 @@
         "angles": [
           {
             "vertex": 0,
-            "label": "60°"
+            "label": "60\u00b0"
           },
           {
             "vertex": 1,
-            "label": "x°"
+            "label": "x\u00b0"
           },
           {
             "vertex": 2,
-            "label": "y°"
+            "label": "y\u00b0"
           }
         ],
         "styleHints": {
@@ -461,7 +461,7 @@
       "explanation": "Perimeter of a rectangle is the total distance around it: P = 2(length + width). So P = 2(7 + 3) = 2(10) = 20 units.",
       "steps": [
         "1. Add length and width: 7 + 3 = 10.",
-        "2. Multiply by 2: 2 × 10 = 20.",
+        "2. Multiply by 2: 2 \u00d7 10 = 20.",
         "3. The perimeter is 20 units."
       ],
       "fastStrategy": "Rectangle: think doubled sum: 2L + 2W = 2(L + W).",
@@ -500,7 +500,7 @@
           "radius": 35,
           "startRay": 0,
           "endRay": 1,
-          "label": "45°",
+          "label": "45\u00b0",
           "measureDegrees": 45
         },
         "styleHints": {
@@ -521,13 +521,13 @@
         "E": "36 square units"
       },
       "answer": "D",
-      "explanation": "Area of a rectangle is A = length × width. Here, A = 9 × 4 = 36. (Be sure to select the correct answer choice that matches this value.)",
+      "explanation": "Area of a rectangle is A = length \u00d7 width. Here, A = 9 \u00d7 4 = 36. (Be sure to select the correct answer choice that matches this value.)",
       "steps": [
-        "1. Use A = L × W.",
-        "2. Multiply: 9 × 4 = 36.",
+        "1. Use A = L \u00d7 W.",
+        "2. Multiply: 9 \u00d7 4 = 36.",
         "3. So the area is 36 square units."
       ],
-      "fastStrategy": "Area of rectangles is just 'base × height' or 'length × width': simple multiplication.",
+      "fastStrategy": "Area of rectangles is just 'base \u00d7 height' or 'length \u00d7 width': simple multiplication.",
       "uiSpec": {
         "type": "geometry_angle_diagram",
         "width": 300,
@@ -563,7 +563,7 @@
           "radius": 35,
           "startRay": 0,
           "endRay": 1,
-          "label": "45°",
+          "label": "45\u00b0",
           "measureDegrees": 45
         },
         "styleHints": {
@@ -584,14 +584,14 @@
         "E": "120 square units"
       },
       "answer": "B",
-      "explanation": "Area of any triangle is A = 1/2 × base × height. Here, A = 1/2 × 10 × 6 = 1/2 × 60 = 30 square units.",
+      "explanation": "Area of any triangle is A = 1/2 \u00d7 base \u00d7 height. Here, A = 1/2 \u00d7 10 \u00d7 6 = 1/2 \u00d7 60 = 30 square units.",
       "steps": [
-        "1. Recall triangle area formula: A = 1/2 × b × h.",
+        "1. Recall triangle area formula: A = 1/2 \u00d7 b \u00d7 h.",
         "2. Plug in base = 10, height = 6.",
-        "3. Multiply: 10 × 6 = 60.",
-        "4. Take half: 60 ÷ 2 = 30."
+        "3. Multiply: 10 \u00d7 6 = 60.",
+        "4. Take half: 60 \u00f7 2 = 30."
       ],
-      "fastStrategy": "Triangle area is always 'half of a rectangle' with same base and height: 1/2 × b × h.",
+      "fastStrategy": "Triangle area is always 'half of a rectangle' with same base and height: 1/2 \u00d7 b \u00d7 h.",
       "uiSpec": {
         "type": "geometry_triangle_diagram",
         "width": 300,
@@ -616,15 +616,15 @@
         "angles": [
           {
             "vertex": 0,
-            "label": "60°"
+            "label": "60\u00b0"
           },
           {
             "vertex": 1,
-            "label": "x°"
+            "label": "x\u00b0"
           },
           {
             "vertex": 2,
-            "label": "y°"
+            "label": "y\u00b0"
           }
         ],
         "styleHints": {
@@ -696,53 +696,53 @@
         "E": "130 square units"
       },
       "answer": "B",
-      "explanation": "In a right triangle, the legs are the base and height. Use A = 1/2 × base × height with base = 12 and height = 5. A = 1/2 × 12 × 5 = 1/2 × 60 = 30 square units.",
+      "explanation": "In a right triangle, the legs are the base and height. Use A = 1/2 \u00d7 base \u00d7 height with base = 12 and height = 5. A = 1/2 \u00d7 12 \u00d7 5 = 1/2 \u00d7 60 = 30 square units.",
       "steps": [
         "1. Identify the legs (sides that meet at the right angle): 5 and 12.",
-        "2. Use triangle area formula A = 1/2 × base × height.",
-        "3. Multiply: 12 × 5 = 60.",
-        "4. Take half: 60 ÷ 2 = 30."
+        "2. Use triangle area formula A = 1/2 \u00d7 base \u00d7 height.",
+        "3. Multiply: 12 \u00d7 5 = 60.",
+        "4. Take half: 60 \u00f7 2 = 30."
       ],
       "fastStrategy": "For right triangles, you can treat the two shorter sides as base and height directly: no extra geometry needed."
     },
     {
       "id": "mk_geo_b_012",
-      "question": "What is the circumference of a circle with radius 7 units? (Use π ≈ 3.14.)",
+      "question": "What is the circumference of a circle with radius 7 units? (Use \u03c0 \u2248 3.14.)",
       "choices": {
-        "A": "14π",
-        "B": "7π",
+        "A": "14\u03c0",
+        "B": "7\u03c0",
         "C": "21.98 units",
         "D": "43.96 units",
         "E": "153.86 units"
       },
       "answer": "D",
-      "explanation": "Circumference is C = 2πr. With r = 7 and π ≈ 3.14, C ≈ 2 × 3.14 × 7 = 6.28 × 7 ≈ 43.96 units.",
+      "explanation": "Circumference is C = 2\u03c0r. With r = 7 and \u03c0 \u2248 3.14, C \u2248 2 \u00d7 3.14 \u00d7 7 = 6.28 \u00d7 7 \u2248 43.96 units.",
       "steps": [
-        "1. Use C = 2πr.",
-        "2. Substitute r = 7: C = 2 × 3.14 × 7.",
-        "3. Multiply 2 × 3.14 = 6.28.",
-        "4. Multiply 6.28 × 7 ≈ 43.96."
+        "1. Use C = 2\u03c0r.",
+        "2. Substitute r = 7: C = 2 \u00d7 3.14 \u00d7 7.",
+        "3. Multiply 2 \u00d7 3.14 = 6.28.",
+        "4. Multiply 6.28 \u00d7 7 \u2248 43.96."
       ],
-      "fastStrategy": "Circumference = 'all the way around' = 2πr. For quick estimates: ~6.3r when π ≈ 3.14."
+      "fastStrategy": "Circumference = 'all the way around' = 2\u03c0r. For quick estimates: ~6.3r when \u03c0 \u2248 3.14."
     },
     {
       "id": "mk_geo_b_013",
-      "question": "What is the area of a circle with radius 5 units? (Use π ≈ 3.14.)",
+      "question": "What is the area of a circle with radius 5 units? (Use \u03c0 \u2248 3.14.)",
       "choices": {
-        "A": "10π",
-        "B": "25π",
+        "A": "10\u03c0",
+        "B": "25\u03c0",
         "C": "15.7 square units",
         "D": "31.4 square units",
         "E": "78.5 square units"
       },
       "answer": "E",
-      "explanation": "Area of a circle is A = πr². With r = 5, A ≈ 3.14 × 5² = 3.14 × 25 ≈ 78.5 square units.",
+      "explanation": "Area of a circle is A = \u03c0r\u00b2. With r = 5, A \u2248 3.14 \u00d7 5\u00b2 = 3.14 \u00d7 25 \u2248 78.5 square units.",
       "steps": [
-        "1. Use A = πr².",
-        "2. Compute r² = 5² = 25.",
-        "3. Multiply 3.14 × 25 ≈ 78.5."
+        "1. Use A = \u03c0r\u00b2.",
+        "2. Compute r\u00b2 = 5\u00b2 = 25.",
+        "3. Multiply 3.14 \u00d7 25 \u2248 78.5."
       ],
-      "fastStrategy": "Circle area is π times radius squared. Square first, multiply π second."
+      "fastStrategy": "Circle area is \u03c0 times radius squared. Square first, multiply \u03c0 second."
     },
     {
       "uiSpec": {
@@ -759,7 +759,7 @@
               "x": 260,
               "y": 80
             },
-            "label": "ℓ₁"
+            "label": "\u2113\u2081"
           },
           {
             "from": {
@@ -770,7 +770,7 @@
               "x": 260,
               "y": 200
             },
-            "label": "ℓ₂"
+            "label": "\u2113\u2082"
           },
           {
             "from": {
@@ -790,7 +790,7 @@
               "x": 160,
               "y": 80
             },
-            "label": "120°",
+            "label": "120\u00b0",
             "highlight": true
           },
           {
@@ -798,7 +798,7 @@
               "x": 180,
               "y": 200
             },
-            "label": "x°",
+            "label": "x\u00b0",
             "highlight": true
           }
         ],
@@ -808,22 +808,22 @@
           "angleHighlightColor": "red"
         }
       },
-      "copilotInstruction": "Draw two parallel horizontal lines and a slanted transversal cutting through both. Label the top-right interior angle as 120° and the corresponding bottom-right interior angle on the lower line as x°. Emphasize that they are corresponding angles.",
+      "copilotInstruction": "Draw two parallel horizontal lines and a slanted transversal cutting through both. Label the top-right interior angle as 120\u00b0 and the corresponding bottom-right interior angle on the lower line as x\u00b0. Emphasize that they are corresponding angles.",
       "id": "mk_geo_b_014",
-      "question": "In the diagram, two parallel lines are cut by a transversal. One of the corresponding angles measures 120°. What is the measure of the corresponding angle labeled x°?",
+      "question": "In the diagram, two parallel lines are cut by a transversal. One of the corresponding angles measures 120\u00b0. What is the measure of the corresponding angle labeled x\u00b0?",
       "choices": {
-        "A": "30°",
-        "B": "60°",
-        "C": "90°",
-        "D": "120°",
-        "E": "180°"
+        "A": "30\u00b0",
+        "B": "60\u00b0",
+        "C": "90\u00b0",
+        "D": "120\u00b0",
+        "E": "180\u00b0"
       },
       "answer": "D",
-      "explanation": "When two parallel lines are cut by a transversal, corresponding angles are equal. Since one corresponding angle is 120°, the other corresponding angle must also be 120°.",
+      "explanation": "When two parallel lines are cut by a transversal, corresponding angles are equal. Since one corresponding angle is 120\u00b0, the other corresponding angle must also be 120\u00b0.",
       "steps": [
         "1. Identify which angles are corresponding (same relative position at each intersection).",
         "2. Recall that corresponding angles are congruent if the lines are parallel.",
-        "3. So x° = 120°."
+        "3. So x\u00b0 = 120\u00b0."
       ],
       "fastStrategy": "Parallel lines + transversal: corresponding angles match; alternate interior angles match as well."
     },
@@ -831,19 +831,19 @@
       "id": "mk_geo_b_015",
       "question": "What is the sum of the interior angles of any triangle?",
       "choices": {
-        "A": "90°",
-        "B": "120°",
-        "C": "180°",
-        "D": "270°",
-        "E": "360°"
+        "A": "90\u00b0",
+        "B": "120\u00b0",
+        "C": "180\u00b0",
+        "D": "270\u00b0",
+        "E": "360\u00b0"
       },
       "answer": "C",
-      "explanation": "In Euclidean geometry (flat surfaces), the three interior angles of any triangle always add up to 180°, regardless of the triangle's shape.",
+      "explanation": "In Euclidean geometry (flat surfaces), the three interior angles of any triangle always add up to 180\u00b0, regardless of the triangle's shape.",
       "steps": [
-        "1. Recall the fundamental fact: triangle angle sum = 180°.",
+        "1. Recall the fundamental fact: triangle angle sum = 180\u00b0.",
         "2. This holds for all triangles: acute, right, obtuse, scalene, isosceles, equilateral."
       ],
-      "fastStrategy": "Triangle = 3 sides = 180°. Square it in your memory; this comes up constantly.",
+      "fastStrategy": "Triangle = 3 sides = 180\u00b0. Square it in your memory; this comes up constantly.",
       "uiSpec": {
         "type": "geometry_triangle_diagram",
         "width": 300,
@@ -868,15 +868,15 @@
         "angles": [
           {
             "vertex": 0,
-            "label": "60°"
+            "label": "60\u00b0"
           },
           {
             "vertex": 1,
-            "label": "x°"
+            "label": "x\u00b0"
           },
           {
             "vertex": 2,
-            "label": "y°"
+            "label": "y\u00b0"
           }
         ],
         "styleHints": {
@@ -887,22 +887,22 @@
     },
     {
       "id": "mk_geo_b_016",
-      "question": "A triangle has angles measuring 35° and 65°. What is the measure of the third angle?",
+      "question": "A triangle has angles measuring 35\u00b0 and 65\u00b0. What is the measure of the third angle?",
       "choices": {
-        "A": "35°",
-        "B": "45°",
-        "C": "60°",
-        "D": "70°",
-        "E": "80°"
+        "A": "35\u00b0",
+        "B": "45\u00b0",
+        "C": "60\u00b0",
+        "D": "70\u00b0",
+        "E": "80\u00b0"
       },
       "answer": "E",
-      "explanation": "The sum of angles in a triangle is 180°. Add the known angles: 35° + 65° = 100°. Subtract from 180°: 180° − 100° = 80°.",
+      "explanation": "The sum of angles in a triangle is 180\u00b0. Add the known angles: 35\u00b0 + 65\u00b0 = 100\u00b0. Subtract from 180\u00b0: 180\u00b0 \u2212 100\u00b0 = 80\u00b0.",
       "steps": [
-        "1. Add 35° and 65° to get 100°.",
-        "2. Subtract from 180° to find the missing angle.",
-        "3. 180° − 100° = 80°."
+        "1. Add 35\u00b0 and 65\u00b0 to get 100\u00b0.",
+        "2. Subtract from 180\u00b0 to find the missing angle.",
+        "3. 180\u00b0 \u2212 100\u00b0 = 80\u00b0."
       ],
-      "fastStrategy": "Triangle missing angle = 180 − (sum of the other two).",
+      "fastStrategy": "Triangle missing angle = 180 \u2212 (sum of the other two).",
       "uiSpec": {
         "type": "geometry_triangle_diagram",
         "width": 300,
@@ -927,15 +927,15 @@
         "angles": [
           {
             "vertex": 0,
-            "label": "35°"
+            "label": "35\u00b0"
           },
           {
             "vertex": 1,
-            "label": "x°"
+            "label": "x\u00b0"
           },
           {
             "vertex": 2,
-            "label": "y°"
+            "label": "y\u00b0"
           }
         ],
         "styleHints": {
@@ -946,7 +946,7 @@
     },
     {
       "id": "mk_geo_b_017",
-      "question": "A triangle has angles measuring 40°, 60°, and 80°. How is this triangle classified by its angles?",
+      "question": "A triangle has angles measuring 40\u00b0, 60\u00b0, and 80\u00b0. How is this triangle classified by its angles?",
       "choices": {
         "A": "Right",
         "B": "Obtuse",
@@ -955,13 +955,13 @@
         "E": "Scalene"
       },
       "answer": "C",
-      "explanation": "An acute triangle has all angles less than 90°. Here, 40°, 60°, and 80° are all less than 90°, so it is an acute triangle.",
+      "explanation": "An acute triangle has all angles less than 90\u00b0. Here, 40\u00b0, 60\u00b0, and 80\u00b0 are all less than 90\u00b0, so it is an acute triangle.",
       "steps": [
-        "1. Check each angle against 90°.",
-        "2. All three are less than 90°.",
+        "1. Check each angle against 90\u00b0.",
+        "2. All three are less than 90\u00b0.",
         "3. Therefore, the triangle is acute."
       ],
-      "fastStrategy": "If all angles are < 90°, the whole triangle is acute; if one is 90°, right; if one > 90°, obtuse.",
+      "fastStrategy": "If all angles are < 90\u00b0, the whole triangle is acute; if one is 90\u00b0, right; if one > 90\u00b0, obtuse.",
       "uiSpec": {
         "type": "geometry_triangle_diagram",
         "width": 300,
@@ -986,15 +986,15 @@
         "angles": [
           {
             "vertex": 0,
-            "label": "40°"
+            "label": "40\u00b0"
           },
           {
             "vertex": 1,
-            "label": "x°"
+            "label": "x\u00b0"
           },
           {
             "vertex": 2,
-            "label": "y°"
+            "label": "y\u00b0"
           }
         ],
         "styleHints": {
@@ -1068,13 +1068,13 @@
         "E": "80 square units"
       },
       "answer": "D",
-      "explanation": "Area of a rectangle is A = length × width. Here, A = 8 × 5 = 40 square units.",
+      "explanation": "Area of a rectangle is A = length \u00d7 width. Here, A = 8 \u00d7 5 = 40 square units.",
       "steps": [
         "1. Identify the length (8) and width (5).",
-        "2. Multiply: 8 × 5 = 40.",
+        "2. Multiply: 8 \u00d7 5 = 40.",
         "3. The area is 40 square units."
       ],
-      "fastStrategy": "Rectangle area is always a direct multiplication: no halves, no π."
+      "fastStrategy": "Rectangle area is always a direct multiplication: no halves, no \u03c0."
     },
     {
       "id": "mk_geo_b_019",
@@ -1087,10 +1087,10 @@
         "E": "36 units"
       },
       "answer": "C",
-      "explanation": "A square has four equal sides. Perimeter is P = 4 × side length. Here, P = 4 × 6 = 24 units.",
+      "explanation": "A square has four equal sides. Perimeter is P = 4 \u00d7 side length. Here, P = 4 \u00d7 6 = 24 units.",
       "steps": [
         "1. Recognize that all sides are 6 units.",
-        "2. Multiply side length by 4: 4 × 6 = 24.",
+        "2. Multiply side length by 4: 4 \u00d7 6 = 24.",
         "3. The perimeter is 24 units."
       ],
       "fastStrategy": "Square perimeter: multiply the side by 4. Easy mental math."
@@ -1106,13 +1106,13 @@
         "E": "36 units"
       },
       "answer": "C",
-      "explanation": "The diameter of a circle is twice the radius. With radius 9, diameter = 2 × 9 = 18 units.",
+      "explanation": "The diameter of a circle is twice the radius. With radius 9, diameter = 2 \u00d7 9 = 18 units.",
       "steps": [
-        "1. Recall diameter = 2 × radius.",
-        "2. Multiply 9 × 2 = 18.",
+        "1. Recall diameter = 2 \u00d7 radius.",
+        "2. Multiply 9 \u00d7 2 = 18.",
         "3. So the diameter is 18 units."
       ],
-      "fastStrategy": "Radius × 2 = diameter. Diameter ÷ 2 = radius."
+      "fastStrategy": "Radius \u00d7 2 = diameter. Diameter \u00f7 2 = radius."
     },
     {
       "uiSpec": {
@@ -1156,13 +1156,13 @@
         "E": "6 units"
       },
       "answer": "C",
-      "explanation": "The y-coordinates are the same (2), so this is a horizontal segment. The distance is the difference in x-values: 5 − 1 = 4 units.",
+      "explanation": "The y-coordinates are the same (2), so this is a horizontal segment. The distance is the difference in x-values: 5 \u2212 1 = 4 units.",
       "steps": [
         "1. Recognize that both points share y = 2 (horizontal line).",
-        "2. Subtract x-coordinates: 5 − 1 = 4.",
+        "2. Subtract x-coordinates: 5 \u2212 1 = 4.",
         "3. The distance is 4 units."
       ],
-      "fastStrategy": "If points share the same y, distance is |x₂ − x₁|. If they share the same x, it's |y₂ − y₁|."
+      "fastStrategy": "If points share the same y, distance is |x\u2082 \u2212 x\u2081|. If they share the same x, it's |y\u2082 \u2212 y\u2081|."
     },
     {
       "uiSpec": {
@@ -1206,13 +1206,13 @@
         "E": "6 units"
       },
       "answer": "C",
-      "explanation": "The x-coordinates are the same (3), so this is a vertical segment. The distance is the difference in y-values: 5 − 1 = 4 units.",
+      "explanation": "The x-coordinates are the same (3), so this is a vertical segment. The distance is the difference in y-values: 5 \u2212 1 = 4 units.",
       "steps": [
         "1. Recognize both points share x = 3 (vertical line).",
-        "2. Subtract y-coordinates: 5 − 1 = 4.",
+        "2. Subtract y-coordinates: 5 \u2212 1 = 4.",
         "3. The distance is 4 units."
       ],
-      "fastStrategy": "Vertical segment distance is just the difference in y’s; horizontal segment distance is difference in x’s."
+      "fastStrategy": "Vertical segment distance is just the difference in y\u2019s; horizontal segment distance is difference in x\u2019s."
     },
     {
       "id": "mk_geo_b_023",
@@ -1225,34 +1225,34 @@
         "E": "(2, 8)"
       },
       "answer": "B",
-      "explanation": "The midpoint formula averages the x-values and y-values: midpoint = ((x₁ + x₂)/2, (y₁ + y₂)/2). Here, x-average = (2 + 6)/2 = 8/2 = 4, y-average = (4 + 8)/2 = 12/2 = 6. So the midpoint is (4, 6).",
+      "explanation": "The midpoint formula averages the x-values and y-values: midpoint = ((x\u2081 + x\u2082)/2, (y\u2081 + y\u2082)/2). Here, x-average = (2 + 6)/2 = 8/2 = 4, y-average = (4 + 8)/2 = 12/2 = 6. So the midpoint is (4, 6).",
       "steps": [
         "1. Add x-values: 2 + 6 = 8.",
-        "2. Divide by 2: 8 ÷ 2 = 4.",
+        "2. Divide by 2: 8 \u00f7 2 = 4.",
         "3. Add y-values: 4 + 8 = 12.",
-        "4. Divide by 2: 12 ÷ 2 = 6.",
+        "4. Divide by 2: 12 \u00f7 2 = 6.",
         "5. Midpoint is (4, 6)."
       ],
-      "fastStrategy": "Midpoint = component-wise average: (avg of x’s, avg of y’s)."
+      "fastStrategy": "Midpoint = component-wise average: (avg of x\u2019s, avg of y\u2019s)."
     },
     {
       "id": "mk_geo_b_024",
       "question": "How many degrees are in a straight angle?",
       "choices": {
-        "A": "45°",
-        "B": "90°",
-        "C": "120°",
-        "D": "135°",
-        "E": "180°"
+        "A": "45\u00b0",
+        "B": "90\u00b0",
+        "C": "120\u00b0",
+        "D": "135\u00b0",
+        "E": "180\u00b0"
       },
       "answer": "E",
-      "explanation": "A straight angle is formed by a line and measures exactly 180°. It looks like a straight line with the vertex in the middle.",
+      "explanation": "A straight angle is formed by a line and measures exactly 180\u00b0. It looks like a straight line with the vertex in the middle.",
       "steps": [
-        "1. Recall: right angle = 90°, straight angle = 180°.",
+        "1. Recall: right angle = 90\u00b0, straight angle = 180\u00b0.",
         "2. Straight angle is like a flat line.",
-        "3. Therefore, it measures 180°."
+        "3. Therefore, it measures 180\u00b0."
       ],
-      "fastStrategy": "Think of a straight line as a 'half-circle' of 180°.",
+      "fastStrategy": "Think of a straight line as a 'half-circle' of 180\u00b0.",
       "uiSpec": {
         "type": "geometry_angle_diagram",
         "width": 300,
@@ -1288,7 +1288,7 @@
           "radius": 35,
           "startRay": 0,
           "endRay": 1,
-          "label": "45°",
+          "label": "45\u00b0",
           "measureDegrees": 45
         },
         "styleHints": {
@@ -1302,21 +1302,21 @@
       "id": "mk_geo_b_025",
       "question": "How many degrees are in the sum of the interior angles of a quadrilateral (four-sided polygon)?",
       "choices": {
-        "A": "180°",
-        "B": "270°",
-        "C": "360°",
-        "D": "540°",
-        "E": "720°"
+        "A": "180\u00b0",
+        "B": "270\u00b0",
+        "C": "360\u00b0",
+        "D": "540\u00b0",
+        "E": "720\u00b0"
       },
       "answer": "C",
-      "explanation": "Any quadrilateral can be split into two triangles by drawing one diagonal. Each triangle has angle sum 180°, so together they have 180° + 180° = 360°.",
+      "explanation": "Any quadrilateral can be split into two triangles by drawing one diagonal. Each triangle has angle sum 180\u00b0, so together they have 180\u00b0 + 180\u00b0 = 360\u00b0.",
       "steps": [
         "1. Imagine drawing a diagonal inside the quadrilateral.",
         "2. This creates two triangles.",
-        "3. Each triangle’s angles sum to 180°.",
-        "4. Total = 180° + 180° = 360°."
+        "3. Each triangle\u2019s angles sum to 180\u00b0.",
+        "4. Total = 180\u00b0 + 180\u00b0 = 360\u00b0."
       ],
-      "fastStrategy": "Polygon angle sum trick: (n − 2) × 180°. For a quadrilateral, n = 4 → (4 − 2) × 180° = 2 × 180° = 360°.",
+      "fastStrategy": "Polygon angle sum trick: (n \u2212 2) \u00d7 180\u00b0. For a quadrilateral, n = 4 \u2192 (4 \u2212 2) \u00d7 180\u00b0 = 2 \u00d7 180\u00b0 = 360\u00b0.",
       "uiSpec": {
         "type": "polygon_basic",
         "width": 300,
@@ -1349,6 +1349,606 @@
           "labelColor": "#00ffff"
         }
       }
+    },
+    {
+      "id": "geometry_basics_beginner_q001",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q002",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q003",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q004",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q005",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q006",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q007",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q008",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q009",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q010",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q011",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q012",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q013",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q014",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q015",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q016",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q017",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q018",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q019",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q020",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q021",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q022",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q023",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q024",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q025",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q026",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q027",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q028",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q029",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q030",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q031",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q032",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q033",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q034",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q035",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q036",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q037",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q038",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q039",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q040",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q041",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q042",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q043",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q044",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q045",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q046",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q047",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q048",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q049",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_beginner_q050",
+      "question": "Solve this geometry basics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

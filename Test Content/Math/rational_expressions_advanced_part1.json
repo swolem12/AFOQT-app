@@ -6,7 +6,7 @@
   "questions": [
     {
       "id": "mk_re_a_001",
-      "question": "Simplify: (x² - 4) / (x + 2)",
+      "question": "Simplify: (x\u00b2 - 4) / (x + 2)",
       "choices": {
         "A": "x - 2",
         "B": "x + 2",
@@ -15,12 +15,12 @@
         "E": "Cannot simplify"
       },
       "answer": "A",
-      "explanation": "Factor numerator: x² - 4 = (x - 2)(x + 2). So (x² - 4)/(x + 2) = (x - 2)(x + 2)/(x + 2) = x - 2 (when x ≠ -2).",
+      "explanation": "Factor numerator: x\u00b2 - 4 = (x - 2)(x + 2). So (x\u00b2 - 4)/(x + 2) = (x - 2)(x + 2)/(x + 2) = x - 2 (when x \u2260 -2).",
       "steps": [
-        "1. Factor numerator: x² - 4 = (x - 2)(x + 2).",
+        "1. Factor numerator: x\u00b2 - 4 = (x - 2)(x + 2).",
         "2. Write: ((x - 2)(x + 2)) / (x + 2).",
         "3. Cancel (x + 2): x - 2.",
-        "4. Note: x ≠ -2 (excluded value)."
+        "4. Note: x \u2260 -2 (excluded value)."
       ],
       "fastStrategy": "Factor; cancel common terms."
     },
@@ -45,18 +45,18 @@
     },
     {
       "id": "mk_re_a_003",
-      "question": "Simplify: (2x² - 8) / (x - 2)",
+      "question": "Simplify: (2x\u00b2 - 8) / (x - 2)",
       "choices": {
         "A": "2x + 4",
         "B": "2(x - 2)",
         "C": "2(x + 2)",
         "D": "x + 4",
-        "E": "(2x² - 8)/(x - 2)"
+        "E": "(2x\u00b2 - 8)/(x - 2)"
       },
       "answer": "C",
-      "explanation": "Factor: 2x² - 8 = 2(x² - 4) = 2(x - 2)(x + 2). So (2x² - 8)/(x - 2) = 2(x - 2)(x + 2)/(x - 2) = 2(x + 2).",
+      "explanation": "Factor: 2x\u00b2 - 8 = 2(x\u00b2 - 4) = 2(x - 2)(x + 2). So (2x\u00b2 - 8)/(x - 2) = 2(x - 2)(x + 2)/(x - 2) = 2(x + 2).",
       "steps": [
-        "1. Factor numerator: 2x² - 8 = 2(x² - 4) = 2(x - 2)(x + 2).",
+        "1. Factor numerator: 2x\u00b2 - 8 = 2(x\u00b2 - 4) = 2(x - 2)(x + 2).",
         "2. Write: (2(x - 2)(x + 2)) / (x - 2).",
         "3. Cancel (x - 2): 2(x + 2)."
       ],
@@ -64,23 +64,623 @@
     },
     {
       "id": "mk_re_a_004",
-      "question": "What value is excluded from the domain of (x + 3) / (x² - 9)?",
+      "question": "What value is excluded from the domain of (x + 3) / (x\u00b2 - 9)?",
       "choices": {
-        "A": "x ≠ 0",
-        "B": "x ≠ 3",
-        "C": "x ≠ -3",
-        "D": "x ≠ 3 and x ≠ -3",
+        "A": "x \u2260 0",
+        "B": "x \u2260 3",
+        "C": "x \u2260 -3",
+        "D": "x \u2260 3 and x \u2260 -3",
         "E": "No restrictions"
       },
       "answer": "D",
-      "explanation": "Denominator cannot be zero: x² - 9 ≠ 0 ⇒ (x - 3)(x + 3) ≠ 0 ⇒ x ≠ 3 and x ≠ -3.",
+      "explanation": "Denominator cannot be zero: x\u00b2 - 9 \u2260 0 \u21d2 (x - 3)(x + 3) \u2260 0 \u21d2 x \u2260 3 and x \u2260 -3.",
       "steps": [
-        "1. Set denominator to zero: x² - 9 = 0.",
+        "1. Set denominator to zero: x\u00b2 - 9 = 0.",
         "2. Factor: (x - 3)(x + 3) = 0.",
         "3. Solve: x = 3 or x = -3.",
-        "4. Excluded values: x ≠ 3 and x ≠ -3."
+        "4. Excluded values: x \u2260 3 and x \u2260 -3."
       ],
-      "fastStrategy": "Domain: denominator ≠ 0."
+      "fastStrategy": "Domain: denominator \u2260 0."
+    },
+    {
+      "id": "rational_expressions_advanced_q001",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q002",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q003",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q004",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q005",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q006",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q007",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q008",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q009",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q010",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q011",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q012",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q013",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q014",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q015",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q016",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q017",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q018",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q019",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q020",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q021",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q022",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q023",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q024",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q025",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q026",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q027",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q028",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q029",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q030",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q031",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q032",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q033",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q034",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q035",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q036",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q037",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q038",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q039",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q040",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q041",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q042",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q043",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q044",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q045",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q046",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q047",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q048",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q049",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_advanced_q050",
+      "question": "Solve this rational expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

@@ -15,13 +15,13 @@
         "E": "16"
       },
       "answer": "C",
-      "explanation": "2^3 = 2 × 2 × 2 = 8.",
+      "explanation": "2^3 = 2 \u00d7 2 \u00d7 2 = 8.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_002",
@@ -34,13 +34,13 @@
         "E": "30"
       },
       "answer": "D",
-      "explanation": "5^2 = 5 × 5 = 25.",
+      "explanation": "5^2 = 5 \u00d7 5 = 25.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_003",
@@ -59,7 +59,7 @@
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_004",
@@ -72,13 +72,13 @@
         "E": "12"
       },
       "answer": "C",
-      "explanation": "3^4 = 3 × 3 × 3 × 3 = 81.",
+      "explanation": "3^4 = 3 \u00d7 3 \u00d7 3 \u00d7 3 = 81.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_005",
@@ -91,17 +91,17 @@
         "E": "12"
       },
       "answer": "D",
-      "explanation": "4^3 = 4 × 4 × 4 = 64.",
+      "explanation": "4^3 = 4 \u00d7 4 \u00d7 4 = 64.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_006",
-      "question": "Evaluate: √49",
+      "question": "Evaluate: \u221a49",
       "choices": {
         "A": "5",
         "B": "6",
@@ -110,17 +110,17 @@
         "E": "9"
       },
       "answer": "C",
-      "explanation": "7 × 7 = 49, so √49 = 7.",
+      "explanation": "7 \u00d7 7 = 49, so \u221a49 = 7.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_007",
-      "question": "Evaluate: √81",
+      "question": "Evaluate: \u221a81",
       "choices": {
         "A": "7",
         "B": "8",
@@ -129,17 +129,17 @@
         "E": "11"
       },
       "answer": "C",
-      "explanation": "9 × 9 = 81, so √81 = 9.",
+      "explanation": "9 \u00d7 9 = 81, so \u221a81 = 9.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_008",
-      "question": "Evaluate: √36",
+      "question": "Evaluate: \u221a36",
       "choices": {
         "A": "4",
         "B": "5",
@@ -148,17 +148,17 @@
         "E": "8"
       },
       "answer": "C",
-      "explanation": "6 × 6 = 36, so √36 = 6.",
+      "explanation": "6 \u00d7 6 = 36, so \u221a36 = 6.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_009",
-      "question": "Evaluate: √16",
+      "question": "Evaluate: \u221a16",
       "choices": {
         "A": "2",
         "B": "3",
@@ -167,13 +167,13 @@
         "E": "6"
       },
       "answer": "C",
-      "explanation": "4 × 4 = 16, so √16 = 4.",
+      "explanation": "4 \u00d7 4 = 16, so \u221a16 = 4.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_010",
@@ -186,13 +186,13 @@
         "E": "64"
       },
       "answer": "C",
-      "explanation": "2^5 = 2 × 2 × 2 × 2 × 2 = 32.",
+      "explanation": "2^5 = 2 \u00d7 2 \u00d7 2 \u00d7 2 \u00d7 2 = 32.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_011",
@@ -205,17 +205,17 @@
         "E": "42"
       },
       "answer": "D",
-      "explanation": "6^2 = 6 × 6 = 36.",
+      "explanation": "6^2 = 6 \u00d7 6 = 36.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_012",
-      "question": "Evaluate: √100",
+      "question": "Evaluate: \u221a100",
       "choices": {
         "A": "9",
         "B": "10",
@@ -224,13 +224,13 @@
         "E": "20"
       },
       "answer": "B",
-      "explanation": "10 × 10 = 100, so √100 = 10.",
+      "explanation": "10 \u00d7 10 = 100, so \u221a100 = 10.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_013",
@@ -243,13 +243,13 @@
         "E": "56"
       },
       "answer": "D",
-      "explanation": "7^2 = 7 × 7 = 49.",
+      "explanation": "7^2 = 7 \u00d7 7 = 49.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_014",
@@ -262,17 +262,17 @@
         "E": "99"
       },
       "answer": "C",
-      "explanation": "9^2 = 9 × 9 = 81.",
+      "explanation": "9^2 = 9 \u00d7 9 = 81.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_015",
-      "question": "Evaluate: √25 + √9",
+      "question": "Evaluate: \u221a25 + \u221a9",
       "choices": {
         "A": "5",
         "B": "7",
@@ -281,17 +281,17 @@
         "E": "10"
       },
       "answer": "C",
-      "explanation": "√25 = 5 and √9 = 3, so 5 + 3 = 8.",
+      "explanation": "\u221a25 = 5 and \u221a9 = 3, so 5 + 3 = 8.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_016",
-      "question": "Evaluate: √64 - √16",
+      "question": "Evaluate: \u221a64 - \u221a16",
       "choices": {
         "A": "0",
         "B": "2",
@@ -300,13 +300,13 @@
         "E": "8"
       },
       "answer": "C",
-      "explanation": "√64 = 8 and √16 = 4, so 8 - 4 = 4.",
+      "explanation": "\u221a64 = 8 and \u221a16 = 4, so 8 - 4 = 4.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_017",
@@ -319,17 +319,17 @@
         "E": "30"
       },
       "answer": "D",
-      "explanation": "3^3 = 3 × 3 × 3 = 27.",
+      "explanation": "3^3 = 3 \u00d7 3 \u00d7 3 = 27.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_018",
-      "question": "Evaluate: (2^2) × (3^2)",
+      "question": "Evaluate: (2^2) \u00d7 (3^2)",
       "choices": {
         "A": "12",
         "B": "16",
@@ -338,17 +338,17 @@
         "E": "36"
       },
       "answer": "E",
-      "explanation": "2^2 = 4 and 3^2 = 9, so 4 × 9 = 36.",
+      "explanation": "2^2 = 4 and 3^2 = 9, so 4 \u00d7 9 = 36.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_019",
-      "question": "Evaluate: √9 × √16",
+      "question": "Evaluate: \u221a9 \u00d7 \u221a16",
       "choices": {
         "A": "6",
         "B": "9",
@@ -357,13 +357,13 @@
         "E": "24"
       },
       "answer": "C",
-      "explanation": "√9 = 3 and √16 = 4, so 3 × 4 = 12.",
+      "explanation": "\u221a9 = 3 and \u221a16 = 4, so 3 \u00d7 4 = 12.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_020",
@@ -382,11 +382,11 @@
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_021",
-      "question": "Evaluate: 4 × 10^1",
+      "question": "Evaluate: 4 \u00d7 10^1",
       "choices": {
         "A": "4",
         "B": "10",
@@ -395,17 +395,17 @@
         "E": "400"
       },
       "answer": "D",
-      "explanation": "10^1 = 10, so 4 × 10 = 40.",
+      "explanation": "10^1 = 10, so 4 \u00d7 10 = 40.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_022",
-      "question": "Evaluate: 5 × 10^0",
+      "question": "Evaluate: 5 \u00d7 10^0",
       "choices": {
         "A": "0",
         "B": "1",
@@ -414,17 +414,17 @@
         "E": "50"
       },
       "answer": "C",
-      "explanation": "10^0 = 1, so 5 × 1 = 5.",
+      "explanation": "10^0 = 1, so 5 \u00d7 1 = 5.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_023",
-      "question": "Evaluate: √121",
+      "question": "Evaluate: \u221a121",
       "choices": {
         "A": "9",
         "B": "10",
@@ -433,13 +433,13 @@
         "E": "13"
       },
       "answer": "C",
-      "explanation": "11 × 11 = 121, so √121 = 11.",
+      "explanation": "11 \u00d7 11 = 121, so \u221a121 = 11.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_024",
@@ -458,11 +458,11 @@
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
     },
     {
       "id": "mk_er_b_025",
-      "question": "Evaluate: √49 - √4",
+      "question": "Evaluate: \u221a49 - \u221a4",
       "choices": {
         "A": "1",
         "B": "3",
@@ -471,13 +471,613 @@
         "E": "9"
       },
       "answer": "C",
-      "explanation": "√49 = 7 and √4 = 2, so 7 - 2 = 5.",
+      "explanation": "\u221a49 = 7 and \u221a4 = 2, so 7 - 2 = 5.",
       "steps": [
         "1. Identify which exponent rule applies.",
         "2. Apply the rule to simplify.",
         "3. Calculate the final value."
       ],
-      "fastStrategy": "Memorize: xᵃ · xᵇ = xᵃ⁺ᵇ; (xᵃ)ᵇ = xᵃᵇ; x⁰ = 1; √x = x^(1/2)."
+      "fastStrategy": "Memorize: x\u1d43 \u00b7 x\u1d47 = x\u1d43\u207a\u1d47; (x\u1d43)\u1d47 = x\u1d43\u1d47; x\u2070 = 1; \u221ax = x^(1/2)."
+    },
+    {
+      "id": "exponents_roots_beginner_q001",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q002",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q003",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q004",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q005",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q006",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q007",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q008",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q009",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q010",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q011",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q012",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q013",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q014",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q015",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q016",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q017",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q018",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q019",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q020",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q021",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q022",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q023",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q024",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q025",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q026",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q027",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q028",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q029",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q030",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q031",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q032",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q033",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q034",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q035",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q036",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q037",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q038",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q039",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q040",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q041",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q042",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q043",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q044",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q045",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q046",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q047",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q048",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q049",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_beginner_q050",
+      "question": "Solve this exponents roots problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

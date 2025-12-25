@@ -15,12 +15,12 @@
         "E": "9"
       },
       "answer": "B",
-      "explanation": "Mean is the average. Add all values: 4 + 6 + 8 + 10 = 28. Divide by 4 → 7.",
+      "explanation": "Mean is the average. Add all values: 4 + 6 + 8 + 10 = 28. Divide by 4 \u2192 7.",
       "steps": [
         "1. Add the numbers: 28.",
         "2. Divide by number of values: 28/4 = 7."
       ],
-      "fastStrategy": "Mean = sum ÷ count."
+      "fastStrategy": "Mean = sum \u00f7 count."
     },
     {
       "id": "stat_b1_002",
@@ -33,12 +33,12 @@
         "E": "9"
       },
       "answer": "C",
-      "explanation": "Median is the middle number. For 5 values, the center is the 3rd number → 5.",
+      "explanation": "Median is the middle number. For 5 values, the center is the 3rd number \u2192 5.",
       "steps": [
         "1. Data is already sorted.",
         "2. Middle value is 5."
       ],
-      "fastStrategy": "Odd count → middle number."
+      "fastStrategy": "Odd count \u2192 middle number."
     },
     {
       "id": "stat_b1_003",
@@ -70,7 +70,7 @@
         "E": "10"
       },
       "answer": "A",
-      "explanation": "Range = max − min. Max = 12, min = 3 → 12 − 3 = 9.",
+      "explanation": "Range = max \u2212 min. Max = 12, min = 3 \u2192 12 \u2212 3 = 9.",
       "fastStrategy": "Biggest minus smallest.",
       "steps": [
         "1. Arrange data in order if needed.",
@@ -89,7 +89,7 @@
         "E": "30"
       },
       "answer": "E",
-      "explanation": "Mean = sum ÷ count. So sum = mean × count = 6 × 5 = 30.",
+      "explanation": "Mean = sum \u00f7 count. So sum = mean \u00d7 count = 6 \u00d7 5 = 30.",
       "fastStrategy": "Reverse mean by multiplying.",
       "steps": [
         "1. Arrange data in order if needed.",
@@ -114,7 +114,7 @@
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_007",
@@ -127,13 +127,13 @@
         "E": "8"
       },
       "answer": "B",
-      "explanation": "Even number of values → average of middle two = (4 + 6)/2 = 5.",
+      "explanation": "Even number of values \u2192 average of middle two = (4 + 6)/2 = 5.",
       "steps": [
         "1. Arrange data in order if needed.",
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_008",
@@ -152,7 +152,7 @@
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_009",
@@ -165,13 +165,13 @@
         "E": "25"
       },
       "answer": "C",
-      "explanation": "Range = 20 − 5 = 15.",
+      "explanation": "Range = 20 \u2212 5 = 15.",
       "steps": [
         "1. Arrange data in order if needed.",
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_010",
@@ -190,7 +190,7 @@
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_011",
@@ -209,7 +209,7 @@
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_012",
@@ -222,13 +222,13 @@
         "E": "No mode"
       },
       "answer": "E",
-      "explanation": "All values appear once → no mode.",
+      "explanation": "All values appear once \u2192 no mode.",
       "steps": [
         "1. Arrange data in order if needed.",
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_013",
@@ -241,13 +241,13 @@
         "E": "25"
       },
       "answer": "B",
-      "explanation": "35 − 25 = 10.",
+      "explanation": "35 \u2212 25 = 10.",
       "steps": [
         "1. Arrange data in order if needed.",
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_014",
@@ -260,13 +260,13 @@
         "E": "13"
       },
       "answer": "B",
-      "explanation": "Middle number is the 3rd → 11.",
+      "explanation": "Middle number is the 3rd \u2192 11.",
       "steps": [
         "1. Arrange data in order if needed.",
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_015",
@@ -285,7 +285,7 @@
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_016",
@@ -304,7 +304,7 @@
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_017",
@@ -323,7 +323,7 @@
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_018",
@@ -336,13 +336,13 @@
         "E": "12"
       },
       "answer": "C",
-      "explanation": "Even count → average of middle two: (8+12)/2 = 10.",
+      "explanation": "Even count \u2192 average of middle two: (8+12)/2 = 10.",
       "steps": [
         "1. Arrange data in order if needed.",
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_019",
@@ -355,13 +355,13 @@
         "E": "20"
       },
       "answer": "C",
-      "explanation": "40 − 28 = 12.",
+      "explanation": "40 \u2212 28 = 12.",
       "steps": [
         "1. Arrange data in order if needed.",
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_020",
@@ -374,13 +374,13 @@
         "E": "100"
       },
       "answer": "C",
-      "explanation": "Sum=270 → mean=270/3=90.",
+      "explanation": "Sum=270 \u2192 mean=270/3=90.",
       "steps": [
         "1. Arrange data in order if needed.",
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_021",
@@ -399,7 +399,7 @@
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_022",
@@ -418,7 +418,7 @@
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_023",
@@ -431,13 +431,13 @@
         "E": "9"
       },
       "answer": "D",
-      "explanation": "9 − 1 = 8.",
+      "explanation": "9 \u2212 1 = 8.",
       "steps": [
         "1. Arrange data in order if needed.",
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_024",
@@ -450,13 +450,13 @@
         "E": "10"
       },
       "answer": "C",
-      "explanation": "Sum=32 → mean=32/4=8.",
+      "explanation": "Sum=32 \u2192 mean=32/4=8.",
       "steps": [
         "1. Arrange data in order if needed.",
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
     },
     {
       "id": "stat_b1_025",
@@ -475,7 +475,607 @@
         "2. Apply the appropriate formula (mean, median, or range).",
         "3. Calculate and simplify."
       ],
-      "fastStrategy": "Mean = sum ÷ count; Median = middle value; Range = max - min."
+      "fastStrategy": "Mean = sum \u00f7 count; Median = middle value; Range = max - min."
+    },
+    {
+      "id": "statistics_beginner_q001",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q002",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q003",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q004",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q005",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q006",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q007",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q008",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q009",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q010",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q011",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q012",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q013",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q014",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q015",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q016",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q017",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q018",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q019",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q020",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q021",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q022",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q023",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q024",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q025",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q026",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q027",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q028",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q029",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q030",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q031",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q032",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q033",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q034",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q035",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q036",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q037",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q038",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q039",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q040",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q041",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q042",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q043",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q044",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q045",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q046",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q047",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q048",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q049",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_beginner_q050",
+      "question": "Solve this statistics problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

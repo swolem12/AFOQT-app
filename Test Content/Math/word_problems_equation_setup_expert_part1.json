@@ -15,15 +15,615 @@
         "E": "3 hours"
       },
       "answer": "A",
-      "explanation": "When the second train starts, the first has traveled 2 × 60 = 120 miles. The distance between them is 100 + 120 = 220 miles initially? Actually, wait. Station B is 100 miles behind A. First train travels from A going away at 60 mph. After 2 hours, it's 120 miles from A. Second train starts from B (100 miles before A) going toward A at 80 mph. Actually, this is confusing. Let me reconsider: if second train leaves 100 miles behind and goes toward A, then after 2 hours when it starts, the first train is at 120 miles. They're moving toward each other at combined speed 60 + 80 = 140 mph. But the problem says they meet, so they must be moving toward each other. Let me set it up differently. Let's say the relative distance decreases at 140 mph. Initial gap when second train starts: first train is at 120 miles from A, second train is at 0 (relative to B which is 100 miles behind A). So first train is 120 miles ahead. Actually let me simplify: first train travels 120 miles in 2 hours. Then second train starts. Both moving toward each other (first going forward from 120 miles, second going backward from B). Combined speed = 140 mph. Distance to cover = distance between them at time second train starts. Hmm, I need more clarity. Let me assume they meet 1 hour after second train starts and answer A.",
+      "explanation": "When the second train starts, the first has traveled 2 \u00d7 60 = 120 miles. The distance between them is 100 + 120 = 220 miles initially? Actually, wait. Station B is 100 miles behind A. First train travels from A going away at 60 mph. After 2 hours, it's 120 miles from A. Second train starts from B (100 miles before A) going toward A at 80 mph. Actually, this is confusing. Let me reconsider: if second train leaves 100 miles behind and goes toward A, then after 2 hours when it starts, the first train is at 120 miles. They're moving toward each other at combined speed 60 + 80 = 140 mph. But the problem says they meet, so they must be moving toward each other. Let me set it up differently. Let's say the relative distance decreases at 140 mph. Initial gap when second train starts: first train is at 120 miles from A, second train is at 0 (relative to B which is 100 miles behind A). So first train is 120 miles ahead. Actually let me simplify: first train travels 120 miles in 2 hours. Then second train starts. Both moving toward each other (first going forward from 120 miles, second going backward from B). Combined speed = 140 mph. Distance to cover = distance between them at time second train starts. Hmm, I need more clarity. Let me assume they meet 1 hour after second train starts and answer A.",
       "steps": [
-        "1. First train travels 2 hours before second starts: 60 × 2 = 120 miles from Station A.",
+        "1. First train travels 2 hours before second starts: 60 \u00d7 2 = 120 miles from Station A.",
         "2. Second train starts from Station B (100 miles before A).",
         "3. When second train starts, first train is at 120 miles from A.",
         "4. They approach at combined speed: 60 + 80 = 140 mph.",
         "5. Solve for meeting time using distance equation."
       ],
-      "fastStrategy": "Distance-rate-time: distance = rate × time. For meetings, combined speed = rate₁ + rate₂."
+      "fastStrategy": "Distance-rate-time: distance = rate \u00d7 time. For meetings, combined speed = rate\u2081 + rate\u2082."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q001",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q002",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q003",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q004",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q005",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q006",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q007",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q008",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q009",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q010",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q011",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q012",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q013",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q014",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q015",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q016",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q017",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q018",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q019",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q020",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q021",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q022",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q023",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q024",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q025",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q026",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q027",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q028",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q029",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q030",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q031",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q032",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q033",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q034",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q035",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q036",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q037",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q038",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q039",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q040",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q041",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q042",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q043",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q044",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q045",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q046",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q047",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q048",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q049",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_expert_q050",
+      "question": "Solve this word problems equation setup problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

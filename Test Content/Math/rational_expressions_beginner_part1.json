@@ -6,7 +6,7 @@
   "questions": [
     {
       "id": "mk_rat_b_001",
-      "question": "Simplify: 6/x ÷ 3",
+      "question": "Simplify: 6/x \u00f7 3",
       "choices": {
         "A": "2/x",
         "B": "6/(3x)",
@@ -15,17 +15,17 @@
         "E": "3/x"
       },
       "answer": "A",
-      "explanation": "6/x ÷ 3 = 6/(3x) = 2/x.",
+      "explanation": "6/x \u00f7 3 = 6/(3x) = 2/x.",
       "steps": [
         "1. Dividing by a number means multiplying by its reciprocal.",
         "2. For division by a whole number: divide the numerator OR multiply denominator.",
         "3. Simplify by canceling common factors."
       ],
-      "fastStrategy": "Division → flip and multiply, or just divide the top."
+      "fastStrategy": "Division \u2192 flip and multiply, or just divide the top."
     },
     {
       "id": "mk_rat_b_002",
-      "question": "Simplify: (x/2) ÷ (x/4)",
+      "question": "Simplify: (x/2) \u00f7 (x/4)",
       "choices": {
         "A": "2",
         "B": "1/2",
@@ -34,17 +34,17 @@
         "E": "1"
       },
       "answer": "A",
-      "explanation": "(x/2) ÷ (x/4)= (x/2)*(4/x)=2.",
+      "explanation": "(x/2) \u00f7 (x/4)= (x/2)*(4/x)=2.",
       "steps": [
         "1. Dividing by a number means multiplying by its reciprocal.",
         "2. For division by a whole number: divide the numerator OR multiply denominator.",
         "3. Simplify by canceling common factors."
       ],
-      "fastStrategy": "Division → flip and multiply, or just divide the top."
+      "fastStrategy": "Division \u2192 flip and multiply, or just divide the top."
     },
     {
       "id": "mk_rat_b_003",
-      "question": "Simplify: (3x/5) × (10/x)",
+      "question": "Simplify: (3x/5) \u00d7 (10/x)",
       "choices": {
         "A": "6",
         "B": "3",
@@ -53,7 +53,7 @@
         "E": "5"
       },
       "answer": "A",
-      "explanation": "3x × 10/(5x)=30x/(5x)=6.",
+      "explanation": "3x \u00d7 10/(5x)=30x/(5x)=6.",
       "steps": [
         "1. Multiply numerators together and denominators together.",
         "2. Cancel common factors before multiplying (easier).",
@@ -78,7 +78,7 @@
         "2. Convert each fraction to equivalent form with LCD.",
         "3. Add numerators, keep denominator, simplify."
       ],
-      "fastStrategy": "Common denominator first—then add tops only."
+      "fastStrategy": "Common denominator first\u2014then add tops only."
     },
     {
       "id": "mk_rat_b_005",
@@ -91,13 +91,13 @@
         "E": "2x/3"
       },
       "answer": "A",
-      "explanation": "Common denominator 6: (2x − x)/6 = x/6.",
+      "explanation": "Common denominator 6: (2x \u2212 x)/6 = x/6.",
       "steps": [
         "1. Find common denominator (LCD of all terms).",
         "2. Convert each fraction to equivalent form with LCD.",
         "3. Subtract numerators, keep denominator, simplify."
       ],
-      "fastStrategy": "Common denominator first—then subtract tops only."
+      "fastStrategy": "Common denominator first\u2014then subtract tops only."
     },
     {
       "id": "mk_rat_b_006",
@@ -120,7 +120,7 @@
     },
     {
       "id": "mk_rat_b_007",
-      "question": "Simplify: (x/8) × (16/x)",
+      "question": "Simplify: (x/8) \u00d7 (16/x)",
       "choices": {
         "A": "2",
         "B": "4/x",
@@ -154,7 +154,7 @@
         "2. Convert each fraction to equivalent form with LCD.",
         "3. Add numerators, keep denominator, simplify."
       ],
-      "fastStrategy": "Common denominator first—then add tops only."
+      "fastStrategy": "Common denominator first\u2014then add tops only."
     },
     {
       "id": "mk_rat_b_009",
@@ -167,7 +167,7 @@
         "E": "6"
       },
       "answer": "A",
-      "explanation": "6x²/3x = 2x.",
+      "explanation": "6x\u00b2/3x = 2x.",
       "steps": [
         "1. Factor numerator and denominator completely.",
         "2. Cancel common factors that appear in both.",
@@ -177,7 +177,7 @@
     },
     {
       "id": "mk_rat_b_010",
-      "question": "Simplify: (3/x) × (x/9)",
+      "question": "Simplify: (3/x) \u00d7 (x/9)",
       "choices": {
         "A": "1/3",
         "B": "3x/9x",
@@ -211,7 +211,7 @@
         "2. Convert each fraction to equivalent form with LCD.",
         "3. Add numerators, keep denominator, simplify."
       ],
-      "fastStrategy": "Common denominator first—then add tops only."
+      "fastStrategy": "Common denominator first\u2014then add tops only."
     },
     {
       "id": "mk_rat_b_012",
@@ -234,7 +234,7 @@
     },
     {
       "id": "mk_rat_b_013",
-      "question": "Simplify: 4/(x) × x/2",
+      "question": "Simplify: 4/(x) \u00d7 x/2",
       "choices": {
         "A": "2",
         "B": "4",
@@ -268,7 +268,7 @@
         "2. Convert each fraction to equivalent form with LCD.",
         "3. Subtract numerators, keep denominator, simplify."
       ],
-      "fastStrategy": "Common denominator first—then subtract tops only."
+      "fastStrategy": "Common denominator first\u2014then subtract tops only."
     },
     {
       "id": "mk_rat_b_015",
@@ -281,7 +281,7 @@
         "E": "x/5"
       },
       "answer": "A",
-      "explanation": "5/15 = 1/3 → x/3.",
+      "explanation": "5/15 = 1/3 \u2192 x/3.",
       "steps": [
         "1. Factor numerator and denominator completely.",
         "2. Cancel common factors that appear in both.",
@@ -310,7 +310,7 @@
     },
     {
       "id": "mk_rat_b_017",
-      "question": "Simplify: (x/4) × (8/x)",
+      "question": "Simplify: (x/4) \u00d7 (8/x)",
       "choices": {
         "A": "2",
         "B": "8/x^2",
@@ -344,7 +344,7 @@
         "2. Convert each fraction to equivalent form with LCD.",
         "3. Add numerators, keep denominator, simplify."
       ],
-      "fastStrategy": "Common denominator first—then add tops only."
+      "fastStrategy": "Common denominator first\u2014then add tops only."
     },
     {
       "id": "mk_rat_b_019",
@@ -367,7 +367,7 @@
     },
     {
       "id": "mk_rat_b_020",
-      "question": "Simplify: (3/x) × (x/3)",
+      "question": "Simplify: (3/x) \u00d7 (x/3)",
       "choices": {
         "A": "1",
         "B": "x",
@@ -386,7 +386,7 @@
     },
     {
       "id": "mk_rat_b_021",
-      "question": "Simplify: (12/x) ÷ 4",
+      "question": "Simplify: (12/x) \u00f7 4",
       "choices": {
         "A": "3/x",
         "B": "12/(4x)",
@@ -401,7 +401,7 @@
         "2. For division by a whole number: divide the numerator OR multiply denominator.",
         "3. Simplify by canceling common factors."
       ],
-      "fastStrategy": "Division → flip and multiply, or just divide the top."
+      "fastStrategy": "Division \u2192 flip and multiply, or just divide the top."
     },
     {
       "id": "mk_rat_b_022",
@@ -420,7 +420,7 @@
         "2. Convert each fraction to equivalent form with LCD.",
         "3. Add numerators, keep denominator, simplify."
       ],
-      "fastStrategy": "Common denominator first—then add tops only."
+      "fastStrategy": "Common denominator first\u2014then add tops only."
     },
     {
       "id": "mk_rat_b_023",
@@ -433,7 +433,7 @@
         "E": "1/(2x)"
       },
       "answer": "A",
-      "explanation": "2x²/4x = x/2.",
+      "explanation": "2x\u00b2/4x = x/2.",
       "steps": [
         "1. Factor numerator and denominator completely.",
         "2. Cancel common factors that appear in both.",
@@ -477,7 +477,607 @@
         "2. Convert each fraction to equivalent form with LCD.",
         "3. Subtract numerators, keep denominator, simplify."
       ],
-      "fastStrategy": "Common denominator first—then subtract tops only."
+      "fastStrategy": "Common denominator first\u2014then subtract tops only."
+    },
+    {
+      "id": "rational_expressions_beginner_q001",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q002",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q003",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q004",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q005",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q006",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q007",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q008",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q009",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q010",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q011",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q012",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q013",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q014",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q015",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q016",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q017",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q018",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q019",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q020",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q021",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q022",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q023",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q024",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q025",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q026",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q027",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q028",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q029",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q030",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q031",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q032",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q033",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q034",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q035",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q036",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q037",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q038",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q039",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q040",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q041",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q042",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q043",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q044",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q045",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q046",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q047",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q048",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q049",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "rational_expressions_beginner_q050",
+      "question": "Solve this rational expressions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

@@ -86,7 +86,7 @@
       "choices": {
         "A": "x/4 = 6",
         "B": "4/x = 6",
-        "C": "x ÷ 6 = 4",
+        "C": "x \u00f7 6 = 4",
         "D": "x/6 = 4",
         "E": "4x = 6"
       },
@@ -110,7 +110,7 @@
         "E": "19"
       },
       "answer": "B",
-      "explanation": "x - 12 = 5 → x = 17.",
+      "explanation": "x - 12 = 5 \u2192 x = 17.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -129,7 +129,7 @@
         "E": "24"
       },
       "answer": "B",
-      "explanation": "x + 4 = 19 → x = 15.",
+      "explanation": "x + 4 = 19 \u2192 x = 15.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -148,7 +148,7 @@
         "E": "27"
       },
       "answer": "E",
-      "explanation": "x/3 = 9 → x = 27.",
+      "explanation": "x/3 = 9 \u2192 x = 27.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -239,11 +239,11 @@
         "A": "d = 50 + 3",
         "B": "d = 50 - 3",
         "C": "d = 50/3",
-        "D": "d = 50 × 3",
+        "D": "d = 50 \u00d7 3",
         "E": "d = 3/50"
       },
       "answer": "D",
-      "explanation": "Distance = speed × time → d = 50 × 3.",
+      "explanation": "Distance = speed \u00d7 time \u2192 d = 50 \u00d7 3.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -304,7 +304,7 @@
           "radius": 35,
           "startRay": 0,
           "endRay": 1,
-          "label": "45°",
+          "label": "45\u00b0",
           "measureDegrees": 45
         },
         "styleHints": {
@@ -344,7 +344,7 @@
         "E": "11"
       },
       "answer": "C",
-      "explanation": "7x = 63 → x = 9.",
+      "explanation": "7x = 63 \u2192 x = 9.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -363,7 +363,7 @@
         "E": "6 - a"
       },
       "answer": "B",
-      "explanation": "Sam is 6 more than Alex ⇒ a + 6.",
+      "explanation": "Sam is 6 more than Alex \u21d2 a + 6.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -382,7 +382,7 @@
         "E": "2(x + 5) = 19"
       },
       "answer": "A",
-      "explanation": "Twice a number → 2x; plus 5; equals 19 → 2x + 5 = 19.",
+      "explanation": "Twice a number \u2192 2x; plus 5; equals 19 \u2192 2x + 5 = 19.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -401,7 +401,7 @@
         "E": "12 - d = 60"
       },
       "answer": "B",
-      "explanation": "Pages per day × days = total pages: 12d = 60.",
+      "explanation": "Pages per day \u00d7 days = total pages: 12d = 60.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -492,7 +492,7 @@
         "A": "T = 5 - 3",
         "B": "T = 5/3",
         "C": "T = 5 + 3",
-        "D": "T = 5 × 3",
+        "D": "T = 5 \u00d7 3",
         "E": "T = 3 - 5"
       },
       "answer": "C",
@@ -515,7 +515,7 @@
         "E": "d = 60 - t"
       },
       "answer": "C",
-      "explanation": "Distance = rate × time → d = 60t.",
+      "explanation": "Distance = rate \u00d7 time \u2192 d = 60t.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
@@ -534,13 +534,613 @@
         "E": "10"
       },
       "answer": "B",
-      "explanation": "4x = 28 → x = 7.",
+      "explanation": "4x = 28 \u2192 x = 7.",
       "steps": [
         "1. Identify what you're solving for.",
         "2. Isolate the variable using inverse operations.",
         "3. Simplify and check your answer."
       ],
       "fastStrategy": "Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division)."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q001",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q002",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q003",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q004",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q005",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q006",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q007",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q008",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q009",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q010",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q011",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q012",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q013",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q014",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q015",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q016",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q017",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q018",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q019",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q020",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q021",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q022",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q023",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q024",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q025",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q026",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q027",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q028",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q029",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q030",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q031",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q032",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q033",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q034",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q035",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q036",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q037",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q038",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q039",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q040",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q041",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q042",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q043",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q044",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q045",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q046",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q047",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q048",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q049",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "word_problems_equation_setup_beginner_q050",
+      "question": "Solve this word problems equation setup problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

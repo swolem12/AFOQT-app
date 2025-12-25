@@ -24,7 +24,7 @@
     },
     {
       "id": "vic_exp_002",
-      "question": "The lieutenant’s comments were **oblique**, hinting at her concerns without addressing them directly.",
+      "question": "The lieutenant\u2019s comments were **oblique**, hinting at her concerns without addressing them directly.",
       "choices": {
         "A": "direct",
         "B": "subtle",
@@ -43,7 +43,7 @@
     },
     {
       "id": "vic_exp_003",
-      "question": "The airman’s confidence bordered on **temerity**, alarming even his closest peers.",
+      "question": "The airman\u2019s confidence bordered on **temerity**, alarming even his closest peers.",
       "choices": {
         "A": "cowardice",
         "B": "recklessness",
@@ -81,7 +81,7 @@
     },
     {
       "id": "vic_exp_005",
-      "question": "The analyst’s claim was dismissed as **specious**, appearing logical but collapsing under scrutiny.",
+      "question": "The analyst\u2019s claim was dismissed as **specious**, appearing logical but collapsing under scrutiny.",
       "choices": {
         "A": "deceptively plausible",
         "B": "well supported",
@@ -96,7 +96,7 @@
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'deceptively plausible'."
+      "fastStrategy": "Read the full sentence\u2014the tone and logic require 'deceptively plausible'."
     },
     {
       "id": "vic_exp_006",
@@ -138,7 +138,7 @@
     },
     {
       "id": "vic_exp_008",
-      "question": "The sergeant’s **abstruse** explanation left even the experienced operators confused.",
+      "question": "The sergeant\u2019s **abstruse** explanation left even the experienced operators confused.",
       "choices": {
         "A": "simple",
         "B": "unclear",
@@ -157,7 +157,7 @@
     },
     {
       "id": "vic_exp_009",
-      "question": "The team was surprised by the colonel’s **intransigent** refusal to alter the plan.",
+      "question": "The team was surprised by the colonel\u2019s **intransigent** refusal to alter the plan.",
       "choices": {
         "A": "flexible",
         "B": "stubborn",
@@ -176,7 +176,7 @@
     },
     {
       "id": "vic_exp_010",
-      "question": "The aircraft’s behavior was **anomalous**, deviating sharply from all previous data.",
+      "question": "The aircraft\u2019s behavior was **anomalous**, deviating sharply from all previous data.",
       "choices": {
         "A": "predictable",
         "B": "abnormal",
@@ -191,11 +191,11 @@
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'abnormal'."
+      "fastStrategy": "Read the full sentence\u2014the tone and logic require 'abnormal'."
     },
     {
       "id": "vic_exp_011",
-      "question": "The cadet’s **perfidy** shocked the unit, as no one expected such a betrayal.",
+      "question": "The cadet\u2019s **perfidy** shocked the unit, as no one expected such a betrayal.",
       "choices": {
         "A": "loyalty",
         "B": "treachery",
@@ -252,7 +252,7 @@
     },
     {
       "id": "vic_exp_014",
-      "question": "The plan’s **recondite** details could only be appreciated by specialists.",
+      "question": "The plan\u2019s **recondite** details could only be appreciated by specialists.",
       "choices": {
         "A": "obvious",
         "B": "hidden",
@@ -271,7 +271,7 @@
     },
     {
       "id": "vic_exp_015",
-      "question": "The captain’s praise was **insidious**, sounding supportive but ultimately undermining morale.",
+      "question": "The captain\u2019s praise was **insidious**, sounding supportive but ultimately undermining morale.",
       "choices": {
         "A": "harmless",
         "B": "subtly harmful",
@@ -286,7 +286,7 @@
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'subtly harmful'."
+      "fastStrategy": "Read the full sentence\u2014the tone and logic require 'subtly harmful'."
     },
     {
       "id": "vic_exp_016",
@@ -328,7 +328,7 @@
     },
     {
       "id": "vic_exp_018",
-      "question": "The project’s outcome remained **equivocal**, offering no clear success or failure.",
+      "question": "The project\u2019s outcome remained **equivocal**, offering no clear success or failure.",
       "choices": {
         "A": "unmistakable",
         "B": "ambiguous",
@@ -366,7 +366,7 @@
     },
     {
       "id": "vic_exp_020",
-      "question": "The general’s speech was filled with **bombast**, sounding grand but lacking substance.",
+      "question": "The general\u2019s speech was filled with **bombast**, sounding grand but lacking substance.",
       "choices": {
         "A": "modesty",
         "B": "inflated language",
@@ -381,7 +381,7 @@
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'inflated language'."
+      "fastStrategy": "Read the full sentence\u2014the tone and logic require 'inflated language'."
     },
     {
       "id": "vic_exp_021",
@@ -423,7 +423,7 @@
     },
     {
       "id": "vic_exp_023",
-      "question": "The sergeant’s **asperity** made even routine conversations feel harsh.",
+      "question": "The sergeant\u2019s **asperity** made even routine conversations feel harsh.",
       "choices": {
         "A": "softness",
         "B": "harshness",
@@ -461,7 +461,7 @@
     },
     {
       "id": "vic_exp_025",
-      "question": "The captain’s optimism proved **illusory**, fading once the actual data emerged.",
+      "question": "The captain\u2019s optimism proved **illusory**, fading once the actual data emerged.",
       "choices": {
         "A": "real",
         "B": "misleading",
@@ -476,7 +476,607 @@
         "3. Predict what type of word would make sense before looking at choices.",
         "4. Pick the choice that fits both meaning and tone."
       ],
-      "fastStrategy": "Read the full sentence—the tone and logic require 'misleading'."
+      "fastStrategy": "Read the full sentence\u2014the tone and logic require 'misleading'."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q001",
+      "question": "Vocabulary In Context: Choose the best match for \"perspicuous\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "pellucid",
+        "C": "transparent",
+        "D": "precocious"
+      },
+      "answer": "C",
+      "explanation": "\"perspicuous\" and \"transparent\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q002",
+      "question": "Vocabulary In Context: Choose the best match for \"pellucid\"",
+      "choices": {
+        "A": "clear",
+        "B": "perspicuous",
+        "C": "precocious",
+        "D": "sanguine"
+      },
+      "answer": "A",
+      "explanation": "\"pellucid\" and \"clear\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q003",
+      "question": "Vocabulary In Context: Choose the best match for \"sanguine\"",
+      "choices": {
+        "A": "hopeful",
+        "B": "perspicuous",
+        "C": "precocious",
+        "D": "pellucid"
+      },
+      "answer": "A",
+      "explanation": "\"sanguine\" and \"hopeful\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q004",
+      "question": "Vocabulary In Context: Choose the best match for \"precocious\"",
+      "choices": {
+        "A": "intelligent",
+        "B": "pellucid",
+        "C": "sanguine",
+        "D": "perspicuous"
+      },
+      "answer": "A",
+      "explanation": "\"precocious\" and \"intelligent\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q005",
+      "question": "Vocabulary In Context: Choose the best match for \"propitious\"",
+      "choices": {
+        "A": "perspicuous",
+        "B": "favorable",
+        "C": "pellucid",
+        "D": "sanguine"
+      },
+      "answer": "B",
+      "explanation": "\"propitious\" and \"favorable\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q006",
+      "question": "Vocabulary In Context: Choose the best match for \"nugatory\"",
+      "choices": {
+        "A": "worthless",
+        "B": "perspicuous",
+        "C": "pellucid",
+        "D": "sanguine"
+      },
+      "answer": "A",
+      "explanation": "\"nugatory\" and \"worthless\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q007",
+      "question": "Vocabulary In Context: Choose the best match for \"pusillanimous\"",
+      "choices": {
+        "A": "perspicuous",
+        "B": "sanguine",
+        "C": "cowardly",
+        "D": "pellucid"
+      },
+      "answer": "C",
+      "explanation": "\"pusillanimous\" and \"cowardly\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q008",
+      "question": "Vocabulary In Context: Choose the best match for \"ebullient\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "enthusiastic",
+        "C": "sanguine",
+        "D": "perspicuous"
+      },
+      "answer": "B",
+      "explanation": "\"ebullient\" and \"enthusiastic\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q009",
+      "question": "Vocabulary In Context: Choose the best match for \"effete\"",
+      "choices": {
+        "A": "perspicuous",
+        "B": "sanguine",
+        "C": "exhausted",
+        "D": "pellucid"
+      },
+      "answer": "C",
+      "explanation": "\"effete\" and \"exhausted\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q010",
+      "question": "Vocabulary In Context: Choose the best match for \"enervate\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "weaken",
+        "C": "perspicuous",
+        "D": "sanguine"
+      },
+      "answer": "B",
+      "explanation": "\"enervate\" and \"weaken\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q011",
+      "question": "Vocabulary In Context: Choose the best match for \"exiguous\"",
+      "choices": {
+        "A": "meager",
+        "B": "perspicuous",
+        "C": "sanguine",
+        "D": "pellucid"
+      },
+      "answer": "A",
+      "explanation": "\"exiguous\" and \"meager\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q012",
+      "question": "Vocabulary In Context: Choose the best match for \"factious\"",
+      "choices": {
+        "A": "divisive",
+        "B": "pellucid",
+        "C": "perspicuous",
+        "D": "sanguine"
+      },
+      "answer": "A",
+      "explanation": "\"factious\" and \"divisive\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q013",
+      "question": "Vocabulary In Context: Choose the best match for \"felicitous\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "appropriate",
+        "C": "sanguine",
+        "D": "perspicuous"
+      },
+      "answer": "B",
+      "explanation": "\"felicitous\" and \"appropriate\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q014",
+      "question": "Vocabulary In Context: Choose the best match for \"fulgent\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "brilliant",
+        "C": "perspicuous",
+        "D": "pellucid"
+      },
+      "answer": "B",
+      "explanation": "\"fulgent\" and \"brilliant\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q015",
+      "question": "Vocabulary In Context: Choose the best match for \"fulsome\"",
+      "choices": {
+        "A": "perspicuous",
+        "B": "pellucid",
+        "C": "excessive",
+        "D": "sanguine"
+      },
+      "answer": "C",
+      "explanation": "\"fulsome\" and \"excessive\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q016",
+      "question": "Vocabulary In Context: Choose the best match for \"grandiloquent\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "bombastic",
+        "C": "perspicuous",
+        "D": "pellucid"
+      },
+      "answer": "B",
+      "explanation": "\"grandiloquent\" and \"bombastic\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q017",
+      "question": "Vocabulary In Context: Choose the best match for \"implacable\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "perspicuous",
+        "C": "relentless",
+        "D": "pellucid"
+      },
+      "answer": "C",
+      "explanation": "\"implacable\" and \"relentless\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q018",
+      "question": "Vocabulary In Context: Choose the best match for \"impugn\"",
+      "choices": {
+        "A": "challenge",
+        "B": "pellucid",
+        "C": "perspicuous",
+        "D": "sanguine"
+      },
+      "answer": "A",
+      "explanation": "\"impugn\" and \"challenge\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q019",
+      "question": "Vocabulary In Context: Choose the best match for \"ineffable\"",
+      "choices": {
+        "A": "perspicuous",
+        "B": "pellucid",
+        "C": "indescribable",
+        "D": "sanguine"
+      },
+      "answer": "C",
+      "explanation": "\"ineffable\" and \"indescribable\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q020",
+      "question": "Vocabulary In Context: Choose the best match for \"ineluctable\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "perspicuous",
+        "C": "pellucid",
+        "D": "inevitable"
+      },
+      "answer": "D",
+      "explanation": "\"ineluctable\" and \"inevitable\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q021",
+      "question": "Vocabulary In Context: Choose the best match for \"insouciant\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "perspicuous",
+        "C": "unconcerned",
+        "D": "sanguine"
+      },
+      "answer": "C",
+      "explanation": "\"insouciant\" and \"unconcerned\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q022",
+      "question": "Vocabulary In Context: Choose the best match for \"intemperate\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "perspicuous",
+        "C": "excessive",
+        "D": "sanguine"
+      },
+      "answer": "C",
+      "explanation": "\"intemperate\" and \"excessive\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q023",
+      "question": "Vocabulary In Context: Choose the best match for \"inveterate\"",
+      "choices": {
+        "A": "habitual",
+        "B": "pellucid",
+        "C": "perspicuous",
+        "D": "sanguine"
+      },
+      "answer": "A",
+      "explanation": "\"inveterate\" and \"habitual\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q024",
+      "question": "Vocabulary In Context: Choose the best match for \"lethargic\"",
+      "choices": {
+        "A": "sluggish",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "pellucid"
+      },
+      "answer": "A",
+      "explanation": "\"lethargic\" and \"sluggish\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q025",
+      "question": "Vocabulary In Context: Choose the best match for \"magniloquent\"",
+      "choices": {
+        "A": "grandiose",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "pellucid"
+      },
+      "answer": "A",
+      "explanation": "\"magniloquent\" and \"grandiose\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q026",
+      "question": "Vocabulary In Context: Choose the best match for \"maladroit\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "perspicuous",
+        "C": "sanguine",
+        "D": "clumsy"
+      },
+      "answer": "D",
+      "explanation": "\"maladroit\" and \"clumsy\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q027",
+      "question": "Vocabulary In Context: Choose the best match for \"mellifluous\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "sweet",
+        "C": "pellucid",
+        "D": "perspicuous"
+      },
+      "answer": "B",
+      "explanation": "\"mellifluous\" and \"sweet\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q028",
+      "question": "Vocabulary In Context: Choose the best match for \"obdurate\"",
+      "choices": {
+        "A": "stubborn",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "pellucid"
+      },
+      "answer": "A",
+      "explanation": "\"obdurate\" and \"stubborn\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q029",
+      "question": "Vocabulary In Context: Choose the best match for \"parsimonious\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "sanguine",
+        "C": "stingy",
+        "D": "perspicuous"
+      },
+      "answer": "C",
+      "explanation": "\"parsimonious\" and \"stingy\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q030",
+      "question": "Vocabulary In Context: Choose the best match for \"pellucid\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "precocious",
+        "C": "clear",
+        "D": "perspicuous"
+      },
+      "answer": "C",
+      "explanation": "\"pellucid\" and \"clear\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q031",
+      "question": "Vocabulary In Context: Choose the best match for \"penurious\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "poor",
+        "C": "perspicuous",
+        "D": "pellucid"
+      },
+      "answer": "B",
+      "explanation": "\"penurious\" and \"poor\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q032",
+      "question": "Vocabulary In Context: Choose the best match for \"perspicacious\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "keen"
+      },
+      "answer": "D",
+      "explanation": "\"perspicacious\" and \"keen\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q033",
+      "question": "Vocabulary In Context: Choose the best match for \"phlegmatic\"",
+      "choices": {
+        "A": "calm",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "pellucid"
+      },
+      "answer": "A",
+      "explanation": "\"phlegmatic\" and \"calm\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q034",
+      "question": "Vocabulary In Context: Choose the best match for \"picayune\"",
+      "choices": {
+        "A": "perspicuous",
+        "B": "pellucid",
+        "C": "trivial",
+        "D": "sanguine"
+      },
+      "answer": "C",
+      "explanation": "\"picayune\" and \"trivial\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q035",
+      "question": "Vocabulary In Context: Choose the best match for \"propitious\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "perspicuous",
+        "C": "sanguine",
+        "D": "auspicious"
+      },
+      "answer": "D",
+      "explanation": "\"propitious\" and \"auspicious\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q036",
+      "question": "Vocabulary In Context: Choose the best match for \"pulchritude\"",
+      "choices": {
+        "A": "beauty",
+        "B": "pellucid",
+        "C": "sanguine",
+        "D": "perspicuous"
+      },
+      "answer": "A",
+      "explanation": "\"pulchritude\" and \"beauty\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q037",
+      "question": "Vocabulary In Context: Choose the best match for \"redolent\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "perspicuous",
+        "C": "fragrant",
+        "D": "pellucid"
+      },
+      "answer": "C",
+      "explanation": "\"redolent\" and \"fragrant\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q038",
+      "question": "Vocabulary In Context: Choose the best match for \"sedulous\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "sanguine",
+        "C": "diligent",
+        "D": "perspicuous"
+      },
+      "answer": "C",
+      "explanation": "\"sedulous\" and \"diligent\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q039",
+      "question": "Vocabulary In Context: Choose the best match for \"solipsistic\"",
+      "choices": {
+        "A": "self-centered",
+        "B": "perspicuous",
+        "C": "pellucid",
+        "D": "sanguine"
+      },
+      "answer": "A",
+      "explanation": "\"solipsistic\" and \"self-centered\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q040",
+      "question": "Vocabulary In Context: Choose the best match for \"stolid\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "perspicuous",
+        "C": "impassive",
+        "D": "pellucid"
+      },
+      "answer": "C",
+      "explanation": "\"stolid\" and \"impassive\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q041",
+      "question": "Vocabulary In Context: Choose the best match for \"surreptitious\"",
+      "choices": {
+        "A": "covert",
+        "B": "sanguine",
+        "C": "perspicuous",
+        "D": "pellucid"
+      },
+      "answer": "A",
+      "explanation": "\"surreptitious\" and \"covert\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q042",
+      "question": "Vocabulary In Context: Choose the best match for \"temeritous\"",
+      "choices": {
+        "A": "perspicuous",
+        "B": "sanguine",
+        "C": "reckless",
+        "D": "pellucid"
+      },
+      "answer": "C",
+      "explanation": "\"temeritous\" and \"reckless\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q043",
+      "question": "Vocabulary In Context: Choose the best match for \"tendentious\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "perspicuous",
+        "C": "pellucid",
+        "D": "biased"
+      },
+      "answer": "D",
+      "explanation": "\"tendentious\" and \"biased\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q044",
+      "question": "Vocabulary In Context: Choose the best match for \"tenuous\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "weak",
+        "C": "pellucid",
+        "D": "perspicuous"
+      },
+      "answer": "B",
+      "explanation": "\"tenuous\" and \"weak\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q045",
+      "question": "Vocabulary In Context: Choose the best match for \"perspicuous\"",
+      "choices": {
+        "A": "pellucid",
+        "B": "precocious",
+        "C": "sanguine",
+        "D": "transparent"
+      },
+      "answer": "D",
+      "explanation": "\"perspicuous\" and \"transparent\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q046",
+      "question": "Vocabulary In Context: Choose the best match for \"pellucid\"",
+      "choices": {
+        "A": "clear",
+        "B": "perspicuous",
+        "C": "precocious",
+        "D": "sanguine"
+      },
+      "answer": "A",
+      "explanation": "\"pellucid\" and \"clear\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q047",
+      "question": "Vocabulary In Context: Choose the best match for \"sanguine\"",
+      "choices": {
+        "A": "precocious",
+        "B": "pellucid",
+        "C": "perspicuous",
+        "D": "hopeful"
+      },
+      "answer": "D",
+      "explanation": "\"sanguine\" and \"hopeful\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q048",
+      "question": "Vocabulary In Context: Choose the best match for \"precocious\"",
+      "choices": {
+        "A": "intelligent",
+        "B": "pellucid",
+        "C": "sanguine",
+        "D": "perspicuous"
+      },
+      "answer": "A",
+      "explanation": "\"precocious\" and \"intelligent\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q049",
+      "question": "Vocabulary In Context: Choose the best match for \"propitious\"",
+      "choices": {
+        "A": "perspicuous",
+        "B": "sanguine",
+        "C": "pellucid",
+        "D": "favorable"
+      },
+      "answer": "D",
+      "explanation": "\"propitious\" and \"favorable\" are closely related in meaning."
+    },
+    {
+      "id": "vocabulary_in_context_expert_q050",
+      "question": "Vocabulary In Context: Choose the best match for \"nugatory\"",
+      "choices": {
+        "A": "sanguine",
+        "B": "perspicuous",
+        "C": "worthless",
+        "D": "pellucid"
+      },
+      "answer": "C",
+      "explanation": "\"nugatory\" and \"worthless\" are closely related in meaning."
     }
   ]
 }

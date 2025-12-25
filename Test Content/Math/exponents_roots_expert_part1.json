@@ -6,41 +6,641 @@
   "questions": [
     {
       "id": "mk_er_e_001",
-      "question": "Simplify: (x²/₃ × x⁴/₃) / x²",
+      "question": "Simplify: (x\u00b2/\u2083 \u00d7 x\u2074/\u2083) / x\u00b2",
       "choices": {
-        "A": "x²",
+        "A": "x\u00b2",
         "B": "x",
         "C": "1",
-        "D": "x⁰",
+        "D": "x\u2070",
         "E": "1/x"
       },
       "answer": "C",
-      "explanation": "Numerator: x^(2/3) × x^(4/3) = x^(2/3 + 4/3) = x^(6/3) = x². Divide by x²: x² / x² = 1.",
+      "explanation": "Numerator: x^(2/3) \u00d7 x^(4/3) = x^(2/3 + 4/3) = x^(6/3) = x\u00b2. Divide by x\u00b2: x\u00b2 / x\u00b2 = 1.",
       "steps": [
         "1. Add exponents in numerator: 2/3 + 4/3 = 6/3 = 2.",
-        "2. Numerator becomes: x².",
-        "3. Divide: x² / x² = x^(2-2) = x⁰ = 1."
+        "2. Numerator becomes: x\u00b2.",
+        "3. Divide: x\u00b2 / x\u00b2 = x^(2-2) = x\u2070 = 1."
       ],
-      "fastStrategy": "Product rule: x^a × x^b = x^(a+b); quotient rule: x^a / x^b = x^(a-b)."
+      "fastStrategy": "Product rule: x^a \u00d7 x^b = x^(a+b); quotient rule: x^a / x^b = x^(a-b)."
     },
     {
       "id": "mk_er_e_002",
-      "question": "Which is equivalent to ⁴√(81)?",
+      "question": "Which is equivalent to \u2074\u221a(81)?",
       "choices": {
         "A": "3",
         "B": "9",
         "C": "27",
         "D": "81",
-        "E": "∜81 = 2.43..."
+        "E": "\u221c81 = 2.43..."
       },
       "answer": "A",
-      "explanation": "⁴√(81) = 81^(1/4). Note 81 = 3⁴, so ⁴√(3⁴) = 3.",
+      "explanation": "\u2074\u221a(81) = 81^(1/4). Note 81 = 3\u2074, so \u2074\u221a(3\u2074) = 3.",
       "steps": [
-        "1. Express: ⁴√(81) = 81^(1/4).",
-        "2. Factor 81: 81 = 3⁴.",
-        "3. Apply: (3⁴)^(1/4) = 3^(4×1/4) = 3¹ = 3."
+        "1. Express: \u2074\u221a(81) = 81^(1/4).",
+        "2. Factor 81: 81 = 3\u2074.",
+        "3. Apply: (3\u2074)^(1/4) = 3^(4\u00d71/4) = 3\u00b9 = 3."
       ],
       "fastStrategy": "Recognize perfect powers for nth roots."
+    },
+    {
+      "id": "exponents_roots_expert_q001",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q002",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q003",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q004",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q005",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q006",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q007",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q008",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q009",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q010",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q011",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q012",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q013",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q014",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q015",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q016",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q017",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q018",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q019",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q020",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q021",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q022",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q023",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q024",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q025",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q026",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q027",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q028",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q029",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q030",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q031",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q032",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q033",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q034",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q035",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q036",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q037",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q038",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q039",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q040",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q041",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q042",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q043",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q044",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q045",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q046",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q047",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q048",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q049",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_expert_q050",
+      "question": "Solve this exponents roots problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

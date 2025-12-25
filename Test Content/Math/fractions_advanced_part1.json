@@ -6,7 +6,7 @@
   "questions": [
     {
       "id": "mk_frac_a_001",
-      "question": "Simplify: (2/3) ÷ (4/5)",
+      "question": "Simplify: (2/3) \u00f7 (4/5)",
       "choices": {
         "A": "8/15",
         "B": "5/6",
@@ -15,11 +15,11 @@
         "E": "8/20"
       },
       "answer": "B",
-      "explanation": "Dividing by a fraction means multiplying by its reciprocal: (2/3) ÷ (4/5) = (2/3) × (5/4) = 10/12 = 5/6.",
+      "explanation": "Dividing by a fraction means multiplying by its reciprocal: (2/3) \u00f7 (4/5) = (2/3) \u00d7 (5/4) = 10/12 = 5/6.",
       "steps": [
-        "1. Write division: (2/3) ÷ (4/5).",
-        "2. Multiply by reciprocal: (2/3) × (5/4).",
-        "3. Multiply: (2 × 5)/(3 × 4) = 10/12.",
+        "1. Write division: (2/3) \u00f7 (4/5).",
+        "2. Multiply by reciprocal: (2/3) \u00d7 (5/4).",
+        "3. Multiply: (2 \u00d7 5)/(3 \u00d7 4) = 10/12.",
         "4. Simplify: 10/12 = 5/6."
       ],
       "fastStrategy": "Division of fractions: multiply by reciprocal."
@@ -45,7 +45,7 @@
     },
     {
       "id": "mk_frac_a_003",
-      "question": "Simplify: (3/4) × (2/5) × (10/3)",
+      "question": "Simplify: (3/4) \u00d7 (2/5) \u00d7 (10/3)",
       "choices": {
         "A": "1",
         "B": "60/60",
@@ -54,10 +54,10 @@
         "E": "2"
       },
       "answer": "A",
-      "explanation": "(3/4) × (2/5) × (10/3) = (3 × 2 × 10)/(4 × 5 × 3) = 60/60 = 1.",
+      "explanation": "(3/4) \u00d7 (2/5) \u00d7 (10/3) = (3 \u00d7 2 \u00d7 10)/(4 \u00d7 5 \u00d7 3) = 60/60 = 1.",
       "steps": [
-        "1. Multiply numerators: 3 × 2 × 10 = 60.",
-        "2. Multiply denominators: 4 × 5 × 3 = 60.",
+        "1. Multiply numerators: 3 \u00d7 2 \u00d7 10 = 60.",
+        "2. Multiply denominators: 4 \u00d7 5 \u00d7 3 = 60.",
         "3. Result: 60/60 = 1."
       ],
       "fastStrategy": "Look for cancellation before multiplying."
@@ -66,18 +66,18 @@
       "id": "mk_frac_a_004",
       "question": "Simplify: (1/(x + 1)) + (1/(x - 1))",
       "choices": {
-        "A": "1/(x² - 1)",
-        "B": "2x/(x² - 1)",
-        "C": "(2x)/(x² - 1)",
-        "D": "(x - 1 + x + 1)/(x² - 1)",
-        "E": "2/(x² - 1)"
+        "A": "1/(x\u00b2 - 1)",
+        "B": "2x/(x\u00b2 - 1)",
+        "C": "(2x)/(x\u00b2 - 1)",
+        "D": "(x - 1 + x + 1)/(x\u00b2 - 1)",
+        "E": "2/(x\u00b2 - 1)"
       },
       "answer": "B",
-      "explanation": "LCD = (x + 1)(x - 1) = x² - 1. Convert: ((x - 1) + (x + 1))/((x + 1)(x - 1)) = 2x/(x² - 1).",
+      "explanation": "LCD = (x + 1)(x - 1) = x\u00b2 - 1. Convert: ((x - 1) + (x + 1))/((x + 1)(x - 1)) = 2x/(x\u00b2 - 1).",
       "steps": [
-        "1. Find LCD: (x + 1)(x - 1) = x² - 1.",
-        "2. Convert: 1/(x + 1) = (x - 1)/(x² - 1); 1/(x - 1) = (x + 1)/(x² - 1).",
-        "3. Add: ((x - 1) + (x + 1))/(x² - 1) = 2x/(x² - 1)."
+        "1. Find LCD: (x + 1)(x - 1) = x\u00b2 - 1.",
+        "2. Convert: 1/(x + 1) = (x - 1)/(x\u00b2 - 1); 1/(x - 1) = (x + 1)/(x\u00b2 - 1).",
+        "3. Add: ((x - 1) + (x + 1))/(x\u00b2 - 1) = 2x/(x\u00b2 - 1)."
       ],
       "fastStrategy": "For rational expressions, find LCD and convert before combining."
     },
@@ -97,7 +97,607 @@
         "1. Convert whole number: 2 = 6/3.",
         "2. Add fraction: 6/3 + 1/3 = 7/3."
       ],
-      "fastStrategy": "Mixed to improper: (whole × denominator + numerator) / denominator."
+      "fastStrategy": "Mixed to improper: (whole \u00d7 denominator + numerator) / denominator."
+    },
+    {
+      "id": "fractions_advanced_q001",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q002",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q003",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q004",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q005",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q006",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q007",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q008",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q009",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q010",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q011",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q012",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q013",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q014",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q015",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q016",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q017",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q018",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q019",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q020",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q021",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q022",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q023",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q024",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q025",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q026",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q027",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q028",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q029",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q030",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q031",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q032",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q033",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q034",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q035",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q036",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q037",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q038",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q039",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q040",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q041",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q042",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q043",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q044",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q045",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q046",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q047",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q048",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q049",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_advanced_q050",
+      "question": "Solve this fractions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

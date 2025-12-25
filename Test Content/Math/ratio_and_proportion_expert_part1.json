@@ -15,14 +15,14 @@
         "E": "18 cups"
       },
       "answer": "B",
-      "explanation": "Ratio 2:3 means 2 parts sugar to 3 parts flour. If 2 parts = 8 cups, then 1 part = 4 cups. 3 parts = 3 × 4 = 12 cups.",
+      "explanation": "Ratio 2:3 means 2 parts sugar to 3 parts flour. If 2 parts = 8 cups, then 1 part = 4 cups. 3 parts = 3 \u00d7 4 = 12 cups.",
       "steps": [
         "1. Ratio: sugar:flour = 2:3.",
         "2. Sugar = 8 cups = 2 parts.",
         "3. 1 part = 8/2 = 4 cups.",
-        "4. Flour = 3 parts = 3 × 4 = 12 cups."
+        "4. Flour = 3 parts = 3 \u00d7 4 = 12 cups."
       ],
-      "fastStrategy": "Use ratio to scale: if a:b ratio and first = x, then second = x × (b/a)."
+      "fastStrategy": "Use ratio to scale: if a:b ratio and first = x, then second = x \u00d7 (b/a)."
     },
     {
       "id": "mk_rp_e_002",
@@ -35,15 +35,615 @@
         "E": "19.2 days"
       },
       "answer": "A",
-      "explanation": "Work is inversely proportional to workers. 5 workers × 12 days = 8 workers × x days. 60 = 8x. x = 7.5 days.",
+      "explanation": "Work is inversely proportional to workers. 5 workers \u00d7 12 days = 8 workers \u00d7 x days. 60 = 8x. x = 7.5 days.",
       "steps": [
-        "1. Work ∝ 1/workers (inverse proportion).",
-        "2. workers₁ × days₁ = workers₂ × days₂.",
-        "3. 5 × 12 = 8 × x.",
+        "1. Work \u221d 1/workers (inverse proportion).",
+        "2. workers\u2081 \u00d7 days\u2081 = workers\u2082 \u00d7 days\u2082.",
+        "3. 5 \u00d7 12 = 8 \u00d7 x.",
         "4. 60 = 8x.",
         "5. x = 7.5 days."
       ],
-      "fastStrategy": "Inverse proportion: x₁ × y₁ = x₂ × y₂."
+      "fastStrategy": "Inverse proportion: x\u2081 \u00d7 y\u2081 = x\u2082 \u00d7 y\u2082."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q001",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q002",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q003",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q004",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q005",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q006",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q007",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q008",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q009",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q010",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q011",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q012",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q013",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q014",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q015",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q016",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q017",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q018",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q019",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q020",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q021",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q022",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q023",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q024",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q025",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q026",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q027",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q028",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q029",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q030",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q031",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q032",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q033",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q034",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q035",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q036",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q037",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q038",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q039",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q040",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q041",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q042",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q043",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q044",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q045",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q046",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q047",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q048",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q049",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_expert_q050",
+      "question": "Solve this ratio and proportion problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

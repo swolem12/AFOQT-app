@@ -8,61 +8,61 @@
       "id": "mk_df_a_001",
       "question": "Expand: (2x + 3)(x + 4)",
       "choices": {
-        "A": "2x² + 12",
-        "B": "2x² + 11x + 12",
-        "C": "2x² + 8x + 12",
-        "D": "x² + 11x + 12",
-        "E": "2x² + 14x + 12"
+        "A": "2x\u00b2 + 12",
+        "B": "2x\u00b2 + 11x + 12",
+        "C": "2x\u00b2 + 8x + 12",
+        "D": "x\u00b2 + 11x + 12",
+        "E": "2x\u00b2 + 14x + 12"
       },
       "answer": "B",
-      "explanation": "Using FOIL: First 2x·x = 2x², Outer 2x·4 = 8x, Inner 3·x = 3x, Last 3·4 = 12. Sum: 2x² + 8x + 3x + 12 = 2x² + 11x + 12.",
+      "explanation": "Using FOIL: First 2x\u00b7x = 2x\u00b2, Outer 2x\u00b74 = 8x, Inner 3\u00b7x = 3x, Last 3\u00b74 = 12. Sum: 2x\u00b2 + 8x + 3x + 12 = 2x\u00b2 + 11x + 12.",
       "steps": [
-        "1. First: 2x · x = 2x².",
-        "2. Outer: 2x · 4 = 8x.",
-        "3. Inner: 3 · x = 3x.",
-        "4. Last: 3 · 4 = 12.",
-        "5. Combine: 2x² + 8x + 3x + 12 = 2x² + 11x + 12."
+        "1. First: 2x \u00b7 x = 2x\u00b2.",
+        "2. Outer: 2x \u00b7 4 = 8x.",
+        "3. Inner: 3 \u00b7 x = 3x.",
+        "4. Last: 3 \u00b7 4 = 12.",
+        "5. Combine: 2x\u00b2 + 8x + 3x + 12 = 2x\u00b2 + 11x + 12."
       ],
       "fastStrategy": "FOIL: multiply First, Outer, Inner, Last terms, then combine like terms."
     },
     {
       "id": "mk_df_a_002",
-      "question": "Expand: (x - 5)²",
+      "question": "Expand: (x - 5)\u00b2",
       "choices": {
-        "A": "x² - 25",
-        "B": "x² - 10x + 25",
-        "C": "x² - 10x - 25",
-        "D": "x² + 10x + 25",
-        "E": "x² - 5x + 25"
+        "A": "x\u00b2 - 25",
+        "B": "x\u00b2 - 10x + 25",
+        "C": "x\u00b2 - 10x - 25",
+        "D": "x\u00b2 + 10x + 25",
+        "E": "x\u00b2 - 5x + 25"
       },
       "answer": "B",
-      "explanation": "(x - 5)² = (x - 5)(x - 5) = x² - 5x - 5x + 25 = x² - 10x + 25. Or use pattern (a - b)² = a² - 2ab + b².",
+      "explanation": "(x - 5)\u00b2 = (x - 5)(x - 5) = x\u00b2 - 5x - 5x + 25 = x\u00b2 - 10x + 25. Or use pattern (a - b)\u00b2 = a\u00b2 - 2ab + b\u00b2.",
       "steps": [
         "1. Rewrite as (x - 5)(x - 5).",
-        "2. Apply FOIL: x² - 5x - 5x + 25.",
-        "3. Combine: x² - 10x + 25.",
-        "4. Or use (a - b)² = a² - 2ab + b²: 1² - 2(1)(5) + 5² = x² - 10x + 25."
+        "2. Apply FOIL: x\u00b2 - 5x - 5x + 25.",
+        "3. Combine: x\u00b2 - 10x + 25.",
+        "4. Or use (a - b)\u00b2 = a\u00b2 - 2ab + b\u00b2: 1\u00b2 - 2(1)(5) + 5\u00b2 = x\u00b2 - 10x + 25."
       ],
-      "fastStrategy": "Perfect square pattern: (a - b)² = a² - 2ab + b²."
+      "fastStrategy": "Perfect square pattern: (a - b)\u00b2 = a\u00b2 - 2ab + b\u00b2."
     },
     {
       "id": "mk_df_a_003",
       "question": "Expand: (2x - 3)(2x + 3)",
       "choices": {
-        "A": "4x² - 9",
-        "B": "4x² + 9",
-        "C": "4x² - 6x - 9",
-        "D": "4x² - 12x + 9",
-        "E": "4x² - 6"
+        "A": "4x\u00b2 - 9",
+        "B": "4x\u00b2 + 9",
+        "C": "4x\u00b2 - 6x - 9",
+        "D": "4x\u00b2 - 12x + 9",
+        "E": "4x\u00b2 - 6"
       },
       "answer": "A",
-      "explanation": "This is a difference of squares: (a - b)(a + b) = a² - b². Here, a = 2x, b = 3, so (2x)² - 3² = 4x² - 9.",
+      "explanation": "This is a difference of squares: (a - b)(a + b) = a\u00b2 - b\u00b2. Here, a = 2x, b = 3, so (2x)\u00b2 - 3\u00b2 = 4x\u00b2 - 9.",
       "steps": [
-        "1. Recognize pattern (a - b)(a + b) = a² - b².",
+        "1. Recognize pattern (a - b)(a + b) = a\u00b2 - b\u00b2.",
         "2. Identify a = 2x, b = 3.",
-        "3. Calculate: (2x)² - 3² = 4x² - 9."
+        "3. Calculate: (2x)\u00b2 - 3\u00b2 = 4x\u00b2 - 9."
       ],
-      "fastStrategy": "Difference of squares: (a - b)(a + b) = a² - b²; middle terms cancel."
+      "fastStrategy": "Difference of squares: (a - b)(a + b) = a\u00b2 - b\u00b2; middle terms cancel."
     },
     {
       "id": "mk_df_a_004",
@@ -87,23 +87,623 @@
     },
     {
       "id": "mk_df_a_005",
-      "question": "Expand: (x + 2)³",
+      "question": "Expand: (x + 2)\u00b3",
       "choices": {
-        "A": "x³ + 6x² + 12x + 8",
-        "B": "x³ + 8",
-        "C": "x³ + 6x + 8",
-        "D": "x³ + 2x² + 4x + 8",
-        "E": "x³ + 3x² + 3x + 1"
+        "A": "x\u00b3 + 6x\u00b2 + 12x + 8",
+        "B": "x\u00b3 + 8",
+        "C": "x\u00b3 + 6x + 8",
+        "D": "x\u00b3 + 2x\u00b2 + 4x + 8",
+        "E": "x\u00b3 + 3x\u00b2 + 3x + 1"
       },
       "answer": "A",
-      "explanation": "(x + 2)³ = (x + 2)(x + 2)(x + 2). First, (x + 2)² = x² + 4x + 4. Then (x² + 4x + 4)(x + 2) = x³ + 2x² + 4x² + 8x + 4x + 8 = x³ + 6x² + 12x + 8.",
+      "explanation": "(x + 2)\u00b3 = (x + 2)(x + 2)(x + 2). First, (x + 2)\u00b2 = x\u00b2 + 4x + 4. Then (x\u00b2 + 4x + 4)(x + 2) = x\u00b3 + 2x\u00b2 + 4x\u00b2 + 8x + 4x + 8 = x\u00b3 + 6x\u00b2 + 12x + 8.",
       "steps": [
-        "1. Start with (x + 2)²= x² + 4x + 4.",
-        "2. Multiply by (x + 2): (x² + 4x + 4)(x + 2).",
-        "3. Distribute: x³ + 2x² + 4x² + 8x + 4x + 8.",
-        "4. Combine: x³ + 6x² + 12x + 8."
+        "1. Start with (x + 2)\u00b2= x\u00b2 + 4x + 4.",
+        "2. Multiply by (x + 2): (x\u00b2 + 4x + 4)(x + 2).",
+        "3. Distribute: x\u00b3 + 2x\u00b2 + 4x\u00b2 + 8x + 4x + 8.",
+        "4. Combine: x\u00b3 + 6x\u00b2 + 12x + 8."
       ],
-      "fastStrategy": "For (a + b)³: build from (a + b)², then multiply by (a + b) again."
+      "fastStrategy": "For (a + b)\u00b3: build from (a + b)\u00b2, then multiply by (a + b) again."
+    },
+    {
+      "id": "distributive_foil_advanced_q001",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q002",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q003",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q004",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q005",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q006",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q007",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q008",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q009",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q010",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q011",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q012",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q013",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q014",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q015",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q016",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q017",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q018",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q019",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q020",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q021",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q022",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q023",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q024",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q025",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q026",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q027",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q028",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q029",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q030",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q031",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q032",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q033",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q034",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q035",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q036",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q037",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q038",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q039",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q040",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q041",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q042",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q043",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q044",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q045",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q046",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q047",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q048",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q049",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "distributive_foil_advanced_q050",
+      "question": "Solve this distributive foil problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

@@ -6,7 +6,7 @@
   "questions": [
     {
       "id": "mk_fact_e_001",
-      "question": "Factor: 6x² - 11x - 10",
+      "question": "Factor: 6x\u00b2 - 11x - 10",
       "choices": {
         "A": "(2x - 5)(3x + 2)",
         "B": "(2x + 5)(3x - 2)",
@@ -15,11 +15,11 @@
         "E": "(6x + 5)(x - 2)"
       },
       "answer": "A",
-      "explanation": "AC method: a = 6, c = -10, ac = -60. Factors of -60 that sum to -11: -15 and 4. Rewrite: 6x² - 15x + 4x - 10 = 3x(2x - 5) + 2(2x - 5) = (2x - 5)(3x + 2).",
+      "explanation": "AC method: a = 6, c = -10, ac = -60. Factors of -60 that sum to -11: -15 and 4. Rewrite: 6x\u00b2 - 15x + 4x - 10 = 3x(2x - 5) + 2(2x - 5) = (2x - 5)(3x + 2).",
       "steps": [
-        "1. AC method: ac = 6 × (-10) = -60.",
+        "1. AC method: ac = 6 \u00d7 (-10) = -60.",
         "2. Find factors of -60 summing to -11: -15 and 4.",
-        "3. Rewrite middle: 6x² - 15x + 4x - 10.",
+        "3. Rewrite middle: 6x\u00b2 - 15x + 4x - 10.",
         "4. Factor by grouping: 3x(2x - 5) + 2(2x - 5).",
         "5. Factor out (2x - 5): (2x - 5)(3x + 2)."
       ],
@@ -27,23 +27,623 @@
     },
     {
       "id": "mk_fact_e_002",
-      "question": "Factor: x⁴ - 16",
+      "question": "Factor: x\u2074 - 16",
       "choices": {
-        "A": "(x² - 4)²",
-        "B": "(x - 2)⁴",
-        "C": "(x² - 4)(x² + 4)",
-        "D": "(x - 2)(x + 2)(x² + 4)",
-        "E": "(x - 4)(x³ + 4)"
+        "A": "(x\u00b2 - 4)\u00b2",
+        "B": "(x - 2)\u2074",
+        "C": "(x\u00b2 - 4)(x\u00b2 + 4)",
+        "D": "(x - 2)(x + 2)(x\u00b2 + 4)",
+        "E": "(x - 4)(x\u00b3 + 4)"
       },
       "answer": "D",
-      "explanation": "x⁴ - 16 = (x²)² - 4² = (x² - 4)(x² + 4). Factor further: x² - 4 = (x - 2)(x + 2). So x⁴ - 16 = (x - 2)(x + 2)(x² + 4).",
+      "explanation": "x\u2074 - 16 = (x\u00b2)\u00b2 - 4\u00b2 = (x\u00b2 - 4)(x\u00b2 + 4). Factor further: x\u00b2 - 4 = (x - 2)(x + 2). So x\u2074 - 16 = (x - 2)(x + 2)(x\u00b2 + 4).",
       "steps": [
-        "1. Recognize difference of squares: x⁴ - 16 = (x²)² - 4².",
-        "2. Apply: (x² - 4)(x² + 4).",
-        "3. Factor x² - 4 again: (x - 2)(x + 2).",
-        "4. Final: (x - 2)(x + 2)(x² + 4)."
+        "1. Recognize difference of squares: x\u2074 - 16 = (x\u00b2)\u00b2 - 4\u00b2.",
+        "2. Apply: (x\u00b2 - 4)(x\u00b2 + 4).",
+        "3. Factor x\u00b2 - 4 again: (x - 2)(x + 2).",
+        "4. Final: (x - 2)(x + 2)(x\u00b2 + 4)."
       ],
-      "fastStrategy": "Difference of squares multiple times; note x² + 4 doesn't factor over reals."
+      "fastStrategy": "Difference of squares multiple times; note x\u00b2 + 4 doesn't factor over reals."
+    },
+    {
+      "id": "factoring_expert_q001",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q002",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q003",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q004",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q005",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q006",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q007",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q008",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q009",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q010",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q011",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q012",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q013",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q014",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q015",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q016",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q017",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q018",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q019",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q020",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q021",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q022",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q023",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q024",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q025",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q026",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q027",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q028",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q029",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q030",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q031",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q032",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q033",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q034",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q035",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q036",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q037",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q038",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q039",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q040",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q041",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q042",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q043",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q044",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q045",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q046",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q047",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q048",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q049",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "factoring_expert_q050",
+      "question": "Solve this factoring problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

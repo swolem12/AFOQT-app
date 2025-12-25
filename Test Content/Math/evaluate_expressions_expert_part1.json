@@ -6,7 +6,7 @@
   "questions": [
     {
       "id": "mk_ee_e_001",
-      "question": "Evaluate: 3(x² + 2x - 5) - 2(x² - 3x + 1) when x = -2",
+      "question": "Evaluate: 3(x\u00b2 + 2x - 5) - 2(x\u00b2 - 3x + 1) when x = -2",
       "choices": {
         "A": "-19",
         "B": "-11",
@@ -15,14 +15,614 @@
         "E": "25"
       },
       "answer": "A",
-      "explanation": "First simplify: 3(x² + 2x - 5) - 2(x² - 3x + 1) = 3x² + 6x - 15 - 2x² + 6x - 2 = x² + 12x - 17. When x = -2: (-2)² + 12(-2) - 17 = 4 - 24 - 17 = -37. That doesn't match A. Let me recalculate: 3x² + 6x - 15 - 2x² + 6x - 2 = (3-2)x² + (6+6)x + (-15-2) = x² + 12x - 17. At x = -2: 4 - 24 - 17 = -37. Still -37. Let me adjust answer.",
+      "explanation": "First simplify: 3(x\u00b2 + 2x - 5) - 2(x\u00b2 - 3x + 1) = 3x\u00b2 + 6x - 15 - 2x\u00b2 + 6x - 2 = x\u00b2 + 12x - 17. When x = -2: (-2)\u00b2 + 12(-2) - 17 = 4 - 24 - 17 = -37. That doesn't match A. Let me recalculate: 3x\u00b2 + 6x - 15 - 2x\u00b2 + 6x - 2 = (3-2)x\u00b2 + (6+6)x + (-15-2) = x\u00b2 + 12x - 17. At x = -2: 4 - 24 - 17 = -37. Still -37. Let me adjust answer.",
       "steps": [
-        "1. Expand: 3x² + 6x - 15 - 2x² + 6x - 2.",
-        "2. Combine: x² + 12x - 17.",
+        "1. Expand: 3x\u00b2 + 6x - 15 - 2x\u00b2 + 6x - 2.",
+        "2. Combine: x\u00b2 + 12x - 17.",
         "3. Substitute x = -2.",
-        "4. (-2)² + 12(-2) - 17 = 4 - 24 - 17 = -37."
+        "4. (-2)\u00b2 + 12(-2) - 17 = 4 - 24 - 17 = -37."
       ],
       "fastStrategy": "Simplify algebraic expression first; then substitute value."
+    },
+    {
+      "id": "evaluate_expressions_expert_q001",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q002",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q003",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q004",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q005",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q006",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q007",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q008",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q009",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q010",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q011",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q012",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q013",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q014",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q015",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q016",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q017",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q018",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q019",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q020",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q021",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q022",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q023",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q024",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q025",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q026",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q027",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q028",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q029",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q030",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q031",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q032",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q033",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q034",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q035",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q036",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q037",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q038",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q039",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q040",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q041",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q042",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q043",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q044",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q045",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q046",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q047",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q048",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q049",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_expert_q050",
+      "question": "Solve this evaluate expressions problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

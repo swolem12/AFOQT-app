@@ -15,14 +15,14 @@
         "E": "18"
       },
       "answer": "C",
-      "explanation": "Set up proportion: 3/4 = x/20. Cross-multiply: 3 × 20 = 4 × x ⇒ 60 = 4x ⇒ x = 15.",
+      "explanation": "Set up proportion: 3/4 = x/20. Cross-multiply: 3 \u00d7 20 = 4 \u00d7 x \u21d2 60 = 4x \u21d2 x = 15.",
       "steps": [
         "1. Write proportion: 3/4 = x/20.",
-        "2. Cross-multiply: 3 × 20 = 4 × x.",
+        "2. Cross-multiply: 3 \u00d7 20 = 4 \u00d7 x.",
         "3. Simplify: 60 = 4x.",
         "4. Solve: x = 15."
       ],
-      "fastStrategy": "Cross-multiply: a/b = c/d ⇒ ad = bc."
+      "fastStrategy": "Cross-multiply: a/b = c/d \u21d2 ad = bc."
     },
     {
       "id": "mk_rp_a_002",
@@ -35,10 +35,10 @@
         "E": "5 cups"
       },
       "answer": "C",
-      "explanation": "Set up proportion: 2/6 = x/9. Cross-multiply: 2 × 9 = 6 × x ⇒ 18 = 6x ⇒ x = 3.",
+      "explanation": "Set up proportion: 2/6 = x/9. Cross-multiply: 2 \u00d7 9 = 6 \u00d7 x \u21d2 18 = 6x \u21d2 x = 3.",
       "steps": [
         "1. Proportion: 2 cups / 6 servings = x / 9 servings.",
-        "2. Cross-multiply: 2 × 9 = 6 × x.",
+        "2. Cross-multiply: 2 \u00d7 9 = 6 \u00d7 x.",
         "3. 18 = 6x.",
         "4. x = 3 cups."
       ],
@@ -55,10 +55,10 @@
         "E": "40"
       },
       "answer": "B",
-      "explanation": "Ratio 5:7 means 5/7. If first is 20: 5/7 = 20/x ⇒ 5x = 140 ⇒ x = 28.",
+      "explanation": "Ratio 5:7 means 5/7. If first is 20: 5/7 = 20/x \u21d2 5x = 140 \u21d2 x = 28.",
       "steps": [
         "1. Set up ratio: 5/7 = 20/x.",
-        "2. Cross-multiply: 5x = 7 × 20.",
+        "2. Cross-multiply: 5x = 7 \u00d7 20.",
         "3. 5x = 140.",
         "4. x = 28."
       ],
@@ -75,14 +75,614 @@
         "E": "36"
       },
       "answer": "D",
-      "explanation": "Direct proportion: y = kx. Find k: 12 = k(3) ⇒ k = 4. So y = 4x. When x = 8: y = 4(8) = 32.",
+      "explanation": "Direct proportion: y = kx. Find k: 12 = k(3) \u21d2 k = 4. So y = 4x. When x = 8: y = 4(8) = 32.",
       "steps": [
         "1. Direct proportion: y = kx.",
-        "2. Find constant: 12 = k(3) ⇒ k = 4.",
+        "2. Find constant: 12 = k(3) \u21d2 k = 4.",
         "3. Equation: y = 4x.",
         "4. When x = 8: y = 32."
       ],
       "fastStrategy": "Direct proportion: y = kx; find k from one data point."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q001",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q002",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q003",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q004",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q005",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q006",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q007",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q008",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q009",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q010",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q011",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q012",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q013",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q014",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q015",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q016",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q017",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q018",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q019",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q020",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q021",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q022",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q023",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q024",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q025",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q026",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q027",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q028",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q029",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q030",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q031",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q032",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q033",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q034",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q035",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q036",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q037",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q038",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q039",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q040",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q041",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q042",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q043",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q044",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q045",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q046",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q047",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q048",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q049",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "ratio_and_proportion_advanced_q050",
+      "question": "Solve this ratio and proportion problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

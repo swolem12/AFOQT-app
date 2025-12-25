@@ -15,7 +15,7 @@
         "E": "$350"
       },
       "answer": "B",
-      "explanation": "To find average, sum all sales and divide by number of days. Sum = 100 + (increasing to 300) + (decreasing to 150). Assuming linear changes: day 1=$100, day 2=$200, day 3=$300, day 4=$225, day 5=$150. Sum = 100+200+300+225+150 = 975. Average = 975/5 = 195 ≈ $200.",
+      "explanation": "To find average, sum all sales and divide by number of days. Sum = 100 + (increasing to 300) + (decreasing to 150). Assuming linear changes: day 1=$100, day 2=$200, day 3=$300, day 4=$225, day 5=$150. Sum = 100+200+300+225+150 = 975. Average = 975/5 = 195 \u2248 $200.",
       "steps": [
         "1. Identify all data points from the graph.",
         "2. Estimate intermediate values if needed.",
@@ -35,13 +35,13 @@
         "E": "None"
       },
       "answer": "C",
-      "explanation": "50% more than City D: 30 + (0.5 × 30) = 30 + 15 = 45 in. City C has 50 in, which is closest and exceeds 45.",
+      "explanation": "50% more than City D: 30 + (0.5 \u00d7 30) = 30 + 15 = 45 in. City C has 50 in, which is closest and exceeds 45.",
       "steps": [
-        "1. Find 50% more than City D: 30 × 1.5 = 45 in.",
+        "1. Find 50% more than City D: 30 \u00d7 1.5 = 45 in.",
         "2. Compare all cities: A=40, B=60, C=50, D=30.",
         "3. Which equals or exceeds 45? C (50 in) is the best fit."
       ],
-      "fastStrategy": "Percent increase: original × (1 + percentage as decimal)."
+      "fastStrategy": "Percent increase: original \u00d7 (1 + percentage as decimal)."
     },
     {
       "id": "mk_gi_a_003",
@@ -54,11 +54,11 @@
         "E": "$950"
       },
       "answer": "B",
-      "explanation": "Housing + Food = 40% + 25% = 65% of $1000 = 0.65 × $1000 = $650.",
+      "explanation": "Housing + Food = 40% + 25% = 65% of $1000 = 0.65 \u00d7 $1000 = $650.",
       "steps": [
         "1. Identify percentages: Housing 40%, Food 25%.",
         "2. Add: 40% + 25% = 65%.",
-        "3. Calculate: 65% of $1000 = 0.65 × $1000 = $650."
+        "3. Calculate: 65% of $1000 = 0.65 \u00d7 $1000 = $650."
       ],
       "fastStrategy": "Percent of total: multiply decimal form of percent by total."
     },
@@ -73,13 +73,613 @@
         "E": "5"
       },
       "answer": "C",
-      "explanation": "Slope = (y₂ - y₁)/(x₂ - x₁) = (25 - 5)/(10 - 0) = 20/10 = 2.",
+      "explanation": "Slope = (y\u2082 - y\u2081)/(x\u2082 - x\u2081) = (25 - 5)/(10 - 0) = 20/10 = 2.",
       "steps": [
         "1. Identify points: (0, 5) and (10, 25).",
         "2. Apply slope formula: m = (25 - 5)/(10 - 0).",
         "3. Simplify: m = 20/10 = 2."
       ],
       "fastStrategy": "Slope from two points: rise over run."
+    },
+    {
+      "id": "graph_interpretation_advanced_q001",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q002",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q003",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q004",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q005",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q006",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q007",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q008",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q009",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q010",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q011",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q012",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q013",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q014",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q015",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q016",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q017",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q018",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q019",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q020",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q021",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q022",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q023",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q024",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q025",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q026",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q027",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q028",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q029",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q030",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q031",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q032",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q033",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q034",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q035",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q036",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q037",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q038",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q039",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q040",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q041",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q042",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q043",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q044",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q045",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q046",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q047",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q048",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q049",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graph_interpretation_advanced_q050",
+      "question": "Solve this graph interpretation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

@@ -6,65 +6,65 @@
   "questions": [
     {
       "id": "mk_er_a_001",
-      "question": "Simplify: (x³)⁴",
+      "question": "Simplify: (x\u00b3)\u2074",
       "choices": {
-        "A": "x⁷",
-        "B": "x¹²",
-        "C": "x¹³",
-        "D": "x³⁴",
-        "E": "4x³"
+        "A": "x\u2077",
+        "B": "x\u00b9\u00b2",
+        "C": "x\u00b9\u00b3",
+        "D": "x\u00b3\u2074",
+        "E": "4x\u00b3"
       },
       "answer": "B",
-      "explanation": "Using power rule (aᵐ)ⁿ = aᵐⁿ: (x³)⁴ = x^(3·4) = x¹².",
+      "explanation": "Using power rule (a\u1d50)\u207f = a\u1d50\u207f: (x\u00b3)\u2074 = x^(3\u00b74) = x\u00b9\u00b2.",
       "steps": [
-        "1. Apply power rule: (aᵐ)ⁿ = aᵐⁿ.",
-        "2. Multiply exponents: 3 × 4 = 12.",
-        "3. Result: x¹²."
+        "1. Apply power rule: (a\u1d50)\u207f = a\u1d50\u207f.",
+        "2. Multiply exponents: 3 \u00d7 4 = 12.",
+        "3. Result: x\u00b9\u00b2."
       ],
-      "fastStrategy": "Power rule: (aᵐ)ⁿ = aᵐⁿ; multiply exponents."
+      "fastStrategy": "Power rule: (a\u1d50)\u207f = a\u1d50\u207f; multiply exponents."
     },
     {
       "id": "mk_er_a_002",
-      "question": "Simplify: x⁵ · x⁻³",
+      "question": "Simplify: x\u2075 \u00b7 x\u207b\u00b3",
       "choices": {
-        "A": "x²",
-        "B": "x⁻¹⁵",
-        "C": "x⁸",
-        "D": "1/x²",
-        "E": "x⁻²"
+        "A": "x\u00b2",
+        "B": "x\u207b\u00b9\u2075",
+        "C": "x\u2078",
+        "D": "1/x\u00b2",
+        "E": "x\u207b\u00b2"
       },
       "answer": "A",
-      "explanation": "Product rule: aᵐ · aⁿ = aᵐ⁺ⁿ. So x⁵ · x⁻³ = x^(5-3) = x².",
+      "explanation": "Product rule: a\u1d50 \u00b7 a\u207f = a\u1d50\u207a\u207f. So x\u2075 \u00b7 x\u207b\u00b3 = x^(5-3) = x\u00b2.",
       "steps": [
-        "1. Apply product rule: aᵐ · aⁿ = aᵐ⁺ⁿ.",
+        "1. Apply product rule: a\u1d50 \u00b7 a\u207f = a\u1d50\u207a\u207f.",
         "2. Add exponents: 5 + (-3) = 2.",
-        "3. Result: x²."
+        "3. Result: x\u00b2."
       ],
-      "fastStrategy": "Product rule: aᵐ · aⁿ = aᵐ⁺ⁿ; add exponents."
+      "fastStrategy": "Product rule: a\u1d50 \u00b7 a\u207f = a\u1d50\u207a\u207f; add exponents."
     },
     {
       "id": "mk_er_a_003",
-      "question": "Simplify: √(16x⁴)",
+      "question": "Simplify: \u221a(16x\u2074)",
       "choices": {
-        "A": "4x²",
-        "B": "4x⁴",
-        "C": "16x²",
-        "D": "±4x²",
-        "E": "4|x²|"
+        "A": "4x\u00b2",
+        "B": "4x\u2074",
+        "C": "16x\u00b2",
+        "D": "\u00b14x\u00b2",
+        "E": "4|x\u00b2|"
       },
       "answer": "A",
-      "explanation": "√(16x⁴) = √16 · √(x⁴) = 4 · x² = 4x². (For principal square root, we take positive.)",
+      "explanation": "\u221a(16x\u2074) = \u221a16 \u00b7 \u221a(x\u2074) = 4 \u00b7 x\u00b2 = 4x\u00b2. (For principal square root, we take positive.)",
       "steps": [
-        "1. Factor under radical: √(16x⁴) = √16 · √(x⁴).",
-        "2. Simplify √16 = 4.",
-        "3. Simplify √(x⁴) = x².",
-        "4. Result: 4x²."
+        "1. Factor under radical: \u221a(16x\u2074) = \u221a16 \u00b7 \u221a(x\u2074).",
+        "2. Simplify \u221a16 = 4.",
+        "3. Simplify \u221a(x\u2074) = x\u00b2.",
+        "4. Result: 4x\u00b2."
       ],
       "fastStrategy": "Separate square root of product; even powers become half their exponent."
     },
     {
       "id": "mk_er_a_004",
-      "question": "Simplify: (2³)⁰",
+      "question": "Simplify: (2\u00b3)\u2070",
       "choices": {
         "A": "0",
         "B": "1",
@@ -73,33 +73,633 @@
         "E": "undefined"
       },
       "answer": "B",
-      "explanation": "Any nonzero number to the power 0 equals 1. (2³)⁰ = 1.",
+      "explanation": "Any nonzero number to the power 0 equals 1. (2\u00b3)\u2070 = 1.",
       "steps": [
-        "1. Recall rule: a⁰ = 1 for any a ≠ 0.",
-        "2. 2³ = 8 ≠ 0.",
-        "3. So (2³)⁰ = 8⁰ = 1."
+        "1. Recall rule: a\u2070 = 1 for any a \u2260 0.",
+        "2. 2\u00b3 = 8 \u2260 0.",
+        "3. So (2\u00b3)\u2070 = 8\u2070 = 1."
       ],
-      "fastStrategy": "Zero exponent rule: a⁰ = 1 for a ≠ 0."
+      "fastStrategy": "Zero exponent rule: a\u2070 = 1 for a \u2260 0."
     },
     {
       "id": "mk_er_a_005",
-      "question": "Simplify: √(x⁶/y²)",
+      "question": "Simplify: \u221a(x\u2076/y\u00b2)",
       "choices": {
-        "A": "x³/y",
-        "B": "x⁶/y²",
-        "C": "x³y",
-        "D": "x²/y²",
-        "E": "±x³/y"
+        "A": "x\u00b3/y",
+        "B": "x\u2076/y\u00b2",
+        "C": "x\u00b3y",
+        "D": "x\u00b2/y\u00b2",
+        "E": "\u00b1x\u00b3/y"
       },
       "answer": "A",
-      "explanation": "√(x⁶/y²) = √(x⁶)/√(y²) = x³/y.",
+      "explanation": "\u221a(x\u2076/y\u00b2) = \u221a(x\u2076)/\u221a(y\u00b2) = x\u00b3/y.",
       "steps": [
-        "1. Apply quotient rule for radicals: √(a/b) = √a/√b.",
-        "2. √(x⁶) = x³.",
-        "3. √(y²) = y.",
-        "4. Result: x³/y."
+        "1. Apply quotient rule for radicals: \u221a(a/b) = \u221aa/\u221ab.",
+        "2. \u221a(x\u2076) = x\u00b3.",
+        "3. \u221a(y\u00b2) = y.",
+        "4. Result: x\u00b3/y."
       ],
       "fastStrategy": "For even exponent under square root, divide exponent by 2."
+    },
+    {
+      "id": "exponents_roots_advanced_q001",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q002",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q003",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q004",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q005",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q006",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q007",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q008",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q009",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q010",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q011",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q012",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q013",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q014",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q015",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q016",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q017",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q018",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q019",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q020",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q021",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q022",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q023",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q024",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q025",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q026",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q027",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q028",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q029",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q030",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q031",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q032",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q033",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q034",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q035",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q036",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q037",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q038",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q039",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q040",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q041",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q042",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q043",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q044",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q045",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q046",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q047",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q048",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q049",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "exponents_roots_advanced_q050",
+      "question": "Solve this exponents roots problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

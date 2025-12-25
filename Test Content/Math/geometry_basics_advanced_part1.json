@@ -35,11 +35,11 @@
         "E": "14"
       },
       "answer": "B",
-      "explanation": "Pythagorean theorem: c² = a² + b² = 6² + 8² = 36 + 64 = 100, so c = 10.",
+      "explanation": "Pythagorean theorem: c\u00b2 = a\u00b2 + b\u00b2 = 6\u00b2 + 8\u00b2 = 36 + 64 = 100, so c = 10.",
       "steps": [
-        "1. Apply Pythagorean theorem: c² = a² + b².",
-        "2. Substitute: c² = 6² + 8².",
-        "3. Calculate: c² = 36 + 64 = 100.",
+        "1. Apply Pythagorean theorem: c\u00b2 = a\u00b2 + b\u00b2.",
+        "2. Substitute: c\u00b2 = 6\u00b2 + 8\u00b2.",
+        "3. Calculate: c\u00b2 = 36 + 64 = 100.",
         "4. Take square root: c = 10."
       ],
       "fastStrategy": "Recognize (6, 8, 10) as a Pythagorean triple."
@@ -48,40 +48,40 @@
       "id": "mk_gb_a_003",
       "question": "What is the area of a circle with radius 5?",
       "choices": {
-        "A": "5π",
-        "B": "10π",
-        "C": "25π",
-        "D": "50π",
-        "E": "100π"
+        "A": "5\u03c0",
+        "B": "10\u03c0",
+        "C": "25\u03c0",
+        "D": "50\u03c0",
+        "E": "100\u03c0"
       },
       "answer": "C",
-      "explanation": "Area = πr² = π(5)² = 25π.",
+      "explanation": "Area = \u03c0r\u00b2 = \u03c0(5)\u00b2 = 25\u03c0.",
       "steps": [
-        "1. Recall area formula: A = πr².",
-        "2. Substitute r = 5: A = π(5)².",
-        "3. Calculate: A = 25π."
+        "1. Recall area formula: A = \u03c0r\u00b2.",
+        "2. Substitute r = 5: A = \u03c0(5)\u00b2.",
+        "3. Calculate: A = 25\u03c0."
       ],
-      "fastStrategy": "Circle area: A = πr²; circumference: C = 2πr."
+      "fastStrategy": "Circle area: A = \u03c0r\u00b2; circumference: C = 2\u03c0r."
     },
     {
       "id": "mk_gb_a_004",
       "question": "What is the sum of interior angles in a pentagon?",
       "choices": {
-        "A": "360°",
-        "B": "540°",
-        "C": "720°",
-        "D": "900°",
-        "E": "1080°"
+        "A": "360\u00b0",
+        "B": "540\u00b0",
+        "C": "720\u00b0",
+        "D": "900\u00b0",
+        "E": "1080\u00b0"
       },
       "answer": "B",
-      "explanation": "Sum of interior angles = (n - 2) × 180° where n is number of sides. For pentagon, n = 5: (5 - 2) × 180° = 3 × 180° = 540°.",
+      "explanation": "Sum of interior angles = (n - 2) \u00d7 180\u00b0 where n is number of sides. For pentagon, n = 5: (5 - 2) \u00d7 180\u00b0 = 3 \u00d7 180\u00b0 = 540\u00b0.",
       "steps": [
-        "1. Use formula: Sum = (n - 2) × 180°.",
+        "1. Use formula: Sum = (n - 2) \u00d7 180\u00b0.",
         "2. For pentagon: n = 5.",
-        "3. Calculate: (5 - 2) × 180° = 3 × 180°.",
-        "4. Result: 540°."
+        "3. Calculate: (5 - 2) \u00d7 180\u00b0 = 3 \u00d7 180\u00b0.",
+        "4. Result: 540\u00b0."
       ],
-      "fastStrategy": "Interior angle sum: (n - 2) × 180° for n-sided polygon."
+      "fastStrategy": "Interior angle sum: (n - 2) \u00d7 180\u00b0 for n-sided polygon."
     },
     {
       "id": "mk_gb_a_005",
@@ -103,6 +103,606 @@
         "5. Same orientation: false (can be rotated/reflected)."
       ],
       "fastStrategy": "Congruence preserves size and shape, but not orientation."
+    },
+    {
+      "id": "geometry_basics_advanced_q001",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q002",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q003",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q004",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q005",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q006",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q007",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q008",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q009",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q010",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q011",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q012",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q013",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q014",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q015",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q016",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q017",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q018",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q019",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q020",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q021",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q022",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q023",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q024",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q025",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q026",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q027",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q028",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q029",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q030",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q031",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q032",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q033",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q034",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q035",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q036",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q037",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q038",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q039",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q040",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q041",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q042",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q043",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q044",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q045",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q046",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q047",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q048",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q049",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "geometry_basics_advanced_q050",
+      "question": "Solve this geometry basics problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

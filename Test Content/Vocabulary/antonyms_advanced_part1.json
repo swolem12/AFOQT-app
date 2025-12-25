@@ -20,7 +20,7 @@
         "3. Scan the choices for the word that represents the opposite meaning.",
         "4. Eliminate synonyms and unrelated words."
       ],
-      "fastStrategy": "Quick test: Can 'mitigate' and 'intensify' both be true at once? No—they're opposites."
+      "fastStrategy": "Quick test: Can 'mitigate' and 'intensify' both be true at once? No\u2014they're opposites."
     },
     {
       "id": "ant_adv_002",
@@ -115,7 +115,7 @@
         "3. Scan the choices for the word that represents the opposite meaning.",
         "4. Eliminate synonyms and unrelated words."
       ],
-      "fastStrategy": "Quick test: Can 'candid' and 'evasive' both be true at once? No—they're opposites."
+      "fastStrategy": "Quick test: Can 'candid' and 'evasive' both be true at once? No\u2014they're opposites."
     },
     {
       "id": "ant_adv_007",
@@ -210,7 +210,7 @@
         "3. Scan the choices for the word that represents the opposite meaning.",
         "4. Eliminate synonyms and unrelated words."
       ],
-      "fastStrategy": "Quick test: Can 'arduous' and 'effortless' both be true at once? No—they're opposites."
+      "fastStrategy": "Quick test: Can 'arduous' and 'effortless' both be true at once? No\u2014they're opposites."
     },
     {
       "id": "ant_adv_012",
@@ -305,7 +305,7 @@
         "3. Scan the choices for the word that represents the opposite meaning.",
         "4. Eliminate synonyms and unrelated words."
       ],
-      "fastStrategy": "Quick test: Can 'wary' and 'trusting' both be true at once? No—they're opposites."
+      "fastStrategy": "Quick test: Can 'wary' and 'trusting' both be true at once? No\u2014they're opposites."
     },
     {
       "id": "ant_adv_017",
@@ -400,7 +400,7 @@
         "3. Scan the choices for the word that represents the opposite meaning.",
         "4. Eliminate synonyms and unrelated words."
       ],
-      "fastStrategy": "Quick test: Can 'conspicuous' and 'inconspicuous' both be true at once? No—they're opposites."
+      "fastStrategy": "Quick test: Can 'conspicuous' and 'inconspicuous' both be true at once? No\u2014they're opposites."
     },
     {
       "id": "ant_adv_022",
@@ -477,6 +477,606 @@
         "4. Eliminate synonyms and unrelated words."
       ],
       "fastStrategy": "Avoid traps: Some choices are synonyms of 'amiable'. 'hostile' contradicts it."
+    },
+    {
+      "id": "antonyms_advanced_q001",
+      "question": "Antonyms: Choose the best match for \"ambiguous\"",
+      "choices": {
+        "A": "unclear",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "diligent"
+      },
+      "answer": "A",
+      "explanation": "\"ambiguous\" and \"unclear\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q002",
+      "question": "Antonyms: Choose the best match for \"benevolent\"",
+      "choices": {
+        "A": "diligent",
+        "B": "kind-hearted",
+        "C": "ambiguous",
+        "D": "candid"
+      },
+      "answer": "B",
+      "explanation": "\"benevolent\" and \"kind-hearted\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q003",
+      "question": "Antonyms: Choose the best match for \"candid\"",
+      "choices": {
+        "A": "diligent",
+        "B": "frank",
+        "C": "benevolent",
+        "D": "ambiguous"
+      },
+      "answer": "B",
+      "explanation": "\"candid\" and \"frank\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q004",
+      "question": "Antonyms: Choose the best match for \"diligent\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "hardworking",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "B",
+      "explanation": "\"diligent\" and \"hardworking\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q005",
+      "question": "Antonyms: Choose the best match for \"eloquent\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "articulate"
+      },
+      "answer": "D",
+      "explanation": "\"eloquent\" and \"articulate\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q006",
+      "question": "Antonyms: Choose the best match for \"frugal\"",
+      "choices": {
+        "A": "candid",
+        "B": "thrifty",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"frugal\" and \"thrifty\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q007",
+      "question": "Antonyms: Choose the best match for \"gregarious\"",
+      "choices": {
+        "A": "social",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"gregarious\" and \"social\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q008",
+      "question": "Antonyms: Choose the best match for \"harbinger\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "forerunner",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "B",
+      "explanation": "\"harbinger\" and \"forerunner\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q009",
+      "question": "Antonyms: Choose the best match for \"incisive\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "penetrating",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"incisive\" and \"penetrating\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q010",
+      "question": "Antonyms: Choose the best match for \"jocular\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "humorous",
+        "C": "ambiguous",
+        "D": "candid"
+      },
+      "answer": "B",
+      "explanation": "\"jocular\" and \"humorous\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q011",
+      "question": "Antonyms: Choose the best match for \"meticulous\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "careful"
+      },
+      "answer": "D",
+      "explanation": "\"meticulous\" and \"careful\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q012",
+      "question": "Antonyms: Choose the best match for \"nonchalant\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "indifferent",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"nonchalant\" and \"indifferent\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q013",
+      "question": "Antonyms: Choose the best match for \"obstinate\"",
+      "choices": {
+        "A": "candid",
+        "B": "stubborn",
+        "C": "benevolent",
+        "D": "ambiguous"
+      },
+      "answer": "B",
+      "explanation": "\"obstinate\" and \"stubborn\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q014",
+      "question": "Antonyms: Choose the best match for \"perspicacious\"",
+      "choices": {
+        "A": "insightful",
+        "B": "candid",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"perspicacious\" and \"insightful\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q015",
+      "question": "Antonyms: Choose the best match for \"querulous\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "complaining",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"querulous\" and \"complaining\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q016",
+      "question": "Antonyms: Choose the best match for \"raucous\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "loud"
+      },
+      "answer": "D",
+      "explanation": "\"raucous\" and \"loud\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q017",
+      "question": "Antonyms: Choose the best match for \"sagacious\"",
+      "choices": {
+        "A": "wise",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"sagacious\" and \"wise\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q018",
+      "question": "Antonyms: Choose the best match for \"taciturn\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "quiet"
+      },
+      "answer": "D",
+      "explanation": "\"taciturn\" and \"quiet\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q019",
+      "question": "Antonyms: Choose the best match for \"ubiquitous\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "everywhere",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"ubiquitous\" and \"everywhere\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q020",
+      "question": "Antonyms: Choose the best match for \"vivacious\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "lively",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"vivacious\" and \"lively\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q021",
+      "question": "Antonyms: Choose the best match for \"obfuscate\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "obscure",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"obfuscate\" and \"obscure\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q022",
+      "question": "Antonyms: Choose the best match for \"copious\"",
+      "choices": {
+        "A": "candid",
+        "B": "abundant",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"copious\" and \"abundant\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q023",
+      "question": "Antonyms: Choose the best match for \"ephemeral\"",
+      "choices": {
+        "A": "candid",
+        "B": "fleeting",
+        "C": "benevolent",
+        "D": "ambiguous"
+      },
+      "answer": "B",
+      "explanation": "\"ephemeral\" and \"fleeting\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q024",
+      "question": "Antonyms: Choose the best match for \"fastidious\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "benevolent",
+        "D": "meticulous"
+      },
+      "answer": "D",
+      "explanation": "\"fastidious\" and \"meticulous\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q025",
+      "question": "Antonyms: Choose the best match for \"fortuitous\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "fortunate",
+        "D": "benevolent"
+      },
+      "answer": "C",
+      "explanation": "\"fortuitous\" and \"fortunate\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q026",
+      "question": "Antonyms: Choose the best match for \"garrulous\"",
+      "choices": {
+        "A": "talkative",
+        "B": "ambiguous",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "A",
+      "explanation": "\"garrulous\" and \"talkative\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q027",
+      "question": "Antonyms: Choose the best match for \"indolent\"",
+      "choices": {
+        "A": "lazy",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"indolent\" and \"lazy\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q028",
+      "question": "Antonyms: Choose the best match for \"lucrative\"",
+      "choices": {
+        "A": "profitable",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"lucrative\" and \"profitable\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q029",
+      "question": "Antonyms: Choose the best match for \"magnanimous\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "generous"
+      },
+      "answer": "D",
+      "explanation": "\"magnanimous\" and \"generous\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q030",
+      "question": "Antonyms: Choose the best match for \"perfunctory\"",
+      "choices": {
+        "A": "candid",
+        "B": "cursory",
+        "C": "benevolent",
+        "D": "ambiguous"
+      },
+      "answer": "B",
+      "explanation": "\"perfunctory\" and \"cursory\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q031",
+      "question": "Antonyms: Choose the best match for \"plausible\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "benevolent",
+        "C": "believable",
+        "D": "candid"
+      },
+      "answer": "C",
+      "explanation": "\"plausible\" and \"believable\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q032",
+      "question": "Antonyms: Choose the best match for \"requisite\"",
+      "choices": {
+        "A": "necessary",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "candid"
+      },
+      "answer": "A",
+      "explanation": "\"requisite\" and \"necessary\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q033",
+      "question": "Antonyms: Choose the best match for \"sanguine\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "benevolent",
+        "C": "optimistic",
+        "D": "candid"
+      },
+      "answer": "C",
+      "explanation": "\"sanguine\" and \"optimistic\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q034",
+      "question": "Antonyms: Choose the best match for \"stringent\"",
+      "choices": {
+        "A": "candid",
+        "B": "strict",
+        "C": "ambiguous",
+        "D": "benevolent"
+      },
+      "answer": "B",
+      "explanation": "\"stringent\" and \"strict\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q035",
+      "question": "Antonyms: Choose the best match for \"tedious\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "boring",
+        "C": "benevolent",
+        "D": "candid"
+      },
+      "answer": "B",
+      "explanation": "\"tedious\" and \"boring\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q036",
+      "question": "Antonyms: Choose the best match for \"vacuous\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "empty"
+      },
+      "answer": "D",
+      "explanation": "\"vacuous\" and \"empty\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q037",
+      "question": "Antonyms: Choose the best match for \"verisimilitude\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "ambiguous",
+        "C": "candid",
+        "D": "authenticity"
+      },
+      "answer": "D",
+      "explanation": "\"verisimilitude\" and \"authenticity\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q038",
+      "question": "Antonyms: Choose the best match for \"viable\"",
+      "choices": {
+        "A": "candid",
+        "B": "ambiguous",
+        "C": "benevolent",
+        "D": "feasible"
+      },
+      "answer": "D",
+      "explanation": "\"viable\" and \"feasible\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q039",
+      "question": "Antonyms: Choose the best match for \"vindicate\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "justify"
+      },
+      "answer": "D",
+      "explanation": "\"vindicate\" and \"justify\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q040",
+      "question": "Antonyms: Choose the best match for \"voluble\"",
+      "choices": {
+        "A": "talkative",
+        "B": "candid",
+        "C": "benevolent",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"voluble\" and \"talkative\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q041",
+      "question": "Antonyms: Choose the best match for \"ambiguous\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "candid",
+        "C": "unclear",
+        "D": "diligent"
+      },
+      "answer": "C",
+      "explanation": "\"ambiguous\" and \"unclear\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q042",
+      "question": "Antonyms: Choose the best match for \"benevolent\"",
+      "choices": {
+        "A": "ambiguous",
+        "B": "kind-hearted",
+        "C": "diligent",
+        "D": "candid"
+      },
+      "answer": "B",
+      "explanation": "\"benevolent\" and \"kind-hearted\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q043",
+      "question": "Antonyms: Choose the best match for \"candid\"",
+      "choices": {
+        "A": "frank",
+        "B": "diligent",
+        "C": "benevolent",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"candid\" and \"frank\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q044",
+      "question": "Antonyms: Choose the best match for \"diligent\"",
+      "choices": {
+        "A": "hardworking",
+        "B": "ambiguous",
+        "C": "candid",
+        "D": "benevolent"
+      },
+      "answer": "A",
+      "explanation": "\"diligent\" and \"hardworking\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q045",
+      "question": "Antonyms: Choose the best match for \"eloquent\"",
+      "choices": {
+        "A": "benevolent",
+        "B": "ambiguous",
+        "C": "articulate",
+        "D": "candid"
+      },
+      "answer": "C",
+      "explanation": "\"eloquent\" and \"articulate\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q046",
+      "question": "Antonyms: Choose the best match for \"frugal\"",
+      "choices": {
+        "A": "candid",
+        "B": "thrifty",
+        "C": "benevolent",
+        "D": "ambiguous"
+      },
+      "answer": "B",
+      "explanation": "\"frugal\" and \"thrifty\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q047",
+      "question": "Antonyms: Choose the best match for \"gregarious\"",
+      "choices": {
+        "A": "candid",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "social"
+      },
+      "answer": "D",
+      "explanation": "\"gregarious\" and \"social\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q048",
+      "question": "Antonyms: Choose the best match for \"harbinger\"",
+      "choices": {
+        "A": "forerunner",
+        "B": "benevolent",
+        "C": "ambiguous",
+        "D": "candid"
+      },
+      "answer": "A",
+      "explanation": "\"harbinger\" and \"forerunner\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q049",
+      "question": "Antonyms: Choose the best match for \"incisive\"",
+      "choices": {
+        "A": "penetrating",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"incisive\" and \"penetrating\" are closely related in meaning."
+    },
+    {
+      "id": "antonyms_advanced_q050",
+      "question": "Antonyms: Choose the best match for \"jocular\"",
+      "choices": {
+        "A": "humorous",
+        "B": "benevolent",
+        "C": "candid",
+        "D": "ambiguous"
+      },
+      "answer": "A",
+      "explanation": "\"jocular\" and \"humorous\" are closely related in meaning."
     }
   ]
 }

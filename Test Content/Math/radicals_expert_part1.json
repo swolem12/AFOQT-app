@@ -6,42 +6,642 @@
   "questions": [
     {
       "id": "mk_rad_e_001",
-      "question": "Simplify: ∛(54)",
+      "question": "Simplify: \u221b(54)",
       "choices": {
-        "A": "3∛2",
-        "B": "3∛5",
-        "C": "2∛3",
-        "D": "5∛3",
-        "E": "∛54 (cannot simplify)"
+        "A": "3\u221b2",
+        "B": "3\u221b5",
+        "C": "2\u221b3",
+        "D": "5\u221b3",
+        "E": "\u221b54 (cannot simplify)"
       },
       "answer": "A",
-      "explanation": "54 = 27 × 2 = 3³ × 2. So ∛54 = ∛(3³ × 2) = 3∛2.",
+      "explanation": "54 = 27 \u00d7 2 = 3\u00b3 \u00d7 2. So \u221b54 = \u221b(3\u00b3 \u00d7 2) = 3\u221b2.",
       "steps": [
-        "1. Factor 54: 54 = 27 × 2 = 3³ × 2.",
-        "2. Apply radical: ∛(3³ × 2) = ∛(3³) × ∛2.",
-        "3. Simplify: 3 × ∛2 = 3∛2."
+        "1. Factor 54: 54 = 27 \u00d7 2 = 3\u00b3 \u00d7 2.",
+        "2. Apply radical: \u221b(3\u00b3 \u00d7 2) = \u221b(3\u00b3) \u00d7 \u221b2.",
+        "3. Simplify: 3 \u00d7 \u221b2 = 3\u221b2."
       ],
       "fastStrategy": "Extract perfect cubes from cube root."
     },
     {
       "id": "mk_rad_e_002",
-      "question": "Rationalize: 2 / (√3 + √2)",
+      "question": "Rationalize: 2 / (\u221a3 + \u221a2)",
       "choices": {
-        "A": "2(√3 - √2)",
-        "B": "(√3 - √2)",
-        "C": "2(√3 + √2)",
-        "D": "(√3 + √2) / 5",
-        "E": "1 / (√3 - √2)"
+        "A": "2(\u221a3 - \u221a2)",
+        "B": "(\u221a3 - \u221a2)",
+        "C": "2(\u221a3 + \u221a2)",
+        "D": "(\u221a3 + \u221a2) / 5",
+        "E": "1 / (\u221a3 - \u221a2)"
       },
       "answer": "A",
-      "explanation": "Multiply by conjugate: (2 / (√3 + √2)) × ((√3 - √2) / (√3 - √2)) = 2(√3 - √2) / ((√3)² - (√2)²) = 2(√3 - √2) / (3 - 2) = 2(√3 - √2).",
+      "explanation": "Multiply by conjugate: (2 / (\u221a3 + \u221a2)) \u00d7 ((\u221a3 - \u221a2) / (\u221a3 - \u221a2)) = 2(\u221a3 - \u221a2) / ((\u221a3)\u00b2 - (\u221a2)\u00b2) = 2(\u221a3 - \u221a2) / (3 - 2) = 2(\u221a3 - \u221a2).",
       "steps": [
-        "1. Multiply by conjugate: (√3 - √2) / (√3 - √2).",
-        "2. Numerator: 2(√3 - √2).",
-        "3. Denominator: (√3)² - (√2)² = 3 - 2 = 1.",
-        "4. Result: 2(√3 - √2)."
+        "1. Multiply by conjugate: (\u221a3 - \u221a2) / (\u221a3 - \u221a2).",
+        "2. Numerator: 2(\u221a3 - \u221a2).",
+        "3. Denominator: (\u221a3)\u00b2 - (\u221a2)\u00b2 = 3 - 2 = 1.",
+        "4. Result: 2(\u221a3 - \u221a2)."
       ],
-      "fastStrategy": "Conjugate for sum/difference in denominator: (a + b)(a - b) = a² - b²."
+      "fastStrategy": "Conjugate for sum/difference in denominator: (a + b)(a - b) = a\u00b2 - b\u00b2."
+    },
+    {
+      "id": "radicals_expert_q001",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q002",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q003",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q004",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q005",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q006",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q007",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q008",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q009",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q010",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q011",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q012",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q013",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q014",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q015",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q016",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q017",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q018",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q019",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q020",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q021",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q022",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q023",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q024",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q025",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q026",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q027",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q028",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q029",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q030",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q031",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q032",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q033",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q034",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q035",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q036",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q037",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q038",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q039",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q040",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q041",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q042",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q043",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q044",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q045",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q046",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q047",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q048",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q049",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "radicals_expert_q050",
+      "question": "Solve this radicals problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

@@ -140,7 +140,7 @@
         "2. See that it crosses the y-axis at y = 3.",
         "3. A horizontal line at height 3 is written y = 3."
       ],
-      "fastStrategy": "Horizontal line → y = (that constant y-value). Vertical line → x = (constant x-value)."
+      "fastStrategy": "Horizontal line \u2192 y = (that constant y-value). Vertical line \u2192 x = (constant x-value)."
     },
     {
       "uiSpec": {
@@ -185,7 +185,7 @@
         "2. See that every point on the line has x = -1.",
         "3. Therefore, the equation is x = -1."
       ],
-      "fastStrategy": "Vertical line → x = constant. Horizontal line → y = constant. Memorize that mapping."
+      "fastStrategy": "Vertical line \u2192 x = constant. Horizontal line \u2192 y = constant. Memorize that mapping."
     },
     {
       "id": "mk_glf_b_005",
@@ -337,7 +337,7 @@
         "2. Identify m = 0.5.",
         "3. Therefore, the slope is 0.5."
       ],
-      "fastStrategy": "Decimal or fraction, it doesn’t matter; the coefficient of x is always the slope.",
+      "fastStrategy": "Decimal or fraction, it doesn\u2019t matter; the coefficient of x is always the slope.",
       "uiSpec": {
         "type": "slope_graph",
         "width": 300,
@@ -425,7 +425,7 @@
         "2. Identify y = 5 as this form.",
         "3. Therefore, y = 5 is a horizontal line."
       ],
-      "fastStrategy": "Quick test: if the equation has only y = (number), it’s horizontal. If it has only x = (number), it’s vertical.",
+      "fastStrategy": "Quick test: if the equation has only y = (number), it\u2019s horizontal. If it has only x = (number), it\u2019s vertical.",
       "uiSpec": {
         "type": "slope_graph",
         "width": 300,
@@ -513,7 +513,7 @@
         "2. Recognize b = 7.",
         "3. The y-intercept is 7."
       ],
-      "fastStrategy": "Don’t overthink: for y = mx + b, the standalone constant is the y-intercept.",
+      "fastStrategy": "Don\u2019t overthink: for y = mx + b, the standalone constant is the y-intercept.",
       "uiSpec": {
         "type": "slope_graph",
         "width": 300,
@@ -557,7 +557,7 @@
         "2. The y-intercept is -4, so the constant must be -4.",
         "3. Therefore, the equation is y = -4."
       ],
-      "fastStrategy": "Slope 0 + given y-intercept → y = (that intercept).",
+      "fastStrategy": "Slope 0 + given y-intercept \u2192 y = (that intercept).",
       "uiSpec": {
         "type": "slope_graph",
         "width": 300,
@@ -820,8 +820,8 @@
       "explanation": "Slope is rise/run. The description says rise = 2 for run = 1, so slope = 2/1 = 2.",
       "steps": [
         "1. Translate the wording into rise and run.",
-        "2. 'y increases by 2' → rise = 2.",
-        "3. 'x increases by 1' → run = 1.",
+        "2. 'y increases by 2' \u2192 rise = 2.",
+        "3. 'x increases by 1' \u2192 run = 1.",
         "4. Slope = 2/1 = 2."
       ],
       "fastStrategy": "Always convert words into 'rise/run' fractions to get the slope.",
@@ -939,7 +939,7 @@
         "2. At that point, y = 0.",
         "3. The point is (-3, 0), so the x-intercept is -3."
       ],
-      "fastStrategy": "x-intercept → look for y = 0 on the line; y-intercept → look for x = 0."
+      "fastStrategy": "x-intercept \u2192 look for y = 0 on the line; y-intercept \u2192 look for x = 0."
     },
     {
       "id": "mk_glf_b_022",
@@ -1002,7 +1002,7 @@
         "2. This means the line does not change in y; it is horizontal.",
         "3. The equation is y = 2, so the line passes through y = 2 on the y-axis."
       ],
-      "fastStrategy": "Same y-value in two points → horizontal line at that y-value.",
+      "fastStrategy": "Same y-value in two points \u2192 horizontal line at that y-value.",
       "uiSpec": {
         "type": "slope_graph",
         "width": 300,
@@ -1116,6 +1116,606 @@
         "showGrid": true,
         "showAxes": true
       }
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q001",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q002",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q003",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q004",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q005",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q006",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q007",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q008",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q009",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q010",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q011",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q012",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q013",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q014",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q015",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q016",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q017",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q018",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q019",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q020",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q021",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q022",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q023",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q024",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q025",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q026",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q027",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q028",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q029",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q030",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q031",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q032",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q033",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q034",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q035",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q036",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q037",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q038",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q039",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q040",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q041",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q042",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q043",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q044",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q045",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q046",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q047",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q048",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q049",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "graphing_linear_functions_beginner_q050",
+      "question": "Solve this graphing linear functions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

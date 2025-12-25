@@ -15,7 +15,7 @@
         "E": "No solution"
       },
       "answer": "B",
-      "explanation": "Add equations: (x + y) + (x - y) = 7 + 1 ⇒ 2x = 8 ⇒ x = 4. Substitute: 4 + y = 7 ⇒ y = 3.",
+      "explanation": "Add equations: (x + y) + (x - y) = 7 + 1 \u21d2 2x = 8 \u21d2 x = 4. Substitute: 4 + y = 7 \u21d2 y = 3.",
       "steps": [
         "1. Add equations to eliminate y: 2x = 8.",
         "2. Solve: x = 4.",
@@ -35,7 +35,7 @@
         "E": "No solution"
       },
       "answer": "C",
-      "explanation": "Since both equal y: 2x + 1 = 3x - 2 ⇒ 1 + 2 = 3x - 2x ⇒ 3 = x. Then y = 2(3) + 1 = 7.",
+      "explanation": "Since both equal y: 2x + 1 = 3x - 2 \u21d2 1 + 2 = 3x - 2x \u21d2 3 = x. Then y = 2(3) + 1 = 7.",
       "steps": [
         "1. Set equations equal: 2x + 1 = 3x - 2.",
         "2. Rearrange: 3 = x.",
@@ -61,7 +61,7 @@
         "2. Simplify: 2x + 2y = 10 is same as x + y = 5.",
         "3. Same equation = same line = infinite solutions."
       ],
-      "fastStrategy": "Dependent equations: one is multiple of other → infinite solutions."
+      "fastStrategy": "Dependent equations: one is multiple of other \u2192 infinite solutions."
     },
     {
       "id": "mk_sys_a_004",
@@ -74,14 +74,614 @@
         "E": "x = 0, y = 4"
       },
       "answer": "C",
-      "explanation": "From first: x = 8 - 2y. Substitute: 2(8 - 2y) + 4y = 12 ⇒ 16 - 4y + 4y = 12 ⇒ 16 = 12 (false). Inconsistent system.",
+      "explanation": "From first: x = 8 - 2y. Substitute: 2(8 - 2y) + 4y = 12 \u21d2 16 - 4y + 4y = 12 \u21d2 16 = 12 (false). Inconsistent system.",
       "steps": [
         "1. Use substitution or elimination.",
         "2. Multiply first by 2: 2x + 4y = 16.",
         "3. Compare with second: 2x + 4y = 12.",
-        "4. 16 ≠ 12, contradiction = no solution."
+        "4. 16 \u2260 12, contradiction = no solution."
       ],
-      "fastStrategy": "Contradiction (false statement) → no solution (parallel lines)."
+      "fastStrategy": "Contradiction (false statement) \u2192 no solution (parallel lines)."
+    },
+    {
+      "id": "systems_linear_advanced_q001",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q002",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q003",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q004",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q005",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q006",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q007",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q008",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q009",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q010",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q011",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q012",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q013",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q014",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q015",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q016",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q017",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q018",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q019",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q020",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q021",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q022",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q023",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q024",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q025",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q026",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q027",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q028",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q029",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q030",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q031",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q032",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q033",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q034",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q035",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q036",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q037",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q038",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q039",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q040",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q041",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q042",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q043",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q044",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q045",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q046",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q047",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q048",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q049",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "systems_linear_advanced_q050",
+      "question": "Solve this systems linear problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

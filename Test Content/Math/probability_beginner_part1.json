@@ -21,7 +21,7 @@
         "2. Total balls: 5.",
         "3. Probability = 3/5."
       ],
-      "fastStrategy": "Probability is favorable outcomes ÷ total outcomes."
+      "fastStrategy": "Probability is favorable outcomes \u00f7 total outcomes."
     },
     {
       "id": "prob_b1_002",
@@ -54,7 +54,7 @@
       },
       "answer": "B",
       "explanation": "A fair coin has 2 outcomes: heads or tails. Probability of heads = 1/2.",
-      "fastStrategy": "Fair coin → always 1/2.",
+      "fastStrategy": "Fair coin \u2192 always 1/2.",
       "steps": [
         "1. Count the favorable outcomes.",
         "2. Count the total possible outcomes.",
@@ -78,7 +78,7 @@
         "2. 4 yellow.",
         "3. Probability = 4/10 = 2/5."
       ],
-      "fastStrategy": "Always simplify the fraction unless the multiple-choice options don’t require it."
+      "fastStrategy": "Always simplify the fraction unless the multiple-choice options don\u2019t require it."
     },
     {
       "id": "prob_b1_005",
@@ -95,7 +95,7 @@
       "steps": [
         "1. Count 4 aces.",
         "2. Total cards = 52.",
-        "3. Reduce 4/52 → 1/13."
+        "3. Reduce 4/52 \u2192 1/13."
       ],
       "fastStrategy": "For playing cards: 4-of-a-kind probability = 1/13."
     },
@@ -135,7 +135,7 @@
         "2. Count the total possible outcomes.",
         "3. Divide: P = favorable / total."
       ],
-      "fastStrategy": "Probability = favorable outcomes ÷ total outcomes. Always between 0 and 1."
+      "fastStrategy": "Probability = favorable outcomes \u00f7 total outcomes. Always between 0 and 1."
     },
     {
       "id": "prob_b1_008",
@@ -154,7 +154,7 @@
         "2. Count the total possible outcomes.",
         "3. Divide: P = favorable / total."
       ],
-      "fastStrategy": "Probability = favorable outcomes ÷ total outcomes. Always between 0 and 1."
+      "fastStrategy": "Probability = favorable outcomes \u00f7 total outcomes. Always between 0 and 1."
     },
     {
       "id": "prob_b1_009",
@@ -167,8 +167,8 @@
         "E": "5/6"
       },
       "answer": "C",
-      "explanation": "Even sides = 2, 4, 6. That’s 3 outcomes out of 6 → 3/6 = 1/2.",
-      "fastStrategy": "Even/odd on a die → both are 1/2.",
+      "explanation": "Even sides = 2, 4, 6. That\u2019s 3 outcomes out of 6 \u2192 3/6 = 1/2.",
+      "fastStrategy": "Even/odd on a die \u2192 both are 1/2.",
       "steps": [
         "1. Count the favorable outcomes.",
         "2. Count the total possible outcomes.",
@@ -186,8 +186,8 @@
         "E": "2/20"
       },
       "answer": "B",
-      "explanation": "Non-black marbles = 20 − 8 = 12. Probability = 12/20 = 3/5.",
-      "fastStrategy": "P(not event) = 1 − P(event).",
+      "explanation": "Non-black marbles = 20 \u2212 8 = 12. Probability = 12/20 = 3/5.",
+      "fastStrategy": "P(not event) = 1 \u2212 P(event).",
       "steps": [
         "1. Count the favorable outcomes.",
         "2. Count the total possible outcomes.",
@@ -211,7 +211,7 @@
         "2. Count the total possible outcomes.",
         "3. Divide: P = favorable / total."
       ],
-      "fastStrategy": "Probability = favorable outcomes ÷ total outcomes. Always between 0 and 1."
+      "fastStrategy": "Probability = favorable outcomes \u00f7 total outcomes. Always between 0 and 1."
     },
     {
       "id": "prob_b1_012",
@@ -225,7 +225,7 @@
       },
       "answer": "A",
       "explanation": "Each flip has probability 1/2. Multiply: (1/2)(1/2) = 1/4.",
-      "fastStrategy": "Independent events → multiply probabilities.",
+      "fastStrategy": "Independent events \u2192 multiply probabilities.",
       "steps": [
         "1. Count the favorable outcomes.",
         "2. Count the total possible outcomes.",
@@ -243,7 +243,7 @@
         "E": "1/18"
       },
       "answer": "C",
-      "explanation": "P(6) = 1/6 each time → multiply: (1/6)(1/6)=1/36.",
+      "explanation": "P(6) = 1/6 each time \u2192 multiply: (1/6)(1/6)=1/36.",
       "fastStrategy": "Two independent 1/6 events multiply to 1/36.",
       "steps": [
         "1. Count the favorable outcomes.",
@@ -253,7 +253,7 @@
     },
     {
       "id": "prob_b1_014",
-      "question": "What is the probability of picking an odd number from 1–10?",
+      "question": "What is the probability of picking an odd number from 1\u201310?",
       "choices": {
         "A": "1/10",
         "B": "3/10",
@@ -262,8 +262,8 @@
         "E": "4/10"
       },
       "answer": "C",
-      "explanation": "Odd numbers from 1–10: 1,3,5,7,9 → 5 odd numbers out of 10 = 1/2.",
-      "fastStrategy": "Half the numbers 1–10 are odd.",
+      "explanation": "Odd numbers from 1\u201310: 1,3,5,7,9 \u2192 5 odd numbers out of 10 = 1/2.",
+      "fastStrategy": "Half the numbers 1\u201310 are odd.",
       "steps": [
         "1. Count the favorable outcomes.",
         "2. Count the total possible outcomes.",
@@ -287,7 +287,7 @@
         "2. Count the total possible outcomes.",
         "3. Divide: P = favorable / total."
       ],
-      "fastStrategy": "Probability = favorable outcomes ÷ total outcomes. Always between 0 and 1."
+      "fastStrategy": "Probability = favorable outcomes \u00f7 total outcomes. Always between 0 and 1."
     },
     {
       "id": "prob_b1_016",
@@ -300,13 +300,13 @@
         "E": "5/6"
       },
       "answer": "B",
-      "explanation": "Numbers >4 are 5 and 6 → 2 outcomes out of 6 = 2/6 = 1/3.",
+      "explanation": "Numbers >4 are 5 and 6 \u2192 2 outcomes out of 6 = 2/6 = 1/3.",
       "steps": [
         "1. Count the favorable outcomes.",
         "2. Count the total possible outcomes.",
         "3. Divide: P = favorable / total."
       ],
-      "fastStrategy": "Probability = favorable outcomes ÷ total outcomes. Always between 0 and 1."
+      "fastStrategy": "Probability = favorable outcomes \u00f7 total outcomes. Always between 0 and 1."
     },
     {
       "id": "prob_b1_017",
@@ -338,7 +338,7 @@
         "E": "5/7"
       },
       "answer": "B",
-      "explanation": "Weekend days: Saturday, Sunday → 2 out of 7.",
+      "explanation": "Weekend days: Saturday, Sunday \u2192 2 out of 7.",
       "fastStrategy": "Weekend = 2 days.",
       "steps": [
         "1. Count the favorable outcomes.",
@@ -357,13 +357,13 @@
         "E": "5/10"
       },
       "answer": "B",
-      "explanation": "5 out of 10 → 1/2.",
+      "explanation": "5 out of 10 \u2192 1/2.",
       "steps": [
         "1. Count the favorable outcomes.",
         "2. Count the total possible outcomes.",
         "3. Divide: P = favorable / total."
       ],
-      "fastStrategy": "Probability = favorable outcomes ÷ total outcomes. Always between 0 and 1."
+      "fastStrategy": "Probability = favorable outcomes \u00f7 total outcomes. Always between 0 and 1."
     },
     {
       "id": "prob_b1_020",
@@ -376,13 +376,13 @@
         "E": "3/4"
       },
       "answer": "B",
-      "explanation": "Numbers <3 are 1 and 2 → 2 out of 4 → 1/2.",
+      "explanation": "Numbers <3 are 1 and 2 \u2192 2 out of 4 \u2192 1/2.",
       "steps": [
         "1. Count the favorable outcomes.",
         "2. Count the total possible outcomes.",
         "3. Divide: P = favorable / total."
       ],
-      "fastStrategy": "Probability = favorable outcomes ÷ total outcomes. Always between 0 and 1."
+      "fastStrategy": "Probability = favorable outcomes \u00f7 total outcomes. Always between 0 and 1."
     },
     {
       "id": "prob_b1_021",
@@ -434,7 +434,7 @@
       },
       "answer": "D",
       "explanation": "(1/2)^3 = 1/8.",
-      "fastStrategy": "For multiple coin flips, count flips = n → probability = (1/2)^n.",
+      "fastStrategy": "For multiple coin flips, count flips = n \u2192 probability = (1/2)^n.",
       "steps": [
         "1. Count the favorable outcomes.",
         "2. Count the total possible outcomes.",
@@ -452,8 +452,8 @@
         "E": "9/10"
       },
       "answer": "B",
-      "explanation": "1 black out of 10 total → 1/10.",
-      "fastStrategy": "Single rare item → small probability (look for 1/total).",
+      "explanation": "1 black out of 10 total \u2192 1/10.",
+      "fastStrategy": "Single rare item \u2192 small probability (look for 1/total).",
       "steps": [
         "1. Count the favorable outcomes.",
         "2. Count the total possible outcomes.",
@@ -471,13 +471,613 @@
         "E": "5/6"
       },
       "answer": "D",
-      "explanation": "Numbers less than 5 are 1,2,3,4 → 4 outcomes out of 6 = 4/6 = 2/3.",
+      "explanation": "Numbers less than 5 are 1,2,3,4 \u2192 4 outcomes out of 6 = 4/6 = 2/3.",
       "fastStrategy": "Count the valid faces directly.",
       "steps": [
         "1. Count the favorable outcomes.",
         "2. Count the total possible outcomes.",
         "3. Divide: P = favorable / total."
       ]
+    },
+    {
+      "id": "probability_beginner_q001",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q002",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q003",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q004",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q005",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q006",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q007",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q008",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q009",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q010",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q011",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q012",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q013",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q014",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q015",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q016",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q017",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q018",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q019",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q020",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q021",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q022",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q023",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q024",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q025",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q026",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q027",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q028",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q029",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q030",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q031",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q032",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q033",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q034",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q035",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q036",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q037",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q038",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q039",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q040",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q041",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q042",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q043",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q044",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q045",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q046",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q047",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q048",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q049",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "probability_beginner_q050",
+      "question": "Solve this probability problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

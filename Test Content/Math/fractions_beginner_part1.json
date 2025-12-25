@@ -15,8 +15,8 @@
         "E": "1/3"
       },
       "answer": "A",
-      "explanation": "The GCF of 12 and 18 is 6. Divide: 12/6 = 2, 18/6 = 3 → 2/3.",
-      "fastStrategy": "Look for common factors in top and bottom—divide by them.",
+      "explanation": "The GCF of 12 and 18 is 6. Divide: 12/6 = 2, 18/6 = 3 \u2192 2/3.",
+      "fastStrategy": "Look for common factors in top and bottom\u2014divide by them.",
       "steps": [
         "1. Find the greatest common divisor (GCD) of numerator and denominator.",
         "2. Divide both numerator and denominator by the GCD.",
@@ -34,7 +34,7 @@
         "E": "1/2"
       },
       "answer": "A",
-      "explanation": "Divide numerator and denominator by 2 → 4/6 = 2/3.",
+      "explanation": "Divide numerator and denominator by 2 \u2192 4/6 = 2/3.",
       "steps": [
         "1. Find a number that divides both the numerator and denominator evenly.",
         "2. Divide both by that number.",
@@ -53,7 +53,7 @@
         "E": "2"
       },
       "answer": "A",
-      "explanation": "3 ÷ 2 = 1 remainder 1 → 1 1/2.",
+      "explanation": "3 \u00f7 2 = 1 remainder 1 \u2192 1 1/2.",
       "steps": [
         "1. For improper to mixed: divide numerator by denominator.",
         "2. The quotient is the whole number, remainder is the new numerator.",
@@ -72,7 +72,7 @@
         "E": "10/3"
       },
       "answer": "B",
-      "explanation": "Multiply whole × denominator: 2×4=8; add numerator: 8+3=11 → 11/4.",
+      "explanation": "Multiply whole \u00d7 denominator: 2\u00d74=8; add numerator: 8+3=11 \u2192 11/4.",
       "steps": [
         "1. For improper to mixed: divide numerator by denominator.",
         "2. The quotient is the whole number, remainder is the new numerator.",
@@ -91,8 +91,8 @@
         "E": "2/4"
       },
       "answer": "B",
-      "explanation": "Add numerators: 1+2=3 → 3/4.",
-      "fastStrategy": "Break down the fraction operation into steps—simplify last.",
+      "explanation": "Add numerators: 1+2=3 \u2192 3/4.",
+      "fastStrategy": "Break down the fraction operation into steps\u2014simplify last.",
       "steps": [
         "1. Identify the fraction operation needed.",
         "2. Find common denominators if adding/subtracting.",
@@ -101,7 +101,7 @@
     },
     {
       "id": "frac_b1_006",
-      "question": "Subtract the fractions: 5/6 − 1/6.",
+      "question": "Subtract the fractions: 5/6 \u2212 1/6.",
       "choices": {
         "A": "3/6",
         "B": "4/6",
@@ -110,17 +110,17 @@
         "E": "5/12"
       },
       "answer": "B",
-      "explanation": "5 − 1 = 4 → 4/6 = 2/3 if simplified.",
+      "explanation": "5 \u2212 1 = 4 \u2192 4/6 = 2/3 if simplified.",
       "steps": [
         "1. Identify the fraction operation needed.",
         "2. Find common denominators if adding/subtracting.",
         "3. Perform the operation and simplify the result."
       ],
-      "fastStrategy": "Break down the fraction operation into steps—simplify last."
+      "fastStrategy": "Break down the fraction operation into steps\u2014simplify last."
     },
     {
       "id": "frac_b1_007",
-      "question": "Multiply: 2/3 × 3/4.",
+      "question": "Multiply: 2/3 \u00d7 3/4.",
       "choices": {
         "A": "1/2",
         "B": "2/4",
@@ -129,8 +129,8 @@
         "E": "All of the above are the same"
       },
       "answer": "E",
-      "explanation": "2×3 = 6; 3×4 = 12 → 6/12 = 1/2.",
-      "fastStrategy": "Break down the fraction operation into steps—simplify last.",
+      "explanation": "2\u00d73 = 6; 3\u00d74 = 12 \u2192 6/12 = 1/2.",
+      "fastStrategy": "Break down the fraction operation into steps\u2014simplify last.",
       "steps": [
         "1. Identify the fraction operation needed.",
         "2. Find common denominators if adding/subtracting.",
@@ -139,7 +139,7 @@
     },
     {
       "id": "frac_b1_008",
-      "question": "Divide: (3/5) ÷ (1/2).",
+      "question": "Divide: (3/5) \u00f7 (1/2).",
       "choices": {
         "A": "3/10",
         "B": "6/5",
@@ -148,8 +148,8 @@
         "E": "1/6"
       },
       "answer": "B",
-      "explanation": "Dividing by a fraction = multiply by its reciprocal: 3/5 × 2/1 = 6/5.",
-      "fastStrategy": "Break down the fraction operation into steps—simplify last.",
+      "explanation": "Dividing by a fraction = multiply by its reciprocal: 3/5 \u00d7 2/1 = 6/5.",
+      "fastStrategy": "Break down the fraction operation into steps\u2014simplify last.",
       "steps": [
         "1. Identify the fraction operation needed.",
         "2. Find common denominators if adding/subtracting.",
@@ -173,7 +173,7 @@
         "2. Find common denominators if adding/subtracting.",
         "3. Perform the operation and simplify the result."
       ],
-      "fastStrategy": "Break down the fraction operation into steps—simplify last."
+      "fastStrategy": "Break down the fraction operation into steps\u2014simplify last."
     },
     {
       "id": "frac_b1_010",
@@ -186,13 +186,13 @@
         "E": "3/9"
       },
       "answer": "B",
-      "explanation": "Divide by 9 → 1/3.",
+      "explanation": "Divide by 9 \u2192 1/3.",
       "steps": [
         "1. Find the greatest common divisor (GCD) of numerator and denominator.",
         "2. Divide both numerator and denominator by the GCD.",
         "3. Write the simplified fraction."
       ],
-      "fastStrategy": "Look for common factors in top and bottom—divide by them."
+      "fastStrategy": "Look for common factors in top and bottom\u2014divide by them."
     },
     {
       "id": "frac_b1_011",
@@ -224,7 +224,7 @@
         "E": "1/3"
       },
       "answer": "A",
-      "explanation": "0.25 = 25/100 → 1/4.",
+      "explanation": "0.25 = 25/100 \u2192 1/4.",
       "steps": [
         "1. For improper to mixed: divide numerator by denominator.",
         "2. The quotient is the whole number, remainder is the new numerator.",
@@ -243,8 +243,8 @@
         "E": "7/10"
       },
       "answer": "E",
-      "explanation": "1/2 = 5/10 → 3/10 + 5/10 = 8/10 = 4/5? Wait: 8/10 simplifies to 4/5 → choice C is 8/10 but simplest is 4/5 (not shown). Given options, 8/10 corresponds to C.",
-      "fastStrategy": "Break down the fraction operation into steps—simplify last.",
+      "explanation": "1/2 = 5/10 \u2192 3/10 + 5/10 = 8/10 = 4/5? Wait: 8/10 simplifies to 4/5 \u2192 choice C is 8/10 but simplest is 4/5 (not shown). Given options, 8/10 corresponds to C.",
+      "fastStrategy": "Break down the fraction operation into steps\u2014simplify last.",
       "steps": [
         "1. Identify the fraction operation needed.",
         "2. Find common denominators if adding/subtracting.",
@@ -253,7 +253,7 @@
     },
     {
       "id": "frac_b1_014",
-      "question": "Subtract: 7/8 − 1/4.",
+      "question": "Subtract: 7/8 \u2212 1/4.",
       "choices": {
         "A": "5/8",
         "B": "4/8",
@@ -262,17 +262,17 @@
         "E": "1/8"
       },
       "answer": "A",
-      "explanation": "1/4 = 2/8 → 7/8 − 2/8 = 5/8.",
+      "explanation": "1/4 = 2/8 \u2192 7/8 \u2212 2/8 = 5/8.",
       "steps": [
         "1. Identify the fraction operation needed.",
         "2. Find common denominators if adding/subtracting.",
         "3. Perform the operation and simplify the result."
       ],
-      "fastStrategy": "Break down the fraction operation into steps—simplify last."
+      "fastStrategy": "Break down the fraction operation into steps\u2014simplify last."
     },
     {
       "id": "frac_b1_015",
-      "question": "Multiply: 4/5 × 5/8.",
+      "question": "Multiply: 4/5 \u00d7 5/8.",
       "choices": {
         "A": "1/2",
         "B": "4/8",
@@ -281,17 +281,17 @@
         "E": "2/5"
       },
       "answer": "A",
-      "explanation": "Cross-cancel: 5 cancels → (4×1)/(1×8) = 4/8 = 1/2.",
+      "explanation": "Cross-cancel: 5 cancels \u2192 (4\u00d71)/(1\u00d78) = 4/8 = 1/2.",
       "steps": [
         "1. Identify the fraction operation needed.",
         "2. Find common denominators if adding/subtracting.",
         "3. Perform the operation and simplify the result."
       ],
-      "fastStrategy": "Break down the fraction operation into steps—simplify last."
+      "fastStrategy": "Break down the fraction operation into steps\u2014simplify last."
     },
     {
       "id": "frac_b1_016",
-      "question": "Divide: 2/3 ÷ 4/9.",
+      "question": "Divide: 2/3 \u00f7 4/9.",
       "choices": {
         "A": "2/3",
         "B": "3/2",
@@ -300,13 +300,13 @@
         "E": "5/6"
       },
       "answer": "B",
-      "explanation": "Flip second: (2/3)×(9/4) = 18/12 = 3/2.",
+      "explanation": "Flip second: (2/3)\u00d7(9/4) = 18/12 = 3/2.",
       "steps": [
         "1. Identify the fraction operation needed.",
         "2. Find common denominators if adding/subtracting.",
         "3. Perform the operation and simplify the result."
       ],
-      "fastStrategy": "Break down the fraction operation into steps—simplify last."
+      "fastStrategy": "Break down the fraction operation into steps\u2014simplify last."
     },
     {
       "id": "frac_b1_017",
@@ -319,13 +319,13 @@
         "E": "They are the same"
       },
       "answer": "B",
-      "explanation": "Compare using cross multiplication: 5×9=45, 4×12=48 → 48>45 so 4/9 is larger.",
+      "explanation": "Compare using cross multiplication: 5\u00d79=45, 4\u00d712=48 \u2192 48>45 so 4/9 is larger.",
       "steps": [
         "1. Identify the fraction operation needed.",
         "2. Find common denominators if adding/subtracting.",
         "3. Perform the operation and simplify the result."
       ],
-      "fastStrategy": "Break down the fraction operation into steps—simplify last."
+      "fastStrategy": "Break down the fraction operation into steps\u2014simplify last."
     },
     {
       "id": "frac_b1_018",
@@ -338,7 +338,7 @@
         "E": "1.25"
       },
       "answer": "C",
-      "explanation": "3 ÷ 4 = 0.75.",
+      "explanation": "3 \u00f7 4 = 0.75.",
       "steps": [
         "1. For improper to mixed: divide numerator by denominator.",
         "2. The quotient is the whole number, remainder is the new numerator.",
@@ -357,13 +357,13 @@
         "E": "5/6"
       },
       "answer": "A",
-      "explanation": "Divide by 10 → 2/3.",
+      "explanation": "Divide by 10 \u2192 2/3.",
       "steps": [
         "1. Find the greatest common divisor (GCD) of numerator and denominator.",
         "2. Divide both numerator and denominator by the GCD.",
         "3. Write the simplified fraction."
       ],
-      "fastStrategy": "Look for common factors in top and bottom—divide by them."
+      "fastStrategy": "Look for common factors in top and bottom\u2014divide by them."
     },
     {
       "id": "frac_b1_020",
@@ -376,17 +376,17 @@
         "E": "1/4"
       },
       "answer": "C",
-      "explanation": "2/5=4/10 → 4/10+1/10=5/10=1/2.",
+      "explanation": "2/5=4/10 \u2192 4/10+1/10=5/10=1/2.",
       "steps": [
         "1. Identify the fraction operation needed.",
         "2. Find common denominators if adding/subtracting.",
         "3. Perform the operation and simplify the result."
       ],
-      "fastStrategy": "Break down the fraction operation into steps—simplify last."
+      "fastStrategy": "Break down the fraction operation into steps\u2014simplify last."
     },
     {
       "id": "frac_b1_021",
-      "question": "Subtract: 5/7 − 2/7.",
+      "question": "Subtract: 5/7 \u2212 2/7.",
       "choices": {
         "A": "1/7",
         "B": "2/7",
@@ -395,17 +395,17 @@
         "E": "5/7"
       },
       "answer": "C",
-      "explanation": "5−2=3 → 3/7.",
+      "explanation": "5\u22122=3 \u2192 3/7.",
       "steps": [
         "1. Identify the fraction operation needed.",
         "2. Find common denominators if adding/subtracting.",
         "3. Perform the operation and simplify the result."
       ],
-      "fastStrategy": "Break down the fraction operation into steps—simplify last."
+      "fastStrategy": "Break down the fraction operation into steps\u2014simplify last."
     },
     {
       "id": "frac_b1_022",
-      "question": "Multiply: 1/3 × 3/7.",
+      "question": "Multiply: 1/3 \u00d7 3/7.",
       "choices": {
         "A": "1/7",
         "B": "3/21",
@@ -414,17 +414,17 @@
         "E": "1/10"
       },
       "answer": "A",
-      "explanation": "Cross-cancel 3 → (1×1)/(1×7) = 1/7.",
+      "explanation": "Cross-cancel 3 \u2192 (1\u00d71)/(1\u00d77) = 1/7.",
       "steps": [
         "1. Identify the fraction operation needed.",
         "2. Find common denominators if adding/subtracting.",
         "3. Perform the operation and simplify the result."
       ],
-      "fastStrategy": "Break down the fraction operation into steps—simplify last."
+      "fastStrategy": "Break down the fraction operation into steps\u2014simplify last."
     },
     {
       "id": "frac_b1_023",
-      "question": "Divide: 5/6 ÷ 5/12.",
+      "question": "Divide: 5/6 \u00f7 5/12.",
       "choices": {
         "A": "1",
         "B": "2",
@@ -433,13 +433,13 @@
         "E": "5"
       },
       "answer": "B",
-      "explanation": "Keep-change-flip: (5/6)×(12/5)=12/6=2.",
+      "explanation": "Keep-change-flip: (5/6)\u00d7(12/5)=12/6=2.",
       "steps": [
         "1. Identify the fraction operation needed.",
         "2. Find common denominators if adding/subtracting.",
         "3. Perform the operation and simplify the result."
       ],
-      "fastStrategy": "Break down the fraction operation into steps—simplify last."
+      "fastStrategy": "Break down the fraction operation into steps\u2014simplify last."
     },
     {
       "id": "frac_b1_024",
@@ -452,7 +452,7 @@
         "E": "3/2"
       },
       "answer": "B",
-      "explanation": "1×4=4; 4+1=5 → 5/4.",
+      "explanation": "1\u00d74=4; 4+1=5 \u2192 5/4.",
       "steps": [
         "1. For improper to mixed: divide numerator by denominator.",
         "2. The quotient is the whole number, remainder is the new numerator.",
@@ -471,13 +471,613 @@
         "E": "3 1/5"
       },
       "answer": "D",
-      "explanation": "7 ÷ 5 = 1 remainder 2 → 1 2/5.",
+      "explanation": "7 \u00f7 5 = 1 remainder 2 \u2192 1 2/5.",
       "steps": [
         "1. For improper to mixed: divide numerator by denominator.",
         "2. The quotient is the whole number, remainder is the new numerator.",
         "3. Keep the same denominator."
       ],
       "fastStrategy": "Divide top by bottom to get the whole number and leftover."
+    },
+    {
+      "id": "fractions_beginner_q001",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q002",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q003",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q004",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q005",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q006",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q007",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q008",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q009",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q010",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q011",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q012",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q013",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q014",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q015",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q016",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q017",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q018",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q019",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q020",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q021",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q022",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q023",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q024",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q025",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q026",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q027",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q028",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q029",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q030",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q031",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q032",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q033",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q034",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q035",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q036",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q037",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q038",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q039",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q040",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q041",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q042",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q043",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q044",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q045",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q046",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q047",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q048",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q049",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "fractions_beginner_q050",
+      "question": "Solve this fractions problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

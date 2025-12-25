@@ -6,7 +6,7 @@
   "questions": [
     {
       "id": "mk_fe_a_001",
-      "question": "If f(x) = 3x² - 2x + 1, find f(2).",
+      "question": "If f(x) = 3x\u00b2 - 2x + 1, find f(2).",
       "choices": {
         "A": "5",
         "B": "9",
@@ -15,9 +15,9 @@
         "E": "21"
       },
       "answer": "B",
-      "explanation": "f(2) = 3(2)² - 2(2) + 1 = 3(4) - 4 + 1 = 12 - 4 + 1 = 9.",
+      "explanation": "f(2) = 3(2)\u00b2 - 2(2) + 1 = 3(4) - 4 + 1 = 12 - 4 + 1 = 9.",
       "steps": [
-        "1. Substitute x = 2: f(2) = 3(2)² - 2(2) + 1.",
+        "1. Substitute x = 2: f(2) = 3(2)\u00b2 - 2(2) + 1.",
         "2. Calculate powers: 3(4) - 2(2) + 1.",
         "3. Multiply: 12 - 4 + 1.",
         "4. Add/subtract: 9."
@@ -65,7 +65,7 @@
     },
     {
       "id": "mk_fe_a_004",
-      "question": "If f(x) = 2x + 3 and g(x) = x², find f(g(2)).",
+      "question": "If f(x) = 2x + 3 and g(x) = x\u00b2, find f(g(2)).",
       "choices": {
         "A": "7",
         "B": "11",
@@ -74,9 +74,9 @@
         "E": "19"
       },
       "answer": "B",
-      "explanation": "First find g(2) = 2² = 4. Then f(4) = 2(4) + 3 = 8 + 3 = 11.",
+      "explanation": "First find g(2) = 2\u00b2 = 4. Then f(4) = 2(4) + 3 = 8 + 3 = 11.",
       "steps": [
-        "1. Evaluate inner function: g(2) = 2² = 4.",
+        "1. Evaluate inner function: g(2) = 2\u00b2 = 4.",
         "2. Evaluate outer function: f(4) = 2(4) + 3.",
         "3. Simplify: 8 + 3 = 11."
       ],
@@ -84,7 +84,7 @@
     },
     {
       "id": "mk_fe_a_005",
-      "question": "If p(x) = x³ - x, find p(-1).",
+      "question": "If p(x) = x\u00b3 - x, find p(-1).",
       "choices": {
         "A": "-2",
         "B": "0",
@@ -93,14 +93,614 @@
         "E": "undefined"
       },
       "answer": "B",
-      "explanation": "p(-1) = (-1)³ - (-1) = -1 + 1 = 0.",
+      "explanation": "p(-1) = (-1)\u00b3 - (-1) = -1 + 1 = 0.",
       "steps": [
-        "1. Substitute x = -1: p(-1) = (-1)³ - (-1).",
-        "2. Evaluate cube: (-1)³ = -1.",
+        "1. Substitute x = -1: p(-1) = (-1)\u00b3 - (-1).",
+        "2. Evaluate cube: (-1)\u00b3 = -1.",
         "3. Evaluate negative: -(-1) = 1.",
         "4. Combine: -1 + 1 = 0."
       ],
       "fastStrategy": "Substitute carefully; watch sign changes."
+    },
+    {
+      "id": "function_evaluation_advanced_q001",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q002",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q003",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q004",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q005",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q006",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q007",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q008",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q009",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q010",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q011",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q012",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q013",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q014",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q015",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q016",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q017",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q018",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q019",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q020",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q021",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q022",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q023",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q024",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q025",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q026",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q027",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q028",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q029",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q030",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q031",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q032",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q033",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q034",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q035",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q036",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q037",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q038",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q039",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q040",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q041",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q042",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q043",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q044",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q045",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q046",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q047",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q048",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q049",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "function_evaluation_advanced_q050",
+      "question": "Solve this function evaluation problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

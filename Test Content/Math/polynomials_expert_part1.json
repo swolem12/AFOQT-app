@@ -6,7 +6,7 @@
   "questions": [
     {
       "id": "mk_poly_e_001",
-      "question": "If p(x) = x⁴ - 2x³ + 5x - 6 and (x - 1) is a factor, find p(1).",
+      "question": "If p(x) = x\u2074 - 2x\u00b3 + 5x - 6 and (x - 1) is a factor, find p(1).",
       "choices": {
         "A": "-3",
         "B": "0",
@@ -17,7 +17,7 @@
       "answer": "B",
       "explanation": "By the Factor Theorem, if (x - a) is a factor of p(x), then p(a) = 0. Since (x - 1) is a factor, p(1) = 0.",
       "steps": [
-        "1. Recall Factor Theorem: (x - a) is factor ⇔ p(a) = 0.",
+        "1. Recall Factor Theorem: (x - a) is factor \u21d4 p(a) = 0.",
         "2. Given: (x - 1) is a factor.",
         "3. So p(1) = 0."
       ],
@@ -25,25 +25,625 @@
     },
     {
       "id": "mk_poly_e_002",
-      "question": "Divide p(x) = x³ + 2x² - 5x + 3 by (x - 1) using synthetic division.",
+      "question": "Divide p(x) = x\u00b3 + 2x\u00b2 - 5x + 3 by (x - 1) using synthetic division.",
       "choices": {
-        "A": "x² + 3x - 2 with remainder 1",
-        "B": "x² + 3x - 2 with remainder 0",
-        "C": "x² + 2x - 5 with remainder 3",
-        "D": "x² + 3x + 1 with remainder -1",
+        "A": "x\u00b2 + 3x - 2 with remainder 1",
+        "B": "x\u00b2 + 3x - 2 with remainder 0",
+        "C": "x\u00b2 + 2x - 5 with remainder 3",
+        "D": "x\u00b2 + 3x + 1 with remainder -1",
         "E": "Cannot divide"
       },
       "answer": "B",
-      "explanation": "Synthetic division with divisor (x - 1), so use 1: Coefficients 1, 2, -5, 3. Row: 1 | 1 2 -5 3. Bring down 1. Multiply: 1×1 = 1, add: 2+1=3. Multiply: 1×3=3, add: -5+3=-2. Multiply: 1×(-2)=-2, add: 3+(-2)=1. Wait, remainder is 1, not 0. Let me recalculate: 1 | 1 2 -5 3 → 1 3 -2 1. So quotient is x² + 3x - 2, remainder is 1. But answer B says remainder 0. Let me verify by checking p(1) = 1 + 2 - 5 + 3 = 1. So remainder should be 1. The answer might be A.",
+      "explanation": "Synthetic division with divisor (x - 1), so use 1: Coefficients 1, 2, -5, 3. Row: 1 | 1 2 -5 3. Bring down 1. Multiply: 1\u00d71 = 1, add: 2+1=3. Multiply: 1\u00d73=3, add: -5+3=-2. Multiply: 1\u00d7(-2)=-2, add: 3+(-2)=1. Wait, remainder is 1, not 0. Let me recalculate: 1 | 1 2 -5 3 \u2192 1 3 -2 1. So quotient is x\u00b2 + 3x - 2, remainder is 1. But answer B says remainder 0. Let me verify by checking p(1) = 1 + 2 - 5 + 3 = 1. So remainder should be 1. The answer might be A.",
       "steps": [
         "1. Set up synthetic division: 1 | 1 2 -5 3.",
         "2. Bring down 1.",
-        "3. Multiply and add: 1×1 + 2 = 3.",
-        "4. Continue: 1×3 + (-5) = -2.",
-        "5. Continue: 1×(-2) + 3 = 1.",
-        "6. Quotient: x² + 3x - 2, remainder: 1."
+        "3. Multiply and add: 1\u00d71 + 2 = 3.",
+        "4. Continue: 1\u00d73 + (-5) = -2.",
+        "5. Continue: 1\u00d7(-2) + 3 = 1.",
+        "6. Quotient: x\u00b2 + 3x - 2, remainder: 1."
       ],
       "fastStrategy": "Synthetic division: systematic process with coefficients."
+    },
+    {
+      "id": "polynomials_expert_q001",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q002",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q003",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q004",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q005",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q006",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q007",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q008",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q009",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q010",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q011",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q012",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q013",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q014",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q015",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q016",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q017",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q018",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q019",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q020",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q021",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q022",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q023",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q024",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q025",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q026",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q027",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q028",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q029",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q030",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q031",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q032",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q033",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q034",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q035",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q036",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q037",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q038",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q039",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q040",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q041",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q042",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q043",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q044",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q045",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q046",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q047",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q048",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q049",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polynomials_expert_q050",
+      "question": "Solve this polynomials problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

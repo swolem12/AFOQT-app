@@ -7,36 +7,51 @@
     {
       "id": "math_stats_e1_001",
       "question": "A dataset has values: 2, 4, 6, 8, 10. What is the standard deviation?",
-      "choices": {"A": "2.83", "B": "√8", "C": "3", "D": "√10"},
+      "choices": {
+        "A": "2.83",
+        "B": "\u221a8",
+        "C": "3",
+        "D": "\u221a10"
+      },
       "answer": "A",
-      "explanation": "Mean = 6. Deviations: -4, -2, 0, 2, 4. Squared: 16, 4, 0, 4, 16. Sum = 40. Variance = 40/5 = 8. SD = √8 ≈ 2.83.",
+      "explanation": "Mean = 6. Deviations: -4, -2, 0, 2, 4. Squared: 16, 4, 0, 4, 16. Sum = 40. Variance = 40/5 = 8. SD = \u221a8 \u2248 2.83.",
       "steps": [
         "1. Calculate mean: (2+4+6+8+10)/5 = 6.",
         "2. Find deviations: each value minus mean.",
         "3. Square deviations: 16, 4, 0, 4, 16.",
         "4. Calculate variance: sum of squared deviations / count = 40/5 = 8.",
-        "5. Standard deviation = √8 ≈ 2.83."
+        "5. Standard deviation = \u221a8 \u2248 2.83."
       ],
-      "fastStrategy": "SD = √(variance); variance = average of squared deviations from mean."
+      "fastStrategy": "SD = \u221a(variance); variance = average of squared deviations from mean."
     },
     {
       "id": "math_stats_e1_002",
       "question": "A sample of 50 test scores has mean 75 and standard deviation 10. What percentage of scores falls between 65 and 85?",
-      "choices": {"A": "68%", "B": "75%", "C": "82%", "D": "95%"},
+      "choices": {
+        "A": "68%",
+        "B": "75%",
+        "C": "82%",
+        "D": "95%"
+      },
       "answer": "A",
-      "explanation": "Using the empirical rule (68-95-99.7), approximately 68% of data falls within 1 standard deviation of the mean. 65-85 is mean ± 1 SD.",
+      "explanation": "Using the empirical rule (68-95-99.7), approximately 68% of data falls within 1 standard deviation of the mean. 65-85 is mean \u00b1 1 SD.",
       "steps": [
         "1. Identify mean = 75, SD = 10.",
-        "2. Range 65-85 = 75 ± 10 = mean ± 1 SD.",
+        "2. Range 65-85 = 75 \u00b1 10 = mean \u00b1 1 SD.",
         "3. Apply empirical rule: 68% within 1 SD, 95% within 2 SD.",
         "4. Answer: 68%."
       ],
-      "fastStrategy": "Empirical rule: ~68% within ±1 SD, ~95% within ±2 SD, ~99.7% within ±3 SD."
+      "fastStrategy": "Empirical rule: ~68% within \u00b11 SD, ~95% within \u00b12 SD, ~99.7% within \u00b13 SD."
     },
     {
       "id": "math_stats_e1_003",
       "question": "If two datasets have the same mean but different standard deviations, which has more variability?",
-      "choices": {"A": "The one with larger standard deviation", "B": "The one with smaller standard deviation", "C": "They have equal variability", "D": "Cannot be determined from given info"},
+      "choices": {
+        "A": "The one with larger standard deviation",
+        "B": "The one with smaller standard deviation",
+        "C": "They have equal variability",
+        "D": "Cannot be determined from given info"
+      },
       "answer": "A",
       "explanation": "Standard deviation measures spread/variability. Larger SD = greater variability, even with equal means.",
       "steps": [
@@ -46,6 +61,606 @@
         "4. Larger SD = more variability."
       ],
       "fastStrategy": "SD directly indicates variability; compare SDs to compare spreads."
+    },
+    {
+      "id": "statistics_expert_q001",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q002",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q003",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q004",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q005",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q006",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q007",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q008",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q009",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q010",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q011",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q012",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q013",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q014",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q015",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q016",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q017",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q018",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q019",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q020",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q021",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q022",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q023",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q024",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q025",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q026",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q027",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q028",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q029",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q030",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q031",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q032",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q033",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q034",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q035",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q036",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q037",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q038",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q039",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q040",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q041",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q042",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q043",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q044",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q045",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q046",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q047",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q048",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q049",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "statistics_expert_q050",
+      "question": "Solve this statistics problem for expert level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

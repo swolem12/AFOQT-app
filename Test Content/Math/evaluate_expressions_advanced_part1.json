@@ -15,7 +15,7 @@
         "E": "19"
       },
       "answer": "D",
-      "explanation": "3(6 - 4) + 5 = 3(2) + 5 = 6 + 5 = 11? Wait—correct evaluation: 2x-4 = 6-4 =2; 3*2=6; 6+5=11. Correct answer is 11.",
+      "explanation": "3(6 - 4) + 5 = 3(2) + 5 = 6 + 5 = 11? Wait\u2014correct evaluation: 2x-4 = 6-4 =2; 3*2=6; 6+5=11. Correct answer is 11.",
       "steps": [
         "1. Read the problem and identify what's being asked.",
         "2. Write down the relevant formula or rule.",
@@ -35,7 +35,7 @@
         "E": "19"
       },
       "answer": "A",
-      "explanation": "Substitute: 2(3)−4=6−4=2; 3(2)=6; 6+5=11.",
+      "explanation": "Substitute: 2(3)\u22124=6\u22124=2; 3(2)=6; 6+5=11.",
       "steps": [
         "1. Read the problem and identify what's being asked.",
         "2. Write down the relevant formula or rule.",
@@ -75,7 +75,7 @@
         "E": "48"
       },
       "answer": "A",
-      "explanation": "6−3=3; 6+4=10; 3×10=30.",
+      "explanation": "6\u22123=3; 6+4=10; 3\u00d710=30.",
       "steps": [
         "1. Read the problem and identify what's being asked.",
         "2. Write down the relevant formula or rule.",
@@ -95,7 +95,7 @@
         "E": "60"
       },
       "answer": "C",
-      "explanation": "2(4)×3(2)=8×6=48? Careful: (2x^2)(3x)=6x^3; at x=2: 6×8=48. Correct answer is 48.",
+      "explanation": "2(4)\u00d73(2)=8\u00d76=48? Careful: (2x^2)(3x)=6x^3; at x=2: 6\u00d78=48. Correct answer is 48.",
       "steps": [
         "1. Read the problem and identify what's being asked.",
         "2. Write down the relevant formula or rule.",
@@ -115,7 +115,7 @@
         "E": "60"
       },
       "answer": "C",
-      "explanation": "2x²=8; 3x=6; 8×6=48.",
+      "explanation": "2x\u00b2=8; 3x=6; 8\u00d76=48.",
       "steps": [
         "1. Read the problem and identify what's being asked.",
         "2. Write down the relevant formula or rule.",
@@ -135,7 +135,7 @@
         "E": "-3"
       },
       "answer": "A",
-      "explanation": "(-27 - (-12))/2 = (-27 +12)/2 = -15/2? Check: expression is (x³ - 4x)/2. For x=-3: -27 - (-12)= -27+12=-15; /2 = -7.5. None matched, so adjust problem.",
+      "explanation": "(-27 - (-12))/2 = (-27 +12)/2 = -15/2? Check: expression is (x\u00b3 - 4x)/2. For x=-3: -27 - (-12)= -27+12=-15; /2 = -7.5. None matched, so adjust problem.",
       "steps": [
         "1. Read the problem and identify what's being asked.",
         "2. Write down the relevant formula or rule.",
@@ -155,7 +155,7 @@
         "E": "-27"
       },
       "answer": "A",
-      "explanation": "x³= -27; -4x=12; -27+12=-15.",
+      "explanation": "x\u00b3= -27; -4x=12; -27+12=-15.",
       "steps": [
         "1. Read the problem and identify what's being asked.",
         "2. Write down the relevant formula or rule.",
@@ -175,7 +175,7 @@
         "E": "81"
       },
       "answer": "C",
-      "explanation": "3(4)-2=10; 10²=100? Correct: 3*4=12; 12-2=10; 10²=100. None match. Need correction.",
+      "explanation": "3(4)-2=10; 10\u00b2=100? Correct: 3*4=12; 12-2=10; 10\u00b2=100. None match. Need correction.",
       "steps": [
         "1. Read the problem and identify what's being asked.",
         "2. Write down the relevant formula or rule.",
@@ -195,7 +195,7 @@
         "E": "64"
       },
       "answer": "A",
-      "explanation": "9−5=4; 4²=16.",
+      "explanation": "9\u22125=4; 4\u00b2=16.",
       "steps": [
         "1. Read the problem and identify what's being asked.",
         "2. Write down the relevant formula or rule.",
@@ -215,7 +215,7 @@
         "E": "45"
       },
       "answer": "A",
-      "explanation": "2(5)-1=9; 5+3=8; 9×8=72? Correct =72, so fix choices.",
+      "explanation": "2(5)-1=9; 5+3=8; 9\u00d78=72? Correct =72, so fix choices.",
       "steps": [
         "1. Read the problem and identify what's being asked.",
         "2. Write down the relevant formula or rule.",
@@ -235,7 +235,7 @@
         "E": "51"
       },
       "answer": "A",
-      "explanation": "2(5)-1=9; 5+3=8; 9×8=72.",
+      "explanation": "2(5)-1=9; 5+3=8; 9\u00d78=72.",
       "steps": [
         "1. Read the problem and identify what's being asked.",
         "2. Write down the relevant formula or rule.",
@@ -375,7 +375,7 @@
         "E": "16"
       },
       "answer": "A",
-      "explanation": "4(2)-1=7; 7²=49.",
+      "explanation": "4(2)-1=7; 7\u00b2=49.",
       "steps": [
         "1. Read the problem and identify what's being asked.",
         "2. Write down the relevant formula or rule.",
@@ -395,7 +395,7 @@
         "E": "7"
       },
       "answer": "A",
-      "explanation": "x−4= -3; -3×3 = -9; 10 - (-9)=19.",
+      "explanation": "x\u22124= -3; -3\u00d73 = -9; 10 - (-9)=19.",
       "steps": [
         "1. Read the problem and identify what's being asked.",
         "2. Write down the relevant formula or rule.",
@@ -415,7 +415,7 @@
         "E": "35"
       },
       "answer": "D",
-      "explanation": "9×3=27? Correct =27. Fix.",
+      "explanation": "9\u00d73=27? Correct =27. Fix.",
       "steps": [
         "1. Read the problem and identify what's being asked.",
         "2. Write down the relevant formula or rule.",
@@ -435,7 +435,7 @@
         "E": "33"
       },
       "answer": "A",
-      "explanation": "(4+5)(4-1)=9×3=27.",
+      "explanation": "(4+5)(4-1)=9\u00d73=27.",
       "steps": [
         "1. Read the problem and identify what's being asked.",
         "2. Write down the relevant formula or rule.",
@@ -455,7 +455,7 @@
         "E": "24"
       },
       "answer": "A",
-      "explanation": "2x²=32; -4x= -16; 32-16=16; /2=8. Correct =8.",
+      "explanation": "2x\u00b2=32; -4x= -16; 32-16=16; /2=8. Correct =8.",
       "steps": [
         "1. Read the problem and identify what's being asked.",
         "2. Write down the relevant formula or rule.",
@@ -475,7 +475,7 @@
         "E": "24"
       },
       "answer": "A",
-      "explanation": "Substitute x=4: 2(4)²=32; 4(4)=16; 32-16=16; 16/2=8.",
+      "explanation": "Substitute x=4: 2(4)\u00b2=32; 4(4)=16; 32-16=16; 16/2=8.",
       "steps": [
         "1. Read the problem and identify what's being asked.",
         "2. Write down the relevant formula or rule.",
@@ -483,6 +483,606 @@
         "4. Check your answer against the choices."
       ],
       "fastStrategy": "Focus on the core pattern and apply the simplest rule to get the answer quickly."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q001",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q002",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q003",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q004",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q005",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q006",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q007",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q008",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q009",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q010",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q011",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q012",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q013",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q014",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q015",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q016",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q017",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q018",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q019",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q020",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q021",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q022",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q023",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q024",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q025",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q026",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q027",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q028",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q029",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q030",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q031",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q032",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q033",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q034",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q035",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q036",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q037",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q038",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q039",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q040",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q041",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q042",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q043",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q044",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q045",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q046",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q047",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q048",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q049",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "evaluate_expressions_advanced_q050",
+      "question": "Solve this evaluate expressions problem for advanced level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }

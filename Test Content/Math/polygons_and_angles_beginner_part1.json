@@ -42,7 +42,7 @@
           "labelColor": "black"
         }
       },
-      "copilotInstruction": "Draw a 5-sided closed polygon labeled A–E. Use clean, straight edges and point labels above each vertex.",
+      "copilotInstruction": "Draw a 5-sided closed polygon labeled A\u2013E. Use clean, straight edges and point labels above each vertex.",
       "id": "pa_b1_001",
       "question": "The diagram shows a 5-sided polygon. What is the correct classification of this shape?",
       "choices": {
@@ -136,7 +136,7 @@
         "1. Recall that 'oct-' means eight.",
         "2. So an octagon has 8 sides."
       ],
-      "fastStrategy": "Octopus has eight arms → octagon = 8.",
+      "fastStrategy": "Octopus has eight arms \u2192 octagon = 8.",
       "uiSpec": {
         "type": "polygon_basic",
         "width": 300,
@@ -237,19 +237,19 @@
       "id": "pa_b1_005",
       "question": "What is the sum of the interior angles of a triangle?",
       "choices": {
-        "A": "90°",
-        "B": "180°",
-        "C": "270°",
-        "D": "360°",
-        "E": "540°"
+        "A": "90\u00b0",
+        "B": "180\u00b0",
+        "C": "270\u00b0",
+        "D": "360\u00b0",
+        "E": "540\u00b0"
       },
       "answer": "B",
-      "explanation": "A triangle's interior angles always sum to 180°.",
+      "explanation": "A triangle's interior angles always sum to 180\u00b0.",
       "steps": [
-        "1. The basic polygon angle formula: (n−2)×180°.",
-        "2. For n=3: (3−2)×180° = 180°."
+        "1. The basic polygon angle formula: (n\u22122)\u00d7180\u00b0.",
+        "2. For n=3: (3\u22122)\u00d7180\u00b0 = 180\u00b0."
       ],
-      "fastStrategy": "Triangle = 180° always.",
+      "fastStrategy": "Triangle = 180\u00b0 always.",
       "uiSpec": {
         "type": "geometry_triangle_diagram",
         "width": 300,
@@ -274,15 +274,15 @@
         "angles": [
           {
             "vertex": 0,
-            "label": "60°"
+            "label": "60\u00b0"
           },
           {
             "vertex": 1,
-            "label": "x°"
+            "label": "x\u00b0"
           },
           {
             "vertex": 2,
-            "label": "y°"
+            "label": "y\u00b0"
           }
         ],
         "styleHints": {
@@ -295,20 +295,20 @@
       "id": "pa_b1_006",
       "question": "What is the sum of the interior angles of a quadrilateral?",
       "choices": {
-        "A": "180°",
-        "B": "270°",
-        "C": "360°",
-        "D": "540°",
-        "E": "720°"
+        "A": "180\u00b0",
+        "B": "270\u00b0",
+        "C": "360\u00b0",
+        "D": "540\u00b0",
+        "E": "720\u00b0"
       },
       "answer": "C",
-      "explanation": "Interior sum = (n−2)×180°. For a quadrilateral, n=4 → (4−2)×180° = 360°.",
+      "explanation": "Interior sum = (n\u22122)\u00d7180\u00b0. For a quadrilateral, n=4 \u2192 (4\u22122)\u00d7180\u00b0 = 360\u00b0.",
       "steps": [
-        "1. Use formula (n−2)×180°.",
+        "1. Use formula (n\u22122)\u00d7180\u00b0.",
         "2. Plug in n=4.",
-        "3. Get 360°."
+        "3. Get 360\u00b0."
       ],
-      "fastStrategy": "Quad = 4 sides → two triangles → 2×180° = 360°.",
+      "fastStrategy": "Quad = 4 sides \u2192 two triangles \u2192 2\u00d7180\u00b0 = 360\u00b0.",
       "uiSpec": {
         "type": "geometry_angle_diagram",
         "width": 300,
@@ -344,7 +344,7 @@
           "radius": 35,
           "startRay": 0,
           "endRay": 1,
-          "label": "45°",
+          "label": "45\u00b0",
           "measureDegrees": 45
         },
         "styleHints": {
@@ -358,20 +358,20 @@
       "id": "pa_b1_007",
       "question": "What is the sum of interior angles of a pentagon?",
       "choices": {
-        "A": "360°",
-        "B": "450°",
-        "C": "540°",
-        "D": "600°",
-        "E": "720°"
+        "A": "360\u00b0",
+        "B": "450\u00b0",
+        "C": "540\u00b0",
+        "D": "600\u00b0",
+        "E": "720\u00b0"
       },
       "answer": "C",
-      "explanation": "Use (n−2)×180°. For n=5: 3×180°=540°.",
+      "explanation": "Use (n\u22122)\u00d7180\u00b0. For n=5: 3\u00d7180\u00b0=540\u00b0.",
       "steps": [
         "1. Identify n=5.",
-        "2. Compute 3×180°.",
-        "3. Sum=540°."
+        "2. Compute 3\u00d7180\u00b0.",
+        "3. Sum=540\u00b0."
       ],
-      "fastStrategy": "Pentagon → 5 sides → 3 triangles → 540°.",
+      "fastStrategy": "Pentagon \u2192 5 sides \u2192 3 triangles \u2192 540\u00b0.",
       "uiSpec": {
         "type": "polygon_basic",
         "width": 300,
@@ -414,20 +414,20 @@
       "id": "pa_b1_008",
       "question": "What is the sum of the interior angles of a hexagon?",
       "choices": {
-        "A": "540°",
-        "B": "600°",
-        "C": "720°",
-        "D": "900°",
-        "E": "1080°"
+        "A": "540\u00b0",
+        "B": "600\u00b0",
+        "C": "720\u00b0",
+        "D": "900\u00b0",
+        "E": "1080\u00b0"
       },
       "answer": "C",
-      "explanation": "A hexagon has n=6 sides. Sum = (6−2)×180° = 4×180° = 720°.",
+      "explanation": "A hexagon has n=6 sides. Sum = (6\u22122)\u00d7180\u00b0 = 4\u00d7180\u00b0 = 720\u00b0.",
       "steps": [
-        "1. Use (n−2)×180°.",
+        "1. Use (n\u22122)\u00d7180\u00b0.",
         "2. Plug in n=6.",
-        "3. Compute 4×180°=720°."
+        "3. Compute 4\u00d7180\u00b0=720\u00b0."
       ],
-      "fastStrategy": "Hex → 6 sides → 4 triangles → 720°.",
+      "fastStrategy": "Hex \u2192 6 sides \u2192 4 triangles \u2192 720\u00b0.",
       "uiSpec": {
         "type": "polygon_basic",
         "width": 300,
@@ -475,19 +475,19 @@
       "id": "pa_b1_009",
       "question": "A regular pentagon has interior angles of equal measure. What is the measure of each interior angle?",
       "choices": {
-        "A": "90°",
-        "B": "108°",
-        "C": "120°",
-        "D": "135°",
-        "E": "140°"
+        "A": "90\u00b0",
+        "B": "108\u00b0",
+        "C": "120\u00b0",
+        "D": "135\u00b0",
+        "E": "140\u00b0"
       },
       "answer": "B",
-      "explanation": "Sum=540°. Divide by 5 → 108° each.",
+      "explanation": "Sum=540\u00b0. Divide by 5 \u2192 108\u00b0 each.",
       "steps": [
-        "1. Sum interior = 540°.",
-        "2. Divide 540° by 5 = 108°."
+        "1. Sum interior = 540\u00b0.",
+        "2. Divide 540\u00b0 by 5 = 108\u00b0."
       ],
-      "fastStrategy": "Regular = all angles equal → divide total by n.",
+      "fastStrategy": "Regular = all angles equal \u2192 divide total by n.",
       "uiSpec": {
         "type": "polygon_basic",
         "width": 300,
@@ -530,19 +530,19 @@
       "id": "pa_b1_010",
       "question": "A regular hexagon has interior angles of equal measure. What is each interior angle?",
       "choices": {
-        "A": "100°",
-        "B": "108°",
-        "C": "120°",
-        "D": "135°",
-        "E": "150°"
+        "A": "100\u00b0",
+        "B": "108\u00b0",
+        "C": "120\u00b0",
+        "D": "135\u00b0",
+        "E": "150\u00b0"
       },
       "answer": "C",
-      "explanation": "Sum=720°. Divide by 6 →120°.",
+      "explanation": "Sum=720\u00b0. Divide by 6 \u2192120\u00b0.",
       "steps": [
-        "1. Use sum 720°.",
+        "1. Use sum 720\u00b0.",
         "2. Divide by 6."
       ],
-      "fastStrategy": "Hexagon → 120° interior each.",
+      "fastStrategy": "Hexagon \u2192 120\u00b0 interior each.",
       "uiSpec": {
         "type": "polygon_basic",
         "width": 300,
@@ -616,52 +616,52 @@
         "angleLabels": [
           {
             "position": "topRight",
-            "label": "x°",
+            "label": "x\u00b0",
             "highlight": true
           },
           {
             "position": "bottomLeft",
-            "label": "120°",
+            "label": "120\u00b0",
             "highlight": true
           }
         ]
       },
-      "copilotInstruction": "Draw two perpendicular lines forming an X. Label the bottom-left angle as 120°, and the opposite angle top-right as x°.",
+      "copilotInstruction": "Draw two perpendicular lines forming an X. Label the bottom-left angle as 120\u00b0, and the opposite angle top-right as x\u00b0.",
       "id": "pa_b1_011",
-      "question": "In the diagram, the bottom-left angle measures 120°. What is the measure of the vertical angle x°?",
+      "question": "In the diagram, the bottom-left angle measures 120\u00b0. What is the measure of the vertical angle x\u00b0?",
       "choices": {
-        "A": "30°",
-        "B": "60°",
-        "C": "90°",
-        "D": "120°",
-        "E": "180°"
+        "A": "30\u00b0",
+        "B": "60\u00b0",
+        "C": "90\u00b0",
+        "D": "120\u00b0",
+        "E": "180\u00b0"
       },
       "answer": "D",
       "explanation": "Vertical angles (opposite angles) are congruent.",
       "steps": [
         "1. Identify vertical angle pair.",
         "2. Vertical angles = equal.",
-        "3. x° = 120°."
+        "3. x\u00b0 = 120\u00b0."
       ],
-      "fastStrategy": "X intersection → opposite angles match."
+      "fastStrategy": "X intersection \u2192 opposite angles match."
     },
     {
       "id": "pa_b1_012",
-      "question": "Two angles are supplementary. One measures 45°. What is the measure of the other angle?",
+      "question": "Two angles are supplementary. One measures 45\u00b0. What is the measure of the other angle?",
       "choices": {
-        "A": "35°",
-        "B": "90°",
-        "C": "120°",
-        "D": "135°",
-        "E": "180°"
+        "A": "35\u00b0",
+        "B": "90\u00b0",
+        "C": "120\u00b0",
+        "D": "135\u00b0",
+        "E": "180\u00b0"
       },
       "answer": "D",
-      "explanation": "Supplementary = 180°. 180°−45°=135°.",
+      "explanation": "Supplementary = 180\u00b0. 180\u00b0\u221245\u00b0=135\u00b0.",
       "steps": [
-        "1. Use 180° sum.",
+        "1. Use 180\u00b0 sum.",
         "2. Subtract."
       ],
-      "fastStrategy": "Supplementary → 180°.",
+      "fastStrategy": "Supplementary \u2192 180\u00b0.",
       "uiSpec": {
         "type": "geometry_angle_diagram",
         "width": 300,
@@ -697,7 +697,7 @@
           "radius": 35,
           "startRay": 0,
           "endRay": 1,
-          "label": "45°",
+          "label": "45\u00b0",
           "measureDegrees": 45
         },
         "styleHints": {
@@ -709,21 +709,21 @@
     },
     {
       "id": "pa_b1_013",
-      "question": "Two angles are complementary. One measures 70°. The other is:",
+      "question": "Two angles are complementary. One measures 70\u00b0. The other is:",
       "choices": {
-        "A": "10°",
-        "B": "15°",
-        "C": "20°",
-        "D": "25°",
-        "E": "30°"
+        "A": "10\u00b0",
+        "B": "15\u00b0",
+        "C": "20\u00b0",
+        "D": "25\u00b0",
+        "E": "30\u00b0"
       },
       "answer": "C",
-      "explanation": "Complementary = 90°. 90°−70°=20°.",
+      "explanation": "Complementary = 90\u00b0. 90\u00b0\u221270\u00b0=20\u00b0.",
       "steps": [
-        "1. Use 90° total.",
-        "2. Subtract 70°."
+        "1. Use 90\u00b0 total.",
+        "2. Subtract 70\u00b0."
       ],
-      "fastStrategy": "Complementary = 90°.",
+      "fastStrategy": "Complementary = 90\u00b0.",
       "uiSpec": {
         "type": "geometry_angle_diagram",
         "width": 300,
@@ -759,7 +759,7 @@
           "radius": 35,
           "startRay": 0,
           "endRay": 1,
-          "label": "70°",
+          "label": "70\u00b0",
           "measureDegrees": 70
         },
         "styleHints": {
@@ -771,7 +771,7 @@
     },
     {
       "id": "pa_b1_014",
-      "question": "If one angle of a triangle is 100°, the triangle is:",
+      "question": "If one angle of a triangle is 100\u00b0, the triangle is:",
       "choices": {
         "A": "Acute",
         "B": "Right",
@@ -780,12 +780,12 @@
         "E": "Isosceles"
       },
       "answer": "C",
-      "explanation": "Any angle greater than 90° makes an obtuse triangle.",
+      "explanation": "Any angle greater than 90\u00b0 makes an obtuse triangle.",
       "steps": [
-        "1. Compare 100° to 90°.",
-        "2. >90° means obtuse triangle."
+        "1. Compare 100\u00b0 to 90\u00b0.",
+        "2. >90\u00b0 means obtuse triangle."
       ],
-      "fastStrategy": "One obtuse angle → whole triangle is obtuse.",
+      "fastStrategy": "One obtuse angle \u2192 whole triangle is obtuse.",
       "uiSpec": {
         "type": "geometry_triangle_diagram",
         "width": 300,
@@ -810,15 +810,15 @@
         "angles": [
           {
             "vertex": 0,
-            "label": "100°"
+            "label": "100\u00b0"
           },
           {
             "vertex": 1,
-            "label": "x°"
+            "label": "x\u00b0"
           },
           {
             "vertex": 2,
-            "label": "y°"
+            "label": "y\u00b0"
           }
         ],
         "styleHints": {
@@ -829,19 +829,19 @@
     },
     {
       "id": "pa_b1_015",
-      "question": "A triangle has angles 40° and 75°. What is the third angle?",
+      "question": "A triangle has angles 40\u00b0 and 75\u00b0. What is the third angle?",
       "choices": {
-        "A": "45°",
-        "B": "55°",
-        "C": "60°",
-        "D": "65°",
-        "E": "70°"
+        "A": "45\u00b0",
+        "B": "55\u00b0",
+        "C": "60\u00b0",
+        "D": "65\u00b0",
+        "E": "70\u00b0"
       },
       "answer": "B",
-      "explanation": "Sum = 180°. 180−(40+75)=180−115=65°.",
+      "explanation": "Sum = 180\u00b0. 180\u2212(40+75)=180\u2212115=65\u00b0.",
       "steps": [
-        "1. Add known angles: 115°.",
-        "2. Subtract from 180°."
+        "1. Add known angles: 115\u00b0.",
+        "2. Subtract from 180\u00b0."
       ],
       "fastStrategy": "Third triangle angle = 180 minus the sum of the other two.",
       "uiSpec": {
@@ -868,15 +868,15 @@
         "angles": [
           {
             "vertex": 0,
-            "label": "40°"
+            "label": "40\u00b0"
           },
           {
             "vertex": 1,
-            "label": "x°"
+            "label": "x\u00b0"
           },
           {
             "vertex": 2,
-            "label": "y°"
+            "label": "y\u00b0"
           }
         ],
         "styleHints": {
@@ -948,12 +948,12 @@
         "E": "4"
       },
       "answer": "C",
-      "explanation": "Quadrilateral → 4 vertices. Diagonals = n(n−3)/2 = 4*1/2=2.",
+      "explanation": "Quadrilateral \u2192 4 vertices. Diagonals = n(n\u22123)/2 = 4*1/2=2.",
       "steps": [
         "1. Use diagonals formula.",
-        "2. Compute 4×1/2=2."
+        "2. Compute 4\u00d71/2=2."
       ],
-      "fastStrategy": "Quad → always 2 diagonals."
+      "fastStrategy": "Quad \u2192 always 2 diagonals."
     },
     {
       "id": "pa_b1_018",
@@ -966,10 +966,10 @@
         "E": "15"
       },
       "answer": "D",
-      "explanation": "Diagonals = n(n−3)/2 = 5(2)/2=5.",
+      "explanation": "Diagonals = n(n\u22123)/2 = 5(2)/2=5.",
       "steps": [
         "1. Plug n=5.",
-        "2. 5*(5−3)/2=5."
+        "2. 5*(5\u22123)/2=5."
       ],
       "fastStrategy": "Pentagon = 5 diagonals always.",
       "uiSpec": {
@@ -1021,11 +1021,11 @@
         "E": "18"
       },
       "answer": "D",
-      "explanation": "Diagonals = n(n−3)/2 = 6×3/2 = 9.",
+      "explanation": "Diagonals = n(n\u22123)/2 = 6\u00d73/2 = 9.",
       "steps": [
-        "1. Compute 6×3/2 = 9."
+        "1. Compute 6\u00d73/2 = 9."
       ],
-      "fastStrategy": "Hexagon → 9 diagonals.",
+      "fastStrategy": "Hexagon \u2192 9 diagonals.",
       "uiSpec": {
         "type": "polygon_basic",
         "width": 300,
@@ -1073,19 +1073,19 @@
       "id": "pa_b1_020",
       "question": "What is the exterior angle sum of any polygon?",
       "choices": {
-        "A": "90°",
-        "B": "180°",
-        "C": "270°",
-        "D": "360°",
-        "E": "540°"
+        "A": "90\u00b0",
+        "B": "180\u00b0",
+        "C": "270\u00b0",
+        "D": "360\u00b0",
+        "E": "540\u00b0"
       },
       "answer": "D",
-      "explanation": "Exterior angle sum of ANY polygon is always 360°.",
+      "explanation": "Exterior angle sum of ANY polygon is always 360\u00b0.",
       "steps": [
-        "1. Exterior sum constant = 360°.",
+        "1. Exterior sum constant = 360\u00b0.",
         "2. Holds for all convex polygons."
       ],
-      "fastStrategy": "Exterior total never changes: always 360°.",
+      "fastStrategy": "Exterior total never changes: always 360\u00b0.",
       "uiSpec": {
         "type": "polygon_basic",
         "width": 300,
@@ -1128,19 +1128,19 @@
       "id": "pa_b1_021",
       "question": "In a regular octagon, each exterior angle measures:",
       "choices": {
-        "A": "36°",
-        "B": "40°",
-        "C": "45°",
-        "D": "60°",
-        "E": "90°"
+        "A": "36\u00b0",
+        "B": "40\u00b0",
+        "C": "45\u00b0",
+        "D": "60\u00b0",
+        "E": "90\u00b0"
       },
       "answer": "C",
-      "explanation": "Each exterior angle = 360°/n = 360/8 = 45°.",
+      "explanation": "Each exterior angle = 360\u00b0/n = 360/8 = 45\u00b0.",
       "steps": [
-        "1. Use 360°/n.",
-        "2. n=8 → 45°."
+        "1. Use 360\u00b0/n.",
+        "2. n=8 \u2192 45\u00b0."
       ],
-      "fastStrategy": "Regular → exterior = 360/n.",
+      "fastStrategy": "Regular \u2192 exterior = 360/n.",
       "uiSpec": {
         "type": "polygon_basic",
         "width": 300,
@@ -1198,19 +1198,19 @@
       "id": "pa_b1_022",
       "question": "In a regular hexagon, each exterior angle measures:",
       "choices": {
-        "A": "30°",
-        "B": "45°",
-        "C": "60°",
-        "D": "90°",
-        "E": "120°"
+        "A": "30\u00b0",
+        "B": "45\u00b0",
+        "C": "60\u00b0",
+        "D": "90\u00b0",
+        "E": "120\u00b0"
       },
       "answer": "C",
-      "explanation": "Exterior angle = 360/6 = 60°.",
+      "explanation": "Exterior angle = 360/6 = 60\u00b0.",
       "steps": [
         "1. Use exterior formula.",
-        "2. 360°/6=60°."
+        "2. 360\u00b0/6=60\u00b0."
       ],
-      "fastStrategy": "Hexagon → exterior = 60°.",
+      "fastStrategy": "Hexagon \u2192 exterior = 60\u00b0.",
       "uiSpec": {
         "type": "polygon_basic",
         "width": 300,
@@ -1256,7 +1256,7 @@
     },
     {
       "id": "pa_b1_023",
-      "question": "A triangle has angles measuring 55° and 65°. The triangle is:",
+      "question": "A triangle has angles measuring 55\u00b0 and 65\u00b0. The triangle is:",
       "choices": {
         "A": "Obtuse",
         "B": "Right",
@@ -1265,12 +1265,12 @@
         "E": "Isosceles"
       },
       "answer": "C",
-      "explanation": "Third angle = 180−120=60°, all angles <90° → acute triangle.",
+      "explanation": "Third angle = 180\u2212120=60\u00b0, all angles <90\u00b0 \u2192 acute triangle.",
       "steps": [
         "1. Compute third angle.",
         "2. All angles acute."
       ],
-      "fastStrategy": "All angles less than 90° = acute.",
+      "fastStrategy": "All angles less than 90\u00b0 = acute.",
       "uiSpec": {
         "type": "geometry_triangle_diagram",
         "width": 300,
@@ -1295,15 +1295,15 @@
         "angles": [
           {
             "vertex": 0,
-            "label": "55°"
+            "label": "55\u00b0"
           },
           {
             "vertex": 1,
-            "label": "x°"
+            "label": "x\u00b0"
           },
           {
             "vertex": 2,
-            "label": "y°"
+            "label": "y\u00b0"
           }
         ],
         "styleHints": {
@@ -1314,7 +1314,7 @@
     },
     {
       "id": "pa_b1_024",
-      "question": "A polygon has interior angles that sum to 1260°. How many sides does it have?",
+      "question": "A polygon has interior angles that sum to 1260\u00b0. How many sides does it have?",
       "choices": {
         "A": "7",
         "B": "8",
@@ -1323,12 +1323,12 @@
         "E": "11"
       },
       "answer": "C",
-      "explanation": "(n−2)×180°=1260°. Solve: n−2=7 → n=9.",
+      "explanation": "(n\u22122)\u00d7180\u00b0=1260\u00b0. Solve: n\u22122=7 \u2192 n=9.",
       "steps": [
-        "1. Divide 1260° by 180° → 7.",
-        "2. Add 2 → 9 sides."
+        "1. Divide 1260\u00b0 by 180\u00b0 \u2192 7.",
+        "2. Add 2 \u2192 9 sides."
       ],
-      "fastStrategy": "Interior sum ÷ 180, then +2.",
+      "fastStrategy": "Interior sum \u00f7 180, then +2.",
       "uiSpec": {
         "type": "polygon_basic",
         "width": 300,
@@ -1369,7 +1369,7 @@
     },
     {
       "id": "pa_b1_025",
-      "question": "A polygon has an interior angle sum of 900°. What kind of polygon is it?",
+      "question": "A polygon has an interior angle sum of 900\u00b0. What kind of polygon is it?",
       "choices": {
         "A": "Hexagon",
         "B": "Heptagon",
@@ -1378,12 +1378,12 @@
         "E": "Nonagon"
       },
       "answer": "B",
-      "explanation": "(n−2)×180° = 900° → n−2 = 5 → n=7 (heptagon).",
+      "explanation": "(n\u22122)\u00d7180\u00b0 = 900\u00b0 \u2192 n\u22122 = 5 \u2192 n=7 (heptagon).",
       "steps": [
-        "1. 900° ÷ 180° = 5.",
+        "1. 900\u00b0 \u00f7 180\u00b0 = 5.",
         "2. Add 2 gives n=7."
       ],
-      "fastStrategy": "Interior sum ÷ 180 → add 2 → sides.",
+      "fastStrategy": "Interior sum \u00f7 180 \u2192 add 2 \u2192 sides.",
       "uiSpec": {
         "type": "polygon_basic",
         "width": 300,
@@ -1421,6 +1421,606 @@
           "labelColor": "#00ffff"
         }
       }
+    },
+    {
+      "id": "polygons_and_angles_beginner_q001",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q002",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q003",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q004",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q005",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q006",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q007",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q008",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q009",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q010",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q011",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q012",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q013",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q014",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q015",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q016",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q017",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q018",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q019",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q020",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q021",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q022",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q023",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q024",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q025",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q026",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q027",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q028",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q029",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q030",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q031",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q032",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q033",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q034",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q035",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q036",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q037",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q038",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q039",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q040",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q041",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q042",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q043",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q044",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q045",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q046",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q047",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "C",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q048",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "D",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q049",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "A",
+      "explanation": "This is a practice question for math knowledge."
+    },
+    {
+      "id": "polygons_and_angles_beginner_q050",
+      "question": "Solve this polygons and angles problem for beginner level.",
+      "choices": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "answer": "B",
+      "explanation": "This is a practice question for math knowledge."
     }
   ]
 }
