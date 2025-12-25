@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AFOQT Admin: All Questions Browser</title>
+  <base href="/AFOQT-app/">
+  <link rel="stylesheet" href="/AFOQT-app/styles.css?v=admin1">
+  <style>
+    :root { --admin-accent: #00ffff; }
+    body { background: #000; color: #cfe; font-family: system-ui, sans-serif; }
+    .admin-wrap { max-width: 1100px; margin: 30px auto; padding: 20px; border: 2px solid var(--admin-accent); border-radius: 12px; background: rgba(0,10,20,0.4); }
+    .admin-header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; }
+    .admin-header h1 { font-size: 20px; margin: 0 10px 0 0; color: var(--admin-accent); }
+    .admin-controls { display: flex; flex-wrap: wrap; gap: 12px; margin: 10px 0 18px; }
+    .admin-controls input, .admin-controls select, .admin-controls button { padding: 8px 10px; border-radius: 8px; border: 1px solid #0aa; background: #012; color: #cfe; }
+    .admin-controls label { display: inline-flex; align-items: center; gap: 6px; }
+    .subject-card { margin: 16px 0; border: 1px solid #0aa; border-radius: 10px; background: rgba(0,20,30,0.35); }
+    .subject-card summary { cursor: pointer; padding: 12px 16px; color: #8ff; font-weight: 600; }
+    .subject-body { padding: 10px 16px 18px; }
+    .subtopic-head { margin: 12px 0 8px; color: #adf; font-weight: 600; }
+    .question-card { border: 1px solid #045; border-radius: 8px; padding: 10px 12px; margin: 8px 0; background: rgba(0,35,45,0.35); }
+    .question-title { font-weight: 600; color: #bff; margin-bottom: 6px; }
+    .question-text { color: #def; margin: 6px 0 10px; }
+    .choices { display: grid; grid-template-columns: repeat(2, minmax(280px,1fr)); gap: 6px 14px; }
+    .choice { padding: 6px 8px; border-radius: 6px; border: 1px solid #066; background: rgba(0,45,55,0.4); }
+    .choice.correct { border-color: #0f8; box-shadow: 0 0 0 1px #0f8 inset; }
+    .explanation { margin-top: 8px; padding: 8px 10px; border-left: 3px solid #0f8; background: rgba(0,60,50,0.3); color: #cff; }
+    .meta { font-size: 12px; color: #9bd; opacity: 0.85; }
+    .ui-spec { font-size: 12px; color: #8ac; opacity: 0.85; margin-top: 6px; }
+    .count-pill { display: inline-block; padding: 3px 8px; border-radius: 999px; background: #024; color: #9ef; border: 1px solid #069; font-size: 12px; margin-left: 10px; }
+  </style>
+</head>
+<body>
+  <div class="admin-wrap">
+    <div class="admin-header">
+      <h1>Admin: All Questions Browser</h1>
+      <span id="status-pill" class="count-pill">Loading…</span>
+    </div>
+    <div class="admin-controls">
+      <button id="initBtn">Initialize Patch 18</button>
+      <label>Subject:
+        <select id="subjectSelect"><option value="">All</option></select>
+      </label>
+      <label>Difficulty:
+        <select id="difficultySelect">
+          <option value="">All</option>
+          <option value="beginner">Beginner</option>
+          <option value="advanced">Advanced</option>
+          <option value="expert">Expert</option>
+        </select>
+      </label>
+      <label>Search:
+        <input id="searchInput" type="text" placeholder="Filter by text" />
+      </label>
+      <label>
+        <input id="showExpToggle" type="checkbox" checked /> Show explanations
+      </label>
+      <label>Items per panel:
+        <input id="limitInput" type="number" min="10" max="500" step="10" value="50" />
+      </label>
+      <button id="refreshBtn">Refresh View</button>
+    </div>
+
+    <div id="adminRoot"></div>
+  </div>
+
+  <!-- Patch loader only; do NOT include app.js to avoid booting the app -->
+  <script src="/AFOQT-app/patch-loader.js?v=admin1"></script>
+  <script>
+    const btnInit = document.getElementById('initBtn');
+    const subjectSelect = document.getElementById('subjectSelect');
+    const difficultySelect = document.getElementById('difficultySelect');
+    const searchInput = document.getElementById('searchInput');
+    const showExpToggle = document.getElementById('showExpToggle');
+    const limitInput = document.getElementById('limitInput');
+    const refreshBtn = document.getElementById('refreshBtn');
+    const adminRoot = document.getElementById('adminRoot');
+    const statusPill = document.getElementById('status-pill');
+
+    let loaded = false;
+
+    async function initContent() {
+      statusPill.textContent = 'Initializing…';
+      try {
+        const ok = await window.initializePatch18?.();
+        loaded = !!ok;
+        statusPill.textContent = ok ? 'Content Loaded' : 'Load Failed';
+        buildSubjectOptions();
+        renderAdmin();
+      } catch (e) {
+        console.warn('Init failed', e);
+        statusPill.textContent = 'Init error';
+      }
+    }
+
+    function buildSubjectOptions() {
+      const reg = window.questionRegistry || {};
+      const subjects = Object.keys(reg).sort();
+      subjectSelect.innerHTML = '<option value="">All</option>' + subjects.map(s => `<option value="${s}">${s}</option>`).join('');
+    }
+
+    function getAllQuestionsFiltered() {
+      const reg = window.questionRegistry || {};
+      const subjFilter = subjectSelect.value || '';
+      const diffFilter = difficultySelect.value || '';
+      const term = (searchInput.value || '').trim().toLowerCase();
+      const showLimit = parseInt(limitInput.value, 10) || 50;
+      const showExp = !!showExpToggle.checked;
+
+      const out = [];
+      for (const subjectId of Object.keys(reg)) {
+        if (subjFilter && subjectId !== subjFilter) continue;
+        const subtopics = reg[subjectId] || {};
+        for (const subtopicId of Object.keys(subtopics)) {
+          const byDiff = subtopics[subtopicId] || {};
+          for (const diff of Object.keys(byDiff)) {
+            if (diffFilter && diff !== diffFilter) continue;
+            let arr = byDiff[diff] || [];
+            // Text search filter
+            if (term) {
+              arr = arr.filter(q => {
+                const t = (q.question || q.prompt || '').toLowerCase();
+                return t.includes(term);
+              });
+            }
+            out.push({ subjectId, subtopicId, diff, items: arr.slice(0, showLimit), total: arr.length, showExp });
+          }
+        }
+      }
+      return out.sort((a,b) => a.subjectId.localeCompare(b.subjectId) || a.subtopicId.localeCompare(b.subtopicId));
+    }
+
+    function renderAdmin() {
+      const panels = getAllQuestionsFiltered();
+      adminRoot.innerHTML = '';
+
+      const frag = document.createDocumentFragment();
+      let totalShown = 0;
+
+      panels.forEach(panel => {
+        const det = document.createElement('details');
+        det.className = 'subject-card';
+        det.open = false;
+        const sum = document.createElement('summary');
+        sum.innerHTML = `${panel.subjectId} / <strong>${panel.subtopicId}</strong> — <em>${panel.diff}</em>` +
+                        `<span class="count-pill">${panel.items.length} / ${panel.total}</span>`;
+        det.appendChild(sum);
+
+        const body = document.createElement('div');
+        body.className = 'subject-body';
+
+        const head = document.createElement('div');
+        head.className = 'subtopic-head';
+        head.textContent = `Showing ${panel.items.length} of ${panel.total} questions`;
+        body.appendChild(head);
+
+        panel.items.forEach(q => {
+          totalShown++;
+          const card = document.createElement('div');
+          card.className = 'question-card';
+
+          const title = document.createElement('div');
+          title.className = 'question-title';
+          title.textContent = `${q.id || '(no id)'} — ${panel.subjectId}/${panel.subtopicId} (${panel.diff})`;
+          card.appendChild(title);
+
+          const meta = document.createElement('div');
+          meta.className = 'meta';
+          if (q.uiSpec) meta.textContent = `uiSpec: ${q.uiSpec.type || 'n/a'}`;
+          else if (q.tableSpec) meta.textContent = 'tableSpec present';
+          else meta.textContent = '';
+          if (meta.textContent) card.appendChild(meta);
+
+          const text = document.createElement('div');
+          text.className = 'question-text';
+          text.textContent = q.question || q.prompt || '(no question text)';
+          card.appendChild(text);
+
+          const choicesWrap = document.createElement('div');
+          choicesWrap.className = 'choices';
+
+          const choicesObj = q.choices || null;
+          const optionsArr = q.options || null;
+          const answerLetter = q.answer || null;
+          const correctIndex = typeof q.correctIndex === 'number' ? q.correctIndex : null;
+
+          if (choicesObj) {
+            const entries = Object.entries(choicesObj);
+            entries.forEach(([label, val]) => {
+              const div = document.createElement('div');
+              div.className = 'choice' + (answerLetter === label ? ' correct' : '');
+              div.textContent = `${label}. ${val}`;
+              choicesWrap.appendChild(div);
+            });
+          } else if (Array.isArray(optionsArr)) {
+            const labels = ['A','B','C','D','E','F'];
+            optionsArr.forEach((val, idx) => {
+              const div = document.createElement('div');
+              const isCorrect = correctIndex === idx;
+              div.className = 'choice' + (isCorrect ? ' correct' : '');
+              div.textContent = `${labels[idx] || String(idx+1)}. ${val}`;
+              choicesWrap.appendChild(div);
+            });
+          }
+          card.appendChild(choicesWrap);
+
+          if (panel.showExp) {
+            const exp = document.createElement('div');
+            exp.className = 'explanation';
+            exp.textContent = q.explanation || '(no explanation provided)';
+            card.appendChild(exp);
+          }
+
+          body.appendChild(card);
+        });
+
+        det.appendChild(body);
+        frag.appendChild(det);
+      });
+
+      adminRoot.appendChild(frag);
+      statusPill.textContent = `Shown: ${totalShown} (filtered)`;
+    }
+
+    btnInit.addEventListener('click', initContent);
+    refreshBtn.addEventListener('click', renderAdmin);
+    subjectSelect.addEventListener('change', renderAdmin);
+    difficultySelect.addEventListener('change', renderAdmin);
+    searchInput.addEventListener('input', () => {
+      // debounce minimal
+      clearTimeout(window.__debTimer);
+      window.__debTimer = setTimeout(renderAdmin, 200);
+    });
+    showExpToggle.addEventListener('change', renderAdmin);
+    limitInput.addEventListener('change', renderAdmin);
+  </script>
+</body>
+</html>
