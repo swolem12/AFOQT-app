@@ -347,8 +347,11 @@
             inset: 0;
             background: radial-gradient(circle at 20% 20%, rgba(158, 244, 255, 0.05), transparent 35%),
                         linear-gradient(135deg, #03040b, #050918 40%, #0a1224);
-            display: grid;
-            place-items: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
             z-index: 999;
             transition: opacity 320ms ease;
         }
@@ -377,18 +380,50 @@
             background: transparent !important;
         }
 
-        .globe-title {
-            position: absolute;
-            inset: 0;
-            display: grid;
-            place-items: center;
-            font-size: clamp(26px, 5vw, 42px);
-            letter-spacing: 0.18em;
+        .app-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(32px, 6vw, 64px);
+            font-weight: 700;
+            letter-spacing: 0.24em;
             text-transform: uppercase;
             text-align: center;
             color: var(--accent);
-            text-shadow: 0 0 12px rgba(158, 244, 255, 0.8);
+            text-shadow: 0 0 20px rgba(158, 244, 255, 0.9), 0 0 40px rgba(158, 244, 255, 0.6);
             pointer-events: none;
+            position: relative;
+            padding: 0 24px;
+            z-index: 10;
+        }
+
+        .app-logo::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent));
+            box-shadow: 0 0 8px rgba(158, 244, 255, 0.8);
+        }
+
+        .app-logo::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, var(--accent));
+            box-shadow: 0 0 8px rgba(158, 244, 255, 0.8);
+        }
+
+        .app-subtitle {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: clamp(11px, 1.5vw, 14px);
+            letter-spacing: 0.3em;
+            color: var(--muted);
+            margin-top: -18px;
+            text-align: center;
         }
 
         .note {
@@ -435,9 +470,10 @@
     </div>
 
     <div class="loader-overlay" id="loader" aria-label="Loading globe">
+        <div class="app-logo">AFOQT QUEST</div>
+        <div class="app-subtitle">// OFFICER TRAINING SIMULATION</div>
         <div class="globe-wrap">
             <div id="globeHost"></div>
-            <div class="globe-title">AFOQT Quest</div>
         </div>
     </div>
 
@@ -511,7 +547,6 @@
             const showBtn = document.getElementById('showLoader');
             const hideBtn = document.getElementById('hideLoader');
             const togglePaletteBtn = document.getElementById('togglePalette');
-            const globeTitle = document.querySelector('.globe-title');
             const boot = document.getElementById('boot');
             const bootSteps = Array.from(document.querySelectorAll('#bootSteps div'));
             const bootBars = Array.from(document.querySelectorAll('.boot-bar'));
@@ -658,20 +693,26 @@
                     ease: 'power3.out'
                 });
 
-                gsap.fromTo('.globe-title', { opacity: 0, scale: 0.9 }, {
+                gsap.fromTo('.app-logo', { opacity: 0, y: -30 }, {
                     opacity: 1,
-                    scale: 1,
-                    duration: 0.7,
-                    ease: 'power2.out',
-                    delay: 0.1
+                    y: 0,
+                    duration: 0.8,
+                    ease: 'power3.out',
+                    delay: 0.2
                 });
 
-                if (globeTitle && window.anime) {
+                gsap.fromTo('.app-subtitle', { opacity: 0 }, {
+                    opacity: 0.7,
+                    duration: 0.6,
+                    ease: 'power2.out',
+                    delay: 0.4
+                });
+
+                if (window.anime) {
                     anime({
-                        targets: globeTitle,
-                        scale: [1, 1.04],
-                        letterSpacing: ['0.18em', '0.24em'],
-                        duration: 2000,
+                        targets: '.app-logo',
+                        scale: [1, 1.02],
+                        duration: 3000,
                         direction: 'alternate',
                         easing: 'easeInOutSine',
                         loop: true
