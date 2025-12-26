@@ -5052,516 +5052,145 @@ function previewBootAnimation(animationName) {
 function showBootSequence() {
     console.log('[showBootSequence] Function called - Globe boot animation');
     return new Promise((resolve) => {
+        // Reuse the globe-based boot implemented in fr0st prototype, adjusted to Tron theme
         let globe, animationId, loopRunning = false;
-        
-        // Configuration constants
         const FADE_DURATION_MS = 800;
         const PROGRESS_DURATION_MS = 8000;
-        
-        // Create boot screen container
-        const bootScreen = document.createElement('div');
-        bootScreen.id = 'boot-screen';
-        bootScreen.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #000000, #001a1a 50%, #002a2a);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 10000;
-            opacity: 1;
-        `;
-        
-        // Create init container
-        const initContainer = document.createElement('div');
-        initContainer.style.cssText = `
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 32px;
-        `;
-        
-        // Create app logo
-        const appLogo = document.createElement('h1');
-        appLogo.textContent = 'AFOQT QUEST';
-        appLogo.style.cssText = `
-            font-family: 'Courier New', monospace;
-            font-size: clamp(32px, 5vw, 56px);
-            font-weight: 700;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            color: #00ffff;
-            text-shadow: 0 0 40px rgba(0, 255, 255, 0.8), 0 0 80px rgba(0, 255, 255, 0.4);
-            margin: 0;
-            position: relative;
-            opacity: 0;
-        `;
-        
-        // Create subtitle
-        const appSubtitle = document.createElement('div');
-        appSubtitle.textContent = '// OFFICER TRAINING SIMULATION';
-        appSubtitle.style.cssText = `
-            font-family: 'Courier New', monospace;
-            font-size: clamp(11px, 1.2vw, 14px);
-            letter-spacing: 0.2em;
-            color: rgba(0, 255, 255, 0.7);
-            text-transform: uppercase;
-            margin-top: -24px;
-            opacity: 0;
-        `;
-        
-        // Create globe container
+
+        const boot = document.createElement('div');
+        boot.id = 'boot-screen';
+        boot.style.cssText = 'position:fixed;inset:0;background:linear-gradient(135deg,#000,#001a1a 50%,#002a2a);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:10000;opacity:1;';
+
+        const wrap = document.createElement('div');
+        wrap.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:32px;';
+
+        const logo = document.createElement('h1');
+        logo.textContent = 'AFOQT QUEST';
+        logo.style.cssText = "font-family:'Courier New',monospace;font-size:clamp(32px,5vw,56px);font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#00ffff;text-shadow:0 0 40px rgba(0,255,255,.8),0 0 80px rgba(0,255,255,.4);margin:0;opacity:0;";
+
+        const sub = document.createElement('div');
+        sub.textContent = '// OFFICER TRAINING SIMULATION';
+        sub.style.cssText = "font-family:'Courier New',monospace;font-size:clamp(11px,1.2vw,14px);letter-spacing:.2em;color:rgba(0,255,255,.7);text-transform:uppercase;margin-top:-24px;opacity:0;";
+
         const globeWrap = document.createElement('div');
-        globeWrap.style.cssText = `
-            position: relative;
-            width: min(480px, 75vw);
-            aspect-ratio: 1 / 1;
-            opacity: 0;
-        `;
-        
-        const globeHost = document.createElement('div');
-        globeHost.id = 'globeHost';
-        globeHost.style.cssText = `
-            width: 100%;
-            height: 100%;
-        `;
-        globeWrap.appendChild(globeHost);
-        
-        // Create progress section
-        const initProgress = document.createElement('div');
-        initProgress.style.cssText = `
-            width: min(480px, 75vw);
-            margin-top: 0;
-            opacity: 0;
-        `;
-        
-        const progressLabel = document.createElement('div');
-        progressLabel.textContent = 'System Initialization';
-        progressLabel.style.cssText = `
-            font-family: 'Courier New', monospace;
-            font-size: 12px;
-            letter-spacing: 0.15em;
-            color: #00ffff;
-            margin-bottom: 8px;
-            text-align: center;
-            text-transform: uppercase;
-        `;
-        
-        const progressTrack = document.createElement('div');
-        progressTrack.style.cssText = `
-            width: 100%;
-            height: 8px;
-            background: rgba(0, 255, 255, 0.1);
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            border-radius: 999px;
-            overflow: hidden;
-            position: relative;
-        `;
-        
-        const progressFill = document.createElement('div');
-        progressFill.id = 'progressFill';
-        progressFill.style.cssText = `
-            height: 100%;
-            width: 0%;
-            background: linear-gradient(90deg, #00ff00, #00ffff);
-            box-shadow: 0 0 16px rgba(0, 255, 255, 0.6);
-            transition: width 100ms linear;
-        `;
-        progressTrack.appendChild(progressFill);
-        
-        const progressPercent = document.createElement('div');
-        progressPercent.id = 'progressPercent';
-        progressPercent.textContent = '0%';
-        progressPercent.style.cssText = `
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
-            color: #00ffff;
-            margin-top: 8px;
-            text-align: center;
-            letter-spacing: 0.1em;
-        `;
-        
-        initProgress.appendChild(progressLabel);
-        initProgress.appendChild(progressTrack);
-        initProgress.appendChild(progressPercent);
-        
-        // Assemble boot screen
-        initContainer.appendChild(appLogo);
-        initContainer.appendChild(appSubtitle);
-        initContainer.appendChild(globeWrap);
-        initContainer.appendChild(initProgress);
-        bootScreen.appendChild(initContainer);
-        document.body.appendChild(bootScreen);
-        
-        // Create boot complete overlay
-        const bootComplete = document.createElement('div');
-        bootComplete.id = 'bootComplete';
-        bootComplete.style.cssText = `
-            position: fixed;
-            inset: 0;
-            background: linear-gradient(135deg, #000000, #001a1a 50%, #002a2a);
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-            z-index: 10001;
-            opacity: 0;
-        `;
-        
-        const bootCompleteTitle = document.createElement('div');
-        bootCompleteTitle.className = 'boot-complete-title';
-        bootCompleteTitle.textContent = 'BOOT UP COMPLETE';
-        bootCompleteTitle.style.cssText = `
-            font-family: 'Courier New', monospace;
-            font-size: clamp(24px, 4vw, 36px);
-            font-weight: 700;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: #00ff00;
-            text-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
-        `;
-        
-        const bootCompleteSubtitle = document.createElement('div');
-        bootCompleteSubtitle.className = 'boot-complete-subtitle';
-        bootCompleteSubtitle.textContent = 'WELCOME TO AFOQT QUEST';
-        bootCompleteSubtitle.style.cssText = `
-            font-family: 'Courier New', monospace;
-            font-size: clamp(14px, 2vw, 18px);
-            letter-spacing: 0.15em;
-            color: #00ffff;
-            text-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
-        `;
-        
-        bootComplete.appendChild(bootCompleteTitle);
-        bootComplete.appendChild(bootCompleteSubtitle);
-        document.body.appendChild(bootComplete);
-        
-        // Globe initialization functions
+        globeWrap.style.cssText = 'position:relative;width:min(480px,75vw);aspect-ratio:1/1;opacity:0;';
+        const host = document.createElement('div');
+        host.style.cssText = 'width:100%;height:100%;';
+        globeWrap.appendChild(host);
+
+        const prog = document.createElement('div');
+        prog.style.cssText = 'width:min(480px,75vw);opacity:0;';
+        const label = document.createElement('div');
+        label.textContent = 'System Initialization';
+        label.style.cssText = "font-family:'Courier New',monospace;font-size:12px;letter-spacing:.15em;color:#00ffff;margin-bottom:8px;text-align:center;text-transform:uppercase;";
+        const track = document.createElement('div');
+        track.style.cssText = 'width:100%;height:8px;background:rgba(0,255,255,.1);border:1px solid rgba(0,255,255,.3);border-radius:999px;overflow:hidden;position:relative;';
+        const fill = document.createElement('div');
+        fill.style.cssText = 'height:100%;width:0%;background:linear-gradient(90deg,#00ff00,#00ffff);box-shadow:0 0 16px rgba(0,255,255,.6);transition:width 100ms linear;';
+        const pct = document.createElement('div');
+        pct.textContent = '0%';
+        pct.style.cssText = "font-family:'Courier New',monospace;font-size:14px;color:#00ffff;margin-top:8px;text-align:center;letter-spacing:.1em;";
+        track.appendChild(fill); prog.appendChild(label); prog.appendChild(track); prog.appendChild(pct);
+
+        wrap.appendChild(logo); wrap.appendChild(sub); wrap.appendChild(globeWrap); wrap.appendChild(prog);
+        boot.appendChild(wrap); document.body.appendChild(boot);
+
+        const complete = document.createElement('div');
+        complete.style.cssText = 'position:fixed;inset:0;background:linear-gradient(135deg,#000,#001a1a 50%,#002a2a);display:none;align-items:center;justify-content:center;flex-direction:column;gap:16px;z-index:10001;opacity:0;';
+        const cTitle = document.createElement('div');
+        cTitle.textContent = 'BOOT UP COMPLETE';
+        cTitle.style.cssText = "font-family:'Courier New',monospace;font-size:clamp(24px,4vw,36px);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#00ff00;text-shadow:0 0 20px rgba(0,255,0,.8);";
+        const cSub = document.createElement('div');
+        cSub.textContent = 'WELCOME TO AFOQT QUEST';
+        cSub.style.cssText = "font-family:'Courier New',monospace;font-size:clamp(14px,2vw,18px);letter-spacing:.15em;color:#00ffff;text-shadow:0 0 12px rgba(0,255,255,.6);";
+        complete.appendChild(cTitle); complete.appendChild(cSub); document.body.appendChild(complete);
+
         const resize = () => {
             if (!globe || !globe.renderer) return;
-            const w = globeHost.clientWidth;
-            const h = globeHost.clientHeight;
-            globe.camera.aspect = w / h;
-            globe.camera.updateProjectionMatrix();
-            globe.renderer.setSize(w, h);
+            const w = host.clientWidth, h = host.clientHeight;
+            globe.camera.aspect = w / h; globe.camera.updateProjectionMatrix(); globe.renderer.setSize(w, h);
         };
-        
-        const stopLoop = () => {
-            if (animationId) cancelAnimationFrame(animationId);
-            animationId = null;
-            loopRunning = false;
-        };
-        
-        const startLoop = () => {
-            if (loopRunning) return;
-            loopRunning = true;
-            const step = () => {
-                animationId = requestAnimationFrame(step);
-                if (globe) globe.tick();
-            };
-            step();
-        };
-        
+        const stopLoop = () => { if (animationId) cancelAnimationFrame(animationId); animationId = null; loopRunning = false; };
+        const startLoop = () => { if (loopRunning) return; loopRunning = true; const step = () => { animationId = requestAnimationFrame(step); if (globe) globe.tick(); }; step(); };
+
         const buildGlobe = () => {
-            if (!window.ENCOM || !window.ENCOM.Globe) {
-                console.warn('ENCOM.Globe not available yet');
-                return;
-            }
-            if (globe && globe.destroy) {
-                globe.destroy();
-            }
-            
-            const w = globeHost.clientWidth || 400;
-            const h = globeHost.clientHeight || 400;
+            if (!window.ENCOM || !window.ENCOM.Globe) return;
+            if (globe && globe.destroy) globe.destroy();
+            const w = host.clientWidth || 400, h = host.clientHeight || 400;
             globe = new ENCOM.Globe(w, h, {
                 font: 'Inconsolata',
                 data: window.data ? window.data.slice() : [],
                 tiles: window.grid ? window.grid.tiles : [],
-                baseColor: '#00ffff',
-                markerColor: '#00ff00',
-                pinColor: '#ffff00',
-                satelliteColor: '#ff00ff',
-                scale: 1.05,
-                dayLength: 12000,
-                introLinesDuration: 2000,
-                maxPins: 10,
-                maxMarkers: 15,
-                viewAngle: 0.3
+                baseColor: '#00ffff', markerColor: '#00ff00', pinColor: '#ffff00', satelliteColor: '#ff00ff',
+                scale: 1.05, dayLength: 12000, introLinesDuration: 2000, maxPins: 10, maxMarkers: 15, viewAngle: 0.3
             });
-            
-            globeHost.innerHTML = '';
-            globeHost.appendChild(globe.domElement);
-            
-            // Force transparent background on renderer
-            if (globe.renderer) {
-                globe.renderer.setClearColor(0x000000, 0);
-                const canvas = globe.renderer.domElement;
-                canvas.style.background = 'none';
-                canvas.style.backgroundColor = 'transparent';
-            }
-            
-            globe.init(() => {
-                startLoop();
-                addGlobeFeatures();
-            });
-            resize();
+            host.innerHTML = ''; host.appendChild(globe.domElement);
+            if (globe.renderer) { globe.renderer.setClearColor(0x000000, 0); const canvas = globe.renderer.domElement; canvas.style.background = 'none'; canvas.style.backgroundColor = 'transparent'; }
+            globe.init(() => { startLoop(); addGlobeFeatures(); }); resize();
         };
-        
+
         const addGlobeFeatures = () => {
             if (!globe) return;
-            
-            // Add connected markers
+            setTimeout(() => { globe.addMarker(40.7128, -74.0060, 'New York'); globe.addMarker(51.5074, -0.1278, 'London', true); }, 2200);
+            setTimeout(() => { globe.addMarker(35.6762, 139.6503, 'Tokyo'); globe.addMarker(-33.8688, 151.2093, 'Sydney', true); }, 2800);
             setTimeout(() => {
-                globe.addMarker(40.7128, -74.0060, "New York");
-                globe.addMarker(51.5074, -0.1278, "London", true);
-            }, 2200);
-            
-            setTimeout(() => {
-                globe.addMarker(35.6762, 139.6503, "Tokyo");
-                globe.addMarker(-33.8688, 151.2093, "Sydney", true);
-            }, 2800);
-            
-            // Add satellite constellation
-            setTimeout(() => {
-                const constellation = [];
-                const opts = {
-                    coreColor: '#ff00ff',
-                    numWaves: 3
-                };
-                for (let i = 0; i < 2; i++) {
-                    for (let j = 0; j < 3; j++) {
-                        constellation.push({
-                            lat: 50 * i - 30 + 15 * Math.random(),
-                            lon: 120 * j - 120 + 30 * i,
-                            altitude: 1.3
-                        });
-                    }
-                }
+                const constellation = []; const opts = { coreColor: '#ff00ff', numWaves: 3 };
+                for (let i = 0; i < 2; i++) for (let j = 0; j < 3; j++) constellation.push({ lat: 50*i-30+15*Math.random(), lon: 120*j-120+30*i, altitude: 1.3 });
                 globe.addConstellation(constellation, opts);
             }, 3500);
-            
-            // Add random pins periodically
             const pinInterval = setInterval(() => {
-                if (!globe) {
-                    clearInterval(pinInterval);
-                    return;
-                }
-                const lat = Math.random() * 180 - 90;
-                const lon = Math.random() * 360 - 180;
-                const names = ['Alpha Site', 'Beta Node', 'Gamma Link', 'Delta Hub', 'Echo Point'];
-                const name = names[Math.floor(Math.random() * names.length)];
-                globe.addPin(lat, lon, name);
+                if (!globe) return clearInterval(pinInterval);
+                const lat = Math.random()*180-90, lon = Math.random()*360-180; const names = ['Alpha Site','Beta Node','Gamma Link','Delta Hub','Echo Point'];
+                globe.addPin(lat, lon, names[Math.floor(Math.random()*names.length)]);
             }, 4000);
-            
-            // Stop after 30s
             setTimeout(() => clearInterval(pinInterval), 30000);
         };
-        
-        // Animate progress bar from 0-100%
+
         const animateProgress = () => {
             if (!window.gsap) {
-                // Fallback without GSAP
-                let progress = 0;
-                const interval = setInterval(() => {
-                    progress += 1;
-                    progressFill.style.width = progress + '%';
-                    progressPercent.textContent = progress + '%';
-                    if (progress >= 100) {
-                        clearInterval(interval);
-                        showBootComplete();
-                    }
-                }, PROGRESS_DURATION_MS / 100);
+                let p = 0; const it = setInterval(()=>{ p+=1; fill.style.width = p+'%'; pct.textContent = p+'%'; if (p>=100){ clearInterval(it); showBootComplete(); } }, PROGRESS_DURATION_MS/100);
                 return;
             }
-            
-            gsap.to(progressFill, {
-                width: '100%',
-                duration: PROGRESS_DURATION_MS / 1000,
-                ease: 'linear',
-                onUpdate: function() {
-                    const progress = Math.floor(this.progress() * 100);
-                    progressPercent.textContent = progress + '%';
-                },
-                onComplete: showBootComplete
-            });
+            gsap.to(fill, { width: '100%', duration: PROGRESS_DURATION_MS/1000, ease: 'linear', onUpdate: function(){ pct.textContent = Math.floor(this.progress()*100)+'%'; }, onComplete: showBootComplete });
         };
-        
-        // Show boot complete message then fade to main UI
+
         const showBootComplete = () => {
             if (!window.gsap) {
-                // Fallback without GSAP
-                bootScreen.style.transition = 'opacity 0.8s';
-                bootScreen.style.opacity = '0';
-                setTimeout(() => {
-                    bootScreen.remove();
-                    bootComplete.style.display = 'flex';
-                    bootComplete.style.transition = 'opacity 0.5s';
-                    bootComplete.style.opacity = '1';
-                    setTimeout(() => {
-                        bootComplete.style.opacity = '0';
-                        setTimeout(() => {
-                            bootComplete.remove();
-                            stopLoop();
-                            resolve();
-                        }, 800);
-                    }, 3000);
-                }, 800);
+                boot.style.transition = 'opacity .8s'; boot.style.opacity = '0';
+                setTimeout(()=>{ boot.remove(); complete.style.display='flex'; complete.style.transition='opacity .5s'; complete.style.opacity='1'; setTimeout(()=>{ complete.style.opacity='0'; setTimeout(()=>{ complete.remove(); stopLoop(); resolve(); },800); },3000); },800);
                 return;
             }
-            
-            // Fade out loader
-            gsap.to(bootScreen, {
-                opacity: 0,
-                duration: 0.8,
-                ease: 'power2.inOut',
-                onComplete: () => {
-                    bootScreen.remove();
-                    
-                    // Show boot complete overlay
-                    bootComplete.style.display = 'flex';
-                    bootComplete.style.opacity = '0';
-                    
-                    // Fade in boot complete
-                    gsap.to(bootComplete, {
-                        opacity: 1,
-                        duration: 0.5,
-                        ease: 'power2.out'
-                    });
-                    
-                    // Animate title
-                    gsap.fromTo(bootCompleteTitle, 
-                        { opacity: 0, y: -20 },
-                        { opacity: 1, y: 0, duration: 0.6, delay: 0.2, ease: 'power3.out' }
-                    );
-                    
-                    // Animate subtitle
-                    gsap.fromTo(bootCompleteSubtitle, 
-                        { opacity: 0, y: 10 },
-                        { opacity: 0.8, y: 0, duration: 0.6, delay: 0.4, ease: 'power3.out' }
-                    );
-                    
-                    // Auto-dismiss after 3 seconds
-                    setTimeout(() => {
-                        gsap.to(bootComplete, {
-                            opacity: 0,
-                            duration: 0.8,
-                            ease: 'power2.inOut',
-                            onComplete: () => {
-                                bootComplete.remove();
-                                stopLoop();
-                                resolve();
-                            }
-                        });
-                    }, 3000);
-                }
-            });
+            gsap.to(boot, { opacity:0, duration:.8, ease:'power2.inOut', onComplete: ()=>{
+                boot.remove(); complete.style.display='flex'; complete.style.opacity='0';
+                gsap.to(complete, { opacity:1, duration:.5, ease:'power2.out' });
+                gsap.fromTo(cTitle, { opacity:0, y:-20 }, { opacity:1, y:0, duration:.6, delay:.2, ease:'power3.out' });
+                gsap.fromTo(cSub, { opacity:0, y:10 }, { opacity:.8, y:0, duration:.6, delay:.4, ease:'power3.out' });
+                setTimeout(()=>{ gsap.to(complete, { opacity:0, duration:.8, ease:'power2.inOut', onComplete: ()=>{ complete.remove(); stopLoop(); resolve(); } }); }, 3000);
+            }});
         };
-        
-        // Initialize globe when ENCOM is ready
+
         const kickOff = () => {
-            buildGlobe();
-            resize();
-            
+            buildGlobe(); resize();
             if (!window.gsap) {
-                // Fallback CSS animations
-                appLogo.style.transition = 'opacity 0.8s, transform 0.8s';
-                appLogo.style.opacity = '1';
-                setTimeout(() => {
-                    appSubtitle.style.transition = 'opacity 0.6s';
-                    appSubtitle.style.opacity = '0.7';
-                }, 200);
-                setTimeout(() => {
-                    globeWrap.style.transition = 'opacity 1s, transform 1s';
-                    globeWrap.style.opacity = '1';
-                }, 400);
-                setTimeout(() => {
-                    initProgress.style.transition = 'opacity 0.7s';
-                    initProgress.style.opacity = '1';
-                }, 900);
-                setTimeout(animateProgress, 1200);
-                return;
+                logo.style.transition='opacity .8s'; logo.style.opacity='1'; setTimeout(()=>{ sub.style.transition='opacity .6s'; sub.style.opacity='.7'; },200); setTimeout(()=>{ globeWrap.style.transition='opacity 1s'; globeWrap.style.opacity='1'; },400); setTimeout(()=>{ prog.style.transition='opacity .7s'; prog.style.opacity='1'; },900); setTimeout(animateProgress,1200); return;
             }
-            
-            // Evangelion-style sequential boot animations
             const tl = gsap.timeline();
-            
-            // Logo glitch-in
-            tl.fromTo(appLogo, 
-                { opacity: 0, y: -30, scaleX: 0.8 },
-                { opacity: 1, y: 0, scaleX: 1, duration: 0.8, ease: 'power4.out' }
-            )
-            // Subtitle scan-in
-            .fromTo(appSubtitle,
-                { opacity: 0, letterSpacing: '0.5em' },
-                { opacity: 0.7, letterSpacing: '0.2em', duration: 0.6, ease: 'power2.out' },
-                '-=0.3'
-            )
-            // Globe fade-scale-in
-            .fromTo(globeWrap,
-                { opacity: 0, scale: 0.85 },
-                { opacity: 1, scale: 1, duration: 1, ease: 'power3.out' },
-                '-=0.2'
-            )
-            // Progress bar slide-in
-            .fromTo(initProgress,
-                { opacity: 0, y: 20 },
-                { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' },
-                '-=0.5'
-            )
-            // Start progress animation
-            .call(() => {
-                setTimeout(animateProgress, 300);
-            });
-            
-            // Logo pulse animation (continuous) using anime if available
-            if (window.anime && window.anime.animate) {
-                anime.animate(appLogo, {
-                    textShadow: [
-                        '0 0 40px rgba(0, 255, 255, 0.8), 0 0 80px rgba(0, 255, 255, 0.4)',
-                        '0 0 60px rgba(0, 255, 255, 1), 0 0 120px rgba(0, 255, 255, 0.6)',
-                        '0 0 40px rgba(0, 255, 255, 0.8), 0 0 80px rgba(0, 255, 255, 0.4)'
-                    ],
-                    duration: 3000,
-                    ease: 'inOutSine',
-                    loop: true
-                });
-            }
+            tl.fromTo(logo,{opacity:0,y:-30,scaleX:.8},{opacity:1,y:0,scaleX:1,duration:.8,ease:'power4.out'})
+              .fromTo(sub,{opacity:0,letterSpacing:'0.5em'},{opacity:.7,letterSpacing:'0.2em',duration:.6,ease:'power2.out'},'-=0.3')
+              .fromTo(globeWrap,{opacity:0,scale:.85},{opacity:1,scale:1,duration:1,ease:'power3.out'},'-=0.2')
+              .fromTo(prog,{opacity:0,y:20},{opacity:1,y:0,duration:.7,ease:'power2.out'},'-=0.5')
+              .call(()=> setTimeout(animateProgress,300));
         };
-        
-        // Enable audio on first user interaction
-        const enableAudio = createAudioEnabler(() => playSfx('boot'));
-        bootScreen.addEventListener('click', enableAudio, { once: true });
-        document.addEventListener('keydown', enableAudio, { once: true });
-        
-        // Wait for ENCOM to load
-        if (window.ENCOM && window.ENCOM.Globe) {
-            kickOff();
-        } else {
-            const poll = setInterval(() => {
-                if (window.ENCOM && window.ENCOM.Globe) {
-                    clearInterval(poll);
-                    kickOff();
-                }
-            }, 50);
-            setTimeout(() => clearInterval(poll), 4000);
-        }
-        
-        // Handle window resize
+
+        const enableAudio = createAudioEnabler(()=> playSfx('boot'));
+        boot.addEventListener('click', enableAudio, { once:true });
+        document.addEventListener('keydown', enableAudio, { once:true });
+
+        if (window.ENCOM && window.ENCOM.Globe) { kickOff(); }
+        else { const poll=setInterval(()=>{ if (window.ENCOM && window.ENCOM.Globe) { clearInterval(poll); kickOff(); } },50); setTimeout(()=> clearInterval(poll),4000); }
+
         window.addEventListener('resize', resize);
-        
-        // Pause animation when tab hidden
-        document.addEventListener('visibilitychange', () => {
-            if (document.hidden) {
-                stopLoop();
-            } else {
-                startLoop();
-            }
-        });
+        document.addEventListener('visibilitychange', ()=>{ if (document.hidden) stopLoop(); else startLoop(); });
     });
 }
         const bootHTML = `
