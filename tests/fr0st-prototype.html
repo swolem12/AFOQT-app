@@ -272,29 +272,31 @@
         }
 
         .boot-panel {
-            width: min(680px, 90vw);
-            padding: 28px 24px;
-            border: 1px solid rgba(0, 255, 255, 0.5);
-            border-radius: 12px;
-            background: rgba(3, 6, 12, 0.92);
-            box-shadow: 0 0 40px rgba(0,255,255,0.4), inset 0 0 20px rgba(0,255,255,0.15);
-            backdrop-filter: blur(12px);
+            width: min(560px, 85vw);
+            padding: 20px 24px;
+            border: 1px solid rgba(0, 255, 255, 0.4);
+            border-radius: 8px;
+            background: rgba(3, 6, 12, 0.88);
+            box-shadow: 0 0 30px rgba(0,255,255,0.3), inset 0 0 15px rgba(0,255,255,0.1);
+            backdrop-filter: blur(16px);
         }
 
         .boot-title {
             font-family: 'IBM Plex Mono', monospace;
-            font-size: 14px;
-            letter-spacing: 0.16em;
+            font-size: 12px;
+            letter-spacing: 0.18em;
             color: #9ef4ff;
-            margin-bottom: 18px;
+            margin-bottom: 14px;
+            text-transform: uppercase;
         }
 
         .boot-steps {
             font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px;
             color: #d7f7ff;
             display: grid;
-            gap: 6px;
-            margin-bottom: 18px;
+            gap: 5px;
+            margin-bottom: 14px;
         }
 
         .boot-steps div { opacity: 0.2; }
@@ -345,13 +347,14 @@
         .loader-overlay {
             position: fixed;
             inset: 0;
-            background: radial-gradient(circle at 20% 20%, rgba(158, 244, 255, 0.05), transparent 35%),
-                        linear-gradient(135deg, #03040b, #050918 40%, #0a1224);
+            background: radial-gradient(circle at 50% 50%, rgba(158, 244, 255, 0.08), transparent 50%),
+                        linear-gradient(135deg, #02030a, #050918 50%, #0a1020);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 32px;
+            gap: 0;
+            padding: 40px 20px;
             z-index: 999;
             transition: opacity 320ms ease;
         }
@@ -359,39 +362,45 @@
 
         .globe-wrap {
             position: relative;
-            width: min(780px, 95vw);
-            height: min(80vh, 90vw);
-            max-height: 780px;
-            aspect-ratio: 1 / 1;
+            width: min(600px, 85vw);
+            height: min(600px, 85vw);
+            max-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         #globeHost {
             width: 100%;
             height: 100%;
             position: relative;
-            background: transparent;
+            background: transparent !important;
+            border-radius: 50%;
+            overflow: visible;
         }
 
         #globeHost canvas {
-            width: 100%;
-            height: 100%;
-            display: block;
-            filter: drop-shadow(0 0 24px rgba(158, 244, 255, 0.4));
+            width: 100% !important;
+            height: 100% !important;
+            display: block !important;
             background: transparent !important;
+            filter: drop-shadow(0 0 30px rgba(158, 244, 255, 0.3));
+            border-radius: 50%;
         }
 
         .app-logo {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(32px, 6vw, 64px);
+            font-size: clamp(28px, 5vw, 48px);
             font-weight: 700;
-            letter-spacing: 0.24em;
+            letter-spacing: 0.28em;
             text-transform: uppercase;
             text-align: center;
             color: var(--accent);
             text-shadow: 0 0 20px rgba(158, 244, 255, 0.9), 0 0 40px rgba(158, 244, 255, 0.6);
             pointer-events: none;
             position: relative;
-            padding: 0 24px;
+            padding: 0 80px;
+            margin-bottom: 8px;
             z-index: 10;
         }
 
@@ -419,11 +428,12 @@
 
         .app-subtitle {
             font-family: 'IBM Plex Mono', monospace;
-            font-size: clamp(11px, 1.5vw, 14px);
-            letter-spacing: 0.3em;
-            color: var(--muted);
-            margin-top: -18px;
+            font-size: clamp(10px, 1.2vw, 12px);
+            letter-spacing: 0.32em;
+            color: rgba(159, 182, 198, 0.7);
+            margin-bottom: 40px;
             text-align: center;
+            opacity: 0.8;
         }
 
         .note {
