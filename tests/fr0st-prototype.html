@@ -35,6 +35,19 @@
             font-family: 'Space Grotesk', 'IBM Plex Mono', system-ui, -apple-system, sans-serif;
             letter-spacing: 0.01em;
             overflow-x: hidden;
+            background-attachment: fixed;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(0, 255, 255, 0.08), transparent 25%),
+                        radial-gradient(circle at 80% 10%, rgba(255, 170, 94, 0.08), transparent 26%),
+                        linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.0) 40%, rgba(255,255,255,0.02) 100%);
+            mix-blend-mode: screen;
+            pointer-events: none;
+            opacity: 0.7;
         }
 
         .grain {
@@ -54,6 +67,18 @@
             opacity: 0.3;
             pointer-events: none;
             mix-blend-mode: soft-light;
+        }
+
+        .hud-grid {
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 120px 120px, 120px 120px;
+            opacity: 0.25;
+            pointer-events: none;
+            mix-blend-mode: screen;
         }
 
         .frame {
@@ -232,6 +257,55 @@
             pointer-events: none;
         }
 
+        .boot-overlay {
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(10, 15, 29, 0.92), rgba(5,7,15,0.96));
+            display: grid;
+            place-items: center;
+            z-index: 1200;
+        }
+
+        .boot-panel {
+            width: min(680px, 90vw);
+            padding: 28px 24px;
+            border: 1px solid rgba(0, 255, 255, 0.4);
+            border-radius: 12px;
+            background: rgba(3, 6, 12, 0.8);
+            box-shadow: 0 0 40px rgba(0,255,255,0.25), inset 0 0 20px rgba(0,255,255,0.08);
+        }
+
+        .boot-title {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 14px;
+            letter-spacing: 0.16em;
+            color: #9ef4ff;
+            margin-bottom: 18px;
+        }
+
+        .boot-steps {
+            font-family: 'IBM Plex Mono', monospace;
+            color: #d7f7ff;
+            display: grid;
+            gap: 6px;
+            margin-bottom: 18px;
+        }
+
+        .boot-steps div { opacity: 0.2; }
+
+        .boot-bars {
+            display: grid;
+            gap: 6px;
+        }
+
+        .boot-bar {
+            height: 6px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #ffb15f, #7ffff0);
+            width: 0%;
+            box-shadow: 0 0 12px rgba(255,177,95,0.7);
+        }
+
         .card h3 {
             margin: 0 0 10px;
             font-size: 18px;
@@ -330,6 +404,25 @@
 <body>
     <div class="grain" aria-hidden="true"></div>
     <div class="scanlines" aria-hidden="true"></div>
+    <div class="hud-grid" aria-hidden="true"></div>
+
+    <div class="boot-overlay" id="boot">
+        <div class="boot-panel">
+            <div class="boot-title">AFOQT QUEST // SYSTEM BOOT</div>
+            <div class="boot-steps" id="bootSteps">
+                <div>INIT CORE.....</div>
+                <div>LINK DATA BUS.....</div>
+                <div>LOAD ENCOM GLOBE.....</div>
+                <div>CALIBRATE SENSORS.....</div>
+                <div>READY.</div>
+            </div>
+            <div class="boot-bars">
+                <div class="boot-bar"></div>
+                <div class="boot-bar"></div>
+                <div class="boot-bar"></div>
+            </div>
+        </div>
+    </div>
 
     <div class="loader-overlay" id="loader" aria-label="Loading globe">
         <div class="globe-wrap">
@@ -409,6 +502,9 @@
             const hideBtn = document.getElementById('hideLoader');
             const togglePaletteBtn = document.getElementById('togglePalette');
             const globeTitle = document.querySelector('.globe-title');
+            const boot = document.getElementById('boot');
+            const bootSteps = Array.from(document.querySelectorAll('#bootSteps div'));
+            const bootBars = Array.from(document.querySelectorAll('.boot-bar'));
 
             let globe, animationId;
             let loopRunning = false;
@@ -518,6 +614,55 @@
                 document.documentElement.style.setProperty('--bg-3', darkMode ? '#0a1820' : '#101a2e');
             };
 
+            const runBoot = () => new Promise((resolve) => {
+                // Animate steps sequentially
+                bootSteps.forEach((step, idx) => {
+                    gsap.to(step, {
+                        opacity: 1,
+                        duration: 0.3,
+                        delay: idx * 0.2,
+                        ease: 'power1.out'
+                    });
+                });
+
+                // Animate progress bars Evangelion-style
+                bootBars.forEach((bar, idx) => {
+                    gsap.to(bar, {
+                        width: '100%',
+                        duration: 0.9,
+                        delay: 0.2 + idx * 0.18,
+                        ease: 'power2.inOut',
+                        repeat: idx === 2 ? 1 : 0,
+                        yoyo: idx === 2,
+                        onComplete: () => {
+                            if (idx === bootBars.length - 1) {
+                                gsap.to(boot, {
+                                    opacity: 0,
+                                    duration: 0.6,
+                                    delay: 0.2,
+                                    ease: 'power2.in',
+                                    onComplete: () => {
+                                        boot.style.display = 'none';
+                                        resolve();
+                                    }
+                                });
+                            }
+                        }
+                    });
+                });
+
+                // Subtle boot flicker
+                if (window.anime) {
+                    anime({
+                        targets: boot,
+                        opacity: [1, 0.92, 1],
+                        easing: 'steps(2)',
+                        duration: 600,
+                        loop: 3
+                    });
+                }
+            });
+
             showBtn.addEventListener('click', () => {
                 showLoader();
                 gsap.fromTo(loader, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: 'power2.out' });
@@ -531,10 +676,12 @@
 
             // Initialize globe when first paint is ready
             const kickOff = () => {
-                buildGlobe();
-                resize();
-                playIntroAnimations();
-                setTimeout(hideLoader, 2600);
+                runBoot().then(() => {
+                    buildGlobe();
+                    resize();
+                    playIntroAnimations();
+                    setTimeout(hideLoader, 2600);
+                });
             };
 
             // Wait for ENCOM to load if needed
