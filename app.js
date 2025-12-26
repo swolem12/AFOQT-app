@@ -501,95 +501,16 @@ animationStyles.textContent = `
 document.head.appendChild(animationStyles);
 
 // ============================================================================
-// Boot Screen Effect - Enhanced ASCII RPG Style
+// Boot Screen Effect - Globe Initialization
 // ============================================================================
 function showBootScreen() {
+    let globe, animationId, loopRunning = false;
+    
     // Configuration constants
-    const MATRIX_COLUMN_WIDTH = 20;
-    const MATRIX_RESET_PROBABILITY = 0.975;
     const FADE_DURATION_MS = 800;
-    const AUTO_FINISH_DELAY_MS = 2000;
-    const TYPING_INTERVAL_MS = 100;
+    const PROGRESS_DURATION_MS = 8000;
     
-    // Detect mobile device
-    const isMobile = window.innerWidth <= 768;
-    
-    // Simplified logo for mobile devices
-    const mobileLogo = `
-    ╔════════════════════════════════════╗
-    ║     █████  ███████  ██████  ████████     ║
-    ║    ██   ██ ██      ██    ██    ██        ║
-    ║    ███████ █████   ██    ██    ██        ║
-    ║    ██   ██ ██      ██ ▄▄ ██    ██        ║
-    ║    ██   ██ ██       ██████     ██        ║
-    ║                        ▀▀                 ║
-    ║          >>> QUEST <<<                    ║
-    ║       [ NEURAL LINK ACTIVE ]              ║
-    ╚════════════════════════════════════╝
-    `;
-    
-    const desktopLogo = `
-    ╔═══════════════════════════════════════════════════════════════════════╗
-    ║                                                                       ║
-    ║     ▄▄▄        █████▒ ▒█████    █████   ▄▄▄█████▓                   ║
-    ║    ▒████▄    ▓██   ▒ ▒██▒  ██▒▒██▓  ██▒ ▓  ██▒ ▓▒                   ║
-    ║    ▒██  ▀█▄  ▒████ ░ ▒██░  ██▒▒██▒  ██░ ▒ ▓██░ ▒░                   ║
-    ║    ░██▄▄▄▄██ ░▓█▒  ░ ▒██   ██░░██  █▀ ░ ░ ▓██▓ ░                    ║
-    ║     ▓█   ▓██▒░▒█░    ░ ████▓▒░░▒███▒█▄    ▒██▒ ░                    ║
-    ║     ▒▒   ▓▒█░ ▒ ░    ░ ▒░▒░▒░ ░░ ▒▒░ ▒    ▒ ░░                      ║
-    ║      ▒   ▒▒ ░ ░        ░ ▒ ▒░  ░ ▒░  ░      ░                       ║
-    ║      ░   ▒    ░ ░    ░ ░ ░ ▒     ░   ░    ░                         ║
-    ║          ░  ░            ░ ░      ░                                  ║
-    ║                                                                       ║
-    ║              ███████  ██    ██ ███████ ███████ ████████              ║
-    ║             ██     ██ ██    ██ ██      ██         ██                 ║
-    ║             ██     ██ ██    ██ █████   ███████    ██                 ║
-    ║             ██  ▄▄ ██ ██    ██ ██           ██    ██                 ║
-    ║              ██████ █  ██████  ███████ ███████    ██                 ║
-    ║                 ▀▀                                                    ║
-    ║                                                                       ║
-    ║               >> R P G   S T U D Y   S Y S T E M <<                  ║
-    ║                     [  NEURAL  LINK  ACTIVE  ]                       ║
-    ╚═══════════════════════════════════════════════════════════════════════╝
-    `;
-    
-    const asciiLogo = isMobile ? mobileLogo : desktopLogo;
-    
-    const bootMessages = [
-        '',
-        '>> SYSTEM INITIALIZATION SEQUENCE...',
-        '>> Establishing neural link...',
-        '',
-        '>> LOADING CORE MODULES:',
-        '   ├─ Math Combat Engine................ [✓] READY',
-        '   ├─ Verbal Processing Unit............ [✓] READY', 
-        '   ├─ Reading Comprehension Matrix...... [✓] READY',
-        '   ├─ Science Knowledge Database........ [✓] READY',
-        '   └─ Audio Synthesis System............ [✓] READY',
-        '',
-        '>> INITIALIZING PLAYER SYSTEMS:',
-        '   ├─ Character Profile Manager......... [✓] ONLINE',
-        '   ├─ Experience Point Calculator....... [✓] ONLINE',
-        '   ├─ Progress Tracker.................. [✓] ONLINE',
-        '   └─ LocalStorage Persistence.......... [✓] ONLINE',
-        '',
-        '>> LOADING QUEST DATABASE:',
-        '   ├─ Math Topics (27 Quests)........... [✓] LOADED',
-        '   ├─ Verbal Challenges................. [✓] LOADED',
-        '   ├─ Reading Missions.................. [✓] LOADED',
-        '   └─ Science Encounters................ [✓] LOADED',
-        '',
-        '>> ALL SYSTEMS OPERATIONAL',
-        '>> NEURAL LINK ESTABLISHED',
-        '',
-        '┌─────────────────────────────────────────────────────────────────┐',
-        '│  WELCOME TO THE VIRTUAL STUDY REALM                            │',
-        '│  Your journey to mastery begins now...                         │',
-        '└─────────────────────────────────────────────────────────────────┘',
-        '',
-        '>> Press any key or wait to continue...'
-    ];
-    
+    // Create boot screen container
     const bootScreen = document.createElement('div');
     bootScreen.id = 'boot-screen';
     bootScreen.style.cssText = `
@@ -598,214 +519,499 @@ function showBootScreen() {
         left: 0;
         width: 100%;
         height: 100%;
-        background: #000;
-        color: #00ffff;
-        font-family: 'Courier New', monospace;
-        padding: ${isMobile ? '10px' : '20px'};
-        z-index: 10000;
-        overflow: auto;
+        background: linear-gradient(135deg, #000000, #001a1a 50%, #002a2a);
         display: flex;
         flex-direction: column;
-        justify-content: ${isMobile ? 'center' : 'flex-start'};
         align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        opacity: 1;
     `;
     
-    // Create matrix rain background effect (lighter on mobile for performance)
-    const matrixCanvas = document.createElement('canvas');
-    matrixCanvas.style.cssText = `
-        position: absolute;
-        top: 0;
-        left: 0;
+    // Create init container
+    const initContainer = document.createElement('div');
+    initContainer.style.cssText = `
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    `;
+    
+    // Create app logo
+    const appLogo = document.createElement('h1');
+    appLogo.textContent = 'AFOQT QUEST';
+    appLogo.style.cssText = `
+        font-family: 'Courier New', monospace;
+        font-size: clamp(32px, 5vw, 56px);
+        font-weight: 700;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: #00ffff;
+        text-shadow: 0 0 40px rgba(0, 255, 255, 0.8), 0 0 80px rgba(0, 255, 255, 0.4);
+        margin: 0;
+        position: relative;
+        opacity: 0;
+    `;
+    
+    // Create subtitle
+    const appSubtitle = document.createElement('div');
+    appSubtitle.textContent = '// OFFICER TRAINING SIMULATION';
+    appSubtitle.style.cssText = `
+        font-family: 'Courier New', monospace;
+        font-size: clamp(11px, 1.2vw, 14px);
+        letter-spacing: 0.2em;
+        color: rgba(0, 255, 255, 0.7);
+        text-transform: uppercase;
+        margin-top: -24px;
+        opacity: 0;
+    `;
+    
+    // Create globe container
+    const globeWrap = document.createElement('div');
+    globeWrap.style.cssText = `
+        position: relative;
+        width: min(480px, 75vw);
+        aspect-ratio: 1 / 1;
+        opacity: 0;
+    `;
+    
+    const globeHost = document.createElement('div');
+    globeHost.id = 'globeHost';
+    globeHost.style.cssText = `
         width: 100%;
         height: 100%;
-        opacity: ${isMobile ? '0.08' : '0.15'};
-        z-index: 1;
     `;
-    bootScreen.appendChild(matrixCanvas);
+    globeWrap.appendChild(globeHost);
     
-    const bootContent = document.createElement('div');
-    bootContent.style.cssText = `
-        position: relative;
-        z-index: 2;
-        width: 100%;
-        max-width: ${isMobile ? '100%' : '900px'};
-        padding: ${isMobile ? '0 5px' : '0'};
-    `;
-    bootScreen.appendChild(bootContent);
-    
-    const logoText = document.createElement('pre');
-    logoText.className = 'boot-logo';
-    logoText.style.cssText = `
-        font-size: ${isMobile ? '7px' : '10px'};
-        line-height: 1.2;
-        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
-        text-align: center;
-        margin-bottom: ${isMobile ? '10px' : '20px'};
+    // Create progress section
+    const initProgress = document.createElement('div');
+    initProgress.style.cssText = `
+        width: min(480px, 75vw);
+        margin-top: 0;
         opacity: 0;
-        overflow-x: auto;
-        transform: scale(0.9);
-        filter: blur(5px);
     `;
-    logoText.textContent = asciiLogo;
-    bootContent.appendChild(logoText);
     
-    const bootText = document.createElement('pre');
-    bootText.className = 'boot-messages';
-    bootText.style.cssText = `
-        font-size: ${isMobile ? '9px' : '13px'};
-        line-height: 1.6;
-        text-shadow: 0 0 5px #00ffff;
-        margin-top: ${isMobile ? '10px' : '20px'};
-        overflow-x: auto;
+    const progressLabel = document.createElement('div');
+    progressLabel.textContent = 'System Initialization';
+    progressLabel.style.cssText = `
+        font-family: 'Courier New', monospace;
+        font-size: 12px;
+        letter-spacing: 0.15em;
+        color: #00ffff;
+        margin-bottom: 8px;
+        text-align: center;
+        text-transform: uppercase;
     `;
-    bootContent.appendChild(bootText);
     
-    // Add CSS for fallback and glitch animation
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes textGlitch {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-2px); }
-            50% { transform: translateX(2px); }
-            75% { transform: translateX(-1px); }
-        }
-        .boot-line {
-            opacity: 0;
-            transform: translateX(-20px);
-        }
-        .boot-line.visible {
-            opacity: 1;
-            transform: translateX(0);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
+    const progressTrack = document.createElement('div');
+    progressTrack.style.cssText = `
+        width: 100%;
+        height: 8px;
+        background: rgba(0, 255, 255, 0.1);
+        border: 1px solid rgba(0, 255, 255, 0.3);
+        border-radius: 999px;
+        overflow: hidden;
+        position: relative;
     `;
-    document.head.appendChild(style);
     
+    const progressFill = document.createElement('div');
+    progressFill.id = 'progressFill';
+    progressFill.style.cssText = `
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, #00ff00, #00ffff);
+        box-shadow: 0 0 16px rgba(0, 255, 255, 0.6);
+        transition: width 100ms linear;
+    `;
+    progressTrack.appendChild(progressFill);
+    
+    const progressPercent = document.createElement('div');
+    progressPercent.id = 'progressPercent';
+    progressPercent.textContent = '0%';
+    progressPercent.style.cssText = `
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+        color: #00ffff;
+        margin-top: 8px;
+        text-align: center;
+        letter-spacing: 0.1em;
+    `;
+    
+    initProgress.appendChild(progressLabel);
+    initProgress.appendChild(progressTrack);
+    initProgress.appendChild(progressPercent);
+    
+    // Assemble boot screen
+    initContainer.appendChild(appLogo);
+    initContainer.appendChild(appSubtitle);
+    initContainer.appendChild(globeWrap);
+    initContainer.appendChild(initProgress);
+    bootScreen.appendChild(initContainer);
     document.body.appendChild(bootScreen);
     
-    // Use anime.js v4 for logo entrance animation
-    if (hasAnime()) {
-        anime.animate(logoText, {
-            opacity: [0, 1],
-            scale: [0.9, 1],
-            filter: ['blur(5px)', 'blur(0px)'],
-            duration: 1000,
-            ease: 'outExpo'
-        });
-    } else {
-        // Fallback CSS animation
-        logoText.style.animation = 'logoFadeIn 1s ease-out forwards';
-    }
+    // Create boot complete overlay
+    const bootComplete = document.createElement('div');
+    bootComplete.id = 'bootComplete';
+    bootComplete.style.cssText = `
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(135deg, #000000, #001a1a 50%, #002a2a);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        z-index: 10001;
+        opacity: 0;
+    `;
     
-    // Matrix rain effect (simplified on mobile)
-    const ctx = matrixCanvas.getContext('2d');
-    matrixCanvas.width = window.innerWidth;
-    matrixCanvas.height = window.innerHeight;
+    const bootCompleteTitle = document.createElement('div');
+    bootCompleteTitle.className = 'boot-complete-title';
+    bootCompleteTitle.textContent = 'BOOT UP COMPLETE';
+    bootCompleteTitle.style.cssText = `
+        font-family: 'Courier New', monospace;
+        font-size: clamp(24px, 4vw, 36px);
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #00ff00;
+        text-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+    `;
     
-    const columns = Math.floor(matrixCanvas.width / (isMobile ? MATRIX_COLUMN_WIDTH * 1.5 : MATRIX_COLUMN_WIDTH));
-    const drops = Array(columns).fill(1);
+    const bootCompleteSubtitle = document.createElement('div');
+    bootCompleteSubtitle.className = 'boot-complete-subtitle';
+    bootCompleteSubtitle.textContent = 'WELCOME TO AFOQT QUEST';
+    bootCompleteSubtitle.style.cssText = `
+        font-family: 'Courier New', monospace;
+        font-size: clamp(14px, 2vw, 18px);
+        letter-spacing: 0.15em;
+        color: #00ffff;
+        text-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+    `;
     
-    // Matrix characters: binary digits + Japanese katakana for cyberpunk aesthetic
-    const matrixChars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+    bootComplete.appendChild(bootCompleteTitle);
+    bootComplete.appendChild(bootCompleteSubtitle);
+    document.body.appendChild(bootComplete);
     
-    function drawMatrix() {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-        ctx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
-        
-        ctx.fillStyle = '#00ffff';
-        ctx.font = `${isMobile ? '12px' : '15px'} monospace`;
-        
-        for (let i = 0; i < drops.length; i++) {
-            const text = matrixChars[Math.floor(Math.random() * matrixChars.length)];
-            const colWidth = isMobile ? MATRIX_COLUMN_WIDTH * 1.5 : MATRIX_COLUMN_WIDTH;
-            ctx.fillText(text, i * colWidth, drops[i] * colWidth);
-            
-            if (drops[i] * colWidth > matrixCanvas.height && Math.random() > MATRIX_RESET_PROBABILITY) {
-                drops[i] = 0;
-            }
-            drops[i]++;
+    // Globe initialization functions
+    const resize = () => {
+        if (!globe || !globe.renderer) return;
+        const w = globeHost.clientWidth;
+        const h = globeHost.clientHeight;
+        globe.camera.aspect = w / h;
+        globe.camera.updateProjectionMatrix();
+        globe.renderer.setSize(w, h);
+    };
+    
+    const stopLoop = () => {
+        if (animationId) cancelAnimationFrame(animationId);
+        animationId = null;
+        loopRunning = false;
+    };
+    
+    const startLoop = () => {
+        if (loopRunning) return;
+        loopRunning = true;
+        const step = () => {
+            animationId = requestAnimationFrame(step);
+            if (globe) globe.tick();
+        };
+        step();
+    };
+    
+    const buildGlobe = () => {
+        if (!window.ENCOM || !window.ENCOM.Globe) {
+            console.warn('ENCOM.Globe not available yet');
+            return;
         }
-    }
+        if (globe && globe.destroy) {
+            globe.destroy();
+        }
+        
+        const w = globeHost.clientWidth || 400;
+        const h = globeHost.clientHeight || 400;
+        globe = new ENCOM.Globe(w, h, {
+            font: 'Inconsolata',
+            data: window.data ? window.data.slice() : [],
+            tiles: window.grid ? window.grid.tiles : [],
+            baseColor: '#00ffff',
+            markerColor: '#00ff00',
+            pinColor: '#ffff00',
+            satelliteColor: '#ff00ff',
+            scale: 1.05,
+            dayLength: 12000,
+            introLinesDuration: 2000,
+            maxPins: 10,
+            maxMarkers: 15,
+            viewAngle: 0.3
+        });
+        
+        globeHost.innerHTML = '';
+        globeHost.appendChild(globe.domElement);
+        
+        // Force transparent background on renderer
+        if (globe.renderer) {
+            globe.renderer.setClearColor(0x000000, 0);
+            const canvas = globe.renderer.domElement;
+            canvas.style.background = 'none';
+            canvas.style.backgroundColor = 'transparent';
+        }
+        
+        globe.init(() => {
+            startLoop();
+            addGlobeFeatures();
+        });
+        resize();
+    };
     
-    const matrixInterval = setInterval(drawMatrix, isMobile ? 80 : 50);
+    const addGlobeFeatures = () => {
+        if (!globe) return;
+        
+        // Add connected markers
+        setTimeout(() => {
+            globe.addMarker(40.7128, -74.0060, "New York");
+            globe.addMarker(51.5074, -0.1278, "London", true);
+        }, 2200);
+        
+        setTimeout(() => {
+            globe.addMarker(35.6762, 139.6503, "Tokyo");
+            globe.addMarker(-33.8688, 151.2093, "Sydney", true);
+        }, 2800);
+        
+        // Add satellite constellation
+        setTimeout(() => {
+            const constellation = [];
+            const opts = {
+                coreColor: '#ff00ff',
+                numWaves: 3
+            };
+            for (let i = 0; i < 2; i++) {
+                for (let j = 0; j < 3; j++) {
+                    constellation.push({
+                        lat: 50 * i - 30 + 15 * Math.random(),
+                        lon: 120 * j - 120 + 30 * i,
+                        altitude: 1.3
+                    });
+                }
+            }
+            globe.addConstellation(constellation, opts);
+        }, 3500);
+        
+        // Add random pins periodically
+        const pinInterval = setInterval(() => {
+            if (!globe) {
+                clearInterval(pinInterval);
+                return;
+            }
+            const lat = Math.random() * 180 - 90;
+            const lon = Math.random() * 360 - 180;
+            const names = ['Alpha Site', 'Beta Node', 'Gamma Link', 'Delta Hub', 'Echo Point'];
+            const name = names[Math.floor(Math.random() * names.length)];
+            globe.addPin(lat, lon, name);
+        }, 4000);
+        
+        // Stop after 30s
+        setTimeout(() => clearInterval(pinInterval), 30000);
+    };
     
-    // Enable audio on first user interaction (required by browser autoplay policy)
+    // Animate progress bar from 0-100%
+    const animateProgress = () => {
+        if (!window.gsap) {
+            // Fallback without GSAP
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 1;
+                progressFill.style.width = progress + '%';
+                progressPercent.textContent = progress + '%';
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    showBootComplete();
+                }
+            }, PROGRESS_DURATION_MS / 100);
+            return;
+        }
+        
+        gsap.to(progressFill, {
+            width: '100%',
+            duration: PROGRESS_DURATION_MS / 1000,
+            ease: 'linear',
+            onUpdate: function() {
+                const progress = Math.floor(this.progress() * 100);
+                progressPercent.textContent = progress + '%';
+            },
+            onComplete: showBootComplete
+        });
+    };
+    
+    // Show boot complete message then fade to main UI
+    const showBootComplete = () => {
+        if (!window.gsap) {
+            // Fallback without GSAP
+            bootScreen.style.transition = 'opacity 0.8s';
+            bootScreen.style.opacity = '0';
+            setTimeout(() => {
+                bootScreen.remove();
+                bootComplete.style.display = 'flex';
+                bootComplete.style.transition = 'opacity 0.5s';
+                bootComplete.style.opacity = '1';
+                setTimeout(() => {
+                    bootComplete.style.opacity = '0';
+                    setTimeout(() => {
+                        bootComplete.remove();
+                        stopLoop();
+                    }, 800);
+                }, 3000);
+            }, 800);
+            return;
+        }
+        
+        // Fade out loader
+        gsap.to(bootScreen, {
+            opacity: 0,
+            duration: 0.8,
+            ease: 'power2.inOut',
+            onComplete: () => {
+                bootScreen.remove();
+                
+                // Show boot complete overlay
+                bootComplete.style.display = 'flex';
+                bootComplete.style.opacity = '0';
+                
+                // Fade in boot complete
+                gsap.to(bootComplete, {
+                    opacity: 1,
+                    duration: 0.5,
+                    ease: 'power2.out'
+                });
+                
+                // Animate title
+                gsap.fromTo(bootCompleteTitle, 
+                    { opacity: 0, y: -20 },
+                    { opacity: 1, y: 0, duration: 0.6, delay: 0.2, ease: 'power3.out' }
+                );
+                
+                // Animate subtitle
+                gsap.fromTo(bootCompleteSubtitle, 
+                    { opacity: 0, y: 10 },
+                    { opacity: 0.8, y: 0, duration: 0.6, delay: 0.4, ease: 'power3.out' }
+                );
+                
+                // Auto-dismiss after 3 seconds
+                setTimeout(() => {
+                    gsap.to(bootComplete, {
+                        opacity: 0,
+                        duration: 0.8,
+                        ease: 'power2.inOut',
+                        onComplete: () => {
+                            bootComplete.remove();
+                            stopLoop();
+                        }
+                    });
+                }, 3000);
+            }
+        });
+    };
+    
+    // Initialize globe when ENCOM is ready
+    const kickOff = () => {
+        buildGlobe();
+        resize();
+        
+        if (!window.gsap) {
+            // Fallback CSS animations
+            appLogo.style.transition = 'opacity 0.8s, transform 0.8s';
+            appLogo.style.opacity = '1';
+            setTimeout(() => {
+                appSubtitle.style.transition = 'opacity 0.6s';
+                appSubtitle.style.opacity = '0.7';
+            }, 200);
+            setTimeout(() => {
+                globeWrap.style.transition = 'opacity 1s, transform 1s';
+                globeWrap.style.opacity = '1';
+            }, 400);
+            setTimeout(() => {
+                initProgress.style.transition = 'opacity 0.7s';
+                initProgress.style.opacity = '1';
+            }, 900);
+            setTimeout(animateProgress, 1200);
+            return;
+        }
+        
+        // Evangelion-style sequential boot animations
+        const tl = gsap.timeline();
+        
+        // Logo glitch-in
+        tl.fromTo(appLogo, 
+            { opacity: 0, y: -30, scaleX: 0.8 },
+            { opacity: 1, y: 0, scaleX: 1, duration: 0.8, ease: 'power4.out' }
+        )
+        // Subtitle scan-in
+        .fromTo(appSubtitle,
+            { opacity: 0, letterSpacing: '0.5em' },
+            { opacity: 0.7, letterSpacing: '0.2em', duration: 0.6, ease: 'power2.out' },
+            '-=0.3'
+        )
+        // Globe fade-scale-in
+        .fromTo(globeWrap,
+            { opacity: 0, scale: 0.85 },
+            { opacity: 1, scale: 1, duration: 1, ease: 'power3.out' },
+            '-=0.2'
+        )
+        // Progress bar slide-in
+        .fromTo(initProgress,
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' },
+            '-=0.5'
+        )
+        // Start progress animation
+        .call(() => {
+            setTimeout(animateProgress, 300);
+        });
+        
+        // Logo pulse animation (continuous) using anime if available
+        if (window.anime && window.anime.animate) {
+            anime.animate(appLogo, {
+                textShadow: [
+                    '0 0 40px rgba(0, 255, 255, 0.8), 0 0 80px rgba(0, 255, 255, 0.4)',
+                    '0 0 60px rgba(0, 255, 255, 1), 0 0 120px rgba(0, 255, 255, 0.6)',
+                    '0 0 40px rgba(0, 255, 255, 0.8), 0 0 80px rgba(0, 255, 255, 0.4)'
+                ],
+                duration: 3000,
+                ease: 'inOutSine',
+                loop: true
+            });
+        }
+    };
+    
+    // Enable audio on first user interaction
     const enableAudio = createAudioEnabler(() => playSfx('boot'));
-    
-    // Listen for any user interaction to enable audio
     bootScreen.addEventListener('click', enableAudio, { once: true });
     document.addEventListener('keydown', enableAudio, { once: true });
     
-    // Type out boot messages
-    let currentLine = 0;
-    const typeInterval = setInterval(() => {
-        if (currentLine < bootMessages.length) {
-            const line = bootMessages[currentLine];
-            bootText.textContent += line + '\n';
-            
-            // Auto-scroll to bottom
-            bootScreen.scrollTop = bootScreen.scrollHeight;
-            
-            currentLine++;
-            
-            // Play sound effects for certain lines
-            if (line.includes('[✓]') || line.includes('READY') || line.includes('ONLINE') || line.includes('LOADED')) {
-                playSfx('nav');
-            } else if (line.includes('OPERATIONAL') || line.includes('ESTABLISHED')) {
-                playSfx('complete');
+    // Wait for ENCOM to load
+    if (window.ENCOM && window.ENCOM.Globe) {
+        kickOff();
+    } else {
+        const poll = setInterval(() => {
+            if (window.ENCOM && window.ENCOM.Globe) {
+                clearInterval(poll);
+                kickOff();
             }
+        }, 50);
+        setTimeout(() => clearInterval(poll), 4000);
+    }
+    
+    // Handle window resize
+    window.addEventListener('resize', resize);
+    
+    // Pause animation when tab hidden
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            stopLoop();
         } else {
-            clearInterval(typeInterval);
-            
-            // Allow click or key to skip - use anime.js v4 for smooth exit
-            const finishBoot = () => {
-                clearInterval(matrixInterval);
-                
-                if (hasAnime()) {
-                    // Create a timeline for exit animation
-                    const exitTimeline = anime.createTimeline({
-                        ease: 'inQuart'
-                    });
-                    
-                    exitTimeline
-                        .add(bootContent, {
-                            opacity: [1, 0],
-                            translateY: [0, -30],
-                            duration: 400
-                        })
-                        .add(bootScreen, {
-                            opacity: [1, 0],
-                            duration: 400,
-                            onComplete: () => {
-                                bootScreen.remove();
-                                style.remove();
-                            }
-                        }, '-=200');
-                } else {
-                    // Fallback to CSS transition
-                    bootScreen.style.transition = `opacity ${FADE_DURATION_MS / 1000}s`;
-                    bootScreen.style.opacity = '0';
-                    setTimeout(() => {
-                        bootScreen.remove();
-                        style.remove();
-                    }, FADE_DURATION_MS);
-                }
-            };
-            
-            // Auto-finish after delay or on user interaction
-            const autoFinishTimeout = setTimeout(finishBoot, AUTO_FINISH_DELAY_MS);
-            
-            const userInteract = () => {
-                clearTimeout(autoFinishTimeout);
-                finishBoot();
-                bootScreen.removeEventListener('click', userInteract);
-                document.removeEventListener('keydown', userInteract);
-            };
-            
-            bootScreen.addEventListener('click', userInteract);
-            document.addEventListener('keydown', userInteract);
+            startLoop();
         }
-    }, TYPING_INTERVAL_MS);
+    });
 }
 
 // ============================================================================
