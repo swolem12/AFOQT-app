@@ -389,45 +389,26 @@ async function loadSituationalFile(filename) {
  */
 async function loadAllVocabularyContent() {
     console.log('Loading vocabulary content...');
-    
-    // Get list of vocabulary files (hardcoded from directory listing)
-    const vocabularyFiles = [
-        'synonyms_beginner_part1.json', 'synonyms_beginner_part2.json', 'synonyms_beginner_part3.json', 'synonyms_beginner_part4.json',
-        'synonyms_advanced_part1.json', 'synonyms_advanced_part2.json', 'synonyms_advanced_part3.json', 'synonyms_advanced_part4.json',
-        'synonyms_expert_part1.json', 'synonyms_expert_part2.json', 'synonyms_expert_part3.json', 'synonyms_expert_part4.json',
-        'antonyms_beginner_part1.json', 'antonyms_beginner_part2.json', 'antonyms_beginner_part3.json', 'antonyms_beginner_part4.json',
-        'antonyms_advanced_part1.json', 'antonyms_advanced_part2.json', 'antonyms_advanced_part3.json', 'antonyms_advanced_part4.json',
-        'antonyms_expert_part1.json', 'antonyms_expert_part2.json', 'antonyms_expert_part3.json', 'antonyms_expert_part4.json',
-        'confusing_word_pairs_beginner_part1.json', 'confusing_word_pairs_beginner_part2.json', 'confusing_word_pairs_beginner_part3.json', 'confusing_word_pairs_beginner_part4.json',
-        'confusing_word_pairs_advanced_part1.json', 'confusing_word_pairs_advanced_part2.json', 'confusing_word_pairs_advanced_part3.json', 'confusing_word_pairs_advanced_part4.json',
-        'confusing_word_pairs_expert_part1.json', 'confusing_word_pairs_expert_part2.json', 'confusing_word_pairs_expert_part3.json', 'confusing_word_pairs_expert_part4.json',
-        'vocabulary_in_context_beginner_part1.json', 'vocabulary_in_context_beginner_part2.json', 'vocabulary_in_context_beginner_part3.json', 'vocabulary_in_context_beginner_part4.json',
-        'vocabulary_in_context_advanced_part1.json', 'vocabulary_in_context_advanced_part2.json', 'vocabulary_in_context_advanced_part3.json', 'vocabulary_in_context_advanced_part4.json',
-        'vocabulary_in_context_expert_part1.json', 'vocabulary_in_context_expert_part2.json', 'vocabulary_in_context_expert_part3.json', 'vocabulary_in_context_expert_part4.json',
-        'word_roots_affixes_beginner_part1.json', 'word_roots_affixes_beginner_part2.json',
-        'word_roots_affixes_advanced_part1.json', 'word_roots_affixes_advanced_part2.json',
-        'word_roots_affixes_expert_part1.json', 'word_roots_affixes_expert_part2.json',
-        'highfreq_vocab_beginner_part1.json', 'highfreq_vocab_beginner_part2.json',
-        'highfreq_vocab_advanced_part1.json', 'highfreq_vocab_advanced_part2.json',
-        'highfreq_vocab_expert_part1.json', 'highfreq_vocab_expert_part2.json',
-        'sentence_completion_beginner_part1.json', 'sentence_completion_beginner_part2.json',
-        'sentence_completion_advanced_part1.json', 'sentence_completion_advanced_part2.json',
-        'sentence_completion_expert_part1.json', 'sentence_completion_expert_part2.json',
-        'verbal_analogies_beginner_part1.json', 'verbal_analogies_beginner_part2.json',
-        'verbal_analogies_advanced_part1.json', 'verbal_analogies_advanced_part2.json',
-        'verbal_analogies_expert_part1.json', 'verbal_analogies_expert_part2.json'
+    const subtopics = [
+        'chemistry_basics',
+        'earth_space',
+        'electricity_magnetism',
+        'energy_heat',
+        'fluids_pressure',
+        'forces_motion',
+        'motion_mechanics',
+        'optics_waves'
     ];
-    
-    let loadedCount = 0;
-    let errorCount = 0;
-    
-    // Load all files in parallel
-    const loadPromises = vocabularyFiles.map(async (filename) => {
-        const data = await loadVocabularyFile(filename);
-        if (!data) {
-            errorCount++;
-            return;
+    const difficulties = ['beginner', 'advanced', 'expert'];
+    const maxParts = 3; // include new part3 files
+    const physicalScienceFiles = [];
+    for (const sub of subtopics) {
+        for (const d of difficulties) {
+            for (let part = 1; part <= maxParts; part++) {
+                physicalScienceFiles.push(`physical_science_${sub}_${d}_part${part}.json`);
+            }
         }
+    }
         
         // Parse filename
         const parsed = parseFilename(filename);
@@ -656,7 +637,7 @@ async function loadAllReadingComprehensionContent() {
     console.log('Loading reading comprehension content...');
 
     const difficulties = ['beginner', 'advanced', 'expert'];
-    const maxPassages = 20; // actual max passages per difficulty in repo
+    const maxPassages = 25; // extended to include new passages 21-25
     const files = [];
     for (const d of difficulties) {
         for (let idx = 1; idx <= maxPassages; idx++) {
@@ -720,7 +701,7 @@ async function loadAllInstrumentComprehensionContent() {
     console.log('Loading instrument comprehension content...');
 
     const difficulties = ['beginner', 'advanced', 'expert'];
-    const maxParts = 1; // only part1 exists per difficulty
+    const maxParts = 3; // now includes part3
     const files = [];
     for (const d of difficulties) {
         for (let part = 1; part <= maxParts; part++) {
@@ -770,7 +751,7 @@ async function loadAllTableReadingContent() {
     console.log('Loading table reading content...');
 
     const difficulties = ['beginner', 'advanced', 'expert'];
-    const maxParts = 2; // part1 and part2 exist
+    const maxParts = 3; // include new part3 files
     const files = [];
     for (const d of difficulties) {
         for (let part = 1; part <= maxParts; part++) {
@@ -910,7 +891,7 @@ async function loadAllBlockCountingContent() {
     console.log('Loading block counting content...');
 
     const difficulties = ['beginner', 'advanced', 'expert'];
-    const maxParts = 2; // part1 and part2 exist
+    const maxParts = 3; // include part3
     const files = [];
     for (const d of difficulties) {
         for (let part = 1; part <= maxParts; part++) {
@@ -954,10 +935,13 @@ async function loadAllAviationContent() {
 
     const aviationFiles = [
         'aviation_information_beginner.json',
+        'aviation_information_beginner_part3.json',
         'aviation_information_advanced.json',
         'aviation_information_advanced_part1.json',
+        'aviation_information_advanced_part3.json',
         'aviation_information_expert.json',
-        'aviation_information_expert_part1.json'
+        'aviation_information_expert_part1.json',
+        'aviation_information_expert_part3.json'
     ];
 
     let loadedCount = 0;
