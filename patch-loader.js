@@ -389,34 +389,53 @@ async function loadSituationalFile(filename) {
  */
 async function loadAllVocabularyContent() {
     console.log('Loading vocabulary content...');
-    const subtopics = [
-        'chemistry_basics',
-        'earth_space',
-        'electricity_magnetism',
-        'energy_heat',
-        'fluids_pressure',
-        'forces_motion',
-        'motion_mechanics',
-        'optics_waves'
+
+    // Get list of vocabulary files (hardcoded from directory listing)
+    const vocabularyFiles = [
+        'synonyms_beginner_part1.json', 'synonyms_beginner_part2.json', 'synonyms_beginner_part3.json', 'synonyms_beginner_part4.json',
+        'synonyms_advanced_part1.json', 'synonyms_advanced_part2.json', 'synonyms_advanced_part3.json', 'synonyms_advanced_part4.json',
+        'synonyms_expert_part1.json', 'synonyms_expert_part2.json', 'synonyms_expert_part3.json', 'synonyms_expert_part4.json',
+        'antonyms_beginner_part1.json', 'antonyms_beginner_part2.json', 'antonyms_beginner_part3.json', 'antonyms_beginner_part4.json',
+        'antonyms_advanced_part1.json', 'antonyms_advanced_part2.json', 'antonyms_advanced_part3.json', 'antonyms_advanced_part4.json',
+        'antonyms_expert_part1.json', 'antonyms_expert_part2.json', 'antonyms_expert_part3.json', 'antonyms_expert_part4.json',
+        'confusing_word_pairs_beginner_part1.json', 'confusing_word_pairs_beginner_part2.json', 'confusing_word_pairs_beginner_part3.json', 'confusing_word_pairs_beginner_part4.json',
+        'confusing_word_pairs_advanced_part1.json', 'confusing_word_pairs_advanced_part2.json', 'confusing_word_pairs_advanced_part3.json', 'confusing_word_pairs_advanced_part4.json',
+        'confusing_word_pairs_expert_part1.json', 'confusing_word_pairs_expert_part2.json', 'confusing_word_pairs_expert_part3.json', 'confusing_word_pairs_expert_part4.json',
+        'vocabulary_in_context_beginner_part1.json', 'vocabulary_in_context_beginner_part2.json', 'vocabulary_in_context_beginner_part3.json', 'vocabulary_in_context_beginner_part4.json',
+        'vocabulary_in_context_advanced_part1.json', 'vocabulary_in_context_advanced_part2.json', 'vocabulary_in_context_advanced_part3.json', 'vocabulary_in_context_advanced_part4.json',
+        'vocabulary_in_context_expert_part1.json', 'vocabulary_in_context_expert_part2.json', 'vocabulary_in_context_expert_part3.json', 'vocabulary_in_context_expert_part4.json',
+        'word_roots_affixes_beginner_part1.json', 'word_roots_affixes_beginner_part2.json',
+        'word_roots_affixes_advanced_part1.json', 'word_roots_affixes_advanced_part2.json',
+        'word_roots_affixes_expert_part1.json', 'word_roots_affixes_expert_part2.json',
+        'highfreq_vocab_beginner_part1.json', 'highfreq_vocab_beginner_part2.json',
+        'highfreq_vocab_advanced_part1.json', 'highfreq_vocab_advanced_part2.json',
+        'highfreq_vocab_expert_part1.json', 'highfreq_vocab_expert_part2.json',
+        'sentence_completion_beginner_part1.json', 'sentence_completion_beginner_part2.json',
+        'sentence_completion_advanced_part1.json', 'sentence_completion_advanced_part2.json',
+        'sentence_completion_expert_part1.json', 'sentence_completion_expert_part2.json',
+        'verbal_analogies_beginner_part1.json', 'verbal_analogies_beginner_part2.json',
+        'verbal_analogies_advanced_part1.json', 'verbal_analogies_advanced_part2.json',
+        'verbal_analogies_expert_part1.json', 'verbal_analogies_expert_part2.json'
     ];
-    const difficulties = ['beginner', 'advanced', 'expert'];
-    const maxParts = 3; // include new part3 files
-    const physicalScienceFiles = [];
-    for (const sub of subtopics) {
-        for (const d of difficulties) {
-            for (let part = 1; part <= maxParts; part++) {
-                physicalScienceFiles.push(`physical_science_${sub}_${d}_part${part}.json`);
-            }
+
+    let loadedCount = 0;
+    let errorCount = 0;
+
+    // Load all files in parallel
+    const loadPromises = vocabularyFiles.map(async (filename) => {
+        const data = await loadVocabularyFile(filename);
+        if (!data) {
+            errorCount++;
+            return;
         }
-    }
-        
+
         // Parse filename
         const parsed = parseFilename(filename);
         if (!parsed) {
             errorCount++;
             return;
         }
-        
+
         // Find subject mapping
         const subjectInfo = findSubjectForSubtopic(parsed.subtopicId);
         if (!subjectInfo) {
@@ -424,7 +443,7 @@ async function loadAllVocabularyContent() {
             errorCount++;
             return;
         }
-        
+
         // Initialize registry structure
         if (!questionRegistry[subjectInfo.subjectId]) {
             questionRegistry[subjectInfo.subjectId] = {};
@@ -436,19 +455,19 @@ async function loadAllVocabularyContent() {
                 expert: []
             };
         }
-        
+
         // Add questions to registry
         if (data.questions && Array.isArray(data.questions)) {
             questionRegistry[subjectInfo.subjectId][parsed.subtopicId][parsed.difficulty].push(...data.questions);
             loadedCount++;
         }
     });
-    
+
     await Promise.all(loadPromises);
-    
+
     console.log(`✓ Loaded ${loadedCount} vocabulary files (${errorCount} errors)`);
     console.log('Question registry:', questionRegistry);
-    
+
     return questionRegistry;
 }
 
