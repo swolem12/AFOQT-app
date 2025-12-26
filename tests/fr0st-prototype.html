@@ -260,19 +260,25 @@
         .boot-overlay {
             position: fixed;
             inset: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(10, 15, 29, 0.92), rgba(5,7,15,0.96));
+            background: transparent;
             display: grid;
             place-items: center;
-            z-index: 1200;
+            z-index: 1100;
+            pointer-events: none;
+        }
+
+        .boot-overlay.active {
+            pointer-events: auto;
         }
 
         .boot-panel {
             width: min(680px, 90vw);
             padding: 28px 24px;
-            border: 1px solid rgba(0, 255, 255, 0.4);
+            border: 1px solid rgba(0, 255, 255, 0.5);
             border-radius: 12px;
-            background: rgba(3, 6, 12, 0.8);
-            box-shadow: 0 0 40px rgba(0,255,255,0.25), inset 0 0 20px rgba(0,255,255,0.08);
+            background: rgba(3, 6, 12, 0.92);
+            box-shadow: 0 0 40px rgba(0,255,255,0.4), inset 0 0 20px rgba(0,255,255,0.15);
+            backdrop-filter: blur(12px);
         }
 
         .boot-title {
@@ -566,8 +572,8 @@
                     scale: 1.05,
                     dayLength: 12000,
                     introLinesDuration: 2000,
-                    maxPins: 6,
-                    maxMarkers: 12,
+                    maxPins: 10,
+                    maxMarkers: 15,
                     viewAngle: 0.3
                 });
 
@@ -577,8 +583,61 @@
                     globe.renderer.setClearColor(0x000000, 0);
                     globe.renderer.domElement.style.background = 'transparent';
                 }
-                globe.init(startLoop);
+                globe.init(() => {
+                    startLoop();
+                    addGlobeFeatures();
+                });
                 resize();
+            };
+
+            const addGlobeFeatures = () => {
+                if (!globe) return;
+
+                // Add connected markers (like in the movie)
+                setTimeout(() => {
+                    globe.addMarker(40.7128, -74.0060, "New York");
+                    globe.addMarker(51.5074, -0.1278, "London", true);
+                }, 2200);
+
+                setTimeout(() => {
+                    globe.addMarker(35.6762, 139.6503, "Tokyo");
+                    globe.addMarker(-33.8688, 151.2093, "Sydney", true);
+                }, 2800);
+
+                // Add satellite constellation
+                setTimeout(() => {
+                    const constellation = [];
+                    const opts = {
+                        coreColor: '#ffae5f',
+                        numWaves: 3
+                    };
+                    for (let i = 0; i < 2; i++) {
+                        for (let j = 0; j < 3; j++) {
+                            constellation.push({
+                                lat: 50 * i - 30 + 15 * Math.random(),
+                                lon: 120 * j - 120 + 30 * i,
+                                altitude: 1.3
+                            });
+                        }
+                    }
+                    globe.addConstellation(constellation, opts);
+                }, 3500);
+
+                // Add random pins periodically
+                const pinInterval = setInterval(() => {
+                    if (!globe) {
+                        clearInterval(pinInterval);
+                        return;
+                    }
+                    const lat = Math.random() * 180 - 90;
+                    const lon = Math.random() * 360 - 180;
+                    const names = ['Alpha Site', 'Beta Node', 'Gamma Link', 'Delta Hub', 'Echo Point'];
+                    const name = names[Math.floor(Math.random() * names.length)];
+                    globe.addPin(lat, lon, name);
+                }, 4000);
+
+                // Stop after 30s
+                setTimeout(() => clearInterval(pinInterval), 30000);
             };
 
             const showLoader = () => loader.classList.remove('hidden');
@@ -627,7 +686,9 @@
                 document.documentElement.style.setProperty('--bg-3', darkMode ? '#0a1820' : '#101a2e');
             };
 
-            const runBoot = () => new Promise((resolve) => {
+            const runBoot = () => {
+                boot.classList.add('active');
+                
                 // Animate steps sequentially
                 bootSteps.forEach((step, idx) => {
                     gsap.to(step, {
@@ -649,14 +710,14 @@
                         yoyo: idx === 2,
                         onComplete: () => {
                             if (idx === bootBars.length - 1) {
-                                gsap.to(boot, {
+                                gsap.to('.boot-panel', {
                                     opacity: 0,
+                                    scale: 0.95,
                                     duration: 0.6,
-                                    delay: 0.2,
+                                    delay: 0.3,
                                     ease: 'power2.in',
                                     onComplete: () => {
                                         boot.style.display = 'none';
-                                        resolve();
                                     }
                                 });
                             }
@@ -667,14 +728,14 @@
                 // Subtle boot flicker
                 if (window.anime) {
                     anime({
-                        targets: boot,
+                        targets: '.boot-panel',
                         opacity: [1, 0.92, 1],
                         easing: 'steps(2)',
                         duration: 600,
                         loop: 3
                     });
                 }
-            });
+            };
 
             showBtn.addEventListener('click', () => {
                 showLoader();
@@ -689,12 +750,11 @@
 
             // Initialize globe when first paint is ready
             const kickOff = () => {
-                runBoot().then(() => {
-                    buildGlobe();
-                    resize();
-                    playIntroAnimations();
-                    setTimeout(hideLoader, 2600);
-                });
+                buildGlobe();
+                resize();
+                runBoot();
+                playIntroAnimations();
+                setTimeout(hideLoader, 10000);
             };
 
             // Wait for ENCOM to load if needed
