@@ -362,9 +362,8 @@
 
         .globe-wrap {
             position: relative;
-            width: min(600px, 85vw);
-            height: min(600px, 85vw);
-            max-height: 70vh;
+            width: min(550px, 80vw);
+            aspect-ratio: 1 / 1;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -374,18 +373,13 @@
             width: 100%;
             height: 100%;
             position: relative;
-            background: transparent !important;
-            border-radius: 50%;
-            overflow: visible;
         }
 
         #globeHost canvas {
             width: 100% !important;
             height: 100% !important;
             display: block !important;
-            background: transparent !important;
-            filter: drop-shadow(0 0 30px rgba(158, 244, 255, 0.3));
-            border-radius: 50%;
+            opacity: 1 !important;
         }
 
         .app-logo {
@@ -567,11 +561,6 @@
 
             const resize = () => {
                 if (!globe || !globe.renderer) return;
-                const vw = window.innerWidth;
-                const vh = window.innerHeight;
-                const size = Math.min(vw, vh) * 0.8;
-                host.style.width = `${size}px`;
-                host.style.height = `${size}px`;
                 const w = host.clientWidth;
                 const h = host.clientHeight;
                 globe.camera.aspect = w / h;
@@ -624,10 +613,15 @@
 
                 host.innerHTML = '';
                 host.appendChild(globe.domElement);
-                if (globe.renderer && globe.renderer.setClearColor) {
+                
+                // Force transparent background on renderer
+                if (globe.renderer) {
                     globe.renderer.setClearColor(0x000000, 0);
-                    globe.renderer.domElement.style.background = 'transparent';
+                    const canvas = globe.renderer.domElement;
+                    canvas.style.background = 'none';
+                    canvas.style.backgroundColor = 'transparent';
                 }
+                
                 globe.init(() => {
                     startLoop();
                     addGlobeFeatures();
