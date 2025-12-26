@@ -280,6 +280,12 @@
             aspect-ratio: 1 / 1;
         }
 
+        #globeHost {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
         #globeHost canvas {
             width: 100%;
             height: 100%;
@@ -390,9 +396,9 @@
         <a class="btn" href="./admin-console.html">Admin Console</a>
     </div>
 
-    <script src="https://raw.githubusercontent.com/swolem12/encom-globe/master/data.js"></script>
-    <script src="https://raw.githubusercontent.com/swolem12/encom-globe/master/grid.js"></script>
-    <script src="https://raw.githubusercontent.com/swolem12/encom-globe/master/build/encom-globe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/swolem12/encom-globe/data.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/swolem12/encom-globe/grid.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/swolem12/encom-globe/build/encom-globe.min.js"></script>
     <script>
         (() => {
             const loader = document.getElementById('loader');
@@ -431,7 +437,10 @@
             };
 
             const buildGlobe = () => {
-                if (!window.ENCOM || !window.ENCOM.Globe) return;
+                if (!window.ENCOM || !window.ENCOM.Globe) {
+                    console.warn('ENCOM.Globe not available yet');
+                    return;
+                }
                 if (globe && globe.destroy) {
                     globe.destroy();
                 }
@@ -481,11 +490,24 @@
             window.addEventListener('resize', onResize);
 
             // Initialize globe when first paint is ready
-            setTimeout(() => {
+            const kickOff = () => {
                 buildGlobe();
                 resize();
                 setTimeout(hideLoader, 2600);
-            }, 60);
+            };
+
+            // Wait for ENCOM to load if needed
+            if (window.ENCOM && window.ENCOM.Globe) {
+                kickOff();
+            } else {
+                const poll = setInterval(() => {
+                    if (window.ENCOM && window.ENCOM.Globe) {
+                        clearInterval(poll);
+                        kickOff();
+                    }
+                }, 50);
+                setTimeout(() => clearInterval(poll), 4000);
+            }
 
             // Pause animation when tab hidden
             document.addEventListener('visibilitychange', () => {
