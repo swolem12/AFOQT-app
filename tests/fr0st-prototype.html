@@ -257,62 +257,7 @@
             pointer-events: none;
         }
 
-        .boot-overlay {
-            position: fixed;
-            inset: 0;
-            background: transparent;
-            display: grid;
-            place-items: center;
-            z-index: 1100;
-            pointer-events: none;
-        }
 
-        .boot-overlay.active {
-            pointer-events: auto;
-        }
-
-        .boot-panel {
-            width: min(560px, 85vw);
-            padding: 20px 24px;
-            border: 1px solid rgba(0, 255, 255, 0.4);
-            border-radius: 8px;
-            background: rgba(3, 6, 12, 0.88);
-            box-shadow: 0 0 30px rgba(0,255,255,0.3), inset 0 0 15px rgba(0,255,255,0.1);
-            backdrop-filter: blur(16px);
-        }
-
-        .boot-title {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 12px;
-            letter-spacing: 0.18em;
-            color: #9ef4ff;
-            margin-bottom: 14px;
-            text-transform: uppercase;
-        }
-
-        .boot-steps {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 11px;
-            color: #d7f7ff;
-            display: grid;
-            gap: 5px;
-            margin-bottom: 14px;
-        }
-
-        .boot-steps div { opacity: 0.2; }
-
-        .boot-bars {
-            display: grid;
-            gap: 6px;
-        }
-
-        .boot-bar {
-            height: 6px;
-            border-radius: 999px;
-            background: linear-gradient(90deg, #ffb15f, #7ffff0);
-            width: 0%;
-            box-shadow: 0 0 12px rgba(255,177,95,0.7);
-        }
 
         .card h3 {
             margin: 0 0 10px;
@@ -347,87 +292,118 @@
         .loader-overlay {
             position: fixed;
             inset: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(158, 244, 255, 0.08), transparent 50%),
-                        linear-gradient(135deg, #02030a, #050918 50%, #0a1020);
+            background: linear-gradient(135deg, #02030a, #040812 50%, #080f1a);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 0;
-            padding: 40px 20px;
             z-index: 999;
-            transition: opacity 320ms ease;
+            opacity: 1;
+            transition: opacity 600ms ease;
         }
         .loader-overlay.hidden { opacity: 0; pointer-events: none; }
 
-        .globe-wrap {
-            position: relative;
-            width: min(550px, 80vw);
-            aspect-ratio: 1 / 1;
-            display: flex;
+        .boot-complete {
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(135deg, #02030a, #040812 50%, #080f1a);
+            display: none;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: 16px;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 600ms ease;
+        }
+
+        .boot-complete.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .boot-complete-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(24px, 4vw, 36px);
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #00ff88;
+            text-shadow: 0 0 20px rgba(0, 255, 136, 0.8);
+        }
+
+        .boot-complete-subtitle {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: clamp(14px, 2vw, 18px);
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            text-shadow: 0 0 12px rgba(158, 244, 255, 0.6);
+        }
+
+        .globe-wrap {
+            position: relative;
+            width: min(480px, 75vw);
+            aspect-ratio: 1 / 1;
         }
 
         #globeHost {
             width: 100%;
             height: 100%;
-            position: relative;
         }
 
         #globeHost canvas {
             width: 100% !important;
             height: 100% !important;
             display: block !important;
-            opacity: 1 !important;
         }
 
-        .app-logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(28px, 5vw, 48px);
-            font-weight: 700;
-            letter-spacing: 0.28em;
-            text-transform: uppercase;
-            text-align: center;
-            color: var(--accent);
-            text-shadow: 0 0 20px rgba(158, 244, 255, 0.9), 0 0 40px rgba(158, 244, 255, 0.6);
-            pointer-events: none;
-            position: relative;
-            padding: 0 80px;
-            margin-bottom: 8px;
-            z-index: 10;
+        .init-progress {
+            width: min(480px, 75vw);
+            margin-top: 0;
         }
 
-        .app-logo::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            width: 60px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent));
-            box-shadow: 0 0 8px rgba(158, 244, 255, 0.8);
-        }
-
-        .app-logo::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 50%;
-            width: 60px;
-            height: 2px;
-            background: linear-gradient(270deg, transparent, var(--accent));
-            box-shadow: 0 0 8px rgba(158, 244, 255, 0.8);
-        }
-
-        .app-subtitle {
+        .progress-label {
             font-family: 'IBM Plex Mono', monospace;
-            font-size: clamp(10px, 1.2vw, 12px);
-            letter-spacing: 0.32em;
-            color: rgba(159, 182, 198, 0.7);
-            margin-bottom: 40px;
+            font-size: 12px;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            margin-bottom: 8px;
             text-align: center;
-            opacity: 0.8;
+            text-transform: uppercase;
+        }
+
+        .progress-track {
+            width: 100%;
+            height: 8px;
+            background: rgba(158, 244, 255, 0.1);
+            border: 1px solid rgba(158, 244, 255, 0.3);
+            border-radius: 999px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #00ff88, #00d4ff);
+            box-shadow: 0 0 16px rgba(0, 255, 136, 0.6);
+            transition: width 100ms linear;
+        }
+
+        .progress-percent {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 14px;
+            color: var(--accent);
+            margin-top: 8px;
+            text-align: center;
+            letter-spacing: 0.1em;
+        }
+
+        .init-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
         }
 
         .note {
@@ -455,30 +431,24 @@
     <div class="scanlines" aria-hidden="true"></div>
     <div class="hud-grid" aria-hidden="true"></div>
 
-    <div class="boot-overlay" id="boot">
-        <div class="boot-panel">
-            <div class="boot-title">AFOQT QUEST // SYSTEM BOOT</div>
-            <div class="boot-steps" id="bootSteps">
-                <div>INIT CORE.....</div>
-                <div>LINK DATA BUS.....</div>
-                <div>LOAD ENCOM GLOBE.....</div>
-                <div>CALIBRATE SENSORS.....</div>
-                <div>READY.</div>
+    <div class="loader-overlay" id="loader" aria-label="Initializing system">
+        <div class="init-container">
+            <div class="globe-wrap">
+                <div id="globeHost"></div>
             </div>
-            <div class="boot-bars">
-                <div class="boot-bar"></div>
-                <div class="boot-bar"></div>
-                <div class="boot-bar"></div>
+            <div class="init-progress">
+                <div class="progress-label">System Initialization</div>
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-percent" id="progressPercent">0%</div>
             </div>
         </div>
     </div>
 
-    <div class="loader-overlay" id="loader" aria-label="Loading globe">
-        <div class="app-logo">AFOQT QUEST</div>
-        <div class="app-subtitle">// OFFICER TRAINING SIMULATION</div>
-        <div class="globe-wrap">
-            <div id="globeHost"></div>
-        </div>
+    <div class="boot-complete" id="bootComplete">
+        <div class="boot-complete-title">BOOT UP COMPLETE</div>
+        <div class="boot-complete-subtitle">WELCOME TO AFOQT QUEST</div>
     </div>
 
     <div class="frame">
@@ -535,7 +505,7 @@
     </div>
 
     <div class="toggle-row">
-        <button class="btn secondary" id="hideLoader">Hide Loader</button>
+        <button class="btn secondary" id="showLoader">Replay Boot Sequence</button>
         <a class="btn" href="./admin-console.html">Admin Console</a>
     </div>
 
@@ -548,12 +518,11 @@
         (() => {
             const loader = document.getElementById('loader');
             const host = document.getElementById('globeHost');
+            const progressFill = document.getElementById('progressFill');
+            const progressPercent = document.getElementById('progressPercent');
+            const bootComplete = document.getElementById('bootComplete');
             const showBtn = document.getElementById('showLoader');
-            const hideBtn = document.getElementById('hideLoader');
             const togglePaletteBtn = document.getElementById('togglePalette');
-            const boot = document.getElementById('boot');
-            const bootSteps = Array.from(document.querySelectorAll('#bootSteps div'));
-            const bootBars = Array.from(document.querySelectorAll('.boot-bar'));
 
             let globe, animationId;
             let loopRunning = false;
@@ -679,49 +648,66 @@
                 setTimeout(() => clearInterval(pinInterval), 30000);
             };
 
-            const showLoader = () => loader.classList.remove('hidden');
-            const hideLoader = () => {
-                gsap.to(loader, {
-                    opacity: 0,
-                    duration: 0.5,
-                    ease: 'power2.out',
-                    onComplete: () => loader.classList.add('hidden')
+            // Animate progress bar from 0-100%
+            const animateProgress = () => {
+                gsap.to(progressFill, {
+                    width: '100%',
+                    duration: 8,
+                    ease: 'linear',
+                    onUpdate: function() {
+                        const progress = Math.floor(this.progress() * 100);
+                        progressPercent.textContent = progress + '%';
+                    },
+                    onComplete: showBootComplete
                 });
             };
 
-            const playIntroAnimations = () => {
-                gsap.fromTo('.globe-wrap', { opacity: 0, scale: 0.92 }, {
-                    opacity: 1,
-                    scale: 1,
-                    duration: 0.9,
-                    ease: 'power3.out'
-                });
-
-                gsap.fromTo('.app-logo', { opacity: 0, y: -30 }, {
-                    opacity: 1,
-                    y: 0,
+            // Show boot complete message then fade to main UI
+            const showBootComplete = () => {
+                // Fade out loader
+                gsap.to(loader, {
+                    opacity: 0,
                     duration: 0.8,
-                    ease: 'power3.out',
-                    delay: 0.2
+                    ease: 'power2.inOut',
+                    onComplete: () => {
+                        loader.classList.add('hidden');
+                        
+                        // Show boot complete overlay
+                        bootComplete.classList.add('show');
+                        bootComplete.style.opacity = '0';
+                        
+                        // Fade in boot complete
+                        gsap.to(bootComplete, {
+                            opacity: 1,
+                            duration: 0.5,
+                            ease: 'power2.out'
+                        });
+                        
+                        // Animate title
+                        gsap.fromTo('.boot-complete-title', 
+                            { opacity: 0, y: -20 },
+                            { opacity: 1, y: 0, duration: 0.6, delay: 0.2, ease: 'power3.out' }
+                        );
+                        
+                        // Animate subtitle
+                        gsap.fromTo('.boot-complete-subtitle', 
+                            { opacity: 0, y: 10 },
+                            { opacity: 0.8, y: 0, duration: 0.6, delay: 0.4, ease: 'power3.out' }
+                        );
+                        
+                        // Auto-dismiss after 3 seconds
+                        setTimeout(() => {
+                            gsap.to(bootComplete, {
+                                opacity: 0,
+                                duration: 0.8,
+                                ease: 'power2.inOut',
+                                onComplete: () => {
+                                    bootComplete.classList.remove('show');
+                                }
+                            });
+                        }, 3000);
+                    }
                 });
-
-                gsap.fromTo('.app-subtitle', { opacity: 0 }, {
-                    opacity: 0.7,
-                    duration: 0.6,
-                    ease: 'power2.out',
-                    delay: 0.4
-                });
-
-                if (window.anime) {
-                    anime({
-                        targets: '.app-logo',
-                        scale: [1, 1.02],
-                        duration: 3000,
-                        direction: 'alternate',
-                        easing: 'easeInOutSine',
-                        loop: true
-                    });
-                }
             };
 
             const togglePalette = () => {
@@ -731,63 +717,14 @@
                 document.documentElement.style.setProperty('--bg-3', darkMode ? '#0a1820' : '#101a2e');
             };
 
-            const runBoot = () => {
-                boot.classList.add('active');
-                
-                // Animate steps sequentially
-                bootSteps.forEach((step, idx) => {
-                    gsap.to(step, {
-                        opacity: 1,
-                        duration: 0.3,
-                        delay: idx * 0.2,
-                        ease: 'power1.out'
-                    });
-                });
-
-                // Animate progress bars Evangelion-style
-                bootBars.forEach((bar, idx) => {
-                    gsap.to(bar, {
-                        width: '100%',
-                        duration: 0.9,
-                        delay: 0.2 + idx * 0.18,
-                        ease: 'power2.inOut',
-                        repeat: idx === 2 ? 1 : 0,
-                        yoyo: idx === 2,
-                        onComplete: () => {
-                            if (idx === bootBars.length - 1) {
-                                gsap.to('.boot-panel', {
-                                    opacity: 0,
-                                    scale: 0.95,
-                                    duration: 0.6,
-                                    delay: 0.3,
-                                    ease: 'power2.in',
-                                    onComplete: () => {
-                                        boot.style.display = 'none';
-                                    }
-                                });
-                            }
-                        }
-                    });
-                });
-
-                // Subtle boot flicker
-                if (window.anime) {
-                    anime({
-                        targets: '.boot-panel',
-                        opacity: [1, 0.92, 1],
-                        easing: 'steps(2)',
-                        duration: 600,
-                        loop: 3
-                    });
-                }
-            };
-
             showBtn.addEventListener('click', () => {
-                showLoader();
-                gsap.fromTo(loader, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: 'power2.out' });
-                setTimeout(hideLoader, 10000);
+                loader.classList.remove('hidden');
+                loader.style.opacity = '1';
+                bootComplete.classList.remove('show');
+                progressFill.style.width = '0%';
+                progressPercent.textContent = '0%';
+                setTimeout(animateProgress, 800);
             });
-            hideBtn.addEventListener('click', hideLoader);
             togglePaletteBtn.addEventListener('click', togglePalette);
 
             const onResize = () => resize();
@@ -797,9 +734,15 @@
             const kickOff = () => {
                 buildGlobe();
                 resize();
-                runBoot();
-                playIntroAnimations();
-                setTimeout(hideLoader, 10000);
+                gsap.fromTo('.init-container', { opacity: 0, scale: 0.95 }, {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1,
+                    ease: 'power3.out',
+                    onComplete: () => {
+                        setTimeout(animateProgress, 500);
+                    }
+                });
             };
 
             // Wait for ENCOM to load if needed
