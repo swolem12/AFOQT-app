@@ -403,7 +403,47 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 24px;
+            gap: 32px;
+        }
+
+        .app-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--accent);
+            text-shadow: 0 0 40px rgba(158, 244, 255, 0.8),
+                         0 0 80px rgba(158, 244, 255, 0.4);
+            margin: 0;
+            position: relative;
+        }
+
+        .app-logo::before,
+        .app-logo::after {
+            content: '—';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent);
+            opacity: 0.6;
+        }
+
+        .app-logo::before {
+            left: -60px;
+        }
+
+        .app-logo::after {
+            right: -60px;
+        }
+
+        .app-subtitle {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: clamp(11px, 1.2vw, 14px);
+            letter-spacing: 0.2em;
+            color: var(--muted);
+            text-transform: uppercase;
+            margin-top: -24px;
         }
 
         .note {
@@ -433,6 +473,8 @@
 
     <div class="loader-overlay" id="loader" aria-label="Initializing system">
         <div class="init-container">
+            <h1 class="app-logo">AFOQT QUEST</h1>
+            <div class="app-subtitle">// OFFICER TRAINING SIMULATION</div>
             <div class="globe-wrap">
                 <div id="globeHost"></div>
             </div>
@@ -734,15 +776,52 @@
             const kickOff = () => {
                 buildGlobe();
                 resize();
-                gsap.fromTo('.init-container', { opacity: 0, scale: 0.95 }, {
-                    opacity: 1,
-                    scale: 1,
-                    duration: 1,
-                    ease: 'power3.out',
-                    onComplete: () => {
-                        setTimeout(animateProgress, 500);
-                    }
+                
+                // Evangelion-style sequential boot animations
+                const tl = gsap.timeline();
+                
+                // Logo glitch-in
+                tl.fromTo('.app-logo', 
+                    { opacity: 0, y: -30, scaleX: 0.8 },
+                    { opacity: 1, y: 0, scaleX: 1, duration: 0.8, ease: 'power4.out' }
+                )
+                // Subtitle scan-in
+                .fromTo('.app-subtitle',
+                    { opacity: 0, letterSpacing: '0.5em' },
+                    { opacity: 0.7, letterSpacing: '0.2em', duration: 0.6, ease: 'power2.out' },
+                    '-=0.3'
+                )
+                // Globe fade-scale-in
+                .fromTo('.globe-wrap',
+                    { opacity: 0, scale: 0.85 },
+                    { opacity: 1, scale: 1, duration: 1, ease: 'power3.out' },
+                    '-=0.2'
+                )
+                // Progress bar slide-in
+                .fromTo('.init-progress',
+                    { opacity: 0, y: 20 },
+                    { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' },
+                    '-=0.5'
+                )
+                // Start progress animation
+                .call(() => {
+                    setTimeout(animateProgress, 300);
                 });
+                
+                // Logo pulse animation (continuous)
+                if (window.anime) {
+                    anime({
+                        targets: '.app-logo',
+                        textShadow: [
+                            '0 0 40px rgba(158, 244, 255, 0.8), 0 0 80px rgba(158, 244, 255, 0.4)',
+                            '0 0 60px rgba(158, 244, 255, 1), 0 0 120px rgba(158, 244, 255, 0.6)',
+                            '0 0 40px rgba(158, 244, 255, 0.8), 0 0 80px rgba(158, 244, 255, 0.4)'
+                        ],
+                        duration: 3000,
+                        easing: 'easeInOutSine',
+                        loop: true
+                    });
+                }
             };
 
             // Wait for ENCOM to load if needed
