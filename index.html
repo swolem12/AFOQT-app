@@ -19,6 +19,13 @@
     
     <title>AFOQT Quest</title>
     <link rel="stylesheet" href="/AFOQT-app/styles.css">
+    
+    <!-- Early boot marker to prevent "not set" errors -->
+    <script>
+        window.__AFOQT_PRE_BOOT__ = true;
+        console.log('[PRE-BOOT] Marker set before scripts load');
+    </script>
+    
     <script src="https://cdn.jsdelivr.net/gh/swolem12/encom-globe/data.js" defer></script>
     <script src="https://cdn.jsdelivr.net/gh/swolem12/encom-globe/grid.js" defer></script>
     <script src="https://cdn.jsdelivr.net/gh/swolem12/encom-globe/build/encom-globe.min.js" defer></script>
@@ -67,15 +74,24 @@
         observer.observe(appRoot, { childList: true, subtree: true });
         
         setTimeout(() => {
-            if (!window.__AFOQT_BOOT_MARKER__) {
-                status.textContent = 'ERROR: app.js did not set boot marker! Loaded: ' + loadedScripts.join(', ');
-                status.style.color = 'red';
-                console.error('[BOOT FAIL] Marker not set. Loaded scripts:', loadedScripts);
-                console.error('[BOOT FAIL] window.__AFOQT_BOOT_MARKER__:', window.__AFOQT_BOOT_MARKER__);
-            } else {
+            const hasAppMarker = !!window.__AFOQT_BOOT_MARKER__;
+            const hasPreBoot = !!window.__AFOQT_PRE_BOOT__;
+            
+            if (hasAppMarker) {
+                status.textContent = '✓ Boot complete';
+                status.style.color = '#00ff00';
                 console.log('[CHECK] Boot marker found, app.js executed');
+            } else if (hasPreBoot && !hasAppMarker) {
+                // Pre-boot is set, but app.js marker isn't - app.js failed to load or execute
+                const failedScripts = ['db.js', 'patch-loader.js', 'app.js'].filter(s => !loadedScripts.includes(s.split('.')[0]));
+                status.textContent = 'ERROR: app.js failed to execute. Missing: ' + (failedScripts.length ? failedScripts.join(', ') : 'unknown error');
+                status.style.color = '#ff6666';
+                console.error('[BOOT FAIL]', 'Loaded scripts:', loadedScripts, 'Failed scripts:', failedScripts);
+            } else {
+                status.textContent = 'ERROR: Scripts not loading at all';
+                status.style.color = '#ff6666';
             }
-        }, 8000);
+        }, 10000);
     </script>
 </body>
 </html>
