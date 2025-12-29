@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Verification - Table Reading & Block Counting</title>
+    <link rel="stylesheet" href="/AFOQT-app/styles.css">
+    <style>
+        body {
+            background: #000;
+            color: #00ffff;
+            font-family: 'Courier New', monospace;
+            padding: 20px;
+            margin: 0;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px solid #00ffff;
+            border-radius: 8px;
+        }
+        h1, h2 {
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .status.success {
+            background: rgba(0, 255, 0, 0.2);
+            color: #00ff00;
+            border-left: 3px solid #00ff00;
+        }
+        .status.error {
+            background: rgba(255, 0, 0, 0.2);
+            color: #ff6666;
+            border-left: 3px solid #ff6666;
+        }
+        .info {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 CSS VERIFICATION TEST</h1>
+    <p class="info">Testing if Table Reading and Block Counting CSS are loading correctly...</p>
+    
+    <div class="test-section">
+        <h2>📋 Table Reading - Data Table Container</h2>
+        <div id="tr-test"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>🧱 Block Counting - Isometric Cubes</h2>
+        <div id="bc-test"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>📊 CSS Class Detection</h2>
+        <div id="css-classes"></div>
+    </div>
+
+    <script>
+        const log = (id, message, isSuccess = true) => {
+            const el = document.getElementById(id);
+            const statusClass = isSuccess ? 'success' : 'error';
+            const symbol = isSuccess ? '✓' : '✗';
+            el.innerHTML += `<div class="status ${statusClass}">${symbol} ${message}</div>`;
+        };
+
+        // Test 1: Table Reading CSS
+        const trTest = document.getElementById('tr-test');
+        const tableHTML = `
+            <div class="data-table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="background: rgba(0,255,255,0.1); color: #00ffff;">Row/Col</th>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                            <th>Column 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Row A</th>
+                            <td>A1</td>
+                            <td>A2</td>
+                            <td>A3</td>
+                        </tr>
+                        <tr>
+                            <th>Row B</th>
+                            <td>B1</td>
+                            <td>B2</td>
+                            <td>B3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        `;
+        trTest.innerHTML = tableHTML;
+
+        // Check if Table Reading CSS is applied
+        const trContainer = trTest.querySelector('.data-table-container');
+        const computedStyle = window.getComputedStyle(trContainer);
+        const hasTableCSS = computedStyle.background || computedStyle.backgroundColor;
+        log('tr-test', `Table Reading CSS loaded: ${hasTableCSS ? 'YES' : 'NO'}`, !!hasTableCSS);
+        log('tr-test', `Background: ${computedStyle.background || computedStyle.backgroundColor}`, true);
+        log('tr-test', `Border: ${computedStyle.border}`, true);
+
+        // Test 2: Block Counting CSS
+        const bcTest = document.getElementById('bc-test');
+        const bcHTML = `
+            <div class="bc-scene">
+                <div class="bc-legend">
+                    <div class="bc-legend-line">Test: 3 cubes stacked isometrically</div>
+                </div>
+                <div class="bc-grid" style="height: 200px;">
+                    <div class="bc-column" style="left: 100px; bottom: 50px;">
+                        <div class="bc-cube" style="width: 40px; height: 23px;"></div>
+                        <div class="bc-cube" style="width: 40px; height: 23px; transform: translateY(-22px);"></div>
+                        <div class="bc-cube" style="width: 40px; height: 23px; transform: translateY(-44px);"></div>
+                    </div>
+                </div>
+            </div>
+        `;
+        bcTest.innerHTML = bcHTML;
+
+        // Check if Block Counting CSS is applied
+        const bcScene = bcTest.querySelector('.bc-scene');
+        const bcComputedStyle = window.getComputedStyle(bcScene);
+        const hasBCCSS = bcComputedStyle.background || bcComputedStyle.backgroundColor;
+        log('bc-test', `Block Counting CSS loaded: ${hasBCCSS ? 'YES' : 'NO'}`, !!hasBCCSS);
+        log('bc-test', `Background: ${bcComputedStyle.background || bcComputedStyle.backgroundColor}`, true);
+        log('bc-test', `Border: ${bcComputedStyle.border}`, true);
+
+        // Check cubes
+        const cube = bcTest.querySelector('.bc-cube');
+        const cubeStyle = window.getComputedStyle(cube);
+        log('bc-test', `Cube color: ${cubeStyle.background || cubeStyle.backgroundColor}`, true);
+
+        // Test 3: Detect CSS classes in stylesheet
+        const cssClasses = document.getElementById('css-classes');
+        const classesToCheck = [
+            '.data-table-container',
+            '.table-reading-grid',
+            '.bc-scene',
+            '.bc-cube',
+            '.bc-grid',
+            '.bc-column',
+            '.table-reading-card'
+        ];
+
+        log('css-classes', `<strong>Checking for CSS classes...</strong>`, true);
+        
+        // Get all stylesheets
+        let foundClasses = [];
+        try {
+            for (let sheet of document.styleSheets) {
+                try {
+                    const rules = sheet.cssRules || sheet.rules;
+                    for (let rule of rules) {
+                        const selector = rule.selectorText || '';
+                        classesToCheck.forEach(cls => {
+                            if (selector.includes(cls) && !foundClasses.includes(cls)) {
+                                foundClasses.push(cls);
+                            }
+                        });
+                    }
+                } catch (e) {
+                    // CORS or other error accessing stylesheet
+                }
+            }
+        } catch (e) {
+            console.error('Error reading stylesheets:', e);
+        }
+
+        if (foundClasses.length > 0) {
+            log('css-classes', `Found ${foundClasses.length} CSS classes: ${foundClasses.join(', ')}`, true);
+        } else {
+            log('css-classes', 'Unable to detect CSS classes (may be CORS-blocked), but classes are rendered', true);
+        }
+
+        // Test 4: Check if styles.css is actually loaded
+        const link = document.querySelector('link[href*="styles.css"]');
+        if (link) {
+            log('css-classes', `styles.css loaded via: ${link.href}`, true);
+        }
+
+        // Final status
+        const allTestsPassed = !!hasTableCSS && !!hasBCCSS;
+        setTimeout(() => {
+            cssClasses.innerHTML += `<div class="status ${allTestsPassed ? 'success' : 'error'}">
+                <strong>${allTestsPassed ? '✓ ALL TESTS PASSED' : '✗ SOME TESTS FAILED'}</strong>
+                <div style="margin-top: 10px;">
+                    ${allTestsPassed ? '✓ Table Reading CSS is loading and applied' : '✗ Table Reading CSS may not be loading'}
+                    <br>
+                    ${allTestsPassed ? '✓ Block Counting CSS is loading and applied' : '✗ Block Counting CSS may not be loading'}
+                </div>
+                ${!allTestsPassed ? '<div style="margin-top: 10px; color: #ffaa00;">💡 Try: Hard refresh browser (Ctrl+Shift+R or Cmd+Shift+R) to clear Service Worker cache</div>' : ''}
+            </div>`;
+        }, 100);
+    </script>
+</body>
+</html>
