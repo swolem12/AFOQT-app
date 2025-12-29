@@ -4860,751 +4860,225 @@ function previewBootAnimation(animationName) {
 // Fusion of Boot Inspiration 2 (Arasaka/Red HUD) + Boot Inspiration 3 (3D Rotating Logo)
 // ============================================================================
 
+// Globe-based boot sequence for AFOQT Quest
+// Replaces both showBootSequence() and runAnimeBootSequence() with simpler encom-globe loader
 function showBootSequence() {
     return new Promise((resolve) => {
         const bootHTML = `
-            <div id="boot-sequence">
-                <!-- CRT Scanline Overlay -->
-                <div class="boot-crt-overlay"></div>
-                
-                <!-- Glitch Overlay -->
-                <div class="boot-glitch-overlay"></div>
-                
-                <!-- Hexagonal Grid Background -->
-                <div class="boot-hex-grid"></div>
-                
-                <!-- Data Stream Particles -->
-                <div class="boot-data-stream boot-data-stream-left"></div>
-                <div class="boot-data-stream boot-data-stream-right"></div>
-                
-                <!-- Phase 1: HUD Frame & Three Circles Logo -->
-                <div class="boot-phase boot-phase-hud">
-                    <!-- Corner Brackets with enhanced styling -->
-                    <div class="hud-corner hud-corner-tl">
-                        <span class="corner-label">SYS.01</span>
+            <div id="boot-sequence" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #02030a, #040812 50%, #080f1a); display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 10000; opacity: 1; transition: opacity 600ms ease;">
+                <div class="boot-sequence-inner" style="display: flex; flex-direction: column; align-items: center; gap: 32px;">
+                    <h1 class="boot-logo" style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 5vw, 56px); font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: #9ef4ff; text-shadow: 0 0 40px rgba(158, 244, 255, 0.8), 0 0 80px rgba(158, 244, 255, 0.4); margin: 0; opacity: 0;">AFOQT QUEST</h1>
+                    <div class="boot-subtitle" style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11px, 1.2vw, 14px); letter-spacing: 0.2em; color: #9fb6c6; text-transform: uppercase; margin-top: -24px; opacity: 0;">// OFFICER TRAINING SIMULATION</div>
+                    <div class="globe-wrap" style="position: relative; width: min(480px, 75vw); aspect-ratio: 1 / 1; opacity: 0;">
+                        <div id="globeHost" style="width: 100%; height: 100%;"></div>
                     </div>
-                    <div class="hud-corner hud-corner-tr">
-                        <span class="corner-label">SYS.02</span>
-                    </div>
-                    <div class="hud-corner hud-corner-bl">
-                        <span class="corner-label">SYS.03</span>
-                    </div>
-                    <div class="hud-corner hud-corner-br">
-                        <span class="corner-label">SYS.04</span>
-                    </div>
-                    
-                    <!-- Side Bars with more segments -->
-                    <div class="hud-sidebar hud-sidebar-left">
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                    </div>
-                    <div class="hud-sidebar hud-sidebar-right">
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                    </div>
-                    
-                    <!-- Top Status Bar with binary decoration -->
-                    <div class="hud-status-bar hud-status-top">
-                        <div class="binary-decoration">01010101</div>
-                        <div class="status-bar-line status-bar-left"></div>
-                        <span class="status-text">NEURAL LINK ESTABLISHED</span>
-                        <div class="status-bar-line status-bar-right"></div>
-                        <div class="binary-decoration">10101010</div>
-                    </div>
-                    
-                    <!-- Chevron Indicators with more arrows -->
-                    <div class="hud-chevrons hud-chevrons-left">
-                        <span class="chevron">‹</span>
-                        <span class="chevron">‹</span>
-                        <span class="chevron">‹</span>
-                        <span class="chevron">‹</span>
-                        <span class="chevron">‹</span>
-                        <span class="chevron">‹</span>
-                        <span class="chevron">‹</span>
-                        <span class="chevron">‹</span>
-                        <span class="chevron">‹</span>
-                    </div>
-                    <div class="hud-chevrons hud-chevrons-right">
-                        <span class="chevron">›</span>
-                        <span class="chevron">›</span>
-                        <span class="chevron">›</span>
-                        <span class="chevron">›</span>
-                        <span class="chevron">›</span>
-                        <span class="chevron">›</span>
-                        <span class="chevron">›</span>
-                        <span class="chevron">›</span>
-                        <span class="chevron">›</span>
-                    </div>
-                    
-                    <!-- Three Circles Logo with ring effects -->
-                    <div class="boot-logo-container">
-                        <div class="boot-circle-outer-ring"></div>
-                        <div class="boot-circle boot-circle-1"></div>
-                        <div class="boot-circle boot-circle-2"></div>
-                        <div class="boot-circle boot-circle-3"></div>
-                        <div class="boot-circle-stem"></div>
-                        <div class="boot-circle-ring"></div>
-                        <div class="boot-circle-pulse"></div>
-                    </div>
-                    
-                    <!-- Hash Decorations -->
-                    <div class="hud-hash-marks hud-hash-left">////////////////////</div>
-                    <div class="hud-hash-marks hud-hash-right">\\\\\\\\\\\\\\\\\\\\</div>
-                    
-                    <!-- Bottom Progress Indicator -->
-                    <div class="hud-bottom-bar">
-                        <div class="bottom-bar-segment"></div>
-                        <div class="bottom-bar-segment"></div>
-                        <div class="bottom-bar-segment"></div>
+                    <div class="init-progress" style="width: min(480px, 75vw); opacity: 0;">
+                        <div class="progress-label" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.15em; color: #9ef4ff; margin-bottom: 8px; text-align: center; text-transform: uppercase;">System Initialization</div>
+                        <div class="progress-track" style="width: 100%; height: 8px; background: rgba(158, 244, 255, 0.1); border: 1px solid rgba(158, 244, 255, 0.3); border-radius: 999px; overflow: hidden; position: relative;">
+                            <div class="progress-fill" id="progressFill" style="height: 100%; width: 0%; background: linear-gradient(90deg, #00ff88, #00d4ff); box-shadow: 0 0 16px rgba(0, 255, 136, 0.6); transition: width 100ms linear;"></div>
+                        </div>
+                        <div class="progress-percent" id="progressPercent" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #9ef4ff; margin-top: 8px; text-align: center; letter-spacing: 0.1em;">0%</div>
                     </div>
                 </div>
-                
-                <!-- Phase 2: 3D Rotating Title -->
-                <div class="boot-phase boot-phase-3d-title">
-                    <!-- 3D Title Container -->
-                    <div class="title-3d-scene">
-                        <div class="title-3d-container">
-                            <!-- Chromatic aberration layers -->
-                            <div class="title-3d-layer title-3d-red">AFOQT Quest</div>
-                            <div class="title-3d-layer title-3d-cyan">AFOQT Quest</div>
-                            <div class="title-3d-layer title-3d-main">AFOQT Quest</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Decorative Frame -->
-                    <div class="title-frame">
-                        <div class="frame-line frame-top"></div>
-                        <div class="frame-line frame-bottom"></div>
-                        <div class="frame-bracket frame-bracket-left">›</div>
-                        <div class="frame-bracket frame-bracket-right">‹</div>
-                    </div>
-                    
-                    <!-- Status Box -->
-                    <div class="boot-status-box">
-                        <span class="status-bracket">[</span>
-                        <span class="status-box-text">TRAINING PROTOCOL ACTIVE</span>
-                        <span class="status-bracket">]</span>
-                    </div>
-                    
-                    <!-- Bottom Chevrons -->
-                    <div class="boot-bottom-indicator">
-                        <span class="indicator-chevron">‹</span>
-                        <span class="indicator-chevron">‹</span>
-                    </div>
-                </div>
-                
-                <!-- Phase 3: Final HUD -->
-                <div class="boot-phase boot-phase-final">
-                    <!-- Coordinate Display -->
-                    <div class="boot-coords">
-                        <div class="coord-line coord-y"><span class="coord-label">Y:</span> <span class="coord-value">0.00</span></div>
-                        <div class="coord-line coord-x"><span class="coord-label">X:</span> <span class="coord-value">0.00</span></div>
-                        <div class="coord-line coord-z"><span class="coord-label">Z:</span> <span class="coord-value">0.00</span></div>
-                    </div>
-                    
-                    <!-- Radar/Scanner -->
-                    <div class="boot-radar">
-                        <div class="radar-ring radar-ring-outer"></div>
-                        <div class="radar-ring radar-ring-mid"></div>
-                        <div class="radar-ring radar-ring-inner"></div>
-                        <div class="radar-sweep"></div>
-                        <div class="radar-dot"></div>
-                    </div>
-                    
-                    <!-- Progress Bar -->
-                    <div class="boot-progress">
-                        <div class="progress-track">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <div class="progress-markers">
-                            <span>|</span><span>|</span><span>|</span><span>|</span><span>|</span>
-                            <span>|</span><span>|</span><span>|</span><span>|</span><span>|</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Version Labels -->
-                    <div class="boot-labels">
-                        <span class="label-left">USAF TRAINING SYSTEM v2.0</span>
-                        <span class="label-right">NEURAL LINK v3.14.159</span>
-                    </div>
-                </div>
-                
-                <!-- Skip Button -->
-                <button class="boot-skip-btn" id="boot-skip">
-                    <span class="skip-text">SKIP</span>
-                    <span class="skip-arrow">▶</span>
-                </button>
+            </div>
+            
+            <div id="boot-complete" class="boot-complete" style="position: fixed; inset: 0; background: linear-gradient(135deg, #02030a, #040812 50%, #080f1a); display: none; flex-direction: column; align-items: center; justify-content: center; gap: 16px; z-index: 10000; opacity: 0; transition: opacity 600ms ease;">
+                <div class="boot-complete-title" style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 4vw, 36px); font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #00ff88; text-shadow: 0 0 20px rgba(0, 255, 136, 0.8);">BOOT UP COMPLETE</div>
+                <div class="boot-complete-subtitle" style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(14px, 2vw, 18px); letter-spacing: 0.15em; color: #9ef4ff; text-shadow: 0 0 12px rgba(158, 244, 255, 0.6);">WELCOME TO AFOQT QUEST</div>
             </div>
         `;
         
         document.body.insertAdjacentHTML('afterbegin', bootHTML);
         
-        const bootSequence = document.getElementById('boot-sequence');
+        const bootLoader = document.getElementById('boot-sequence');
+        const bootComplete = document.getElementById('boot-complete');
+        const globeHost = document.getElementById('globeHost');
+        const progressFill = document.getElementById('progressFill');
+        const progressPercent = document.getElementById('progressPercent');
         
         // Enable audio on first interaction
         const enableAudio = createAudioEnabler();
-        if (bootSequence) {
-            bootSequence.addEventListener('click', enableAudio, { once: true });
+        if (bootLoader) {
+            bootLoader.addEventListener('click', enableAudio, { once: true });
             document.addEventListener('keydown', enableAudio, { once: true });
         }
         
-        // Skip handler with cleanup
-        let isSkipped = false;
-        let typingInterval = null;
+        // Globe initialization
+        let loopRunning = false;
+        let animationId = null;
+        let globe = null;
         
-        const cleanupAndSkip = () => {
-            if (isSkipped) return;
-            isSkipped = true;
+        const startLoop = () => {
+            if (loopRunning) return;
+            loopRunning = true;
+            const step = () => {
+                animationId = requestAnimationFrame(step);
+                if (globe && globe.tick) globe.tick();
+            };
+            step();
+        };
+        
+        const stopLoop = () => {
+            if (animationId) cancelAnimationFrame(animationId);
+            animationId = null;
+            loopRunning = false;
+        };
+        
+        const buildGlobe = () => {
+            if (!window.ENCOM || !window.ENCOM.Globe) {
+                console.warn('ENCOM.Globe not available');
+                return false;
+            }
+            if (globe && globe.destroy) globe.destroy();
             
-            // Clear typing interval if running
-            if (typingInterval) {
-                clearInterval(typingInterval);
-                typingInterval = null;
+            const w = globeHost.clientWidth || 400;
+            const h = globeHost.clientHeight || 400;
+            globe = new ENCOM.Globe(w, h, {
+                font: 'Inconsolata',
+                data: window.data ? window.data.slice() : [],
+                tiles: window.grid ? window.grid.tiles : [],
+                baseColor: '#8ce7ff',
+                markerColor: '#b8ffcf',
+                pinColor: '#ffdf8b',
+                satelliteColor: '#ffae5f',
+                scale: 1.05,
+                dayLength: 12000,
+                introLinesDuration: 2000,
+                maxPins: 10,
+                maxMarkers: 15,
+                viewAngle: 0.3
+            });
+            
+            globeHost.innerHTML = '';
+            globeHost.appendChild(globe.domElement);
+            
+            if (globe.renderer) {
+                globe.renderer.setClearColor(0x000000, 0);
+                const canvas = globe.renderer.domElement;
+                canvas.style.background = 'none';
+                canvas.style.backgroundColor = 'transparent';
             }
             
-            // Remove keyboard listener
-            document.removeEventListener('keydown', keyHandler);
+            globe.init(() => {
+                startLoop();
+            });
             
-            const bootSeq = document.getElementById('boot-sequence');
-            if (bootSeq) {
-                if (hasAnime()) {
-                    anime.animate(bootSeq, {
-                        opacity: [1, 0],
-                        duration: 300,
-                        ease: 'outQuad',
-                        onComplete: () => {
-                            bootSeq.remove();
-                            resolve();
-                        }
-                    });
-                } else {
-                    bootSeq.remove();
-                    resolve();
-                }
+            return true;
+        };
+        
+        // Animate progress bar
+        const animateProgress = () => {
+            if (typeof gsap !== 'undefined') {
+                gsap.to(progressFill, {
+                    width: '100%',
+                    duration: 8,
+                    ease: 'linear',
+                    onUpdate: function() {
+                        const progress = Math.floor(this.progress() * 100);
+                        progressPercent.textContent = progress + '%';
+                    },
+                    onComplete: showBootComplete
+                });
             } else {
-                resolve();
+                let progress = 0;
+                const interval = setInterval(() => {
+                    progress += Math.random() * 15;
+                    if (progress > 100) progress = 100;
+                    progressFill.style.width = progress + '%';
+                    progressPercent.textContent = Math.floor(progress) + '%';
+                    if (progress >= 100) {
+                        clearInterval(interval);
+                        setTimeout(showBootComplete, 200);
+                    }
+                }, 100);
             }
         };
         
-        const skipBtn = document.getElementById('boot-skip');
-        if (skipBtn) {
-            skipBtn.addEventListener('click', cleanupAndSkip, { once: true });
-        }
-        
-        // Keyboard skip - listen for any skip key
-        const keyHandler = (e) => {
-            if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
-                cleanupAndSkip();
-            }
-        };
-        document.addEventListener('keydown', keyHandler);
-        
-        // Run the animation sequence after DOM is ready
-        // Use setTimeout to ensure DOM is fully rendered before querying
-        setTimeout(() => {
-            if (hasAnime()) {
-                runAnimeBootSequence(resolve, cleanupAndSkip, (interval) => { typingInterval = interval; });
+        // Show boot complete
+        const showBootComplete = () => {
+            stopLoop();
+            if (!bootLoader) return;
+            
+            if (typeof gsap !== 'undefined') {
+                gsap.to(bootLoader, {
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: 'power2.inOut',
+                    onComplete: () => {
+                        bootLoader.style.display = 'none';
+                        bootComplete.style.display = 'flex';
+                        bootComplete.style.opacity = '0';
+                        
+                        gsap.to(bootComplete, {
+                            opacity: 1,
+                            duration: 0.5,
+                            ease: 'power2.out'
+                        });
+                        
+                        gsap.fromTo('.boot-complete-title', 
+                            { opacity: 0, y: -20 },
+                            { opacity: 1, y: 0, duration: 0.6, delay: 0.2, ease: 'power3.out' }
+                        );
+                        
+                        gsap.fromTo('.boot-complete-subtitle', 
+                            { opacity: 0, y: 10 },
+                            { opacity: 0.8, y: 0, duration: 0.6, delay: 0.4, ease: 'power3.out' }
+                        );
+                        
+                        setTimeout(() => {
+                            gsap.to(bootComplete, {
+                                opacity: 0,
+                                duration: 0.8,
+                                ease: 'power2.inOut',
+                                onComplete: () => {
+                                    bootComplete.style.display = 'none';
+                                    bootLoader.remove();
+                                    resolve();
+                                }
+                            });
+                        }, 3000);
+                    }
+                });
             } else {
-                // Fallback - just show briefly and resolve
                 setTimeout(() => {
-                    if (!isSkipped) cleanupAndSkip();
-                }, 3000);
-            }
-        }, 50);
-    });
-}
-
-// Main anime.js boot sequence
-function runAnimeBootSequence(resolve, skipBoot, setTypingInterval) {
-    const bootSeq = document.getElementById('boot-sequence');
-    if (!bootSeq) {
-        console.warn('Boot sequence element not found');
-        return resolve();
-    }
-    
-    // Phase elements
-    const phaseHud = bootSeq.querySelector('.boot-phase-hud');
-    const phase3d = bootSeq.querySelector('.boot-phase-3d-title');
-    const phaseFinal = bootSeq.querySelector('.boot-phase-final');
-    
-    // Ensure all phases start hidden (with null checks)
-    if (phaseHud) phaseHud.style.opacity = '0';
-    if (phase3d) phase3d.style.opacity = '0';
-    if (phaseFinal) phaseFinal.style.opacity = '0';
-    
-    // If essential phases are missing, skip boot
-    if (!phaseHud || !phase3d || !phaseFinal) {
-        console.warn('Boot sequence phases not found, skipping animation');
-        skipBoot();
-        return;
-    }
-    
-    // Sound effects
-    playSfx('boot');
-    
-    // ============ PHASE 1: HUD Frame (0-2.2s) ============
-    
-    // Show HUD phase with fade in
-    anime.animate(phaseHud, {
-        opacity: [0, 1],
-        duration: 300,
-        ease: 'outQuart'
-    });
-    
-    // Corner brackets animation
-    const corners = phaseHud.querySelectorAll('.hud-corner');
-    anime.animate(corners, {
-        opacity: [0, 1],
-        scale: [0.3, 1],
-        duration: 400,
-        delay: anime.stagger(100, { start: 100 }),
-        ease: 'outBack'
-    });
-    
-    // Sidebar segments
-    const leftSegments = phaseHud.querySelectorAll('.hud-sidebar-left .sidebar-segment');
-    const rightSegments = phaseHud.querySelectorAll('.hud-sidebar-right .sidebar-segment');
-    
-    anime.animate(leftSegments, {
-        opacity: [0, 0.8],
-        scaleY: [0, 1],
-        duration: 300,
-        delay: anime.stagger(80, { start: 300 }),
-        ease: 'outQuart'
-    });
-    
-    anime.animate(rightSegments, {
-        opacity: [0, 0.8],
-        scaleY: [0, 1],
-        duration: 300,
-        delay: anime.stagger(80, { start: 350 }),
-        ease: 'outQuart'
-    });
-    
-    // Status bar
-    const statusBar = phaseHud.querySelector('.hud-status-bar');
-    const statusLines = phaseHud.querySelectorAll('.status-bar-line');
-    const statusText = phaseHud.querySelector('.status-text');
-    
-    anime.animate(statusBar, {
-        opacity: [0, 1],
-        duration: 400,
-        delay: 500,
-        ease: 'outQuart'
-    });
-    
-    anime.animate(statusLines[0], {
-        scaleX: [0, 1],
-        duration: 500,
-        delay: 600,
-        ease: 'outQuart'
-    });
-    
-    anime.animate(statusLines[1], {
-        scaleX: [0, 1],
-        duration: 500,
-        delay: 650,
-        ease: 'outQuart'
-    });
-    
-    // Status text typing effect with interval tracking for cleanup
-    if (statusText) {
-        const text = statusText.textContent;
-        statusText.textContent = '';
-        statusText.style.opacity = '1';
-        let charIndex = 0;
-        const typeInterval = setInterval(() => {
-            if (charIndex < text.length) {
-                statusText.textContent += text[charIndex];
-                charIndex++;
-            } else {
-                clearInterval(typeInterval);
-            }
-        }, 40);
-        
-        // Pass interval reference for cleanup on skip
-        if (setTypingInterval) {
-            setTypingInterval(typeInterval);
-        }
-    }
-    
-    // Chevrons
-    const leftChevrons = phaseHud.querySelectorAll('.hud-chevrons-left .chevron');
-    const rightChevrons = phaseHud.querySelectorAll('.hud-chevrons-right .chevron');
-    
-    anime.animate(leftChevrons, {
-        opacity: [0, 0.8],
-        translateX: [20, 0],
-        duration: 300,
-        delay: anime.stagger(50, { start: 800 }),
-        ease: 'outQuart'
-    });
-    
-    anime.animate(rightChevrons, {
-        opacity: [0, 0.8],
-        translateX: [-20, 0],
-        duration: 300,
-        delay: anime.stagger(50, { start: 850 }),
-        ease: 'outQuart'
-    });
-    
-    // Chevron pulse animation (continuous)
-    setTimeout(() => {
-        anime.animate(leftChevrons, {
-            translateX: [0, -8, 0],
-            opacity: [0.8, 1, 0.8],
-            duration: 1000,
-            delay: anime.stagger(50),
-            loop: true,
-            ease: 'inOutSine'
-        });
-        
-        anime.animate(rightChevrons, {
-            translateX: [0, 8, 0],
-            opacity: [0.8, 1, 0.8],
-            duration: 1000,
-            delay: anime.stagger(50),
-            loop: true,
-            ease: 'inOutSine'
-        });
-    }, 1200);
-    
-    // Three circles logo
-    const circles = phaseHud.querySelectorAll('.boot-circle');
-    const stem = phaseHud.querySelector('.boot-circle-stem');
-    const ring = phaseHud.querySelector('.boot-circle-ring');
-    
-    anime.animate(circles, {
-        opacity: [0, 1],
-        scale: [0, 1],
-        duration: 400,
-        delay: anime.stagger(150, { start: 400 }),
-        ease: 'outElastic(1, 0.5)'
-    });
-    
-    anime.animate(stem, {
-        opacity: [0, 1],
-        scaleY: [0, 1],
-        duration: 400,
-        delay: 900,
-        ease: 'outQuart'
-    });
-    
-    anime.animate(ring, {
-        opacity: [0, 0.6],
-        scale: [0.5, 1],
-        duration: 600,
-        delay: 1100,
-        ease: 'outQuart'
-    });
-    
-    // Circle glow pulse (continuous)
-    setTimeout(() => {
-        anime.animate(circles, {
-            boxShadow: [
-                '0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.4)',
-                '0 0 40px rgba(255, 0, 0, 1), 0 0 80px rgba(255, 0, 0, 0.6)',
-                '0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.4)'
-            ],
-            duration: 1500,
-            loop: true,
-            ease: 'inOutSine'
-        });
-    }, 1000);
-    
-    // Hash marks
-    const hashMarks = phaseHud.querySelectorAll('.hud-hash-marks');
-    anime.animate(hashMarks, {
-        opacity: [0, 0.5],
-        duration: 500,
-        delay: 1000,
-        ease: 'outQuart'
-    });
-    
-    // Bottom bar segments
-    const bottomSegments = phaseHud.querySelectorAll('.bottom-bar-segment');
-    anime.animate(bottomSegments, {
-        opacity: [0, 0.7],
-        scaleX: [0, 1],
-        duration: 400,
-        delay: anime.stagger(150, { start: 1200 }),
-        ease: 'outQuart'
-    });
-    
-    // Sound effect
-    setTimeout(() => playSfx('nav'), 800);
-    
-    // ============ PHASE 2: 3D Title (2.2-4.2s) ============
-    
-    setTimeout(() => {
-        // Fade out HUD phase
-        anime.animate(phaseHud, {
-            opacity: [1, 0],
-            duration: 400,
-            ease: 'outQuart'
-        });
-        
-        // Show 3D title phase with fade in
-        anime.animate(phase3d, {
-            opacity: [0, 1],
-            duration: 400,
-            ease: 'outQuart'
-        });
-        
-        const titleContainer = phase3d.querySelector('.title-3d-container');
-        const titleLayers = phase3d.querySelectorAll('.title-3d-layer');
-        const titleMain = phase3d.querySelector('.title-3d-main');
-        const frameLines = phase3d.querySelectorAll('.frame-line');
-        const frameBrackets = phase3d.querySelectorAll('.frame-bracket');
-        const statusBox = phase3d.querySelector('.boot-status-box');
-        const bottomIndicator = phase3d.querySelector('.boot-bottom-indicator');
-        
-        // Title entrance with dramatic 3D rotation from behind
-        anime.animate(titleContainer, {
-            opacity: [0, 1],
-            rotateY: [-180, 0],
-            rotateX: [30, 0],
-            translateZ: [-500, 0],
-            scale: [0.3, 1],
-            duration: 1500,
-            ease: 'outExpo'
-        });
-        
-        // Chromatic aberration effect - more dramatic shifts
-        anime.animate(phase3d.querySelector('.title-3d-red'), {
-            translateX: [-8, -3, -8],
-            translateY: [-2, 1, -2],
-            opacity: [0, 0.8, 0.8],
-            duration: 1500,
-            loop: true,
-            ease: 'inOutSine'
-        });
-        
-        anime.animate(phase3d.querySelector('.title-3d-cyan'), {
-            translateX: [8, 3, 8],
-            translateY: [2, -1, 2],
-            opacity: [0, 0.8, 0.8],
-            duration: 1500,
-            loop: true,
-            ease: 'inOutSine',
-            delay: 75
-        });
-        
-        // Continuous full 360 Y-axis rotation like the reference
-        setTimeout(() => {
-            anime.animate(titleContainer, {
-                rotateY: [0, 360],
-                duration: 6000,
-                loop: true,
-                ease: 'linear'
-            });
-        }, 1500);
-        
-        // Add subtle X-axis tilt during rotation
-        setTimeout(() => {
-            anime.animate(titleContainer, {
-                rotateX: [0, 10, 0, -10, 0],
-                duration: 3000,
-                loop: true,
-                ease: 'inOutSine'
-            });
-        }, 1500);
-        
-        // Title glow pulse with more dramatic effect
-        anime.animate(titleMain, {
-            textShadow: [
-                '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.4)',
-                '0 0 60px rgba(255, 255, 255, 1), 0 0 120px rgba(0, 255, 255, 0.8)',
-                '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.4)'
-            ],
-            duration: 1500,
-            loop: true,
-            ease: 'inOutSine',
-            delay: 500
-        });
-        
-        // Frame lines
-        anime.animate(frameLines, {
-            scaleX: [0, 1],
-            opacity: [0, 0.8],
-            duration: 500,
-            delay: anime.stagger(100, { start: 400 }),
-            ease: 'outQuart'
-        });
-        
-        // Frame brackets
-        anime.animate(frameBrackets, {
-            opacity: [0, 1],
-            scale: [0.5, 1],
-            duration: 400,
-            delay: anime.stagger(100, { start: 600 }),
-            ease: 'outBack'
-        });
-        
-        // Status box
-        anime.animate(statusBox, {
-            opacity: [0, 1],
-            translateY: [20, 0],
-            duration: 500,
-            delay: 800,
-            ease: 'outQuart'
-        });
-        
-        // Bottom indicator
-        anime.animate(bottomIndicator, {
-            opacity: [0, 1],
-            duration: 400,
-            delay: 1000,
-            ease: 'outQuart'
-        });
-        
-        // Indicator chevrons bounce
-        const indicatorChevrons = phase3d.querySelectorAll('.indicator-chevron');
-        setTimeout(() => {
-            anime.animate(indicatorChevrons, {
-                translateY: [0, 5, 0],
-                duration: 800,
-                delay: anime.stagger(100),
-                loop: true,
-                ease: 'inOutSine'
-            });
-        }, 1200);
-        
-        playSfx('nav');
-        
-    }, 2200);
-    
-    // ============ PHASE 3: Final HUD (4.2-5.5s) ============
-    
-    setTimeout(() => {
-        // Fade out 3D phase
-        anime.animate(phase3d, {
-            opacity: [1, 0],
-            duration: 400,
-            ease: 'outQuart'
-        });
-        
-        // Show final phase with fade in
-        anime.animate(phaseFinal, {
-            opacity: [0, 1],
-            duration: 400,
-            ease: 'outQuart'
-        });
-        
-        const coords = phaseFinal.querySelector('.boot-coords');
-        const radar = phaseFinal.querySelector('.boot-radar');
-        const radarRings = phaseFinal.querySelectorAll('.radar-ring');
-        const radarSweep = phaseFinal.querySelector('.radar-sweep');
-        const radarDot = phaseFinal.querySelector('.radar-dot');
-        const progress = phaseFinal.querySelector('.boot-progress');
-        const progressFill = phaseFinal.querySelector('.progress-fill');
-        const progressMarkers = phaseFinal.querySelectorAll('.progress-markers span');
-        const labels = phaseFinal.querySelectorAll('.boot-labels span');
-        
-        // Coordinates
-        anime.animate(coords, {
-            opacity: [0, 1],
-            translateX: [-20, 0],
-            duration: 400,
-            ease: 'outQuart'
-        });
-        
-        // Radar
-        anime.animate(radar, {
-            opacity: [0, 0.8],
-            scale: [0.5, 1],
-            duration: 600,
-            delay: 200,
-            ease: 'outQuart'
-        });
-        
-        anime.animate(radarRings, {
-            opacity: [0, 0.5],
-            scale: [0.8, 1],
-            duration: 400,
-            delay: anime.stagger(100, { start: 300 }),
-            ease: 'outQuart'
-        });
-        
-        // Radar sweep rotation
-        anime.animate(radarSweep, {
-            rotate: ['-60deg', '60deg'],
-            duration: 2000,
-            loop: true,
-            ease: 'linear',
-            direction: 'alternate'
-        });
-        
-        anime.animate(radarDot, {
-            opacity: [0, 1],
-            scale: [0, 1],
-            duration: 300,
-            delay: 500,
-            ease: 'outBack'
-        });
-        
-        // Progress bar
-        anime.animate(progress, {
-            opacity: [0, 1],
-            duration: 400,
-            delay: 400,
-            ease: 'outQuart'
-        });
-        
-        anime.animate(progressFill, {
-            scaleX: [0, 1],
-            duration: 800,
-            delay: 500,
-            ease: 'outQuart'
-        });
-        
-        anime.animate(progressMarkers, {
-            opacity: [0, 0.6],
-            duration: 200,
-            delay: anime.stagger(50, { start: 600 }),
-            ease: 'outQuart'
-        });
-        
-        // Labels
-        anime.animate(labels, {
-            opacity: [0, 0.7],
-            duration: 500,
-            delay: anime.stagger(100, { start: 700 }),
-            ease: 'outQuart'
-        });
-        
-        playSfx('correct');
-        
-    }, 4200);
-    
-    // ============ END SEQUENCE (5.5s) ============
-    
-    setTimeout(() => {
-        const bootSeq = document.getElementById('boot-sequence');
-        if (bootSeq) {
-            anime.animate(bootSeq, {
-                opacity: [1, 0],
-                duration: 500,
-                ease: 'outQuart',
-                onComplete: () => {
-                    bootSeq.remove();
+                    bootLoader.remove();
                     resolve();
-                }
-            });
-        } else {
-            resolve();
-        }
-    }, 5500);
+                }, 2000);
+            }
+        };
+        
+        // Start boot sequence
+        setTimeout(() => {
+            if (typeof gsap !== 'undefined') {
+                const tl = gsap.timeline();
+                tl.fromTo('.boot-logo', 
+                    { opacity: 0, y: -30, scaleX: 0.8 },
+                    { opacity: 1, y: 0, scaleX: 1, duration: 0.8, ease: 'power4.out' }
+                )
+                .fromTo('.boot-subtitle',
+                    { opacity: 0, letterSpacing: '0.5em' },
+                    { opacity: 0.7, letterSpacing: '0.2em', duration: 0.6, ease: 'power2.out' },
+                    '-=0.3'
+                )
+                .fromTo('.globe-wrap',
+                    { opacity: 0, scale: 0.85 },
+                    { opacity: 1, scale: 1, duration: 1, ease: 'power3.out' },
+                    '-=0.2'
+                )
+                .fromTo('.init-progress',
+                    { opacity: 0, translateY: 20 },
+                    { opacity: 1, translateY: 0, duration: 0.6, ease: 'power2.out' },
+                    '-=0.4'
+                );
+            }
+            
+            if (buildGlobe()) {
+                setTimeout(animateProgress, 800);
+            } else {
+                setTimeout(animateProgress, 200);
+            }
+        }, 100);
+    });
 }
 
 // Access Granted animation after player selection
