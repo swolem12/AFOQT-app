@@ -4875,7 +4875,7 @@ function showBootSequence() {
                     <div class="init-progress" style="width: min(480px, 75vw); opacity: 0;">
                         <div class="progress-label" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.15em; color: #9ef4ff; margin-bottom: 8px; text-align: center; text-transform: uppercase;">System Initialization</div>
                         <div class="progress-track" style="width: 100%; height: 8px; background: rgba(158, 244, 255, 0.1); border: 1px solid rgba(158, 244, 255, 0.3); border-radius: 999px; overflow: hidden; position: relative;">
-                            <div class="progress-fill" id="progressFill" style="height: 100%; width: 0%; background: linear-gradient(90deg, #00ff88, #00d4ff); box-shadow: 0 0 16px rgba(0, 255, 136, 0.6); transition: width 100ms linear;"></div>
+                            <div class="progress-fill" id="progressFill" style="height: 100%; width: 0%; background: linear-gradient(90deg, #00d4ff, #0088ff); box-shadow: 0 0 16px rgba(0, 212, 255, 0.8), 0 0 32px rgba(0, 136, 255, 0.4); transition: width 100ms linear;"></div>
                         </div>
                         <div class="progress-percent" id="progressPercent" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #9ef4ff; margin-top: 8px; text-align: center; letter-spacing: 0.1em;">0%</div>
                     </div>
@@ -4926,44 +4926,61 @@ function showBootSequence() {
         
         const buildGlobe = () => {
             if (!window.ENCOM || !window.ENCOM.Globe) {
-                console.warn('ENCOM.Globe not available');
+                console.warn('ENCOM.Globe not available, skipping globe');
                 return false;
             }
-            if (globe && globe.destroy) globe.destroy();
             
-            const w = globeHost.clientWidth || 400;
-            const h = globeHost.clientHeight || 400;
-            globe = new ENCOM.Globe(w, h, {
-                font: 'Inconsolata',
-                data: window.data ? window.data.slice() : [],
-                tiles: window.grid ? window.grid.tiles : [],
-                baseColor: '#8ce7ff',
-                markerColor: '#b8ffcf',
-                pinColor: '#ffdf8b',
-                satelliteColor: '#ffae5f',
-                scale: 1.05,
-                dayLength: 12000,
-                introLinesDuration: 2000,
-                maxPins: 10,
-                maxMarkers: 15,
-                viewAngle: 0.3
-            });
-            
-            globeHost.innerHTML = '';
-            globeHost.appendChild(globe.domElement);
-            
-            if (globe.renderer) {
-                globe.renderer.setClearColor(0x000000, 0);
-                const canvas = globe.renderer.domElement;
-                canvas.style.background = 'none';
-                canvas.style.backgroundColor = 'transparent';
+            try {
+                if (globe && globe.destroy) {
+                    globe.destroy();
+                }
+                globe = null;
+                
+                const w = globeHost.clientWidth || 400;
+                const h = globeHost.clientHeight || 400;
+                
+                // Create new globe instance
+                globe = new ENCOM.Globe(w, h, {
+                    font: 'Inconsolata',
+                    data: window.data ? window.data.slice() : [],
+                    tiles: window.grid ? window.grid.tiles : [],
+                    baseColor: '#8ce7ff',
+                    markerColor: '#b8ffcf',
+                    pinColor: '#ffdf8b',
+                    satelliteColor: '#ffae5f',
+                    scale: 1.05,
+                    dayLength: 12000,
+                    introLinesDuration: 1500,
+                    maxPins: 8,
+                    maxMarkers: 12,
+                    viewAngle: 0.3
+                });
+                
+                // Clear host and add globe
+                globeHost.innerHTML = '';
+                globeHost.appendChild(globe.domElement);
+                
+                // Ensure transparent background
+                if (globe.renderer) {
+                    globe.renderer.setClearColor(0x000000, 0);
+                    const canvas = globe.renderer.domElement;
+                    canvas.style.background = 'none';
+                    canvas.style.backgroundColor = 'transparent';
+                    canvas.style.width = '100%';
+                    canvas.style.height = '100%';
+                }
+                
+                // Initialize globe
+                globe.init(() => {
+                    startLoop();
+                });
+                
+                return true;
+            } catch (e) {
+                console.error('Globe initialization error:', e);
+                globeHost.innerHTML = '<div style="color: #9ef4ff; text-align: center; font-size: 14px;">Initializing...</div>';
+                return false;
             }
-            
-            globe.init(() => {
-                startLoop();
-            });
-            
-            return true;
         };
         
         // Animate progress bar
@@ -4980,17 +4997,19 @@ function showBootSequence() {
                     onComplete: showBootComplete
                 });
             } else {
+                // Silent fallback: just animate progress without showing loading box
                 let progress = 0;
+                const startTime = Date.now();
                 const interval = setInterval(() => {
-                    progress += Math.random() * 15;
-                    if (progress > 100) progress = 100;
+                    const elapsed = Date.now() - startTime;
+                    progress = Math.min(100, (elapsed / 8000) * 100);
                     progressFill.style.width = progress + '%';
                     progressPercent.textContent = Math.floor(progress) + '%';
                     if (progress >= 100) {
                         clearInterval(interval);
                         setTimeout(showBootComplete, 200);
                     }
-                }, 100);
+                }, 50);
             }
         };
         

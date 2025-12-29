@@ -18,20 +18,33 @@ open http://localhost:8000
 
 > **Note:** After updates, hard refresh (Ctrl+Shift+R / Cmd+Shift+R) to clear service worker cache.
 
-## 🧪 Tests & Debugging
+## 🧪 Tests, Admin Tools & Debugging
 
-Use these pages to verify content loading, question rendering, and spaced repetition logic. If assets look stale, append `?v=debug1` and hard refresh.
+### Quick Access
+**[→ Full Test Sites Guide](TEST_SITES_GUIDE.md)** — Complete reference for all 20+ testing utilities
 
-- **Content Loader**: Shows subjects, subtopics, and question counts
-   - https://swolem12.github.io/AFOQT-app/tests/test-content-loading.html
-- **Real Questions Viewer**: Renders real JSON questions with math UI
-   - https://swolem12.github.io/AFOQT-app/tests/test-real-questions.html
-- **Tracking & Spaced Repetition Suite**: Full DB tests (15/15)
-   - https://swolem12.github.io/AFOQT-app/tests/test-question-tracking.html
+### Essential Test Sites
+| Tool | Purpose |
+|------|---------|
+| **[Admin Console](https://swolem12.github.io/AFOQT-app/tests/admin-console.html)** | Full dashboard: browse all questions, manage players, view stats |
+| **[All Questions Browser](https://swolem12.github.io/AFOQT-app/tests/test-admin-all-questions.html)** | Search & filter 2,200+ questions by subject/difficulty |
+| **[Content Loader Test](https://swolem12.github.io/AFOQT-app/tests/test-content-loading.html)** | Verify JSON files load, display question registry |
+| **[CSS Verification](https://swolem12.github.io/AFOQT-app/tests/css-verification.html)** | Check all CSS classes applied correctly |
+| **[Table Reading Test](https://swolem12.github.io/AFOQT-app/tests/test-table-reading.html)** | Test table rendering with X/Y axis |
+| **[Block Counting Test](https://swolem12.github.io/AFOQT-app/tests/test-block-counting-iso.html)** | Verify 3D isometric cube rendering |
+| **[Database Inspector](https://swolem12.github.io/AFOQT-app/tests/test-db.html)** | Inspect localStorage player data & sessions |
 
-Tips
-- Service worker caching is enabled. If a test fetches an HTML 404 instead of JSON, hard refresh or add `?v=debug1`.
-- Test pages use absolute paths (`/AFOQT-app/...`) so they work on GitHub Pages.
+### Testing Workflows
+- **Adding Content?** → Test at: Content Loader → All Questions Browser → Main App
+- **CSS Broken?** → Check at: CSS Verification → Subject Test → Main App
+- **Questions Not Loading?** → Diagnose with: Content Loader → Console (F12) → patch-loader.js review
+- **Bootstrap Issues?** → Debug at: Boot Demo → App.js Error Check → Browser Console
+
+### Tips
+- Hard refresh browser (Ctrl+Shift+R / Cmd+Shift+R) after updates to clear service worker cache
+- If a test shows 404 for JSON files, check that paths use `/AFOQT-app/Test Content/...`
+- Service Worker cache version is `v110` — increment if pushing JS/CSS changes
+- All test pages work on GitHub Pages with absolute paths
 
 ## 📋 Features
 
