@@ -189,8 +189,13 @@ function parseFilename(filename) {
     
     // Everything before 'part' is subtopicId, part after is difficulty
     const difficulty = parts[partIndex - 1];
-    const subtopicId = parts.slice(0, partIndex - 1).join('_');
+    let subtopicId = parts.slice(0, partIndex - 1).join('_');
     const part = parseInt(parts[partIndex].replace('part', ''));
+    
+    // Strip subject prefix for Physical Science files (physical_science_topicname → topicname)
+    if (subtopicId.startsWith('physical_science_')) {
+        subtopicId = subtopicId.replace('physical_science_', '');
+    }
     
     return { subtopicId, difficulty, part };
 }
@@ -823,43 +828,31 @@ async function loadAllTableReadingContent() {
 async function loadAllPhysicalScienceContent() {
     console.log('Loading physical science content...');
 
-    const physicalScienceFiles = [
-        'physical_science_chemistry_basics_advanced_part1.json',
-        'physical_science_chemistry_basics_advanced_part2.json',
-        'physical_science_chemistry_basics_beginner_part1.json',
-        'physical_science_chemistry_basics_beginner_part2.json',
-        'physical_science_chemistry_basics_expert_part1.json',
-        'physical_science_earth_space_advanced_part1.json',
-        'physical_science_earth_space_advanced_part2.json',
-        'physical_science_earth_space_beginner_part1.json',
-        'physical_science_earth_space_beginner_part2.json',
-        'physical_science_earth_space_expert_part1.json',
-        'physical_science_electricity_magnetism_advanced_part1.json',
-        'physical_science_electricity_magnetism_advanced_part2.json',
-        'physical_science_electricity_magnetism_beginner_part1.json',
-        'physical_science_electricity_magnetism_beginner_part2.json',
-        'physical_science_electricity_magnetism_expert_part1.json',
-        'physical_science_energy_heat_advanced_part1.json',
-        'physical_science_energy_heat_advanced_part2.json',
-        'physical_science_energy_heat_beginner_part1.json',
-        'physical_science_energy_heat_beginner_part2.json',
-        'physical_science_energy_heat_expert_part1.json',
-        'physical_science_fluids_pressure_advanced_part1.json',
-        'physical_science_fluids_pressure_advanced_part2.json',
-        'physical_science_fluids_pressure_beginner_part1.json',
-        'physical_science_fluids_pressure_beginner_part2.json',
-        'physical_science_fluids_pressure_expert_part1.json',
-        'physical_science_motion_mechanics_advanced_part1.json',
-        'physical_science_motion_mechanics_advanced_part2.json',
-        'physical_science_motion_mechanics_beginner_part1.json',
-        'physical_science_motion_mechanics_beginner_part2.json',
-        'physical_science_motion_mechanics_expert_part1.json',
-        'physical_science_optics_waves_advanced_part1.json',
-        'physical_science_optics_waves_advanced_part2.json',
-        'physical_science_optics_waves_beginner_part1.json',
-        'physical_science_optics_waves_beginner_part2.json',
-        'physical_science_optics_waves_expert_part1.json'
+    // Physical Science topics (as defined in app.js)
+    const topics = [
+        'chemistry_basics',
+        'earth_space',
+        'electricity_magnetism',
+        'energy_heat',
+        'fluids_pressure',
+        'forces_motion',
+        'motion_mechanics',
+        'optics_waves'
     ];
+
+    const difficulties = ['beginner', 'advanced', 'expert'];
+    const parts = [1, 2, 3, 4]; // Support up to 4 parts
+
+    const physicalScienceFiles = [];
+    for (const topic of topics) {
+        for (const difficulty of difficulties) {
+            for (const part of parts) {
+                physicalScienceFiles.push(
+                    `physical_science_${topic}_${difficulty}_part${part}.json`
+                );
+            }
+        }
+    }
 
     let loadedCount = 0;
     let errorCount = 0;
@@ -867,7 +860,7 @@ async function loadAllPhysicalScienceContent() {
     const loadPromises = physicalScienceFiles.map(async (filename) => {
         const data = await loadPhysicalScienceFile(filename);
         if (!data || !data.questions) {
-            errorCount++;
+            // Don't error on missing parts - some might not exist
             return;
         }
 
@@ -900,7 +893,7 @@ async function loadAllPhysicalScienceContent() {
     });
 
     await Promise.all(loadPromises);
-    console.log(`✓ Loaded ${loadedCount} physical science files (${errorCount} errors)`);
+    console.log(`✓ Loaded ${loadedCount} physical science files (${errorCount} critical errors)`);
     console.log('Physical Science question registry:', questionRegistry.physical_science);
     return questionRegistry;
 }
