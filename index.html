@@ -68,12 +68,14 @@
         
         setTimeout(() => {
             if (!window.__AFOQT_BOOT_MARKER__) {
-                status.textContent = 'ERROR: app.js did not set boot marker!';
+                status.textContent = 'ERROR: app.js did not set boot marker! Loaded: ' + loadedScripts.join(', ');
                 status.style.color = 'red';
+                console.error('[BOOT FAIL] Marker not set. Loaded scripts:', loadedScripts);
+                console.error('[BOOT FAIL] window.__AFOQT_BOOT_MARKER__:', window.__AFOQT_BOOT_MARKER__);
             } else {
                 console.log('[CHECK] Boot marker found, app.js executed');
             }
-        }, 5000);
+        }, 8000);
     </script>
 </body>
 </html>
