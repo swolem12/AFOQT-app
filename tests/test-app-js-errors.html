@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>app.js Error Diagnostic</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0e27;
+            color: #00ffff;
+            line-height: 1.6;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px #00ffff;
+            letter-spacing: 2px;
+        }
+        
+        h2 {
+            color: #00cc99;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #00ffff;
+            padding-bottom: 8px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            background: rgba(0, 26, 51, 0.7);
+            border: 2px solid #00ffff;
+            border-radius: 4px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+        }
+        
+        .controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            background: rgba(0, 255, 255, 0.1);
+            color: #00ffff;
+            border: 2px solid #00ffff;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        button:hover {
+            background: rgba(0, 255, 255, 0.3);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+        }
+        
+        button.danger {
+            border-color: #ff6666;
+            color: #ff6666;
+        }
+        
+        button.danger:hover {
+            background: rgba(255, 102, 102, 0.2);
+            box-shadow: 0 0 15px rgba(255, 102, 102, 0.6);
+        }
+        
+        .output {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #00ffff;
+            padding: 15px;
+            margin-bottom: 15px;
+            max-height: 400px;
+            overflow-y: auto;
+            font-size: 12px;
+            word-break: break-all;
+        }
+        
+        .output.error {
+            border-color: #ff6666;
+            color: #ff6666;
+        }
+        
+        .output.success {
+            border-color: #00ff00;
+            color: #00ff00;
+        }
+        
+        .output.warning {
+            border-color: #ffcc00;
+            color: #ffcc00;
+        }
+        
+        .log-entry {
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+        }
+        
+        .log-entry:last-child {
+            border-bottom: none;
+        }
+        
+        .log-type {
+            color: #00cc99;
+            font-weight: bold;
+            min-width: 80px;
+            display: inline-block;
+        }
+        
+        .log-message {
+            flex: 1;
+        }
+        
+        .error-details {
+            background: rgba(255, 102, 102, 0.1);
+            border-left: 4px solid #ff6666;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 2px;
+        }
+        
+        .success-check {
+            color: #00ff00;
+            margin-right: 5px;
+        }
+        
+        .fail-x {
+            color: #ff6666;
+            margin-right: 5px;
+        }
+        
+        .info-box {
+            background: rgba(0, 153, 255, 0.1);
+            border-left: 4px solid #0099ff;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 2px;
+            font-size: 12px;
+        }
+        
+        .script-load-status {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .status-item {
+            background: rgba(0, 26, 51, 0.5);
+            border: 1px solid #00ffff;
+            padding: 10px;
+            border-radius: 2px;
+            text-align: center;
+            font-size: 12px;
+        }
+        
+        .status-item.loaded {
+            border-color: #00ff00;
+            color: #00ff00;
+        }
+        
+        .status-item.failed {
+            border-color: #ff6666;
+            color: #ff6666;
+        }
+        
+        .status-item.pending {
+            border-color: #ffcc00;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 app.js ERROR DIAGNOSTIC</h1>
+        
+        <div class="section">
+            <h2>Script Load Status</h2>
+            <div id="scriptStatus" class="script-load-status">
+                <div class="status-item pending">db.js: PENDING</div>
+                <div class="status-item pending">patch-loader.js: PENDING</div>
+                <div class="status-item pending">app.js: PENDING</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Diagnostics</h2>
+            <div class="controls">
+                <button onclick="testAppJsLoad()">▶ Test app.js Load</button>
+                <button onclick="testDependencies()">▶ Test Dependencies</button>
+                <button onclick="checkBootMarker()">▶ Check Boot Marker</button>
+                <button onclick="clearLogs()" class="danger">✗ Clear Logs</button>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Execution Log</h2>
+            <div id="logOutput" class="output"></div>
+        </div>
+        
+        <div class="section">
+            <h2>Global Error Capture</h2>
+            <div id="errorOutput" class="output error" style="display: none;"></div>
+            <div id="noErrors" class="info-box">
+                ✓ No global errors detected yet. Errors will appear here.
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Window Object State</h2>
+            <div id="windowState" class="output"></div>
+        </div>
+    </div>
+
+    <script>
+        const logs = [];
+        const errors = [];
+        
+        // Set up global error listener
+        window.addEventListener('error', (e) => {
+            const errorInfo = {
+                message: e.message,
+                source: e.filename,
+                line: e.lineno,
+                column: e.colno,
+                stack: e.error ? e.error.stack : 'No stack trace',
+                timestamp: new Date().toLocaleTimeString()
+            };
+            
+            errors.push(errorInfo);
+            addLog('GLOBAL_ERROR', `${e.message} at ${e.filename}:${e.lineno}:${e.colno}`);
+            
+            // Show error output
+            const errorOutput = document.getElementById('errorOutput');
+            const noErrors = document.getElementById('noErrors');
+            noErrors.style.display = 'none';
+            errorOutput.style.display = 'block';
+            
+            updateErrorOutput();
+        });
+        
+        function addLog(type, message) {
+            const timestamp = new Date().toLocaleTimeString();
+            logs.push({ type, message, timestamp });
+            updateLogOutput();
+        }
+        
+        function updateLogOutput() {
+            const output = document.getElementById('logOutput');
+            output.innerHTML = logs.map(log => `
+                <div class="log-entry">
+                    <span class="log-type">[${log.type}]</span>
+                    <span class="log-message">${log.message}</span>
+                    <span style="color: #00aa77; font-size: 10px;">${log.timestamp}</span>
+                </div>
+            `).join('');
+            output.scrollTop = output.scrollHeight;
+        }
+        
+        function updateErrorOutput() {
+            const output = document.getElementById('errorOutput');
+            output.innerHTML = errors.map(err => `
+                <div class="error-details">
+                    <strong>✗ Error:</strong> ${err.message}<br>
+                    <strong>Source:</strong> ${err.source}<br>
+                    <strong>Location:</strong> Line ${err.line}, Column ${err.column}<br>
+                    <strong>Time:</strong> ${err.timestamp}<br>
+                    <details>
+                        <summary>Stack Trace</summary>
+                        <pre style="margin-top: 8px; font-size: 10px; overflow-x: auto;">${err.stack}</pre>
+                    </details>
+                </div>
+            `).join('');
+        }
+        
+        function testAppJsLoad() {
+            addLog('TEST_START', 'Testing app.js load...');
+            
+            // Check pre-boot marker
+            if (window.__AFOQT_PRE_BOOT__) {
+                addLog('INFO', '✓ Pre-boot marker exists');
+            } else {
+                addLog('WARNING', '⚠ Pre-boot marker NOT set');
+            }
+            
+            // Try to load app.js dynamically
+            const script = document.createElement('script');
+            script.src = '../app.js';
+            
+            script.onload = () => {
+                addLog('SUCCESS', '✓ app.js loaded successfully');
+                
+                if (window.__AFOQT_BOOT_MARKER__) {
+                    addLog('SUCCESS', '✓ app.js boot marker found!');
+                } else {
+                    addLog('ERROR', '✗ app.js loaded but boot marker NOT set');
+                }
+                
+                updateWindowState();
+            };
+            
+            script.onerror = (e) => {
+                addLog('ERROR', '✗ Failed to load app.js: ' + e.message);
+            };
+            
+            script.onreadystatechange = function() {
+                if (this.readyState === 'loaded' || this.readyState === 'complete') {
+                    addLog('INFO', 'app.js readystate: ' + this.readyState);
+                }
+            };
+            
+            document.head.appendChild(script);
+        }
+        
+        function testDependencies() {
+            addLog('TEST_START', 'Testing dependencies...');
+            
+            const deps = [
+                { name: 'db.js', file: '../db.js', global: 'afoqtDB' },
+                { name: 'patch-loader.js', file: '../patch-loader.js', global: 'initializePatch18' },
+                { name: 'anime.js', global: 'anime' }
+            ];
+            
+            deps.forEach(dep => {
+                const loaded = window[dep.global] !== undefined;
+                const status = loaded ? '✓ LOADED' : '✗ MISSING';
+                const color = loaded ? 'success' : 'error';
+                
+                addLog(color.toUpperCase(), `${dep.name}: ${status}`);
+                
+                if (loaded) {
+                    addLog('INFO', `  → ${dep.global} exists: ${typeof window[dep.global]}`);
+                }
+            });
+            
+            updateWindowState();
+        }
+        
+        function checkBootMarker() {
+            addLog('TEST_START', 'Checking boot markers...');
+            
+            const markers = {
+                '__AFOQT_PRE_BOOT__': 'Pre-boot marker (sync)',
+                '__AFOQT_BOOT_MARKER__': 'App boot marker (from app.js)'
+            };
+            
+            Object.entries(markers).forEach(([marker, desc]) => {
+                const exists = window[marker] !== undefined;
+                const status = exists ? '✓ SET' : '✗ NOT SET';
+                const type = exists ? 'SUCCESS' : 'ERROR';
+                
+                addLog(type, `${desc}: ${status}`);
+                
+                if (exists) {
+                    addLog('INFO', `  → Value: ${window[marker]}`);
+                }
+            });
+            
+            updateWindowState();
+        }
+        
+        function updateWindowState() {
+            const state = document.getElementById('windowState');
+            
+            const checks = {
+                'Pre-boot Marker': window.__AFOQT_PRE_BOOT__ ? '✓ SET' : '✗ NOT SET',
+                'Boot Marker': window.__AFOQT_BOOT_MARKER__ ? '✓ SET' : '✗ NOT SET',
+                'afoqtDB': window.afoqtDB ? `✓ Available (${typeof window.afoqtDB})` : '✗ Missing',
+                'initializePatch18': window.initializePatch18 ? `✓ Available` : '✗ Missing',
+                'anime': window.anime ? '✓ Available' : '✗ Missing',
+                'Document Ready': document.readyState,
+                'Window Load': window.onload ? '✓ Handler exists' : '⚠ No handler',
+                'Total Errors': errors.length
+            };
+            
+            state.innerHTML = Object.entries(checks).map(([key, value]) => `
+                <div class="log-entry">
+                    <span class="log-type">${key}:</span>
+                    <span class="log-message">${value}</span>
+                </div>
+            `).join('');
+        }
+        
+        function clearLogs() {
+            logs.length = 0;
+            errors.length = 0;
+            document.getElementById('logOutput').innerHTML = '';
+            document.getElementById('errorOutput').innerHTML = '';
+            document.getElementById('errorOutput').style.display = 'none';
+            document.getElementById('noErrors').style.display = 'block';
+            document.getElementById('windowState').innerHTML = '';
+            addLog('INFO', 'Logs cleared');
+        }
+        
+        // Initial state
+        addLog('INFO', 'Diagnostic tool loaded');
+        addLog('INFO', `Document readyState: ${document.readyState}`);
+        updateWindowState();
+    </script>
+</body>
+</html>
