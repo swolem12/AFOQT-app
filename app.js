@@ -1072,7 +1072,13 @@ const state = {
         difficulty: 'beginner', // Store difficulty with quiz session
         showFeedback: true, // Patch 18: control feedback visibility
         isPracticeTest: false, // Patch 18: flag for AFOQT practice tests
-        showSectionTransition: false // Flag to show section transition confirmation modal
+        showSectionTransition: false, // Flag to show section transition confirmation modal
+        // Full Practice Test fields
+        isFullPracticeTest: false, // Flag for full AFOQT practice test mode
+        sections: [], // Array of section objects for full test
+        currentSectionIndex: 0, // Which section user is currently on
+        sectionTimerInterval: null, // Timer for current section
+        fullTestData: null // Complete test data structure
     },
     patch18Loaded: false, // Track if Patch 18 content is loaded
     contentLoading: false, // Track if content loading async operation is in progress
@@ -6492,6 +6498,89 @@ function startAFOQTSectionTimer() {
     if (state.quiz.timerInterval) {
         clearInterval(state.quiz.timerInterval);
     }
+
+async function _startAFOQTPracticeTestAsync(difficulty) {
+    console.log('[AFOQT] Starting full practice test with difficulty:', difficulty);
+    
+    try {
+        // Check if full practice test is initialized
+        if (!fullPracticeTestConfig.initialized) {
+            console.log('[AFOQT] Initializing full practice test...');
+            const initialized = await initializeFullPracticeTest();
+            if (!initialized) {
+                playSfx('wrong');
+                showErrorNotification('Failed to load AFOQT practice test content. Please try again.');
+                return;
+            }
+        }
+        
+        // Generate full practice test
+        const testData = generateFullPracticeTest(difficulty);
+        if (!testData || !testData.sections || testData.sections.length === 0) {
+            playSfx('wrong');
+            showErrorNotification('Failed to generate AFOQT practice test. Please try again.');
+            return;
+        }
+        
+        // Validate content has questions
+        const sectionsWithQuestions = testData.sections.filter(s => s.questions && s.questions.length > 0);
+        if (sectionsWithQuestions.length < testData.sections.length) {
+            console.warn('[AFOQT] Some sections have no questions:', {
+                totalSections: testData.sections.length,
+                withQuestions: sectionsWithQuestions.length,
+                empt: testData.sections.filter(s => !s.questions || s.questions.length === 0).map(s => s.sectionId)
+            });
+        }
+        
+        // Initialize quiz state for full practice test
+        state.quiz.isFullPracticeTest = true;
+        state.quiz.fullTestData = testData;
+        state.quiz.sections = testData.sections;
+        state.quiz.currentSectionIndex = 0;
+        state.quiz.difficulty = difficulty;
+        state.quiz.mode = 'full-practice';
+        state.quiz.showFeedback = false; // No feedback until test complete
+        state.quiz.score = 0;
+        state.quiz.selectedAnswer = null;
+        state.quiz.questionStartTime = null;
+        state.quiz.questionTimes = [];
+        state.quiz.userAnswers = [];
+        
+        // Load first section
+        const firstSection = testData.sections[0];
+        state.quiz.questions = firstSection.questions || [];
+        state.quiz.currentIndex = 0;
+        state.quiz.questionStartTime = Date.now();
+        
+        console.log('[AFOQT] Test initialized:', {
+            difficulty,
+            totalSections: testData.sections.length,
+            firstSectionQuestions: state.quiz.questions.length,
+            firstSectionTime: firstSection.timeLimitSeconds
+        });
+        
+        state.screen = 'quiz';
+        playSfx('start');
+        render();
+        
+        // Start section timer
+        startAFOQTSectionTimer();
+        
+    } catch (error) {
+        console.error('[AFOQT] Error starting full practice test:', error);
+        playSfx('wrong');
+        showErrorNotification(`Failed to start AFOQT practice test: ${error.message}`);
+        state.screen = 'home';
+        render();
+    }
+}
+
+function startAFOQTSectionTimer() {
+    // Clear any existing timer
+    if (state.quiz.sectionTimerInterval) {
+        clearInterval(state.quiz.sectionTimerInterval);
+    }
+
     
     // Update timer immediately
     updateTimerDisplay();
@@ -7348,6 +7437,126 @@ function renderModeSelect() {
                 <button class="btn" id="home-btn">🏠 Home</button>
             </div>
         </div>
+    `;
+}
+
+/**
+ * Render AFOQT Full Practice Test Difficulty Selection
+ */
+function renderAFOQTDifficultySelect() {
+    const isLoading = state.contentLoading || !state.contentReady;
+    const disabledStyle = isLoading ? 'opacity: 0.5; pointer-events: none;' : '';
+    const loadingMessage = isLoading ? '<p style="text-align: center; color: var(--color-primary); margin-top: 20px;">⏳ Loading question content...</p>' : '';
+    
+    return `
+        <div class="panel">
+            <h1 class="panel-header">AFOQT FULL PRACTICE TEST</h1>
+            
+            <div style="margin: 40px auto; max-width: 1000px;">
+                <div class="afoqt-practice-info" style="background: rgba(0, 255, 255, 0.1); border: 1px solid var(--color-primary); padding: 20px; margin-bottom: 30px; border-radius: 4px;">
+                    <h2 style="text-align: center; margin-bottom: 15px; color: var(--color-primary);">OFFICIAL AFOQT SIMULATION</h2>
+                    <p style="text-align: center; margin-bottom: 20px; line-height: 1.6;">
+                        This full-length practice test simulates the real AFOQT with 12 timed sections in official order.
+                        Each section has a countdown timer - when time runs out, you'll proceed to the next section.
+                        Your performance will be saved with composite scores (Verbal, Quantitative, Academic Aptitude, Pilot, CSO, ABM).
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; font-size: 0.9rem;">
+                        <div>✓ 12 Official Sections</div>
+                        <div>✓ Realistic Timing</div>
+                        <div>✓ Composite Scoring</div>
+                        <div>✓ Progress Tracking</div>
+                        <div>✓ Detailed Analytics</div>
+                        <div>✓ Section-by-Section Results</div>
+                    </div>
+                </div>
+                
+                ${loadingMessage}
+                
+                <h2 style="text-align: center; margin: 30px 0 20px 0;">SELECT DIFFICULTY LEVEL</h2>
+                
+                <div class="grid grid-3" style="${disabledStyle}">
+                    <div class="tile afoqt-difficulty-tile" id="afoqt-beginner-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title" style="font-size: 1.5rem; margin-bottom: 15px;">⭐ BEGINNER</div>
+                        <div class="tile-description" style="line-height: 1.6;">
+                            <strong>Foundational Level</strong><br><br>
+                            • Simpler questions<br>
+                            • Build confidence<br>
+                            • Learn the format<br>
+                            • Ideal for first attempt
+                        </div>
+                    </div>
+                    
+                    <div class="tile afoqt-difficulty-tile" id="afoqt-advanced-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title" style="font-size: 1.5rem; margin-bottom: 15px;">⭐⭐ ADVANCED</div>
+                        <div class="tile-description" style="line-height: 1.6;">
+                            <strong>Standard Difficulty</strong><br><br>
+                            • Realistic challenge<br>
+                            • True test simulation<br>
+                            • Balanced difficulty<br>
+                            • Recommended for practice
+                        </div>
+                    </div>
+                    
+                    <div class="tile afoqt-difficulty-tile" id="afoqt-expert-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title" style="font-size: 1.5rem; margin-bottom: 15px;">⭐⭐⭐ EXPERT</div>
+                        <div class="tile-description" style="line-height: 1.6;">
+                            <strong>Maximum Challenge</strong><br><br>
+                            • Complex problems<br>
+                            • Exceed the standard<br>
+                            • Test mastery<br>
+                            • For high scorers
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="afoqt-section-preview" style="margin-top: 40px; font-size: 0.85rem;">
+                    <h3 style="text-align: center; margin-bottom: 15px; color: var(--color-primary);">TEST SECTIONS (In Order)</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px;">
+                        <div style="padding: 10px; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.2);">
+                            1. Verbal Analogies <span style="float: right; opacity: 0.7;">25 Q • 8 min</span>
+                        </div>
+                        <div style="padding: 10px; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.2);">
+                            2. Arithmetic Reasoning <span style="float: right; opacity: 0.7;">25 Q • 29 min</span>
+                        </div>
+                        <div style="padding: 10px; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.2);">
+                            3. Word Knowledge <span style="float: right; opacity: 0.7;">25 Q • 5 min</span>
+                        </div>
+                        <div style="padding: 10px; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.2);">
+                            4. Math Knowledge <span style="float: right; opacity: 0.7;">25 Q • 22 min</span>
+                        </div>
+                        <div style="padding: 10px; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.2);">
+                            5. Reading Comprehension <span style="float: right; opacity: 0.7;">25 Q • 38 min</span>
+                        </div>
+                        <div style="padding: 10px; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.2);">
+                            6. Situational Judgment <span style="float: right; opacity: 0.7;">50 Q • 35 min</span>
+                        </div>
+                        <div style="padding: 10px; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.2);">
+                            7. Physical Science <span style="float: right; opacity: 0.7;">20 Q • 10 min</span>
+                        </div>
+                        <div style="padding: 10px; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.2);">
+                            8. Table Reading <span style="float: right; opacity: 0.7;">40 Q • 7 min</span>
+                        </div>
+                        <div style="padding: 10px; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.2);">
+                            9. Instrument Comprehension <span style="float: right; opacity: 0.7;">25 Q • 5 min</span>
+                        </div>
+                        <div style="padding: 10px; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.2);">
+                            10. Block Counting <span style="float: right; opacity: 0.7;">30 Q • 4.5 min</span>
+                        </div>
+                        <div style="padding: 10px; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.2);">
+                            11. Aviation Information <span style="float: right; opacity: 0.7;">20 Q • 8 min</span>
+                        </div>
+                        <div style="padding: 10px; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.2); opacity: 0.5;">
+                            12. Self-Description (Not scored) <span style="float: right; opacity: 0.7;">240 items • 45 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons quiz-action-buttons" style="margin-top: 30px;">
+                <button class="btn" id="home-btn">← Back to Home</button>
+            </div>
+        </div>
+        ${renderFloatingNav({ showBack: true })}
     `;
 }
 
