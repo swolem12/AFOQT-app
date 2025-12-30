@@ -6528,7 +6528,7 @@ async function _startAFOQTPracticeTestAsync(difficulty) {
             console.warn('[AFOQT] Some sections have no questions:', {
                 totalSections: testData.sections.length,
                 withQuestions: sectionsWithQuestions.length,
-                empt: testData.sections.filter(s => !s.questions || s.questions.length === 0).map(s => s.sectionId)
+                empty: testData.sections.filter(s => !s.questions || s.questions.length === 0).map(s => s.sectionId)
             });
         }
         
@@ -6545,18 +6545,21 @@ async function _startAFOQTPracticeTestAsync(difficulty) {
         state.quiz.questionStartTime = null;
         state.quiz.questionTimes = [];
         state.quiz.userAnswers = [];
+        state.quiz.answers = new Array(testData.allQuestions.length).fill(null);
+        state.quiz.currentSection = 0;
         
-        // Load first section
-        const firstSection = testData.sections[0];
-        state.quiz.questions = firstSection.questions || [];
+        // Load all questions but start with first section display
+        state.quiz.questions = testData.allQuestions || [];
         state.quiz.currentIndex = 0;
         state.quiz.questionStartTime = Date.now();
+        state.quiz.sectionTimeStarted = Date.now();
         
         console.log('[AFOQT] Test initialized:', {
             difficulty,
             totalSections: testData.sections.length,
-            firstSectionQuestions: state.quiz.questions.length,
-            firstSectionTime: firstSection.timeLimitSeconds
+            totalQuestions: testData.allQuestions.length,
+            firstSectionQuestions: testData.sections[0].questions.length,
+            firstSectionTime: testData.sections[0].timeLimitSeconds
         });
         
         state.screen = 'quiz';
@@ -6807,6 +6810,9 @@ function finishQuiz() {
     if (state.quiz.timerInterval) {
         clearInterval(state.quiz.timerInterval);
     }
+    if (state.quiz.sectionTimerInterval) {
+        clearInterval(state.quiz.sectionTimerInterval);
+    }
     
     // Calculate final score from answers array (works for ALL quiz modes: practice, test, sprint, AFOQT)
     let score = 0;
@@ -6843,7 +6849,36 @@ function finishQuiz() {
         }
     });
     
-    if (state.currentPlayer) {
+    // Handle AFOQT Full Practice Test separately
+    if (state.quiz.isFullPracticeTest && state.quiz.fullTestData) {
+        console.log('[AFOQT] Finishing full practice test');
+        // Save the full practice test result
+        const result = saveFullPracticeTestResult(state.quiz.fullTestData);
+        
+        if (state.currentPlayer) {
+            // Also save to general sessions
+            const session = {
+                topicId: 'full_afoqt_practice',
+                topicName: 'AFOQT Full Practice Test',
+                score: state.quiz.score,
+                total: state.quiz.questions.length,
+                avgTime: avgTime,
+                timestamp: Date.now(),
+                difficulty: state.quiz.difficulty,
+                playerId: state.currentPlayer.id,
+                mode: 'full-practice',
+                isPracticeTest: true,
+                breakdown: Object.values(breakdown),
+                afoqtResult: result // Reference to the detailed AFOQT result
+            };
+            
+            state.currentPlayer.sessions.push(session);
+            afoqtDB.saveSession(session).catch(err => {
+                console.error('Failed to save AFOQT session:', err);
+            });
+        }
+    } else if (state.currentPlayer) {
+        // Standard quiz result handling
         const session = {
             topicId: state.currentTopic.id,
             topicName: state.currentTopic.name,

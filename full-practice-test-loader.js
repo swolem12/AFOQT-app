@@ -256,26 +256,43 @@ function generateFullPracticeTest(difficulty) {
 
     const config = fullPracticeTestConfig.config;
     const testSections = [];
+    let globalQuestionIndex = 0;
 
     for (const sectionConfig of config.examSections) {
         const sectionQuestions = selectQuestionsForSection(sectionConfig, difficulty);
+        const startIndex = globalQuestionIndex;
+        const endIndex = globalQuestionIndex + sectionQuestions.length - 1;
         
         testSections.push({
             sectionId: sectionConfig.sectionId,
             displayName: sectionConfig.displayName,
+            name: sectionConfig.displayName,
             questionCount: sectionConfig.questionCount,
             timeLimitSeconds: sectionConfig.timeLimitSeconds,
+            timeSeconds: sectionConfig.timeLimitSeconds, // Alias for timer
             questions: sectionQuestions,
+            startIndex: startIndex,
+            endIndex: endIndex,
+            totalQuestions: sectionQuestions.length,
             currentQuestionIndex: 0,
             answers: new Array(sectionQuestions.length).fill(null),
-            timeRemaining: sectionConfig.timeLimitSeconds,
+            blanks: 0,
             completed: false
         });
+        
+        globalQuestionIndex = endIndex + 1;
     }
+    
+    // Flatten all questions into a single array for quiz rendering
+    const allQuestions = [];
+    testSections.forEach(section => {
+        allQuestions.push(...section.questions);
+    });
 
     return {
         difficulty,
         sections: testSections,
+        allQuestions: allQuestions,
         currentSectionIndex: 0,
         startTime: Date.now(),
         attemptNumber: getNextAttemptNumber()
