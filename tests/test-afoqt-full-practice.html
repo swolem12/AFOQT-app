@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFOQT Full Practice Test - Integration Test</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body { background: #0a0e27; color: #00ffff; font-family: 'Courier New', monospace; padding: 20px; }
+        .test-section { background: rgba(0,255,255,0.1); border: 1px solid #00ffff; padding: 20px; margin: 10px 0; }
+        .test-pass { color: #00ff99; }
+        .test-fail { color: #ff4444; }
+        .test-info { color: #00ccff; }
+        button { padding: 10px 20px; margin: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>AFOQT Full Practice Test - Integration Test</h1>
+    
+    <div class="test-section">
+        <h2>Test 1: Loader Initialization</h2>
+        <button onclick="testLoaderInit()">Test Initialization</button>
+        <div id="test1-result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 2: Full Config Loading</h2>
+        <button onclick="testConfigLoading()">Test Config Load</button>
+        <div id="test2-result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 3: Question Registry Build</h2>
+        <button onclick="testRegistryBuild()">Test Registry</button>
+        <div id="test3-result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 4: Full Practice Test Generation</h2>
+        <button onclick="testTestGeneration()">Test Generation</button>
+        <div id="test4-result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 5: Section Validation</h2>
+        <button onclick="testSectionValidation()">Validate Content</button>
+        <div id="test5-result"></div>
+    </div>
+
+    <script src="../full-practice-test-loader.js"></script>
+    <script>
+        function log(elementId, message, type = 'info') {
+            const element = document.getElementById(elementId);
+            const line = document.createElement('div');
+            line.className = `test-${type}`;
+            line.textContent = message;
+            element.appendChild(line);
+        }
+
+        async function testLoaderInit() {
+            const resultId = 'test1-result';
+            document.getElementById(resultId).innerHTML = '';
+            
+            try {
+                log(resultId, 'Testing fullPracticeTestConfig object...', 'info');
+                
+                if (typeof fullPracticeTestConfig === 'undefined') {
+                    log(resultId, 'FAIL: fullPracticeTestConfig not defined', 'fail');
+                    return;
+                }
+                
+                log(resultId, 'PASS: fullPracticeTestConfig object exists', 'pass');
+                log(resultId, `  - initialized: ${fullPracticeTestConfig.initialized}`, 'info');
+                log(resultId, `  - has questionRegistry: ${!!fullPracticeTestConfig.questionRegistry}`, 'info');
+                log(resultId, `  - has config: ${!!fullPracticeTestConfig.config}`, 'info');
+                
+            } catch (error) {
+                log(resultId, `FAIL: ${error.message}`, 'fail');
+            }
+        }
+
+        async function testConfigLoading() {
+            const resultId = 'test2-result';
+            document.getElementById(resultId).innerHTML = '';
+            
+            try {
+                log(resultId, 'Loading full_afoqt_practice_test_config_v1.json...', 'info');
+                
+                const response = await fetch('../Test Content/full_afoqt_practice_test_config_v1.json');
+                if (!response.ok) {
+                    log(resultId, `FAIL: Could not load config (${response.status})`, 'fail');
+                    return;
+                }
+                
+                const config = await response.json();
+                log(resultId, 'PASS: Config loaded successfully', 'pass');
+                log(resultId, `  - fileId: ${config.fileId}`, 'info');
+                log(resultId, `  - displayName: ${config.displayName}`, 'info');
+                log(resultId, `  - examSections: ${config.examSections.length}`, 'info');
+                log(resultId, `  - sections:`, 'info');
+                
+                config.examSections.forEach(s => {
+                    log(resultId, `    * ${s.displayName}: ${s.questionCount}q × ${s.timeLimitMinutes}min`, 'info');
+                });
+                
+            } catch (error) {
+                log(resultId, `FAIL: ${error.message}`, 'fail');
+            }
+        }
+
+        async function testRegistryBuild() {
+            const resultId = 'test3-result';
+            document.getElementById(resultId).innerHTML = '';
+            
+            try {
+                log(resultId, 'Initializing full practice test system...', 'info');
+                
+                const initialized = await initializeFullPracticeTest();
+                if (!initialized) {
+                    log(resultId, 'FAIL: Initialization failed', 'fail');
+                    return;
+                }
+                
+                log(resultId, 'PASS: System initialized', 'pass');
+                log(resultId, `  - Registry keys: ${Object.keys(fullPracticeTestConfig.questionRegistry).length}`, 'info');
+                
+                // Show sample registry stats
+                Object.entries(fullPracticeTestConfig.questionRegistry).slice(0, 3).forEach(([sectionId, registry]) => {
+                    const begin = registry.beginner ? registry.beginner.length : 0;
+                    const adv = registry.advanced ? registry.advanced.length : 0;
+                    const exp = registry.expert ? registry.expert.length : 0;
+                    log(resultId, `  - ${sectionId}: B:${begin} A:${adv} E:${exp}`, 'info');
+                });
+                
+            } catch (error) {
+                log(resultId, `FAIL: ${error.message}`, 'fail');
+            }
+        }
+
+        async function testTestGeneration() {
+            const resultId = 'test4-result';
+            document.getElementById(resultId).innerHTML = '';
+            
+            try {
+                log(resultId, 'Generating beginner difficulty full practice test...', 'info');
+                
+                if (!fullPracticeTestConfig.initialized) {
+                    log(resultId, 'Initializing first...', 'info');
+                    await initializeFullPracticeTest();
+                }
+                
+                const test = generateFullPracticeTest('beginner');
+                if (!test) {
+                    log(resultId, 'FAIL: Test generation returned null', 'fail');
+                    return;
+                }
+                
+                log(resultId, 'PASS: Test generated successfully', 'pass');
+                log(resultId, `  - difficulty: ${test.difficulty}`, 'info');
+                log(resultId, `  - sections: ${test.sections.length}`, 'info');
+                log(resultId, `  - total questions: ${test.allQuestions.length}`, 'info');
+                log(resultId, `  - attemptNumber: ${test.attemptNumber}`, 'info');
+                
+                // Show section summary
+                log(resultId, `  - Section breakdown:`, 'info');
+                test.sections.slice(0, 5).forEach(s => {
+                    log(resultId, `    * ${s.name}: ${s.questions.length} Q (${s.timeLimitSeconds}s)`, 'info');
+                });
+                
+            } catch (error) {
+                log(resultId, `FAIL: ${error.message}`, 'fail');
+            }
+        }
+
+        async function testSectionValidation() {
+            const resultId = 'test5-result';
+            document.getElementById(resultId).innerHTML = '';
+            
+            try {
+                log(resultId, 'Validating AFOQT practice test content...', 'info');
+                
+                if (!fullPracticeTestConfig.initialized) {
+                    log(resultId, 'Initializing first...', 'info');
+                    await initializeFullPracticeTest();
+                }
+                
+                const validation = validateFullPracticeTestContent();
+                if (!validation) {
+                    log(resultId, 'FAIL: Validation returned null', 'fail');
+                    return;
+                }
+                
+                if (!validation.isValid) {
+                    log(resultId, 'WARNING: Some sections have insufficient content', 'info');
+                }
+                
+                log(resultId, 'Validation results:', 'info');
+                
+                Object.entries(validation.sections).slice(0, 3).forEach(([sectionId, data]) => {
+                    const status = data.difficulties.beginner.sufficient ? '✓' : '✗';
+                    log(resultId, `  ${status} ${data.displayName}:`, 'info');
+                    
+                    Object.entries(data.difficulties).forEach(([diff, stats]) => {
+                        const color = stats.sufficient ? 'pass' : 'fail';
+                        log(resultId, `     - ${diff}: ${stats.available}/${stats.required}`, color);
+                    });
+                });
+                
+            } catch (error) {
+                log(resultId, `FAIL: ${error.message}`, 'fail');
+            }
+        }
+    </script>
+</body>
+</html>
