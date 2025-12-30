@@ -501,95 +501,16 @@ animationStyles.textContent = `
 document.head.appendChild(animationStyles);
 
 // ============================================================================
-// Boot Screen Effect - Enhanced ASCII RPG Style
+// Boot Screen Effect - Globe Initialization
 // ============================================================================
 function showBootScreen() {
+    let globe, animationId, loopRunning = false;
+    
     // Configuration constants
-    const MATRIX_COLUMN_WIDTH = 20;
-    const MATRIX_RESET_PROBABILITY = 0.975;
     const FADE_DURATION_MS = 800;
-    const AUTO_FINISH_DELAY_MS = 2000;
-    const TYPING_INTERVAL_MS = 100;
+    const PROGRESS_DURATION_MS = 8000;
     
-    // Detect mobile device
-    const isMobile = window.innerWidth <= 768;
-    
-    // Simplified logo for mobile devices
-    const mobileLogo = `
-    ╔════════════════════════════════════╗
-    ║     █████  ███████  ██████  ████████     ║
-    ║    ██   ██ ██      ██    ██    ██        ║
-    ║    ███████ █████   ██    ██    ██        ║
-    ║    ██   ██ ██      ██ ▄▄ ██    ██        ║
-    ║    ██   ██ ██       ██████     ██        ║
-    ║                        ▀▀                 ║
-    ║          >>> QUEST <<<                    ║
-    ║       [ NEURAL LINK ACTIVE ]              ║
-    ╚════════════════════════════════════╝
-    `;
-    
-    const desktopLogo = `
-    ╔═══════════════════════════════════════════════════════════════════════╗
-    ║                                                                       ║
-    ║     ▄▄▄        █████▒ ▒█████    █████   ▄▄▄█████▓                   ║
-    ║    ▒████▄    ▓██   ▒ ▒██▒  ██▒▒██▓  ██▒ ▓  ██▒ ▓▒                   ║
-    ║    ▒██  ▀█▄  ▒████ ░ ▒██░  ██▒▒██▒  ██░ ▒ ▓██░ ▒░                   ║
-    ║    ░██▄▄▄▄██ ░▓█▒  ░ ▒██   ██░░██  █▀ ░ ░ ▓██▓ ░                    ║
-    ║     ▓█   ▓██▒░▒█░    ░ ████▓▒░░▒███▒█▄    ▒██▒ ░                    ║
-    ║     ▒▒   ▓▒█░ ▒ ░    ░ ▒░▒░▒░ ░░ ▒▒░ ▒    ▒ ░░                      ║
-    ║      ▒   ▒▒ ░ ░        ░ ▒ ▒░  ░ ▒░  ░      ░                       ║
-    ║      ░   ▒    ░ ░    ░ ░ ░ ▒     ░   ░    ░                         ║
-    ║          ░  ░            ░ ░      ░                                  ║
-    ║                                                                       ║
-    ║              ███████  ██    ██ ███████ ███████ ████████              ║
-    ║             ██     ██ ██    ██ ██      ██         ██                 ║
-    ║             ██     ██ ██    ██ █████   ███████    ██                 ║
-    ║             ██  ▄▄ ██ ██    ██ ██           ██    ██                 ║
-    ║              ██████ █  ██████  ███████ ███████    ██                 ║
-    ║                 ▀▀                                                    ║
-    ║                                                                       ║
-    ║               >> R P G   S T U D Y   S Y S T E M <<                  ║
-    ║                     [  NEURAL  LINK  ACTIVE  ]                       ║
-    ╚═══════════════════════════════════════════════════════════════════════╝
-    `;
-    
-    const asciiLogo = isMobile ? mobileLogo : desktopLogo;
-    
-    const bootMessages = [
-        '',
-        '>> SYSTEM INITIALIZATION SEQUENCE...',
-        '>> Establishing neural link...',
-        '',
-        '>> LOADING CORE MODULES:',
-        '   ├─ Math Combat Engine................ [✓] READY',
-        '   ├─ Verbal Processing Unit............ [✓] READY', 
-        '   ├─ Reading Comprehension Matrix...... [✓] READY',
-        '   ├─ Science Knowledge Database........ [✓] READY',
-        '   └─ Audio Synthesis System............ [✓] READY',
-        '',
-        '>> INITIALIZING PLAYER SYSTEMS:',
-        '   ├─ Character Profile Manager......... [✓] ONLINE',
-        '   ├─ Experience Point Calculator....... [✓] ONLINE',
-        '   ├─ Progress Tracker.................. [✓] ONLINE',
-        '   └─ LocalStorage Persistence.......... [✓] ONLINE',
-        '',
-        '>> LOADING QUEST DATABASE:',
-        '   ├─ Math Topics (27 Quests)........... [✓] LOADED',
-        '   ├─ Verbal Challenges................. [✓] LOADED',
-        '   ├─ Reading Missions.................. [✓] LOADED',
-        '   └─ Science Encounters................ [✓] LOADED',
-        '',
-        '>> ALL SYSTEMS OPERATIONAL',
-        '>> NEURAL LINK ESTABLISHED',
-        '',
-        '┌─────────────────────────────────────────────────────────────────┐',
-        '│  WELCOME TO THE VIRTUAL STUDY REALM                            │',
-        '│  Your journey to mastery begins now...                         │',
-        '└─────────────────────────────────────────────────────────────────┘',
-        '',
-        '>> Press any key or wait to continue...'
-    ];
-    
+    // Create boot screen container
     const bootScreen = document.createElement('div');
     bootScreen.id = 'boot-screen';
     bootScreen.style.cssText = `
@@ -598,214 +519,499 @@ function showBootScreen() {
         left: 0;
         width: 100%;
         height: 100%;
-        background: #000;
-        color: #00ffff;
-        font-family: 'Courier New', monospace;
-        padding: ${isMobile ? '10px' : '20px'};
-        z-index: 10000;
-        overflow: auto;
+        background: linear-gradient(135deg, #000000, #001a1a 50%, #002a2a);
         display: flex;
         flex-direction: column;
-        justify-content: ${isMobile ? 'center' : 'flex-start'};
         align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        opacity: 1;
     `;
     
-    // Create matrix rain background effect (lighter on mobile for performance)
-    const matrixCanvas = document.createElement('canvas');
-    matrixCanvas.style.cssText = `
-        position: absolute;
-        top: 0;
-        left: 0;
+    // Create init container
+    const initContainer = document.createElement('div');
+    initContainer.style.cssText = `
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    `;
+    
+    // Create app logo
+    const appLogo = document.createElement('h1');
+    appLogo.textContent = 'AFOQT QUEST';
+    appLogo.style.cssText = `
+        font-family: 'Courier New', monospace;
+        font-size: clamp(32px, 5vw, 56px);
+        font-weight: 700;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: #00ffff;
+        text-shadow: 0 0 40px rgba(0, 255, 255, 0.8), 0 0 80px rgba(0, 255, 255, 0.4);
+        margin: 0;
+        position: relative;
+        opacity: 0;
+    `;
+    
+    // Create subtitle
+    const appSubtitle = document.createElement('div');
+    appSubtitle.textContent = '// OFFICER TRAINING SIMULATION';
+    appSubtitle.style.cssText = `
+        font-family: 'Courier New', monospace;
+        font-size: clamp(11px, 1.2vw, 14px);
+        letter-spacing: 0.2em;
+        color: rgba(0, 255, 255, 0.7);
+        text-transform: uppercase;
+        margin-top: -24px;
+        opacity: 0;
+    `;
+    
+    // Create globe container
+    const globeWrap = document.createElement('div');
+    globeWrap.style.cssText = `
+        position: relative;
+        width: min(480px, 75vw);
+        aspect-ratio: 1 / 1;
+        opacity: 0;
+    `;
+    
+    const globeHost = document.createElement('div');
+    globeHost.id = 'globeHost';
+    globeHost.style.cssText = `
         width: 100%;
         height: 100%;
-        opacity: ${isMobile ? '0.08' : '0.15'};
-        z-index: 1;
     `;
-    bootScreen.appendChild(matrixCanvas);
+    globeWrap.appendChild(globeHost);
     
-    const bootContent = document.createElement('div');
-    bootContent.style.cssText = `
-        position: relative;
-        z-index: 2;
-        width: 100%;
-        max-width: ${isMobile ? '100%' : '900px'};
-        padding: ${isMobile ? '0 5px' : '0'};
-    `;
-    bootScreen.appendChild(bootContent);
-    
-    const logoText = document.createElement('pre');
-    logoText.className = 'boot-logo';
-    logoText.style.cssText = `
-        font-size: ${isMobile ? '7px' : '10px'};
-        line-height: 1.2;
-        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
-        text-align: center;
-        margin-bottom: ${isMobile ? '10px' : '20px'};
+    // Create progress section
+    const initProgress = document.createElement('div');
+    initProgress.style.cssText = `
+        width: min(480px, 75vw);
+        margin-top: 0;
         opacity: 0;
-        overflow-x: auto;
-        transform: scale(0.9);
-        filter: blur(5px);
     `;
-    logoText.textContent = asciiLogo;
-    bootContent.appendChild(logoText);
     
-    const bootText = document.createElement('pre');
-    bootText.className = 'boot-messages';
-    bootText.style.cssText = `
-        font-size: ${isMobile ? '9px' : '13px'};
-        line-height: 1.6;
-        text-shadow: 0 0 5px #00ffff;
-        margin-top: ${isMobile ? '10px' : '20px'};
-        overflow-x: auto;
+    const progressLabel = document.createElement('div');
+    progressLabel.textContent = 'System Initialization';
+    progressLabel.style.cssText = `
+        font-family: 'Courier New', monospace;
+        font-size: 12px;
+        letter-spacing: 0.15em;
+        color: #00ffff;
+        margin-bottom: 8px;
+        text-align: center;
+        text-transform: uppercase;
     `;
-    bootContent.appendChild(bootText);
     
-    // Add CSS for fallback and glitch animation
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes textGlitch {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-2px); }
-            50% { transform: translateX(2px); }
-            75% { transform: translateX(-1px); }
-        }
-        .boot-line {
-            opacity: 0;
-            transform: translateX(-20px);
-        }
-        .boot-line.visible {
-            opacity: 1;
-            transform: translateX(0);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
+    const progressTrack = document.createElement('div');
+    progressTrack.style.cssText = `
+        width: 100%;
+        height: 8px;
+        background: rgba(0, 255, 255, 0.1);
+        border: 1px solid rgba(0, 255, 255, 0.3);
+        border-radius: 999px;
+        overflow: hidden;
+        position: relative;
     `;
-    document.head.appendChild(style);
     
+    const progressFill = document.createElement('div');
+    progressFill.id = 'progressFill';
+    progressFill.style.cssText = `
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, #00ff88, #00d4ff);
+        box-shadow: 0 0 16px rgba(0, 255, 136, 0.6);
+        transition: width 100ms linear;
+    `;
+    progressTrack.appendChild(progressFill);
+    
+    const progressPercent = document.createElement('div');
+    progressPercent.id = 'progressPercent';
+    progressPercent.textContent = '0%';
+    progressPercent.style.cssText = `
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+        color: #00ffff;
+        margin-top: 8px;
+        text-align: center;
+        letter-spacing: 0.1em;
+    `;
+    
+    initProgress.appendChild(progressLabel);
+    initProgress.appendChild(progressTrack);
+    initProgress.appendChild(progressPercent);
+    
+    // Assemble boot screen
+    initContainer.appendChild(appLogo);
+    initContainer.appendChild(appSubtitle);
+    initContainer.appendChild(globeWrap);
+    initContainer.appendChild(initProgress);
+    bootScreen.appendChild(initContainer);
     document.body.appendChild(bootScreen);
     
-    // Use anime.js v4 for logo entrance animation
-    if (hasAnime()) {
-        anime.animate(logoText, {
-            opacity: [0, 1],
-            scale: [0.9, 1],
-            filter: ['blur(5px)', 'blur(0px)'],
-            duration: 1000,
-            ease: 'outExpo'
-        });
-    } else {
-        // Fallback CSS animation
-        logoText.style.animation = 'logoFadeIn 1s ease-out forwards';
-    }
+    // Create boot complete overlay
+    const bootComplete = document.createElement('div');
+    bootComplete.id = 'bootComplete';
+    bootComplete.style.cssText = `
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(135deg, #000000, #001a1a 50%, #002a2a);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        z-index: 10001;
+        opacity: 0;
+    `;
     
-    // Matrix rain effect (simplified on mobile)
-    const ctx = matrixCanvas.getContext('2d');
-    matrixCanvas.width = window.innerWidth;
-    matrixCanvas.height = window.innerHeight;
+    const bootCompleteTitle = document.createElement('div');
+    bootCompleteTitle.className = 'boot-complete-title';
+    bootCompleteTitle.textContent = 'BOOT UP COMPLETE';
+    bootCompleteTitle.style.cssText = `
+        font-family: 'Courier New', monospace;
+        font-size: clamp(24px, 4vw, 36px);
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #00ff00;
+        text-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+    `;
     
-    const columns = Math.floor(matrixCanvas.width / (isMobile ? MATRIX_COLUMN_WIDTH * 1.5 : MATRIX_COLUMN_WIDTH));
-    const drops = Array(columns).fill(1);
+    const bootCompleteSubtitle = document.createElement('div');
+    bootCompleteSubtitle.className = 'boot-complete-subtitle';
+    bootCompleteSubtitle.textContent = 'WELCOME TO AFOQT QUEST';
+    bootCompleteSubtitle.style.cssText = `
+        font-family: 'Courier New', monospace;
+        font-size: clamp(14px, 2vw, 18px);
+        letter-spacing: 0.15em;
+        color: #00ffff;
+        text-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+    `;
     
-    // Matrix characters: binary digits + Japanese katakana for cyberpunk aesthetic
-    const matrixChars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+    bootComplete.appendChild(bootCompleteTitle);
+    bootComplete.appendChild(bootCompleteSubtitle);
+    document.body.appendChild(bootComplete);
     
-    function drawMatrix() {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-        ctx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
-        
-        ctx.fillStyle = '#00ffff';
-        ctx.font = `${isMobile ? '12px' : '15px'} monospace`;
-        
-        for (let i = 0; i < drops.length; i++) {
-            const text = matrixChars[Math.floor(Math.random() * matrixChars.length)];
-            const colWidth = isMobile ? MATRIX_COLUMN_WIDTH * 1.5 : MATRIX_COLUMN_WIDTH;
-            ctx.fillText(text, i * colWidth, drops[i] * colWidth);
-            
-            if (drops[i] * colWidth > matrixCanvas.height && Math.random() > MATRIX_RESET_PROBABILITY) {
-                drops[i] = 0;
-            }
-            drops[i]++;
+    // Globe initialization functions
+    const resize = () => {
+        if (!globe || !globe.renderer) return;
+        const w = globeHost.clientWidth;
+        const h = globeHost.clientHeight;
+        globe.camera.aspect = w / h;
+        globe.camera.updateProjectionMatrix();
+        globe.renderer.setSize(w, h);
+    };
+    
+    const stopLoop = () => {
+        if (animationId) cancelAnimationFrame(animationId);
+        animationId = null;
+        loopRunning = false;
+    };
+    
+    const startLoop = () => {
+        if (loopRunning) return;
+        loopRunning = true;
+        const step = () => {
+            animationId = requestAnimationFrame(step);
+            if (globe) globe.tick();
+        };
+        step();
+    };
+    
+    const buildGlobe = () => {
+        if (!window.ENCOM || !window.ENCOM.Globe) {
+            console.warn('ENCOM.Globe not available yet');
+            return;
         }
-    }
+        if (globe && globe.destroy) {
+            globe.destroy();
+        }
+        
+        const w = globeHost.clientWidth || 400;
+        const h = globeHost.clientHeight || 400;
+        globe = new ENCOM.Globe(w, h, {
+            font: 'Inconsolata',
+            data: window.data ? window.data.slice() : [],
+            tiles: window.grid ? window.grid.tiles : [],
+            baseColor: '#00ffff',
+            markerColor: '#00ff00',
+            pinColor: '#ffff00',
+            satelliteColor: '#ff00ff',
+            scale: 1.05,
+            dayLength: 12000,
+            introLinesDuration: 2000,
+            maxPins: 10,
+            maxMarkers: 15,
+            viewAngle: 0.3
+        });
+        
+        globeHost.innerHTML = '';
+        globeHost.appendChild(globe.domElement);
+        
+        // Force transparent background on renderer
+        if (globe.renderer) {
+            globe.renderer.setClearColor(0x000000, 0);
+            const canvas = globe.renderer.domElement;
+            canvas.style.background = 'none';
+            canvas.style.backgroundColor = 'transparent';
+        }
+        
+        globe.init(() => {
+            startLoop();
+            addGlobeFeatures();
+        });
+        resize();
+    };
     
-    const matrixInterval = setInterval(drawMatrix, isMobile ? 80 : 50);
+    const addGlobeFeatures = () => {
+        if (!globe) return;
+        
+        // Add connected markers
+        setTimeout(() => {
+            globe.addMarker(40.7128, -74.0060, "New York");
+            globe.addMarker(51.5074, -0.1278, "London", true);
+        }, 2200);
+        
+        setTimeout(() => {
+            globe.addMarker(35.6762, 139.6503, "Tokyo");
+            globe.addMarker(-33.8688, 151.2093, "Sydney", true);
+        }, 2800);
+        
+        // Add satellite constellation
+        setTimeout(() => {
+            const constellation = [];
+            const opts = {
+                coreColor: '#ff00ff',
+                numWaves: 3
+            };
+            for (let i = 0; i < 2; i++) {
+                for (let j = 0; j < 3; j++) {
+                    constellation.push({
+                        lat: 50 * i - 30 + 15 * Math.random(),
+                        lon: 120 * j - 120 + 30 * i,
+                        altitude: 1.3
+                    });
+                }
+            }
+            globe.addConstellation(constellation, opts);
+        }, 3500);
+        
+        // Add random pins periodically
+        const pinInterval = setInterval(() => {
+            if (!globe) {
+                clearInterval(pinInterval);
+                return;
+            }
+            const lat = Math.random() * 180 - 90;
+            const lon = Math.random() * 360 - 180;
+            const names = ['Alpha Site', 'Beta Node', 'Gamma Link', 'Delta Hub', 'Echo Point'];
+            const name = names[Math.floor(Math.random() * names.length)];
+            globe.addPin(lat, lon, name);
+        }, 4000);
+        
+        // Stop after 30s
+        setTimeout(() => clearInterval(pinInterval), 30000);
+    };
     
-    // Enable audio on first user interaction (required by browser autoplay policy)
+    // Animate progress bar from 0-100%
+    const animateProgress = () => {
+        if (!window.gsap) {
+            // Fallback without GSAP
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 1;
+                progressFill.style.width = progress + '%';
+                progressPercent.textContent = progress + '%';
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    showBootComplete();
+                }
+            }, PROGRESS_DURATION_MS / 100);
+            return;
+        }
+        
+        gsap.to(progressFill, {
+            width: '100%',
+            duration: PROGRESS_DURATION_MS / 1000,
+            ease: 'linear',
+            onUpdate: function() {
+                const progress = Math.floor(this.progress() * 100);
+                progressPercent.textContent = progress + '%';
+            },
+            onComplete: showBootComplete
+        });
+    };
+    
+    // Show boot complete message then fade to main UI
+    const showBootComplete = () => {
+        if (!window.gsap) {
+            // Fallback without GSAP
+            bootScreen.style.transition = 'opacity 0.8s';
+            bootScreen.style.opacity = '0';
+            setTimeout(() => {
+                bootScreen.remove();
+                bootComplete.style.display = 'flex';
+                bootComplete.style.transition = 'opacity 0.5s';
+                bootComplete.style.opacity = '1';
+                setTimeout(() => {
+                    bootComplete.style.opacity = '0';
+                    setTimeout(() => {
+                        bootComplete.remove();
+                        stopLoop();
+                    }, 800);
+                }, 3000);
+            }, 800);
+            return;
+        }
+        
+        // Fade out loader
+        gsap.to(bootScreen, {
+            opacity: 0,
+            duration: 0.8,
+            ease: 'power2.inOut',
+            onComplete: () => {
+                bootScreen.remove();
+                
+                // Show boot complete overlay
+                bootComplete.style.display = 'flex';
+                bootComplete.style.opacity = '0';
+                
+                // Fade in boot complete
+                gsap.to(bootComplete, {
+                    opacity: 1,
+                    duration: 0.5,
+                    ease: 'power2.out'
+                });
+                
+                // Animate title
+                gsap.fromTo(bootCompleteTitle, 
+                    { opacity: 0, y: -20 },
+                    { opacity: 1, y: 0, duration: 0.6, delay: 0.2, ease: 'power3.out' }
+                );
+                
+                // Animate subtitle
+                gsap.fromTo(bootCompleteSubtitle, 
+                    { opacity: 0, y: 10 },
+                    { opacity: 0.8, y: 0, duration: 0.6, delay: 0.4, ease: 'power3.out' }
+                );
+                
+                // Auto-dismiss after 3 seconds
+                setTimeout(() => {
+                    gsap.to(bootComplete, {
+                        opacity: 0,
+                        duration: 0.8,
+                        ease: 'power2.inOut',
+                        onComplete: () => {
+                            bootComplete.remove();
+                            stopLoop();
+                        }
+                    });
+                }, 3000);
+            }
+        });
+    };
+    
+    // Initialize globe when ENCOM is ready
+    const kickOff = () => {
+        buildGlobe();
+        resize();
+        
+        if (!window.gsap) {
+            // Fallback CSS animations
+            appLogo.style.transition = 'opacity 0.8s, transform 0.8s';
+            appLogo.style.opacity = '1';
+            setTimeout(() => {
+                appSubtitle.style.transition = 'opacity 0.6s';
+                appSubtitle.style.opacity = '0.7';
+            }, 200);
+            setTimeout(() => {
+                globeWrap.style.transition = 'opacity 1s, transform 1s';
+                globeWrap.style.opacity = '1';
+            }, 400);
+            setTimeout(() => {
+                initProgress.style.transition = 'opacity 0.7s';
+                initProgress.style.opacity = '1';
+            }, 900);
+            setTimeout(animateProgress, 1200);
+            return;
+        }
+        
+        // Evangelion-style sequential boot animations
+        const tl = gsap.timeline();
+        
+        // Logo glitch-in
+        tl.fromTo(appLogo, 
+            { opacity: 0, y: -30, scaleX: 0.8 },
+            { opacity: 1, y: 0, scaleX: 1, duration: 0.8, ease: 'power4.out' }
+        )
+        // Subtitle scan-in
+        .fromTo(appSubtitle,
+            { opacity: 0, letterSpacing: '0.5em' },
+            { opacity: 0.7, letterSpacing: '0.2em', duration: 0.6, ease: 'power2.out' },
+            '-=0.3'
+        )
+        // Globe fade-scale-in
+        .fromTo(globeWrap,
+            { opacity: 0, scale: 0.85 },
+            { opacity: 1, scale: 1, duration: 1, ease: 'power3.out' },
+            '-=0.2'
+        )
+        // Progress bar slide-in
+        .fromTo(initProgress,
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' },
+            '-=0.5'
+        )
+        // Start progress animation
+        .call(() => {
+            setTimeout(animateProgress, 300);
+        });
+        
+        // Logo pulse animation (continuous) using anime if available
+        if (window.anime && window.anime.animate) {
+            anime.animate(appLogo, {
+                textShadow: [
+                    '0 0 40px rgba(0, 255, 255, 0.8), 0 0 80px rgba(0, 255, 255, 0.4)',
+                    '0 0 60px rgba(0, 255, 255, 1), 0 0 120px rgba(0, 255, 255, 0.6)',
+                    '0 0 40px rgba(0, 255, 255, 0.8), 0 0 80px rgba(0, 255, 255, 0.4)'
+                ],
+                duration: 3000,
+                ease: 'inOutSine',
+                loop: true
+            });
+        }
+    };
+    
+    // Enable audio on first user interaction
     const enableAudio = createAudioEnabler(() => playSfx('boot'));
-    
-    // Listen for any user interaction to enable audio
     bootScreen.addEventListener('click', enableAudio, { once: true });
     document.addEventListener('keydown', enableAudio, { once: true });
     
-    // Type out boot messages
-    let currentLine = 0;
-    const typeInterval = setInterval(() => {
-        if (currentLine < bootMessages.length) {
-            const line = bootMessages[currentLine];
-            bootText.textContent += line + '\n';
-            
-            // Auto-scroll to bottom
-            bootScreen.scrollTop = bootScreen.scrollHeight;
-            
-            currentLine++;
-            
-            // Play sound effects for certain lines
-            if (line.includes('[✓]') || line.includes('READY') || line.includes('ONLINE') || line.includes('LOADED')) {
-                playSfx('nav');
-            } else if (line.includes('OPERATIONAL') || line.includes('ESTABLISHED')) {
-                playSfx('complete');
+    // Wait for ENCOM to load
+    if (window.ENCOM && window.ENCOM.Globe) {
+        kickOff();
+    } else {
+        const poll = setInterval(() => {
+            if (window.ENCOM && window.ENCOM.Globe) {
+                clearInterval(poll);
+                kickOff();
             }
+        }, 50);
+        setTimeout(() => clearInterval(poll), 4000);
+    }
+    
+    // Handle window resize
+    window.addEventListener('resize', resize);
+    
+    // Pause animation when tab hidden
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            stopLoop();
         } else {
-            clearInterval(typeInterval);
-            
-            // Allow click or key to skip - use anime.js v4 for smooth exit
-            const finishBoot = () => {
-                clearInterval(matrixInterval);
-                
-                if (hasAnime()) {
-                    // Create a timeline for exit animation
-                    const exitTimeline = anime.createTimeline({
-                        ease: 'inQuart'
-                    });
-                    
-                    exitTimeline
-                        .add(bootContent, {
-                            opacity: [1, 0],
-                            translateY: [0, -30],
-                            duration: 400
-                        })
-                        .add(bootScreen, {
-                            opacity: [1, 0],
-                            duration: 400,
-                            onComplete: () => {
-                                bootScreen.remove();
-                                style.remove();
-                            }
-                        }, '-=200');
-                } else {
-                    // Fallback to CSS transition
-                    bootScreen.style.transition = `opacity ${FADE_DURATION_MS / 1000}s`;
-                    bootScreen.style.opacity = '0';
-                    setTimeout(() => {
-                        bootScreen.remove();
-                        style.remove();
-                    }, FADE_DURATION_MS);
-                }
-            };
-            
-            // Auto-finish after delay or on user interaction
-            const autoFinishTimeout = setTimeout(finishBoot, AUTO_FINISH_DELAY_MS);
-            
-            const userInteract = () => {
-                clearTimeout(autoFinishTimeout);
-                finishBoot();
-                bootScreen.removeEventListener('click', userInteract);
-                document.removeEventListener('keydown', userInteract);
-            };
-            
-            bootScreen.addEventListener('click', userInteract);
-            document.addEventListener('keydown', userInteract);
+            startLoop();
         }
-    }, TYPING_INTERVAL_MS);
+    });
 }
 
 // ============================================================================
@@ -816,6 +1022,9 @@ const DIFFICULTY_LEVELS = ['beginner', 'advanced', 'expert'];
 // ============================================================================
 // Global State
 // ============================================================================
+// Debug flag - set to false in production
+const DEBUG_MODE = false;
+
 const state = {
     screen: 'login', // 'login' | 'create-account' | 'home' | 'subject' | 'mode-select' | 'difficulty-select' | 'quiz' | 'results' | 'status' | 'equipment' | 'settings'
     players: [],
@@ -862,9 +1071,12 @@ const state = {
         mode: 'practice', // Store mode with quiz session
         difficulty: 'beginner', // Store difficulty with quiz session
         showFeedback: true, // Patch 18: control feedback visibility
-        isPracticeTest: false // Patch 18: flag for AFOQT practice tests
+        isPracticeTest: false, // Patch 18: flag for AFOQT practice tests
+        showSectionTransition: false // Flag to show section transition confirmation modal
     },
-    patch18Loaded: false // Track if Patch 18 content is loaded
+    patch18Loaded: false, // Track if Patch 18 content is loaded
+    contentLoading: false, // Track if content loading async operation is in progress
+    contentReady: false // Track if content is available (loaded or using procedural fallbacks)
 };
 
 // ============================================================================
@@ -1814,14 +2026,8 @@ const scienceTopics = [
         name: 'Chemistry Basics',
         description: 'Atomic structure, periodic table, reactions',
         subjectId: 'physical_science',
-        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
             // Loaded from patch-loader.js physical_science question registry
-            // See startQuiz() which uses getQuestionsFromRegistry for topics with hasContent
-            if (typeof getQuestionsFromRegistry === 'function') {
-                const questions = getQuestionsFromRegistry('physical_science', 'chemistry_basics', difficulty, 1);
-                return questions.length > 0 ? questions[0] : null;
-            }
             return null;
         }
     },
@@ -1830,12 +2036,7 @@ const scienceTopics = [
         name: 'Earth & Space Science',
         description: 'Geology, atmosphere, solar system',
         subjectId: 'physical_science',
-        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
-            if (typeof getQuestionsFromRegistry === 'function') {
-                const questions = getQuestionsFromRegistry('physical_science', 'earth_space', difficulty, 1);
-                return questions.length > 0 ? questions[0] : null;
-            }
             return null;
         }
     },
@@ -1844,12 +2045,7 @@ const scienceTopics = [
         name: 'Electricity & Magnetism',
         description: 'Circuits, current, magnetic fields',
         subjectId: 'physical_science',
-        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
-            if (typeof getQuestionsFromRegistry === 'function') {
-                const questions = getQuestionsFromRegistry('physical_science', 'electricity_magnetism', difficulty, 1);
-                return questions.length > 0 ? questions[0] : null;
-            }
             return null;
         }
     },
@@ -1858,12 +2054,7 @@ const scienceTopics = [
         name: 'Energy & Heat',
         description: 'Energy transfer, temperature, thermodynamics',
         subjectId: 'physical_science',
-        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
-            if (typeof getQuestionsFromRegistry === 'function') {
-                const questions = getQuestionsFromRegistry('physical_science', 'energy_heat', difficulty, 1);
-                return questions.length > 0 ? questions[0] : null;
-            }
             return null;
         }
     },
@@ -1872,12 +2063,7 @@ const scienceTopics = [
         name: 'Fluids & Pressure',
         description: 'Density, buoyancy, fluid dynamics',
         subjectId: 'physical_science',
-        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
-            if (typeof getQuestionsFromRegistry === 'function') {
-                const questions = getQuestionsFromRegistry('physical_science', 'fluids_pressure', difficulty, 1);
-                return questions.length > 0 ? questions[0] : null;
-            }
             return null;
         }
     },
@@ -1886,12 +2072,7 @@ const scienceTopics = [
         name: 'Motion & Mechanics',
         description: 'Forces, Newton\'s laws, kinematics',
         subjectId: 'physical_science',
-        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
-            if (typeof getQuestionsFromRegistry === 'function') {
-                const questions = getQuestionsFromRegistry('physical_science', 'motion_mechanics', difficulty, 1);
-                return questions.length > 0 ? questions[0] : null;
-            }
             return null;
         }
     },
@@ -1900,12 +2081,7 @@ const scienceTopics = [
         name: 'Optics & Waves',
         description: 'Light, sound, electromagnetic spectrum',
         subjectId: 'physical_science',
-        hasContent: true,
         generateQuestion: (difficulty = 'beginner') => {
-            if (typeof getQuestionsFromRegistry === 'function') {
-                const questions = getQuestionsFromRegistry('physical_science', 'optics_waves', difficulty, 1);
-                return questions.length > 0 ? questions[0] : null;
-            }
             return null;
         }
     }
@@ -2833,18 +3009,17 @@ const instrumentTopics = [
 // ============================================================================
 const tableTopics = [
     {
-        id: 'table-reading',
+        id: 'basic_lookup',
         name: 'Table Reading',
-        description: 'Quick data extraction from tables',
-        subjectId: 'table',
+        description: 'Rapid value lookups, aggregates, and comparisons from tables',
+        subjectId: 'table_reading',
+        hasContent: true,
+        // Procedural fallback (rarely used if content exists)
         generateQuestion: (difficulty = 'beginner') => {
-            // Generate a random data table
             const rows = 5;
             const cols = 5;
-            const rowLabels = Array.from({length: rows}, (_, i) => (i + 1) * 10);
-            const colLabels = Array.from({length: cols}, (_, i) => (i + 1) * 5);
-            
-            // Create table data
+            const rowLabels = Array.from({ length: rows }, (_, i) => (i + 1) * 10);
+            const colLabels = Array.from({ length: cols }, (_, i) => (i + 1) * 5);
             const table = {};
             rowLabels.forEach(row => {
                 table[row] = {};
@@ -2852,40 +3027,30 @@ const tableTopics = [
                     table[row][col] = Math.floor(Math.random() * 90) + 10;
                 });
             });
-            
-            // Pick a random cell
             const targetRow = rowLabels[Math.floor(Math.random() * rows)];
             const targetCol = colLabels[Math.floor(Math.random() * cols)];
             const correctValue = table[targetRow][targetCol];
-            
-            // Generate distractors from nearby cells
             const distractors = [];
             rowLabels.forEach(row => {
                 colLabels.forEach(col => {
-                    if (row !== targetRow || col !== targetCol) {
-                        distractors.push(table[row][col]);
-                    }
+                    if (row !== targetRow || col !== targetCol) distractors.push(table[row][col]);
                 });
             });
-            
             const shuffledDistractors = shuffleArray(distractors);
             const options = [correctValue, ...shuffledDistractors.slice(0, 3)];
-            const shuffled = shuffleArray([...new Set(options)].map(String)); // Remove duplicates
-            
-            // Build table display
-            let tableDisplay = `Row\\Col  ${colLabels.join('   ')}\n`;
-            rowLabels.forEach(row => {
-                tableDisplay += `${row.toString().padStart(3)}     `;
-                tableDisplay += colLabels.map(col => table[row][col].toString().padStart(2)).join('  ');
-                tableDisplay += '\n';
-            });
-            
+            const shuffled = shuffleArray([...new Set(options)].map(String));
             return {
-                prompt: `Find the value at Row ${targetRow}, Column ${targetCol}:\n\n${tableDisplay}`,
+                prompt: `Find the value at Row ${targetRow}, Column ${targetCol}.` ,
                 options: shuffled,
                 correctIndex: shuffled.indexOf(String(correctValue)),
                 explanation: `The value at Row ${targetRow}, Column ${targetCol} is ${correctValue}`,
-                image: "assets/icons/table-sample.svg"
+                tableSpec: {
+                    type: 'data_table',
+                    xHeader: colLabels,
+                    yHeader: rowLabels,
+                    cellValues: rowLabels.map(r => colLabels.map(c => table[r][c]))
+                },
+                lookup: { x: targetCol, y: targetRow }
             };
         }
     }
@@ -3193,14 +3358,14 @@ function createBlockCountingTopicsFromRegistry() {
 function createVocabularyTopicsFromRegistry() {
     const vocabTopics = [];
     
-    // Topic name mapping
+    // Topic name mapping (keys must match filenames in Test Content/Vocabulary/)
     const topicNames = {
         'synonyms': 'Synonyms',
         'antonyms': 'Antonyms',
         'verbal_analogies': 'Verbal Analogies',
         'vocabulary_in_context': 'Vocabulary in Context',
         'confusing_word_pairs': 'Confusing Word Pairs',
-        'high_frequency_vocab': 'High Frequency Vocabulary',
+        'highfreq_vocab': 'High Frequency Vocabulary',
         'sentence_completion': 'Sentence Completion',
         'word_roots_affixes': 'Word Roots & Affixes'
     };
@@ -3211,20 +3376,20 @@ function createVocabularyTopicsFromRegistry() {
         'verbal_analogies': 'Word relationship patterns',
         'vocabulary_in_context': 'Word meanings from context',
         'confusing_word_pairs': 'Commonly confused words',
-        'high_frequency_vocab': 'Common AFOQT vocabulary words',
+        'highfreq_vocab': 'Common AFOQT vocabulary words',
         'sentence_completion': 'Fill in the blank with best word',
         'word_roots_affixes': 'Latin and Greek word origins'
     };
     
-    // Check word_knowledge content
-    if (questionRegistry && questionRegistry.word_knowledge) {
-        const wkContent = questionRegistry.word_knowledge;
+    // Check word_knowledge content (registry uses 'vocabulary' as subjectId from Patch 18)
+    if (questionRegistry && questionRegistry.vocabulary) {
+        const wkContent = questionRegistry.vocabulary;
         for (const subtopicId in wkContent) {
             vocabTopics.push({
                 id: subtopicId,
                 name: topicNames[subtopicId] || subtopicId.replace(/_/g, ' '),
                 description: topicDescriptions[subtopicId] || 'Vocabulary practice',
-                subjectId: 'word_knowledge',
+                subjectId: 'vocabulary', // Use 'vocabulary' to match registry
                 isOfficialAfoqtTopic: true,
                 hasContent: true
             });
@@ -3288,10 +3453,10 @@ function createPhysicalScienceTopicsFromRegistry() {
     
     // Create topics from loaded content
     for (const subtopicId in psContent) {
-        // Remove 'physical_science_' prefix if present
+        // Remove 'physical_science_' prefix for display name, but keep full ID for registry lookup
         const cleanId = subtopicId.replace('physical_science_', '');
         dynamicTopics.push({
-            id: cleanId,
+            id: subtopicId, // Keep full ID for registry lookup
             name: topicNames[cleanId] || cleanId.replace(/_/g, ' '),
             description: topicDescriptions[cleanId] || 'Physical science practice',
             subjectId: 'physical_science',
@@ -4231,6 +4396,30 @@ function showAchievementNotification(achievement) {
     }, 4000);
 }
 
+function showErrorNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'achievement-notification'; // Reuse same styling
+    notification.style.background = 'rgba(255, 0, 0, 0.9)'; // Red background for errors
+    notification.innerHTML = `
+        <div class="achievement-icon">⚠</div>
+        <div class="achievement-content">
+            <div class="achievement-title">Error</div>
+            <div class="achievement-desc">${message}</div>
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Play error sound
+    playSfx('wrong');
+    
+    // Remove after animation (consistent with achievement notification timing)
+    setTimeout(() => {
+        notification.style.opacity = '0';
+        setTimeout(() => notification.remove(), 500);
+    }, 4000);
+}
+
 function updateChallengeProgress(player, progressType, value = 1) {
     if (!player.challengeProgress) {
         player.challengeProgress = {};
@@ -4860,244 +5049,893 @@ function previewBootAnimation(animationName) {
 // Fusion of Boot Inspiration 2 (Arasaka/Red HUD) + Boot Inspiration 3 (3D Rotating Logo)
 // ============================================================================
 
-// Globe-based boot sequence for AFOQT Quest
-// Replaces both showBootSequence() and runAnimeBootSequence() with simpler encom-globe loader
 function showBootSequence() {
+    console.log('[showBootSequence] Function called - Globe boot animation');
     return new Promise((resolve) => {
+        // Reuse the globe-based boot implemented in fr0st prototype, adjusted to Tron theme
+        let globe, animationId, loopRunning = false;
+        const FADE_DURATION_MS = 800;
+        const PROGRESS_DURATION_MS = 8000;
+
+        const boot = document.createElement('div');
+        boot.id = 'boot-screen';
+        boot.style.cssText = 'position:fixed;inset:0;background:linear-gradient(135deg,#000,#001a1a 50%,#002a2a);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:10000;opacity:1;';
+
+        const wrap = document.createElement('div');
+        wrap.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:32px;';
+
+        const logo = document.createElement('h1');
+        logo.textContent = 'AFOQT QUEST';
+        logo.style.cssText = "font-family:'Courier New',monospace;font-size:clamp(32px,5vw,56px);font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#00ffff;text-shadow:0 0 40px rgba(0,255,255,.8),0 0 80px rgba(0,255,255,.4);margin:0;opacity:0;";
+
+        const sub = document.createElement('div');
+        sub.textContent = '// OFFICER TRAINING SIMULATION';
+        sub.style.cssText = "font-family:'Courier New',monospace;font-size:clamp(11px,1.2vw,14px);letter-spacing:.2em;color:rgba(0,255,255,.7);text-transform:uppercase;margin-top:-24px;opacity:0;";
+
+        const globeWrap = document.createElement('div');
+        globeWrap.style.cssText = 'position:relative;width:min(480px,75vw);aspect-ratio:1/1;opacity:0;';
+        const host = document.createElement('div');
+        host.style.cssText = 'width:100%;height:100%;';
+        globeWrap.appendChild(host);
+
+        const prog = document.createElement('div');
+        prog.style.cssText = 'width:min(480px,75vw);opacity:0;';
+        const label = document.createElement('div');
+        label.textContent = 'System Initialization';
+        label.style.cssText = "font-family:'Courier New',monospace;font-size:12px;letter-spacing:.15em;color:#00ffff;margin-bottom:8px;text-align:center;text-transform:uppercase;";
+        const track = document.createElement('div');
+        track.style.cssText = 'width:100%;height:8px;background:rgba(0,255,255,.1);border:1px solid rgba(0,255,255,.3);border-radius:999px;overflow:hidden;position:relative;';
+        const fill = document.createElement('div');
+        fill.style.cssText = 'height:100%;width:0%;background:linear-gradient(90deg,#00ff88,#00d4ff);box-shadow:0 0 16px rgba(0,255,136,.6);transition:width 100ms linear;';
+        const pct = document.createElement('div');
+        pct.textContent = '0%';
+        pct.style.cssText = "font-family:'Courier New',monospace;font-size:14px;color:#00ffff;margin-top:8px;text-align:center;letter-spacing:.1em;";
+        track.appendChild(fill); prog.appendChild(label); prog.appendChild(track); prog.appendChild(pct);
+
+        wrap.appendChild(logo); wrap.appendChild(sub); wrap.appendChild(globeWrap); wrap.appendChild(prog);
+        boot.appendChild(wrap); document.body.appendChild(boot);
+
+        const complete = document.createElement('div');
+        complete.style.cssText = 'position:fixed;inset:0;background:linear-gradient(135deg,#000,#001a1a 50%,#002a2a);display:none;align-items:center;justify-content:center;flex-direction:column;gap:16px;z-index:10001;opacity:0;';
+        const cTitle = document.createElement('div');
+        cTitle.textContent = 'BOOT UP COMPLETE';
+        cTitle.style.cssText = "font-family:'Courier New',monospace;font-size:clamp(24px,4vw,36px);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#00ff00;text-shadow:0 0 20px rgba(0,255,0,.8);";
+        const cSub = document.createElement('div');
+        cSub.textContent = 'WELCOME TO AFOQT QUEST';
+        cSub.style.cssText = "font-family:'Courier New',monospace;font-size:clamp(14px,2vw,18px);letter-spacing:.15em;color:#00ffff;text-shadow:0 0 12px rgba(0,255,255,.6);";
+        complete.appendChild(cTitle); complete.appendChild(cSub); document.body.appendChild(complete);
+
+        const resize = () => {
+            if (!globe || !globe.renderer) return;
+            const w = host.clientWidth, h = host.clientHeight;
+            globe.camera.aspect = w / h; globe.camera.updateProjectionMatrix(); globe.renderer.setSize(w, h);
+        };
+        const stopLoop = () => { if (animationId) cancelAnimationFrame(animationId); animationId = null; loopRunning = false; };
+        const startLoop = () => { if (loopRunning) return; loopRunning = true; const step = () => { animationId = requestAnimationFrame(step); if (globe) globe.tick(); }; step(); };
+
+        const buildGlobe = () => {
+            if (!window.ENCOM || !window.ENCOM.Globe) return;
+            if (globe && globe.destroy) globe.destroy();
+            const w = host.clientWidth || 400, h = host.clientHeight || 400;
+            globe = new ENCOM.Globe(w, h, {
+                font: 'Inconsolata',
+                data: window.data ? window.data.slice() : [],
+                tiles: window.grid ? window.grid.tiles : [],
+                baseColor: '#00ffff', markerColor: '#00ff00', pinColor: '#ffff00', satelliteColor: '#ff00ff',
+                scale: 1.05, dayLength: 12000, introLinesDuration: 2000, maxPins: 10, maxMarkers: 15, viewAngle: 0.3
+            });
+            host.innerHTML = ''; host.appendChild(globe.domElement);
+            if (globe.renderer) { globe.renderer.setClearColor(0x000000, 0); const canvas = globe.renderer.domElement; canvas.style.background = 'none'; canvas.style.backgroundColor = 'transparent'; }
+            globe.init(() => { startLoop(); addGlobeFeatures(); }); resize();
+        };
+
+        const addGlobeFeatures = () => {
+            if (!globe) return;
+            setTimeout(() => { globe.addMarker(40.7128, -74.0060, 'New York'); globe.addMarker(51.5074, -0.1278, 'London', true); }, 2200);
+            setTimeout(() => { globe.addMarker(35.6762, 139.6503, 'Tokyo'); globe.addMarker(-33.8688, 151.2093, 'Sydney', true); }, 2800);
+            setTimeout(() => {
+                const constellation = []; const opts = { coreColor: '#ff00ff', numWaves: 3 };
+                for (let i = 0; i < 2; i++) for (let j = 0; j < 3; j++) constellation.push({ lat: 50*i-30+15*Math.random(), lon: 120*j-120+30*i, altitude: 1.3 });
+                globe.addConstellation(constellation, opts);
+            }, 3500);
+            const pinInterval = setInterval(() => {
+                if (!globe) return clearInterval(pinInterval);
+                const lat = Math.random()*180-90, lon = Math.random()*360-180; const names = ['Alpha Site','Beta Node','Gamma Link','Delta Hub','Echo Point'];
+                globe.addPin(lat, lon, names[Math.floor(Math.random()*names.length)]);
+            }, 4000);
+            setTimeout(() => clearInterval(pinInterval), 30000);
+        };
+
+        const animateProgress = () => {
+            if (!window.gsap) {
+                let p = 0; const it = setInterval(()=>{ p+=1; fill.style.width = p+'%'; pct.textContent = p+'%'; if (p>=100){ clearInterval(it); showBootComplete(); } }, PROGRESS_DURATION_MS/100);
+                return;
+            }
+            gsap.to(fill, { width: '100%', duration: PROGRESS_DURATION_MS/1000, ease: 'linear', onUpdate: function(){ pct.textContent = Math.floor(this.progress()*100)+'%'; }, onComplete: showBootComplete });
+        };
+
+        const showBootComplete = () => {
+            if (!window.gsap) {
+                boot.style.transition = 'opacity .8s'; boot.style.opacity = '0';
+                setTimeout(()=>{ boot.remove(); complete.style.display='flex'; complete.style.transition='opacity .5s'; complete.style.opacity='1'; setTimeout(()=>{ complete.style.opacity='0'; setTimeout(()=>{ complete.remove(); stopLoop(); resolve(); },800); },3000); },800);
+                return;
+            }
+            gsap.to(boot, { opacity:0, duration:.8, ease:'power2.inOut', onComplete: ()=>{
+                boot.remove(); complete.style.display='flex'; complete.style.opacity='0';
+                gsap.to(complete, { opacity:1, duration:.5, ease:'power2.out' });
+                gsap.fromTo(cTitle, { opacity:0, y:-20 }, { opacity:1, y:0, duration:.6, delay:.2, ease:'power3.out' });
+                gsap.fromTo(cSub, { opacity:0, y:10 }, { opacity:.8, y:0, duration:.6, delay:.4, ease:'power3.out' });
+                setTimeout(()=>{ gsap.to(complete, { opacity:0, duration:.8, ease:'power2.inOut', onComplete: ()=>{ complete.remove(); stopLoop(); resolve(); } }); }, 3000);
+            }});
+        };
+
+        const kickOff = () => {
+            buildGlobe(); resize();
+            if (!window.gsap) {
+                logo.style.transition='opacity .8s'; logo.style.opacity='1'; setTimeout(()=>{ sub.style.transition='opacity .6s'; sub.style.opacity='.7'; },200); setTimeout(()=>{ globeWrap.style.transition='opacity 1s'; globeWrap.style.opacity='1'; },400); setTimeout(()=>{ prog.style.transition='opacity .7s'; prog.style.opacity='1'; },900); setTimeout(animateProgress,1200); return;
+            }
+            const tl = gsap.timeline();
+            tl.fromTo(logo,{opacity:0,y:-30,scaleX:.8},{opacity:1,y:0,scaleX:1,duration:.8,ease:'power4.out'})
+              .fromTo(sub,{opacity:0,letterSpacing:'0.5em'},{opacity:.7,letterSpacing:'0.2em',duration:.6,ease:'power2.out'},'-=0.3')
+              .fromTo(globeWrap,{opacity:0,scale:.85},{opacity:1,scale:1,duration:1,ease:'power3.out'},'-=0.2')
+              .fromTo(prog,{opacity:0,y:20},{opacity:1,y:0,duration:.7,ease:'power2.out'},'-=0.5')
+              .call(()=> setTimeout(animateProgress,300));
+        };
+
+        const enableAudio = createAudioEnabler(()=> playSfx('boot'));
+        boot.addEventListener('click', enableAudio, { once:true });
+        document.addEventListener('keydown', enableAudio, { once:true });
+
+        if (window.ENCOM && window.ENCOM.Globe) { kickOff(); }
+        else { const poll=setInterval(()=>{ if (window.ENCOM && window.ENCOM.Globe) { clearInterval(poll); kickOff(); } },50); setTimeout(()=> clearInterval(poll),4000); }
+
+        window.addEventListener('resize', resize);
+        document.addEventListener('visibilitychange', ()=>{ if (document.hidden) stopLoop(); else startLoop(); });
+    });
+}
         const bootHTML = `
-            <div id="boot-sequence" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #02030a, #040812 50%, #080f1a); display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 10000; opacity: 1; transition: opacity 600ms ease;">
-                <div class="boot-sequence-inner" style="display: flex; flex-direction: column; align-items: center; gap: 32px;">
-                    <h1 class="boot-logo" style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 5vw, 56px); font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: #9ef4ff; text-shadow: 0 0 40px rgba(158, 244, 255, 0.8), 0 0 80px rgba(158, 244, 255, 0.4); margin: 0; opacity: 0;">AFOQT QUEST</h1>
-                    <div class="boot-subtitle" style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(11px, 1.2vw, 14px); letter-spacing: 0.2em; color: #9fb6c6; text-transform: uppercase; margin-top: -24px; opacity: 0;">// OFFICER TRAINING SIMULATION</div>
-                    <div class="globe-wrap" style="position: relative; width: min(480px, 75vw); aspect-ratio: 1 / 1; opacity: 0;">
-                        <div id="globeHost" style="width: 100%; height: 100%;"></div>
+            <div id="boot-sequence">
+                <!-- CRT Scanline Overlay -->
+                <div class="boot-crt-overlay"></div>
+                
+                <!-- Glitch Overlay -->
+                <div class="boot-glitch-overlay"></div>
+                
+                <!-- Hexagonal Grid Background -->
+                <div class="boot-hex-grid"></div>
+                
+                <!-- Data Stream Particles -->
+                <div class="boot-data-stream boot-data-stream-left"></div>
+                <div class="boot-data-stream boot-data-stream-right"></div>
+                
+                <!-- Phase 1: HUD Frame & Three Circles Logo -->
+                <div class="boot-phase boot-phase-hud">
+                    <!-- Corner Brackets with enhanced styling -->
+                    <div class="hud-corner hud-corner-tl">
+                        <span class="corner-label">SYS.01</span>
                     </div>
-                    <div class="init-progress" style="width: min(480px, 75vw); opacity: 0;">
-                        <div class="progress-label" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.15em; color: #9ef4ff; margin-bottom: 8px; text-align: center; text-transform: uppercase;">System Initialization</div>
-                        <div class="progress-track" style="width: 100%; height: 8px; background: rgba(158, 244, 255, 0.1); border: 1px solid rgba(158, 244, 255, 0.3); border-radius: 999px; overflow: hidden; position: relative;">
-                            <div class="progress-fill" id="progressFill" style="height: 100%; width: 0%; background: linear-gradient(90deg, #00d4ff, #0088ff); box-shadow: 0 0 16px rgba(0, 212, 255, 0.8), 0 0 32px rgba(0, 136, 255, 0.4); transition: width 100ms linear;"></div>
-                        </div>
-                        <div class="progress-percent" id="progressPercent" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #9ef4ff; margin-top: 8px; text-align: center; letter-spacing: 0.1em;">0%</div>
+                    <div class="hud-corner hud-corner-tr">
+                        <span class="corner-label">SYS.02</span>
+                    </div>
+                    <div class="hud-corner hud-corner-bl">
+                        <span class="corner-label">SYS.03</span>
+                    </div>
+                    <div class="hud-corner hud-corner-br">
+                        <span class="corner-label">SYS.04</span>
+                    </div>
+                    
+                    <!-- Side Bars with more segments -->
+                    <div class="hud-sidebar hud-sidebar-left">
+                        <div class="sidebar-segment"></div>
+                        <div class="sidebar-segment"></div>
+                        <div class="sidebar-segment"></div>
+                        <div class="sidebar-segment"></div>
+                        <div class="sidebar-segment"></div>
+                        <div class="sidebar-segment"></div>
+                        <div class="sidebar-segment"></div>
+                    </div>
+                    <div class="hud-sidebar hud-sidebar-right">
+                        <div class="sidebar-segment"></div>
+                        <div class="sidebar-segment"></div>
+                        <div class="sidebar-segment"></div>
+                        <div class="sidebar-segment"></div>
+                        <div class="sidebar-segment"></div>
+                        <div class="sidebar-segment"></div>
+                        <div class="sidebar-segment"></div>
+                    </div>
+                    
+                    <!-- Top Status Bar with binary decoration -->
+                    <div class="hud-status-bar hud-status-top">
+                        <div class="binary-decoration">01010101</div>
+                        <div class="status-bar-line status-bar-left"></div>
+                        <span class="status-text">NEURAL LINK ESTABLISHED</span>
+                        <div class="status-bar-line status-bar-right"></div>
+                        <div class="binary-decoration">10101010</div>
+                    </div>
+                    
+                    <!-- Chevron Indicators with more arrows -->
+                    <div class="hud-chevrons hud-chevrons-left">
+                        <span class="chevron">‹</span>
+                        <span class="chevron">‹</span>
+                        <span class="chevron">‹</span>
+                        <span class="chevron">‹</span>
+                        <span class="chevron">‹</span>
+                        <span class="chevron">‹</span>
+                        <span class="chevron">‹</span>
+                        <span class="chevron">‹</span>
+                        <span class="chevron">‹</span>
+                    </div>
+                    <div class="hud-chevrons hud-chevrons-right">
+                        <span class="chevron">›</span>
+                        <span class="chevron">›</span>
+                        <span class="chevron">›</span>
+                        <span class="chevron">›</span>
+                        <span class="chevron">›</span>
+                        <span class="chevron">›</span>
+                        <span class="chevron">›</span>
+                        <span class="chevron">›</span>
+                        <span class="chevron">›</span>
+                    </div>
+                    
+                    <!-- Three Circles Logo with ring effects -->
+                    <div class="boot-logo-container">
+                        <div class="boot-circle-outer-ring"></div>
+                        <div class="boot-circle boot-circle-1"></div>
+                        <div class="boot-circle boot-circle-2"></div>
+                        <div class="boot-circle boot-circle-3"></div>
+                        <div class="boot-circle-stem"></div>
+                        <div class="boot-circle-ring"></div>
+                        <div class="boot-circle-pulse"></div>
+                    </div>
+                    
+                    <!-- Hash Decorations -->
+                    <div class="hud-hash-marks hud-hash-left">////////////////////</div>
+                    <div class="hud-hash-marks hud-hash-right">\\\\\\\\\\\\\\\\\\\\</div>
+                    
+                    <!-- Bottom Progress Indicator -->
+                    <div class="hud-bottom-bar">
+                        <div class="bottom-bar-segment"></div>
+                        <div class="bottom-bar-segment"></div>
+                        <div class="bottom-bar-segment"></div>
                     </div>
                 </div>
-            </div>
-            
-            <div id="boot-complete" class="boot-complete" style="position: fixed; inset: 0; background: linear-gradient(135deg, #02030a, #040812 50%, #080f1a); display: none; flex-direction: column; align-items: center; justify-content: center; gap: 16px; z-index: 10000; opacity: 0; transition: opacity 600ms ease;">
-                <div class="boot-complete-title" style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 4vw, 36px); font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #00ff88; text-shadow: 0 0 20px rgba(0, 255, 136, 0.8);">BOOT UP COMPLETE</div>
-                <div class="boot-complete-subtitle" style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(14px, 2vw, 18px); letter-spacing: 0.15em; color: #9ef4ff; text-shadow: 0 0 12px rgba(158, 244, 255, 0.6);">WELCOME TO AFOQT QUEST</div>
+                
+                <!-- Phase 2: 3D Rotating Title -->
+                <div class="boot-phase boot-phase-3d-title">
+                    <!-- 3D Title Container -->
+                    <div class="title-3d-scene">
+                        <div class="title-3d-container">
+                            <!-- Chromatic aberration layers -->
+                            <div class="title-3d-layer title-3d-red">AFOQT Quest</div>
+                            <div class="title-3d-layer title-3d-cyan">AFOQT Quest</div>
+                            <div class="title-3d-layer title-3d-main">AFOQT Quest</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Decorative Frame -->
+                    <div class="title-frame">
+                        <div class="frame-line frame-top"></div>
+                        <div class="frame-line frame-bottom"></div>
+                        <div class="frame-bracket frame-bracket-left">›</div>
+                        <div class="frame-bracket frame-bracket-right">‹</div>
+                    </div>
+                    
+                    <!-- Status Box -->
+                    <div class="boot-status-box">
+                        <span class="status-bracket">[</span>
+                        <span class="status-box-text">TRAINING PROTOCOL ACTIVE</span>
+                        <span class="status-bracket">]</span>
+                    </div>
+                    
+                    <!-- Bottom Chevrons -->
+                    <div class="boot-bottom-indicator">
+                        <span class="indicator-chevron">‹</span>
+                        <span class="indicator-chevron">‹</span>
+                    </div>
+                </div>
+                
+                <!-- Phase 3: Final HUD -->
+                <div class="boot-phase boot-phase-final">
+                    <!-- Coordinate Display -->
+                    <div class="boot-coords">
+                        <div class="coord-line coord-y"><span class="coord-label">Y:</span> <span class="coord-value">0.00</span></div>
+                        <div class="coord-line coord-x"><span class="coord-label">X:</span> <span class="coord-value">0.00</span></div>
+                        <div class="coord-line coord-z"><span class="coord-label">Z:</span> <span class="coord-value">0.00</span></div>
+                    </div>
+                    
+                    <!-- Radar/Scanner -->
+                    <div class="boot-radar">
+                        <div class="radar-ring radar-ring-outer"></div>
+                        <div class="radar-ring radar-ring-mid"></div>
+                        <div class="radar-ring radar-ring-inner"></div>
+                        <div class="radar-sweep"></div>
+                        <div class="radar-dot"></div>
+                    </div>
+                    
+                    <!-- Progress Bar -->
+                    <div class="boot-progress">
+                        <div class="progress-track">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <div class="progress-markers">
+                            <span>|</span><span>|</span><span>|</span><span>|</span><span>|</span>
+                            <span>|</span><span>|</span><span>|</span><span>|</span><span>|</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Version Labels -->
+                    <div class="boot-labels">
+                        <span class="label-left">USAF TRAINING SYSTEM v2.0</span>
+                        <span class="label-right">NEURAL LINK v3.14.159</span>
+                    </div>
+                </div>
+                
+                <!-- Skip Button -->
+                <button class="boot-skip-btn" id="boot-skip">
+                    <span class="skip-text">SKIP</span>
+                    <span class="skip-arrow">▶</span>
+                </button>
             </div>
         `;
         
         document.body.insertAdjacentHTML('afterbegin', bootHTML);
         
-        const bootLoader = document.getElementById('boot-sequence');
-        const bootComplete = document.getElementById('boot-complete');
-        const globeHost = document.getElementById('globeHost');
-        const progressFill = document.getElementById('progressFill');
-        const progressPercent = document.getElementById('progressPercent');
+        const bootSequence = document.getElementById('boot-sequence');
         
         // Enable audio on first interaction
         const enableAudio = createAudioEnabler();
-        if (bootLoader) {
-            bootLoader.addEventListener('click', enableAudio, { once: true });
+        if (bootSequence) {
+            bootSequence.addEventListener('click', enableAudio, { once: true });
             document.addEventListener('keydown', enableAudio, { once: true });
         }
         
-        // Globe initialization
-        let loopRunning = false;
-        let animationId = null;
-        let globe = null;
+        // Skip handler with cleanup
+        let isSkipped = false;
+        let typingInterval = null;
         
-        const startLoop = () => {
-            if (loopRunning) return;
-            loopRunning = true;
-            const step = () => {
-                animationId = requestAnimationFrame(step);
-                if (globe && globe.tick) globe.tick();
-            };
-            step();
-        };
-        
-        const stopLoop = () => {
-            if (animationId) cancelAnimationFrame(animationId);
-            animationId = null;
-            loopRunning = false;
-        };
-        
-        const buildGlobe = () => {
-            if (!window.ENCOM || !window.ENCOM.Globe) {
-                console.warn('ENCOM.Globe not available, skipping globe');
-                return false;
+        const cleanupAndSkip = () => {
+            if (isSkipped) return;
+            isSkipped = true;
+            
+            // Clear typing interval if running
+            if (typingInterval) {
+                clearInterval(typingInterval);
+                typingInterval = null;
             }
             
-            try {
-                if (globe && globe.destroy) {
-                    globe.destroy();
-                }
-                globe = null;
-                
-                const w = globeHost.clientWidth || 400;
-                const h = globeHost.clientHeight || 400;
-                
-                // Create new globe instance
-                globe = new ENCOM.Globe(w, h, {
-                    font: 'Inconsolata',
-                    data: window.data ? window.data.slice() : [],
-                    tiles: window.grid ? window.grid.tiles : [],
-                    baseColor: '#8ce7ff',
-                    markerColor: '#b8ffcf',
-                    pinColor: '#ffdf8b',
-                    satelliteColor: '#ffae5f',
-                    scale: 1.05,
-                    dayLength: 12000,
-                    introLinesDuration: 1500,
-                    maxPins: 8,
-                    maxMarkers: 12,
-                    viewAngle: 0.3
-                });
-                
-                // Clear host and add globe
-                globeHost.innerHTML = '';
-                globeHost.appendChild(globe.domElement);
-                
-                // Ensure transparent background
-                if (globe.renderer) {
-                    globe.renderer.setClearColor(0x000000, 0);
-                    const canvas = globe.renderer.domElement;
-                    canvas.style.background = 'none';
-                    canvas.style.backgroundColor = 'transparent';
-                    canvas.style.width = '100%';
-                    canvas.style.height = '100%';
-                }
-                
-                // Initialize globe
-                globe.init(() => {
-                    startLoop();
-                });
-                
-                return true;
-            } catch (e) {
-                console.error('Globe initialization error:', e);
-                globeHost.innerHTML = '<div style="color: #9ef4ff; text-align: center; font-size: 14px;">Initializing...</div>';
-                return false;
-            }
-        };
-        
-        // Animate progress bar
-        const animateProgress = () => {
-            if (typeof gsap !== 'undefined') {
-                gsap.to(progressFill, {
-                    width: '100%',
-                    duration: 8,
-                    ease: 'linear',
-                    onUpdate: function() {
-                        const progress = Math.floor(this.progress() * 100);
-                        progressPercent.textContent = progress + '%';
-                    },
-                    onComplete: showBootComplete
-                });
-            } else {
-                // Silent fallback: just animate progress without showing loading box
-                let progress = 0;
-                const startTime = Date.now();
-                const interval = setInterval(() => {
-                    const elapsed = Date.now() - startTime;
-                    progress = Math.min(100, (elapsed / 8000) * 100);
-                    progressFill.style.width = progress + '%';
-                    progressPercent.textContent = Math.floor(progress) + '%';
-                    if (progress >= 100) {
-                        clearInterval(interval);
-                        setTimeout(showBootComplete, 200);
-                    }
-                }, 50);
-            }
-        };
-        
-        // Show boot complete
-        const showBootComplete = () => {
-            stopLoop();
-            if (!bootLoader) return;
+            // Remove keyboard listener
+            document.removeEventListener('keydown', keyHandler);
             
-            if (typeof gsap !== 'undefined') {
-                gsap.to(bootLoader, {
-                    opacity: 0,
-                    duration: 0.8,
-                    ease: 'power2.inOut',
-                    onComplete: () => {
-                        bootLoader.style.display = 'none';
-                        bootComplete.style.display = 'flex';
-                        bootComplete.style.opacity = '0';
-                        
-                        gsap.to(bootComplete, {
-                            opacity: 1,
-                            duration: 0.5,
-                            ease: 'power2.out'
-                        });
-                        
-                        gsap.fromTo('.boot-complete-title', 
-                            { opacity: 0, y: -20 },
-                            { opacity: 1, y: 0, duration: 0.6, delay: 0.2, ease: 'power3.out' }
-                        );
-                        
-                        gsap.fromTo('.boot-complete-subtitle', 
-                            { opacity: 0, y: 10 },
-                            { opacity: 0.8, y: 0, duration: 0.6, delay: 0.4, ease: 'power3.out' }
-                        );
-                        
-                        setTimeout(() => {
-                            gsap.to(bootComplete, {
-                                opacity: 0,
-                                duration: 0.8,
-                                ease: 'power2.inOut',
-                                onComplete: () => {
-                                    bootComplete.style.display = 'none';
-                                    bootLoader.remove();
-                                    resolve();
-                                }
-                            });
-                        }, 3000);
-                    }
-                });
-            } else {
-                setTimeout(() => {
-                    bootLoader.remove();
+            const bootSeq = document.getElementById('boot-sequence');
+            if (bootSeq) {
+                if (hasAnime()) {
+                    anime.animate(bootSeq, {
+                        opacity: [1, 0],
+                        duration: 300,
+                        ease: 'outQuad',
+                        onComplete: () => {
+                            bootSeq.remove();
+                            resolve();
+                        }
+                    });
+                } else {
+                    bootSeq.remove();
                     resolve();
-                }, 2000);
+                }
+            } else {
+                resolve();
             }
         };
         
-        // Start boot sequence
+        const skipBtn = document.getElementById('boot-skip');
+        if (skipBtn) {
+            skipBtn.addEventListener('click', cleanupAndSkip, { once: true });
+        }
+        
+        // Keyboard skip - listen for any skip key
+        const keyHandler = (e) => {
+            if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+                cleanupAndSkip();
+            }
+        };
+        document.addEventListener('keydown', keyHandler);
+        
+        // Run the animation sequence after DOM is ready
+        // Use setTimeout to ensure DOM is fully rendered before querying
         setTimeout(() => {
-            if (typeof gsap !== 'undefined') {
-                const tl = gsap.timeline();
-                tl.fromTo('.boot-logo', 
-                    { opacity: 0, y: -30, scaleX: 0.8 },
-                    { opacity: 1, y: 0, scaleX: 1, duration: 0.8, ease: 'power4.out' }
-                )
-                .fromTo('.boot-subtitle',
-                    { opacity: 0, letterSpacing: '0.5em' },
-                    { opacity: 0.7, letterSpacing: '0.2em', duration: 0.6, ease: 'power2.out' },
-                    '-=0.3'
-                )
-                .fromTo('.globe-wrap',
-                    { opacity: 0, scale: 0.85 },
-                    { opacity: 1, scale: 1, duration: 1, ease: 'power3.out' },
-                    '-=0.2'
-                )
-                .fromTo('.init-progress',
-                    { opacity: 0, translateY: 20 },
-                    { opacity: 1, translateY: 0, duration: 0.6, ease: 'power2.out' },
-                    '-=0.4'
-                );
-            }
-            
-            if (buildGlobe()) {
-                setTimeout(animateProgress, 800);
+            if (hasAnime()) {
+                runAnimeBootSequence(resolve, cleanupAndSkip, (interval) => { typingInterval = interval; });
             } else {
-                setTimeout(animateProgress, 200);
+                // Fallback - just show briefly and resolve
+                setTimeout(() => {
+                    if (!isSkipped) cleanupAndSkip();
+                }, 3000);
             }
-        }, 100);
+        }, 50);
     });
+}
+
+// Main anime.js boot sequence
+function runAnimeBootSequence(resolve, skipBoot, setTypingInterval) {
+    const bootSeq = document.getElementById('boot-sequence');
+    if (!bootSeq) {
+        console.warn('Boot sequence element not found');
+        return resolve();
+    }
+    
+    // Phase elements
+    const phaseHud = bootSeq.querySelector('.boot-phase-hud');
+    const phase3d = bootSeq.querySelector('.boot-phase-3d-title');
+    const phaseFinal = bootSeq.querySelector('.boot-phase-final');
+    
+    // Ensure all phases start hidden (with null checks)
+    if (phaseHud) phaseHud.style.opacity = '0';
+    if (phase3d) phase3d.style.opacity = '0';
+    if (phaseFinal) phaseFinal.style.opacity = '0';
+    
+    // If essential phases are missing, skip boot
+    if (!phaseHud || !phase3d || !phaseFinal) {
+        console.warn('Boot sequence phases not found, skipping animation');
+        skipBoot();
+        return;
+    }
+    
+    // Sound effects
+    playSfx('boot');
+    
+    // ============ PHASE 1: HUD Frame (0-2.2s) ============
+    
+    // Show HUD phase with fade in
+    anime.animate(phaseHud, {
+        opacity: [0, 1],
+        duration: 300,
+        ease: 'outQuart'
+    });
+    
+    // Corner brackets animation
+    const corners = phaseHud.querySelectorAll('.hud-corner');
+    anime.animate(corners, {
+        opacity: [0, 1],
+        scale: [0.3, 1],
+        duration: 400,
+        delay: anime.stagger(100, { start: 100 }),
+        ease: 'outBack'
+    });
+    
+    // Sidebar segments
+    const leftSegments = phaseHud.querySelectorAll('.hud-sidebar-left .sidebar-segment');
+    const rightSegments = phaseHud.querySelectorAll('.hud-sidebar-right .sidebar-segment');
+    
+    anime.animate(leftSegments, {
+        opacity: [0, 0.8],
+        scaleY: [0, 1],
+        duration: 300,
+        delay: anime.stagger(80, { start: 300 }),
+        ease: 'outQuart'
+    });
+    
+    anime.animate(rightSegments, {
+        opacity: [0, 0.8],
+        scaleY: [0, 1],
+        duration: 300,
+        delay: anime.stagger(80, { start: 350 }),
+        ease: 'outQuart'
+    });
+    
+    // Status bar
+    const statusBar = phaseHud.querySelector('.hud-status-bar');
+    const statusLines = phaseHud.querySelectorAll('.status-bar-line');
+    const statusText = phaseHud.querySelector('.status-text');
+    
+    anime.animate(statusBar, {
+        opacity: [0, 1],
+        duration: 400,
+        delay: 500,
+        ease: 'outQuart'
+    });
+    
+    anime.animate(statusLines[0], {
+        scaleX: [0, 1],
+        duration: 500,
+        delay: 600,
+        ease: 'outQuart'
+    });
+    
+    anime.animate(statusLines[1], {
+        scaleX: [0, 1],
+        duration: 500,
+        delay: 650,
+        ease: 'outQuart'
+    });
+    
+    // Status text typing effect with interval tracking for cleanup
+    if (statusText) {
+        const text = statusText.textContent;
+        statusText.textContent = '';
+        statusText.style.opacity = '1';
+        let charIndex = 0;
+        const typeInterval = setInterval(() => {
+            if (charIndex < text.length) {
+                statusText.textContent += text[charIndex];
+                charIndex++;
+            } else {
+                clearInterval(typeInterval);
+            }
+        }, 40);
+        
+        // Pass interval reference for cleanup on skip
+        if (setTypingInterval) {
+            setTypingInterval(typeInterval);
+        }
+    }
+    
+    // Chevrons
+    const leftChevrons = phaseHud.querySelectorAll('.hud-chevrons-left .chevron');
+    const rightChevrons = phaseHud.querySelectorAll('.hud-chevrons-right .chevron');
+    
+    anime.animate(leftChevrons, {
+        opacity: [0, 0.8],
+        translateX: [20, 0],
+        duration: 300,
+        delay: anime.stagger(50, { start: 800 }),
+        ease: 'outQuart'
+    });
+    
+    anime.animate(rightChevrons, {
+        opacity: [0, 0.8],
+        translateX: [-20, 0],
+        duration: 300,
+        delay: anime.stagger(50, { start: 850 }),
+        ease: 'outQuart'
+    });
+    
+    // Chevron pulse animation (continuous)
+    setTimeout(() => {
+        anime.animate(leftChevrons, {
+            translateX: [0, -8, 0],
+            opacity: [0.8, 1, 0.8],
+            duration: 1000,
+            delay: anime.stagger(50),
+            loop: true,
+            ease: 'inOutSine'
+        });
+        
+        anime.animate(rightChevrons, {
+            translateX: [0, 8, 0],
+            opacity: [0.8, 1, 0.8],
+            duration: 1000,
+            delay: anime.stagger(50),
+            loop: true,
+            ease: 'inOutSine'
+        });
+    }, 1200);
+    
+    // Three circles logo
+    const circles = phaseHud.querySelectorAll('.boot-circle');
+    const stem = phaseHud.querySelector('.boot-circle-stem');
+    const ring = phaseHud.querySelector('.boot-circle-ring');
+    
+    anime.animate(circles, {
+        opacity: [0, 1],
+        scale: [0, 1],
+        duration: 400,
+        delay: anime.stagger(150, { start: 400 }),
+        ease: 'outElastic(1, 0.5)'
+    });
+    
+    anime.animate(stem, {
+        opacity: [0, 1],
+        scaleY: [0, 1],
+        duration: 400,
+        delay: 900,
+        ease: 'outQuart'
+    });
+    
+    anime.animate(ring, {
+        opacity: [0, 0.6],
+        scale: [0.5, 1],
+        duration: 600,
+        delay: 1100,
+        ease: 'outQuart'
+    });
+    
+    // Circle glow pulse (continuous)
+    setTimeout(() => {
+        anime.animate(circles, {
+            boxShadow: [
+                '0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.4)',
+                '0 0 40px rgba(255, 0, 0, 1), 0 0 80px rgba(255, 0, 0, 0.6)',
+                '0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.4)'
+            ],
+            duration: 1500,
+            loop: true,
+            ease: 'inOutSine'
+        });
+    }, 1000);
+    
+    // Hash marks
+    const hashMarks = phaseHud.querySelectorAll('.hud-hash-marks');
+    anime.animate(hashMarks, {
+        opacity: [0, 0.5],
+        duration: 500,
+        delay: 1000,
+        ease: 'outQuart'
+    });
+    
+    // Bottom bar segments
+    const bottomSegments = phaseHud.querySelectorAll('.bottom-bar-segment');
+    anime.animate(bottomSegments, {
+        opacity: [0, 0.7],
+        scaleX: [0, 1],
+        duration: 400,
+        delay: anime.stagger(150, { start: 1200 }),
+        ease: 'outQuart'
+    });
+    
+    // Sound effect
+    setTimeout(() => playSfx('nav'), 800);
+    
+    // ============ PHASE 2: 3D Title (2.2-4.2s) ============
+    
+    setTimeout(() => {
+        // Fade out HUD phase
+        anime.animate(phaseHud, {
+            opacity: [1, 0],
+            duration: 400,
+            ease: 'outQuart'
+        });
+        
+        // Show 3D title phase with fade in
+        anime.animate(phase3d, {
+            opacity: [0, 1],
+            duration: 400,
+            ease: 'outQuart'
+        });
+        
+        const titleContainer = phase3d.querySelector('.title-3d-container');
+        const titleLayers = phase3d.querySelectorAll('.title-3d-layer');
+        const titleMain = phase3d.querySelector('.title-3d-main');
+        const frameLines = phase3d.querySelectorAll('.frame-line');
+        const frameBrackets = phase3d.querySelectorAll('.frame-bracket');
+        const statusBox = phase3d.querySelector('.boot-status-box');
+        const bottomIndicator = phase3d.querySelector('.boot-bottom-indicator');
+        
+        // Title entrance with dramatic 3D rotation from behind
+        anime.animate(titleContainer, {
+            opacity: [0, 1],
+            rotateY: [-180, 0],
+            rotateX: [30, 0],
+            translateZ: [-500, 0],
+            scale: [0.3, 1],
+            duration: 1500,
+            ease: 'outExpo'
+        });
+        
+        // Chromatic aberration effect - more dramatic shifts
+        anime.animate(phase3d.querySelector('.title-3d-red'), {
+            translateX: [-8, -3, -8],
+            translateY: [-2, 1, -2],
+            opacity: [0, 0.8, 0.8],
+            duration: 1500,
+            loop: true,
+            ease: 'inOutSine'
+        });
+        
+        anime.animate(phase3d.querySelector('.title-3d-cyan'), {
+            translateX: [8, 3, 8],
+            translateY: [2, -1, 2],
+            opacity: [0, 0.8, 0.8],
+            duration: 1500,
+            loop: true,
+            ease: 'inOutSine',
+            delay: 75
+        });
+        
+        // Continuous full 360 Y-axis rotation like the reference
+        setTimeout(() => {
+            anime.animate(titleContainer, {
+                rotateY: [0, 360],
+                duration: 6000,
+                loop: true,
+                ease: 'linear'
+            });
+        }, 1500);
+        
+        // Add subtle X-axis tilt during rotation
+        setTimeout(() => {
+            anime.animate(titleContainer, {
+                rotateX: [0, 10, 0, -10, 0],
+                duration: 3000,
+                loop: true,
+                ease: 'inOutSine'
+            });
+        }, 1500);
+        
+        // Title glow pulse with more dramatic effect
+        anime.animate(titleMain, {
+            textShadow: [
+                '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.4)',
+                '0 0 60px rgba(255, 255, 255, 1), 0 0 120px rgba(0, 255, 255, 0.8)',
+                '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.4)'
+            ],
+            duration: 1500,
+            loop: true,
+            ease: 'inOutSine',
+            delay: 500
+        });
+        
+        // Frame lines
+        anime.animate(frameLines, {
+            scaleX: [0, 1],
+            opacity: [0, 0.8],
+            duration: 500,
+            delay: anime.stagger(100, { start: 400 }),
+            ease: 'outQuart'
+        });
+        
+        // Frame brackets
+        anime.animate(frameBrackets, {
+            opacity: [0, 1],
+            scale: [0.5, 1],
+            duration: 400,
+            delay: anime.stagger(100, { start: 600 }),
+            ease: 'outBack'
+        });
+        
+        // Status box
+        anime.animate(statusBox, {
+            opacity: [0, 1],
+            translateY: [20, 0],
+            duration: 500,
+            delay: 800,
+            ease: 'outQuart'
+        });
+        
+        // Bottom indicator
+        anime.animate(bottomIndicator, {
+            opacity: [0, 1],
+            duration: 400,
+            delay: 1000,
+            ease: 'outQuart'
+        });
+        
+        // Indicator chevrons bounce
+        const indicatorChevrons = phase3d.querySelectorAll('.indicator-chevron');
+        setTimeout(() => {
+            anime.animate(indicatorChevrons, {
+                translateY: [0, 5, 0],
+                duration: 800,
+                delay: anime.stagger(100),
+                loop: true,
+                ease: 'inOutSine'
+            });
+        }, 1200);
+        
+        playSfx('nav');
+        
+    }, 2200);
+    
+    // ============ PHASE 3: Final HUD (4.2-5.5s) ============
+    
+    setTimeout(() => {
+        // Fade out 3D phase
+        anime.animate(phase3d, {
+            opacity: [1, 0],
+            duration: 400,
+            ease: 'outQuart'
+        });
+        
+        // Show final phase with fade in
+        anime.animate(phaseFinal, {
+            opacity: [0, 1],
+            duration: 400,
+            ease: 'outQuart'
+        });
+        
+        const coords = phaseFinal.querySelector('.boot-coords');
+        const radar = phaseFinal.querySelector('.boot-radar');
+        const radarRings = phaseFinal.querySelectorAll('.radar-ring');
+        const radarSweep = phaseFinal.querySelector('.radar-sweep');
+        const radarDot = phaseFinal.querySelector('.radar-dot');
+        const progress = phaseFinal.querySelector('.boot-progress');
+        const progressFill = phaseFinal.querySelector('.progress-fill');
+        const progressMarkers = phaseFinal.querySelectorAll('.progress-markers span');
+        const labels = phaseFinal.querySelectorAll('.boot-labels span');
+        
+        // Coordinates
+        anime.animate(coords, {
+            opacity: [0, 1],
+            translateX: [-20, 0],
+            duration: 400,
+            ease: 'outQuart'
+        });
+        
+        // Radar
+        anime.animate(radar, {
+            opacity: [0, 0.8],
+            scale: [0.5, 1],
+            duration: 600,
+            delay: 200,
+            ease: 'outQuart'
+        });
+        
+        anime.animate(radarRings, {
+            opacity: [0, 0.5],
+            scale: [0.8, 1],
+            duration: 400,
+            delay: anime.stagger(100, { start: 300 }),
+            ease: 'outQuart'
+        });
+        
+        // Radar sweep rotation
+        anime.animate(radarSweep, {
+            rotate: ['-60deg', '60deg'],
+            duration: 2000,
+            loop: true,
+            ease: 'linear',
+            direction: 'alternate'
+        });
+        
+        anime.animate(radarDot, {
+            opacity: [0, 1],
+            scale: [0, 1],
+            duration: 300,
+            delay: 500,
+            ease: 'outBack'
+        });
+        
+        // Progress bar
+        anime.animate(progress, {
+            opacity: [0, 1],
+            duration: 400,
+            delay: 400,
+            ease: 'outQuart'
+        });
+        
+        anime.animate(progressFill, {
+            scaleX: [0, 1],
+            duration: 800,
+            delay: 500,
+            ease: 'outQuart'
+        });
+        
+        anime.animate(progressMarkers, {
+            opacity: [0, 0.6],
+            duration: 200,
+            delay: anime.stagger(50, { start: 600 }),
+            ease: 'outQuart'
+        });
+        
+        // Labels
+        anime.animate(labels, {
+            opacity: [0, 0.7],
+            duration: 500,
+            delay: anime.stagger(100, { start: 700 }),
+            ease: 'outQuart'
+        });
+        
+        playSfx('correct');
+        
+    }, 4200);
+    
+    // ============ END SEQUENCE (5.5s) ============
+    
+    setTimeout(() => {
+        const bootSeq = document.getElementById('boot-sequence');
+        if (bootSeq) {
+            anime.animate(bootSeq, {
+                opacity: [1, 0],
+                duration: 500,
+                ease: 'outQuart',
+                onComplete: () => {
+                    bootSeq.remove();
+                    resolve();
+                }
+            });
+        } else {
+            resolve();
+        }
+    }, 5500);
 }
 
 // Access Granted animation after player selection
@@ -5167,27 +6005,248 @@ function selectPlayer(playerId) {
 // ============================================================================
 // Quiz Management
 // ============================================================================
-async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
-    const topic = topics.find(t => t.id === topicId);
-    if (!topic) return;
+
+/**
+ * Sample questions for a section using difficulty distribution
+ * E.g., for 25 questions with distribution {beginner: 0.35, advanced: 0.45, expert: 0.20}
+ * Will sample ~9 beginner, ~11 advanced, ~5 expert questions
+ */
+function sampleQuestionsWithDifficultyDistribution(subjectId, subtopicId, requestedCount, distribution = null) {
+    // Default distribution: 35% beginner, 45% advanced, 20% expert
+    const defaultDist = { beginner: 0.35, advanced: 0.45, expert: 0.20 };
+    const dist = distribution || defaultDist;
     
-    state.currentTopic = topic;
+    const sampled = [];
+    for (const [diff, ratio] of Object.entries(dist)) {
+        const count = Math.round(requestedCount * ratio);
+        if (count > 0) {
+            const qs = getQuestionsFromRegistry(subjectId, subtopicId, diff, count);
+            if (qs && qs.length > 0) {
+                sampled.push(...qs);
+            }
+        }
+    }
+    
+    // Ensure we have the right count
+    if (sampled.length > requestedCount) {
+        return sampled.slice(0, requestedCount);
+    } else if (sampled.length < requestedCount) {
+        // Fallback: fill remaining with beginner questions
+        const remaining = requestedCount - sampled.length;
+        const fallback = getQuestionsFromRegistry(subjectId, subtopicId, 'beginner', remaining);
+        if (fallback && fallback.length > 0) {
+            sampled.push(...fallback);
+        }
+    }
+    
+    return sampled;
+}
+
+/**
+ * Start an AFOQT Practice Test following full_afoqt_practice_test_config_v1.json structure
+ */
+async function _startAFOQTPracticeTestAsync(difficulty = 'beginner') {
+    console.log('Starting AFOQT Practice Test with difficulty:', difficulty);
+    playSfx('select');
+    
+    // Initialize AFOQT practice test state
     state.quiz.questions = [];
-    state.quiz.mode = mode;
+    state.quiz.mode = 'practiceTestMode';
     state.quiz.difficulty = difficulty;
+    state.quiz.showFeedback = false; // No feedback until end
+    state.quiz.isPracticeTest = true;
+    state.quiz.isAFOQTOfficial = true;
+    state.quiz.sections = [];
+    state.quiz.currentSection = 0;
+    state.quiz.sectionScores = {};
+    
+    // AFOQT section configuration - following the official spec
+    const sectionConfig = [
+        { name: 'Verbal Analogies', topicId: 'verbal_analogies', count: 25, timeSeconds: 480 },
+        { name: 'Arithmetic Reasoning', topicId: 'arithmetic_reasoning', count: 25, timeSeconds: 1740 },
+        { name: 'Word Knowledge', topicId: 'vocabulary', count: 25, timeSeconds: 300 },
+        { name: 'Math Knowledge', topicId: 'math_knowledge', count: 25, timeSeconds: 1320 },
+        { name: 'Reading Comprehension', topicId: 'reading_comprehension', count: 25, timeSeconds: 2280 },
+        { name: 'Physical Science', topicId: 'physical_science', count: 20, timeSeconds: 600 },
+        { name: 'Table Reading', topicId: 'table_reading', count: 40, timeSeconds: 420 },
+        { name: 'Instrument Comprehension', topicId: 'instrument_comprehension', count: 25, timeSeconds: 300 },
+        { name: 'Block Counting', topicId: 'block_counting', count: 30, timeSeconds: 270 }
+    ];
+    
+    console.log('Loading AFOQT sections...');
+    
+    const playerId = state.currentPlayer ? state.currentPlayer.id : null;
+    
+    // Difficulty distribution: 35% beginner, 45% advanced, 20% expert
+    // Can be customized per section if needed
+    const defaultDistribution = { beginner: 0.35, advanced: 0.45, expert: 0.20 };
+    
+    // Process each section according to config
+    for (const section of sectionConfig) {
+        // Match topics by subjectId instead of id (to aggregate all subtopics for a subject)
+        const matchingTopics = topics.filter(t => t.subjectId === section.topicId || t.id === section.topicId);
+        let sectionQuestions = [];
+        
+        console.log(`Section ${section.name}: Found ${matchingTopics.length} matching topics for ${section.topicId}`);
+        
+        // For official AFOQT subjects with content, use difficulty distribution sampling
+        const hasOfficialContent = matchingTopics.some(t => t.hasContent && t.isOfficialAfoqtTopic);
+        
+        if (hasOfficialContent && typeof sampleQuestionsWithDifficultyDistribution === 'function') {
+            // Use distribution-based sampling for official content
+            for (const topic of matchingTopics) {
+                if (topic.hasContent) {
+                    const questionsNeeded = Math.min(
+                        Math.ceil(section.count / matchingTopics.length),
+                        section.count - sectionQuestions.length
+                    );
+                    
+                    if (questionsNeeded <= 0) break;
+                    
+                    const qs = sampleQuestionsWithDifficultyDistribution(
+                        topic.subjectId || section.topicId,
+                        topic.id,
+                        questionsNeeded,
+                        defaultDistribution
+                    );
+                    
+                    if (qs && qs.length > 0) {
+                        sectionQuestions.push(...qs);
+                    }
+                }
+            }
+        } else {
+            // Fallback: use spaced repetition or procedural generation
+            const questionsPerTopic = matchingTopics.length > 0 ? Math.ceil(section.count / matchingTopics.length) : section.count;
+            
+            for (const topic of matchingTopics) {
+                const questionsNeeded = Math.min(questionsPerTopic, section.count - sectionQuestions.length);
+                if (questionsNeeded <= 0) break;
+                
+                if (typeof getQuestionsWithSpacedRepetition === 'function') {
+                    try {
+                        const qs = await getQuestionsWithSpacedRepetition(
+                            topic.subjectId || section.topicId,
+                            topic.id,
+                            difficulty,
+                            questionsNeeded,
+                            playerId
+                        );
+                        sectionQuestions.push(...qs);
+                    } catch (e) {
+                        console.warn(`Failed to load via spaced repetition for ${topic.id}:`, e);
+                    }
+                }
+                
+                // Fallback to procedural generation
+                if (sectionQuestions.length < section.count && topic.generateQuestion) {
+                    const needed = Math.min(questionsPerTopic, section.count - sectionQuestions.length);
+                    for (let i = 0; i < needed; i++) {
+                        const q = topic.generateQuestion(difficulty);
+                        if (q) {
+                            q._section = section.name;
+                            q._topicId = section.topicId;
+                            q._sourceTopicId = topic.id;
+                            sectionQuestions.push(q);
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Ensure we have exactly the right count
+        sectionQuestions = sectionQuestions.slice(0, section.count);
+        
+        // Add metadata
+        sectionQuestions.forEach((q, idx) => {
+            q._section = section.name;
+            q._sectionIndex = state.quiz.sections.length;
+            q._questionInSection = idx + 1;
+            q._topicId = section.topicId;
+        });
+        
+        // Store section metadata
+        state.quiz.sections.push({
+            name: section.name,
+            topicId: section.topicId,
+            totalQuestions: sectionQuestions.length,
+            startIndex: state.quiz.questions.length,
+            endIndex: state.quiz.questions.length + sectionQuestions.length - 1,
+            timeSeconds: section.timeSeconds,
+            timeRemaining: section.timeSeconds
+        });
+        
+        state.quiz.questions.push(...sectionQuestions);
+        console.log(`Loaded ${sectionQuestions.length} questions for ${section.name}`);
+    }
+    
+    console.log('Total questions for full AFOQT test:', state.quiz.questions.length);
+    
+    // Initialize quiz state
+    state.quiz.currentIndex = 0;
+    state.quiz.answers = [];
+    state.quiz.isAnswered = false;
+    state.quiz.timeStarted = Date.now();
+    state.quiz.sectionTimeStarted = Date.now();
+    state.quiz.selectedAnswer = null;
+    
+    state.screen = 'quiz';
+    console.log('Transitioning to quiz screen with', state.quiz.questions.length, 'questions across', state.quiz.sections.length, 'sections');
+    render();
+}
+
+async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
+    console.log('[ENTER] startQuiz called with:', {topicId, mode, difficulty, topicsLength: topics?.length});
+    try {
+        if (DEBUG_MODE) console.log('startQuiz called with:', {topicId, mode, difficulty});
+        const topic = topics.find(t => t.id === topicId);
+        if (!topic) {
+            console.error('Topic not found:', topicId);
+            playSfx('wrong');
+            return;
+        }
+        
+        if (DEBUG_MODE) console.log('Starting quiz for topic:', topic.name, {subjectId: topic.subjectId, hasContent: topic.hasContent});
+        state.currentTopic = topic;
+        state.quiz.questions = [];
+        console.log('[INIT] state.quiz.questions initialized to empty array');
+        state.quiz.mode = mode;
+        state.quiz.difficulty = difficulty;
     
     // Patch 18: Set feedback visibility based on mode
     // test/practiceTestMode = no feedback until end, practice/sprint = immediate feedback
     state.quiz.showFeedback = (mode !== 'practiceTestMode' && mode !== 'test');
     state.quiz.isPracticeTest = topic.isPracticeTest || false;
     
+    // Log topic properties for debugging
+    console.log('[DEBUG] Topic properties:', {
+        id: topic.id,
+        subjectId: topic.subjectId,
+        isPracticeTest: topic.isPracticeTest,
+        hasContent: topic.hasContent,
+        hasGenerateQuestion: typeof topic.generateQuestion === 'function'
+    });
+    
+    console.log('[DEBUG] Available functions:', {
+        generateAfoqtPracticeTest: typeof generateAfoqtPracticeTest,
+        getQuestionsWithSpacedRepetition: typeof getQuestionsWithSpacedRepetition,
+        getQuestionsFromRegistry: typeof getQuestionsFromRegistry
+    });
+    
     // Patch 18: Check if this is an AFOQT practice test
     if (topic.isPracticeTest && topic.testConfig && typeof generateAfoqtPracticeTest === 'function') {
+        console.log('[QUIZ] Using AFOQT practice test path');
         // Use Patch 18 content-based questions
-        state.quiz.questions = generateAfoqtPracticeTest(topic.testConfig);
+        const qs = generateAfoqtPracticeTest(topic.testConfig);
+        state.quiz.questions = (qs && Array.isArray(qs)) ? qs : [];
         state.quiz.mode = 'practiceTestMode'; // Force practice test mode
         state.quiz.showFeedback = false;
+        // Ensure questions is always an array
+        if (!Array.isArray(state.quiz.questions)) {
+            state.quiz.questions = [];
+        }
     } else if ((topic.subjectId === 'vocabulary' || topic.subjectId === 'word_knowledge' || topic.subjectId === 'verbal_analogies' || topic.subjectId === 'math_knowledge') && typeof getQuestionsWithSpacedRepetition === 'function') {
+        console.log('[QUIZ] Using spaced repetition path for', topic.subjectId);
         // Patch 18: Use content-based questions with spaced repetition for vocabulary and math topics
         const questionCount = mode === 'sprint' ? 5 : 10;
         const playerId = state.currentPlayer ? state.currentPlayer.id : null;
@@ -5205,20 +6264,28 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
                     questionsPerDifficulty,
                     playerId
                 );
-                state.quiz.questions.push(...qs);
+                if (qs && Array.isArray(qs)) {
+                    state.quiz.questions.push(...qs);
+                }
             }
             
-            // Shuffle and limit to exact count using Fisher-Yates algorithm
-            state.quiz.questions = shuffleArray(state.quiz.questions).slice(0, questionCount);
+            // Shuffle and limit to exact count
+            state.quiz.questions = state.quiz.questions.sort(() => Math.random() - 0.5).slice(0, questionCount);
         } else {
             // Regular practice/test mode - use spaced repetition with specified difficulty
-            state.quiz.questions = await getQuestionsWithSpacedRepetition(
+            const qs = await getQuestionsWithSpacedRepetition(
                 topic.subjectId, 
                 topic.id, 
                 difficulty, 
                 questionCount,
                 playerId
             );
+            state.quiz.questions = (qs && Array.isArray(qs)) ? qs : [];
+        }
+        
+        // Ensure questions is always an array
+        if (!Array.isArray(state.quiz.questions)) {
+            state.quiz.questions = [];
         }
         
         // Fallback to procedural if no content available
@@ -5241,6 +6308,14 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
             }
         }
     } else if (topic.hasContent && typeof getQuestionsFromRegistry === 'function') {
+        console.log('[QUIZ] Using registry path for', topic.subjectId, '/', topic.id);
+        console.log('[REGISTRY-CHECK] Checking questionRegistry:', {
+            registryExists: typeof questionRegistry !== 'undefined',
+            subjectExists: typeof questionRegistry !== 'undefined' && !!questionRegistry[topic.subjectId],
+            subtopicExists: typeof questionRegistry !== 'undefined' && questionRegistry[topic.subjectId] && !!questionRegistry[topic.subjectId][topic.id],
+            difficultyExists: typeof questionRegistry !== 'undefined' && questionRegistry[topic.subjectId] && questionRegistry[topic.subjectId][topic.id] && !!questionRegistry[topic.subjectId][topic.id][difficulty]
+        });
+        
         // Content-based subjects (instrument, table reading, block counting, etc.)
         const questionCount = mode === 'sprint' ? 5 : 10;
         if (mode === 'sprint') {
@@ -5248,15 +6323,25 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
             const perDiff = Math.ceil(questionCount / difficulties.length);
             const pooled = [];
             difficulties.forEach(diff => {
-                pooled.push(...getQuestionsFromRegistry(topic.subjectId, topic.id, diff, perDiff));
+                const qsFromReg = getQuestionsFromRegistry(topic.subjectId, topic.id, diff, perDiff);
+                if (qsFromReg && Array.isArray(qsFromReg)) {
+                    pooled.push(...qsFromReg);
+                }
             });
-            state.quiz.questions = shuffleArray(pooled).slice(0, questionCount);
+            state.quiz.questions = pooled.sort(() => Math.random() - 0.5).slice(0, questionCount);
         } else {
-            state.quiz.questions = getQuestionsFromRegistry(topic.subjectId, topic.id, difficulty, questionCount);
+            const qsFromReg = getQuestionsFromRegistry(topic.subjectId, topic.id, difficulty, questionCount);
+            state.quiz.questions = (qsFromReg && Array.isArray(qsFromReg)) ? qsFromReg : [];
             // Fallback to beginner if chosen difficulty has no pool (common for arithmetic where only beginner exists)
             if ((!state.quiz.questions || state.quiz.questions.length === 0) && difficulty !== 'beginner') {
-                state.quiz.questions = getQuestionsFromRegistry(topic.subjectId, topic.id, 'beginner', questionCount);
+                const qsFromRegBeginner = getQuestionsFromRegistry(topic.subjectId, topic.id, 'beginner', questionCount);
+                state.quiz.questions = (qsFromRegBeginner && Array.isArray(qsFromRegBeginner)) ? qsFromRegBeginner : [];
             }
+        }
+        
+        // Ensure questions is always an array
+        if (!Array.isArray(state.quiz.questions)) {
+            state.quiz.questions = [];
         }
 
         // Fallback to procedural generator when registry is empty
@@ -5276,6 +6361,7 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
             }
         }
     } else {
+        console.log('[QUIZ] Using procedural generator fallback for', topic.id);
         // Use procedural generators for non-vocabulary topics
         const questionCount = mode === 'sprint' ? 5 : 10;
         const usedQuestions = new Set();
@@ -5304,22 +6390,89 @@ async function startQuiz(topicId, mode = 'practice', difficulty = 'beginner') {
         }
     }
     
+    // CRITICAL: Ensure state.quiz.questions is ALWAYS a valid array before any operations
+    if (typeof state.quiz.questions === 'undefined' || state.quiz.questions === null) {
+        console.error('[CRITICAL] state.quiz.questions was undefined/null, initializing to []');
+        state.quiz.questions = [];
+    }
+    if (!Array.isArray(state.quiz.questions)) {
+        console.error('[CRITICAL] state.quiz.questions is not an array:', typeof state.quiz.questions, state.quiz.questions);
+        state.quiz.questions = [];
+    }
+    
+    // Check if we have any questions before starting quiz
+    console.log('[BEFORE-CHECK] state.quiz.questions type:', typeof state.quiz.questions, 'isDefined:', typeof state.quiz.questions !== 'undefined', 'isArray:', Array.isArray(state.quiz.questions));
+    
+    if (!state.quiz.questions || !Array.isArray(state.quiz.questions) || state.quiz.questions.length === 0) {
+        const topicInfo = `${topic.subjectId || 'unknown'}/${topic.id}/${difficulty}`;
+        console.error('❌ Failed to generate any questions for quiz');
+        console.error('  Topic:', topic.name);
+        console.error('  Subject ID:', topic.subjectId);
+        console.error('  Topic ID:', topic.id);
+        console.error('  Difficulty:', difficulty);
+        console.error('  Mode:', mode);
+        
+        // Check registry status for this topic
+        if (typeof questionRegistry !== 'undefined' && topic.subjectId) {
+            const subjectPool = questionRegistry[topic.subjectId];
+            if (subjectPool && subjectPool[topic.id]) {
+                const poolSizes = subjectPool[topic.id];
+                console.error('  Registry pools:', {
+                    beginner: poolSizes.beginner?.length || 0,
+                    advanced: poolSizes.advanced?.length || 0,
+                    expert: poolSizes.expert?.length || 0
+                });
+            } else {
+                console.error('  Registry: No pool found for', topicInfo);
+            }
+        }
+        
+        console.log('[BEFORE-RENDER] state.quiz.questions:', {
+            isDefined: typeof state.quiz.questions !== 'undefined',
+            isArray: Array.isArray(state.quiz.questions),
+            length: state.quiz.questions?.length,
+            value: state.quiz.questions
+        });
+        
+        console.error('[ERROR] No questions available!', {
+            isDefined: typeof state.quiz.questions !== 'undefined',
+            isArray: Array.isArray(state.quiz.questions),
+            length: state.quiz.questions?.length
+        });
+        showErrorNotification(`No questions available for ${topic.name} (${difficulty}). Try a different topic or difficulty.`);
+        playSfx('wrong');
+        return;
+    }
+    
+    if (DEBUG_MODE) console.log(`Starting quiz with ${state.quiz.questions.length} questions`);
     state.quiz.currentIndex = 0;
+    state.quiz.currentSection = 0;
     state.quiz.score = 0;
     state.quiz.selectedAnswer = null;
     state.quiz.questionTimes = [];
     state.quiz.userAnswers = [];
-    
-    // Final shuffle: randomize question order so users get different order each session
-    // This applies to ALL question sources (content-based and procedurally generated)
-    state.quiz.questions = shuffleArray(state.quiz.questions);
-    
     state.quiz.questionStartTime = Date.now();
+    state.quiz.sections = state.quiz.sections || []; // Ensure sections array exists
     
     state.screen = 'quiz';
     playSfx('start');
     render();
     startQuestionTimer();
+    } catch (error) {
+        console.error('[CRITICAL ERROR in startQuiz]', error);
+        console.error('Stack:', error.stack);
+        console.error('[ERROR-CONTEXT] Quiz was for:', {
+            topicId,
+            topicName: state.currentTopic?.name,
+            subjectId: state.currentTopic?.subjectId,
+            mode,
+            difficulty,
+            questionsLoaded: Array.isArray(state.quiz.questions) ? state.quiz.questions.length : 'NOT_ARRAY'
+        });
+        showErrorNotification(`Quiz initialization failed: ${error.message}`);
+        state.screen = 'subject';
+        render();
+    }
 }
 
 function startQuestionTimer() {
@@ -5334,19 +6487,89 @@ function startQuestionTimer() {
     }, 100);
 }
 
+function startAFOQTSectionTimer() {
+    // Clear any existing timer
+    if (state.quiz.timerInterval) {
+        clearInterval(state.quiz.timerInterval);
+    }
+    
+    // Update timer immediately
+    updateTimerDisplay();
+    
+    // Update every 100ms for smooth countdown
+    state.quiz.timerInterval = setInterval(() => {
+        updateTimerDisplay();
+    }, 100);
+}
+
 function updateTimerDisplay() {
-    const timerEl = document.querySelector('.timer');
+    const timerEl = document.getElementById('section-timer') || document.querySelector('.timer');
     if (!timerEl) return;
     
-    const elapsed = (Date.now() - state.quiz.questionStartTime) / 1000;
-    const remaining = 60 - elapsed;
-    
-    timerEl.textContent = formatTime(remaining) + 's';
-    
-    if (remaining < 0) {
-        timerEl.classList.add('negative');
+    // For AFOQT practice tests with sections, show section time
+    if (state.quiz.sections && state.quiz.sections.length > 0) {
+        const currentSection = state.quiz.sections[state.quiz.currentSection];
+        if (!currentSection) return;
+        
+        const elapsedSeconds = (Date.now() - state.quiz.sectionTimeStarted) / 1000;
+        const remainingSeconds = Math.max(0, currentSection.timeSeconds - elapsedSeconds);
+        
+        const minutes = Math.floor(remainingSeconds / 60);
+        const seconds = Math.floor(remainingSeconds % 60);
+        timerEl.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        
+        // Color change when time is running out
+        if (remainingSeconds < 60) {
+            timerEl.style.color = '#ff6666';
+        } else if (remainingSeconds < 300) {
+            timerEl.style.color = '#ffff00';
+        } else {
+            timerEl.style.color = '#00ffff';
+        }
+        
+        // Auto-submit section when time expires
+        if (remainingSeconds <= 0) {
+            console.log('Section time expired, moving to next section');
+            advanceToNextSection();
+        }
     } else {
-        timerEl.classList.remove('negative');
+        // Fall back to question timer
+        const elapsed = (Date.now() - state.quiz.questionStartTime) / 1000;
+        const remaining = 60 - elapsed;
+        
+        timerEl.textContent = formatTime(remaining) + 's';
+        
+        if (remaining < 0) {
+            timerEl.classList.add('negative');
+        } else {
+            timerEl.classList.remove('negative');
+        }
+    }
+}
+
+function advanceToNextSection() {
+    // Auto-submit any unanswered questions in current section
+    const currentSection = state.quiz.sections[state.quiz.currentSection];
+    if (!currentSection) return;
+    
+    for (let i = currentSection.startIndex; i <= currentSection.endIndex; i++) {
+        if (!state.quiz.answers[i]) {
+            state.quiz.answers[i] = null; // Mark as blank
+        }
+    }
+    
+    // Move to next section
+    if (state.quiz.currentSection < state.quiz.sections.length - 1) {
+        state.quiz.currentSection++;
+        state.quiz.sectionTimeStarted = Date.now();
+        state.quiz.currentIndex = state.quiz.sections[state.quiz.currentSection].startIndex;
+        console.log('Advanced to section', state.quiz.currentSection + 1);
+        render();
+    } else {
+        // Test complete
+        console.log('All sections complete, showing results');
+        state.screen = 'results';
+        render();
     }
 }
 
@@ -5356,6 +6579,13 @@ function handleAnswer(optionIndex) {
     const elapsed = (Date.now() - state.quiz.questionStartTime) / 1000;
     state.quiz.questionTimes.push(elapsed);
     state.quiz.selectedAnswer = optionIndex;
+    
+    // Initialize answers array if needed (for all quiz modes)
+    if (!state.quiz.answers) {
+        state.quiz.answers = [];
+    }
+    // Store answer in array
+    state.quiz.answers[state.quiz.currentIndex] = optionIndex;
     
     const currentQuestion = state.quiz.questions[state.quiz.currentIndex];
     const isCorrect = optionIndex === currentQuestion.correctIndex;
@@ -5407,26 +6637,81 @@ function handleAnswer(optionIndex) {
     }
     
     if (isCorrect) {
-        state.quiz.score++;
         playSfx('correct');
     } else {
         playSfx('wrong');
     }
     
     render();
+    
+    // Auto-advance for AFOQT practice tests after showing feedback
+    if (state.quiz.isPracticeTest && state.quiz.sections && state.quiz.sections.length > 0) {
+        setTimeout(() => {
+            nextQuestion();
+        }, 800); // Brief delay to show feedback
+    }
 }
 
 function nextQuestion() {
     playSfx('nav');
     
-    if (state.quiz.currentIndex < state.quiz.questions.length - 1) {
-        state.quiz.currentIndex++;
-        state.quiz.selectedAnswer = null;
-        state.quiz.questionStartTime = Date.now();
-        render();
+    // For AFOQT practice tests with sections
+    if (state.quiz.sections && state.quiz.sections.length > 0) {
+        const currentSection = state.quiz.sections[state.quiz.currentSection];
+        const nextIndex = state.quiz.currentIndex + 1;
+
+        // Check if next question is in the same section
+        if (nextIndex <= currentSection.endIndex) {
+            state.quiz.currentIndex = nextIndex;
+            state.quiz.selectedAnswer = null;
+            render();
+        } else {
+            // Reached end of section - show confirmation modal if there's a next section
+            if (state.quiz.currentSection < state.quiz.sections.length - 1) {
+                state.quiz.showSectionTransition = true;
+                playSfx('modal-open');
+                render();
+            } else {
+                // All sections complete
+                finishQuiz();
+            }
+        }
     } else {
-        finishQuiz();
+        // Regular quiz mode
+        if (state.quiz.currentIndex < state.quiz.questions.length - 1) {
+            state.quiz.currentIndex++;
+            state.quiz.selectedAnswer = null;
+            state.quiz.questionStartTime = Date.now();
+            render();
+        } else {
+            finishQuiz();
+        }
     }
+}
+
+function proceedToNextSection() {
+    // Hide the modal and advance to next section
+    state.quiz.showSectionTransition = false;
+    
+    // Validate next section exists before advancing
+    const nextSectionIndex = state.quiz.currentSection + 1;
+    if (nextSectionIndex < state.quiz.sections.length) {
+        const nextSection = state.quiz.sections[nextSectionIndex];
+        state.quiz.currentSection = nextSectionIndex;
+        state.quiz.sectionTimeStarted = Date.now();
+        state.quiz.currentIndex = nextSection.startIndex;
+        state.quiz.selectedAnswer = null;
+        console.log('Advanced to section', state.quiz.currentSection + 1);
+        playSfx('select');
+    }
+    render();
+}
+
+function stayInCurrentSection() {
+    // Hide modal and stay on current question
+    state.quiz.showSectionTransition = false;
+    playSfx('modal-close');
+    render();
 }
 
 function finishQuiz() {
@@ -5434,7 +6719,40 @@ function finishQuiz() {
         clearInterval(state.quiz.timerInterval);
     }
     
-    const avgTime = state.quiz.questionTimes.reduce((a, b) => a + b, 0) / state.quiz.questionTimes.length;
+    // Calculate final score from answers array (works for ALL quiz modes: practice, test, sprint, AFOQT)
+    let score = 0;
+    if (state.quiz.answers && state.quiz.answers.length > 0) {
+        for (let i = 0; i < state.quiz.answers.length; i++) {
+            const answer = state.quiz.answers[i];
+            if (answer !== null && answer !== undefined) {
+                const question = state.quiz.questions[i];
+                if (question && answer === question.correctIndex) {
+                    score++;
+                }
+            }
+        }
+    }
+    state.quiz.score = score;
+    
+    const avgTime = state.quiz.questionTimes.length > 0 ? state.quiz.questionTimes.reduce((a, b) => a + b, 0) / state.quiz.questionTimes.length : 0;
+    
+    // Calculate subject/subtopic/difficulty breakdown for analytics
+    const breakdown = {};
+    state.quiz.userAnswers.forEach(answer => {
+        const question = state.quiz.questions[answer.questionIndex];
+        if (question) {
+            const subjectId = question._topicId || state.currentTopic?.subjectId || 'unknown';
+            const subtopicId = question._sourceTopicId || state.currentTopic?.id || 'unknown';
+            const diff = question.difficulty || state.quiz.difficulty || 'mixed';
+            const key = `${subjectId}|${subtopicId}|${diff}`;
+            
+            if (!breakdown[key]) {
+                breakdown[key] = { subject: subjectId, subtopic: subtopicId, difficulty: diff, correct: 0, total: 0 };
+            }
+            breakdown[key].total += 1;
+            if (answer.isCorrect) breakdown[key].correct += 1;
+        }
+    });
     
     if (state.currentPlayer) {
         const session = {
@@ -5445,7 +6763,10 @@ function finishQuiz() {
             avgTime: avgTime,
             timestamp: Date.now(),
             difficulty: state.quiz.difficulty,
-            playerId: state.currentPlayer.id // Add playerId for database
+            playerId: state.currentPlayer.id, // Add playerId for database
+            mode: state.quiz.mode, // practice, test, sprint, practiceTestMode
+            isPracticeTest: state.quiz.isPracticeTest || false,
+            breakdown: Object.values(breakdown) // Per-subtopic/difficulty results
         };
         
         // Add to player's sessions array (in-memory)
@@ -5603,6 +6924,7 @@ function renderFloatingNav(options = {}) {
 function render() {
     const root = document.getElementById('app-root');
     if (!root) return;
+    console.log('[render] screen=', state.screen);
     
     switch (state.screen) {
         case 'login':
@@ -5613,6 +6935,12 @@ function render() {
             break;
         case 'home':
             root.innerHTML = renderHome();
+            break;
+        case 'subject-list':
+            root.innerHTML = renderSubjectList();
+            break;
+        case 'afoqt-practice':
+            root.innerHTML = renderAFOQTDifficultySelect();
             break;
         case 'subject':
             root.innerHTML = renderSubject();
@@ -5657,8 +6985,18 @@ function render() {
     // Initialize anime.js button animations (ripple effects, hover)
     initButtonAnimations();
     
+    // Start timer for AFOQT practice tests
+    if (state.screen === 'quiz' && state.quiz.isPracticeTest && state.quiz.sections && state.quiz.sections.length > 0) {
+        startAFOQTSectionTimer();
+    }
+    
     // Animate panel entrances
     animatePanelEntrance();
+    
+    // Save session state for persistence across page refreshes
+    if (state.currentPlayer) {
+        saveSessionState();
+    }
 }
 
 function renderLogin() {
@@ -5709,10 +7047,18 @@ function renderLogin() {
 
 function renderHome() {
     const playerInfo = state.currentPlayer ? computePlayerTotals(state.currentPlayer) : null;
+    const testResults = state.currentPlayer && state.currentPlayer.testResults ? state.currentPlayer.testResults : [];
+    
+    const loadingIndicator = state.contentLoading ? `
+        <div style="text-align: center; padding: 20px; color: var(--color-primary);">
+            <div style="font-size: 2rem; margin-bottom: 10px;">⏳</div>
+            <div>Loading question content...</div>
+        </div>
+    ` : '';
     
     return `
         <div class="panel">
-            <h1 class="panel-header" style="text-align: center; margin-bottom: 20px;">AFOQT QUEST</h1>
+            <h1 class="panel-header">AFOQT QUEST</h1>
             
             <div class="home-controls-box">
                 <div class="header-controls">
@@ -5729,9 +7075,6 @@ function renderHome() {
                         <button class="btn btn-small" id="achievements-btn">
                             🏆 Awards
                         </button>
-                        <button class="btn btn-small" id="results-btn">
-                            📈 Results
-                        </button>
                     ` : ''}
                     <button class="btn btn-small" id="settings-btn">
                         ⚙ Settings
@@ -5739,15 +7082,41 @@ function renderHome() {
                 </div>
             </div>
             
-            <h2>Subjects</h2>
-            <div class="grid grid-2">
-                ${subjects.map(subject => `
-                    <div class="tile" data-subject-id="${subject.id}">
-                        <div class="tile-title">${subject.name}</div>
-                        <div class="tile-description">${subject.description}</div>
-                    </div>
-                `).join('')}
+            ${loadingIndicator}
+            
+            <div class="home-main-grid">
+                <div class="home-primary-tile" id="practice-test-selector">
+                    <div class="home-tile-icon">🧠</div>
+                    <div class="home-tile-title">AFOQT PRACTICE</div>
+                    <div class="home-tile-subtitle">Full-Length Timed Test</div>
+                    <div class="home-tile-description">Complete official AFOQT sections with realistic timing and scoring</div>
+                </div>
+                
+                <div class="home-primary-tile" id="subjects-selector">
+                    <div class="home-tile-icon">📚</div>
+                    <div class="home-tile-title">SUBJECTS</div>
+                    <div class="home-tile-subtitle">Topic Practice</div>
+                    <div class="home-tile-description">Master individual topics with targeted drills by difficulty</div>
+                </div>
             </div>
+            
+            ${testResults.length > 0 ? `
+            <div class="home-secondary-section">
+                <h2 class="home-section-title">Test Results & Analytics</h2>
+                <div class="home-results-grid">
+                    ${testResults.slice().reverse().map((result, idx) => `
+                        <div class="home-result-card">
+                            <div class="home-result-label">Attempt ${testResults.length - idx}</div>
+                            <div class="home-result-score">${Math.round(result.compositeScore || 0)}</div>
+                            <div class="home-result-detail">Composite</div>
+                            <div class="home-result-detail" style="margin-top: 0.5rem;">Difficulty: ${(result.difficulty || 'unknown').toUpperCase()}</div>
+                            <div class="home-result-detail">Date: ${new Date(result.timestamp || Date.now()).toLocaleDateString()}</div>
+                            <div class="home-result-detail" style="margin-top: 0.5rem; color: #ffaa00;">Blanks: ${result.blanksPerSection ? Object.values(result.blanksPerSection).reduce((a, b) => a + b, 0) : 0}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+            ` : ``}
         </div>
         ${renderFloatingNav({ showBack: false })}
         
@@ -5807,6 +7176,81 @@ function renderPlayerModal() {
     `;
 }
 
+/**
+ * Render Subject List - Shows all available subjects for practice
+ */
+function renderSubjectList() {
+    return `
+        <div class="panel">
+            <h1 class="panel-header">SUBJECTS</h1>
+            
+            <div class="action-buttons quiz-action-buttons" style="margin-bottom: 20px;">
+                <button class="btn" id="home-btn">🏠 Home</button>
+            </div>
+            
+            <div class="grid grid-3">
+                ${subjects.map(subject => `
+                    <div class="tile" data-subject-id="${subject.id}" style="cursor: pointer;">
+                        <div class="tile-title">${subject.name}</div>
+                        <div class="tile-description">${subject.description}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+        ${renderFloatingNav({ showBack: true })}
+        ${renderPlayerModal()}
+    `;
+}
+
+/**
+ * Render AFOQT Practice Difficulty Select - Choose difficulty for official AFOQT practice test
+ */
+function renderAFOQTDifficultySelect() {
+    return `
+        <div class="panel">
+            <h1 class="panel-header">AFOQT PRACTICE</h1>
+            
+            <div style="margin: 40px 0; text-align: center;">
+                <p style="margin-bottom: 30px; color: rgba(0, 255, 255, 0.8);">Select Difficulty Level</p>
+                
+                <div class="grid grid-3" style="max-width: 900px; margin: 0 auto;">
+                    <div class="tile mode-tile" id="afoqt-beginner-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">🟢 BEGINNER</div>
+                        <div class="tile-description">
+                            • Fundamental concepts<br>
+                            • 40 questions<br>
+                            • No time pressure<br>
+                            • Great for learning
+                        </div>
+                    </div>
+                    
+                    <div class="tile mode-tile" id="afoqt-advanced-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">🟡 ADVANCED</div>
+                        <div class="tile-description">
+                            • Realistic difficulty<br>
+                            • 40 questions<br>
+                            • Timed sections<br>
+                            • Official format
+                        </div>
+                    </div>
+                    
+                    <div class="tile mode-tile" id="afoqt-expert-btn" style="cursor: pointer; padding: 30px;">
+                        <div class="tile-title mode-icon" style="font-size: 1.5rem; margin-bottom: 15px;">🔴 EXPERT</div>
+                        <div class="tile-description">
+                            • Advanced concepts<br>
+                            • 40 questions<br>
+                            • Strict timing<br>
+                            • Maximum challenge
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        ${renderFloatingNav({ showBack: true })}
+        ${renderPlayerModal()}
+    `;
+}
+
 function renderSubject() {
     if (!state.currentSubject) return '';
     
@@ -5834,7 +7278,20 @@ function renderSubject() {
 }
 
 function renderModeSelect() {
-    if (!state.currentTopic) return '';
+    if (!state.currentTopic) {
+        console.error('renderModeSelect: state.currentTopic is not set!');
+        return `
+            <div class="panel">
+                <h1 class="panel-header">Error</h1>
+                <p style="text-align: center; color: var(--color-primary); padding: 40px;">
+                    No topic selected. Please go back and select a topic.
+                </p>
+                <div class="action-buttons quiz-action-buttons">
+                    <button class="btn" id="home-btn">🏠 Home</button>
+                </div>
+            </div>
+        `;
+    }
     
     return `
         <div class="panel">
@@ -5895,7 +7352,24 @@ function renderModeSelect() {
 }
 
 function renderDifficultySelect() {
-    if (!state.currentTopic) return '';
+    if (!state.currentTopic) {
+        console.error('renderDifficultySelect: state.currentTopic is not set!');
+        return `
+            <div class="panel">
+                <h1 class="panel-header">Error</h1>
+                <p style="text-align: center; color: var(--color-primary); padding: 40px;">
+                    No topic selected. Please go back and select a topic.
+                </p>
+                <div class="action-buttons quiz-action-buttons">
+                    <button class="btn" id="home-btn">🏠 Home</button>
+                </div>
+            </div>
+        `;
+    }
+    
+    const isLoading = state.contentLoading || !state.contentReady;
+    const disabledStyle = isLoading ? 'opacity: 0.5; pointer-events: none;' : '';
+    const loadingMessage = isLoading ? '<p style="text-align: center; color: var(--color-primary); margin-top: 20px;">⏳ Loading question content...</p>' : '';
     
     return `
         <div class="panel">
@@ -5903,8 +7377,9 @@ function renderDifficultySelect() {
             
             <div style="margin: 40px 0;">
                 <h2 style="text-align: center; margin-bottom: 30px;">${state.currentTopic.name} - Practice Mode</h2>
+                ${loadingMessage}
                 
-                <div class="grid grid-3" style="max-width: 900px; margin: 0 auto;">
+                <div class="grid grid-3" style="max-width: 900px; margin: 0 auto; ${disabledStyle}">
                     <div class="tile difficulty-tile" id="beginner-diff-btn" style="cursor: pointer; padding: 30px;">
                         <div class="tile-title" style="font-size: 1.5rem; margin-bottom: 15px;">⭐ Beginner</div>
                         <div class="tile-description">
@@ -6473,10 +7948,127 @@ const topicLearningContent = {
     }
 };
 
+// Subject-level learning content (fallback when a topic lacks specifics)
+const subjectLearningContent = {
+    math_knowledge: {
+        concept: 'Core algebra, geometry, and number properties needed for AFOQT quantitative sections.',
+        steps: [
+            '1. Identify the topic (algebra, geometry, number properties).',
+            '2. Write given values and required formula or rule.',
+            '3. Plug in carefully, keep units consistent, and simplify.',
+            '4. Sanity-check: magnitude, sign, and units make sense.'
+        ],
+        fastStrategy: 'Label what’s asked, pick the right rule, then plug and chug with clean arithmetic.',
+        examples: ['Solve for x in 3x + 12 = 27 → x = 5']
+    },
+    arithmetic_reasoning: {
+        concept: 'Word problems on rates, ratios, work, mixtures, and proportional reasoning.',
+        steps: [
+            '1. Translate words to math: list givens, unknowns, and units.',
+            '2. Choose the structure: rate×time=distance, work=rate×time, ratio/percent.',
+            '3. Set a clear equation with consistent units.',
+            '4. Solve, then double-check units and reasonableness.'
+        ],
+        fastStrategy: 'Underline quantities, circle the question, pick the matching formula, solve with unit discipline.',
+        examples: ['A plane travels 420 miles in 1.5 hours → speed = 280 mph']
+    },
+    vocabulary: {
+        concept: 'Word knowledge, synonyms, antonyms, analogies, and context clues.',
+        steps: [
+            '1. Isolate the target word and its part of speech.',
+            '2. Use context: tone, contrast words (however, but), or restatements.',
+            '3. Eliminate answers with wrong tone or part of speech.',
+            '4. Pick the choice closest in meaning or opposition (for antonyms).'
+        ],
+        fastStrategy: 'Anchor on context and tone; drop answers that don’t fit the sentence vibe.',
+        examples: ['"astute" in context → options: dull, clever, tired, loud → clever']
+    },
+    reading_comprehension: {
+        concept: 'Extract main idea, detail, inference, and tone from short passages.',
+        steps: [
+            '1. Skim the first/last sentences for main idea.',
+            '2. For detail questions, locate and reread the exact lines.',
+            '3. For inference, choose what must be true, not what could be.',
+            '4. For tone, look at adjective/verb choices and overall stance.'
+        ],
+        fastStrategy: 'Read the question stem first, then hunt the lines. Answer from text, not memory.',
+        examples: ['If asked “The author suggests…” → pick the choice directly supported by the lines.']
+    },
+    physical_science: {
+        concept: 'Newton’s laws, forces, energy, simple machines, electricity, waves, and basic thermo.',
+        steps: [
+            '1. Identify the domain: motion, energy, electricity, fluids, or waves.',
+            '2. Write the governing law (F=ma, W=Fd, P=VI, etc.).',
+            '3. Keep units consistent; convert early.',
+            '4. Solve, then check scale and units.'
+        ],
+        fastStrategy: 'Name the law first; plug numbers carefully; watch units.',
+        examples: ['Force with mass 5 kg, accel 3 m/s² → F=15 N']
+    },
+    situational: {
+        concept: 'Judgment on teamwork, integrity, chain of command, professionalism, and safety.',
+        steps: [
+            '1. Identify the core issue (safety, respect, integrity, following orders).',
+            '2. Prefer actions that are calm, professional, and chain-of-command aligned.',
+            '3. Avoid extremes: no overreaction, no ignoring the problem.',
+            '4. Pick the option that preserves safety, respect, and mission readiness.'
+        ],
+        fastStrategy: 'Calm, professional, safety-first, respect the chain of command.',
+        examples: ['Report safety hazards up the chain; don’t confront recklessly or ignore.']
+    },
+    aviation: {
+        concept: 'Aircraft basics: aerodynamics, controls, performance, navigation, and operations.',
+        steps: [
+            '1. Identify the domain: lift/drag/thrust/weight, stability, instruments, procedures.',
+            '2. Recall the governing principle (e.g., lift via angle of attack, drag types).',
+            '3. Apply to the scenario (takeoff, climb, cruise, maneuver).',
+            '4. Eliminate answers that violate fundamentals or safety.'
+        ],
+        fastStrategy: 'Use fundamentals: lift vs. weight, thrust vs. drag, coordinated flight basics.',
+        examples: ['Increasing angle of attack (within limits) increases lift but also drag.']
+    },
+    instrument_comprehension: {
+        concept: 'Read attitude (pitch/bank) and heading from simplified instruments.',
+        steps: [
+            '1. Attitude indicator first: nose up/down, bank left/right.',
+            '2. Heading indicator next: note the cardinal/ordinal heading.',
+            '3. Cross-check climb/descend indicator if shown.',
+            '4. Combine: “climbing left bank, heading north” style answer.'
+        ],
+        fastStrategy: 'Attitude first, heading second, trend last.',
+        examples: ['Bank left + nose down + heading east → descending left turn, heading east.']
+    },
+    table_reading: {
+        concept: 'Rapidly find and compare values in data tables under time pressure.',
+        steps: [
+            '1. Lock the row (Y) first, then the column (X).',
+            '2. For aggregates, scan whole row/column (sum, max, min, avg).',
+            '3. Watch units and headers; avoid column/row swaps.',
+            '4. Estimate first; then pick the exact value or best match.'
+        ],
+        fastStrategy: 'Row first, column second. Finger-trace; avoid swapping axes.',
+        examples: ['Find X=4, Y=30 → trace to intersection; for “largest row total” sum each row quickly.']
+    },
+    block_counting: {
+        concept: 'Count visible and hidden cubes in stacked isometric figures.',
+        steps: [
+            '1. Slice the figure into columns; note each column height.',
+            '2. Add columns per layer; watch for hidden blocks behind others.',
+            '3. Use symmetry: mirrored sides often match counts.',
+            '4. Recount quickly to verify totals.'
+        ],
+        fastStrategy: 'Group columns by height; multiply instead of counting one-by-one.',
+        examples: ['If 4 columns of height 3 → 4×3 = 12 blocks (check for hidden support).']
+    }
+};
+
 // Get learning content for a topic (with fallback)
-function getTopicLearningContent(topicId) {
+function getTopicLearningContent(topicId, subjectId) {
     if (topicLearningContent[topicId]) {
         return topicLearningContent[topicId];
+    }
+    if (subjectId && subjectLearningContent[subjectId]) {
+        return subjectLearningContent[subjectId];
     }
     
     // Fallback for topics without specific content
@@ -6496,7 +8088,7 @@ function getTopicLearningContent(topicId) {
 function renderLearn() {
     if (!state.currentTopic) return '';
     
-    const content = getTopicLearningContent(state.currentTopic.id);
+    const content = getTopicLearningContent(state.currentTopic.id, state.currentTopic.subjectId);
     
     return `
         <div class="panel">
@@ -6604,13 +8196,41 @@ function renderMathUI(uiSpec) {
             return renderDataTable(uiSpec);
         case 'block_stack_iso':
             return renderBlockStackIso(uiSpec);
+        // Additional angle diagram types - all use renderGeometryAnglePairDiagram
+        // These types share the same structure: lines array + angleLabels array
+        case 'adjacent_angles_on_line':
+        case 'angle_linear_pair':
+        case 'angle_pair_vertical':
+        case 'angle_vertical_pair':
+        case 'triangle_exterior_angle':
+        case 'quadrilateral_angles':
+            return renderGeometryAnglePairDiagram(uiSpec);
+        // Parallel lines diagram
+        case 'coordinate_parallel_lines':
+        case 'geometry_parallel_lines_diagram':
+            return renderGeometryAnglePairDiagram(uiSpec); // Uses same structure
+        // Circle diagram
+        case 'geometry_circle_diagram':
+            return renderGeometryCircleDiagram(uiSpec);
+        // Simple line types (horizontal/vertical) - render as single line
+        case 'horizontal':
+        case 'vertical':
+            return renderSimpleLineDiagram(uiSpec);
+        // Point mapping - use coordinate points renderer  
+        case 'point_mapping':
+            return renderCoordinatePointsCss(uiSpec);
+        // Rectangle reflection - use reflection renderer for proper shape handling
+        case 'rectangle_reflection':
+            return renderReflectionCss(uiSpec);
         default:
             console.warn('Unknown uiSpec type:', uiSpec.type);
             return '';
     }
 }
 
-// Reading Comprehension renderers (Patch 20)
+// Render table reading tables with optional cell highlighting
+/**
+ * Reading Comprehension renderers (Patch 20)
 function renderRCPassageBlock(uiSpec) {
     if (!uiSpec || !uiSpec.passage) return '';
     return `
@@ -6761,101 +8381,175 @@ function renderDataTable(uiSpec) {
     if (!uiSpec) return '';
     
     // Get table data from uiSpec or from question's tableSpec
-    const tableSpec = uiSpec.tableSpec || state.quiz.questions[state.quiz.currentIndex].tableSpec;
+    const tableSpec = uiSpec.tableSpec || state.quiz.questions[state.quiz.currentIndex]?.tableSpec;
     if (!tableSpec) {
         console.warn('No tableSpec found for data_table');
         return '';
     }
     
     const { xHeader = [], yHeader = [], cellValues = [] } = tableSpec;
+    const lookup = uiSpec.lookup || null;
     
-    // Build table HTML
-    let tableHtml = `
-        <div class="data-table-container" style="background: rgba(0,0,0,0.4); border: 1px solid rgba(0,255,255,0.2); padding: 20px; margin: 10px 0; border-radius: 6px; overflow-x: auto;">
-            <div style="text-align: center; margin-bottom: 12px; font-size: 13px; color: #00ffff; opacity: 0.9;">
-                <div style="margin-bottom: 4px;"><strong>Columns (X):</strong> values across the top → (X = ${xHeader.join(', ')})</div>
-                <div><strong>Rows (Y):</strong> values down the left ↓ (Y = ${yHeader.join(', ')})</div>
-            </div>
-            <table style="margin: 0 auto; border-collapse: collapse; background: rgba(0,20,40,0.6);">
-                <thead>
-                    <tr>
-                        <th style="padding: 10px; border: 1px solid rgba(0,255,255,0.3); background: rgba(0,255,255,0.1); color: #00ffff; font-weight: 700;">Y (rows ↓) / X (columns →)</th>
-                        ${xHeader.map(x => `<th style="padding: 10px; border: 1px solid rgba(0,255,255,0.3); background: rgba(0,255,255,0.1); color: #00ffff; font-weight: 700;">X = ${x}</th>`).join('')}
-                    </tr>
-                </thead>
-                <tbody>
-                    ${yHeader.map((y, rowIdx) => `
-                        <tr>
-                            <th style="padding: 10px; border: 1px solid rgba(0,255,255,0.3); background: rgba(0,255,255,0.1); color: #00ffff; font-weight: 700;">Y = ${y}</th>
-                            ${xHeader.map((x, colIdx) => {
-                                const value = cellValues[rowIdx] && cellValues[rowIdx][colIdx] !== undefined ? cellValues[rowIdx][colIdx] : '—';
-                                return `<td style="padding: 10px; border: 1px solid rgba(0,255,255,0.3); background: rgba(0,40,60,0.3); color: #e8f6ff; text-align: center; font-size: 16px;">${value}</td>`;
-                            }).join('')}
-                        </tr>
-                    `).join('')}
-                </tbody>
-            </table>
-        </div>
-    `;
+    // Find target cell indices
+    let targetRow = -1, targetCol = -1;
+    if (lookup) {
+        targetRow = yHeader.indexOf(lookup.y);
+        targetCol = xHeader.indexOf(lookup.x);
+    }
     
-    return tableHtml;
+    // Build HTML with sticky headers
+    let html = '<div class="trTableScope">';
+    html += '<div class="trLegendWrap">X-axis (columns) and Y-axis (rows). Sticky headers for easy reference.</div>';
+    html += '<div class="trTableWrap">';
+    html += '<table class="trTable">';
+    
+    // Header row
+    html += '<thead><tr>';
+    html += '<th class="trCorner">X \\ Y</th>';
+    xHeader.forEach((x, colIdx) => {
+        const cls = (targetCol === colIdx && lookup) ? 'trColHdr trPulseAnim' : 'trColHdr';
+        html += `<th class="${cls}">${x}</th>`;
+    });
+    html += '</tr></thead>';
+    
+    // Body rows
+    html += '<tbody>';
+    yHeader.forEach((y, rowIdx) => {
+        html += '<tr>';
+        const rowCls = (targetRow === rowIdx && lookup) ? 'trRowHdr trPulseAnim' : 'trRowHdr';
+        html += `<th class="${rowCls}">${y}</th>`;
+        cellValues[rowIdx].forEach((val, colIdx) => {
+            const isTarget = (rowIdx === targetRow && colIdx === targetCol && lookup);
+            const cellCls = isTarget ? 'trCell trCell--target trPulseAnim' : 'trCell';
+            html += `<td class="${cellCls}">${val}</td>`;
+        });
+        html += '</tr>';
+    });
+    html += '</tbody>';
+    
+    html += '</table></div></div>';
+    return html;
 }
 
-// Block Counting isometric renderer
+// Block Counting isometric renderer with full voxel-based face culling
 function renderBlockStackIso(uiSpec) {
-    if (!uiSpec || !Array.isArray(uiSpec.stacks)) return '';
-
-    const width = uiSpec.width || 360;
-    const height = uiSpec.height || 360;
-    const grid = uiSpec.grid || { cols: 3, rows: 3 };
-    const logicalCols = Math.max(1, grid.cols || 3);
-    const logicalRows = Math.max(1, grid.rows || 3);
+    if (!uiSpec) return '';
     
-    // Better cube sizing for isometric view
-    const maxStacks = Math.max(logicalCols, logicalRows);
-    const cubeBase = Math.max(28, Math.min(50, width / (maxStacks * 1.8)));
-    const cubeW = cubeBase;
-    const cubeH = Math.round(cubeBase * 0.58);
-
-    // Center the grid and provide better spacing
-    const baseLeft = (width / 2) - ((logicalCols - 1) * cubeW * 0.5) - ((logicalRows - 1) * cubeW * 0.25);
-    const baseBottom = Math.max(cubeH * 2, height * 0.15);
-    const colStep = cubeW * 0.866; // √3/2 for proper isometric spacing
-    const rowStepX = -cubeW * 0.433; // -√3/4 for isometric depth
-    const rowStepY = cubeH * 1.0;
-
-    const sortedStacks = [...uiSpec.stacks].sort((a, b) => {
-        if (a.row !== b.row) return a.row - b.row; // front to back
-        return a.col - b.col; // left to right
-    });
-
-    const columnsHtml = sortedStacks.map((stack) => {
-        const { col = 0, row = 0, height: stackHeight = 0 } = stack;
-        const left = baseLeft + (col * colStep) + (row * rowStepX);
-        const bottom = baseBottom + (row * rowStepY);
-        const safeHeight = Math.max(0, stackHeight);
-        const cubes = Array.from({ length: safeHeight }).map((_, level) => {
-            const yOffset = -level * (cubeH * 0.95);
-            const zIndex = (row * 100) + (col * 10) + level;
-            return `<div class="bc-cube" style=\"transform: translateY(${yOffset}px) skewY(-30deg) skewX(-45deg); z-index:${zIndex}; width:${cubeW}px; height:${cubeH}px;\"></div>`;
-        }).join('');
-        const columnZ = (row * 100) + (col * 10);
-        return `<div class="bc-column" style="left:${left}px; bottom:${bottom}px; z-index:${columnZ};">${cubes}</div>`;
-    }).join('');
-
-    const gridHeight = Math.max(height - 120, cubeH * (logicalRows + 3));
-
-    return `
-        <div class="bc-scene" style="width:${width}px; height:${height}px;">
-            <div class="bc-legend">
-                <div class="bc-legend-line">Each column is a stack of cubes.</div>
-                <div class="bc-legend-line">Rows farther back sit higher in view.</div>
-            </div>
-            <div class="bc-grid" style="height:${gridHeight}px;">
-                ${columnsHtml}
-            </div>
-        </div>
-    `;
+    // Normalize to heightMap
+    let heightMap;
+    if (uiSpec.heightMap) {
+        heightMap = uiSpec.heightMap;
+    } else if (uiSpec.stacks && uiSpec.grid) {
+        // Convert stacks array to heightMap
+        const { cols, rows } = uiSpec.grid;
+        heightMap = Array.from({ length: rows }, () => Array(cols).fill(0));
+        uiSpec.stacks.forEach(stack => {
+            if (stack.row < rows && stack.col < cols) {
+                heightMap[stack.row][stack.col] = stack.height;
+            }
+        });
+    } else {
+        console.warn('No heightMap or stacks found for block_stack_iso');
+        return '';
+    }
+    
+    const size = 26;
+    const xVec = { x: size, y: size / 2 };
+    const yVec = { x: -size, y: size / 2 };
+    const zVec = { x: 0, y: -size };
+    
+    function hasCube(set, x, y, z) {
+        return set.has(`${x},${y},${z}`);
+    }
+    
+    function projectPoint(x, y, z, origin) {
+        return {
+            x: origin.x + x * xVec.x + y * yVec.x + z * zVec.x,
+            y: origin.y + x * xVec.y + y * yVec.y + z * zVec.y
+        };
+    }
+    
+    function buildVoxelSet(hMap) {
+        const set = new Set();
+        for (let y = 0; y < hMap.length; y++) {
+            const row = hMap[y] || [];
+            for (let x = 0; x < row.length; x++) {
+                const h = row[x] || 0;
+                for (let z = 0; z < h; z++) {
+                    set.add(`${x},${y},${z}`);
+                }
+            }
+        }
+        return set;
+    }
+    
+    function cubeCorners(x, y, z, origin) {
+        return {
+            p000: projectPoint(x, y, z, origin),
+            p100: projectPoint(x + 1, y, z, origin),
+            p010: projectPoint(x, y + 1, z, origin),
+            p110: projectPoint(x + 1, y + 1, z, origin),
+            p001: projectPoint(x, y, z + 1, origin),
+            p101: projectPoint(x + 1, y, z + 1, origin),
+            p011: projectPoint(x, y + 1, z + 1, origin),
+            p111: projectPoint(x + 1, y + 1, z + 1, origin)
+        };
+    }
+    
+    function facesForCube(x, y, z, origin, voxels) {
+        const pts = cubeCorners(x, y, z, origin);
+        const faces = [];
+        if (!hasCube(voxels, x, y, z + 1)) {
+            faces.push({
+                type: 'top',
+                depth: x + y + (z + 1) * 2,
+                points: [pts.p001, pts.p101, pts.p111, pts.p011]
+            });
+        }
+        if (!hasCube(voxels, x + 1, y, z)) {
+            faces.push({
+                type: 'right',
+                depth: (x + 1) + y + z * 2,
+                points: [pts.p100, pts.p110, pts.p111, pts.p101]
+            });
+        }
+        if (!hasCube(voxels, x, y + 1, z)) {
+            faces.push({
+                type: 'left',
+                depth: x + (y + 1) + z * 2,
+                points: [pts.p010, pts.p110, pts.p111, pts.p011]
+            });
+        }
+        return faces;
+    }
+    
+    const voxels = buildVoxelSet(heightMap);
+    const rows = heightMap.length;
+    const cols = heightMap[0]?.length || 0;
+    const maxH = Math.max(0, ...heightMap.flat());
+    const origin = { x: cols * size, y: rows * size + maxH * size * 0.5 + 40 };
+    
+    const allFaces = [];
+    for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
+            const h = heightMap[y]?.[x] || 0;
+            for (let z = 0; z < h; z++) {
+                allFaces.push(...facesForCube(x, y, z, origin, voxels));
+            }
+        }
+    }
+    
+    allFaces.sort((a, b) => a.depth - b.depth);
+    
+    const svgPolys = allFaces.map(face => {
+        const pts = face.points.map(p => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
+        return `<polygon class="bc-face--${face.type}" points="${pts}"></polygon>`;
+    }).join('\n');
+    
+    const w = (cols + rows) * size + 120;
+    const h = (cols + rows + maxH) * size + 120;
+    
+    return `<div class="bcFigureScope"><svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" aria-label="Isometric block figure">${svgPolys}</svg></div>`;
 }
 
 /**
@@ -7522,6 +9216,114 @@ function renderGeometryAnglePairDiagram(uiSpec) {
     `;
 }
 
+/**
+ * Render geometry circle diagram
+ * uiSpec shape: { type: 'geometry_circle_diagram', width, height, circle: {center: {x,y}, radius}, labels, styleHints }
+ */
+function renderGeometryCircleDiagram(uiSpec) {
+    const { width = 300, height = 300, circle = {}, labels = [], styleHints = {} } = uiSpec;
+    const { center = {x: width/2, y: height/2}, radius = 50 } = circle;
+    const baseColor = styleHints.lineColor || '#00ffff';
+    const labelColor = styleHints.labelsColor || '#00ffff';
+    
+    // Label positioning constants
+    const LABEL_OFFSET_Y = 10;   // pixels above/below elements
+    const LABEL_OFFSET_X = 10;   // pixels to the side of elements
+    const LABEL_CENTER_OFFSET = 15; // pixels from center point
+    
+    // Render circle using SVG
+    const circleSvg = `
+        <svg style="position: absolute; left: 0; top: 0; width: ${width}px; height: ${height}px; pointer-events: none;">
+            <circle 
+                cx="${center.x}" 
+                cy="${center.y}" 
+                r="${radius}" 
+                stroke="${baseColor}" 
+                stroke-width="2" 
+                fill="none"
+            />
+        </svg>
+    `;
+    
+    // Render center point
+    const centerPoint = `<div class="graphPoint" style="left: ${center.x - 4}px; top: ${center.y - 4}px;"></div>`;
+    
+    // Render labels (radius, diameter, etc.)
+    const renderLabels = () => {
+        return labels.map(label => {
+            const { text, position } = label;
+            let x = center.x;
+            let y = center.y;
+            
+            // Position label based on type
+            if (position === 'radius') {
+                x = center.x + radius / 2;
+                y = center.y - LABEL_OFFSET_Y;
+            } else if (position === 'center') {
+                x = center.x + LABEL_OFFSET_X;
+                y = center.y + LABEL_CENTER_OFFSET;
+            } else if (label.x !== undefined && label.y !== undefined) {
+                x = label.x;
+                y = label.y;
+            }
+            
+            return `<div class="graphLabel" style="left: ${x}px; top: ${y}px; color: ${labelColor};">${text}</div>`;
+        }).join('');
+    };
+    
+    return `
+        <div class="graphContainer" style="width: ${width}px; height: ${height}px; position: relative;">
+            ${circleSvg}
+            ${centerPoint}
+            ${renderLabels()}
+        </div>
+    `;
+}
+
+/**
+ * Render simple line diagram (horizontal or vertical line)
+ * uiSpec shape: { type: 'horizontal'|'vertical', width, height, line: {position, label}, styleHints }
+ */
+function renderSimpleLineDiagram(uiSpec) {
+    const { type, width = 300, height = 300, line = {}, styleHints = {} } = uiSpec;
+    const baseColor = styleHints.lineColor || '#00ffff';
+    const labelColor = styleHints.labelsColor || '#00ffff';
+    
+    // Label positioning constants (in pixels)
+    const LABEL_OFFSET_FROM_LINE = 20;  // distance from line to label
+    const LABEL_SIDE_OFFSET = 10;       // horizontal offset for labels next to vertical lines
+    
+    let lineHtml = '';
+    let labelHtml = '';
+    
+    if (type === 'horizontal') {
+        const position = line.position !== undefined ? line.position : height / 2;
+        const label = line.label || '';
+        
+        // Horizontal line across the width
+        lineHtml = `<div class="graphLine" style="left: 0; top: ${position}px; width: ${width}px; background: ${baseColor};"></div>`;
+        if (label) {
+            labelHtml = `<div class="graphLabel" style="left: ${width / 2 - LABEL_OFFSET_FROM_LINE}px; top: ${position - LABEL_OFFSET_FROM_LINE}px; color: ${labelColor};">${label}</div>`;
+        }
+    } else if (type === 'vertical') {
+        const position = line.position !== undefined ? line.position : width / 2;
+        const label = line.label || '';
+        
+        // Vertical line - can't use .graphLine class (designed for horizontal) so use explicit styling
+        lineHtml = `<div style="position: absolute; left: ${position}px; top: 0; width: 2px; height: ${height}px; background: ${baseColor};"></div>`;
+        if (label) {
+            labelHtml = `<div class="graphLabel" style="left: ${position + LABEL_SIDE_OFFSET}px; top: ${height / 2}px; color: ${labelColor};">${label}</div>`;
+        }
+    }
+    
+    return `
+        <div class="graphContainer" style="width: ${width}px; height: ${height}px; position: relative;">
+            ${lineHtml}
+            ${labelHtml}
+        </div>
+    `;
+}
+
 function renderQuiz() {
     const currentQuestion = state.quiz.questions[state.quiz.currentIndex];
     const answered = state.quiz.selectedAnswer !== null;
@@ -7530,6 +9332,7 @@ function renderQuiz() {
     const isPracticeTestMode = state.quiz.mode === 'practiceTestMode';
     const isSprintMode = state.quiz.mode === 'sprint';
     const showFeedback = state.quiz.showFeedback; // Patch 18: use flag
+    const allowFeedbackToggle = !isTestMode && !isPracticeTestMode;
     const progressPercent = ((state.quiz.currentIndex + 1) / state.quiz.questions.length) * 100;
     
     // Determine mode label with difficulty
@@ -7558,6 +9361,27 @@ function renderQuiz() {
         modeLabel = ` <span style="color: #00ff00;">• ${diffLabel} ${xpLabel} XP</span>`;
     }
     
+    // Calculate question number within current section
+    let questionDisplay = '';
+    if (state.quiz.sections.length > 0) {
+        const currentSection = state.quiz.sections[state.quiz.currentSection];
+        if (currentSection && 
+            state.quiz.currentIndex >= currentSection.startIndex && 
+            state.quiz.currentIndex <= currentSection.endIndex) {
+            const questionInSection = state.quiz.currentIndex - currentSection.startIndex + 1;
+            const totalInSection = currentSection.totalQuestions;
+            questionDisplay = `Question ${questionInSection} / ${totalInSection}`;
+        } else {
+            // Fallback if section is undefined or index is out of range
+            questionDisplay = `Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}`;
+        }
+    } else {
+        questionDisplay = `Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}`;
+    }
+
+    // Check if current section is valid
+    const hasValidCurrentSection = state.quiz.sections.length > 0 && state.quiz.sections[state.quiz.currentSection];
+
     return `
         <div class="panel">
             <div class="quiz-progress-bar">
@@ -7566,12 +9390,30 @@ function renderQuiz() {
             
             <div class="quiz-header">
                 <div class="quiz-info">
-                    <strong>${state.currentTopic.name}</strong><br>
-                    Question ${state.quiz.currentIndex + 1} / ${state.quiz.questions.length}
+                    ${hasValidCurrentSection ? `
+                        <strong>${state.quiz.isPracticeTest ? 'AFOQT Practice Test' : (state.currentTopic ? state.currentTopic.name : 'Quiz')}</strong><br>
+                        <span style="font-size: 0.9em; color: #00ff00;">Section ${state.quiz.currentSection + 1}/${state.quiz.sections.length}: ${state.quiz.sections[state.quiz.currentSection].name}</span><br>
+                    ` : `
+                        <strong>${state.quiz.isPracticeTest ? 'AFOQT Practice Test' : (state.currentTopic ? state.currentTopic.name : 'Quiz')}</strong><br>
+                    `}
+                    ${questionDisplay}
                     ${modeLabel}
                 </div>
-                <div class="timer">60.0s</div>
+                <div class="timer" id="section-timer">
+                    ${hasValidCurrentSection && state.quiz.sections[state.quiz.currentSection].timeSeconds ? 
+                        `${Math.max(0, Math.floor((state.quiz.sections[state.quiz.currentSection].timeSeconds - (Date.now() - state.quiz.sectionTimeStarted) / 1000)))} s` :
+                        '60.0s'
+                    }
+                </div>
             </div>
+
+            ${allowFeedbackToggle ? `
+                <div class="quiz-subheader" style="display: flex; justify-content: flex-end; margin-top: 8px;">
+                    <button class="btn btn-secondary" id="feedback-toggle-btn" style="min-width: 180px;">
+                        Feedback: ${showFeedback ? 'On (Study Mode)' : 'Off (Practice Test Style)'}
+                    </button>
+                </div>
+            ` : ''}
             
             ${currentQuestion.image ? `
                 <div class="question-image">
@@ -7670,12 +9512,140 @@ function renderQuiz() {
             </div>
         </div>
         ${renderFloatingNav({ showBack: false })}
+        ${renderSectionTransitionModal()}
+    `;
+}
+
+function renderSectionTransitionModal() {
+    // Only show for AFOQT practice tests with sections
+    if (!state.quiz.sections || state.quiz.sections.length === 0 || !state.quiz.showSectionTransition) {
+        return '';
+    }
+
+    // Check if there's a next section
+    if (state.quiz.currentSection + 1 >= state.quiz.sections.length) {
+        return '';
+    }
+
+    const currentSection = state.quiz.sections[state.quiz.currentSection];
+    const nextSection = state.quiz.sections[state.quiz.currentSection + 1];
+    
+    // Validate both sections exist
+    if (!currentSection || !nextSection) return '';
+
+    return `
+        <div id="section-transition-modal" class="modal" style="display: flex;">
+            <div class="modal-content" style="max-width: 500px; text-align: center;">
+                <div class="auth-header">
+                    <div class="auth-header-bracket left"></div>
+                    <h2 class="auth-title">SECTION COMPLETE</h2>
+                    <div class="auth-header-bracket right"></div>
+                </div>
+                <div class="modal-body" style="padding: 30px;">
+                    <div style="font-size: 1.2em; color: #00ff00; margin-bottom: 20px;">
+                        ✓ You have completed:<br>
+                        <strong>${currentSection.name}</strong>
+                    </div>
+                    <div style="font-size: 1.1em; color: #00ffff; margin-bottom: 30px;">
+                        Are you ready to move on to the next section?<br>
+                        <strong>${nextSection.name}</strong>
+                    </div>
+                    <div style="display: flex; gap: 15px; justify-content: center;">
+                        <button class="btn" id="confirm-next-section-btn" style="flex: 1; max-width: 200px;">
+                            ✓ Yes, Continue
+                        </button>
+                        <button class="btn btn-secondary" id="stay-section-btn" style="flex: 1; max-width: 200px;">
+                            ← Wait
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     `;
 }
 
 function renderResults() {
     const percentage = (state.quiz.score / state.quiz.questions.length * 100).toFixed(1);
     const avgTime = state.quiz.questionTimes.reduce((a, b) => a + b, 0) / state.quiz.questionTimes.length;
+    const difficultyStats = {};
+    state.quiz.userAnswers.forEach(answer => {
+        const question = state.quiz.questions[answer.questionIndex] || {};
+        const diff = question.difficulty || state.quiz.difficulty || 'mixed';
+        if (!difficultyStats[diff]) {
+            difficultyStats[diff] = { total: 0, correct: 0 };
+        }
+        difficultyStats[diff].total += 1;
+        if (answer.isCorrect) {
+            difficultyStats[diff].correct += 1;
+        }
+    });
+
+    const missedAnswers = state.quiz.userAnswers.filter(a => !a.isCorrect);
+    const deferredFeedback = !state.quiz.showFeedback || state.quiz.mode === 'practiceTestMode' || state.quiz.mode === 'test';
+    
+    // For AFOQT practice tests, calculate composite scores
+    let compositeScores = {};
+    if (state.quiz.isPracticeTest && state.quiz.sections && state.quiz.sections.length > 0) {
+        // Calculate section scores
+        const sectionScores = {};
+        state.quiz.sections.forEach(section => {
+            let sectionCorrect = 0;
+            for (let i = section.startIndex; i <= section.endIndex; i++) {
+                const answer = state.quiz.userAnswers.find(a => a.questionIndex === i);
+                if (answer && answer.isCorrect) {
+                    sectionCorrect++;
+                }
+            }
+            sectionScores[section.name] = {
+                correct: sectionCorrect,
+                total: section.totalQuestions,
+                percent: ((sectionCorrect / section.totalQuestions) * 100).toFixed(1)
+            };
+        });
+        
+        // Composite scores based on full_afoqt_practice_test_config_v1.json structure
+        // Verbal = Verbal Analogies + Word Knowledge + Reading Comprehension
+        if (sectionScores['Verbal Analogies'] && sectionScores['Word Knowledge'] && sectionScores['Reading Comprehension']) {
+            const verbalScores = [
+                parseFloat(sectionScores['Verbal Analogies'].percent),
+                parseFloat(sectionScores['Word Knowledge'].percent),
+                parseFloat(sectionScores['Reading Comprehension'].percent)
+            ];
+            compositeScores['Verbal'] = (verbalScores.reduce((a, b) => a + b, 0) / verbalScores.length).toFixed(1);
+        }
+        
+        // Quantitative = Arithmetic Reasoning + Math Knowledge
+        if (sectionScores['Arithmetic Reasoning'] && sectionScores['Math Knowledge']) {
+            const quantScores = [
+                parseFloat(sectionScores['Arithmetic Reasoning'].percent),
+                parseFloat(sectionScores['Math Knowledge'].percent)
+            ];
+            compositeScores['Quantitative'] = (quantScores.reduce((a, b) => a + b, 0) / quantScores.length).toFixed(1);
+        }
+        
+        // Pilot = Instrument Comprehension + Table Reading + Aviation Information + Math Knowledge
+        if (sectionScores['Instrument Comprehension'] && sectionScores['Table Reading'] && sectionScores['Math Knowledge']) {
+            const pilotScores = [
+                parseFloat(sectionScores['Instrument Comprehension'].percent),
+                parseFloat(sectionScores['Table Reading'].percent),
+                parseFloat(sectionScores['Math Knowledge'].percent)
+            ];
+            compositeScores['Pilot'] = (pilotScores.reduce((a, b) => a + b, 0) / pilotScores.length).toFixed(1);
+        }
+        
+        // CSO = Verbal Analogies + Arithmetic Reasoning + Table Reading + Math Knowledge + Block Counting + Physical Science
+        if (sectionScores['Verbal Analogies'] && sectionScores['Arithmetic Reasoning'] && sectionScores['Table Reading'] && sectionScores['Math Knowledge'] && sectionScores['Block Counting'] && sectionScores['Physical Science']) {
+            const csoScores = [
+                parseFloat(sectionScores['Verbal Analogies'].percent),
+                parseFloat(sectionScores['Arithmetic Reasoning'].percent),
+                parseFloat(sectionScores['Table Reading'].percent),
+                parseFloat(sectionScores['Math Knowledge'].percent),
+                parseFloat(sectionScores['Block Counting'].percent),
+                parseFloat(sectionScores['Physical Science'].percent)
+            ];
+            compositeScores['CSO'] = (csoScores.reduce((a, b) => a + b, 0) / csoScores.length).toFixed(1);
+        }
+    }
     
     return `
         <div class="panel">
@@ -7695,6 +9665,81 @@ function renderResults() {
                     Topic: ${state.currentTopic.name}
                 </div>
             </div>
+
+            ${Object.keys(difficultyStats).length > 0 ? `
+                <div class="results-summary" style="margin-top: 10px;">
+                    <div class="stat-line" style="font-weight: bold;">Difficulty Breakdown</div>
+                    ${Object.entries(difficultyStats).map(([diff, stats]) => {
+                        const percent = stats.total > 0 ? ((stats.correct / stats.total) * 100).toFixed(1) : '0.0';
+                        return `<div class="stat-line">${diff}: ${stats.correct}/${stats.total} (${percent}%)</div>`;
+                    }).join('')}
+                </div>
+            ` : ''}
+
+            ${Object.keys(compositeScores).length > 0 ? `
+                <div class="results-summary" style="margin-top: 10px; border: 2px solid #ffa500;">
+                    <div class="stat-line" style="font-weight: bold; color: #ffa500;">🎖️ AFOQT Composite Scores</div>
+                    ${Object.entries(compositeScores).map(([composite, score]) => {
+                        return `<div class="stat-line" style="color: #00ffff;">${composite}: ${score}%</div>`;
+                    }).join('')}
+                </div>
+            ` : ''}
+
+            ${deferredFeedback ? `
+                <div class="question-review-section">
+                    <h2 class="review-title">📊 Practice Test Summary</h2>
+                    ${Object.keys(compositeScores).length > 0 ? `
+                        <div class="results-summary" style="margin-bottom: 10px;">
+                            <div class="stat-line" style="font-weight: bold;">Composite Scores</div>
+                            ${Object.entries(compositeScores).map(([name, score]) => `<div class="stat-line">${name}: ${score}%</div>`).join('')}
+                        </div>
+                    ` : ''}
+                    ${state.quiz.sections && state.quiz.sections.length > 0 ? `
+                        <div class="results-summary" style="margin-bottom: 10px;">
+                            <div class="stat-line" style="font-weight: bold;">Section Results</div>
+                            ${state.quiz.sections.map(section => {
+                                let sectionCorrect = 0;
+                                for (let i = section.startIndex; i <= section.endIndex; i++) {
+                                    const ans = state.quiz.userAnswers.find(a => a.questionIndex === i);
+                                    if (ans && ans.isCorrect) sectionCorrect++;
+                                }
+                                const percent = section.totalQuestions > 0 ? ((sectionCorrect / section.totalQuestions) * 100).toFixed(1) : '0.0';
+                                return `<div class="stat-line">${section.name}: ${sectionCorrect}/${section.totalQuestions} (${percent}%) · Time: ${formatTime(section.timeSeconds)}s</div>`;
+                            }).join('')}
+                        </div>
+                    ` : ''}
+                    ${missedAnswers.length === 0 ? `
+                        <div class="review-question review-correct">
+                            <div class="review-header">
+                                <div class="review-number">All Questions</div>
+                                <div class="review-status status-correct">Perfect!</div>
+                            </div>
+                            <div class="review-prompt">You held all feedback to the end and still aced it. Great work.</div>
+                        </div>
+                    ` : missedAnswers.map(answer => {
+                        const question = state.quiz.questions[answer.questionIndex];
+                        const correctAnswerText = question.options[question.correctIndex];
+                        const correctLabel = String.fromCharCode(65 + question.correctIndex);
+                        return `
+                            <div class="review-question review-incorrect">
+                                <div class="review-header">
+                                    <div class="review-number">Question ${answer.questionIndex + 1}</div>
+                                    <div class="review-status status-incorrect">Missed</div>
+                                    <div class="review-time">⏱ ${formatTime(answer.timeSpent)}s</div>
+                                </div>
+                                <div class="review-prompt">${question.prompt}</div>
+                                ${question.uiSpec ? renderMathUI(question.uiSpec) : ''}
+                                <div class="review-explanation" style="margin-top: 10px;">
+                                    <strong>Correct:</strong> ${correctLabel}. ${correctAnswerText}
+                                </div>
+                                <div class="review-explanation" style="margin-top: 8px;">
+                                    <strong>Explanation:</strong> ${question.explanation}
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            ` : ''}
             
             <!-- Question Review Section -->
             <div class="question-review-section">
@@ -9163,6 +11208,8 @@ async function loadDetailedAnalytics() {
 // Event Listeners
 // ============================================================================
 function attachEventListeners() {
+    console.log('attachEventListeners called');
+    
     // Login screen - Character selection
     const selectPlayerBtns = document.querySelectorAll('.select-player-btn');
     selectPlayerBtns.forEach(btn => {
@@ -9510,11 +11557,41 @@ function attachEventListeners() {
     
     // Subject tiles
     const subjectTiles = document.querySelectorAll('[data-subject-id]');
+    console.log('Found subject tiles:', subjectTiles.length);
     subjectTiles.forEach(tile => {
         tile.addEventListener('click', () => {
+            if (!state.contentReady) {
+                console.warn('Subject click ignored: content not ready yet');
+                showErrorNotification && showErrorNotification('Loading content… Please wait.');
+                return;
+            }
             goToSubject(tile.dataset.subjectId);
         });
     });
+    
+    // NEW: Home page primary selectors - AFOQT Practice
+    const practiceTestSelector = document.getElementById('practice-test-selector');
+    console.log('Found practice test selector:', !!practiceTestSelector);
+    if (practiceTestSelector) {
+        practiceTestSelector.addEventListener('click', () => {
+            console.log('Practice test selector clicked');
+            state.screen = 'afoqt-practice';
+            playSfx('select');
+            render();
+        });
+    }
+    
+    // NEW: Home page primary selectors - Subjects
+    const subjectsSelector = document.getElementById('subjects-selector');
+    console.log('Found subjects selector:', !!subjectsSelector);
+    if (subjectsSelector) {
+        subjectsSelector.addEventListener('click', () => {
+            console.log('Subjects selector clicked');
+            state.screen = 'subject-list';
+            playSfx('select');
+            render();
+        });
+    }
     
     // Topic tiles
     const topicTiles = document.querySelectorAll('[data-topic-id]');
@@ -9575,28 +11652,92 @@ function attachEventListeners() {
     // Difficulty selection buttons
     const beginnerDiffBtn = document.getElementById('beginner-diff-btn');
     if (beginnerDiffBtn) {
-        beginnerDiffBtn.addEventListener('click', () => {
+        if (DEBUG_MODE) console.log('✓ Beginner difficulty button found, attaching click handler');
+        beginnerDiffBtn.addEventListener('click', async () => {
+            if (DEBUG_MODE) console.log('Beginner difficulty button clicked', {currentTopic: state.currentTopic});
             if (state.currentTopic) {
-                startQuiz(state.currentTopic.id, 'practice', 'beginner');
+                await startQuiz(state.currentTopic.id, 'practice', 'beginner').catch(err => {
+                    console.error('Error starting quiz:', err);
+                    showErrorNotification('Failed to start quiz. Please try again or select a different topic.');
+                });
+            } else {
+                console.error('Cannot start quiz: state.currentTopic is not set');
+                showErrorNotification('No topic selected. Please go back and select a topic first.');
             }
         });
+    } else {
+        if (DEBUG_MODE) console.warn('✗ Beginner difficulty button NOT found in DOM');
     }
     
     const advancedDiffBtn = document.getElementById('advanced-diff-btn');
     if (advancedDiffBtn) {
-        advancedDiffBtn.addEventListener('click', () => {
+        if (DEBUG_MODE) console.log('✓ Advanced difficulty button found, attaching click handler');
+        advancedDiffBtn.addEventListener('click', async () => {
+            if (DEBUG_MODE) console.log('Advanced difficulty button clicked', {currentTopic: state.currentTopic});
             if (state.currentTopic) {
-                startQuiz(state.currentTopic.id, 'practice', 'advanced');
+                await startQuiz(state.currentTopic.id, 'practice', 'advanced').catch(err => {
+                    console.error('Error starting quiz:', err);
+                    showErrorNotification('Failed to start quiz. Please try again or select a different topic.');
+                });
+            } else {
+                console.error('Cannot start quiz: state.currentTopic is not set');
+                showErrorNotification('No topic selected. Please go back and select a topic first.');
             }
         });
+    } else {
+        if (DEBUG_MODE) console.warn('✗ Advanced difficulty button NOT found in DOM');
     }
     
     const expertDiffBtn = document.getElementById('expert-diff-btn');
     if (expertDiffBtn) {
-        expertDiffBtn.addEventListener('click', () => {
+        if (DEBUG_MODE) console.log('✓ Expert difficulty button found, attaching click handler');
+        expertDiffBtn.addEventListener('click', async () => {
+            if (DEBUG_MODE) console.log('Expert difficulty button clicked', {currentTopic: state.currentTopic});
             if (state.currentTopic) {
-                startQuiz(state.currentTopic.id, 'practice', 'expert');
+                await startQuiz(state.currentTopic.id, 'practice', 'expert').catch(err => {
+                    console.error('Error starting quiz:', err);
+                    showErrorNotification('Failed to start quiz. Please try again or select a different topic.');
+                });
+            } else {
+                console.error('Cannot start quiz: state.currentTopic is not set');
+                showErrorNotification('No topic selected. Please go back and select a topic first.');
             }
+        });
+    } else {
+        if (DEBUG_MODE) console.warn('✗ Expert difficulty button NOT found in DOM');
+    }
+    
+    // AFOQT Practice difficulty buttons
+    const afoqtBeginnerBtn = document.getElementById('afoqt-beginner-btn');
+    if (afoqtBeginnerBtn) {
+        afoqtBeginnerBtn.addEventListener('click', () => {
+            console.log('AFOQT Beginner button clicked');
+            _startAFOQTPracticeTestAsync('beginner').catch(err => {
+                console.error('Error starting AFOQT test:', err);
+                playSfx('wrong');
+            });
+        });
+    }
+    
+    const afoqtAdvancedBtn = document.getElementById('afoqt-advanced-btn');
+    if (afoqtAdvancedBtn) {
+        afoqtAdvancedBtn.addEventListener('click', () => {
+            console.log('AFOQT Advanced button clicked');
+            _startAFOQTPracticeTestAsync('advanced').catch(err => {
+                console.error('Error starting AFOQT test:', err);
+                playSfx('wrong');
+            });
+        });
+    }
+    
+    const afoqtExpertBtn = document.getElementById('afoqt-expert-btn');
+    if (afoqtExpertBtn) {
+        afoqtExpertBtn.addEventListener('click', () => {
+            console.log('AFOQT Expert button clicked');
+            _startAFOQTPracticeTestAsync('expert').catch(err => {
+                console.error('Error starting AFOQT test:', err);
+                playSfx('wrong');
+            });
         });
     }
     
@@ -9637,6 +11778,15 @@ function attachEventListeners() {
             handleAnswer(parseInt(btn.dataset.optionIndex));
         });
     });
+
+    const feedbackToggleBtn = document.getElementById('feedback-toggle-btn');
+    if (feedbackToggleBtn) {
+        feedbackToggleBtn.addEventListener('click', () => {
+            state.quiz.showFeedback = !state.quiz.showFeedback;
+            playSfx('nav');
+            render();
+        });
+    }
     
     // Navigation buttons
     const homeBtn = document.getElementById('home-btn');
@@ -9683,6 +11833,17 @@ function attachEventListeners() {
     const nextBtn = document.getElementById('next-btn');
     if (nextBtn) {
         nextBtn.addEventListener('click', nextQuestion);
+    }
+    
+    // Section transition modal buttons
+    const confirmNextSectionBtn = document.getElementById('confirm-next-section-btn');
+    if (confirmNextSectionBtn) {
+        confirmNextSectionBtn.addEventListener('click', proceedToNextSection);
+    }
+    
+    const staySectionBtn = document.getElementById('stay-section-btn');
+    if (staySectionBtn) {
+        staySectionBtn.addEventListener('click', stayInCurrentSection);
     }
     
     const retryBtn = document.getElementById('retry-btn');
@@ -9854,6 +12015,7 @@ function handleScrollForFAB() {
 // Initialization
 // ============================================================================
 async function init() {
+    console.log('🚀 AFOQT Quest initializing...');
     // ====================================================================
     // VERSION CHECK - Automatic cache invalidation on app update
     // ====================================================================
@@ -9911,10 +12073,18 @@ async function init() {
     }
     
     // Show Evangelion-style boot sequence on first load
+    // Allow forcing via URL: ?boot=1
+    const params = new URLSearchParams(location.search);
+    const forceBoot = params.get('boot') === '1' || params.get('forceBoot') === '1';
     const hasBooted = sessionStorage.getItem('afoqt-booted');
-    if (!hasBooted) {
+    console.log('[BOOT CHECK]', {hasBooted, forceBoot, shouldShowBoot: !hasBooted || forceBoot});
+    if (!hasBooted || forceBoot) {
+        console.log('[BOOT] Starting boot sequence...');
         await showBootSequence();
+        console.log('[BOOT] Boot sequence complete');
         sessionStorage.setItem('afoqt-booted', 'true');
+    } else {
+        console.log('[BOOT] Skipping boot - already shown this session');
     }
     
     state.players = await loadPlayers();
@@ -9922,7 +12092,11 @@ async function init() {
     if (state.players.length > 0) {
         state.currentPlayer = state.players[0];
         // Restore session state after boot (user should see their last screen)
+        // Save the session topic ID for later re-migration after topics are created
+        state._sessionTopicId = null;
         await restoreSessionState();
+        // Note: If restoreSessionState couldn't find the topic, state._sessionTopicId will be set
+        // so we can re-migrate it after topics are created
     } else {
         // No players, show login
         state.screen = 'login';
@@ -9930,8 +12104,14 @@ async function init() {
     
     // Patch 18: Initialize content-based question system
     if (typeof initializePatch18 === 'function') {
+        state.contentLoading = true;
+        state.contentReady = false;
+        render(); // Show loading state
+        
         try {
+            console.log('[INIT-APP] Calling initializePatch18...');
             const success = await initializePatch18();
+            console.log('[INIT-APP] initializePatch18 returned:', success);
             if (success) {
                 state.patch18Loaded = true;
                 console.log('✓ Patch 18 active');
@@ -10009,11 +12189,77 @@ async function init() {
                         console.log(`✓ Added ${practiceTests.length} AFOQT practice tests`);
                     }
                 }
+                
+                // Re-migrate session topic ID if it couldn't be found when session was restored
+                if (state._sessionTopicId) {
+                    console.log(`[RE-MIGRATE] Re-migrating saved topic ID: ${state._sessionTopicId}...`);
+                    const oldTopicId = state._sessionTopicId;
+                    let migratedTopic = null;
+                    
+                    // Try to find the topic in the new topics array
+                    migratedTopic = topics.find(t => t.id === oldTopicId);
+                    
+                    if (!migratedTopic) {
+                        const possiblePrefixes = ['physical_science', 'math_knowledge', 'arithmetic_reasoning', 'vocabulary', 'word_knowledge', 'verbal_analogies'];
+                        for (const prefix of possiblePrefixes) {
+                            const newId = `${prefix}_${oldTopicId}`;
+                            migratedTopic = topics.find(t => t.id === newId);
+                            if (migratedTopic) {
+                                console.log(`[RE-MIGRATE] Found topic with prefix: ${oldTopicId} → ${migratedTopic.id}`);
+                                break;
+                            }
+                        }
+                    }
+                    
+                    if (!migratedTopic) {
+                        migratedTopic = topics.find(t => t.id.endsWith(`_${oldTopicId}`) || t.id.includes(oldTopicId));
+                        if (migratedTopic) {
+                            console.log(`[RE-MIGRATE] Found topic by partial match: ${oldTopicId} → ${migratedTopic.id}`);
+                        }
+                    }
+                    
+                    if (migratedTopic) {
+                        state.currentTopic = migratedTopic;
+                        state.screen = 'difficulty-select'; // Restore to difficulty selection
+                        console.log(`[RE-MIGRATE] ✓ Topic re-migrated to: ${migratedTopic.id}`);
+                        state._sessionTopicId = null; // Clear the flag
+                    } else {
+                        console.error(`[RE-MIGRATE] ❌ Could not find topic for ${oldTopicId}, staying on home`);
+                        state._sessionTopicId = null; // Clear the flag
+                    }
+                }
+                
+                // Log registry diagnostics
+                if (typeof questionRegistry !== 'undefined') {
+                    console.log('📊 Question Registry Status:');
+                    Object.keys(questionRegistry).forEach(subjectId => {
+                        console.log(`  ${subjectId}:`);
+                        Object.keys(questionRegistry[subjectId]).forEach(subtopicId => {
+                            const difficulties = questionRegistry[subjectId][subtopicId];
+                            const counts = {
+                                beginner: difficulties.beginner?.length || 0,
+                                advanced: difficulties.advanced?.length || 0,
+                                expert: difficulties.expert?.length || 0
+                            };
+                            const total = counts.beginner + counts.advanced + counts.expert;
+                            console.log(`    ${subtopicId}: ${total} questions (B:${counts.beginner}, A:${counts.advanced}, E:${counts.expert})`);
+                        });
+                    });
+                }
             }
+            
+            console.log('✅ Content loaded - quiz ready');
         } catch (error) {
-            console.warn('Patch 18 initialization failed:', error);
+            console.error('❌ [INIT-APP] Patch 18 initialization FAILED:', error.message);
+            console.error('[INIT-APP] Stack:', error.stack);
+            console.warn('⚠ Patch 18 initialization failed, using procedural fallbacks:', error);
         }
     }
+    
+    // Mark content as ready (either loaded successfully or using procedural fallbacks)
+    // Always set to true because app can fall back to procedural question generators
+    state.contentLoading = false;
+    state.contentReady = true;
     
     render();
     registerServiceWorker();
@@ -10026,11 +12272,10 @@ function registerServiceWorker() {
             navigator.serviceWorker.register('./sw.js')
                 .then((registration) => {
                     console.log('Service Worker registered:', registration.scope);
-                    
                     // Check for updates periodically
                     setInterval(() => {
                         registration.update();
-                    }, 60000); // Check every minute
+                    }, 60000);
                 })
                 .catch((error) => {
                     console.warn('Service Worker registration failed:', error);
@@ -10040,10 +12285,33 @@ function registerServiceWorker() {
 }
 
 // Start the app when DOM is ready
+async function startApp() {
+    try {
+        console.log('[startApp] called');
+        await init();
+        console.log('[startApp] init() resolved');
+    } catch (error) {
+        console.error('❌ CRITICAL: App initialization failed:', error);
+        document.getElementById('app-root').innerHTML = `
+            <div style="color: red; font-family: monospace; padding: 20px;">
+                <h2>App Initialization Error</h2>
+                <p>${error.message}</p>
+                <pre>${error.stack}</pre>
+                <p>Check browser console (F12) for more details</p>
+            </div>
+        `;
+    }
+}
+
+console.log('[DEBUG] About to check readyState for boot...');
+
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    console.log('[BOOT] DOM is loading; attaching DOMContentLoaded handler');
+    document.addEventListener('DOMContentLoaded', startApp);
 } else {
-    init();
+    console.log('[BOOT] DOM is ready or interactive (readyState:', document.readyState, '); calling startApp');
+    // DOM is either 'interactive' or 'complete', both are ready for deferred scripts
+    startApp();
 }
 
 // ============================================================================
@@ -10121,12 +12389,48 @@ async function restoreSessionState() {
         state.currentSubject = subjects.find(s => s.id === sessionState.currentSubjectId);
         state.screen = 'subject';
     } else if (sessionState.currentTopicId && ['mode-select', 'difficulty-select', 'quiz', 'results'].includes(sessionState.screen)) {
-        state.currentTopic = topics.find(t => t.id === sessionState.currentTopicId);
-        // Only restore quiz states if we have questions (avoid loading incomplete quizzes)
-        if (sessionState.screen !== 'quiz' || state.quiz.questions.length > 0) {
-            state.screen = sessionState.screen;
+        // Try to find topic by ID - handle legacy topic IDs that might not have subject prefix
+        let topic = topics.find(t => t.id === sessionState.currentTopicId);
+        
+        // Migration: If topic not found, try matching with subject prefix (for old saved sessions)
+        if (!topic) {
+            const legacyTopicId = sessionState.currentTopicId;
+            console.log(`⚠ Topic not found for ID: ${legacyTopicId}, attempting migration...`);
+            
+            // Try prepending various subject prefixes
+            const possiblePrefixes = ['physical_science', 'math_knowledge', 'arithmetic_reasoning', 'vocabulary', 'word_knowledge', 'verbal_analogies'];
+            for (const prefix of possiblePrefixes) {
+                const newId = `${prefix}_${legacyTopicId}`;
+                topic = topics.find(t => t.id === newId);
+                if (topic) {
+                    console.log(`✓ Migrated legacy topic ID: ${legacyTopicId} → ${topic.id}`);
+                    break;
+                }
+            }
+            
+            // If still not found, try partial match
+            if (!topic) {
+                topic = topics.find(t => t.id.endsWith(`_${legacyTopicId}`) || t.id.includes(legacyTopicId));
+                if (topic) {
+                    console.log(`✓ Partial match migration: ${legacyTopicId} → ${topic.id}`);
+                }
+            }
+        }
+        
+        state.currentTopic = topic;
+        
+        // If we still don't have a topic, save the topic ID for re-migration after topics are created
+        if (!topic) {
+            console.warn(`❌ Could not restore topic ${sessionState.currentTopicId}, saving for re-migration after topics load`);
+            state._sessionTopicId = sessionState.currentTopicId; // Save for re-migration
+            state.screen = 'home';
         } else {
-            state.screen = 'home'; // Quiz questions lost, go home
+            // Only restore quiz states if we have questions (avoid loading incomplete quizzes)
+            if (sessionState.screen !== 'quiz' || state.quiz.questions.length > 0) {
+                state.screen = sessionState.screen;
+            } else {
+                state.screen = 'home'; // Quiz questions lost, go home
+            }
         }
     } else if (sessionState.screen === 'home' || sessionState.screen === 'settings' || sessionState.screen === 'status' || sessionState.screen === 'equipment' || sessionState.screen === 'achievements' || sessionState.screen === 'analytics') {
         state.screen = sessionState.screen;
