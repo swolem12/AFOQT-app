@@ -3,6 +3,636 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AFOQT Admin Hub - Evangelion</title>
+  <base href="/AFOQT-app/" />
+  <style>
+    :root {
+      --bg: #0b0f1d;
+      --panel: #11172b;
+      --panel-strong: #151c30;
+      --accent: #b6ff00;
+      --accent-2: #7c3aed;
+      --text: #e8ecf5;
+      --muted: #9aa6c0;
+      --warn: #ffb300;
+      --err: #ff4b6e;
+      --border: rgba(255,255,255,0.08);
+      --grid: rgba(255,255,255,0.04);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Mono", "Space Mono", monospace;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    a { color: var(--accent); }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 18px;
+      background: linear-gradient(180deg, #121a2f 0%, #0c1123 100%);
+      border-bottom: 1px solid var(--accent-2);
+      box-shadow: 0 3px 16px rgba(0,0,0,0.35);
+    }
+
+    .brand { font-weight: 700; letter-spacing: 1px; color: var(--accent); }
+    .menu { display: flex; gap: 12px; flex-wrap: wrap; }
+    .menu a {
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      background: rgba(124, 58, 237, 0.15);
+      text-decoration: none;
+      color: var(--text);
+      font-size: 12px;
+      border-radius: 4px;
+      transition: all 0.15s ease;
+    }
+    .menu a:hover { border-color: var(--accent); color: var(--accent); }
+
+    .page { max-width: 1280px; margin: 16px auto 48px auto; padding: 0 16px; display: grid; gap: 16px; }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+      padding: 16px 18px;
+      position: relative;
+      overflow: hidden;
+    }
+    .panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(90deg, var(--grid) 1px, transparent 1px), linear-gradient(180deg, var(--grid) 1px, transparent 1px);
+      background-size: 28px 28px;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+    .panel > * { position: relative; z-index: 1; }
+
+    h1 { margin: 0 0 8px 0; font-size: 18px; letter-spacing: 1px; }
+    h2 { margin: 0 0 10px 0; font-size: 15px; letter-spacing: 0.5px; color: var(--accent); }
+    p { margin: 0 0 10px 0; color: var(--muted); font-size: 13px; }
+
+    .controls { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; align-items: center; }
+    .btn {
+      padding: 8px 12px;
+      border: 1px solid var(--accent);
+      background: rgba(182, 255, 0, 0.12);
+      color: var(--text);
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+    }
+    .btn:hover { background: rgba(182, 255, 0, 0.2); box-shadow: 0 0 10px rgba(182, 255, 0, 0.25); }
+    .btn:active { transform: translateY(1px); }
+    .btn.secondary { border-color: var(--accent-2); background: rgba(124, 58, 237, 0.15); }
+    .btn.danger { border-color: var(--err); color: var(--err); background: rgba(255, 75, 110, 0.12); }
+
+    .chips { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); margin: 12px 0; }
+    .chip {
+      border: 1px solid var(--border);
+      background: var(--panel-strong);
+      padding: 10px 12px;
+      font-size: 12px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .chip .label { color: var(--muted); font-size: 11px; }
+    .chip.ok { border-color: rgba(182, 255, 0, 0.5); color: var(--accent); }
+    .chip.warn { border-color: rgba(255, 179, 0, 0.6); color: var(--warn); }
+    .chip.err { border-color: rgba(255, 75, 110, 0.7); color: var(--err); }
+
+    .log {
+      background: #05070f;
+      border: 1px solid var(--border);
+      color: var(--accent);
+      padding: 12px;
+      font-size: 12px;
+      min-height: 200px;
+      max-height: 320px;
+      overflow: auto;
+      white-space: pre-wrap;
+      line-height: 1.4;
+    }
+    .log .err { color: var(--err); }
+    .log .warn { color: var(--warn); }
+
+    .cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .card {
+      background: var(--panel-strong);
+      border: 1px solid var(--border);
+      padding: 12px;
+      min-height: 140px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .card h3 { margin: 0; font-size: 13px; color: var(--text); }
+    .card p { margin: 0; font-size: 12px; color: var(--muted); }
+    .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .tag { font-size: 11px; padding: 2px 7px; border: 1px solid var(--border); color: var(--accent); }
+    .tag.alt { color: var(--accent-2); border-color: rgba(124,58,237,0.4); }
+    .card-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; }
+
+    .iframe-wrap { border: 1px solid var(--border); background: #05070f; height: 520px; }
+    iframe { width: 100%; height: 100%; border: 0; background: #05070f; }
+
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+    th { background: rgba(124, 58, 237, 0.15); color: var(--text); }
+
+    textarea {
+      width: 100%;
+      background: #05070f;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 10px;
+      min-height: 160px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+    }
+
+    @media (max-width: 720px) {
+      .menu { width: 100%; }
+      .chips { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">AFOQT Admin Hub</div>
+    <nav class="menu">
+      <a href="#overview">Status</a>
+      <a href="#essentials">Essentials</a>
+      <a href="#labs">Subject Labs</a>
+      <a href="#viewer">Inline Viewer</a>
+      <a href="#directory">Directory</a>
+      <a href="#share">Share Block</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section id="overview" class="panel">
+      <h1>Evangelion Ops Deck</h1>
+      <p>Lean status board for Patch18 content, CSS probes, DB reachability, and a share-ready log block.</p>
+      <div class="controls">
+        <button class="btn" id="runDiagBtn">Run diagnostics</button>
+        <button class="btn secondary" id="copyLogBtn">Copy logs</button>
+        <button class="btn secondary" id="copyShareBtn">Copy share block</button>
+        <button class="btn danger" id="clearLogBtn">Clear</button>
+        <span id="diagStatus" style="color: var(--muted); font-size: 12px;">Status: idle</span>
+      </div>
+      <div class="chips" id="chipRow"></div>
+      <div class="log" id="log"></div>
+    </section>
+
+    <section id="essentials" class="panel">
+      <h2>Essential Test Sites</h2>
+      <p>Primary troubleshooting utilities: loaders, CSS, registry, and database inspectors.</p>
+      <div class="cards" id="essentialCards"></div>
+    </section>
+
+    <section id="labs" class="panel">
+      <h2>Subject Labs and Specialty Tools</h2>
+      <p>Subject harnesses, patch inspectors, boot demos, PWA install checks, and UISpec debuggers.</p>
+      <div class="cards" id="labCards"></div>
+    </section>
+
+    <section id="viewer" class="panel">
+      <h2>Inline Tool Viewer</h2>
+      <p>Preview any tool without leaving the hub. Use open in tab for a dedicated view.</p>
+      <div class="controls" style="align-items: center;">
+        <label for="toolSelect" style="font-size: 12px; color: var(--muted);">Tool</label>
+        <select id="toolSelect" style="min-width: 260px; padding: 8px 10px; background: #05070f; color: var(--text); border: 1px solid var(--border);"></select>
+        <button class="btn" id="loadInlineBtn">Load inline</button>
+        <button class="btn secondary" id="openTabBtn">Open in new tab</button>
+      </div>
+      <div class="iframe-wrap"><iframe id="toolFrame" title="Tool preview"></iframe></div>
+    </section>
+
+    <section id="directory" class="panel">
+      <h2>Tools Directory</h2>
+      <p>Every available test and diagnostic entry point. Use this when hunting regressions across subjects.</p>
+      <table id="toolTable">
+        <thead><tr><th>Name</th><th>Category</th><th>Purpose</th><th>Actions</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="share" class="panel">
+      <h2>Shareable Error Block</h2>
+      <p>Copy-paste when reporting issues. Mirrors the live log with timestamps.</p>
+      <textarea id="shareBlock" readonly></textarea>
+    </section>
+  </main>
+
+  <script>
+    // ----------- Script loading guards (prevents double-declare errors) -----------
+    let patchLoaderPromise;
+    function ensurePatchLoader() {
+      if (window.initializePatch18) return Promise.resolve();
+      if (!patchLoaderPromise) {
+        patchLoaderPromise = new Promise((resolve, reject) => {
+          const s = document.createElement('script');
+          s.src = '/AFOQT-app/patch-loader.js?v=admin-suite2';
+          s.onload = () => resolve();
+          s.onerror = () => reject(new Error('patch-loader failed to load'));
+          document.head.appendChild(s);
+        });
+      }
+      return patchLoaderPromise;
+    }
+
+    let dbPromise;
+    function ensureDB() {
+      if (window.afoqtDB) return Promise.resolve();
+      if (!dbPromise) {
+        dbPromise = new Promise((resolve, reject) => {
+          const s = document.createElement('script');
+          s.src = '/AFOQT-app/db.js?v=admin-suite2';
+          s.onload = () => resolve();
+          s.onerror = () => reject(new Error('db.js failed to load'));
+          document.head.appendChild(s);
+        });
+      }
+      return dbPromise;
+    }
+
+    // ---------------------- UI data ----------------------
+    const tools = [
+      { id: 'admin-console', name: 'Admin Console', path: 'tests/admin-console.html', category: 'Admin', purpose: 'Full dashboard: browse questions, manage players, view stats', tier: 'essential', tags: ['questions', 'players'] },
+      { id: 'all-questions', name: 'All Questions Browser', path: 'tests/test-admin-all-questions.html', category: 'Admin', purpose: 'Search and filter all questions by subject/difficulty', tier: 'essential', tags: ['search', 'filter'] },
+      { id: 'content-loader', name: 'Content Loader Test', path: 'tests/test-content-loading.html', category: 'Content', purpose: 'Verify JSON loads and registry builds', tier: 'essential', tags: ['content', 'registry'] },
+      { id: 'real-questions', name: 'Real Questions Viewer', path: 'tests/test-real-questions.html', category: 'Content', purpose: 'Render actual question JSON for spot checks', tier: 'essential', tags: ['content'] },
+      { id: 'css-verification', name: 'CSS Verification', path: 'tests/css-verification.html', category: 'CSS', purpose: 'Check Table Reading and Block Counting CSS', tier: 'essential', tags: ['css', 'table', 'blocks'] },
+      { id: 'table-reading', name: 'Table Reading Harness', path: 'tests/test-table-reading.html', category: 'Subject', purpose: 'Coordinate lookup and sticky headers', tier: 'essential', tags: ['subject'] },
+      { id: 'block-counting', name: 'Block Counting Test', path: 'tests/test-block-counting-iso.html', category: 'Subject', purpose: '3D isometric cube rendering', tier: 'essential', tags: ['subject'] },
+      { id: 'db-inspector', name: 'Database Inspector', path: 'tests/test-db.html', category: 'Database', purpose: 'Inspect localStorage and IndexedDB data', tier: 'essential', tags: ['storage'] },
+      { id: 'app-errors', name: 'App.js Error Catcher', path: 'tests/test-app-js-errors.html', category: 'Diagnostics', purpose: 'Surface syntax/runtime errors early', tier: 'essential', tags: ['diagnostics'] },
+
+      { id: 'afoqt-practice', name: 'AFOQT Practice Config', path: 'tests/test-afoqt-full-practice.html', category: 'Content', purpose: 'Auto-generated practice test configuration', tier: 'lab', tags: ['config'] },
+      { id: 'patch18', name: 'Patch 18 Config', path: 'tests/test-patch_18.html', category: 'Content', purpose: 'Validate patch mappings and subject registry', tier: 'lab', tags: ['patch'] },
+      { id: 'question-tracking', name: 'Question Tracking', path: 'tests/test-question-tracking.html', category: 'Content', purpose: 'Spaced repetition and tracking debug harness', tier: 'lab', tags: ['tracking'] },
+      { id: 'math-ui', name: 'Math UI Lab', path: 'tests/test-math-ui.html', category: 'Subject', purpose: 'Math renderers and KaTeX support', tier: 'lab', tags: ['subject'] },
+      { id: 'geometry-ui', name: 'Geometry UI Lab', path: 'tests/test-geometry-ui.html', category: 'Subject', purpose: 'Geometry visuals and coordinate renderers', tier: 'lab', tags: ['subject'] },
+      { id: 'boot-demo', name: 'Boot Sequence Demo', path: 'tests/boot-demo.html', category: 'Boot', purpose: 'Isolated ENCOM globe boot animation', tier: 'lab', tags: ['boot'] },
+      { id: 'fr0st', name: 'Fr0st Prototype', path: 'tests/fr0st-prototype.html', category: 'Boot', purpose: 'Reference globe/animation prototype', tier: 'lab', tags: ['boot'] },
+      { id: 'install', name: 'Install / PWA', path: 'tests/install.html', category: 'Setup', purpose: 'PWA installation and offline flow', tier: 'lab', tags: ['pwa'] },
+      { id: 'manual-md', name: 'Manual Test Checklist (MD)', path: 'tests/MANUAL_TEST_CHECKLIST.md', category: 'Docs', purpose: 'Step-by-step manual verification', tier: 'lab', tags: ['docs'] },
+      { id: 'manual-html', name: 'Test Checklist (HTML)', path: 'test-checklist.html', category: 'Docs', purpose: 'HTML landing for manual checks', tier: 'lab', tags: ['docs'] },
+      { id: 'clear-sw', name: 'Clear Service Worker', path: 'clear-sw.html', category: 'Diagnostics', purpose: 'Force service worker reset for cache-busting', tier: 'lab', tags: ['cache'] },
+      { id: 'debug', name: 'Debug Landing', path: 'debug.html', category: 'Diagnostics', purpose: 'Plain debug hooks and console surface', tier: 'lab', tags: ['diagnostics'] },
+      { id: 'loading', name: 'Minimal Loader', path: 'test-loading.html', category: 'Diagnostics', purpose: 'Barebones loader sanity check', tier: 'lab', tags: ['diagnostics'] },
+      { id: 'boot-test', name: 'Boot Smoke Test', path: 'boot-test.html', category: 'Boot', purpose: 'Minimal boot smoke test', tier: 'lab', tags: ['boot'] },
+      { id: 'minimal', name: 'Minimal Harness', path: 'minimal-test.html', category: 'Diagnostics', purpose: 'Quick repro harness', tier: 'lab', tags: ['diagnostics'] }
+    ];
+
+    // ---------------------- state ----------------------
+    const logLines = [];
+    const chipRow = document.getElementById('chipRow');
+    const logEl = document.getElementById('log');
+    const shareBlockEl = document.getElementById('shareBlock');
+    const diagStatusEl = document.getElementById('diagStatus');
+    const toolSelect = document.getElementById('toolSelect');
+    const toolFrame = document.getElementById('toolFrame');
+
+    function setStatus(text) { diagStatusEl.textContent = `Status: ${text}`; }
+
+    function addLog(level, message, meta) {
+      const ts = new Date().toISOString();
+      const metaText = meta ? ' | ' + JSON.stringify(meta) : '';
+      const line = `[${ts}] [${level}] ${message}${metaText}`;
+      logLines.push(line);
+      const div = document.createElement('div');
+      div.className = level;
+      div.textContent = line;
+      logEl.appendChild(div);
+      logEl.scrollTop = logEl.scrollHeight;
+      shareBlockEl.value = '[AFOQT Admin Hub - Share Block]\n' + logLines.join('\n');
+    }
+
+    function renderChips(states) {
+      chipRow.innerHTML = '';
+      states.forEach(s => {
+        const chip = document.createElement('div');
+        chip.className = 'chip ' + (s.state || '');
+        chip.innerHTML = `<span class="label">${s.label}</span><span class="value">${s.value}</span>`;
+        chipRow.appendChild(chip);
+      });
+    }
+
+    function defaultChips() {
+      renderChips([
+        { label: 'patch-loader', value: 'pending' },
+        { label: 'Patch18 init', value: 'pending' },
+        { label: 'Registry', value: 'pending' },
+        { label: 'CSS probes', value: 'pending' },
+        { label: 'DB/Storage', value: 'pending' },
+        { label: 'Service worker', value: 'pending' },
+        { label: 'Network', value: navigator.onLine ? 'online' : 'offline', state: navigator.onLine ? 'ok' : 'warn' }
+      ]);
+    }
+
+    async function runDiagnostics() {
+      setStatus('running');
+      logEl.innerHTML = '';
+      logLines.length = 0;
+      defaultChips();
+
+      addLog('info', 'Network state', { online: navigator.onLine });
+      renderChips([
+        { label: 'patch-loader', value: 'checking' },
+        { label: 'Patch18 init', value: 'pending' },
+        { label: 'Registry', value: 'pending' },
+        { label: 'CSS probes', value: 'pending' },
+        { label: 'DB/Storage', value: 'pending' },
+        { label: 'Service worker', value: 'pending' },
+        { label: 'Network', value: navigator.onLine ? 'online' : 'offline', state: navigator.onLine ? 'ok' : 'warn' }
+      ]);
+
+      // patch-loader
+      try {
+        await ensurePatchLoader();
+        addLog('info', 'patch-loader reachable');
+        renderChips([
+          { label: 'patch-loader', value: 'ready', state: 'ok' },
+          { label: 'Patch18 init', value: 'pending' },
+          { label: 'Registry', value: 'pending' },
+          { label: 'CSS probes', value: 'pending' },
+          { label: 'DB/Storage', value: 'pending' },
+          { label: 'Service worker', value: 'pending' },
+          { label: 'Network', value: navigator.onLine ? 'online' : 'offline', state: navigator.onLine ? 'ok' : 'warn' }
+        ]);
+      } catch (err) {
+        addLog('err', 'patch-loader failed', { message: err.message });
+        renderChips([
+          { label: 'patch-loader', value: 'failed', state: 'err' },
+          { label: 'Patch18 init', value: 'skip', state: 'warn' },
+          { label: 'Registry', value: 'skip', state: 'warn' },
+          { label: 'CSS probes', value: 'pending' },
+          { label: 'DB/Storage', value: 'pending' },
+          { label: 'Service worker', value: 'pending' },
+          { label: 'Network', value: navigator.onLine ? 'online' : 'offline', state: navigator.onLine ? 'ok' : 'warn' }
+        ]);
+        setStatus('failed');
+        return;
+      }
+
+      // Patch18 init + registry snapshot
+      try {
+        const ok = await window.initializePatch18?.();
+        if (!ok) addLog('warn', 'Patch18 init returned falsy');
+        const reg = window.questionRegistry || {};
+        const subjects = Object.keys(reg);
+        const breakdown = subjects.map(id => {
+          const subs = reg[id] || {};
+          return `${id}:${Object.keys(subs).length}`;
+        }).join(', ');
+        addLog('info', 'Registry snapshot', { subjects: subjects.length, breakdown });
+        renderChips([
+          { label: 'patch-loader', value: 'ready', state: 'ok' },
+          { label: 'Patch18 init', value: ok ? 'ready' : 'warn', state: ok ? 'ok' : 'warn' },
+          { label: 'Registry', value: `${subjects.length} subjects`, state: subjects.length ? 'ok' : 'warn' },
+          { label: 'CSS probes', value: 'pending' },
+          { label: 'DB/Storage', value: 'pending' },
+          { label: 'Service worker', value: 'pending' },
+          { label: 'Network', value: navigator.onLine ? 'online' : 'offline', state: navigator.onLine ? 'ok' : 'warn' }
+        ]);
+      } catch (err) {
+        addLog('err', 'Patch18 init error', { message: err.message });
+        renderChips([
+          { label: 'patch-loader', value: 'ready', state: 'ok' },
+          { label: 'Patch18 init', value: 'error', state: 'err' },
+          { label: 'Registry', value: 'unavailable', state: 'err' },
+          { label: 'CSS probes', value: 'pending' },
+          { label: 'DB/Storage', value: 'pending' },
+          { label: 'Service worker', value: 'pending' },
+          { label: 'Network', value: navigator.onLine ? 'online' : 'offline', state: navigator.onLine ? 'ok' : 'warn' }
+        ]);
+      }
+
+      // JSON probes
+      try {
+        const files = [
+          'Test Content/Aviation/aviation_information_beginner_part3.json',
+          'Test Content/Block Counting/block_counting_beginner_part3.json',
+          'Test Content/Table Reading/table_reading_beginner_part3.json'
+        ];
+        for (const file of files) {
+          const resp = await fetch(file);
+          if (resp.ok) {
+            const data = await resp.json();
+            addLog('info', 'JSON ok', { file: file.split('/').pop(), questions: (data.questions || []).length });
+          } else {
+            addLog('warn', 'JSON fetch non-200', { file, status: resp.status });
+          }
+        }
+      } catch (err) {
+        addLog('err', 'JSON probe error', { message: err.message });
+      }
+
+      // CSS probes
+      try {
+        const probe = document.createElement('div');
+        probe.innerHTML = '<div class="data-table-container"><table><tr><td>t</td></tr></table></div><div class="bc-scene"><div class="bc-cube"></div></div>';
+        document.body.appendChild(probe);
+        const tableStyle = window.getComputedStyle(probe.querySelector('.data-table-container'));
+        const cubeStyle = window.getComputedStyle(probe.querySelector('.bc-cube'));
+        const tableOk = !!(tableStyle && (tableStyle.background || tableStyle.backgroundColor));
+        const cubeOk = !!(cubeStyle && (cubeStyle.background || cubeStyle.backgroundColor));
+        addLog(tableOk ? 'info' : 'warn', 'Table Reading CSS', { background: tableStyle.background || tableStyle.backgroundColor });
+        addLog(cubeOk ? 'info' : 'warn', 'Block Counting CSS', { background: cubeStyle.background || cubeStyle.backgroundColor });
+        renderChips([
+          { label: 'patch-loader', value: 'ready', state: 'ok' },
+          { label: 'Patch18 init', value: window.questionRegistry ? 'ready' : 'warn', state: window.questionRegistry ? 'ok' : 'warn' },
+          { label: 'Registry', value: window.questionRegistry ? `${Object.keys(window.questionRegistry).length} subjects` : 'n/a', state: window.questionRegistry ? 'ok' : 'warn' },
+          { label: 'CSS probes', value: tableOk && cubeOk ? 'ready' : 'check', state: tableOk && cubeOk ? 'ok' : 'warn' },
+          { label: 'DB/Storage', value: 'pending' },
+          { label: 'Service worker', value: 'pending' },
+          { label: 'Network', value: navigator.onLine ? 'online' : 'offline', state: navigator.onLine ? 'ok' : 'warn' }
+        ]);
+        probe.remove();
+      } catch (err) {
+        addLog('err', 'CSS probe error', { message: err.message });
+      }
+
+      // DB probe
+      try {
+        await ensureDB();
+        await afoqtDB.init();
+        const players = await afoqtDB.getAllPlayers();
+        addLog('info', 'DB reachable', { players: players.length });
+        renderChips([
+          { label: 'patch-loader', value: 'ready', state: 'ok' },
+          { label: 'Patch18 init', value: window.questionRegistry ? 'ready' : 'warn', state: window.questionRegistry ? 'ok' : 'warn' },
+          { label: 'Registry', value: window.questionRegistry ? `${Object.keys(window.questionRegistry).length} subjects` : 'n/a', state: window.questionRegistry ? 'ok' : 'warn' },
+          { label: 'CSS probes', value: 'done', state: 'ok' },
+          { label: 'DB/Storage', value: `${players.length} players`, state: 'ok' },
+          { label: 'Service worker', value: 'pending' },
+          { label: 'Network', value: navigator.onLine ? 'online' : 'offline', state: navigator.onLine ? 'ok' : 'warn' }
+        ]);
+      } catch (err) {
+        addLog('err', 'DB error', { message: err.message });
+        renderChips([
+          { label: 'patch-loader', value: 'ready', state: 'ok' },
+          { label: 'Patch18 init', value: window.questionRegistry ? 'ready' : 'warn', state: window.questionRegistry ? 'ok' : 'warn' },
+          { label: 'Registry', value: window.questionRegistry ? `${Object.keys(window.questionRegistry).length} subjects` : 'n/a', state: window.questionRegistry ? 'ok' : 'warn' },
+          { label: 'CSS probes', value: 'done', state: 'ok' },
+          { label: 'DB/Storage', value: 'error', state: 'err' },
+          { label: 'Service worker', value: 'pending' },
+          { label: 'Network', value: navigator.onLine ? 'online' : 'offline', state: navigator.onLine ? 'ok' : 'warn' }
+        ]);
+      }
+
+      // Service worker presence
+      try {
+        const swReady = 'serviceWorker' in navigator;
+        renderChips([
+          { label: 'patch-loader', value: 'ready', state: 'ok' },
+          { label: 'Patch18 init', value: window.questionRegistry ? 'ready' : 'warn', state: window.questionRegistry ? 'ok' : 'warn' },
+          { label: 'Registry', value: window.questionRegistry ? `${Object.keys(window.questionRegistry).length} subjects` : 'n/a', state: window.questionRegistry ? 'ok' : 'warn' },
+          { label: 'CSS probes', value: 'done', state: 'ok' },
+          { label: 'DB/Storage', value: window.afoqtDB ? 'ready' : 'warn', state: window.afoqtDB ? 'ok' : 'warn' },
+          { label: 'Service worker', value: swReady ? 'supported' : 'missing', state: swReady ? 'ok' : 'warn' },
+          { label: 'Network', value: navigator.onLine ? 'online' : 'offline', state: navigator.onLine ? 'ok' : 'warn' }
+        ]);
+        addLog('info', 'Service worker', { supported: swReady });
+      } catch (err) {
+        addLog('err', 'Service worker probe error', { message: err.message });
+      }
+
+      setStatus('complete');
+    }
+
+    // ---------------------- rendering helpers ----------------------
+    function renderCards(containerId, tier) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = '';
+      tools.filter(t => (tier === 'essential' ? t.tier === 'essential' : t.tier === 'lab')).forEach(tool => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `<h3>${tool.name}</h3><p>${tool.purpose}</p>`;
+        const tags = document.createElement('div');
+        tags.className = 'tags';
+        tool.tags.forEach(tag => {
+          const span = document.createElement('span');
+          span.className = 'tag' + (tag === 'patch' || tag === 'boot' || tag === 'docs' ? ' alt' : '');
+          span.textContent = tag;
+          tags.appendChild(span);
+        });
+        const actions = document.createElement('div');
+        actions.className = 'card-actions';
+        const preview = document.createElement('button');
+        preview.className = 'btn';
+        preview.textContent = 'Preview';
+        preview.onclick = () => loadInline(tool.path);
+        const open = document.createElement('button');
+        open.className = 'btn secondary';
+        open.textContent = 'Open';
+        open.onclick = () => window.open(tool.path, '_blank');
+        actions.appendChild(preview);
+        actions.appendChild(open);
+        card.appendChild(tags);
+        card.appendChild(actions);
+        container.appendChild(card);
+      });
+    }
+
+    function renderSelect() {
+      toolSelect.innerHTML = '';
+      tools.forEach(tool => {
+        const opt = document.createElement('option');
+        opt.value = tool.path;
+        opt.textContent = `${tool.name} - ${tool.category}`;
+        toolSelect.appendChild(opt);
+      });
+    }
+
+    function renderTable() {
+      const tbody = document.querySelector('#toolTable tbody');
+      tbody.innerHTML = '';
+      tools.forEach(tool => {
+        const tr = document.createElement('tr');
+        const nameTd = document.createElement('td'); nameTd.textContent = tool.name; tr.appendChild(nameTd);
+        const catTd = document.createElement('td'); catTd.textContent = tool.category; tr.appendChild(catTd);
+        const purTd = document.createElement('td'); purTd.textContent = tool.purpose; tr.appendChild(purTd);
+        const actTd = document.createElement('td');
+        const openBtn = document.createElement('button'); openBtn.className = 'btn secondary'; openBtn.textContent = 'Open'; openBtn.onclick = () => window.open(tool.path, '_blank');
+        const previewBtn = document.createElement('button'); previewBtn.className = 'btn'; previewBtn.textContent = 'Preview'; previewBtn.onclick = () => loadInline(tool.path);
+        actTd.appendChild(previewBtn); actTd.appendChild(openBtn); tr.appendChild(actTd);
+        tbody.appendChild(tr);
+      });
+    }
+
+    function loadInline(path) {
+      toolFrame.src = path;
+      addLog('info', 'Inline load', { path });
+    }
+
+    function openTab() {
+      const path = toolSelect.value;
+      if (path) window.open(path, '_blank');
+    }
+
+    function copyLogs() {
+      if (!logLines.length) return;
+      navigator.clipboard.writeText(logLines.join('\n')).then(() => setStatus('logs copied')).catch(() => setStatus('copy failed'));
+    }
+
+    function copyShare() {
+      if (!shareBlockEl.value) return;
+      navigator.clipboard.writeText(shareBlockEl.value).then(() => setStatus('share copied')).catch(() => setStatus('copy failed'));
+    }
+
+    function clearLogs() {
+      logLines.length = 0;
+      logEl.textContent = '';
+      shareBlockEl.value = '';
+      setStatus('idle');
+      defaultChips();
+    }
+
+    window.addEventListener('error', (event) => {
+      addLog('err', event.message, { file: event.filename, line: event.lineno, col: event.colno });
+    });
+
+    window.addEventListener('unhandledrejection', (event) => {
+      addLog('err', 'Unhandled rejection', { reason: event.reason ? event.reason.toString() : 'unknown' });
+    });
+
+    // ---------------------- init ----------------------
+    document.getElementById('runDiagBtn').addEventListener('click', runDiagnostics);
+    document.getElementById('copyLogBtn').addEventListener('click', copyLogs);
+    document.getElementById('copyShareBtn').addEventListener('click', copyShare);
+    document.getElementById('clearLogBtn').addEventListener('click', clearLogs);
+    document.getElementById('loadInlineBtn').addEventListener('click', () => loadInline(toolSelect.value));
+    document.getElementById('openTabBtn').addEventListener('click', openTab);
+
+    renderCards('essentialCards', 'essential');
+    renderCards('labCards', 'lab');
+    renderSelect();
+    renderTable();
+    defaultChips();
+    if (tools[0]) loadInline(tools[0].path);
+  </script>
+</body>
+</html><!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AFOQT Admin Test Hub - Evangelion Deck</title>
   <base href="/AFOQT-app/" />
   <style>
