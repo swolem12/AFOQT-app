@@ -230,790 +230,6 @@ function animateQuizOptions() {
         ease: 'outQuart'
     });
 }
-
-// ============================================================================
-// Correct/Wrong Answer Feedback Animation (anime.js v4)
-// ============================================================================
-function animateAnswerFeedback(element, isCorrect) {
-    if (!hasAnime() || !element) return;
-    
-    if (isCorrect) {
-        // Pulse and glow for correct
-        anime.animate(element, {
-            scale: [1, 1.05, 1],
-            duration: 400,
-            ease: 'outElastic(1, .6)'
-        });
-    } else {
-        // Shake for wrong
-        anime.animate(element, {
-            translateX: [0, -10, 10, -10, 10, 0],
-            duration: 400,
-            ease: 'inOutQuad'
-        });
-    }
-}
-
-// ============================================================================
-// Score Counter Animation (anime.js v4)
-// ============================================================================
-function animateScoreChange(element, fromValue, toValue) {
-    if (!hasAnime() || !element) return;
-    
-    const obj = { value: fromValue };
-    anime.animate(obj, {
-        value: toValue,
-        duration: 800,
-        ease: 'outQuart',
-        round: 1,
-        update: () => {
-            element.textContent = Math.round(obj.value);
-        }
-    });
-}
-
-// ============================================================================
-// Screen Transition Animation (anime.js v4)
-// ============================================================================
-function animateScreenTransition(callback) {
-    if (!hasAnime()) {
-        if (callback) callback();
-        return;
-    }
-    
-    const root = document.getElementById('app-root');
-    if (!root) {
-        if (callback) callback();
-        return;
-    }
-    
-    anime.animate(root, {
-        opacity: [1, 0],
-        translateY: [0, -20],
-        duration: 150,
-        ease: 'inQuad',
-        onComplete: () => {
-            if (callback) callback();
-            anime.animate(root, {
-                opacity: [0, 1],
-                translateY: [20, 0],
-                duration: 300,
-                ease: 'outQuart'
-            });
-        }
-    });
-}
-
-// ============================================================================
-// Stat Bar Fill Animation (anime.js v4)
-// ============================================================================
-function animateStatBar(element, targetPercent) {
-    if (!hasAnime() || !element) return;
-    
-    anime.animate(element, {
-        width: [`0%`, `${targetPercent}%`],
-        duration: 1000,
-        ease: 'outQuart',
-        delay: 200
-    });
-}
-
-// ============================================================================
-// Button Hover Glow Animation (anime.js v4)
-// ============================================================================
-function initButtonAnimations() {
-    // Add ripple effect to all buttons
-    document.querySelectorAll('.btn, .option-btn, .subject-card, .topic-card').forEach(btn => {
-        if (!btn.dataset.rippleInit) {
-            btn.addEventListener('click', createRipple);
-            btn.dataset.rippleInit = 'true';
-        }
-    });
-}
-
-// ============================================================================
-// Boot Screen Logo Animation (anime.js v4 Timeline)
-// ============================================================================
-function animateBootLogo(logoElement, bootTextElement) {
-    if (!hasAnime() || !logoElement) return;
-    
-    // Create a timeline for the boot sequence
-    const timeline = anime.createTimeline({
-        ease: 'outExpo'
-    });
-    
-    timeline
-        .add(logoElement, {
-            opacity: [0, 1],
-            scale: [0.8, 1],
-            filter: ['blur(10px)', 'blur(0px)'],
-            duration: 1000
-        })
-        .add(logoElement, {
-            textShadow: [
-                '0 0 10px var(--color-primary)',
-                '0 0 30px var(--color-primary), 0 0 50px var(--color-primary)'
-            ],
-            duration: 500
-        }, '-=300');
-    
-    return timeline;
-}
-
-// Add CSS for animations
-const animationStyles = document.createElement('style');
-animationStyles.textContent = `
-    @keyframes particleFloat {
-        0% {
-            transform: translate(0, 0) scale(1);
-            opacity: 1;
-        }
-        100% {
-            transform: translate(var(--vx), var(--vy)) scale(0);
-            opacity: 0;
-        }
-    }
-    
-    .btn, .option-btn, .subject-card, .topic-card {
-        position: relative;
-        overflow: hidden;
-        transition: transform 0.2s ease, box-shadow 0.3s ease;
-    }
-    
-    .btn:hover, .option-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 
-            0 0 15px var(--color-primary-glow, rgba(0, 255, 255, 0.4)),
-            0 0 30px var(--color-primary-dim, rgba(0, 255, 255, 0.2));
-    }
-    
-    .btn:active, .option-btn:active {
-        transform: translateY(0);
-    }
-    
-    /* Enhanced card hover effects */
-    .subject-card:hover, .topic-card:hover {
-        transform: translateY(-4px) scale(1.02);
-        box-shadow: 
-            0 0 20px var(--color-primary-glow, rgba(0, 255, 255, 0.5)),
-            0 0 40px var(--color-primary-dim, rgba(0, 255, 255, 0.3)),
-            0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-    
-    .subject-card:active, .topic-card:active {
-        transform: translateY(-2px) scale(1.01);
-    }
-    
-    /* Mode card special effects */
-    .mode-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    }
-    
-    .mode-card:hover {
-        transform: translateY(-6px) scale(1.03);
-        border-color: var(--color-primary);
-        box-shadow: 
-            0 0 25px var(--color-primary-glow, rgba(0, 255, 255, 0.6)),
-            0 15px 40px rgba(0, 0, 0, 0.4);
-    }
-    
-    .ripple-effect {
-        position: absolute;
-        border-radius: 50%;
-        pointer-events: none;
-    }
-    
-    /* Glowing neon effect for interactive elements */
-    .neon-glow {
-        animation: neonPulse 2s ease-in-out infinite alternate;
-    }
-    
-    @keyframes neonPulse {
-        from {
-            box-shadow: 
-                0 0 5px var(--color-primary-glow),
-                0 0 10px var(--color-primary-dim);
-        }
-        to {
-            box-shadow: 
-                0 0 10px var(--color-primary-glow),
-                0 0 20px var(--color-primary-dim),
-                0 0 30px var(--color-primary-dim);
-        }
-    }
-    
-    /* Floating animation for decorative elements */
-    .float-animation {
-        animation: floatUpDown 3s ease-in-out infinite;
-    }
-    
-    @keyframes floatUpDown {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-    }
-    
-    /* Correct answer glow effect */
-    .option-btn.correct {
-        animation: correctPulse 0.5s ease-out;
-    }
-    
-    @keyframes correctPulse {
-        0% { box-shadow: 0 0 0 rgba(0, 255, 0, 0); }
-        50% { box-shadow: 0 0 30px rgba(0, 255, 0, 0.8); }
-        100% { box-shadow: 0 0 15px rgba(0, 255, 0, 0.4); }
-    }
-    
-    /* Wrong answer shake effect */
-    .option-btn.wrong {
-        animation: wrongShake 0.4s ease-out;
-    }
-    
-    @keyframes wrongShake {
-        0%, 100% { transform: translateX(0); }
-        20% { transform: translateX(-8px); }
-        40% { transform: translateX(8px); }
-        60% { transform: translateX(-6px); }
-        80% { transform: translateX(6px); }
-    }
-    
-    /* Score increase animation */
-    .score-increase {
-        animation: scoreUp 0.5s ease-out;
-    }
-    
-    @keyframes scoreUp {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.3); color: var(--color-success); }
-        100% { transform: scale(1); }
-    }
-    
-    /* Panel header typing cursor */
-    .panel-header::after {
-        content: '_';
-        animation: blink 1s step-end infinite;
-    }
-    
-    @keyframes blink {
-        0%, 50% { opacity: 1; }
-        51%, 100% { opacity: 0; }
-    }
-`;
-document.head.appendChild(animationStyles);
-
-// ============================================================================
-// Boot Screen Effect - Globe Initialization
-// ============================================================================
-function showBootScreen() {
-    let globe, animationId, loopRunning = false;
-    
-    // Configuration constants
-    const FADE_DURATION_MS = 800;
-    const PROGRESS_DURATION_MS = 8000;
-    
-    // Create boot screen container
-    const bootScreen = document.createElement('div');
-    bootScreen.id = 'boot-screen';
-    bootScreen.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, #000000, #001a1a 50%, #002a2a);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 10000;
-        opacity: 1;
-    `;
-    
-    // Create init container
-    const initContainer = document.createElement('div');
-    initContainer.style.cssText = `
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-    `;
-    
-    // Create app logo
-    const appLogo = document.createElement('h1');
-    appLogo.textContent = 'AFOQT QUEST';
-    appLogo.style.cssText = `
-        font-family: 'Courier New', monospace;
-        font-size: clamp(32px, 5vw, 56px);
-        font-weight: 700;
-        letter-spacing: 0.3em;
-        text-transform: uppercase;
-        color: #00ffff;
-        text-shadow: 0 0 40px rgba(0, 255, 255, 0.8), 0 0 80px rgba(0, 255, 255, 0.4);
-        margin: 0;
-        position: relative;
-        opacity: 0;
-    `;
-    
-    // Create subtitle
-    const appSubtitle = document.createElement('div');
-    appSubtitle.textContent = '// OFFICER TRAINING SIMULATION';
-    appSubtitle.style.cssText = `
-        font-family: 'Courier New', monospace;
-        font-size: clamp(11px, 1.2vw, 14px);
-        letter-spacing: 0.2em;
-        color: rgba(0, 255, 255, 0.7);
-        text-transform: uppercase;
-        margin-top: -24px;
-        opacity: 0;
-    `;
-    
-    // Create globe container
-    const globeWrap = document.createElement('div');
-    globeWrap.style.cssText = `
-        position: relative;
-        width: min(480px, 75vw);
-        aspect-ratio: 1 / 1;
-        opacity: 0;
-    `;
-    
-    const globeHost = document.createElement('div');
-    globeHost.id = 'globeHost';
-    globeHost.style.cssText = `
-        width: 100%;
-        height: 100%;
-    `;
-    globeWrap.appendChild(globeHost);
-    
-    // Create progress section
-    const initProgress = document.createElement('div');
-    initProgress.style.cssText = `
-        width: min(480px, 75vw);
-        margin-top: 0;
-        opacity: 0;
-    `;
-    
-    const progressLabel = document.createElement('div');
-    progressLabel.textContent = 'System Initialization';
-    progressLabel.style.cssText = `
-        font-family: 'Courier New', monospace;
-        font-size: 12px;
-        letter-spacing: 0.15em;
-        color: #00ffff;
-        margin-bottom: 8px;
-        text-align: center;
-        text-transform: uppercase;
-    `;
-    
-    const progressTrack = document.createElement('div');
-    progressTrack.style.cssText = `
-        width: 100%;
-        height: 8px;
-        background: rgba(0, 255, 255, 0.1);
-        border: 1px solid rgba(0, 255, 255, 0.3);
-        border-radius: 999px;
-        overflow: hidden;
-        position: relative;
-    `;
-    
-    const progressFill = document.createElement('div');
-    progressFill.id = 'progressFill';
-    progressFill.style.cssText = `
-        height: 100%;
-        width: 0%;
-        background: linear-gradient(90deg, #00ff88, #00d4ff);
-        box-shadow: 0 0 16px rgba(0, 255, 136, 0.6);
-        transition: width 100ms linear;
-    `;
-    progressTrack.appendChild(progressFill);
-    
-    const progressPercent = document.createElement('div');
-    progressPercent.id = 'progressPercent';
-    progressPercent.textContent = '0%';
-    progressPercent.style.cssText = `
-        font-family: 'Courier New', monospace;
-        font-size: 14px;
-        color: #00ffff;
-        margin-top: 8px;
-        text-align: center;
-        letter-spacing: 0.1em;
-    `;
-    
-    initProgress.appendChild(progressLabel);
-    initProgress.appendChild(progressTrack);
-    initProgress.appendChild(progressPercent);
-    
-    // Assemble boot screen
-    initContainer.appendChild(appLogo);
-    initContainer.appendChild(appSubtitle);
-    initContainer.appendChild(globeWrap);
-    initContainer.appendChild(initProgress);
-    bootScreen.appendChild(initContainer);
-    document.body.appendChild(bootScreen);
-    
-    // Create boot complete overlay
-    const bootComplete = document.createElement('div');
-    bootComplete.id = 'bootComplete';
-    bootComplete.style.cssText = `
-        position: fixed;
-        inset: 0;
-        background: linear-gradient(135deg, #000000, #001a1a 50%, #002a2a);
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 16px;
-        z-index: 10001;
-        opacity: 0;
-    `;
-    
-    const bootCompleteTitle = document.createElement('div');
-    bootCompleteTitle.className = 'boot-complete-title';
-    bootCompleteTitle.textContent = 'BOOT UP COMPLETE';
-    bootCompleteTitle.style.cssText = `
-        font-family: 'Courier New', monospace;
-        font-size: clamp(24px, 4vw, 36px);
-        font-weight: 700;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: #00ff00;
-        text-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
-    `;
-    
-    const bootCompleteSubtitle = document.createElement('div');
-    bootCompleteSubtitle.className = 'boot-complete-subtitle';
-    bootCompleteSubtitle.textContent = 'WELCOME TO AFOQT QUEST';
-    bootCompleteSubtitle.style.cssText = `
-        font-family: 'Courier New', monospace;
-        font-size: clamp(14px, 2vw, 18px);
-        letter-spacing: 0.15em;
-        color: #00ffff;
-        text-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
-    `;
-    
-    bootComplete.appendChild(bootCompleteTitle);
-    bootComplete.appendChild(bootCompleteSubtitle);
-    document.body.appendChild(bootComplete);
-    
-    // Globe initialization functions
-    const resize = () => {
-        if (!globe || !globe.renderer) return;
-        const w = globeHost.clientWidth;
-        const h = globeHost.clientHeight;
-        globe.camera.aspect = w / h;
-        globe.camera.updateProjectionMatrix();
-        globe.renderer.setSize(w, h);
-    };
-    
-    const stopLoop = () => {
-        if (animationId) cancelAnimationFrame(animationId);
-        animationId = null;
-        loopRunning = false;
-    };
-    
-    const startLoop = () => {
-        if (loopRunning) return;
-        loopRunning = true;
-        const step = () => {
-            animationId = requestAnimationFrame(step);
-            if (globe) globe.tick();
-        };
-        step();
-    };
-    
-    const buildGlobe = () => {
-        if (!window.ENCOM || !window.ENCOM.Globe) {
-            console.warn('ENCOM.Globe not available yet');
-            return;
-        }
-        if (globe && globe.destroy) {
-            globe.destroy();
-        }
-        
-        const w = globeHost.clientWidth || 400;
-        const h = globeHost.clientHeight || 400;
-        globe = new ENCOM.Globe(w, h, {
-            font: 'Inconsolata',
-            data: window.data ? window.data.slice() : [],
-            tiles: window.grid ? window.grid.tiles : [],
-            baseColor: '#00ffff',
-            markerColor: '#00ff00',
-            pinColor: '#ffff00',
-            satelliteColor: '#ff00ff',
-            scale: 1.05,
-            dayLength: 12000,
-            introLinesDuration: 2000,
-            maxPins: 10,
-            maxMarkers: 15,
-            viewAngle: 0.3
-        });
-        
-        globeHost.innerHTML = '';
-        globeHost.appendChild(globe.domElement);
-        
-        // Force transparent background on renderer
-        if (globe.renderer) {
-            globe.renderer.setClearColor(0x000000, 0);
-            const canvas = globe.renderer.domElement;
-            canvas.style.background = 'none';
-            canvas.style.backgroundColor = 'transparent';
-        }
-        
-        globe.init(() => {
-            startLoop();
-            addGlobeFeatures();
-        });
-        resize();
-    };
-    
-    const addGlobeFeatures = () => {
-        if (!globe) return;
-        
-        // Add connected markers
-        setTimeout(() => {
-            globe.addMarker(40.7128, -74.0060, "New York");
-            globe.addMarker(51.5074, -0.1278, "London", true);
-        }, 2200);
-        
-        setTimeout(() => {
-            globe.addMarker(35.6762, 139.6503, "Tokyo");
-            globe.addMarker(-33.8688, 151.2093, "Sydney", true);
-        }, 2800);
-        
-        // Add satellite constellation
-        setTimeout(() => {
-            const constellation = [];
-            const opts = {
-                coreColor: '#ff00ff',
-                numWaves: 3
-            };
-            for (let i = 0; i < 2; i++) {
-                for (let j = 0; j < 3; j++) {
-                    constellation.push({
-                        lat: 50 * i - 30 + 15 * Math.random(),
-                        lon: 120 * j - 120 + 30 * i,
-                        altitude: 1.3
-                    });
-                }
-            }
-            globe.addConstellation(constellation, opts);
-        }, 3500);
-        
-        // Add random pins periodically
-        const pinInterval = setInterval(() => {
-            if (!globe) {
-                clearInterval(pinInterval);
-                return;
-            }
-            const lat = Math.random() * 180 - 90;
-            const lon = Math.random() * 360 - 180;
-            const names = ['Alpha Site', 'Beta Node', 'Gamma Link', 'Delta Hub', 'Echo Point'];
-            const name = names[Math.floor(Math.random() * names.length)];
-            globe.addPin(lat, lon, name);
-        }, 4000);
-        
-        // Stop after 30s
-        setTimeout(() => clearInterval(pinInterval), 30000);
-    };
-    
-    // Animate progress bar from 0-100%
-    const animateProgress = () => {
-        if (!window.gsap) {
-            // Fallback without GSAP
-            let progress = 0;
-            const interval = setInterval(() => {
-                progress += 1;
-                progressFill.style.width = progress + '%';
-                progressPercent.textContent = progress + '%';
-                if (progress >= 100) {
-                    clearInterval(interval);
-                    showBootComplete();
-                }
-            }, PROGRESS_DURATION_MS / 100);
-            return;
-        }
-        
-        gsap.to(progressFill, {
-            width: '100%',
-            duration: PROGRESS_DURATION_MS / 1000,
-            ease: 'linear',
-            onUpdate: function() {
-                const progress = Math.floor(this.progress() * 100);
-                progressPercent.textContent = progress + '%';
-            },
-            onComplete: showBootComplete
-        });
-    };
-    
-    // Show boot complete message then fade to main UI
-    const showBootComplete = () => {
-        if (!window.gsap) {
-            // Fallback without GSAP
-            bootScreen.style.transition = 'opacity 0.8s';
-            bootScreen.style.opacity = '0';
-            setTimeout(() => {
-                bootScreen.remove();
-                bootComplete.style.display = 'flex';
-                bootComplete.style.transition = 'opacity 0.5s';
-                bootComplete.style.opacity = '1';
-                setTimeout(() => {
-                    bootComplete.style.opacity = '0';
-                    setTimeout(() => {
-                        bootComplete.remove();
-                        stopLoop();
-                    }, 800);
-                }, 3000);
-            }, 800);
-            return;
-        }
-        
-        // Fade out loader
-        gsap.to(bootScreen, {
-            opacity: 0,
-            duration: 0.8,
-            ease: 'power2.inOut',
-            onComplete: () => {
-                bootScreen.remove();
-                
-                // Show boot complete overlay
-                bootComplete.style.display = 'flex';
-                bootComplete.style.opacity = '0';
-                
-                // Fade in boot complete
-                gsap.to(bootComplete, {
-                    opacity: 1,
-                    duration: 0.5,
-                    ease: 'power2.out'
-                });
-                
-                // Animate title
-                gsap.fromTo(bootCompleteTitle, 
-                    { opacity: 0, y: -20 },
-                    { opacity: 1, y: 0, duration: 0.6, delay: 0.2, ease: 'power3.out' }
-                );
-                
-                // Animate subtitle
-                gsap.fromTo(bootCompleteSubtitle, 
-                    { opacity: 0, y: 10 },
-                    { opacity: 0.8, y: 0, duration: 0.6, delay: 0.4, ease: 'power3.out' }
-                );
-                
-                // Auto-dismiss after 3 seconds
-                setTimeout(() => {
-                    gsap.to(bootComplete, {
-                        opacity: 0,
-                        duration: 0.8,
-                        ease: 'power2.inOut',
-                        onComplete: () => {
-                            bootComplete.remove();
-                            stopLoop();
-                        }
-                    });
-                }, 3000);
-            }
-        });
-    };
-    
-    // Initialize globe when ENCOM is ready
-    const kickOff = () => {
-        buildGlobe();
-        resize();
-        
-        if (!window.gsap) {
-            // Fallback CSS animations
-            appLogo.style.transition = 'opacity 0.8s, transform 0.8s';
-            appLogo.style.opacity = '1';
-            setTimeout(() => {
-                appSubtitle.style.transition = 'opacity 0.6s';
-                appSubtitle.style.opacity = '0.7';
-            }, 200);
-            setTimeout(() => {
-                globeWrap.style.transition = 'opacity 1s, transform 1s';
-                globeWrap.style.opacity = '1';
-            }, 400);
-            setTimeout(() => {
-                initProgress.style.transition = 'opacity 0.7s';
-                initProgress.style.opacity = '1';
-            }, 900);
-            setTimeout(animateProgress, 1200);
-            return;
-        }
-        
-        // Evangelion-style sequential boot animations
-        const tl = gsap.timeline();
-        
-        // Logo glitch-in
-        tl.fromTo(appLogo, 
-            { opacity: 0, y: -30, scaleX: 0.8 },
-            { opacity: 1, y: 0, scaleX: 1, duration: 0.8, ease: 'power4.out' }
-        )
-        // Subtitle scan-in
-        .fromTo(appSubtitle,
-            { opacity: 0, letterSpacing: '0.5em' },
-            { opacity: 0.7, letterSpacing: '0.2em', duration: 0.6, ease: 'power2.out' },
-            '-=0.3'
-        )
-        // Globe fade-scale-in
-        .fromTo(globeWrap,
-            { opacity: 0, scale: 0.85 },
-            { opacity: 1, scale: 1, duration: 1, ease: 'power3.out' },
-            '-=0.2'
-        )
-        // Progress bar slide-in
-        .fromTo(initProgress,
-            { opacity: 0, y: 20 },
-            { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' },
-            '-=0.5'
-        )
-        // Start progress animation
-        .call(() => {
-            setTimeout(animateProgress, 300);
-        });
-        
-        // Logo pulse animation (continuous) using anime if available
-        if (window.anime && window.anime.animate) {
-            anime.animate(appLogo, {
-                textShadow: [
-                    '0 0 40px rgba(0, 255, 255, 0.8), 0 0 80px rgba(0, 255, 255, 0.4)',
-                    '0 0 60px rgba(0, 255, 255, 1), 0 0 120px rgba(0, 255, 255, 0.6)',
-                    '0 0 40px rgba(0, 255, 255, 0.8), 0 0 80px rgba(0, 255, 255, 0.4)'
-                ],
-                duration: 3000,
-                ease: 'inOutSine',
-                loop: true
-            });
-        }
-    };
-    
-    // Enable audio on first user interaction
-    const enableAudio = createAudioEnabler(() => playSfx('boot'));
-    bootScreen.addEventListener('click', enableAudio, { once: true });
-    document.addEventListener('keydown', enableAudio, { once: true });
-    
-    // Wait for ENCOM to load
-    if (window.ENCOM && window.ENCOM.Globe) {
-        kickOff();
-    } else {
-        const poll = setInterval(() => {
-            if (window.ENCOM && window.ENCOM.Globe) {
-                clearInterval(poll);
-                kickOff();
-            }
-        }, 50);
-        setTimeout(() => clearInterval(poll), 4000);
-    }
-    
-    // Handle window resize
-    window.addEventListener('resize', resize);
-    
-    // Pause animation when tab hidden
-    document.addEventListener('visibilitychange', () => {
-        if (document.hidden) {
-            stopLoop();
-        } else {
-            startLoop();
-        }
-    });
-}
-
 // ============================================================================
 // Constants
 // ============================================================================
@@ -1025,908 +241,324 @@ const DIFFICULTY_LEVELS = ['beginner', 'advanced', 'expert'];
 // Debug flag - set to false in production
 const DEBUG_MODE = false;
 
+// ============================================================================
+// Boot Screen Effect - Globe Initialization
+// ============================================================================
+function showBootSequence() {
+    console.log('[showBootSequence] Function called - Globe boot animation');
+    return new Promise((resolve) => {
+        let globe;
+        let animationId;
+        let loopRunning = false;
+        const FADE_DURATION_MS = 800;
+        const PROGRESS_DURATION_MS = 8000;
+
+        const boot = document.createElement('div');
+        boot.id = 'boot-screen';
+        boot.style.cssText = 'position:fixed;inset:0;background:#000000;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:10000;opacity:1;';
+
+        const wrap = document.createElement('div');
+        wrap.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:32px;';
+
+        const logo = document.createElement('h1');
+        logo.textContent = 'AFOQT QUEST';
+        logo.style.cssText = "font-family:'Courier New',monospace;font-size:clamp(32px,5vw,56px);font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#00ffff;text-shadow:0 0 40px rgba(0,255,255,.8),0 0 80px rgba(0,255,255,.4);margin:0;opacity:0;";
+
+        const sub = document.createElement('div');
+        sub.textContent = '// OFFICER TRAINING SIMULATION';
+        sub.style.cssText = "font-family:'Courier New',monospace;font-size:clamp(11px,1.2vw,14px);letter-spacing:.2em;color:rgba(0,255,255,.7);text-transform:uppercase;margin-top:-24px;opacity:0;";
+
+        const globeWrap = document.createElement('div');
+        globeWrap.style.cssText = 'position:relative;width:min(480px,75vw);aspect-ratio:1/1;opacity:0;';
+        const host = document.createElement('div');
+        host.style.cssText = 'width:100%;height:100%;';
+        globeWrap.appendChild(host);
+
+        const prog = document.createElement('div');
+        prog.style.cssText = 'width:min(480px,75vw);opacity:0;';
+        const label = document.createElement('div');
+        label.textContent = 'System Initialization';
+        label.style.cssText = "font-family:'Courier New',monospace;font-size:12px;letter-spacing:.15em;color:#00ffff;margin-bottom:8px;text-align:center;text-transform:uppercase;";
+        const track = document.createElement('div');
+        track.style.cssText = 'width:100%;height:8px;background:rgba(0,255,255,.1);border:1px solid rgba(0,255,255,.3);border-radius:999px;overflow:hidden;position:relative;';
+        const fill = document.createElement('div');
+        fill.style.cssText = 'height:100%;width:0%;background:linear-gradient(90deg,#00ff88,#00d4ff);box-shadow:0 0 16px rgba(0,255,136,.6);transition:width 100ms linear;';
+        const pct = document.createElement('div');
+        pct.textContent = '0%';
+        pct.style.cssText = "font-family:'Courier New',monospace;font-size:14px;color:#00ffff;margin-top:8px;text-align:center;letter-spacing:.1em;";
+        track.appendChild(fill);
+        prog.appendChild(label);
+        prog.appendChild(track);
+        prog.appendChild(pct);
+
+        wrap.appendChild(logo);
+        wrap.appendChild(sub);
+        wrap.appendChild(globeWrap);
+        wrap.appendChild(prog);
+        boot.appendChild(wrap);
+        document.body.appendChild(boot);
+
+        const complete = document.createElement('div');
+        complete.style.cssText = 'position:fixed;inset:0;background:#000000;display:none;align-items:center;justify-content:center;flex-direction:column;gap:16px;z-index:10001;opacity:0;';
+        const cTitle = document.createElement('div');
+        cTitle.textContent = 'BOOT UP COMPLETE';
+        cTitle.style.cssText = "font-family:'Courier New',monospace;font-size:clamp(24px,4vw,36px);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#00ff00;text-shadow:0 0 20px rgba(0,255,0,.8);";
+        const cSub = document.createElement('div');
+        cSub.textContent = 'WELCOME TO AFOQT QUEST';
+        cSub.style.cssText = "font-family:'Courier New',monospace;font-size:clamp(14px,2vw,18px);letter-spacing:.15em;color:#00ffff;text-shadow:0 0 12px rgba(0,255,255,.6);";
+        complete.appendChild(cTitle);
+        complete.appendChild(cSub);
+        document.body.appendChild(complete);
+
+        const resize = () => {
+            if (!globe || !globe.renderer) return;
+            const w = host.clientWidth;
+            const h = host.clientHeight;
+            globe.camera.aspect = w / h;
+            globe.camera.updateProjectionMatrix();
+            globe.renderer.setSize(w, h);
+        };
+
+        const stopLoop = () => {
+            if (animationId) cancelAnimationFrame(animationId);
+            animationId = null;
+            loopRunning = false;
+        };
+
+        const startLoop = () => {
+            if (loopRunning) return;
+            loopRunning = true;
+            const step = () => {
+                animationId = requestAnimationFrame(step);
+                if (globe && globe.tick) globe.tick();
+            };
+            step();
+        };
+
+        const addGlobeFeatures = () => {
+            if (!globe) return;
+            setTimeout(() => {
+                globe.addMarker(40.7128, -74.006, 'New York');
+                globe.addMarker(51.5074, -0.1278, 'London', true);
+            }, 2200);
+            setTimeout(() => {
+                globe.addMarker(35.6762, 139.6503, 'Tokyo');
+                globe.addMarker(-33.8688, 151.2093, 'Sydney', true);
+            }, 2800);
+            setTimeout(() => {
+                const constellation = [];
+                const opts = { coreColor: '#ff00ff', numWaves: 3 };
+                for (let i = 0; i < 2; i++) {
+                    for (let j = 0; j < 3; j++) {
+                        constellation.push({
+                            lat: 50 * i - 30 + 15 * Math.random(),
+                            lon: 120 * j - 120 + 30 * i,
+                            altitude: 1.3
+                        });
+                    }
+                }
+                globe.addConstellation(constellation, opts);
+            }, 3500);
+            const pinInterval = setInterval(() => {
+                if (!globe) return clearInterval(pinInterval);
+                const lat = Math.random() * 180 - 90;
+                const lon = Math.random() * 360 - 180;
+                const names = ['Alpha Site', 'Beta Node', 'Gamma Link', 'Delta Hub', 'Echo Point'];
+                globe.addPin(lat, lon, names[Math.floor(Math.random() * names.length)]);
+            }, 4000);
+            setTimeout(() => clearInterval(pinInterval), 30000);
+        };
+
+        const buildGlobe = () => {
+            if (!window.ENCOM || !window.ENCOM.Globe) return;
+            if (globe && globe.destroy) globe.destroy();
+            const w = host.clientWidth || 400;
+            const h = host.clientHeight || 400;
+            globe = new ENCOM.Globe(w, h, {
+                font: 'Inconsolata',
+                data: window.data ? window.data.slice() : [],
+                tiles: window.grid ? window.grid.tiles : [],
+                baseColor: '#00ffff',
+                markerColor: '#00ff00',
+                pinColor: '#ffff00',
+                satelliteColor: '#ff00ff',
+                scale: 1.05,
+                dayLength: 12000,
+                introLinesDuration: 2000,
+                maxPins: 10,
+                maxMarkers: 15,
+                viewAngle: 0.3
+            });
+            host.innerHTML = '';
+            host.appendChild(globe.domElement);
+            if (globe.renderer) {
+                globe.renderer.setClearColor(0x000000, 0);
+                const canvas = globe.renderer.domElement;
+                canvas.style.background = 'none';
+                canvas.style.backgroundColor = 'transparent';
+            }
+            globe.init(() => {
+                startLoop();
+                addGlobeFeatures();
+            });
+            resize();
+        };
+
+        const animateProgress = () => {
+            if (!window.gsap) {
+                let p = 0;
+                const it = setInterval(() => {
+                    p += 1;
+                    fill.style.width = p + '%';
+                    pct.textContent = p + '%';
+                    if (p >= 100) {
+                        clearInterval(it);
+                        showBootComplete();
+                    }
+                }, PROGRESS_DURATION_MS / 100);
+                return;
+            }
+            gsap.to(fill, {
+                width: '100%',
+                duration: PROGRESS_DURATION_MS / 1000,
+                ease: 'linear',
+                onUpdate: function () {
+                    pct.textContent = Math.floor(this.progress() * 100) + '%';
+                },
+                onComplete: showBootComplete
+            });
+        };
+
+        const showBootComplete = () => {
+            if (!window.gsap) {
+                boot.style.transition = 'opacity .8s';
+                boot.style.opacity = '0';
+                setTimeout(() => {
+                    boot.remove();
+                    complete.style.display = 'flex';
+                    complete.style.transition = 'opacity .5s';
+                    complete.style.opacity = '1';
+                    setTimeout(() => {
+                        complete.style.opacity = '0';
+                        setTimeout(() => {
+                            complete.remove();
+                            stopLoop();
+                            resolve();
+                        }, FADE_DURATION_MS);
+                    }, 3000);
+                }, FADE_DURATION_MS);
+                return;
+            }
+            gsap.to(boot, {
+                opacity: 0,
+                duration: FADE_DURATION_MS / 1000,
+                ease: 'power2.inOut',
+                onComplete: () => {
+                    boot.remove();
+                    complete.style.display = 'flex';
+                    complete.style.opacity = '0';
+                    gsap.to(complete, { opacity: 1, duration: 0.5, ease: 'power2.out' });
+                    gsap.fromTo(cTitle, { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.6, delay: 0.2, ease: 'power3.out' });
+                    gsap.fromTo(cSub, { opacity: 0, y: 10 }, { opacity: 0.8, y: 0, duration: 0.6, delay: 0.4, ease: 'power3.out' });
+                    setTimeout(() => {
+                        gsap.to(complete, {
+                            opacity: 0,
+                            duration: FADE_DURATION_MS / 1000,
+                            ease: 'power2.inOut',
+                            onComplete: () => {
+                                complete.remove();
+                                stopLoop();
+                                resolve();
+                            }
+                        });
+                    }, 3000);
+                }
+            });
+        };
+
+        const kickOff = () => {
+            buildGlobe();
+            resize();
+            if (!window.gsap) {
+                logo.style.transition = 'opacity .8s';
+                logo.style.opacity = '1';
+                setTimeout(() => {
+                    sub.style.transition = 'opacity .6s';
+                    sub.style.opacity = '.7';
+                }, 200);
+                setTimeout(() => {
+                    globeWrap.style.transition = 'opacity 1s';
+                    globeWrap.style.opacity = '1';
+                }, 400);
+                setTimeout(() => {
+                    prog.style.transition = 'opacity .7s';
+                    prog.style.opacity = '1';
+                }, 900);
+                setTimeout(animateProgress, 1200);
+                return;
+            }
+            const tl = gsap.timeline();
+            tl.fromTo(logo, { opacity: 0, y: -30, scaleX: 0.8 }, { opacity: 1, y: 0, scaleX: 1, duration: 0.8, ease: 'power4.out' })
+                .fromTo(sub, { opacity: 0, letterSpacing: '0.5em' }, { opacity: 0.7, letterSpacing: '0.2em', duration: 0.6, ease: 'power2.out' }, '-=0.3')
+                .fromTo(globeWrap, { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 1, ease: 'power3.out' }, '-=0.2')
+                .fromTo(prog, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, '-=0.5')
+                .call(() => setTimeout(animateProgress, 300));
+        };
+
+        const enableAudio = createAudioEnabler(() => playSfx('boot'));
+        boot.addEventListener('click', enableAudio, { once: true });
+        document.addEventListener('keydown', enableAudio, { once: true });
+
+        if (window.ENCOM && window.ENCOM.Globe) {
+            kickOff();
+        } else {
+            const poll = setInterval(() => {
+                if (window.ENCOM && window.ENCOM.Globe) {
+                    clearInterval(poll);
+                    kickOff();
+                }
+            }, 50);
+            setTimeout(() => clearInterval(poll), 4000);
+        }
+
+        window.addEventListener('resize', resize);
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                stopLoop();
+            } else {
+                startLoop();
+            }
+        });
+    });
+}
+
 const state = {
-    screen: 'login', // 'login' | 'create-account' | 'home' | 'subject' | 'mode-select' | 'difficulty-select' | 'quiz' | 'results' | 'status' | 'equipment' | 'settings'
+    screen: 'boot',
     players: [],
     currentPlayer: null,
     currentSubject: null,
     currentTopic: null,
-    quizMode: 'practice', // 'practice' | 'test' | 'sprint'
-    difficulty: 'beginner', // 'beginner' | 'advanced' | 'expert'
-    lastScreenBeforeBoot: 'login', // Save user's last screen for session persistence
-    settings: {
-        theme: 'default', // 21 themes: default, eva01, eva02, rx0, eva03, purple-gundam, gray-gundam, celestial-pink, blue-terminal, green-terminal, orange-terminal, red-terminal, solo-leveling, nova-kit, hydra-kit, cyberpunk-purple, red-yellow-mech, gray-white-gundam, purple-white-gundam, wb-mecha, yellow-terminal
-        panelStyle: 'default', // 14 panel styles: default, blue-mech, cyberpunk01, cyberpunk02, gungale, pink-mech, purple-mech, unicorn, wb-mecha, white-scifi01, white-scifi02, white-scifi03, word-boxes, yellow-mech
-        uiLayout: 'default', // 14 UI layouts: default, aida, blue-mech, blue-terminal, celestial-pink, covert-ops, green-terminal, nova-kit, orange-scifi, orange-terminal, pink-mech, purple-mech, yellow-mech, yellow-terminal
-        bootAnimation: 'classic', // 5 boot animations: classic, inspiration1, inspiration2, inspiration3, retro-tech
-        characterLayout: 'default', // 3 character layouts: default, equipment-loadout, gundam-loadout
-        visualEffects: {
-            glassmorphism: true,
-            neonBorders: true,
-            floatingAnimations: true,
-            gradientEffects: false,
-            premiumButtons: false
-        },
-        volumes: {
-            master: 0.5,
-            nav: 0.5,
-            correct: 0.5,
-            wrong: 0.5,
-            levelup: 0.5,
-            boot: 0.5,
-            modal: 0.5,
-            bgMusic: 0.3
-        },
-        bgMusicEnabled: false
-    },
     quiz: {
         questions: [],
         currentIndex: 0,
         score: 0,
         selectedAnswer: null,
-        questionStartTime: null,
-        questionTimes: [],
-        userAnswers: [], // Track user's answer for each question
-        timerInterval: null,
-        mode: 'practice', // Store mode with quiz session
-        difficulty: 'beginner', // Store difficulty with quiz session
-        showFeedback: true, // Patch 18: control feedback visibility
-        isPracticeTest: false, // Patch 18: flag for AFOQT practice tests
-        showSectionTransition: false, // Flag to show section transition confirmation modal
-        // Full Practice Test fields
-        isFullPracticeTest: false, // Flag for full AFOQT practice test mode
-        sections: [], // Array of section objects for full test
-        currentSectionIndex: 0, // Which section user is currently on
-        sectionTimerInterval: null, // Timer for current section
-        fullTestData: null // Complete test data structure
+        mode: 'practice',
+        difficulty: 'beginner',
+        sections: [],
+        currentSection: 0
     },
-    patch18Loaded: false, // Track if Patch 18 content is loaded
-    contentLoading: false, // Track if content loading async operation is in progress
-    contentReady: false // Track if content is available (loaded or using procedural fallbacks)
+    settings: {
+        volume: 0.5,
+        bootAnimation: 'classic'
+    },
+    lastScreenBeforeBoot: null
 };
-
-// ============================================================================
-// Subjects and Topics Configuration
-// ============================================================================
-const subjects = [
-    {
-        id: 'math_knowledge',
-        name: 'Math',
-        description: 'AFOQT quantitative reasoning'
-    },
-    {
-        id: 'arithmetic_reasoning',
-        name: 'Arithmetic Reasoning',
-        description: 'AFOQT arithmetic reasoning word problems',
-        isAfoqtOfficialSubject: true
-    },
-    {
-        id: 'vocabulary',
-        name: 'Vocabulary',
-        description: 'Word knowledge and analogies',
-        isAfoqtOfficialSubject: true,
-        mappedGameSubtopics: ['synonyms', 'antonyms', 'verbal_analogies', 'vocabulary_in_context', 'confusing_word_pairs', 'highfreq_vocab', 'sentence_completion', 'word_roots_affixes']
-    },
-    {
-        id: 'reading_comprehension',
-        name: 'Reading Comprehension',
-        description: 'AFOQT reading passages and comprehension',
-        isAfoqtOfficialSubject: true
-    },
-    {
-        id: 'physical_science',
-        name: 'Physical Science',
-        description: 'Physics, chemistry, earth & space science'
-    },
-    {
-        id: 'situational',
-        name: 'Situational Judgement',
-        description: 'Decision-making and leadership'
-    },
-    {
-        id: 'aviation',
-        name: 'Aviation Knowledge',
-        description: 'Aircraft and flight principles'
-    },
-    {
-        id: 'instrument_comprehension',
-        name: 'Instrument Comprehension',
-        description: 'AFOQT aircraft attitude and heading from instruments',
-        isAfoqtOfficialSubject: true
-    },
-    {
-        id: 'table_reading',
-        name: 'Table Reading',
-        description: 'AFOQT data extraction and speed reading from tables',
-        isAfoqtOfficialSubject: true
-    },
-    {
-        id: 'block_counting',
-        name: 'Block Counting',
-        description: 'AFOQT spatial block counting',
-        isAfoqtOfficialSubject: true
-    }
-];
-
-// ============================================================================
-// Topics with Question Generators - MATH
-// ============================================================================
-const mathTopics = [
-    {
-        id: 'evaluate_expressions',
-        name: 'Evaluate Expressions (Substitution)',
-        description: 'Substitute values and evaluate',
-        generateQuestion: () => {
-            const x = Math.floor(Math.random() * 10) + 1;
-            const y = Math.floor(Math.random() * 10) + 1;
-            const z = Math.floor(Math.random() * 5) + 1;
-            const expr = `2x + 3y - z`;
-            const correct = 2 * x + 3 * y - z;
-            const options = [
-                correct,
-                correct + Math.floor(Math.random() * 3) + 1,
-                correct - Math.floor(Math.random() * 3) - 1,
-                correct + Math.floor(Math.random() * 5) + 3
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Evaluate ${expr} when x = ${x}, y = ${y}, z = ${z}`,
-                options: shuffled.map(String),
-                correctIndex: shuffled.indexOf(correct),
-                explanation: `Substitute values: 2(${x}) + 3(${y}) - ${z} = ${2*x} + ${3*y} - ${z} = ${correct}`
-            };
-        }
-    },
-    {
-        id: 'distributive_foil',
-        name: 'Distributive & FOIL',
-        description: 'Expand expressions',
-        generateQuestion: () => {
-            const a = Math.floor(Math.random() * 5) + 2;
-            const b = Math.floor(Math.random() * 5) + 1;
-            const c = Math.floor(Math.random() * 5) + 1;
-            const correct = a * b + a * c;
-            const options = [
-                correct,
-                a * b + c,
-                a * (b * c),
-                correct + a
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Expand ${a}(${b} + ${c})`,
-                options: shuffled.map(String),
-                correctIndex: shuffled.indexOf(correct),
-                explanation: `Using distributive property: ${a}(${b} + ${c}) = ${a}×${b} + ${a}×${c} = ${a*b} + ${a*c} = ${correct}`
-            };
-        }
-    },
-    {
-        id: 'linear_equations',
-        name: 'Linear Equations (Solve for x)',
-        description: 'Solve basic equations',
-        generateQuestion: () => {
-            const solution = Math.floor(Math.random() * 15) + 1;
-            const a = Math.floor(Math.random() * 5) + 2;
-            const b = a * solution;
-            const options = [
-                solution,
-                solution + 1,
-                solution - 1,
-                solution + 2
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Solve for x: ${a}x = ${b}`,
-                options: shuffled.map(String),
-                correctIndex: shuffled.indexOf(solution),
-                explanation: `Divide both sides by ${a}: x = ${b}/${a} = ${solution}`
-            };
-        }
-    },
-    {
-        id: 'inequalities',
-        name: 'Inequalities (Solve inequalities)',
-        description: 'Solve inequality expressions',
-        generateQuestion: () => {
-            const solution = Math.floor(Math.random() * 10) + 1;
-            const a = Math.floor(Math.random() * 3) + 2;
-            const b = a * solution;
-            const options = [
-                `x > ${solution}`,
-                `x < ${solution}`,
-                `x ≥ ${solution}`,
-                `x ≤ ${solution - 1}`
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Solve: ${a}x > ${b}`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(`x > ${solution}`),
-                explanation: `Divide both sides by ${a}: x > ${b}/${a} = ${solution}`
-            };
-        }
-    },
-    {
-        id: 'systems_linear',
-        name: 'Systems (Solve systems)',
-        description: 'Solve system of equations',
-        generateQuestion: () => {
-            const x = Math.floor(Math.random() * 5) + 1;
-            const y = Math.floor(Math.random() * 5) + 1;
-            const a1 = 2, b1 = 1, c1 = 2 * x + y;
-            const a2 = 1, b2 = 1, c2 = x + y;
-            const options = [
-                `x = ${x}, y = ${y}`,
-                `x = ${y}, y = ${x}`,
-                `x = ${x+1}, y = ${y}`,
-                `x = ${x}, y = ${y+1}`
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Solve: 2x + y = ${c1} and x + y = ${c2}`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(`x = ${x}, y = ${y}`),
-                explanation: `Subtract second from first: x = ${x}. Substitute: ${x} + y = ${c2}, so y = ${y}`
-            };
-        }
-    },
-    {
-        id: 'factoring',
-        name: 'Factoring (Factor quadratics)',
-        description: 'Factor quadratic expressions',
-        generateQuestion: () => {
-            const p = Math.floor(Math.random() * 4) + 2;
-            const q = Math.floor(Math.random() * 4) + 1;
-            const b = p + q;
-            const c = p * q;
-            const options = [
-                `(x + ${p})(x + ${q})`,
-                `(x + ${b})(x + ${c})`,
-                `(x + ${p-1})(x + ${q+1})`,
-                `(x - ${p})(x - ${q})`
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Factor: x² + ${b}x + ${c}`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(`(x + ${p})(x + ${q})`),
-                explanation: `Find two numbers that multiply to ${c} and add to ${b}: ${p} and ${q}. Answer: (x + ${p})(x + ${q})`
-            };
-        }
-    },
-    {
-        id: 'quadratic_equations',
-        name: 'Quadratic Equations (Solve quadratics)',
-        description: 'Solve quadratic equations',
-        generateQuestion: () => {
-            const r1 = Math.floor(Math.random() * 5) + 1;
-            const r2 = -(Math.floor(Math.random() * 5) + 1);
-            const b = -(r1 + r2);
-            const c = r1 * r2;
-            const options = [
-                `x = ${r1} or x = ${r2}`,
-                `x = ${r2} only`,
-                `x = ${r1} only`,
-                `x = ${-r1} or x = ${-r2}`
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Solve: x² ${b >= 0 ? '+' : ''}${b}x ${c >= 0 ? '+' : ''}${c} = 0`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(`x = ${r1} or x = ${r2}`),
-                explanation: `Factor: (x - ${r1})(x - ${r2}) = 0. Solutions: x = ${r1} or x = ${r2}`
-            };
-        }
-    },
-    {
-        id: 'exponents_roots',
-        name: 'Exponents (Laws of exponents)',
-        description: 'Apply exponent rules',
-        generateQuestion: () => {
-            const base = Math.floor(Math.random() * 3) + 2;
-            const exp1 = Math.floor(Math.random() * 3) + 2;
-            const exp2 = Math.floor(Math.random() * 3) + 1;
-            const correct = exp1 + exp2;
-            const options = [
-                `${base}^${correct}`,
-                `${base}^${exp1 * exp2}`,
-                `${base}^${exp1 - exp2}`,
-                `${base * 2}^${exp1}`
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Simplify: ${base}^${exp1} × ${base}^${exp2}`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(`${base}^${correct}`),
-                explanation: `When multiplying same bases, add exponents: ${base}^${exp1} × ${base}^${exp2} = ${base}^${exp1}+${exp2} = ${base}^${correct}`
-            };
-        }
-    },
-    {
-        id: 'radicals',
-        name: 'Radicals (Simplify radicals)',
-        description: 'Simplify square roots',
-        generateQuestion: () => {
-            const perfect = [4, 9, 16, 25, 36, 49];
-            const p = perfect[Math.floor(Math.random() * perfect.length)];
-            const mult = Math.floor(Math.random() * 3) + 2;
-            const under = p * mult;
-            const correct = `${Math.sqrt(p)}√${mult}`;
-            const options = [
-                correct,
-                `√${under}`,
-                `${Math.sqrt(p) + 1}√${mult}`,
-                `${Math.sqrt(p)}√${mult + 1}`
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Simplify: √${under}`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(correct),
-                explanation: `√${under} = √${p}×${mult} = √${p} × √${mult} = ${Math.sqrt(p)}√${mult}`
-            };
-        }
-    },
-    {
-        id: 'scientific-notation',
-        name: 'Scientific Notation (Sci ↔ Standard)',
-        description: 'Convert between notations',
-        generateQuestion: () => {
-            const coef = (Math.random() * 9 + 1).toFixed(1);
-            const exp = Math.floor(Math.random() * 5) + 3;
-            const standard = parseFloat(coef) * Math.pow(10, exp);
-            const options = [
-                standard.toString(),
-                (standard * 10).toString(),
-                (standard / 10).toString(),
-                (standard + 1000).toString()
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Convert to standard form: ${coef} × 10^${exp}`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(standard.toString()),
-                explanation: `Move decimal ${exp} places right: ${coef} × 10^${exp} = ${standard}`
-            };
-        }
-    },
-    {
-        id: 'absolute_value',
-        name: 'Absolute Value (Solve |x − a| = b)',
-        description: 'Solve absolute value equations',
-        generateQuestion: () => {
-            const a = Math.floor(Math.random() * 10) + 1;
-            const b = Math.floor(Math.random() * 5) + 2;
-            const sol1 = a + b;
-            const sol2 = a - b;
-            const options = [
-                `x = ${sol1} or x = ${sol2}`,
-                `x = ${sol1} only`,
-                `x = ${-sol1} or x = ${-sol2}`,
-                `x = ${a} or x = ${b}`
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Solve: |x - ${a}| = ${b}`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(`x = ${sol1} or x = ${sol2}`),
-                explanation: `|x - ${a}| = ${b} means x - ${a} = ${b} or x - ${a} = -${b}. Solutions: x = ${sol1} or x = ${sol2}`
-            };
-        }
-    },
-    {
-        id: 'rational_expressions',
-        name: 'Rational Expressions (Simplify fractions)',
-        description: 'Simplify algebraic fractions',
-        generateQuestion: () => {
-            const n = Math.floor(Math.random() * 5) + 2;
-            const factor = Math.floor(Math.random() * 3) + 2;
-            const num = n * factor;
-            const den = factor;
-            const options = [
-                `${n}`,
-                `${num}/${den}`,
-                `${n + 1}`,
-                `${num}/${den + 1}`
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Simplify: ${num}x/${den}x`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(`${n}`),
-                explanation: `Cancel common factor x: ${num}x/${den}x = ${num}/${den} = ${n}`
-            };
-        }
-    },
-    {
-        id: 'functions',
-        name: 'Functions (Evaluate f(x))',
-        description: 'Evaluate function values',
-        generateQuestion: () => {
-            const a = Math.floor(Math.random() * 5) + 2;
-            const b = Math.floor(Math.random() * 10) + 1;
-            const x = Math.floor(Math.random() * 5) + 1;
-            const correct = a * x + b;
-            const options = [
-                correct,
-                a * x - b,
-                correct + 1,
-                correct - 1
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `If f(x) = ${a}x + ${b}, find f(${x})`,
-                options: shuffled.map(String),
-                correctIndex: shuffled.indexOf(correct),
-                explanation: `Substitute x = ${x}: f(${x}) = ${a}(${x}) + ${b} = ${a*x} + ${b} = ${correct}`
-            };
-        }
-    },
-    {
-        id: 'angles',
-        name: 'Angles (Complementary/Supplementary)',
-        description: 'Find angle relationships',
-        generateQuestion: () => {
-            const angle = Math.floor(Math.random() * 60) + 20;
-            const complement = 90 - angle;
-            const options = [
-                `${complement}°`,
-                `${180 - angle}°`,
-                `${90 + angle}°`,
-                `${complement + 5}°`
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Find the complement of ${angle}°`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(`${complement}°`),
-                explanation: `Complementary angles sum to 90°: 90° - ${angle}° = ${complement}°`
-            };
-        }
-    },
-    {
-        id: 'triangles',
-        name: 'Triangles (Angle sum)',
-        description: 'Find missing angles in triangles',
-        generateQuestion: () => {
-            const a1 = Math.floor(Math.random() * 60) + 30;
-            const a2 = Math.floor(Math.random() * 60) + 30;
-            const a3 = 180 - a1 - a2;
-            const options = [
-                `${a3}°`,
-                `${a3 + 5}°`,
-                `${a3 - 5}°`,
-                `${180 - a1}°`
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `In a triangle with angles ${a1}° and ${a2}°, find the third angle`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(`${a3}°`),
-                explanation: `Triangle angles sum to 180°: 180° - ${a1}° - ${a2}° = ${a3}°`
-            };
-        }
-    },
-    {
-        id: 'quadrilaterals',
-        name: 'Quadrilaterals (Angle sum)',
-        description: 'Find angles in quadrilaterals',
-        generateQuestion: () => {
-            const a1 = 90;
-            const a2 = 90;
-            const a3 = Math.floor(Math.random() * 60) + 60;
-            const a4 = 360 - a1 - a2 - a3;
-            const options = [
-                `${a4}°`,
-                `${a4 + 10}°`,
-                `${a4 - 10}°`,
-                `${180 - a3}°`
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `In a quadrilateral with angles 90°, 90°, and ${a3}°, find the fourth angle`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(`${a4}°`),
-                explanation: `Quadrilateral angles sum to 360°: 360° - 90° - 90° - ${a3}° = ${a4}°`
-            };
-        }
-    },
-    {
-        id: 'circles',
-        name: 'Circles (Area & circumference)',
-        description: 'Calculate circle measurements',
-        generateQuestion: () => {
-            const r = Math.floor(Math.random() * 8) + 2;
-            const area = Math.PI * r * r;
-            const correct = area.toFixed(1);
-            const options = [
-                correct,
-                (2 * Math.PI * r).toFixed(1),
-                (Math.PI * r).toFixed(1),
-                (area + 5).toFixed(1)
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Find the area of a circle with radius ${r} (use π ≈ 3.14)`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(correct),
-                explanation: `Area = πr² = π(${r})² = ${r*r}π ≈ ${correct}`
-            };
-        }
-    },
-    {
-        id: 'area-volume',
-        name: 'Area/Volume (2D + 3D)',
-        description: 'Calculate areas and volumes',
-        generateQuestion: () => {
-            const l = Math.floor(Math.random() * 8) + 3;
-            const w = Math.floor(Math.random() * 6) + 2;
-            const h = Math.floor(Math.random() * 5) + 2;
-            const volume = l * w * h;
-            const options = [
-                volume,
-                l * w,
-                volume + 10,
-                volume - 10
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Find the volume of a rectangular prism with length ${l}, width ${w}, height ${h}`,
-                options: shuffled.map(String),
-                correctIndex: shuffled.indexOf(volume),
-                explanation: `Volume = length × width × height = ${l} × ${w} × ${h} = ${volume}`
-            };
-        }
-    },
-    {
-        id: 'pythagorean',
-        name: 'Pythagorean (Right triangles)',
-        description: 'Use Pythagorean theorem',
-        generateQuestion: () => {
-            const triples = [[3,4,5], [5,12,13], [8,15,17], [7,24,25]];
-            const triple = triples[Math.floor(Math.random() * triples.length)];
-            const [a, b, c] = triple;
-            const options = [
-                c,
-                c + 1,
-                c - 1,
-                a + b
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `In a right triangle with legs ${a} and ${b}, find the hypotenuse`,
-                options: shuffled.map(String),
-                correctIndex: shuffled.indexOf(c),
-                explanation: `Using a² + b² = c²: ${a}² + ${b}² = ${a*a} + ${b*b} = ${a*a + b*b} = ${c}² → c = ${c}`
-            };
-        }
-    },
-    {
-        id: 'coordinate_geometry',
-        name: 'Coordinate Geometry (Distance, midpoint, slope)',
-        description: 'Work with coordinate plane',
-        generateQuestion: () => {
-            const x1 = Math.floor(Math.random() * 5) + 1;
-            const y1 = Math.floor(Math.random() * 5) + 1;
-            const x2 = x1 + Math.floor(Math.random() * 5) + 2;
-            const y2 = y1 + Math.floor(Math.random() * 5) + 2;
-            const slope = (y2 - y1) / (x2 - x1);
-            const correct = slope.toFixed(1);
-            const options = [
-                correct,
-                ((y2 - y1) / (x2 - x1) + 0.5).toFixed(1),
-                ((x2 - x1) / (y2 - y1)).toFixed(1),
-                ((y2 - y1) / (x2 - x1) - 0.5).toFixed(1)
-            ];
-            const shuffled = shuffleArray([...new Set(options)]);
-            return {
-                prompt: `Find the slope between points (${x1}, ${y1}) and (${x2}, ${y2})`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(correct),
-                explanation: `Slope = (y₂ - y₁)/(x₂ - x₁) = (${y2} - ${y1})/(${x2} - ${x1}) = ${y2-y1}/${x2-x1} = ${correct}`
-            };
-        }
-    },
-    {
-        id: 'parallel-perp',
-        name: 'Parallel & Perp (Slopes)',
-        description: 'Find parallel/perpendicular slopes',
-        generateQuestion: () => {
-            const m = Math.floor(Math.random() * 5) + 1;
-            const perpSlope = -1 / m;
-            const correct = perpSlope.toFixed(2);
-            const options = [
-                correct,
-                m.toFixed(2),
-                (-m).toFixed(2),
-                (1/m).toFixed(2)
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Find the slope perpendicular to ${m}`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(correct),
-                explanation: `Perpendicular slope is negative reciprocal: -1/${m} = ${correct}`
-            };
-        }
-    },
-    {
-        id: 'triangle-similarity',
-        name: 'Triangle Similarity (Proportional)',
-        description: 'Use similar triangles',
-        generateQuestion: () => {
-            const a = Math.floor(Math.random() * 5) + 3;
-            const b = Math.floor(Math.random() * 5) + 3;
-            const scale = Math.floor(Math.random() * 3) + 2;
-            const c = a * scale;
-            const d = b * scale;
-            const options = [
-                d,
-                d + 1,
-                d - 1,
-                b + scale
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Two similar triangles have sides ${a} and ${b}. If the first side becomes ${c}, what is the second side?`,
-                options: shuffled.map(String),
-                correctIndex: shuffled.indexOf(d),
-                explanation: `Scale factor = ${c}/${a} = ${scale}. Second side = ${b} × ${scale} = ${d}`
-            };
-        }
-    },
-    {
-        id: 'number-properties',
-        name: 'Number Properties (Associative/commutative/distributive)',
-        description: 'Identify number properties',
-        generateQuestion: () => {
-            const props = [
-                { name: 'Commutative', example: 'a + b = b + a' },
-                { name: 'Associative', example: '(a + b) + c = a + (b + c)' },
-                { name: 'Distributive', example: 'a(b + c) = ab + ac' },
-                { name: 'Identity', example: 'a + 0 = a' }
-            ];
-            const prop = props[Math.floor(Math.random() * props.length)];
-            const otherProps = props.filter(p => p.name !== prop.name).map(p => p.name);
-            const options = [prop.name, ...otherProps.slice(0, 3)];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Which property is shown: ${prop.example}?`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(prop.name),
-                explanation: `This is the ${prop.name} property`
-            };
-        }
-    },
-    {
-        id: 'number-classification',
-        name: 'Number Classification (Rational/irrational/integers/etc.)',
-        description: 'Classify number types',
-        generateQuestion: () => {
-            const examples = [
-                { num: '√2', type: 'Irrational' },
-                { num: '3/4', type: 'Rational' },
-                { num: '-5', type: 'Integer' },
-                { num: 'π', type: 'Irrational' }
-            ];
-            const ex = examples[Math.floor(Math.random() * examples.length)];
-            const options = ['Rational', 'Irrational', 'Integer', 'Whole'];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `Classify ${ex.num}`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(ex.type),
-                explanation: `${ex.num} is ${ex.type}`
-            };
-        }
-    },
-    {
-        id: 'trigonometry',
-        name: 'Trigonometry (SOH-CAH-TOA)',
-        description: 'Basic trigonometric ratios',
-        generateQuestion: () => {
-            const opp = Math.floor(Math.random() * 8) + 3;
-            const adj = Math.floor(Math.random() * 8) + 3;
-            const hyp = Math.sqrt(opp * opp + adj * adj).toFixed(1);
-            const sinValue = (opp / parseFloat(hyp)).toFixed(2);
-            const cosValue = (adj / parseFloat(hyp)).toFixed(2);
-            const options = [
-                sinValue,
-                cosValue,
-                (opp / adj).toFixed(2),
-                (adj / opp).toFixed(2)
-            ];
-            const shuffled = shuffleArray([...new Set(options)]);
-            return {
-                prompt: `In a right triangle with opposite = ${opp} and hypotenuse = ${hyp}, find sin(θ)`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(sinValue),
-                explanation: `sin(θ) = opposite/hypotenuse = ${opp}/${hyp} = ${sinValue}`
-            };
-        }
-    },
-    {
-        id: 'sequences',
-        name: 'Sequences (Arithmetic/geometric)',
-        description: 'Find sequence terms',
-        generateQuestion: () => {
-            const first = Math.floor(Math.random() * 10) + 2;
-            const diff = Math.floor(Math.random() * 5) + 2;
-            const n = Math.floor(Math.random() * 5) + 4;
-            const term = first + (n - 1) * diff;
-            const options = [
-                term,
-                term + diff,
-                term - diff,
-                first + n * diff
-            ];
-            const shuffled = shuffleArray(options);
-            return {
-                prompt: `In the arithmetic sequence ${first}, ${first+diff}, ${first+2*diff}, ..., find the ${n}th term`,
-                options: shuffled.map(String),
-                correctIndex: shuffled.indexOf(term),
-                explanation: `nth term = first + (n-1)×d = ${first} + ${n-1}×${diff} = ${first} + ${(n-1)*diff} = ${term}`
-            };
-        }
-    },
-    {
-        id: 'statistics',
-        name: 'Statistics (Mean/median/range)',
-        description: 'Calculate basic statistics',
-        generateQuestion: () => {
-            const data = Array.from({length: 5}, () => Math.floor(Math.random() * 20) + 10).sort((a,b) => a-b);
-            const mean = (data.reduce((a,b) => a+b, 0) / data.length).toFixed(1);
-            const median = data[2];
-            const options = [
-                mean,
-                median.toFixed(1),
-                data[0].toFixed(1),
-                data[4].toFixed(1)
-            ];
-            const shuffled = shuffleArray([...new Set(options)]);
-            return {
-                prompt: `Find the mean of: ${data.join(', ')}`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(mean),
-                explanation: `Mean = sum/count = ${data.reduce((a,b) => a+b, 0)}/5 = ${mean}`
-            };
-        }
-    }
-];
 
 // ============================================================================
 // Topics with Question Generators - VOCABULARY
 // ============================================================================
-const vocabularyTopics = [
-    {
-        id: 'synonyms',
-        name: 'Synonyms',
-        description: 'Words with similar meanings',
-        subjectId: 'vocabulary',
-        isOfficialAfoqtTopic: true,
-        generateQuestion: (difficulty = 'beginner') => {
-            // Fallback generator - will be replaced by content-based questions from Patch 18
-            const words = [
-                { word: 'BENEVOLENT', correct: 'Kind', options: ['Angry', 'Confused', 'Wealthy'], definition: 'well-meaning and kindly' },
-                { word: 'METICULOUS', correct: 'Careful', options: ['Messy', 'Quick', 'Lazy'], definition: 'showing great attention to detail' }
-            ];
-            const item = words[Math.floor(Math.random() * words.length)];
-            const allOptions = [item.correct, ...item.options];
-            const shuffled = shuffleArray(allOptions);
-            return {
-                prompt: `${item.word} most nearly means:`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(item.correct),
-                explanation: `${item.word} means ${item.definition}.`
-            };
-        }
-    },
-    {
-        id: 'antonyms',
-        name: 'Antonyms',
-        description: 'Words with opposite meanings',
-        subjectId: 'vocabulary',
-        isOfficialAfoqtTopic: true,
-        generateQuestion: (difficulty = 'beginner') => {
-            const words = [
-                { word: 'HOT', correct: 'Cold', options: ['Warm', 'Spicy', 'Bright'] },
-                { word: 'HAPPY', correct: 'Sad', options: ['Joyful', 'Excited', 'Content'] }
-            ];
-            const item = words[Math.floor(Math.random() * words.length)];
-            const allOptions = [item.correct, ...item.options];
-            const shuffled = shuffleArray(allOptions);
-            return {
-                prompt: `Select the word that means the OPPOSITE of ${item.word}:`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(item.correct),
-                explanation: `The opposite of ${item.word} is ${item.correct}.`
-            };
-        }
-    },
-    {
-        id: 'verbal_analogies',
-        name: 'Verbal Analogies',
-        description: 'Word relationship patterns',
-        subjectId: 'vocabulary',
-        isOfficialAfoqtTopic: true,
-        generateQuestion: (difficulty = 'beginner') => {
-            const analogies = [
-                { pair1: ['CAT', 'KITTEN'], pair2: ['DOG', 'PUPPY'], options: ['PUPPY', 'BONE', 'BARK', 'LEASH'], correct: 0, relation: 'adult to young' },
-                { pair1: ['HOT', 'COLD'], pair2: ['UP', 'DOWN'], options: ['DOWN', 'CLIMB', 'TALL', 'FALL'], correct: 0, relation: 'opposites' }
-            ];
-            const analogy = analogies[Math.floor(Math.random() * analogies.length)];
-            const shuffled = shuffleArray(analogy.options);
-            return {
-                prompt: `${analogy.pair1[0]} is to ${analogy.pair1[1]} as ${analogy.pair2[0]} is to _____`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(analogy.options[analogy.correct]),
-                explanation: `This is a ${analogy.relation} relationship.`
-            };
-        }
-    },
-    {
-        id: 'vocabulary_in_context',
-        name: 'Vocabulary in Context',
-        description: 'Word meanings from context',
-        subjectId: 'vocabulary',
-        isOfficialAfoqtTopic: true,
-        generateQuestion: (difficulty = 'beginner') => {
-            const examples = [
-                { sentence: 'The lawyer\'s argument was very COGENT and convinced the jury.', word: 'COGENT', correct: 'Convincing', options: ['Confusing', 'Weak', 'Lengthy'] }
-            ];
-            const item = examples[0];
-            const allOptions = [item.correct, ...item.options];
-            const shuffled = shuffleArray(allOptions);
-            return {
-                prompt: `${item.sentence}\n\nWhat does ${item.word} mean in this context?`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(item.correct),
-                explanation: `In context, ${item.word} means ${item.correct}.`
-            };
-        }
-    },
-    {
-        id: 'confusing_word_pairs',
-        name: 'Confusing Word Pairs',
-        description: 'Commonly confused words',
-        subjectId: 'vocabulary',
-        isOfficialAfoqtTopic: true,
-        generateQuestion: (difficulty = 'beginner') => {
-            const pairs = [
-                { sentence: 'The weather ___ nice today.', correct: 'is', wrong: 'its', explanation: '"is" is a verb, "its" is possessive' }
-            ];
-            const item = pairs[0];
-            const shuffled = shuffleArray([item.correct, item.wrong, 'was', 'are']);
-            return {
-                prompt: `Choose the correct word: ${item.sentence}`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(item.correct),
-                explanation: item.explanation
-            };
-        }
-    },
-    {
-        id: 'highfreq_vocab',
-        name: 'High Frequency Vocabulary',
-        description: 'Common AFOQT vocabulary words',
-        subjectId: 'vocabulary',
-        isOfficialAfoqtTopic: true,
-        generateQuestion: (difficulty = 'beginner') => {
-            const words = [
-                { word: 'ELOQUENT', correct: 'Articulate', options: ['Silent', 'Confused', 'Angry'], definition: 'fluent in speech' }
-            ];
-            const item = words[0];
-            const allOptions = [item.correct, ...item.options];
-            const shuffled = shuffleArray(allOptions);
-            return {
-                prompt: `${item.word} most nearly means:`,
-                options: shuffled,
-                correctIndex: shuffled.indexOf(item.correct),
-                explanation: `${item.word} means ${item.definition}.`
-            };
-        }
-    },
+const verbalTopics = [
     {
         id: 'sentence_completion',
         name: 'Sentence Completion',
@@ -5050,900 +3682,6 @@ function previewBootAnimation(animationName) {
     });
 }
 
-// ============================================================================
-// Boot Initialization Sequence - Cyberpunk HUD Style with Anime.js
-// Fusion of Boot Inspiration 2 (Arasaka/Red HUD) + Boot Inspiration 3 (3D Rotating Logo)
-// ============================================================================
-
-function showBootSequence() {
-    console.log('[showBootSequence] Function called - Globe boot animation');
-    return new Promise((resolve) => {
-        // Reuse the globe-based boot implemented in fr0st prototype, adjusted to Tron theme
-        let globe, animationId, loopRunning = false;
-        const FADE_DURATION_MS = 800;
-        const PROGRESS_DURATION_MS = 8000;
-
-        const boot = document.createElement('div');
-        boot.id = 'boot-screen';
-        boot.style.cssText = 'position:fixed;inset:0;background:linear-gradient(135deg,#000,#001a1a 50%,#002a2a);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:10000;opacity:1;';
-
-        const wrap = document.createElement('div');
-        wrap.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:32px;';
-
-        const logo = document.createElement('h1');
-        logo.textContent = 'AFOQT QUEST';
-        logo.style.cssText = "font-family:'Courier New',monospace;font-size:clamp(32px,5vw,56px);font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#00ffff;text-shadow:0 0 40px rgba(0,255,255,.8),0 0 80px rgba(0,255,255,.4);margin:0;opacity:0;";
-
-        const sub = document.createElement('div');
-        sub.textContent = '// OFFICER TRAINING SIMULATION';
-        sub.style.cssText = "font-family:'Courier New',monospace;font-size:clamp(11px,1.2vw,14px);letter-spacing:.2em;color:rgba(0,255,255,.7);text-transform:uppercase;margin-top:-24px;opacity:0;";
-
-        const globeWrap = document.createElement('div');
-        globeWrap.style.cssText = 'position:relative;width:min(480px,75vw);aspect-ratio:1/1;opacity:0;';
-        const host = document.createElement('div');
-        host.style.cssText = 'width:100%;height:100%;';
-        globeWrap.appendChild(host);
-
-        const prog = document.createElement('div');
-        prog.style.cssText = 'width:min(480px,75vw);opacity:0;';
-        const label = document.createElement('div');
-        label.textContent = 'System Initialization';
-        label.style.cssText = "font-family:'Courier New',monospace;font-size:12px;letter-spacing:.15em;color:#00ffff;margin-bottom:8px;text-align:center;text-transform:uppercase;";
-        const track = document.createElement('div');
-        track.style.cssText = 'width:100%;height:8px;background:rgba(0,255,255,.1);border:1px solid rgba(0,255,255,.3);border-radius:999px;overflow:hidden;position:relative;';
-        const fill = document.createElement('div');
-        fill.style.cssText = 'height:100%;width:0%;background:linear-gradient(90deg,#00ff88,#00d4ff);box-shadow:0 0 16px rgba(0,255,136,.6);transition:width 100ms linear;';
-        const pct = document.createElement('div');
-        pct.textContent = '0%';
-        pct.style.cssText = "font-family:'Courier New',monospace;font-size:14px;color:#00ffff;margin-top:8px;text-align:center;letter-spacing:.1em;";
-        track.appendChild(fill); prog.appendChild(label); prog.appendChild(track); prog.appendChild(pct);
-
-        wrap.appendChild(logo); wrap.appendChild(sub); wrap.appendChild(globeWrap); wrap.appendChild(prog);
-        boot.appendChild(wrap); document.body.appendChild(boot);
-
-        const complete = document.createElement('div');
-        complete.style.cssText = 'position:fixed;inset:0;background:linear-gradient(135deg,#000,#001a1a 50%,#002a2a);display:none;align-items:center;justify-content:center;flex-direction:column;gap:16px;z-index:10001;opacity:0;';
-        const cTitle = document.createElement('div');
-        cTitle.textContent = 'BOOT UP COMPLETE';
-        cTitle.style.cssText = "font-family:'Courier New',monospace;font-size:clamp(24px,4vw,36px);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#00ff00;text-shadow:0 0 20px rgba(0,255,0,.8);";
-        const cSub = document.createElement('div');
-        cSub.textContent = 'WELCOME TO AFOQT QUEST';
-        cSub.style.cssText = "font-family:'Courier New',monospace;font-size:clamp(14px,2vw,18px);letter-spacing:.15em;color:#00ffff;text-shadow:0 0 12px rgba(0,255,255,.6);";
-        complete.appendChild(cTitle); complete.appendChild(cSub); document.body.appendChild(complete);
-
-        const resize = () => {
-            if (!globe || !globe.renderer) return;
-            const w = host.clientWidth, h = host.clientHeight;
-            globe.camera.aspect = w / h; globe.camera.updateProjectionMatrix(); globe.renderer.setSize(w, h);
-        };
-        const stopLoop = () => { if (animationId) cancelAnimationFrame(animationId); animationId = null; loopRunning = false; };
-        const startLoop = () => { if (loopRunning) return; loopRunning = true; const step = () => { animationId = requestAnimationFrame(step); if (globe) globe.tick(); }; step(); };
-
-        const buildGlobe = () => {
-            if (!window.ENCOM || !window.ENCOM.Globe) return;
-            if (globe && globe.destroy) globe.destroy();
-            const w = host.clientWidth || 400, h = host.clientHeight || 400;
-            globe = new ENCOM.Globe(w, h, {
-                font: 'Inconsolata',
-                data: window.data ? window.data.slice() : [],
-                tiles: window.grid ? window.grid.tiles : [],
-                baseColor: '#00ffff', markerColor: '#00ff00', pinColor: '#ffff00', satelliteColor: '#ff00ff',
-                scale: 1.05, dayLength: 12000, introLinesDuration: 2000, maxPins: 10, maxMarkers: 15, viewAngle: 0.3
-            });
-            host.innerHTML = ''; host.appendChild(globe.domElement);
-            if (globe.renderer) { globe.renderer.setClearColor(0x000000, 0); const canvas = globe.renderer.domElement; canvas.style.background = 'none'; canvas.style.backgroundColor = 'transparent'; }
-            globe.init(() => { startLoop(); addGlobeFeatures(); }); resize();
-        };
-
-        const addGlobeFeatures = () => {
-            if (!globe) return;
-            setTimeout(() => { globe.addMarker(40.7128, -74.0060, 'New York'); globe.addMarker(51.5074, -0.1278, 'London', true); }, 2200);
-            setTimeout(() => { globe.addMarker(35.6762, 139.6503, 'Tokyo'); globe.addMarker(-33.8688, 151.2093, 'Sydney', true); }, 2800);
-            setTimeout(() => {
-                const constellation = []; const opts = { coreColor: '#ff00ff', numWaves: 3 };
-                for (let i = 0; i < 2; i++) for (let j = 0; j < 3; j++) constellation.push({ lat: 50*i-30+15*Math.random(), lon: 120*j-120+30*i, altitude: 1.3 });
-                globe.addConstellation(constellation, opts);
-            }, 3500);
-            const pinInterval = setInterval(() => {
-                if (!globe) return clearInterval(pinInterval);
-                const lat = Math.random()*180-90, lon = Math.random()*360-180; const names = ['Alpha Site','Beta Node','Gamma Link','Delta Hub','Echo Point'];
-                globe.addPin(lat, lon, names[Math.floor(Math.random()*names.length)]);
-            }, 4000);
-            setTimeout(() => clearInterval(pinInterval), 30000);
-        };
-
-        const animateProgress = () => {
-            if (!window.gsap) {
-                let p = 0; const it = setInterval(()=>{ p+=1; fill.style.width = p+'%'; pct.textContent = p+'%'; if (p>=100){ clearInterval(it); showBootComplete(); } }, PROGRESS_DURATION_MS/100);
-                return;
-            }
-            gsap.to(fill, { width: '100%', duration: PROGRESS_DURATION_MS/1000, ease: 'linear', onUpdate: function(){ pct.textContent = Math.floor(this.progress()*100)+'%'; }, onComplete: showBootComplete });
-        };
-
-        const showBootComplete = () => {
-            if (!window.gsap) {
-                boot.style.transition = 'opacity .8s'; boot.style.opacity = '0';
-                setTimeout(()=>{ boot.remove(); complete.style.display='flex'; complete.style.transition='opacity .5s'; complete.style.opacity='1'; setTimeout(()=>{ complete.style.opacity='0'; setTimeout(()=>{ complete.remove(); stopLoop(); resolve(); },800); },3000); },800);
-                return;
-            }
-            gsap.to(boot, { opacity:0, duration:.8, ease:'power2.inOut', onComplete: ()=>{
-                boot.remove(); complete.style.display='flex'; complete.style.opacity='0';
-                gsap.to(complete, { opacity:1, duration:.5, ease:'power2.out' });
-                gsap.fromTo(cTitle, { opacity:0, y:-20 }, { opacity:1, y:0, duration:.6, delay:.2, ease:'power3.out' });
-                gsap.fromTo(cSub, { opacity:0, y:10 }, { opacity:.8, y:0, duration:.6, delay:.4, ease:'power3.out' });
-                setTimeout(()=>{ gsap.to(complete, { opacity:0, duration:.8, ease:'power2.inOut', onComplete: ()=>{ complete.remove(); stopLoop(); resolve(); } }); }, 3000);
-            }});
-        };
-
-        const kickOff = () => {
-            buildGlobe(); resize();
-            if (!window.gsap) {
-                logo.style.transition='opacity .8s'; logo.style.opacity='1'; setTimeout(()=>{ sub.style.transition='opacity .6s'; sub.style.opacity='.7'; },200); setTimeout(()=>{ globeWrap.style.transition='opacity 1s'; globeWrap.style.opacity='1'; },400); setTimeout(()=>{ prog.style.transition='opacity .7s'; prog.style.opacity='1'; },900); setTimeout(animateProgress,1200); return;
-            }
-            const tl = gsap.timeline();
-            tl.fromTo(logo,{opacity:0,y:-30,scaleX:.8},{opacity:1,y:0,scaleX:1,duration:.8,ease:'power4.out'})
-              .fromTo(sub,{opacity:0,letterSpacing:'0.5em'},{opacity:.7,letterSpacing:'0.2em',duration:.6,ease:'power2.out'},'-=0.3')
-              .fromTo(globeWrap,{opacity:0,scale:.85},{opacity:1,scale:1,duration:1,ease:'power3.out'},'-=0.2')
-              .fromTo(prog,{opacity:0,y:20},{opacity:1,y:0,duration:.7,ease:'power2.out'},'-=0.5')
-              .call(()=> setTimeout(animateProgress,300));
-        };
-
-        const enableAudio = createAudioEnabler(()=> playSfx('boot'));
-        boot.addEventListener('click', enableAudio, { once:true });
-        document.addEventListener('keydown', enableAudio, { once:true });
-
-        if (window.ENCOM && window.ENCOM.Globe) { kickOff(); }
-        else { const poll=setInterval(()=>{ if (window.ENCOM && window.ENCOM.Globe) { clearInterval(poll); kickOff(); } },50); setTimeout(()=> clearInterval(poll),4000); }
-
-        window.addEventListener('resize', resize);
-        document.addEventListener('visibilitychange', ()=>{ if (document.hidden) stopLoop(); else startLoop(); });
-    });
-}
-        const bootHTML = `
-            <div id="boot-sequence">
-                <!-- CRT Scanline Overlay -->
-                <div class="boot-crt-overlay"></div>
-                
-                <!-- Glitch Overlay -->
-                <div class="boot-glitch-overlay"></div>
-                
-                <!-- Hexagonal Grid Background -->
-                <div class="boot-hex-grid"></div>
-                
-                <!-- Data Stream Particles -->
-                <div class="boot-data-stream boot-data-stream-left"></div>
-                <div class="boot-data-stream boot-data-stream-right"></div>
-                
-                <!-- Phase 1: HUD Frame & Three Circles Logo -->
-                <div class="boot-phase boot-phase-hud">
-                    <!-- Corner Brackets with enhanced styling -->
-                    <div class="hud-corner hud-corner-tl">
-                        <span class="corner-label">SYS.01</span>
-                    </div>
-                    <div class="hud-corner hud-corner-tr">
-                        <span class="corner-label">SYS.02</span>
-                    </div>
-                    <div class="hud-corner hud-corner-bl">
-                        <span class="corner-label">SYS.03</span>
-                    </div>
-                    <div class="hud-corner hud-corner-br">
-                        <span class="corner-label">SYS.04</span>
-                    </div>
-                    
-                    <!-- Side Bars with more segments -->
-                    <div class="hud-sidebar hud-sidebar-left">
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                    </div>
-                    <div class="hud-sidebar hud-sidebar-right">
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                        <div class="sidebar-segment"></div>
-                    </div>
-                    
-                    <!-- Top Status Bar with binary decoration -->
-                    <div class="hud-status-bar hud-status-top">
-                        <div class="binary-decoration">01010101</div>
-                        <div class="status-bar-line status-bar-left"></div>
-                        <span class="status-text">NEURAL LINK ESTABLISHED</span>
-                        <div class="status-bar-line status-bar-right"></div>
-                        <div class="binary-decoration">10101010</div>
-                    </div>
-                    
-                    <!-- Chevron Indicators with more arrows -->
-                    <div class="hud-chevrons hud-chevrons-left">
-                        <span class="chevron">‹</span>
-                        <span class="chevron">‹</span>
-                        <span class="chevron">‹</span>
-                        <span class="chevron">‹</span>
-                        <span class="chevron">‹</span>
-                        <span class="chevron">‹</span>
-                        <span class="chevron">‹</span>
-                        <span class="chevron">‹</span>
-                        <span class="chevron">‹</span>
-                    </div>
-                    <div class="hud-chevrons hud-chevrons-right">
-                        <span class="chevron">›</span>
-                        <span class="chevron">›</span>
-                        <span class="chevron">›</span>
-                        <span class="chevron">›</span>
-                        <span class="chevron">›</span>
-                        <span class="chevron">›</span>
-                        <span class="chevron">›</span>
-                        <span class="chevron">›</span>
-                        <span class="chevron">›</span>
-                    </div>
-                    
-                    <!-- Three Circles Logo with ring effects -->
-                    <div class="boot-logo-container">
-                        <div class="boot-circle-outer-ring"></div>
-                        <div class="boot-circle boot-circle-1"></div>
-                        <div class="boot-circle boot-circle-2"></div>
-                        <div class="boot-circle boot-circle-3"></div>
-                        <div class="boot-circle-stem"></div>
-                        <div class="boot-circle-ring"></div>
-                        <div class="boot-circle-pulse"></div>
-                    </div>
-                    
-                    <!-- Hash Decorations -->
-                    <div class="hud-hash-marks hud-hash-left">////////////////////</div>
-                    <div class="hud-hash-marks hud-hash-right">\\\\\\\\\\\\\\\\\\\\</div>
-                    
-                    <!-- Bottom Progress Indicator -->
-                    <div class="hud-bottom-bar">
-                        <div class="bottom-bar-segment"></div>
-                        <div class="bottom-bar-segment"></div>
-                        <div class="bottom-bar-segment"></div>
-                    </div>
-                </div>
-                
-                <!-- Phase 2: 3D Rotating Title -->
-                <div class="boot-phase boot-phase-3d-title">
-                    <!-- 3D Title Container -->
-                    <div class="title-3d-scene">
-                        <div class="title-3d-container">
-                            <!-- Chromatic aberration layers -->
-                            <div class="title-3d-layer title-3d-red">AFOQT Quest</div>
-                            <div class="title-3d-layer title-3d-cyan">AFOQT Quest</div>
-                            <div class="title-3d-layer title-3d-main">AFOQT Quest</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Decorative Frame -->
-                    <div class="title-frame">
-                        <div class="frame-line frame-top"></div>
-                        <div class="frame-line frame-bottom"></div>
-                        <div class="frame-bracket frame-bracket-left">›</div>
-                        <div class="frame-bracket frame-bracket-right">‹</div>
-                    </div>
-                    
-                    <!-- Status Box -->
-                    <div class="boot-status-box">
-                        <span class="status-bracket">[</span>
-                        <span class="status-box-text">TRAINING PROTOCOL ACTIVE</span>
-                        <span class="status-bracket">]</span>
-                    </div>
-                    
-                    <!-- Bottom Chevrons -->
-                    <div class="boot-bottom-indicator">
-                        <span class="indicator-chevron">‹</span>
-                        <span class="indicator-chevron">‹</span>
-                    </div>
-                </div>
-                
-                <!-- Phase 3: Final HUD -->
-                <div class="boot-phase boot-phase-final">
-                    <!-- Coordinate Display -->
-                    <div class="boot-coords">
-                        <div class="coord-line coord-y"><span class="coord-label">Y:</span> <span class="coord-value">0.00</span></div>
-                        <div class="coord-line coord-x"><span class="coord-label">X:</span> <span class="coord-value">0.00</span></div>
-                        <div class="coord-line coord-z"><span class="coord-label">Z:</span> <span class="coord-value">0.00</span></div>
-                    </div>
-                    
-                    <!-- Radar/Scanner -->
-                    <div class="boot-radar">
-                        <div class="radar-ring radar-ring-outer"></div>
-                        <div class="radar-ring radar-ring-mid"></div>
-                        <div class="radar-ring radar-ring-inner"></div>
-                        <div class="radar-sweep"></div>
-                        <div class="radar-dot"></div>
-                    </div>
-                    
-                    <!-- Progress Bar -->
-                    <div class="boot-progress">
-                        <div class="progress-track">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <div class="progress-markers">
-                            <span>|</span><span>|</span><span>|</span><span>|</span><span>|</span>
-                            <span>|</span><span>|</span><span>|</span><span>|</span><span>|</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Version Labels -->
-                    <div class="boot-labels">
-                        <span class="label-left">USAF TRAINING SYSTEM v2.0</span>
-                        <span class="label-right">NEURAL LINK v3.14.159</span>
-                    </div>
-                </div>
-                
-                <!-- Skip Button -->
-                <button class="boot-skip-btn" id="boot-skip">
-                    <span class="skip-text">SKIP</span>
-                    <span class="skip-arrow">▶</span>
-                </button>
-            </div>
-        `;
-        
-        document.body.insertAdjacentHTML('afterbegin', bootHTML);
-        
-        const bootSequence = document.getElementById('boot-sequence');
-        
-        // Enable audio on first interaction
-        const enableAudio = createAudioEnabler();
-        if (bootSequence) {
-            bootSequence.addEventListener('click', enableAudio, { once: true });
-            document.addEventListener('keydown', enableAudio, { once: true });
-        }
-        
-        // Skip handler with cleanup
-        let isSkipped = false;
-        let typingInterval = null;
-        
-        const cleanupAndSkip = () => {
-            if (isSkipped) return;
-            isSkipped = true;
-            
-            // Clear typing interval if running
-            if (typingInterval) {
-                clearInterval(typingInterval);
-                typingInterval = null;
-            }
-            
-            // Remove keyboard listener
-            document.removeEventListener('keydown', keyHandler);
-            
-            const bootSeq = document.getElementById('boot-sequence');
-            if (bootSeq) {
-                if (hasAnime()) {
-                    anime.animate(bootSeq, {
-                        opacity: [1, 0],
-                        duration: 300,
-                        ease: 'outQuad',
-                        onComplete: () => {
-                            bootSeq.remove();
-                            resolve();
-                        }
-                    });
-                } else {
-                    bootSeq.remove();
-                    resolve();
-                }
-            } else {
-                resolve();
-            }
-        };
-        
-        const skipBtn = document.getElementById('boot-skip');
-        if (skipBtn) {
-            skipBtn.addEventListener('click', cleanupAndSkip, { once: true });
-        }
-        
-        // Keyboard skip - listen for any skip key
-        const keyHandler = (e) => {
-            if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
-                cleanupAndSkip();
-            }
-        };
-        document.addEventListener('keydown', keyHandler);
-        
-        // Run the animation sequence after DOM is ready
-        // Use setTimeout to ensure DOM is fully rendered before querying
-        setTimeout(() => {
-            if (hasAnime()) {
-                runAnimeBootSequence(resolve, cleanupAndSkip, (interval) => { typingInterval = interval; });
-            } else {
-                // Fallback - just show briefly and resolve
-                setTimeout(() => {
-                    if (!isSkipped) cleanupAndSkip();
-                }, 3000);
-            }
-        }, 50);
-    });
-}
-
-// Main anime.js boot sequence
-function runAnimeBootSequence(resolve, skipBoot, setTypingInterval) {
-    const bootSeq = document.getElementById('boot-sequence');
-    if (!bootSeq) {
-        console.warn('Boot sequence element not found');
-        return resolve();
-    }
-    
-    // Phase elements
-    const phaseHud = bootSeq.querySelector('.boot-phase-hud');
-    const phase3d = bootSeq.querySelector('.boot-phase-3d-title');
-    const phaseFinal = bootSeq.querySelector('.boot-phase-final');
-    
-    // Ensure all phases start hidden (with null checks)
-    if (phaseHud) phaseHud.style.opacity = '0';
-    if (phase3d) phase3d.style.opacity = '0';
-    if (phaseFinal) phaseFinal.style.opacity = '0';
-    
-    // If essential phases are missing, skip boot
-    if (!phaseHud || !phase3d || !phaseFinal) {
-        console.warn('Boot sequence phases not found, skipping animation');
-        skipBoot();
-        return;
-    }
-    
-    // Sound effects
-    playSfx('boot');
-    
-    // ============ PHASE 1: HUD Frame (0-2.2s) ============
-    
-    // Show HUD phase with fade in
-    anime.animate(phaseHud, {
-        opacity: [0, 1],
-        duration: 300,
-        ease: 'outQuart'
-    });
-    
-    // Corner brackets animation
-    const corners = phaseHud.querySelectorAll('.hud-corner');
-    anime.animate(corners, {
-        opacity: [0, 1],
-        scale: [0.3, 1],
-        duration: 400,
-        delay: anime.stagger(100, { start: 100 }),
-        ease: 'outBack'
-    });
-    
-    // Sidebar segments
-    const leftSegments = phaseHud.querySelectorAll('.hud-sidebar-left .sidebar-segment');
-    const rightSegments = phaseHud.querySelectorAll('.hud-sidebar-right .sidebar-segment');
-    
-    anime.animate(leftSegments, {
-        opacity: [0, 0.8],
-        scaleY: [0, 1],
-        duration: 300,
-        delay: anime.stagger(80, { start: 300 }),
-        ease: 'outQuart'
-    });
-    
-    anime.animate(rightSegments, {
-        opacity: [0, 0.8],
-        scaleY: [0, 1],
-        duration: 300,
-        delay: anime.stagger(80, { start: 350 }),
-        ease: 'outQuart'
-    });
-    
-    // Status bar
-    const statusBar = phaseHud.querySelector('.hud-status-bar');
-    const statusLines = phaseHud.querySelectorAll('.status-bar-line');
-    const statusText = phaseHud.querySelector('.status-text');
-    
-    anime.animate(statusBar, {
-        opacity: [0, 1],
-        duration: 400,
-        delay: 500,
-        ease: 'outQuart'
-    });
-    
-    anime.animate(statusLines[0], {
-        scaleX: [0, 1],
-        duration: 500,
-        delay: 600,
-        ease: 'outQuart'
-    });
-    
-    anime.animate(statusLines[1], {
-        scaleX: [0, 1],
-        duration: 500,
-        delay: 650,
-        ease: 'outQuart'
-    });
-    
-    // Status text typing effect with interval tracking for cleanup
-    if (statusText) {
-        const text = statusText.textContent;
-        statusText.textContent = '';
-        statusText.style.opacity = '1';
-        let charIndex = 0;
-        const typeInterval = setInterval(() => {
-            if (charIndex < text.length) {
-                statusText.textContent += text[charIndex];
-                charIndex++;
-            } else {
-                clearInterval(typeInterval);
-            }
-        }, 40);
-        
-        // Pass interval reference for cleanup on skip
-        if (setTypingInterval) {
-            setTypingInterval(typeInterval);
-        }
-    }
-    
-    // Chevrons
-    const leftChevrons = phaseHud.querySelectorAll('.hud-chevrons-left .chevron');
-    const rightChevrons = phaseHud.querySelectorAll('.hud-chevrons-right .chevron');
-    
-    anime.animate(leftChevrons, {
-        opacity: [0, 0.8],
-        translateX: [20, 0],
-        duration: 300,
-        delay: anime.stagger(50, { start: 800 }),
-        ease: 'outQuart'
-    });
-    
-    anime.animate(rightChevrons, {
-        opacity: [0, 0.8],
-        translateX: [-20, 0],
-        duration: 300,
-        delay: anime.stagger(50, { start: 850 }),
-        ease: 'outQuart'
-    });
-    
-    // Chevron pulse animation (continuous)
-    setTimeout(() => {
-        anime.animate(leftChevrons, {
-            translateX: [0, -8, 0],
-            opacity: [0.8, 1, 0.8],
-            duration: 1000,
-            delay: anime.stagger(50),
-            loop: true,
-            ease: 'inOutSine'
-        });
-        
-        anime.animate(rightChevrons, {
-            translateX: [0, 8, 0],
-            opacity: [0.8, 1, 0.8],
-            duration: 1000,
-            delay: anime.stagger(50),
-            loop: true,
-            ease: 'inOutSine'
-        });
-    }, 1200);
-    
-    // Three circles logo
-    const circles = phaseHud.querySelectorAll('.boot-circle');
-    const stem = phaseHud.querySelector('.boot-circle-stem');
-    const ring = phaseHud.querySelector('.boot-circle-ring');
-    
-    anime.animate(circles, {
-        opacity: [0, 1],
-        scale: [0, 1],
-        duration: 400,
-        delay: anime.stagger(150, { start: 400 }),
-        ease: 'outElastic(1, 0.5)'
-    });
-    
-    anime.animate(stem, {
-        opacity: [0, 1],
-        scaleY: [0, 1],
-        duration: 400,
-        delay: 900,
-        ease: 'outQuart'
-    });
-    
-    anime.animate(ring, {
-        opacity: [0, 0.6],
-        scale: [0.5, 1],
-        duration: 600,
-        delay: 1100,
-        ease: 'outQuart'
-    });
-    
-    // Circle glow pulse (continuous)
-    setTimeout(() => {
-        anime.animate(circles, {
-            boxShadow: [
-                '0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.4)',
-                '0 0 40px rgba(255, 0, 0, 1), 0 0 80px rgba(255, 0, 0, 0.6)',
-                '0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.4)'
-            ],
-            duration: 1500,
-            loop: true,
-            ease: 'inOutSine'
-        });
-    }, 1000);
-    
-    // Hash marks
-    const hashMarks = phaseHud.querySelectorAll('.hud-hash-marks');
-    anime.animate(hashMarks, {
-        opacity: [0, 0.5],
-        duration: 500,
-        delay: 1000,
-        ease: 'outQuart'
-    });
-    
-    // Bottom bar segments
-    const bottomSegments = phaseHud.querySelectorAll('.bottom-bar-segment');
-    anime.animate(bottomSegments, {
-        opacity: [0, 0.7],
-        scaleX: [0, 1],
-        duration: 400,
-        delay: anime.stagger(150, { start: 1200 }),
-        ease: 'outQuart'
-    });
-    
-    // Sound effect
-    setTimeout(() => playSfx('nav'), 800);
-    
-    // ============ PHASE 2: 3D Title (2.2-4.2s) ============
-    
-    setTimeout(() => {
-        // Fade out HUD phase
-        anime.animate(phaseHud, {
-            opacity: [1, 0],
-            duration: 400,
-            ease: 'outQuart'
-        });
-        
-        // Show 3D title phase with fade in
-        anime.animate(phase3d, {
-            opacity: [0, 1],
-            duration: 400,
-            ease: 'outQuart'
-        });
-        
-        const titleContainer = phase3d.querySelector('.title-3d-container');
-        const titleLayers = phase3d.querySelectorAll('.title-3d-layer');
-        const titleMain = phase3d.querySelector('.title-3d-main');
-        const frameLines = phase3d.querySelectorAll('.frame-line');
-        const frameBrackets = phase3d.querySelectorAll('.frame-bracket');
-        const statusBox = phase3d.querySelector('.boot-status-box');
-        const bottomIndicator = phase3d.querySelector('.boot-bottom-indicator');
-        
-        // Title entrance with dramatic 3D rotation from behind
-        anime.animate(titleContainer, {
-            opacity: [0, 1],
-            rotateY: [-180, 0],
-            rotateX: [30, 0],
-            translateZ: [-500, 0],
-            scale: [0.3, 1],
-            duration: 1500,
-            ease: 'outExpo'
-        });
-        
-        // Chromatic aberration effect - more dramatic shifts
-        anime.animate(phase3d.querySelector('.title-3d-red'), {
-            translateX: [-8, -3, -8],
-            translateY: [-2, 1, -2],
-            opacity: [0, 0.8, 0.8],
-            duration: 1500,
-            loop: true,
-            ease: 'inOutSine'
-        });
-        
-        anime.animate(phase3d.querySelector('.title-3d-cyan'), {
-            translateX: [8, 3, 8],
-            translateY: [2, -1, 2],
-            opacity: [0, 0.8, 0.8],
-            duration: 1500,
-            loop: true,
-            ease: 'inOutSine',
-            delay: 75
-        });
-        
-        // Continuous full 360 Y-axis rotation like the reference
-        setTimeout(() => {
-            anime.animate(titleContainer, {
-                rotateY: [0, 360],
-                duration: 6000,
-                loop: true,
-                ease: 'linear'
-            });
-        }, 1500);
-        
-        // Add subtle X-axis tilt during rotation
-        setTimeout(() => {
-            anime.animate(titleContainer, {
-                rotateX: [0, 10, 0, -10, 0],
-                duration: 3000,
-                loop: true,
-                ease: 'inOutSine'
-            });
-        }, 1500);
-        
-        // Title glow pulse with more dramatic effect
-        anime.animate(titleMain, {
-            textShadow: [
-                '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.4)',
-                '0 0 60px rgba(255, 255, 255, 1), 0 0 120px rgba(0, 255, 255, 0.8)',
-                '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.4)'
-            ],
-            duration: 1500,
-            loop: true,
-            ease: 'inOutSine',
-            delay: 500
-        });
-        
-        // Frame lines
-        anime.animate(frameLines, {
-            scaleX: [0, 1],
-            opacity: [0, 0.8],
-            duration: 500,
-            delay: anime.stagger(100, { start: 400 }),
-            ease: 'outQuart'
-        });
-        
-        // Frame brackets
-        anime.animate(frameBrackets, {
-            opacity: [0, 1],
-            scale: [0.5, 1],
-            duration: 400,
-            delay: anime.stagger(100, { start: 600 }),
-            ease: 'outBack'
-        });
-        
-        // Status box
-        anime.animate(statusBox, {
-            opacity: [0, 1],
-            translateY: [20, 0],
-            duration: 500,
-            delay: 800,
-            ease: 'outQuart'
-        });
-        
-        // Bottom indicator
-        anime.animate(bottomIndicator, {
-            opacity: [0, 1],
-            duration: 400,
-            delay: 1000,
-            ease: 'outQuart'
-        });
-        
-        // Indicator chevrons bounce
-        const indicatorChevrons = phase3d.querySelectorAll('.indicator-chevron');
-        setTimeout(() => {
-            anime.animate(indicatorChevrons, {
-                translateY: [0, 5, 0],
-                duration: 800,
-                delay: anime.stagger(100),
-                loop: true,
-                ease: 'inOutSine'
-            });
-        }, 1200);
-        
-        playSfx('nav');
-        
-    }, 2200);
-    
-    // ============ PHASE 3: Final HUD (4.2-5.5s) ============
-    
-    setTimeout(() => {
-        // Fade out 3D phase
-        anime.animate(phase3d, {
-            opacity: [1, 0],
-            duration: 400,
-            ease: 'outQuart'
-        });
-        
-        // Show final phase with fade in
-        anime.animate(phaseFinal, {
-            opacity: [0, 1],
-            duration: 400,
-            ease: 'outQuart'
-        });
-        
-        const coords = phaseFinal.querySelector('.boot-coords');
-        const radar = phaseFinal.querySelector('.boot-radar');
-        const radarRings = phaseFinal.querySelectorAll('.radar-ring');
-        const radarSweep = phaseFinal.querySelector('.radar-sweep');
-        const radarDot = phaseFinal.querySelector('.radar-dot');
-        const progress = phaseFinal.querySelector('.boot-progress');
-        const progressFill = phaseFinal.querySelector('.progress-fill');
-        const progressMarkers = phaseFinal.querySelectorAll('.progress-markers span');
-        const labels = phaseFinal.querySelectorAll('.boot-labels span');
-        
-        // Coordinates
-        anime.animate(coords, {
-            opacity: [0, 1],
-            translateX: [-20, 0],
-            duration: 400,
-            ease: 'outQuart'
-        });
-        
-        // Radar
-        anime.animate(radar, {
-            opacity: [0, 0.8],
-            scale: [0.5, 1],
-            duration: 600,
-            delay: 200,
-            ease: 'outQuart'
-        });
-        
-        anime.animate(radarRings, {
-            opacity: [0, 0.5],
-            scale: [0.8, 1],
-            duration: 400,
-            delay: anime.stagger(100, { start: 300 }),
-            ease: 'outQuart'
-        });
-        
-        // Radar sweep rotation
-        anime.animate(radarSweep, {
-            rotate: ['-60deg', '60deg'],
-            duration: 2000,
-            loop: true,
-            ease: 'linear',
-            direction: 'alternate'
-        });
-        
-        anime.animate(radarDot, {
-            opacity: [0, 1],
-            scale: [0, 1],
-            duration: 300,
-            delay: 500,
-            ease: 'outBack'
-        });
-        
-        // Progress bar
-        anime.animate(progress, {
-            opacity: [0, 1],
-            duration: 400,
-            delay: 400,
-            ease: 'outQuart'
-        });
-        
-        anime.animate(progressFill, {
-            scaleX: [0, 1],
-            duration: 800,
-            delay: 500,
-            ease: 'outQuart'
-        });
-        
-        anime.animate(progressMarkers, {
-            opacity: [0, 0.6],
-            duration: 200,
-            delay: anime.stagger(50, { start: 600 }),
-            ease: 'outQuart'
-        });
-        
-        // Labels
-        anime.animate(labels, {
-            opacity: [0, 0.7],
-            duration: 500,
-            delay: anime.stagger(100, { start: 700 }),
-            ease: 'outQuart'
-        });
-        
-        playSfx('correct');
-        
-    }, 4200);
-    
-    // ============ END SEQUENCE (5.5s) ============
-    
-    setTimeout(() => {
-        const bootSeq = document.getElementById('boot-sequence');
-        if (bootSeq) {
-            anime.animate(bootSeq, {
-                opacity: [1, 0],
-                duration: 500,
-                ease: 'outQuart',
-                onComplete: () => {
-                    bootSeq.remove();
-                    resolve();
-                }
-            });
-        } else {
-            resolve();
-        }
-    }, 5500);
-}
-
 // Access Granted animation after player selection
 function showAccessGranted() {
     return new Promise((resolve) => {
@@ -6493,11 +4231,14 @@ function startQuestionTimer() {
     }, 100);
 }
 
+// TODO: Implement section timer for AFOQT practice tests
 function startAFOQTSectionTimer() {
     // Clear any existing timer
     if (state.quiz.timerInterval) {
         clearInterval(state.quiz.timerInterval);
     }
+    // Timer placeholder - full implementation pending
+}
 
 async function _startAFOQTPracticeTestAsync(difficulty) {
     console.log('[AFOQT] Starting full practice test with difficulty:', difficulty);
@@ -7149,7 +4890,7 @@ function renderLogin() {
                                 </div>
                                 <div class="player-action">
                                     <button class="btn btn-small select-player-btn" data-player-id="${p.id}">
-                                        SELECT →
+                                        SELECT ->
                                     </button>
                                 </div>
                             </div>
@@ -7678,7 +5419,7 @@ const topicLearningContent = {
             '4. Double-check your arithmetic.'
         ],
         fastStrategy: 'Substitute the given values carefully, then follow order of operations (PEMDAS).',
-        examples: ['If x = 3 and y = 2, evaluate 2x + 3y → 2(3) + 3(2) = 6 + 6 = 12']
+        examples: ['If x = 3 and y = 2, evaluate 2x + 3y -> 2(3) + 3(2) = 6 + 6 = 12']
     },
     'distributive_foil': {
         concept: 'Expanding expressions by distributing a single term or using FOIL (First, Outer, Inner, Last) for binomials.',
@@ -7700,7 +5441,7 @@ const topicLearningContent = {
             '4. Check your answer by substituting back.'
         ],
         fastStrategy: 'Isolate the variable: undo operations in reverse order (addition/subtraction first, then multiplication/division).',
-        examples: ['Solve 3x + 5 = 14 → 3x = 9 → x = 3']
+        examples: ['Solve 3x + 5 = 14 -> 3x = 9 -> x = 3']
     },
     'inequalities': {
         concept: 'Solving inequalities like equations, but remembering to flip the inequality sign when multiplying or dividing by a negative.',
@@ -7711,7 +5452,7 @@ const topicLearningContent = {
             '4. If graphing, use open circle for < or >, closed for ≤ or ≥.'
         ],
         fastStrategy: 'Solve like equations, but flip the inequality sign when multiplying/dividing by a negative.',
-        examples: ['Solve -2x > 6 → x < -3 (flipped because of negative)']
+        examples: ['Solve -2x > 6 -> x < -3 (flipped because of negative)']
     },
     'systems_linear': {
         concept: 'Finding values that satisfy two equations simultaneously using substitution or elimination methods.',
@@ -7722,7 +5463,7 @@ const topicLearningContent = {
             '4. Solve for one variable, then substitute back to find the other.'
         ],
         fastStrategy: 'Substitution or elimination. Pick the method that avoids fractions.',
-        examples: ['x + y = 5 and x - y = 1 → Add equations: 2x = 6 → x = 3, y = 2']
+        examples: ['x + y = 5 and x - y = 1 -> Add equations: 2x = 6 -> x = 3, y = 2']
     },
     'factoring': {
         concept: 'Breaking down expressions into products of simpler factors to simplify or solve equations.',
@@ -7744,7 +5485,7 @@ const topicLearningContent = {
             '4. Check both solutions in the original equation.'
         ],
         fastStrategy: 'Try factoring first; if stuck, use quadratic formula: x = (-b ± √(b²-4ac)) / 2a.',
-        examples: ['x² - 5x + 6 = 0 → (x - 2)(x - 3) = 0 → x = 2 or x = 3']
+        examples: ['x² - 5x + 6 = 0 -> (x - 2)(x - 3) = 0 -> x = 2 or x = 3']
     },
     'exponents_roots': {
         concept: 'Laws of exponents help simplify expressions with powers. Remember: when multiplying same bases, add exponents.',
@@ -7776,7 +5517,7 @@ const topicLearningContent = {
             '3. For large numbers, exponent is positive; for small numbers, negative.',
             '4. Write as: (number between 1-10) × 10^(exponent).'
         ],
-        fastStrategy: 'Count decimal places moved. Large numbers → positive exponent. Small numbers → negative exponent.',
+        fastStrategy: 'Count decimal places moved. Large numbers -> positive exponent. Small numbers -> negative exponent.',
         examples: ['5,400,000 = 5.4 × 10⁶', '0.00032 = 3.2 × 10⁻⁴']
     },
     'absolute_value': {
@@ -7788,7 +5529,7 @@ const topicLearningContent = {
             '4. Solve each case and check both answers.'
         ],
         fastStrategy: 'For |x - a| = b, split into two cases: x - a = b or x - a = -b.',
-        examples: ['|x - 5| = 3 → x - 5 = 3 OR x - 5 = -3 → x = 8 or x = 2']
+        examples: ['|x - 5| = 3 -> x - 5 = 3 OR x - 5 = -3 -> x = 8 or x = 2']
     },
     'rational_expressions': {
         concept: 'Algebraic fractions that can be simplified by factoring and canceling common factors.',
@@ -7821,7 +5562,7 @@ const topicLearningContent = {
             '4. Verify your answer adds to the correct total.'
         ],
         fastStrategy: 'Complementary = 90° total. Supplementary = 180° total.',
-        examples: ['Find complement of 35° → 90° - 35° = 55°']
+        examples: ['Find complement of 35° -> 90° - 35° = 55°']
     },
     'triangles': {
         concept: 'The three interior angles of any triangle always sum to exactly 180°.',
@@ -7920,7 +5661,7 @@ const topicLearningContent = {
             '4. Check by substituting back into the original proportion.'
         ],
         fastStrategy: 'Cross-multiply to solve proportions: if a/b = c/d, then ad = bc.',
-        examples: ['If 3/4 = x/12, then 3×12 = 4×x → 36 = 4x → x = 9']
+        examples: ['If 3/4 = x/12, then 3×12 = 4×x -> 36 = 4x -> x = 9']
     },
     'percent': {
         concept: 'Percent means "per hundred." Convert between percent, decimal, and fraction forms.',
@@ -7942,7 +5683,7 @@ const topicLearningContent = {
             '4. Range = maximum - minimum.'
         ],
         fastStrategy: 'Mean = sum ÷ count; Median = middle value; Range = max - min.',
-        examples: ['Data: 2, 4, 4, 6, 8 → Mean = 24/5 = 4.8, Median = 4, Mode = 4, Range = 6']
+        examples: ['Data: 2, 4, 4, 6, 8 -> Mean = 24/5 = 4.8, Median = 4, Mode = 4, Range = 6']
     },
     'probability': {
         concept: 'Probability measures how likely an event is to occur, expressed as favorable outcomes over total outcomes.',
@@ -7965,7 +5706,7 @@ const topicLearningContent = {
             '4. Choose the word closest in meaning.'
         ],
         fastStrategy: 'Look for the word that could replace the given word in a sentence.',
-        examples: ['HAPPY → joyful, glad, pleased (all synonyms)']
+        examples: ['HAPPY -> joyful, glad, pleased (all synonyms)']
     },
     'antonyms': {
         concept: 'Antonyms are words with opposite meanings. This tests your understanding of word relationships.',
@@ -7976,7 +5717,7 @@ const topicLearningContent = {
             '4. Choose the true opposite.'
         ],
         fastStrategy: 'Find the word that means the exact opposite. Watch for tricky near-opposites.',
-        examples: ['HOT → cold (antonym), NOT warm or heat (those are related, not opposite)']
+        examples: ['HOT -> cold (antonym), NOT warm or heat (those are related, not opposite)']
     },
     'verbal_analogies': {
         concept: 'Analogies show relationships between word pairs. Identify the relationship first.',
@@ -7987,7 +5728,7 @@ const topicLearningContent = {
             '4. Verify the relationship holds for both pairs.'
         ],
         fastStrategy: 'Name the relationship (synonym, antonym, part-whole, cause-effect) then match it.',
-        examples: ['CAT : KITTEN :: DOG : ? → Adult to young relationship → PUPPY']
+        examples: ['CAT : KITTEN :: DOG : ? -> Adult to young relationship -> PUPPY']
     },
     'vocabulary_in_context': {
         concept: 'Understanding word meaning from surrounding context clues in a sentence.',
@@ -7998,7 +5739,7 @@ const topicLearningContent = {
             '4. Choose the word that makes the sentence make sense.'
         ],
         fastStrategy: 'Use the surrounding words as clues. Which option makes the sentence logical?',
-        examples: ['The COGENT argument convinced everyone. → Cogent means convincing/persuasive']
+        examples: ['The COGENT argument convinced everyone. -> Cogent means convincing/persuasive']
     },
     'confusing_word_pairs': {
         concept: 'Words that sound similar or are often confused (affect/effect, their/there/they\'re).',
@@ -8031,7 +5772,7 @@ const topicLearningContent = {
             '4. Choose the option that matches your prediction.'
         ],
         fastStrategy: 'Predict the answer before looking at choices. Signal words show contrast or continuation.',
-        examples: ['Although tired, she was ___ to finish. → Need positive word → "determined"']
+        examples: ['Although tired, she was ___ to finish. -> Need positive word -> "determined"']
     },
     'word_roots_affixes': {
         concept: 'Breaking words into roots, prefixes, and suffixes to understand meaning.',
@@ -8091,7 +5832,7 @@ const topicLearningContent = {
             '5. Prefer collaborative solutions over unilateral actions.'
         ],
         fastStrategy: 'Best answers: communicate openly, involve stakeholders, address issues constructively. Avoid: ignoring problems, blame, or extreme reactions.',
-        examples: ['Team conflict → facilitate open communication.', 'Policy not working → acknowledge, gather feedback, adjust.']
+        examples: ['Team conflict -> facilitate open communication.', 'Policy not working -> acknowledge, gather feedback, adjust.']
     },
     // Aviation Knowledge Topics
     'aviation-knowledge': {
@@ -8150,7 +5891,7 @@ const topicLearningContent = {
             '5. Work quickly—this section is time-sensitive.'
         ],
         fastStrategy: 'Trace X horizontally, Y vertically until they meet. Practice speed with accuracy.',
-        examples: ['X = 5, Y = 3 → Find column 5, row 3, read the value at intersection.']
+        examples: ['X = 5, Y = 3 -> Find column 5, row 3, read the value at intersection.']
     },
     // Block Counting Topics
     'block-counting': {
@@ -8175,7 +5916,7 @@ const topicLearningContent = {
             '5. If blocks are added/removed, adjust only that stack/row instead of recalculating everything.'
         ],
         fastStrategy: 'Convert the isometric view into a height table. Add heights by row; use (height − 1) for above-ground counts and “non-empty stacks” for ground-contact counts.',
-        examples: ['Stacks with heights 2,1,0,3 → total = 6 blocks.', 'Back row heights 3,1,2 → row total = 6; above-ground blocks = (2 + 0 + 1) = 3.']
+        examples: ['Stacks with heights 2,1,0,3 -> total = 6 blocks.', 'Back row heights 3,1,2 -> row total = 6; above-ground blocks = (2 + 0 + 1) = 3.']
     },
     // Additional Arithmetic Reasoning Topics
     'arithmetic-word-problems': {
@@ -8188,7 +5929,7 @@ const topicLearningContent = {
             '5. Solve and verify the answer makes sense in context.'
         ],
         fastStrategy: 'Keywords: "total" = add, "difference" = subtract, "each" = multiply/divide, "per" = rate.',
-        examples: ['If 3 items cost $12, how much for 5 items? → $12/3 = $4 each → 5 × $4 = $20']
+        examples: ['If 3 items cost $12, how much for 5 items? -> $12/3 = $4 each -> 5 × $4 = $20']
     }
 };
 
@@ -8203,7 +5944,7 @@ const subjectLearningContent = {
             '4. Sanity-check: magnitude, sign, and units make sense.'
         ],
         fastStrategy: 'Label what’s asked, pick the right rule, then plug and chug with clean arithmetic.',
-        examples: ['Solve for x in 3x + 12 = 27 → x = 5']
+        examples: ['Solve for x in 3x + 12 = 27 -> x = 5']
     },
     arithmetic_reasoning: {
         concept: 'Word problems on rates, ratios, work, mixtures, and proportional reasoning.',
@@ -8214,7 +5955,7 @@ const subjectLearningContent = {
             '4. Solve, then double-check units and reasonableness.'
         ],
         fastStrategy: 'Underline quantities, circle the question, pick the matching formula, solve with unit discipline.',
-        examples: ['A plane travels 420 miles in 1.5 hours → speed = 280 mph']
+        examples: ['A plane travels 420 miles in 1.5 hours -> speed = 280 mph']
     },
     vocabulary: {
         concept: 'Word knowledge, synonyms, antonyms, analogies, and context clues.',
@@ -8225,7 +5966,7 @@ const subjectLearningContent = {
             '4. Pick the choice closest in meaning or opposition (for antonyms).'
         ],
         fastStrategy: 'Anchor on context and tone; drop answers that don’t fit the sentence vibe.',
-        examples: ['"astute" in context → options: dull, clever, tired, loud → clever']
+        examples: ['"astute" in context -> options: dull, clever, tired, loud -> clever']
     },
     reading_comprehension: {
         concept: 'Extract main idea, detail, inference, and tone from short passages.',
@@ -8236,7 +5977,7 @@ const subjectLearningContent = {
             '4. For tone, look at adjective/verb choices and overall stance.'
         ],
         fastStrategy: 'Read the question stem first, then hunt the lines. Answer from text, not memory.',
-        examples: ['If asked “The author suggests…” → pick the choice directly supported by the lines.']
+        examples: ['If asked “The author suggests…” -> pick the choice directly supported by the lines.']
     },
     physical_science: {
         concept: 'Newton’s laws, forces, energy, simple machines, electricity, waves, and basic thermo.',
@@ -8247,7 +5988,7 @@ const subjectLearningContent = {
             '4. Solve, then check scale and units.'
         ],
         fastStrategy: 'Name the law first; plug numbers carefully; watch units.',
-        examples: ['Force with mass 5 kg, accel 3 m/s² → F=15 N']
+        examples: ['Force with mass 5 kg, accel 3 m/s² -> F=15 N']
     },
     situational: {
         concept: 'Judgment on teamwork, integrity, chain of command, professionalism, and safety.',
@@ -8280,7 +6021,7 @@ const subjectLearningContent = {
             '4. Combine: “climbing left bank, heading north” style answer.'
         ],
         fastStrategy: 'Attitude first, heading second, trend last.',
-        examples: ['Bank left + nose down + heading east → descending left turn, heading east.']
+        examples: ['Bank left + nose down + heading east -> descending left turn, heading east.']
     },
     table_reading: {
         concept: 'Rapidly find and compare values in data tables under time pressure.',
@@ -8291,7 +6032,7 @@ const subjectLearningContent = {
             '4. Estimate first; then pick the exact value or best match.'
         ],
         fastStrategy: 'Row first, column second. Finger-trace; avoid swapping axes.',
-        examples: ['Find X=4, Y=30 → trace to intersection; for “largest row total” sum each row quickly.']
+        examples: ['Find X=4, Y=30 -> trace to intersection; for “largest row total” sum each row quickly.']
     },
     block_counting: {
         concept: 'Count visible and hidden cubes in stacked isometric figures.',
@@ -8302,7 +6043,7 @@ const subjectLearningContent = {
             '4. Recount quickly to verify totals.'
         ],
         fastStrategy: 'Group columns by height; multiply instead of counting one-by-one.',
-        examples: ['If 4 columns of height 3 → 4×3 = 12 blocks (check for hidden support).']
+        examples: ['If 4 columns of height 3 -> 4×3 = 12 blocks (check for hidden support).']
     }
 };
 
@@ -9750,7 +7491,7 @@ function renderQuiz() {
                 <button class="btn" id="home-btn">← Return to Topics</button>
                 ${answered ? `
                     <button class="btn" id="next-btn">
-                        ${state.quiz.currentIndex < state.quiz.questions.length - 1 ? 'Next →' : 'Finish'}
+                        ${state.quiz.currentIndex < state.quiz.questions.length - 1 ? 'Next ->' : 'Finish'}
                     </button>
                 ` : ''}
             </div>
@@ -12449,7 +10190,7 @@ async function init() {
                             const newId = `${prefix}_${oldTopicId}`;
                             migratedTopic = topics.find(t => t.id === newId);
                             if (migratedTopic) {
-                                console.log(`[RE-MIGRATE] Found topic with prefix: ${oldTopicId} → ${migratedTopic.id}`);
+                                console.log(`[RE-MIGRATE] Found topic with prefix: ${oldTopicId} -> ${migratedTopic.id}`);
                                 break;
                             }
                         }
@@ -12458,7 +10199,7 @@ async function init() {
                     if (!migratedTopic) {
                         migratedTopic = topics.find(t => t.id.endsWith(`_${oldTopicId}`) || t.id.includes(oldTopicId));
                         if (migratedTopic) {
-                            console.log(`[RE-MIGRATE] Found topic by partial match: ${oldTopicId} → ${migratedTopic.id}`);
+                            console.log(`[RE-MIGRATE] Found topic by partial match: ${oldTopicId} -> ${migratedTopic.id}`);
                         }
                     }
                     
@@ -12647,7 +10388,7 @@ async function restoreSessionState() {
                 const newId = `${prefix}_${legacyTopicId}`;
                 topic = topics.find(t => t.id === newId);
                 if (topic) {
-                    console.log(`✓ Migrated legacy topic ID: ${legacyTopicId} → ${topic.id}`);
+                    console.log(`✓ Migrated legacy topic ID: ${legacyTopicId} -> ${topic.id}`);
                     break;
                 }
             }
@@ -12656,7 +10397,7 @@ async function restoreSessionState() {
             if (!topic) {
                 topic = topics.find(t => t.id.endsWith(`_${legacyTopicId}`) || t.id.includes(legacyTopicId));
                 if (topic) {
-                    console.log(`✓ Partial match migration: ${legacyTopicId} → ${topic.id}`);
+                    console.log(`✓ Partial match migration: ${legacyTopicId} -> ${topic.id}`);
                 }
             }
         }
