@@ -550,7 +550,17 @@ const state = {
     },
     settings: {
         volume: 0.5,
-        bootAnimation: 'classic'
+        bootAnimation: 'classic',
+        volumes: {
+            master: 0.5,
+            boot: 0.5,
+            correct: 0.5,
+            wrong: 0.5,
+            nav: 0.5,
+            levelup: 0.5,
+            player: 0.5,
+            modal: 0.5
+        }
     },
     lastScreenBeforeBoot: null
 };
@@ -2212,16 +2222,31 @@ function playSweep(startFreq, endFreq, duration, type = 'square', gainValue = 0.
 }
 
 function playSfx(kind) {
-    // Get category volume (default to 0.5 if not set)
-    const categoryVol = state.settings.volumes[kind] || 0.5;
-    const masterVol = state.settings.volumes.master || 0.5;
-    const totalVol = categoryVol * masterVol;
-    
-    // If volume is 0, don't play
-    if (totalVol === 0) return;
-    
-    // Helper to apply volume to gain values
-    const applyVol = (baseGain) => baseGain * totalVol;
+    try {
+        // Ensure volumes object exists
+        if (!state.settings.volumes) {
+            state.settings.volumes = {
+                master: 0.5,
+                boot: 0.5,
+                correct: 0.5,
+                wrong: 0.5,
+                nav: 0.5,
+                levelup: 0.5,
+                player: 0.5,
+                modal: 0.5
+            };
+        }
+        
+        // Get category volume (default to 0.5 if not set)
+        const categoryVol = state.settings.volumes[kind] || 0.5;
+        const masterVol = state.settings.volumes.master || 0.5;
+        const totalVol = categoryVol * masterVol;
+        
+        // If volume is 0, don't play
+        if (totalVol === 0) return;
+        
+        // Helper to apply volume to gain values
+        const applyVol = (baseGain) => baseGain * totalVol;
     
     switch (kind) {
         case 'boot':
@@ -2320,6 +2345,9 @@ function playSfx(kind) {
             playBeep(1568, 0.1, 'sine', applyVol(0.12), 1.05);
             playBeep(2093, 0.1, 'sine', applyVol(0.10), 1.1);
             break;
+    }
+    } catch (e) {
+        console.warn('playSfx error:', e);
     }
 }
 
