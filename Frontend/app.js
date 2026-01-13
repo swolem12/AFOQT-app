@@ -4848,7 +4848,7 @@ function render() {
     applyPanelStyle(state.settings.panelStyle || 'default');
     
     // Initialize anime.js button animations (ripple effects, hover)
-    initButtonAnimations();
+    // initButtonAnimations(); // Optional animation enhancement
     
     // Start timer for AFOQT practice tests
     if (state.screen === 'quiz' && state.quiz.isPracticeTest && state.quiz.sections && state.quiz.sections.length > 0) {
