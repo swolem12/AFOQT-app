@@ -1,0 +1,1333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <title>AFOQT Admin Hub - EVA Deck</title>
+  <base href="/AFOQT-app/" />
+  <style>
+    :root {
+      --bg: #0b0d17;
+      --panel: #0f1222;
+      --panel-strong: #14182b;
+      --green: #9cff00;
+      --orange: #ff7a00;
+      --purple: #5b4bff;
+      --text: #e6e9f2;
+      --muted: #9aa4be;
+      --warn: #ffb300;
+      --err: #ff4b6e;
+      --border: rgba(255, 255, 255, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Mono", "Space Mono", Menlo, monospace;
+      background: linear-gradient(135deg, #0b0d17 0%, #0a0c15 50%, #0b0d17 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      background: linear-gradient(180deg, #14182b 0%, #0f1222 100%);
+      border-bottom: 1px solid var(--orange);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .brand { font-weight: 700; letter-spacing: 1px; color: var(--green); font-size: 14px; }
+    .menu { display: flex; gap: 8px; flex-wrap: wrap; }
+    .menu a {
+      padding: 5px 9px;
+      border: 1px solid var(--border);
+      background: rgba(91, 75, 255, 0.1);
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 10px;
+      border-radius: 3px;
+      transition: all 0.12s ease;
+    }
+    .menu a:hover { border-color: var(--green); color: var(--green); }
+
+    .page { max-width: 1320px; margin: 10px auto 30px auto; padding: 0 12px; display: grid; gap: 10px; }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      padding: 12px 13px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    h2 { margin: 0 0 6px 0; font-size: 12px; letter-spacing: 0.4px; color: var(--green); }
+    h3 { margin: 0; font-size: 11px; }
+    p { margin: 0 0 6px 0; color: var(--muted); font-size: 10px; }
+
+    .tab-bar { display: flex; gap: 6px; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border); flex-wrap: wrap; align-items: center; }
+    .tab-btn {
+      padding: 5px 9px;
+      border: 1px solid var(--border);
+      background: rgba(91, 75, 255, 0.08);
+      color: var(--muted);
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 10px;
+      letter-spacing: 0.3px;
+      transition: all 0.1s ease;
+      border-radius: 3px;
+    }
+    .tab-btn:hover { border-color: var(--green); color: var(--text); }
+    .tab-btn.active { border-color: var(--green); background: rgba(156, 255, 0, 0.14); color: var(--green); }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .controls { display: flex; gap: 5px; flex-wrap: wrap; margin: 6px 0; align-items: center; }
+    .btn {
+      padding: 5px 9px;
+      border: 1px solid var(--green);
+      background: rgba(156, 255, 0, 0.11);
+      color: var(--text);
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 10px;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.08s ease;
+      border-radius: 2px;
+    }
+    .btn:hover { background: rgba(156, 255, 0, 0.18); box-shadow: 0 0 8px rgba(156, 255, 0, 0.2); }
+    .btn:active { transform: translateY(1px); }
+    .btn.secondary { border-color: var(--orange); background: rgba(255, 122, 0, 0.1); }
+    .btn.purple { border-color: var(--purple); background: rgba(91, 75, 255, 0.12); }
+    .btn.danger { border-color: var(--err); color: var(--err); background: rgba(255, 75, 110, 0.08); }
+
+    .chips { display: grid; gap: 5px; grid-template-columns: repeat(2, 1fr); margin: 6px 0; }
+    .chip {
+      border: 1px solid var(--border);
+      background: var(--panel-strong);
+      padding: 6px 8px;
+      font-size: 9px;
+      display: flex; justify-content: space-between; align-items: center;
+      border-radius: 2px;
+    }
+    .chip .label { color: var(--muted); font-size: 8px; }
+    .chip.ok { border-color: rgba(156, 255, 0, 0.5); color: var(--green); }
+    .chip.warn { border-color: rgba(255, 179, 0, 0.6); color: var(--warn); }
+    .chip.err { border-color: rgba(255, 75, 110, 0.6); color: var(--err); }
+
+    .log {
+      background: #060713;
+      border: 1px solid var(--border);
+      color: var(--green);
+      padding: 8px;
+      font-size: 10px;
+      height: 280px;
+      overflow: auto;
+      white-space: pre-wrap;
+      line-height: 1.3;
+      word-break: break-word;
+    }
+    .log .err { color: var(--err); }
+    .log .warn { color: var(--warn); }
+
+    .cards { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+    .card {
+      background: var(--panel-strong);
+      border: 1px solid var(--border);
+      padding: 9px;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      border-radius: 2px;
+    }
+    .card h3 { color: var(--text); font-size: 11px; margin: 0; }
+    .card p { font-size: 10px; color: var(--muted); margin: 0 0 3px 0; }
+    .tags { display: flex; gap: 3px; flex-wrap: wrap; }
+    .tag { font-size: 8px; padding: 1px 4px; border: 1px solid var(--border); color: var(--green); border-radius: 2px; }
+    .tag.alt { color: var(--orange); border-color: rgba(255, 122, 0, 0.4); }
+    .card-actions { display: flex; gap: 5px; flex-wrap: wrap; margin-top: auto; }
+
+    .tab-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+    .tab-sub { font-size: 10px; color: var(--muted); margin: 0; }
+
+    .test-stack { display: flex; flex-direction: column; gap: 10px; }
+    .test-card {
+      border: 1px solid var(--border);
+      background: var(--panel-strong);
+      padding: 10px;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .test-header { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .test-title { font-size: 11px; color: var(--text); font-weight: 600; letter-spacing: 0.2px; }
+    .test-desc { font-size: 10px; color: var(--muted); }
+    .status-badge {
+      font-size: 9px;
+      padding: 2px 6px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      color: var(--muted);
+      background: rgba(255,255,255,0.03);
+    }
+    .status-badge.ok { border-color: rgba(156,255,0,0.5); color: var(--green); }
+    .status-badge.warn { border-color: rgba(255,179,0,0.6); color: var(--warn); }
+    .status-badge.err { border-color: rgba(255,75,110,0.6); color: var(--err); }
+    .mini-controls { display: flex; gap: 6px; flex-wrap: wrap; }
+    .mini-log {
+      background: #060713;
+      border: 1px solid var(--border);
+      color: var(--green);
+      padding: 8px;
+      font-size: 10px;
+      height: 180px;
+      overflow: auto;
+      white-space: pre-wrap;
+      line-height: 1.3;
+      word-break: break-word;
+    }
+    .mini-log .err { color: var(--err); }
+    .mini-log .warn { color: var(--warn); }
+
+    .iframe-wrap { border: 1px solid var(--border); background: #060713; height: 380px; border-radius: 2px; }
+    iframe { width: 100%; height: 100%; border: 0; background: #060713; }
+
+    table { width: 100%; border-collapse: collapse; font-size: 9px; }
+    th, td { border: 1px solid var(--border); padding: 5px; text-align: left; }
+    th { background: rgba(255, 122, 0, 0.14); color: var(--text); font-size: 9px; font-weight: bold; }
+
+    input[type="text"], select, textarea {
+      width: 100%;
+      background: #060713;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 6px 7px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 9px;
+      border-radius: 2px;
+    }
+
+    textarea { min-height: 120px; }
+
+    .split { display: grid; grid-template-columns: 1.5fr 1fr; gap: 10px; }
+    @media (max-width: 1100px) { .split { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistration().then(reg => {
+        if (reg) reg.unregister();
+      });
+    }
+  </script>
+
+  <header class="topbar">
+    <div class="brand">AFOQT Admin Hub</div>
+    <nav class="menu">
+      <a href="#top">TOP</a>
+      <a href="/">App</a>
+      <a href="clear-sw.html">Clear SW</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="tab-bar">
+      <button class="tab-btn active" data-tab="diag">Diagnostics</button>
+      <button class="tab-btn" data-tab="essentials">Essentials</button>
+      <button class="tab-btn" data-tab="labs">Labs</button>
+      <button class="tab-btn" data-tab="viewer">Viewer</button>
+      <button class="tab-btn" data-tab="comprehensive">Comprehensive</button>
+      <span id="diagStatus" style="color: var(--muted); font-size: 9px; margin-left: auto;">Status: idle</span>
+    </div>
+
+    <section id="diag-tab" class="tab-content active panel">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <div>
+          <h2>System Health</h2>
+          <div class="controls">
+            <button class="btn" id="runDiagBtn">Run</button>
+            <button class="btn secondary" id="copyLogBtn">Copy</button>
+            <button class="btn purple" id="copyShareBtn">Share</button>
+            <button class="btn danger" id="clearLogBtn">Clear</button>
+          </div>
+          <div class="chips" id="chipRow"></div>
+          <h3 style="color: var(--green); margin-top: 8px; margin-bottom: 4px;">Coverage</h3>
+          <div id="subjectSummary" style="font-size: 9px; color: var(--muted); max-height: 160px; overflow-y: auto; line-height: 1.25; white-space: pre-wrap; word-break: break-word;"></div>
+        </div>
+        <div>
+          <h2>Event Log</h2>
+          <div class="log" id="log"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="essentials-tab" class="tab-content panel">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <div>
+          <h2>Essentials Control</h2>
+          <div class="controls">
+            <button class="btn" id="runAllEssential">Run</button>
+            <button class="btn secondary" id="copyAllEssential">Copy</button>
+            <button class="btn danger" id="clearAllEssential">Clear</button>
+          </div>
+          <div class="chips" id="essentialChips"></div>
+          <h3 style="color: var(--green); margin-top: 8px; margin-bottom: 4px;">Tests (6)</h3>
+          <div id="essentialTests" style="font-size: 9px; color: var(--muted); max-height: 200px; overflow-y: auto; line-height: 1.25;"></div>
+        </div>
+        <div>
+          <h2>Essentials Log</h2>
+          <div class="log" id="essentialLog"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="labs-tab" class="tab-content panel">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <div>
+          <h2>Labs Control</h2>
+          <div class="controls">
+            <button class="btn" id="runAllLabs">Run</button>
+            <button class="btn secondary" id="copyAllLabs">Copy</button>
+            <button class="btn danger" id="clearAllLabs">Clear</button>
+          </div>
+          <div class="chips" id="labChips"></div>
+          <h3 style="color: var(--green); margin-top: 8px; margin-bottom: 4px;">Tests (14)</h3>
+          <div id="labTests" style="font-size: 9px; color: var(--muted); max-height: 200px; overflow-y: auto; line-height: 1.25;"></div>
+        </div>
+        <div>
+          <h2>Labs Log</h2>
+          <div class="log" id="labLog"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="viewer-tab" class="tab-content">
+      <div class="split">
+        <section class="panel">
+          <h2>Preview</h2>
+          <div class="controls" style="gap: 4px; margin-bottom: 8px;">
+            <select id="toolSelect" style="flex: 1; min-width: 150px;"></select>
+            <button class="btn" id="loadInlineBtn">Load</button>
+            <button class="btn secondary" id="openTabBtn">Tab</button>
+          </div>
+          <div class="iframe-wrap"><iframe id="toolFrame" title="Tool preview"></iframe></div>
+        </section>
+
+        <section class="panel">
+          <h2>Tools (23)</h2>
+          <input type="text" id="toolFilter" placeholder="Filter..." style="margin-bottom: 8px;">
+          <table id="toolTable">
+            <thead><tr><th>Name</th><th>Category</th><th>Acts</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </section>
+      </div>
+    </section>
+
+    <section id="comprehensive-tab" class="tab-content panel">
+      <h2>Comprehensive Test Suite</h2>
+      <p style="margin-bottom: 6px;">Run the consolidated harness without leaving the Admin Hub.</p>
+      <div class="controls" style="margin-bottom: 8px;">
+        <button class="btn" id="compRefreshBtn">Refresh</button>
+        <button class="btn secondary" id="compOpenBtn">Open Tab</button>
+      </div>
+      <div class="iframe-wrap" style="height: 520px;">
+        <iframe id="compFrame" title="Comprehensive Suite"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    let patchLoaderPromise;
+    function ensurePatchLoader() {
+      if (window.initializePatch18) return Promise.resolve();
+      if (!patchLoaderPromise) {
+        patchLoaderPromise = new Promise((resolve, reject) => {
+          const s = document.createElement('script');
+          s.src = '/AFOQT-app/patch-loader.js?t=' + Date.now();
+          s.onload = () => resolve();
+          s.onerror = () => reject(new Error('patch-loader failed'));
+          document.head.appendChild(s);
+        });
+      }
+      return patchLoaderPromise;
+    }
+
+    let dbPromise;
+    function ensureDB() {
+      if (window.afoqtDB) return Promise.resolve();
+      if (!dbPromise) {
+        dbPromise = new Promise((resolve, reject) => {
+          const s = document.createElement('script');
+          s.src = '/AFOQT-app/db.js?t=' + Date.now();
+          s.onload = () => resolve();
+          s.onerror = () => reject(new Error('db.js failed'));
+          document.head.appendChild(s);
+        });
+      }
+      return dbPromise;
+    }
+
+    const tools = [
+      { id: 'admin-console', name: 'Admin Console', path: 'tests/admin-console.html', category: 'Admin', purpose: 'Dashboard: browse questions, manage players', tier: 'essential', tags: ['questions', 'players'] },
+      { id: 'all-questions', name: 'All Questions', path: 'tests/test-admin-all-questions.html', category: 'Admin', purpose: 'Search/filter all questions', tier: 'essential', tags: ['search', 'registry'] },
+      { id: 'content-loader', name: 'Content Loader', path: 'tests/test-content-loading.html', category: 'Content', purpose: 'Verify JSON loads and registry builds', tier: 'essential', tags: ['content', 'registry'] },
+      { id: 'real-questions', name: 'Real Questions', path: 'tests/test-real-questions.html', category: 'Content', purpose: 'Render actual question JSON', tier: 'essential', tags: ['content'] },
+      { id: 'css-verification', name: 'CSS Verification', path: 'tests/css-verification.html', category: 'CSS', purpose: 'Check Table Reading and Block Counting CSS', tier: 'essential', tags: ['css', 'table', 'blocks'] },
+      { id: 'table-reading', name: 'Table Reading', path: 'tests/test-table-reading.html', category: 'Subject', purpose: 'Coordinate lookup and sticky headers', tier: 'essential', tags: ['subject'] },
+      { id: 'block-counting', name: 'Block Counting', path: 'tests/test-block-counting-iso.html', category: 'Subject', purpose: '3D isometric cube rendering', tier: 'essential', tags: ['subject'] },
+      { id: 'db-inspector', name: 'DB Inspector', path: 'tests/test-db.html', category: 'Database', purpose: 'Inspect localStorage and IndexedDB', tier: 'essential', tags: ['storage'] },
+      { id: 'app-errors', name: 'App.js Errors', path: 'tests/test-app-js-errors.html', category: 'Diagnostics', purpose: 'Surface syntax/runtime errors', tier: 'essential', tags: ['diagnostics'] },
+      { id: 'afoqt-practice', name: 'AFOQT Practice', path: 'tests/test-afoqt-full-practice.html', category: 'Content', purpose: 'Auto-generated practice config', tier: 'lab', tags: ['config'] },
+      { id: 'patch18', name: 'Patch 18 Config', path: 'tests/test-patch_18.html', category: 'Content', purpose: 'Validate patch mappings', tier: 'lab', tags: ['patch'] },
+      { id: 'question-tracking', name: 'Question Tracking', path: 'tests/test-question-tracking.html', category: 'Content', purpose: 'Spaced repetition debug', tier: 'lab', tags: ['tracking'] },
+      { id: 'math-ui', name: 'Math UI Lab', path: 'tests/test-math-ui.html', category: 'Subject', purpose: 'Math renderers and KaTeX', tier: 'lab', tags: ['subject'] },
+      { id: 'geometry-ui', name: 'Geometry UI Lab', path: 'tests/test-geometry-ui.html', category: 'Subject', purpose: 'Geometry visuals', tier: 'lab', tags: ['subject'] },
+      { id: 'install', name: 'Install / PWA', path: 'tests/install.html', category: 'Setup', purpose: 'PWA installation', tier: 'lab', tags: ['pwa'] },
+      { id: 'boot-demo', name: 'Boot Demo', path: 'tests/boot-demo.html', category: 'Boot', purpose: 'Boot animation', tier: 'lab', tags: ['boot'] },
+      { id: 'fr0st', name: 'Fr0st Prototype', path: 'tests/fr0st-prototype.html', category: 'Boot', purpose: 'Globe prototype', tier: 'lab', tags: ['boot'] },
+      { id: 'clear-sw', name: 'Clear SW', path: 'clear-sw.html', category: 'Diagnostics', purpose: 'Force SW reset', tier: 'lab', tags: ['cache'] },
+      { id: 'manual-md', name: 'Manual Checklist', path: 'tests/MANUAL_TEST_CHECKLIST.md', category: 'Docs', purpose: 'Manual verification', tier: 'lab', tags: ['docs'] },
+      { id: 'manual-html', name: 'Checklist (HTML)', path: 'test-checklist.html', category: 'Docs', purpose: 'Manual checks', tier: 'lab', tags: ['docs'] },
+      { id: 'debug', name: 'Debug Landing', path: 'debug.html', category: 'Diagnostics', purpose: 'Debug hooks', tier: 'lab', tags: ['diagnostics'] },
+      { id: 'loading', name: 'Minimal Loader', path: 'test-loading.html', category: 'Diagnostics', purpose: 'Loader sanity check', tier: 'lab', tags: ['diagnostics'] },
+      { id: 'minimal', name: 'Minimal Harness', path: 'minimal-test.html', category: 'Diagnostics', purpose: 'Quick repro harness', tier: 'lab', tags: ['diagnostics'] }
+    ];
+
+    const essentialTests = [
+      {
+        id: 'all-questions',
+        name: 'All Questions Browser',
+        desc: 'Search & filter 2,200+ questions by subject/difficulty. Shows registry stats and sample lookup.',
+        run: async ({ log, setBadge }) => {
+          await ensurePatchLoader();
+          await window.initializePatch18?.();
+          const reg = window.questionRegistry || {};
+          const subjects = Object.keys(reg);
+          if (!subjects.length) { setBadge('err', 'empty'); return; }
+          
+          let totalQ = 0, totalB = 0, totalA = 0, totalE = 0;
+          const stats = {};
+          subjects.forEach(subj => {
+            let bCount = 0, aCount = 0, eCount = 0;
+            Object.values(reg[subj] || {}).forEach(d => {
+              bCount += (d.beginner || []).length;
+              aCount += (d.advanced || []).length;
+              eCount += (d.expert || []).length;
+            });
+            const subtotal = bCount + aCount + eCount;
+            totalQ += subtotal;
+            totalB += bCount;
+            totalA += aCount;
+            totalE += eCount;
+            stats[subj] = { beginner: bCount, advanced: aCount, expert: eCount, total: subtotal };
+          });
+          
+          log('info', 'Registry Summary', { subjects: subjects.length, total: totalQ });
+          log('info', 'Difficulty Distribution', { beginner: totalB, advanced: totalA, expert: totalE });
+          
+          subjects.slice(0, 3).forEach(subj => {
+            const s = stats[subj];
+            log('info', `${subj}`, { ...s });
+          });
+          
+          const sampleSubj = subjects[0];
+          const samplePool = reg[sampleSubj][Object.keys(reg[sampleSubj])[0]];
+          if (samplePool?.beginner?.length) {
+            const q = samplePool.beginner[0];
+            log('info', 'Sample Q', { prompt: q.question?.slice(0, 60), answer: q.answer });
+          }
+          
+          setBadge(totalQ > 2000 ? 'ok' : 'warn', totalQ > 2000 ? 'ok' : `low: ${totalQ}`);
+        }
+      },
+      {
+        id: 'content-loader',
+        name: 'Content Loader Test',
+        desc: 'Verify JSON files load, display question registry structure with counts.',
+        run: async ({ log, setBadge }) => {
+          await ensurePatchLoader();
+          log('info', 'patch-loader loaded');
+          
+          const ok = await window.initializePatch18?.();
+          log(ok ? 'info' : 'warn', 'Patch18 init', { success: !!ok });
+          
+          const reg = window.questionRegistry || {};
+          const subjects = Object.keys(reg);
+          log('info', 'Registry loaded', { subjects: subjects.length });
+          
+          const files = [
+            'Test Content/Vocabulary/synonyms_beginner_part1.json',
+            'Test Content/Math/factoring_advanced_part1.json',
+            'Test Content/Arithmetic/arithmetic_basic_word_problems_beginner_part1.json',
+            'Test Content/Reading Comprehension /reading_comprehension_beginner_passage7.json',
+            'Test Content/Table Reading/table_reading_beginner_part1.json',
+            'Test Content/Block Counting/block_counting_beginner_part1.json'
+          ];
+          
+          let pass = 0;
+          for (const file of files) {
+            const resp = await fetch(file);
+            if (resp.ok) {
+              const data = await resp.json();
+              log('pass', 'JSON ok', { file: file.split('/').pop(), questions: (data.questions || []).length });
+              pass++;
+            } else {
+              log('warn', 'JSON 404', { file: file.split('/').pop() });
+            }
+          }
+          
+          log('info', 'File Probe', { passed: pass, total: files.length });
+          setBadge(pass === files.length ? 'ok' : 'warn', pass === files.length ? 'ok' : `${pass}/${files.length}`);
+        }
+      },
+      {
+        id: 'css-verification',
+        name: 'CSS Verification',
+        desc: 'Check all CSS classes applied correctly (Table Reading, Block Counting, etc).',
+        run: async ({ log, setBadge }) => {
+          // Create probe divs for CSS validation
+          const probe = document.createElement('div');
+          probe.style.display = 'none';
+          probe.innerHTML = `
+            <div class="data-table-container"><table><tr><td>test</td></tr></table></div>
+            <div class="bc-scene"><div class="bc-cube"></div></div>
+            <div class="instrument-display"></div>
+            <div class="sr-frame"></div>
+          `;
+          document.body.appendChild(probe);
+          
+          const checks = [
+            { name: 'Table CSS', el: probe.querySelector('.data-table-container') },
+            { name: 'Block CSS', el: probe.querySelector('.bc-scene') },
+            { name: 'Instrument CSS', el: probe.querySelector('.instrument-display') },
+            { name: 'Situational CSS', el: probe.querySelector('.sr-frame') }
+          ];
+          
+          let pass = 0;
+          checks.forEach(({ name, el }) => {
+            const ok = el && !!window.getComputedStyle(el).display;
+            log(ok ? 'pass' : 'warn', name, { applied: !!ok });
+            if (ok) pass++;
+          });
+          
+          probe.remove();
+          log('info', 'CSS Check', { passed: pass, total: checks.length });
+          setBadge(pass === checks.length ? 'ok' : 'warn', pass === checks.length ? 'ok' : `${pass}/${checks.length}`);
+        }
+      },
+      {
+        id: 'table-reading',
+        name: 'Table Reading Test',
+        desc: 'Test table rendering with X/Y axis coordinates and sticky headers.',
+        run: async ({ log, setBadge }) => {
+          await ensurePatchLoader();
+          await window.initializePatch18?.();
+          
+          const entry = window.questionRegistry?.table_reading;
+          if (!entry) { log('err', 'table_reading missing'); setBadge('err', 'missing'); return; }
+          
+          const subtopics = Object.keys(entry);
+          let totalQ = 0;
+          subtopics.forEach(st => {
+            const d = entry[st];
+            totalQ += (d.beginner || []).length + (d.advanced || []).length + (d.expert || []).length;
+          });
+          
+          log('info', 'Table Reading Content', { subtopics: subtopics.length, total: totalQ });
+          
+          // Render sample table structure
+          const sample = (entry[subtopics[0]]?.beginner || [])[0];
+          if (sample && sample.question) {
+            log('info', 'Sample Table', { prompt: sample.question.slice(0, 80) });
+            if (sample.uiSpec?.type === 'table') {
+              log('pass', 'UI Spec', { type: 'table', hasCoordinates: !!sample.uiSpec.coordinates });
+            }
+          }
+          
+          const probe = document.createElement('div');
+          probe.innerHTML = '<div class="data-table-container"><table><tr><th>X</th><th>Y</th></tr><tr><td>1</td><td>2</td></tr></table></div>';
+          document.body.appendChild(probe);
+          const tableOk = !!window.getComputedStyle(probe.querySelector('.data-table-container')).display;
+          probe.remove();
+          
+          log(tableOk ? 'pass' : 'warn', 'CSS Applied', { ok: tableOk });
+          setBadge(tableOk && subtopics.length ? 'ok' : 'warn', tableOk && subtopics.length ? 'ok' : 'issue');
+        }
+      },
+      {
+        id: 'block-counting',
+        name: 'Block Counting Test',
+        desc: 'Verify 3D isometric cube rendering and content loading.',
+        run: async ({ log, setBadge }) => {
+          await ensurePatchLoader();
+          await window.initializePatch18?.();
+          
+          const entry = window.questionRegistry?.block_counting;
+          if (!entry) { log('err', 'block_counting missing'); setBadge('err', 'missing'); return; }
+          
+          const subtopics = Object.keys(entry);
+          let totalQ = 0;
+          subtopics.forEach(st => {
+            const d = entry[st];
+            totalQ += (d.beginner || []).length + (d.advanced || []).length + (d.expert || []).length;
+          });
+          
+          log('info', 'Block Counting Content', { subtopics: subtopics.length, total: totalQ });
+          
+          // Check CSS for 3D rendering
+          const probe = document.createElement('div');
+          probe.innerHTML = '<div class="bc-scene"><div class="bc-cube" style="position:absolute;width:40px;height:40px;"></div></div>';
+          document.body.appendChild(probe);
+          
+          const sceneOk = !!window.getComputedStyle(probe.querySelector('.bc-scene')).display;
+          const cubeOk = !!window.getComputedStyle(probe.querySelector('.bc-cube')).width;
+          probe.remove();
+          
+          log(sceneOk ? 'pass' : 'warn', 'Scene CSS', { ok: sceneOk });
+          log(cubeOk ? 'pass' : 'warn', 'Cube Rendered', { ok: cubeOk });
+          
+          // Sample question check
+          const sample = (entry[subtopics[0]]?.beginner || [])[0];
+          if (sample) {
+            log('info', 'Sample Q', { hasUiSpec: !!sample.uiSpec });
+          }
+          
+          setBadge(sceneOk && cubeOk && totalQ ? 'ok' : 'warn', sceneOk && cubeOk ? 'ok' : 'render issue');
+        }
+      },
+      {
+        id: 'db-inspector',
+        name: 'Database Inspector',
+        desc: 'Inspect localStorage player data & sessions, display counts and recent activity.',
+        run: async ({ log, setBadge }) => {
+          await ensureDB();
+          await afoqtDB.init();
+          
+          const players = await afoqtDB.getAllPlayers();
+          log('info', 'Players', { count: players.length });
+          
+          let totalSessions = 0;
+          const playerStats = [];
+          for (const p of players) {
+            const sessions = p.sessions || [];
+            totalSessions += sessions.length;
+            playerStats.push({
+              name: p.name?.slice(0, 20),
+              sessions: sessions.length,
+              level: p.rpgStats?.level || 0
+            });
+          }
+          
+          log('info', 'Sessions Total', { count: totalSessions });
+          
+          playerStats.slice(0, 3).forEach(ps => {
+            log('info', `Player: ${ps.name}`, { sessions: ps.sessions, level: ps.level });
+          });
+          
+          // Check localStorage directly
+          const localKeys = Object.keys(localStorage).filter(k => k.includes('afoqt') || k.includes('player'));
+          log('info', 'localStorage Keys', { count: localKeys.length });
+          
+          setBadge(players.length > 0 ? 'ok' : 'warn', players.length > 0 ? `${players.length} players` : 'no data');
+        }
+      }
+    ];
+
+    const labTests = [
+      {
+        id: 'afoqt-practice',
+        name: 'AFOQT Practice',
+        desc: 'Verify practice test config loads.',
+        run: async ({ log, setBadge }) => {
+          const resp = await fetch('Test Content/full_afoqt_practice_test_config_v1.json');
+          if (!resp.ok) { setBadge('err', 'missing'); return; }
+          const data = await resp.json();
+          log('info', 'Config loaded', { subjects: Object.keys(data || {}).length });
+          setBadge('ok', 'ok');
+        }
+      },
+      {
+        id: 'patch18',
+        name: 'Patch 18 Config',
+        desc: 'Check key patch files exist.',
+        run: async ({ log, setBadge }) => {
+          const files = [
+            'Test Content/patches/Patch_18.json',
+            'Test Content/patches/Patch_20.json',
+            'Test Content/patches/Patch_21.json'
+          ];
+          let ok = 0;
+          for (const f of files) {
+            const r = await fetch(f);
+            log(r.ok ? 'info' : 'warn', r.ok ? 'Found' : 'Missing', { file: f.split('/').pop() });
+            if (r.ok) ok++;
+          }
+          setBadge(ok === files.length ? 'ok' : 'warn', ok === files.length ? 'ok' : 'partial');
+        }
+      },
+      {
+        id: 'question-tracking',
+        name: 'Question Tracking',
+        desc: 'Verify registry present for tracking flows.',
+        run: async ({ log, setBadge }) => {
+          await ensurePatchLoader();
+          await window.initializePatch18?.();
+          const reg = window.questionRegistry || {};
+          log('info', 'Subjects', { count: Object.keys(reg).length });
+          setBadge(Object.keys(reg).length ? 'ok' : 'warn', Object.keys(reg).length ? 'ok' : 'empty');
+        }
+      },
+      {
+        id: 'math-ui',
+        name: 'Math UI Lab',
+        desc: 'Ensure math content available.',
+        run: async ({ log, setBadge }) => {
+          await ensurePatchLoader();
+          await window.initializePatch18?.();
+          const math = window.questionRegistry?.math_knowledge;
+          const count = math ? Object.keys(math).length : 0;
+          log(count ? 'info' : 'warn', 'Subtopics', { count });
+          setBadge(count ? 'ok' : 'warn', count ? 'ok' : 'missing');
+        }
+      },
+      {
+        id: 'geometry-ui',
+        name: 'Geometry UI Lab',
+        desc: 'Check geometry subtopics present.',
+        run: async ({ log, setBadge }) => {
+          await ensurePatchLoader();
+          await window.initializePatch18?.();
+          const math = window.questionRegistry?.math_knowledge;
+          const hasGeo = math && Object.keys(math).some(k => k.includes('geometry'));
+          log(hasGeo ? 'info' : 'warn', 'Geometry present', { found: !!hasGeo });
+          setBadge(hasGeo ? 'ok' : 'warn', hasGeo ? 'ok' : 'missing');
+        }
+      },
+      {
+        id: 'install',
+        name: 'Install / PWA',
+        desc: 'Manifest fetch and SW support check.',
+        run: async ({ log, setBadge }) => {
+          const resp = await fetch('manifest.json');
+          log(resp.ok ? 'info' : 'warn', 'Manifest', { status: resp.status });
+          const sw = 'serviceWorker' in navigator;
+          log('info', 'SW support', { sw });
+          setBadge(resp.ok && sw ? 'ok' : 'warn', resp.ok && sw ? 'ok' : 'issue');
+        }
+      },
+      {
+        id: 'boot-demo',
+        name: 'Boot Demo',
+        desc: 'Ensure boot demo asset is reachable.',
+        run: async ({ log, setBadge }) => {
+          const resp = await fetch('tests/boot-demo.html');
+          log(resp.ok ? 'info' : 'warn', 'boot-demo.html', { status: resp.status });
+          setBadge(resp.ok ? 'ok' : 'warn', resp.ok ? 'ok' : 'missing');
+        }
+      },
+      {
+        id: 'fr0st',
+        name: 'Fr0st Prototype',
+        desc: 'Check prototype asset exists.',
+        run: async ({ log, setBadge }) => {
+          const resp = await fetch('tests/fr0st-prototype.html');
+          log(resp.ok ? 'info' : 'warn', 'fr0st-prototype', { status: resp.status });
+          setBadge(resp.ok ? 'ok' : 'warn', resp.ok ? 'ok' : 'missing');
+        }
+      },
+      {
+        id: 'clear-sw',
+        name: 'Clear SW',
+        desc: 'Report current SW registration.',
+        run: async ({ log, setBadge }) => {
+          if (!('serviceWorker' in navigator)) { setBadge('warn', 'no sw'); return; }
+          const reg = await navigator.serviceWorker.getRegistration();
+          log('info', 'SW', { active: !!reg });
+          setBadge(reg ? 'warn' : 'ok', reg ? 'registered' : 'none');
+        }
+      },
+      {
+        id: 'manual-md',
+        name: 'Manual Checklist (MD)',
+        desc: 'Fetch MANUAL_TEST_CHECKLIST.md.',
+        run: async ({ log, setBadge }) => {
+          const resp = await fetch('tests/MANUAL_TEST_CHECKLIST.md');
+          log(resp.ok ? 'info' : 'warn', 'MD', { status: resp.status });
+          setBadge(resp.ok ? 'ok' : 'warn', resp.ok ? 'ok' : 'missing');
+        }
+      },
+      {
+        id: 'manual-html',
+        name: 'Checklist (HTML)',
+        desc: 'Fetch test-checklist.html.',
+        run: async ({ log, setBadge }) => {
+          const resp = await fetch('test-checklist.html');
+          log(resp.ok ? 'info' : 'warn', 'HTML', { status: resp.status });
+          setBadge(resp.ok ? 'ok' : 'warn', resp.ok ? 'ok' : 'missing');
+        }
+      },
+      {
+        id: 'debug',
+        name: 'Debug Landing',
+        desc: 'Ensure debug harness reachable.',
+        run: async ({ log, setBadge }) => {
+          const resp = await fetch('debug.html');
+          log(resp.ok ? 'info' : 'warn', 'debug.html', { status: resp.status });
+          setBadge(resp.ok ? 'ok' : 'warn', resp.ok ? 'ok' : 'missing');
+        }
+      },
+      {
+        id: 'loading',
+        name: 'Minimal Loader',
+        desc: 'Fetch test-loading.html.',
+        run: async ({ log, setBadge }) => {
+          const resp = await fetch('test-loading.html');
+          log(resp.ok ? 'info' : 'warn', 'test-loading', { status: resp.status });
+          setBadge(resp.ok ? 'ok' : 'warn', resp.ok ? 'ok' : 'missing');
+        }
+      },
+      {
+        id: 'minimal',
+        name: 'Minimal Harness',
+        desc: 'Fetch minimal-test.html.',
+        run: async ({ log, setBadge }) => {
+          const resp = await fetch('minimal-test.html');
+          log(resp.ok ? 'info' : 'warn', 'minimal-test', { status: resp.status });
+          setBadge(resp.ok ? 'ok' : 'warn', resp.ok ? 'ok' : 'missing');
+        }
+      }
+    ];
+
+    const logLines = [];
+    const logEl = document.getElementById('log');
+    const diagStatusEl = document.getElementById('diagStatus');
+    const chipRow = document.getElementById('chipRow');
+    const toolSelect = document.getElementById('toolSelect');
+    const toolFrame = document.getElementById('toolFrame');
+    const compFrame = document.getElementById('compFrame');
+    const subjectSummaryEl = document.getElementById('subjectSummary');
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    function setStatus(text) { diagStatusEl.textContent = `Status: ${text}`; }
+
+    function addLog(level, message, meta) {
+      const ts = new Date().toISOString().substring(11, 19);
+      const metaText = meta ? ' | ' + JSON.stringify(meta) : '';
+      const line = `[${ts}] [${level}] ${message}${metaText}`;
+      logLines.push(line);
+      const div = document.createElement('div');
+      div.className = level;
+      div.textContent = line;
+      logEl.appendChild(div);
+      logEl.scrollTop = logEl.scrollHeight;
+    }
+
+    function renderChips(entries) {
+      chipRow.innerHTML = '';
+      entries.forEach(s => {
+        const chip = document.createElement('div');
+        chip.className = 'chip' + (s.state ? ' ' + s.state : '');
+        chip.innerHTML = `<span class="label">${s.label}</span><span>${s.value}</span>`;
+        chipRow.appendChild(chip);
+      });
+    }
+
+    function defaultChips() {
+      renderChips([
+        { label: 'Loader', value: 'pending' },
+        { label: 'Patch18', value: 'pending' },
+        { label: 'Registry', value: 'pending' },
+        { label: 'Subjects', value: 'pending' },
+        { label: 'CSS', value: 'pending' },
+        { label: 'DB', value: 'pending' },
+        { label: 'SW', value: 'pending' },
+        { label: 'Network', value: navigator.onLine ? 'online' : 'offline', state: navigator.onLine ? 'ok' : 'warn' }
+      ]);
+    }
+
+    function summarizeSubjects(registry) {
+      if (!registry || !Object.keys(registry).length) {
+        subjectSummaryEl.textContent = 'Run diagnostics first.';
+        return;
+      }
+      const lines = [];
+      const present = new Set(Object.keys(registry));
+      const expectedSubjects = [
+        'vocabulary', 'verbal_analogies', 'math_knowledge', 'arithmetic_reasoning', 
+        'reading_comprehension', 'instrument_comprehension', 'aviation_information', 
+        'block_counting', 'table_reading', 'physical_science', 'situational_judgment'
+      ];
+      
+      let totalQuestions = 0;
+      expectedSubjects.forEach(id => {
+        const entry = registry[id];
+        if (!entry) { lines.push(`✗ ${id} MISSING`); return; }
+        const subtopics = Object.keys(entry || {});
+        let subCount = 0;
+        subtopics.forEach(s => {
+          const d = entry[s] || {};
+          const b = (d.beginner || []).length;
+          const a = (d.advanced || []).length;
+          const e = (d.expert || []).length;
+          subCount += b + a + e;
+        });
+        totalQuestions += subCount;
+        lines.push(`✓ ${id}: ${subtopics.length} subtopics, ${subCount} total Q`);
+      });
+      lines.push(`\n═══ TOTAL: ${totalQuestions} questions loaded ═══`);
+      subjectSummaryEl.textContent = lines.join('\n');
+    }
+
+    async function runDiagnostics() {
+      setStatus('running');
+      logEl.innerHTML = '';
+      logLines.length = 0;
+      defaultChips();
+
+      addLog('info', 'Network', { online: navigator.onLine });
+
+      try {
+        await ensurePatchLoader();
+        addLog('info', 'patch-loader ready');
+        renderChips([
+          { label: 'Loader', value: 'ready', state: 'ok' },
+          { label: 'Patch18', value: 'pending' },
+          { label: 'Registry', value: 'pending' },
+          { label: 'Subjects', value: 'pending' },
+          { label: 'CSS', value: 'pending' },
+          { label: 'DB', value: 'pending' },
+          { label: 'SW', value: 'pending' },
+          { label: 'Network', value: navigator.onLine ? 'online' : 'offline', state: navigator.onLine ? 'ok' : 'warn' }
+        ]);
+      } catch (err) {
+        addLog('err', 'patch-loader', { message: err.message });
+        setStatus('failed');
+        return;
+      }
+
+      try {
+        const ok = await window.initializePatch18?.();
+        const reg = window.questionRegistry || {};
+        const subjects = Object.keys(reg);
+        addLog('info', 'Registry init', { subjects: subjects.length, ok: ok ? 'true' : 'false' });
+        summarizeSubjects(reg);
+        renderChips([
+          { label: 'Loader', value: 'ready', state: 'ok' },
+          { label: 'Patch18', value: ok ? 'ready' : 'warn', state: ok ? 'ok' : 'warn' },
+          { label: 'Registry', value: `${subjects.length}`, state: subjects.length ? 'ok' : 'warn' },
+          { label: 'Subjects', value: subjects.length ? 'ok' : 'warn', state: subjects.length ? 'ok' : 'warn' },
+          { label: 'CSS', value: 'pending' },
+          { label: 'DB', value: 'pending' },
+          { label: 'SW', value: 'pending' },
+          { label: 'Network', value: navigator.onLine ? 'online' : 'offline', state: navigator.onLine ? 'ok' : 'warn' }
+        ]);
+      } catch (err) {
+        addLog('err', 'Patch18 init', { message: err.message });
+        summarizeSubjects(null);
+      }
+
+      try {
+        const files = [
+          'Test Content/Vocabulary/synonyms_beginner_part1.json',
+          'Test Content/Vocabulary/verbal_analogies_advanced_part1.json',
+          'Test Content/Math/word_problems_equation_setup_beginner_part1.json',
+          'Test Content/Math/factoring_advanced_part1.json',
+          'Test Content/Arithmetic/arithmetic_basic_word_problems_beginner_part1.json',
+          'Test Content/Reading Comprehension /reading_comprehension_beginner_passage7.json',
+          'Test Content/Instrument Comprehension/instrument_comprehension_beginner_part1.json',
+          'Test Content/Aviation/aviation_information_beginner_part1.json',
+          'Test Content/Block Counting/block_counting_beginner_part1.json',
+          'Test Content/Table Reading/table_reading_beginner_part1.json',
+          'Test Content/Physical Science/physical_science_earth_space_beginner_part1.json',
+          'Test Content/Situational/situational_judgment_beginner.json'
+        ];
+        let okCount = 0, failCount = 0;
+        for (const file of files) {
+          const resp = await fetch(file);
+          if (resp.ok) { 
+            const data = await resp.json(); 
+            okCount++;
+            addLog('info', 'JSON ok', { file: file.split('/').pop(), count: (data.questions || []).length }); 
+          } else { 
+            failCount++;
+            addLog('warn', 'JSON 404', { file: file.split('/').pop() }); 
+          }
+        }
+        addLog('info', 'JSON probe summary', { total: files.length, ok: okCount, failed: failCount });
+      } catch (err) {
+        addLog('err', 'JSON probe', { message: err.message });
+      }
+
+      try {
+        const probe = document.createElement('div');
+        probe.innerHTML = '<div class="data-table-container"><table><tr><td>t</td></tr></table></div><div class="bc-scene"><div class="bc-cube"></div></div>';
+        document.body.appendChild(probe);
+        const tableOk = !!window.getComputedStyle(probe.querySelector('.data-table-container')).background;
+        const cubeOk = !!window.getComputedStyle(probe.querySelector('.bc-cube')).background;
+        addLog(tableOk ? 'info' : 'warn', 'Table CSS', { ok: tableOk });
+        addLog(cubeOk ? 'info' : 'warn', 'Block CSS', { ok: cubeOk });
+        probe.remove();
+      } catch (err) {
+        addLog('err', 'CSS probe', { message: err.message });
+      }
+
+      try {
+        await ensureDB();
+        await afoqtDB.init();
+        const players = await afoqtDB.getAllPlayers();
+        addLog('info', 'DB ok', { players: players.length });
+      } catch (err) {
+        addLog('err', 'DB', { message: err.message });
+      }
+
+      try {
+        const swReady = 'serviceWorker' in navigator;
+        const reg = swReady ? await navigator.serviceWorker.getRegistration() : null;
+        addLog('info', 'Service Worker', { supported: swReady, active: reg ? 'yes' : 'no' });
+      } catch (err) {
+        addLog('err', 'SW probe', { message: err.message });
+      }
+
+      setStatus('complete');
+    }
+
+    function createTestCard(def) {
+      const card = document.createElement('div');
+      card.className = 'test-card';
+      const header = document.createElement('div');
+      header.className = 'test-header';
+      const title = document.createElement('div'); title.className = 'test-title'; title.textContent = def.name;
+      const badge = document.createElement('span'); badge.className = 'status-badge'; badge.textContent = 'idle';
+      header.appendChild(title); header.appendChild(badge);
+      const desc = document.createElement('div'); desc.className = 'test-desc'; desc.textContent = def.desc || '';
+
+      const controls = document.createElement('div');
+      controls.className = 'mini-controls';
+      const runBtn = document.createElement('button'); runBtn.className = 'btn'; runBtn.textContent = 'Run';
+      const copyBtn = document.createElement('button'); copyBtn.className = 'btn secondary'; copyBtn.textContent = 'Copy';
+      const clearBtn = document.createElement('button'); clearBtn.className = 'btn danger'; clearBtn.textContent = 'Clear';
+      controls.appendChild(runBtn); controls.appendChild(copyBtn); controls.appendChild(clearBtn);
+
+      const logBox = document.createElement('div'); logBox.className = 'mini-log';
+
+      const lines = [];
+      const setBadge = (state, text) => {
+        badge.className = 'status-badge' + (state ? ' ' + state : '');
+        badge.textContent = text || state || 'idle';
+      };
+      const log = (level, message, meta) => {
+        const ts = new Date().toISOString().substring(11, 19);
+        const metaText = meta ? ' | ' + JSON.stringify(meta) : '';
+        const line = `[${ts}] [${level}] ${message}${metaText}`;
+        lines.push(line);
+        const div = document.createElement('div');
+        div.className = level;
+        div.textContent = line;
+        logBox.appendChild(div);
+        logBox.scrollTop = logBox.scrollHeight;
+      };
+      const clear = () => { lines.length = 0; logBox.innerHTML = ''; setBadge('', 'idle'); };
+
+      runBtn.onclick = async () => {
+        clear();
+        setBadge('warn', 'running');
+        try {
+          await def.run({ log, setBadge });
+          if (badge.textContent === 'running') setBadge('ok', 'ok');
+        } catch (err) {
+          log('err', err.message);
+          setBadge('err', 'failed');
+        }
+      };
+      copyBtn.onclick = () => { if (lines.length) navigator.clipboard.writeText(lines.join('\n')); };
+      clearBtn.onclick = clear;
+
+      card.appendChild(header);
+      card.appendChild(desc);
+      card.appendChild(controls);
+      card.appendChild(logBox);
+      return card;
+    }
+
+    function renderTests(containerId, defs) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      container.innerHTML = '';
+      defs.forEach(def => container.appendChild(createTestCard(def)));
+    }
+
+    function runEssentialsStack() {
+      const logEl = document.getElementById('essentialLog');
+      const chipsEl = document.getElementById('essentialChips');
+      const testListEl = document.getElementById('essentialTests');
+      const lines = [];
+      
+      function log(level, message, meta) {
+        const ts = new Date().toISOString().substring(11, 19);
+        const metaText = meta ? ' | ' + JSON.stringify(meta) : '';
+        const line = `[${ts}] [${level}] ${message}${metaText}`;
+        lines.push(line);
+        const div = document.createElement('div');
+        div.className = level;
+        div.textContent = line;
+        logEl.appendChild(div);
+        logEl.scrollTop = logEl.scrollHeight;
+      }
+      
+      function renderChips(entries) {
+        chipsEl.innerHTML = '';
+        entries.forEach(s => {
+          const chip = document.createElement('div');
+          chip.className = 'chip' + (s.state ? ' ' + s.state : '');
+          chip.innerHTML = `<span class="label">${s.label}</span><span>${s.value}</span>`;
+          chipsEl.appendChild(chip);
+        });
+      }
+      
+      renderChips([
+        { label: 'All Questions', value: 'pending' },
+        { label: 'Content Loader', value: 'pending' },
+        { label: 'CSS Verify', value: 'pending' },
+        { label: 'Table Reading', value: 'pending' },
+        { label: 'Block Counting', value: 'pending' },
+        { label: 'DB Inspector', value: 'pending' }
+      ]);
+      
+      logEl.innerHTML = '';
+      testListEl.innerHTML = '';
+      
+      (async () => {
+        let pass = 0, fail = 0;
+        for (const test of essentialTests) {
+          try {
+            await test.run({ log, setBadge: (s, t) => { if (s === 'ok') pass++; else fail++; } });
+          } catch (e) {
+            log('err', test.name, { error: e.message });
+            fail++;
+          }
+        }
+        log('info', 'Essentials Complete', { passed: pass, failed: fail });
+        renderChips([
+          { label: 'All Questions', value: pass > 0 ? 'ok' : 'fail', state: pass > 0 ? 'ok' : 'err' },
+          { label: 'Content Loader', value: pass > 1 ? 'ok' : 'fail', state: pass > 1 ? 'ok' : 'err' },
+          { label: 'CSS Verify', value: pass > 2 ? 'ok' : 'fail', state: pass > 2 ? 'ok' : 'err' },
+          { label: 'Table Reading', value: pass > 3 ? 'ok' : 'fail', state: pass > 3 ? 'ok' : 'err' },
+          { label: 'Block Counting', value: pass > 4 ? 'ok' : 'fail', state: pass > 4 ? 'ok' : 'err' },
+          { label: 'DB Inspector', value: pass > 5 ? 'ok' : 'fail', state: pass > 5 ? 'ok' : 'err' }
+        ]);
+      })();
+    }
+
+    function runLabsStack() {
+      const logEl = document.getElementById('labLog');
+      const chipsEl = document.getElementById('labChips');
+      const testListEl = document.getElementById('labTests');
+      const lines = [];
+      
+      function log(level, message, meta) {
+        const ts = new Date().toISOString().substring(11, 19);
+        const metaText = meta ? ' | ' + JSON.stringify(meta) : '';
+        const line = `[${ts}] [${level}] ${message}${metaText}`;
+        lines.push(line);
+        const div = document.createElement('div');
+        div.className = level;
+        div.textContent = line;
+        logEl.appendChild(div);
+        logEl.scrollTop = logEl.scrollHeight;
+      }
+      
+      function renderChips(entries) {
+        chipsEl.innerHTML = '';
+        entries.forEach(s => {
+          const chip = document.createElement('div');
+          chip.className = 'chip' + (s.state ? ' ' + s.state : '');
+          chip.innerHTML = `<span class="label">${s.label}</span><span>${s.value}</span>`;
+          chipsEl.appendChild(chip);
+        });
+      }
+      
+      renderChips([
+        { label: 'AFOQT Practice', value: 'pending' },
+        { label: 'Patch Configs', value: 'pending' },
+        { label: 'Tracking', value: 'pending' },
+        { label: 'Math UI', value: 'pending' },
+        { label: 'Geometry', value: 'pending' },
+        { label: 'PWA', value: 'pending' }
+      ]);
+      
+      logEl.innerHTML = '';
+      testListEl.innerHTML = '';
+      
+      (async () => {
+        let pass = 0, fail = 0;
+        for (const test of labTests) {
+          try {
+            await test.run({ log, setBadge: (s, t) => { if (s === 'ok') pass++; else fail++; } });
+          } catch (e) {
+            log('err', test.name, { error: e.message });
+            fail++;
+          }
+        }
+        log('info', 'Labs Complete', { passed: pass, failed: fail });
+      })();
+    }
+
+
+    function renderSelect() {
+      toolSelect.innerHTML = '';
+      tools.forEach(tool => {
+        const opt = document.createElement('option');
+        opt.value = tool.path;
+        opt.textContent = `${tool.name} (${tool.category})`;
+        toolSelect.appendChild(opt);
+      });
+    }
+
+    function renderTable() {
+      const tbody = document.querySelector('#toolTable tbody');
+      tbody.innerHTML = '';
+      tools.forEach(tool => {
+        const tr = document.createElement('tr');
+        const nameTd = document.createElement('td'); nameTd.textContent = tool.name; tr.appendChild(nameTd);
+        const catTd = document.createElement('td'); catTd.textContent = tool.category; tr.appendChild(catTd);
+        const actTd = document.createElement('td');
+        const previewBtn = document.createElement('button'); previewBtn.className = 'btn'; previewBtn.textContent = 'P'; previewBtn.title = 'Preview inline'; previewBtn.onclick = () => { activateTab('viewer'); loadInline(tool.path); };
+        const openBtn = document.createElement('button'); openBtn.className = 'btn secondary'; openBtn.textContent = 'O'; openBtn.title = 'Popout'; openBtn.onclick = () => window.open(tool.path, '_blank');
+        actTd.appendChild(previewBtn); actTd.appendChild(openBtn); tr.appendChild(actTd);
+        tr.addEventListener('dblclick', () => { activateTab('viewer'); loadInline(tool.path); });
+        tbody.appendChild(tr);
+      });
+    }
+
+    function activateTab(tabName) {
+      const targetId = `${tabName}-tab`;
+      tabBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-tab') === tabName));
+      tabContents.forEach(c => c.classList.toggle('active', c.id === targetId));
+    }
+
+    function loadInline(path) {
+      toolFrame.src = path + '?t=' + Date.now();
+      addLog('info', 'Inline load', { path });
+    }
+
+    function loadComprehensive(bust = true) {
+      if (!compFrame) return;
+      const base = 'tests/comprehensive-test-suite.html';
+      compFrame.src = base + (bust ? '?t=' + Date.now() : '');
+      addLog('info', 'Inline load', { path: 'comprehensive-test-suite' });
+    }
+
+    function openTab() {
+      const path = toolSelect.value;
+      if (path) window.open(path, '_blank');
+    }
+
+    function copyLogs() {
+      if (!logLines.length) return;
+      navigator.clipboard.writeText(logLines.join('\n')).then(() => setStatus('copied')).catch(() => setStatus('copy failed'));
+    }
+
+    function copyShare() {
+      const text = logLines.join('\n');
+      if (!text) return;
+      navigator.clipboard.writeText(text).then(() => setStatus('share copied')).catch(() => setStatus('copy failed'));
+    }
+
+    function clearLogs() {
+      logLines.length = 0;
+      logEl.textContent = '';
+      setStatus('idle');
+      defaultChips();
+      subjectSummaryEl.textContent = 'Run diagnostics to populate.';
+    }
+
+    document.getElementById('runDiagBtn').addEventListener('click', runDiagnostics);
+    document.getElementById('copyLogBtn').addEventListener('click', copyLogs);
+    document.getElementById('copyShareBtn').addEventListener('click', copyShare);
+    document.getElementById('clearLogBtn').addEventListener('click', clearLogs);
+    document.getElementById('loadInlineBtn').addEventListener('click', () => loadInline(toolSelect.value));
+    document.getElementById('openTabBtn').addEventListener('click', openTab);
+    const compRefreshBtn = document.getElementById('compRefreshBtn');
+    const compOpenBtn = document.getElementById('compOpenBtn');
+    if (compRefreshBtn) compRefreshBtn.addEventListener('click', () => loadComprehensive(true));
+    if (compOpenBtn) compOpenBtn.addEventListener('click', () => window.open('tests/comprehensive-test-suite.html', '_blank'));
+
+    renderTests('essentialTests', essentialTests);
+    renderTests('labTests', labTests);
+    renderSelect();
+    renderTable();
+    defaultChips();
+    subjectSummaryEl.textContent = 'Run diagnostics to populate.';
+    if (tools[0]) {
+      loadInline(tools[0].path);
+    }
+    loadComprehensive(false);
+
+    // Wire essentials/labs controls
+    document.getElementById('runAllEssential').onclick = runEssentialsStack;
+    document.getElementById('copyAllEssential').onclick = () => {
+      const logEl = document.getElementById('essentialLog');
+      const text = logEl.textContent.trim();
+      if (text) navigator.clipboard.writeText(text);
+    };
+    document.getElementById('clearAllEssential').onclick = () => {
+      document.getElementById('essentialLog').innerHTML = '';
+      document.getElementById('essentialChips').innerHTML = '';
+      document.getElementById('essentialTests').innerHTML = '';
+    };
+
+    document.getElementById('runAllLabs').onclick = runLabsStack;
+    document.getElementById('copyAllLabs').onclick = () => {
+      const logEl = document.getElementById('labLog');
+      const text = logEl.textContent.trim();
+      if (text) navigator.clipboard.writeText(text);
+    };
+    document.getElementById('clearAllLabs').onclick = () => {
+      document.getElementById('labLog').innerHTML = '';
+      document.getElementById('labChips').innerHTML = '';
+      document.getElementById('labTests').innerHTML = '';
+    };
+
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        const tabId = btn.getAttribute('data-tab') + '-tab';
+        const content = document.getElementById(tabId);
+        if (content) content.classList.add('active');
+      });
+    });
+
+    const toolFilter = document.getElementById('toolFilter');
+    if (toolFilter) {
+      toolFilter.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        const rows = document.querySelectorAll('#toolTable tbody tr');
+        rows.forEach(row => {
+          const text = row.textContent.toLowerCase();
+          row.style.display = text.includes(query) ? '' : 'none';
+        });
+      });
+    }
+  </script>
+</body>
+</html>

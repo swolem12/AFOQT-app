@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Comprehensive Test Suite - AFOQT</title>
+  <base href="/AFOQT-app/" />
+  <style>
+    :root {
+      --bg: #0a0c14;
+      --panel: #0e1018;
+      --panel-alt: #12151f;
+      --green: #9cff00;
+      --orange: #ff7a00;
+      --cyan: #00d9ff;
+      --purple: #a78bfa;
+      --text: #e8ecf5;
+      --muted: #9aa6c0;
+      --warn: #ffb300;
+      --err: #ff4b6e;
+      --border: rgba(255, 255, 255, 0.1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "IBM Plex Mono", "Menlo", monospace;
+      background: linear-gradient(135deg, var(--bg) 0%, #0c0e16 50%, var(--bg) 100%);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 12px;
+    }
+
+    .header {
+      background: linear-gradient(90deg, #12151f 0%, #0e1018 100%);
+      border: 1px solid var(--border);
+      padding: 12px 16px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header h1 { font-size: 16px; color: var(--green); letter-spacing: 1px; }
+    .header .status { font-size: 10px; color: var(--muted); }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px; margin-bottom: 12px; }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      padding: 12px;
+      position: relative;
+    }
+    .card h2 { font-size: 12px; color: var(--cyan); margin-bottom: 8px; letter-spacing: 0.5px; }
+    .card p { font-size: 10px; color: var(--muted); margin-bottom: 8px; line-height: 1.4; }
+
+    .btn-group { display: flex; gap: 6px; flex-wrap: wrap; }
+    .btn {
+      padding: 5px 10px;
+      font-size: 9px;
+      font-family: inherit;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      border: 1px solid var(--green);
+      background: rgba(156, 255, 0, 0.08);
+      color: var(--text);
+      cursor: pointer;
+      transition: all 0.12s ease;
+    }
+    .btn:hover { background: rgba(156, 255, 0, 0.16); box-shadow: 0 0 8px rgba(156, 255, 0, 0.2); }
+    .btn.orange { border-color: var(--orange); background: rgba(255, 122, 0, 0.08); }
+    .btn.cyan { border-color: var(--cyan); background: rgba(0, 217, 255, 0.08); }
+    .btn.purple { border-color: var(--purple); background: rgba(167, 139, 250, 0.08); }
+
+    .results {
+      background: #060810;
+      border: 1px solid var(--border);
+      padding: 12px;
+      font-size: 10px;
+      max-height: 400px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      line-height: 1.4;
+      color: var(--green);
+    }
+    .results .pass { color: var(--green); }
+    .results .fail { color: var(--err); }
+    .results .warn { color: var(--warn); }
+    .results .info { color: var(--cyan); }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 6px;
+      font-size: 8px;
+      border: 1px solid var(--border);
+      margin-right: 4px;
+      color: var(--muted);
+    }
+    .badge.core { border-color: var(--green); color: var(--green); }
+    .badge.ui { border-color: var(--cyan); color: var(--cyan); }
+    .badge.data { border-color: var(--purple); color: var(--purple); }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>⚡ Comprehensive Test Suite</h1>
+    <div class="status" id="globalStatus">Ready to test</div>
+  </div>
+
+  <div class="grid">
+    <!-- Content Loading Tests -->
+    <div class="card">
+      <h2>📦 Content Loading</h2>
+      <span class="badge core">CORE</span><span class="badge data">DATA</span>
+      <p>Verify all subject JSON files load correctly and registry builds properly.</p>
+      <div class="btn-group">
+        <button class="btn" onclick="testContentLoading()">Run Test</button>
+        <button class="btn orange" onclick="testJSONSchema()">Schema Validation</button>
+        <button class="btn cyan" onclick="testMissingFiles()">Find Missing Files</button>
+      </div>
+    </div>
+
+    <!-- Registry Integrity -->
+    <div class="card">
+      <h2>🗂️ Registry Integrity</h2>
+      <span class="badge core">CORE</span>
+      <p>Check questionRegistry structure, verify all expected subjects and subtopics present.</p>
+      <div class="btn-group">
+        <button class="btn" onclick="testRegistryStructure()">Structure Check</button>
+        <button class="btn orange" onclick="testQuestionCounts()">Count Questions</button>
+        <button class="btn cyan" onclick="testDifficultyDistribution()">Difficulty Balance</button>
+      </div>
+    </div>
+
+    <!-- UI Renderers -->
+    <div class="card">
+      <h2>🎨 UI Renderers</h2>
+      <span class="badge ui">UI</span>
+      <p>Test Math UI, Geometry UI, Table Reading, Block Counting, Instrument Comprehension renderers.</p>
+      <div class="btn-group">
+        <button class="btn" onclick="testMathUI()">Math UI</button>
+        <button class="btn orange" onclick="testGeometryUI()">Geometry</button>
+        <button class="btn cyan" onclick="testTableReading()">Table Reading</button>
+        <button class="btn purple" onclick="testBlockCounting()">Block Counting</button>
+      </div>
+    </div>
+
+    <!-- CSS & Styling -->
+    <div class="card">
+      <h2>🎭 CSS & Styling</h2>
+      <span class="badge ui">UI</span>
+      <p>Verify all subject-specific CSS classes load correctly (table, blocks, instruments).</p>
+      <div class="btn-group">
+        <button class="btn" onclick="testCSS()">All CSS</button>
+        <button class="btn orange" onclick="testTableCSS()">Table CSS</button>
+        <button class="btn cyan" onclick="testBlockCSS()">Block CSS</button>
+      </div>
+    </div>
+
+    <!-- Database & Storage -->
+    <div class="card">
+      <h2>💾 Database & Storage</h2>
+      <span class="badge data">DATA</span>
+      <p>Test IndexedDB, localStorage, player persistence, session tracking.</p>
+      <div class="btn-group">
+        <button class="btn" onclick="testDatabase()">DB Test</button>
+        <button class="btn orange" onclick="testPlayerCRUD()">Player CRUD</button>
+        <button class="btn cyan" onclick="testSessionTracking()">Session Tracking</button>
+      </div>
+    </div>
+
+    <!-- Question Tracking & SR -->
+    <div class="card">
+      <h2>📊 Question Tracking</h2>
+      <span class="badge data">DATA</span>
+      <p>Spaced repetition, question history, performance tracking.</p>
+      <div class="btn-group">
+        <button class="btn" onclick="testQuestionTracking()">Tracking Logic</button>
+        <button class="btn orange" onclick="testSpacedRepetition()">Spaced Rep</button>
+      </div>
+    </div>
+
+    <!-- App.js Core -->
+    <div class="card">
+      <h2>⚙️ App.js Core</h2>
+      <span class="badge core">CORE</span>
+      <p>Test main app initialization, state management, screen navigation.</p>
+      <div class="btn-group">
+        <button class="btn" onclick="testAppInit()">Init Test</button>
+        <button class="btn orange" onclick="testStateManagement()">State Mgmt</button>
+        <button class="btn cyan" onclick="testNavigation()">Navigation</button>
+      </div>
+    </div>
+
+    <!-- Patch System -->
+    <div class="card">
+      <h2>🔧 Patch System</h2>
+      <span class="badge core">CORE</span>
+      <p>Verify Patch 18-24 configs, subject mappings, content routing.</p>
+      <div class="btn-group">
+        <button class="btn" onclick="testPatchConfigs()">All Patches</button>
+        <button class="btn orange" onclick="testSubjectMapping()">Subject Maps</button>
+      </div>
+    </div>
+
+    <!-- PWA & Service Worker -->
+    <div class="card">
+      <h2>📱 PWA & Offline</h2>
+      <span class="badge core">CORE</span>
+      <p>Service worker, offline mode, cache strategy, install prompt.</p>
+      <div class="btn-group">
+        <button class="btn" onclick="testServiceWorker()">SW Status</button>
+        <button class="btn orange" onclick="testOfflineMode()">Offline Test</button>
+        <button class="btn cyan" onclick="testInstall()">Install Flow</button>
+      </div>
+    </div>
+
+    <!-- Practice Test Generation -->
+    <div class="card">
+      <h2>📝 Practice Tests</h2>
+      <span class="badge core">CORE</span>
+      <p>AFOQT practice test generation, difficulty distribution, question sampling.</p>
+      <div class="btn-group">
+        <button class="btn" onclick="testPracticeGeneration()">Generate Test</button>
+        <button class="btn orange" onclick="testDifficultyDist()">Check Distribution</button>
+      </div>
+    </div>
+
+    <!-- Boot Sequence -->
+    <div class="card">
+      <h2>🚀 Boot Sequence</h2>
+      <span class="badge ui">UI</span>
+      <p>ENCOM globe, boot animation, initialization flow.</p>
+      <div class="btn-group">
+        <button class="btn" onclick="testBootSequence()">Boot Test</button>
+        <button class="btn orange" onclick="openBootDemo()">Boot Demo</button>
+      </div>
+    </div>
+
+    <!-- Error Handling -->
+    <div class="card">
+      <h2>⚠️ Error Handling</h2>
+      <span class="badge core">CORE</span>
+      <p>Test error boundaries, missing content fallbacks, network failures.</p>
+      <div class="btn-group">
+        <button class="btn" onclick="testErrorHandling()">Error Tests</button>
+        <button class="btn orange" onclick="testFallbacks()">Fallbacks</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="results" id="results">Awaiting test execution...</div>
+
+  <script>
+    const resultsEl = document.getElementById('results');
+    const statusEl = document.getElementById('globalStatus');
+    let testLog = [];
+
+    function log(type, message) {
+      const ts = new Date().toISOString().substring(11, 19);
+      const line = `[${ts}] [${type.toUpperCase()}] ${message}`;
+      testLog.push(line);
+      const div = document.createElement('div');
+      div.className = type;
+      div.textContent = line;
+      resultsEl.appendChild(div);
+      resultsEl.scrollTop = resultsEl.scrollHeight;
+    }
+
+    function clearResults() {
+      resultsEl.innerHTML = '';
+      testLog = [];
+    }
+
+    function setStatus(text) {
+      statusEl.textContent = text;
+    }
+
+    // Content Loading Tests
+    async function testContentLoading() {
+      clearResults();
+      setStatus('Testing content loading...');
+      log('info', 'Starting content loading test');
+
+      try {
+        if (!window.questionRegistry) {
+          if (!window.initializePatch18) {
+            log('warn', 'Loading patch-loader...');
+            await loadScript('patch-loader.js');
+          }
+          log('info', 'Initializing Patch18...');
+          await window.initializePatch18();
+        }
+
+        const reg = window.questionRegistry;
+        const subjects = Object.keys(reg);
+        log('pass', `Registry has ${subjects.length} subjects`);
+
+        subjects.forEach(subj => {
+          const subtopics = Object.keys(reg[subj]);
+          let total = 0;
+          subtopics.forEach(st => {
+            const d = reg[subj][st];
+            total += (d.beginner || []).length + (d.advanced || []).length + (d.expert || []).length;
+          });
+          log('info', `${subj}: ${subtopics.length} subtopics, ${total} questions`);
+        });
+
+        log('pass', 'Content loading test PASSED');
+        setStatus('✓ Content loading OK');
+      } catch (err) {
+        log('fail', `Content loading FAILED: ${err.message}`);
+        setStatus('✗ Content loading failed');
+      }
+    }
+
+    async function testJSONSchema() {
+      clearResults();
+      setStatus('Testing JSON schema...');
+      log('info', 'Validating JSON schema');
+
+      const sampleFiles = [
+        'Test Content/Vocabulary/synonyms_beginner_part1.json',
+        'Test Content/Math/factoring_beginner_part1.json',
+        'Test Content/Arithmetic/basic_word_problems_beginner_part1.json'
+      ];
+
+      let pass = 0, fail = 0;
+      for (const file of sampleFiles) {
+        try {
+          const resp = await fetch(file);
+          if (!resp.ok) { log('warn', `404: ${file.split('/').pop()}`); fail++; continue; }
+          const data = await resp.json();
+          
+          // Schema validation
+          if (!data.subtopicId || !data.difficulty || !Array.isArray(data.questions)) {
+            log('fail', `Invalid schema: ${file.split('/').pop()}`);
+            fail++;
+            continue;
+          }
+
+          const q = data.questions[0];
+          if (!q.id || !q.question || !q.choices || !q.answer || !q.explanation) {
+            log('fail', `Invalid question schema: ${file.split('/').pop()}`);
+            fail++;
+            continue;
+          }
+
+          log('pass', `Valid schema: ${file.split('/').pop()} (${data.questions.length} Q)`);
+          pass++;
+        } catch (err) {
+          log('fail', `Error: ${file.split('/').pop()} - ${err.message}`);
+          fail++;
+        }
+      }
+
+      log('info', `Schema validation: ${pass} pass, ${fail} fail`);
+      setStatus(fail === 0 ? '✓ Schema OK' : '✗ Schema issues found');
+    }
+
+    async function testMissingFiles() {
+      clearResults();
+      setStatus('Scanning for missing files...');
+      log('info', 'Checking for 404s in expected content files');
+
+      const expectedFiles = [
+        'Test Content/Instrument Comprehension/instrument_comprehension_beginner_part2.json',
+        'Test Content/Instrument Comprehension/instrument_comprehension_advanced_part2.json',
+        'Test Content/Instrument Comprehension/instrument_comprehension_expert_part2.json',
+        'Test Content/Block Counting/block_counting_advanced_part2.json',
+        'Test Content/Block Counting/block_counting_expert_part2.json'
+      ];
+
+      let missing = 0;
+      for (const file of expectedFiles) {
+        const resp = await fetch(file);
+        if (!resp.ok) {
+          log('warn', `MISSING: ${file.split('/').pop()}`);
+          missing++;
+        } else {
+          log('pass', `Found: ${file.split('/').pop()}`);
+        }
+      }
+
+      log('info', `Missing files: ${missing}`);
+      setStatus(missing > 0 ? `⚠ ${missing} files missing` : '✓ All files present');
+    }
+
+    // Registry Tests
+    async function testRegistryStructure() {
+      clearResults();
+      setStatus('Testing registry structure...');
+      log('info', 'Validating questionRegistry structure');
+
+      if (!window.questionRegistry) {
+        log('fail', 'questionRegistry not initialized');
+        setStatus('✗ Registry not initialized');
+        return;
+      }
+
+      const reg = window.questionRegistry;
+      const expected = ['vocabulary', 'verbal_analogies', 'math_knowledge', 'arithmetic_reasoning', 'reading_comprehension', 'instrument_comprehension', 'aviation_information', 'block_counting', 'table_reading', 'physical_science', 'situational_judgment'];
+
+      let pass = 0, fail = 0;
+      expected.forEach(subj => {
+        if (reg[subj]) {
+          const subtopics = Object.keys(reg[subj]);
+          log('pass', `${subj}: ${subtopics.length} subtopics`);
+          pass++;
+        } else {
+          log('fail', `MISSING SUBJECT: ${subj}`);
+          fail++;
+        }
+      });
+
+      log('info', `Registry check: ${pass}/${expected.length} subjects present`);
+      setStatus(fail === 0 ? '✓ Registry OK' : `✗ ${fail} subjects missing`);
+    }
+
+    async function testQuestionCounts() {
+      clearResults();
+      if (!window.questionRegistry) {
+        log('fail', 'Registry not initialized');
+        return;
+      }
+
+      setStatus('Counting questions...');
+      log('info', 'Counting all questions by subject');
+
+      const reg = window.questionRegistry;
+      let grandTotal = 0;
+
+      Object.keys(reg).forEach(subj => {
+        let subjTotal = 0;
+        Object.keys(reg[subj]).forEach(st => {
+          const d = reg[subj][st];
+          subjTotal += (d.beginner || []).length + (d.advanced || []).length + (d.expert || []).length;
+        });
+        grandTotal += subjTotal;
+        log('info', `${subj}: ${subjTotal} questions`);
+      });
+
+      log('pass', `TOTAL: ${grandTotal} questions in registry`);
+      setStatus(`✓ ${grandTotal} total questions`);
+    }
+
+    async function testDifficultyDistribution() {
+      clearResults();
+      if (!window.questionRegistry) {
+        log('fail', 'Registry not initialized');
+        return;
+      }
+
+      setStatus('Analyzing difficulty distribution...');
+      log('info', 'Checking beginner/advanced/expert balance');
+
+      const reg = window.questionRegistry;
+      let bTotal = 0, aTotal = 0, eTotal = 0;
+
+      Object.keys(reg).forEach(subj => {
+        let bCount = 0, aCount = 0, eCount = 0;
+        Object.keys(reg[subj]).forEach(st => {
+          const d = reg[subj][st];
+          bCount += (d.beginner || []).length;
+          aCount += (d.advanced || []).length;
+          eCount += (d.expert || []).length;
+        });
+        bTotal += bCount; aTotal += aCount; eTotal += eCount;
+        if (bCount + aCount + eCount > 0) {
+          log('info', `${subj}: B:${bCount} A:${aCount} E:${eCount}`);
+        }
+      });
+
+      const total = bTotal + aTotal + eTotal;
+      const bPct = ((bTotal / total) * 100).toFixed(1);
+      const aPct = ((aTotal / total) * 100).toFixed(1);
+      const ePct = ((eTotal / total) * 100).toFixed(1);
+
+      log('pass', `Distribution: ${bPct}% beginner, ${aPct}% advanced, ${ePct}% expert`);
+      setStatus(`✓ B:${bPct}% A:${aPct}% E:${ePct}%`);
+    }
+
+    // UI Tests
+    async function testMathUI() {
+      clearResults();
+      log('info', 'Testing Math UI renderer');
+      window.open('tests/test-math-ui.html', '_blank');
+      log('pass', 'Opened Math UI test in new tab');
+    }
+
+    async function testGeometryUI() {
+      clearResults();
+      log('info', 'Testing Geometry UI renderer');
+      window.open('tests/test-geometry-ui.html', '_blank');
+      log('pass', 'Opened Geometry UI test in new tab');
+    }
+
+    async function testTableReading() {
+      clearResults();
+      log('info', 'Testing Table Reading UI');
+      window.open('tests/test-table-reading.html', '_blank');
+      log('pass', 'Opened Table Reading test in new tab');
+    }
+
+    async function testBlockCounting() {
+      clearResults();
+      log('info', 'Testing Block Counting UI');
+      window.open('tests/test-block-counting-iso.html', '_blank');
+      log('pass', 'Opened Block Counting test in new tab');
+    }
+
+    // CSS Tests
+    async function testCSS() {
+      clearResults();
+      setStatus('Testing CSS...');
+      log('info', 'Probing CSS class availability');
+
+      const probe = document.createElement('div');
+      probe.innerHTML = `
+        <div class="data-table-container"><table><tr><td>t</td></tr></table></div>
+        <div class="bc-scene"><div class="bc-cube"></div></div>
+        <div class="instrument-display"></div>
+      `;
+      document.body.appendChild(probe);
+
+      const tableOk = !!window.getComputedStyle(probe.querySelector('.data-table-container')).background;
+      const cubeOk = !!window.getComputedStyle(probe.querySelector('.bc-cube')).background;
+      const instOk = !!window.getComputedStyle(probe.querySelector('.instrument-display')).display;
+
+      log(tableOk ? 'pass' : 'fail', `Table Reading CSS: ${tableOk ? 'OK' : 'MISSING'}`);
+      log(cubeOk ? 'pass' : 'fail', `Block Counting CSS: ${cubeOk ? 'OK' : 'MISSING'}`);
+      log(instOk ? 'pass' : 'fail', `Instrument CSS: ${instOk ? 'OK' : 'MISSING'}`);
+
+      probe.remove();
+      setStatus(tableOk && cubeOk && instOk ? '✓ CSS OK' : '✗ CSS issues');
+    }
+
+    async function testTableCSS() {
+      clearResults();
+      window.open('tests/css-verification.html', '_blank');
+      log('pass', 'Opened CSS verification in new tab');
+    }
+
+    async function testBlockCSS() {
+      clearResults();
+      window.open('tests/css-verification.html', '_blank');
+      log('pass', 'Opened CSS verification in new tab');
+    }
+
+    // Database Tests
+    async function testDatabase() {
+      clearResults();
+      setStatus('Testing database...');
+      log('info', 'Testing IndexedDB access');
+
+      try {
+        if (!window.afoqtDB) {
+          await loadScript('db.js');
+        }
+
+        await window.afoqtDB.init();
+        const players = await window.afoqtDB.getAllPlayers();
+        log('pass', `DB accessible: ${players.length} players`);
+        setStatus(`✓ DB OK (${players.length} players)`);
+      } catch (err) {
+        log('fail', `DB error: ${err.message}`);
+        setStatus('✗ DB failed');
+      }
+    }
+
+    async function testPlayerCRUD() {
+      clearResults();
+      window.open('tests/test-db.html', '_blank');
+      log('pass', 'Opened DB inspector in new tab');
+    }
+
+    async function testSessionTracking() {
+      clearResults();
+      window.open('tests/test-question-tracking.html', '_blank');
+      log('pass', 'Opened tracking test in new tab');
+    }
+
+    // Question Tracking
+    async function testQuestionTracking() {
+      clearResults();
+      window.open('tests/test-question-tracking.html', '_blank');
+      log('pass', 'Opened tracking test in new tab');
+    }
+
+    async function testSpacedRepetition() {
+      clearResults();
+      window.open('tests/test-question-tracking.html', '_blank');
+      log('pass', 'Opened SR test in new tab');
+    }
+
+    // App.js Core
+    async function testAppInit() {
+      clearResults();
+      setStatus('Testing app init...');
+      log('info', 'Checking app.js initialization');
+
+      if (typeof initGame === 'function') {
+        log('pass', 'app.js loaded, initGame available');
+      } else {
+        log('warn', 'app.js not loaded in this context');
+      }
+
+      window.open('/', '_blank');
+      log('pass', 'Opened main app in new tab');
+    }
+
+    async function testStateManagement() {
+      clearResults();
+      log('info', 'State management test requires main app context');
+      window.open('/', '_blank');
+    }
+
+    async function testNavigation() {
+      clearResults();
+      log('info', 'Navigation test requires main app context');
+      window.open('/', '_blank');
+    }
+
+    // Patch System
+    async function testPatchConfigs() {
+      clearResults();
+      setStatus('Testing patch configs...');
+      log('info', 'Checking Patch 18-24 configs');
+
+      const patchFiles = [
+        'Test Content/patches/Patch_18.json',
+        'patches/Patch_19.json',
+        'patches/Patch_20.json',
+        'patches/Patch_21.json',
+        'patches/Patch_22.json',
+        'patches/Patch_24.json'
+      ];
+
+      let pass = 0, fail = 0;
+      for (const file of patchFiles) {
+        const resp = await fetch(file);
+        if (resp.ok) {
+          log('pass', `Found: ${file.split('/').pop()}`);
+          pass++;
+        } else {
+          log('fail', `Missing: ${file.split('/').pop()}`);
+          fail++;
+        }
+      }
+
+      log('info', `Patch configs: ${pass} found, ${fail} missing`);
+      setStatus(fail === 0 ? '✓ All patches OK' : `✗ ${fail} patches missing`);
+    }
+
+    async function testSubjectMapping() {
+      clearResults();
+      window.open('tests/test-patch_18.html', '_blank');
+      log('pass', 'Opened Patch18 test in new tab');
+    }
+
+    // PWA
+    async function testServiceWorker() {
+      clearResults();
+      setStatus('Checking service worker...');
+      log('info', 'Testing SW registration');
+
+      if ('serviceWorker' in navigator) {
+        const reg = await navigator.serviceWorker.getRegistration();
+        if (reg) {
+          log('pass', `SW active: ${reg.active?.scriptURL || 'unknown'}`);
+          setStatus('✓ SW active');
+        } else {
+          log('warn', 'SW supported but not registered');
+          setStatus('⚠ SW not registered');
+        }
+      } else {
+        log('fail', 'SW not supported');
+        setStatus('✗ SW not supported');
+      }
+    }
+
+    async function testOfflineMode() {
+      clearResults();
+      log('info', 'Offline mode test requires network toggle');
+      log('info', 'Use DevTools > Network > Offline checkbox');
+    }
+
+    async function testInstall() {
+      clearResults();
+      window.open('tests/install.html', '_blank');
+      log('pass', 'Opened install test in new tab');
+    }
+
+    // Practice Tests
+    async function testPracticeGeneration() {
+      clearResults();
+      window.open('tests/test-afoqt-full-practice.html', '_blank');
+      log('pass', 'Opened practice test generator in new tab');
+    }
+
+    async function testDifficultyDist() {
+      clearResults();
+      window.open('tests/test-afoqt-full-practice.html', '_blank');
+      log('pass', 'Opened practice test config in new tab');
+    }
+
+    // Boot
+    async function testBootSequence() {
+      clearResults();
+      window.open('tests/boot-demo.html', '_blank');
+      log('pass', 'Opened boot demo in new tab');
+    }
+
+    async function openBootDemo() {
+      clearResults();
+      window.open('tests/boot-demo.html', '_blank');
+      log('pass', 'Opened boot demo in new tab');
+    }
+
+    // Error Handling
+    async function testErrorHandling() {
+      clearResults();
+      window.open('tests/test-app-js-errors.html', '_blank');
+      log('pass', 'Opened error catcher in new tab');
+    }
+
+    async function testFallbacks() {
+      clearResults();
+      log('info', 'Testing fallback mechanisms');
+      log('warn', 'Manual test: disable network and try loading app');
+    }
+
+    // Helpers
+    function loadScript(src) {
+      return new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = src + '?t=' + Date.now();
+        s.onload = resolve;
+        s.onerror = reject;
+        document.head.appendChild(s);
+      });
+    }
+
+    // Auto-run on load
+    log('info', 'Comprehensive Test Suite loaded');
+    log('info', 'Click any test button to begin');
+  </script>
+</body>
+</html>

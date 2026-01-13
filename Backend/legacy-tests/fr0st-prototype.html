@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFOQT Quest · fr0st Prototype</title>
+    <style>
+        :root {
+            --bg-1: #05070f;
+            --bg-2: #0a0f1d;
+            --bg-3: #101a2e;
+            --accent: #9ef4ff;
+            --accent-2: #86c1ff;
+            --accent-3: #b8ffcf;
+            --glow: 0 0 32px rgba(134, 193, 255, 0.4);
+            --text: #eaf6ff;
+            --muted: #9fb6c6;
+            --panel: rgba(255, 255, 255, 0.04);
+            --panel-strong: rgba(255, 255, 255, 0.08);
+            --border: rgba(158, 244, 255, 0.25);
+            --card-radius: 20px;
+            --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: radial-gradient(circle at 20% 20%, rgba(134, 193, 255, 0.08), transparent 30%),
+                        radial-gradient(circle at 80% 10%, rgba(184, 255, 207, 0.08), transparent 28%),
+                        linear-gradient(135deg, var(--bg-1), var(--bg-2) 40%, var(--bg-3));
+            color: var(--text);
+            font-family: 'Space Grotesk', 'IBM Plex Mono', system-ui, -apple-system, sans-serif;
+            letter-spacing: 0.01em;
+            overflow-x: hidden;
+            background-attachment: fixed;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(0, 255, 255, 0.08), transparent 25%),
+                        radial-gradient(circle at 80% 10%, rgba(255, 170, 94, 0.08), transparent 26%),
+                        linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.0) 40%, rgba(255,255,255,0.02) 100%);
+            mix-blend-mode: screen;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        .grain {
+            position: fixed;
+            inset: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3"/></filter><rect width="120" height="120" filter="url(%23n)" opacity="0.08"/></svg>');
+            pointer-events: none;
+            mix-blend-mode: screen;
+            opacity: 0.45;
+        }
+
+        .scanlines {
+            position: fixed;
+            inset: 0;
+            background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+            background-size: 100% 3px;
+            opacity: 0.3;
+            pointer-events: none;
+            mix-blend-mode: soft-light;
+        }
+
+        .hud-grid {
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 120px 120px, 120px 120px;
+            opacity: 0.25;
+            pointer-events: none;
+            mix-blend-mode: screen;
+        }
+
+        .frame {
+            position: relative;
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 48px 24px 120px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 24px;
+            margin-bottom: 28px;
+            border: 1px solid var(--border);
+            border-radius: var(--card-radius);
+            background: linear-gradient(120deg, rgba(158, 244, 255, 0.08), rgba(255,255,255,0.02));
+            box-shadow: var(--shadow);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .brand .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--accent-3), var(--accent));
+            box-shadow: 0 0 18px rgba(158, 244, 255, 0.8);
+        }
+
+        .nav {
+            display: flex;
+            gap: 12px;
+        }
+
+        .pill {
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            color: var(--text);
+            background: rgba(255,255,255,0.03);
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 0.05em;
+            transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+        }
+        .pill:hover {
+            transform: translateY(-1px);
+            border-color: rgba(158, 244, 255, 0.6);
+            box-shadow: var(--glow);
+        }
+
+        .hero {
+            position: relative;
+            border: 1px solid var(--border);
+            border-radius: calc(var(--card-radius) + 8px);
+            padding: 48px 38px;
+            background: linear-gradient(160deg, rgba(158, 244, 255, 0.08), rgba(255,255,255,0.02) 40%), var(--panel);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        .hero .corner {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--accent);
+            opacity: 0.7;
+        }
+        .corner.tl { top: 12px; left: 12px; border-right: 0; border-bottom: 0; }
+        .corner.tr { top: 12px; right: 12px; border-left: 0; border-bottom: 0; }
+        .corner.bl { bottom: 12px; left: 12px; border-right: 0; border-top: 0; }
+        .corner.br { bottom: 12px; right: 12px; border-left: 0; border-top: 0; }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 20%, rgba(184, 255, 207, 0.18), transparent 30%);
+            filter: blur(18px);
+            opacity: 0.8;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(158, 244, 255, 0.12);
+            border: 1px solid var(--border);
+            color: var(--accent);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+        }
+
+        h1 {
+            margin: 10px 0 14px;
+            font-size: clamp(28px, 3vw, 42px);
+            line-height: 1.1;
+            text-shadow: var(--glow);
+        }
+
+        .muted { color: var(--muted); }
+
+        .cta-row {
+            margin-top: 18px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 18px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            background: linear-gradient(120deg, rgba(158, 244, 255, 0.18), rgba(255,255,255,0.05));
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            box-shadow: var(--shadow);
+            transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 50px rgba(134, 193, 255, 0.35);
+            border-color: rgba(158, 244, 255, 0.6);
+        }
+        .btn.secondary { background: rgba(255,255,255,0.04); }
+
+        .grid {
+            margin-top: 36px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            position: relative;
+            padding: 18px 18px 20px;
+            border-radius: var(--card-radius);
+            border: 1px solid var(--border);
+            background: linear-gradient(140deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)), var(--panel);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px dashed rgba(158, 244, 255, 0.18);
+            border-radius: inherit;
+            pointer-events: none;
+        }
+
+
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            letter-spacing: 0.04em;
+        }
+
+        .tag {
+            display: inline-flex;
+            padding: 6px 10px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            font-size: 12px;
+            color: var(--accent-2);
+            letter-spacing: 0.05em;
+        }
+
+        .progress {
+            margin-top: 12px;
+            height: 6px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.05);
+            overflow: hidden;
+        }
+        .progress span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-3));
+            width: var(--pct, 50%);
+        }
+
+        .loader-overlay {
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(135deg, #02030a, #040812 50%, #080f1a);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 1;
+            transition: opacity 600ms ease;
+        }
+        .loader-overlay.hidden { opacity: 0; pointer-events: none; }
+
+        .boot-complete {
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(135deg, #02030a, #040812 50%, #080f1a);
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 600ms ease;
+        }
+
+        .boot-complete.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .boot-complete-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(24px, 4vw, 36px);
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #00ff88;
+            text-shadow: 0 0 20px rgba(0, 255, 136, 0.8);
+        }
+
+        .boot-complete-subtitle {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: clamp(14px, 2vw, 18px);
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            text-shadow: 0 0 12px rgba(158, 244, 255, 0.6);
+        }
+
+        .globe-wrap {
+            position: relative;
+            width: min(480px, 75vw);
+            aspect-ratio: 1 / 1;
+        }
+
+        #globeHost {
+            width: 100%;
+            height: 100%;
+        }
+
+        #globeHost canvas {
+            width: 100% !important;
+            height: 100% !important;
+            display: block !important;
+        }
+
+        .init-progress {
+            width: min(480px, 75vw);
+            margin-top: 0;
+        }
+
+        .progress-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12px;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            margin-bottom: 8px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .progress-track {
+            width: 100%;
+            height: 8px;
+            background: rgba(158, 244, 255, 0.1);
+            border: 1px solid rgba(158, 244, 255, 0.3);
+            border-radius: 999px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #00ff88, #00d4ff);
+            box-shadow: 0 0 16px rgba(0, 255, 136, 0.6);
+            transition: width 100ms linear;
+        }
+
+        .progress-percent {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 14px;
+            color: var(--accent);
+            margin-top: 8px;
+            text-align: center;
+            letter-spacing: 0.1em;
+        }
+
+        .init-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .app-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--accent);
+            text-shadow: 0 0 40px rgba(158, 244, 255, 0.8),
+                         0 0 80px rgba(158, 244, 255, 0.4);
+            margin: 0;
+            position: relative;
+        }
+
+        .app-logo::before,
+        .app-logo::after {
+            content: '—';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent);
+            opacity: 0.6;
+        }
+
+        .app-logo::before {
+            left: -60px;
+        }
+
+        .app-logo::after {
+            right: -60px;
+        }
+
+        .app-subtitle {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: clamp(11px, 1.2vw, 14px);
+            letter-spacing: 0.2em;
+            color: var(--muted);
+            text-transform: uppercase;
+            margin-top: -24px;
+        }
+
+        .note {
+            margin-top: 12px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .toggle-row {
+            position: fixed;
+            right: 16px;
+            bottom: 16px;
+            display: flex;
+            gap: 10px;
+        }
+
+        @media (max-width: 720px) {
+            header { flex-direction: column; align-items: flex-start; gap: 12px; }
+            .nav { flex-wrap: wrap; }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="hud-grid" aria-hidden="true"></div>
+
+    <div class="loader-overlay" id="loader" aria-label="Initializing system">
+        <div class="init-container">
+            <h1 class="app-logo">AFOQT QUEST</h1>
+            <div class="app-subtitle">// OFFICER TRAINING SIMULATION</div>
+            <div class="globe-wrap">
+                <div id="globeHost"></div>
+            </div>
+            <div class="init-progress">
+                <div class="progress-label">System Initialization</div>
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-percent" id="progressPercent">0%</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="boot-complete" id="bootComplete">
+        <div class="boot-complete-title">BOOT UP COMPLETE</div>
+        <div class="boot-complete-subtitle">WELCOME TO AFOQT QUEST</div>
+    </div>
+
+    <div class="frame">
+        <header>
+            <div class="brand"><span class="dot"></span> fr0st · Prototype</div>
+            <nav class="nav">
+                <a class="pill" href="../index.html">Current UI</a>
+                <a class="pill" href="#">Docs</a>
+                <a class="pill" href="#">Components</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+            <div class="hero-content">
+                <div>
+                    <div class="badge">Exploration Build</div>
+                    <h1>New frost-glass interface for AFOQT Quest</h1>
+                    <p class="muted">Prototype a cooler, crisper layer inspired by fr0st.xyz. Everything here is self-contained so we can iterate safely before merging into the main SPA.</p>
+                    <div class="cta-row">
+                        <button class="btn" id="showLoader">Replay Globe Loader</button>
+                        <button class="btn secondary" id="togglePalette">Toggle Palette</button>
+                    </div>
+                </div>
+                <div class="card" style="min-height: 180px;">
+                    <div class="tag">Layout Sketch</div>
+                    <p class="muted" style="margin:12px 0 0;">Hero + modular tiles. Keep glassy edges, layered gradients, and neon accents. Works standalone; no app.js dependency.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid" aria-label="Component ideas">
+            <div class="card">
+                <div class="tag">Modules</div>
+                <h3>Practice deck</h3>
+                <p class="muted">Show condensed progress, quick actions, and difficulty states with color-coded accents.</p>
+                <div class="progress" aria-hidden="true"><span style="--pct:72%;"></span></div>
+            </div>
+            <div class="card">
+                <div class="tag">Status</div>
+                <h3>Offline-first</h3>
+                <p class="muted">Surface cache state and sync health. Frosted panels let status sit without shouting.</p>
+                <div class="progress" aria-hidden="true"><span style="--pct:44%;"></span></div>
+            </div>
+            <div class="card">
+                <div class="tag">Controls</div>
+                <h3>Input lattice</h3>
+                <p class="muted">Use mono for inputs, grotesk for labels. Keep hit areas chunky for touch.</p>
+                <div class="progress" aria-hidden="true"><span style="--pct:58%;"></span></div>
+            </div>
+        </div>
+
+        <p class="note">Tip: use this page as a sandbox. Duplicate components into the app once the look & interactions feel right.</p>
+    </div>
+
+    <div class="toggle-row">
+        <button class="btn secondary" id="showLoader">Replay Boot Sequence</button>
+        <a class="btn" href="./admin-console.html">Admin Console</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/swolem12/encom-globe/data.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/swolem12/encom-globe/grid.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/swolem12/encom-globe/build/encom-globe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        (() => {
+            const loader = document.getElementById('loader');
+            const host = document.getElementById('globeHost');
+            const progressFill = document.getElementById('progressFill');
+            const progressPercent = document.getElementById('progressPercent');
+            const bootComplete = document.getElementById('bootComplete');
+            const showBtn = document.getElementById('showLoader');
+            const togglePaletteBtn = document.getElementById('togglePalette');
+
+            let globe, animationId;
+            let loopRunning = false;
+            let darkMode = false;
+
+            const resize = () => {
+                if (!globe || !globe.renderer) return;
+                const w = host.clientWidth;
+                const h = host.clientHeight;
+                globe.camera.aspect = w / h;
+                globe.camera.updateProjectionMatrix();
+                globe.renderer.setSize(w, h);
+            };
+
+            const stopLoop = () => {
+                if (animationId) cancelAnimationFrame(animationId);
+                animationId = null;
+                loopRunning = false;
+            };
+
+            const startLoop = () => {
+                if (loopRunning) return;
+                loopRunning = true;
+                const step = () => {
+                    animationId = requestAnimationFrame(step);
+                    if (globe) globe.tick();
+                };
+                step();
+            };
+
+            const buildGlobe = () => {
+                if (!window.ENCOM || !window.ENCOM.Globe) {
+                    console.warn('ENCOM.Globe not available yet');
+                    return;
+                }
+                if (globe && globe.destroy) {
+                    globe.destroy();
+                }
+
+                const w = host.clientWidth || 400;
+                const h = host.clientHeight || 400;
+                globe = new ENCOM.Globe(w, h, {
+                    font: 'Inconsolata',
+                    data: window.data ? window.data.slice() : [],
+                    tiles: window.grid ? window.grid.tiles : [],
+                    baseColor: '#8ce7ff',
+                    markerColor: '#b8ffcf',
+                    pinColor: '#ffdf8b',
+                    satelliteColor: '#ffae5f',
+                    scale: 1.05,
+                    dayLength: 12000,
+                    introLinesDuration: 2000,
+                    maxPins: 10,
+                    maxMarkers: 15,
+                    viewAngle: 0.3
+                });
+
+                host.innerHTML = '';
+                host.appendChild(globe.domElement);
+                
+                // Force transparent background on renderer
+                if (globe.renderer) {
+                    globe.renderer.setClearColor(0x000000, 0);
+                    const canvas = globe.renderer.domElement;
+                    canvas.style.background = 'none';
+                    canvas.style.backgroundColor = 'transparent';
+                }
+                
+                globe.init(() => {
+                    startLoop();
+                    addGlobeFeatures();
+                });
+                resize();
+            };
+
+            const addGlobeFeatures = () => {
+                if (!globe) return;
+
+                // Add connected markers (like in the movie)
+                setTimeout(() => {
+                    globe.addMarker(40.7128, -74.0060, "New York");
+                    globe.addMarker(51.5074, -0.1278, "London", true);
+                }, 2200);
+
+                setTimeout(() => {
+                    globe.addMarker(35.6762, 139.6503, "Tokyo");
+                    globe.addMarker(-33.8688, 151.2093, "Sydney", true);
+                }, 2800);
+
+                // Add satellite constellation
+                setTimeout(() => {
+                    const constellation = [];
+                    const opts = {
+                        coreColor: '#ffae5f',
+                        numWaves: 3
+                    };
+                    for (let i = 0; i < 2; i++) {
+                        for (let j = 0; j < 3; j++) {
+                            constellation.push({
+                                lat: 50 * i - 30 + 15 * Math.random(),
+                                lon: 120 * j - 120 + 30 * i,
+                                altitude: 1.3
+                            });
+                        }
+                    }
+                    globe.addConstellation(constellation, opts);
+                }, 3500);
+
+                // Add random pins periodically
+                const pinInterval = setInterval(() => {
+                    if (!globe) {
+                        clearInterval(pinInterval);
+                        return;
+                    }
+                    const lat = Math.random() * 180 - 90;
+                    const lon = Math.random() * 360 - 180;
+                    const names = ['Alpha Site', 'Beta Node', 'Gamma Link', 'Delta Hub', 'Echo Point'];
+                    const name = names[Math.floor(Math.random() * names.length)];
+                    globe.addPin(lat, lon, name);
+                }, 4000);
+
+                // Stop after 30s
+                setTimeout(() => clearInterval(pinInterval), 30000);
+            };
+
+            // Animate progress bar from 0-100%
+            const animateProgress = () => {
+                gsap.to(progressFill, {
+                    width: '100%',
+                    duration: 8,
+                    ease: 'linear',
+                    onUpdate: function() {
+                        const progress = Math.floor(this.progress() * 100);
+                        progressPercent.textContent = progress + '%';
+                    },
+                    onComplete: showBootComplete
+                });
+            };
+
+            // Show boot complete message then fade to main UI
+            const showBootComplete = () => {
+                // Fade out loader
+                gsap.to(loader, {
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: 'power2.inOut',
+                    onComplete: () => {
+                        loader.classList.add('hidden');
+                        
+                        // Show boot complete overlay
+                        bootComplete.classList.add('show');
+                        bootComplete.style.opacity = '0';
+                        
+                        // Fade in boot complete
+                        gsap.to(bootComplete, {
+                            opacity: 1,
+                            duration: 0.5,
+                            ease: 'power2.out'
+                        });
+                        
+                        // Animate title
+                        gsap.fromTo('.boot-complete-title', 
+                            { opacity: 0, y: -20 },
+                            { opacity: 1, y: 0, duration: 0.6, delay: 0.2, ease: 'power3.out' }
+                        );
+                        
+                        // Animate subtitle
+                        gsap.fromTo('.boot-complete-subtitle', 
+                            { opacity: 0, y: 10 },
+                            { opacity: 0.8, y: 0, duration: 0.6, delay: 0.4, ease: 'power3.out' }
+                        );
+                        
+                        // Auto-dismiss after 3 seconds
+                        setTimeout(() => {
+                            gsap.to(bootComplete, {
+                                opacity: 0,
+                                duration: 0.8,
+                                ease: 'power2.inOut',
+                                onComplete: () => {
+                                    bootComplete.classList.remove('show');
+                                }
+                            });
+                        }, 3000);
+                    }
+                });
+            };
+
+            const togglePalette = () => {
+                darkMode = !darkMode;
+                document.documentElement.style.setProperty('--bg-1', darkMode ? '#030507' : '#05070f');
+                document.documentElement.style.setProperty('--bg-2', darkMode ? '#050c10' : '#0a0f1d');
+                document.documentElement.style.setProperty('--bg-3', darkMode ? '#0a1820' : '#101a2e');
+            };
+
+            showBtn.addEventListener('click', () => {
+                loader.classList.remove('hidden');
+                loader.style.opacity = '1';
+                bootComplete.classList.remove('show');
+                progressFill.style.width = '0%';
+                progressPercent.textContent = '0%';
+                setTimeout(animateProgress, 800);
+            });
+            togglePaletteBtn.addEventListener('click', togglePalette);
+
+            const onResize = () => resize();
+            window.addEventListener('resize', onResize);
+
+            // Initialize globe when first paint is ready
+            const kickOff = () => {
+                buildGlobe();
+                resize();
+                
+                // Evangelion-style sequential boot animations
+                const tl = gsap.timeline();
+                
+                // Logo glitch-in
+                tl.fromTo('.app-logo', 
+                    { opacity: 0, y: -30, scaleX: 0.8 },
+                    { opacity: 1, y: 0, scaleX: 1, duration: 0.8, ease: 'power4.out' }
+                )
+                // Subtitle scan-in
+                .fromTo('.app-subtitle',
+                    { opacity: 0, letterSpacing: '0.5em' },
+                    { opacity: 0.7, letterSpacing: '0.2em', duration: 0.6, ease: 'power2.out' },
+                    '-=0.3'
+                )
+                // Globe fade-scale-in
+                .fromTo('.globe-wrap',
+                    { opacity: 0, scale: 0.85 },
+                    { opacity: 1, scale: 1, duration: 1, ease: 'power3.out' },
+                    '-=0.2'
+                )
+                // Progress bar slide-in
+                .fromTo('.init-progress',
+                    { opacity: 0, y: 20 },
+                    { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' },
+                    '-=0.5'
+                )
+                // Start progress animation
+                .call(() => {
+                    setTimeout(animateProgress, 300);
+                });
+                
+                // Logo pulse animation (continuous)
+                if (window.anime) {
+                    anime({
+                        targets: '.app-logo',
+                        textShadow: [
+                            '0 0 40px rgba(158, 244, 255, 0.8), 0 0 80px rgba(158, 244, 255, 0.4)',
+                            '0 0 60px rgba(158, 244, 255, 1), 0 0 120px rgba(158, 244, 255, 0.6)',
+                            '0 0 40px rgba(158, 244, 255, 0.8), 0 0 80px rgba(158, 244, 255, 0.4)'
+                        ],
+                        duration: 3000,
+                        easing: 'easeInOutSine',
+                        loop: true
+                    });
+                }
+            };
+
+            // Wait for ENCOM to load if needed
+            if (window.ENCOM && window.ENCOM.Globe) {
+                kickOff();
+            } else {
+                const poll = setInterval(() => {
+                    if (window.ENCOM && window.ENCOM.Globe) {
+                        clearInterval(poll);
+                        kickOff();
+                    }
+                }, 50);
+                setTimeout(() => clearInterval(poll), 4000);
+            }
+
+            // Pause animation when tab hidden
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    stopLoop();
+                } else {
+                    startLoop();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

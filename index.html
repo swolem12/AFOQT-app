@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AFOQT Quest - RPG-style study app with procedurally generated questions">
+    <meta name="theme-color" content="#00ffff">
+    
+    <!-- PWA Configuration -->
+    <link rel="manifest" href="/AFOQT-app/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="AFOQT Quest">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/AFOQT-app/assets/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="/AFOQT-app/assets/icons/icon-192.png">
+    
+    <title>AFOQT Quest</title>
+    <link rel="stylesheet" href="/AFOQT-app/styles.css">
+    <script src="https://cdn.jsdelivr.net/gh/swolem12/encom-globe/data.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/swolem12/encom-globe/grid.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/swolem12/encom-globe/build/encom-globe.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="/AFOQT-app/assets/libs/anime.min.js" defer onload="scriptLoaded('anime')" onerror="document.getElementById('boot-status').textContent='Anime failed to load'"></script>
+    <script src="/AFOQT-app/db.js" defer onload="scriptLoaded('db')" onerror="document.getElementById('boot-status').textContent='DB failed to load'"></script>
+    <script src="/AFOQT-app/patch-loader.js" defer onload="scriptLoaded('patch-loader')" onerror="document.getElementById('boot-status').textContent='Patch-loader failed to load'"></script>
+    <script src="/AFOQT-app/full-practice-test-loader.js" defer onload="scriptLoaded('full-practice-test-loader')" onerror="document.getElementById('boot-status').textContent='Full practice test loader failed to load'"></script>
+    <script src="/AFOQT-app/app.js" defer onload="scriptLoaded('app')" onerror="document.getElementById('boot-status').textContent='App failed to load'"></script>
+</head>
+<body>
+    <div id="app-root">
+        <div class="panel" style="padding: 20px;">
+            <h1 class="panel-header">LOADING...</h1>
+            <p id="boot-status">Initializing scripts...</p>
+        </div>
+    </div>
+    
+    <script>
+        // Inline boot diagnostics
+        console.log('[INLINE] Script executing');
+        const status = document.getElementById('boot-status');
+        status.textContent = 'Inline script running...';
+        
+        window.addEventListener('error', (e) => {
+            console.error('[ERROR]', e.message, e.filename, e.lineno);
+            status.textContent = 'ERROR: ' + e.message + ' at ' + e.filename;
+            status.style.color = 'red';
+        });
+        
+        // Track script loading
+        let loadedScripts = [];
+        window.scriptLoaded = (name) => {
+            loadedScripts.push(name);
+            status.textContent = 'Loaded: ' + loadedScripts.join(', ');
+            console.log('[LOADED]', name);
+        };
+        
+        // Monitor when app tries to modify app-root
+        const appRoot = document.getElementById('app-root');
+        const observer = new MutationObserver((mutations) => {
+            console.log('[MUTATION] app-root changed, new innerHTML length:', appRoot.innerHTML.length);
+            if (appRoot.innerHTML.length === 0) {
+                console.error('[MUTATION] WARNING: app-root was cleared!');
+            }
+        });
+        observer.observe(appRoot, { childList: true, subtree: true });
+        
+        setTimeout(() => {
+            if (!window.__AFOQT_BOOT_MARKER__) {
+                status.textContent = 'ERROR: app.js did not set boot marker!';
+                status.style.color = 'red';
+            } else {
+                console.log('[CHECK] Boot marker found, app.js executed');
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
