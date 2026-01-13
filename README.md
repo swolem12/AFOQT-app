@@ -119,29 +119,31 @@ open http://localhost:8000
 
 ```
 AFOQT-app/
-├── index.html              # Main app entry point
-├── app.js                  # Core app logic (10,300+ lines)
-├── styles.css              # CSS with theme system and math UI
-├── manifest.json           # PWA manifest
-├── sw.js                   # Service worker (v108)
-├── patch-loader.js         # Patch system & question registry (1,000+ lines)
-├── db.js                   # IndexedDB for spaced repetition
-├── assets/
-│   ├── config/            # PWA build config
-│   ├── icons/             # App icons (192x192, 512x512)
-│   ├── libs/              # anime.js for animations
-│   └── scripts/           # Utility scripts
-├── Test Content/
-│   ├── Patch_18.json      # Patch 18 config
-│   ├── Vocabulary/        # 40 files (synonyms, antonyms, context clues)
-│   ├── Math/              # 40 files (27 math topics)
-│   ├── Arithmetic/        # 19 files (8 AR subtopics)
-│   ├── Reading Comprehension/ # 20 passages
-│   ├── Instrument Comprehension/ # IC questions + generator meta
-│   └── Table Reading/     # 50 TR questions + axis clarity spec
-├── docs/                  # Technical documentation
-└── tests/                 # Manual test pages
+├── Frontend/                      # Deployed site content (served on GitHub Pages)
+│   ├── index.html                 # App entry
+│   ├── app.js                     # Core app logic (10k+ lines)
+│   ├── styles.css                 # Theme + UI
+│   ├── manifest.json              # PWA manifest
+│   ├── sw.js                      # Service worker (cache v111)
+│   ├── patch-loader.js            # Patch system & question registry
+│   ├── db.js                      # IndexedDB helpers
+│   ├── assets/                    # Icons, libs, scripts
+│   ├── Test Content/              # JSON question banks (runtime)
+│   └── tests/                     # Admin + diagnostics pages
+├── Backend/                       # Tools, scripts, developer docs
+│   ├── tools/                     # CLI utilities
+│   ├── docs/                      # Technical documentation
+│   ├── *.py                       # Content processing scripts
+│   └── *.md                       # Analysis/status reports
+├── .github/workflows/deploy-pages.yml  # Pages deploy pipeline (Frontend → Pages)
+├── .nojekyll
+└── README.md
 ```
+
+### Deployment
+- GitHub Pages is configured via Actions to deploy the `Frontend/` folder.
+- Project page URL: https://swolem12.github.io/AFOQT-app/
+- After updates: force refresh to clear Service Worker.
 
 ## 🎮 Game Mechanics
 
