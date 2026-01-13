@@ -474,8 +474,8 @@
           const files = [
             'Test Content/Vocabulary/synonyms_beginner_part1.json',
             'Test Content/Math/factoring_advanced_part1.json',
-            'Test Content/Arithmetic/basic_word_problems_beginner_part1.json',
-            'Test Content/Reading Comprehension /rc_passage_comprehension_beginner_part1.json',
+            'Test Content/Arithmetic/arithmetic_basic_word_problems_beginner_part1.json',
+            'Test Content/Reading Comprehension /reading_comprehension_beginner_passage7.json',
             'Test Content/Table Reading/table_reading_beginner_part1.json',
             'Test Content/Block Counting/block_counting_beginner_part1.json'
           ];
@@ -668,9 +668,9 @@
         desc: 'Check key patch files exist.',
         run: async ({ log, setBadge }) => {
           const files = [
-            'Test Content/Patch_18.json',
-            'Test Content/Patch_20.json',
-            'Test Content/Patch_21.json'
+            'Test Content/patches/Patch_18.json',
+            'Test Content/patches/Patch_20.json',
+            'Test Content/patches/Patch_21.json'
           ];
           let ok = 0;
           for (const f of files) {
@@ -949,14 +949,14 @@
           'Test Content/Vocabulary/verbal_analogies_advanced_part1.json',
           'Test Content/Math/word_problems_equation_setup_beginner_part1.json',
           'Test Content/Math/factoring_advanced_part1.json',
-          'Test Content/Arithmetic/basic_word_problems_beginner_part1.json',
-          'Test Content/Reading Comprehension /rc_passage_comprehension_beginner_part1.json',
+          'Test Content/Arithmetic/arithmetic_basic_word_problems_beginner_part1.json',
+          'Test Content/Reading Comprehension /reading_comprehension_beginner_passage7.json',
           'Test Content/Instrument Comprehension/instrument_comprehension_beginner_part1.json',
           'Test Content/Aviation/aviation_information_beginner_part1.json',
           'Test Content/Block Counting/block_counting_beginner_part1.json',
           'Test Content/Table Reading/table_reading_beginner_part1.json',
           'Test Content/Physical Science/physical_science_earth_space_beginner_part1.json',
-          'Test Content/Situational/judgment_scenarios_beginner_part1.json'
+          'Test Content/Situational/situational_judgment_beginner.json'
         ];
         let okCount = 0, failCount = 0;
         for (const file of files) {

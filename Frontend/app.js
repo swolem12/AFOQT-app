@@ -558,7 +558,7 @@ const state = {
 // ============================================================================
 // Topics with Question Generators - VOCABULARY
 // ============================================================================
-const verbalTopics = [
+const vocabularyTopics = [
     {
         id: 'sentence_completion',
         name: 'Sentence Completion',
