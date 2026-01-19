@@ -2128,6 +2128,21 @@ let topics = [
     ...blockTopics
 ];
 
+// Define subjects array for navigation
+const subjects = [
+    { id: 'vocabulary', name: 'Word Knowledge', description: 'Synonyms, Antonyms, Context Clues' },
+    { id: 'verbal_analogies', name: 'Verbal Analogies', description: 'Word Relationship Patterns' },
+    { id: 'math_knowledge', name: 'Math Knowledge', description: '27 Topics: Algebra, Geometry, Trig' },
+    { id: 'arithmetic_reasoning', name: 'Arithmetic Reasoning', description: 'Word Problems & Calculations' },
+    { id: 'reading_comprehension', name: 'Reading Comprehension', description: 'Passage Analysis' },
+    { id: 'instrument_comprehension', name: 'Instrument Comprehension', description: 'Aircraft Attitude & Heading' },
+    { id: 'table_reading', name: 'Table Reading', description: 'X/Y Coordinate Lookup' },
+    { id: 'block_counting', name: 'Block Counting', description: 'Isometric Stack Analysis' },
+    { id: 'physical_science', name: 'Physical Science', description: 'Physics, Chemistry, Earth Science' },
+    { id: 'aviation_information', name: 'Aviation Information', description: 'Aircraft & Flight Principles' },
+    { id: 'situational_judgment', name: 'Situational Judgment', description: 'Leadership Scenarios' }
+];
+
 // ============================================================================
 // Web Audio Sound Effects - 12-bit Sci-Fi RPG Style
 // ============================================================================
