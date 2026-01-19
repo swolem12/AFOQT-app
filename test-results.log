@@ -1,0 +1,17 @@
+
+═══════════════════════════════════════════════════
+   AFOQT-app Comprehensive Test Suite
+═══════════════════════════════════════════════════
+
+📄 Core Files:
+Test harness error: TypeError: https.head is not a function
+    at /workspaces/AFOQT-app/test-harness.js:40:11
+    at new Promise (<anonymous>)
+    at testURL (/workspaces/AFOQT-app/test-harness.js:34:10)
+    at runTests (/workspaces/AFOQT-app/test-harness.js:64:9)
+    at Object.<anonymous> (/workspaces/AFOQT-app/test-harness.js:203:1)
+    at Module._compile (node:internal/modules/cjs/loader:1706:14)
+    at Object..js (node:internal/modules/cjs/loader:1839:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)

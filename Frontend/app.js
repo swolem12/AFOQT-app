@@ -535,6 +535,7 @@ function showBootSequence() {
 const state = {
     screen: 'boot',
     players: [],
+    screenHistory: [], // Navigation history stack
     currentPlayer: null,
     currentSubject: null,
     currentTopic: null,

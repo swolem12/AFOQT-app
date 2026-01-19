@@ -1,0 +1,29 @@
+// Add to app.js after state definition (around line 570)
+
+// ============================================================================
+// Navigation History Management  
+// ============================================================================
+function pushScreen(screenName) {
+    // Don't add duplicates or certain screens to history
+    const skipHistory = ['boot', 'error'];
+    if (!skipHistory.includes(screenName) && state.screen !== screenName) {
+        state.screenHistory.push(state.screen);
+        // Limit history to 10 screens
+        if (state.screenHistory.length > 10) {
+            state.screenHistory.shift();
+        }
+    }
+    state.screen = screenName;
+}
+
+function goBack() {
+    if (state.screenHistory.length > 0) {
+        const previousScreen = state.screenHistory.pop();
+        state.screen = previousScreen;
+        render();
+    } else {
+        // No history, go to menu
+        state.screen = 'menu';
+        render();
+    }
+}

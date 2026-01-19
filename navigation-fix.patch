@@ -1,0 +1,89 @@
+--- a/Frontend/patch-loader.js
++++ b/Frontend/patch-loader.js
+@@ -317,11 +317,13 @@ async function loadInstrumentComprehensionFile(filename) {
+     try {
+         const url = encodeURI(`./Test Content/Instrument Comprehension/${filename}`);
+         const response = await fetch(url);
+         if (!response.ok) {
++            // Silently skip missing part2 files (expected)
+             return null;
+         }
+         return await response.json();
+     } catch (error) {
+-        console.warn('Failed to load instrument comprehension file', filename, error);
++        // Suppress warnings for expected missing files
++        if (!filename.includes('_part2')) console.warn('Failed to load instrument comprehension file', filename, error);
+         return null;
+     }
+ }
+@@ -346,11 +348,13 @@ async function loadBlockCountingFile(filename) {
+     try {
+         const url = encodeURI(`./Test Content/Block Counting/${filename}`);
+         const response = await fetch(url);
+         if (!response.ok) {
++            // Silently skip missing part2 files (expected)
+             return null;
+         }
+         return await response.json();
+     } catch (error) {
+-        console.warn('Failed to load block counting file', filename, error);
++        // Suppress warnings for expected missing files
++        if (!filename.includes('_part2')) console.warn('Failed to load block counting file', filename, error);
+         return null;
+     }
+ }
+
+--- a/Frontend/app.js
++++ b/Frontend/app.js
+@@ -535,6 +535,7 @@ function stopMatrix() {
+ 
+ const state = {
+     screen: 'boot',
++    screenHistory: [], // Navigation history stack
+     players: [],
+     currentPlayer: null,
+     currentSubject: null,
+
+Add navigation helper functions after state definition:
+
+// ============================================================================
+// Navigation History Management
+// ============================================================================
+function pushScreen(screenName) {
+    // Don't add duplicates or certain screens to history
+    const skipHistory = ['boot', 'error'];
+    if (!skipHistory.includes(screenName) && state.screen !== screenName) {
+        state.screenHistory.push(state.screen);
+        // Limit history to 10 screens
+        if (state.screenHistory.length > 10) {
+            state.screenHistory.shift();
+        }
+    }
+    state.screen = screenName;
+}
+
+function goBack() {
+    if (state.screenHistory.length > 0) {
+        const previousScreen = state.screenHistory.pop();
+        state.screen = previousScreen;
+        render();
+    } else {
+        // No history, go to menu
+        state.screen = 'menu';
+        render();
+    }
+}
+
+Update render() function to use pushScreen() instead of directly setting state.screen.
+
+Add back button handler in attachEventListeners() function around line 9200:
+
+    // Back button (universal)
+    const backBtn = document.getElementById('back-btn');
+    if (backBtn) {
+        backBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            playSfx('nav');
+            goBack();
+        });
+    }
